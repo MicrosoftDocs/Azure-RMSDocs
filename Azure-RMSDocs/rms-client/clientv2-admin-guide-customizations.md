@@ -138,7 +138,7 @@ When more than one label policy is configured for a user, each with potentially 
 Label policy advanced settings are applied using the same logic, using the last policy setting.
 
 > [!NOTE]
-> The the current GA version, an exception exists for the [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) advanced label policy setting, which enables you to set a different default label for Outlook.
+> In the current GA version, an exception exists for the [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) advanced label policy setting, which enables you to set a different default label for Outlook.
 > 
 > If you have conflicts for the [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) setting, the configuration is taken from the first policy setting, according to the policy order in the admin center. 
 >
@@ -525,7 +525,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### Optimization for PowerPoint
 
-Headers and footers in PowerPoint are implemented as shapes. For the **msoTextBox,** **msoTextEffect,** **msoPlaceholder,** and **msoAutoShape** shape types, the following advanced settings provide additional optimizations:
+Headers and footers in PowerPoint are implemented as shapes. For the **msoTextBox**, **msoTextEffect**, **msoPlaceholder**, and **msoAutoShape** shape types, the following advanced settings provide additional optimizations:
 
 - [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)
 - [RemoveExternalMarkingFromCustomLayouts](#extend-external-marking-removal-to-custom-layouts)
@@ -1562,9 +1562,9 @@ Supported node types include:
 | **Or**	|Performs *or* on all child nodes       |
 | **Not**	| Performs *not* for its own child      |
 | **Except**	| Returns *not* for its own child, causing it to behave as **All**        |
-| **SentTo,** followed by **Domains: listOfDomains**	|Checks one of the following: <br>- If the Parent is **Except,** checks whether **All** of the recipients are in one of the domains<br>- If the Parent is anything else but **Except,** checks whether **Any** of the recipients are in one of the domains.   |
-| **EMailLabel,** followed by label	| One of the following:  <br>- The label ID <br>- null, if not labeled             |
-| **AttachmentLabel,** followed by **Label** and supported **Extensions**	| One of the following:  <br><br>**true:** <br>- If the Parent is **Except,** checks whether **All** of the attachments with one supported extension exists within the label<br>- 	If the Parent is anything else but **Except,** checks whether **Any** of the attachments with one supported extension exists within the label <br>- If not labeled, and **label = null** <br><br> **false:** For all other cases <br><br>**Note**: If the **Extensions** property is empty or missing, all supported file types (extensions) are included in the rule.
+| **SentTo**, followed by **Domains: listOfDomains**	|Checks one of the following: <br>- If the Parent is **Except**, checks whether **All** of the recipients are in one of the domains<br>- If the Parent is anything else but **Except**, checks whether **Any** of the recipients are in one of the domains.   |
+| **EMailLabel**, followed by label	| One of the following:  <br>- The label ID <br>- null, if not labeled             |
+| **AttachmentLabel**, followed by **Label** and supported **Extensions**	| One of the following:  <br><br>**true:** <br>- If the Parent is **Except**, checks whether **All** of the attachments with one supported extension exists within the label<br>- 	If the Parent is anything else but **Except**, checks whether **Any** of the attachments with one supported extension exists within the label <br>- If not labeled, and **label = null** <br><br> **false:** For all other cases <br><br>**Note**: If the **Extensions** property is empty or missing, all supported file types (extensions) are included in the rule.
 | | |
 
 #### Rule action syntax

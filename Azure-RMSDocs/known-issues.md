@@ -94,7 +94,7 @@ Publishing policies may take up to 24 hours.
 
 - [Maximum file sizes](#maximum-file-sizes)
 - [AIP viewer](#aip-viewer)
-- [Tracking and revoking document access](#tracking-and-revoking-document-access)
+- [Tracking and revoking document access](#tracking-and-revoking-document-access-public-preview)
 
 ### Maximum file sizes
 
