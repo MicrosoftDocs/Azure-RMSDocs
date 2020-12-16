@@ -85,12 +85,12 @@ This version includes the following new features, fixes, and enhancements for th
 
     - [PowerShell support for disconnected scanner servers](#powershell-support-for-disconnected-scanner-servers)
     - [Support for NFS repositories in content scan jobs](#support-for-nfs-repositories-in-content-scan-jobs)
-    - [Added support for sensitive information types](#added-support-for-sensitive-information-types)
+    - [Added support for additional sensitive information types](#additional-support-for-sensitive-information-types)
 
 - **New features for the client**:
 
     - [Track document access and revoke access](#track-document-access-and-revoke-access)
-    - [Added support for sensitive information types](#added-support-for-sensitive-information-types)
+    - [Added support for additional sensitive information types](#additional-support-for-sensitive-information-types)
 
 - **Fixes and improvements:**
 
@@ -136,7 +136,7 @@ To support scans on NFS shares, services for NFS must be deployed on the scanner
 
 For more information, see [Create a content scan job](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 
-### Added support for sensitive information types
+### Added support for additional sensitive information types
 
 We’ve added support for additional sensitive information types in Azure Information Protection, such as **Australia business number,** **Australia company number,** or **Austria identity card.**
 
@@ -191,10 +191,6 @@ The following fixes were delivered in version 2.9.109.0 of the [Azure Informatio
 - In a scenario where **%APPDATA% (AppData\Roaming)** points to a non-default Windows folder structure, files in folders that are mapped to user directories are now [excluded from labeling and protection](clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection) as expected, based on the configuration.
 
 - [New advanced client setting](clientv2-admin-guide-customizations.md#remove-all-shapes-of-a-specific-shape-name) (**PowerPointRemoveAllShapesByShapeName**), added to remove shapes from PowerPoint headers or footers, by using the shape name instead of the text inside a shape.
-
-### Known issues
-
-In the public preview version of 2.9.109.0, applying labels with [DKE protection](../plan-implement-tenant-key.md#double-key-encryption-dke) is not supported by the scanner.
 
 ## Version 2.8.85.0
 

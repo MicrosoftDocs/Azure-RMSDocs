@@ -25,7 +25,7 @@ ms.custom: user
 
 ---
 
-# Administrator Guide: Track and revoke document access with Azure Information Protection
+# Administrator Guide: Track and revoke document access with Azure Information Protection (Public preview)
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
@@ -34,6 +34,8 @@ ms.custom: user
 If you've upgraded to [version 2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) or later, any protected documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client.
 
 Registering a document for tracking enables AIP Global Administrators to track access details, including successful access events and denied attempts, as well as revoke access if needed. 
+
+Track and revoke features for the unified labeling client are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
 
 ## Track document access
 

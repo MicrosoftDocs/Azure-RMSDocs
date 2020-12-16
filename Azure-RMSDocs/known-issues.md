@@ -113,7 +113,7 @@ For more information, see:
 - [**Classic client**: View protected files with the Azure Information Protection viewer](rms-client/client-view-use-files.md)
 - [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md)
 
-### Tracking and revoking document access
+### Tracking and revoking document access (Public preview)
 
 Tracking and revoking document access using the unified labeling client has the following known issues:
 
