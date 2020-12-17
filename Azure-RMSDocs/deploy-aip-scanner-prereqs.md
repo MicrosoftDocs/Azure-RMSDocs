@@ -332,19 +332,11 @@ If you can be granted the Sysadmin role *temporarily* to install the scanner, yo
 
 Do one of the following, depending on your organization's requirements:
 
-- **You can have the Sysadmin role temporarily.** If you temporarily have the Sysadmin role, the database is automatically created for you and the service account for the scanner is automatically granted the required permissions.
-
-    However, the user account that configures the scanner still requires the **db_owner** role for the scanner configuration database. If you only have the Sysadmin role until the scanner installation is complete, grant the **db_owner** role to the user account manually.
-
-- **You cannot have the Sysadmin role at all**. If you cannot be granted the Sysadmin role even temporarily, you must ask a user with Sysadmin rights to manually create a database before you install the scanner.
-
-    For this configuration, the **db_owner** role must be assigned to the following accounts:
-
-    - Service account for the scanner
-    - User account for the scanner installation
-    - User account for scanner configuration
-
-    Typically, you will use the same user account to install and configure the scanner. If you use different accounts, they both require the **db_owner** role for the scanner configuration database. Create this user and rights as needed. If you specify your own cluster name, the configuration database is named **AIPScannerUL_<cluster_name>**.
+|Restriction  |Description  |
+|---------|---------|
+|**You can have the Sysadmin role temporarily**     |  If you temporarily have the Sysadmin role, the database is automatically created for you and the service account for the scanner is automatically granted the required permissions. <br><br>However, the user account that configures the scanner still requires the **db_owner** role for the scanner configuration database. If you only have the Sysadmin role until the scanner installation is complete, grant the **db_owner** role to the user account manually.       |
+|**You cannot have the Sysadmin role at all**     |  If you cannot be granted the Sysadmin role even temporarily, you must ask a user with Sysadmin rights to manually create a database before you install the scanner. <br><br>For this configuration, the **db_owner** role must be assigned to the following accounts: <br>- Service account for the scanner<br>- User account for the scanner installation<br>- User account for scanner configuration <br><br>Typically, you will use the same user account to install and configure the scanner. If you use different accounts, they both require the **db_owner** role for the scanner configuration database. Create this user and rights as needed. If you specify your own cluster name, the configuration database is named **AIPScannerUL_<cluster_name>**.
+       |
 
 Additionally:
 
