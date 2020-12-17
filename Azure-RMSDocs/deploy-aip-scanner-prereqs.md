@@ -383,7 +383,7 @@ If you need to manually create your scanner database and/or create a user and gr
 
 #### Manually create a database and user for the Network Discovery service, and grant db_owner rights
 
-If you need to manually create your [Network Discovery]((deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview)) database and/or create a user and grant **db_owner** rights on the database, ask your Sysadmin to perform the following steps:
+If you need to manually create your [Network Discovery](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview)) database and/or create a user and grant **db_owner** rights on the database, ask your Sysadmin to perform the following steps:
 
 1. Create a database for the Network Discovery service:
 
