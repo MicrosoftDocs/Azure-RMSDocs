@@ -335,8 +335,8 @@ Do one of the following, depending on your organization's requirements:
 |Restriction  |Description  |
 |---------|---------|
 |**You can have the Sysadmin role temporarily**     |  If you temporarily have the Sysadmin role, the database is automatically created for you and the service account for the scanner is automatically granted the required permissions. <br><br>However, the user account that configures the scanner still requires the **db_owner** role for the scanner configuration database. If you only have the Sysadmin role until the scanner installation is complete, grant the **db_owner** role to the user account manually.       |
-|**You cannot have the Sysadmin role at all**     |  If you cannot be granted the Sysadmin role even temporarily, you must ask a user with Sysadmin rights to manually create a database before you install the scanner. <br><br>For this configuration, the **db_owner** role must be assigned to the following accounts: <br>- Service account for the scanner<br>- User account for the scanner installation<br>- User account for scanner configuration <br><br>Typically, you will use the same user account to install and configure the scanner. If you use different accounts, they both require the **db_owner** role for the scanner configuration database. Create this user and rights as needed. If you specify your own cluster name, the configuration database is named **AIPScannerUL_<cluster_name>**.
-       |
+|**You cannot have the Sysadmin role at all**     |  If you cannot be granted the Sysadmin role even temporarily, you must ask a user with Sysadmin rights to manually create a database before you install the scanner. <br><br>For this configuration, the **db_owner** role must be assigned to the following accounts: <br>- Service account for the scanner<br>- User account for the scanner installation<br>- User account for scanner configuration <br><br>Typically, you will use the same user account to install and configure the scanner. If you use different accounts, they both require the **db_owner** role for the scanner configuration database. Create this user and rights as needed. If you specify your own cluster name, the configuration database is named **AIPScannerUL_<cluster_name>**.  |
+| | |
 
 Additionally:
 
@@ -375,7 +375,7 @@ If you need to manually create your scanner database and/or create a user and gr
 
 #### Manually create a database and user for the Network Discovery service, and grant db_owner rights
 
-If you need to manually create your [Network Discovery](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview)) database and/or create a user and grant **db_owner** rights on the database, ask your Sysadmin to perform the following steps:
+If you need to manually create your [Network Discovery](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview) database and/or create a user and grant **db_owner** rights on the database, ask your Sysadmin to perform the following steps:
 
 1. Create a database for the Network Discovery service:
 
