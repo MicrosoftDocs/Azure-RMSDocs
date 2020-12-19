@@ -1326,7 +1326,7 @@
         },
         {
             "source_path": "mip/develop/concept-authentication-acquire-token-ps.md",
-            "redirect_url": "mip/develop/concept-authentication-acquire-token-py",
+            "redirect_url": "/information-protection/develop/concept-authentication-acquire-token-py",
             "redirect_document_id": false
         }
     ]
