@@ -346,13 +346,6 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
 
 4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart. If you run the application, you see output similar to the following. You won't have an access token to provide, until you complete the next Quickstart.
 
-   ```console
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Sign in with user account:
-   Enter access token:
-   ```
 
 ## Next Steps
 
