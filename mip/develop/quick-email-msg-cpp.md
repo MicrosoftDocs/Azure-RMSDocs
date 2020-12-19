@@ -214,36 +214,6 @@ For further details on file operations refer to the [File Handler concepts](conc
 
 Use **F6** (Build Solution) to build your client application. If you have no build errors, use **F5** (Start debugging) to run your application.
 
-```Console
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://syncservice.o365syncservice.com/
-    Sign in with user account: User@Contoso.onmicrosoft.com
-    Enter access token: <Paste token here>
-    Press any key to continue . . .
-
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://aadrm.com
-    Sign in with user account: User@Contoso.onmicrosoft.com
-    Enter access token: <Paste token here>
-    Press any key to continue . . .
-
-    Protection applied to file: C:\Test_protected.msg
-
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/37f4583d-9985-4e7f-a1ab-71afd8b55ba0
-    Set $resourceUrl to: https://aadrm.com
-    Sign in with user account: User@Contoso.onmicrosoft.com
-    Enter access token: <Paste token here>
-    Press any key to continue . . .
-    Original file: C:\Test.msg
-    Protected file: C:\Test_protected.msg
-    TemplateID applied to protected file : 667466bf-a01b-4b0a-8bbf-a79a3d96f720
-    Protection Owner of protected file : User@Contoso.OnMicrosoft.com
-
-```
-
 ## Troubleshooting
 
 ### Problems during execution of C# application
