@@ -113,5 +113,4 @@ However, in production code the user may be required to be presented with a choi
 
 For simplicity, samples demonstrating the delegate will implement token acquisition by calling an external script. This script can be replaced by any other type of script, an open-source OAuth2 library, or a custom OAuth2 library.
 
-- [Acquire an access token using PowerShell](concept-authentication-acquire-token-ps.md)
 - [Acquire an access token using Python](concept-authentication-acquire-token-py.md)

@@ -1323,6 +1323,11 @@
             "source_path": "Azure-RMSDocs/faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client",
             "redirect_url": "Azure-RMSDocs/faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "mip/develop/concept-authentication-acquire-token-ps.md",
+            "redirect_url": "/information-protection/develop/concept-authentication-acquire-token-py",
+            "redirect_document_id": false
         }
     ]
 }
