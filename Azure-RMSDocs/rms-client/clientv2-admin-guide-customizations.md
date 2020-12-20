@@ -142,7 +142,7 @@ Label policy advanced settings are applied using the same logic, using the last 
 > 
 > If you have conflicts for the [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) setting, the configuration is taken from the first policy setting, according to the policy order in the admin center. 
 >
-> This exception was removed as part of the [2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) public preview.
+> This exception was removed as part of the [2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090) release.
 
 #### Available advanced settings for label policies
 

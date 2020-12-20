@@ -73,7 +73,7 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.9.109.0 (Public preview)
+## Version 2.9.109.0
 
 Unified labeling scanner and client version 2.9.109.0
 
@@ -99,7 +99,7 @@ This version includes the following new features, fixes, and enhancements for th
 
 ### PowerShell support for disconnected scanner servers
 
-The [Azure Information Protection on-premises scanner](../deploy-aip-scanner.md) now supports managing content scan jobs, for scanner servers that cannot connect to the internet, over PowerShell.
+The [Azure Information Protection on-premises scanner](../deploy-aip-scanner.md) now supports managing content scan jobs over PowerShell, for scanner servers that cannot connect to the internet, such as with an [Azure China 21Vianet scanner server](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs).
 
 To support disconnected scanner servers, we've added the following new cmdlets:
 
