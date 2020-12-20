@@ -139,10 +139,13 @@ Use the following sections for specific information for each service type:
 
 After these servers are configured to use the connector, client applications that are installed locally on these servers might not work with RMS. When this happens, it is because the applications try to use the connector rather than use RMS directly, which is not supported.
 
-In addition, if Office 2010 is installed locally on an Exchange server, the client app's IRM features might work from that computer after the server is configured to use the connector, but this is not supported.
+In addition, if Office 2010 is installed locally on an Exchange server, the client app's IRM features might work from that computer after the server is configured to use the connector, but this is not supported. 
 
 In both scenarios, you must install the client applications on separate computers that are not configured to use the connector. They will then correctly use RMS directly.
 
+> [!NOTE]
+> For more information about AIP and Office 2010, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+> 
 ## Configuring an Exchange server to use the connector
 The following Exchange roles communicate with the RMS connector:
 

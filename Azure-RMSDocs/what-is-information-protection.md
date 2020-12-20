@@ -20,7 +20,7 @@ Customer intent: As an administrator, I want to extend Microsoft 365's labeling 
 #ms.reviewer: eymanor
 #ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 search.appverid:
 - MET150
 
@@ -100,7 +100,7 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 
 **When you're ready to customize AIP further**, see [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md).
 
-**To get started with the MIP SDK,** see [Microsoft Information Protection (MIP) SDK setup and configuration](/information-protection/develop/setup-configure-mip).
+**To get started with the MIP SDK**, see [Microsoft Information Protection (MIP) SDK setup and configuration](/information-protection/develop/setup-configure-mip).
 
 ### Additional resources
 

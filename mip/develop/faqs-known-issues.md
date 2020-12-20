@@ -14,6 +14,12 @@ This article provides answers to Frequently Asked Questions (FAQs), and troubles
 
 ## Frequently Asked Questions 
 
+### File Parsing
+
+**Question**: Can I write to the same file that I'm currently reading with the File SDK?
+
+The MIP SDK does not support concurrently reading and writing the same file. Any labeled files will result in a *copy* of the input file with the label actions applied. Your application must replace the original with the labeled file. 
+
 ### SDK string handling
 
 **Question**: How does the SDK handle strings, and what string type should I be using in my code?
@@ -67,9 +73,3 @@ Your application does not have the required runtime, or was not built as Release
 > "ProxyAuthenticatonError: Proxy authentication is unsupported"
 
 The MIP SDK doesn't support the use of authenticated proxies. To fix this message, proxy administrators should set the Microsoft Information Protection service endpoints to bypass the proxy. A list of those endpoints are available at the [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges) page. MIP SDK requires that `*.protection.outlook.com` (row 9) and the Azure Information Protection service endpoints (row 73) bypass proxy authentication.
-
-### Issues in .NET Core
-
-**Question**: Does the NuGet package work in .NET Core? 
-
-The NuGet package will install to a .NET Core project, but will fail to run. We're working on fixing this for Windows, but don't currently have a timeline to support other platforms.
