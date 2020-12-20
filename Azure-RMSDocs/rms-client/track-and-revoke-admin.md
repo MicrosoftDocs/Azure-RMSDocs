@@ -78,7 +78,7 @@ Administrators can revoke access for any protected document stored in their loca
     
     Use the [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) to search for a document using the filename and/or the email address of the user who applied protection.
     
-    For example;
+    For example:
         
     ```PowerShell
     Get-AipServiceDocumentLog -ContentName "test.docx" -Owner “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
@@ -106,7 +106,7 @@ Administrators can revoke access for any protected document stored in their loca
 
 If you have accidentally revoked access to a specific document, use the same **ContentID** value with the [Clear-AipServiceDocumentRevoke](/powershell/module/aipservice/clear-aipservicedocumentrevoke) cmdlet to un-revoke the access. 
 
-For example: 
+For example:
 
 ```PowerShell
 Clear-AipServiceDocumentRevoke -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
