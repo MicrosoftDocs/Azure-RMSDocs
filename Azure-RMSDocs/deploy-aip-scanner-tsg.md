@@ -30,13 +30,13 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-Use the content in this article to help you troubleshoot your on-premises scanner deployment:
+Use the content in this article to help you troubleshoot your on-premises scanner deployment.
 
 ## Troubleshooting using the scanner diagnostic tool
 
-If you're having issues with the Azure Information Scanner, verify whether your deployment is healthy using the following PowerShell command:
+If you're having issues with the Azure Information Scanner, verify whether your deployment is healthy using the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) PowerShell command:
 
-```PowerShell
+```powershell
 Start-AIPScannerDiagnostics
 ```
 
@@ -54,12 +54,12 @@ The diagnostics tool checks the following details and then exports a log file wi
 >
 
 > [!NOTE]
-> The **Start-AIPScannerDiagnostics** tool does not run a full prerequisites check. If you're having issues with the scanner, also ensure that your system complies with [scanner requirements](deploy-aip-scanner-prereqs.md), and that your [scanner configuration and installation](deploy-aip-scanner-configure-install.md) is complete.
+> The **Start-AIPScannerDiagnostics** command does not run a full prerequisites check. If you're having issues with the scanner, also ensure that your system complies with [scanner requirements](deploy-aip-scanner-prereqs.md), and that your [scanner configuration and installation](deploy-aip-scanner-configure-install.md) is complete.
 >
 
 ## Troubleshooting a scan that timed out
 
-If the scanner stops in the middle unexpectedly, and doesn't complete scanning a large number of files in a repository, you may need to modify one of the following settings:
+If the scanner stops in the middle unexpectedly and doesn't complete scanning a large number of files in a repository, you may need to modify one of the following settings:
 
 - **Number of dynamic ports**. You may need to increase the number of dynamic ports for the operating system hosting the files. Server hardening for SharePoint can be one reason why the scanner exceeds the number of allowed network connections, and therefore stops.
 
@@ -204,4 +204,4 @@ For more information, see [Configuring and installing the  Azure Information Pro
 
 ## Next steps
 
-See also our blog on [Best practices for deploying and using the AIP UL scanner](https://techcommunity.microsoft.com/t5/microsoft-security-and/best-practices-for-deploying-and-using-the-aip-ul-scanner/ba-p/1878168)
+For more information, see our blog on [Best practices for deploying and using the AIP UL scanner](https://techcommunity.microsoft.com/t5/microsoft-security-and/best-practices-for-deploying-and-using-the-aip-ul-scanner/ba-p/1878168).
