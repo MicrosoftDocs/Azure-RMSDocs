@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/03/2020
+ms.date: 12/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -323,62 +323,80 @@ To support a disconnected computer using PowerShell only, perform the following 
 
 ### Restriction: You cannot be granted Sysadmin or databases must be created and configured manually
 
+Use the following procedures to manually create databases and grant the **db_owner** role, as needed.
+
+- [Procedure for the scanner database](#manually-create-a-database-and-user-for-the-scanner-and-grant-db_owner-rights)
+- [Procedure for the Network Discovery database](#manually-create-a-database-and-user-for-the-network-discovery-service-and-grant-db_owner-rights)
+
 If you can be granted the Sysadmin role *temporarily* to install the scanner, you can remove this role when the scanner installation is complete.
 
 Do one of the following, depending on your organization's requirements:
 
-- **You can have the Sysadmin role temporarily.** If you temporarily have the Sysadmin role, the database is automatically created for you and the service account for the scanner is automatically granted the required permissions.
-
-    However, the user account that configures the scanner still requires the **db_owner** role for the scanner configuration database. If you only have the Sysadmin role until the scanner installation is complete, [grant the db_owner role to the user account manually](#create-a-user-and-grant-db_owner-rights-manually).
-
-- **You cannot have the Sysadmin role at all**. If you cannot be granted the Sysadmin role even temporarily, you must ask a user with Sysadmin rights to manually create a database before you install the scanner.
-
-    For this configuration, the **db_owner** role must be assigned to the following accounts:
-
-    - Service account for the scanner
-    - User account for the scanner installation
-    - User account for scanner configuration
-
-    Typically, you will use the same user account to install and configure the scanner. If you use different accounts, they both require the db_owner role for the scanner configuration database. Create this user and rights as needed. If you specify your own cluster name, the configuration database is named **AIPScannerUL_<cluster_name>**.
+|Restriction  |Description  |
+|---------|---------|
+|**You can have the Sysadmin role temporarily**     |  If you temporarily have the Sysadmin role, the database is automatically created for you and the service account for the scanner is automatically granted the required permissions. <br><br>However, the user account that configures the scanner still requires the **db_owner** role for the scanner configuration database. If you only have the Sysadmin role until the scanner installation is complete, grant the **db_owner** role to the user account manually.       |
+|**You cannot have the Sysadmin role at all**     |  If you cannot be granted the Sysadmin role even temporarily, you must ask a user with Sysadmin rights to manually create a database before you install the scanner. <br><br>For this configuration, the **db_owner** role must be assigned to the following accounts: <br>- Service account for the scanner<br>- User account for the scanner installation<br>- User account for scanner configuration <br><br>Typically, you will use the same user account to install and configure the scanner. If you use different accounts, they both require the **db_owner** role for the scanner configuration database. Create this user and rights as needed. If you specify your own cluster name, the configuration database is named **AIPScannerUL_<cluster_name>**.  |
+| | |
 
 Additionally:
 
 - You must be a local administrator on the server that will run the scanner
 - The service account that will run the scanner must be granted Full Control permissions to the following registry keys:
 
-    - HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
-    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server
+    - `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server`
+    - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server`
 
 If, after configuring these permissions, you see an error when you install the scanner, the error can be ignored and you can manually start the scanner service.
 
-#### Create a user and grant db_owner rights manually
+#### Manually create a database and user for the scanner, and grant db_owner rights
 
-To create a user and grant db_owner rights on this database, ask the Sysadmin to perform the following steps:
+If you need to manually create your scanner database and/or create a user and grant **db_owner** rights on the database, ask your Sysadmin to perform the following steps:
 
-1. Create a DB for scanner:
+1. Create a database for scanner:
 
-    ```cli
+    ```sql
     **CREATE DATABASE AIPScannerUL_[clustername]**
 
     **ALTER DATABASE AIPScannerUL_[clustername] SET TRUSTWORTHY ON**
     ```
 
-2. Grant rights to the user that runs the install command and is used to run scanner management commands.
-
-    SQL script:
+2. Grant rights to the user that runs the installation command and is used to run scanner management commands. Use the following script:
 
     ```sql
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
     ```
 
-3. Grant rights to scanner service account.
+3. Grant rights to scanner service account. Use the following script:
 
-    SQL script:
     ```sql
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     ```
 
+#### Manually create a database and user for the Network Discovery service, and grant db_owner rights
+
+If you need to manually create your [Network Discovery](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview) database and/or create a user and grant **db_owner** rights on the database, ask your Sysadmin to perform the following steps:
+
+1. Create a database for the Network Discovery service:
+
+    ```sql
+    **CREATE DATABASE AIPNetworkDiscovery_[clustername]**
+
+    **ALTER DATABASE AIPNetworkDiscovery_[clustername] SET TRUSTWORTHY ON**
+    ```
+
+2. Grant rights to the user that runs the installation command and is used to run scanner management commands. Use the following script:
+
+    ```sql
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
+    ```
+
+3. Grant rights to the scanner service account. Use the following script:
+
+    ```sql
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    ```
 ### Restriction: The service account for the scanner cannot be granted the **Log on locally** right
 
 If your organization policies prohibit the **Log on locally** right for service accounts, use the *OnBehalfOf* parameter with Set-AIPAuthentication.
