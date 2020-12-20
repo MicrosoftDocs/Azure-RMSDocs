@@ -32,25 +32,6 @@ ms.custom: admin
 
 Use the content in this article to help you troubleshoot your on-premises scanner deployment:
 
-## Troubleshooting a stopped scan
-
-If the scanner stops in the middle unexpectedly, and doesn't complete scanning a large number of files in a repository, you may need to modify one of the following settings:
-
-- **Number of dynamic ports**. You may need to increase the number of dynamic ports for the operating system hosting the files. Server hardening for SharePoint can be one reason why the scanner exceeds the number of allowed network connections, and therefore stops.
-
-    To check whether this is the cause of the scanner stopping, look to see if the following error message is logged for the scanner in the  **%*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog** file.
-
-    **Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port**
-
-    > [!NOTE]
-    > This file will be zipped if there are multiple logs.
-
-    For more information about how to view the current port range and increase the range, see [Settings that can be Modified to Improve Network Performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
-
-- **List view threshold.** For large SharePoint farms, you may need to increase the list view threshold. By default, the list view threshold is set to 5,000.
-
-    For more information, see [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
-
 ## Troubleshooting using the scanner diagnostic tool
 
 If you're having issues with the Azure Information Scanner, verify whether your deployment is healthy using the following PowerShell command:
@@ -75,6 +56,26 @@ The diagnostics tool checks the following details and then exports a log file wi
 > [!NOTE]
 > The **Start-AIPScannerDiagnostics** tool does not run a full prerequisites check. If you're having issues with the scanner, also ensure that your system complies with [scanner requirements](deploy-aip-scanner-prereqs.md), and that your [scanner configuration and installation](deploy-aip-scanner-configure-install.md) is complete.
 >
+
+## Troubleshooting a scan that timed out
+
+If the scanner stops in the middle unexpectedly, and doesn't complete scanning a large number of files in a repository, you may need to modify one of the following settings:
+
+- **Number of dynamic ports**. You may need to increase the number of dynamic ports for the operating system hosting the files. Server hardening for SharePoint can be one reason why the scanner exceeds the number of allowed network connections, and therefore stops.
+
+    To check whether this is the cause of the scanner stopping, look to see if the following error message is logged for the scanner in the  **%*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog** file.
+
+    **Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port**
+
+    > [!NOTE]
+    > This file will be zipped if there are multiple logs.
+
+    For more information about how to view the current port range and increase the range, see [Settings that can be Modified to Improve Network Performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+
+- **List view threshold.** For large SharePoint farms, you may need to increase the list view threshold. By default, the list view threshold is set to 5,000.
+
+    For more information, see [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
+
 
 ## Scanner error reference
 
@@ -201,13 +202,6 @@ For more information, see [Configuring and installing the  Azure Information Pro
 > A *profile* is a legacy scanner term that has been replaced by the scanner cluster and content scan job in newer versions of the scanner.
 > 
 
-### Scanner diagnostics errors
+## Next steps
 
-If you get errors running the [Start-AIPDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) command, make sure that you're using the correct scanner account credentials in the **-OnBehalf** parameter.
-
-For example:
-
-```powershell
-$scanner_account_creds= Get-Credential
-Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds
-```
+See also our blog on [Best practices for deploying and using the AIP UL scanner](https://techcommunity.microsoft.com/t5/microsoft-security-and/best-practices-for-deploying-and-using-the-aip-ul-scanner/ba-p/1878168)
