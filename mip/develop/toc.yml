@@ -90,9 +90,7 @@
     - name: Authentication concepts
       href: concept-authentication-cpp.md
     - name: Implementing an authentication delegate (C++)
-      href: concept-authentication-delegate-cpp.md
-    - name: Acquiring an access token (PowerShell)
-      href: concept-authentication-acquire-token-ps.md
+      href: concept-authentication-delegate-cpp.md    
     - name: Acquiring an access token (Python)
       href: concept-authentication-acquire-token-py.md     
   - name: Consent

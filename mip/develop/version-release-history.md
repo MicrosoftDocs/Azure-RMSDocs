@@ -13,7 +13,7 @@ manager: barbkess
 
 ## Servicing
 
-Each general availability (GA) version is supported for six months once the next GA version is released. The documentation may not include information about unsupported versions. Fixes and new functionality are only applied to the latest GA version.
+Each general availability (GA) version is supported for one year once the next GA version is released. The documentation may not include information about unsupported versions. Fixes and new functionality are only applied to the latest GA version.
 
 Preview versions shouldn't be deployed in production. Instead, use the latest preview version to test new functionality or fixes that are coming in the next GA version. Only the most current preview version is supported.
 
@@ -22,9 +22,25 @@ Preview versions shouldn't be deployed in production. Instead, use the latest pr
 Use the following information to see what’s new or changed for a supported release. The most current release is listed first.
 
 > [!NOTE]
-> Minor fixes are not listed so if you experience a problem with the SDK, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version.
+> Minor fixes are not listed. If you experience a problem with the SDK, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version.
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
+
+## Version 1.7.147
+
+### File SDK
+
+- Minor bug fix for the PBIX file format.
+
+## Version 1.7.145
+
+**Release date:** November 13, 2020
+
+### General Changes
+
+- Updated NuGet package to copy dependencies only on update rather than always.
+- Debug configuration on .NET will use release version of native libraries. We found that customers deploying .NET solutions in debug mode to remote servers were required to install the VC++ Debug runtime, which isn't trivial. If there's a need to debug in to native libraries, please copy the DLLs from the SDK redistributable into the project folder (https://ala.ms/mipsdkbins)
+- Fixed a bug that was generating warnings for .NET Core projects.
 
 ## Version 1.7.133
 
