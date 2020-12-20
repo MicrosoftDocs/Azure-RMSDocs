@@ -137,7 +137,7 @@ Check for errors with your authentication token, and refer to the relevant secti
 
 If there are no token errors, make sure that the Date format on the scanner computer is set to use a slash (**/**).
 
-For example, your dates should appear as **12/9/2020,** and not **12.9.2020** or **12-9-2020.**
+For example, your dates should appear as **12/9/2020**, and not **12.9.2020** or **12-9-2020.**
 
 ### Policy doesn't include any automatic labeling condition
 
