@@ -181,7 +181,7 @@ For even more details, see also:
 |**HYOK support**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
 |**Usage logging in Event Viewer**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)| ![no](../media/no-icon.png)|
 |**Display the Do Not Forward button in Outlook**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
-|**Track protected documented**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>5</sup> |  ![no](../media/no-icon.png)|
+|**Track protected documented**| ![yes](../media/yes-icon.png)<sup>5</sup> | ![yes](../media/yes-icon.png) <sup>5</sup> |  ![no](../media/no-icon.png)|
 |**Revoke protected documents**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
 |**Protection-only mode** (no labels)| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
 |**Support for account switching**|  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)| ![yes](../media/yes-icon.png) |
@@ -207,7 +207,7 @@ Supported by File Explorer and PowerShell. In Office apps, users can select **Fi
 For File Explorer and PowerShell commands, the user must be connected to the internet to protect files.
 
 <sup>5</sup>
-The document tracking site that's supported by the classic client isn't supported by the unified labeling client. However, without the need to first register the document for tracking, administrators can use [central reporting](../reports-aip.md) to identify whether protected documented are accessed from Windows computers, and whether access was granted or denied. 
+For more information, see: **Unified labeling client**: [Admin guide (Public preview)](track-and-revoke-admin.md) |  [User guide (Public preview)](revoke-access-user.md). **Classic client**: [Admin guide](client-admin-guide-document-tracking.md) | [User guide](client-track-revoke.md). Administrators can also use [central reporting](../reports-aip.md) to identify whether protected documents are accessed from Windows computers, and whether access was granted or denied.
 
 <sup>6</sup>
 Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
