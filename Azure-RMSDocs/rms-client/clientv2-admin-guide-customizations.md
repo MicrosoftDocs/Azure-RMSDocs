@@ -182,61 +182,17 @@ The following sections the available advanced settings for label policies and la
 
 The following sections list the advanced settings described on this page by product and feature integration:
 
-- [Outlook and emails settings](#outlook-and-emails-settings)
-- [File Explorer settings](#file-explorer-settings)
-- [Performance improvements settings](#performance-improvements-settings)
-- [Settings for integrations with other labeling solutions](#settings-for-integrations-with-other-labeling-solutions)
-- [AIP analytics settings](#aip-analytics-settings)
-- [General settings](#general-settings)
+|Feature  |Advanced settings  |
+|---------|---------|
+|**Outlook and email settings**     |   - [Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)<br>- [Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)<br>- [Set a different default label for Outlook](#set-a-different-default-label-for-outlook) <br>- [For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook) <br>- [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails) <br>- [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [Customize Outlook popup messages](#customize-outlook-popup-messages)      |
+|**File explorer settings**     |   - [Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer) <br>- [For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)      |
+|**Performance improvements settings**     | - [Limit CPU consumption](#limit-cpu-consumption) <br>- [Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner) <br>- [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)        |
+|**Settings for integrations with other labeling solutions**     |  - [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)  <br>- [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)    |
+|**AIP analytics settings**     |   - [Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) <br>- [Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)      |
+|**General settings**     | - [Change which file types to protect](#change-which-file-types-to-protect)  <br>- [Enable removal of protection from compressed files](#enable-removal-of-protection-from-compressed-files)
+- [Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>- [Add "Report an Issue" for users](#add-report-an-issue-for-users) <br>- [Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied) <br>- [Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label) <br>- [Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Specify a color for the label](#specify-a-color-for-the-label) <br>- [Support for disconnected computers](#support-for-disconnected-computers) <br>- [Change the local logging level](#change-the-local-logging-level) <br>- [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>- [Preserve NTFS owners during labeling (public preview)](#preserve-ntfs-owners-during-labeling-public-preview) <br>- [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels) <br>- [Configure SharePoint timeouts](#configure-sharepoint-timeouts  |
+|     |         |
 
-#### Outlook and emails settings
-
-- [Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)
-- [Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)
-- [Set a different default label for Outlook](#set-a-different-default-label-for-outlook) 
-- [For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
-- [Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)
-- [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)
-- [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-- [Customize Outlook popup messages](#customize-outlook-popup-messages)
-
-#### File Explorer settings
-
-- [Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)
-- [For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)  
-
-#### Performance improvements settings
-
-- [Limit CPU consumption](#limit-cpu-consumption)
-- [Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)
-- [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)
-
-#### Settings for integrations with other labeling solutions
-
-- [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions) 
-- [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions) 
-
-#### AIP analytics settings
-
-- [Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)
-- [Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)
-
-#### General settings
-
-- [Change which file types to protect](#change-which-file-types-to-protect)  
-- [Enable removal of protection from compressed files](#enable-removal-of-protection-from-compressed-files)
-- [Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling) 
-- [Add "Report an Issue" for users](#add-report-an-issue-for-users)
-- [Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied)
-- [Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label)
-- [Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)
-- [Specify a color for the label](#specify-a-color-for-the-label)
-- [Support for disconnected computers](#support-for-disconnected-computers)
-- [Change the local logging level](#change-the-local-logging-level)
-- [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes)
-- [Preserve NTFS owners during labeling (public preview)](#preserve-ntfs-owners-during-labeling-public-preview)
-- [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels)
-- [Configure SharePoint timeouts](#configure-sharepoint-timeouts)
 
 ### Label policy advanced setting reference
 
