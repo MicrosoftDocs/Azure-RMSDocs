@@ -89,7 +89,7 @@ Global admins can revoke access for any protected document stored in their local
     > [!TIP]
     > Only documents that have been protected and registered for tracking have a **ContentID** value. 
     >
-    > If your document has no **ContentID,** open it on a machine with the unified labeling client installed to register the file for tracking.
+    > If your document has no **ContentID**, open it on a machine with the unified labeling client installed to register the file for tracking.
 
 1. Use the [Set-AIPServiceDocumentRevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) with your document's ContentID to revoke access.
 
