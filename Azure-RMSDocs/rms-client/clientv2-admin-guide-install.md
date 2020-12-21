@@ -59,8 +59,8 @@ There are two options for installing the client for users:
 
 |Option  |Description  | I
 |---------|---------|
-|**Run the executable (.exe) version of the client**     |   The recommended installation method that you can run interactively, or silently. <br><br>This method has the most flexibility and it is recommended because the installer checks for many of the prerequisites, and can automatically install missing prerequisites. <br><br>For more information, see [To install the Azure Information Protection unified labeling client by using the executable installer](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer).|
-|**Deploy the Windows installer (.msi) version of the client**     |     Supported for silent installs only that use a central deployment mechanism, such as group policy, Configuration Manager, and Microsoft Intune. <br><br>This method is necessary for Windows 10 PCs that are managed by Intune and mobile device management (MDM) because for these computers, executable files are not supported for installation. <br><br> However, when you use this installation method, you must manually check and install or uninstall the dependent software that the installer for the executable would perform for each computer. <br><br>For more information, see [To install the Azure Information Protection unified labeling client by using the .msi installer](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer).   |
+|**Run the executable (.exe) version of the client**     |   The recommended installation method that you can run interactively, or silently. <br><br>This method has the most flexibility and it is recommended because the installer checks for many of the prerequisites, and can automatically install missing prerequisites. <br><br>For more information, see [Install the AIP unified labeling client using the executable installer](#install-the-aip-unified-labeling-client-using-the-executable-installer).|
+|**Deploy the Windows installer (.msi) version of the client**     |     Supported for silent installs only that use a central deployment mechanism, such as group policy, Configuration Manager, and Microsoft Intune. <br><br>This method is necessary for Windows 10 PCs that are managed by Intune and mobile device management (MDM) because for these computers, executable files are not supported for installation. <br><br> However, when you use this installation method, you must manually check and install or uninstall the dependent software that the installer for the executable would perform for each computer. <br><br>For more information, see [Install the unified labeling client using the .msi installer](#install-the-unified-labeling-client-using-the-msi-installer). |
 |     |         |
 
 
@@ -185,7 +185,7 @@ If you use Intune for your software deployment method, use these instructions to
 
 1. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection_UL.msi /quiet`.
 
-    You may need to specify additional installation parameters. For more information, see the [executable installer instructions](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer).
+    You may need to specify additional installation parameters. For more information, see the [executable installer instructions](#install-the-aip-unified-labeling-client-using-the-executable-installer).
 
     > [!NOTE]
     > By default, the **Help improve Azure Information Protection by sending usage statistics to Microsoft** installation option is enabled. To disable this option, make sure to do one of the following:

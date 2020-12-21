@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 12/21/2020
-ms.topic: concept
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 

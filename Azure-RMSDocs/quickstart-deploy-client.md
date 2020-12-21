@@ -42,21 +42,21 @@ Use the articles linked below to help you understand the prerequisites for deplo
 
 - **[Azure Information Protection requirements](requirements.md).** Describes detailed system requirements for deploying the AIP client in your organization, such as an Azure Information Protection subscription and Azure Active Directory. Also lists of supported client devices and supported applications.
 
-- **[Unified labeling client prerequisites](rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).** Lists system requirements for each machine where the AIP client is installed.
+- **[Unified labeling client requirements](./rms-client/reqs-ul-client.md).** Lists system requirements for each machine where the AIP client is installed.
 
 ## Install the AIP client
 
 AIP provides the following client installation options:
 
-- **[Download and run the .exe file.](rms-client/clientv2-admin-guide-install.md#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)** This installation is the recommended option for most use cases. The installation can be run interactively or silently.
+- **[Download and run the .exe file.](rms-client/clientv2-admin-guide-install.md#install-the-aip-unified-labeling-client-using-the-executable-installer)** This installation is the recommended option for most use cases. The installation can be run interactively or silently.
 
     When the installation is complete, you may be prompted to restart your computer or Office software. Restart as needed to continue.
 
-- **[Download and run the .msi file.](rms-client/clientv2-admin-guide-install.md#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer)** Supported for silent installations that use a central deployment mechanism, such as group policies, Configuration Manger, or Microsoft Intune.
+- **[Download and run the .msi file.](rms-client/clientv2-admin-guide-install.md#install-the-unified-labeling-client-using-the-msi-installer)** Supported for silent installations that use a central deployment mechanism, such as group policies, Configuration Manger, or Microsoft Intune.
 
 The AIP client installation files are available from the [Microsoft Download site](https://www.microsoft.com/download/details.aspx?id=53018). 
 
-For more information, see [Options for installing the AIP client](rms-client/clientv2-admin-guide-install.md#options-to-install-the-azure-information-protection-unified-labeling-client-for-users).
+For more information, see [Admin Guide: Install the Azure Information Protection unified labeling client for users](rms-client/clientv2-admin-guide-install.md).
 
 > [!TIP]
 > To test-run the latest features available for the AIP client, deploy our public preview version on a testing system. For more information, see the AIP unified labeling client [version release history](rms-client/unifiedlabelingclient-version-release-history.md).
