@@ -61,11 +61,11 @@ The diagnostics tool checks the following details and then exports a log file wi
 
 If the scanner stops in the middle unexpectedly and doesn't complete scanning a large number of files in a repository, you may need to modify one of the following settings:
 
-- **Number of dynamic ports.** You may need to increase the number of dynamic ports for the operating system hosting the files. Server hardening for SharePoint can be one reason why the scanner exceeds the number of allowed network connections, and therefore stops.
+- **Number of dynamic ports**. You may need to increase the number of dynamic ports for the operating system hosting the files. Server hardening for SharePoint can be one reason why the scanner exceeds the number of allowed network connections, and therefore stops.
 
     For more information about how to view the current port range and increase the range, see [Settings that can be Modified to Improve Network Performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
-- **List view threshold.** For large SharePoint farms, you may need to increase the list view threshold. By default, the list view threshold is set to 5,000.
+- **List view threshold**. For large SharePoint farms, you may need to increase the list view threshold. By default, the list view threshold is set to 5,000.
 
     For more information, see [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 
