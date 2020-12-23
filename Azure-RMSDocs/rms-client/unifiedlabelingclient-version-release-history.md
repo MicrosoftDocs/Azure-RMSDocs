@@ -154,6 +154,15 @@ For more information, see:
 - [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
 - [Known issues for tracking and revoking document access](../known-issues.md#tracking-and-revoking-document-access-public-preview)
 
+To turn off document tracking features, see [Turning off tracking features for your tenant](track-and-revoke-admin.md#turning-off-tracking-features-for-your-tenant).
+
+> [!NOTE]
+> The AIP classic client supports track and revoke features using the [Microsoft tracking portal](client-track-revoke.md#using-a-web-browser-to-track-and-revoke-documents-that-you-have-registered). This tracking portal is not relevant when working with the unified labeling client.
+>
+> If you are upgrading from the classic client, and had tracking turned on, tracking remains turned on with the unified labeling client. However, the classic client tracking site will stop showing tracking logs after your upgrade.
+> 
+> To view tracking data with the unified labeling client, use the PowerShell commands only, as described in the [admin guide](track-and-revoke-admin.md).
+
 ### Fixes and improvements for the unified labeling scanner
 
 The following fixes were delivered in version 2.9.109.0 of the [Azure Information Protection unified labeling scanner](../deploy-aip-scanner.md):

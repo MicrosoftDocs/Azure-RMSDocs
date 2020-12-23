@@ -118,7 +118,7 @@ For more information, see:
 Tracking and revoking document access using the unified labeling client has the following known issues:
 
 - [Multiple attachments in a protected email](#multiple-attachments-in-a-protected-email)
-- [Documents accessed via SharePoint](#documents-accessed-via-sharepoint)
+- [Documents accessed via SharePoint Server](#documents-accessed-via-sharepoint-server)
 
 For more information, see [Administrator Guide: Track and revoke document access with Azure Information Protection](rms-client/track-and-revoke-admin.md) and [User Guide: Revoke document access with Azure Information Protection](rms-client/revoke-access-user.md).
 
@@ -130,7 +130,7 @@ This ContentID value will be returned only with the first file that had been ope
 
 Additionally, revoking access for one of the attachments also revokes access for the other attachments in the same protected email.
 
-#### Documents accessed via SharePoint
+#### Documents accessed via SharePoint Server
     
 - Protected documents that are uploaded to SharePoint lose their ContentID value. 
 

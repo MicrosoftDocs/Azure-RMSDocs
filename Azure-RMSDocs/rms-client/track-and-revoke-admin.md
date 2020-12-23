@@ -118,6 +118,38 @@ Clear-AipServiceDocumentRevoke -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8
 
 Document access is granted to the user you defined in the **IssuerName** parameter.
 
+## Turning off tracking features for your tenant
+
+If you need to turn off tracking features for your tenant, such as for privacy requirements in your organization, do the following:
+
+1. Run the [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) cmdlet.
+
+1. Set the [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) advanced client setting to **false**. 
+
+Document tracking is turned off for your tenant, and your users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
+
+
+> [!NOTE]
+> If you are upgrading from the classic client to the unified labeling client and had turned off tracking in the classic client, tracking will automatically be turned off for your unified labeling client as well.
+> 
+> In this case, documents are *not* automatically registered for tracking, and tracking logs will not show any tracking information after upgrading to the unified labeling client.
+> 
+
+
+In PowerShell: 
+At some point we will need to update the description for Disable-AipServiceDocumentTrackingFeature. At this moment current description is fine.
+@Batami Gold, You may want to add that for AIPv2 experience,
+Get-AIpServiceTrackingLog will not show any tracking information corresponding to any tenant user activity post disabling the T&R feature.
+ 
+In email:
+Do you think we should mention that the user will get a misleading error message here? It seems that tracking isn't actually disabled, just that it's moved...
+
+One difference from portal vs cmdlet experience is portal will stop showing any tracking log as it will get routed to page with below information
+ 
+“Your administrator has disabled document tracking for your organization.
+Contact your administrator for details.
+“
+ 
 ## Next steps
 
 For more information, see:
