@@ -152,7 +152,7 @@ For more information, see:
 
 - [Administrator Guide: Track and revoke document access with Azure Information Protection](track-and-revoke-admin.md)
 - [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
-- [Known issues for tracking and revoking document access](../known-issues.md#tracking-and-revoking-document-access-public-preview)
+- [Known issues for tracking and revoking document access](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)
 
 ### Fixes and improvements for the unified labeling scanner
 
