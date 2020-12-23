@@ -930,16 +930,18 @@ Example PowerShell command, where your label policy is named "Global":
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 ```
 
-### To implement block messages for recipients inside an Outlook distribution list (Public preview)
+## Expand Outlook distribution lists when searching for email recipients (Public preview)
 
-By default, the [OutlookBlockTrustedDomains](#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) and [OutlookBlockUntrustedCollaborationLabel](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) advanced settings apply only to email outside of a distribution list. 
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-To extend support for these block messages to recipients inside Outlook distribution lists, set the **EnableOutlookDistributionListExpansion** advanced setting to **true**:
+To extend support from other advanced settings to recipients inside Outlook distribution lists, set the **EnableOutlookDistributionListExpansion** advanced setting to **true**.
 
 - Key: **EnableOutlookDistributionListExpansion**
 - Value: **true**
 
-This advanced property enables Outlook to expand the distribution list for the purpose of ensuring that a block message appears as needed. The default timeout for expanding the distribution list is **2000** seconds.
+For example, if you've configured the [OutlookBlockTrustedDomains](#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels), [OutlookBlockUntrustedCollaborationLabel](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) advanced settings, and then also configure the **EnableOutlookDistributionListExpansion** setting, Outlook is enabled to expand the distribution list to ensuring that a block message appears as needed.
+
+The default timeout for expanding the distribution list is **2000** seconds.
 
 To modify this timeout, create the following advanced setting for the selected policy:
 
