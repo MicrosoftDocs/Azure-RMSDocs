@@ -156,12 +156,13 @@ For more information, see:
 
 If you have privacy requirements in your organization or region that require you to turn off document tracking features, see [Turn off tracking features for your tenant](track-and-revoke-admin.md#turning-off-tracking-features-for-your-tenant).
 
-> [!NOTE]
-> The AIP classic client supports track and revoke features using the [Microsoft tracking portal](client-track-revoke.md#using-a-web-browser-to-track-and-revoke-documents-that-you-have-registered). This tracking portal is not relevant when working with the unified labeling client.
->
-> If you are upgrading from the classic client, and had tracking turned on, tracking remains turned on with the unified labeling client. However, the classic client tracking site will stop showing tracking logs after your upgrade.
-> 
-> To view tracking data with the unified labeling client, use the PowerShell commands only, as described in the [admin guide](track-and-revoke-admin.md).
+#### Upgrades from the classic client
+
+The AIP classic client supports track and revoke features using the [Microsoft tracking portal](client-track-revoke.md#using-a-web-browser-to-track-and-revoke-documents-that-you-have-registered). This tracking portal is not relevant when working with the unified labeling client.
+
+If you are upgrading from the classic client, and had tracking turned on, tracking remains turned on with the unified labeling client. However, the classic client tracking site will stop showing tracking logs after your upgrade.
+ 
+To view tracking data with the unified labeling client, use the PowerShell commands only, as described in the [admin guide](track-and-revoke-admin.md).
 
 ### Fixes and improvements for the unified labeling scanner
 
