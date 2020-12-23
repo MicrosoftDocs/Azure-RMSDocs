@@ -90,7 +90,7 @@ An example of a label advanced setting is the setting to specify a label color.
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
 ```
 
-**For a multiple string value for the same key,** use the following syntax:
+**For a multiple string value for the same key**, use the following syntax:
 
 ```PowerShell
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
@@ -132,7 +132,7 @@ For example, to identify the label in the following picture, use the following s
 
 ![Use 'Name' rather than 'Display name' to identify a sensitivity label](../media/labelname_scc.png)
 
-If you prefer to specify the label **GUID,** this value is *not* shown in the labeling admin center. Use the [Get-Label](/powershell/module/exchange/get-label) command to find this value, as follows:
+If you prefer to specify the label **GUID**, this value is *not* shown in the labeling admin center. Use the [Get-Label](/powershell/module/exchange/get-label) command to find this value, as follows:
 
 ```PowerShell
 Get-Label | Format-Table -Property DisplayName, Name, Guid
@@ -608,7 +608,7 @@ For more information, see [Find the name of the shape that you're using as a hea
 
 ##### Avoid removing shapes from PowerPoint that contain specified text, and are not headers / footers
 
-To avoid removing shapes that contain the text that you have specified, but are not headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove.** 
+To avoid removing shapes that contain the text that you have specified, but are not headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove**. 
 
 We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process. 
 
@@ -871,7 +871,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollab
 For further customization, you can also [exempt domain names for pop-up messages configured for specific labels](#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels).
 
 > [!NOTE]
-> The advanced settings in this section **(OutlookWarnUntrustedCollaborationLabel,** **OutlookJustifyUntrustedCollaborationLabel,** and **OutlookBlockUntrustedCollaborationLabel)** are for when a *specific* label is in use.
+> The advanced settings in this section (**OutlookWarnUntrustedCollaborationLabel**, **OutlookJustifyUntrustedCollaborationLabel**, and **OutlookBlockUntrustedCollaborationLabel**) are for when a *specific* label is in use.
 > 
 > To implement default popup messages for *unlabled* content, use the **[OutlookUnlabeledCollaborationAction](#to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label)** advanced setting. To customize your popup messages for unlabeled content, use a **.json** file to define your advanced settings. 
 >
