@@ -154,7 +154,7 @@ For more information, see:
 - [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
 - [Known issues for tracking and revoking document access](../known-issues.md#tracking-and-revoking-document-access-public-preview)
 
-If you have privacy requirements in your organization or region that require you to turn off document tracking features, see [Turn off tracking features for your tenant](track-and-revoke-admin.md#turning-off-tracking-features-for-your-tenant).
+If you have privacy requirements in your organization or region that require you to turn off document tracking features, see the [track and revoke administrator procedures](track-and-revoke-admin.md#turn-off-tracking-features-for-your-tenant).
 
 #### Upgrades from the classic client
 
