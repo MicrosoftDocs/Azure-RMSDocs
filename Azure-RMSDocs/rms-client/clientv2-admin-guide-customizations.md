@@ -137,13 +137,6 @@ When more than one label policy is configured for a user, each with potentially 
 
 Label policy advanced settings are applied using the same logic, using the last policy setting.
 
-> [!NOTE]
-> In the current GA version, an exception exists for the [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) advanced label policy setting, which enables you to set a different default label for Outlook.
-> 
-> If you have conflicts for the [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) setting, the configuration is taken from the first policy setting, according to the policy order in the admin center. 
->
-> This exception was removed as part of the [2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090) release.
-
 #### Available advanced settings for label policies
 
 Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/exchange/policy-and-compliance/new-labelpolicy) and [Set-LabelPolicy](/powershell/module/exchange/policy-and-compliance/set-labelpolicy).
@@ -930,7 +923,7 @@ Example PowerShell command, where your label policy is named "Global":
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 ```
 
-## Expand Outlook distribution lists when searching for email recipients (Public preview)
+## Expand Outlook distribution lists when searching for email recipients
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
