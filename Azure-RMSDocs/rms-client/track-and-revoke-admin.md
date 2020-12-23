@@ -128,28 +128,10 @@ If you need to turn off tracking features for your tenant, such as for privacy r
 
 Document tracking is turned off for your tenant, and your users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
 
-
-> [!NOTE]
-> If you are upgrading from the classic client to the unified labeling client and had turned off tracking in the classic client, tracking will automatically be turned off for your unified labeling client as well.
-> 
-> In this case, documents are *not* automatically registered for tracking, and tracking logs will not show any tracking information after upgrading to the unified labeling client.
-> 
-
-
-In PowerShell: 
-At some point we will need to update the description for Disable-AipServiceDocumentTrackingFeature. At this moment current description is fine.
-@Batami Gold, You may want to add that for AIPv2 experience,
-Get-AIpServiceTrackingLog will not show any tracking information corresponding to any tenant user activity post disabling the T&R feature.
+### Upgrades from the classic client
+If you are upgrading from the classic client to the unified labeling client and had turned off tracking in the classic client, tracking will automatically be turned off for your unified labeling client as well.
  
-In email:
-Do you think we should mention that the user will get a misleading error message here? It seems that tracking isn't actually disabled, just that it's moved...
-
-One difference from portal vs cmdlet experience is portal will stop showing any tracking log as it will get routed to page with below information
- 
-“Your administrator has disabled document tracking for your organization.
-Contact your administrator for details.
-“
- 
+In this case, documents are *not* automatically registered for tracking, and tracking logs will not show any tracking information after upgrading to the unified labeling client.
 ## Next steps
 
 For more information, see:

@@ -161,6 +161,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |EnableLabelByMailHeader|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |EnableLabelBySharePointProperties|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
 | EnableOutlookDistributionListExpansion | [Implement block messages for recipients inside an Outlook distribution list](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) |
+| EnableTrackAndRevoke | [Turn off document tracking features (public preview)](#turn-off-document-tracking-features-public-preview) |
 |HideBarByDefault|[Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps)|
 |JustificationTextForUserText | [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels) |
 |LogMatchedContent|[Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
