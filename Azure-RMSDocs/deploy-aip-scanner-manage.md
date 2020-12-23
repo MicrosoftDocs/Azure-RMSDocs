@@ -36,8 +36,6 @@ Use other steps detailed below to manage your scans moving forward.
 
 - [Stop a scan](#stopping-a-scan)
 - [Rescanning files](#rescanning-files)
-- [Troubleshooting a stopped scan](#troubleshooting-a-stopped-scan)
-- [Troubleshooting using the scanner diagnostic tool](#troubleshooting-using-the-scanner-diagnostic-tool)
 
 For more information, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
@@ -141,50 +139,6 @@ If you've also changed protection settings for your labels, wait an extra 15 min
 >
 > For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
 > 
-
-## Troubleshooting a stopped scan
-
-If the scanner stops in the middle unexpectedly, and doesn't complete scanning a large number of files in a repository, you may need to modify one of the following settings:
-
-- **Number of dynamic ports**. You may need to increase the number of dynamic ports for the operating system hosting the files. Server hardening for SharePoint can be one reason why the scanner exceeds the number of allowed network connections, and therefore stops.
-
-    To check whether this is the cause of the scanner stopping, look to see if the following error message is logged for the scanner in the  **%*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog** file.
-
-    **Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port**
-
-    > [!NOTE]
-    > This file will be zipped if there are multiple logs.
-
-    For more information about how to view the current port range and increase the range, see [Settings that can be Modified to Improve Network Performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
-
-- **List view threshold.** For large SharePoint farms, you may need to increase the list view threshold. By default, the list view threshold is set to 5,000.
-
-    For more information, see [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
-
-## Troubleshooting using the scanner diagnostic tool
-
-If you're having issues with the Azure Information Scanner, verify whether your deployment is healthy using the following PowerShell command:
-
-```PowerShell
-Start-AIPScannerDiagnostics
-```
-
-The diagnostics tool checks the following details and then exports a log file with the results:
-
-- Whether the database is up to date
-- Whether network URLs are accessible
-- Whether there's a valid authentication token and the policy can be acquired
-- Whether the profile is defined in the Azure portal
-- Whether offline/online configuration exists and can be acquired
-- Whether the rules configured are valid
-
-> [!TIP]
-> If you are running the command under a user that is not the scanner user, be sure to add the **-OnBehalf** parameter. 
->
-
-> [!NOTE]
-> The **Start-AIPScannerDiagnostics** tool does not run a full prerequisites check. If you're having issues with the scanner, also ensure that your system complies with [scanner requirements](deploy-aip-scanner-prereqs.md), and that your [scanner configuration and installation](deploy-aip-scanner-configure-install.md) is complete.
->
 
 ## Next steps
 
