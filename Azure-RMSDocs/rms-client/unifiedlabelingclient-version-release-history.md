@@ -154,7 +154,7 @@ For more information, see:
 - [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
 - [Known issues for tracking and revoking document access](../known-issues.md#tracking-and-revoking-document-access-public-preview)
 
-To turn off document tracking features, see [Turning off tracking features for your tenant](track-and-revoke-admin.md#turning-off-tracking-features-for-your-tenant).
+If you have privacy requirements in your organization or region that require you to turn off document tracking features, see [Turn off tracking features for your tenant](track-and-revoke-admin.md#turning-off-tracking-features-for-your-tenant).
 
 > [!NOTE]
 > The AIP classic client supports track and revoke features using the [Microsoft tracking portal](client-track-revoke.md#using-a-web-browser-to-track-and-revoke-documents-that-you-have-registered). This tracking portal is not relevant when working with the unified labeling client.

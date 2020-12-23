@@ -118,9 +118,9 @@ Clear-AipServiceDocumentRevoke -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8
 
 Document access is granted to the user you defined in the **IssuerName** parameter.
 
-## Turning off tracking features for your tenant
+## Turn off tracking features for your tenant
 
-If you need to turn off tracking features for your tenant, such as for privacy requirements in your organization, do the following:
+If you need to turn off tracking features for your tenant, such as for privacy requirements in your organization or region, do the following:
 
 1. Run the [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) cmdlet.
 

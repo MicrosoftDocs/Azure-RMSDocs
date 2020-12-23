@@ -1951,7 +1951,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPa
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-By default, document tracking features are turned on for your tenant. To turn them off, such as for privacy requirements in your orgnization, set the **EnableTrackAndRevoke** value to **False**.
+By default, document tracking features are turned on for your tenant. To turn them off, such as for privacy requirements in your orgnization or region, set the **EnableTrackAndRevoke** value to **False**.
 
 Once turned off, document tracking data will not longer be available in your organization, and users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
 
