@@ -128,7 +128,8 @@ If you need to turn off tracking features for your tenant, such as for privacy r
 
 Document tracking is turned off for your tenant, and your users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
 
-### Upgrades from the classic client
+**Upgrades from the classic client**
+
 If you are upgrading from the classic client to the unified labeling client and had turned off tracking in the classic client, tracking will automatically be turned off for your unified labeling client as well.
  
 In this case, documents are *not* automatically registered for tracking, and tracking logs will not show any tracking information after upgrading to the unified labeling client.

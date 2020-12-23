@@ -130,7 +130,7 @@ This ContentID value will be returned only with the first file that had been ope
 
 Additionally, revoking access for one of the attachments also revokes access for the other attachments in the same protected email.
 
-#### Documents accessed via SharePoint Server
+#### Documents accessed via SharePoint
     
 - Protected documents that are uploaded to SharePoint lose their ContentID value. 
 
