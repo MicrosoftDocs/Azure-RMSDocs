@@ -33,13 +33,13 @@ ms.custom: user
 
 If you've upgraded to [version 2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090) or later, any protected documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client.
 
-Registering a document for tracking enables AIP Global Administrators to track access details, including successful access events and denied attempts, as well as revoke access if needed. 
+Registering a document for tracking enables [Microsoft 365 global admins](/microsoft-365/admin/add-users/about-admin-roles#commonly-used-microsoft-365-admin-center-roles) to track access details, including successful access events and denied attempts, as well as revoke access if needed. 
 
 Track and revoke features for the unified labeling client are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
 
 ## Track document access
 
-Administrators can track access for protected documents via PowerShell using the ContentID generated for the protected document during registration.
+Global admins can track access for protected documents via PowerShell using the **ContentID** generated for the protected document during registration.
 
 **To view document access details**:
 
@@ -72,9 +72,9 @@ Use the following cmdlets to find details for the document you want to track:
 
 ## Revoke document access from PowerShell
 
-Administrators can revoke access for any protected document stored in their local content shares, using the [Set-AIPServiceDocumentRevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) cmdlet. 
+Global admins can revoke access for any protected document stored in their local content shares, using the [Set-AIPServiceDocumentRevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) cmdlet.
 
-1. Find the ContentID value for the document you want to revoke access for.
+1. Find the **ContentID** value for the document you want to revoke access for.
     
     Use the [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) to search for a document using the filename and/or the email address of the user who applied protection.
     
@@ -87,9 +87,9 @@ Administrators can revoke access for any protected document stored in their loca
     The data returned includes the ContentID value for your document.
 
     > [!TIP]
-    > Only documents that have been protected and registered for tracking have a ContentID value. 
+    > Only documents that have been protected and registered for tracking have a **ContentID** value. 
     >
-    > If your document has no ContentID, open it on a machine with the unified labeling client installed to register the file for tracking.
+    > If your document has no **ContentID**, open it on a machine with the unified labeling client installed to register the file for tracking.
 
 1. Use the [Set-AIPServiceDocumentRevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) with your document's ContentID to revoke access.
 
@@ -98,6 +98,10 @@ Administrators can revoke access for any protected document stored in their loca
     ```PowerShell
     Set-AipServiceDocumentRevoked -ContentId 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
     ```
+
+> [!NOTE]
+> If [offline access](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now) is allowed, users will continue to be able to access the documents that have been revoked until the offline policy period expires. 
+> 
 
 > [!TIP]
 > Users can also revoke access for any documents where they applied protection directly from the **Sensitivity** menu in their Office apps. For more information, see [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)

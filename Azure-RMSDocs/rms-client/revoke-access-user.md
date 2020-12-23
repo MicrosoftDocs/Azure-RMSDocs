@@ -56,7 +56,7 @@ To revoke access from Word, Excel, or PowerPoint:
  
 1. In the confirmation message that appears, click **Yes** to continue.
 
-Access is revoked, and other users can no longer access the document.
+Access is revoked, and other users can no longer access the document. If [offline access](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now) is allowed, users will continue to be able to access the documents that have been revoked until the offline policy period expires. 
 
 ### Don't see the Revoke Access option?
 

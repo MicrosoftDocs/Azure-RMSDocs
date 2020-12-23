@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/14/2020
+ms.date: 12/23/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -160,7 +160,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |EnableLabelBySharePointProperties|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-| EnableOutlookDistributionListExpansion | [Implement block messages for recipients inside an Outlook distribution list](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) |
+| EnableOutlookDistributionListExpansion | [Expand Outlook distribution lists when searching for email recipients (Public preview)](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) |
 |HideBarByDefault|[Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps)|
 |JustificationTextForUserText | [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels) |
 |LogMatchedContent|[Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
@@ -168,7 +168,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |OutlookBlockUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookCollaborationRule| [Customize Outlook popup messages](#customize-outlook-popup-messages)|
 |OutlookDefaultLabel|[Set a different default label for Outlook](#set-a-different-default-label-for-outlook)|
-|OutlookGetEmailAddressesTimeOutMSProperty | [Modify the timeout for expanding a distribution list in Outlook when implementing block messages for recipients in distribution lists](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) |
+|OutlookGetEmailAddressesTimeOutMSProperty | [Modify the timeout for expanding a distribution list in Outlook when implementing block messages for recipients in distribution lists](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview)  |
 |OutlookJustifyTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookJustifyUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
@@ -788,7 +788,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollab
 ```
 
 > [!NOTE]
-> To ensure that your block messages are displayed as needed, even for a recipient located inside an Outlook distribution list, make sure to add the [EnableOutlookDistributionListExpansion](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) advanced setting.
+> To ensure that your block messages are displayed as needed, even for a recipient located inside an Outlook distribution list, make sure to add the [EnableOutlookDistributionListExpansion](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) advanced setting.
 >
 
 #### To exempt domain names for pop-up messages configured for specific labels
@@ -832,7 +832,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomain
 ```
 
 > [!NOTE]
-> To ensure that your block messages are displayed as needed, even for a recipient located inside an Outlook distribution list, make sure to add the [EnableOutlookDistributionListExpansion](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) advanced setting.
+> To ensure that your block messages are displayed as needed, even for a recipient located inside an Outlook distribution list, make sure to add the [EnableOutlookDistributionListExpansion](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) advanced setting.
 >
 
 ### To implement the warn, justify, or block pop-up messages for emails or attachments that don't have a label:
@@ -930,21 +930,23 @@ Example PowerShell command, where your label policy is named "Global":
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 ```
 
-### To implement block messages for recipients inside an Outlook distribution list (Public preview)
+## Expand Outlook distribution lists when searching for email recipients (Public preview)
 
-By default, the [OutlookBlockTrustedDomains](#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) and [OutlookBlockUntrustedCollaborationLabel](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) advanced settings apply only to email outside of a distribution list. 
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-To extend support for these block messages to recipients inside Outlook distribution lists, set the **EnableOutlookDistributionListExpansion** advanced setting to **true**:
+To extend support from other advanced settings to recipients inside Outlook distribution lists, set the **EnableOutlookDistributionListExpansion** advanced setting to **true**.
 
 - Key: **EnableOutlookDistributionListExpansion**
 - Value: **true**
 
-This advanced property enables Outlook to expand the distribution list for the purpose of ensuring that a block message appears as needed. The default timeout for expanding the distribution list is **2000** seconds.
+For example, if you've configured the [OutlookBlockTrustedDomains](#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels), [OutlookBlockUntrustedCollaborationLabel](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) advanced settings, and then also configure the **EnableOutlookDistributionListExpansion** setting, Outlook is enabled to expand the distribution list to ensuring that a block message appears as needed.
+
+The default timeout for expanding the distribution list is **2000** milliseconds.
 
 To modify this timeout, create the following advanced setting for the selected policy:
 
 - Key: **OutlookGetEmailAddressesTimeOutMSProperty**
-- Value: *Integer, in seconds*
+- Value: *Integer, in milliseconds*
 
 Example PowerShell command, where your label policy is named "Global":
 

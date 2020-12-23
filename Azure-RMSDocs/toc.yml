@@ -139,6 +139,8 @@
           href: deploy-aip-scanner-configure-install.md
         - name: Run the unified labeling scanner
           href: deploy-aip-scanner-manage.md
+        - name: Troubleshoot your scanner
+          href: deploy-aip-scanner-tsg.md
     - name: Deploying the RMS connector
       items:
       - name: Overview
