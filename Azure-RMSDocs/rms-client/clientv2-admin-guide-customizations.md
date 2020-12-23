@@ -941,12 +941,12 @@ To extend support from other advanced settings to recipients inside Outlook dist
 
 For example, if you've configured the [OutlookBlockTrustedDomains](#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels), [OutlookBlockUntrustedCollaborationLabel](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) advanced settings, and then also configure the **EnableOutlookDistributionListExpansion** setting, Outlook is enabled to expand the distribution list to ensuring that a block message appears as needed.
 
-The default timeout for expanding the distribution list is **2000** seconds.
+The default timeout for expanding the distribution list is **2000** milliseconds.
 
 To modify this timeout, create the following advanced setting for the selected policy:
 
 - Key: **OutlookGetEmailAddressesTimeOutMSProperty**
-- Value: *Integer, in seconds*
+- Value: *Integer, in milliseconds*
 
 Example PowerShell command, where your label policy is named "Global":
 
