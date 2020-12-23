@@ -178,9 +178,9 @@ The following fixes were delivered in version 2.9.109.0 of the [Azure Informatio
 
 - [Recommended labels](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) and [watermarking](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) are applied as expected in Outlook. 
 
-- Added support for the [OutlookBlockTrustedDomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) and [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) settings for contacts in distribution lists.
+- Added support for [finding recipients in Outlook distribution lists](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview), such as when [OutlookBlockTrustedDomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) and [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) settings are configured.
 
-    To configure this, set the [EnableOutlookDistributionListExpansion](clientv2-admin-guide-customizations.md#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) value to **true**. You may also want to raise the default timeout value, as defined in the [OutlookGetEmailAddressesTimeOutMSProperty](clientv2-admin-guide-customizations.md#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) setting.
+    When turning on this functionality, we recommend that you also raise the default timeout value, as defined in the [OutlookGetEmailAddressesTimeOutMSProperty](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) setting.
 
 - Updates to the [order of precedence](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved) used when more than one label policy is configured for a user, each with conflicting advanced settings.
 
