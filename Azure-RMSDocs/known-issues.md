@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/15/2020
+ms.date: 12/23/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -95,6 +95,7 @@ Publishing policies may take up to 24 hours.
 - [Maximum file sizes](#maximum-file-sizes)
 - [AIP viewer](#aip-viewer)
 - [Tracking and revoking document access](#tracking-and-revoking-document-access-public-preview)
+- [AIP client and OneDrive](#aip-client-and-onedrive)
 
 ### Maximum file sizes
 
@@ -142,6 +143,11 @@ Additionally, revoking access for one of the attachments also revokes access for
 
     In such cases, administrators may be able to locate the downloaded files using PowerShell to find the new ContentID values to track or revoke access.
 
+### AIP client and OneDrive
+
+If you have documents stored in OneDrive with a sensitivity label applied, and an administrator changes the label in the labeling policy to add protection, the newly applied protection is not automatically applied to the labeled document. 
+
+In such cases, re-label the document manually to apply the protection as needed.
 ## AIP for Windows and Office versions in extended support
 
 - [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
