@@ -86,4 +86,8 @@ For more information about how you can purchase or evaluate Azure Information Pr
 
 ## Next steps
 
-For more information, see [Terminology for Azure Information Protection](terminology.md).
+For more information, see:
+
+- [What is Azure Information Protection?](what-is-information-protection.md)
+- [What is Azure Rights Management?](what-is-azure-rms.md)
+- [Terminology for Azure Information Protection](terminology.md)
