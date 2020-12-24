@@ -136,7 +136,7 @@ For more information, see [Create a content scan job](../deploy-aip-scanner-conf
 
 ### Added support for additional sensitive information types
 
-We’ve added support for additional sensitive information types in Azure Information Protection, such as **Australia business number**, **Australia company number**, or **Austria identity card.**
+We’ve added support for additional sensitive information types in Azure Information Protection, such as **Australia business number**, **Australia company number**, or **Austria identity card**.
 
 For more information, see the [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in the Microsoft 365 documentation.
 
@@ -256,7 +256,7 @@ The **network discovery** service updates **Repository** reports with a list of 
 
 1. Make sure that you have Azure Information Protection analytics enabled.
 
-    In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview).**
+    In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview)**.
 
     For more information, see [Central reporting for Azure Information Protection (public preview)](../reports-aip.md).
 

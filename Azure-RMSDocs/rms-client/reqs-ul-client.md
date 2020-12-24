@@ -81,7 +81,7 @@ To install the Azure Information Protection unified labeling client, you must ha
         
 ## Windows 10 requirements
 
-Computers running Office 2010 require **Microsoft Online Services Sign-in Assistant version 7.250.4303.0,** which is included with the client installation. 
+Computers running Office 2010 require **Microsoft Online Services Sign-in Assistant version 7.250.4303.0**, which is included with the client installation. 
 
 If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection unified labeling client. 
 
