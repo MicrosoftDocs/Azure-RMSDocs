@@ -65,7 +65,7 @@ If the scanner stops in the middle unexpectedly and doesn't complete scanning a 
 
     For more information about how to view the current port range and increase the range, see [Settings that can be Modified to Improve Network Performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
-- **List view threshold**. For large SharePoint farms, you may need to increase the list view threshold. By default, the list view threshold is set to 5,000.
+- **List view threshold**. For large SharePoint farms, you may need to increase the list view threshold. By default, the list view threshold is set to **5,000**.
 
     For more information, see [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 
@@ -113,7 +113,9 @@ One of the following:
 
 **Solution**
 
-Make sure that you're authenticating using a token. When you run the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) command, make sure you use the token parameter on behalf of the scanner user.
+In order to have the scanner run non-interactively, you must authenticate using a token. 
+
+When you run the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) command, make sure you use the token parameter on behalf of the scanner user.
 
 For example:
 
@@ -160,7 +162,7 @@ The DLP policy either failed to download or is missing entirely.
 
 Check for errors with your authentication token, and refer to the relevant section for that error.
 
-If there are no token errors, make sure that the Date format on the scanner computer is set to use a slash (**/**).
+If there are no token errors, make sure that the **Date** format on the scanner computer is set to use a slash (**/**).
 
 For example, your dates should appear as **12/9/2020**, and not **12.9.2020** or **12-9-2020**.
 
@@ -234,7 +236,7 @@ If the file continues to grow, this means that the scanner is still processing d
 
 However, if the file is no longer growing, do the following:
 
-1. Take a dump of the scanner process to share with support.
+1. Export your log files using the [Export-AIPLogs](/powershell/module/azureinformationprotection/Export-AIPLogs) cmdlet to share your scanner processes with support.
 1. In the Azure portal, stop the scan. 
 1. On the scanner machine, restart the service.
 1. Open a support ticket and attach the dump files from the scanner process.
