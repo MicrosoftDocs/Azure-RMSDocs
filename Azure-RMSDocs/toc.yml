@@ -17,6 +17,8 @@
       href: requirements-applications.md
     - name: File types supported
       href: ./rms-client/clientv2-admin-guide-file-types.md
+    - name: Unified labeling client requirements
+      href: ./rms-client/reqs-ul-client.md
     - name: On-premises scanner requirements
       href: deploy-aip-scanner-prereqs.md
   - name: AIP is also known as ...
