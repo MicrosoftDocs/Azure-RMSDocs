@@ -132,6 +132,9 @@ Document tracking and options to revoke access are turned off for your tenant:
 - Access logs are not stored when protected documents that are already registered are opened. Access logs that were stored before turning off these features are still available. 
 - Admins will not be able to track or revoke access via PowerShell, and end-users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
 
+> [!NOTE]
+> To turn track and revoke back on, set the [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) to **true**, and also run the [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) cmdlet.
+>
 ## Next steps
 
 For more information, see:

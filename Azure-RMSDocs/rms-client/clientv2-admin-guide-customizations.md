@@ -2060,6 +2060,9 @@ However, protected documents that are already registered for tracking will conti
 
 This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
+> [!NOTE]
+> To turn track and revoke back on, set the **EnableTrackAndRevoke** to **true**, and also run the [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) cmdlet.
+>
 ## Next steps
 
 Now that you've customized the Azure Information Protection unified labeling client, see the following resources for additional information that you might need to support this client:
