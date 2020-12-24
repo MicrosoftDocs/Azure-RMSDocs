@@ -2035,8 +2035,6 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPa
 
 ## Turn off document tracking features (public preview)
 
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
-
 By default, document tracking features are turned on for your tenant. To turn them off, such as for privacy requirements in your orgnization or region, set the **EnableTrackAndRevoke** value to **False**.
 
 Once turned off, document tracking data will not longer be available in your organization, and users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
@@ -2052,6 +2050,15 @@ Example PowerShell command, where your label policy is named "Global":
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableTrackAndRevoke="False"}
 ```
+
+After setting this value to **False**, track and revoke is turned off as follows: 
+
+- Opening protected documents with the AIP unified labeling client no longer registers the documents for track and revoke.
+- End-users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
+
+However, protected documents that are already registered for tracking will continue to be track, and administrators can still revoke access from PowerShell. To full turn off track and revoke features, also run the [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) cmdlet.
+
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 ## Next steps
 
