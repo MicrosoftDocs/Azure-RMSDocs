@@ -70,6 +70,8 @@ If you do not see the option to **Revoke Access** in the **Sensitivity** menu, y
 
     For more information, see [User Guide: Download and install the Azure Information Protection client](install-client-app.md).
 
+- Your administrator may have [turned off tracking features](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant) in your organization.
+
 ## Revoking access where the document protection has been changed on a copy
 
 If another user had changed the label or the protection on a copy of the document, access is *not revoked* on that copy of the document. 

@@ -183,7 +183,7 @@ The following sections list the advanced settings described on this page by prod
 |**Performance improvements settings**     | - [Limit CPU consumption](#limit-cpu-consumption) <br>- [Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner) <br>- [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)        |
 |**Settings for integrations with other labeling solutions**     | - [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions) <br> - [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)    |
 |**AIP analytics settings**     |   - [Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) <br>- [Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)      |
-|**General settings**     | - [Add "Report an Issue" for users](#add-report-an-issue-for-users) <br>- [Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Change the local logging level](#change-the-local-logging-level) <br>- [Change which file types to protect](#change-which-file-types-to-protect)<br>- [Configure SharePoint timeouts](#configure-sharepoint-timeouts)<br>- [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps) <br>- [Enable removal of protection from compressed files](#enable-removal-of-protection-from-compressed-files) <br>-  [Preserve NTFS owners during labeling (public preview)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  [Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Specify a color for the label](#specify-a-color-for-the-label)<br>-  [Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label)<br>-  [Support for changing \<EXT>.PFILE to P\<EXT>](#additionalpprefixextensions)  <br>-  [Support for disconnected computers](#support-for-disconnected-computers)     <br>-  [Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)    |
+|**General settings**     | - [Add "Report an Issue" for users](#add-report-an-issue-for-users) <br>- [Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Change the local logging level](#change-the-local-logging-level) <br>- [Change which file types to protect](#change-which-file-types-to-protect)<br>- [Configure SharePoint timeouts](#configure-sharepoint-timeouts)<br>- [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps) <br>- [Enable removal of protection from compressed files](#enable-removal-of-protection-from-compressed-files) <br>-  [Preserve NTFS owners during labeling (public preview)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  [Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Specify a color for the label](#specify-a-color-for-the-label)<br>-  [Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label)<br>-  [Support for changing \<EXT>.PFILE to P\<EXT>](#additionalpprefixextensions)  <br>-  [Support for disconnected computers](#support-for-disconnected-computers)     <br>-  [Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Turn off document tracking features (public preview)](#turn-off-document-tracking-features-public-preview)   |
 |     |         |
 
 
@@ -203,7 +203,8 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |**EnableCustomPermissionsForCustomProtectedFiles**|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |**EnableLabelByMailHeader**|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |**EnableLabelBySharePointProperties**|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-| **EnableOutlookDistributionListExpansion** | [Expand Outlook distribution lists when searching for email recipients](#expand-outlook-distribution-lists-when-searching-for-email-recipients) |
+| **EnableOutlookDistributionListExpansion** | [Expand Outlook distribution lists when searching for email recipients](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) |
+| **EnableTrackAndRevoke** | [Turn off document tracking features (public preview)](#turn-off-document-tracking-features-public-preview) |
 |**HideBarByDefault**|[Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps)|
 |**JustificationTextForUserText** | [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels) |
 |**LogMatchedContent**|[Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
@@ -2025,6 +2026,36 @@ For example, if your policy is named **Global**, the following sample PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPaneEnabled="true"}
 ```
 
+## Turn off document tracking features (public preview)
+
+By default, document tracking features are turned on for your tenant. To turn them off, such as for privacy requirements in your orgnization or region, set the **EnableTrackAndRevoke** value to **False**.
+
+Once turned off, document tracking data will not longer be available in your organization, and users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
+
+For the selected label policy, specify the following strings:
+
+- Key: **EnableTrackAndRevoke**
+
+- Value: **False**
+
+Example PowerShell command, where your label policy is named "Global":
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableTrackAndRevoke="False"}
+```
+
+After setting this value to **False**, track and revoke is turned off as follows: 
+
+- Opening protected documents with the AIP unified labeling client no longer registers the documents for track and revoke.
+- End-users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
+
+However, protected documents that are already registered for tracking will continue to be track, and administrators can still revoke access from PowerShell. To full turn off track and revoke features, also run the [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) cmdlet.
+
+This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+
+> [!NOTE]
+> To turn track and revoke back on, set the **EnableTrackAndRevoke** to **true**, and also run the [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) cmdlet.
+>
 ## Next steps
 
 Now that you've customized the Azure Information Protection unified labeling client, see the following resources for additional information that you might need to support this client:
