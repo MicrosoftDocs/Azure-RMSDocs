@@ -58,7 +58,7 @@ To disable Exploit protection via PowerShell, run the following:
 Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
 ```
 
-For more information, see [Additional prerequisites for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
+For more information, see [Microsoft .NET Framework requirements](rms-client/reqs-ul-client.md#microsoft-net-framework-requirements).
 
 ## PowerShell support for the Azure Information Protection client
 

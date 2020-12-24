@@ -134,11 +134,11 @@ Additionally, Server Core and Nano Server are not supported.
 
 ### Additional requirements per client
 
-Each Azure Information Protection client has additional prerequisites. For details, see:
+Each Azure Information Protection client has additional requirements. For details, see:
 
-- [Azure Information Protection unified labeling client prerequisites](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
+- [Azure Information Protection unified labeling client requirements](./rms-client/reqs-ul-client.md)
 
-- [Azure Information Protection client prerequisites](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
+- [Azure Information Protection client requirements](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
 ## Applications
 

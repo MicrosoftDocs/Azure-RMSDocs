@@ -136,7 +136,7 @@ For more information, see [Create a content scan job](../deploy-aip-scanner-conf
 
 ### Added support for additional sensitive information types
 
-We’ve added support for additional sensitive information types in Azure Information Protection, such as **Australia business number**, **Australia company number**, or **Austria identity card.**
+We’ve added support for additional sensitive information types in Azure Information Protection, such as **Australia business number**, **Australia company number**, or **Austria identity card**.
 
 For more information, see the [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in the Microsoft 365 documentation.
 
@@ -256,7 +256,7 @@ The **network discovery** service updates **Repository** reports with a list of 
 
 1. Make sure that you have Azure Information Protection analytics enabled.
 
-    In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview).**
+    In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview)**.
 
     For more information, see [Central reporting for Azure Information Protection (public preview)](../reports-aip.md).
 
@@ -449,11 +449,12 @@ For more requirement details, see [Firewalls and network infrastructure requirem
 
 - Issue where only the first page of content of a PDF was being used for applying autoclassification rules is now resolved, and autoclassification based on all content in the PDF now proceeds as expected. For more information about classification and labeling, see the [classification and labeling FAQ](../faqs-infoprotect.md).
 
-- When multiple Exchange accounts are configured and the Azure Information Protection Outlook client is enabled, mails are sent from the secondary account as expected. For more information about configuring the unified labeling client with Outlook, see [Additional prerequisites for the Azure Information Protection unified labeling client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
+- When multiple Exchange accounts are configured and the Azure Information Protection Outlook client is enabled, mails are sent from the secondary account as expected. For more information about configuring the unified labeling client with Outlook, see [Configure your group policy to prevent disabling AIP](reqs-ul-client.md#configure-your-group-policy-to-prevent-disabling-aip).
 
 - When a document with a higher confidentiality label is dragged and dropped into an email, the email now automatically receives the higher confidentiality label as expected. For more information about labeling client features, see the [labeling client comparison table](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-- Custom permissions are now applied to emails as expected, when email addresses include both an apostrophe (') and period (.) For more information about configuring the unified labeling client with Outlook, see [Additional prerequisites for the Azure Information Protection unified labeling client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
+- Custom permissions are now applied to emails as expected, when email addresses include both an apostrophe (') and period (.) For more information about configuring the unified labeling client with Outlook, see [Configure your group policy to prevent disabling AIP](reqs-ul-client.md#configure-your-group-policy-to-prevent-disabling-aip).
+
 
 - By default, a file's NTFS owner is lost when the file is labeled by the unified labeling scanner, PowerShell, or the File Explorer extension. Now you can configure the system to keep the file's NTFS owner by setting the new **[UseCopyAndPreserveNTFSOwner](clientv2-admin-guide-customizations.md#preserve-ntfs-owners-during-labeling-public-preview)** advanced setting to **true**.
 
