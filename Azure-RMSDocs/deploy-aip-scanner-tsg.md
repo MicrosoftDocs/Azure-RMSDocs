@@ -218,7 +218,7 @@ However, if the file is no longer growing, do the following:
     - Run the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet to run diagnostic checks on your scanner, and export and zip log files for any errors that are found.
     - Run the [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) cmdlet to export and zip log files from the **%localappdata%\Microsoft\MSIP\Logs** directory.
 
-1. Create a dump file for the MSIP Scanner service. In the Windows Task Manager, right-click the **MSIP Scanner service,** and select **Create dump file**.
+1. Create a dump file for the MSIP Scanner service. In the Windows Task Manager, right-click the **MSIP Scanner service**, and select **Create dump file**.
 
 1. In the Azure portal, stop the scan. 
 
