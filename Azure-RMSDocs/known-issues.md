@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/15/2020
+ms.date: 12/23/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -90,17 +90,11 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 
 Publishing policies may take up to 24 hours.
 
-## Known issues in the AIP client
-
-- [Maximum file sizes](#maximum-file-sizes)
-- [AIP viewer](#aip-viewer)
-- [Tracking and revoking document access](#tracking-and-revoking-document-access-public-preview)
-
-### Maximum file sizes
+## Maximum file sizes
 
 Files of over 2 GB are supported for protection, but not decryption.
 
-### AIP viewer
+## Known issues for the AIP viewer
 
 The AIP viewer displays images in portrait mode, and some wide, landscape-view images may appear to be stretched.
 
@@ -113,7 +107,7 @@ For more information, see:
 - [**Classic client**: View protected files with the Azure Information Protection viewer](rms-client/client-view-use-files.md)
 - [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md)
 
-### Tracking and revoking document access (Public preview)
+## Known issues for track and revoke features (Public preview)
 
 Tracking and revoking document access using the unified labeling client has the following known issues:
 
@@ -142,6 +136,11 @@ Additionally, revoking access for one of the attachments also revokes access for
 
     In such cases, administrators may be able to locate the downloaded files using PowerShell to find the new ContentID values to track or revoke access.
 
+### Knowns issues for the AIP client and OneDrive
+
+If you have documents stored in OneDrive with a sensitivity label applied, and an administrator changes the label in the labeling policy to add protection, the newly applied protection is not automatically applied to the labeled document. 
+
+In such cases, re-label the document manually to apply the protection as needed.
 ## AIP for Windows and Office versions in extended support
 
 - [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
