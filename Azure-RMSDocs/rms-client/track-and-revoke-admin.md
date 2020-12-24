@@ -6,7 +6,7 @@ description: Describes how administrators can track document access for protecte
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/20/2020
+ms.date: 12/24/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -118,6 +118,23 @@ Clear-AipServiceDocumentRevoke -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8
 
 Document access is granted to the user you defined in the **IssuerName** parameter.
 
+## Turn off track and revoke features for your tenant
+
+If you need to turn off track and revoke features for your tenant, such as for privacy requirements in your organization or region, perform both of the following steps:
+
+1. Run the [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) cmdlet.
+
+1. Set the [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) advanced client setting to **false**. 
+
+Document tracking and options to revoke access are turned off for your tenant:
+
+- Opening protected documents with the AIP unified labeling client no longer registers the documents for track and revoke.
+- Access logs are not stored when protected documents that are already registered are opened. Access logs that were stored before turning off these features are still available. 
+- Admins will not be able to track or revoke access via PowerShell, and end-users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
+
+> [!NOTE]
+> To turn track and revoke back on, set the [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) to **true**, and also run the [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) cmdlet.
+>
 ## Next steps
 
 For more information, see:

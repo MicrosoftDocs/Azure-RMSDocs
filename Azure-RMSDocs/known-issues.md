@@ -126,15 +126,13 @@ Additionally, revoking access for one of the attachments also revokes access for
 
 #### Documents accessed via SharePoint
     
-- Protected documents that are uploaded to SharePoint lose their ContentID value. 
+- Protected documents that are uploaded to SharePoint lose their **ContentID** value, and access cannot be track or revoked.
 
-    This means that data is not tracked, and any access revocation will not apply for the file stored in SharePoint.
-
-- If a user downloads the file from SharePoint and accesses it from their local machine, a new ContentID is applied to the document when they open it locally. 
+- If a user downloads the file from SharePoint and accesses it from their local machine, a new **ContentID** is applied to the document when they open it locally. 
     
-    Using the original ContentID value to track data will not include any access performed for the user's downloaded file. Additionally, revoking access based on the original ContentID value will not revoke access for any of the downloaded files.
+    Using the original **ContentID** value to track data will not include any access performed for the user's downloaded file. Additionally, revoking access based on the original **ContentID** value will not revoke access for any of the downloaded files.
 
-    In such cases, administrators may be able to locate the downloaded files using PowerShell to find the new ContentID values to track or revoke access.
+    In such cases, administrators may be able to locate the downloaded files using PowerShell to find the new **ContentID** values to track or revoke access.
 
 ### Knowns issues for the AIP client and OneDrive
 
