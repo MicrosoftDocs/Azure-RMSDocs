@@ -124,4 +124,4 @@ For more information, see:
 
 - [AIP unified labeling client user guide](clientv2-user-guide.md)
 - [AIP unified labeling client administrator guide](clientv2-admin-guide.md)
-- [Known issues for tracking and revoking document access](../known-issues.md#tracking-and-revoking-document-access-public-preview)
+- [Known issues for track and revoke features](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)
