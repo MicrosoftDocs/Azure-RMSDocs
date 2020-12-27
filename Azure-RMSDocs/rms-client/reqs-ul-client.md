@@ -6,7 +6,7 @@ description: Information for admins who need to understand the additional system
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/21/2020
+ms.date: 12/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -56,7 +56,9 @@ If you are installing the [Azure Information Protection Viewer](clientv2-view-us
 
 The AIP client is not supported on machines with .NET 2 or 3 that have [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. 
 
-If your machine has .NET 2 or 3 in addition to a .NET 4.x version listed above, make sure to [disable Exploit protection](../known-issues.md#known-issues-for-aip-and-exploit-protection) before installing the AIP client.
+In such cases, we recommend that you upgrade your .NET version. 
+
+If you must keep your .NET version 2 or 3,  make sure to [disable Exploit protection](../known-issues.md#known-issues-for-aip-and-exploit-protection) before installing the AIP client.
 
 ## Windows PowerShell minimum requirements
 
