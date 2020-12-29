@@ -34,7 +34,7 @@ ms.custom: admin
 > [!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
-**To deploy the AIP classic client**, open a support ticket to get download access.
+**To obtain and deploy the most up-to-date and supported version of the AIP classic client**, open a support ticket to get download access. 
 
 For more information, see [Upgrading and maintaining the Azure Information Protection client](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
@@ -65,16 +65,6 @@ Each general availability (GA) version of the Azure Information Protection clien
 
 The date format used on this page is *month/day/year*.
 
-Starting 6/2/2019, the labeling service for Azure Information Protection requires connections that use TLS 1.2.
-
-All client versions from 1.4.21.0 released 03/15/2017 support TLS 1.2. Client versions **1.3.155.2**, **1.2.4.0**, and **1.1.23.0** do not use TLS 1.2 and therefore can no longer download the Azure Information Protection policy.
-
 ## Next steps
 
 Not sure if this is the right client to install?  See [Choose your Windows labeling solution](use-client.md#choose-your-windows-labeling-solution).
-
-For more information about installing and using the client: 
-
-- For users: [Install the Azure Information Protection classic client](install-client-app.md)
-
-- For admins: [Azure Information Protection classic client administrator guide](client-admin-guide.md)

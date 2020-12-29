@@ -147,12 +147,12 @@ In such cases, re-label the document manually to apply the protection as needed.
 
     For more information, check with your support contact.
 
-- [**Office 2010 is currently in extended support**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
+- [**Office 2010 extended support ended on October 13, 2020.**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
 
-    This support will end on Oct. 13, 2020, and will not be extended. Additionally, ESU will not be offered for Office 2010, and we strongly encourage you to upgrade to a newer version of Office 365. 
+    This support will not be extended, and ESU will not be offered for Office 2010. 
+
+    We strongly encourage you to upgrade to a newer version of Office 365. 
     
-    For customers who are currently running Office 2010 in extended support, AIP support is available until October 13, 2020. 
-
     For more information, check with your support contact.
 
 ## AIP-based Conditional Access policies
