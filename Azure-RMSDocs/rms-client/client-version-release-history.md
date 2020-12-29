@@ -46,6 +46,7 @@ Each general availability (GA) version of the Azure Information Protection clien
 
 |Client version|Date released|
 |--------------|-------------|
+|1.54.59.0 | 02/12/2020 |
 |1.54.33.0 | 10/23/2019|
 |1.53.10|07/15/2019|
 |1.48.204.0|04/16/2019|
@@ -60,6 +61,7 @@ Each general availability (GA) version of the Azure Information Protection clien
 |1.3.155.2|02/08/2017|
 |1.2.4.0.0|10/27/2016|
 |1.1.23.0|10/01/2016|
+| | |
 
 The date format used on this page is *month/day/year*.
 
@@ -67,39 +69,12 @@ Starting 6/2/2019, the labeling service for Azure Information Protection require
 
 All client versions from 1.4.21.0 released 03/15/2017 support TLS 1.2. Client versions **1.3.155.2**, **1.2.4.0**, and **1.1.23.0** do not use TLS 1.2 and therefore can no longer download the Azure Information Protection policy.
 
-### Release history
-
-Use the following information to see what's new or changed for a supported release of the Azure Information Protection classic client for Windows. The most current release is listed first.
-
-Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
-
-> [!NOTE]
-> Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
->  
-> For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
-
-## Version 1.54.59.0
-
-**Released**: 02/12/2020
-
-This version includes fixes only. 
-
-**Fixes**:
-
-- Issue where files protected by IQP displayed **recover** and/or **save as** options after protection was removed, are resolved. 
-
-- Numerous product feature tooltip texts were improved for clarity and ease of understanding. 
-
-- Issues surrounding client stability when working with protected PDF files is resolved. 
-
-- Protection labels are now removed as expected if the label is deleted on the email during the email creation process. 
-
 ## Next steps
 
 Not sure if this is the right client to install?  See [Choose your Windows labeling solution](use-client.md#choose-your-windows-labeling-solution).
 
 For more information about installing and using the client: 
 
-- For users: [Download and install the client](install-client-app.md)
+- For users: [Install the Azure Information Protection classic client](install-client-app.md)
 
-- For admins: [Azure Information Protection client administrator guide](client-admin-guide.md)
+- For admins: [Azure Information Protection classic client administrator guide](client-admin-guide.md)
