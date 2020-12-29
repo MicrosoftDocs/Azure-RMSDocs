@@ -11,11 +11,11 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: aiplabels
