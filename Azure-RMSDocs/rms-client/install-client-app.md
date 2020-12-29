@@ -17,7 +17,6 @@ ROBOTS: NOINDEX
 # optional metadata
 
 #audience:
-#audience:
 #ms.devlang:
 ms.subservice: v1client
 ms.reviewer: eymanor
