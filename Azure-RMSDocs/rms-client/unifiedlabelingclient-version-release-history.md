@@ -185,7 +185,7 @@ The following fixes were delivered in version 2.9.109.0 of the [Azure Informatio
 
 - Outlook Preview mode now generates [audit logs for discovery events](../audit-logs.md#discover-audit-logs)
 
-- [Recommended labels](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) and [watermarking](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) are applied as expected in Outlook. 
+- [Recommended labels](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) and [visual marking](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) are applied as expected in Outlook. 
 
 - Added support for [finding recipients in Outlook distribution lists](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview), such as when [OutlookBlockTrustedDomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) and [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) settings are configured.
 
