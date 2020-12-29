@@ -11,10 +11,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
+#audience:
 #audience:
 #ms.devlang:
 ms.subservice: fci
