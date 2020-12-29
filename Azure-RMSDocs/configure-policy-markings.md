@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/29/2020
+ms.date: 12/29/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
