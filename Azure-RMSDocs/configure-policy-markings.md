@@ -107,7 +107,7 @@ You can use the following variables in the text string for your header, footer, 
 
 - `${Item.Location}` for the path and file name for documents, and the email subject for emails. For example: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` for the display name owner of the document or email, by the Windows user currently signed in. For example: Rosalind Simone
+- `${User.Name}` for the display name of the owner of the document or email, by the Windows user currently signed in. For example: Rosalind Simone
 
 - `${User.PrincipalName}` for the owner of the document or email, by the Azure Information Protection client signed in email address (UPN). For example: rsimone@vanarsdelltd.com
 
