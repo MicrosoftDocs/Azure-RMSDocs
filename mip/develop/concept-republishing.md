@@ -1,11 +1,11 @@
 ---
 title: Republishing in MIP SDK
 description: This article will help you understand the scenario of how to re-use protection handler for republishing scenarios.
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 ---
 
 # Republishing (C++)
