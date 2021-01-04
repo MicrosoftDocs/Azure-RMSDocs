@@ -1,8 +1,8 @@
 ---
 title: Concepts - Authentication Scenarios for Microsoft Information Protection (MIP) SDK C# clients
 description: Technical details about authentication scenarios for Microsoft Information Protection SDK C# client applications.
-author: Pathak-Aniket
-ms.author: v-anikep
+author: msmbaldwin
+ms.author: mbaldwin
 ms.date: 09/02/2020
 ms.topic: conceptual
 ms.service: information-protection
