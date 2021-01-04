@@ -6,15 +6,16 @@ description: When you assign a label to a document or email message, you can sel
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/29/2020
-ms.topic: conceptual
+ms.date: 12/29/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: aiplabels
@@ -27,10 +28,13 @@ ms.custom: admin
 
 # How to configure a label for visual markings for Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->[!NOTE]
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from the Microsoft 365 documentation.*
+
+> [!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark.
 
@@ -71,7 +75,7 @@ For documents, the visual markings are applied as follows:
     The exception is when you use [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office apps for files that are saved in Microsoft SharePoint, OneDrive for work or school, or OneDrive for home: When AutoSave is on, visual markings are not applied unless you configure the [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) to turn on classification to run continuously in the background.
 
 > [!NOTE]
-> For more information about support for visual markings in the AIP clients and in built-in labeling Office functionality, see [Compare the labeling clients for Windows computers](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers).
+> For more information about support for visual markings in the AIP clients and in built-in labeling Office functionality, see [Choose your Windows labeling solution](rms-client/use-client.md#choose-your-windows-labeling-solution).
 > 
 
 ## To configure visual markings for a label
@@ -104,7 +108,7 @@ You can use the following variables in the text string for your header, footer, 
 
 - `${Item.Location}` for the path and file name for documents, and the email subject for emails. For example: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` for the owner of the document or email, by the Windows signed in user name. For example: rsimone
+- `${User.Name}` for the display name of the owner of the document or email, by the Windows user currently signed in. For example: Rosalind Simone
 
 - `${User.PrincipalName}` for the owner of the document or email, by the Azure Information Protection client signed in email address (UPN). For example: rsimone@vanarsdelltd.com
 
@@ -114,7 +118,7 @@ You can use the following variables in the text string for your header, footer, 
 >This syntax is case-sensitive.
 
 >[!TIP]
-> You can also use a [field code to insert the label name](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) into a document or template.
+> You can also use a [field code to insert the label name](faqs-classic.md#can-i-create-a-document-template-that-automatically-includes-the-classification) into a document or template.
 
 ## Setting different visual markings for Word, Excel, PowerPoint, and Outlook
 
@@ -131,19 +135,19 @@ ${If.App.<application type>}<your visual markings text> ${If.End}
 
 Examples:
 
-- **Set header text for Word documents only:**
+- **Set header text for Word documents only**:
 
     `${If.App.Word}This Word document is sensitive ${If.End}`
 
     In Word document headers only, the label applies the header text "This Word document is sensitive". No header text is applied to other Office applications.
 
-- **Set footer text for Word, Excel, and Outlook, and different footer text for PowerPoint:**
+- **Set footer text for Word, Excel, and Outlook, and different footer text for PowerPoint**:
 
     `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential. ${If.End}`
 
     In Word, Excel, and Outlook, the label applies the footer text "This content is confidential." In PowerPoint, the label applies the footer text "This presentation is confidential."
 
-- **Set specific watermark text for Word and PowerPoint, and then watermark text for Word, Excel, and PowerPoint:**
+- **Set specific watermark text for Word and PowerPoint, and then watermark text for Word, Excel, and PowerPoint**:
 
     `${If.App.WP}This content is ${If.End}Confidential`
 

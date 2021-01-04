@@ -3,11 +3,11 @@
 
 title: Migrate AD RMS-Azure Information Protection - Phase 3
 description: Phase 3 of migrating from AD RMS to Azure Information Protection, covering step 7 from Migrating from AD RMS to Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/05/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
@@ -26,25 +26,41 @@ ms.custom: admin
 ---
 # Migration phase 3 - client-side configuration
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Use the following information for Phase 3 of migrating from AD RMS to Azure Information Protection. These procedures cover step 7 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 ## Step 7. Reconfigure Windows computers to use Azure Information Protection
 
-For Windows computers that use Microsoft 365 apps, Office 2019, or Office 2016 click-to-run desktop apps:
+Reconfigure your Windows computers to use Azure Information Protection using one of the following methods:
 
-- You can reconfigure these clients to use Azure Information Protection by using DNS redirection. This is the preferred method for client migration because it is the simplest. However, this method is restricted to Office 2016 (or later) click-to-run desktop apps for Windows computers.
+- **DNS redirection**. Simplest and preferred method, when supported. 
 
-    This method requires you to create a new SRV record, and set an NTFS deny permission for users on the AD RMS publishing endpoint.
+    Supported for Windows computers that use Office 2016 or later click-to-run desktop apps, including:
 
-- For Windows computers that don't use Office 2019 or Office 2016 click-to-run:
+    - Microsoft 365 apps
+    - Office 2019
+    - Office 2016 click to run desktop apps
 
-    You cannot use DNS redirection and instead, must use registry edits. If you have a mix of Office versions that can and cannot use DNS redirection, you can use this single method for all Windows computers, or a combination of DNS redirection and editing the registry. 
+    Requires you to create a new SRV record and set an NTFS deny permission for users on the AD RMS publishing endpoint.
+
+    For more information, see [Client reconfiguration by using DNS redirection](#client-reconfiguration-by-using-dns-redirection).
+
+- **Registry edits**. Relevant for all supported environments, including both:
+
+    - Windows computers that use Office 2016 or later click-to-run desktop apps, as listed above
+    - Windows computers that use other apps
     
-    The registry changes are made easier for you by editing and deploying scripts that you can download. 
+    Make the required registry changes manually, or edit and deploy downloadable scripts to make the registry changes for you.
 
-See the following sections for more information about how to reconfigure Windows clients.
+    For more information, see [Client reconfiguration by using registry edits](#client-reconfiguration-by-using-registry-edits).
+
+
+> [!TIP]
+> If you have a mixture of Office versions that can and cannot use DNS redirection, you can either use a combination of DNS redirection and editing the registry, or edit the registry as a single method for all Windows computers.
+
 
 ## Client reconfiguration by using DNS redirection
 
@@ -75,6 +91,7 @@ This method is suitable only for Windows clients that run Microsoft 365 apps and
     |**Weight**|0|  
     |**Port number**|80|  
     |**Host offering this service**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
+    | | |
 
 2. Set a deny permission on the AD RMS publishing endpoint for users running Microsoft 365 apps or Office 2016 (or later):
 

@@ -1,19 +1,20 @@
 ---
 # required metadata
 
-title: Azure Information Protection client - Version history & support policy
-description: See what's new or changed in a release of the Azure Information Protection client for Windows, and understand the lifecycle policy for support. 
+title: Azure Information Protection classic client - Version history & support policy
+description: See what's new or changed in a release of the Azure Information Protection classic client, and understand the lifecycle policy for support. 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/17/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:git
 #ms.devlang:
 ms.subservice: v1client
@@ -24,20 +25,17 @@ ms.custom: admin
 
 ---
 
-# Azure Information Protection client: Version release history and support policy
+# Azure Information Protection classic client: Version release history and support policy
 
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client version history](unifiedlabelingclient-version-release-history.md).*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
-> [!TIP]
-> Interested in using the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center? When you download and then install the unified labeling client from the Microsoft Download Center, you can upgrade your Azure Information Protection client to the [unified labeling client](unifiedlabelingclient-version-release-history.md).
-
-**To deploy the AIP classic client,** open a support ticket to get download access.
+**To deploy the AIP classic client**, open a support ticket to get download access.
 
 For more information, see [Upgrading and maintaining the Azure Information Protection client](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
@@ -45,12 +43,11 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 
 Each general availability (GA) version of the Azure Information Protection client is supported for up to six months after the release of the subsequent GA version. With the exception of this section, the documentation does not include information about unsupported versions of the client. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
 
-Preview versions should not be deployed for end users on production networks. Instead, use the latest preview version to see and try new functionality or fixes that are coming in the next GA version. Preview versions that are not current are not supported.
-
 ##### General availability versions that are no longer supported:
 
 |Client version|Date released|
 |--------------|-------------|
+|1.54.33.0 | 10/23/2019|
 |1.53.10|07/15/2019|
 |1.48.204.0|04/16/2019|
 |1.41.51.0|11/27/2018|
@@ -73,7 +70,9 @@ All client versions from 1.4.21.0 released 03/15/2017 support TLS 1.2. Client ve
 
 ### Release history
 
-Use the following information to see what's new or changed for a supported release of the Azure Information Protection client for Windows. The most current release is listed first.
+Use the following information to see what's new or changed for a supported release of the Azure Information Protection classic client for Windows. The most current release is listed first.
+
+Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
@@ -82,7 +81,7 @@ Use the following information to see what's new or changed for a supported relea
 
 ## Version 1.54.59.0
 
-**Released**: 12/02/2020
+**Released**: 02/12/2020
 
 This version includes fixes only. 
 
@@ -96,19 +95,9 @@ This version includes fixes only.
 
 - Protection labels are now removed as expected if the label is deleted on the email during the email creation process. 
 
-## Version 1.54.33.0
-
-**Released**: 10/23/2019
-
-Supported through 08/12/2020
-
-This version includes the MSIPC version 1.0.4008.0813 of the RMS client.
-
-This release has general fixes for stability and performance.
-
 ## Next steps
 
-Not sure if this is the right client to install?  See [Choose which labeling client to use for Windows computers](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+Not sure if this is the right client to install?  See [Choose your Windows labeling solution](use-client.md#choose-your-windows-labeling-solution).
 
 For more information about installing and using the client: 
 

@@ -1,20 +1,21 @@
 ---
 # required metadata
 
-title: Download & install the Azure Information Protection client
-description: Instructions for users to install the Azure Information Protection client for Windows, so that you can classify and protect your documents and emails. 
+title: Download & install the Azure Information Protection classic client
+description: Instructions for users to install the Azure Information Protection classic client for Windows, so that you can classify and protect your documents and emails. 
 author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/17/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: v1client
@@ -25,12 +26,14 @@ ms.custom: user
 
 ---
 
-# User Guide: Download and install the Azure Information Protection client
+# User Guide: Download and install the Azure Information Protection classic client
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling user guide](install-unifiedlabelingclient-app.md).*
 
+> [!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 If your administrator does not install the Azure Information Protection client for you, you can do this yourself. You must be a local administrator for your PC to install this client so that it can label and protect your documents and emails.
 
@@ -56,9 +59,9 @@ To deploy the AIP classic client, open a support ticket to get download access.
 
 1. Click **Close**. Before you start to use the Azure Information Protection client:    
 
-    - If your computer runs Office 2010, restart your computer and then go to the next section for your final step.    
+    - **If your computer runs Office 2010**, restart your computer and then go to the [next section](#installing-the-azure-information-protection-client-with-office-2010) for your final step.  
         
-    - For other versions of Office, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use the client to label and protect your documents and emails.    
+    - **For other versions of Office**, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use the client to label and protect your documents and emails.    
 
 ### Installing the Azure Information Protection client with Office 2010    
 After you have installed the Azure Information Protection client by using the previous instructions:    
@@ -70,6 +73,8 @@ After you have installed the Azure Information Protection client by using the pr
 3. If you see a **User Access Control** dialog box, click **Yes** so that the Azure Information Protection client can update the registry.
 
 Your installation is now complete and you can use Azure Information Protection to label and protect your documents and emails.
+
+For more information, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ## Other instructions    
 More how-to instructions from the Azure Information Protection user guide:

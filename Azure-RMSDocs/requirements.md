@@ -6,7 +6,7 @@ description: Identify the prerequisites required to deploy Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/21/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,9 @@ ms.custom: admin
 
 # Azure Information Protection requirements
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>****Applies to***: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 Before deploying Azure Information Protection, ensure that your system meets the following prerequisites:
 
@@ -41,7 +43,7 @@ Before deploying Azure Information Protection, ensure that your system meets the
 
 You must have one of the following, depending on the Azure Information Protection features you'll be using:
 
-- **An [Azure Information Protection plan](https://azure.microsoft.com/pricing/details/information-protection/)**. Required for classification, labeling, and protection by using the Azure Information Protection scanner or client (classic, or unified labeling)
+- **An [Azure Information Protection plan](https://azure.microsoft.com/pricing/details/information-protection/)**. Required for classification, labeling, and protection by using the Azure Information Protection scanner or client.
 
 - **An [Office 365 plan that includes Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)**. Required for protection only.
 
@@ -50,9 +52,11 @@ To verify that your subscription includes the Azure Information Protection featu
 If you have questions about licensing, read through the [frequently asked questions](https://azure.microsoft.com/pricing/details/information-protection#faq) for licensing.
 
 > [!TIP]
-> Looking to see if your Microsoft 365 plan or Exchange Online standalone plan supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
+> Looking to see if your plan supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
 >
 > - [Exchange Online Service Description](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description)
+>
+> - [Microsoft 365 Compliance Licensing Comparison](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-business-service-description)
 >
 > - [Office 365 Education](/office365/servicedescriptions/office-365-platform-service-description/office-365-education)
 >
@@ -70,10 +74,11 @@ To support authentication and authorization for Azure Information Protection, yo
 
 Conditional access is supported in preview for documents protected by Azure Information Protection. For more information, see: [I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
-Additional prerequisites are required for specific scenarios, such as when using Office 2010, certificate-based or multi-factor authentication, or when UPN values don't match user email addresses. For more information, see [Additional Azure AD requirements for Azure Information Protection](requirements-azure-ad.md).
+Additional prerequisites are required for specific scenarios, such as when using certificate-based or multi-factor authentication, when UPN values don't match user email addresses, or when using [Office 2010](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 For more information, see:
 
+- [Additional Azure AD requirements for Azure Information Protection](requirements-azure-ad.md).
 - [What is Azure AD Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Integrate on-premises Active Directory domains with Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
@@ -88,7 +93,7 @@ User computers or mobile devices must run on an operating system that supports A
 
 ### Supported operating systems for client devices
 
-The following operating systems support both the Azure Information Protection unified labeling and the Azure Information Protection clients: 
+The Azure Information Protection clients for Windows are supported are the following operating systems:
 
 - **Windows 10** (x86, x64). Handwriting is not supported in the Windows 10 RS4 build and later.
  
@@ -101,8 +106,6 @@ The following operating systems support both the Azure Information Protection un
 - **Windows Server 2016**
 
 - **Windows Server 2012 R2** and **Windows Server 2012**
-
-[Both clients](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) let users classify and label their documents and emails.
 
 For details about support in earlier versions of Windows, contact your Microsoft account or support representative.
 
@@ -131,19 +134,17 @@ Additionally, Server Core and Nano Server are not supported.
 
 ### Additional requirements per client
 
-Each Azure Information Protection client has additional prerequisites. For details, see:
+Each Azure Information Protection client has additional requirements. For details, see:
 
-- [Azure Information Protection unified labeling client prerequisites](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
+- [Azure Information Protection unified labeling client requirements](./rms-client/reqs-ul-client.md)
 
-- [Azure Information Protection client prerequisites](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
+- [Azure Information Protection client requirements](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
 ## Applications
 
 The Azure Information Protection clients can label and protect documents and emails by using Microsoft **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office editions:
 
-- **Office apps minimum version 1805**, build 9330.2078 from Microsoft 365 Apps for Business or Microsoft 365 Business Premium. 
-
-    This edition is supported only when the user is assigned a license for Azure Rights Management, also known as Azure Information Protection for Microsoft 365.
+- **Office apps**, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), from Microsoft 365 Apps for Business or Microsoft 365 Business Premium, when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
 
 - **Microsoft 365 Apps for Enterprise**
 
@@ -157,13 +158,13 @@ The Azure Information Protection clients can label and protect documents and ema
 
 Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only, and labels that apply protection are not displayed for users. 
 
-These labels would have otherwise been displayed on the Azure Information Protection bar or in the unified labeling client on the Office ribbon (from the **Protect** button in the classic client or the **Sensitivity** button in the unified labeling client). 
+Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client, or the **Protect** button in the classic client.
 
-For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
+For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md) and [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ### Office features and capabilities not supported
 
-- The Azure Information Protection clients, including both classic and unified labeling, do not support multiple versions of Office on the same computer, or switching user accounts in Office.
+- The Azure Information Protection clients for Windows do not support multiple versions of Office on the same computer, or switching user accounts in Office.
 
 - The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.
 
@@ -179,10 +180,10 @@ Azure Information Protection has the following additional requirements:
 
     To support **Proxy.pac** files when using a proxy to acquire a token, add the following new registry key:
 
-    - **Path:** `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
-    - **Key:** `UseDefaultCredentialsInProxy`
-    - **Type:** `DWORD`
-    - **Value:** `1`
+    - **Path**: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
+    - **Key**: `UseDefaultCredentialsInProxy`
+    - **Type**: `DWORD`
+    - **Value**: `1`
     
 - **TLS client-to-service connections**. Do not terminate any TLS client-to-service connections, for example to perform packet-level inspection, to the **aadrm.com** URL. Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
      
@@ -222,13 +223,14 @@ For other, non-migration scenarios, where both services are active in the same o
 
 ### Service Tags
 
-Make sure to allow access to all ports for the following Service Tags:
+If you are using an Azure endpoint and an NSG, make sure to allow access to all ports for the following Service Tags:
 
 - **AzureInformationProtection**
 - **AzureActiveDirectory**
 - **AzureFrontDoor.Frontend**
 
-The Azure Information Protection service also depends on two specific IP addresses:
+Additionally, in this case, the Azure Information Protection service also depends on two specific IP addresses:
+
  - **13.107.6.181** 
  - **13.107.9.181**
  - **Port 443**, for HTTPS traffic

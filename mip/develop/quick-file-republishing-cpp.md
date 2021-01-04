@@ -1,6 +1,6 @@
 ---
 title: How to - Republishing scenario C++
-description: This article will help you understand the scenario of how to re-use protection handler for republishing scenarios.
+description: This article will help you understand the scenario of how to re-use protection handler for republishing scenarios (C++).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart

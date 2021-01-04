@@ -1,6 +1,6 @@
 ---
 title: Quickstart - List protection templates available to an authenticated user in a Microsoft Information Protection (MIP) tenant using C++ MIP SDK
-description: A quickstart showing you how to use the Microsoft Information Protection C++ SDK Protection API to list the protection templates available to a user.
+description: A quickstart showing you how to use the Microsoft Information Protection C++ SDK Protection API to list the protection templates available to a user (C++)
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart

@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
@@ -27,14 +27,19 @@ ms.custom: admin
 
 # Configuring usage rights for Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> 
+> For completeness, this article includes values from the Azure classic portal, which was retired January 08, 2018.
 
 When you configure sensitivity labels or protection templates for encryption, you select the usage rights that will then be automatically applied when the label or template is selected by users, administrators, or configured services. For example, in the Azure portal you can select roles that configure a logical grouping of usage rights, or you can configure the individual rights. Alternatively users might select and apply the usage rights themselves.
 
 Use this article to help you configure the usage rights you want for the application you’re using and understand how these rights are designed to be interpreted by applications. However, applications might vary in how they implement the rights so always consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy in production.
 
-> [!NOTE] 
-> For completeness, this article includes values from the Azure classic portal, which was retired January 08, 2018.
 
 ## Usage rights and descriptions
 The following table lists and describes the usage rights that Rights Management supports, and how they are used and interpreted. They are listed by their **common name**, which is typically how you might see the usage right displayed or referenced, as a more friendly version of the single-word value that is used in the code (the **Encoding in policy** value). 
@@ -43,7 +48,9 @@ In this table:
 
 - The **API Constant or Value** is the SDK name for an MSIPC API call, used when you write an application that checks for a usage right, or adds a usage right to a policy.
 
-- The **labeling admin center** refers to where you configure sensitivity labels and can be either the Microsoft 365 compliance center, the Microsoft 365 security center, or the Office 365 Security & Compliance Center.
+- The **labeling admin center** refers to where you configure sensitivity labels and can be either the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center.
+
+    If you have the classic client, configure your labels and label policies in the Azure portal.
 
 
 |Usage right|Description|Implementation|
@@ -92,16 +99,6 @@ Not applicable to the Azure Information Protection client for Windows.
 ###### Footnote 4
 Not included in the labeling admin center, the Azure portal, or the Azure Information Protection client for Windows.
 
-## Rights included in the default templates
-The following table lists the usage rights that are included when the default templates are created. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
-
-These default templates are created when your subscription was purchased, and the names and usage rights can be [changed](configure-policy-templates.md) in the Azure portal and with [PowerShell](/powershell/module/aipservice/set-aipservicetemplateproperty). 
-
-|Display name of template|Usage rights October 6, 2017 to current date|Usage rights before October 6, 2017|
-|----------------|--------------------|----------|
-|\<*organization name> - Confidential View Only* <br /><br />or<br /><br /> *Highly Confidential \ All Employees*|View, Open, Read; Copy; View Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit|View, Open, Read|
-|\<*organization name>- Confidential* <br /><br />or <br /><br />*Confidential \ All Employees*|View, Open, Read; Save As, Export; Copy; View Rights; Change Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control|View, Open, Read; Save As, Export; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
-
 ## Do Not Forward option for emails
 
 Exchange clients and services (for example, the Outlook client, Outlook on the web, Exchange mail flow rules, and DLP actions for Exchange) have an additional information rights protection option for emails: **Do Not Forward**. 
@@ -129,7 +126,14 @@ A user wants to email some information to specific people in the Marketing depar
 
 When Exchange Online uses the new capabilities for Office 365 Message Encryption, a new email option becomes available: **Encrypt-Only**.
 
-This option is available to tenants who use Exchange Online and can be selected in Outlook on the web, as another rights protection option for a mail flow rule, as an Office 365 DLP action, and from Outlook (minimum version of [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) for Microsoft 365 Apps for Enterprise, and minimum version of 1805 when you have [Microsoft 365 apps that support Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). For more information about the Encrypt-Only option, see the following blog post announcement from the Office team: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
+This option is available to tenants who use Exchange Online and can be selected as follows:
+
+- **In Outlook on the web**
+- **As another rights protection option** for a mail flow rule
+- **As an Office 365 DLP action**
+- **From Outlook**, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), when you have [Microsoft 365 apps that support Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
+
+For more information about the Encrypt-Only option, see the following blog post announcement from the Office team: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
 
 When this option is selected, the email is encrypted and recipients must be authenticated. Then, the recipients have all usage rights except **Save As, Export** and **Full Control**. This combination of usage rights means that the recipients have no restrictions except that they cannot remove the protection. For example, a recipient can copy from the email, print it, and forward it. 
 
@@ -194,6 +198,19 @@ The default use license validity period for a tenant is 30 days and you can conf
 - When you configure a template by using PowerShell, the use license validity period takes its value from the *LicenseValidityDuration* parameter in the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) and [Add-AipServiceTemplate](/powershell/module/aipservice/add-aipservicetemplate) cmdlets.
     
     For more information and guidance to configure this setting by using PowerShell, see the help for each cmdlet.
+
+## Rights included in the default templates
+
+**Relevant for**: AIP classic client only
+
+The following table lists the usage rights that are included when the default templates are created. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
+
+These default templates are created when your subscription was purchased, and the names and usage rights can be [changed](configure-policy-templates.md) in the Azure portal and with [PowerShell](/powershell/module/aipservice/set-aipservicetemplateproperty). 
+
+|Display name of template|Usage rights October 6, 2017 to current date|Usage rights before October 6, 2017|
+|----------------|--------------------|----------|
+|\<*organization name> - Confidential View Only* <br /><br />or<br /><br /> *Highly Confidential \ All Employees*|View, Open, Read; Copy; View Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit|View, Open, Read|
+|\<*organization name>- Confidential* <br /><br />or <br /><br />*Confidential \ All Employees*|View, Open, Read; Save As, Export; Copy; View Rights; Change Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control|View, Open, Read; Save As, Export; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
 
 ## See Also
 [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md)

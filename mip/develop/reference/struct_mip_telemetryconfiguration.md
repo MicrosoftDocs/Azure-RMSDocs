@@ -1,6 +1,6 @@
 ---
 title: struct TelemetryConfiguration 
-description: Documents structures associated with the Microsoft Information Protection (MIP) SDK.
+description: Documents the TelemetryConfiguration structure
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
