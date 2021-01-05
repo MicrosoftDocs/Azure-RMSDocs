@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/15/2020
+ms.date: 12/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -50,6 +50,7 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 |Client version|Date released|
 |--------------|-------------|
+|2.6.111.0 | 03/09/2020|
 |2.5.33.0 |10/23/2019|
 |2.2.21.0|09/03/2019|
 |2.2.19.0|08/06/2019|
@@ -183,7 +184,7 @@ The following fixes were delivered in version 2.9.109.0 of the [Azure Informatio
 
 - Outlook Preview mode now generates [audit logs for discovery events](../audit-logs.md#discover-audit-logs)
 
-- [Recommended labels](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) and [watermarking](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) are applied as expected in Outlook. 
+- [Recommended labels](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) and [visual marking](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) are applied as expected in Outlook. 
 
 - Added support for [finding recipients in Outlook distribution lists](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients), such as when [OutlookBlockTrustedDomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) and [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) settings are configured.
 
@@ -466,44 +467,6 @@ For more requirement details, see [Firewalls and network infrastructure requirem
 - By default, a file's NTFS owner is lost when the file is labeled by the unified labeling scanner, PowerShell, or the File Explorer extension. Now you can configure the system to keep the file's NTFS owner by setting the new **[UseCopyAndPreserveNTFSOwner](clientv2-admin-guide-customizations.md#preserve-ntfs-owners-during-labeling-public-preview)** advanced setting to **true**.
 
     The **UseCopyAndPreserveNTFSOwner** advanced setting requires a low latency, reliable network connection between the scanner and the scanned repository.
-
-## Version 2.6.111.0
-
-**Released** 03/09/2020
-
-Supported through  12/29/2020
-
-### New features, version 2.6.111.0
-
-- General availability version of the [scanner](../deploy-aip-scanner.md), to inspect and label documents in on-premises data stores.
-
-- [Scanner](../deploy-aip-scanner.md) related:
-    - [Easier SharePoint on-premises and subsite discovery](../quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories). Setting each specific site is no longer required.
-    - Advanced property for [SQL chunk sizing](../deploy-aip-scanner-prereqs.md#storage-requirements-and-capacity-planning-for-sql-server) added.
-    - Administrators now have the ability to [stop existing scans and perform a rescan](../deploy-aip-scanner-manage.md#stopping-a-scan) if a change was made to the default label.
-    - By default, scanner now sets minimal telemetry for faster scans and reduced log size and information types are now cached in the database. Learn more about [scanner optimization](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance).
-    - Scanner now supports separate deployments for database and the service, while **Sysadmin** rights are needed only for database deployment.
-    - Improvements made to scanner performance.
-
-- Modification of [PowerShell](./clientv2-admin-guide-powershell.md) cmdlet **Set-AIPFileLabel** to enable removal of protection from PST, rar, 7zip, and MSG files. This feature is disabled by default and must be turned on using the [Set-LabelPolicy](./clientv2-admin-guide-customizations.md) cmdlet, as described [here](./clientv2-admin-guide-customizations.md#enable-removal-of-protection-from-compressed-files).  
-
-- Added ability for Azure Information Protection administrators to control when .pfile extensions are used for files. Learn more about [changing protected file types](./clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
-
-- Dynamic visual marking support added for applications and variables. Learn more about how to [configure labels for visual markings](../configure-policy-markings.md).
-
-- Improvements made to [customizable policy tips for automatic and recommended labels](use-client.md).
-
-- Support added for [offline labeling capability](./clientv2-admin-guide-customizations.md#support-for-disconnected-computers) with Office apps in the unified labeling client.
-
-### Fixes and improvements, version 2.6.111.0
-
-- In instances where users attempted unsuccessfully to open protected TIFF files, and TIFF files created by RightFax, the TIFF files now open and remain stable as expected.  
-- Previous corruptions of protected txt and PDF files are resolved.
-- Inconsistent labeling between **Automatic** and **Manual** in Log Analytics was corrected.
-- Unexpected inheritance issues identified between new emails and a user's last opened email is now resolved.  
-- Protection of **.msg** files as **.msg.pfiles** now works as expected.
-- Co-owner permissions added from Office user-defined settings is now applied as expected.
-- When entering permissions downgrade justification, text can no longer be entered when other options are already selected.
 
 ## Next steps
 

@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/23/2020
+ms.date: 12/29/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -50,15 +50,15 @@ For more information, see [Admin Guide: File types supported by the Azure Inform
 
 The Azure Information Protection client is not supported on machines that have .NET 2 or 3, where [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled, and will cause Office apps to behave unexpectedly.
 
-If you have a .NET version 2 or 3 in addition to a .NET 4.x version required for your system, make sure to disable Exploit protection before installing AIP. 
+In such cases, we recommend that you upgrade your .NET version. For more information, see [Microsoft .NET Framework requirements](rms-client/reqs-ul-client.md#microsoft-net-framework-requirements).
+
+If you must keep your .NET version 2 or 3, make sure to disable Exploit protection before installing AIP. 
 
 To disable Exploit protection via PowerShell, run the following:
 
 ```PowerShell
 Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
 ```
-
-For more information, see [Microsoft .NET Framework requirements](rms-client/reqs-ul-client.md#microsoft-net-framework-requirements).
 
 ## PowerShell support for the Azure Information Protection client
 
@@ -143,16 +143,18 @@ In such cases, re-label the document manually to apply the protection as needed.
 
 - [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
 
-    We strongly encourage you to upgrade to a newer version of Windows 10. However, if you have Extended Security Updates (ESU) and a support contract, AIP support is available to continue keeping your Windows 7 systems secure.
+    We strongly encourage you to upgrade to a newer version of Windows 10. 
+
+    However, if you have Extended Security Updates (ESU) and a support contract, AIP support is available to continue keeping your Windows 7 systems secure.
 
     For more information, check with your support contact.
 
-- [**Office 2010 is currently in extended support**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
+- [**Office 2010 extended support ended on October 13, 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
 
-    This support will end on Oct. 13, 2020, and will not be extended. Additionally, ESU will not be offered for Office 2010, and we strongly encourage you to upgrade to a newer version of Office 365. 
+    This support will not be extended, and ESU will not be offered for Office 2010. 
+
+    We strongly encourage you to upgrade to a newer version of Office 365. 
     
-    For customers who are currently running Office 2010 in extended support, AIP support is available until October 13, 2020. 
-
     For more information, check with your support contact.
 
 ## AIP-based Conditional Access policies

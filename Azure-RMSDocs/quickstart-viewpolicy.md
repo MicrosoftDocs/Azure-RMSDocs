@@ -8,10 +8,11 @@ ms.date: 07/19/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 #ms.reviewer: demizets
