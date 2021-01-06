@@ -74,9 +74,9 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.9.109.0
+## Version 2.9.111.0
 
-Unified labeling scanner and client version 2.9.109.0
+Unified labeling scanner and client version 2.9.111.0
 
 **Release** 12/16/2020
 
@@ -143,7 +143,7 @@ For more information, see the [Sensitive information type entity definitions](/m
 
 ### Track document access and revoke access (Public preview)
 
-Once you've upgraded to version 2.9.109.0, any documents not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed.
+Once you've upgraded to version 2.9.111.0, any documents not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed.
 
 Having your documents registered for tracking enables administrators to use PowerShell to track document access, and revoke access if needed.
 
@@ -165,7 +165,7 @@ To view tracking data with the unified labeling client, use the PowerShell comma
 
 ### Fixes and improvements for the unified labeling scanner
 
-The following fixes were delivered in version 2.9.109.0 of the [Azure Information Protection unified labeling scanner](../deploy-aip-scanner.md):
+The following fixes were delivered in version 2.9.111.0 of the [Azure Information Protection unified labeling scanner](../deploy-aip-scanner.md):
 
 - Added support for hyphens (**-**) in [scanner database](../deploy-aip-scanner-prereqs.md) names
 - Updates in reports for when the **[Label files based on content](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** option is set to **Off**
