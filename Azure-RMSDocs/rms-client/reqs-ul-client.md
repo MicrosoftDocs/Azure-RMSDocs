@@ -141,7 +141,7 @@ If you need to configure your system to point to a different sovereign cloud, co
 For more information, see:
 
 - [Azure Information Protection Premium Government Service Description](/enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description#aip-apps-configuration-unified-labeling-only)
-- [Parity between Azure Information Protection for Office 365 operated by 21Vianet and commercial offerings](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection?view=o365-21vianet&branch=pr-en-us-6280#manage-azure-information-protection-content-scan-jobs)
+- [Parity between Azure Information Protection for Office 365 operated by 21Vianet and commercial offerings](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection?view=o365-21vianet&preserve-view=true#manage-azure-information-protection-content-scan-jobs)
 
 ## Next steps
 
