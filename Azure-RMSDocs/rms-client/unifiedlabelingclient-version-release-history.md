@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/29/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -143,7 +143,7 @@ For more information, see the [Sensitive information type entity definitions](/m
 
 ### Track document access and revoke access (Public preview)
 
-Once you've upgraded to version 2.9.111.0, any documents not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed.
+Once you've upgraded to version 2.9.111.0, any protected documents that are not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed. Protected documents are supported for track and revoke, even if they are not labeled.
 
 Having your documents registered for tracking enables administrators to use PowerShell to track document access, and revoke access if needed.
 
