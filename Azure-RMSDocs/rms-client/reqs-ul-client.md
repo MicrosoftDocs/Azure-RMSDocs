@@ -118,6 +118,7 @@ If you need to configure your system to point to a different sovereign cloud, co
 - **Name**: ``CloudEnvType``
 
 - **Value**: One of the following:
+
     | Sovereign clouds | Value |
     | ---------- | ----------- |
     | **Commercial** | 0 (default) |
