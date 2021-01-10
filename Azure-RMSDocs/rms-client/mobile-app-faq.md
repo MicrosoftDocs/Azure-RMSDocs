@@ -33,7 +33,7 @@ The Azure Information Protection (AIP) mobile app for iOS and Android is a viewe
 
 For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
 
-For more information, see [Applications that support Azure Rights Management data protection](../requirements-applications.md).
+For more information about the protection features supported in your apps, [Applications that support Azure Rights Management data protection](../requirements-applications.md). 
 
 > [!NOTE]
 > The AIP mobile apps are *viewers only,* and do not enable you to create new emails or reply to emails, or create or edit protected files. The AIP mobile apps also cannot open attachments to protected PDFs or emails.
