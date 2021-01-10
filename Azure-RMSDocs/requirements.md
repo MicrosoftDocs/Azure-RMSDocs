@@ -6,7 +6,7 @@ description: Identify the prerequisites required to deploy Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 01/10/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -234,8 +234,13 @@ Additionally, in this case, the Azure Information Protection service also depend
  - **13.107.6.181** 
  - **13.107.9.181**
  - **Port 443**, for HTTPS traffic
+ - **13.107.9.198**
+ - **13.107.6.198**
+ - **2620:1ec:4::198**
+ - **2620:1ec:a92::198**
 
-Make sure to create rules to allow outbound access to these specific IP addresses, and via this port.
+
+Make sure to create rules that allow outbound access to these specific IP addresses, and via this port.
 
 ## Supported on-premises servers for Azure Rights Management data protection
 
