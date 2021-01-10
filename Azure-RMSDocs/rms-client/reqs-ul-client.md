@@ -106,43 +106,6 @@ Specify the following programmatic identifiers (ProgID) for AIP, and set the opt
 |PowerPoint     |   `MSIP.PowerPointAddin`      |
 |Outlook | `MSIP.OutlookAddin` |
 | | | 
-    
-## Configure sovereign clouds
-
-By default, the Azure Information Protection unified labeling client points to the commercial cloud.
-
-If you need to configure your system to point to a different sovereign cloud, configure the following registry key on your client machine:
-
-- **Registry Node**: 	`HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP`
-
-- **Name**: ``CloudEnvType``
-
-- **Value**: One of the following:
-
-    | Sovereign clouds | Value |
-    | ---------- | ----------- |
-    | **Commercial** | 0 (default) |
-    | **GCC**        | 1           |
-    | **GCC High**   | 2           |
-    | **DoD**        | 3           |
-    | **USNat/EX** | 4 |
-    | **USSec/RX** | 5 | 
-    | **Azure China** | 6 |
-    | **Azure Germany**| 7 |
-    | | |
-
-
-> [!NOTE]
-> If you are uninstalling Azure Information Protection, make sure not to delete the registry key. 
-> 
-> If the key is empty, incorrect, or missing, the functionality will revert to the default (**0** = Commercial).
-> 
-> If the key is empty or incorrect, a print error is also added to the log.
-
-For more information, see:
-
-- [Azure Information Protection Premium Government Service Description](/enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description#aip-apps-configuration-unified-labeling-only)
-- [Parity between Azure Information Protection for Office 365 operated by 21Vianet and commercial offerings](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection?view=o365-21vianet&preserve-view=true#manage-azure-information-protection-content-scan-jobs)
 
 ## Next steps
 

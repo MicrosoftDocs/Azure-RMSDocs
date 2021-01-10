@@ -229,7 +229,7 @@ If you are using an Azure endpoint and an NSG, make sure to allow access to all 
 - **AzureActiveDirectory**
 - **AzureFrontDoor.Frontend**
 
-Additionally, in this case, the Azure Information Protection service also depends on the following IP addresses:
+Additionally, in this case, the Azure Information Protection service also depends on the following IP addresses and port:
 
  - **13.107.9.198**
  - **13.107.6.198**
