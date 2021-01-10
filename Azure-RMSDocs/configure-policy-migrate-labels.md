@@ -176,7 +176,7 @@ Protection settings that behave the same way are not listed in the table, with t
 
 ###### Footnote 1
 
-In Outlook, protection is preserved with one exception: When an email has been protected with the Encrypt-Only option, that protection is removed.
+In Outlook, protection is preserved with one exception: When an email has been protected with the encrypt-only option (**Encrypt**), that protection is removed.
 
 
 ###### Footnote 2
