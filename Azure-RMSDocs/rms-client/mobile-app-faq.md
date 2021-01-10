@@ -43,26 +43,19 @@ For more information, see [Applications that support Azure Rights Management dat
 
 Download and install AIP mobile apps from one of the following locations:
 
-**iTunes**
+**iTunes**:
 
-:::image type="content" source="../media/develop/ios-icon.png" alt-text="iTunes" link="https://apps.apple.com/app/microsoft-rights-management/id689516635" border="false":::
+:::image type="content" source="../media/ios-icon.png" alt-text="iTunes" link="https://apps.apple.com/app/microsoft-rights-management/id689516635" border="false":::  
 
-**Google Play**
+**Google Play**:
 
-:::image type="content" source="../media/develop/android-icon.png" alt-text="Google Play" link="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer" border="false":::
+:::image type="content" source="../media/android-icon.png" alt-text="Google Play" link="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer" border="false"::: 
 
-**AIP download page**
-
-:::image type="content" source="../media/aip-icon.png" alt-text="Azure Information Protection download page" border="false":::
-
-Select the [iOS](https://apps.apple.com/app/microsoft-rights-management/id689516635) or [Android](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer) icons in the **Mobile Devices** section.
-
-**Your company portal**
+**Your company portal**:
 
 If your mobile device is managed by Microsoft Intune, you may be able to download the AIP mobile apps from your company portal. 
 
-For more information, contact your system administrator.
-
+For more information, contact your system administrator. 
 ## iOS: View protected files on your device
 
 Once you've [installed the AIP mobile app](#download-and-install-the-aip-app-for-your-device), open a protected email or file. 
