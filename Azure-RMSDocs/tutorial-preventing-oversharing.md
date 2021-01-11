@@ -48,7 +48,7 @@ Make sure you have the following system requirements before starting this tutori
 |---------|---------|
 |**Machine requirements**     | Make sure that you: <br /><br />- Have a Windows computer, with the Azure Information Protection unified labeling client installed. For more information, see [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md). <br /><br />- Have PowerShell installed, and that you can run PowerShell as an administrator. <br /><br />- Can sign into Outlook. Be prepared to restart Outlook multiple times during this tutorial.     |
 |**Azure Information Protection subscription**     |   You'll need an Azure subscription that includes [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />If you don't have one of these subscriptions, create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
-|**Sensitivity labels and a testing policy**     |  A **General** sensitivity label configured in your policy. <br /><br />Configure sensitivity labels in your labeling admin center, including the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). <br /><br />We recommend using a testing policy for this tutorial so that you don't affect your live policy. <br />Make sure that you have the name of your policy handy, as well as the GUID for your **General** label.   |
+|**Sensitivity labels and a testing policy**     |  A **General** sensitivity label configured in your policy. <br /><br />Configure sensitivity labels in your labeling admin center, including the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/create-sensitivity-labels). <br /><br />We recommend using a testing policy for this tutorial so that you don't affect your live policy. <br />Make sure that you have the name of your policy handy, as well as the GUID for your **General** label.   |
 | | |
 
 Let's get started. 
@@ -406,7 +406,7 @@ Once you're finished with this tutorial, you can keep the testing policy for fur
 
 If you want to delete your policy, do so in the admin center where it was created, either the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center.
 
-For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)
+For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)
 
 Once deleted, restart Outlook on the client machine so that it's no longer configured with the settings defined in this tutorial.
 
