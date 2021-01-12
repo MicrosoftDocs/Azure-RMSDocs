@@ -6,7 +6,7 @@ description: Identify the prerequisites required to deploy Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 01/12/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -229,13 +229,18 @@ If you are using an Azure endpoint and an NSG, make sure to allow access to all 
 - **AzureActiveDirectory**
 - **AzureFrontDoor.Frontend**
 
-Additionally, in this case, the Azure Information Protection service also depends on two specific IP addresses:
+Additionally, in this case, the Azure Information Protection service also depends on the following IP addresses and port:
 
+ - **13.107.9.198**
+ - **13.107.6.198**
+ - **2620:1ec:4::198**
+ - **2620:1ec:a92::198**
  - **13.107.6.181** 
  - **13.107.9.181**
  - **Port 443**, for HTTPS traffic
 
-Make sure to create rules to allow outbound access to these specific IP addresses, and via this port.
+Make sure to create rules that allow outbound access to these specific IP addresses, and via this port.
+
 
 ## Supported on-premises servers for Azure Rights Management data protection
 
