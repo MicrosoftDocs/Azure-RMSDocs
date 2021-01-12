@@ -93,7 +93,7 @@ This version includes the following new features, fixes, and enhancements for th
     - [Track document access and revoke access](#track-document-access-and-revoke-access-public-preview)
     - [Added support for additional sensitive information types](#added-support-for-additional-sensitive-information-types)
 
-- **Fixes and improvements:**
+- **Fixes and improvements**:
 
     - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client)
