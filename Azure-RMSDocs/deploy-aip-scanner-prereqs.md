@@ -292,7 +292,11 @@ To support a disconnected computer from the Azure portal, perform the following 
 
 #### Use PowerShell with a disconnected computer
 
-To support a disconnected computer using PowerShell only, perform the following steps:
+Perform the following procedure to support a disconnected computer using PowerShell only.
+
+> [!IMPORTANT]
+> Admins of [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs) *must* use this procedure in order to manage their content scan jobs.
+> 
 
 **Manage your content scan jobs using PowerShell only**:
 

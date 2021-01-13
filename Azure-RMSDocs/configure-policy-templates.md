@@ -47,7 +47,7 @@ Protection templates, also known as Rights Management templates, are a grouping 
 - Templates for your tenant are displayed in the **Protection templates** section on the **Azure Information Protection - Labels** pane. To navigate to this pane, select the **Classifications** > **Labels** menu option. No labels are displayed. You also see configuration settings that are specific to classification and labeling, but these settings either have no effect on your templates or cannot be configured. 
 
 >[!NOTE]
->In some applications and services, you might see [Do Not Forward](configure-usage-rights.md#do-not-forward-option-for-emails) and [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails) (or **Encrypt**) displayed as a template. These are not templates that you can edit or delete, but options that come by default with the Exchange service.
+>In some applications and services, you might see [Do Not Forward](configure-usage-rights.md#do-not-forward-option-for-emails) and [encrypt-only](configure-usage-rights.md#encrypt-only-option-for-emails) (**Encrypt**) displayed as a template. These are not templates that you can edit or delete, but options that come by default with the Exchange service.
 
 ## Default templates
 
