@@ -241,7 +241,6 @@ Additionally, in this case, the Azure Information Protection service also depend
 
 Make sure to create rules that allow outbound access to these specific IP addresses, and via this port.
 
-
 ## Supported on-premises servers for Azure Rights Management data protection
 
 The following on-premises servers are supported with Azure Information Protection when you use the Azure Rights Management connector.

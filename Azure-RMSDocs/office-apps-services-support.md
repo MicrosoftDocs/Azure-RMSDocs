@@ -62,7 +62,7 @@ When you use Exchange Online or Exchange Server, you can configure options for A
 
 If you use Exchange on-premises, you can use the IRM features with the Azure Rights Management service by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Azure Rights Management service.
 
-For more information about the email options that you can use to protect emails, see [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails) and [Encrypt-Only option for emails](configure-usage-rights.md#encrypt-only-option-for-emails).
+For more information about the email options that you can use to protect emails, see [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails) and [encrypt-only option for emails](configure-usage-rights.md#encrypt-only-option-for-emails).
 
 If you're ready to configure Exchange to protect emails:
 

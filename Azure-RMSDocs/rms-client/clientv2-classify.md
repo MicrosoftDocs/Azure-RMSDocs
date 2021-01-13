@@ -29,7 +29,7 @@ ms.custom: user
 >
 >*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->***Instructions for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see the [classic client user guide](client-classify.md).*
+>***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see the [classic client user guide](client-classify.md).*
 
 > [!NOTE]
 > Use these instructions to help you classify (but not protect) your documents and emails. If you need to also protect your documents and emails, see the [classify and protect instructions](clientv2-classify-protect.md). If you are not sure which set of instructions to use, check with your administrator or help desk.

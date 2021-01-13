@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/29/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -74,9 +74,9 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.9.109.0 (Public preview)
+## Version 2.9.111.0
 
-Unified labeling scanner and client version 2.9.109.0
+Unified labeling scanner and client version 2.9.111.0
 
 **Release** 12/16/2020
 
@@ -85,22 +85,22 @@ This version includes the following new features, fixes, and enhancements for th
 - **New features for the scanner**:
 
     - [PowerShell support for disconnected scanner servers](#powershell-support-for-disconnected-scanner-servers)
-    - [Support for NFS repositories in content scan jobs](#support-for-nfs-repositories-in-content-scan-jobs)
+    - [Support for NFS repositories in content scan jobs](#support-for-nfs-repositories-in-content-scan-jobs-public-preview)
     - [Added support for additional sensitive information types](#added-support-for-additional-sensitive-information-types)
 
 - **New features for the client**:
 
-    - [Track document access and revoke access](#track-document-access-and-revoke-access)
+    - [Track document access and revoke access](#track-document-access-and-revoke-access-public-preview)
     - [Added support for additional sensitive information types](#added-support-for-additional-sensitive-information-types)
 
-- **Fixes and improvements:**
+- **Fixes and improvements**:
 
     - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client)
 
 ### PowerShell support for disconnected scanner servers
 
-The [Azure Information Protection on-premises scanner](../deploy-aip-scanner.md) now supports managing content scan jobs, for scanner servers that cannot connect to the internet, over PowerShell.
+The [Azure Information Protection on-premises scanner](../deploy-aip-scanner.md) now supports managing content scan jobs over PowerShell, for scanner servers that cannot connect to the internet, such as with an [Azure China 21Vianet scanner server](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs).
 
 To support disconnected scanner servers, we've added the following new cmdlets:
 
@@ -119,7 +119,7 @@ The [**Set-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/
 
 For more information, see [When the scanner server cannot have internet connectivity](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) and [Configure the scanner](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
 
-### Support for NFS repositories in content scan jobs
+### Support for NFS repositories in content scan jobs (Public preview)
 
 Now you can add NFS repositories to your content scan jobs, in addition to SMB file shares and SharePoint repositories.
 
@@ -141,9 +141,9 @@ We’ve added support for additional sensitive information types in Azure Inform
 
 For more information, see the [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in the Microsoft 365 documentation.
 
-### Track document access and revoke access
+### Track document access and revoke access (Public preview)
 
-Once you've upgraded to version 2.9.109.0, any documents not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed.
+Once you've upgraded to version 2.9.111.0, any protected documents that are not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed. Protected documents are supported for track and revoke, even if they are not labeled.
 
 Having your documents registered for tracking enables administrators to use PowerShell to track document access, and revoke access if needed.
 
@@ -165,14 +165,13 @@ To view tracking data with the unified labeling client, use the PowerShell comma
 
 ### Fixes and improvements for the unified labeling scanner
 
-The following fixes were delivered in version 2.9.109.0 of the [Azure Information Protection unified labeling scanner](../deploy-aip-scanner.md):
+The following fixes were delivered in version 2.9.111.0 of the [Azure Information Protection unified labeling scanner](../deploy-aip-scanner.md):
 
 - Added support for hyphens (**-**) in [scanner database](../deploy-aip-scanner-prereqs.md) names
 - Updates in reports for when the **[Label files based on content](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** option is set to **Off**
 - [Improved memory consumption](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) for large numbers of information type matches
 - Support for [SharePoint on-premises](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) paths that end in a slash (**/**)
 - Increased SharePoint scanning [speed](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
-
 - Support for [avoiding a timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) when scanning a SharePoint server.
 
 ### Fixes and improvements for the unified labeling client
@@ -187,9 +186,9 @@ The following fixes were delivered in version 2.9.109.0 of the [Azure Informatio
 
 - [Recommended labels](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) and [visual marking](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) are applied as expected in Outlook. 
 
-- Added support for [finding recipients in Outlook distribution lists](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview), such as when [OutlookBlockTrustedDomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) and [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) settings are configured.
+- Added support for [finding recipients in Outlook distribution lists](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients), such as when [OutlookBlockTrustedDomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) and [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) settings are configured.
 
-    When turning on this functionality, we recommend that you also raise the default timeout value, as defined in the [OutlookGetEmailAddressesTimeOutMSProperty](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) setting.
+    When turning on this functionality, we recommend that you also raise the default timeout value, as defined in the [OutlookGetEmailAddressesTimeOutMSProperty](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients) setting.
 
 - Updates to the [order of precedence](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved) used when more than one label policy is configured for a user, each with conflicting advanced settings.
 

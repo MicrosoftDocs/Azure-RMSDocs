@@ -6,7 +6,7 @@ description: Information for admins who need to understand the additional system
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/27/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -30,7 +30,7 @@ ms.custom: admin
 >
 >*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->***Instructions for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see the [classic client admin guide](client-admin-guide-install.md).*
+>***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see the [classic client admin guide](client-admin-guide-install.md).*
 
 Before you install the Azure Information Protection unified labeling client on your enterprise network, check that computers have the required operating system versions and applications for Azure Information Protection: [Requirements for Azure Information Protection](../requirements.md). 
 
@@ -106,7 +106,6 @@ Specify the following programmatic identifiers (ProgID) for AIP, and set the opt
 |PowerPoint     |   `MSIP.PowerPointAddin`      |
 |Outlook | `MSIP.OutlookAddin` |
 | | | 
-    
 
 ## Next steps
 
