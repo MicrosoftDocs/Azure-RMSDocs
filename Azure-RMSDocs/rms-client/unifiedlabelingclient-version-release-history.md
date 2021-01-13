@@ -78,7 +78,7 @@ The unified labeling client replaces the Azure Information Protection classic cl
 
 Unified labeling scanner and client version 2.9.111.0
 
-**Release** 12/16/2020
+**Release** 1/13/2021
 
 This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
 
