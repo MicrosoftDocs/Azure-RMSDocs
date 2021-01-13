@@ -6,7 +6,7 @@ description: Identify the prerequisites required to deploy Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/10/2021
+ms.date: 01/12/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
