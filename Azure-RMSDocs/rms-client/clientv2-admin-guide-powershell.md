@@ -107,8 +107,8 @@ For more information, see:
 
 > [!NOTE]
 > If the computer cannot have internet access, there's no need to create the app in Azure AD and run the **Set-AIPAuthentication** cmdlet. 
-
-Instead, follow the instructions for [disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
+>
+> Instead, follow the instructions for [disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
 
 ### Prerequisites for running AIP labeling cmdlets unattended
 
@@ -139,8 +139,7 @@ The computer running the **AIPAuthentication** cmdlet downloads the labeling pol
 
 The **Set-AIPAuthentication** cmdlet requires an app registration for the *AppId* and *AppSecret* parameters. 
 
-> [!NOTE]
-> For users who've recently migrated from the classic client, and had created an app registration for the previous *WebAppID* and *NativeAppId* parameters, you'll need to create a new app registration for the unified labeling client.
+For users who've recently migrated from the classic client, and had created an app registration for the previous *WebAppID* and *NativeAppId* parameters, you'll need to create a new app registration for the unified labeling client.
 
 **To create a new app registration for the unified labeling client Set-AIPAuthentication cmdlet**:
 
