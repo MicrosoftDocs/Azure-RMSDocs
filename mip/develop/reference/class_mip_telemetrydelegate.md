@@ -23,7 +23,7 @@ public void Flush()  |  Flush any queued events (e.g. due to shutdown)
 Log a diagnostic event.
 
 Parameters:  
-* **event**: [Event](#classEvent) to be logged
+* **event**: Event to be logged
 
 
   

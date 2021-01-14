@@ -145,10 +145,10 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when create delegated license is successful.
 
 Parameters:  
-* **context**: The same context that was passed to [ProtectionEngine::CreateDelegationLicensesAsync](#classProtectionEngine_1aa0f481ab54c04977b9c1c009e03885ac)
+* **context**: The same context that was passed to ProtectionEngine::CreateDelegationLicensesAsync.
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::CreateDelegationLicensesAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnCreateDelegatedLicensesSuccess](#classProtectionEngine_1_1Observer_1a0218cd29f63297d3178033b5225d9f6a) or [ProtectionEngine::Observer::OnCreateDelegatedLicensesFailure](#classProtectionEngine_1_1Observer_1a0a3ead878a44cdce11a3de078e8452dc)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::CreateDelegationLicensesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnCreateDelegatedLicensesSuccess or ProtectionEngine::Observer::OnCreateDelegatedLicensesFailure.
   
 ### OnCreateDelegatedLicensesFailure function
 Called when create delegated license fails.

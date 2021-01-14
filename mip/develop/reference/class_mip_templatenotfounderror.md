@@ -104,8 +104,10 @@ Get debug info.
 **Returns**: Debug info (keys/values)
   
 ### ErrorCode enum
+
+ErrorCode of bad input error.
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 General            | General bad input error
 FileIsTooLargeForProtection            | File is too large for protection
-ErrorCode of bad input error.

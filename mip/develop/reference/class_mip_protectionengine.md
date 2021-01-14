@@ -309,4 +309,4 @@ Parameters:
 
   
 **Returns**: Async control object.
-Use this method to create licenses for a list of users. Receive the [DelegationLicense](#classDelegationLicense) vector in callback OnCreateDelegatedLicensesSuccess Failures are sent in OnCreateDelegatedLicensesFailure
+Use this method to create licenses for a list of users. Receive the DelegationLicense vector in callback OnCreateDelegatedLicensesSuccess Failures are sent in OnCreateDelegatedLicensesFailure
