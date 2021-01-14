@@ -33,7 +33,7 @@ Passing information into the MIP SDK to compute an action that should be taken, 
 | `std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties()` | Returns a std::vector of std::pairs of strings, containing the custom metadata that will be applied to the document. |
 | `std::vector<std::pair<std::string, std::string>> GetContentMetadata()`            | Returns a std::vector of std::pairs of string containing the current content metadata.                               |
 | `std::shared_ptr<mip::ProtectionDescriptor> GetProtectionDescriptor()`             | Returns a pointer to a mip::ProtectionDescriptor                                                                     |
-| `mip::ContentFormat GetContentFormat()`                                            | Returns mip::ContentFormat                                                                                           |
+| `std::string GetContentFormat()`                                            | Returns string                                                                                           |
 | `mip::ActionType GetSupportedActions()`                                            | Returns mip::ActionTypes for the label.                                                                              |
 | `std::shared_ptr<mip::ClassificationResults>`                                      | Returns a list of classification results, if implemented.                                                            |
 
@@ -52,7 +52,7 @@ struct ExecutionStateOptions {
     bool isDowngradeJustified = false;
     std::string downgradeJustification;
     std::string templateId;
-    mip::ContentFormat contentFormat = mip::ContentFormat::DEFAULT;
+    std::string contentFormat = mip::GetFileContentFormat();
     mip::ActionType supportedActions;
     bool generateAuditEvent;
 };

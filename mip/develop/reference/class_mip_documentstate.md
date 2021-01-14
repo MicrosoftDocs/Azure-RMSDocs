@@ -1,11 +1,11 @@
 ---
 title: class DocumentState 
 description: Documents the documentstate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class DocumentState 
@@ -17,7 +17,7 @@ public std::string GetContentIdentifier() const  |  Gets the content description
 public virtual DataState GetDataState() const  |  Gets the state of the content while the application is interacting with it.
 public std::vector\<MetadataEntry\> GetContentMetadata(const std::vector\<std::string\>& names, const std::vector\<std::string\>& namePrefixes) const  |  Get the meta-data items from the content.
 public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Get the Protection Descriptor.
-public ContentFormat GetContentFormat() const  |  Gets the content format.
+public std::string GetContentFormat() const  |  Gets the content format.
 public virtual MetadataVersion GetContentMetadataVersion() const  |  Gets the highest metadata version supported by the application for the tenant.
 public virtual std::shared_ptr\<ClassificationResults\> GetClassificationResults(const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Return a map of classification results.
 public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  Return a map of application specific audit key-value pairs.
@@ -56,9 +56,7 @@ Get the Protection Descriptor.
 Gets the content format.
 
   
-**Returns**: DEFAULT, EMAIL 
-  
-**See also**: mip::ContentFormat
+**Returns**: Content format
   
 ### GetContentMetadataVersion function
 Gets the highest metadata version supported by the application for the tenant.

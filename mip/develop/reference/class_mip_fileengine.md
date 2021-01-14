@@ -1,11 +1,11 @@
 ---
 title: class FileEngine 
 description: Documents the fileengine::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class FileEngine 
@@ -18,15 +18,15 @@ public const Settings& GetSettings() const  |  Returns the engine settings.
 public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
 public const std::shared_ptr\<Label\> GetDefaultSensitivityLabel() const  |  Get the default sensitivity label.
 public std::shared_ptr\<Label\> GetLabelById(const std::string& id) const  |  Gets the label according to the provided id.
-public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  Returns a list of sensitivity labels.
+public const std::vector\<std::shared_ptr\<Label\>\> ListSensitivityLabels()  |  Returns a list of sensitivity labels.
 public const std::string& GetMoreInfoUrl() const  |  Provide a url for looking up more information about the policy/labels.
 public const std::string& GetPolicyFileId() const  |  Gets the policy file ID.
 public const std::string& GetSensitivityFileId() const  |  Gets the sensitivity file ID.
 public bool IsLabelingRequired() const  |  Checks if the policy dictates that a document must be labeled.
 public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Gets the time when the policy was last fetched.
 public const std::string& GetPolicyDataXml() const  |  Gets policy data XML which describes the settings, labels, and rules associated with this policy.
-public std::shared_ptr\<AsyncControl\> CreateFileHandlerAsync(const std::string& inputFilePath, const std::string& actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr\<FileHandler::Observer\>& fileHandlerObserver, const std::shared_ptr\<void\>& context, const std::shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Starts creating a file handler for given file path.
-public std::shared_ptr\<AsyncControl\> CreateFileHandlerAsync(const std::shared_ptr\<Stream\>& inputStream, const std::string& actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr\<FileHandler::Observer\>& fileHandlerObserver, const std::shared_ptr\<void\>& context, const std::shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Starts creating a file handler for given file stream.
+public std::shared_ptr\<AsyncControl\> CreateFileHandlerAsync(const std::string& inputFilePath, const std::string& actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr\<FileHandler::Observer\>& fileHandlerObserver, const std::shared_ptr\<void\>& context, const std::shared_ptr\<FileExecutionState\>& fileExecutionState, bool isGetSensitivityLabelAuditDiscoveryEnabled)  |  Starts creating a file handler for given file path.
+public std::shared_ptr\<AsyncControl\> CreateFileHandlerAsync(const std::shared_ptr\<Stream\>& inputStream, const std::string& actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr\<FileHandler::Observer\>& fileHandlerObserver, const std::shared_ptr\<void\>& context, const std::shared_ptr\<FileExecutionState\>& fileExecutionState, bool isGetSensitivityLabelAuditDiscoveryEnabled)  |  Starts creating a file handler for given file stream.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Logs an application specific event to the audit pipeline.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Gets a list of custom settings.
 public bool HasClassificationRules() const  |  Gets if the policy has automatic or recommendation rules.
@@ -42,7 +42,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: FileEngine::Settings).
+**See also**: [FileEngine::Settings](undefined)).
   
 ### GetDefaultSensitivityLabel function
 Get the default sensitivity label.
@@ -105,10 +105,13 @@ Parameters:
 * **isAuditDiscoveryEnabled**: representing whether audit discovery is enabled or not. 
 
 
-* **fileHandlerObserver**: A class implementing the FileHandler::Observer interface. 
+* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](undefined) interface. 
 
 
 * **context**: Client context that will be opaquely passed back to the observer. 
+
+
+* **isGetSensitivityLabelAuditDiscoveryEnabled**: representing whether audit discovery is triggered for getSensitivityLabel or not. 
 
 
 
@@ -128,10 +131,13 @@ Parameters:
 * **isAuditDiscoveryEnabled**: representing whether audit discovery is enabled or not. 
 
 
-* **fileHandlerObserver**: A class implementing the FileHandler::Observer interface. 
+* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](undefined) interface. 
 
 
 * **context**: Client context that will be opaquely passed back to the observer. 
+
+
+* **isGetSensitivityLabelAuditDiscoveryEnabled**: representing whether audit discovery is triggered for getSensitivityLabel or not. 
 
 
 

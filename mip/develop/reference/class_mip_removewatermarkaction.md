@@ -1,11 +1,11 @@
 ---
 title: class RemoveWatermarkAction 
 description: Documents the removewatermarkaction::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class RemoveWatermarkAction 
@@ -15,7 +15,7 @@ An action class that specifies removing the watermarking from the document.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::vector\<std::string\>& GetUIElementNames()  |  Gets a list of names that should be used to find the UI elements that should be removed.
-public ActionType GetType() const  |  Get the type of Action.
+public ActionType GetType() const  |  Get the type of [Action](undefined).
   
 ## Members
   
@@ -26,7 +26,7 @@ Gets a list of names that should be used to find the UI elements that should be 
 **Returns**: A list of ui element names.
   
 ### GetType function
-Get the type of Action.
+Get the type of [Action](undefined).
 
   
 **Returns**: ActionType The type of derived action this base class can be cast to.
