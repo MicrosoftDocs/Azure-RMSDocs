@@ -1,11 +1,11 @@
 ---
 title: class PolicyProfile::Settings 
 description: Documents the policyprofile::settings class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class PolicyProfile::Settings 
@@ -92,11 +92,11 @@ Parameters:
 tasks can reference profile objects preventing its destruction as a result taskdispatcher queues should not be shared.
   
 ### SetSessionId function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetSessionId function
-Not yet documented.
+_Not documented yet._
 
   
 ### SetCustomSettings function
@@ -114,4 +114,4 @@ Get the custom settings, used for feature gating and testing.
 **Returns**: List of name/value pairs.
   
 ### ~Settings function
-Not yet documented.
+_Not documented yet._

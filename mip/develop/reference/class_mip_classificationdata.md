@@ -1,11 +1,11 @@
 ---
 title: class ClassificationData 
 description: Documents the classificationdata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class ClassificationData 
@@ -18,4 +18,4 @@ public virtual ~ClassificationData()  | _Not yet documented._
 ## Members
   
 ### ~ClassificationData function
-Not yet documented.
+_Not documented yet._
