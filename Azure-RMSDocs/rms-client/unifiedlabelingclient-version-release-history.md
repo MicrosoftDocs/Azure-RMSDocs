@@ -85,12 +85,12 @@ This version includes the following new features, fixes, and enhancements for th
 - **New features for the scanner**:
 
     - [PowerShell support for disconnected scanner servers](#powershell-support-for-disconnected-scanner-servers)
-    - [Support for NFS repositories in content scan jobs](#support-for-nfs-repositories-in-content-scan-jobs-public-preview)
+    - [Support for NFS repositories in content scan jobs](#support-for-nfs-repositories-in-content-scan-jobs-public-preview) (Public preview)
     - [Added support for additional sensitive information types](#added-support-for-additional-sensitive-information-types)
 
 - **New features for the client**:
 
-    - [Track document access and revoke access](#track-document-access-and-revoke-access-public-preview)
+    - [Track document access and revoke access](#track-document-access-and-revoke-access-public-preview) (Public preview)
     - [Added support for additional sensitive information types](#added-support-for-additional-sensitive-information-types)
 
 - **Fixes and improvements**:
@@ -100,9 +100,9 @@ This version includes the following new features, fixes, and enhancements for th
 
 ### PowerShell support for disconnected scanner servers
 
-The [Azure Information Protection on-premises scanner](../deploy-aip-scanner.md) now supports managing content scan jobs over PowerShell, for scanner servers that cannot connect to the internet, such as with an [Azure China 21Vianet scanner server](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs).
+The [Azure Information Protection on-premises scanner](../deploy-aip-scanner.md) now supports managing content scan jobs over PowerShell, for scanner servers that cannot connect to the internet, or for scanners in an [Azure China 21Vianet environment (China sovereign cloud)](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs).
 
-To support disconnected scanner servers, we've added the following new cmdlets:
+To support disconnected or Azure China 21Vianet scanner servers, we've added the following new cmdlets:
 
 |Cmdlet  |Description  |
 |---------|---------|
@@ -203,6 +203,8 @@ The following fixes were delivered in version 2.9.111.0 of the [Azure Informatio
 Unified labeling scanner and client version 2.8.85.0
 
 **Released** 09/22/2020
+
+**Supported through** 7/13/2021
 
 This version includes the following new features, fixes, and enhancements, for the unified labeling scanner and client:
 
@@ -357,6 +359,8 @@ Unified labeling scanner and client version 2.7.101.0
 
 **Released** 08/23/2020
 
+**Supported through** 3/22/2021
+
 **Fix**:
 
 Fixed issue for PPT, Excel and Word users which resulted in files freezing, crashing, or being forced to repeat save that was related to mandatory labels configured with protection, watermarking, and/or content marking.
@@ -366,6 +370,8 @@ Fixed issue for PPT, Excel and Word users which resulted in files freezing, cras
 Unified labeling scanner and client version 2.7.99.0
 
 **Released** 07/20/2020
+
+**Supported through** 2/23/2021
 
 **Fixes and improvements**:
 
@@ -378,6 +384,8 @@ For more information, see [Version 2.7.96.0](#version-27960) and [Azure Informat
 Unified labeling scanner and client version 2.7.96.0
 
 **Released** 06/29/2020
+
+**Supported through** 1/20/2021
 
 - [New features for the unified labeling client, version 2.7.96.0](#new-features-for-the-unified-labeling-client-version-27960)
 - [New features for the unified labeling scanner, version 2.7.96.0](#new-features-for-the-unified-labeling-scanner-version-27960)
