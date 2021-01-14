@@ -9,12 +9,12 @@ ms.date: 01/13/2021
 ---
 
 # class MetadataVersion 
-Interface for a [MetadataVersion](undefined). [MetadataVersion](undefined) determines which metadata is active and how it is processed.
+Interface for a MetadataVersion. MetadataVersion determines which metadata is active and how it is processed.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MetadataVersion(uint32_t version, MetadataVersionFormat flags)  |  [MetadataVersion](undefined) constructor.
+public MetadataVersion(uint32_t version, MetadataVersionFormat flags)  |  MetadataVersion constructor.
 public virtual uint32_t GetValue() const  |  Get the numerical version.
 public virtual bool HasFlag(MetadataVersionFormat flag) const  |  Get whether a specific flag is set.
 public virtual MetadataVersionFormat GetFlags() const  |  Get the flags that define how metadata is processed for a given version.
@@ -22,7 +22,7 @@ public virtual MetadataVersionFormat GetFlags() const  |  Get the flags that def
 ## Members
   
 ### MetadataVersion function
-[MetadataVersion](undefined) constructor.
+MetadataVersion constructor.
 
 Parameters:  
 * **version**: numerical version to use for metadata actions 

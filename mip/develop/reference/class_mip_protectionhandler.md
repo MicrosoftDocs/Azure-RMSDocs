@@ -17,9 +17,9 @@ Manages protection-related actions for a specific protection configuration.
 public std::shared_ptr\<Stream\> CreateProtectedStream(const std::shared_ptr\<Stream\>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Create a protected stream that will allow for encryption/decryption of content.
 public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Encrypt a buffer.
 public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Decrypt a buffer.
-public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calculates size (in bytes) of content if it were to be encrypted with this [ProtectionHandler](undefined).
-public int64_t GetBlockSize()  |  Gets the block size (in bytes) for the cipher mode used by this [ProtectionHandler](undefined).
-public std::vector\<std::string\> GetRights() const  |  Gets the rights granted to the user/identity associated with this [ProtectionHandler](undefined).
+public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calculates size (in bytes) of content if it were to be encrypted with this ProtectionHandler.
+public int64_t GetBlockSize()  |  Gets the block size (in bytes) for the cipher mode used by this ProtectionHandler.
+public std::vector\<std::string\> GetRights() const  |  Gets the rights granted to the user/identity associated with this ProtectionHandler.
 public bool AccessCheck(const std::string& right) const  |  Checks if protection handler grants user access to the specified right.
 public const std::string GetIssuedTo()  |  Gets user associated with the protection handler.
 public const std::string GetOwner()  |  Gets email address of content owner.
@@ -28,7 +28,7 @@ public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor()  |  Get
 public const std::string GetContentId()  |  Gets unique identifier for the document/content.
 public bool DoesUseDeprecatedAlgorithms()  |  Gets if protection handler uses deprecated crypto algorithms (ECB) for backward compatibility or not.
 public bool IsAuditedExtractAllowed()  |  Gets if protection handler grants user 'audited extract' right or not.
-public const std::vector\<uint8_t\>& GetSerializedPublishingLicense() const  |  Serialize [ProtectionHandler](undefined) into a publishing license (PL)
+public const std::vector\<uint8_t\>& GetSerializedPublishingLicense() const  |  Serialize ProtectionHandler into a publishing license (PL)
 public const std::vector\<uint8_t\>& GetSerializedPreLicense(PreLicenseFormat format) const  |  Get pre-license.
 public CipherMode GetCipherMode() const  |  Gets the cipher mode of the protection handler.
 enum PreLicenseFormat  |  Pre-license format.
@@ -105,7 +105,7 @@ Parameters:
 **Returns**: Actual size (in bytes) of decrypted content
   
 ### GetProtectedContentLength function
-Calculates size (in bytes) of content if it were to be encrypted with this [ProtectionHandler](undefined).
+Calculates size (in bytes) of content if it were to be encrypted with this ProtectionHandler.
 
 Parameters:  
 * **unprotectedLength**: Size (in bytes) of unprotected content 
@@ -119,13 +119,13 @@ Parameters:
 **Returns**: Size (in bytes) of protected content
   
 ### GetBlockSize function
-Gets the block size (in bytes) for the cipher mode used by this [ProtectionHandler](undefined).
+Gets the block size (in bytes) for the cipher mode used by this ProtectionHandler.
 
   
 **Returns**: Block size (in bytes)
   
 ### GetRights function
-Gets the rights granted to the user/identity associated with this [ProtectionHandler](undefined).
+Gets the rights granted to the user/identity associated with this ProtectionHandler.
 
   
 **Returns**: Rights granted to the user
@@ -184,7 +184,7 @@ Gets if protection handler grants user 'audited extract' right or not.
 **Returns**: If protection handler grants user 'audited extract' right or not
   
 ### GetSerializedPublishingLicense function
-Serialize [ProtectionHandler](undefined) into a publishing license (PL)
+Serialize ProtectionHandler into a publishing license (PL)
 
   
 **Returns**: Serialized publishing license
@@ -199,7 +199,7 @@ Parameters:
 
   
 **Returns**: Serialized pre-license
-A pre-license allows a user to immediately consume content without making an additional HTTP call. The [ProtectionHandler](undefined) must have been created with a [ProtectionHandler::PublishingSettings::SetPreLicenseUserEmail](undefined) value or else this will return an empty vector.
+A pre-license allows a user to immediately consume content without making an additional HTTP call. The ProtectionHandler must have been created with a ProtectionHandler::PublishingSettings::SetPreLicenseUserEmail value or else this will return an empty vector.
   
 ### GetCipherMode function
 Gets the cipher mode of the protection handler.

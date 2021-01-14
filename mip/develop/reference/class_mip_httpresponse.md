@@ -9,7 +9,7 @@ ms.date: 01/13/2021
 ---
 
 # class HttpResponse 
-Interface that describes a single HTTP response, implemented by client app when overriding [HttpDelegate](undefined).
+Interface that describes a single HTTP response, implemented by client app when overriding HttpDelegate.
   
 ## Summary
  Members                        | Descriptions                                
@@ -26,7 +26,7 @@ Gets response ID.
 
   
 **Returns**: Response ID
-The corresponding [HttpRequest](undefined) will have had the same ID
+The corresponding HttpRequest will have had the same ID
   
 ### GetStatusCode function
 Get response status code.
