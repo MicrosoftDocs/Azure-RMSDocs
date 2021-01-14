@@ -61,7 +61,7 @@ The **AzureInformationProtection** module is installed in the **\ProgramFiles (x
 
 In addition to the prerequisites for installing the **AzureInformationProtection** module, there are extra prerequisites for when you use the labeling cmdlets for Azure Information Protection:
 
-- **The Azure Rights Management service must be activated.**
+- **The Azure Rights Management service must be activated**.
 
     If your Azure Information Protection tenant is not activated, see the instructions for [Activating the protection service from Azure Information Protection](../activate-service.md).
 
@@ -161,7 +161,7 @@ The **Set-AIPAuthentication** cmdlet requires an app registration for the *AppId
 
     The value looks similar to the following example: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. 
 
-    This value is used for the *AppId* parameter when you run the **Set-AIPAuthentication cmdlet.** Paste and save the value for later reference.
+    This value is used for the *AppId* parameter when you run the **Set-AIPAuthentication cmdlet**. Paste and save the value for later reference.
 
 1. From the sidebar, select **Manage** > **Certificates & secrets**.
 
