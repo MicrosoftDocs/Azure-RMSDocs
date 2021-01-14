@@ -59,7 +59,7 @@ The **AzureInformationProtection** module is installed in the **\ProgramFiles (x
 
 ## Prerequisites for using the AzureInformationProtection module
 
-In addition to the prerequisites for installing the **AzureInformationProtection** module, there are additional prerequisites for when you use the labeling cmdlets for Azure Information Protection:
+In addition to the prerequisites for installing the **AzureInformationProtection** module, there are extra prerequisites for when you use the labeling cmdlets for Azure Information Protection:
 
 - **The Azure Rights Management service must be activated.**
 
@@ -78,7 +78,7 @@ In addition to the prerequisites for installing the **AzureInformationProtection
 
 If you've migrated from Azure RMS, note that RMS-related cmdlets have been deprecated for use in unified labeling. 
 
-Some of these have been replaced with new cmdlets for unified labeling. For example, if you used **New-RMSProtectionLicense** with RMS protection and have migrated to unified labeling, use **New-AIPCustomPermissions** instead.
+Some of the legacy cmdlets have been replaced with new cmdlets for unified labeling. For example, if you used **New-RMSProtectionLicense** with RMS protection and have migrated to unified labeling, use **New-AIPCustomPermissions** instead.
 
 The following table maps RMS-related cmdlets with the updated cmdlets used for unified labeling:
 
@@ -112,7 +112,7 @@ Instead, follow the instructions for [disconnected computers](clientv2-admin-gui
 
 ### Prerequisites for running AIP labeling cmdlets unattended
 
-To run Azure Information Protection labeling cmdlets unattended, use the following:
+To run Azure Information Protection labeling cmdlets unattended, use the following access details:
 
 - **A Windows account** that can sign in interactively.
 
@@ -208,7 +208,7 @@ The **Set-AIPAuthentication** cmdlet requires an app registration for the *AppId
 
 1. Back on the **AIP-DelegatedUser - API permissions** pane, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
     
-    Your API permissions should look like the following:
+    Your API permissions should look like the following image:
 
     :::image type="content" source="../media/api-permissions-app.png" alt-text="API permissions for the registered app in Azure AD":::
 
@@ -229,7 +229,7 @@ Now you've completed the registration of this app with a secret, you're ready to
 
     You're prompted for this account's password.
 
-1. Run the **Set-AIPAuthentication** cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you just created. 
+1. Run the **Set-AIPAuthentication** cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you created. 
 
     Also specify your app registration values, your tenant ID, and the name of the delegated user account in Azure AD. For example:
     
@@ -244,7 +244,7 @@ For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet nam
 Get-Help Set-AIPFileLabel -online
 ```
 
-See the following for additional information that you might need to support the Azure Information Protection client:
+For more information, see:
 
 - [Unified labeling client customizations](clientv2-admin-guide-customizations.md)
 
