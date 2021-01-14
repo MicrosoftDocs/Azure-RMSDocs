@@ -1,11 +1,11 @@
 ---
 title: class PolicyPackageData 
 description: Documents the policypackagedata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class PolicyPackageData 
@@ -19,8 +19,8 @@ public virtual ~PolicyPackageData()  | _Not yet documented._
 ## Members
   
 ### GetRules function
-Not yet documented.
+_Not documented yet._
 
   
 ### ~PolicyPackageData function
-Not yet documented.
+_Not documented yet._

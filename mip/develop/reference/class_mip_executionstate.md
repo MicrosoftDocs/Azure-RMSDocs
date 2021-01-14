@@ -1,11 +1,11 @@
 ---
 title: class ExecutionState 
 description: Documents the executionstate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class ExecutionState 
@@ -23,7 +23,7 @@ public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Get the new labe
 public virtual std::vector\<std::pair\<std::string, std::string\>\> GetNewLabelExtendedProperties() const  |  Return new label's extended properties.
 public std::vector\<MetadataEntry\> GetContentMetadata(const std::vector\<std::string\>& names, const std::vector\<std::string\>& namePrefixes) const  |  Get the meta-data items from the content.
 public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Get the Protection Descriptor.
-public ContentFormat GetContentFormat() const  |  Gets the content format.
+public std::string GetContentFormat() const  |  Gets the content format.
 public virtual MetadataVersion GetContentMetadataVersion() const  |  Gets the highest metadata version supported by the application for the tenant.
 public ActionType GetSupportedActions() const  |  Gets a masked enum describing all the supported action types.
 public virtual std::shared_ptr\<ClassificationResults\> GetClassificationResults(const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Return a map of classification results.
@@ -89,9 +89,7 @@ Get the Protection Descriptor.
 Gets the content format.
 
   
-**Returns**: DEFAULT, EMAIL 
-  
-**See also**: mip::ContentFormat
+**Returns**: Content format
   
 ### GetContentMetadataVersion function
 Gets the highest metadata version supported by the application for the tenant.

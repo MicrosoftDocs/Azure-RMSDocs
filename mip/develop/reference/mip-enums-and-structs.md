@@ -10,7 +10,6 @@ ms.date: 01/28/2019
 
 # Enumerations and Structures
 
-## Namespace mip
 
 Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
@@ -43,9 +42,9 @@ enum ProtectionActionType       | _Not yet documented._
 struct mip::ApplicationInfo  |  A struct that includes application specific information.
 struct mip::TelemetryConfiguration  |  Custom telemetry settings (not commonly used)
 
-### Enumerations
+## Enumerations
 
-#### WatermarkLayout enum
+### WatermarkLayout enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 HORIZONTAL            | Watermark layout is horizontal
@@ -53,7 +52,7 @@ DIAGONAL            | Watermark layout is diagonal
 
 Layout for watermarks.
   
-#### ContentMarkAlignment enum
+### ContentMarkAlignment enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 LEFT            | Content marking is aligned to the left
@@ -62,7 +61,7 @@ CENTER            | Content marking is centered
 
 Alignment for content marks (content header or content footer).
   
-#### AssignmentMethod enum
+### AssignmentMethod enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 STANDARD            | Label assignment method is standard
@@ -71,7 +70,7 @@ AUTO            | Label assignment method is automatic
 
 The assignment method of the label on the document. Whether the Assignment of the label was done automatically, standard or as a privileged operation (The equivalent to an administrator operation).
   
-#### ActionSource enum
+### ActionSource enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 MANUAL            | Selected manually by user
@@ -81,7 +80,7 @@ DEFAULT            | Set by default in policy
 
 Defines what triggered the SetLabel event
   
-#### DataState enum
+### DataState enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 REST            | Inactive data stored physically in databases/file/warehouses
@@ -90,7 +89,7 @@ USE            | Active data under constant change stored physically in database
 
 Defines what state of the data is the application acting upon.
   
-#### ContentFormat enum
+### ContentFormat enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 DEFAULT            | Content format is standard file format
@@ -98,7 +97,7 @@ EMAIL            | Content format is email format
 
 Content format.
   
-#### LabelFilterType enum
+### LabelFilterType enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 None            | Disable default labeling filtration
@@ -112,14 +111,14 @@ DoubleKeyProtection            | Filter labels that may result in protection tha
 
 Label filter types, optional set of properties that can be used to filter labels when calling list sensitivity labels.
   
-#### FeatureId enum
+### FeatureId enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 EncryptOnly            | Check if server supports EncryptOnly feature
 
 Defines new features by name.
   
-#### VariableTextMarkingType enum
+### VariableTextMarkingType enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Default            | Known markings are converted unknown marking are removed
@@ -128,7 +127,7 @@ None            | All markings are passed through
 
 Various dynamic fields can be set into the text message of the application Some known: ${Item.Label} ${Item.Name} ${Item.Location} ${User.Name} ${User.PrincipalName} ${Event.DateTime} Others are still not defined: The sdk will replace them with correct values using these control flags.
   
-#### Consent enum
+### Consent enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 AcceptAlways            | Consent, and remember this decision
@@ -137,7 +136,7 @@ Reject            | Do not consent
 
 A user's response when consent is requested to connect to a service endpoint.
   
-#### CacheStorageType enum
+### CacheStorageType enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 InMemory            | In Memory storage
@@ -146,7 +145,7 @@ OnDiskEncrypted            | On Disk storage with encryption (if supported by th
 
 Storage type for the caches.
   
-#### PFileExtensionBehavior enum
+### PFileExtensionBehavior enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Default            | Extensions will become as SDK default behavior
@@ -155,7 +154,7 @@ PPrefix            | Extensions will become P<EXT>
 
 Describes PFile extensions behavior.
   
-#### ErrorType enum
+### ErrorType enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 BAD_INPUT_ERROR            | Caller passed bad input.
@@ -180,7 +179,7 @@ TEMPLATE_NOT_FOUND            | Template ID is not recognized
 LABEL_NOT_FOUND            | Label ID is not recognized
 LABEL_DISABLED            | Label is disabled or inactive
   
-#### InspectorType enum
+### InspectorType enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unkown file inspector.
@@ -188,7 +187,7 @@ Msg            | Msg style file inspector, rpmsg / msg based.
 
 Inspector type correlating to supported file types.
   
-#### BodyType enum
+### BodyType enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 UNKNOWN            | Unkown body type
@@ -198,7 +197,7 @@ RTF            | RTF style body type, a binary format
 
 Body type enumerator.
   
-#### FlightingFeature enum
+### FlightingFeature enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 ServiceDiscovery            | Rely on separate HTTP call to determine RMS service endpoints
@@ -214,7 +213,7 @@ VariableTextMarking            | Enable variable text marking
 
 Defines new features by name.
   
-#### HttpRequestType enum
+### HttpRequestType enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Get            | GET
@@ -222,7 +221,7 @@ Post            | POST
 
 HTTP request type.
   
-#### LogLevel enum
+### LogLevel enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Trace            | 
@@ -232,7 +231,7 @@ Error            |
 
 Different log levels used across the MIP SDK.
   
-#### ProtectionType enum
+### ProtectionType enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 TemplateBased            | Handle was created from a template
@@ -240,7 +239,7 @@ Custom            | Handle was created ad hoc
 
 Describes whether protection is based off a template or ad-hoc (custom)
   
-#### ActionType enum
+### ActionType enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 ADD_CONTENT_FOOTER            | Add a content footer to the document action type.
@@ -264,14 +263,14 @@ PROTECT_DO_NOT_FORWARD_DK            | A protect by do not forward action type.
 
 Different action types. CUSTOM is the generic action type. Every other action type is a specific action with a specific meaning.
   
-#### LabelState enum
+### LabelState enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 NoChange            | 
 Remove            | 
 Update            | 
   
-#### ActionDataType enum
+### ActionDataType enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Custom            | 
@@ -280,25 +279,25 @@ ContentMarking            |
 AddWatermark            | 
 Label            | 
   
-#### ConditionDataType enum
+### ConditionDataType enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Default            | 
 Sensitivity            | 
   
-#### ContentMarkPlacement enum
+### ContentMarkPlacement enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Header            | 
 Footer            | 
   
-#### LabelActionDataType enum
+### LabelActionDataType enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Recommend            | 
 Apply            | 
   
-#### ProtectionActionType enum
+### ProtectionActionType enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Custom            | 
@@ -311,9 +310,9 @@ PredefinedTemplate            |
 RemoveProtection            | 
  
 
-### Structures
+## Structures
 
-#### struct mip::ApplicationInfo 
+### struct mip::ApplicationInfo 
 A struct that includes application specific information.
   
 Members                        | Descriptions                                
@@ -323,16 +322,76 @@ public std::string applicationName  |  Application name, (Should only contain va
 public std::string applicationVersion  |  The version of the application being used, (Should only contain valid ASCII character excluding ';')
   
 
-##### applicationId struct member
+#### applicationId struct member
 Application identifier as set in the AAD portal, (Should be a GUID without brackets).
   
-##### applicationName struct member
+#### applicationName struct member
 Application name, (Should only contain valid ASCII character excluding ';')
   
-##### applicationVersion struct member
+#### applicationVersion struct member
 The version of the application being used, (Should only contain valid ASCII character excluding ';')
 
-#### struct mip::TelemetryConfiguration 
+### struct DiagnosticConfiguration
+
+Custom diagnostic configurations (not commonly used)
+  
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+public std::string hostNameOverride  |  Host audit/telemetry instance name. If not set, MIP will act as its own host.
+public std::string libraryNameOverride  |  Alternate audit/telemetry library (DLL) filename.
+public std::shared_ptr\<HttpDelegate\> httpDelegateOverride  |  If set, HTTP handling will be managed by this instance
+public std::shared_ptr\<TaskDispatcherDelegate\> taskDispatcherDelegateOverride  |  If set, async task handling will be managed by this instance, taskDispatcherDelegateOverides should not be shared as they can hold audit/telemetry objects, and prevent their release until taskDispatcher is freed.
+public bool isNetworkDetectionEnabled  |  If set, audit/telemetry component will ping network status on background thread
+public bool isLocalCachingEnabled  |  If set, audit/telemetry component will use on-disk caching
+public bool isTraceLoggingEnabled  |  If set, audit/telemetry component will write warning/error logs to disk
+public bool isMinimalTelemetryEnabled  |  If set, only necessary service data telemetry will be sent
+public bool isFastShutdownEnabled  |  If set, No events will be uploaded on shutdown, Audit events will be uploaded immediately upon logging
+public std::map\<std::string, std::string\> customSettings  |  Custom audit/telemetry settings >
+public std::map\<std::string, std::vector\<std::string\>\> maskedProperties  |  Audit/Telemetry events/properties which should be masked
+public std::shared_ptr\<AuditDelegate\> auditPipelineDelegateOverride  |  Audit delegate override for writting audit events
+public Cloud cloud  |  Cloud type for controlling telemetry and audit events for sovereign cloud scenario
+  
+  
+#### hostNameOverride struct member
+Host audit/telemetry instance name. If not set, MIP will act as its own host.
+  
+#### libraryNameOverride struct member
+Alternate audit/telemetry library (DLL) filename.
+  
+#### HttpDelegate
+If set, HTTP handling will be managed by this instance
+  
+#### TaskDispatcherDelegate
+If set, async task handling will be managed by this instance, taskDispatcherDelegateOverides should not be shared as they can hold audit/telemetry objects, and prevent their release until taskDispatcher is freed.
+  
+#### isNetworkDetectionEnabled struct member
+If set, audit/telemetry component will ping network status on background thread
+  
+#### isLocalCachingEnabled struct member
+If set, audit/telemetry component will use on-disk caching
+  
+#### isTraceLoggingEnabled struct member
+If set, audit/telemetry component will write warning/error logs to disk
+  
+#### isMinimalTelemetryEnabled struct member
+If set, only necessary service data telemetry will be sent
+  
+#### isFastShutdownEnabled struct member
+If set, No events will be uploaded on shutdown, Audit events will be uploaded immediately upon logging
+  
+#### customSettings struct member
+Custom audit/telemetry settings >
+  
+#### maskedProperties struct member
+Audit/Telemetry events/properties which should be masked
+  
+#### AuditDelegate
+Audit delegate override for writting audit events
+  
+#### Cloud
+Cloud type for controlling telemetry and audit events for sovereign cloud scenario
+
+### struct mip::TelemetryConfiguration 
 Custom telemetry settings (not commonly used)
   
 Members                        | Descriptions                                
@@ -349,32 +408,50 @@ public bool isFastShutdownEnabled  |  If set, No events will be uploaded on shut
 public std::map\<std::string, std::string\> customSettings  |  Custom telemetry settings >
   
 
-##### hostNameOverride struct member
+#### hostNameOverride struct member
 Host telemetry instance name. If not set, MIP will act as its own host.
   
-##### libraryNameOverride struct member
+#### libraryNameOverride struct member
 Alternate telemetry library (DLL) filename.
   
-##### HttpDelegate
+#### HttpDelegate
 If set, HTTP handling will be managed by this instance
   
-##### TaskDispatcherDelegate
+#### TaskDispatcherDelegate
 If set, async task handling will be managed by this instance, taskDispatcherDelegateOverides should not be shared as they can hold telemetry objects, and prevent their release until taskDispatcher is freed.
   
-##### isNetworkDetectionEnabled struct member
+#### isNetworkDetectionEnabled struct member
 If set, telemetry component will ping network status on background thread
   
-##### isLocalCachingEnabled struct member
+#### isLocalCachingEnabled struct member
 If set, telemetry component will use on-disk caching
   
-##### isTraceLoggingEnabled struct member
+#### isTraceLoggingEnabled struct member
 If set, telemetry component will write warning/error logs to disk
   
-##### isTelemetryOptedOut struct member
+#### isTelemetryOptedOut struct member
 If set, only necessary service data telemetry will be sent
   
-##### isFastShutdownEnabled struct member
+#### isFastShutdownEnabled struct member
 If set, No events will be uploaded on shutdown, Audit events will be uploaded immediately upon logging
   
-##### customSettings struct member
-Custom telemetry settings >
+#### customSettings struct member
+Custom telemetry settings.
+
+### struct UniqueIdsAndContentFormats 
+  
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+public std::unordered_map\<std::string, std::string\> uniqueIds  | _Not yet documented._
+public std::vector\<std::string\> contentFormats  | _Not yet documented._
+  
+
+  
+#### uniqueIds struct member
+
+_Not yet documented._
+
+  
+#### contentFormats struct member
+
+_Not yet documented._
