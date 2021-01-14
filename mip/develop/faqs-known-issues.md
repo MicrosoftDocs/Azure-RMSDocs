@@ -46,7 +46,7 @@ We [recently announced](https://aka.ms/mipsdkmetadata) that we're making a chang
 
 **Question**: Currently, it's easy to "read" the label by extracting the key/value pair strings from the file. Will reading still be possible in this manner? 
 
-- Yes, the metadata is still available in the Office file XML to be read. However, it should be noted that your application will need to understand whether the new feature set is enabled to know which section is authoritative (custom.xml vs. labelinfo.xml). Review [MS-OFFCRYPTO: LabelInfo versus Custom Document Properties | Microsoft Docs.](https://docs.microsoft.com/en-us/openspecs/office_file_formats/ms-offcrypto/13939de6-c833-44ab-b213-e0088bf02341) for implementation details.
+- Yes, the metadata is still available in the Office file XML to be read. However, it should be noted that your application will need to understand whether the new feature set is enabled to know which section is authoritative (custom.xml vs. labelinfo.xml). Review [MS-OFFCRYPTO: LabelInfo versus Custom Document Properties | Microsoft Docs.](https://docs.microsoft.com/openspecs/office_file_formats/ms-offcrypto/13939de6-c833-44ab-b213-e0088bf02341) for implementation details.
   
 **Question**: How can I discover if the new features are enabled? 
 
