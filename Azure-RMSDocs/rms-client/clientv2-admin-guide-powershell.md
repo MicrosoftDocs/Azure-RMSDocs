@@ -106,9 +106,7 @@ For more information, see:
 - [Running the Set-AIPAuthentication cmdlet](#running-the-set-aipauthentication-cmdlet)
 
 > [!NOTE]
-> If the computer cannot have internet access, there's no need to create the app in Azure AD and run the **Set-AIPAuthentication** cmdlet. 
->
-> Instead, follow the instructions for [disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
+> If the computer cannot have internet access, there's no need to create the app in Azure AD and run the **Set-AIPAuthentication** cmdlet. Instead, follow the instructions for [disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
 
 ### Prerequisites for running AIP labeling cmdlets unattended
 
