@@ -1,11 +1,11 @@
 ---
 title: class FileProfile::Observer 
 description: Documents the fileprofile::observer class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class FileProfile::Observer 
@@ -34,7 +34,7 @@ protected Observer()  | _Not yet documented._
 ## Members
   
 ### ~Observer function
-Not yet documented.
+_Not documented yet._
 
   
 ### OnLoadSuccess function
@@ -80,4 +80,4 @@ Parameters:
 This optional callback may be used by an application to be informed whether or not an AddEngineAsync operation will require an HTTP operation (with its associated delay) to complete.
   
 ### Observer function
-Not yet documented.
+_Not documented yet._

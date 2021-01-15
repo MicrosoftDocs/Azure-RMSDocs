@@ -1,11 +1,11 @@
 ---
 title: class ProtectionEngine 
 description: Documents the protectionengine::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class ProtectionEngine 
@@ -30,6 +30,8 @@ public void RegisterContentForTrackingAndRevocation(const std::vector\<uint8_t\>
 public std::shared_ptr\<AsyncControl\> RegisterContentForTrackingAndRevocationAsync(const std::vector\<uint8_t\>& serializedPublishingLicense, const std::string& contentName, bool isOwnerNotificationEnabled, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Register publishing license (PL) for document tracking & revocation.
 public void RevokeContent(const std::vector\<uint8_t\>& serializedPublishingLicense, const std::shared_ptr\<void\>& context)  |  Perform revocation for content.
 public std::shared_ptr\<AsyncControl\> RevokeContentAsync(const std::vector\<uint8_t\>& serializedPublishingLicense, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Perform revocation for content.
+public std::vector\<std::shared_ptr\<DelegationLicense\>\> CreateDelegationLicenses(const DelegationLicenseSettings& settings, const std::shared_ptr\<void\>& context)  |  Creates a delegated license.
+public std::shared_ptr\<AsyncControl\> CreateDelegationLicensesAsync(const DelegationLicenseSettings& settings, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a delegated license.
   
 ## Members
   
@@ -275,3 +277,36 @@ Parameters:
 
   
 **Returns**: Async control object.
+  
+### CreateDelegationLicenses function
+Creates a delegated license.
+
+Parameters:  
+* **settings**: The delegation settings 
+
+
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
+
+
+
+  
+**Returns**: A vector of the delegation licenses
+Use this method to create licenses for a list of users
+  
+### CreateDelegationLicensesAsync function
+Creates a delegated license.
+
+Parameters:  
+* **settings**: The delegation settings 
+
+
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
+
+
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
+
+
+
+  
+**Returns**: Async control object.
+Use this method to create licenses for a list of users. Receive the DelegationLicense vector in callback OnCreateDelegatedLicensesSuccess Failures are sent in OnCreateDelegatedLicensesFailure
