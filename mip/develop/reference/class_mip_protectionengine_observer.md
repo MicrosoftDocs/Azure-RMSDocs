@@ -1,11 +1,11 @@
 ---
 title: class ProtectionEngine::Observer 
 description: Documents the protectionengine::observer class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class ProtectionEngine::Observer 
@@ -25,6 +25,8 @@ public virtual void OnRegisterContentForTrackingAndRevocationSuccess(const std::
 public virtual void OnRegisterContentForTrackingAndRevocationFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when registration of content for tracking & revocation fails.
 public virtual void OnRevokeContentSuccess(const std::shared_ptr\<void\>& context)  |  Called when revocation of is successful.
 public virtual void OnRevokeContentFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when revocation of content is fails.
+public virtual void OnCreateDelegatedLicensesSuccess(std::vector\<std::shared_ptr\<DelegationLicense\>\> delegatedLicenses, const std::shared_ptr\<void\>& context)  |  Called when create delegated license is successful.
+public virtual void OnCreateDelegatedLicensesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when create delegated license fails.
   
 ## Members
   
@@ -138,3 +140,24 @@ Parameters:
 
 
 An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RevokeContentAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnRevokeContentSuccess or ProtectionEngine::Observer::OnRevokeContentFailure
+  
+### OnCreateDelegatedLicensesSuccess function
+Called when create delegated license is successful.
+
+Parameters:  
+* **context**: The same context that was passed to ProtectionEngine::CreateDelegationLicensesAsync.
+
+
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::CreateDelegationLicensesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnCreateDelegatedLicensesSuccess or ProtectionEngine::Observer::OnCreateDelegatedLicensesFailure.
+  
+### OnCreateDelegatedLicensesFailure function
+Called when create delegated license fails.
+
+Parameters:  
+* **error**: Error that occurred 
+
+
+* **context**: The same context that was passed to ProtectionEngine::CreateDelegationLicensesAsync
+
+
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::CreateDelegationLicensesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnCreateDelegatedLicensesSuccess or ProtectionEngine::Observer::OnCreateDelegatedLicensesFailure

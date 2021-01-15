@@ -17,6 +17,8 @@
       href: requirements-applications.md
     - name: File types supported
       href: ./rms-client/clientv2-admin-guide-file-types.md
+    - name: Unified labeling client requirements
+      href: ./rms-client/reqs-ul-client.md
     - name: On-premises scanner requirements
       href: deploy-aip-scanner-prereqs.md
   - name: AIP is also known as ...
@@ -135,10 +137,12 @@
       items:
         - name: Overview
           href: deploy-aip-scanner.md
-        - name: Configure and install the unifed labeling scanner
+        - name: Configure and install the unified labeling scanner
           href: deploy-aip-scanner-configure-install.md
         - name: Run the unified labeling scanner
           href: deploy-aip-scanner-manage.md
+        - name: Troubleshoot your scanner
+          href: deploy-aip-scanner-tsg.md
     - name: Deploying the RMS connector
       items:
       - name: Overview
@@ -181,6 +185,8 @@
         href: ./rms-client/clientv2-admin-guide.md
       - name: Install the client for users
         href: ./rms-client/clientv2-admin-guide-install.md
+      - name: Track and revoke access
+        href: ./rms-client/track-and-revoke-admin.md
       - name: Customizations
         href: ./rms-client/clientv2-admin-guide-customizations.md
       - name: Client files and usage logging
@@ -201,7 +207,9 @@
         href: ./rms-client/clientv2-view-use-files.md
       - name: Remove labels and protection
         href: ./rms-client/clientv2-remove-label-protection.md
-    - name: Azure Information Protection apps for iOS and Android
+      - name: Revoke document access
+        href: ./rms-client/revoke-access-user.md
+    - name: AIP apps for iOS and Android
       href: ./rms-client/mobile-app-faq.md
     - name: Protected PDF readers
       href: ./rms-client/protected-pdf-readers.md

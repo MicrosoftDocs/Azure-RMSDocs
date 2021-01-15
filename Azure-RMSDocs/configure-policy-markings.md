@@ -6,15 +6,16 @@ description: When you assign a label to a document or email message, you can sel
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/29/2020
+ms.date: 12/29/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: aiplabels
@@ -107,7 +108,7 @@ You can use the following variables in the text string for your header, footer, 
 
 - `${Item.Location}` for the path and file name for documents, and the email subject for emails. For example: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` for the owner of the document or email, by the Windows signed in user name. For example: rsimone
+- `${User.Name}` for the display name of the owner of the document or email, by the Windows user currently signed in. For example: Rosalind Simone
 
 - `${User.PrincipalName}` for the owner of the document or email, by the Azure Information Protection client signed in email address (UPN). For example: rsimone@vanarsdelltd.com
 

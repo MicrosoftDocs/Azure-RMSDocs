@@ -33,7 +33,7 @@ The Azure Information Protection (AIP) mobile app for iOS and Android is a viewe
 
 For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
 
-For more information, see [Applications that support Azure Rights Management data protection](../requirements-applications.md).
+For more information about the protection features supported in your apps, [Applications that support Azure Rights Management data protection](../requirements-applications.md). 
 
 > [!NOTE]
 > The AIP mobile apps are *viewers only,* and do not enable you to create new emails or reply to emails, or create or edit protected files. The AIP mobile apps also cannot open attachments to protected PDFs or emails.
@@ -43,26 +43,19 @@ For more information, see [Applications that support Azure Rights Management dat
 
 Download and install AIP mobile apps from one of the following locations:
 
-**iTunes**
+**iTunes**:
 
-:::image type="content" source="../media/develop/ios-icon.png" alt-text="iTunes" link="https://apps.apple.com/app/microsoft-rights-management/id689516635" border="false":::
+:::image type="content" source="../media/ios-icon.png" alt-text="iTunes" link="https://apps.apple.com/app/microsoft-rights-management/id689516635" border="false":::  
 
-**Google Play**
+**Google Play**:
 
-:::image type="content" source="../media/develop/android-icon.png" alt-text="Google Play" link="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer" border="false":::
+:::image type="content" source="../media/android-icon.png" alt-text="Google Play" link="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer" border="false"::: 
 
-**AIP download page**
-
-:::image type="content" source="../media/aip-icon.png" alt-text="Azure Information Protection download page" border="false":::
-
-Select the [iOS](https://apps.apple.com/app/microsoft-rights-management/id689516635) or [Android](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer) icons in the **Mobile Devices** section.
-
-**Your company portal**
+**Your company portal**:
 
 If your mobile device is managed by Microsoft Intune, you may be able to download the AIP mobile apps from your company portal. 
 
-For more information, contact your system administrator.
-
+For more information, contact your system administrator. 
 ## iOS: View protected files on your device
 
 Once you've [installed the AIP mobile app](#download-and-install-the-aip-app-for-your-device), open a protected email or file. 
@@ -99,7 +92,7 @@ The AIP mobile apps for iOS and Android support the following file types and env
 |---------|---------|
 |**Supported OS versions**     | Minimum mobile OSs include: </br>- iOS 11  </br>- Android 6.0 </br></br>**Note**: The AIP mobile apps are not supported on Intel CPUs.  |
 |**Supported sign in credentials**     | Sign in to the AIP mobile apps with one of the following: </br></br>**Work or school credentials.** Try logging in with your work or school credentials. If you have questions, contact your administrator to understand whether your organization has AD RMS on-premises with the mobile device extension, or uses Azure Information Protection. </br></br>**A Microsoft account.** If your personal email address was used to protect the file, sign in with a [Microsoft account](https://signup.live.com). If you need to apply for a Microsoft account, you can use your own Hotmail, Gmail, or any other email address to do so. </br></br>**Note**: Not all applications are able to open content protected with a Microsoft account. For more information, see [Supported scenarios for opening protected documents](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
-|**Supported file types**     | Supported files types include protected email messages, PDF files, images, and text files. </br></br>For example, these files include the following extensions: **rpmsg**, **.pdf**, **.ppdf**, **.pjpg,** **.pjpeg**, **.ptiff**, **.ppng**, **.ptxt**, **.pxml** </br></br>For a full list of supported file types, see [The AIP client admin guide](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
+|**Supported file types**     | Supported files types include protected email messages, PDF files, images, and text files. </br></br>For example, these files include the following extensions: **rpmsg**, **.pdf**, **.ppdf**, **.pjpg**, **.pjpeg**, **.ptiff**, **.ppng**, **.ptxt**, **.pxml** </br></br>For a full list of supported file types, see [The AIP client admin guide](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
 | | |
 
 ## Admins: Testing the AIP mobile apps

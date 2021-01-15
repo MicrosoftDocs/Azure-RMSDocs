@@ -1,11 +1,11 @@
 ---
 title: class FileEngine::Settings 
 description: Documents the fileengine::settings class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class FileEngine::Settings 
@@ -40,10 +40,8 @@ public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Set
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
 public void SetLabelFilter(const std::vector\<LabelFilterType\>& deprecatedLabelFilters)  |  Sets the label filter.
 public const std::vector\<LabelFilterType\>& GetLabelFilter() const  |  Gets the label filters set through deprecated function SetLabelFilter.
-public void ConfigureFunctionality(LabelFilterType labelFilterType, bool enabled)  |  Enables or disables functionality.
-public const std::map\<LabelFilterType, bool\>& GetConfiguredFunctionality() const  |  Gets the configured functionality.
-public void SetClassifierEnabled(Classifier classifierType, bool enabled)  |  Enables or disables support for classification types.
-public const std::map\<Classifier, bool\>& GetConfiguredClassifierSupport() const  |  Gets the supported classifier overrides.
+public void ConfigureFunctionality(FunctionalityFilterType functionalityFilterType, bool enabled)  |  Enables or disables functionality.
+public const std::map\<FunctionalityFilterType, bool\>& GetConfiguredFunctionality() const  |  Gets the configured functionality.
 public void SetAuthDelegate(const std::shared_ptr\<AuthDelegate\>& authDelegate)  |  Set the Engine Auth Delegate.
 public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Get the Engine Auth Delegate.
   
@@ -227,7 +225,7 @@ Labels are by default filter to scope, this api is to allow filtering by possibl
 Enables or disables functionality.
 
 Parameters:  
-* **labelFilterType**: the type of functionality. 
+* **functionalityFilterType**: the type of functionality. 
 
 
 * **enabled**: True to enable, false to disable
@@ -240,24 +238,6 @@ Gets the configured functionality.
 
   
 **Returns**: A map of the types to a boolean value indicating whether or not it is enabled
-  
-### SetClassifierEnabled function
-Enables or disables support for classification types.
-
-Parameters:  
-* **classifierType**: the type of classifier 
-
-
-* **enabled**: True to enable, false to disable
-
-
-Only SensitiveInformation classifers are enabled by default
-  
-### GetConfiguredClassifierSupport function
-Gets the supported classifier overrides.
-
-  
-**Returns**: A map of the types to a boolean value indicating whether or not they have been overwritten with support
   
 ### SetAuthDelegate function
 Set the Engine Auth Delegate.

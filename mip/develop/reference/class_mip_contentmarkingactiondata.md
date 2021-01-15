@@ -1,11 +1,11 @@
 ---
 title: class ContentMarkingActionData 
 description: Documents the contentmarkingactiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class ContentMarkingActionData 
@@ -25,32 +25,32 @@ public virtual ~ContentMarkingActionData()  | _Not yet documented._
 ## Members
   
 ### GetText function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetFontName function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetFontColor function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetContentMarkAlignment function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetFontSize function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetMargin function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetContentMarkPlacement function
-Not yet documented.
+_Not documented yet._
 
   
 ### ~ContentMarkingActionData function
-Not yet documented.
+_Not documented yet._

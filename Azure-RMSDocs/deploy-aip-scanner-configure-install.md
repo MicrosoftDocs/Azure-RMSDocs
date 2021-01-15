@@ -171,18 +171,20 @@ If you've [defined a network scan job](#create-a-network-scan-job-public-preview
 
 Repositories where **Public access** is found to have **read** or **read/write** capabilities may have sensitive content that must be secured. If **Public access** is false, the repository not accessible by the public at all.
 
-Public access to a repository is only reported if you've set a weak account in the **StandardDomainsUserAccount** parameter of the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) cmdlet.
+Public access to a repository is only reported if you've set a weak account in the **StandardDomainsUserAccount** parameter of the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) or [**Set-MIPNetworkDiscoveryConfiguration**](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration) cmdlets.
 
 - The accounts defined in these parameters are used to simulate the access of a weak user to the repository. If the weak user defined there can access the repository, this means that the repository can be accessed publicly. 
 
 - To ensure that public access is reported correctly, make sure that the user specified in these parameters is a member of the **Domain Users** group only.
-       
+
 ### Create a content scan job
 
 Deep dive into your content to scan specific repositories for sensitive content. 
 
 You may want to do this only after running a network scan job to analyze the repositories in your network, but can also define your repositories yourself.
- 
+
+**To create your content scan job on the Azure portal:**
+
 1. Under the **Scanner** menu on the left, select **Content scan jobs**. 
    
 1. On the **Azure Information Protection - Content scan jobs** pane, select **Add** ![add icon](media/i-add.png "save icon").
@@ -260,18 +262,20 @@ After you've [configured the Azure Information Protection scanner in the Azure p
 1. Sign in to the Windows Server computer that will run the scanner. Use an account that has local administrator rights and that has permissions to write to the SQL Server master database.
 
     > [!IMPORTANT]
+    > You must have the AIP unified labeling client installed on your machine before installing the scanner. 
+    >
     > For more information, see [Prerequisites for installing and deploying the Azure Information Protection scanner](deploy-aip-scanner-prereqs.md).
     >
  
 1. Open a Windows PowerShell session with the **Run as an administrator** option.
 
-1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner, and the scanner cluster name that you specified in the preceding section: 
+1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner, and the scanner cluster name that you [specified in the preceding section](#create-a-scanner-cluster): 
     
     ```PowerShell
     Install-AIPScanner -SqlServerInstance <name> -Cluster <cluster name>
     ```
     
-    Examples, using the profile name of **Europe**:
+    Examples, using the scanner cluster name of **Europe**:
     
     - For a default instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster Europe`
     
@@ -279,7 +283,9 @@ After you've [configured the Azure Information Protection scanner in the Azure p
     
     - For SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster Europe`
     
-    When you are prompted, provide the credentials for the scanner service account (\<domain\user name>) and password.
+    When you are prompted, provide the Active Directory credentials for the scanner service account.
+
+    Use the following syntax: `\<domain\user name>`. For example: `contoso\scanneraccount`
 
 1. Verify that the service is now installed by using **Administrative Tools** > **Services**. 
     
@@ -409,6 +415,7 @@ In the following scenarios, the Azure Information Protection scanner is also abl
 - [Apply a default label to all files in a data repository](#apply-a-default-label-to-all-files-in-a-data-repository)
 - [Remove existing labels from all files in a data repository](#remove-existing-labels-from-all-files-in-a-data-repository)
 - [Identify all custom conditions and known sensitive information types](#identify-all-custom-conditions-and-known-sensitive-information-types)
+
 ### Apply a default label to all files in a data repository
 
 In this configuration, all unlabeled files in the repository are labeled with the default label specified for the repository or the content scan job. Files are labeled without inspection. 
@@ -498,6 +505,10 @@ Supported cmdlets for the scanner include:
 
 - [Get-MIPNetworkDiscoveryStatus](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)
 
+- [Get-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-mipscannercontentscanjob)
+
+- [Get-MIPScannerRepository](/powershell/module/azureinformationprotection/get-mipscannerrepository)
+
 - [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
 - [Set-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery)
@@ -508,6 +519,10 @@ Supported cmdlets for the scanner include:
 
 - [Install-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)
 
+- [Remove-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-mipscannercontentscanjob)
+
+- [Remove-MIPScannerRepository](/powershell/module/azureinformationprotection/remove-mipscannerrepository)
+
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
@@ -517,6 +532,10 @@ Supported cmdlets for the scanner include:
 - [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)
 
 - [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
+
+- [Set-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-mipscannercontentscanjob)
+
+- [Set-MIPScannerRepository](/powershell/module/azureinformationprotection/set-mipscannerrepository)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
 
@@ -535,6 +554,7 @@ Supported cmdlets for the scanner include:
 - [Uninstall-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
+
 
 ## Next steps
 

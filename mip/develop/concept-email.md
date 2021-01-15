@@ -1,11 +1,11 @@
 ---
 title: How to - process email messages using MIP SDK
 description: This article will help you understand the scenario of how to use MIP SDK file API to process .msg and .rpmsg files.
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 04/08/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 ---
 
 # File API email message file processing

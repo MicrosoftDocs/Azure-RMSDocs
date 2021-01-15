@@ -6,7 +6,7 @@ description: Identify the prerequisites required to deploy Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 01/12/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -74,10 +74,11 @@ To support authentication and authorization for Azure Information Protection, yo
 
 Conditional access is supported in preview for documents protected by Azure Information Protection. For more information, see: [I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
-Additional prerequisites are required for specific scenarios, such as when using Office 2010, certificate-based or multi-factor authentication, or when UPN values don't match user email addresses. For more information, see [Additional Azure AD requirements for Azure Information Protection](requirements-azure-ad.md).
+Additional prerequisites are required for specific scenarios, such as when using certificate-based or multi-factor authentication, when UPN values don't match user email addresses, or when using [Office 2010](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 For more information, see:
 
+- [Additional Azure AD requirements for Azure Information Protection](requirements-azure-ad.md).
 - [What is Azure AD Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Integrate on-premises Active Directory domains with Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
@@ -133,11 +134,11 @@ Additionally, Server Core and Nano Server are not supported.
 
 ### Additional requirements per client
 
-Each Azure Information Protection client has additional prerequisites. For details, see:
+Each Azure Information Protection client has additional requirements. For details, see:
 
-- [Azure Information Protection unified labeling client prerequisites](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
+- [Azure Information Protection unified labeling client requirements](./rms-client/reqs-ul-client.md)
 
-- [Azure Information Protection client prerequisites](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
+- [Azure Information Protection client requirements](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
 ## Applications
 
@@ -159,7 +160,7 @@ Other editions of Office cannot protect documents and emails by using a Rights M
 
 Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client, or the **Protect** button in the classic client.
 
-For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
+For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md) and [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ### Office features and capabilities not supported
 
@@ -228,13 +229,17 @@ If you are using an Azure endpoint and an NSG, make sure to allow access to all 
 - **AzureActiveDirectory**
 - **AzureFrontDoor.Frontend**
 
-Additionally, in this case, the Azure Information Protection service also depends on two specific IP addresses:
+Additionally, in this case, the Azure Information Protection service also depends on the following IP addresses and port:
 
+ - **13.107.9.198**
+ - **13.107.6.198**
+ - **2620:1ec:4::198**
+ - **2620:1ec:a92::198**
  - **13.107.6.181** 
  - **13.107.9.181**
  - **Port 443**, for HTTPS traffic
 
-Make sure to create rules to allow outbound access to these specific IP addresses, and via this port.
+Make sure to create rules that allow outbound access to these specific IP addresses, and via this port.
 
 ## Supported on-premises servers for Azure Rights Management data protection
 

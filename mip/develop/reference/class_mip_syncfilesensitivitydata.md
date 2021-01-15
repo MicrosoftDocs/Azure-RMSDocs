@@ -1,11 +1,11 @@
 ---
 title: class SyncFileSensitivityData 
 description: Documents the syncfilesensitivitydata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class SyncFileSensitivityData 
@@ -21,16 +21,16 @@ public const std::string& GetTenantId() const  | _Not yet documented._
 ## Members
   
 ### GetSensitivityTypesRulePackages function
-Not yet documented.
+_Not documented yet._
 
   
 ### ~SyncFileSensitivityData function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetFileId function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetTenantId function
-Not yet documented.
+_Not documented yet._

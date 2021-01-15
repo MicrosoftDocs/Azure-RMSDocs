@@ -1,11 +1,11 @@
 ---
 title: class NetworkError 
 description: Documents the networkerror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class NetworkError 
@@ -16,4 +16,4 @@ Networking error. Caused by unexpected behavior when making network calls to ser
 --------------------------------|---------------------------------------------
   
 ## Members
-Not yet documented.
+_Not documented yet._
