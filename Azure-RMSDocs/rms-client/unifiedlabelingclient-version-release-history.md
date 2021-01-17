@@ -74,6 +74,16 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
+## Version 2.10.x
+
+### Configure the maximum size limit for protecting / un-protecting via PowerShell and File Explorer
+
+The maximum size limit for protecting and un-protecting files via PowerShell and the File Explorer has a maximum file size of 2GB. 
+
+Now you can configure this maximum file size using the new **MaxFileSizeInMBForProtection** advanced property.
+
+For more information, see <x>.
+
 ## Version 2.9.111.0
 
 Unified labeling scanner and client version 2.9.111.0
@@ -95,8 +105,8 @@ This version includes the following new features, fixes, and enhancements for th
 
 - **Fixes and improvements**:
 
-    - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner)
-    - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client)
+    - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner-version-291110)
+    - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client-version-291110)
 
 ### PowerShell support for disconnected scanner servers
 
@@ -163,7 +173,7 @@ The AIP classic client supports track and revoke features using the [Microsoft t
  
 To view tracking data with the unified labeling client, use the PowerShell commands only, as described in the [admin guide](track-and-revoke-admin.md).
 
-### Fixes and improvements for the unified labeling scanner
+### Fixes and improvements for the unified labeling scanner - version 2.9.111.0
 
 The following fixes were delivered in version 2.9.111.0 of the [Azure Information Protection unified labeling scanner](../deploy-aip-scanner.md):
 
@@ -174,7 +184,7 @@ The following fixes were delivered in version 2.9.111.0 of the [Azure Informatio
 - Increased SharePoint scanning [speed](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
 - Support for [avoiding a timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) when scanning a SharePoint server.
 
-### Fixes and improvements for the unified labeling client
+### Fixes and improvements for the unified labeling client - version 2.9.111.0
 
 - Issues fixed for [labeling on emails](clientv2-admin-guide-customizations.md#extend-your-label-migration-rules-to-emails) from Office MSI, such as when replying to or forwarding an email.
 
