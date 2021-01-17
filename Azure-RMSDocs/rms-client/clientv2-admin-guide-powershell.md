@@ -39,11 +39,11 @@ The **AzureInformationProtection** module enables you to manage the client by ru
 For example:
 
 - [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus): Gets the Azure Information Protection label and protection information for a specified file or files.
-- [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification):
+- [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification): Scans a file to automatically set an Azure Information Protection label for a file, according to conditions that are configured in the policy.
 - [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel): Sets or removes an Azure Information Protection label for a file, and sets or removes the protection according to the label configuration or custom permissions.
 - [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication): Sets the authentication credentials for the Azure Information Protection client.
 
-The **AzureInformationProtection** module is installed in the **\ProgramFiles (x86)\Microsoft Azure Information Protection** directory, and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
+The **AzureInformationProtection** module is installed in the **\ProgramFiles (x86)\Microsoft Azure Information Protection** folder, and then adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
 
 > [!IMPORTANT]
 > The **AzureInformationProtection** module doesn't support configuring advanced settings for labels or label policies. 
@@ -143,7 +143,7 @@ For users who've recently migrated from the classic client, and had created an a
 
 1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/) to the Azure AD tenant that you use with Azure Information Protection.
 
-1. Navigate to **Azure Active Directory** > **Manage** > **App registrations**, and select **+ New registration**. 
+1. Navigate to **Azure Active Directory** > **Manage** > **App registrations**, and select **New registration**. 
 
 1. On the **Register an application** pane, specify the following values, and then click **Register**:
 
@@ -162,7 +162,7 @@ For users who've recently migrated from the classic client, and had created an a
 
 1. From the sidebar, select **Manage** > **Certificates & secrets**.
 
-    Then, on the **AIP-DelegatedUser - Certificates & secrets** pane, in the **Client secrets** section, select **+ New client secret**.
+    Then, on the **AIP-DelegatedUser - Certificates & secrets** pane, in the **Client secrets** section, select **New client secret**.
 
 1. For **Add a client secret**, specify the following, and then select **Add**:
 
@@ -184,7 +184,7 @@ For users who've recently migrated from the classic client, and had created an a
 
 1. From the sidebar, select **Manage** > **API permissions**.
 
-    On the **AIP-DelegatedUser - API permissions** pane, select **+ Add a permission**.
+    On the **AIP-DelegatedUser - API permissions** pane, select **Add a permission**.
 
 1. On the **Request API permissions** pane, make sure that you're on the **Microsoft APIs** tab, and select **Azure Rights Management Services**. 
 
@@ -195,7 +195,7 @@ For users who've recently migrated from the classic client, and had created an a
     -  **Content.DelegatedReader** 
     -  **Content.DelegatedWriter**
 
-1. Back on the **AIP-DelegatedUser - API permissions** pane, select **+ Add a permission** again.
+1. Back on the **AIP-DelegatedUser - API permissions** pane, select **Add a permission** again.
 
     On the **Request AIP permissions** pane, select **APIs my organization uses**, and search for **Microsoft Information Protection Sync Service**.
 

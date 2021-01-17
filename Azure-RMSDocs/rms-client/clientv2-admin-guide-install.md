@@ -95,7 +95,6 @@ Use the following instructions to install the client when you're *not* using the
     |---------|---------|
     |**AllowTelemetry=0**     |    Use this parameter to disable the install option **Help improve Azure Information Protection by sending usage statistics to Microsoft**.     |
     |**ServiceLocation**     |  Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted. <br><br>For more information, see: <br>- [More information about the **ServiceLocation** installation parameter](#more-information-about-the-servicelocation-installation-parameter) <br> - [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)      |
-
     | | |
 
 1. To complete the installation: 
