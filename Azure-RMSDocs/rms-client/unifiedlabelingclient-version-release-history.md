@@ -105,8 +105,8 @@ This version includes the following new features, fixes, and enhancements for th
 
 - **Fixes and improvements**:
 
-    - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner-version-291110)
-    - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client-version-291110)
+    - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner---version-291110)
+    - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client---version-291110)
 
 ### PowerShell support for disconnected scanner servers
 
