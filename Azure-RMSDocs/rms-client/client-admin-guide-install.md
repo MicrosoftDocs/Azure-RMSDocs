@@ -143,11 +143,8 @@ Use the following instructions to install the client when you're not using the M
 
 1. To complete the installation, restart any Office applications and all instances of File Explorer.
 
-    > [!NOTE]
-    > If your computer runs [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions), restart your computer.
-    >
-    > If the client was not installed with the **ServiceLocation** parameter, when you first open one of the Office applications that use the Azure Information Protection bar (for example, Word), you must confirm any prompts to update the registry for this first-time use. [Service discovery](client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys.
-    >
+    **Office 2010 only**: If your computer runs [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions), restart your computer. If the client was not installed with the **ServiceLocation** parameter, when you first open one of the Office applications that use the Azure Information Protection bar (for example, Word), you must confirm any prompts to update the registry for this first-time use. [Service discovery](client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys.
+    
 
 1. You can confirm that the installation was successful by checking the install log file, which by default is created in the %temp% folder. You can change this location with the **/log** installation parameter.
 

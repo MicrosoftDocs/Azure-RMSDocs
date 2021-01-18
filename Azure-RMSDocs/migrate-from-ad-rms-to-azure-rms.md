@@ -83,15 +83,22 @@ Before you start the migration to Azure Information Protection, make sure that t
 
 	See [Requirements for Azure Information Protection](./requirements.md).
 
-    **If you have computers that run Office 2010**, you must install the [Azure Information Protection client](rms-client/use-client.md) to provide the ability to authenticate users to cloud services. 
-
-    Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
- 
-    **For later versions of Office**, the Azure Information Protection client is *required* for classification and labeling, and *optional, but recommended* if you want to only protect data. 
+    The Azure Information Protection client is *required* for classification and labeling, and *optional, but recommended* if you want to only protect data. 
 
     For more information, see the admin guides for the [Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide.md).
 
-	Although you must have a subscription for Azure Information Protection before you can migrate from AD RMS, we recommend that the Rights Management service for your tenant is not activated before you start the migration. The migration process includes this activation step after you have exported keys and templates from AD RMS and imported them to your tenant for Azure Information Protection. However, if the Rights Management service is already activated, you can still migrate from AD RMS with some additional steps.
+	Although you must have a subscription for Azure Information Protection before you can migrate from AD RMS, we recommend that the Rights Management service for your tenant is not activated before you start the migration. 
+
+    The migration process includes this activation step after you have exported keys and templates from AD RMS and imported them to your tenant for Azure Information Protection. However, if the Rights Management service is already activated, you can still migrate from AD RMS with some additional steps.
+
+    **Office 2010 only**: 
+
+    If you have computers that run Office 2010, you must install the [Azure Information Protection client](rms-client/use-client.md) to provide the ability to authenticate users to cloud services. 
+
+    > [!IMPORTANT]
+    > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+    >  
+    
 
 
 - **Preparation for Azure Information Protection**:
