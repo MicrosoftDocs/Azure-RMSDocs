@@ -68,7 +68,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
     If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection client. For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.
 
-    > [!NOTE]
+    > [!IMPORTANT]
     > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
     >
 
@@ -135,23 +135,19 @@ Use the following instructions to install the client when you're not using the M
 
     - **ServiceLocation**: Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted.  For more information, see [More information about the ServiceLocation installation parameter](#more-information-about-the-servicelocation-installation-parameter). 
     
-        > [!NOTE]
+        > [!IMPORTANT]
         > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
         >
 
 1. If you are installing interactively, select the option to install a **demo policy** if you cannot connect to Microsoft 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy.
 
-1. To complete the installation:
+1. To complete the installation, restart any Office applications and all instances of File Explorer.
 
-    - **If your computer runs Office 2010**, restart your computer.
-
-        If the client was not installed with the **ServiceLocation** parameter, when you first open one of the Office applications that use the Azure Information Protection bar (for example, Word), you must confirm any prompts to update the registry for this first-time use. [Service discovery](client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys.
-
-        > [!NOTE]
-        > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
-        >
-
-    - **For other versions of Office**, restart any Office applications and all instances of File Explorer.
+    > [!NOTE]
+    > If your computer runs [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions), restart your computer.
+    >
+    > If the client was not installed with the **ServiceLocation** parameter, when you first open one of the Office applications that use the Azure Information Protection bar (for example, Word), you must confirm any prompts to update the registry for this first-time use. [Service discovery](client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys.
+    >
 
 1. You can confirm that the installation was successful by checking the install log file, which by default is created in the %temp% folder. You can change this location with the **/log** installation parameter.
 
@@ -163,7 +159,14 @@ Use the following instructions to install the client when you're not using the M
 
 #### More information about the ServiceLocation installation parameter
 
-When you install the client for users who have Office 2010 and they do not have local administrative permissions, specify the **ServiceLocation** parameter and the URL for your Azure Rights Management service. This parameter and value creates and sets the following registry keys:
+When you install the client for users who have Office 2010 and they do not have local administrative permissions, specify the **ServiceLocation** parameter and the URL for your Azure Rights Management service. 
+
+    
+> [!IMPORTANT]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+>
+
+This parameter and value creates and sets the following registry keys:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation`
 
@@ -174,10 +177,6 @@ When you install the client for users who have Office 2010 and they do not have 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation`
 
 Use the [following procedure](#to-identify-the-value-to-specify-for-the-servicelocation-parameter) to identify the value to specify for the **ServiceLocation** parameter.
-    
-> [!NOTE]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
->
 
 ##### To identify the value to specify for the ServiceLocation parameter
 
@@ -228,7 +227,7 @@ If you use Intune for your software deployment method, use these instructions to
     |**Office 2010**|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
     | | | | |
     
-    > [!NOTE]
+    > [!IMPORTANT]
     > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
     >
 

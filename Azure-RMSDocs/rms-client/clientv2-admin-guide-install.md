@@ -51,7 +51,8 @@ Consequently, labels that apply protection do not display to users on the Azure 
 
 For information about which Office editions support the protection service, see [Applications that support Azure Rights Management data protection](../requirements-applications.md).
 
-For more information, see [AIP known issues in Office applications](../known-issues.md#aip-known-issues-in-office-applications).
+> [!IMPORTANT]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 ## Unified labeling client installation options
 
@@ -97,15 +98,15 @@ Use the following instructions to install the client when you're *not* using the
     |**ServiceLocation**     |  Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted. <br><br>**Note**: Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions). |
     | | |
 
-1. To complete the installation: 
+1. To complete the installation, restart any Office applications and all instances of File Explorer. 
 
-    - **If your computer runs [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions)**, restart your computer. 
-        
-        If the client was not installed with the **ServiceLocation** parameter, when you first open one of the Office applications that use the Azure Information Protection unified client (for example, Word), you must confirm any prompts to update the registry for this first-time use. 
-
-        [Service discovery](client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys. 
-    
-    - **For other versions of Office**, restart any Office applications and all instances of File Explorer. 
+    > [!NOTE]
+    > If your computer runs [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions), restart your computer. 
+    >
+    > If the client was not installed with the **ServiceLocation** parameter, when you first open one of the Office applications that use the Azure Information Protection unified client (for example, Word), you must confirm any prompts to update the registry for this first-time use. 
+    >
+    > [Service discovery](client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys. 
+    > 
         
 1. Confirm that the installation was successful by checking the install log file, which by default is created in the **%temp%** folder. 
 
@@ -121,6 +122,10 @@ Use the following instructions to install the client when you're *not* using the
 ### More information about the ServiceLocation installation parameter
 
 When you install the client for users who have [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions) and they do not have local administrative permissions, specify the **ServiceLocation** parameter and the URL for your Azure Rights Management service. 
+    
+> [!IMPORTANT]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+>
 
 This parameter and value creates and sets the following registry keys:
 
@@ -132,10 +137,6 @@ This parameter and value creates and sets the following registry keys:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation`
 
-    
-> [!NOTE]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
->
 
 **To identify the value to specify for the ServiceLocation parameter**:
 
@@ -186,7 +187,7 @@ If you use Intune for your software deployment method, use these instructions to
     |[**Office 2010**](../known-issues.md#aip-and-legacy-windows-and-office-versions)|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
     | | | | |
 
-    > [!NOTE]
+    > [!IMPORTANT]
     > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
     >
 

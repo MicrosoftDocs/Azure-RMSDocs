@@ -46,7 +46,7 @@ We recommend that you deploy the Azure Information Protection unified labeling c
 
 For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
 
-> [!NOTE]
+> [!IMPORTANT]
 > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
 > 
 > To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 

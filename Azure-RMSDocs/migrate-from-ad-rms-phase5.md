@@ -73,7 +73,7 @@ If migrated clients run Office 2010, users might experience delays in opening pr
 
 - **Redirection via DNS**: Create a new host (A) record for your AD RMS URL FQDN, which has the IP address of 127.0.0.1.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
 > 
 
@@ -134,7 +134,7 @@ Finally, if you are using Office 2010 and you have enabled the **AD RMS Rights P
 
 This task is typically enabled by using group policy and supports an AD RMS deployment. You can find this task in the following location: **Microsoft** > **Windows** > **Active Directory Rights Management Services Client**. 
 
-> [!NOTE]
+> [!IMPORTANT]
 > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 ## Step 12. Rekey your Azure Information Protection tenant key

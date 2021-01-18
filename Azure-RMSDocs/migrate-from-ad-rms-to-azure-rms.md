@@ -230,7 +230,7 @@ The onboarding controls that you configured during the preparation phase are no 
     
 If your Windows computers are running Office 2010, check whether you need to disable the **AD RMS Rights Policy Template Management (Automated)** task.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 **Step 12: Rekey your Azure Information Protection tenant key**

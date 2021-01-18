@@ -162,7 +162,7 @@ Labels are displayed in a bar displayed at the top of the Office document, acces
 
 For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
 
-> [!NOTE]
+> [!IMPORTANT]
 > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
 > 
 
