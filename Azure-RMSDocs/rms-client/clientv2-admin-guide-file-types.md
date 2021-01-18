@@ -111,7 +111,7 @@ There are maximum file sizes that the Azure Information Protection unified label
 
 > [!IMPORTANT]
 > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
-    > 
+>
 
 **For all other files**:
 
