@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/23/2020
+ms.date: 01/18/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -45,6 +45,8 @@ Use the following information for advanced configurations needed for specific sc
 > These settings require editing the registry or specifying advanced settings. The advanced settings use [Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell).
 > 
 
+
+
 ## Configuring advanced settings for the client via PowerShell
 
 Use the Microsoft 365 Security & Compliance Center PowerShell to configure advanced settings for customizing label policies and labels. 
@@ -58,13 +60,14 @@ To remove an advanced setting, use the same **AdvancedSettings** parameter synta
 
 For more information, see:
 
-- [Label policy advanced settings syntax](#label-policy-advanced-settings)
-- [Label advanced settings syntax](#label-advanced-settings)
+- [Label policy advanced settings syntax](#label-policy-advanced-settings-syntax)
+- [Label advanced settings syntax](#label-advanced-settings-syntax)
+- [Checking your current advanced settings](#checking-your-current-advanced-settings)
 - [Examples for setting advanced settings](#examples-for-setting-advanced-settings)
 - [Specifying the label policy or label identity](#specifying-the-label-policy-or-label-identity)
 - [Order of precedence - how conflicting settings are resolved](#order-of-precedence---how-conflicting-settings-are-resolved)
 - [Advanced setting references](#advanced-setting-references)
-### Label policy advanced settings
+### Label policy advanced settings syntax
 
 An example of a label policy advanced setting is the setting to display the Information Protection bar in Office apps.
 
@@ -80,7 +83,7 @@ Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
 Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
-### Label advanced settings
+### Label advanced settings syntax
 
 An example of a label advanced setting is the setting to specify a label color.
 
@@ -94,6 +97,28 @@ Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
 
 ```PowerShell
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
+```
+
+
+
+### Checking your current advanced settings
+
+To check the current advanced settings settings in effect, run the following commands:
+
+**To check your *label policy* advanced settings**, use the following syntax:
+
+For a label policy named **Global**:
+
+```PowerShell
+(Get-LabelPolicy -Identity Global).settings
+```
+
+**To check your *label* advanced settings**, use the following syntax:
+
+For a label named **Public**:
+
+```powershell
+(Get-Label -Identity Public).settings
 ```
 
 ### Examples for setting advanced settings
@@ -238,12 +263,6 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |**UseCopyAndPreserveNTFSOwner** | [Preserve NTFS owners during labeling](#preserve-ntfs-owners-during-labeling-public-preview)
 | | |
 
-#### Check label policy settings
-Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
-
-```PowerShell
-(Get-LabelPolicy -Identity Global).settings
-```
 
 ### Label advanced setting reference
 
@@ -258,13 +277,6 @@ Use the *AdvancedSettings* parameter with [New-Label](/powershell/module/exchang
 |**SMimeEncrypt**|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |**SMimeSign**|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 
-#### Check label settings
-
-Example PowerShell command to check your label settings in effect for a label named "Public":
-
-```PowerShell
-(Get-Label -Identity Public).settings
-```
 
 ## Display the Information Protection bar in Office apps
 
