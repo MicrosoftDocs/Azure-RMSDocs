@@ -144,7 +144,7 @@ In addition, if Office 2010 is installed locally on an Exchange server, the clie
 In both scenarios, you must install the client applications on separate computers that are not configured to use the connector. They will then correctly use RMS directly.
 
 > [!NOTE]
-> For more information about AIP and Office 2010, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+> For more information about AIP and Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 > 
 ## Configuring an Exchange server to use the connector
 The following Exchange roles communicate with the RMS connector:

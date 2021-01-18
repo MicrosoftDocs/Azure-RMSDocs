@@ -119,7 +119,7 @@ Perform the following steps:
     
     Install the classic client for users to support Office 2010, to protect files other than Office documents and emails, and to track protected documents, and provide user training for this client. 
 
-    For more information, see [Azure Information Protection classic client for Windows](./rms-client/aip-client.md) and [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+    For more information, see [Azure Information Protection classic client for Windows](./rms-client/aip-client.md) and [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 2. **Configure Office applications and services**
     
