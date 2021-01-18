@@ -81,7 +81,7 @@ Before you start the migration to Azure Information Protection, make sure that t
 
 	See [Requirements for Azure Information Protection](./requirements.md).
 
-    **If you have computers that run Office 2010**, you must install the [Azure Information Protection client](rms-client/use-client.md) to provide the ability to authenticate users to cloud services. For more information, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+    **If you have computers that run Office 2010**, you must install the [Azure Information Protection client](rms-client/use-client.md) to provide the ability to authenticate users to cloud services. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
 
     **For later versions of Office**, the Azure Information Protection client is *required* for classification and labeling, and *optional, but recommended* if you want to only protect data. 
 
@@ -224,7 +224,7 @@ If you have deployed the [mobile device extension](/previous-versions/windows/it
     
 The onboarding controls that you configured during the preparation phase are no longer needed. However, if you did not use onboarding controls because you chose to migrate everything at the same time rather than do a phased migration, you can skip the instructions to remove the onboarding controls.
     
-If your Windows computers are running Office 2010, check whether you need to disable the **AD RMS Rights Policy Template Management (Automated)** task. For more information, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+If your Windows computers are running Office 2010, check whether you need to disable the **AD RMS Rights Policy Template Management (Automated)** task. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 **Step 12: Rekey your Azure Information Protection tenant key**
 

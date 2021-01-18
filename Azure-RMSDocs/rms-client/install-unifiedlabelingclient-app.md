@@ -65,7 +65,7 @@ After you have installed the Azure Information Protection unified labeling clien
 
 Your installation is now complete and you can use the Azure Information Protection unified labeling client to label and protect your documents and emails.
 
-For more information, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 ## Other instructions    
 More how-to instructions from the Azure Information Protection unified labeling client user guide.
