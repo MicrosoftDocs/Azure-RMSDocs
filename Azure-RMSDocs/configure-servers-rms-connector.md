@@ -143,7 +143,7 @@ In addition, if Office 2010 is installed locally on an Exchange server, the clie
 
 In both scenarios, you must install the client applications on separate computers that are not configured to use the connector. They will then correctly use RMS directly.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
 > 
 ## Configuring an Exchange server to use the connector

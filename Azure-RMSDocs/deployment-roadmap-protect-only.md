@@ -117,11 +117,7 @@ Perform the following steps:
 
 1. **Deploy the Azure Information Protection classic client**
     
-    Install the classic client for users to support Office 2010, to protect files other than Office documents and emails, and to track protected documents, and provide user training for this client. For more information, see [Azure Information Protection classic client for Windows](./rms-client/aip-client.md).
-
-    > [!IMPORTANT]
-    > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
-    >
+    Install the classic client for users to protect files other than Office documents and emails, and to track protected documents, and provide user training for this client. For more information, see [Azure Information Protection classic client for Windows](./rms-client/aip-client.md).
  
 2. **Configure Office applications and services**
     
