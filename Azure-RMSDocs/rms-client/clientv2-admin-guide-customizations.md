@@ -2074,9 +2074,14 @@ Example PowerShell command, where your label policy is named "Global":
 Set-LabelPolicy -Identity Global -AdvancedSettings @{MaxFileSizeInMBForProtection="5000"}
 ```
 
-> [!IMPORTANT]
-> Protecting and unprotecting large files via PowerShell or the File Explorer may have undesirable effects on the memory usage. We recommend raising this maximum only when neccesary and returning it to the default when possible.
+> [!CAUTION]
+> Raising this maximum and then protecting and unprotecting large files via PowerShell or the File Explorer may cause the protection/un-protection process to fail. 
 >
+> The actual maximum file size will differ depending on your system's operating system and artchiecture.
+>
+> We recommend raising this maximum with caution.
+>
+
 ## Next steps
 
 Now that you've customized the Azure Information Protection unified labeling client, see the following resources for additional information that you might need to support this client:
