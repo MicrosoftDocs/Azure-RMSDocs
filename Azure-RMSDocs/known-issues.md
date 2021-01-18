@@ -93,7 +93,9 @@ Publishing policies may take up to 24 hours.
 
 ## Maximum file sizes
 
-Files of over 2 GB are supported for protection, but not decryption.
+By default, the maximum file size supported for protection and decryption (un-protection) is 2 GB. 
+
+While you can customize this default using the [MaxFileSizeInMBForProtection](rms-client/clientv2-admin-guide-customizations.md#configure-the-maximum-file-size-for-protection--unprotection-via-powershell-and-file-explorer) advanced property, we recommend doing so with caution.
 
 ## Known issues for the AIP viewer
 
