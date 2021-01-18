@@ -44,9 +44,11 @@ If your user accounts are federated (for example, you use AD FS), these computer
 
 We recommend that you deploy the Azure Information Protection unified labeling client. If you haven't yet upgraded, your system may still have the [Azure Information Protection classic client](./rms-client/aip-client.md) deployed. 
 
-For more information, see [The client side of Azure Information Protection](rms-client/use-client.md) and [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
 
 > [!NOTE]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+> 
 > To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 >
 > This time-frame allows all current Azure Information Protection customers to transition to the Microsoft Information Protection unified labeling solution. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).

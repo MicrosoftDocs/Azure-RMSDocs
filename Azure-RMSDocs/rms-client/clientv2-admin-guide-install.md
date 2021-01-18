@@ -94,7 +94,7 @@ Use the following instructions to install the client when you're *not* using the
     |Parameter  |Description  |
     |---------|---------|
     |**AllowTelemetry=0**     |    Use this parameter to disable the install option **Help improve Azure Information Protection by sending usage statistics to Microsoft**.     |
-    |**ServiceLocation**     |  Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted. <br><br>For more information, see: <br>- [More information about the **ServiceLocation** installation parameter](#more-information-about-the-servicelocation-installation-parameter) <br> - [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions)      |
+    |**ServiceLocation**     |  Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted. <br><br>**Note**: Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions). |
     | | |
 
 1. To complete the installation: 
@@ -132,6 +132,10 @@ This parameter and value creates and sets the following registry keys:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation`
 
+    
+> [!NOTE]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+>
 
 **To identify the value to specify for the ServiceLocation parameter:**
 
@@ -181,6 +185,10 @@ If you use Intune for your software deployment method, use these instructions to
     |[**Office 2010**](../known-issues.md#aip-and-legacy-windows-and-office-versions)|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
     |[**Office 2010**](../known-issues.md#aip-and-legacy-windows-and-office-versions)|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
     | | | | |
+
+    > [!NOTE]
+    > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+    >
 
 1. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection_UL.msi /quiet`.
 

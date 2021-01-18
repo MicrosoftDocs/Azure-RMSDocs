@@ -75,14 +75,18 @@ Before you start the migration to Azure Information Protection, make sure that t
         
       - Multiple forests, multiple RMS clusters
         
-    Note: By default, multiple AD RMS clusters migrate to a single tenant for Azure Information Protection. If you want separate tenants for Azure Information Protection, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one tenant.
-
+    > [!NOTE]
+    > By default, multiple AD RMS clusters migrate to a single tenant for Azure Information Protection. If you want separate tenants for Azure Information Protection, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one tenant.
+    >
+ 
 - **All requirements to run Azure Information Protection, including a subscription for Azure Information Protection (the Azure Rights Management service is not activated)**:
 
 	See [Requirements for Azure Information Protection](./requirements.md).
 
-    **If you have computers that run Office 2010**, you must install the [Azure Information Protection client](rms-client/use-client.md) to provide the ability to authenticate users to cloud services. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+    **If you have computers that run Office 2010**, you must install the [Azure Information Protection client](rms-client/use-client.md) to provide the ability to authenticate users to cloud services. 
 
+    Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+ 
     **For later versions of Office**, the Azure Information Protection client is *required* for classification and labeling, and *optional, but recommended* if you want to only protect data. 
 
     For more information, see the admin guides for the [Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide.md).
@@ -224,7 +228,10 @@ If you have deployed the [mobile device extension](/previous-versions/windows/it
     
 The onboarding controls that you configured during the preparation phase are no longer needed. However, if you did not use onboarding controls because you chose to migrate everything at the same time rather than do a phased migration, you can skip the instructions to remove the onboarding controls.
     
-If your Windows computers are running Office 2010, check whether you need to disable the **AD RMS Rights Policy Template Management (Automated)** task. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+If your Windows computers are running Office 2010, check whether you need to disable the **AD RMS Rights Policy Template Management (Automated)** task.
+
+> [!NOTE]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 **Step 12: Rekey your Azure Information Protection tenant key**
 
