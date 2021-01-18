@@ -182,7 +182,7 @@ The admin guide contains a full list of the file types supported and the files a
      If this setting was previously configured by using custom permissions from an Office 2010 app, the specified expiry date does not display in this dialog box but the expiry date is still set. This is a display issue only for when the expiry date was configured in Office 2010. 
 
         > [!NOTE]
-        > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+        > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
         >
 
 5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.

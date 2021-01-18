@@ -94,7 +94,7 @@ Use the following instructions to install the client when you're *not* using the
     |Parameter  |Description  |
     |---------|---------|
     |**AllowTelemetry=0**     |    Use this parameter to disable the install option **Help improve Azure Information Protection by sending usage statistics to Microsoft**.     |
-    |**ServiceLocation**     |  Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted. <br><br>**Note**: Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions). |
+    |**ServiceLocation**     |  Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted. <br><br>**Note**: Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions). |
     | | |
 
 1. To complete the installation: 
@@ -134,10 +134,10 @@ This parameter and value creates and sets the following registry keys:
 
     
 > [!NOTE]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 >
 
-**To identify the value to specify for the ServiceLocation parameter:**
+**To identify the value to specify for the ServiceLocation parameter**:
 
 1. From a PowerShell session, first run [Connect-AipService](/powershell/module/aipservice/connect-aipservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration). 
  
@@ -187,7 +187,7 @@ If you use Intune for your software deployment method, use these instructions to
     | | | | |
 
     > [!NOTE]
-    > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+    > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
     >
 
 1. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection_UL.msi /quiet`.

@@ -69,7 +69,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection client. For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.
 
     > [!NOTE]
-    > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+    > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
     >
 
 - **KB 4482887**
@@ -136,7 +136,7 @@ Use the following instructions to install the client when you're not using the M
     - **ServiceLocation**: Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted.  For more information, see [More information about the ServiceLocation installation parameter](#more-information-about-the-servicelocation-installation-parameter). 
     
         > [!NOTE]
-        > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+        > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
         >
 
 1. If you are installing interactively, select the option to install a **demo policy** if you cannot connect to Microsoft 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy.
@@ -148,7 +148,7 @@ Use the following instructions to install the client when you're not using the M
         If the client was not installed with the **ServiceLocation** parameter, when you first open one of the Office applications that use the Azure Information Protection bar (for example, Word), you must confirm any prompts to update the registry for this first-time use. [Service discovery](client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys.
 
         > [!NOTE]
-        > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+        > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
         >
 
     - **For other versions of Office**, restart any Office applications and all instances of File Explorer.
@@ -176,7 +176,7 @@ When you install the client for users who have Office 2010 and they do not have 
 Use the [following procedure](#to-identify-the-value-to-specify-for-the-servicelocation-parameter) to identify the value to specify for the **ServiceLocation** parameter.
     
 > [!NOTE]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 >
 
 ##### To identify the value to specify for the ServiceLocation parameter
@@ -229,7 +229,7 @@ If you use Intune for your software deployment method, use these instructions to
     | | | | |
     
     > [!NOTE]
-    > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+    > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
     >
 
 1. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).
