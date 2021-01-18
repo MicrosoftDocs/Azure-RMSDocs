@@ -140,7 +140,7 @@ Additionally, revoking access for one of the attachments also revokes access for
 If you have documents stored in OneDrive with a sensitivity label applied, and an administrator changes the label in the labeling policy to add protection, the newly applied protection is not automatically applied to the labeled document. 
 
 In such cases, re-label the document manually to apply the protection as needed.
-## AIP for Windows and Office versions in extended support
+## AIP and legacy Windows and Office versions
 
 - [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
 
