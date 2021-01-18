@@ -27,7 +27,7 @@ ms.custom: user
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
->*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
+>*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see the [classic client user guide](client-classify-protect.md).*
 
@@ -139,7 +139,7 @@ The admin guide contains a full list of the file types supported and the files a
         
     - **Expire access**: Select this option only for time-sensitive files so that the people you specified can't open your selected file or files after a date that you set. You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
     
-     Note that if this setting was previously configured by using custom permissions from an [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) app, the specified expiry date does not display in this dialog box but the expiry date is still set. This is a display issue only for when the expiry date was configured in Office 2010.
+     Note that if this setting was previously configured by using custom permissions from an [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions) app, the specified expiry date does not display in this dialog box but the expiry date is still set. This is a display issue only for when the expiry date was configured in Office 2010.
 
 5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
 

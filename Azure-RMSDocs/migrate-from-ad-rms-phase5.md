@@ -77,7 +77,7 @@ Redirection via DNS:
 
 - Create a new host (A) record for your AD RMS URL FQDN, which has the IP address of 127.0.0.1.
 
-For more information about AIP and Office 2010, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+For more information about AIP and Office 2010, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-and-legacy-windows-and-office-versions).
 ## Step 11. Complete client migration tasks
 
 For mobile device clients and Mac computers: Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)).
@@ -135,7 +135,7 @@ Finally, if you are using Office 2010 and you have enabled the **AD RMS Rights P
 
 This task is typically enabled by using group policy and supports an AD RMS deployment. You can find this task in the following location: **Microsoft** > **Windows** > **Active Directory Rights Management Services Client**. 
 
-For more information, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+For more information, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 ## Step 12. Rekey your Azure Information Protection tenant key
 
