@@ -2077,7 +2077,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{MaxFileSizeInMBForProtectio
 > [!CAUTION]
 > Raising this maximum and then protecting and unprotecting large files via PowerShell or the File Explorer may cause the protection/un-protection process to fail. 
 >
-> The actual maximum file size will differ depending on your system's operating system and artchiecture.
+> The actual maximum file size will differ depending on your system's operating system and architecture.
 >
 > We recommend raising this maximum with caution.
 >
