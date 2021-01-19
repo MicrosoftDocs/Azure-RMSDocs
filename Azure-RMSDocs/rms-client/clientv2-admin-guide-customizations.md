@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/23/2020
+ms.date: 01/18/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -45,6 +45,8 @@ Use the following information for advanced configurations needed for specific sc
 > These settings require editing the registry or specifying advanced settings. The advanced settings use [Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell).
 > 
 
+
+
 ## Configuring advanced settings for the client via PowerShell
 
 Use the Microsoft 365 Security & Compliance Center PowerShell to configure advanced settings for customizing label policies and labels. 
@@ -58,13 +60,14 @@ To remove an advanced setting, use the same **AdvancedSettings** parameter synta
 
 For more information, see:
 
-- [Label policy advanced settings syntax](#label-policy-advanced-settings)
-- [Label advanced settings syntax](#label-advanced-settings)
+- [Label policy advanced settings syntax](#label-policy-advanced-settings-syntax)
+- [Label advanced settings syntax](#label-advanced-settings-syntax)
+- [Checking your current advanced settings](#checking-your-current-advanced-settings)
 - [Examples for setting advanced settings](#examples-for-setting-advanced-settings)
 - [Specifying the label policy or label identity](#specifying-the-label-policy-or-label-identity)
 - [Order of precedence - how conflicting settings are resolved](#order-of-precedence---how-conflicting-settings-are-resolved)
 - [Advanced setting references](#advanced-setting-references)
-### Label policy advanced settings
+### Label policy advanced settings syntax
 
 An example of a label policy advanced setting is the setting to display the Information Protection bar in Office apps.
 
@@ -80,7 +83,7 @@ Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
 Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
-### Label advanced settings
+### Label advanced settings syntax
 
 An example of a label advanced setting is the setting to specify a label color.
 
@@ -96,27 +99,49 @@ Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
+
+
+### Checking your current advanced settings
+
+To check the current advanced settings settings in effect, run the following commands:
+
+**To check your *label policy* advanced settings**, use the following syntax:
+
+For a label policy named **Global**:
+
+```PowerShell
+(Get-LabelPolicy -Identity Global).settings
+```
+
+**To check your *label* advanced settings**, use the following syntax:
+
+For a label named **Public**:
+
+```powershell
+(Get-Label -Identity Public).settings
+```
+
 ### Examples for setting advanced settings
 
-**Example 1:** Set a label policy advanced setting for a single string value:
+**Example 1**: Set a label policy advanced setting for a single string value:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 ```
 
-**Example 2:** Set a label advanced setting for a single string value:
+**Example 2**: Set a label advanced setting for a single string value:
 
 ```PowerShell
 Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
 ```
 
-**Example 3:** Set a label advanced setting for multiple string values:
+**Example 3**: Set a label advanced setting for multiple string values:
 
 ```PowerShell
 Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 ```
 
-**Example 4:** Remove a label policy advanced setting by specifying a null string value:
+**Example 4**: Remove a label policy advanced setting by specifying a null string value:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
@@ -238,12 +263,6 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |**UseCopyAndPreserveNTFSOwner** | [Preserve NTFS owners during labeling](#preserve-ntfs-owners-during-labeling-public-preview)
 | | |
 
-#### Check label policy settings
-Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
-
-```PowerShell
-(Get-LabelPolicy -Identity Global).settings
-```
 
 ### Label advanced setting reference
 
@@ -258,13 +277,6 @@ Use the *AdvancedSettings* parameter with [New-Label](/powershell/module/exchang
 |**SMimeEncrypt**|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |**SMimeSign**|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 
-#### Check label settings
-
-Example PowerShell command to check your label settings in effect for a label named "Public":
-
-```PowerShell
-(Get-Label -Identity Public).settings
-```
 
 ## Display the Information Protection bar in Office apps
 
@@ -376,13 +388,13 @@ Use the following table to identify the string value to specify:
 |ConvertTo-Json(".jpg", ".png")|In addition to Office file types and PDF files, apply protection to the specified file name extensions | In addition to Office file types and PDF files, apply protection to the specified file name extensions
 | | | |
 
-**Example 1:**  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
+**Example 1**:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-**Example 2:** PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
+**Example 2**: PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
@@ -406,23 +418,23 @@ Use the following table to identify the string value to specify:
 |\<null value>| Default value behaves like the default protection value.|
 |ConvertTo-Json(".dwg", ".zip")|In addition to the previous list, ".dwg" and ".zip" become P\<EXT>| 
 
-With this setting, the following extensions always become **P\<EXT>:** ".txt", ".xml", ".bmp", ".jt", ".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".tif", ".tiff", ".gif") . Notable exclusion is that "ptxt" does not become "txt.pfile". 
+With this setting, the following extensions always become **P\<EXT>**: ".txt", ".xml", ".bmp", ".jt", ".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".tif", ".tiff", ".gif") . Notable exclusion is that "ptxt" does not become "txt.pfile". 
 
 **AdditionalPPrefixExtensions** only works if protection of PFiles with the advanced property - [**PFileSupportedExtension**](#pfilesupportedextension) is enabled. 
 
-**Example 1:** PowerShell command to behave like the default behavior where Protect ".dwg" becomes ".dwg.pfile":
+**Example 1**: PowerShell command to behave like the default behavior where Protect ".dwg" becomes ".dwg.pfile":
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
 ```
 
-**Example 2:**  PowerShell command to change all PFile extensions from generic protection (dwg.pfile) to native protection (.pdwg) when the files are protected:
+**Example 2**:  PowerShell command to change all PFile extensions from generic protection (dwg.pfile) to native protection (.pdwg) when the files are protected:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
 ```
 
-**Example 3:** PowerShell command to change ".dwg"  to ".pdwg" when using this service protect this file:
+**Example 3**: PowerShell command to change ".dwg"  to ".pdwg" when using this service protect this file:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
@@ -483,7 +495,7 @@ Avoid removing shapes that contain the text that you wish to ignore, by defining
 > If you do not specify Word shapes in this additional advanced property setting, and Word is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) value. 
 >
 
-**To find the name of the shape that you're using and wish to exclude:**
+**To find the name of the shape that you're using and wish to exclude**:
 
 1. In Word, display the **Selection** pane: **Home** tab > **Editing** group > **Select** option > **Selection Pane**.
 
@@ -1103,11 +1115,11 @@ For Office documents that are labeled by Secure Islands, you can relabel these d
 
 As a result of this configuration option, the new sensitivity label is applied by the Azure Information Protection unified labeling client as follows:
 
-- **For Office documents:** When the document is opened in the desktop app, the new sensitivity label is shown as set and is applied when the document is saved.
+- **For Office documents**: When the document is opened in the desktop app, the new sensitivity label is shown as set and is applied when the document is saved.
 
-- **For PowerShell:** [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) can apply the new sensitivity label.
+- **For PowerShell**: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) can apply the new sensitivity label.
 
-- **For File Explorer:** In the Azure Information Protection dialog box, the new sensitivity label is shown but isn't set.
+- **For File Explorer**: In the Azure Information Protection dialog box, the new sensitivity label is shown but isn't set.
 
 This configuration requires you to specify an advanced setting named **labelByCustomProperties** for each sensitivity label that you want to map to the old label. Then for each entry, set the value by using the following syntax:
 
@@ -1429,7 +1441,7 @@ By default, the Azure Information Protection unified labeling client automatical
 
 If you have computers that cannot connect to the internet for a period of time, you can export and copy files that manually manages the policy for the unified labeling client.
 
-**To support disconnected computers from the unified labeling client:**
+**To support disconnected computers from the unified labeling client**:
 
 1. Choose or create a user account in Azure AD that you will use to download labels and policy settings that you want to use on your disconnected computer.
 
@@ -1641,7 +1653,7 @@ Supported node types include:
 | **Except**	| Returns *not* for its own child, causing it to behave as **All**        |
 | **SentTo**, followed by **Domains: listOfDomains**	|Checks one of the following: <br>- If the Parent is **Except**, checks whether **All** of the recipients are in one of the domains<br>- If the Parent is anything else but **Except**, checks whether **Any** of the recipients are in one of the domains.   |
 | **EMailLabel**, followed by label	| One of the following:  <br>- The label ID <br>- null, if not labeled             |
-| **AttachmentLabel**, followed by **Label** and supported **Extensions**	| One of the following:  <br><br>**true:** <br>- If the Parent is **Except**, checks whether **All** of the attachments with one supported extension exists within the label<br>- 	If the Parent is anything else but **Except**, checks whether **Any** of the attachments with one supported extension exists within the label <br>- If not labeled, and **label = null** <br><br> **false:** For all other cases <br><br>**Note**: If the **Extensions** property is empty or missing, all supported file types (extensions) are included in the rule.
+| **AttachmentLabel**, followed by **Label** and supported **Extensions**	| One of the following:  <br><br>**true**: <br>- If the Parent is **Except**, checks whether **All** of the attachments with one supported extension exists within the label<br>- 	If the Parent is anything else but **Except**, checks whether **Any** of the attachments with one supported extension exists within the label <br>- If not labeled, and **label = null** <br><br> **false**: For all other cases <br><br>**Note**: If the **Extensions** property is empty or missing, all supported file types (extensions) are included in the rule.
 | | |
 
 #### Rule action syntax
@@ -2000,7 +2012,7 @@ If you have long file paths in SharePoint version 2013 or higher, ensure that yo
 
 This value is defined in the **HttpRuntimeSection** class of the `ASP.NET` configuration. 
 
-**To update the HttpRuntimeSection** class:**
+**To update the HttpRuntimeSection class**:
 
 1. Back up your **web.config** configuration. 
 
