@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/15/2020
+ms.date: 01/12/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -50,15 +50,15 @@ For more information, see [Admin Guide: File types supported by the Azure Inform
 
 The Azure Information Protection client is not supported on machines that have .NET 2 or 3, where [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled, and will cause Office apps to behave unexpectedly.
 
-If you have a .NET version 2 or 3 in addition to a .NET 4.x version required for your system, make sure to disable Exploit protection before installing AIP. 
+In such cases, we recommend that you upgrade your .NET version. For more information, see [Microsoft .NET Framework requirements](rms-client/reqs-ul-client.md#microsoft-net-framework-requirements).
+
+If you must keep your .NET version 2 or 3, make sure to disable Exploit protection before installing AIP. 
 
 To disable Exploit protection via PowerShell, run the following:
 
 ```PowerShell
 Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
 ```
-
-For more information, see [Additional prerequisites for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
 ## PowerShell support for the Azure Information Protection client
 
@@ -79,6 +79,7 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 |**Multiple versions of Office**    | The Azure Information Protection clients, including both classic and unified labeling, do not support multiple versions of Office on the same computer, or switching user accounts in Office.       |
 |**Multiple displays** |If you're using multiple displays and have an Office application open: <br><br>- You may experience performance issues in your Office apps.<br>- The Azure Information Protection bar may appear to float in the middle of the Office screen, on one or both displays <br><br>To ensure consistent performance, and that the bar remains in the correct location, open the **Options** dialog for your Office application, and under **General**, select **Optimize for compatibility** instead of **Optimize for best appearance**.    |
 |**IRM support in Office 2016**| The [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) registry setting, which controls metadata encryption in Office 2016, is not supported for Azure Information Protection labels.|
+|**Outlook object model access** | - The [PromptOOMAddressBookAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when address books are accessed via the Outlook object model, is not supported with Azure Information Protection labels. <br><br>- The [PromptOOMAddressInformationAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) registry setting, which controls the prompts that displays when a program reads address information, is not supported for Azure Information Protection labels.|
 |**Content markings in Word**    | AIP [content markings](configure-policy-markings.md) in Microsoft Word headers or footers may be offset or placed incorrectly, or may be hidden entirely, when that same header or footer also contains a table.<br><br>For more information, see [When visual markings are applied](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**Files attached to emails** |Due to a limitation in recent Windows updates, when [Microsoft Outlook is protected by Azure Rights Management](office-apps-services-support.md), files attached to emails may be locked after opening the file. |
 |**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.       |
@@ -90,36 +91,71 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 
 Publishing policies may take up to 24 hours.
 
-## Known issues in the AIP client
+## Maximum file sizes
 
-- **Maximum file sizes.** of over 2 GB are supported for protection, but not decryption.
+Files of over 2 GB are supported for protection, but not decryption.
 
-- **AIP viewer.** The AIP viewer displays images in portrait mode, and some wide, landscape-view images may appear to be stretched.
+## Known issues for the AIP viewer
 
-    For example, an original image is shown below on the left, with a stretched, portrait version in the AIP viewer on the right. 
+The AIP viewer displays images in portrait mode, and some wide, landscape-view images may appear to be stretched.
+
+For example, an original image is shown below on the left, with a stretched, portrait version in the AIP viewer on the right. 
     
-    :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Stretched image in client viewer":::
+:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Stretched image in client viewer":::
     
-    For more information, see:
+For more information, see:
 
-    - [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md)
-    - [**Classic client**: View protected files with the Azure Information Protection viewer](rms-client/client-view-use-files.md)
+- [**Classic client**: View protected files with the Azure Information Protection viewer](rms-client/client-view-use-files.md)
+- [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md)
 
+## Known issues for track and revoke features (Public preview)
 
-## AIP for Windows and Office versions in extended support
+Tracking and revoking document access using the unified labeling client has the following known issues:
+
+- [Multiple attachments in a protected email](#multiple-attachments-in-a-protected-email)
+- [Documents accessed via SharePoint](#documents-accessed-via-sharepoint)
+
+For more information, see [Administrator Guide: Track and revoke document access with Azure Information Protection](rms-client/track-and-revoke-admin.md) and [User Guide: Revoke document access with Azure Information Protection](rms-client/revoke-access-user.md).
+
+#### Multiple attachments in a protected email
+
+If you attach multiple documents to an email, and then protect the email and send it, each of the attachments get the same ContentID value. 
+
+This ContentID value will be returned only with the first file that had been opened. Searching for the other attachments will not return the ContentID value required to get tracking data.      
+
+Additionally, revoking access for one of the attachments also revokes access for the other attachments in the same protected email.
+
+#### Documents accessed via SharePoint
+    
+- Protected documents that are uploaded to SharePoint lose their **ContentID** value, and access cannot be track or revoked.
+
+- If a user downloads the file from SharePoint and accesses it from their local machine, a new **ContentID** is applied to the document when they open it locally. 
+    
+    Using the original **ContentID** value to track data will not include any access performed for the user's downloaded file. Additionally, revoking access based on the original **ContentID** value will not revoke access for any of the downloaded files.
+
+    In such cases, administrators may be able to locate the downloaded files using PowerShell to find the new **ContentID** values to track or revoke access.
+
+### Knowns issues for the AIP client and OneDrive
+
+If you have documents stored in OneDrive with a sensitivity label applied, and an administrator changes the label in the labeling policy to add protection, the newly applied protection is not automatically applied to the labeled document. 
+
+In such cases, re-label the document manually to apply the protection as needed.
+## AIP and legacy Windows and Office versions
 
 - [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
 
-    We strongly encourage you to upgrade to a newer version of Windows 10. However, if you have Extended Security Updates (ESU) and a support contract, AIP support is available to continue keeping your Windows 7 systems secure.
+    We strongly encourage you to upgrade to a newer version of Windows 10. 
+
+    However, if you have Extended Security Updates (ESU) and a support contract, AIP support is available to continue keeping your Windows 7 systems secure.
 
     For more information, check with your support contact.
 
-- [**Office 2010 is currently in extended support**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
+- [**Office 2010 extended support ended on October 13, 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
 
-    This support will end on Oct. 13, 2020, and will not be extended. Additionally, ESU will not be offered for Office 2010, and we strongly encourage you to upgrade to a newer version of Office 365. 
+    This support will not be extended, and ESU will not be offered for Office 2010. 
+
+    We strongly encourage you to upgrade to a newer version of Office 365. 
     
-    For customers who are currently running Office 2010 in extended support, AIP support is available until October 13, 2020. 
-
     For more information, check with your support contact.
 
 ## AIP-based Conditional Access policies

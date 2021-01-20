@@ -11,10 +11,11 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.reviewer: esaggese
@@ -28,7 +29,7 @@ ms.custom: admin
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md).*
 
 > [!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
@@ -116,10 +117,8 @@ Perform the following steps:
 
 1. **Deploy the Azure Information Protection classic client**
     
-    Install the classic client for users to support Office 2010, to protect files other than Office documents and emails, and to track protected documents, and provide user training for this client. 
-
-    For more information, see [Azure Information Protection classic client for Windows](./rms-client/aip-client.md).
-
+    Install the classic client for users to protect files other than Office documents and emails, and to track protected documents, and provide user training for this client. For more information, see [Azure Information Protection classic client for Windows](./rms-client/aip-client.md).
+ 
 2. **Configure Office applications and services**
     
     Configure Office applications and services for the information rights management (IRM) features in SharePoint or Exchange Online. 

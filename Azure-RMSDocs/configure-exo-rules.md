@@ -11,10 +11,11 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.reviewer: shakella
@@ -37,9 +38,9 @@ Use the following information to help you configure mail flow rules in Exchange 
 
 - Your default label is **General**, which does not apply protection. For emails with this label that are sent externally, apply the additional Do Not Forward protection action.
 
-- If an attachment with a **Confidential \ Partners** label is emailed to people outside the organization and the email is not protected, apply the additional Encrypt-Only protection action.
+- If an attachment with a **Confidential \ Partners** label is emailed to people outside the organization and the email is not protected, apply the additional encrypt-only protection action.
 
-Mail flow rules that apply protection as an action are ignored if the email is already protected. For example, an email message that has been protected by Do Not Forward cannot be changed by an Exchange mail flow rule to use the Encrypt-Only option.  
+Mail flow rules that apply protection as an action are ignored if the email is already protected. For example, an email message that has been protected by Do Not Forward cannot be changed by an Exchange mail flow rule to use the encrypt-only option.  
 
 You can extend these examples as well as modify them. For example, add more conditions. For more information about configuring mail flow rules, see [Mail flow rules (transport rules) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) from the Exchange Online documentation.
 
@@ -100,7 +101,7 @@ In the Azure Information Protection policy, this label has been configured as th
 
 For more information about the Do Not Forward option, see [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails).
 
-### Example 2: Rule that applies the Encrypt-Only option to emails when they have attachments that are labeled **Confidential \ Partners** and these emails are sent outside the organization
+### Example 2: Rule that applies the encrypt-only option to emails when they have attachments that are labeled **Confidential \ Partners** and these emails are sent outside the organization
 
 In this example, the **Confidential \ Partners** sublabel has a GUID of 0e421e6d-ea17-4fdb-8f01-93a3e71333b8. Substitute your own label or sublabel GUID that you want to use with this rule. 
 
@@ -129,7 +130,7 @@ This label is used to classify and protect documents that you use for partner co
 
 6. Select **Save** 
 
-For more information about the Encrypt option, see [Encrypt-Only option for emails](configure-usage-rights.md#encrypt-only-option-for-emails).
+For more information about the Encrypt option, see [encrypt-only option for emails](configure-usage-rights.md#encrypt-only-option-for-emails).
 
 
 ## Next steps

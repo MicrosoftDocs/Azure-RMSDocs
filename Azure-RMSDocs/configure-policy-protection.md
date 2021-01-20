@@ -11,10 +11,11 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 #ms.reviewer: demizets
@@ -281,7 +282,7 @@ If you specify external users who do not have an account in Azure AD:
 
 
 > [!NOTE]
-> Exchange Online is rolling out a new option, [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). This option is not available for label configuration. However, when you know who the recipients will be, you can use this example to configure a label with the same set of usage rights. 
+> Exchange Online is rolling out a new option, [encrypt-only](configure-usage-rights.md#encrypt-only-option-for-emails). This option is not available for label configuration. However, when you know who the recipients will be, you can use this example to configure a label with the same set of usage rights. 
 
 When your users specify the email addresses in the **To** box, the addresses must be for the same users that you specify for this label configuration. Because users can belong to groups and have more than one email address, the email address that they specify does not have to match the email address that you specify for the permissions. However, specifying the same email address is the easiest way to ensure that the recipient will be successfully authorized. For more information about how users are authorized for permissions, see [Preparing users and groups for Azure Information Protection](prepare.md). 
 
@@ -297,7 +298,7 @@ When your users specify the email addresses in the **To** box, the addresses mus
     
     Note: Do not select **Viewer** for emails and if you do select **Custom**, make sure that you include **Edit and Save**.
     
-    To select the same permissions that match the new **Encrypt-Only** option from Exchange Online, select **Custom**. Then select all permissions except **Save As, Export (EXPORT)** and **Full Control (OWNER)**.
+    To select the same permissions that match the **Encrypt** option from Exchange Online, which applies encryption without additional restrictions, select **Custom**. Then select all permissions except **Save As, Export (EXPORT)** and **Full Control (OWNER)**.
 
 5. To specify additional users who should have different permissions, repeat steps 3 and 4.
 

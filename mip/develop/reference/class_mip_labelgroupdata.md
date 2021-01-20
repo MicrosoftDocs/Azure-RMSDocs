@@ -1,11 +1,11 @@
 ---
 title: class LabelGroupData 
 description: Documents the labelgroupdata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class LabelGroupData 
@@ -16,6 +16,7 @@ ms.date: 09/21/2020
 public const std::string& GetLabelId() const  | _Not yet documented._
 public const std::vector\<std::unique_ptr\<LabelGroupData\>\>& GetLabelGroupData() const  | _Not yet documented._
 public int GetOrder() const  | _Not yet documented._
+public const std::vector\<std::string\>& GetContentFormats() const  | _Not yet documented._
 public const std::pair\<std::string, std::string\>& GetColor() const  | _Not yet documented._
 public const std::pair\<std::string, std::string\>& GetName() const  | _Not yet documented._
 public const std::pair\<std::string, std::string\>& GetDescription() const  | _Not yet documented._
@@ -25,13 +26,18 @@ public const std::pair\<std::string, std::string\>& GetTooltip() const  | _Not y
 public const std::pair\<std::string, std::string\>& GetAutoTooltip() const  | _Not yet documented._
 public bool IsEnabled() const  | _Not yet documented._
 public bool IsDowngradeJustificationRequired() const  | _Not yet documented._
+public const std::vector\<std::string\>& GetSupportedContentFormats() const  | _Not yet documented._
 public const std::string& GetDefaultLabelId() const  | _Not yet documented._
+public const std::string& GetDefaultLabelId(const std::string& contentFormat) const  | _Not yet documented._
+public const std::map\<std::string, mip::DefaultLabelInfo\>& GetDefaultLabelInfoPerContentFormat() const  | _Not yet documented._
 public const std::pair\<std::string, std::string\>& GetMoreInfoUrl() const  | _Not yet documented._
 public bool IsMandatory() const  | _Not yet documented._
+public bool IsMandatory(const std::string& contentFormat) const  | _Not yet documented._
 public const std::vector\<std::shared_ptr\<ProtectionActionData\>\>& GetProtectionActionData() const  | _Not yet documented._
 public bool IsAuditEnabled() const  | _Not yet documented._
 public bool IsCoauthEnabled() const  | _Not yet documented._
 public bool IsEnhancedClassificationEnabled() const  | _Not yet documented._
+public bool IsSubLabelPriorityOrderEnabled() const  | _Not yet documented._
 public const std::string& GetAuditWorkspaceId() const  | _Not yet documented._
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  | _Not yet documented._
 public const std::vector\<std::string\>& GetLabelByCustomProperties() const  | _Not yet documented._
@@ -43,104 +49,128 @@ public virtual ~LabelGroupData()  | _Not yet documented._
 ## Members
   
 ### GetLabelId function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetLabelGroupData function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetOrder function
-Not yet documented.
+_Not documented yet._
+
+  
+### GetContentFormats function
+_Not documented yet._
 
   
 ### GetColor function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetName function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetDescription function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetTemplateId function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetInvariantName function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetTooltip function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetAutoTooltip function
-Not yet documented.
+_Not documented yet._
 
   
 ### IsEnabled function
-Not yet documented.
+_Not documented yet._
 
   
 ### IsDowngradeJustificationRequired function
-Not yet documented.
+_Not documented yet._
+
+  
+### GetSupportedContentFormats function
+_Not documented yet._
 
   
 ### GetDefaultLabelId function
-Not yet documented.
+_Not documented yet._
+
+  
+### GetDefaultLabelId function
+_Not documented yet._
+
+  
+### GetDefaultLabelInfoPerContentFormat function
+_Not documented yet._
 
   
 ### GetMoreInfoUrl function
-Not yet documented.
+_Not documented yet._
 
   
 ### IsMandatory function
-Not yet documented.
+_Not documented yet._
+
+  
+### IsMandatory function
+_Not documented yet._
 
   
 ### GetProtectionActionData function
-Not yet documented.
+_Not documented yet._
 
   
 ### IsAuditEnabled function
-Not yet documented.
+_Not documented yet._
 
   
 ### IsCoauthEnabled function
-Not yet documented.
+_Not documented yet._
 
   
 ### IsEnhancedClassificationEnabled function
-Not yet documented.
+_Not documented yet._
+
+  
+### IsSubLabelPriorityOrderEnabled function
+_Not documented yet._
 
   
 ### GetAuditWorkspaceId function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetCustomSettings function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetLabelByCustomProperties function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetCustomPropertiesByLabel function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetParsedCustomPropertiesByLabel function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetLabelByCustomPropertiesSettings function
-Not yet documented.
+_Not documented yet._
 
   
 ### ~LabelGroupData function
-Not yet documented.
+_Not documented yet._

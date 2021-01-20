@@ -1,11 +1,11 @@
 ---
 title: Concepts - Service discovery in the MIP SDK.
 description: This article will help you understand how the MIP SDK implements service discovery
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 05/30/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 ---
 
 # Microsoft Information Protection SDK - Service Discovery

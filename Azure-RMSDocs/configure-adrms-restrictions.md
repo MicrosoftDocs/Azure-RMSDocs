@@ -11,11 +11,11 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
+ROBOTS: NOINDEX
 
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: hyok
@@ -88,7 +88,7 @@ To ensure that only users who need to apply HYOK protection see the HYOK-configu
 
 Microsoft 365 services and other online services can't decrypt HYOK-protected content.
 
-For emails, this loss of functionality includes malware scanners, Encrypt-Only protection, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync.
+For emails, this loss of functionality includes malware scanners, encrypt-only protection, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync.
 
 Users may not understand why some devices aren't able to open HYOK-protected emails, leading to additional calls to your help desk. Be aware of these severe limitations when configuring HYOK protection with emails.
 
@@ -165,7 +165,7 @@ An AD RMS deployment must meet the following requirements to provide HYOK protec
 |**AD RMS configuration**     |Your AD RMS system must be configured in specific ways to support HYOK. For more information, see [below](#ad-rms-configuration-requirements).          |
 |**Directory synchronization**     |Directory synchronization must be configured between your on-premises Active Directory and the Azure Active Directory. </br></br>Users who will use HYOK protection labels must be configured for single-sign-on.         |
 |**Configuration for explicitly defined trusts**     |If you share HYOK-protected content with others outside your organization, AD RMS must be configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations. </br></br>Do this using trusted user domains (TUDs) or federated trusts that are created using Active Directory Federation Services (AD FS).         |
-|**Microsoft Office supported version**     | Users who are protecting or consuming HYOK-protected content must have: </br></br>- A version of Office that supports Information Rights Management (IRM) </br>- Microsoft Office Professional Plus version 2013 or later with Service Pack 1, running on Windows 7 Service Pack 1 or later. </br>- For the Office 2016 Microsoft Installer (.msi)-based edition, you must have the [update 4018295 for Microsoft Office 2016 that was released on March 6, 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Note**: Office 2010 and Office 2007 are not supported.        |
+|**Microsoft Office supported version**     | Users who are protecting or consuming HYOK-protected content must have: </br></br>- A version of Office that supports Information Rights Management (IRM) </br>- Microsoft Office Professional Plus version 2013 or later with Service Pack 1, running on Windows 7 Service Pack 1 or later. </br>- For the Office 2016 Microsoft Installer (.msi)-based edition, you must have the [update 4018295 for Microsoft Office 2016 that was released on March 6, 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Note**: Office 2010 and Office 2007 are not supported.  For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).      |
 
 > [!IMPORTANT]
 > To fulfill the high assurance that HYOK protection offers, we recommend:
@@ -242,4 +242,4 @@ For example: **https://rmscluster.contoso.com**
 
 ## Next steps
 
-When you're done configuring your system to support HYOK, continue with configuring labels for HYOK protection. FOr more information, see [How to configure a label for Rights Management protection](configure-policy-protection.md).
+When you're done configuring your system to support HYOK, continue with configuring labels for HYOK protection. For more information, see [How to configure a label for Rights Management protection](configure-policy-protection.md).

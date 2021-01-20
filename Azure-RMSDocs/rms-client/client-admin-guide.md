@@ -11,10 +11,11 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: v1client
@@ -98,8 +99,10 @@ Deploy the Azure Information Protection client if you are not using [sensitivity
 
 - You want to remove encryption from files and containers (unprotect) in bulk for data recovery purposes.
 
-- You run Office 2010 and want to protect documents and email messages by using the Azure Rights Management service.
+- You run Office 2010 and want to protect documents and email messages by using the Azure Rights Management service. 
 
+    Note that Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    
 Example showing the Azure Information Protection client add-in for an Office application, displaying the classification labels for your organization, and the new **Protect** button on the ribbon:
 
 ![Azure Information Protection bar with default policy](../media/word2016-calloutsv2.png)

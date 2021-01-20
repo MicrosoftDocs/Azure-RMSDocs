@@ -11,10 +11,11 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: azurerms
@@ -40,15 +41,15 @@ When you use the Azure Rights Management service from Azure Information Protecti
 
 |Application or service|How templates are refreshed after changes|
 |--------------------------|---------------------------------------------|
-|Exchange Online<br /><br />Applicable for transport rules and the Outlook web app |Automatically refreshed within an hour - no additional steps required.|
-|Azure Information Protection client|Automatically refreshed whenever the Azure Information Protection policy is refreshed on the client:<br /><br /> - When an Office application opens that supports the Azure Information Protection bar. <br /><br /> - When you right-click to classify and protect a file or folder. <br /><br /> - When you run the PowerShell cmdlets for labeling and protection (Get-AIPFileStatus and Set-AIPFileLabel).<br /><br /> - When the Azure Information Protection Scanner service starts and the local policy is older than one hour. In addition, the scanner service checks for changes every hour and uses these changes for the next scan cycle.<br /><br /> - Every 24 hours.<br /><br /> Additionally, because this client is tightly integrated with Office, any refreshed templates for Microsoft 365 apps, Office 2019, Office 2016, or Office 2013 will also be refreshed for the Azure Information Protection client.|
-|Azure Information Protection unified labeling client|For Office apps, the templates automatically refresh every time the app is opened.<br /><br /> Additionally, because this client is tightly integrated with Office, any refreshed templates for Microsoft 365 apps, Office 2019, Office 2016, or Office 2013 will also be refreshed for the Azure Information Protection unified labeling client.<br /><br /> For File Explorer, PowerShell, and the scanner, the client doesn't download templates but accesses them online - no additional steps required.|
-|Microsoft 365 apps, Office 2019, Office 2016, and Office 2013|Automatically refreshed - on a schedule:<br /><br />- For these later versions of Office: The default refresh interval  is every 7 days.<br /><br />To force a refresh sooner than the schedule, see the following section, [Microsoft 365 apps, Office 2019, Office 2016, and Office 2013: How to force a refresh for templates](#microsoft-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates).|
-|Office 2010|Automatically refreshed when users sign out from Windows, sign back in, and wait up to 1 hour.|
-|Exchange on-premises with the Rights Management connector<br /><br />Applicable for transport rules and the Outlook web app|Automatically refreshed - no additional steps required. However, the Outlook web app caches the UI for a day.|
-|Office 2019 for Mac and Office 2016 for Mac|Automatically refreshed when you open protected content. To force a refresh, see the following section, [Office 2019 for Mac and Office 2016 for Mac: How to force a refresh for templates](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
-|RMS sharing app for Mac computers|Automatically refreshed - no additional steps required.|
-|Office 365 ProPlus with [built-in labeling](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|This built-in labeling solution doesn't download templates but accesses them online - no additional steps required.|
+|**Exchange Online**<br /><br />Applicable for transport rules and the Outlook web app |Automatically refreshed within an hour - no additional steps required.|
+|**Azure Information Protection classic client**|Automatically refreshed whenever the Azure Information Protection policy is refreshed on the client:<br /><br /> - When an Office application opens that supports the Azure Information Protection bar. <br /><br /> - When you right-click to classify and protect a file or folder. <br /><br /> - When you run the PowerShell cmdlets for labeling and protection (Get-AIPFileStatus and Set-AIPFileLabel).<br /><br /> - When the Azure Information Protection Scanner service starts and the local policy is older than one hour. In addition, the scanner service checks for changes every hour and uses these changes for the next scan cycle.<br /><br /> - Every 24 hours.<br /><br /> Additionally, because this client is tightly integrated with Office, any refreshed templates for Microsoft 365 apps, Office 2019, Office 2016, or Office 2013 will also be refreshed for the Azure Information Protection client.|
+|**Azure Information Protection unified labeling client**|For Office apps, the templates automatically refresh every time the app is opened.<br /><br /> Additionally, because this client is tightly integrated with Office, any refreshed templates for Microsoft 365 apps, Office 2019, Office 2016, or Office 2013 will also be refreshed for the Azure Information Protection unified labeling client.<br /><br /> For File Explorer, PowerShell, and the scanner, the client doesn't download templates but accesses them online - no additional steps required.|
+|**Microsoft 365 apps, Office 2019, Office 2016, and Office 2013**|Automatically refreshed - on a schedule:<br /><br />- For these later versions of Office: The default refresh interval  is every 7 days.<br /><br />To force a refresh sooner than the schedule, see the following section, [Microsoft 365 apps, Office 2019, Office 2016, and Office 2013: How to force a refresh for templates](#microsoft-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates).|
+|**Office 2010**|Automatically refreshed when users sign out from Windows, sign back in, and wait up to 1 hour. <br><br>**Important**: Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).|
+|**Exchange on-premises with the Rights Management connector**<br /><br />Applicable for transport rules and the Outlook web app|Automatically refreshed - no additional steps required. However, the Outlook web app caches the UI for a day.|
+|**Office 2019 for Mac and Office 2016 for Mac**|Automatically refreshed when you open protected content. To force a refresh, see the following section, [Office 2019 for Mac and Office 2016 for Mac: How to force a refresh for templates](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
+|**RMS sharing app for Mac computers**|Automatically refreshed - no additional steps required.|
+|**Office 365 ProPlus with [built-in labeling](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)**|This built-in labeling solution doesn't download templates but accesses them online - no additional steps required.|
 | | |
 
 When client applications need to download templates (initially or refreshed for changes), be prepared to wait up to 30 minutes before the download is complete and the new or updated templates are fully operational. The actual time will vary, according to factors such as the size and complexity of the template configuration, and the network connectivity. 

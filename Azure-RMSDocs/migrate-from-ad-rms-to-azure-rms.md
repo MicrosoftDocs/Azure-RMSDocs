@@ -75,17 +75,30 @@ Before you start the migration to Azure Information Protection, make sure that t
         
       - Multiple forests, multiple RMS clusters
         
-    Note: By default, multiple AD RMS clusters migrate to a single tenant for Azure Information Protection. If you want separate tenants for Azure Information Protection, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one tenant.
-
+    > [!NOTE]
+    > By default, multiple AD RMS clusters migrate to a single tenant for Azure Information Protection. If you want separate tenants for Azure Information Protection, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one tenant.
+    >
+ 
 - **All requirements to run Azure Information Protection, including a subscription for Azure Information Protection (the Azure Rights Management service is not activated)**:
 
 	See [Requirements for Azure Information Protection](./requirements.md).
 
-    Note that if you have computers that run Office 2010, you must install the [Azure Information Protection client](rms-client/use-client.md) to provide the ability to authenticate users to cloud services. 
+    The Azure Information Protection client is *required* for classification and labeling, and *optional, but recommended* if you want to only protect data. 
 
-    For later versions of Office, these clients are required for classification and labeling, and the Azure Information Protection client is optional but recommended if you want to only protect data. For more information, see the admin guides for the [Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide.md).
+    For more information, see the admin guides for the [Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide.md).
 
-	Although you must have a subscription for Azure Information Protection before you can migrate from AD RMS, we recommend that the Rights Management service for your tenant is not activated before you start the migration. The migration process includes this activation step after you have exported keys and templates from AD RMS and imported them to your tenant for Azure Information Protection. However, if the Rights Management service is already activated, you can still migrate from AD RMS with some additional steps.
+	Although you must have a subscription for Azure Information Protection before you can migrate from AD RMS, we recommend that the Rights Management service for your tenant is not activated before you start the migration. 
+
+    The migration process includes this activation step after you have exported keys and templates from AD RMS and imported them to your tenant for Azure Information Protection. However, if the Rights Management service is already activated, you can still migrate from AD RMS with some additional steps.
+
+    **Office 2010 only**: 
+
+    If you have computers that run Office 2010, you must install the [Azure Information Protection client](rms-client/use-client.md) to provide the ability to authenticate users to cloud services. 
+
+    > [!IMPORTANT]
+    > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+    >  
+    
 
 
 - **Preparation for Azure Information Protection**:
@@ -223,6 +236,9 @@ If you have deployed the [mobile device extension](/previous-versions/windows/it
 The onboarding controls that you configured during the preparation phase are no longer needed. However, if you did not use onboarding controls because you chose to migrate everything at the same time rather than do a phased migration, you can skip the instructions to remove the onboarding controls.
     
 If your Windows computers are running Office 2010, check whether you need to disable the **AD RMS Rights Policy Template Management (Automated)** task.
+
+> [!IMPORTANT]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 **Step 12: Rekey your Azure Information Protection tenant key**
 

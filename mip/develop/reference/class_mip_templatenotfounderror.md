@@ -1,11 +1,11 @@
 ---
 title: class TemplateNotFoundError 
 description: Documents the templatenotfounderror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class TemplateNotFoundError 
@@ -31,15 +31,15 @@ enum ErrorCode  |  ErrorCode of bad input error.
 ## Members
   
 ### mMessage
-Not yet documented.
+_Not documented yet._
 
   
 ### mDebugInfo
-Not yet documented.
+_Not documented yet._
 
   
 ### mName
-Not yet documented.
+_Not documented yet._
 
   
 ### GetErrorCode function
@@ -105,9 +105,9 @@ Get debug info.
   
 ### ErrorCode enum
 
+ErrorCode of bad input error.
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 General            | General bad input error
 FileIsTooLargeForProtection            | File is too large for protection
-
-ErrorCode of bad input error.

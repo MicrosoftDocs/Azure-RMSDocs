@@ -1,11 +1,11 @@
 ---
 title: Concept - Action Justification in MIP SDK
 description: This article will help you understand the scenario of how to downgrade or remove a label needing justification.
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 04/14/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 ---
 
 # Action Justification in MIP SDK
