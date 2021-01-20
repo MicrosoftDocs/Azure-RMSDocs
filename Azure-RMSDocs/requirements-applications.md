@@ -270,8 +270,6 @@ In addition to the applications listed above, any application that supports the 
 
 Examples may include line-of-business applications written in-house, or applications from software vendors, written using the RSM SDKs.
 
-For more information, see the [Azure Information Protection Developer's Guide](./develop/developers-guide.md).
-
 ## Applications that are not supported by Azure RMS
 
 Applications not currently supported by Azure RMS include:
