@@ -6,7 +6,7 @@ description: Information to help you monitor the connector and your organization
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 01/20/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -184,21 +184,25 @@ Usage logging helps you identify when emails and documents are protected and con
 
 For more information about usage logging, see [Logging and analyzing the protection usage from Azure Information Protection](log-analyze-usage.md).
 
-If you need more detailed logging for diagnosis purposes, you can use [Debugview](/sysinternals/downloads/debugview) from Windows Sysinternals. Enable tracing for the RMS connector by modifying the web.config file for the Default site in IIS:
+If you need more detailed logging for diagnosis purposes, use [DebugView](/sysinternals/downloads/debugview) from Windows Sysinternals to output the logs to a debug pipe. 
 
-1. Locate the web.config file from **%programfiles%\Microsoft Rights Management connector\Web Service**.
+1. Launch DebugView as an administrator, and then select **Capture** > **Capture Global Win32**.
 
-1. Locate the following line:
+1. Enable tracing for the RMS connector by modifying the **web.config** file for the Default site in IIS:
 
-    ```sh
-    <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
-    ```
+    1. Locate the **web.config** file from **%programfiles%\Microsoft Rights Management connector\Web Service**.
 
-1. Replace that line with the following text:
-    ```sh
-    <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
-    ```
+    1. Locate the following line:
+
+        ```sh
+        <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+        ```
+
+    1. Replace that line with the following text:
+        ```sh
+        <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+        ```
 
 1.  Stop and start IIS to activate tracing. 
 
-1.  When you have captured the traces that you need, revert the line in step 3, and stop and start IIS again.
+1.  When you have captured the traces in DebugView that you need, revert the line in step 3, and stop and start IIS again.
