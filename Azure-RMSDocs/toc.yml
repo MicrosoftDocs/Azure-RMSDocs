@@ -330,10 +330,9 @@
     - name: Microsoft Information Protection SDK
       href: /information-protection/develop/
     - name: Rights Management SDKs deprecation notice
-    - href: ./develop/deprecation-notice.md
+      href: ./develop/deprecation-notice.md
     - name: Rights Management SDKs documentation (deprecated)
       href: /previous-versions/azure/rms/rights-management-sdks
-
 - name: Resources
   items:
   - name: Frequently asked questions
