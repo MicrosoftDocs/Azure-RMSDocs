@@ -158,7 +158,7 @@ For even more details, see also:
 |**Manual labeling**| ![yes](../media/yes-icon.png)   | ![yes](../media/yes-icon.png)   |![yes](../media/yes-icon.png) |
 |**Default label**| ![yes](../media/yes-icon.png)| ![yes](../media/yes-icon.png)| ![yes](../media/yes-icon.png)|
 |**Recommended or automatic labeling** <br />For Word, Excel, PowerPoint, Outlook|![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |
-|**Mandatory labeling**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**Mandatory labeling**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![yes](../media/yes-icon.png)|
 |**User-defined permissions for a label**: <br />Do Not Forward for emails| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |
 |**User-defined permissions for a label**: <br />Custom permissions for Word, Excel, PowerPoint| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |
 |**Multilanguage support for labels**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |![yes](../media/yes-icon.png) |
