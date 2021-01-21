@@ -190,7 +190,7 @@ If you need more detailed logging for diagnosis purposes, use [DebugView](/sysin
 
 1. Enable tracing for the RMS connector by modifying the **web.config** file for the Default site in IIS:
 
-    1. Locate the **web.config** file from **%programfiles%\Microsoft Rights Management connector\Web Service**.
+    1. Locate the **web.config** file in the **%programfiles%\Microsoft Rights Management connector\Web Service** folder.
 
     1. Locate the following line:
 
