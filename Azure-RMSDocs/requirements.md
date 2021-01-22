@@ -74,7 +74,7 @@ To support authentication and authorization for Azure Information Protection, yo
 
 Conditional access is supported in preview for documents protected by Azure Information Protection. For more information, see: [I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
-Additional prerequisites are required for specific scenarios, such as when using certificate-based or multi-factor authentication, when UPN values don't match user email addresses, or when using [Office 2010](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+Additional prerequisites are required for specific scenarios, such as when using certificate-based or multi-factor authentication, or when UPN values don't match user email addresses.
 
 For more information, see:
 
@@ -160,7 +160,11 @@ Other editions of Office cannot protect documents and emails by using a Rights M
 
 Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client, or the **Protect** button in the classic client.
 
-For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md) and [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
+
+> [!IMPORTANT]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+> 
 
 ### Office features and capabilities not supported
 

@@ -330,6 +330,8 @@ You're now ready to run your first scan in discovery mode. For more information,
 
 Once you've run your initial discovery scan, continue with [Configure the scanner to apply classification and protection](#configure-the-scanner-to-apply-classification-and-protection).
 
+> [!NOTE]
+> For more information, see [How to label files non-interactively for Azure Information Protection](rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
 ## Configure the scanner to apply classification and protection
 
 The default settings configure the scanner to run once, and in reporting-only mode.

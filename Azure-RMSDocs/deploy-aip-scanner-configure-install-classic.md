@@ -257,7 +257,7 @@ By default, the AIP scanner protects Office file types and PDF files only. To ch
 - Specify the additional file types that you want to be protected
 - Specify the type of protection you want to apply (native or generic)
 
-For more information, see [File API configuration](develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile".
+In this documentation for developers, generic protection is referred to as "PFile".
 
 To align the supported file types with the client, where all files are automatically protected with native or generic protection:
 
