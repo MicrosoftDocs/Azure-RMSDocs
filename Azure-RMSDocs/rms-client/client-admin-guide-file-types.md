@@ -205,7 +205,7 @@ You can make similar registry edits for other scenarios by changing the value of
 
 After making these registry changes, there's no need to restart the computer. However, if you're using PowerShell commands to protect files, you must start a new PowerShell session for the changes to take effect.
 
-For more information about editing the registry to change the default protection level of files, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile".
+In this documentation for developers, generic protection is referred to as "PFile".
 
 ## File types that are excluded from classification and protection
 
