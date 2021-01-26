@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/07/2021
+ms.date: 01/26/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -74,6 +74,23 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
+## Version 2.9.113.0
+
+Unified labeling scanner and client version 2.9.113.0
+
+**Released** 1/31/2021
+
+**Supported through** 7/1/2021
+
+**Fix**:
+
+Fixed the following issues for File Explorer and the Azure Information Protection Viewer app:
+
+- Removing non-scoped labels is now supported from the File Explorer
+- Protected files can now be opened via the File Explorer when they are labeled, and required by the labeling policy to have a justification for the label
+- Guest users can now be added to view protected content using the AIP Viewer.
+
+For more information, see the [AIP unified labeling client user guide](clientv2-user-guide.md).
 ## Version 2.9.111.0
 
 Unified labeling scanner and client version 2.9.111.0
