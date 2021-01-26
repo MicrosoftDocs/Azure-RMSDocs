@@ -80,15 +80,8 @@ Unified labeling scanner and client version 2.9.113.0
 
 **Released** 1/31/2021
 
-**Supported through** 7/1/2021
-
-**Fix**:
-
-Fixed the following issues for File Explorer and the Azure Information Protection Viewer app:
-
-- Removing non-scoped labels is now supported from the File Explorer
-- Protected files can now be opened via the File Explorer when they are labeled, and required by the labeling policy to have a justification for the label
-- Guest users can now be added to view protected content using the AIP Viewer.
+- **Newly supported**: You can now view non-scoped labels via the File Explorer.
+- **Fix**: You can now use both the File Explorer and the AIP Viewer app to open and view files protected by non-scoped labels
 
 For more information, see the [AIP unified labeling client user guide](clientv2-user-guide.md).
 ## Version 2.9.111.0
