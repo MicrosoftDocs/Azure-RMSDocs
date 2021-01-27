@@ -112,11 +112,15 @@ For more information, see:
 
 Tracking and revoking document access using the unified labeling client has the following known issues:
 
+- [Password-protected documents](#password-protected-documents)
 - [Multiple attachments in a protected email](#multiple-attachments-in-a-protected-email)
 - [Documents accessed via SharePoint](#documents-accessed-via-sharepoint)
 
-For more information, see [Administrator Guide: Track and revoke document access with Azure Information Protection](rms-client/track-and-revoke-admin.md) and [User Guide: Revoke document access with Azure Information Protection](rms-client/revoke-access-user.md).
+For more information, see the [Admin Guide](rms-client/track-and-revoke-admin.md) and [User Guide](rms-client/revoke-access-user.md) procedures.
 
+#### Password-protected documents
+
+Password-protected documents are not supported by track and revoke features.
 #### Multiple attachments in a protected email
 
 If you attach multiple documents to an email, and then protect the email and send it, each of the attachments get the same ContentID value. 
