@@ -6,8 +6,8 @@ description: Describes how administrators can track document access for protecte
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/26/2021
-ms.topic: how-to
+ms.date: 01/20/2021
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
