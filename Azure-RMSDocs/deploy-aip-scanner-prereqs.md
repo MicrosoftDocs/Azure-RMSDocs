@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/17/2020
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -42,7 +42,6 @@ Additionally, the following requirements are specific for the scanner:
 - [SharePoint requirements](#sharepoint-requirements)
 - [Microsoft Office requirements](#microsoft-office-requirements)
 - [File path requirements](#file-path-requirements)
-- [Usage statistics requirements](#usage-statistics-requirements)
 
 If you can't meet all the requirements listed for the scanner because they are prohibited by your organization policies, see the [alternative configurations](#deploying-the-scanner-with-alternative-configurations) section.
 
@@ -200,13 +199,6 @@ To scan files with file paths of more than 260 characters, install the scanner o
 |**Windows 10, version 1607 or later**     |  Opt in for the updated **MAX_PATH** functionality. For more information, see [Enable Long Paths in Windows 10 versions 1607 and later](/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later).      |
 | | |
 
-## Usage statistics requirements
-
-Disable usage statistics using one of the following methods:
-
-- Setting the [AllowTelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer) parameter to 0
-
-- Ensure that the **Help improve Azure Information Protection by sending usage statistics to Microsoft** option remains unselected during the scanner installation process.
 
 ## Deploying the scanner with alternative configurations
 
