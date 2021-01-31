@@ -6,7 +6,7 @@ description: Instructions for troubleshooting your unified labeling on-premises 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/26/2021
+ms.date: 01/31/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -213,6 +213,16 @@ For more information, see [Firewalls and network infrastructure](requirements.md
 
 To enable TLS 1.2, see [How to enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) in the Enterprise Mobility + Security documentation.
 
+**Still have an issue?**
+
+If enabling TLS 1.2 does not help, you may have a ciphers issue. In this case, perform the following steps:
+
+1. Back up and then delete the following registry key: **HKLM> Software> Policies> Microsoft> Cryptography**.
+
+    Alternately, [back up your entire registry](https://support.microsoft.com/en-us/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) before deleting.
+
+1. Restart the machine to have the registry reset to the default value.
+
 ### Stuck scanner processes
 
 **Error message**
@@ -276,6 +286,16 @@ This error usually means that TLS 1.2 is not enabled.
 For more information, see [Firewalls and network infrastructure](requirements.md#firewalls-and-network-infrastructure). 
 
 To enable TLS 1.2, see [How to enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) in the Enterprise Mobility + Security documentation.
+
+**Still have an issue?**
+
+If enabling TLS 1.2 does not help, you may have a ciphers issue. In this case, perform the following steps:
+
+1. Back up and then delete the following registry key: **HKLM> Software> Policies> Microsoft> Cryptography**.
+
+    Alternately, [back up your entire registry](https://support.microsoft.com/en-us/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) before deleting.
+
+1. Restart the machine to have the registry reset to the default value.
 
 
 ### Missing content scan job or profile
