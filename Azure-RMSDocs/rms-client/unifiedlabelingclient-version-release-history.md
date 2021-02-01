@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/27/2021
+ms.date: 02/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -239,7 +239,7 @@ Skip the full, immediate rescan, and return later to [run a full rescan](../depl
 > [!IMPORTANT]
 > Administrators making changes in their policies and content scan jobs must now understand the effects of those changes on the content, and determine whether a full rescan is required.
 >
-> For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
+> For example, if you’ve changed **Sensitivity policy** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
 >
 
 ### Configure SharePoint timeouts
