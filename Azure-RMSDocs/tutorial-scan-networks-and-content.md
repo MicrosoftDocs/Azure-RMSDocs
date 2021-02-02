@@ -99,7 +99,7 @@ The grid data is updated as your scan completes. For example:
 :::image type="content" source="media/qs-tutor/scanned-network.png" alt-text="Refreshed network scan jobs":::
 
 > [!TIP]
-> If your network scan job does not run, check to make sure that the [Network Discovery service is installed correctly](tutorial-install-scanner.md#install-the-network-discovery-service) on the scanner machine.
+> If your network scan job does not run, check to make sure that the [Network Discovery service is installed correctly](tutorial-install-scanner.md#install-the-network-discovery-service-public-preview) on the scanner machine.
 
 Continue with [Add risky repositories to a content scan job](#add-risky-repositories-to-a-content-scan-job).
 

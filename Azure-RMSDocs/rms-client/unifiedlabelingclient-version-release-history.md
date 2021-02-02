@@ -103,10 +103,9 @@ This version includes the following new features, fixes, and enhancements for th
 	
     - When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue occurs only with the [AIP Viewer app](clientv2-view-use-files.md).
 
-	- When content with a scoped label is shared with users or groups not included in the label's scope. This issue occurs both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the File Explorer.
+	- When content with a scoped label is shared with users or groups not included in the label's scope. This issue occurs both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the [File Explorer](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
 	
-    The team is working on a fix and an updated delivery plan.
-
+    We are actively working on this issue and an updated delivery plan for the fix.
 
 ### PowerShell support for disconnected scanner servers
 
