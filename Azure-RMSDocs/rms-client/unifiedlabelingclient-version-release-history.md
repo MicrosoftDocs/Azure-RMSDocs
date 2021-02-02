@@ -212,7 +212,7 @@ This version includes the following new features, fixes, and enhancements, for t
 
     - [Optional full rescans for changes detected](#optional-full-rescans-for-changes-detected)
     - [Configure SharePoint timeouts](#configure-sharepoint-timeouts)
-    - [Network discovery support](#network-discovery-support)
+    - [Network discovery support](Public Preview)(#network-discovery-support)
 
 - **New features for the client**:
 
@@ -249,7 +249,7 @@ AIP administrators can also now configure SharePoint timeouts, separately for al
 
 For more information, see [Configure SharePoint timeouts](clientv2-admin-guide-customizations.md#configure-sharepoint-timeouts).
 
-### Network Discovery support
+### Network Discovery support (Public Preview)
 
 The unified labeling scanner now includes a new **network discovery** service, which enables you to scan specified IP addresses or ranges for network file shares that may have sensitive content.
 
@@ -281,7 +281,7 @@ The **network discovery** service updates **Repository** reports with a list of 
 
 1. Use the generated reports on the new [**Repositories**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) pane to find additional network file shares that may be at risk. Add any risky file shares to your [content scan jobs](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) to scan the added repositories for sensitive content.
 
-#### Network discovery cmdlets
+#### Network discovery cmdlets (Public Preview)
 
 PowerShell cmdlets added for Network Discovery include:
 
