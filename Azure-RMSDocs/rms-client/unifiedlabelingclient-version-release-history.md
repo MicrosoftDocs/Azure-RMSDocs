@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/27/2021
+ms.date: 02/02/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -98,6 +98,14 @@ This version includes the following new features, fixes, and enhancements for th
 
     - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client)
+
+- **Known issue**: An issue was identified in the latest GA version (2.9.111) where users were not able to view protected, non Office files in the following scenarios:
+
+    - **When protected files are shared with users who don’t have an AIP policy configured**, such as external users. This issue occurs only with the AIP Viewer app.
+    
+    - **When content with a scoped label is shared with users or groups not included in the label's scope**. This issue occurs both with the AIP Viewer app and when viewing or classifying the shared content via the File Explorer.
+
+    We are working on a fix, which will be announced as soon as it’s available. 
 
 ### PowerShell support for disconnected scanner servers
 
