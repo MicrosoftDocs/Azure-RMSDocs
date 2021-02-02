@@ -99,11 +99,14 @@ This version includes the following new features, fixes, and enhancements for th
     - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client)
 
-- **Known issue**: An issue was identified in the latest GA version (2.9.111) where users are not able to view protected, non-Office files in the following scenarios:
+- **Known issue**: An issue was identified in the latest GA version (2.9.111) where some users are not able to view protected files in the following scenarios:
+	
+    - When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue occurs only with the [AIP Viewer app](clientv2-view-use-files.md).
 
-    - **When protected files are shared with users who don’t have an AIP policy configured**, such as external users. This issue occurs only with the AIP Viewer app.
-    
-    - **When content with a scoped label is shared with users or groups not included in the label's scope**. This issue occurs both with the AIP Viewer app and when viewing or classifying the shared content via the File Explorer.
+	- When content with a scoped label is shared with users or groups not included in the label's scope. This issue occurs both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the File Explorer.
+	
+    The team is working on a fix and an updated delivery plan.
+
 
 ### PowerShell support for disconnected scanner servers
 
@@ -219,7 +222,7 @@ This version includes the following new features, fixes, and enhancements, for t
 
     - [Optional full rescans for changes detected](#optional-full-rescans-for-changes-detected)
     - [Configure SharePoint timeouts](#configure-sharepoint-timeouts)
-    - [Network discovery support](#network-discovery-support)
+    - [Network discovery support Public preview](#network-discovery-support-public-preview)
 
 - **New features for the client**:
 
@@ -256,14 +259,14 @@ AIP administrators can also now configure SharePoint timeouts, separately for al
 
 For more information, see [Configure SharePoint timeouts](clientv2-admin-guide-customizations.md#configure-sharepoint-timeouts).
 
-### Network Discovery support
+### Network Discovery support (Public preview)
 
 The unified labeling scanner now includes a new **network discovery** service, which enables you to scan specified IP addresses or ranges for network file shares that may have sensitive content.
 
 The **network discovery** service updates **Repository** reports with a list of share locations that may be at risk, based on the discovered permissions and access rights. Check the updated **Repository** reports to ensure that your content scan jobs include all repositories that need to be scanned.
 
 > [!TIP]
-> For more information, see [Network discovery cmdlets](#network-discovery-cmdlets).
+> For more information, see [Network discovery cmdlets](#network-discovery-cmdlets-public-preview).
 
 **To use the Network discovery service**
 
@@ -288,7 +291,7 @@ The **network discovery** service updates **Repository** reports with a list of 
 
 1. Use the generated reports on the new [**Repositories**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) pane to find additional network file shares that may be at risk. Add any risky file shares to your [content scan jobs](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) to scan the added repositories for sensitive content.
 
-#### Network discovery cmdlets
+#### Network discovery cmdlets (Public preview)
 
 PowerShell cmdlets added for Network Discovery include:
 
