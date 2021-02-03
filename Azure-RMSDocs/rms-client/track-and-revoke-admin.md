@@ -6,8 +6,8 @@ description: Describes how administrators can track document access for protecte
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/24/2020
-ms.topic: how-to
+ms.date: 01/20/2021
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
@@ -31,7 +31,7 @@ ms.custom: user
 >
 >***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see [Admin Guide: Configuring and using document tracking for AIP using the classic client](client-admin-guide-document-tracking.md).*
 
-If you've upgraded to [version 2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) or later, any protected documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client.
+If you've upgraded to [version 2.9.111.0](unifiedlabelingclient-version-release-history.md#version-291110) or later, any protected documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client. Protected documents are supported for track and revoke, even if they are not labeled.
 
 Registering a document for tracking enables [Microsoft 365 global admins](/microsoft-365/admin/add-users/about-admin-roles#commonly-used-microsoft-365-admin-center-roles) to track access details, including successful access events and denied attempts, as well as revoke access if needed. 
 
@@ -108,12 +108,15 @@ Global admins can revoke access for any protected document stored in their local
 
 ### Un-revoke access
 
-If you have accidentally revoked access to a specific document, use the same **ContentID** value with the [Clear-AipServiceDocumentRevoke](/powershell/module/aipservice/clear-aipservicedocumentrevoke) cmdlet to un-revoke the access. 
+If you have accidentally revoked access to a specific document, use the same **ContentID** value with the [Clear-AipServiceDocumentRevoked](/powershell/module/aipservice/clear-aipservicedocumentrevoked) cmdlet to un-revoke the access. 
+
+To use the **Clear-AipServiceDocumentRevoked** cmdlet, you must first load the **AipService.dll**.
 
 For example:
 
 ```PowerShell
-Clear-AipServiceDocumentRevoke -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
+Import-Module -Name "C:\Program Files\WindowsPowerShell\Modules\AIPService\1.0.0.4\AipService.dll"
+Clear-AipServiceDocumentRevoked -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
 ```
 
 Document access is granted to the user you defined in the **IssuerName** parameter.

@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/10/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
@@ -143,8 +143,8 @@ In addition, if Office 2010 is installed locally on an Exchange server, the clie
 
 In both scenarios, you must install the client applications on separate computers that are not configured to use the connector. They will then correctly use RMS directly.
 
-> [!NOTE]
-> For more information about AIP and Office 2010, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+> [!IMPORTANT]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
 > 
 ## Configuring an Exchange server to use the connector
 The following Exchange roles communicate with the RMS connector:

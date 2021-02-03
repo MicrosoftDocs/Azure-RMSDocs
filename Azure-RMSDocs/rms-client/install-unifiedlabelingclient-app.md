@@ -47,13 +47,19 @@ Before you install the Azure Information Protection unified labeling client, con
 
 4. If you are prompted to continue, click **Yes**, and wait for the installation to finish.
 
-6. Click **Close**. Before you start to use the Azure Information Protection unified labeling client:
+6. Click **Close**. 
 
-    - **If your computer runs Office 2010**, restart your computer and then go to the next section for your final step.    
-        
-    - **For other versions of Office**, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use the client to label and protect your documents and emails.
+    Before you start to use the Azure Information Protection unified labeling client, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use the client to label and protect your documents and emails.
 
+    > [!NOTE]
+    > If your computer runs Office 2010, restart your computer and then go to the [next section](#installing-the-azure-information-protection-unified-labeling-client-with-office-2010) for your final step.   
+    >
+     
 ### Installing the Azure Information Protection unified labeling client with Office 2010
+
+> [!IMPORTANT]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> 
 
 After you have installed the Azure Information Protection unified labeling client by using the previous instructions:
 
@@ -64,8 +70,6 @@ After you have installed the Azure Information Protection unified labeling clien
 3. If you see a **User Access Control** dialog box, click **Yes** so that the Azure Information Protection client can update the registry.
 
 Your installation is now complete and you can use the Azure Information Protection unified labeling client to label and protect your documents and emails.
-
-For more information, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ## Other instructions    
 More how-to instructions from the Azure Information Protection unified labeling client user guide.

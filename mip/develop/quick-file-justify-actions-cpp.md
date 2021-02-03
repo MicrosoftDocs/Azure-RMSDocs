@@ -1,11 +1,11 @@
 ---
 title: How to - Downgrade/Remove a label that needs a justification (C++)
 description: This article will help you understand the scenario of how to downgrade or remove a label needing justification.
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/14/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 ---
 
 # Microsoft Information Protection SDK File API - Action Justification for lowering a sensitivity label on a file (C++)

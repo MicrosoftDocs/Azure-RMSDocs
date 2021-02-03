@@ -6,7 +6,7 @@ description: Describes how end users can use the AIP client to revoke document a
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/21/2020
+ms.date: 01/07/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.custom: user
 >
 >***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see [User Guide: Track and revoke your documents when you use the AIP classic client](client-track-revoke.md).*
 
-This article describes how to revoke access for documents that you've protected from Microsoft Office.
+This article describes how to revoke access for documents that you've protected from Microsoft Office. Protected documents are supported for track and revoke, even if they are not labeled.
 
 Revoking access for a protected document prevents other users from accessing the document, even if you've given them access before. For more information, see [User Guide: Classify and protect with the Azure Information Protection unified labeling client](clientv2-classify-protect.md).
 

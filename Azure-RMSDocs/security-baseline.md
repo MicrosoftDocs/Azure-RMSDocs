@@ -14,7 +14,7 @@ ms.custom: subject-security-benchmark
 
 # Azure security baseline for Azure Information Protection
 
-This security baseline applies guidance from the [Azure Security Benchmark version 2.0](https://docs.microsoft.com/azure/security/benchmarks/overview) to Azure Information Protection. The Azure Security Benchmark provides recommendations on how you can secure your cloud solutions on Azure. The content is grouped by the **security controls** defined by the Azure Security Benchmark and the related guidance applicable to Azure Information Protection. **Controls** not applicable to Azure Information Protection have been excluded.
+This security baseline applies guidance from the [Azure Security Benchmark version 2.0](/azure/security/benchmarks/overview) to Azure Information Protection. The Azure Security Benchmark provides recommendations on how you can secure your cloud solutions on Azure. The content is grouped by the **security controls** defined by the Azure Security Benchmark and the related guidance applicable to Azure Information Protection. **Controls** not applicable to Azure Information Protection have been excluded.
 
 To see how Azure Information Protection completely maps to the Azure Security Benchmark, see the [full Azure Information Protection security baseline mapping file](https://github.com/MicrosoftDocs/SecurityBenchmarks/tree/master/Azure%20Offer%20Security%20Baselines).
 
@@ -30,9 +30,9 @@ When creating security rules, use service tags in place of specific IP addresses
 
 Microsoft manages the address prefixes encompassed by the service tag, and automatically updates the service tag as addresses change.
 
-- [Understand and using Service Tags](https://docs.microsoft.com/azure/virtual-network/service-tags-overview)
+- [Understand and using Service Tags](/azure/virtual-network/service-tags-overview)
 
-- [Azure Information Protection Service Tag](https://docs.microsoft.com/azure/information-protection/requirements#service-tags)
+- [Azure Information Protection Service Tag](./requirements.md#service-tags)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -56,13 +56,13 @@ Standardize Azure AD to govern your organization’s identity and access managem
 
 Azure AD supports external identities to allow users without a Microsoft account to sign-in to their applications and resources with their non-Microsoft accounts.
 
-- [Tenancy in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/single-and-multi-tenant-apps)
+- [Tenancy in Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps)
 
-- [How to create and configure an Azure AD instance](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
+- [How to create and configure an Azure AD instance](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
 
-- [Use external identity providers for application](https://docs.microsoft.com/azure/active-directory/b2b/identity-providers)
+- [Use external identity providers for application](/azure/active-directory/b2b/identity-providers)
 
-- [What is the identity secure score in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/identity-secure-score)
+- [What is the identity secure score in Azure Active Directory](/azure/active-directory/fundamentals/identity-secure-score)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -72,7 +72,7 @@ Azure AD supports external identities to allow users without a Microsoft account
 
 **Guidance**: Azure Information Protection is integrated with Azure Active Directory (Azure AD), which is Azure's identity and access management service. Azure Rights Management service uses an Azure AD application identity while accessing customers’ keys stored with Azure Key Vault for Bring Your Own Key (BYOK) scenarios. Authorizing Azure Rights Management service to access your keys is achieved through configuring Azure Key Vault access policies, which can be done either using the Azure portal or using PowerShell.
 
-- [Authorizing the Azure Rights Management service for BYOK](https://docs.microsoft.com/azure/information-protection/byok-price-restrictions#authorizing-the-azure-rights-management-service-to-use-your-key)
+- [Authorizing the Azure Rights Management service for BYOK](./byok-price-restrictions.md#authorizing-the-azure-rights-management-service-to-use-your-key)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -84,7 +84,7 @@ Azure AD supports external identities to allow users without a Microsoft account
 
 Azure Information Protection uses Azure AD to provide identity and access management to Azure resources, cloud applications, and on-premises applications. This includes enterprise identities such as employees, as well as external identities such as partners, vendors, and suppliers. This enables single sign-on to manage and secure access to your organization’s data and resources on-premises and in the cloud. Connect all your users, applications, and devices to the Azure AD for seamless, secure access and greater visibility and control.
 
-- [Sign-in to Azure Information Protection with Azure Active Directory](https://docs.microsoft.com/azure/information-protection/requirements)
+- [Sign-in to Azure Information Protection with Azure Active Directory](./requirements.md)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -100,7 +100,7 @@ Azure Information Protection uses Azure AD to provide identity and access manage
 
 For more information, see the following references:
 
-- [Azure Information Protection Authentication through Azure Active Directory](https://docs.microsoft.com/azure/information-protection/requirements)
+- [Azure Information Protection Authentication through Azure Active Directory](./requirements.md)
 
 **Azure Security Center monitoring**: Yes
 
@@ -122,17 +122,17 @@ Azure Security Center can also alert on certain suspicious activities, such as a
 
 Azure Advanced Threat Protection (ATP) is a security solution that can use Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions.
 
-- [Audit activity reports in the Azure Active Directory](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs) 
+- [Audit activity reports in the Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs) 
 
-- [How to view Azure AD risky sign-ins](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-risky-sign-ins) 
+- [How to view Azure AD risky sign-ins](/azure/active-directory/reports-monitoring/concept-risky-sign-ins) 
 
-- [How to identify Azure AD users flagged for risky activity](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-user-at-risk) 
+- [How to identify Azure AD users flagged for risky activity](/azure/active-directory/reports-monitoring/concept-user-at-risk) 
 
-- [How to monitor users' identity and access activity in Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-identity-access) 
+- [How to monitor users' identity and access activity in Azure Security Center](/azure/security-center/security-center-identity-access) 
 
-- [Alerts in Azure Security Center's threat intelligence protection module](https://docs.microsoft.com//azure/security-center/alerts-reference) 
+- [Alerts in Azure Security Center's threat intelligence protection module](//azure/security-center/alerts-reference) 
 
-- [How to integrate Azure Activity Logs into Azure Monitor](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+- [How to integrate Azure Activity Logs into Azure Monitor](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -162,13 +162,13 @@ Azure Information Protection includes an administrator-level role in Azure AD. U
 
 Limit the number of highly privileged accounts or roles and protect these accounts at an elevated level, as users with this privilege can directly or indirectly read and modify every resource in your Azure environment. Enable just-in-time (JIT) privileged access to Azure resources and Azure AD using Privileged Identity Management (PIM). Just-in-time access grants temporary permissions to perform privileged tasks only when users need it. PIM can also generate security alerts when there is suspicious or unsafe activity in your Azure AD organization.
 
-- [Azure Information Protection Administrator Role](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
+- [Azure Information Protection Administrator Role](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
 
-- [Administrator role permissions in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
+- [Administrator role permissions in Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
 
-- [Use Azure Privileged Identity Management security alerts](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-how-to-configure-security-alerts) 
+- [Use Azure Privileged Identity Management security alerts](/azure/active-directory/privileged-identity-management/pim-how-to-configure-security-alerts) 
 
-- [Securing privileged access for hybrid and cloud deployments in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-admin-roles-secure)
+- [Securing privileged access for hybrid and cloud deployments in Azure AD](/azure/active-directory/users-groups-roles/directory-admin-roles-secure)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -180,9 +180,9 @@ Limit the number of highly privileged accounts or roles and protect these accoun
 
 Azure Information Protection includes an administrator-level role in Azure AD. Users assigned to the Administrator role have full permissions in the Azure Information Protection service. The Administrator role allows configuring labels for the Azure Information Protection policy, managing protection templates, and activating protection. The Administrator role does not grant any permissions in Identity Protection Center, Privileged Identity Management, Monitor Microsoft 365 Service Health, or Office 365 Security &amp; Compliance Center.
 
-- [Azure Information Protection Administrator Role](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
+- [Azure Information Protection Administrator Role](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
 
-- [Actions Azure Information Protection Administrator can take](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator-permissions)
+- [Actions Azure Information Protection Administrator can take](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator-permissions)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -196,13 +196,13 @@ Use Azure AD to manage resources, review user accounts, and access assignments r
 
 In addition, Azure Privileged Identity Management can also be configured to alert when an excessive number of administrator accounts are created, and to identify administrator accounts that are stale or improperly configured. Note that some Azure services support local users and roles that are not managed through Azure AD. Customers will need to manage these users separately.
 
-- [Azure Information Protection Administrator Role](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
+- [Azure Information Protection Administrator Role](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
 
-- [Actions Azure Information Protection Administrator can take](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator-permissions)
+- [Actions Azure Information Protection Administrator can take](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator-permissions)
 
-- [Create an access review of Azure resource roles in Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-resource-roles-start-access-review) 
+- [Create an access review of Azure resource roles in Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-resource-roles-start-access-review) 
 
-- [How to use Azure AD identity and access reviews](https://docs.microsoft.com/azure/active-directory/governance/access-reviews-overvie)
+- [How to use Azure AD identity and access reviews](/azure/active-directory/governance/access-reviews-overvie)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -214,7 +214,7 @@ In addition, Azure Privileged Identity Management can also be configured to aler
 
 You should ensure that the credentials (such as password, certificate, or smart card) for emergency access accounts are kept secure and known only to individuals who are authorized to use them only in an emergency.
 
-- [Manage emergency access accounts in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-emergency-access)
+- [Manage emergency access accounts in Azure AD](/azure/active-directory/users-groups-roles/directory-emergency-access)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -226,9 +226,9 @@ You should ensure that the credentials (such as password, certificate, or smart 
 
 Azure AD offers entitlement management features to automate access request workflows, including access assignments, reviews, and expiration. Dual or multi-stage approval is also supported.
 
-- [What are Azure AD access reviews](https://docs.microsoft.com/azure/active-directory/governance/access-reviews-overview) 
+- [What are Azure AD access reviews](/azure/active-directory/governance/access-reviews-overview) 
 
-- [What is Azure AD entitlement management](https://docs.microsoft.com/azure/active-directory/governance/entitlement-management-overview)
+- [What is Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -242,11 +242,11 @@ Secured, isolated workstations are critically important for the security of sens
 
 Use highly secured user workstations and/or Azure Bastion for administrative tasks. Use Azure Active Directory, Microsoft Defender Advanced Threat Protection (ATP), and/or Microsoft Intune to deploy a secure and managed user workstation for administrative tasks. The secured workstations can be centrally managed to enforce secured configuration, including strong authentication, software and hardware baselines, and restricted logical and network access.
 
-- [Guidance on using PowerShell for Azure Information Protection](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide-powershell)
+- [Guidance on using PowerShell for Azure Information Protection](./rms-client/client-admin-guide-powershell.md)
 
-- [Understand privileged access workstations](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-managed-workstation) 
+- [Understand privileged access workstations](/azure/active-directory/devices/concept-azure-managed-workstation) 
 
-- [Deploy a privileged access workstation](https://docs.microsoft.com/azure/active-directory/devices/howto-azure-managed-workstation)
+- [Deploy a privileged access workstation](/azure/active-directory/devices/howto-azure-managed-workstation)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -260,17 +260,17 @@ Azure Information Protection includes an administrator-level role in Azure AD. U
 
 Limit the number of highly privileged accounts or roles and protect these accounts at an elevated level, as users with this privilege can directly or indirectly read and modify every resource in your Azure environment. Enable just-in-time (JIT) privileged access to Azure resources and Azure AD using Privileged Identity Management (PIM). Just-in-time access grants temporary permissions to perform privileged tasks only when users need it. PIM can also generate security alerts when there is suspicious or unsafe activity in your Azure AD organization.
 
-- [Rights Included in Permission Levels for Azure Information Protection](https://docs.microsoft.com/azure/information-protection/configure-usage-rights#rights-included-in-permissions-levels)
+- [Rights Included in Permission Levels for Azure Information Protection](./configure-usage-rights.md#rights-included-in-permissions-levels)
 
-- [Rights Management Issuer and Rights Management Owner](https://docs.microsoft.com/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner)
+- [Rights Management Issuer and Rights Management Owner](./configure-usage-rights.md#rights-management-issuer-and-rights-management-owner)
 
-- [Azure Information Protection Administrator Role](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
+- [Azure Information Protection Administrator Role](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
 
-- [Administrator role permissions in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
+- [Administrator role permissions in Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
 
-- [Use Azure Privileged Identity Management security alerts](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-how-to-configure-security-alerts) 
+- [Use Azure Privileged Identity Management security alerts](/azure/active-directory/privileged-identity-management/pim-how-to-configure-security-alerts) 
 
-- [Securing privileged access for hybrid and cloud deployments in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-admin-roles-secure)
+- [Securing privileged access for hybrid and cloud deployments in Azure AD](/azure/active-directory/users-groups-roles/directory-admin-roles-secure)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -280,7 +280,7 @@ Limit the number of highly privileged accounts or roles and protect these accoun
 
 **Guidance**: Azure Information Protection supports Azure Customer Lockbox to provide customers with the ability to review, approve, and reject data access requests, as well as review requests being made. 
 
-- [Lockbox Overview](https://docs.microsoft.com/azure/security/fundamentals/customer-lockbox-overview)
+- [Lockbox Overview](/azure/security/fundamentals/customer-lockbox-overview)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -296,9 +296,9 @@ Limit the number of highly privileged accounts or roles and protect these accoun
 
 Azure Information Protection is a cloud-based solution that enables organizations to classify and protect documents and emails by applying labels. Labels can be applied automatically by administrators using rules and conditions, manually by users, or by a combination where administrators define the recommendations shown to users.
 
-- [Overview of Azure Information Protection](https://docs.microsoft.com/azure/information-protection/)
+- [Overview of Azure Information Protection](./index.yml)
 
-- [Guidance on how to set up the unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-user-guide)
+- [Guidance on how to set up the unified labeling client](./rms-client/clientv2-user-guide.md)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -308,7 +308,7 @@ Azure Information Protection is a cloud-based solution that enables organization
 
 **Guidance**: Azure Information Protection provides data protection by offering the ability to label sensitive information and provide protection on that data through encryption. Protection is provided by the Azure Rights Management service.
 
-- [Azure Rights Management](https://docs.microsoft.com/azure/information-protection/what-is-azure-rms)
+- [Azure Rights Management](./what-is-azure-rms.md)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -318,7 +318,7 @@ Azure Information Protection is a cloud-based solution that enables organization
 
 **Guidance**: Azure Information Protection provides the ability to monitor for unauthorized transfer of sensitive data through the track and revoke capability. Track and Revoke allows the customer to track how people are using documents they have sent and revoke access if people should no longer be able to read them. 
 
-- [Guidance on track and revoke](https://docs.microsoft.com/azure/information-protection/rms-client/client-track-revoke)
+- [Guidance on track and revoke](./rms-client/client-track-revoke.md)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -338,9 +338,9 @@ Security Reader permissions can be applied broadly to an entire tenant (Root Man
 
 Note: Additional permissions might be required to get visibility into workloads and services. 
 
-- [Overview of Security Reader Role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#security-reader)
+- [Overview of Security Reader Role](/azure/role-based-access-control/built-in-roles#security-reader)
 
-- [Overview of Azure Management Groups](https://docs.microsoft.com/azure/governance/management-groups/overview)
+- [Overview of Azure Management Groups](/azure/governance/management-groups/overview)
 
 **Azure Security Center monitoring**: Currently not available
 
@@ -350,7 +350,7 @@ Note: Additional permissions might be required to get visibility into workloads 
 
 **Guidance**: Azure Information Protection does not support Azure Resource Manager Deployments or allow customers the ability to limit deployments through built-in Azure Policy definitions, such as 'Allow Resources' or 'Deny Resources'. However, customers can limit usage of Azure Information Protection through labeling policies in the Security and Compliance Center. 
 
-- [Manage Information protection through the Security and Compliance Center](https://docs.microsoft.com/microsoft-365/compliance/protect-information?view=o365-worldwide&amp;preserve-view=true)
+- [Manage Information protection through the Security and Compliance Center](/microsoft-365/compliance/protect-information?amp;preserve-view=true&view=o365-worldwide)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -378,11 +378,11 @@ They are:
 
 Azure Security Center can also alert on certain suspicious activities, such as an excessive number of failed authentication attempts, and deprecated accounts in the subscription. In addition to the basic security hygiene monitoring, Security Center’s Threat Protection module can also collect more in-depth security alerts from individual Azure compute resources (such as virtual machines, containers, app service), data resources (such as SQL DB and storage), and Azure service layers. This capability allows you to see account anomalies inside the individual resources.
 
-- [Audit activity reports in Azure AD](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs)
+- [Audit activity reports in Azure AD](/azure/active-directory/reports-monitoring/concept-audit-logs)
 
-- [Enable Azure Identity Protection](https://docs.microsoft.com/azure/active-directory/identity-protection/overview-identity-protection)
+- [Enable Azure Identity Protection](/azure/active-directory/identity-protection/overview-identity-protection)
 
-- [Threat protection in Azure Security Center](https://docs.microsoft.com/azure/security-center/threat-protection)
+- [Threat protection in Azure Security Center](/azure/security-center/threat-protection)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -404,7 +404,7 @@ Types of logs produced by Azure Information Protection include:
 
 The Protection usage logs can be used to identify 'who' is accessing your protected data, from 'which' devices, and from 'where'. Logs reveal whether people can successfully read protected content, as well as identify which people have read an important document that was protected. 
 
-- [Logging and analyzing the protection usage from Azure Information Protection](https://docs.microsoft.com/azure/information-protection/log-analyze-usage)
+- [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -418,9 +418,9 @@ Avoid blind spots by collecting diverse logs and sending them to a central SIEM 
 
 Azure Sentinel provides extensive data analytics across virtually any log source and a case management portal to manage the full lifecycle of incidents. Intelligence information during an investigation can be associated with an incident for tracking and reporting purposes. 
 
-- [Logging and analyzing the protection usage from Azure Information Protection](https://docs.microsoft.com/azure/information-protection/log-analyze-usage)
+- [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md)
 
-- [Investigate incidents with Azure Sentinel](https://docs.microsoft.com/azure/sentinel/tutorial-investigate-cases)
+- [Investigate incidents with Azure Sentinel](/azure/sentinel/tutorial-investigate-cases)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -434,9 +434,9 @@ The amount of data collected and stored in your Azure Information Protection wor
 
 Use Azure Monitor Log's Usage and estimated costs feature to help estimate and review the amount of data stored and also control the data retention period for your Log Analytics workspace. 
 
-- [Logging and analyzing the protection usage from Azure Information Protection](https://docs.microsoft.com/azure/information-protection/log-analyze-usage)
+- [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md)
 
-- [Manage usage and costs with Azure Monitor Logs](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage)
+- [Manage usage and costs with Azure Monitor Logs](/azure/azure-monitor/platform/manage-cost-storage)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -450,9 +450,9 @@ Use Azure Monitor Log's Usage and estimated costs feature to help estimate and r
 
 **Guidance**: Ensure your organization has processes to respond to security incidents, has updated these processes for Azure, and is regularly exercising them to ensure readiness.
 
-- [Implement security across the enterprise environment](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
+- [Implement security across the enterprise environment](/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
 
-- [Incident response reference guide](https://docs.microsoft.com/microsoft-365/downloads/IR-Reference-Guide.pdf)
+- [Incident response reference guide](/microsoft-365/downloads/IR-Reference-Guide.pdf)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -462,7 +462,7 @@ Use Azure Monitor Log's Usage and estimated costs feature to help estimate and r
 
 **Guidance**: Set up security incident contact information in Azure Security Center. This contact information is used by Microsoft to contact you if the Microsoft Security Response Center (MSRC) discovers that your data has been accessed by an unlawful or unauthorized party. You also have options to customize incident alert and notification in different Azure services based on your incident response needs. 
 
-- [How to set the Azure Security Center security contact](https://docs.microsoft.com/azure/security-center/security-center-provide-security-contact-details)
+- [How to set the Azure Security Center security contact](/azure/security-center/security-center-provide-security-contact-details)
 
 **Azure Security Center monitoring**: Yes
 
@@ -478,9 +478,9 @@ Azure Security Center provides high-quality alerts across many Azure assets. You
 
 Export your Azure Security Center alerts and recommendations using the export feature to help identify risks to Azure resources. Export alerts and recommendations either manually or in an ongoing, continuous fashion.
 
-- [How to configure export](https://docs.microsoft.com/azure/security-center/continuous-export)
+- [How to configure export](/azure/security-center/continuous-export)
 
-- [How to stream alerts into Azure Sentinel](https://docs.microsoft.com/azure/sentinel/connect-azure-security-center)
+- [How to stream alerts into Azure Sentinel](/azure/sentinel/connect-azure-security-center)
 
 **Azure Security Center monitoring**: Currently not available
 
@@ -504,13 +504,13 @@ The data sources for investigation include the centralized logging sources that 
 
 Azure Sentinel provides extensive data analytics across virtually any log source and a case management portal to manage the full lifecycle of incidents. Intelligence information during an investigation can be associated with an incident for tracking and reporting purposes. 
 
-- [Snapshot a Windows machine's disk](https://docs.microsoft.com/azure/virtual-machines/windows/snapshot-copy-managed-disk)
+- [Snapshot a Windows machine's disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk)
 
-- [Snapshot a Linux machine's disk](https://docs.microsoft.com/azure/virtual-machines/linux/snapshot-copy-managed-disk)
+- [Snapshot a Linux machine's disk](/azure/virtual-machines/linux/snapshot-copy-managed-disk)
 
 - [Microsoft Azure Support diagnostic information and memory dump collection](https://azure.microsoft.com/support/legal/support-diagnostic-information-collection/) 
 
-- [Investigate incidents with Azure Sentinel](https://docs.microsoft.com/azure/sentinel/tutorial-investigate-cases)
+- [Investigate incidents with Azure Sentinel](/azure/sentinel/tutorial-investigate-cases)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -524,9 +524,9 @@ Azure Security Center assigns a severity to each alert to help you prioritize wh
 
 Additionally, mark resources using tags and create a naming system to identify and categorize Azure resources, especially those processing sensitive data.  It is your responsibility to prioritize the remediation of alerts based on the criticality of the Azure resources and environment where the incident occurred.
 
-- [Security alerts in Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-alerts-overview)
+- [Security alerts in Azure Security Center](/azure/security-center/security-center-alerts-overview)
 
-- [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags)
+- [Use tags to organize your Azure resources](/azure/azure-resource-manager/resource-group-using-tags)
 
 **Azure Security Center monitoring**: Currently not available
 
@@ -537,11 +537,11 @@ Additionally, mark resources using tags and create a naming system to identify a
 **Guidance**: Automate manual repetitive tasks to speed up response time and reduce the burden on analysts. Manual tasks take longer to execute, slowing each incident and reducing how many incidents an analyst can handle. Manual tasks also increase analyst fatigue, which increases the risk of human error that causes delays, and degrades the ability of analysts to focus effectively on complex tasks. 
 Use workflow automation features in Azure Security Center and Azure Sentinel to automatically trigger actions or run a playbook to respond to incoming security alerts. The playbook takes actions, such as sending notifications, disabling accounts, and isolating problematic networks. 
 
-- [Configure workflow automation in Security Center](https://docs.microsoft.com/azure/security-center/workflow-automation)
+- [Configure workflow automation in Security Center](/azure/security-center/workflow-automation)
 
-- [Set up automated threat responses in Azure Security Center](https://docs.microsoft.com/azure/security-center/tutorial-security-incident#triage-security-alerts)
+- [Set up automated threat responses in Azure Security Center](/azure/security-center/tutorial-security-incident#triage-security-alerts)
 
-- [Set up automated threat responses in Azure Sentinel](https://docs.microsoft.com/azure/sentinel/tutorial-respond-threats-playbook)
+- [Set up automated threat responses in Azure Sentinel](/azure/sentinel/tutorial-respond-threats-playbook)
 
 **Azure Security Center monitoring**: Currently not available
 
@@ -575,13 +575,13 @@ In order to use PowerShell, install the AIPService PowerShell Module. Within Pow
 
 For more information, see the following references:
 
-- [Get Started with Sensitivity Labels in Security and Compliance Center](https://docs.microsoft.com/microsoft-365/compliance/get-started-with-sensitivity-labels?view=o365-worldwide&amp;preserve-view=true)
+- [Get Started with Sensitivity Labels in Security and Compliance Center](/microsoft-365/compliance/get-started-with-sensitivity-labels?amp;preserve-view=true&view=o365-worldwide)
 
-- [Create and Publish Sensitivity Labels](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels?view=o365-worldwide&amp;preserve-view=true)
+- [Create and Publish Sensitivity Labels](/microsoft-365/compliance/create-sensitivity-labels?amp;preserve-view=true&view=o365-worldwide)
 
-- [Apply Encryption to Sensitivity Labels](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide&amp;preserve-view=true)
+- [Apply Encryption to Sensitivity Labels](/microsoft-365/compliance/encryption-sensitivity-labels?amp;preserve-view=true&view=o365-worldwide)
 
-- [PowerShell for Azure Information Protection](https://docs.microsoft.com/azure/information-protection/administer-powershell)
+- [PowerShell for Azure Information Protection](./administer-powershell.md)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -592,7 +592,7 @@ For more information, see the following references:
 **Guidance**: As required, conduct penetration testing or red team activities on your Azure resources and ensure remediation of all critical security findings.
 Follow the Microsoft Cloud Penetration Testing Rules of Engagement to ensure your penetration tests are not in violation of Microsoft policies. Use Microsoft's strategy and execution of Red Teaming and live site penetration testing against Microsoft-managed cloud infrastructure, services, and applications.
 
-- [Penetration testing in Azure](https://docs.microsoft.com/azure/security/fundamentals/pen-testing)
+- [Penetration testing in Azure](/azure/security/fundamentals/pen-testing)
 
 - [Penetration Testing Rules of Engagement](https://www.microsoft.com/msrc/pentest-rules-of-engagement?rtc=1) 
 
@@ -610,8 +610,8 @@ Follow the Microsoft Cloud Penetration Testing Rules of Engagement to ensure you
 
 **Guidance**: Azure Information Protection provides customers with the ability to configure their tenant with their own key through Bring Your Own Key (BYOK). Customer-generated keys must be stored in Azure Key Vault for protection. Azure Key Vault helps prevent the loss of keys through soft delete, role separation, and separated security domains. 
 
-- [Azure Information Protection Bring Your Own Key and Integration with Azure Key Vault](https://docs.microsoft.com/azure/information-protection/byok-price-restrictions)
-- [Enable soft delete in Key Vault](https://docs.microsoft.com/azure/storage/blobs/storage-blob-soft-delete?tabs=azure-portal)
+- [Azure Information Protection Bring Your Own Key and Integration with Azure Key Vault](./byok-price-restrictions.md)
+- [Enable soft delete in Key Vault](/azure/storage/blobs/storage-blob-soft-delete?tabs=azure-portal)
 
 **Azure Security Center monitoring**: Yes
 
@@ -645,15 +645,15 @@ This strategy should include documented guidance, policy, and standards for the 
 
 For more information, see the following references:
 
-- [Azure Security Architecture Recommendation - Storage, data, and encryption](https://docs.microsoft.com/azure/architecture/framework/security/storage-data-encryption?toc=/security/compass/toc.json&amp;bc=/security/compass/breadcrumb/toc.json)
+- [Azure Security Architecture Recommendation - Storage, data, and encryption](/azure/architecture/framework/security/storage-data-encryption?amp;bc=%2fsecurity%2fcompass%2fbreadcrumb%2ftoc.json&toc=%2fsecurity%2fcompass%2ftoc.json)
 
-- [Azure Security Fundamentals - Azure Data security, encryption, and storage](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview)
+- [Azure Security Fundamentals - Azure Data security, encryption, and storage](/azure/security/fundamentals/encryption-overview)
 
-- [Cloud Adoption Framework - Azure data security and encryption best practices](https://docs.microsoft.com/azure/security/fundamentals/data-encryption-best-practices?toc=/azure/cloud-adoption-framework/toc.json&amp;bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [Cloud Adoption Framework - Azure data security and encryption best practices](/azure/security/fundamentals/data-encryption-best-practices?amp;bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
 
-- [Azure Security Benchmark - Asset management](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-asset-management)
+- [Azure Security Benchmark - Asset management](/azure/security/benchmarks/security-benchmark-v2-asset-management)
 
-- [Azure Security Benchmark - Data Protection](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-data-protection)
+- [Azure Security Benchmark - Data Protection](/azure/security/benchmarks/security-benchmark-v2-data-protection)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -667,11 +667,11 @@ Carefully balance the need for security separation with the need to enable daily
 
 Ensure that the segmentation strategy is implemented consistently across control types including network security, identity and access models, and application permission/access models, and human process controls.
 
-- [Guidance on segmentation strategy in Azure (video)](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151)
+- [Guidance on segmentation strategy in Azure (video)](/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151)
 
-- [Guidance on segmentation strategy in Azure (document)](https://docs.microsoft.com/security/compass/governance#enterprise-segmentation-strategy)
+- [Guidance on segmentation strategy in Azure (document)](/security/compass/governance#enterprise-segmentation-strategy)
 
-- [Align network segmentation with enterprise segmentation strategy](https://docs.microsoft.com/security/compass/network-security-containment#align-network-segmentation-with-enterprise-segmentation-strategy)
+- [Align network segmentation with enterprise segmentation strategy](/security/compass/network-security-containment#align-network-segmentation-with-enterprise-segmentation-strategy)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -681,7 +681,7 @@ Ensure that the segmentation strategy is implemented consistently across control
 
 **Guidance**: Continuously measure and mitigate risks to your individual assets and the environment they are hosted in. Prioritize high value assets and highly-exposed attack surfaces, such as published applications, network ingress and egress points, user and administrator endpoints, etc.
 
-- [Azure Security Benchmark - Posture and vulnerability management](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-posture-vulnerability-management)
+- [Azure Security Benchmark - Posture and vulnerability management](/azure/security/benchmarks/security-benchmark-v2-posture-vulnerability-management)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -691,11 +691,11 @@ Ensure that the segmentation strategy is implemented consistently across control
 
 **Guidance**: Ensure you document and communicate a clear strategy for roles and responsibilities in your security organization. Prioritize providing clear accountability for security decisions, educating everyone on the shared responsibility model, and educate technical teams on technology to secure the cloud.
 
-- [Azure Security Best Practice 1 – People: Educate Teams on Cloud Security Journey](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#1-people-educate-teams-about-the-cloud-security-journey)
+- [Azure Security Best Practice 1 – People: Educate Teams on Cloud Security Journey](/azure/cloud-adoption-framework/security/security-top-10#1-people-educate-teams-about-the-cloud-security-journey)
 
-- [Azure Security Best Practice 2 - People: Educate Teams on Cloud Security Technology](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#2-people-educate-teams-on-cloud-security-technology)
+- [Azure Security Best Practice 2 - People: Educate Teams on Cloud Security Technology](/azure/cloud-adoption-framework/security/security-top-10#2-people-educate-teams-on-cloud-security-technology)
 
-- [Azure Security Best Practice 3 - Process: Assign Accountability for Cloud Security Decisions](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
+- [Azure Security Best Practice 3 - Process: Assign Accountability for Cloud Security Decisions](/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -720,13 +720,13 @@ This strategy should include documented guidance, policy, and standards for the 
 -	Up-to-date network security artifacts (e.g. network diagrams, reference network architecture)
 
 For more information, see the following references:
-- [Azure Security Best Practice 11 - Architecture. Single unified security strategy](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
+- [Azure Security Best Practice 11 - Architecture. Single unified security strategy](/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
 
-- [Azure Security Benchmark - Network Security](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-network-security)
+- [Azure Security Benchmark - Network Security](/azure/security/benchmarks/security-benchmark-v2-network-security)
 
-- [Azure network security overview](https://docs.microsoft.com/azure/security/fundamentals/network-overview)
+- [Azure network security overview](/azure/security/fundamentals/network-overview)
 
-- [Enterprise network architecture strategy](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/architecture)
+- [Enterprise network architecture strategy](/azure/cloud-adoption-framework/ready/enterprise-scale/architecture)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -750,13 +750,13 @@ This strategy should include documented guidance, policy, and standards for the 
 
 For more information, see the following references:
 
-- [Azure Security Benchmark - Identity management](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-identity-management)
+- [Azure Security Benchmark - Identity management](/azure/security/benchmarks/security-benchmark-v2-identity-management)
 
-- [Azure Security Benchmark - Privileged access](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-privileged-access)
+- [Azure Security Benchmark - Privileged access](/azure/security/benchmarks/security-benchmark-v2-privileged-access)
 
-- [Azure Security Best Practice 11 - Architecture. Single unified security strategy](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
+- [Azure Security Best Practice 11 - Architecture. Single unified security strategy](/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
 
-- [Azure identity management security overview](https://docs.microsoft.com/azure/security/fundamentals/identity-management-overview)
+- [Azure identity management security overview](/azure/security/fundamentals/identity-management-overview)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -784,15 +784,15 @@ This strategy should include documented guidance, policy, and standards for the 
 
 For more information, see the following references:
 
-- [Azure Security Benchmark - Logging and threat detection](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-logging-threat-detection)
+- [Azure Security Benchmark - Logging and threat detection](/azure/security/benchmarks/security-benchmark-v2-logging-threat-detection)
 
-- [Azure Security Benchmark - Incident response](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-incident-response)
+- [Azure Security Benchmark - Incident response](/azure/security/benchmarks/security-benchmark-v2-incident-response)
 
-- [Azure Security Best Practice 4 - Process. Update Incident Response Processes for Cloud](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
+- [Azure Security Best Practice 4 - Process. Update Incident Response Processes for Cloud](/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
 
-- [Azure Adoption Framework, logging, and reporting decision guide](https://docs.microsoft.com/azure/cloud-adoption-framework/decision-guides/logging-and-reporting/)
+- [Azure Adoption Framework, logging, and reporting decision guide](/azure/cloud-adoption-framework/decision-guides/logging-and-reporting/)
 
-- [Azure enterprise scale, management, and monitoring](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring)
+- [Azure enterprise scale, management, and monitoring](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring)
 
 **Azure Security Center monitoring**: Not applicable
 

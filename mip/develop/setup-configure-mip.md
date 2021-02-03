@@ -23,7 +23,7 @@ Be sure to review the following topics before getting started:
 - [How does the protection work in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
 > [!IMPORTANT]
-> **In order to honor user privacy, you must ask the user to consent before enabling automatic logging.** The following example is a standard message Microsoft uses for logging notification:
+> **To honor user privacy, you must ask the user to consent before enabling automatic logging.** The following example is a standard message Microsoft uses for logging notification:
 >
 > *By turning on Error and Performance Logging, you are agreeing to send Error and Performance Data to Microsoft. Microsoft will collect error and performance data over the internet (“Data”). Microsoft uses this Data to provide and improve the quality, security and integrity of Microsoft products and services. For example, we analyze performance and reliability, such as what features you use, how quickly the features respond, device performance, user interface interactions, and any problems you experience with the product. Data will also include information about the configuration of your software like the software you are currently running, and the IP address.*
 
@@ -98,7 +98,7 @@ Next, complete the following steps to ensure your client computer is set up and 
 
    **Tar.gz/.Zip downloads**
 
-   Tar.gz and .Zip downloads contain additional compressed files, one for each API. The compressed files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. For example, the file for protection API binaries and headers on Debian would be: `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Each contained .tar.gz/.zip is split into three directories:
+   Tar.gz and .Zip downloads contain compressed files, one for each API. The compressed files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. For example, the file for protection API binaries and headers on Debian would be: `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Each contained .tar.gz/.zip is split into three directories:
 
    - **Bins:** Compiled binaries for each platform architecture, where applicable.
    - **Include:** Header files (C++).
@@ -151,7 +151,7 @@ To register an application account in Azure AD for use with the Quickstarts and 
 
 1. Follow the steps in [Register an app with Azure AD, Register a new application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal) section. For testing purposes, use the following values for the given properties as you go through the guide steps:
     - **Supported Account Types** - Select "Accounts in this organizational directory only."
-    - **Redirect URI** - Set the redirect URI type to "Public client (mobile & desktop)." Since the SDK uses simple console client applications, use a URI in the format `<app-name>://authorize`.
+    - **Redirect URI** - Set the redirect URI type to "Public client (mobile & desktop)." If your application is using the Microsoft Authentication Library (MSAL), use `http://localhost`. Otherwise, use something in the format `<app-name>://authorize`.
 
 2. When finished, you'll be returned to the **Registered app** page for your new application registration. Copy and save the GUID in the **Application (client) ID** field, as you will need it for the Quickstarts.
 
@@ -160,7 +160,7 @@ To register an application account in Azure AD for use with the Quickstarts and 
 4. Now you'll add the MIP APIs and permissions the application will require at runtime:
    - On the **Select an API** page, click **Azure Rights Management Services**.
    - On the **Azure Rights Management Services** API page, click **Delegated permissions**.
-   - On the **Select permissions** section, check the **user_impersonation** permission. This allows the application to create and access protected content on behalf of a user.
+   - On the **Select permissions** section, check the **user_impersonation** permission. This right allows the application to create and access protected content on behalf of a user.
    - Click **Add permissions** to save.
 
 5. Repeat step #4, but this time when you get to the **Select an API** page, you'll need to search for the API.
@@ -174,7 +174,7 @@ To register an application account in Azure AD for use with the Quickstarts and 
 When finished, application registration and API permissions should look similar to the following examples:
 
    [![Azure AD app registration](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox)
-   [![Azure AD app permissions](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
+   [![Azure AD app registration](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
 
 For more information on adding APIs and permissions to a registration, see [Configure a client application to access web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Here you'll find information on adding the APIs and permissions needed by a client application.
 
@@ -191,7 +191,7 @@ Before you can release an application developed with MIP, you must apply for and
    - First and last name of the requester
    - Email address of the requester
 
-2. Upon receipt of your IPIA request, we will send you a form (as a Word document). Review the terms and conditions of the IPIA, and return the form to [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=IPIA%20Response%20for%20<company-name>) with the following information:
+2. Upon receipt of your IPIA request, we'll send you a form (as a Word document). Review the terms and conditions of the IPIA, and return the form to [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=IPIA%20Response%20for%20<company-name>) with the following information:
 
    - Legal name of the Company
    - State/Province (US/Canada) or Country of Incorporation
@@ -217,7 +217,7 @@ for an application you are releasing, send an email to [IPIA@microsoft.com](mail
 - App ID for the application
 - Company contacts, email, and phone for Critical Situation Correspondence
 
-Upon the sending of the email, allow up to 72 hours for an acknowledgement of the receipt.
+Upon the sending of the email, allow up to 72 hours for an acknowledgment of the receipt.
 
 ## Ensure your app has the required runtime
 

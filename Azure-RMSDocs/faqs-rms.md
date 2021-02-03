@@ -55,7 +55,7 @@ For more information about this change, see the blog announcement: [Office 365 M
 
 ## Where can I find information about third-party solutions that integrate with Azure RMS?
 
-Many software vendors already have solutions or are implementing solutions that integrate with Azure Rights Management—and the list is growing rapidly. You might find it useful to check the [RMS-enlightened applications](requirements-applications.md#) lists and get the latest updates from [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter. Also check the [developer's guide](./develop/developers-guide.md) and post any specific integration questions on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam).
+Many software vendors already have solutions or are implementing solutions that integrate with Azure Rights Management—and the list is growing rapidly. You might find it useful to check the [RMS-enlightened applications](requirements-applications.md#) lists and get the latest updates from [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter. You can and post any specific integration questions on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam).
 
 ## Is there a management pack or similar monitoring mechanism for the RMS connector?
 

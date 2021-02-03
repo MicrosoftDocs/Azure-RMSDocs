@@ -1,8 +1,8 @@
 ---
 title: Required API permissions - Microsoft Information Protection SDK
 description: Technical details about API permissions needed for Microsoft Information Protection Software Development kit operations.
-author: Pathak-Aniket
-ms.author: v-anikep
+author: msmbaldwin
+ms.author: mbaldwin
 ms.date: 08/20/2020
 ms.topic: conceptual
 ms.service: information-protection

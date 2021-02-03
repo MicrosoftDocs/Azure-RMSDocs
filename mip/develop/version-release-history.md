@@ -6,7 +6,7 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
-manager: barbkess
+
 ---
 
 # Microsoft Information Protection (MIP) Software Development Kit (SDK) version release history and support policy
@@ -26,11 +26,70 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
 
+## Version 1.8.86
+
+**Release date:** January 13, 2021
+
+### General Changes
+
+- Added support for Mac on ARM.
+- Signed all dylib files for Mac.
+- All clouds are fully supported across all three SDKs.
+- Rename `TelemetryConfiguration` to `DiagnosticConfiguration`.
+- Updated `MipContext` to accept `DiagnosticConfiguration` instead of `TelemetryConfiguration`.
+- Exposed new `TelemetryDelegate` and `AuditDelegate`.
+- Several custom settings have had their name changed and will be removed in version 1.9. These will continue to function in parallel with their updates names in version 1.8. 
+
+| New Name          | Old Name                   |
+| ----------------- | -------------------------- |
+| is_debug_audit    | is_debug_telemetry         |
+| is_audit_disabled | is_built_in_audit_disabled |
+
+### File SDK
+
+- Added support for user-defined labels with double key encryption.
+- Added an API, `MsgInspector.BodyType` to expose body encoding type for MSG files.
+- Added APIs to support Double Key Encryption with User-Defined Permissions.
+- Added flag for `mip::FileHandler` that will allow the caller to disable audit discover event send. This fixes a scenario where using the `ClassifyAsync()` API would result in duplicate discovery events.
+- Fixed bugs where: 
+  - Setting protection on XPS file fails.
+  - A file cannot be opened after upload/download from SharePoint Online and removing custom permissions.
+  - `RemoveProtection()` function would accept a message.rpmsg input. Now accepts only MSG files.
+  - A crash that occurred when attempting to track or revoke unprotected files.
+
+### Policy SDK
+
+- Removed `ActionId` from default metadata properties to ensure consistency between Microsoft Office and SharePoint Online labeled documents.
+- Added support for Azure Purview-specific labels.
+- Added ability to override both telemetry and audit via delegates for each.
+  - Audit delegate provides the ability to send AIP auditing events to a destination other than AIP Analytics, or in addition to AIP Analytics.
+- Added flag for `mip::PolicyHandler` that will allow the caller to discover audit discover event send. This fixes a scenario where using the `ClassifyAsync()` API would result in duplicate discovery events.
+- Fixed a bug where encrypted policy database couldn't be opened in certain scenarios.
+- Exposed new `AuditDelegate` that allows developers to override default MIP SDK audit pipeline and send events to their own infrastructure. 
+- `mip::ClassifierUniqueIdsAndContentFormats` and `GetContentFormat()` now return `std::string` instead of `mip::ContentFormat`. This change is replicated in .NET and Java wrappers. 
+- `ContentFormat.Default` is now `ContentFormat.File`.
+
+### Protection SDK
+
+- Added a `ProtectionEngineSettings.SetAllowCloudServiceOnly` property that will prohibit any connections to Active Directory Rights Management Services clusters when true. Only cloud environments will be used.
+- Added support for acquiring delegation licenses.
+  - Delegations licenses enable services to fetch a license for content on behalf of a user.
+  - This lets the service view rights data and decrypt on behalf of the user without additional calls to service.  
+
+### Java Wrapper (Public Preview)
+
+- Added support for Track and Revoke to Java Wrapper.
+- Added stream support to Java Wrapper
+
+### C API
+
+- Removed **MIP_FLIGHTING_FEATURE_KEEP_PDF_LINEARIZATION** flag from C API.
+
 ## Version 1.7.147
 
 ### File SDK
 
-- Minor bug fix for the PBIX file format.
+- Minor bug fix for the PBIX file format. 
 
 ## Version 1.7.145
 
@@ -71,14 +130,14 @@ Use the following information to see what’s new or changed for a supported rel
 
 - Policy SDK now supports Encrypt Only labeling actions.
 - Fixed a bug where `mip::Identity` wasn't properly loaded from cached engines.
-- Fixed a bug where classification GUID comparisons were case sensitive in classification API.
+- Fixed a bug where classification GUID comparisons were case-sensitive in classification API.
 - Enriched audit events by adding new fields.
 
 ### Protection SDK
 
 - Fixed a bug where `mip::Identity` wasn't properly loaded from cached engines.
 - Added implicit registration for newly created publishing licenses.
-- Added support for cyptographic algorithms used to support DKE in Office files.
+- Added support for cryptographic algorithms used to support DKE in Office files.
 - Made `documentId` and `owner` parameters optional.
 
 ### C APIs
@@ -111,15 +170,15 @@ Use the following information to see what’s new or changed for a supported rel
 ### General SDK Changes
 
 - TLS 1.2 enforced for all non-ADRMS HTTP communication.
-- Migrated iOS/MacOS HTTP implementation from NSURLConnection to NSURLSession.
+- Migrated iOS/macOS HTTP implementation from NSURLConnection to NSURLSession.
 - Migrated iOS telemetry component from Aria SDK to 1DS SDK.
-- Telemetry component now uses MIP's HttpDelegate on iOS, MacOs, and Linux. (Previously only win32).
+- Telemetry component now uses MIP's HttpDelegate on iOS, macOs, and Linux. (Previously only win32).
 - Improved type safety for C API.
 - Moved AuthDelegate from Profile to Engine in C++, C#, and Java APIs.
 - AuthDelegate moved from constructor of `Profile::Settings` to `Engine::Settings`.
 - Added Category to NoPolicyError to provide more info about why policy sync failed.
 - Added `PolicyEngine::GetTenantId` method.
-- Added explicit sovereign cloud support.
+- Added explicit support for all clouds.
   - New `Engine::Settings::SetCloud` method to set target cloud (GCC High, 21-Vianet, etc.).
   - Existing `Engine::Settings::SetCloudEndpointBaseUrl` method call is no longer necessary for recognized clouds.
 - Enabled bitcode for iOS binaries.
@@ -156,10 +215,10 @@ Use the following information to see what’s new or changed for a supported rel
 
 - New support for registration and revocation for doc tracking.
 - New support for generating a pre-license when publishing.
-- Exposed public Microsoft SSL cert used by protection service.
+- Exposed public Microsoft TLS cert used by protection service.
    - `GetMsftCert` and `GetMsftCertPEM`
    - If an application overrides `HttpDelegate` interface, it must trust server certificates issued by this CA.
-   - This requirement is expected be removed late in 2020.    
+   - This requirement is expected to be removed late in 2020.    
 
 ## Version 1.5.124
 
@@ -277,7 +336,7 @@ This version introduces support for the Protection SDK in the .NET package (Micr
 - Performance improvements and bug fixes
 - Renamed StorageType enum to CacheStorageType
 - Android links to libc++ instead of gnustl
-- Removed previouslydeprecated APIs
+- Removed previously deprecated APIs
   - File/Policy/Profile::Settings must be initialized with a MipContext
   - File/Policy/Profile::Settings path, application info, logger delegate, telemetry, and log level getters/setters have been removed. These properties are managed by MipContext
 - Better static library support on Apple platforms
@@ -307,7 +366,7 @@ This version introduces support for the Protection SDK in the .NET package (Micr
 
 ### Protection SDK
 
-- Removed previouslydeprecated APIs
+- Removed previously deprecated APIs
   - Removed ProtectionEngine::CreateProtectionHandlerFromDescriptor[Async] (use ProtectionEngine::CreateProtectionHandlerForPublishing[Async])
   - Removed ProtectionEngine::CreateProtectionHandlerFromPublishingLicense[Async] (use ProtectionEngine::CreateProtectionHandlerForConsumption[Async])
 - Complete C# API
@@ -349,7 +408,7 @@ This version introduces support for the Protection SDK in the .NET package (Micr
 - Decryption of protected MSG files is now supported.
 - Inspection of message.rpmsg files is supported via `mip::FileInspector` and `mip::FileHandler::InspectAsync()`.
 - On-disk cache may now be optionally encrypted.
-- Protection SDK now supports China sovereign cloud.
+- Protection SDK now supports Chinese cloud customers.
 - Arm64 support on Android.
 - Arm64e support on iOS.
 - End-user license (EUL) cache can now be disabled.

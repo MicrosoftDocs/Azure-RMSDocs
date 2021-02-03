@@ -1,11 +1,11 @@
 ---
 title: class FileHandler 
 description: Documents the filehandler::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class FileHandler 
@@ -17,8 +17,8 @@ Interface for all file handling functions.
 public std::shared_ptr\<ContentLabel\> GetLabel()  |  Starts retrieving the sensitivity label from the file.
 public std::vector\<std::pair\<std::string, std::string\>\> GetProperties(uint32_t version)  |  Retrievs the file propertries according to version.
 public std::shared_ptr\<ProtectionHandler\> GetProtection()  |  Starts retrieving the protection policy from the file.
-public std::shared_ptr\<AsyncControl\> RegisterContentForTrackingAndRevocationAsync(bool isOwnerNotificationEnabled, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  #### Parameters
-public std::shared_ptr\<AsyncControl\> RevokeContentAsync(const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Perform revocation for the content.
+public void RegisterContentForTrackingAndRevocationAsync(bool isOwnerNotificationEnabled, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  #### Parameters
+public void RevokeContentAsync(const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Perform revocation for the content.
 public void ClassifyAsync(const std::shared_ptr\<void\>& context)  |  Executes the rules in the handler and returns the list of actions to be executed.
 public void InspectAsync(const std::shared_ptr\<void\>& context)  |  Create a file inspector object, used to retrieve file contents from compatible file formats.
 public void SetLabel(const std::shared_ptr\<Label\>& label, const LabelingOptions& labelingOptions, const ProtectionSettings& protectionSettings)  |  Sets the sensitivity label to the file.
