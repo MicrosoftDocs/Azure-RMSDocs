@@ -92,8 +92,7 @@ On the [Microsoft download site](https://www.microsoft.com/en-us/download/detail
 For more information, see:
 
 - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
-- [Known issues for co-authoring in Azure Information Protection](../known-issues.md#co-authoring-public-preview) 
-
+[Known issues for co-authoring](../known-issues.md#known-issues-for-co-authoring-public-preview)
 ## Version 2.10.36.0 (Public preview)
 
 Unified labeling scanner version 2.10.36.0
