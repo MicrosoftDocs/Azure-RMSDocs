@@ -75,6 +75,58 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
+## Version 2.10.xx (Public preview)
+
+Unified labeling client version 2.10.xx
+
+**Release** 03/02/2021
+
+This dedicated version of Azure Information Protection provides a public preview of co-authoring features newly supported in Microsoft 365. 
+
+Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) at the same time.
+
+To leverage the co-authoring features in public preview, you must download and install the dedicated installation file for this release. 
+
+On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `<name>.exe` or `<name>.msi` file.
+
+For more information, see:
+
+- [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
+- [Known issues for co-authoring in Azure Information Protection](../known-issues.md#co-authoring-public-preview) 
+
+## Version 2.10.36.0 (Public preview)
+
+Unified labeling scanner version 2.10.36.0
+
+**Release** 03/02/2021
+
+This dedicated version of Azure Information Protection provides a public preview of the support for Data Loss Prevention (DLP) policies supported by Microsoft 365. 
+
+DLP policies are configured in your labeling admin center, such as the Microsoft 365 Compliance center. 
+
+- Using a DLP policy enables the scanner to detect potential data leaks by matching DLP rules to files stored in file shares and SharePoint Server. 
+
+- **Enable DLP rules** in your content scan job to reduce the exposure of any files that match your DLP policies. 
+
+    The scanner may reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**.
+
+- Scanning your files also creates file permission reports. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
+
+To leverage the DLP support in public preview, you must download and install the dedicated installation file for this release. 
+
+On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `<name>.exe` or `<name>.msi` file.
+
+For more information, including licensing requirements, see:
+
+- [Configure a DLP policy in the AIP scanner](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview)
+- [Learn about the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-learn), in the Microsoft 365 documentation
+- [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started)
+- [Use the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-use)
+
+> [!IMPORTANT]
+> Settings for whether you are testing the DLP policy or want your DLP rules enforced and file accesses changed are in the [DLP policy configuration](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy) in the Microsoft 365 Compliance center. 
+>
+
 ## Version 2.9.111.0
 
 Unified labeling scanner and client version 2.9.111.0

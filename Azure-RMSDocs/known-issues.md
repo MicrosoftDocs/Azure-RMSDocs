@@ -85,8 +85,73 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 |**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.       |
 | **S/MIME emails** | Opening S/MIME emails in Outlook's Reading Pane may cause performance issues. <br><br>To prevent performance issues with S/MIME emails, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property. <br><br>**Note**: Enabling this property prevents the AIP bar or the email classification from being displayed in Outlook's Reading Pane. |
 |**Send to File Explorer option** |If you choose to right-click on any file in the File Explorer and select **Send to > Mail recipient**, the Outlook message that opens with the file attached may not display the AIP toolbar. <br><br>If this occurs and you need to use the AIP toolbar options, start your email from within Outlook and then browse to and attach the file you want to send.|
+|**Co-authoring** |Co-authoring support is provided by a [dedicated installation](rms-client/unifiedlabelingclient-version-release-history.md#version-210xx-public-preview) of the Azure Information Protection client, and is currently in public preview. <br><br>For more information about known issues for co-authoring, see [below](#co-authoring-public-preview). |
+| | |
+### Known issues for co-authoring (Public preview)
+
+- [Use in testing environments only](#use-in-testing-environments-only)
+- [Supported versions for co-authoring and sensitivity labels](#supported-versions-for-co-authoring-and-sensitivity-labels)
+- [Policy updates](#policy-updates)
+- [AIP analytics and audit logs](#aip-analytics-and-audit-logs)
+- [Labels with user-defined permissions](#labels-with-user-defined-permissions)
+- [Unsupported features for co-authoring](#unsupported-features-for-co-authoring)
+
+> [!NOTE]
+> Co-authoring and sensitivity labels cannot be deployed to only some users, as any new labels will not be visible to users with an older version of the Office client.
+> 
+For more information about co-authoring support, including limitations and known issues for the public preview, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring).
+#### Use in testing environments only
+
+To avoid conflicts between your labeled files, co-authoring cannot be turned off without assistance from customer support during the public preview period.
+
+For this reason, we recommend that you currently turn co-authoring on for your system in testing environments only.
+
+#### Supported versions for co-authoring and sensitivity labels
+
+|Application  |Description  |
+|---------|---------|
+|**Office apps and the AIP client**     |  All users of co-authoring and sensitivity labels must have the latest version of Office apps and the Azure Information Protection unified labeling client. <br><br>Customers who use co-authoring and sensitivity labels must [change their update frequency to **current channel**](/deployoffice/change-update-channels), for all of their users.       |
+|**Third-party products**     |  Customers who use third-party products that are based on the MIP SDK must upgrade to versions that use MIP SDK 1.7, which also supports co-authoring and sensitivity labels.       |
+|**Office 97-2003 formats**     |      While sensitivity labels can be applied on files in Office 97-2003 formats, such as  **.doc**, **.ppt**, and **.xls**, co-authoring for these file types is not supported. <br><br>Once a label is applied on a newly-created file, or a file in the advanced file format, such as **.docx**, **.pptx**, and **.xlsx**, saving the file in an Office 97-2003 format will cause the label to be removed.|
 | | |
 
+#### Policy updates
+
+If your labeling policy was updated while an Office application was opened with Azure Information Protection, any new labels are displayed, but applying them will result in an error. 
+
+If this occurs, close and reopen your Office application to be able to apply your labels.
+#### AIP analytics and audit logs
+
+When co-authoring is enabled, AIP analytics are sent to the Microsoft 365 Activity Explorer instead of the Azure Information Protection reports in the Azure portal.
+
+For more information, see:
+
+- [Central reporting for Azure Information Protection (public preview)](reports-aip.md)
+- [Azure Information Protection audit log reference (public preview)](audit-logs.md)
+
+#### Labels with user-defined permissions
+
+In Microsoft Word, Excel, and PowerPoint, labels with user-defined permissions are still available and can be applied to documents, but are not supported for co-authoring features. 
+
+This means that applying a label with user-defined permissions will prevent you from working on the document with others at the same time.
+
+#### Unsupported features for co-authoring
+
+The following features are not supported when working with co-authoring and sensitivity labels:
+
+- **DKE templates and DKE user-defined properties**. For more information, see [Double Key Encryption (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).
+
+- **Removing external content marking in apps**
+
+- The following advanced settings:
+
+    - **customPropertiesByLabel**. For more information, see [Applying a custom property when a label is applied](rms-client/clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied).
+
+    - **labelByCustomProperties** and **EnableLabelBySharePointProperties**. For more information, see [Migrate labels from Secure Islands and other labeling solutions](rms-client/clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions).
+
+    - **RunPolicyInBackground**, for all Office apps except for Excel. For more information, see [Turn on classification to run continuously in the background](rms-client/clientv2-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background). 
+
+For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
 ## Known issues in policies
 
 Publishing policies may take up to 24 hours.
