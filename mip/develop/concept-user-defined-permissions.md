@@ -1,6 +1,6 @@
 ---
-title: Concepts - The core concepts in the MIP SDK - MipContext
-description: This article will help you understand the core SDK concept called MipContext which drives application initialization.
+title: Concepts - The core concepts in the MIP SDK - User-defined permissions. 
+description: This article will help you understand the core SDK concept called user-defined permissions.
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
