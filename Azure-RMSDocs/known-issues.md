@@ -114,7 +114,7 @@ Tracking and revoking document access using the unified labeling client has the 
 
 - [Password-protected documents](#password-protected-documents)
 - [Multiple attachments in a protected email](#multiple-attachments-in-a-protected-email)
-- [Documents accessed via SharePoint](#documents-accessed-via-sharepoint)
+- [Documents accessed via SharePoint or OneDrive](#documents-accessed-via-sharepoint-or-onedrive)
 
 For more information, see the [Admin Guide](rms-client/track-and-revoke-admin.md) and [User Guide](rms-client/revoke-access-user.md) procedures.
 
@@ -129,11 +129,11 @@ This ContentID value will be returned only with the first file that had been ope
 
 Additionally, revoking access for one of the attachments also revokes access for the other attachments in the same protected email.
 
-#### Documents accessed via SharePoint
+#### Documents accessed via SharePoint or OneDrive
     
-- Protected documents that are uploaded to SharePoint lose their **ContentID** value, and access cannot be track or revoked.
+- Protected documents that are uploaded to SharePoint or OneDrive lose their **ContentID** value, and access cannot be track or revoked.
 
-- If a user downloads the file from SharePoint and accesses it from their local machine, a new **ContentID** is applied to the document when they open it locally. 
+- If a user downloads the file from SharePoint or OneDrive and accesses it from their local machine, a new **ContentID** is applied to the document when they open it locally. 
     
     Using the original **ContentID** value to track data will not include any access performed for the user's downloaded file. Additionally, revoking access based on the original **ContentID** value will not revoke access for any of the downloaded files.
 
