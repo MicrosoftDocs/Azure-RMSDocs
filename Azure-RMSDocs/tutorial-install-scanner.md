@@ -186,9 +186,9 @@ For more information, see [How to label files non-interactively for Azure Inform
 
 The scanner now has a token to authenticate to Azure AD. This token is valid for as long as you've configured in Azure Active Directory. You must repeat this procedure when the token expires.
 
-Continue with [installing the optional Network Discovery service](#install-the-network-discovery-service), which enables you to scan your network repositories for content that may be at risk, and then add those repositories to a content scan job.
+Continue with [installing the optional Network Discovery service](#install-the-network-discovery-service-public-preview), which enables you to scan your network repositories for content that may be at risk, and then add those repositories to a content scan job.
 
-## Install the Network Discovery service
+## Install the Network Discovery service (public preview)
 
 Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) of the AIP unified labeling client, administrators can use the AIP scanner to scan network repositories, and then add any repositories that seem risky to a content scan job.
 
