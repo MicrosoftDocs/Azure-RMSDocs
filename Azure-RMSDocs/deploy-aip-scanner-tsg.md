@@ -6,7 +6,7 @@ description: Instructions for troubleshooting your unified labeling on-premises 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/26/2021
+ms.date: 02/01/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -209,9 +209,11 @@ Run the [Update-AIPScanner](/powershell/module/azureinformationprotection/Update
 
 This error usually means that TLS 1.2 is not enabled.
 
-For more information, see [Firewalls and network infrastructure](requirements.md#firewalls-and-network-infrastructure). 
+For more information, see:
 
-To enable TLS 1.2, see [How to enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) in the Enterprise Mobility + Security documentation.
+- [Firewalls and network infrastructure requirements](requirements.md#firewalls-and-network-infrastructure)
+- [How to enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) 
+- [Enable TLS 1.1 and TLS 1.2 support in Office Online Server](/officeonlineserver/enable-tls-1-1-and-tls-1-2-support-in-office-online-server)
 
 ### Stuck scanner processes
 
@@ -273,9 +275,11 @@ See also: [Troubleshooting a scan that timed out](#troubleshooting-a-scan-that-t
 
 This error usually means that TLS 1.2 is not enabled.
 
-For more information, see [Firewalls and network infrastructure](requirements.md#firewalls-and-network-infrastructure). 
+For more information, see:
 
-To enable TLS 1.2, see [How to enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) in the Enterprise Mobility + Security documentation.
+- [Firewalls and network infrastructure requirements](requirements.md#firewalls-and-network-infrastructure)
+- [How to enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) 
+- [Enable TLS 1.1 and TLS 1.2 support in Office Online Server](/officeonlineserver/enable-tls-1-1-and-tls-1-2-support-in-office-online-server)
 
 
 ### Missing content scan job or profile
