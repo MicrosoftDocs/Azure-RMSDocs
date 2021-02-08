@@ -131,7 +131,7 @@ Additionally, revoking access for one of the attachments also revokes access for
 
 #### Documents accessed via SharePoint or OneDrive
     
-- Protected documents that are uploaded to SharePoint or OneDrive lose their **ContentID** value, and access cannot be track or revoked.
+- Protected documents that are uploaded to SharePoint or OneDrive lose their **ContentID** value, and access cannot be tracked or revoked.
 
 - If a user downloads the file from SharePoint or OneDrive and accesses it from their local machine, a new **ContentID** is applied to the document when they open it locally. 
     
