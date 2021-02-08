@@ -122,7 +122,9 @@
     - name: Labels   
       href: concept-classification-labels.md
     - name: Labels and Protection Behavior
-      href: concept-labeling-and-protection.md  
+      href: concept-labeling-and-protection.md
+    - name: User-defined Permissions
+      href: concept-user-defined-permissions.md  
   - name: Metadata
     href: concept-mip-metadata.md
   - name: Observers for async (C++)

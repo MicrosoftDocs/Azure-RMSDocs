@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/26/2021
+ms.date: 02/08/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -50,6 +50,7 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 |Client version|Date released|
 |--------------|-------------|
+| 2.7.96  |01/20/2021 |
 |2.6.111.0 | 03/09/2020|
 |2.5.33.0 |10/23/2019|
 |2.2.21.0|09/03/2019|
@@ -69,19 +70,22 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
->  
+>
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.9.113.0
+## Version 2.9.116 
 
-Unified labeling scanner and client version 2.9.113.0
+Unified labeling scanner and client version 2.9.116 
 
-**Released** 1/31/2021
+**Released** 02/08/2021
 
-- **Newly supported**: You can now view non-scoped labels via the File Explorer.
-- **Fix**: You can now use both the File Explorer and the AIP Viewer app to open and view files protected by non-scoped labels
+**Fixed issues** Users are now able to view protected files as expected in the following scenarios:
+
+- When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue had occurred only with the [AIP Viewer app](clientv2-view-use-files.md).
+
+- When content with a scoped label is shared with users or groups not included in the label's scope. This issue had occurred both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the [File Explorer](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
 
 For more information, see the [AIP unified labeling client user guide](clientv2-user-guide.md).
 ## Version 2.9.111.0
@@ -107,6 +111,12 @@ This version includes the following new features, fixes, and enhancements for th
 
     - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client)
+
+- **Known issue**: An issue was identified in the latest GA version (2.9.111) where some users were not able to view protected files in the following scenarios:
+
+    - When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue occurs only with the [AIP Viewer app](clientv2-view-use-files.md).
+
+	- When content with a scoped label is shared with users or groups not included in the label's scope. This issue occurs both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the [File Explorer](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
 
 ### PowerShell support for disconnected scanner servers
 
@@ -222,7 +232,7 @@ This version includes the following new features, fixes, and enhancements, for t
 
     - [Optional full rescans for changes detected](#optional-full-rescans-for-changes-detected)
     - [Configure SharePoint timeouts](#configure-sharepoint-timeouts)
-    - [Network discovery support](#network-discovery-support)
+    - [Network discovery support](#network-discovery-support-public-preview) (public preview)
 
 - **New features for the client**:
 
@@ -259,14 +269,14 @@ AIP administrators can also now configure SharePoint timeouts, separately for al
 
 For more information, see [Configure SharePoint timeouts](clientv2-admin-guide-customizations.md#configure-sharepoint-timeouts).
 
-### Network Discovery support
+### Network Discovery support (public preview)
 
 The unified labeling scanner now includes a new **network discovery** service, which enables you to scan specified IP addresses or ranges for network file shares that may have sensitive content.
 
 The **network discovery** service updates **Repository** reports with a list of share locations that may be at risk, based on the discovered permissions and access rights. Check the updated **Repository** reports to ensure that your content scan jobs include all repositories that need to be scanned.
 
 > [!TIP]
-> For more information, see [Network discovery cmdlets](#network-discovery-cmdlets).
+> For more information, see [Network discovery cmdlets](#network-discovery-cmdlets-public-preview).
 
 **To use the Network discovery service**
 
@@ -291,7 +301,7 @@ The **network discovery** service updates **Repository** reports with a list of 
 
 1. Use the generated reports on the new [**Repositories**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) pane to find additional network file shares that may be at risk. Add any risky file shares to your [content scan jobs](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) to scan the added repositories for sensitive content.
 
-#### Network discovery cmdlets
+#### Network discovery cmdlets (public preview)
 
 PowerShell cmdlets added for Network Discovery include:
 
