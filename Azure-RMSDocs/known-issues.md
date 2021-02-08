@@ -149,8 +149,6 @@ The following features are not supported when working with co-authoring and sens
 
     - **labelByCustomProperties** and **EnableLabelBySharePointProperties**. For more information, see [Migrate labels from Secure Islands and other labeling solutions](rms-client/clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions).
 
-    - **RunPolicyInBackground**, for all Office apps except for Excel. For more information, see [Turn on classification to run continuously in the background](rms-client/clientv2-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background). 
-
 For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
 ## Known issues in policies
 
