@@ -123,7 +123,7 @@ For more information, including licensing requirements, see:
 - [Use the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-use)
 
 > [!IMPORTANT]
-> Settings for whether you are testing the DLP policy or want your DLP rules enforced and file accesses changed are in the [DLP policy configuration](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy) in the Microsoft 365 Compliance center. 
+> Settings for enforcing or testing the DLP policy are configured in the [Microsoft 365 Compliance center](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
 >
 
 ## Version 2.9.111.0
