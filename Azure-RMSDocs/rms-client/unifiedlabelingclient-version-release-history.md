@@ -92,7 +92,9 @@ For more information, see the [AIP unified labeling client user guide](clientv2-
 
 Unified labeling scanner and client version 2.9.111.0
 
-**Release** 1/13/2021
+**Release** 01/13/2021
+
+**Supported through** 08/08/2021
 
 This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
 
