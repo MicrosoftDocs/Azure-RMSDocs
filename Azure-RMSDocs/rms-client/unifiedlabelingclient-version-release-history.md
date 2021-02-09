@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/08/2021
+ms.date: 02/09/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -92,7 +92,7 @@ On the [Microsoft download site](https://www.microsoft.com/en-us/download/detail
 For more information, see:
 
 - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
-[Known issues for co-authoring](../known-issues.md#known-issues-for-co-authoring-public-preview)
+- [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
 ## Version 2.10.36.0 (Public preview)
 
 Unified labeling scanner version 2.10.36.0
