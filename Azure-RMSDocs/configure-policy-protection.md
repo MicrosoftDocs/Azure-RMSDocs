@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 02/09/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -147,7 +147,9 @@ Exchange does not have to be configured for Azure Information Protection before 
        - You have a requirement that the content must be encrypted at rest and in transit, but it doesn't require access controls.
         
    - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or, use this option to specify all users in another organization by entering any domain name from that organization. You can also use this option for social providers, by entering their domain name such as **gmail.com**, **hotmail.com**, or **outlook.com**.
-        
+       
+        Adding more than 200 individual users is not supported.
+
      >[!NOTE]
      >If an email address changes after you select the user or group, see the [Considerations if email addresses change](prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) section from the planning documentation.
     
