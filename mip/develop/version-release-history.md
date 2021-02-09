@@ -26,6 +26,15 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
 
+## Version 1.8.94
+
+**Release date:** February 8, 2021
+
+- Fixed bug in NuGet package where debug configuration for C++ projects deployed release binaries. 
+- Fixed a bug where policy engine was required to remove protection. 
+  - If policy engine can't be loaded and label metadata is present, it will be discarded if protection is removed. 
+- Fixed a bug where empty `labelInfo.xml` was generated if file was changed to another protected label. 
+
 ## Version 1.8.86
 
 **Release date:** January 13, 2021
