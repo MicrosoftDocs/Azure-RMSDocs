@@ -96,7 +96,7 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 - [Labels with user-defined permissions](#labels-with-user-defined-permissions)
 - [Unsupported features for co-authoring](#unsupported-features-for-co-authoring)
 
-> [!NOTE]
+> [!IMPORTANT]
 > Co-authoring and sensitivity labels cannot be deployed to only some users, as any new labels will not be visible to users with an older version of the Office client.
 > 
 For more information about co-authoring support, including limitations and known issues for the public preview, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring).
@@ -108,13 +108,13 @@ For this reason, we recommend that you currently turn co-authoring on for your s
 
 #### Supported versions for co-authoring and sensitivity labels
 
-|Application  |Description  |
-|---------|---------|
-|**Office apps and the AIP client**     |  All users of co-authoring and sensitivity labels must have the latest version of Office apps and the Azure Information Protection unified labeling client. <br><br>Customers who use co-authoring and sensitivity labels must [change their update frequency to **current channel**](/deployoffice/change-update-channels), for all of their users.       |
-|**Third-party products**     |  Customers who use third-party products that are based on the MIP SDK must upgrade to versions that use MIP SDK 1.7, which also supports co-authoring and sensitivity labels.       |
-|**Office 97-2003 formats**     |      While sensitivity labels can be applied on files in Office 97-2003 formats, such as  **.doc**, **.ppt**, and **.xls**, co-authoring for these file types is not supported. <br><br>Once a label is applied on a newly-created file, or a file in the advanced file format, such as **.docx**, **.pptx**, and **.xlsx**, saving the file in an Office 97-2003 format will cause the label to be removed.|
-| | |
+All apps, services, and operation tools in your tenant must support co-authoring.
 
+Before you start, make sure that your system complies with the version requirements listed in the [Microsoft 365 prerequisites for co-authoring](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites).
+
+> [!NOTE]
+> While sensitivity labels can be applied on files in Office 97-2003 formats, such as  **.doc**, **.ppt**, and **.xls**, co-authoring for these file types is not supported. Once a label is applied on a newly-created file, or a file in the advanced file format, such as **.docx**, **.pptx**, and **.xlsx**, saving the file in an Office 97-2003 format will cause the label to be removed.
+> 
 #### Policy updates
 
 If your labeling policy was updated while an Office application was opened with Azure Information Protection, any new labels are displayed, but applying them will result in an error. 
