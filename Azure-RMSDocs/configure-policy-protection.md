@@ -147,7 +147,7 @@ Exchange does not have to be configured for Azure Information Protection before 
        - You have a requirement that the content must be encrypted at rest and in transit, but it doesn't require access controls.
         
    - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or, use this option to specify all users in another organization by entering any domain name from that organization. You can also use this option for social providers, by entering their domain name such as **gmail.com**, **hotmail.com**, or **outlook.com**.
-       
+        
      >[!NOTE]
      >If an email address changes after you select the user or group, see the [Considerations if email addresses change](prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) section from the planning documentation.
     
