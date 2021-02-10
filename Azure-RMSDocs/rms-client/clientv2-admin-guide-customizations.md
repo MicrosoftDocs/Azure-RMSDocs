@@ -2093,7 +2093,7 @@ This configuration uses a policy [advanced setting](#configuring-advanced-settin
 
 By default, the scanner's autolabeling timeout on Office files is 3 seconds.
 
-If you have a complex Excel file with many sheets or rows, 3 seconds may not be enough to automatically apply labels. To raise this timeout for the selected label policy, specify the following strings:
+If you have a complex Excel file with many sheets or rows, 3 seconds may not be enough to automatically apply labels. To increase this timeout for the selected label policy, specify the following strings:
 
 - Key: **OfficeContentExtractionTimeout**
 
