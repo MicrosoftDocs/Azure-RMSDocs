@@ -117,7 +117,7 @@ If such an error appears, the user must install [Adobe Acrobat DC with the MIP e
 
 When opening the protected document after installing Adobe Acrobat DC with the MIP extension, the user may still see an error showing that the selected user account does not exist in the tenant, and prompting them to select an account. 
 
-This is an expected error. In the prompt window, select the **Back** button to continue opening the protected document.
+This is an expected error. In the prompt window, select **Back** to continue opening the protected document.
 
 ## Known issues for track and revoke features (Public preview)
 
