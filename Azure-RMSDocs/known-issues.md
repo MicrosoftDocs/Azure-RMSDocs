@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/08/2021
+ms.date: 02/09/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -97,16 +97,27 @@ Files of over 2 GB are supported for protection, but not decryption.
 
 ## Known issues for the AIP viewer
 
+- [Landscape views](#landscape-views-in-the-aip-viewer)
+- [External users](#external-users-and-the-aip-viewer)
+
+For more information, see [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md).
+### Landscape views in the AIP viewer
+
 The AIP viewer displays images in portrait mode, and some wide, landscape-view images may appear to be stretched.
 
 For example, an original image is shown below on the left, with a stretched, portrait version in the AIP viewer on the right. 
-    
-:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Stretched image in client viewer":::
-    
-For more information, see:
 
-- [**Classic client**: View protected files with the Azure Information Protection viewer](rms-client/client-view-use-files.md)
-- [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md)
+:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Stretched image in client viewer":::
+
+### External users and the AIP viewer 
+
+If an external user already has a guest account in Azure AD, the AIP Viewer may display an error when the user opens a protected document, telling them that they cannot sign in with a personal account.
+
+If such an error appears, the user must install [Adobe Acrobat DC with the MIP extension](https://helpx.adobe.com/il_en/acrobat/kb/mip-plugin-download.html) in order to open the protected document.
+
+When opening the protected document after installing Adobe Acrobat DC with the MIP extension, the user may still see an error showing that the selected user account does not exist in the tenant, and prompting them to select an account. 
+
+This is an expected error. In the prompt window, select **Back** to continue opening the protected document.
 
 ## Known issues for track and revoke features (Public preview)
 
