@@ -1,6 +1,6 @@
 ---
-title: Concepts - The core concepts in the MIP SDK - Telemetry Control
-description: This article will help you understand how to opt out of telemetry and which events are still sent when opted out.
+title: Concepts - The core concepts in the MIP SDK - Diagnostic Control
+description: This article will help you understand how to opt out of diagnostic data and which events are still sent when opted out.
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
@@ -8,21 +8,21 @@ ms.date: 10/01/2019
 ms.author: tommos
 ---
 
-# Microsoft Information Protection SDK - Telemetry Configuration
+# Microsoft Information Protection SDK - Diagnostic Configuration
 
-## Telemetry
+## Diagnostic Data
 
-By default, the Microsoft Information Protection SDK sends telemetry data to Microsoft. This telemetry data is useful for troubleshooting bugs, quality, and performance issues across the SDK install base that we may not capture in our internal testing. When implementing your application with the SDK, it's important to give users and admins the ability to opt out of telemetry if required.
+By default, the Microsoft Information Protection SDK sends diagnostic data to Microsoft. This data is useful for troubleshooting bugs, quality, and performance issues across the SDK install base that we may not capture in our internal testing. When implementing your application with the SDK, it's important to give users and admins the ability to opt out of sending diagnostic data if required.
 
-## Telemetry Configuration
+## Diagnostic Configuration
 
-Telemetry options in the MIP SDK can be controlled via [TelemetryConfiguration](/dotnet/api/microsoft.informationprotection.telemetryconfiguration). Create an instance of this class, then set **IsTelemetryOptedOut** to true. Provide the object of class **TelemetryConfiguration** to the function used to create **MipContext**.
+Diagnostic options in the MIP SDK can be controlled via `DiagnosticConfiguration`. Create an instance of this class, then set **isMinimalTelemetryEnabled** to true. Provide the object of class **DiagnosticConfiguration** to the function used to create **MipContext**.
 
-### Minimum Telemetry Events
+### Minimum Diagnostic Events
 
-When telemetry is set to *opted out*, a minimum set of data is sent to Microsoft. All personally identifiable information is scrubbed from this information. This data includes heartbeat information to understand that the SDK is being used, and system metadata. **No user content or end user identifiable information is set to the service.**
+When diagnostic configuration is set to minimum, a minimum set of data is sent to Microsoft. All personally identifiable information is scrubbed from this information. This data includes heartbeat information to understand that the SDK is being used, and system metadata. **No user content or end user identifiable information is set to the service.**
 
-Review the tables below to see exactly what events and data are sent with minimum telemetry set.
+Review the tables below to see exactly what events and data are sent with minimum diagnostics enabled.
 
 #### Event: Heartbeat
 
@@ -30,8 +30,8 @@ Review the tables below to see exactly what events and data are sent with minimu
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
 | App.ApplicationId                    | The application identifier provided via mip::ApplicationInfo.                          | No       |
 | App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | No       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | No       |
-| ApplicationId                        | The application version profided via mip::ApplicationInfo.                             | No       |
+| App.ApplicationVersion               | The application version provided via mip::ApplicationInfo.                             | No       |
+| ApplicationId                        | The application version provided via mip::ApplicationInfo.                             | No       |
 | ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | No       |
 | CreationTime                         | Time event was generated.                                                              | No       |
 | DefaultLabel.Id                      | Tenant default label ID.                                                               | No       |
@@ -61,8 +61,8 @@ Review the tables below to see exactly what events and data are sent with minimu
 | ActionId                             | Unique action ID for this event, used for event correlation.                           | No       |
 | App.ApplicationId                    | The application identifier provided via mip::ApplicationInfo.                          | No       |
 | App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | No       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | No       |
-| ApplicationId                        | The application version profided via mip::ApplicationInfo.                             | No       |
+| App.ApplicationVersion               | The application version provided via mip::ApplicationInfo.                             | No       |
+| ApplicationId                        | The application version provided via mip::ApplicationInfo.                             | No       |
 | ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | No       |
 | CreationTime                         | Time event was generated.                                                              | No       |
 | DataState                            | The state of the data as the application acts on it “REST”, “MOTION”, “USE”.           | No       |
@@ -99,7 +99,7 @@ Review the tables below to see exactly what events and data are sent with minimu
 | ActionSource                         | Value of MIP::ActionSource.                                                            | No       |
 | App.ApplicationId                    | The application ID provided via mip::ApplicationInfo.                                  | No       |
 | App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | No       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | No       |
+| App.ApplicationVersion               | The application version provided via mip::ApplicationInfo.                             | No       |
 | ApplicationId                        | The application ID provided via mip::ApplicationInfo.                                  | No       |
 | ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | No       |
 | CreationTime                         | Time the event was generated.                                                          | No       |
@@ -139,11 +139,11 @@ Review the tables below to see exactly what events and data are sent with minimu
 
 ### Opting out in C++
 
-To set telemetry to minimum only, create a shared pointer of **mip::TelemetryConfiguration()** and set **isTelemetryOptedOut** to true. Pass the configuration object in to **MipContent::Create()**.
+To set diagnostics to minimum only, create a shared pointer of **mip::DiagnosticConfiguration()** and set **isMinimalTelemetryEnabled** to true. Pass the configuration object in to **MipContent::Create()**.
 
 ```cpp
-auto telemetryConfig = std::make_shared<mip::TelemetryConfiguration>();										
-telemetryConfig->isTelemetryOptedOut = true;
+auto diagnosticConfig = std::make_shared<mip::DiagnosticConfiguration>();
+diagnosticConfig->isMinimalTelemetryEnabled = true;
 					   
 // Create MipContext, passing in mip::TelemetryConfiguration object.
 mMipContext = mip::MipContext::Create(
@@ -152,33 +152,22 @@ mMipContext = mip::MipContext::Create(
 	mip::LogLevel::Trace,
 	false,
 	nullptr /*loggerDelegateOverride*/,
-	telemetryConfig /*telemetryOverride*/
+	diagnosticConfig /*diagnosticOverride*/
 );
 ```
 
 ### Opting out in .NET
 
-To set telemetry to minimum only, create a **TelemetryConfiguration()** object and set **isTelemetryOptedOut** to true. Pass the configuration object in to **MIP.CreateMipContext()**.
+To set diagnostic data to minimum only, create a **DiagnosticConfiguration()** object and set **isMinimalTelemetryEnabled** to true. Pass the configuration object in to **MIP.CreateMipContext()**.
 
 ```csharp
-TelemetryConfiguration telemetryConfiguration = new TelemetryConfiguration();
-telemetryConfiguration.IsTelemetryOptedOut = true;
+DiagnosticConfiguration diagnosticConfiguration = new DiagnosticConfiguration();
+diagnosticConfiguration.IsTelemetryOptedOut = true;
 
 // Create MipContext, passing in TelemetryConfiguration object.
 mipContext = MIP.CreateMipContext(appInfo, 
     "mip_data", 
     LogLevel.Trace, 
     null, 
-    telemetryConfiguration);
+    diagnosticConfiguration);
 ```
-
-## Telemetry in MIP SDK 1.6.102 to 1.6.152
-
-In MIP SDK versions 1.6.102, 103, 113, 151, and 152, it was documented that when `IsTelemetryOptedOut` is set to **true** that zero telemetry is sent. A bug was identified that revealed telemetry events are being emitted when this flag is set. These telemetry events fired when calling the APIs listed below in the Policy SDK.
-
-- mip::PolicyEngine::ListSensitivityLabels()
-- mip::PolicyHandler::ComputeActions()
-- mip::PolicyHandler::NotifyCommitAsync()
-- mip::PolicyHandler::GetSensitivityLabel()
-
-The functionality in MIP SDK 1.6.n reverts to the previous behavior and sends the events detailed in [Minimum Telemetry Events](#minimum-telemetry-events). MIP SDK 1.7 updates the name of `IsTelemetryOptedOut` to `SendMinimumTelemetry` and follows the same behavior as detailed above.
