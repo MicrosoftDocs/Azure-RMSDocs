@@ -30,8 +30,8 @@ Review the tables below to see exactly what events and data are sent with minimu
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
 | App.ApplicationId                    | The application identifier provided via mip::ApplicationInfo.                          | No       |
 | App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | No       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | No       |
-| ApplicationId                        | The application version profided via mip::ApplicationInfo.                             | No       |
+| App.ApplicationVersion               | The application version provided via mip::ApplicationInfo.                             | No       |
+| ApplicationId                        | The application version provided via mip::ApplicationInfo.                             | No       |
 | ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | No       |
 | CreationTime                         | Time event was generated.                                                              | No       |
 | DefaultLabel.Id                      | Tenant default label ID.                                                               | No       |
@@ -61,8 +61,8 @@ Review the tables below to see exactly what events and data are sent with minimu
 | ActionId                             | Unique action ID for this event, used for event correlation.                           | No       |
 | App.ApplicationId                    | The application identifier provided via mip::ApplicationInfo.                          | No       |
 | App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | No       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | No       |
-| ApplicationId                        | The application version profided via mip::ApplicationInfo.                             | No       |
+| App.ApplicationVersion               | The application version provided via mip::ApplicationInfo.                             | No       |
+| ApplicationId                        | The application version provided via mip::ApplicationInfo.                             | No       |
 | ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | No       |
 | CreationTime                         | Time event was generated.                                                              | No       |
 | DataState                            | The state of the data as the application acts on it “REST”, “MOTION”, “USE”.           | No       |
@@ -99,7 +99,7 @@ Review the tables below to see exactly what events and data are sent with minimu
 | ActionSource                         | Value of MIP::ActionSource.                                                            | No       |
 | App.ApplicationId                    | The application ID provided via mip::ApplicationInfo.                                  | No       |
 | App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | No       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | No       |
+| App.ApplicationVersion               | The application version provided via mip::ApplicationInfo.                             | No       |
 | ApplicationId                        | The application ID provided via mip::ApplicationInfo.                                  | No       |
 | ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | No       |
 | CreationTime                         | Time the event was generated.                                                          | No       |
