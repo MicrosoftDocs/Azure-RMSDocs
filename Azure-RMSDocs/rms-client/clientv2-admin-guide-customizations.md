@@ -1163,6 +1163,10 @@ For additional customization, see:
 - [Extend your label migration rules to emails](#extend-your-label-migration-rules-to-emails)
 - [Extend your label migration rules to SharePoint properties](#extend-your-label-migration-rules-to-sharepoint-properties)
 
+> [!NOTE]
+> If you are migrating from your labels across tenants, such as after a company merger, we recommend that you read our [blog post on mergers and spinoffs](https://techcommunity.microsoft.com/t5/microsoft-security-and/mergers-and-spinoffs/ba-p/910455) for more information.
+>
+
 #### Example 1: One-to-one mapping of the same label name
 
 Requirement: Documents that have a Secure Islands label of "Confidential" should be relabeled as "Confidential" by Azure Information Protection.
