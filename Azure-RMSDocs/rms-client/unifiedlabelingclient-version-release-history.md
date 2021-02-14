@@ -338,6 +338,8 @@ Audit logs for access events from the unified labeling client are now sent only 
 
 Information types are no longer sent by [audit logs for access events](../audit-logs.md#access-audit-logs), and are now sent only with [audit logs for discover events](../audit-logs.md#discover-audit-logs).
 
+For more information, see [Access audit logs](../audit-logs.md#access-audit-logs).
+
 For more information, see [Azure Information Protection audit log reference](../audit-logs.md).
 ### DKE template-based labeling updates
 
