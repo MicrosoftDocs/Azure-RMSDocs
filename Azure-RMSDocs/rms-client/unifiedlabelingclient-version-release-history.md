@@ -79,40 +79,28 @@ The unified labeling client replaces the Azure Information Protection classic cl
 
 Unified labeling scanner and client version 2.10.x
 
-**Released** 03/18/2021
-
-## Improved accuracy for sensitive information types
-
-This version of the unified labeling client provides increased accuracy for automatic labeling.
-
-For more information, see <SCC>.
-
-## Audit log updates
+**Released** 03/15/2021
+### Audit log updates
 
 This version of the unified labeling client and scanner supports the following improvements for AIP audit logs:
 
-### Support for audit logs from the AIP unified labeling viewer
+- **The unified labeling client now logs user activity to the local Windows event log**. For more information, see [Usage logging for the Azure Information Protection unified labeling client](clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-unified-labeling-client).
 
-Azure Information Protection audit logs for access events now include events from the AIP viewer.
-CHECK W ODED
+- **Support for audit logs for access events from the AIP viewer**. Azure Information Protection audit logs for access events now include events from the AIP viewer.
 
-### Support for audit logs for GCC-High environments
-THIS MAY NOT GO OUT
+### Fixes and improvements
 
-This version of the unified labeling client provides support for audit logs in GCC-High environments.
+The following fixes were delivered in version 2.10.x of the Azure Information Protection unified labeling client and scanner:
 
-For more information, see the [Azure Information Protection Premium Government Service description](/enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description#aip-apps-configuration-unified-labeling-only) and [Azure Information Protection audit log reference (public preview)](../audit-logs.md).
+- Added support for removing a protected label when the [File API engine](../../mip/develop/concept-profile-engine-file-engine-cpp.md) isn't loaded in Outlook. <!-- when might this occur? when should the regular user be concerned about it? -->
 
-### Audit logs include Outlook pop-up events
+- Fixed issues for mandatory labeling functionality when opening protected PowerPoint files with [Track and Revoke](track-and-revoke-admin.md) enabled. <!-- and async?>
 
-All events related to Outlook pop-up messages, such as warnings for missing labels, are now sent to AIP audit logs. The following details are recorded in the audit logs:
+- Fixed issues for opening protected files with inactive labels with the File Explorer and the [AIP Viewer app](clientv2-view-use-files.md).
 
-- A new audit log event for the pop-up message displayed and any option selected by the user
-- Any free text justification provided by the user in the popup.
+- The [PowerPointRemoveAllShapesByShapeName](clientv2-admin-guide-customizations.md#remove-all-shapes-of-a-specific-shape-name) advanced setting no longer requires that you also define the [ExternalContentMarkingToRemove](clientv2-admin-guide-customizations.md#how-to-configure-externalcontentmarkingtoremove) setting. Now you can define PowerPointRemoveAllShapesByShapeName on its own.
 
-
-Audit log events now go to the windows event log. 
-Check with Moriah and Elina .
+- Fixed an issue where an empty option would appear on [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) when only two options for the user to select were configured for the popup message.
 
 ## Version 2.9.116 
 
