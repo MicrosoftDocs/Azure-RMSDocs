@@ -49,7 +49,7 @@ Microsoft Azure Information Protection generates audit logs at the following act
 * [Upgrade label](#upgrade-label-audit-logs)
 
 > [!NOTE]
-> The [AIP Viewer](rms-client/clientv2-view-use-files.md) does not send audit logs. 
+> The [AIP Viewer](rms-client/clientv2-view-use-files.md) sends audit logs for [access events](#access-audit-logs) only.
 >
 ## Access audit logs
 
