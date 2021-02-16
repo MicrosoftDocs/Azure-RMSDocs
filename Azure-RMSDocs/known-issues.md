@@ -93,36 +93,14 @@ Publishing policies may take up to 24 hours.
 
 ## Maximum file sizes
 
-|  |File Explorer  |PowerShell  |
+The following table lists the maximum sizes support for encryption and decryption, depending on the method used. 
+
+| Action |File Explorer  |PowerShell  |
 |---------|---------|---------|
 |**Encryption**     |  2 GB       |   2 GB      |
-|**Decryption**     |   Up to the available disk size, RAM, or architecture limits (lowest of the three). <br><br>This is typically around 3.5 GB, but may vary for your system.    | Up to the available disk size or RAM, the lower of the two.        |
+|**Decryption**     |   Up to the available disk size, RAM, or architecture limits (lowest of the three).     | Up to the available disk size or RAM, the lower of the two.        |
 |     |         |         |
 
-SPEAK TO SAGI ABOUT THIS
-
-Specifically, for encroypting Office files:
-
-|                                                     Office application                                                      |                                                Maximum file size supported                                                 |
-|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-|             Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32-bit: 512 MB<br /><br />64-bit: 512 MB                                          |
-|           Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                       |
-| PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
-| | |
-
-> [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
->
-
-**For all other files**:
-
-- **To protect other file types**, and to open these file types in the Azure Information Protection viewer: The maximum file size is limited only by available disk space and memory.
-
-- **To unprotect files** by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: The maximum file size supported for .pst files is 5 GB. Other file types are limited only by available disk space and memory
-
-> [!TIP]
-> To search or recover protected items in large .pst files, see the [Guidance for using Unprotect-RMSFile for eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
-> 
 ## Known issues for the AIP viewer
 
 - [Landscape views](#landscape-views-in-the-aip-viewer)
