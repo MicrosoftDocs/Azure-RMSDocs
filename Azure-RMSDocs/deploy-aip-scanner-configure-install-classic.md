@@ -6,7 +6,7 @@ description: Instructions for installing and configuring the Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/29/2020
+ms.date: 02/01/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -94,7 +94,7 @@ To configure your scanner:
     |Section  |Settings  |
     |---------|---------|
     |**Content scan job settings**     |    - **Schedule**: Keep the default of **Manual** </br>- **Info types to be discovered**: Change to **Policy only** </br>- **Configure repositories**: Do not configure at this time because the content scan job must first be saved.         |
-    |**Policy enforcement**     | - **Enforce**: Select **Off** </br>- **Label files based on content**: Keep the default of **On** </br>- **Default label**: Keep the default of **Policy default** </br>- **Relabel files**: Keep the default of **Off**        |
+    |**Sensitivity policy**     | - **Enforce**: Select **Off** </br>- **Label files based on content**: Keep the default of **On** </br>- **Default label**: Keep the default of **Policy default** </br>- **Relabel files**: Keep the default of **Off**        |
     |**Configure file settings**     | - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On** </br>- **File types to scan**: Keep the default file types for **Exclude** </br>- **Default owner**: Keep the default of **Scanner Account**        |
     | | |
 
@@ -229,7 +229,7 @@ To change these settings, edit the content scan job:
 2. On the Content scan job pane, change the following, and then select **Save**:
 
    - From the **Content scan job** section: Change the **Schedule** to **Always**
-   - From the **Policy enforcement** section: Change **Enforce** to **On**
+   - From the **Sensitivity policy** section: Change **Enforce** to **On**
 
     > [!TIP]
     > You may want to change other settings on this pane, such as whether file attributes are changed and whether the scanner can relabel files. Use the information popup help to learn more information about each configuration setting.
@@ -257,7 +257,7 @@ By default, the AIP scanner protects Office file types and PDF files only. To ch
 - Specify the additional file types that you want to be protected
 - Specify the type of protection you want to apply (native or generic)
 
-For more information, see [File API configuration](develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile".
+In this documentation for developers, generic protection is referred to as "PFile".
 
 To align the supported file types with the client, where all files are automatically protected with native or generic protection:
 

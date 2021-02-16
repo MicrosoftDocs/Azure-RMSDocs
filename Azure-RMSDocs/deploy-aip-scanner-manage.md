@@ -6,8 +6,8 @@ description: Instructions for running the Azure Information Protection unified l
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/25/2020
-ms.topic: how-to
+ms.date: 02/01/2021
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -137,7 +137,7 @@ If you've also changed protection settings for your labels, wait an extra 15 min
 > [!IMPORTANT]
 > If you've upgraded to version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) or later, AIP skips the full rescan for updated settings to ensure consistent performance. If you've upgraded, make sure to [run a full rescan manually](#rescanning-files) as needed. 
 >
-> For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
+> For example, if you’ve changed **Sensitivity policy** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
 > 
 
 ## Next steps

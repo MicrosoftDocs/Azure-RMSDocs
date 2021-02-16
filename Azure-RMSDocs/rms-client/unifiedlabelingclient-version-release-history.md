@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/07/2021
+ms.date: 02/14/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.custom: admin
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
->*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
+>*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see [AIP classic client version release history and support policy](client-version-release-history.md).*
 
@@ -50,6 +50,7 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 |Client version|Date released|
 |--------------|-------------|
+| 2.7.96  |01/20/2021 |
 |2.6.111.0 | 03/09/2020|
 |2.5.33.0 |10/23/2019|
 |2.2.21.0|09/03/2019|
@@ -69,26 +70,70 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
->  
+>
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.10.x
+## Version 2.10.x (Public preview)
 
-### Configure the maximum size limit for protecting / un-protecting via PowerShell and File Explorer
+Unified labeling scanner and client version 2.10.x
 
-The maximum size limit for protecting and un-protecting files via PowerShell and the File Explorer has a maximum file size of 2GB. 
+**Released** 03/18/2021
 
-Now you can configure this maximum file size using the new **MaxFileSizeInMBForProtection** advanced property.
+## Improved accuracy for sensitive information types
 
-For more information, see <x>.
+This version of the unified labeling client provides increased accuracy for automatic labeling.
 
+For more information, see <SCC>.
+
+## Audit log updates
+
+This version of the unified labeling client and scanner supports the following improvements for AIP audit logs:
+
+### Support for audit logs from the AIP unified labeling viewer
+
+Azure Information Protection audit logs for access events now include events from the AIP viewer.
+CHECK W ODED
+
+### Support for audit logs for GCC-High environments
+THIS MAY NOT GO OUT
+
+This version of the unified labeling client provides support for audit logs in GCC-High environments.
+
+For more information, see the [Azure Information Protection Premium Government Service description](/enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description#aip-apps-configuration-unified-labeling-only) and [Azure Information Protection audit log reference (public preview)](../audit-logs.md).
+
+### Audit logs include Outlook pop-up events
+
+All events related to Outlook pop-up messages, such as warnings for missing labels, are now sent to AIP audit logs. The following details are recorded in the audit logs:
+
+- A new audit log event for the pop-up message displayed and any option selected by the user
+- Any free text justification provided by the user in the popup.
+
+
+Audit log events now go to the windows event log. 
+Check with Moriah and Elina .
+
+## Version 2.9.116 
+
+Unified labeling scanner and client version 2.9.116 
+
+**Released** 02/08/2021
+
+**Fixed issues** Users are now able to view protected files as expected in the following scenarios:
+
+- When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue had occurred only with the [AIP Viewer app](clientv2-view-use-files.md).
+
+- When content with a scoped label is shared with users or groups not included in the label's scope. This issue had occurred both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the [File Explorer](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
+
+For more information, see the [AIP unified labeling client user guide](clientv2-user-guide.md).
 ## Version 2.9.111.0
 
 Unified labeling scanner and client version 2.9.111.0
 
-**Release** 1/13/2021
+**Released** 01/13/2021
+
+**Supported through** 08/08/2021
 
 This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
 
@@ -107,6 +152,12 @@ This version includes the following new features, fixes, and enhancements for th
 
     - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner---version-291110)
     - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client---version-291110)
+
+- **Known issue**: An issue was identified in the latest GA version (2.9.111) where some users were not able to view protected files in the following scenarios:
+
+    - When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue occurs only with the [AIP Viewer app](clientv2-view-use-files.md).
+
+	- When content with a scoped label is shared with users or groups not included in the label's scope. This issue occurs both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the [File Explorer](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
 
 ### PowerShell support for disconnected scanner servers
 
@@ -222,7 +273,7 @@ This version includes the following new features, fixes, and enhancements, for t
 
     - [Optional full rescans for changes detected](#optional-full-rescans-for-changes-detected)
     - [Configure SharePoint timeouts](#configure-sharepoint-timeouts)
-    - [Network discovery support](#network-discovery-support)
+    - [Network discovery support](#network-discovery-support-public-preview) (public preview)
 
 - **New features for the client**:
 
@@ -248,7 +299,7 @@ Skip the full, immediate rescan, and return later to [run a full rescan](../depl
 > [!IMPORTANT]
 > Administrators making changes in their policies and content scan jobs must now understand the effects of those changes on the content, and determine whether a full rescan is required.
 >
-> For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
+> For example, if you’ve changed **Sensitivity policy** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
 >
 
 ### Configure SharePoint timeouts
@@ -259,14 +310,14 @@ AIP administrators can also now configure SharePoint timeouts, separately for al
 
 For more information, see [Configure SharePoint timeouts](clientv2-admin-guide-customizations.md#configure-sharepoint-timeouts).
 
-### Network Discovery support
+### Network Discovery support (public preview)
 
 The unified labeling scanner now includes a new **network discovery** service, which enables you to scan specified IP addresses or ranges for network file shares that may have sensitive content.
 
 The **network discovery** service updates **Repository** reports with a list of share locations that may be at risk, based on the discovered permissions and access rights. Check the updated **Repository** reports to ensure that your content scan jobs include all repositories that need to be scanned.
 
 > [!TIP]
-> For more information, see [Network discovery cmdlets](#network-discovery-cmdlets).
+> For more information, see [Network discovery cmdlets](#network-discovery-cmdlets-public-preview).
 
 **To use the Network discovery service**
 
@@ -291,7 +342,7 @@ The **network discovery** service updates **Repository** reports with a list of 
 
 1. Use the generated reports on the new [**Repositories**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) pane to find additional network file shares that may be at risk. Add any risky file shares to your [content scan jobs](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) to scan the added repositories for sensitive content.
 
-#### Network discovery cmdlets
+#### Network discovery cmdlets (public preview)
 
 PowerShell cmdlets added for Network Discovery include:
 
@@ -324,8 +375,11 @@ For more information, see [Customize justification prompt texts for modified lab
 
 Audit logs for access events from the unified labeling client are now sent only when users open labeled or protected files, providing a clearer indication of user access.
 
+Information types are no longer sent by [audit logs for access events](../audit-logs.md#access-audit-logs), and are now sent only with [audit logs for discover events](../audit-logs.md#discover-audit-logs).
+
 For more information, see [Access audit logs](../audit-logs.md#access-audit-logs).
 
+For more information, see [Azure Information Protection audit log reference](../audit-logs.md).
 ### DKE template-based labeling updates
 
 Azure Information Protection now supports Double Key Encryption (DKE) template-based labeling in the scanner, as well as using the File Explorer and PowerShell.

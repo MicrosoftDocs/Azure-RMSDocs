@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/27/2020
+ms.date: 02/03/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -44,7 +44,6 @@ Before installing the Azure Information Protection on-premises scanner, make sur
 - [SharePoint requirements](#sharepoint-requirements)
 - [Microsoft Office requirements](#microsoft-office-requirements)
 - [File path requirements](#file-path-requirements)
-- [Usage statistics requirements](#usage-statistics-requirements)
 
 If you can't meet all the requirements in the table because they are prohibited by your organization policies, see the [alternative configurations](#deploying-the-scanner-with-alternative-configurations) section.
 
@@ -179,15 +178,6 @@ To scan files, your file paths must have a maximum of 260 characters, unless the
 Windows 10 and Windows Server 2016 support path lengths greater than 260 characters with the following [group policy setting](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10): **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths**
 
 For more information about supporting long file paths, see the [Maximum Path Length Limitation](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) section from the Windows 10 developer documentation.
-
-## Usage statistics requirements
-
-Disable usage statistics using one of the following methods:
-
-- Setting the [AllowTelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer) parameter to 0
-
-- Ensure that the **Help improve Azure Information Protection by sending usage statistics to Microsoft** option remains unselected during the scanner installation process.
-
 
 ## Deploying the scanner with alternative configurations
 

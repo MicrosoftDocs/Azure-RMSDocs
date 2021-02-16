@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/12/2021
+ms.date: 02/09/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -79,7 +79,7 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 |**Multiple versions of Office**    | The Azure Information Protection clients, including both classic and unified labeling, do not support multiple versions of Office on the same computer, or switching user accounts in Office.       |
 |**Multiple displays** |If you're using multiple displays and have an Office application open: <br><br>- You may experience performance issues in your Office apps.<br>- The Azure Information Protection bar may appear to float in the middle of the Office screen, on one or both displays <br><br>To ensure consistent performance, and that the bar remains in the correct location, open the **Options** dialog for your Office application, and under **General**, select **Optimize for compatibility** instead of **Optimize for best appearance**.    |
 |**IRM support in Office 2016**| The [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) registry setting, which controls metadata encryption in Office 2016, is not supported for Azure Information Protection labels.|
-|**Outlook object model access** | - The [PromptOOMAddressBookAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when address books are accessed via the Outlook object model, is not supported with Azure Information Protection labels. <br><br>- The [PromptOOMAddressInformationAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) registry setting, which controls the prompts that displays when a program reads address information, is not supported for Azure Information Protection labels.|
+|**Outlook object model access** | - The [PromptOOMAddressBookAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when address books are accessed via the Outlook object model, is not supported with Azure Information Protection labels. <br><br>- The [PromptOOMAddressInformationAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when a program reads address information, is not supported for Azure Information Protection labels.|
 |**Content markings in Word**    | AIP [content markings](configure-policy-markings.md) in Microsoft Word headers or footers may be offset or placed incorrectly, or may be hidden entirely, when that same header or footer also contains a table.<br><br>For more information, see [When visual markings are applied](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**Files attached to emails** |Due to a limitation in recent Windows updates, when [Microsoft Outlook is protected by Azure Rights Management](office-apps-services-support.md), files attached to emails may be locked after opening the file. |
 |**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.       |
@@ -99,26 +99,41 @@ While you can customize this default using the [MaxFileSizeInMBForProtection](rm
 
 ## Known issues for the AIP viewer
 
+- [Landscape views](#landscape-views-in-the-aip-viewer)
+- [External users](#external-users-and-the-aip-viewer)
+
+For more information, see [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md).
+### Landscape views in the AIP viewer
+
 The AIP viewer displays images in portrait mode, and some wide, landscape-view images may appear to be stretched.
 
 For example, an original image is shown below on the left, with a stretched, portrait version in the AIP viewer on the right. 
-    
-:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Stretched image in client viewer":::
-    
-For more information, see:
 
-- [**Classic client**: View protected files with the Azure Information Protection viewer](rms-client/client-view-use-files.md)
-- [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md)
+:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Stretched image in client viewer":::
+
+### External users and the AIP viewer 
+
+If an external user already has a guest account in Azure AD, the AIP Viewer may display an error when the user opens a protected document, telling them that they cannot sign in with a personal account.
+
+If such an error appears, the user must install [Adobe Acrobat DC with the MIP extension](https://helpx.adobe.com/il_en/acrobat/kb/mip-plugin-download.html) in order to open the protected document.
+
+When opening the protected document after installing Adobe Acrobat DC with the MIP extension, the user may still see an error showing that the selected user account does not exist in the tenant, and prompting them to select an account. 
+
+This is an expected error. In the prompt window, select **Back** to continue opening the protected document.
 
 ## Known issues for track and revoke features (Public preview)
 
 Tracking and revoking document access using the unified labeling client has the following known issues:
 
+- [Password-protected documents](#password-protected-documents)
 - [Multiple attachments in a protected email](#multiple-attachments-in-a-protected-email)
-- [Documents accessed via SharePoint](#documents-accessed-via-sharepoint)
+- [Documents accessed via SharePoint or OneDrive](#documents-accessed-via-sharepoint-or-onedrive)
 
-For more information, see [Administrator Guide: Track and revoke document access with Azure Information Protection](rms-client/track-and-revoke-admin.md) and [User Guide: Revoke document access with Azure Information Protection](rms-client/revoke-access-user.md).
+For more information, see the [Admin Guide](rms-client/track-and-revoke-admin.md) and [User Guide](rms-client/revoke-access-user.md) procedures.
 
+#### Password-protected documents
+
+Password-protected documents are not supported by track and revoke features.
 #### Multiple attachments in a protected email
 
 If you attach multiple documents to an email, and then protect the email and send it, each of the attachments get the same ContentID value. 
@@ -127,17 +142,17 @@ This ContentID value will be returned only with the first file that had been ope
 
 Additionally, revoking access for one of the attachments also revokes access for the other attachments in the same protected email.
 
-#### Documents accessed via SharePoint
+#### Documents accessed via SharePoint or OneDrive
     
-- Protected documents that are uploaded to SharePoint lose their **ContentID** value, and access cannot be track or revoked.
+- Protected documents that are uploaded to SharePoint or OneDrive lose their **ContentID** value, and access cannot be tracked or revoked.
 
-- If a user downloads the file from SharePoint and accesses it from their local machine, a new **ContentID** is applied to the document when they open it locally. 
+- If a user downloads the file from SharePoint or OneDrive and accesses it from their local machine, a new **ContentID** is applied to the document when they open it locally. 
     
     Using the original **ContentID** value to track data will not include any access performed for the user's downloaded file. Additionally, revoking access based on the original **ContentID** value will not revoke access for any of the downloaded files.
 
     In such cases, administrators may be able to locate the downloaded files using PowerShell to find the new **ContentID** values to track or revoke access.
 
-### Knowns issues for the AIP client and OneDrive
+### Known issues for the AIP client and OneDrive
 
 If you have documents stored in OneDrive with a sensitivity label applied, and an administrator changes the label in the labeling policy to add protection, the newly applied protection is not automatically applied to the labeled document. 
 

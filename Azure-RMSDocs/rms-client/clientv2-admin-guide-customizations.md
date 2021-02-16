@@ -6,8 +6,8 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/17/2021
-ms.topic: how-to
+ms.date: 02/09/2021
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -35,7 +35,7 @@ FUTURE task - reorganize this topic by feature type so that admins can read rela
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
->*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
+>*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see the [classic client admin guide](client-admin-guide-customizations.md).*
 
@@ -44,6 +44,8 @@ Use the following information for advanced configurations needed for specific sc
 > [!NOTE]
 > These settings require editing the registry or specifying advanced settings. The advanced settings use [Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell).
 > 
+
+
 
 ## Configuring advanced settings for the client via PowerShell
 
@@ -58,13 +60,14 @@ To remove an advanced setting, use the same **AdvancedSettings** parameter synta
 
 For more information, see:
 
-- [Label policy advanced settings syntax](#label-policy-advanced-settings)
-- [Label advanced settings syntax](#label-advanced-settings)
+- [Label policy advanced settings syntax](#label-policy-advanced-settings-syntax)
+- [Label advanced settings syntax](#label-advanced-settings-syntax)
+- [Checking your current advanced settings](#checking-your-current-advanced-settings)
 - [Examples for setting advanced settings](#examples-for-setting-advanced-settings)
 - [Specifying the label policy or label identity](#specifying-the-label-policy-or-label-identity)
 - [Order of precedence - how conflicting settings are resolved](#order-of-precedence---how-conflicting-settings-are-resolved)
 - [Advanced setting references](#advanced-setting-references)
-### Label policy advanced settings
+### Label policy advanced settings syntax
 
 An example of a label policy advanced setting is the setting to display the Information Protection bar in Office apps.
 
@@ -80,7 +83,7 @@ Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
 Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
-### Label advanced settings
+### Label advanced settings syntax
 
 An example of a label advanced setting is the setting to specify a label color.
 
@@ -96,27 +99,49 @@ Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
+
+
+### Checking your current advanced settings
+
+To check the current advanced settings settings in effect, run the following commands:
+
+**To check your *label policy* advanced settings**, use the following syntax:
+
+For a label policy named **Global**:
+
+```PowerShell
+(Get-LabelPolicy -Identity Global).settings
+```
+
+**To check your *label* advanced settings**, use the following syntax:
+
+For a label named **Public**:
+
+```powershell
+(Get-Label -Identity Public).settings
+```
+
 ### Examples for setting advanced settings
 
-**Example 1:** Set a label policy advanced setting for a single string value:
+**Example 1**: Set a label policy advanced setting for a single string value:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 ```
 
-**Example 2:** Set a label advanced setting for a single string value:
+**Example 2**: Set a label advanced setting for a single string value:
 
 ```PowerShell
 Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
 ```
 
-**Example 3:** Set a label advanced setting for multiple string values:
+**Example 3**: Set a label advanced setting for multiple string values:
 
 ```PowerShell
 Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 ```
 
-**Example 4:** Remove a label policy advanced setting by specifying a null string value:
+**Example 4**: Remove a label policy advanced setting by specifying a null string value:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
@@ -179,13 +204,12 @@ The following sections list the advanced settings described on this page by prod
 |---------|---------|
 |**Outlook and email settings**     | - [Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook) <br> - [Customize Outlook popup messages](#customize-outlook-popup-messages) <br>- [Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)<br> - [Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling) <br>- [For emails with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [Expand Outlook distribution lists when searching for email recipients](#expand-outlook-distribution-lists-when-searching-for-email-recipients) <br>- [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)   <br>- [Set a different default label for Outlook](#set-a-different-default-label-for-outlook)     |
 |**PowerPoint settings** | - [Avoid removing shapes from PowerPoint that contain specified text, and are not headers / footers](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)<br>- [Explicitly remove external content markings from inside your PowerPoint custom layouts](#extend-external-marking-removal-to-custom-layouts)<br>- [Remove all shapes of a specific shape name from your headers and footers, instead of removing shapes by text inside the shape](#remove-all-shapes-of-a-specific-shape-name)  |
-|**File Explorer settings**     | - [Always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) <br>  - [Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)   <br>- <br>- [Configure the maximum file size for protection / unprotection via PowerShell and File Explorer](#configure-the-maximum-file-size-for-protection--unprotection-via-powershell-and-file-explorer)   |
+|**File Explorer settings**     | - [Always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) <br>  - [Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)      |
 |**Performance improvements settings**     | - [Limit CPU consumption](#limit-cpu-consumption) <br>- [Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner) <br>- [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)        |
 |**Settings for integrations with other labeling solutions**     | - [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions) <br> - [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)    |
 |**AIP analytics settings**     |   - [Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) <br>- [Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)      |
-|**General settings**     | - [Add "Report an Issue" for users](#add-report-an-issue-for-users) <br>- [Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Change the local logging level](#change-the-local-logging-level) <br>- [Change which file types to protect](#change-which-file-types-to-protect)<br>- [Configure the maximum file size for protection / unprotection via PowerShell and File Explorer](#configure-the-maximum-file-size-for-protection--unprotection-via-powershell-and-file-explorer)  <br>- [Configure SharePoint timeouts](#configure-sharepoint-timeouts)<br>- [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps) <br>- [Enable removal of protection from compressed files](#enable-removal-of-protection-from-compressed-files) <br>-  [Preserve NTFS owners during labeling (public preview)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  [Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Specify a color for the label](#specify-a-color-for-the-label)<br>-  [Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label)<br>-  [Support for changing \<EXT>.PFILE to P\<EXT>](#additionalpprefixextensions)  <br>-  [Support for disconnected computers](#support-for-disconnected-computers)     <br>-  [Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Turn off document tracking features (public preview)](#turn-off-document-tracking-features-public-preview)  |
+|**General settings**     | - [Add "Report an Issue" for users](#add-report-an-issue-for-users) <br>- [Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Change the local logging level](#change-the-local-logging-level) <br>- [Change which file types to protect](#change-which-file-types-to-protect)<br>- [Configure the autolabeling timeout on Office files](#configure-the-autolabeling-timeout-on-office-files) <br>- [Configure SharePoint timeouts](#configure-sharepoint-timeouts)<br>- [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps) <br>- [Enable removal of protection from compressed files](#enable-removal-of-protection-from-compressed-files) <br>-  [Preserve NTFS owners during labeling (public preview)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  [Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Specify a color for the label](#specify-a-color-for-the-label)<br>-  [Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label)<br>-  [Support for changing \<EXT>.PFILE to P\<EXT>](#additionalpprefixextensions)  <br>-  [Support for disconnected computers](#support-for-disconnected-computers)     <br>-  [Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Turn off document tracking features (public preview)](#turn-off-document-tracking-features-public-preview)   |
 |     |         |
-
 
 ### Label policy advanced setting reference
 
@@ -195,7 +219,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |----------------|---------------|
 |**AdditionalPPrefixExtensions**|[Support for changing \<EXT>.PFILE to P\<EXT> by using this advanced property](#additionalpprefixextensions)
 |**AttachmentAction**|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
-|**AttachmentActionTip**|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
+|**AttachmentActionTip**|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |**DisableMandatoryInOutlook**|[Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)
 |**EnableAudit**|[Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
 |**EnableContainerSupport**|[Enable removal of protection from PST, rar, 7zip, and MSG files](#enable-removal-of-protection-from-compressed-files)
@@ -208,7 +232,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |**HideBarByDefault**|[Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps)|
 |**JustificationTextForUserText** | [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels) |
 |**LogMatchedContent**|[Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
-|**MaxFileSizeInMBForProtection** | [Configure the maximum file size for protection / unprotection via PowerShell and File Explorer](#configure-the-maximum-file-size-for-protection--unprotection-via-powershell-and-file-explorer) |
+|**OfficeContentExtractionTimeout** | [Configure the autolabeling timeout on Office files](#configure-the-autolabeling-timeout-on-office-files) |
 |**OutlookBlockTrustedDomains**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookBlockUntrustedCollaborationLabel**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookCollaborationRule**| [Customize Outlook popup messages](#customize-outlook-popup-messages)|
@@ -239,12 +263,6 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |**UseCopyAndPreserveNTFSOwner** | [Preserve NTFS owners during labeling](#preserve-ntfs-owners-during-labeling-public-preview)
 | | |
 
-#### Check label policy settings
-Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
-
-```PowerShell
-(Get-LabelPolicy -Identity Global).settings
-```
 
 ### Label advanced setting reference
 
@@ -259,13 +277,6 @@ Use the *AdvancedSettings* parameter with [New-Label](/powershell/module/exchang
 |**SMimeEncrypt**|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |**SMimeSign**|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 
-#### Check label settings
-
-Example PowerShell command to check your label settings in effect for a label named "Public":
-
-```PowerShell
-(Get-Label -Identity Public).settings
-```
 
 ## Display the Information Protection bar in Office apps
 
@@ -377,13 +388,13 @@ Use the following table to identify the string value to specify:
 |ConvertTo-Json(".jpg", ".png")|In addition to Office file types and PDF files, apply protection to the specified file name extensions | In addition to Office file types and PDF files, apply protection to the specified file name extensions
 | | | |
 
-**Example 1:**  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
+**Example 1**:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-**Example 2:** PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
+**Example 2**: PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
@@ -407,23 +418,23 @@ Use the following table to identify the string value to specify:
 |\<null value>| Default value behaves like the default protection value.|
 |ConvertTo-Json(".dwg", ".zip")|In addition to the previous list, ".dwg" and ".zip" become P\<EXT>| 
 
-With this setting, the following extensions always become **P\<EXT>:** ".txt", ".xml", ".bmp", ".jt", ".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".tif", ".tiff", ".gif") . Notable exclusion is that "ptxt" does not become "txt.pfile". 
+With this setting, the following extensions always become **P\<EXT>**: ".txt", ".xml", ".bmp", ".jt", ".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".tif", ".tiff", ".gif") . Notable exclusion is that "ptxt" does not become "txt.pfile". 
 
 **AdditionalPPrefixExtensions** only works if protection of PFiles with the advanced property - [**PFileSupportedExtension**](#pfilesupportedextension) is enabled. 
 
-**Example 1:** PowerShell command to behave like the default behavior where Protect ".dwg" becomes ".dwg.pfile":
+**Example 1**: PowerShell command to behave like the default behavior where Protect ".dwg" becomes ".dwg.pfile":
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
 ```
 
-**Example 2:**  PowerShell command to change all PFile extensions from generic protection (dwg.pfile) to native protection (.pdwg) when the files are protected:
+**Example 2**:  PowerShell command to change all PFile extensions from generic protection (dwg.pfile) to native protection (.pdwg) when the files are protected:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
 ```
 
-**Example 3:** PowerShell command to change ".dwg"  to ".pdwg" when using this service protect this file:
+**Example 3**: PowerShell command to change ".dwg"  to ".pdwg" when using this service protect this file:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
@@ -484,7 +495,7 @@ Avoid removing shapes that contain the text that you wish to ignore, by defining
 > If you do not specify Word shapes in this additional advanced property setting, and Word is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) value. 
 >
 
-**To find the name of the shape that you're using and wish to exclude:**
+**To find the name of the shape that you're using and wish to exclude**:
 
 1. In Word, display the **Selection** pane: **Home** tab > **Editing** group > **Select** option > **Selection Pane**.
 
@@ -570,25 +581,45 @@ For more information, see:
 
 #### Multiline headers or footers
 
-If a header or footer text is more than a single line, create a key and value for each line. For example, if you have the following footer with two lines:
+If your header or footer text is more than a single line, your command will depend on what parts you want to remove from the header. In this section, we'll use the following sample, multi-line footer:
 
-**The file is classified as Confidential**
+*The file is classified as Confidential*
 
-**Label applied manually**
+*Label applied manually*
 
-To remove this multiline footer, you create the following two entries for the same label policy:
+*Share with caution*
 
-- Key: **ExternalContentMarkingToRemove**
+Use one of the following methods, depending on which part of the footer you want to remove:
 
-- Key Value 1: **\*Confidential***
+- **If you want to remove the entire footer**, you only need one key value, with asterisks before and after any single word from your footer. 
 
-- Key Value 2: **\*Label applied*** 
+    For example, create the following entry in the label policy:
 
-Example PowerShell command, where your label policy is named "Global":
+    - Key: **ExternalContentMarkingToRemove**
 
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
-```
+    - Key Value 1: **\*Confidential***
+    
+    Example PowerShell command, where your label policy is named "Global":
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*"}
+    ```
+
+- **If you want to remove only a specific line**, you need a key value for each specific line you want to remove. Each key value must contain the exact text you want to remove.
+
+    For example, create the following entry in the label policy:
+
+    - Key: **ExternalContentMarkingToRemove**
+
+    - Key Value 1: **Label applied manually**
+
+    - Key Value 2: **Share with caution**
+
+    Example PowerShell command, where your label policy is named "Global":
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="Label applied manually,Share with caution"}
+    ```
 
 #### Optimization for PowerPoint
 
@@ -1104,11 +1135,11 @@ For Office documents that are labeled by Secure Islands, you can relabel these d
 
 As a result of this configuration option, the new sensitivity label is applied by the Azure Information Protection unified labeling client as follows:
 
-- **For Office documents:** When the document is opened in the desktop app, the new sensitivity label is shown as set and is applied when the document is saved.
+- **For Office documents**: When the document is opened in the desktop app, the new sensitivity label is shown as set and is applied when the document is saved.
 
-- **For PowerShell:** [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) can apply the new sensitivity label.
+- **For PowerShell**: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) can apply the new sensitivity label.
 
-- **For File Explorer:** In the Azure Information Protection dialog box, the new sensitivity label is shown but isn't set.
+- **For File Explorer**: In the Azure Information Protection dialog box, the new sensitivity label is shown but isn't set.
 
 This configuration requires you to specify an advanced setting named **labelByCustomProperties** for each sensitivity label that you want to map to the old label. Then for each entry, set the value by using the following syntax:
 
@@ -1131,6 +1162,10 @@ For additional customization, see:
 
 - [Extend your label migration rules to emails](#extend-your-label-migration-rules-to-emails)
 - [Extend your label migration rules to SharePoint properties](#extend-your-label-migration-rules-to-sharepoint-properties)
+
+> [!NOTE]
+> If you are migrating from your labels across tenants, such as after a company merger, we recommend that you read our [blog post on mergers and spinoffs](https://techcommunity.microsoft.com/t5/microsoft-security-and/mergers-and-spinoffs/ba-p/910455) for more information.
+>
 
 #### Example 1: One-to-one mapping of the same label name
 
@@ -1430,7 +1465,7 @@ By default, the Azure Information Protection unified labeling client automatical
 
 If you have computers that cannot connect to the internet for a period of time, you can export and copy files that manually manages the policy for the unified labeling client.
 
-**To support disconnected computers from the unified labeling client:**
+**To support disconnected computers from the unified labeling client**:
 
 1. Choose or create a user account in Azure AD that you will use to download labels and policy settings that you want to use on your disconnected computer.
 
@@ -1642,7 +1677,7 @@ Supported node types include:
 | **Except**	| Returns *not* for its own child, causing it to behave as **All**        |
 | **SentTo**, followed by **Domains: listOfDomains**	|Checks one of the following: <br>- If the Parent is **Except**, checks whether **All** of the recipients are in one of the domains<br>- If the Parent is anything else but **Except**, checks whether **Any** of the recipients are in one of the domains.   |
 | **EMailLabel**, followed by label	| One of the following:  <br>- The label ID <br>- null, if not labeled             |
-| **AttachmentLabel**, followed by **Label** and supported **Extensions**	| One of the following:  <br><br>**true:** <br>- If the Parent is **Except**, checks whether **All** of the attachments with one supported extension exists within the label<br>- 	If the Parent is anything else but **Except**, checks whether **Any** of the attachments with one supported extension exists within the label <br>- If not labeled, and **label = null** <br><br> **false:** For all other cases <br><br>**Note**: If the **Extensions** property is empty or missing, all supported file types (extensions) are included in the rule.
+| **AttachmentLabel**, followed by **Label** and supported **Extensions**	| One of the following:  <br><br>**true**: <br>- If the Parent is **Except**, checks whether **All** of the attachments with one supported extension exists within the label<br>- 	If the Parent is anything else but **Except**, checks whether **Any** of the attachments with one supported extension exists within the label <br>- If not labeled, and **label = null** <br><br> **false**: For all other cases <br><br>**Note**: If the **Extensions** property is empty or missing, all supported file types (extensions) are included in the rule.
 | | |
 
 #### Rule action syntax
@@ -2001,7 +2036,7 @@ If you have long file paths in SharePoint version 2013 or higher, ensure that yo
 
 This value is defined in the **HttpRuntimeSection** class of the `ASP.NET` configuration. 
 
-**To update the HttpRuntimeSection** class:**
+**To update the HttpRuntimeSection class**:
 
 1. Back up your **web.config** configuration. 
 
@@ -2058,29 +2093,27 @@ This configuration uses a policy [advanced setting](#configuring-advanced-settin
 > To turn track and revoke back on, set the **EnableTrackAndRevoke** to **true**, and also run the [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) cmdlet.
 >
 
-## Configure the maximum file size for protection / unprotection via PowerShell and File Explorer
+## Configure the autolabeling timeout on Office files
 
-By default, the maximum file size for protecting / unprotecting documents via PowerShell and the File Explorer is set to 2 GB, or 2048 MB.
+By default, the scanner's autolabeling timeout on Office files is 3 seconds.
 
-If you need to modify this maximum, use the following advanced property:
+If you have a complex Excel file with many sheets or rows, 3 seconds may not be enough to automatically apply labels. To increase this timeout for the selected label policy, specify the following strings:
 
-- Key: **MaxFileSizeInMBForProtection**
+- Key: **OfficeContentExtractionTimeout**
 
-- Value: *Integer, in MB*. Default = **2048**.
+- Value: Seconds, in the following format: `hh:mm:ss`. 
+
+> [!IMPORTANT]
+> We recommend that you do not raise this timeout to higher than 15 seconds.
+> 
 
 Example PowerShell command, where your label policy is named "Global":
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{MaxFileSizeInMBForProtection="5000"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OfficeContentExtractionTimeout="00:00:15"}
 ```
 
-> [!CAUTION]
-> Raising this maximum and then protecting and unprotecting large files via PowerShell or the File Explorer may cause the protection/un-protection process to fail. 
->
-> The actual maximum file size will differ depending on your system's operating system and architecture.
->
-> We recommend raising this maximum with caution.
->
+The updated timeout applies to autolabeling on all Office files.
 
 ## Next steps
 

@@ -57,13 +57,19 @@ To deploy the AIP classic client, open a support ticket to get download access.
 
 1. If you are prompted to continue, click **Yes**, and wait for the installation to finish.    
 
-1. Click **Close**. Before you start to use the Azure Information Protection client:    
+1. Click **Close**. 
 
-    - **If your computer runs Office 2010**, restart your computer and then go to the [next section](#installing-the-azure-information-protection-client-with-office-2010) for your final step.  
-        
-    - **For other versions of Office**, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use the client to label and protect your documents and emails.    
+    Before you start to use the Azure Information Protection client, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use the client to label and protect your documents and emails.
 
-### Installing the Azure Information Protection client with Office 2010    
+    > [!NOTE]
+    > If your computer runs Office 2010, restart your computer and then go to the [next section](#installing-the-azure-information-protection-client-with-office-2010) for your final step.  
+
+### Installing the Azure Information Protection client with Office 2010
+
+> [!IMPORTANT]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> 
+
 After you have installed the Azure Information Protection client by using the previous instructions:    
 
 1. Open Microsoft Word. When this is the first time that you have run an Office 2010 application after you have installed the Azure Information Protection client, you see a **Microsoft Azure Information Protection** dialog box. This dialog box tells you that administrator credentials are required to complete the sign in process.
@@ -73,8 +79,6 @@ After you have installed the Azure Information Protection client by using the pr
 3. If you see a **User Access Control** dialog box, click **Yes** so that the Azure Information Protection client can update the registry.
 
 Your installation is now complete and you can use Azure Information Protection to label and protect your documents and emails.
-
-For more information, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 ## Other instructions    
 More how-to instructions from the Azure Information Protection user guide:

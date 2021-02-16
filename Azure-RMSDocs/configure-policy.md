@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 ms.date: 08/17/2020
 manager: rkarlin
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933

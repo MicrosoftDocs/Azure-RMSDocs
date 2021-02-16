@@ -1,6 +1,276 @@
 {
     "redirections": [
-		{
+       {
+            "source_path": "Azure-RMSDocs/develop/ad-rms-client.md",
+            "redirect_url": "/previous-versions/azure/rms/ad-rms-client",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/ad-rms-overview.md",
+            "redirect_url": "/previous-versions/azure/rms/ad-rms-overview",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/ad-rms-server.md",
+            "redirect_url": "/previous-versions/azure/rms/ad-rms-server",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/adal-auth.md",
+            "redirect_url": "/previous-versions/azure/rms/adal-auth",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/add-explicit-owner-rights.md",
+            "redirect_url": "/previous-versions/azure/rms/add-explicit-owner-rights",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/android-code.md",
+            "redirect_url": "/previous-versions/azure/rms/android-code",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/android-sdk.md",
+            "redirect_url": "/previous-versions/azure/rms/android-sdk",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/api-reference-2-1.md",
+            "redirect_url": "/previous-versions/azure/rms/api-reference-2-1",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/api-reference-4-2.md",
+            "redirect_url": "/previous-versions/azure/rms/api-reference-4-2",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/application-types.md",
+            "redirect_url": "/previous-versions/azure/rms/application-types",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/authentication-integration.md",
+            "redirect_url": "/previous-versions/azure/rms/authentication-integration",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/built-in-rights-usage-restriction-reference.md",
+            "redirect_url": "/previous-versions/azure/rms/built-in-rights-usage-restriction-reference",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/code-examples.md",
+            "redirect_url": "/previous-versions/azure/rms/code-examples",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/community-resources.md",
+            "redirect_url": "/previous-versions/azure/rms/community-resources",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/core-concepts.md",
+            "redirect_url": "/previous-versions/azure/rms/core-concepts",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/debugging-applications-that-use-ad-rms.md",
+            "redirect_url": "/previous-versions/azure/rms/debugging-applications-that-use-ad-rms",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/deploying-your-application.md",
+            "redirect_url": "/previous-versions/azure/rms/deploying-your-application",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/developer-notes.md",
+            "redirect_url": "/previous-versions/azure/rms/developer-notes",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/developers-guide.md",
+            "redirect_url": "/previous-versions/azure/rms/developers-guide",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/developing-your-application.md",
+            "redirect_url": "/previous-versions/azure/rms/developing-your-application",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/enabling-logging.md",
+            "redirect_url": "/previous-versions/azure/rms/enabling-logging",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/file-api-configuration.md",
+            "redirect_url": "/previous-versions/azure/rms/file-api-configuration",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/get-started.md",
+            "redirect_url": "/previous-versions/azure/rms/get-started",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/getting-started-with-ad-rms-2-0.md",
+            "redirect_url": "/previous-versions/azure/rms/getting-started-with-ad-rms-2-0",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md",
+            "redirect_url": "/previous-versions/azure/rms/how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/how-to-deploy-app.md",
+            "redirect_url": "/previous-versions/azure/rms/how-to-deploy-app",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/how-to-enable-email-notification.md",
+            "redirect_url": "/previous-versions/azure/rms/how-to-enable-email-notification",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/how-to-install-and-configure-an-rms-server.md",
+            "redirect_url": "/previous-versions/azure/rms/how-to-install-and-configure-an-rms-server",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/how-to-renew-symmetric-key.md",
+            "redirect_url": "/previous-versions/azure/rms/how-to-renew-symmetric-key",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/how-to-set-up-your-test-environment.md",
+            "redirect_url": "/previous-versions/azure/rms/how-to-set-up-your-test-environment",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/how-to-use-adal-authentication.md",
+            "redirect_url": "/previous-versions/azure/rms/how-to-use-adal-authentication",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/how-to-use-document-tracking.md",
+            "redirect_url": "/previous-versions/azure/rms/how-to-use-document-tracking",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/how-to-use-file-api-with-aadrm-cloud.md",
+            "redirect_url": "/previous-versions/azure/rms/how-to-use-file-api-with-aadrm-cloud",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/install-the-rms-sdk.md",
+            "redirect_url": "/previous-versions/azure/rms/install-the-rms-sdk",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/ios-os-x-code-examples.md",
+            "redirect_url": "/previous-versions/azure/rms/ios-os-x-code-examples",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/ios-sdk.md",
+            "redirect_url": "/previous-versions/azure/rms/ios-sdk",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/linux-c-api-reference.md",
+            "redirect_url": "/previous-versions/azure/rms/linux-c-api-reference",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/linux-c-code-examples.md",
+            "redirect_url": "/previous-versions/azure/rms/linux-c-code-examples",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/linux-setup.md",
+            "redirect_url": "/previous-versions/azure/rms/linux-setup",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/overview.md",
+            "redirect_url": "/previous-versions/azure/rms/overview",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/release-notes-rtm.md",
+            "redirect_url": "/previous-versions/azure/rms/release-notes-rtm",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/rights-management-sdks.md",
+            "redirect_url": "/previous-versions/azure/rms/rights-management-sdks",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/sdk-elements.md",
+            "redirect_url": "/previous-versions/azure/rms/sdk-elements",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/security-guidelines.md",
+            "redirect_url": "/previous-versions/azure/rms/security-guidelines",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/setting-the-api-security-mode-api-mode.md",
+            "redirect_url": "/previous-versions/azure/rms/setting-the-api-security-mode-api-mode",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/setup-developer-environment.md",
+            "redirect_url": "/previous-versions/azure/rms/setup-developer-environment",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/supported-file-formats.md",
+            "redirect_url": "/previous-versions/azure/rms/supported-file-formats",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/supported-platforms.md",
+            "redirect_url": "/previous-versions/azure/rms/supported-platforms",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/terms.md",
+            "redirect_url": "/previous-versions/azure/rms/terms",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/tracking-content.md",
+            "redirect_url": "/previous-versions/azure/rms/tracking-content",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/understanding-usage-restrictions.md",
+            "redirect_url": "/previous-versions/azure/rms/understanding-usage-restrictions",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/windows-phone-apps.md",
+            "redirect_url": "/previous-versions/azure/rms/windows-phone-apps",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/winrt-sdk.md",
+            "redirect_url": "/previous-versions/azure/rms/winrt-sdk",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "Azure-RMSDocs/develop/working-with-encryption.md",
+            "redirect_url": "/previous-versions/azure/rms/working-with-encryption",
+            "redirect_document_id": false
+        },
+	{
             "source_path": "Azure-RMSDocs/rms-client/mobile-app-get-started.md",
             "redirect_url": "/azure/information-protection/rms-client/mobile-app-faq#admins-testing-the-aip-mobile-apps",
             "redirect_document_id": false
