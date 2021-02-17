@@ -92,7 +92,7 @@ This version of the unified labeling client and scanner supports the following i
 
 The following fixes were delivered in version 2.10.x of the Azure Information Protection unified labeling client and scanner:
 
-- Added support for removing a protected label when the [File API engine](../../mip/develop/concept-profile-engine-file-engine-cpp.md) isn't loaded in Outlook. <!-- when might this occur? when should the regular user be concerned about it? -->
+- Added support for removing a protected label when the [File API engine](/information-protection/develop/concept-profile-engine-file-engine-cpp) isn't loaded in Outlook. <!-- when might this occur? when should the regular user be concerned about it? -->
 
 - Fixed issues for mandatory labeling functionality when opening protected PowerPoint files with [Track and Revoke](track-and-revoke-admin.md) enabled. <!-- and async?>
 
