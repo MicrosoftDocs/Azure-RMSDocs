@@ -38,7 +38,7 @@ We [recently announced](https://aka.ms/mipsdkmetadata) that we're making a chang
 
 **Question**: Will the existing metadata stored as a custom property in *custom.xml* be kept up to date?
 
-- No. The first time the document is saved after the new storage location is enabled, label metadata will be moved to the new location. Metadata written via [`LabelingOptions.ExtendedProperties`](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.file.labelingoptions.extendedproperties?view=mipsdk-dotnet-1.7#Microsoft_InformationProtection_File_LabelingOptions_ExtendedProperties) will remain in *custom.xml*.
+- No. The first time the document is saved after the new storage location is enabled, label metadata will be moved to the new location. Metadata written via [`LabelingOptions.ExtendedProperties`](/dotnet/api/microsoft.informationprotection.file.labelingoptions.extendedproperties?view=mipsdk-dotnet-1.7#Microsoft_InformationProtection_File_LabelingOptions_ExtendedProperties) will remain in *custom.xml*.
 
 **Question**: Will it be possible to read the label metadata without MIP SDK? 
 
@@ -46,7 +46,7 @@ We [recently announced](https://aka.ms/mipsdkmetadata) that we're making a chang
 
 **Question**: Currently, it's easy to "read" the label by extracting the key/value pair strings from the file. Will reading still be possible in this manner? 
 
-- Yes, the metadata is still available in the Office file XML to be read. However, it should be noted that your application will need to understand whether the new feature set is enabled to know which section is authoritative (custom.xml vs. labelinfo.xml). Review [MS-OFFCRYPTO: LabelInfo versus Custom Document Properties | Microsoft Docs.](https://docs.microsoft.com/openspecs/office_file_formats/ms-offcrypto/13939de6-c833-44ab-b213-e0088bf02341) for implementation details.
+- Yes, the metadata is still available in the Office file XML to be read. However, it should be noted that your application will need to understand whether the new feature set is enabled to know which section is authoritative (custom.xml vs. labelinfo.xml). Review [MS-OFFCRYPTO: LabelInfo versus Custom Document Properties | Microsoft Docs.](/openspecs/office_file_formats/ms-offcrypto/13939de6-c833-44ab-b213-e0088bf02341) for implementation details.
   
 **Question**: How can I discover if the new features are enabled? 
 
