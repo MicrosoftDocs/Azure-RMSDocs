@@ -147,10 +147,10 @@ In addition, the following scenarios support viewing documents:
 
 |Platforms for viewing and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|
 |---------------|----------|-----------|-----------|
-|Windows|Yes [[1]](#footnote-1)|Yes (Microsoft 365 apps only)|
+|Windows|Yes [[1]](#footnote-1)|Yes (Microsoft 365 apps and Microsoft Office 2019)|
 |iOS|Yes [[1]](#footnote-1)|Yes (version 2.42 and higher) |
 |Android|Yes [[1]](#footnote-1)|Yes (version 16.0.13029 and higher)|
-|MacOS|Yes [[1]](#footnote-1)|Yes (version 16.42 and higher)|
+|MacOS|Yes [[1]](#footnote-1)|Yes (Microsoft 365 apps, version 16.42 and higher)|
 
 ###### Footnote 1
 Supports user accounts, email-enabled groups, all members. User accounts and email-enabled groups can include guest accounts. All members exclude guest accounts.
