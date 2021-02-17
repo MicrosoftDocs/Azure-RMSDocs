@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/08/2020
+ms.date: 02/17/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -98,6 +98,15 @@ The protection can be applied automatically when a user selects a sensitivity la
 
 ### File sizes supported for protection
 
+The following table lists the maximum sizes support for encryption and decryption, depending on the method used.
+
+| Action |File Explorer  |PowerShell  |
+|---------|---------|---------|
+|**Encryption**     |  2 GB       |   2 GB      |
+|**Decryption**     |   Up to the available disk size, RAM, or architecture limits (lowest of the three).     | Up to the available disk size or RAM, the lower of the two.        |
+|     |         |         |
+
+<!--
 There are maximum file sizes that the Azure Information Protection unified labeling client supports for protection.
 
 **For Office files**:
@@ -122,6 +131,7 @@ There are maximum file sizes that the Azure Information Protection unified label
 > [!TIP]
 > To search or recover protected items in large .pst files, see the [Guidance for using Unprotect-RMSFile for eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
 > 
+-->
 ### Supported file types for classification and protection
 
 The following table lists a subset of file types that support native protection by the Azure Information Protection unified labeling client, and that can also be classified.
@@ -175,7 +185,7 @@ By default, the scanner also excludes the same file types as the Azure Informati
 You can change the file types included or excluded for file inspection by the scanner:
 
 - Configure **File types to scan** in the scanner profile, by [using the Azure portal](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
-    
+
     > [!NOTE]
     > If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted.
 

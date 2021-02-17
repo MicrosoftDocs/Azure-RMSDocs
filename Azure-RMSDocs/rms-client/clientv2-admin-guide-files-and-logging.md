@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/16/2021
+ms.date: 02/17/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -51,7 +51,7 @@ Client logs files and currently installed policy files:
 
 The client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**. The events include the following information:
 
-- **Client version, policy ID**
+- **Client version**
 
 - **IP addresses of the signed in user**
 
@@ -60,55 +60,38 @@ The client logs user activity to the local Windows event log **Applications and 
 - **Action**, one of the following:
 
     - Set label: Information ID 101​
-    
-    - Set label (lower): Information ID 102
-    
-    - Set label (higher): Information ID 103​
-    
+
     - Remove label: Information ID 104​
-    
+
     - Recommended label tooltip: Information 105​
-    
+
     - Apply custom protection: Information ID 201​
-    
+
     - Remove custom protection: Information ID 202​
-    
+
     - Outlook warn message: Information ID 301
-    
+
     - Outlook justify message: Information ID 302
-    
+
     - Outlook block message: Information ID 303
-    
-    - Sign in (operational): Information ID 902​
-    
-    - Download policy (operational): Information ID 901
-    
+
 - **Action source**, one of the following:
-    
+
     - Manual ​
-    
+
     - Recommended​
-    
+
     - Automatic  ​
-    
-    - System (for sign in and download policy)
-    
+
     - Default
-    
+
 - **Label before and after action** ​
-    
+
 - **Protection before and after action​**
-    
+
 - **User justification**, when applicable
 
-- **Custom permissions**, when applicable, which includes the [usage rights by their encoding name](../configure-usage-rights.md#usage-rights-and-descriptions) for the specified users, groups, or organizations
-
-###  Usage logging for Outlook pop-up message events
-
-All events related to [Outlook pop-up messages](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent), such as warnings for missing labels, are now sent to AIP audit logs. The following details are recorded in the audit logs:
-
-- A new audit log event for the pop-up message displayed and any option selected by the user
-- Any free text justification provided by the user in the popup.
+- **Custom permissions**: Noted whether permissions are custom or a template
 
 ## Next steps
 Now that you've identified all the log files associated with the Azure Information Protection unified labeling client, see the following for additional information that you might need to support this client:

@@ -52,7 +52,7 @@ For information about new and preview versions, see the [Azure Information Prote
 
 The official roadmap for Azure Information Protection is now on the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent).
 
-The Azure Information Protection product team posts announcements about major new releases on the [Enterprise Mobility + Security blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection). Smaller releases are announced on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam), and you might also find it useful to check the [UserVoice site](https://office365.uservoice.com/forums/928576-microsoft-information-protection-mip) for the status of requested features.
+The Azure Information Protection product team posts announcements about new releases on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam), and you might also find it useful to check the [UserVoice site](https://office365.uservoice.com/forums/928576-microsoft-information-protection-mip) for the status of requested features.
 
 You'll find additional and more detailed information on the [Azure Information Protection technical blog](https://aka.ms/AIPblog). 
 
@@ -108,5 +108,4 @@ For additional support options, ask your Microsoft contact.
 
 We recommend the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam). This resource provides direct responses from the Azure Information Protection team in addition to the benefit of shared experience and knowledge from other admins and consultants.
 
-If you don't have access to this site, try the [Tech Community space for Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection), or the [TechNet forum for Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
-
+If you don't have access to this site, try the [Tech Community space for Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection).

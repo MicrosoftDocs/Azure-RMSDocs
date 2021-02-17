@@ -323,8 +323,7 @@ For more information about the Microsoft Graph Security API, see [Microsoft Grap
 
 ## I've heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
-The technical documentation does not contain information about upcoming releases. For this type of information, use the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent), check the [Enterprise Mobility + Security Blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services).
-
+The technical documentation does not contain information about upcoming releases. For this type of information, use the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent).
 ## Is Azure Information Protection suitable for my country?
 
 Different countries have different requirements and regulations. To help you answer this question for your organization, see [Suitability for different countries](./compliance.md#suitability-for-different-countries).

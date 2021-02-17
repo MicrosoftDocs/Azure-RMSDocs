@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/09/2021
+ms.date: 02/17/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -90,17 +90,6 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 ## Known issues in policies
 
 Publishing policies may take up to 24 hours.
-
-## Maximum file sizes
-
-The following table lists the maximum sizes support for encryption and decryption, depending on the method used. 
-
-| Action |File Explorer  |PowerShell  |
-|---------|---------|---------|
-|**Encryption**     |  2 GB       |   2 GB      |
-|**Decryption**     |   Up to the available disk size, RAM, or architecture limits (lowest of the three).     | Up to the available disk size or RAM, the lower of the two.        |
-|     |         |         |
-
 ## Known issues for the AIP viewer
 
 - [Landscape views](#landscape-views-in-the-aip-viewer)
@@ -199,8 +188,9 @@ For more information, see the [Conditional Access documentation](/azure/active-d
 
 ## More information
 
-The following additional articles may be helpful in answering questions about known issues in Azure Information Protection:
+The following additional articles may be helpful in answering questions you have about Azure Information Protection:
 
+- [File types supported by the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-file-types.md)
 - [Frequently asked questions for Azure Information Protection](faqs.md)
 - [Frequently asked questions about data protection in Azure Information Protection](faqs-rms.md)
 - [Frequently asked questions about classification and labeling in Azure Information Protection](faqs-infoprotect.md)

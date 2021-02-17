@@ -106,8 +106,6 @@ For libraries that are not IRM-protected, if you apply protection-only to a file
 
 When you use SharePoint IRM protection, the Azure Rights Management service applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive and SharePoint](/microsoft-365/compliance/data-encryption-in-odb-and-spo?redirectSourcePath=%252fen-us%252farticle%252f6501b5ef-6bf7-43df-b60d-f65781847d6c) from the SharePoint documentation.
 
-Although no longer new, the following post from the Microsoft 365 blog has some additional information that you might find useful: [What’s New with Information Rights Management in SharePoint](https://www.microsoft.com/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
-
 For changes that are coming, see [Updates to SharePoint security, administration, and migration](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585).
 
 If you are ready to configure SharePoint for IRM:
