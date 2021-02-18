@@ -110,6 +110,16 @@ The following fixes were delivered in version 2.10.x of the Azure Information Pr
 
 - Fixed an issue where an empty option would appear on [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) when only two options for the user to select were configured for the popup message.
 
+- The AIP viewer app now supports opening files without a labeling policy, to support protection-only scenarios.
+
+- Fixed issues where audit logs for [discovery](../audit-logs.md#discover-audit-logs) and [new label](../audit-logs.md#new-label-audit-logs) events aren't sent from Outlook. 
+
+- Fixes to prevent [PowerShell](clientv2-admin-guide-powershell.md) from behaving unexpectedly in client versions after 2.8.x.
+
+- Fixes to ensure that a [justification prompt](clientv2-admin-guide-customizations.md#customize-justification-prompt-texts-for-modified-labels) appears in Outlook, when a user downgrades a classification label for the second time in the same Outlook session.
+
+-
+
 ## Version 2.9.116 
 
 Unified labeling scanner and client version 2.9.116 
