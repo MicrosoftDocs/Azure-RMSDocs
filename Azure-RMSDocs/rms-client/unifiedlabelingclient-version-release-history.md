@@ -75,17 +75,17 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.10.xx (Public preview)
+## Version 2.10.43.0 (Public preview)
 
-Unified labeling client version 2.10.xx
+Unified labeling client version 2.10.43.0
 
 **Release** 03/02/2021
 
-This dedicated version of Azure Information Protection provides a public preview of co-authoring features newly supported in Microsoft 365. 
+This dedicated version of Azure Information Protection provides a public preview of co-authoring features newly supported in Microsoft 365.
 
 Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) at the same time.
 
-To leverage the co-authoring features in public preview, you must download and install the dedicated installation file for this release. 
+To leverage the co-authoring features in public preview, you must download and install the dedicated installation file for this release.
 
 On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `<name>.exe` or `<name>.msi` file.
 
