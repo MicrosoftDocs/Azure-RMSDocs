@@ -88,11 +88,22 @@ For more information, see [Usage logging for the Azure Information Protection un
 
 ### Scanner diagnostics tool improvements
 
-With the upgrade to version 2.10.15.0, running the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics?view=azureipps) cmdlet with the **Verbose** parameter prints the last 10 errors from the scanner log.
+With the upgrade to version 2.10.15.0, running the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet with the **Verbose** parameter prints the last 10 errors from the scanner log.
 
 To print more or fewer errors, use the new **VerboseErrorCount parameter** to define the number of errors you want to print.
 
 For more information, see [Using PowerShell with the Azure Information Protection unified client](clientv2-admin-guide-powershell.md) and [Troubleshooting your unified labeling on-premises scanner deployment](../deploy-aip-scanner-tsg.md).
+
+### Improved scanner details output
+
+The unified labeling on-premises scanner has improved outputs for the following cmdlets:
+
+|Cmdlet  |Improvement  |
+|---------|---------|
+|**Get-AIPScannerStatus**     |  Previously, running the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) command provided only high-level details of the scanner cluster status, without details per node in your cluster.   <br><br> Now, you can use the **NodesInfo** variable and the **Verbose** parameter to drill down into additional levels of detail for each node. <br><br>   For more information, see the [AIP PowerShell documentation](/powershell/module/azureinformationprotection/get-aipscannerstatus).   |
+|**Get-AIPScannerConfiguration**     |   Running the [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/get-aipscannerconfiguration) now provides details about the current scanner configuration in addition to the online configuration settings. <br><br>For more information, see the [AIP PowerShell documentation](/powershell/module/azureinformationprotection/get-aipscannerconfiguration).      |
+|     |         |
+
 
 ### Fixes and improvements
 
@@ -110,15 +121,15 @@ The following fixes were delivered in version 2.10.15.0 of the Azure Information
 
 - The AIP viewer app now supports opening files without a labeling policy, to support protection-only scenarios.
 
-- Fixed issues where audit logs for [discovery](../audit-logs.md#discover-audit-logs) and [new label](../audit-logs.md#new-label-audit-logs) events aren't sent from Outlook. 
+- Fixed issues where audit logs for [discovery](../audit-logs.md#discover-audit-logs) and [new label](../audit-logs.md#new-label-audit-logs) events aren't sent from Outlook.
 
 - Fixes to prevent [PowerShell](clientv2-admin-guide-powershell.md) from behaving unexpectedly in client versions after 2.8.x.
 
 - Fixes to ensure that a [justification prompt](clientv2-admin-guide-customizations.md#customize-justification-prompt-texts-for-modified-labels) appears in Outlook, when a user downgrades a classification label for the second time in the same Outlook session.
 
-## Version 2.9.116 
+## Version 2.9.116
 
-Unified labeling scanner and client version 2.9.116 
+Unified labeling scanner and client version 2.9.116
 
 **Released** 02/08/2021
 
