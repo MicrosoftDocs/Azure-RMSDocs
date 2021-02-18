@@ -46,7 +46,7 @@ Use Azure Information Protection analytics for central reporting to help you tra
 
 - Identify when protected documents are accessed by internal or external users from Windows computers, and whether access was granted or denied.
 
-The data that you see is aggregated from your Azure Information Protection clients and scanners, from Microsoft Cloud App Security, from Windows 10 computers using Microsoft Defender Advanced Threat Protection, and from [protection usage logs](log-analyze-usage.md). Note that the [AIP Viewer](rms-client/clientv2-view-use-files.md) does not send audit logs.
+The data that you see is aggregated from your Azure Information Protection clients and scanners, from Microsoft Cloud App Security, from Windows 10 computers using Microsoft Defender Advanced Threat Protection, and from [protection usage logs](log-analyze-usage.md). 
 
 Azure Information Protection analytics for central reporting is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
 
