@@ -69,11 +69,7 @@ The client logs user activity to the local Windows event log **Applications and 
 
     - Remove custom protection: Information ID 202​
 
-    - Outlook warn message: Information ID 301
-
     - Outlook justify message: Information ID 302
-
-    - Outlook block message: Information ID 303
 
 - **Action source**, one of the following:
 
