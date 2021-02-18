@@ -1015,7 +1015,10 @@ To modify this timeout, create the following advanced setting for the selected p
 Example PowerShell command, where your label policy is named "Global":
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableOutlookDistributionListExpansion="true"} @{OutlookGetEmailAddressesTimeOutMSProperty="3000"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{
+  EnableOutlookDistributionListExpansion="true"
+  OutlookGetEmailAddressesTimeOutMSProperty="3000"
+}
 ```
 
 ## Disable sending audit data to Azure Information Protection analytics
