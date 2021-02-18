@@ -94,7 +94,7 @@ With the upgrade to version 2.10.x, running the [Start-AIPScannerDiagnostics](/p
 
 To print more or fewer errors, use the new **VerboseErrorCount parameter** to define the number of errors you want to print.
 
-For more information, see [Using PowerShell with the Azure Information Protection unified client](clientv2-admin-guide-powershell.md).
+For more information, see [Using PowerShell with the Azure Information Protection unified client](clientv2-admin-guide-powershell.md) and [Troubleshooting your unified labeling on-premises scanner deployment](../deploy-aip-scanner-tsg.md).
 
 ### Fixes and improvements
 
