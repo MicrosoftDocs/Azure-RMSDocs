@@ -80,13 +80,11 @@ The unified labeling client replaces the Azure Information Protection classic cl
 Unified labeling scanner and client version 2.10.x
 
 **Released** 03/15/2021
-### Audit log updates
+### Usage logging in the Windows event log
 
-This version of the unified labeling client and scanner supports the following improvements for AIP audit logs:
+The unified labeling client now logs user activity to the local Windows event log. 
 
-- **The unified labeling client now logs user activity to the local Windows event log**. For more information, see [Usage logging for the Azure Information Protection unified labeling client](clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-unified-labeling-client).
-
-- **Support for audit logs for access events from the AIP viewer**. Azure Information Protection audit logs for access events now include events from the AIP viewer.
+For more information, see [Usage logging for the Azure Information Protection unified labeling client](clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-unified-labeling-client).
 
 ### Scanner diagnostics tool improvements
 
@@ -117,8 +115,6 @@ The following fixes were delivered in version 2.10.x of the Azure Information Pr
 - Fixes to prevent [PowerShell](clientv2-admin-guide-powershell.md) from behaving unexpectedly in client versions after 2.8.x.
 
 - Fixes to ensure that a [justification prompt](clientv2-admin-guide-customizations.md#customize-justification-prompt-texts-for-modified-labels) appears in Outlook, when a user downgrades a classification label for the second time in the same Outlook session.
-
--
 
 ## Version 2.9.116 
 
