@@ -4,7 +4,7 @@ description: Use the Azure Information Protection scanner to find what sensitive
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -97,7 +97,7 @@ Before you install the scanner, create a profile for it in the Azure portal. Thi
 
     Optionally, specify a description for administrative purposes, to help you identify the scanner's profile name.
 
-1. Locate the **Policy enforcement** section, where for this quickstart, select just one setting: For **Enforce**, select **Off**. Then select **Save** but do not close the pane.
+1. Locate the **Sensitivity policy** section, where for this quickstart, select just one setting: For **Enforce**, select **Off**. Then select **Save** but do not close the pane.
 
     The settings configure the scanner to do a one-time discovery of all files in your specified data repositories. This scan looks for all known sensitive information types, and doesn't require you to first configure your Azure Information Protection labels or policy settings.
 

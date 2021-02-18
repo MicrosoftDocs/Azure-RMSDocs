@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/09/2021
+ms.date: 02/14/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -311,7 +311,7 @@ Skip the full, immediate rescan, and return later to [run a full rescan](../depl
 > [!IMPORTANT]
 > Administrators making changes in their policies and content scan jobs must now understand the effects of those changes on the content, and determine whether a full rescan is required.
 >
-> For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
+> For example, if you’ve changed **Sensitivity policy** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
 >
 
 ### Configure SharePoint timeouts
@@ -387,8 +387,11 @@ For more information, see [Customize justification prompt texts for modified lab
 
 Audit logs for access events from the unified labeling client are now sent only when users open labeled or protected files, providing a clearer indication of user access.
 
+Information types are no longer sent by [audit logs for access events](../audit-logs.md#access-audit-logs), and are now sent only with [audit logs for discover events](../audit-logs.md#discover-audit-logs).
+
 For more information, see [Access audit logs](../audit-logs.md#access-audit-logs).
 
+For more information, see [Azure Information Protection audit log reference](../audit-logs.md).
 ### DKE template-based labeling updates
 
 Azure Information Protection now supports Double Key Encryption (DKE) template-based labeling in the scanner, as well as using the File Explorer and PowerShell.
