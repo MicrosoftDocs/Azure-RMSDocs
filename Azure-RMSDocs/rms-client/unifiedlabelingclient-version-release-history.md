@@ -104,6 +104,7 @@ The unified labeling on-premises scanner has improved outputs for the following 
 |**Get-AIPScannerConfiguration**     |   Running the [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/get-aipscannerconfiguration) now provides details about the current scanner configuration in addition to the online configuration settings. <br><br>For more information, see the [AIP PowerShell documentation](/powershell/module/azureinformationprotection/get-aipscannerconfiguration).      |
 |     |         |
 
+For more information, see 
 
 ### Fixes and improvements
 
