@@ -49,7 +49,8 @@ Client logs files and currently installed policy files:
 
 ## Usage logging for the Azure Information Protection unified labeling client
 
-The client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**. The events include the following information:
+The client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection Scanner**. The events include the following information:
+
 
 - **Client version**
 
