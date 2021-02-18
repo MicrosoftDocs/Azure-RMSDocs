@@ -88,6 +88,14 @@ This version of the unified labeling client and scanner supports the following i
 
 - **Support for audit logs for access events from the AIP viewer**. Azure Information Protection audit logs for access events now include events from the AIP viewer.
 
+### Scanner diagnostics tool improvements
+
+With the upgrade to version 2.10.x, running the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics?view=azureipps) cmdlet with the **Verbose** parameter prints the last 10 errors from the scanner log.
+
+To print more or fewer errors, use the new **VerboseErrorCount parameter** to define the number of errors you want to print.
+
+For more information, see [Using PowerShell with the Azure Information Protection unified client](clientv2-admin-guide-powershell.md).
+
 ### Fixes and improvements
 
 The following fixes were delivered in version 2.10.x of the Azure Information Protection unified labeling client and scanner:
