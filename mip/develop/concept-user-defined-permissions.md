@@ -89,4 +89,4 @@ This process can also be used to set only protection by setting protection and s
 
 ## Next Steps
 
-- [Review label encryption configuration in the Microsoft 365 documentation.](https://docs.microsoft.com/en-us/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide#understand-how-the-encryption-works)
+- [Review label encryption configuration in the Microsoft 365 documentation.](/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide#understand-how-the-encryption-works)
