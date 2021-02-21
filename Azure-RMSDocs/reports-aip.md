@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: batamig
 ms.author: bagol
-ms.date: 02/18/2021
+ms.date: 02/21/2021
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -61,7 +61,7 @@ For example, the Azure Information Protection analytics for central reporting di
 |**Activity logs**     | Select a time period to show any of the following: <br /><br />      - Which files previously discovered by scanner were deleted from the scanned repository <br /> <br /> - What labeling actions were performed by a specific user <br /><br /> - What labeling actions were performed from a specific device<br /> <br />    - Which users have accessed a specific labeled document<br /> <br />- What labeling actions were performed for a specific file path<br /> <br />- What labeling actions were performed by a specific application, such File Explorer and right-click, PowerShell, the scanner, or Microsoft Cloud App Security <br /> <br />- Which protected documents were accessed successfully by users or denied access to users, even if those users don't have the Azure Information Protection client installed or are outside your organization <br /> <br />- Drill down into reported files to view **Activity Details** for additional information      |
 |**Data discovery report**     |      - What files are on your scanned data repositories, Windows 10 computers, or computers running the Azure Information Protection clients <br /><br />- Which files are labeled and protected, and the location of files by labels <br /><br />- Which files contain sensitive information for known categories, such as financial data and personal information, and the location of files by these categories       |
 |**Recommendations report**     | - Identify unprotected files that contain a known sensitive information type. A recommendation lets you immediately configure the corresponding condition for one of your labels to apply automatic or recommended labeling. **<br />If you follow the recommendation**: The next time the files are opened by a user or scanned by the Azure Information Protection scanner, the files can be automatically classified and protected. <br /><br /> - Which data repositories have files with identified sensitive information but are not being scanned by the Azure Information Protection. A recommendation lets you immediately add the identified data store to one of your scanner's profiles. <br />   **If you follow the recommendation**: On the next scanner cycle, the files can be automatically classified and protected.        |
- 
+| | |
 The reports use [Azure Monitor](/azure/log-analytics/log-analytics-overview) to store the data in a Log Analytics workspace that your organization owns. If you're familiar with the query language, you can modify the queries, and create new reports and Power BI dashboards. You might find the following tutorial helpful to understand the query language: [Get started with Azure Monitor log queries](/azure/azure-monitor/log-query/get-started-queries).
 
 For more information, read the following blog posts: 
@@ -146,6 +146,7 @@ To view the Azure Information Protection reports and create your own, make sure 
 |For reporting information from cloud-based data stores: <br /><br />- Microsoft Cloud App Security |To display information from Microsoft Cloud App Security, configure [Azure Information Protection integration](/cloud-app-security/azip-integration).|
 |For reporting information from on-premises data stores: <br /><br />- Azure Information Protection scanner |For installation instructions for the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). |
 |For reporting information from Windows 10 computers:  <br /><br />- Minimum build of 1809 with Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)|You must enable the Azure Information Protection integration feature from Microsoft Defender Security Center. For more information, see [Information protection in Windows overview](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
+| | |
 
 ### Permissions required for Azure Information Protection analytics
 
@@ -303,7 +304,7 @@ Use the following table to identify the friendly name of event functions that yo
 |**UserJustification**|Justification when downgrading or removing label|
 |**LastModifiedBy**|User in UPN format who last modified the file. Available for Office and SharePoint only|
 |**LastModifiedDate**|UTC in format YYYY-MM-DDTHH:MM:SS: Available for Office and SharePoint only |
-
+| | |
 #### Examples using InformationProtectionEvents
 
 Use the following examples to see how you might use the friendly schema to create custom queries.
@@ -352,3 +353,4 @@ After reviewing the information in the reports, if you are using the Azure Infor
 
 If you have a Microsoft 365 subscription, you can also view label usage in the Microsoft 365 compliance center and Microsoft 365 security center. For more information, see [View label usage with label analytics](/microsoft-365/compliance/label-analytics).
 
+AIP audit logs are also sent to the Microsoft 365 Activity Explorer, where they may be displayed with different names. For more information, see [Get started with activity explorer](/microsoft-365/compliance/data-classification-activity-explorer).
