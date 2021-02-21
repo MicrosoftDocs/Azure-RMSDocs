@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/17/2021
+ms.date: 02/21/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -88,17 +88,39 @@ The Azure Information Protection unified labeling client supports protection at 
 
 |Type of protection|Native|Generic|
 |----------------------|----------|-----------|
-|Description|For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and other application file types that support a Rights Management service, native protection provides a strong level of protection that includes both encryption and enforcement of rights (permissions).|For other supported file types, generic protection provides a level of protection that includes both file encapsulation using the .pfile file type and authentication to verify if a user is authorized to open the file.|
-|Protection|Files protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for those who receive the file through email or are given access to it through file or share permissions.<br /><br />- Additionally, usage rights and policy that were set by the content owner when the files were protected are enforced when the content is rendered in either the Azure Information Protection viewer (for protected text and image files) or the associated application (for all other supported file types).|File protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for people who are authorized to open the file and given access to it. If authorization fails, the file does not open.<br /><br />- Usage rights and policy set by the content owner are displayed to inform authorized users of the intended usage policy.<br /><br />- Audit logging of authorized users opening and accessing files occurs. However, usage rights are not enforced.|
-|Default for file types|This is the default level of protection for the following file types:<br /><br />- Text and image files<br /><br />- Microsoft Office (Word, Excel, PowerPoint) files<br /><br />- Portable document format (.pdf)<br /><br />For more information, see the following section, [Supported file types for classification and protection](#supported-file-types-for-classification-and-protection).|This is the default protection for all other file types (such as .vsdx, .rtf, and so on) that are not supported by native protection.|
+|**Description**|For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and other application file types that support a Rights Management service, native protection provides a strong level of protection that includes both encryption and enforcement of rights (permissions).|For other supported file types, generic protection provides a level of protection that includes both file encapsulation using the .pfile file type and authentication to verify if a user is authorized to open the file.|
+|**Protection**|Files protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for those who receive the file through email or are given access to it through file or share permissions.<br /><br />- Additionally, usage rights and policy that were set by the content owner when the files were protected are enforced when the content is rendered in either the Azure Information Protection viewer (for protected text and image files) or the associated application (for all other supported file types).|File protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for people who are authorized to open the file and given access to it. If authorization fails, the file does not open.<br /><br />- Usage rights and policy set by the content owner are displayed to inform authorized users of the intended usage policy.<br /><br />- Audit logging of authorized users opening and accessing files occurs. However, usage rights are not enforced.|
+|**Default for file types**|This is the default level of protection for the following file types:<br /><br />- Text and image files<br /><br />- Microsoft Office (Word, Excel, PowerPoint) files<br /><br />- Portable document format (.pdf)<br /><br />For more information, see the following section, [Supported file types for classification and protection](#supported-file-types-for-classification-and-protection).|This is the default protection for all other file types (such as .vsdx, .rtf, and so on) that are not supported by native protection.|
+| | |
 
 You cannot change the default protection level that the Azure Information Protection unified labeling client or the scanner applies. However, you can change which file types are protected. For more information, see [Change which file types to protect](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
 
 The protection can be applied automatically when a user selects a sensitivity label that an administrator has configured, or users can specify their own custom protection settings by using [permission levels](../configure-usage-rights.md#rights-included-in-permissions-levels).
 
-### File sizes supported for protection
+### Supported file sizes
 
-The following table lists the maximum sizes support for encryption and decryption, depending on the method used.
+#### Supported file sizes for the Office add-in
+
+The following table lists maximum sizes supported for protection using Office with the AIP add-in:
+
+|                                                     Office application                                                      |                                                Maximum file size supported                                                 |
+|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+|             **Word 2010<br /><br />Word 2013<br /><br />Word 2016**             |                                          32-bit: 512 MB<br /><br />64-bit: 512 MB                                          |
+|           **Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016**           |                      32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                       |
+| **PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016** | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
+| | |
+
+> [!IMPORTANT]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+>
+
+#### Supported file sizes for non-Office files
+
+When protecting non-Office files, and opening them using the [AIP Viewer](clientv2-view-use-files.md), the maximum file size is limited only by available disk size and RAM, the lower of the two.
+
+#### Supported file sizes for the File Explorer and PowerShell
+
+The following table lists the maximum sizes support for encryption and decryption using the File Explorer and PowerShell:
 
 | Action |File Explorer  |PowerShell  |
 |---------|---------|---------|
@@ -106,32 +128,6 @@ The following table lists the maximum sizes support for encryption and decryptio
 |**Decryption**     |   Up to the available disk size, RAM, or architecture limits (lowest of the three).     | Up to the available disk size or RAM, the lower of the two.        |
 |     |         |         |
 
-<!--
-There are maximum file sizes that the Azure Information Protection unified labeling client supports for protection.
-
-**For Office files**:
-
-|                                                     Office application                                                      |                                                Maximum file size supported                                                 |
-|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-|             Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32-bit: 512 MB<br /><br />64-bit: 512 MB                                          |
-|           Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                       |
-| PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
-| | |
-
-> [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
->
-
-**For all other files**:
-
-- **To protect other file types**, and to open these file types in the Azure Information Protection viewer: The maximum file size is limited only by available disk space and memory.
-
-- **To unprotect files** by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: The maximum file size supported for .pst files is 5 GB. Other file types are limited only by available disk space and memory
-
-> [!TIP]
-> To search or recover protected items in large .pst files, see the [Guidance for using Unprotect-RMSFile for eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
-> 
--->
 ### Supported file types for classification and protection
 
 The following table lists a subset of file types that support native protection by the Azure Information Protection unified labeling client, and that can also be classified.
