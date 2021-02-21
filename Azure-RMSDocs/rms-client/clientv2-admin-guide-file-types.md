@@ -97,38 +97,8 @@ You cannot change the default protection level that the Azure Information Protec
 
 The protection can be applied automatically when a user selects a sensitivity label that an administrator has configured, or users can specify their own custom protection settings by using [permission levels](../configure-usage-rights.md#rights-included-in-permissions-levels).
 
-### Supported file sizes
 
-#### Supported file sizes for the Office add-in
-
-The following table lists maximum sizes supported for protection using Office with the AIP add-in:
-
-|                                                     Office application                                                      |                                                Maximum file size supported                                                 |
-|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-|             **Word 2010<br /><br />Word 2013<br /><br />Word 2016**             |                                          32-bit: 512 MB<br /><br />64-bit: 512 MB                                          |
-|           **Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016**           |                      32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                       |
-| **PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016** | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
-| | |
-
-> [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
->
-
-#### Supported file sizes for non-Office files
-
-When protecting non-Office files, and opening them using the [AIP Viewer](clientv2-view-use-files.md), the maximum file size is limited only by available disk size and RAM, the lower of the two.
-
-#### Supported file sizes for the File Explorer and PowerShell
-
-The following table lists the maximum sizes support for encryption and decryption using the File Explorer and PowerShell:
-
-| Action |File Explorer  |PowerShell  |
-|---------|---------|---------|
-|**Encryption**     |  2 GB       |   2 GB      |
-|**Decryption**     |   Up to the available disk size, RAM, or architecture limits (lowest of the three).     | Up to the available disk size or RAM, the lower of the two.        |
-|     |         |         |
-
-### Supported file types for classification and protection
+## Supported file types for classification and protection
 
 The following table lists a subset of file types that support native protection by the Azure Information Protection unified labeling client, and that can also be classified.
 
@@ -232,6 +202,37 @@ After inspecting the file, the unified labeling client from your PowerShell sess
 The [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you install the Windows TIFF IFilter feature, and then configure [Windows TIFF IFilter Settings](/previous-versions/windows/it-pro/windows-7/dd744701(v=ws.10)) on the computer running the PowerShell session.
 
 For the scanner: After finding sensitive information, if the .tiff file should be classified and protected with a label, specify this file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) from the scanner deployment instructions.
+
+## Supported file sizes
+
+### Supported file sizes for the Office add-in
+
+The following table lists maximum sizes supported for protection using Office with the AIP add-in:
+
+|                                                     Office application                                                      |                                                Maximum file size supported                                                 |
+|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+|             **Word 2010<br /><br />Word 2013<br /><br />Word 2016**             |                                          32-bit: 512 MB<br /><br />64-bit: 512 MB                                          |
+|           **Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016**           |                      32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                       |
+| **PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016** | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
+| | |
+
+> [!IMPORTANT]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+>
+
+### Supported file sizes for non-Office files
+
+When protecting non-Office files, and opening them using the [AIP Viewer](clientv2-view-use-files.md), the maximum file size is limited only by available disk size and RAM, the lower of the two.
+
+### Supported file sizes for the File Explorer and PowerShell
+
+The following table lists the maximum sizes support for encryption and decryption using the File Explorer and PowerShell:
+
+| Action |File Explorer  |PowerShell  |
+|---------|---------|---------|
+|**Encryption**     |  2 GB       |   2 GB      |
+|**Decryption**     |   Up to the available disk size, RAM, or architecture limits (lowest of the three).     | Up to the available disk size or RAM, the lower of the two.        |
+|     |         |         |
 
 ## Next steps
 
