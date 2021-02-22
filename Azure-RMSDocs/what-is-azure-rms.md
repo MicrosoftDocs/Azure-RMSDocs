@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Overview of Azure Rights Management protection - AIP
+title: What is Azure Rights Management? - AIP
 description: Information about Azure Rights Management (Azure RMS), the protection technology used by Azure Information Protection.
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/08/2020
+ms.date: 02/22/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -36,9 +36,11 @@ search.appverid:
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
-Azure Rights Management (Azure RMS) is the protection technology used by [Azure Information Protection](what-is-information-protection.md).
+Azure Rights Management (Azure RMS) is the cloud-based protection technology used by [Azure Information Protection](what-is-information-protection.md).
 
-Azure RMS is a cloud-based protection service that uses encryption, identity, and authorization policies to help secure files and emails across multiple devices, including phones, tablets, and PCs. Protection settings remain with your data, even when it leaves your organization's boundaries, keeping your content protected both within and outside your organization.
+Azure RMS uses encryption, identity, and authorization policies to help secure files and emails across multiple devices, including phones, tablets, and PCs.
+
+Protection settings remain with your data, even when it leaves your organization's boundaries, keeping your content protected both within and outside your organization.
 
 The following image shows how Azure RMS provides protection for Microsoft 365, as well as on-premises servers and services. Protection is also supported by popular end-user devices running Windows, macOS, iOS, and Android.
 

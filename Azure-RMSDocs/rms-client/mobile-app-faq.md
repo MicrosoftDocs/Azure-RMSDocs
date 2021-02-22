@@ -6,7 +6,7 @@ description: Learn the basics about the Azure Information Protection (AIP) mobil
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/24/2020
+ms.date: 02/22/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -29,33 +29,42 @@ ms.custom: user
 >
 >***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-The Azure Information Protection (AIP) mobile app for iOS and Android is a viewer app that enables you to view protected email messages, PDFs, images, and text files, and are useful if your regular apps for these file types do not support protection. 
+The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text file when you can't open them with your regular apps for these file types. For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
 
-For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
 
-For more information about the protection features supported in your apps, [Applications that support Azure Rights Management data protection](../requirements-applications.md). 
+**Protection and sensitivity labels are supported in mobile Office versions**. If you have mobile Office apps installed on your device, we recommend that you use the Office apps to view protected files. For more information, see [Sensitivity label capabilities in Word, Excel, and PowerPoint](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-word-excel-and-powerpoint).
+
+**If you are opening your file on a desktop**, use the [desktop version of the AIP Viewer](clientv2-view-use-files.md). 
+
 
 > [!NOTE]
 > The AIP mobile apps are *viewers only,* and do not enable you to create new emails or reply to emails, or create or edit protected files. The AIP mobile apps also cannot open attachments to protected PDFs or emails.
 > 
 
+## AIP mobile app requirements
+
+The AIP mobile apps for iOS and Android support the following file types and environments:
+
+|Requirement  |Description  |
+|---------|---------|
+|**Supported OS versions**     | Minimum mobile OSs include: </br>- iOS 11  </br>- Android 6.0 </br></br>**Note**: The AIP mobile apps are not supported on Intel CPUs.  |
+|**Supported sign in credentials**     | Sign in to the AIP mobile apps with one of the following: </br></br>**Work or school credentials.** Try logging in with your work or school credentials. If you have questions, contact your administrator to understand whether your organization has AD RMS on-premises with the mobile device extension, or uses Azure Information Protection. </br></br>**A Microsoft account.** If your personal email address was used to protect the file, sign in with a [Microsoft account](https://signup.live.com). If you need to apply for a Microsoft account, you can use your own Hotmail, Gmail, or any other email address to do so. </br></br>**Note**: Not all applications are able to open content protected with a Microsoft account. For more information, see [Supported scenarios for opening protected documents](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
+|**Supported file types**     | Supported files types include protected email messages, PDF files, images, and text files. </br></br>For example, these files include the following extensions: **rpmsg**, **.pdf**, **.ppdf**, **.pjpg**, **.pjpeg**, **.ptiff**, **.ppng**, **.ptxt**, **.pxml** </br></br>For a full list of supported file types, see [The AIP client admin guide](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
+| | |
+
 ## Download and install the AIP app for your device
 
-Download and install AIP mobile apps from one of the following locations:
+If you do not have [Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-word-excel-and-powerpoint) that you can use to open your protected files, download and install AIP mobile apps.
 
-**iTunes**:
+Download and install the mobile apps from the following locations:
 
-:::image type="content" source="../media/ios-icon.png" alt-text="iTunes" link="https://apps.apple.com/app/microsoft-rights-management/id689516635" border="false":::  
+|Location  |Details / Link  |
+|---------|---------|
+|**iTunes**     | [![iTunes](../media/small/ios-icon-small.png)](https://apps.apple.com/app/microsoft-rights-management/id689516635)        |
+|**Google Play**     |[![Google Play](../media/small/android-icon-small.png)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)         |
+|**Your company portal**     |  If your mobile device is managed by Microsoft Intune, you may be able to download the AIP mobile apps from your company portal. <br><br>For more information, contact your system administrator.        |
+|     |         |
 
-**Google Play**:
-
-:::image type="content" source="../media/android-icon.png" alt-text="Google Play" link="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer" border="false"::: 
-
-**Your company portal**:
-
-If your mobile device is managed by Microsoft Intune, you may be able to download the AIP mobile apps from your company portal. 
-
-For more information, contact your system administrator. 
 ## iOS: View protected files on your device
 
 Once you've [installed the AIP mobile app](#download-and-install-the-aip-app-for-your-device), open a protected email or file. 
@@ -84,16 +93,6 @@ Once you've [installed the AIP mobile app](#download-and-install-the-aip-app-for
 
     Once you've been authenticated, the your email or file will open in the AIP Viewer.
 
-## AIP mobile app requirements
-
-The AIP mobile apps for iOS and Android support the following file types and environments:
-
-|Requirement  |Description  |
-|---------|---------|
-|**Supported OS versions**     | Minimum mobile OSs include: </br>- iOS 11  </br>- Android 6.0 </br></br>**Note**: The AIP mobile apps are not supported on Intel CPUs.  |
-|**Supported sign in credentials**     | Sign in to the AIP mobile apps with one of the following: </br></br>**Work or school credentials.** Try logging in with your work or school credentials. If you have questions, contact your administrator to understand whether your organization has AD RMS on-premises with the mobile device extension, or uses Azure Information Protection. </br></br>**A Microsoft account.** If your personal email address was used to protect the file, sign in with a [Microsoft account](https://signup.live.com). If you need to apply for a Microsoft account, you can use your own Hotmail, Gmail, or any other email address to do so. </br></br>**Note**: Not all applications are able to open content protected with a Microsoft account. For more information, see [Supported scenarios for opening protected documents](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
-|**Supported file types**     | Supported files types include protected email messages, PDF files, images, and text files. </br></br>For example, these files include the following extensions: **rpmsg**, **.pdf**, **.ppdf**, **.pjpg**, **.pjpeg**, **.ptiff**, **.ppng**, **.ptxt**, **.pxml** </br></br>For a full list of supported file types, see [The AIP client admin guide](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
-| | |
 
 ## Admins: Testing the AIP mobile apps
 
@@ -132,3 +131,5 @@ Use one of the following methods to provide feedback about the AIP mobile apps:
 
 - Go to **Settings** > **Send feedback**
 - Post your question on our [Yammer site](https://www.yammer.com/AskIPTeam)
+
+For more information about the protection features supported in your apps, see [Applications that support Azure Rights Management data protection](../requirements-applications.md).

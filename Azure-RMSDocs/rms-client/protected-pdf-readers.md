@@ -36,7 +36,7 @@ search.appverid:
 
 PDF readers for classified and/or protected PDFs enable you to open encrypted PDFs that contain sensitive information.
 
-Encrypting your PDFs with [Azure Information Protection (AIP)](../what-is-information-protection.md) ensures that unauthorized people cannot read the file's content.
+Encrypting your PDFs with Azure Information Protection (AIP) ensures that unauthorized people cannot read the file's content.
 
 Protected PDF readers that support Azure Information Protection verify that you've been granted permissions to open the document, and also decrypt the content for you.
 
@@ -69,7 +69,7 @@ This standard is used by default by the AIP client.
 
 ### Viewing protected PDFs in Adobe Acrobat Reader
 
-Adobe Acrobat Reader integrates with Microsoft Information Protection solutions, such as [Azure Information Protection](../what-is-information-protection.md) to provide users with a simplified and consistent experience for classified and/or protected PDFs.
+Adobe Acrobat Reader integrates with Microsoft Information Protection solutions, such as Azure Information Protection to provide users with a simplified and consistent experience for classified and/or protected PDFs.
 
 The Adobe Acrobat Reader with Microsoft Information Protection integration is supported for [Windows](#installing-a-protected-pdf-reader-for-windows-or-mac) and [macOS](#installing-a-protected-pdf-reader-for-windows-or-mac).
 
