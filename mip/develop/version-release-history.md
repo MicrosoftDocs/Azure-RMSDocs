@@ -30,7 +30,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 **Release date:** February 8, 2021
 
-- Fixed bug in NuGet package where debug configuration for C++ projects deployed release binaries. 
+- Fixed bug in NuGet package where debug configuration for C++ projects deployed release binaries. Verison 1.8.86 may result in a crash with native C++ apps. Please make sure to update to 1.8.94 or later.
 - Fixed a bug where policy engine was required to remove protection. 
   - If policy engine can't be loaded and label metadata is present, it will be discarded if protection is removed. 
 - Fixed a bug where empty `labelInfo.xml` was generated if file was changed to another protected label. 
