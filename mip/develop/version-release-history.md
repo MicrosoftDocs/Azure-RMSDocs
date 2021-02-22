@@ -46,7 +46,7 @@ Use the following information to see what’s new or changed for a supported rel
 - All clouds are fully supported across all three SDKs.
 - Rename `TelemetryConfiguration` to `DiagnosticConfiguration`.
 - Updated `MipContext` to accept `DiagnosticConfiguration` instead of `TelemetryConfiguration`.
-- Exposed new `TelemetryDelegate` and `AuditDelegate`.
+- Exposed new `AuditDelegate`.
 - Several custom settings have had their name changed and will be removed in version 1.9. These will continue to function in parallel with their updates names in version 1.8. 
 
 | New Name          | Old Name                   |
