@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/14/2021
+ms.date: 02/23/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -75,9 +75,9 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.10.15.0 (Public preview)
+## Version 2.10.43.0 (Public preview)
 
-Unified labeling scanner and client version 2.10.15.0
+Unified labeling scanner and client version 2.10.43.0
 
 **Released** 03/15/2021
 ### Usage logging in the Windows event log
@@ -88,7 +88,7 @@ For more information, see [Usage logging for the Azure Information Protection un
 
 ### Scanner diagnostics tool improvements
 
-With the upgrade to version 2.10.15.0, running the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet with the **Verbose** parameter prints the last 10 errors from the scanner log.
+With the upgrade to version 2.10.43.0, running the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet with the **Verbose** parameter prints the last 10 errors from the scanner log.
 
 To print more or fewer errors, use the new **VerboseErrorCount parameter** to define the number of errors you want to print.
 
@@ -108,7 +108,7 @@ For more information, see
 
 ### Fixes and improvements
 
-The following fixes were delivered in version 2.10.15.0 of the Azure Information Protection unified labeling client and scanner:
+The following fixes were delivered in version 2.10.43.0 of the Azure Information Protection unified labeling client and scanner:
 
 - Added support for removing a protected label when the [File API engine](/information-protection/develop/concept-profile-engine-file-engine-cpp) isn't loaded in Outlook. <!-- when might this occur? when should the regular user be concerned about it? -->
 
