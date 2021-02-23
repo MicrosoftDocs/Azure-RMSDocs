@@ -75,9 +75,9 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.10.43.0 (Public preview)
+## Version TBD (Public preview)
 
-Unified labeling client version 2.10.43.0
+Unified labeling client version TBD
 
 **Release** 03/02/2021
 
@@ -93,9 +93,9 @@ For more information, see:
 
 - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
 - [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
-## Version 2.10.36.0 (Public preview)
+## Version 2.10.43.0 (Public preview)
 
-Unified labeling scanner version 2.10.36.0
+Unified labeling scanner version 2.10.43.0
 
 **Release** 03/02/2021
 
