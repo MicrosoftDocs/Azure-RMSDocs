@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: FAQs for Azure Information Protection
-description: Some frequently asked questions about Azure Information Protection and its protection service, Azure Rights Management (Azure RMS).
+title: FAQs for Azure Information Protection (AIP)
+description: Get answers to frequently asked questions about Azure Information Protection (AIP) and its protection service, Azure Rights Management (Azure RMS).
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -24,7 +24,7 @@ search.appverid:
 
 ---
 
-# Frequently asked questions for Azure Information Protection
+# Frequently asked questions for Azure Information Protection (AIP)
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
@@ -33,7 +33,9 @@ search.appverid:
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
-Have a question about Azure Information Protection, or about the Azure Rights Management service (Azure RMS)? See if it's answered here.
+Have a question about Azure Information Protection (AIP), or about the Azure Rights Management service (Azure RMS)? 
+
+See if it's answered below or on the [subsequent, more specific, FAQ pages](#what-do-i-do-if-my-question-isnt-here).
 
 ## What's the difference between Azure Information Protection and Microsoft Information Protection?
 
@@ -125,13 +127,13 @@ If you are a user who wants to understand whether you have the classic or the un
 
     :::image type="content" source="media/client-about.png" alt-text="Check the Azure Information Protection client version":::
 
-## When is the right time to migrate my labels?
+## When is the right time to migrate my labels to unified labeling?
 
 We recommend that you migrate your Azure Information Protection labels to the unified labeling platform so that you can use them as sensitivity labels with other [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
 For more information and instructions, see [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md).
 
-## After I've migrated my labels, which management portal do I use?
+## After I've migrated my labels to unified labeling, which management portal do I use?
 
 After you've migrated your labels in the Azure portal, continue managing them in one of the following locations, depending on the clients you have installed:
 

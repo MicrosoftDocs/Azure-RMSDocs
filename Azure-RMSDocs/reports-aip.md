@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Central reporting for Azure Information Protection
-description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
+title: Analytics and central reporting for Azure Information Protection (AIP)
+description: Learn how to use Azure Information Protection (AIP) analytics and central reporting to track label usage and to identify files that contain sensitive information.
 author: batamig
 ms.author: bagol
 ms.date: 02/18/2021
@@ -25,7 +25,7 @@ ms.custom: admin
 
 ---
 
-# Central reporting for Azure Information Protection (public preview)
+# Analytics and central reporting for Azure Information Protection (public preview)
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
@@ -34,7 +34,9 @@ ms.custom: admin
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
-Use Azure Information Protection analytics for central reporting to help you track the adoption of your labels that classify and protect your organization's data. In addition:
+This article describes how to use Azure Information Protection (AIP) analytics for central reporting, which can help you track the adoption of your labels that classify and protect your organization's data. 
+
+AIP analytics also enable you to do perform the following steps:
 
 - Monitor labeled and protected documents and emails across your organization
 
@@ -238,7 +240,7 @@ Azure Monitor Logs has a **Usage and estimated costs** feature to help you estim
 
 You're now ready to view the reports.
 
-## How to view the reports
+## View the AIP analytics reports
 
 From the Azure Information Protection pane, locate the **Dashboards** menu options, and select one of the following options:
 
@@ -251,7 +253,7 @@ From the Azure Information Protection pane, locate the **Dashboards** menu optio
 |     |         |
 
 
-## How to modify the reports and create custom queries
+## Modify the AIP analytics reports and create custom queries
 
 Select the query icon in the dashboard to open a **Log Search** pane: 
 
