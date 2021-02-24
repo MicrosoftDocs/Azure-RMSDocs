@@ -26,6 +26,12 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
 
+## Version 1.8.99
+
+**Release date:** February 24, 2021
+
+- Fixed a bug where child labels were not filtered properly and included all types of labels, even if not requested. 
+
 ## Version 1.8.94
 
 **Release date:** February 8, 2021
