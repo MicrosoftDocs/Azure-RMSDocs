@@ -196,7 +196,7 @@ You may want to do this only after running a network scan job to analyze the rep
     |**Content scan job settings**     |    - **Schedule**: Keep the default of **Manual** <br />- **Info types to be discovered**: Change to **Policy only** <br />- **Configure repositories**: Do not configure at this time because the content scan job must first be saved.         |
     |**DLP policy** | If you are using a Microsoft 365 Data Loss Prevention (DLP) policy, set **Enable DLP rules** to **On**. For more information, see [Use a DLP policy](#use-a-dlp-policy-public-preview). |
     |**Sensitivity policy**     | - **Enforce**: Select **Off** <br />- **Label files based on content**: Keep the default of **On** <br />- **Default label**: Keep the default of **Policy default** <br />- **Relabel files**: Keep the default of **Off**        |
-    |**Configure file settings**     | - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On** <br />- **File types to scan**: Keep the default file types for **Exclude** <br />- **Default owner**: Keep the default of **Scanner Account**  <br /> - **Set repository owner**: Use this feature only with a DLP policy. For more information, see [below](#use-a-dlp-policy-public-preview). |
+    |**Configure file settings**     | - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On** <br />- **File types to scan**: Keep the default file types for **Exclude** <br />- **Default owner**: Keep the default of **Scanner Account**  <br /> - **Set repository owner**: Use this feature only when [using a DLP policy](#use-a-dlp-policy-public-preview). |
     | | |
 
     > [!TIP]
@@ -375,6 +375,7 @@ Using a Microsoft 365 Data Loss Prevention (DLP) policy enables the scanner to d
 > [!TIP]
 > Scanning your files, even when just testing the DLP policy, also creates file permission reports. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
 > 
+
 DLP policies are configured in your labeling admin center, such as the Microsoft 365 Compliance center, and are supported in Azure Information Protection starting in version [2.10.36.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210360-public-preview). 
 
 For more information about DLP licensing, see [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started).
@@ -397,7 +398,7 @@ For more information about DLP licensing, see [Get started with the data loss pr
 
 If you are using a DLP policy with a *make private* action, and are also planning to use the scanner to automatically label your files, we recommend that you also define the unified labeling client's [**UseCopyAndPreserveNTFSOwner**](rms-client/clientv2-admin-guide-customizations.md#preserve-ntfs-owners-during-labeling-public-preview) advanced setting. 
 
-This setting ensures that the files' original owners retain access to their files. 
+This setting ensures that the original owners retain access to their files.
 
 For more information, see [Create a content scan job](#create-a-content-scan-job) and  [Apply a sensitivity label to content automatically](/microsoft-365/compliance/apply-sensitivity-label-automatically) in the Microsoft 365 documentation. 
 

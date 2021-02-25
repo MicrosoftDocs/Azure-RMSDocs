@@ -97,7 +97,7 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 - [Unsupported features for co-authoring](#unsupported-features-for-co-authoring)
 
 > [!IMPORTANT]
-> Co-authoring and sensitivity labels cannot be deployed to only some users, as any new labels will not be visible to users with an older version of the Office client.
+> Co-authoring and sensitivity labels cannot be deployed to some users only, as any new labels will not be visible to users with an older version of the Office client.
 > 
 For more information about co-authoring support, including limitations and known issues for the public preview, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring).
 #### Use in testing environments only
