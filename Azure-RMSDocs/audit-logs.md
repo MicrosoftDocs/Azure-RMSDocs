@@ -174,6 +174,6 @@ AIP audit logs are also sent to the Microsoft 365 Activity Explorer, where they 
 
 For more information, see:
 
-- [Now in Public Preview: AIP audit logs in Activity Explorer](https://www.yammer.com/askipteam/#/Threads/show?threadId=1085834054254592)
+- [Public Preview: AIP audit logs in Activity Explorer](https://www.yammer.com/askipteam/#/Threads/show?threadId=1085834054254592)
 - [Get started with activity explorer](/microsoft-365/compliance/data-classification-activity-explorer)
 - [Central reporting for Azure Information Protection (public preview)](reports-aip.md)
