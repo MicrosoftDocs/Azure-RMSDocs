@@ -101,8 +101,6 @@ Unified labeling scanner version 2.10.43.0
 
 This dedicated version of Azure Information Protection provides a public preview of the support for Data Loss Prevention (DLP) policies supported by Microsoft 365. 
 
-DLP policies are configured in your labeling admin center, such as the Microsoft 365 Compliance center. 
-
 - **Using a DLP policy** enables the scanner to detect potential data leaks by matching DLP rules to files stored in file shares and SharePoint Server. 
 
 - [**Enable DLP rules in your content scan job**](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview) to reduce the exposure of any files that match your DLP policies. 
@@ -110,6 +108,8 @@ DLP policies are configured in your labeling admin center, such as the Microsoft
     The scanner may reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**.
 
 - **Scanning your files with DLP rules enabled also creates file permission reports**. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
+
+Settings for enforcing or testing the DLP policy are configured in the [Microsoft 365 Compliance center](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
 
 > [!IMPORTANT]
 > To leverage the DLP support in public preview, you must download and install the dedicated installation file for this release. On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `AzInfoProtection_2.10.43_DLP_PublicPreview.exe` file.
@@ -121,9 +121,7 @@ For more information, including licensing requirements, see:
 - [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started)
 - [Use the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-use)
 
-> [!IMPORTANT]
-> Settings for enforcing or testing the DLP policy are configured in the [Microsoft 365 Compliance center](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
->
+
 
 ## Version 2.9.116 
 
