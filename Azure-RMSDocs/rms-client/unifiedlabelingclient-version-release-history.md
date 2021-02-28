@@ -44,8 +44,6 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 
 Each general availability (GA) version of the Azure Information Protection unified labeling client is supported for up to six months after the release of the subsequent GA version. The documentation does not include information about unsupported versions of the client. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
 
-Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
-
 ### General availability versions that are no longer supported
 
 |Client version|Date released|
@@ -66,7 +64,7 @@ The date format used on this page is *month/day/year*.
 
 Use the following information to see what's new or changed for a supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
 
-The latest version of Azure Information Protection is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
@@ -75,9 +73,9 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version TBD (Public preview)
+## Version 2.10.45.0 (Public preview)
 
-Unified labeling client version TBD
+Unified labeling client version 2.10.45.0
 
 **Release** 03/02/2021
 
@@ -85,10 +83,9 @@ This dedicated version of Azure Information Protection provides a public preview
 
 Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) at the same time.
 
-To leverage the co-authoring features in public preview, you must download and install the dedicated installation file for this release.
-
-On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `<name>.exe` or `<name>.msi` file.
-
+> [!IMPORTANT]
+> To leverage the co-authoring features in public preview, you must download and install the dedicated installation file for this release. On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `AzInfoProtection_2.10.45_CoAuthoring_PublicPreview.exe`  file.
+> 
 For more information, see:
 
 - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
@@ -103,18 +100,17 @@ This dedicated version of Azure Information Protection provides a public preview
 
 DLP policies are configured in your labeling admin center, such as the Microsoft 365 Compliance center. 
 
-- Using a DLP policy enables the scanner to detect potential data leaks by matching DLP rules to files stored in file shares and SharePoint Server. 
+- **Using a DLP policy** enables the scanner to detect potential data leaks by matching DLP rules to files stored in file shares and SharePoint Server. 
 
-- **Enable DLP rules** in your content scan job to reduce the exposure of any files that match your DLP policies. 
+- [**Enable DLP rules in your content scan job**](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview) to reduce the exposure of any files that match your DLP policies. 
 
     The scanner may reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**.
 
-- Scanning your files also creates file permission reports. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
+- **Scanning your files with DLP rules enabled also creates file permission reports**. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
 
-To leverage the DLP support in public preview, you must download and install the dedicated installation file for this release. 
-
-On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `<name>.exe` or `<name>.msi` file.
-
+> [!IMPORTANT]
+> To leverage the DLP support in public preview, you must download and install the dedicated installation file for this release. On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `AzInfoProtection_2.10.43_DLP_PublicPreview.exe` file.
+> 
 For more information, including licensing requirements, see:
 
 - [Configure a DLP policy in the AIP scanner](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview)
