@@ -126,12 +126,7 @@ If this occurs, close and reopen your Office application to be able to apply you
 
 #### AIP analytics and audit logs
 
-When co-authoring is enabled, AIP analytics are sent to the Microsoft 365 Activity Explorer instead of the Azure Information Protection reports in the Azure portal.
-
-For more information, see:
-
-- [Central reporting for Azure Information Protection (public preview)](reports-aip.md)
-- [Azure Information Protection audit log reference (public preview)](audit-logs.md)
+When co-authoring is enabled, the Azure Information Protection client doesn't send any [audit logs](audit-logs.md).
 
 #### Labels with user-defined permissions
 
@@ -145,15 +140,13 @@ The following features are not supported when working with co-authoring and sens
 
 - **DKE templates and DKE user-defined properties**. For more information, see [Double Key Encryption (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).
 
-- **Removing external content marking in apps**
+- **Removing external content marking in apps**. For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
 
 - The following advanced settings:
 
     - **customPropertiesByLabel**. For more information, see [Applying a custom property when a label is applied](rms-client/clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied).
 
     - **labelByCustomProperties** and **EnableLabelBySharePointProperties**. For more information, see [Migrate labels from Secure Islands and other labeling solutions](rms-client/clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions).
-
-For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
 
 ## Known issues in policies
 
