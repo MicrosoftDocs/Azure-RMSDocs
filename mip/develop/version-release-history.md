@@ -31,6 +31,7 @@ Use the following information to see what’s new or changed for a supported rel
 **Release date:** February 24, 2021
 
 - Fixed a bug where child labels were not filtered properly and included all types of labels, even if not requested. 
+- Fixed a bug where labels weren't maintained on `RemoveProtection()` if label metadata was incomplete. 
 
 ## Version 1.8.94
 
