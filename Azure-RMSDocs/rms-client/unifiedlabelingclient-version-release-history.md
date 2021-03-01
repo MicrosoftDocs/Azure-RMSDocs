@@ -73,9 +73,9 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.10.45.0 for co-authoring (Public preview)
+## Version 2.10.46.0 for co-authoring (Public preview)
 
-Unified labeling client version 2.10.45.0
+Unified labeling client version 2.10.46.0
 
 **Release** 03/02/2021
 
@@ -84,12 +84,12 @@ This dedicated version of Azure Information Protection provides a public preview
 Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 > [!IMPORTANT]
-> To leverage the co-authoring features in public preview, you must download and install the dedicated installation file for this release. On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `AzInfoProtection_2.10.45_CoAuthoring_PublicPreview.exe`  file.
+> To leverage the co-authoring features in public preview, you must download and install the dedicated installation file for this release. On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `AzInfoProtection_2.10.46_CoAuthoring_PublicPreview.exe`  file.
 >
 > Your system must also comply with the version requirements listed in the [Microsoft 365 prerequisites for co-authoring](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites).
 >
 
-Before you start, we recommend that you review the related prerequisites and limitations. For more information, see:
+Before you start, we recommend that you review all related prerequisites and limitations. For more information, see:
 
 - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
 - [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
