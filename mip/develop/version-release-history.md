@@ -188,7 +188,7 @@ Use the following information to see what’s new or changed for a supported rel
 - TLS 1.2 enforced for all non-ADRMS HTTP communication.
 - Migrated iOS/macOS HTTP implementation from NSURLConnection to NSURLSession.
 - Migrated iOS telemetry component from Aria SDK to 1DS SDK.
-- Telemetry component now uses MIP's HttpDelegate on iOS, macOs, and Linux. (Previously only win32).
+- Telemetry component now uses MIP's HttpDelegate on iOS, macOS, and Linux. (Previously only win32).
 - Improved type safety for C API.
 - Moved AuthDelegate from Profile to Engine in C++, C#, and Java APIs.
 - AuthDelegate moved from constructor of `Profile::Settings` to `Engine::Settings`.
