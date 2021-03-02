@@ -1,0 +1,105 @@
+### YamlMime:Landing
+
+title: Microsoft Information Protection SDK documentation
+summary: Microsoft Information Protection SDK Documentation - Tutorials, API Reference 
+
+metadata:
+  title: Microsoft Information Protection SDK documentation
+  description: Microsoft Information Protection SDK Documentation - Tutorials, API Reference 
+  services: information-protection
+  ms.service: information-protection
+  ms.topic: landing-page # Required
+  ms.collection: M365-security-compliance
+  author: msmbaldwin
+  ms.author: mbaldwin
+  ms.date: 06/24/2020 #Required; mm/dd/yyyy format.
+
+# linkListType: architecture | deploy | download | get-started | how-to-guide | learn | overview | quickstart | tutorial
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card 
+  - title: Overview
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: About the Microsoft Information Protection SDK
+            url: overview.md
+
+
+  # Card
+  - title: Get started
+    linkLists:
+     - linkListType: overview
+       links:
+          - text: Setup and configuration the MIP SDK
+            url: setup-configure-mip.md
+          - text: Implement AD RMS Protection
+            url: quick-app-adrms.md
+
+  # Card
+  - title: C++ Quickstarts
+    linkLists:
+     - linkListType: quickstart
+       links:
+          - text: Client application initialization
+            url: quick-app-initialization-cpp.md
+          - text: List sensitivity labels
+            url: quick-file-list-labels-cpp.md
+          - text: Set & get sensitivity labels 
+            url: quick-file-set-get-label-cpp.md 
+          - text: Lower the sensitivity label on a file 
+            url: quick-file-justify-actions-cpp.md 
+          - text: Republish File
+            url: quick-file-republishing-cpp.md 
+          - text: Process email .msg files 
+            url: quick-email-msg-cpp.md 
+          - text: Initilize applications
+            url: quick-protection-app-initialization-cpp.md
+          - text: List Templates 
+            url: quick-protection-list-templates-cpp.md
+          - text: Encrypt & decrypt Text 
+            url: quick-protection-encrypt-decrypt-text-cpp.md
+
+  # Card
+  - title: C# Quickstarts
+    linkLists:
+     - linkListType: quickstart
+       links:
+          - text: Client application initialization
+            url: quick-app-initialization-csharp.md
+          - text: List sensitivity labels
+            url: quick-file-list-labels-csharp.md
+          - text: Set & get sensitivity labels 
+            url: quick-file-set-get-label-csharp.md 
+          - text: Lower the sensitivity label on a file 
+            url: quick-file-justify-actions-csharp.md 
+          - text: Republish File
+            url: quick-file-republishing-csharp.md 
+          - text: Process email .msg files 
+            url: quick-email-msg-csharp.md 
+          - text: Initilize applications
+            url: quick-protection-app-initialization-csharp.md
+          - text: List Templates 
+            url: quick-protection-list-templates-csharp.md
+          - text: Encrypt & decrypt Text 
+            url: quick-protection-encrypt-decrypt-text-csharp.md
+
+  # Card
+  - title: Concepts
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: API concepts
+            url: concept-apis-use-cases.md
+          - text: MipContext object concepts
+            url: concept-mipcontext.md
+          - text: Cache storage
+            url: concept-cache-storage.md
+          - text: Consent
+            url: concept-consent-cpp.md 
+          - text: Labels
+            url: concept-classification-labels.md
+          - text: Metadata
+            url: concept-mip-metadata.md

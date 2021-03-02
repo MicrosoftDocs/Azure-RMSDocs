@@ -1,7 +1,0 @@
-# [Understand & Explore](/information-protection/understand-explore/what-is-azure-information-protection)
-# [Get Started](/information-protection/get-started/requirements-azure-rms)
-# [Plan & Design](/information-protection/plan-design/deployment-roadmap)
-# [Deploy & Use the Service](/information-protection/deploy-use/activate-service)
-# [Deploy & Use the Client](/information-protection/rms-client/use-client)
-# [Develop & Customize apps](/information-protection/develop/developers-guide)
-# [Azure Information Protection (preview)](/information-protection/understand-explore/what-is-azure-information-protection)

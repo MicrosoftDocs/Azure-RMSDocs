@@ -1,95 +1,101 @@
 ---
 # required metadata
 
-title: RMS protection with Windows Server File Classification Infrastructure (FCI) | Azure Information Protection
-description: Instructions to use the Rights Management (RMS) client with the RMS Protection tool to configure File Server Resource Manager and file classification infrastructure (FCI).
-author: cabailey
-manager: mbaldwin
-ms.date: 11/03/2016
-ms.topic: article
-ms.prod:
+title: Azure RMS protection with Windows Server FCI - AIP
+description: Instructions to use the Rights Management (RMS) client with the Azure Information Protection client to configure File Server Resource Manager and file classification infrastructure (FCI).
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 11/12/2020
+ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
 # RMS protection with Windows Server File Classification Infrastructure (FCI)
 
->*Applies to: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
+>
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Use this article for instructions and a script to use the Rights Management (RMS) client with the RMS Protection tool to configure File Server Resource Manager and file classification infrastructure (FCI).
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
-This solutions lets you automatically protect all files in a folder on a file server running Windows Server, or automatically protect files that meet a specific criteria. For example, files that have been classified as containing confidential or sensitive information. This solution uses the Azure Rights Management service from Azure Information Protection to protect the files, so you must have this technology deployed in your organization.
+Use this article for instructions and a script to use the Azure Information Protection client and PowerShell to configure File Server Resource Manager and File Classification Infrastructure (FCI).
+
+This solution lets you automatically protect all files in a folder on a file server running Windows Server, or automatically protect files that meet a specific criteria. For example, files that have been classified as containing confidential or sensitive information. This solution connects directly to the Azure Rights Management service from Azure Information Protection to protect the files, so you must have this service deployed for your organization.
 
 > [!NOTE]
-> Although Azure Information Protection includes a [connector](../deploy-use/deploy-rms-connector.md) that supports file classification infrastructure, that solution supports native protection only—for example, Office files.
+> Although Azure Information Protection includes a [connector](../deploy-rms-connector.md) that supports File Classification Infrastructure, that solution supports native protection only—for example, Office files.
 > 
-> To support all file types with file classification infrastructure, you must use the Windows PowerShell **RMS Protection** module, as documented in this article. The RMS Protection cmdlets, like the RMS sharing application, support generic protection as well as native protection, which means that all files can be protected. For more information about these different protection levels, see the [Levels of protection – native and generic](sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) section in the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md).
+> To support multiple file types with Windows Server file classification infrastructure, you must use the PowerShell **AzureInformationProtection** module, as documented in this article. The Azure Information Protection cmdlets, like the Azure Information Protection client, support generic protection as well as native protection, which means that file types other than Office documents can be protected. For more information, see [File types supported by the Azure Information Protection client](client-admin-guide-file-types.md) from the Azure Information Protection client admin guide.
 
 The instructions that follow are for Windows Server 2012 R2 or Windows Server 2012. If you run other supported versions of Windows, you might need to adapt some of the steps for differences between your operating system version and the one documented in this article.
 
 ## Prerequisites for Azure Rights Management protection with Windows Server FCI
+
 Prerequisites for these instructions:
 
--   On each file server where you will run File Resource Manager with file classification infrastructure:
+- On each file server where you will run File Resource Manager with file classification infrastructure:
+    
+  - You have installed File Server Resource Manager as one of the role services for the File Services role.
+    
+  - You have identified a local folder that contains files to protect with Rights Management. For example, C:\FileShare.
+    
+  - You have installed the AzureInformationProtection PowerShell module and configured the prerequisites for this module to connect to the Azure Rights Management service.
+    
+    The AzureInformationProtection PowerShell module is included with the Azure Information Protection client. For installation instructions, see [Install the Azure Information Protection client for users](client-admin-guide-install.md) from the Azure Information Protection admin guide. If required, you can install just the PowerShell module by using the `PowerShellOnly=true` parameter.
+    
+    The [prerequisites for using this PowerShell module](client-admin-guide-powershell.md#azure-information-protection-and-azure-rights-management-service) include activating the Azure Rights Management service, creating a service principal, and editing the registry if your tenant is outside North America. Before you start the instructions in this article, make sure that you have values for your **BposTenantId**, **AppPrincipalId**, and **Symmetric key**, as documented in these prerequisites. 
+    
+  - If you want to change the default level of protection (native or generic) for specific file name extensions, you have edited the registry as described in the [Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) section from the admin guide.
+    
+  - You have an internet connection, and you have configured your computer settings if these are required for a proxy server. For example: `netsh winhttp import proxy source=ie`
+    
+- You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Microsoft 365, including their email addresses. This is required for all users that might need to access files after they are protected by FCI and the Azure Rights Management service. If you do not do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this requirement, see [Preparing users and groups for Azure Information Protection](../prepare.md).
+    
+- This scenario does not support departmental templates so you must either use a template that is not configured for a scope, or use the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet and the *EnableInLegacyApps* parameter.
 
-    -   You have installed File Server Resource Manager as one of the role services for the File Services role.
+## Instructions to configure File Server Resource Manager FCI for Azure Rights Management protection
+Follow these instructions to automatically protect all files in a folder, by using a PowerShell script as a custom task. Do these procedures in this order:
 
-    -   You have identified a local folder that contains files to protect with Rights Management. For example, C:\FileShare.
+1. Save the PowerShell script
 
-    -   You have installed the RMS Protection tool, including the prerequisites for the tool (such as the RMS client) and for Azure RMS (such as the service principal account). For more information, see [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+2. Create a classification property for Rights Management (RMS)
 
-    -   If you want to change the default level of RMS protection (native or generic) for specific file name extensions, you have edited the registry as described in the [File API configuration](../develop/file-api-configuration.md) page.
+3. Create a classification rule (Classify for RMS)
 
-    -   You have an Internet connection, with configured computer settings if required for a proxy server. For example: `netsh winhttp import proxy source=ie`
+4. Configure the classification schedule
 
--   You have configured the additional prerequisites for your Azure Information Protection deployment, as described in [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx). Specifically, you have the following values to connect to the Azure Rights Management service by using a service principal:
+5. Create a custom file management task (Protect files with RMS)
 
-    -   BposTenantId
-
-    -   AppPrincipalId
-
-    -   Symmetric key
-
--   You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that might need to access files after they are protected by FCI and the Azure Rights Management service. If you do not do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this account configuration, see [Preparing for the Azure Rights Management service](../plan-design/prepare.md).
-
--   You have identified the Rights Management template to use, which will protect the files. Make sure that you know the ID for this template by using the [Get-RMSTemplate](https://msdn.microsoft.com/library/azure/mt433197.aspx) cmdlet.
-
-## Instructions to configure File Server Resource Manager FCI for Azure RMS protection
-Follow these instructions to automatically protect all files in a folder, by using a Windows PowerShell script as a custom task. Do these procedures in this order:
-
-1.  Save the Windows PowerShell script
-
-2.  Create a classification property for Rights Management (RMS)
-
-3.  Create a classification rule (Classify for RMS)
-
-4.  Configure the classification schedule
-
-5.  Create a custom file management task (Protect files with RMS)
-
-6.  Test the configuration by manually running the rule and task
+6. Test the configuration by manually running the rule and task
 
 At the end of these instructions, all files in your selected folder will be classified with the custom property of RMS, and these files will then be protected by Rights Management. For a more complex configuration that selectively protects some files and not others, you can then create or use a different classification property and rule, with a file management task that protects just those files.
+
+Note that if you make changes to the Rights Management template that you use for FCI, the computer account that runs the script to protect the files does not automatically get the updated template. To do so, in the script, locate the commented out `Get-RMSTemplate -Force` command, and remove the `#` comment character. When the updated template is downloaded (the script has run at least one time), you can comment out this additional command so that the templates are not unnecessarily downloaded each time. If the changes to the template are important enough to reprotect the files on the file server, you can do this interactively by running the Protect-RMSFile cmdlet with an account that has the Export or Full Control usage rights for the files. You must also run `Get-RMSTemplate -Force` if you publish a new template that you want to use for FCI.
 
 ### Save the Windows PowerShell script
 
 1.  Copy the contents of the [Windows PowerShell script](fci-script.md) for Azure RMS protection by using File Server Resource Manager. Paste the contents of the script and  name the file **RMS-Protect-FCI.ps1** on your own computer.
 
 2.  Review the script and make the following changes:
-
-    -   Search for the following string and replace it with your own AppPrincipalId that you use with the [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) cmdlet to connect to the Azure Rights Management service:
+    
+    - Search for the following string and replace it with your own AppPrincipalId that you use with the [Set-RMSServerAuthentication](/powershell/azureinformationprotection/vlatest/set-rmsserverauthentication) cmdlet to connect to the Azure Rights Management service:
 
         ```
         <enter your AppPrincipalId here>
@@ -100,7 +106,7 @@ At the end of these instructions, all files in your selected folder will be clas
 
         `[Parameter(Mandatory = $false)]             [string]$AppPrincipalId = "b5e3f76a-b5c2-4c96-a594-a0807f65bba4",`
 
-    -   Search for the following string and replace it with your own symmetric key that you use with the [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) cmdlet to connect to the Azure Rights Management service:
+    -   Search for the following string and replace it with your own symmetric key that you use with the [Set-RMSServerAuthentication](/powershell/azureinformationprotection/vlatest/set-rmsserverauthentication) cmdlet to connect to the Azure Rights Management service:
 
         ```
         <enter your key here>
@@ -111,7 +117,7 @@ At the end of these instructions, all files in your selected folder will be clas
 
         `[string]$SymmetricKey = "zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA="`
 
-    -   Search for the following string and replace it with your own BposTenantId (tenant ID) that you use with the [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) cmdlet to connect to the Azure Rights Management service:
+    -   Search for the following string and replace it with your own BposTenantId (tenant ID) that you use with the [Set-RMSServerAuthentication](/powershell/azureinformationprotection/vlatest/set-rmsserverauthentication) cmdlet to connect to the Azure Rights Management service:
 
         ```
         <enter your BposTenantId here>
@@ -122,17 +128,11 @@ At the end of these instructions, all files in your selected folder will be clas
 
         `[string]$BposTenantId = "23976bc6-dcd4-4173-9d96-dad1f48efd42",`
 
-    -   If your server is running Windows Server 2012, you might have to manually load the RMSProtection module at the beginning of the script. Add the following command (or equivalent if  the "Program Files" folder is  on a drive other than the  C: drive :
-
-        ```
-        Import-Module "C:\Program Files\WindowsPowerShell\Modules\RMSProtection\RMSProtection.dll"
-        ```
-
 3.  Sign the script. If you do not sign the script (more secure), you must configure Windows PowerShell on the servers that run it. For example, run a Windows PowerShell session with the **Run as Administrator** option, and type: **Set-ExecutionPolicy RemoteSigned**. However, this configuration lets all unsigned scripts run when they are stored on this server (less secure).
 
-    For more information about signing Windows PowerShell scripts, see [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) in the PowerShell documentation library.
+    For more information about signing Windows PowerShell scripts, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) in the PowerShell documentation library.
 
-4.  Save the file locally on each file server that will run File Resource Manager with file classification infrastructure. For example, save the file in **C:\RMS-Protection**. If you use a different path or folder name, choose a path and folder that does not include spaces. Secure this file by using NTFS permissions so that unauthorized users cannot modify it.
+4.  Save the file locally on each file server that runs File Resource Manager with file classification infrastructure. For example, save the file in **C:\RMS-Protection**. If you use a different path or folder name, choose a path and folder that does not include spaces. Secure this file by using NTFS permissions so that unauthorized users cannot modify it.
 
 You're now ready to start configuring File Server Resource Manager.
 
@@ -176,7 +176,7 @@ We can now create a classification rule that uses this property.
 
     -   Property **value**: Select **Yes**
 
-Although you can run the classification rules manually, for ongoing operations, you will want this rule to run on a schedule so that new files will be classified with the RMS property.
+Although you can run the classification rules manually, for ongoing operations, you want this rule to run on a schedule so that new files are classified with the RMS property.
 
 ### Configure the classification schedule
 
@@ -186,7 +186,7 @@ Although you can run the classification rules manually, for ongoing operations, 
 
     -   Configure the schedule for all classification rules to run, which includes our new rule to classify files with the RMS property.
 
-    -   **Allow continuous classification for new files**: Select this checkbox so that new files will be classified.
+    -   **Allow continuous classification for new files**: Select this check box so that new files are classified.
 
     -   Optional: Make any other changes that you want, such as configuring options for reports and notifications.
 
@@ -224,20 +224,20 @@ Now you've completed the classification configuration, you're ready to configure
         -   **Argument**: Specify the following, supplying your own values for &lt;path&gt; and &lt;template ID&gt;:
 
             ```
-            -Noprofile -Command "<path>\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID <template GUID> -OwnerMail [Source File Owner Email]"
+            -Noprofile -Command "<path>\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID <template GUID> -OwnerMail '[Source File Owner Email]'"
             ```
             For example, if you copied the script to C:\RMS-Protection and the template ID you identified from the prerequisites is e6ee2481-26b9-45e5-b34a-f744eacd53b0, specify the following:
 
-            `-Noprofile -Command "C:\RMS-Protection\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID e6ee2481-26b9-45e5-b34a-f744eacd53b0 -OwnerMail [Source File Owner Email]"`
+            `-Noprofile -Command "C:\RMS-Protection\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID e6ee2481-26b9-45e5-b34a-f744eacd53b0 -OwnerMail '[Source File Owner Email]'"`
 
-            In this command, **[Source File Path]** and **[Source File Owner Email]** are both FCI-specific variables, so type these exactly as they appear in the command above. The first one is used by FCI to automatically specify the identified file in the folder, and the second is for FCI to automatically retrieve the email address of the named Owner of the identified file. This command is repeated for each file in the folder, which in our example, is each file in the C:\FileShare folder that additionally, has RMS as a file classification property.
+            In this command, **[Source File Path]** and **[Source File Owner Email]** are both FCI-specific variables, so type these exactly as they appear in the preceding command. The first variable is used by FCI to automatically specify the identified file in the folder, and the second variable is for FCI to automatically retrieve the email address of the named Owner of the identified file. This command is repeated for each file in the folder, which in our example, is each file in the C:\FileShare folder that additionally, has RMS as a file classification property.
 
             > [!NOTE]
-            > The **-OwnerMail [Source File Owner Email]** parameter and value ensures that the original owner of the file is granted the Rights Management owner of the file after it is protected. This ensures that the original file owner has all Rights Management rights to their own files. When files are created by a domain user, the email address is  automatically retrieved from Active Directory by using the user account name in the file's Owner property. To do this, the file server must be in the same domain or trusted domain as the user.
+            > The **-OwnerMail [Source File Owner Email]** parameter and value ensures that the original owner of the file is granted the Rights Management owner of the file after it is protected. This configuration ensures that the original file owner has all Rights Management rights to their own files. When files are created by a domain user, the email address is  automatically retrieved from Active Directory by using the user account name in the file's Owner property. To do this, the file server must be in the same domain or trusted domain as the user.
             > 
-            > Whenever possible, assign the original owners to protected documents, to ensure that these users continue to have full control over the files that they created. However, if you use the [Source File Owner Email] variable as above, and a file does not have a domain user defined as the owner (for example, a local account was used to create the file, so the owner displays SYSTEM), the script will fail.
+            > Whenever possible, assign the original owners to protected documents, to ensure that these users continue to have full control over the files that they created. However, if you use the [Source File Owner Email] variable as in the preceding command, and a file does not have a domain user defined as the owner (for example, a local account was used to create the file, so the owner displays SYSTEM), the script fails.
             > 
-            > For files that do not have a domain user as owner, you can either copy and save these files yourself as a domain user, so that you become the owner for just these files. Or, if you have permissions, you can manually change the owner.  Or alternatively, you can supply a specific email address (such as your own or a group address for the IT department) instead of the [Source File Owner Email] variable, which means that all files you protect by using this script will use this email address to define the new owner.
+            > For files that do not have a domain user as owner, you can either copy and save these files yourself as a domain user, so that you become the owner for just these files. Or, if you have permissions, you can manually change the owner.  Or alternatively, you can supply a specific email address (such as your own or a group address for the IT department) instead of the [Source File Owner Email] variable, which means that all files you protect by using this script uses this email address to define the new owner.
 
     -   **Run the command as**: Select **Local System**
 
@@ -253,7 +253,7 @@ Now you've completed the classification configuration, you're ready to configure
 
         -   **Run at**: Configure your preferred schedule.
 
-            Allow plenty of time for the script to complete. Although this solution  protects all files in the folder, the script runs once for each file, each time. Although this takes longer than protecting all the files at the same time, which the RMS Protection tool supports, this file-by-file configuration for FCI is more powerful. For example, the protected files can have different owners (retain the original owner) when you use the   [Source File Owner Email] variable, and this file-by-file action will be required if you later change the configuration to selectively protect files rather than all files in a folder.
+            Allow plenty of time for the script to complete. Although this solution protects all files in the folder, the script runs once for each file, each time. Although this takes longer than protecting all the files at the same time, which the Azure Information Protection client supports, this file-by-file configuration for FCI is more powerful. For example, the protected files can have different owners (retain the original owner) when you use the [Source File Owner Email] variable, and this file-by-file action is required if you later change the configuration to selectively protect files rather than all files in a folder.
 
         -   **Run continuously on new files**: Select this checkbox.
 
@@ -273,7 +273,7 @@ Now you've completed the classification configuration, you're ready to configure
 
     2.  Click **Wait for the task to complete**, and then click **OK**.
 
-4.  Wait for the **Running File Management Task** dialog box to close and then view the results in the automatically displayed report. You should see the number of files that are in your chosen folder in the **Files** field. Confirm that the files in your chosen folder are now protected by RMS. For example, if your chosen folder is C:\FileShare, type the following in a Windows PowerShell session and confirm that no files have a status of **UnProtected**:
+4.  Wait for the **Running File Management Task** dialog box to close and then view the results in the automatically displayed report. You should see the number of files that are in your chosen folder in the **Files** field. Confirm that the files in your chosen folder are now protected by Rights Management. For example, if your chosen folder is C:\FileShare, type the following command in a Windows PowerShell session and confirm that no files have a status of **Unprotected**:
 
     ```
     foreach ($file in (Get-ChildItem -Path C:\FileShare -Force | where {!$_.PSIsContainer})) {Get-RMSFileStatus -f $file.PSPath}
@@ -281,10 +281,10 @@ Now you've completed the classification configuration, you're ready to configure
     > [!TIP]
     > Some troubleshooting tips:
     > 
-    > -   If you see **0** in the report, instead of the number of files in your folder, this indicates that the script did not run. First, check the script itself by loading it in Windows PowerShell ISE to validate the script contents and try running it to see if any errors are displayed. With no arguments specified, the script will try to connect and authenticate to Azure RMS.
+    > -   If you see **0** in the report, instead of the number of files in your folder, this output indicates that the script did not run. First, check the script itself by loading it in Windows PowerShell ISE to validate the script contents and try running it one time in the same PowerShell session, to see if any errors are displayed. With no arguments specified, the script tries to connect and authenticate to the Azure Rights Management service.
     > 
-    >     -   If the script reports that it couldn't connect to Azure RMS, check the values it displays for the service principal account, which you specified in the script.  For more information about how to create this service principal account, see the second prerequisite in [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)
-    >     -   If the script reports that it could connect to Azure RMS, next check that it can find the specified template by running [Get-RMSTemplate](https://msdn.microsoft.com/library/mt433197.aspx) directly from Windows PowerShell on the server. You should see the template you specified returned in the results.
+    >     -   If the script reports that it couldn't connect to the Azure Rights Management service (Azure RMS), check the values it displays for the service principal account, which you specified in the script. For more information about how to create this service principal account, see [Prerequisite 3: To protect or unprotect files without interaction](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) from the Azure Information Protection client admin guide.
+    >     -   If the script reports that it could connect to Azure RMS, next check that it can find the specified template by running [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) directly from Windows PowerShell on the server. You should see the template you specified returned in the results.
     > -   If the script by itself runs in Windows PowerShell ISE without errors, try running it as follows from a  PowerShell session, specifying a file name to protect and without the -OwnerEmail parameter:
     > 
     >     ```
@@ -292,16 +292,27 @@ Now you've completed the classification configuration, you're ready to configure
     >     ```
     >     -   If the script runs successfully in this Windows PowerShell session, check  your entries for **Executive** and **Argument** in the file management task action.  If you have specified **-OwnerEmail [Source File Owner Email]**, try removing this parameter.
     > 
-    >         If the file management task works successfully without  **-OwnerEmail [Source File Owner Email]**, check that the unprotected files have a domain user listed as the file owner, rather than **SYSTEM**.  To do this, use the **Security** tab for the file's properties, and then click **Advanced**. The **Owner** value is displayed immediately after the file **Name**. Also, verify that the file server is in the same domain or a trusted domain to lookup the user's email address from Active Directory Domain Services.
-    > -   If you see the correct number of files in the report but the files are not protected, try protecting the files manually by using the [Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx) cmdlet, to see if any errors are displayed.
+    >         If the file management task works successfully without  **-OwnerEmail [Source File Owner Email]**, check that the unprotected files have a domain user listed as the file owner, rather than **SYSTEM**.  To make this check, use the **Security** tab for the file's properties, and then click **Advanced**. The **Owner** value is displayed immediately after the file **Name**. Also, verify that the file server is in the same domain or a trusted domain to look up the user's email address from Active Directory Domain Services.
+    > -   If you see the correct number of files in the report but the files are not protected, try protecting the files manually by using the [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) cmdlet, to see if any errors are displayed.
 
-When you have confirmed that these tasks run successfully, you can close File Resource Manager. New files will be automatically protected and all files will be protected again when the schedules run. Re-protecting files ensures that any changes to the template are applied to the files.
+When you have confirmed that these tasks run successfully, you can close File Resource Manager. New files are automatically classified and protected when the scheduled tasks run. 
 
+## Action required if you make changes to the Rights Management template
+
+If you make changes to the Rights Management template that the script references, the computer account that runs the script to protect the files does not automatically get the updated template. In the script, locate the commented out `Get-RMSTemplate -Force` command in the Set-RMSConnection function, and remove the comment character at the beginning of the line. The next time the script runs, the updated template is downloaded. To optimize performance so that templates don't download unnecessarily, you can then comment out this line again. 
+
+If the changes to the template are important enough to reprotect the files on the file server, you can do this interactively by running the Protect-RMSFile cmdlet with an account that has the Export or Full Control usage rights for the files. 
+
+Also run this line in the script if you publish a new template that you want to use for FCI, and change the template ID in the argument line for the custom file management task.
 
 ## Modifying the instructions to selectively protect files
-When you have the preceding instructions working, it's then very easy to modify them for a more sophisticated configuration. For example, protect files by using the same script but only for files that contain personal identifiable information, and perhaps select a template that has more restrictive rights.
 
-To do this, use one of the built-in classification properties (for example, **Personally Identifiable Information**) or create your own new property. Then create a new rule that uses this property. For example, you might select the **Content Classifier**, choose the **Personally Identifiable Information** property with a value of **High**, and configure the string or expression pattern that identifies the file to be configured for this property (such as the  string "**Date of Birth**").
+When you have the preceding instructions working, it's then easy to modify them for a more sophisticated configuration. For example, protect files by using the same script but only for files that contain personal identifiable information, and perhaps select a template that has more restrictive rights.
+
+To make this modification, use one of the built-in classification properties (for example, **Personally Identifiable Information**) or create your own new property. Then create a new rule that uses this property. For example, you might select the **Content Classifier**, choose the **Personally Identifiable Information** property with a value of **High**, and configure the string or expression pattern that identifies the file to be configured for this property (such as the  string "**Date of Birth**").
 
 Now all you need to do is create a new file management task that uses the same script but perhaps with a different template, and configure the condition for the classification property that you have just configured. For example, instead of the condition that we configured previously (**RMS** property, **Equal**, **Yes**), select the **Personally Identifiable Information** property with the **Operator** value set to **Equal** and the **Value** of **High**.
 
+## Next steps
+
+You might be wondering: [What’s the difference between Windows Server FCI and the Azure Information Protection scanner?](../faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)

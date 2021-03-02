@@ -1,0 +1,25 @@
+---
+title: class ProtectDoNotForwardDkAction 
+description: Documents the protectdonotforwarddkaction::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.author: bryanla
+ms.date: 01/13/2021
+---
+
+# class ProtectDoNotForwardDkAction 
+An action class that specifies adding do not forward double key protection to the document.
+  
+## Summary
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+public const std::string& GetDoubleKeyEncryptionUrl() const  |  Get the double key encryption Url.
+  
+## Members
+  
+### GetDoubleKeyEncryptionUrl function
+Get the double key encryption Url.
+
+  
+**Returns**: The double key encryption Url.

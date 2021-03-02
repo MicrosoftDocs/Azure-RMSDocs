@@ -3,7 +3,8 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/**.md",
+          "**/**.yml"
         ],
         "exclude": [
           "**/obj/**",
@@ -12,15 +13,15 @@
       }
     ],
     "resource": [
-        {
-          "files": [
-          "**/images/**", 
+      {
+        "files": [
+          "**/images/**",
           "**/*.png",
           "**/*.jpg",
           "**/*.gif",
           "**/*.bmp",
           "**/*.html"
-          ],
+        ],
         "exclude": [
           "**/obj/**",
           "_themes/**"
@@ -30,8 +31,16 @@
     "dest": "Azure-RMSDocs",
     "template": "docs.html",
     "globalMetadata": {
+      "feedback_system": "GitHub",
+      "uhfHeaderId": "azure",
+      "feedback_github_repo": "MicrosoftDocs/azure-rmsdocs",
+      "feedback_product_url": "https://office365.uservoice.com/forums/928576-microsoft-information-protection-mip",
       "layout": "Conceptual",
-      "breadcrumb_path": "/enterprise-mobility-security/toc.json"
-    }
+      "breadcrumb_path": "/azure/information-protection/bread/toc.json",
+      "searchScope": [
+        "Information Protection"
+      ]
+    },
+    "markdownEngineName": "markdig"
   }
 }

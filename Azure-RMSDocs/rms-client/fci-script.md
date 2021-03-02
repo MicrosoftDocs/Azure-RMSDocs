@@ -1,46 +1,52 @@
 ---
 # required metadata
 
-title: Windows PowerShell script for Azure RMS protection by using File Server Resource Manager FCI | Azure Information Protection
+title: PowerShell script for Azure RMS & FCI - AIP
 description: Sample script to copy and edit, as described in the instructions for RMS protection with Windows Server File Classification Infrastructure.
-author: cabailey
-manager: mbaldwin
-ms.date: 10/24/2016
-ms.topic: article
-ms.prod:
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 11/30/2019
+ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
 # Windows PowerShell script for Azure RMS protection by using File Server Resource Manager FCI
 
->*Applies to: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
+>
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 This page contains the sample script to copy and edit, as described in [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).
 
-This script uses a minimum version of **2.2.0.0** for the RMS Protection module. Run the following command to check the version: `(Get-Module RMSProtection -ListAvailable).Version` 
+This script uses a minimum version of **1.3.155.2** for the AzureInformationProtection module. Run the following command to check the version: `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
-*&#42;&#42;Disclaimer&#42;&#42;: This sample script is not supported under any Microsoft standard support program or service. This sample*
-*script is provided AS IS without warranty of any kind.*
+*&#42;&#42;Disclaimer&#42;&#42;: This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.*
 
 ```
 <#
 .SYNOPSIS 
      Helper script to protect all file types using the Azure Rights Management service and FCI.
 .DESCRIPTION
-     Protect files with the Azure Rights Management service and Windows Server FCI, using an RMS template ID and RMS Protection module minimum version 2.2.0.0.   
+     Protect files with the Azure Rights Management service and Windows Server FCI, using an RMS template ID and AzureInformationProtection module minimum version 1.3.155.2.   
 #>
 param(
             [Parameter(Mandatory = $false)]
@@ -64,7 +70,7 @@ param(
 ) 
 
 # script information
-[String] $Script:Version = 'version 2.0' 
+[String] $Script:Version = 'version 3.4' 
 [String] $Script:Name = "RMS-Protect-FCI.ps1"
 
 #global working variables
@@ -80,25 +86,22 @@ function Get-ScriptName(){
 
 function Check-Module{
 
-	param ([String]$Module = $(Throw "Module name not specified"))
+    param ([String]$Module = $(Throw "Module name not specified"))
 
-	[bool]$isResult = $False
+    [bool]$isResult = $False
 
-	#try to load the module
-	if (get-module -list -name $Module) {
-		import-module $Module
+    #try to load the module
+    if ((get-module -list -name $Module) -ne $nil)
+        {
 
-		if (get-module -name $Module ) {
+            $isResult = $True
+        } else 
+        
+        {
+            $isResult = $False
+        } 
 
-			$isResult = $True
-		} else {
-			$isResult = $False
-		} 
-
-	} else {
-			$isResult = $False
-	}
-	return $isResult
+    return $isResult
 }
 
 function Protect-File ($ffile, $ftemplateId, $fownermail) {
@@ -106,11 +109,11 @@ function Protect-File ($ffile, $ftemplateId, $fownermail) {
     [bool] $returnValue = $false
     try {
         If ($OwnerMail -eq $null -or $OwnerMail -eq "") {
-            $protectReturn = Protect-RMSFile -File $ffile -InPlace -TemplateID $ftemplateId
+            $protectReturn = Protect-RMSFile -File $ffile -InPlace -DoNotPersistEncryptionKey All -TemplateID $ftemplateId
             $returnValue = $true
             Write-Host ( "Information: " + "Protected File: $ffile with Template: $ftemplateId")
         } else {
-            $protectReturn = Protect-RMSFile -File $ffile -InPlace -TemplateID $ftemplateId -OwnerEmail $fownermail
+            $protectReturn = Protect-RMSFile -File $ffile -InPlace -DoNotPersistEncryptionKey All -TemplateID $ftemplateId -OwnerEmail $fownermail
             $returnValue = $true
             Write-Host ( "Information: " + "Protected File: $ffile with Template: $ftemplateId, set Owner: $fownermail")
         }
@@ -126,6 +129,7 @@ function Set-RMSConnection ($fappId, $fkey, $fbposId) {
     try {
                Set-RMSServerAuthentication -AppPrincipalId $fappId -Key $fkey -BposTenantId $fbposId
         Write-Host ("Information: " + "Connected to Azure RMS Service with BposTenantId: $fbposId using AppPrincipalId: $fappId")
+#       Get-RMSTemplate -Force
         $returnValue = $true
     } catch {
         Write-Host ("ERROR" + "During connection to Azure RMS Service with BposTenantId: $fbposId using AppPrincipalId: $fappId")
@@ -141,11 +145,11 @@ $Script:isScriptProcess = $True
 
 # Validate Azure RMS connection by checking the module and then connection
 if ($Script:isScriptProcess) {
- 		if (Check-Module -Module RMSProtection){
+ 		if (Check-Module -Module AzureInformationProtection){
     	$Script:isScriptProcess = $True
 	} else {
 
-		Write-Host ("The RMSProtection module is not loaded") -foregroundcolor "yellow" -backgroundcolor "black"	        
+		Write-Host ("The AzureInformationProtection module is not loaded") -foregroundcolor "yellow" -backgroundcolor "black"	        
 		$Script:isScriptProcess = $False
 	}
 }

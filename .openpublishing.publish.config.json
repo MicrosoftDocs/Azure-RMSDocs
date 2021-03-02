@@ -1,18 +1,40 @@
 {
-  "build_entry_point": "docs.ps1",
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
+  "build_entry_point": "docs",
   "docsets_to_publish": [
     {
       "docset_name": "Azure-RMSDocs",
       "build_source_folder": "Azure-RMSDocs",
       "build_output_subfolder": "Azure-RMSDocs",
       "locale": "en-us",
-      "version": 0,
+      "monikers": [],
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
-      }
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content",
+        "LandingData": "Content",
+        "ContextObject": "Toc"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "version": 0
+    },
+    {
+      "docset_name": "MIP",
+      "build_source_folder": "mip",
+      "build_output_subfolder": "MIP",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content",
+        "ContextObject": "Toc"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [
@@ -20,6 +42,7 @@
   ],
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/Azure-RMSDocs",
+  "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "dependent_repositories": [
@@ -28,6 +51,36 @@
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master",
+      "branch_mapping": {}
     }
-  ]
+  ],
+  "branch_target_mapping": {
+    "live": [
+      "Publish",
+      "PDF"
+    ],
+    "master": [
+      "Publish",
+      "PDF"
+    ]
+  },
+  "need_generate_pdf_url_template": true,
+  "targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  },
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
+  "enable_branch_build_custom_validation": true,
+  "enable_pull_request_custom_validation": true,
+  "template_folder": "_themes",
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }
