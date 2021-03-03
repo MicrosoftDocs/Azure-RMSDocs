@@ -26,11 +26,18 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
 
+## Version 1.8.97
+
+**Release date:** February 24, 2021
+
+- Fixed a bug where child labels were not filtered properly and included all types of labels, even if not requested. 
+- Fixed a bug where labels weren't maintained on `RemoveProtection()` if label metadata was incomplete. 
+
 ## Version 1.8.94
 
 **Release date:** February 8, 2021
 
-- Fixed bug in NuGet package where debug configuration for C++ projects deployed release binaries. 
+- Fixed bug in NuGet package where debug configuration for C++ projects deployed release binaries. Version 1.8.86 may result in a crash with native C++ apps. Please make sure to update to 1.8.94 or later.
 - Fixed a bug where policy engine was required to remove protection. 
   - If policy engine can't be loaded and label metadata is present, it will be discarded if protection is removed. 
 - Fixed a bug where empty `labelInfo.xml` was generated if file was changed to another protected label. 
@@ -46,7 +53,7 @@ Use the following information to see what’s new or changed for a supported rel
 - All clouds are fully supported across all three SDKs.
 - Rename `TelemetryConfiguration` to `DiagnosticConfiguration`.
 - Updated `MipContext` to accept `DiagnosticConfiguration` instead of `TelemetryConfiguration`.
-- Exposed new `TelemetryDelegate` and `AuditDelegate`.
+- Exposed new `AuditDelegate`.
 - Several custom settings have had their name changed and will be removed in version 1.9. These will continue to function in parallel with their updates names in version 1.8. 
 
 | New Name          | Old Name                   |
@@ -181,7 +188,7 @@ Use the following information to see what’s new or changed for a supported rel
 - TLS 1.2 enforced for all non-ADRMS HTTP communication.
 - Migrated iOS/macOS HTTP implementation from NSURLConnection to NSURLSession.
 - Migrated iOS telemetry component from Aria SDK to 1DS SDK.
-- Telemetry component now uses MIP's HttpDelegate on iOS, macOs, and Linux. (Previously only win32).
+- Telemetry component now uses MIP's HttpDelegate on iOS, macOS, and Linux. (Previously only win32).
 - Improved type safety for C API.
 - Moved AuthDelegate from Profile to Engine in C++, C#, and Java APIs.
 - AuthDelegate moved from constructor of `Profile::Settings` to `Engine::Settings`.
