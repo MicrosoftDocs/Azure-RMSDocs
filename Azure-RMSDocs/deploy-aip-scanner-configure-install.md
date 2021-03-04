@@ -6,7 +6,7 @@ description: Learn how to install and configure the Azure Information Protection
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/01/2021
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -194,10 +194,12 @@ You may want to do this only after running a network scan job to analyze the rep
     |Setting  |Description  |
     |---------|---------|
     |**Content scan job settings**     |    - **Schedule**: Keep the default of **Manual** <br />- **Info types to be discovered**: Change to **Policy only** <br />- **Configure repositories**: Do not configure at this time because the content scan job must first be saved.         |
+    |**DLP policy** | If you are using a Microsoft 365 Data Loss Prevention (DLP) policy, set **Enable DLP rules** to **On**. For more information, see [Use a DLP policy](#use-a-dlp-policy-public-preview). |
     |**Sensitivity policy**     | - **Enforce**: Select **Off** <br />- **Label files based on content**: Keep the default of **On** <br />- **Default label**: Keep the default of **Policy default** <br />- **Relabel files**: Keep the default of **Off**        |
-    |**Configure file settings**     | - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On** <br />- **File types to scan**: Keep the default file types for **Exclude** <br />- **Default owner**: Keep the default of **Scanner Account**        |
+    |**Configure file settings**     | - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On** <br />- **File types to scan**: Keep the default file types for **Exclude** <br />- **Default owner**: Keep the default of **Scanner Account**  <br /> - **Set repository owner**: Use this option only when [using a DLP policy](#use-a-dlp-policy-public-preview). |
     | | |
 
+   
 1. Now that the content scan job is created and saved, you're ready to return to the **Configure repositories** option to specify the data stores to be scanned. 
 
     Specify UNC paths and SharePoint Server URLs for SharePoint on-premises document libraries and folders. 
@@ -359,6 +361,44 @@ To change these settings, edit the content scan job:
     ```
 
 The scanner is now scheduled to run continuously. When the scanner works its way through all configured files, it automatically starts a new cycle so that any new and changed files are discovered.
+
+## Use a DLP policy (public preview)
+
+Using a Microsoft 365 Data Loss Prevention (DLP) policy enables the scanner to detect potential data leaks by matching DLP rules to files stored in file shares and SharePoint Server.
+
+- **Enable DLP rules in your content scan job** to reduce the exposure of any files that match your DLP policies. When your DLP rules are enabled, the scanner may reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**. 
+
+- **In your Microsoft 365 labeling admin center**, determine whether you are just testing your DLP policy or whether you want your rules enforced and your file permissions changed according to those rules. For more information, see [Turn on a DLP policy](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
+
+> [!TIP]
+> Scanning your files, even when just testing the DLP policy, also creates file permission reports. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
+> 
+
+DLP policies are configured in your labeling admin center, such as the Microsoft 365 Compliance center, and are supported in Azure Information Protection starting in version [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-DLP-policies-public-preview). 
+
+For more information about DLP licensing, see [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started).
+
+**To use a DLP policy with the scanner**:
+
+1. In the Azure portal, navigate to your content scan job. For more information, see [Create a content scan job](#create-a-content-scan-job).
+
+1. Under **DLP policy**, set **Enable DLP rules** to **On**.
+
+    > [!IMPORTANT]
+    > Do not set **Enable DLP rules** to **On** unless you actually have a DLP policy configured in Microsoft 365. 
+    >
+    >Turning this feature on without a DLP policy will cause the scanner to generate errors.
+1. (Optional) Under **Configure file settings**, set the **Set repository owner** to **On**, and define a specific user as the repository owner.  
+
+    This option enables the scanner to reduce the exposure of any files found in this repository, which match the DLP policy, to the repository owner defined.
+
+### DLP policies and *make private* actions
+
+If you are using a DLP policy with a *make private* action, and are also planning to use the scanner to automatically label your files, we recommend that you also define the unified labeling client's [**UseCopyAndPreserveNTFSOwner**](rms-client/clientv2-admin-guide-customizations.md#preserve-ntfs-owners-during-labeling-public-preview) advanced setting. 
+
+This setting ensures that the original owners retain access to their files.
+
+For more information, see [Create a content scan job](#create-a-content-scan-job) and  [Apply a sensitivity label to content automatically](/microsoft-365/compliance/apply-sensitivity-label-automatically) in the Microsoft 365 documentation. 
 
 ## Change which file types to protect
 
