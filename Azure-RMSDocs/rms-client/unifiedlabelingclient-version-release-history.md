@@ -118,24 +118,28 @@ If you have sensitivity labels that use these sensitive information types, we re
 
 The following fixes were delivered in version 2.11.53.0 of the Azure Information Protection unified labeling client and scanner:
 
+- The [AIP Viewer app](clientv2-view-use-files.md) now supports opening files without a labeling policy, to support protection-only scenarios.
+
+- Fixed issues where audit logs for [discovery](../audit-logs.md#discover-audit-logs) and [new label](../audit-logs.md#new-label-audit-logs) events aren't sent from Outlook.
+
+
 - Added support for removing a protected label when the [File API engine](/information-protection/develop/concept-profile-engine-file-engine-cpp) isn't loaded in Outlook. <!-- when might this occur? when should the regular user be concerned about it? -->
 
 - Fixed issues for mandatory labeling functionality when opening protected PowerPoint files with [Track and Revoke](track-and-revoke-admin.md) enabled. <!-- and async?>
 
-- Fixed issues for opening protected files with inactive labels with the File Explorer and the [AIP Viewer app](clientv2-view-use-files.md).
-
-- The [PowerPointRemoveAllShapesByShapeName](clientv2-admin-guide-customizations.md#remove-all-shapes-of-a-specific-shape-name) advanced setting no longer requires that you also define the [ExternalContentMarkingToRemove](clientv2-admin-guide-customizations.md#how-to-configure-externalcontentmarkingtoremove) setting. Now you can define PowerPointRemoveAllShapesByShapeName on its own.
+- The [PowerPointRemoveAllShapesByShapeName](clientv2-admin-guide-customizations.md#remove-all-shapes-of-a-specific-shape-name) advanced setting no longer requires that you also define the [ExternalContentMarkingToRemove](clientv2-admin-guide-customizations.md#how-to-configure-externalcontentmarkingtoremove) setting. Now you can define the **PowerPointRemoveAllShapesByShapeName** advanced setting on its own.
 
 - Fixed an issue where an empty option would appear on [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) when only two options for the user to select were configured for the popup message.
-
-- The AIP viewer app now supports opening files without a labeling policy, to support protection-only scenarios.
-
-- Fixed issues where audit logs for [discovery](../audit-logs.md#discover-audit-logs) and [new label](../audit-logs.md#new-label-audit-logs) events aren't sent from Outlook.
 
 - Fixes to prevent [PowerShell](clientv2-admin-guide-powershell.md) from behaving unexpectedly in client versions after 2.8.x.
 
 - Fixes to ensure that a [justification prompt](clientv2-admin-guide-customizations.md#customize-justification-prompt-texts-for-modified-labels) appears in Outlook, when a user downgrades a classification label for the second time in the same Outlook session.
 
+- Fixed issues for opening protected **.jt** files in the [AIP Viewer app](clientv2-view-use-files.md).
+.
+- Fixed issues for opening protected files with inactive labels with the File Explorer and the [AIP Viewer app](clientv2-view-use-files.md).
+
+- Size limits for protecting and decrypting files using the File Explorer and PowerShell are now updated. For more information, see [Supported file sizes for the File Explorer and PowerShell](clientv2-admin-guide-file-types.md#supported-file-sizes-for-the-file-explorer-and-powershell).
 
 ## Version 2.10.46.0 for co-authoring (Public preview)
 
