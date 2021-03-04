@@ -51,13 +51,13 @@ Then, perform the following configuration procedures as needed for your system:
 |Procedure  |Description  |
 |---------|---------|
 |[Change which file types to protect](#change-which-file-types-to-protect) |You may want to scan, classify, or protect different file types than the default. For more information, see [AIP scanning process](deploy-aip-scanner.md#aip-scanning-process). |
-|[Upgrading your scanner](#upgrading-your-scanner) | Upgrade your scanner to leverage the latest features and improvements.|
-|[Editing data repository settings in bulk](#editing-data-repository-settings-in-bulk)| Use import and export options to make changes in bulk for multiple data repositories.|
-|[Use the scanner with alternative configurations](#using-the-scanner-with-alternative-configurations)| Use the scanner without configuring labels with any conditions |
-|[Optimize performance](#optimizing-scanner-performance)| Guidance to optimize your scanner performance|
+|[Upgrading your scanner](#upgrade-your-scanner) | Upgrade your scanner to leverage the latest features and improvements.|
+|[Editing data repository settings in bulk](#edit-data-repository-settings-in-bulk)| Use import and export options to make changes in bulk for multiple data repositories.|
+|[Use the scanner with alternative configurations](#use-the-scanner-with-alternative-configurations)| Use the scanner without configuring labels with any conditions |
+|[Optimize performance](#optimize-scanner-performance)| Guidance to optimize your scanner performance|
 | | |
 
-For more information, see also [List of cmdlets for the scanner](#list-of-cmdlets-for-the-scanner).
+For more information, see also [Supported PowerShell cmdlets](#supported-powershell-cmdlets).
 
 ## Configure the scanner in the Azure portal
 
@@ -374,7 +374,7 @@ Using a Microsoft 365 Data Loss Prevention (DLP) policy enables the scanner to d
 > Scanning your files, even when just testing the DLP policy, also creates file permission reports. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
 > 
 
-DLP policies are configured in your labeling admin center, such as the Microsoft 365 Compliance center, and are supported in Azure Information Protection starting in version [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-DLP-policies-public-preview). 
+DLP policies are configured in your labeling admin center, such as the Microsoft 365 Compliance center, and are supported in Azure Information Protection starting in version [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-dlp-policies-public-preview). 
 
 For more information about DLP licensing, see [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started).
 
@@ -505,7 +505,7 @@ Use the following options and guidance to help you optimize scanner performance:
 |**Have a high speed and reliable network connection between the scanner computer and the scanned data store**     |  For example, place the scanner computer in the same LAN, or preferably, in the same network segment as the scanned data store. <br /><br />The quality of the network connection affects the scanner performance because, to inspect the files, the scanner transfers the contents of the files to the computer running the scanner service. <br /><br />Reducing or eliminating  the network hops required for the data to travel also reduces the load on your network.      |
 |**Make sure the scanner computer has available processor resources**     | Inspecting the file contents and encrypting and decrypting files are processor-intensive actions. <br /><br />Monitor the typical scanning cycles for your specified data stores to identify whether a lack of processor resources is negatively affecting the scanner performance.        |
 |**Install multiple instances of the scanner** | The Azure Information Protection scanner supports multiple configuration databases on the same SQL server instance when you specify a custom cluster name for the scanner. <br /><br />Multiple scanners can also share the same cluster, resulting in quicker scanning times.|
-|**Check your alternative configuration usage** |The scanner runs more quickly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to apply a default label to all files because the scanner does not inspect the file contents. <br/><br />The scanner runs more slowly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.|
+|**Check your alternative configuration usage** |The scanner runs more quickly when you use the [alternative configuration](#use-the-scanner-with-alternative-configurations) to apply a default label to all files because the scanner does not inspect the file contents. <br/><br />The scanner runs more slowly when you use the [alternative configuration](#use-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.|
 | | |
 
 
