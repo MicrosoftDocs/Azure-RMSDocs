@@ -72,7 +72,7 @@ If the scanner stops in the middle unexpectedly and doesn't complete scanning a 
 
 
 
-## Verify scanning details per scanner node and repository
+## Verify scanning details per scanner node and repository (Public preview)
 
 Use the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) together with variables to get details about the scanning status on each node in your scanner cluster.
 
@@ -166,7 +166,7 @@ C:\temp     Scanning
 
 ```powershell
 PS C:\Windows\system32> $x.RepositoriesStatus
-```
+
 
 ScannerID               : 
 ScannedFiles            : 2280
@@ -175,6 +175,7 @@ ScannedBytes            : 78478187
 Classified              : 0
 Labeled                 : 0
 ....
+```
 
 This output shows only a single repository. In cases of multiple repositories, each one will be listed separately.
 ## Scanner error reference

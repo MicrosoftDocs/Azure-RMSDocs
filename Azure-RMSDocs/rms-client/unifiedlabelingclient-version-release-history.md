@@ -34,7 +34,7 @@ ms.custom: admin
 
 You can download the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
-After a short delay of typically a couple of weeks, the latest general availability version is also included in the Microsoft Update Catalog. Azure Information Protection versions have a product name of **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Unified Labeling Client**, and a classification of **Updates**.
+After a short delay of typically 4 weeks, the latest general availability version is also included in the Microsoft Update Catalog. Azure Information Protection versions have a product name of **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Unified Labeling Client**, and a classification of **Updates**.
 
 Including Azure Information Protection in the catalog means that you can upgrade the client using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
 
@@ -74,7 +74,7 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.11.53.0
+## Version 2.11.53.0 (Public preview)
 
 Unified labeling scanner and client version 2.11.53.0
 
@@ -88,11 +88,11 @@ For more information, see [Usage logging for the Azure Information Protection un
 
 ### Scanner diagnostics tool improvements
 
-With the upgrade to version 2.10.43.0, running the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet with the **Verbose** parameter prints the last 10 errors from the scanner log.
+With the upgrade to version 2.11.53.0, running the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet with the **Verbose** parameter prints the last 10 errors from the scanner log.
 
 To print more or fewer errors, use the new **VerboseErrorCount parameter** to define the number of errors you want to print.
 
-For more information, see [Using PowerShell with the Azure Information Protection unified client](clientv2-admin-guide-powershell.md) and [Troubleshooting your unified labeling on-premises scanner deployment](../deploy-aip-scanner-tsg.md).
+For more information, see [Troubleshooting using the scanner diagnostic tool](../deploy-aip-scanner-tsg.md#troubleshooting-using-the-scanner-diagnostic-tool).
 
 ### Improved scanner details output
 
@@ -100,11 +100,19 @@ The unified labeling on-premises scanner has improved outputs for the following 
 
 |Cmdlet  |Improvement  |
 |---------|---------|
-|**Get-AIPScannerStatus**     |  Previously, running the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) command provided only high-level details of the scanner cluster status, without details per node in your cluster.   <br><br> Now, you can use the **NodesInfo** variable and the **Verbose** parameter to drill down into additional levels of detail for each node. <br><br>   For more information, see the [AIP PowerShell documentation](/powershell/module/azureinformationprotection/get-aipscannerstatus).   |
-|**Get-AIPScannerConfiguration**     |   Running the [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/get-aipscannerconfiguration) now provides details about the current scanner configuration in addition to the online configuration settings. <br><br>For more information, see the [AIP PowerShell documentation](/powershell/module/azureinformationprotection/get-aipscannerconfiguration).      |
+|**Get-AIPScannerStatus**     |  Previously, running the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) command provided only high-level details of the scanner cluster status, without details per node in your cluster.   <br><br> Now, you can use the **NodesInfo** variable and the **Verbose** parameter to drill down into additional levels of detail for each node. <br><br>   For more information, see the [Verify scanning details per scanner node and repository](../deploy-aip-scanner-tsg.md#verify-scanning-details-per-scanner-node-and-repository-public-preview). |
+|**Get-AIPScannerConfiguration**     |   Running the [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/get-aipscannerconfiguration) now provides details about the current scanner configuration in addition to the online configuration settings.     |
 |     |         |
 
-For more information, see 
+
+### Updates for the scanner's supported information types
+
+Beginning with version 2.11.53.0, the following sensitive information types are not scanned by the unified labeling scanner. 
+
+If you have sensitivity labels that use these sensitive information types, we recommend that you remove them.
+
+- **EU Phone Number**
+- **EU GPS Coordinates**
 
 ### Fixes and improvements
 
