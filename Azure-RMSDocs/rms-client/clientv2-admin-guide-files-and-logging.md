@@ -47,9 +47,18 @@ Client logs files and currently installed policy files:
 - For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP**
 
 
-## Usage logging for the Azure Information Protection unified labeling client
+## Usage logging for the Azure Information Protection unified labeling client (Public preview)
 
-The client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**. The events include the following information:
+Activities are logged to the following local Windows event logs:
+
+|Source  |Windows event log  |
+|---------|---------|
+|Unified labeling client     |  **Applications and Services Logs** > **Azure Information Protection**       |
+|Unified labeling scanner     | **Applications and Services Logs** > **Azure Information Protection Scanner**        |
+|     |         |
+
+
+Logged events include the following information:
 
 - **Client version**
 
