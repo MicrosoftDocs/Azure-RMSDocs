@@ -374,7 +374,7 @@ Using a Microsoft 365 Data Loss Prevention (DLP) policy enables the scanner to d
 > Scanning your files, even when just testing the DLP policy, also creates file permission reports. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
 > 
 
-DLP policies are configured in your labeling admin center, such as the Microsoft 365 Compliance center, and are supported in Azure Information Protection starting in version [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-DLP-policies-public-preview). 
+DLP policies are configured in your labeling admin center, such as the Microsoft 365 Compliance center, and are supported in Azure Information Protection starting in version [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-dlp-policies-public-preview). 
 
 For more information about DLP licensing, see [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started).
 
