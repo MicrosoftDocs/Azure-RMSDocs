@@ -6,7 +6,7 @@ description: Identify the prerequisites required to deploy Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/12/2021
+ms.date: 03/04/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -205,6 +205,15 @@ Azure Information Protection has the following additional requirements:
 
 - **TLS version 1.2 or higher** (unified labeling client only). The unified labeling client requires a TLS version of 1.2 or higher to ensure the use of cryptographically secure protocols and align with Microsoft security guidelines.
 
+- **Microsoft 365 Enhanced Configuration Service (ECS)**. AIP must have access to the **config.edge.skype.com** URL, which is a Microsoft 365 Enhanced Configuration Service (ECS).
+ 
+    ECS provides Microsoft the ability to reconfigure AIP installations without the need for you to redeploy AIP. It’s used to control the gradual rollout of features or updates, while the impact of the rollout is monitored from diagnostic data being collected.
+    
+    ECS is also used to mitigate security or performance issues with a feature or update. ECS also supports configuration changes related to diagnostic data, to help ensure that the appropriate events are being collected. 
+ 
+    Limiting the **config.edge.skype.com** URL may affect Microsoft’s ability to mitigate errors and may affect your ability to test preview features.
+ 
+    For more information, see [Essential services for Office - Deploy Office](/deployoffice/privacy/essential-services).
 ### Coexistence of AD RMS with Azure RMS
 
 Using AD RMS and Azure RMS side by side, in the same organization, to protect content by the same user in the same organization, is **only** supported in AD RMS for [HYOK (hold your own key) protection](configure-adrms-restrictions.md) with Azure Information Protection.
