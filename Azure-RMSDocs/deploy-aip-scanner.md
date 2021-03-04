@@ -85,7 +85,7 @@ For more information, see [Files not labeled by the scanner](#files-not-labeled-
 
 ### 1. Determine whether files are included or excluded for scanning 
 
-The scanner automatically skips files that are excluded from classification and protection, such as executable files and system files. For more information, see [File types that are excluded from classification and protection](./rms-client/clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection).
+The scanner automatically skips files that are excluded from classification and protection, such as executable files and system files. For more information, see [File types excluded from classification and protection](rms-client/clientv2-admin-guide-file-types.md#file-types-excluded-from-classification-and-protection).
 
 The scanner also considers any file lists explicitly defined to scan, or exclude from scanning. File lists apply for all data repositories by default, and can also be defined for specific repositories only.
 

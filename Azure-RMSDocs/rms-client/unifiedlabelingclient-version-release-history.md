@@ -241,9 +241,9 @@ The following fixes were delivered in version 2.9.111.0 of the [Azure Informatio
 
 - Added support for hyphens (**-**) in [scanner database](../deploy-aip-scanner-prereqs.md) names
 - Updates in reports for when the **[Label files based on content](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** option is set to **Off**
-- [Improved memory consumption](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) for large numbers of information type matches
+- [Improved memory consumption](../deploy-aip-scanner-configure-install.md#optimize-scanner-performance) for large numbers of information type matches
 - Support for [SharePoint on-premises](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) paths that end in a slash (**/**)
-- Increased SharePoint scanning [speed](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
+- Increased SharePoint scanning [speed](../deploy-aip-scanner-configure-install.md#optimize-scanner-performance)
 - Support for [avoiding a timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) when scanning a SharePoint server.
 
 ### Fixes and improvements for the unified labeling client
@@ -333,7 +333,7 @@ The **network discovery** service updates **Repository** reports with a list of 
 **To use the Network discovery service**
 
 1. Upgrade your scanner version and make sure that you have your scanner cluster configured correctly. For more information, see:
-    - [Upgrading your scanner](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
+    - [Upgrading your scanner](../deploy-aip-scanner-configure-install.md#upgrade-your-scanner)
     - [Create a scanner cluster](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
 
 1. Make sure that you have Azure Information Protection analytics enabled.
