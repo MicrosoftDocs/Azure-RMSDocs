@@ -35,12 +35,6 @@ Use the following set of instructions to migrate your Active Directory Rights Ma
 
 After the migration, your AD RMS servers are no longer in use but users still have access to documents and email messages that your organization protected by using AD RMS. Newly protected content will use the Azure Rights Management service (Azure RMS) from Azure Information Protection.
 
-Not sure whether this AD RMS migration is right for your organization?
-
-- For an introduction to Azure Information Protection, see [What is Azure Information Protection?](./what-is-information-protection.md)
-
-- For a comparison of Azure Information Protection with AD RMS, see [Comparing Azure Information Protection and AD RMS](./compare-on-premise.md).
-
 ## Recommended reading before you migrate to Azure Information Protection
 
 Although not required, you might find it useful to read the following documentation before you start the migration. This knowledge provides you with a better understanding of how the technology works when it is relevant to your migration step.

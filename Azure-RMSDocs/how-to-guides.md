@@ -62,5 +62,3 @@ For more information and step-by-step instructions, see:
 ## Next steps
 
 Don't see your scenario listed? Check the [Deployment roadmaps](deployment-roadmap.md) for a full list of planning and deployment steps.
-
-If you're new to Azure Information Protection, review [What is Azure Information Protection?](what-is-information-protection.md) for a quick introduction to the service before you begin your deployment.

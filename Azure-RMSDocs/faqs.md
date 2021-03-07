@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: FAQs for Azure Information Protection
-description: Some frequently asked questions about Azure Information Protection and its protection service, Azure Rights Management (Azure RMS).
+title: FAQs for Azure Information Protection (AIP)
+description: Get answers to frequently asked questions about Azure Information Protection (AIP) and its protection service, Azure Rights Management (Azure RMS).
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -24,7 +24,7 @@ search.appverid:
 
 ---
 
-# Frequently asked questions for Azure Information Protection
+# Frequently asked questions for Azure Information Protection (AIP)
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
@@ -33,7 +33,9 @@ search.appverid:
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
-Have a question about Azure Information Protection, or about the Azure Rights Management service (Azure RMS)? See if it's answered here.
+Have a question about Azure Information Protection (AIP), or about the Azure Rights Management service (Azure RMS)? 
+
+See if it's answered below or on the [subsequent, more specific, FAQ pages](#what-do-i-do-if-my-question-isnt-here).
 
 ## What's the difference between Azure Information Protection and Microsoft Information Protection?
 
@@ -100,7 +102,7 @@ If you're an admin, learn more in [Choose your Windows labeling solution](rms-cl
 
 ### Classic client deprecation
 
-To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure portal are being **deprecated** as of **March 31, 2021**. 
 
 After deprecation, the client will continue to work as expected. However, administrators will not be able to update policies on the portal, and no more fixes or changes will be supplied for the classic client.
 
@@ -125,13 +127,13 @@ If you are a user who wants to understand whether you have the classic or the un
 
     :::image type="content" source="media/client-about.png" alt-text="Check the Azure Information Protection client version":::
 
-## When is the right time to migrate my labels?
+## When is the right time to migrate my labels to unified labeling?
 
 We recommend that you migrate your Azure Information Protection labels to the unified labeling platform so that you can use them as sensitivity labels with other [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
 For more information and instructions, see [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md).
 
-## After I've migrated my labels, which management portal do I use?
+## After I've migrated my labels to unified labeling, which management portal do I use?
 
 After you've migrated your labels in the Azure portal, continue managing them in one of the following locations, depending on the clients you have installed:
 
@@ -187,7 +189,7 @@ However, if you want to assign administrative permissions to other users, do so 
 
 Additionally, note the following when managing administrative tasks and roles:
 
-|Topic  |Details  |
+|Issue  |Details  |
 |---------|---------|
 |**Supported account types**     | Microsoft accounts are not supported for delegated administration of Azure Information Protection, even if these accounts are assigned to one of the administrative roles listed.         |
 |**Onboarding controls**     |If you have configured [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), this configuration does not affect the ability to administer Azure Information Protection, except the RMS connector. <br /><br />For example, if you have configured onboarding controls so that the ability to protect content is restricted to the *IT department* group, the account used to install and configure the RMS connector must be a member of that group.          |
@@ -240,7 +242,7 @@ Because this feature uses Azure Monitor, you must also have a supporting [RBAC r
 
 ### Security administrator
 
-This Azure Active Directory administrator role enables administrators to configure Azure Information Protection in the Azure portal as well as some aspects of other Azure services. 
+This Azure Active Directory administrator role enables administrators to configure Azure Information Protection in the Azure portal and some aspects of other Azure services. 
 
 Administrators with this role cannot run any of the [PowerShell cmdlets from the AIPService module](administer-powershell.md), or track and revoke documents for users.
     
@@ -288,7 +290,7 @@ For more information, see the full list [file types supported](./rms-client/clie
 
 Yes, as a preview offering, you can configure Azure AD conditional access for Azure Information Protection.
 
-When a user opens a document that is protected by Azure Information Protection, administrators can now block or grant access to users in their tenant, based on the standard conditional access controls. Requiring multi-factor authentication (MFA) is one of the most commonly requested conditions. Another one is that devices must be [compliant with your Intune policies](/intune/protect/conditional-access-intune-common-ways-use) so that for example, mobile devices meet your password requirements and a minimum operating system version, and computers must be domain-joined.
+When a user opens a document that is protected by Azure Information Protection, administrators can now block or grant access to users in their tenant, based on the standard conditional access controls. Requiring multi-factor authentication (MFA) is one of the most commonly requested conditions. Another one is that devices must be [compliant with your Intune policies](/intune/protect/conditional-access-intune-common-ways-use) so that, for example, mobile devices meet your password requirements and a minimum operating system version, and computers must be domain-joined.
 
 For more information and some walk-through examples, see the following blog post: [Conditional Access policies for Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/17/conditional-access-policies-for-azure-information-protection/).
 
