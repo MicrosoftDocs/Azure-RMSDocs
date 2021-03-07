@@ -117,7 +117,7 @@ To store the scanner configuration data, use an SQL server with the following re
 
 The amount of disk space required for the scanner's configuration database and the specification of the computer running SQL Server can vary for each environment, so we encourage you to do your own testing. Use the following guidance as a starting point.
 
-For more information, see [Optimizing the performance of the scanner](deploy-aip-scanner-configure-install.md#optimizing-scanner-performance).
+For more information, see [Optimizing the performance of the scanner](deploy-aip-scanner-configure-install.md#optimize-scanner-performance).
 
 The disk size for the scanner configuration database will vary for each deployment. Use the following equation as guidance:
 
@@ -274,7 +274,7 @@ To support a disconnected computer from the Azure portal, perform the following 
 
     1. Set the Network Discovery service (public preview) to function in offline mode using the [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) cmdlet.
 
-    1. Configure the network scan job in the Azure portal. For more information, see [Creating a network scan job](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
+    1. Configure the network scan job in the Azure portal. For more information, see [Creating a network scan job](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview).
     
     1. Export your network scan job from the **Azure Information Protection - Network scan jobs (Preview)** pane using the **Export** option. 
     

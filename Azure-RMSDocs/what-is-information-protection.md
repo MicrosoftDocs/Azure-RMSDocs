@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/09/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
@@ -34,14 +34,17 @@ search.appverid:
 
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to discover, classify, and protect documents and emails by applying labels to content.
 
-AIP is part of the Microsoft Information Protection (MIP) solution, and extends the labeling and classification functionality provided by Microsoft 365.
+AIP is part of the Microsoft Information Protection (MIP) solution, and extends the [labeling](/microsoft-365/compliance/sensitivity-labels) and [classification](/microsoft-365/compliance/data-classification-overview) functionality provided by Microsoft 365.
 
-The following image shows the Azure Information Protection additions to MIP, including the [unified labeling client](#aip-unified-labeling-client), [scanner](#aip-on-premises-scanner), and [SDK](#microsoft-information-protection-sdk).
+The following image shows the Azure Information Protection additions to MIP, including the [**unified labeling client**](#aip-unified-labeling-client), [**scanner**](#aip-on-premises-scanner), and [**SDK**](#microsoft-information-protection-sdk).
 
 :::image type="content" source="media/what-is-mip.png" alt-text="The Azure Information Protection areas of the Microsoft Information Protection framework":::
 
 Microsoft Information Protection is the common information protection stack that's leveraged by AIP's unified labeling client. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/protect-information).
 
+> [!NOTE]
+> For details about the latest features and public preview version of the unified labeling client, see [Azure Information Protection unified labeling client - Version release history and support policy](rms-client/unifiedlabelingclient-version-release-history.md).
+> 
 ## AIP unified labeling client
 
 The Azure Information Protection unified labeling client extends labeling, classification, and protection capabilities to additional file types, as well as to the File Explorer and PowerShell. 
@@ -50,7 +53,6 @@ For example, in the File Explorer, right-click one or more files and select **Cl
 
 :::image type="content" source="media/protect-from-file-explorer.png" alt-text="Classify and protect from the File Explorer":::
 
-For details about the latest features and public preview version of the unified labeling client, see [Azure Information Protection unified labeling client - Version release history and support policy](rms-client/unifiedlabelingclient-version-release-history.md).
 
 Download the client from the [Microsoft Azure Information Protection download page](https://www.microsoft.com/download/details.aspx?id=53018).
     

@@ -65,7 +65,7 @@ However, some relevant information that can help your legal adviser make a deter
 
 ## Security, compliance, and auditing
 
-See the [Security, compliance, and regulatory requirements](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) section in the [What problems does Azure RMS solve?](./what-is-azure-rms.md#business-problems-solved-by-azure-rights-management) article, for information about specific certifications for the Azure Rights Management service. In addition:
+See the [Security, compliance, and regulatory requirements](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) section in the [What is Azure RMS?](./what-is-azure-rms.md) article, for information about specific certifications for the Azure Rights Management service. In addition:
 
 - For external certifications for Azure Information Protection: [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/)
 

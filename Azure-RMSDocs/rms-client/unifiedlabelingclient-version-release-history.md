@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Information Protection unified labeling client - Version history & support policy
+title: What's new in Azure Information Protection (AIP) - Version history & support policy
 description: Find out what's new for the Azure Information Protection (AIP) unified labeling client for Windows.
 author: batamig
 ms.author: bagol
@@ -31,6 +31,8 @@ ms.custom: admin
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see [AIP classic client version release history and support policy](client-version-release-history.md).*
+
+This article describes the new features available for the unified labeling client, as well as servicing information and support timelines for each AIP unified client version.
 
 You can download the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
@@ -239,9 +241,9 @@ The following fixes were delivered in version 2.9.111.0 of the [Azure Informatio
 
 - Added support for hyphens (**-**) in [scanner database](../deploy-aip-scanner-prereqs.md) names
 - Updates in reports for when the **[Label files based on content](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** option is set to **Off**
-- [Improved memory consumption](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) for large numbers of information type matches
+- [Improved memory consumption](../deploy-aip-scanner-configure-install.md#optimize-scanner-performance) for large numbers of information type matches
 - Support for [SharePoint on-premises](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) paths that end in a slash (**/**)
-- Increased SharePoint scanning [speed](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
+- Increased SharePoint scanning [speed](../deploy-aip-scanner-configure-install.md#optimize-scanner-performance)
 - Support for [avoiding a timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) when scanning a SharePoint server.
 
 ### Fixes and improvements for the unified labeling client
@@ -264,7 +266,7 @@ The following fixes were delivered in version 2.9.111.0 of the [Azure Informatio
 
     In such cases, the advanced settings from the first policy are always applied, according to the order of the policies in the admin center. The exception for the *OutlookDefaultLabel* is now removed.
 
-- In a scenario where **%APPDATA% (AppData\Roaming)** points to a non-default Windows folder structure, files in folders that are mapped to user directories are now [excluded from labeling and protection](clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection) as expected, based on the configuration.
+- In a scenario where **%APPDATA% (AppData\Roaming)** points to a non-default Windows folder structure, files in folders that are mapped to user directories are now [excluded from labeling and protection](clientv2-admin-guide-file-types.md#file-types-excluded-from-classification-and-protection) as expected, based on the configuration.
 
 - [New advanced client setting](clientv2-admin-guide-customizations.md#remove-all-shapes-of-a-specific-shape-name) (**PowerPointRemoveAllShapesByShapeName**), added to remove shapes from PowerPoint headers or footers, by using the shape name instead of the text inside a shape.
 
@@ -331,7 +333,7 @@ The **network discovery** service updates **Repository** reports with a list of 
 **To use the Network discovery service**
 
 1. Upgrade your scanner version and make sure that you have your scanner cluster configured correctly. For more information, see:
-    - [Upgrading your scanner](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
+    - [Upgrading your scanner](../deploy-aip-scanner-configure-install.md#upgrade-your-scanner)
     - [Create a scanner cluster](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
 
 1. Make sure that you have Azure Information Protection analytics enabled.
@@ -351,7 +353,7 @@ The **network discovery** service updates **Repository** reports with a list of 
 
 1. Use the generated reports on the new [**Repositories**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) pane to find additional network file shares that may be at risk. Add any risky file shares to your [content scan jobs](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) to scan the added repositories for sensitive content.
 
-#### Network discovery cmdlets (public preview)
+### Network discovery cmdlets (public preview)
 
 PowerShell cmdlets added for Network Discovery include:
 
