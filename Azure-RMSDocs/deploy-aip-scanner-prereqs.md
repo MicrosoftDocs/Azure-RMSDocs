@@ -405,7 +405,9 @@ You can have one account to run the scanner service and use another account to a
 
 - **For the scanner service account**, use a local Windows account or an Active Directory account.
 
-- **For the Azure Active Directory account**, specify your local account for the *OnBehalfOf* parameter with Set-AIPAuthentication. For more information, see [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+- **For the Azure Active Directory account**, if you are running the scan under any user other than the scanner account, make sure to specify the scanner account in the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet, using the *OnBehalfOf* parameter. 
+
+    For more information, see [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
 ### Restriction: Your labels do not have auto-labeling conditions
 

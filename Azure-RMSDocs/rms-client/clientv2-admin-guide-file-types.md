@@ -6,7 +6,7 @@ description: Learn about the file types and sizes supported for the Azure Inform
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/08/2020
+ms.date: 03/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -119,35 +119,104 @@ There are maximum file sizes that the Azure Information Protection unified label
 
 The following table lists a subset of file types that support native protection by the Azure Information Protection unified labeling client, and that can also be classified.
 
-These file types are identified separately because when they are natively protected, the original file name extension is changed, and these files become read-only. When files are generically protected, the original file name extension is always changed to .pfile.
+These file types are identified separately because when they are natively protected, the original file name extension is changed, and these files become read-only. When files are generically protected, the original file name extension is always changed to `.p<file-type>`.
 
 > [!WARNING]
 > If you have firewalls, web proxies, or security software that inspect and take action according to file name extensions, you might need to reconfigure these network devices and software to support these new file name extensions.
 
 |Original file name extension|Protected file name extension|
 |--------------------------------|-------------------------------------|
-|.txt|.ptxt|
-|.xml|.pxml|
-|.jpg|.pjpg|
+|.bmp|.pbmp|
+|.gif|.pgif|
+|.jfif|.pjfif|
+|.jpe|.pjpe|
 |.jpeg|.pjpeg|
+|.jpg|.pjpg|
+|.jt|.pjt|
 |.png|.ppng|
 |.tif|.ptif|
 |.tiff|.ptiff|
-|.bmp|.pbmp|
-|.gif|.pgif|
-|.jpe|.pjpe|
-|.jfif|.pjfif|
-|.jt|.pjt|
+|.txt|.ptxt|
+|.xla |.pxla | 
+|.xlam |.pxlam |
+|.xml|.pxml|
 | | |
 
-The next table lists the remaining file types that support native protection by the Azure Information Protection unified labeling client, and that can also be classified. You will recognize these as file types for Microsoft Office apps. The supported file formats for these file types are the 97-2003 file formats and Office Open XML formats for the following Office programs: Word, Excel, and PowerPoint.
+**File types supported by Office**
 
-For these files, the file name extension remains the same after the file is protected by a Rights Management service.
+The following list includes the remaining file types that support native protection by the Azure Information Protection unified labeling client, and that can also be classified. You will recognize these as file types for Microsoft Office apps. The supported file formats for these file types are the 97-2003 file formats and Office Open XML formats for the following Office programs: Word, Excel, and PowerPoint.
 
-|File types supported by Office|File types supported by Office|
-|----------------------------------|----------------------------------|
-|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
-| | |
+For these files, the file name extension *remains the same* after the file is protected by a Rights Management service.
+
+:::row:::
+   :::column span="4":::
+.doc
+
+.docm
+
+.docx
+
+.dot
+
+.dotm
+
+.dotx
+
+.potm
+
+   :::column-end:::
+   :::column span="":::
+
+.potx
+
+.pps
+
+.ppsm
+
+.ppsx
+
+.ppt
+
+.pptm
+
+.pptx
+
+
+   :::column-end:::
+   :::column span="":::
+.vsdm
+
+.vsdx
+
+.vssm
+
+.vssx
+
+.vstm
+
+.vstx
+
+.xls
+
+   :::column-end:::
+   :::column span="":::
+
+.xlsb
+
+.xlt
+
+.xlsm
+
+.xlsx
+
+.xltm
+
+.xltx
+
+.xps
+   :::column-end:::
+:::row-end:::
+
 ## File types excluded from classification and protection
 
 To help prevent users from changing files that are critical for computer operations, some file types and folders are automatically excluded from classification and protection. If users try to classify or protect these files by using the Azure Information Protection unified labeling client, they see a message that they are excluded.
