@@ -102,7 +102,7 @@ If you're an admin, learn more in [Choose your Windows labeling solution](rms-cl
 
 ### Classic client deprecation
 
-To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure portal are being **deprecated** as of **March 31, 2021**. 
 
 After deprecation, the client will continue to work as expected. However, administrators will not be able to update policies on the portal, and no more fixes or changes will be supplied for the classic client.
 
@@ -189,7 +189,7 @@ However, if you want to assign administrative permissions to other users, do so 
 
 Additionally, note the following when managing administrative tasks and roles:
 
-|Topic  |Details  |
+|Issue  |Details  |
 |---------|---------|
 |**Supported account types**     | Microsoft accounts are not supported for delegated administration of Azure Information Protection, even if these accounts are assigned to one of the administrative roles listed.         |
 |**Onboarding controls**     |If you have configured [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), this configuration does not affect the ability to administer Azure Information Protection, except the RMS connector. <br /><br />For example, if you have configured onboarding controls so that the ability to protect content is restricted to the *IT department* group, the account used to install and configure the RMS connector must be a member of that group.          |
@@ -242,7 +242,7 @@ Because this feature uses Azure Monitor, you must also have a supporting [RBAC r
 
 ### Security administrator
 
-This Azure Active Directory administrator role enables administrators to configure Azure Information Protection in the Azure portal as well as some aspects of other Azure services. 
+This Azure Active Directory administrator role enables administrators to configure Azure Information Protection in the Azure portal and some aspects of other Azure services. 
 
 Administrators with this role cannot run any of the [PowerShell cmdlets from the AIPService module](administer-powershell.md), or track and revoke documents for users.
     
@@ -290,7 +290,7 @@ For more information, see the full list [file types supported](./rms-client/clie
 
 Yes, as a preview offering, you can configure Azure AD conditional access for Azure Information Protection.
 
-When a user opens a document that is protected by Azure Information Protection, administrators can now block or grant access to users in their tenant, based on the standard conditional access controls. Requiring multi-factor authentication (MFA) is one of the most commonly requested conditions. Another one is that devices must be [compliant with your Intune policies](/intune/protect/conditional-access-intune-common-ways-use) so that for example, mobile devices meet your password requirements and a minimum operating system version, and computers must be domain-joined.
+When a user opens a document that is protected by Azure Information Protection, administrators can now block or grant access to users in their tenant, based on the standard conditional access controls. Requiring multi-factor authentication (MFA) is one of the most commonly requested conditions. Another one is that devices must be [compliant with your Intune policies](/intune/protect/conditional-access-intune-common-ways-use) so that, for example, mobile devices meet your password requirements and a minimum operating system version, and computers must be domain-joined.
 
 For more information and some walk-through examples, see the following blog post: [Conditional Access policies for Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/17/conditional-access-policies-for-azure-information-protection/).
 
