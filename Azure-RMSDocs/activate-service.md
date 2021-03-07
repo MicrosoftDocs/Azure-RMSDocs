@@ -48,7 +48,7 @@ When you have a service plan that includes Azure Rights Management, you may not 
 
 - **If your subscription that includes Azure Rights Management or Azure Information Protection was obtained before or during February 2018**: Microsoft activates the Azure Rights Management service for these subscriptions if your tenant is using Exchange Online. For these subscriptions, the service will be activated for you unless you see that **AutomaticServiceUpdateEnabled** is set to **false** when you run [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration). 
 
-If neither of the subsequent scenarios apply to you, you must manually activate the protection service. 
+If neither of the listed scenarios apply to you, you must manually activate the protection service. 
 
 When the service is activated, all users in your organization can apply information protection to their documents and emails, and all users can open (consume) documents and emails that have been protected by the Azure Rights Management service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
 
