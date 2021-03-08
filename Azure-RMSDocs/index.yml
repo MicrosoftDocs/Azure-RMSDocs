@@ -127,5 +127,7 @@ landingContent:
         links:
           - text: Central reporting
             url: reports-aip.md
+      - linkListType: reference
+        links:
           - text: Audit log reference
             url: audit-logs.md
