@@ -6,7 +6,7 @@ description: Identify the prerequisites required to deploy Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/04/2021
+ms.date: 03/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -214,6 +214,14 @@ Azure Information Protection has the following additional requirements:
     Limiting the **config.edge.skype.com** URL may affect Microsoft’s ability to mitigate errors and may affect your ability to test preview features.
  
     For more information, see [Essential services for Office - Deploy Office](/deployoffice/privacy/essential-services).
+
+- **Audit logging URL network connectivity**. AIP must be able to access the following URLs in order to support AIP audit logs:
+
+    - `https://*.events.data.microsoft.com`
+    - `https://*.aria.microsoft.com` (Android device data only)
+    
+    For more information, see [Prerequisites for AIP reporting](reports-aip.md#prerequisites).
+
 ### Coexistence of AD RMS with Azure RMS
 
 Using AD RMS and Azure RMS side by side, in the same organization, to protect content by the same user in the same organization, is **only** supported in AD RMS for [HYOK (hold your own key) protection](configure-adrms-restrictions.md) with Azure Information Protection.
