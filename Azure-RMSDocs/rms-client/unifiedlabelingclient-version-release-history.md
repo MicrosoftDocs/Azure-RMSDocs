@@ -91,7 +91,7 @@ This version includes the following new features, fixes, and enhancements for th
 
 The unified labeling scanner now logs user activity to the local Windows event log.
 
-For more information, see [Usage logging for the Azure Information Protection unified labeling client](clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-unified-labeling-client-public-preview).
+For more information, see [Usage logging for the Azure Information Protection scanner](clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-scanner-public-preview).
 
 ### Scanner diagnostics tool improvements
 

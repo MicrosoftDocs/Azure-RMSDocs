@@ -47,7 +47,7 @@ Client logs files and currently installed policy files:
 - For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP**
 
 
-## Usage logging for the Azure Information Protection unified labeling scanner (Public preview)
+## Usage logging for the Azure Information Protection scanner (Public preview)
 
 Scanner activities are logged to the following local Windows event log: **Applications and Services Logs** > **Azure Information Protection Scanner** 
 
