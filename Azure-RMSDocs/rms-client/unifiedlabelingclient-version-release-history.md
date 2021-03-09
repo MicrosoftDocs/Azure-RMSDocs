@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/07/2021
+ms.date: 03/09/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -76,15 +76,20 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.11.53.0 (Public preview)
+## Version 2.11.5.0 (Public preview)
 
 Unified labeling scanner and client version 2.11.53.0
 
 **Released** 03/15/2021
 
-### Usage logging in the Windows event log
+This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
 
-The unified labeling client now logs user activity to the local Windows event log.
+- [Scanner usage logging in the Windows event log](#scanner-usage-logging-in-the-windows-event-log)
+
+
+### Scanner usage logging in the Windows event log
+
+The unified labeling scanner now logs user activity to the local Windows event log.
 
 For more information, see [Usage logging for the Azure Information Protection unified labeling client](clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-unified-labeling-client-public-preview).
 
@@ -120,10 +125,13 @@ If you have sensitivity labels that use these sensitive information types, we re
 
 The following fixes were delivered in version 2.11.53.0 of the Azure Information Protection unified labeling client and scanner:
 
+- Fixes for missing labels for the [AIP add-in in Office apps](clientv2-user-guide.md).
+
+- Improvements in loading time for the [AIP add-in in Office apps](clientv2-user-guide.md).
+
 - The [AIP Viewer app](clientv2-view-use-files.md) now supports opening files without a labeling policy, to support protection-only scenarios.
 
 - Fixed issues where audit logs for [discovery](../audit-logs.md#discover-audit-logs) and [new label](../audit-logs.md#new-label-audit-logs) events aren't sent from Outlook.
-
 
 - Added support for removing a protected label when the [File API engine](/information-protection/develop/concept-profile-engine-file-engine-cpp) isn't loaded in Outlook. <!-- when might this occur? when should the regular user be concerned about it? -->
 
@@ -141,7 +149,7 @@ The following fixes were delivered in version 2.11.53.0 of the Azure Information
 .
 - Fixed issues for opening protected files with inactive labels with the File Explorer and the [AIP Viewer app](clientv2-view-use-files.md).
 
-- Size limits for protecting and decrypting files using the File Explorer and PowerShell are now updated. For more information, see [Supported file sizes for the File Explorer and PowerShell](clientv2-admin-guide-file-types.md#supported-file-sizes-for-the-file-explorer-and-powershell).
+- [Size limits](clientv2-admin-guide-file-types.md#supported-file-sizes-for-the-file-explorer-and-powershell) for protecting and decrypting files using the File Explorer and PowerShell are now updated.
 
 ## Version 2.10.46.0 for co-authoring (Public preview)
 

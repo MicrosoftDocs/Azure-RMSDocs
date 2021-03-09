@@ -49,14 +49,7 @@ Client logs files and currently installed policy files:
 
 ## Usage logging for the Azure Information Protection unified labeling client (Public preview)
 
-Activities are logged to the following local Windows event logs:
-
-|Source  |Windows event log  |
-|---------|---------|
-|Unified labeling client     |  **Applications and Services Logs** > **Azure Information Protection**       |
-|Unified labeling scanner     | **Applications and Services Logs** > **Azure Information Protection Scanner**        |
-|     |         |
-
+Scanner activities are logged to the following local Windows event log: **Applications and Services Logs** > **Azure Information Protection Scanner** 
 
 Logged events include the following information:
 
