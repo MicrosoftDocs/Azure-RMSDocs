@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/17/2021
+ms.date: 03/09/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -47,13 +47,13 @@ Client logs files and currently installed policy files:
 - For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP**
 
 
-## Usage logging for the Azure Information Protection unified labeling client (Public preview)
+## Usage logging for the Azure Information Protection unified labeling scanner (Public preview)
 
 Scanner activities are logged to the following local Windows event log: **Applications and Services Logs** > **Azure Information Protection Scanner** 
 
 Logged events include the following information:
 
-- **Client version**
+- **Scanner version**
 
 - **IP addresses of the signed in user**
 
@@ -72,6 +72,28 @@ Logged events include the following information:
     - Remove custom protection: Information ID 202​
 
     - Outlook justify message: Information ID 302
+
+    - Scan started: Information ID 1001
+
+    - Scan finished: Information ID 1002
+
+    - Scan canceled: Information ID 2002
+
+- **Error**, one of the following:
+
+    - Unknown error: Information ID 3001
+
+    - No automatic labeling conditions: Information ID 3002
+
+    - Database error: Information ID 3003
+
+    - Database schema error: Information ID 3004
+
+    - No policy found: Information ID 3005
+
+    - No DLP policy found: Information ID 3006
+
+    - No content scan job found: Information ID 3007
 
 - **Action source**, one of the following:
 
