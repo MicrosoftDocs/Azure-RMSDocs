@@ -190,18 +190,18 @@ For more information, see the [Admin Guide](rms-client/track-and-revoke-admin.md
 Password-protected documents are not supported by track and revoke features.
 #### Multiple attachments in a protected email
 
-If you attach multiple documents to an email, and then protect the email and send it, each of the attachments get the same ContentID value. 
+If you attach multiple documents to an email, and then protect the email and send it, each of the attachments get the same ContentID value.
 
-This ContentID value will be returned only with the first file that had been opened. Searching for the other attachments will not return the ContentID value required to get tracking data.      
+This ContentID value will be returned only with the first file that had been opened. Searching for the other attachments will not return the ContentID value required to get tracking data.
 
 Additionally, revoking access for one of the attachments also revokes access for the other attachments in the same protected email.
 
 #### Documents accessed via SharePoint or OneDrive
-    
+
 - Protected documents that are uploaded to SharePoint or OneDrive lose their **ContentID** value, and access cannot be tracked or revoked.
 
-- If a user downloads the file from SharePoint or OneDrive and accesses it from their local machine, a new **ContentID** is applied to the document when they open it locally. 
-    
+- If a user downloads the file from SharePoint or OneDrive and accesses it from their local machine, a new **ContentID** is applied to the document when they open it locally.
+
     Using the original **ContentID** value to track data will not include any access performed for the user's downloaded file. Additionally, revoking access based on the original **ContentID** value will not revoke access for any of the downloaded files.
 
     In such cases, administrators may be able to locate the downloaded files using PowerShell to find the new **ContentID** values to track or revoke access.
@@ -213,20 +213,20 @@ If you have documents stored in OneDrive with a sensitivity label applied, and a
 In such cases, re-label the document manually to apply the protection as needed.
 ## AIP and legacy Windows and Office versions
 
-- [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
+- [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
-    We strongly encourage you to upgrade to a newer version of Windows 10. 
+    We strongly encourage you to upgrade to a newer version of Windows 10.
 
     However, if you have Extended Security Updates (ESU) and a support contract, AIP support is available to continue keeping your Windows 7 systems secure.
 
     For more information, check with your support contact.
 
-- [**Office 2010 extended support ended on October 13, 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
+- [**Office 2010 extended support ended on October 13, 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010).
 
-    This support will not be extended, and ESU will not be offered for Office 2010. 
+    This support will not be extended, and ESU will not be offered for Office 2010.
 
-    We strongly encourage you to upgrade to a newer version of Office 365. 
-    
+    We strongly encourage you to upgrade to a newer version of Office 365.
+
     For more information, check with your support contact.
 
 ## AIP-based Conditional Access policies
@@ -239,11 +239,11 @@ We recommend enabling AIP-based conditional access policies for your internal us
 
 **Enable conditional access policies for AIP for internal users only**:
 
-1.	In the Azure portal, navigate to the **Conditional Access** blade, and select the conditional access policy you wish to modify. 
+1.	In the Azure portal, navigate to the **Conditional Access** blade, and select the conditional access policy you wish to modify.
 2.	Under **Assignments**, select **Users and groups**, and then select **All users**. Make sure that the **All guest and external users** option is *not* selected.
-3.	Save your changes. 
- 
-You can also entirely disable CA within Azure Information Protection if the functionality is not required for your organization, in order to avoid this potential issue. 
+3.	Save your changes.
+
+You can also entirely disable CA within Azure Information Protection if the functionality is not required for your organization, in order to avoid this potential issue.
 
 For more information, see the [Conditional Access documentation](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 
