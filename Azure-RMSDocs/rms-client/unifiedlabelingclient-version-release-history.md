@@ -132,11 +132,7 @@ The following fixes were delivered in version 2.11.53.0 of the Azure Information
 
 - Improvements in loading time for the [AIP add-in in Office apps](clientv2-user-guide.md).
 
-- The [AIP Viewer app](clientv2-view-use-files.md) now supports opening files without a labeling policy, to support protection-only scenarios.
-
-- Added support for removing a protected label when the [File API engine](/information-protection/develop/concept-profile-engine-file-engine-cpp) isn't loaded in Outlook. <!-- when might this occur? when should the regular user be concerned about it? -->
-
-- Fixed issues for mandatory labeling functionality when opening protected PowerPoint files with [Track and Revoke](track-and-revoke-admin.md) enabled. <!-- and async?>
+- Added support for removing a protected label when the [File API engine](/information-protection/develop/concept-profile-engine-file-engine-cpp) isn't loaded in Outlook.
 
 - The [PowerPointRemoveAllShapesByShapeName](clientv2-admin-guide-customizations.md#remove-all-shapes-of-a-specific-shape-name) advanced setting no longer requires that you also define the [ExternalContentMarkingToRemove](clientv2-admin-guide-customizations.md#how-to-configure-externalcontentmarkingtoremove) setting. Now you can define the **PowerPointRemoveAllShapesByShapeName** advanced setting on its own.
 
@@ -144,9 +140,7 @@ The following fixes were delivered in version 2.11.53.0 of the Azure Information
 
 - Fixed issues for opening protected **.jt** files in the [AIP Viewer app](clientv2-view-use-files.md).
 
-- Fixed issues for opening protected files with inactive labels with the [File Explorer](clientv2-classify-protect.md) and the [AIP Viewer app](clientv2-view-use-files.md).
-
-- [Size limits](clientv2-admin-guide-file-types.md#supported-file-sizes-for-the-file-explorer-and-powershell) for protecting and decrypting files using the File Explorer and PowerShell are now updated.
+- [Size limits](clientv2-admin-guide-file-types.md#supported-file-sizes-for-the-file-explorer-and-powershell) for protecting files using the File Explorer and PowerShell are now updated.
 
 - Fixed issues for duplicate records found in the detailed report when the [scanner runs in offline mode](../deploy-aip-scanner-prereqs.md#use-the-azure-portal-with-a-disconnected-computer).
 
