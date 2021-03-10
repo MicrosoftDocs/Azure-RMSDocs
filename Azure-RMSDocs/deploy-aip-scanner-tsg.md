@@ -6,7 +6,7 @@ description: Instructions for troubleshooting your unified labeling on-premises 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/01/2021
+ms.date: 03/10/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -79,7 +79,7 @@ Use the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get
 Use one or more of the following methods:
 
 - [Use the NodesInfo variable to get details about the scanning status on each node](#use-the-nodesinfo-variable-to-get-details-about-the-scanning-status-on-each-node)
-- [Use the Verbose parameter to get data for current or last scan](#use-the-verbose-parameter-to-get-data-for-current-or-last-scan)
+- [Use the Verbose parameter to get data for current scan](#use-the-verbose-parameter-to-get-data-for-current-scan)
 ### Use the NodesInfo variable to get details about the scanning status on each node
 
 For example, run the following command:
@@ -131,7 +131,7 @@ Labeled                 : 0
 
 ```
 
-### Use the Verbose parameter to get data for current or last scan
+### Use the Verbose parameter to get data for current scan
 
 
 ```
@@ -147,9 +147,9 @@ Drill down further to find more details for the repositories by using the **Repo
 Possible repository statuses include:
 
 - **Skipped**, if the repository was skipped
-- **Pending**, if the next scan has not yet started
-- **Scanning**, if a scan is currently running
-- **Finished**, if the last scan has completed
+- **Pending**, if the current scan has not yet started scanning the repository
+- **Scanning**, if a scan is currently running on the repository
+- **Finished**, if the current scan has completed running on the repository
 
 **RepositoriesStatus**
 
