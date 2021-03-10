@@ -165,7 +165,7 @@ C:\temp     Scanning
 **CurrentScanSummary**
 
 ```powershell
-PS C:\Windows\system32> $x.RepositoriesStatus
+PS C:\Windows\system32> $x.CurrentScanSummary
 
 
 ScannerID               : 
