@@ -49,70 +49,41 @@ Client logs files and currently installed policy files:
 
 ## Usage logging for the Azure Information Protection scanner (Public preview)
 
-Scanner activities are logged to the following local Windows event log: **Applications and Services Logs** > **Azure Information Protection Scanner** 
+Scanner activities are logged to the following local Windows event log: **Applications and Services Logs** > **Azure Information Protection Scanner**
 
 Logged events include the following information:
 
-- **Scanner version**
-
-- **IP addresses of the signed in user**
-
-- **File name and location**
+- **Computer name of the scanner machine**
+-
+- **SID (Security identifier) of the signed in scanner user**
 
 - **Action**, one of the following:
 
-    - Set label: Information ID 101​
+    - **Info messages**, one of the following:
 
-    - Remove label: Information ID 104​
+        - Scan started: Information ID 1001
 
-    - Recommended label tooltip: Information 105​
+        - Scan finished: Information ID 1002
 
-    - Apply custom protection: Information ID 201​
+    - **Warning message**: Scan canceled: Information ID 2002
 
-    - Remove custom protection: Information ID 202​
+    - **Error message**, one of the following:
 
-    - Outlook justify message: Information ID 302
+        - Unknown error: Information ID 3001
 
-    - Scan started: Information ID 1001
+        - No automatic labeling conditions: Information ID 3002
 
-    - Scan finished: Information ID 1002
+        - Database error: Information ID 3003
 
-    - Scan canceled: Information ID 2002
+        - Database schema error: Information ID 3004
 
-- **Error**, one of the following:
+        - No policy found: Information ID 3005
 
-    - Unknown error: Information ID 3001
+        - No DLP policy found: Information ID 3006
 
-    - No automatic labeling conditions: Information ID 3002
+        - No content scan job found: Information ID 3007
 
-    - Database error: Information ID 3003
-
-    - Database schema error: Information ID 3004
-
-    - No policy found: Information ID 3005
-
-    - No DLP policy found: Information ID 3006
-
-    - No content scan job found: Information ID 3007
-
-- **Action source**, one of the following:
-
-    - Manual ​
-
-    - Recommended​
-
-    - Automatic  ​
-
-    - Default
-
-- **Label before and after action** ​
-
-- **Protection before and after action​**
-
-- **User justification**, when applicable
-
-- **Custom permissions**: Noted whether permissions are custom or a template
-
+- **Event data**, for more information depending on the action type
 ## Next steps
 Now that you've identified all the log files associated with the Azure Information Protection unified labeling client, see the following for additional information that you might need to support this client:
 
