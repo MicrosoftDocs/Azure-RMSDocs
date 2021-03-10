@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/09/2021
+ms.date: 03/10/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -76,7 +76,7 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.11.5.0 (Public preview)
+## Version 2.11.53.0 (Public preview)
 
 Unified labeling scanner and client version 2.11.53.0
 
@@ -85,7 +85,10 @@ Unified labeling scanner and client version 2.11.53.0
 This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
 
 - [Scanner usage logging in the Windows event log](#scanner-usage-logging-in-the-windows-event-log)
-
+- [Scanner diagnostics tool improvements](#scanner-diagnostics-tool-improvements)
+- [Improved scanner details output](#improved-scanner-details-output)
+- [Updates for the scanner's supported information types](#updates-for-the-scanners-supported-information-types)
+- [Fixes and improvements](#fixes-and-improvements)
 
 ### Scanner usage logging in the Windows event log
 
@@ -125,13 +128,11 @@ If you have sensitivity labels that use these sensitive information types, we re
 
 The following fixes were delivered in version 2.11.53.0 of the Azure Information Protection unified labeling client and scanner:
 
-- Fixes for missing labels for the [AIP add-in in Office apps](clientv2-user-guide.md).
+- Fixed issues where the [File Explorer](clientv2-classify-protect.md) would not show inactive labels on protected files.
 
 - Improvements in loading time for the [AIP add-in in Office apps](clientv2-user-guide.md).
 
 - The [AIP Viewer app](clientv2-view-use-files.md) now supports opening files without a labeling policy, to support protection-only scenarios.
-
-- Fixed issues where audit logs for [discovery](../audit-logs.md#discover-audit-logs) and [new label](../audit-logs.md#new-label-audit-logs) events aren't sent from Outlook.
 
 - Added support for removing a protected label when the [File API engine](/information-protection/develop/concept-profile-engine-file-engine-cpp) isn't loaded in Outlook. <!-- when might this occur? when should the regular user be concerned about it? -->
 
@@ -141,15 +142,15 @@ The following fixes were delivered in version 2.11.53.0 of the Azure Information
 
 - Fixed an issue where an empty option would appear on [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) when only two options for the user to select were configured for the popup message.
 
-- Fixes to prevent [PowerShell](clientv2-admin-guide-powershell.md) from behaving unexpectedly in client versions after 2.8.x.
-
-- Fixes to ensure that a [justification prompt](clientv2-admin-guide-customizations.md#customize-justification-prompt-texts-for-modified-labels) appears in Outlook, when a user downgrades a classification label for the second time in the same Outlook session.
-
 - Fixed issues for opening protected **.jt** files in the [AIP Viewer app](clientv2-view-use-files.md).
-.
-- Fixed issues for opening protected files with inactive labels with the File Explorer and the [AIP Viewer app](clientv2-view-use-files.md).
+
+- Fixed issues for opening protected files with inactive labels with the [File Explorer](clientv2-classify-protect.md) and the [AIP Viewer app](clientv2-view-use-files.md).
 
 - [Size limits](clientv2-admin-guide-file-types.md#supported-file-sizes-for-the-file-explorer-and-powershell) for protecting and decrypting files using the File Explorer and PowerShell are now updated.
+
+- Fixed issues for duplicate records found in the detailed report when the [scanner runs in offline mode](../deploy-aip-scanner-prereqs.md#use-the-azure-portal-with-a-disconnected-computer).
+
+- Fixed issues in parsing [sensitivity label policies](/microsoft-365/compliance/create-sensitivity-labels).
 
 ## Version 2.10.46.0 for co-authoring (Public preview)
 
