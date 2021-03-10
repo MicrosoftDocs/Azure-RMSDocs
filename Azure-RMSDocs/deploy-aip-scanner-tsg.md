@@ -148,7 +148,7 @@ Possible repository statuses include:
 
 - **Skipped**, if the repository was skipped
 - **Pending**, if the current scan has not yet started scanning the repository
-- **Scanning**, if a scan is currently running on the repository
+- **Scanning**, if the current scan is running on the repository
 - **Finished**, if the current scan has completed running on the repository
 
 **RepositoriesStatus**
