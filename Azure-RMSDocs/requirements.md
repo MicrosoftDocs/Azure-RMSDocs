@@ -6,7 +6,7 @@ description: Identify the prerequisites required to deploy Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/07/2021
+ms.date: 03/11/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -87,6 +87,8 @@ For more information, see:
 User computers or mobile devices must run on an operating system that supports Azure Information Protection.
 
 - [Supported operating systems for client devices](#supported-operating-systems-for-client-devices)
+- [IPv6 support](#ipv6-support)
+- [ARM64](#arm64)
 - [Virtual machines](#virtual-machines)
 - [Server support](#server-support)
 - [Additional requirements per client](#additional-requirements-per-client)
@@ -112,6 +114,11 @@ For details about support in earlier versions of Windows, contact your Microsoft
 > [!NOTE]
 > When the Azure Information Protection clients protect the data by using the Azure Rights Management service, the data can be consumed by the [same devices](#client-devices) that support the Azure Rights Management service.
 >
+
+### IPv6 support
+
+The Azure Information Protection client supports IPv6 addresses.
+
 ### ARM64 
 
 ARM64 is **not** currently supported. 
