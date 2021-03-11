@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/10/2021
+ms.date: 03/11/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -76,9 +76,9 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.11.53.0 (Public preview)
+## Version 2.11.56.0  (Public preview)
 
-Unified labeling scanner and client version 2.11.53.0
+Unified labeling scanner and client version 2.11.56.0 
 
 **Released** 03/15/2021
 
@@ -98,7 +98,7 @@ For more information, see [Usage logging for the Azure Information Protection sc
 
 ### Scanner diagnostics tool improvements
 
-With the upgrade to version 2.11.53.0, running the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet with the **Verbose** parameter prints the last 10 errors from the scanner log.
+With the upgrade to version 2.11.56.0, running the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet with the **Verbose** parameter prints the last 10 errors from the scanner log.
 
 To print more or fewer errors, use the new **VerboseErrorCount parameter** to define the number of errors you want to print.
 
@@ -117,7 +117,7 @@ The unified labeling on-premises scanner has improved outputs for the following 
 
 ### Updates for the scanner's supported information types
 
-Beginning with version 2.11.53.0, the following sensitive information types are not scanned by the unified labeling scanner. 
+Beginning with version 2.11.56.0, the following sensitive information types are not scanned by the unified labeling scanner. 
 
 If you have sensitivity labels that use these sensitive information types, we recommend that you remove them.
 
@@ -126,7 +126,7 @@ If you have sensitivity labels that use these sensitive information types, we re
 
 ### Fixes and improvements
 
-The following fixes were delivered in version 2.11.53.0 of the Azure Information Protection unified labeling client and scanner:
+The following fixes were delivered in version 2.11.56.0 of the Azure Information Protection unified labeling client and scanner:
 
 - Fixed issues where the [File Explorer](clientv2-classify-protect.md) would not show inactive labels on protected files.
 
@@ -141,8 +141,6 @@ The following fixes were delivered in version 2.11.53.0 of the Azure Information
 - Fixed issues for opening protected **.jt** files in the [AIP Viewer app](clientv2-view-use-files.md).
 
 - [Size limits](clientv2-admin-guide-file-types.md#supported-file-sizes-for-the-file-explorer-and-powershell) for protecting files using the File Explorer and PowerShell are now updated.
-
-- Fixed issues for duplicate records found in the detailed report when the [scanner runs in offline mode](../deploy-aip-scanner-prereqs.md#use-the-azure-portal-with-a-disconnected-computer).
 
 - Fixed issues in parsing [sensitivity label policies](/microsoft-365/compliance/create-sensitivity-labels).
 
