@@ -30,6 +30,9 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
+[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
+
+
 Before you deploy Azure Information Protection for your organization, make sure that you have accounts for users and groups in Azure AD for your organization's tenant.
 
 There are different ways to create these accounts for users and groups, which include:
