@@ -33,7 +33,7 @@ search.appverid:
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-[!INCLUDE [classic-client-deprecation](../includes/classic-client-deprecation.md)]
+[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
 
 Azure Rights Management (Azure RMS) is the cloud-based protection technology used by [Azure Information Protection](what-is-information-protection.md). 
 

@@ -30,7 +30,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-[!INCLUDE [classic-client-deprecation](../includes/classic-client-deprecation.md)]
+[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
 
 Use the following information to help you understand how the Azure Rights Management service from Azure Information Protection can support other applications to protect your organization's data.
 
