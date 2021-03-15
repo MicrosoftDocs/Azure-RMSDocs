@@ -1542,7 +1542,7 @@ To ensure that the NTFS owner value is preserved, set the **UseCopyAndPreserveNT
 Sample PowerShell command, when your label policy is named "Global":
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{UseCopyAndPreserveNTFSOwner ="true"}
 ```
 
 > [!NOTE]
@@ -1562,8 +1562,7 @@ To modify the default **Other** text that's displayed, use the **JustificationTe
 Sample PowerShell command, when your label policy is named "Global":
 
 ``` PowerShell
-
-[Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
 ```
 
 ## Customize Outlook popup messages
@@ -1591,7 +1590,7 @@ AIP administrators can customize the popup messages that appear to end users in 
     Use the following syntax:
 
     ```PowerShell
-    $filedata = Get-Content "<Path to json file>”
+    $filedata = Get-Content "<Path to json file>"
     Set-LabelPolicy -Identity <Policy name> -AdvancedSettings @{<Key> ="$filedata"}
     ```
     Where: 
