@@ -248,7 +248,7 @@ For more information about deploying and using the classic client, see:
 - [Classic client administrator guide](./rms-client/client-admin-guide.md)
 - [Classic client user guide](./rms-client/client-user-guide.md).
 
-[!INCLUDE [classic-client-deprecation]../includes/classic-client-deprecation.md)]
+[!INCLUDE [classic-client-deprecation](../includes/classic-client-deprecation.md)]
 
 ## Rights Management sharing app
 

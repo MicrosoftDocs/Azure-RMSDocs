@@ -32,7 +32,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client version history](unifiedlabelingclient-version-release-history.md).*
 
-[!INCLUDE [classic-client-deprecation-extended-support]../includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [classic-client-deprecation-extended-support](../includes/classic-client-deprecation-extended-support.md)]
 
 **To deploy the AIP classic client**, open a support ticket to get download access.
 

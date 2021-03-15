@@ -30,7 +30,7 @@ search.appverid:
 >
 >***Relevant for**: [AIP unified labeling client and classic client](#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [classic-client-deprecation]../includes/classic-client-deprecation.md)]
+[!INCLUDE [classic-client-deprecation](../includes/classic-client-deprecation.md)]
 
 Have a question about Azure Information Protection (AIP), or about the Azure Rights Management service (Azure RMS)? 
 
@@ -330,7 +330,7 @@ Different countries have different requirements and regulations. To help you ans
 
 ## How can Azure Information Protection help with GDPR?
 
-[!INCLUDE [gdpr-hybrid-note]../includes/gdpr-hybrid-note.md)]
+[!INCLUDE [gdpr-hybrid-note](../includes/gdpr-hybrid-note.md)]
 
 ## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
 See [Compliance and supporting information for Azure Information Protection](./compliance.md).

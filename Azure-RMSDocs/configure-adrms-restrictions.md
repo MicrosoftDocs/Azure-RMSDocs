@@ -32,7 +32,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Double Key Encryption](plan-implement-tenant-key.md#double-key-encryption-dke).*
 
-[!INCLUDE [classic-client-deprecation-extended-support]../includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [classic-client-deprecation-extended-support](../includes/classic-client-deprecation-extended-support.md)]
 
 Hold Your Own Key (HYOK) configurations enable AIP customers with the classic client to protect highly sensitive content while maintaining full control of their key. HYOK uses an additional, customer-held key that's stored on premises for highly sensitive content, together with the default cloud-based protection used for other content. 
 

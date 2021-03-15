@@ -32,7 +32,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from the Microsoft 365 documentation.*
 
-[!INCLUDE [classic-client-deprecation]../includes/classic-client-deprecation.md)]
+[!INCLUDE [classic-client-deprecation](../includes/classic-client-deprecation.md)]
 >
 
 Used to the Azure classic portal for managing the Azure Rights Management service, and need some help transitioning to the Azure portal?

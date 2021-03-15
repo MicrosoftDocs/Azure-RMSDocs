@@ -34,8 +34,6 @@ ms.custom: admin
 
 [!INCLUDE [classic-client-deprecation-extended-support](../includes/classic-client-deprecation-extended-support.md)]
 
-[!INCLUDE [classic-client-deprecation-extended-support]../includes/classic-client-deprecation-extended-support.md)]
-
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection client.
 
 Some of these settings require editing the registry and some use advanced settings that you must configure in the Azure portal, and then publish for clients to download.  
