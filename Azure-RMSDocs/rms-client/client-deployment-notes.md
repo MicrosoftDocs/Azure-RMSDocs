@@ -30,8 +30,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [classic-client-deprecation-extended-support](includes/classic-client-deprecation-extended-support.md)]
 
 The Rights Management Service client (RMS client) version 2 is also known as the MSIPC client. It is software for Windows computers that communicates with Microsoft Rights Management services on-premises or in the cloud to help protect access to and usage of information as it flows through applications and devices, within the boundaries of your organization, or outside those managed boundaries. 
 

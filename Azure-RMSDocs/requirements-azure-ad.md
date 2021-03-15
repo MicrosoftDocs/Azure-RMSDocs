@@ -30,10 +30,7 @@ ms.custom: admin, has-adal-ref
 >
 >***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-> [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
->
-> This time-frame allows all current Azure Information Protection customers to transition to the Microsoft Information Protection unified labeling solution. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
 
 An [Azure AD directory is a requirement](requirements.md#azure-active-directory) for using Azure Information protection. Use an account from an Azure AD directory to sign in to the Azure portal, where you can configure Azure Information Protection settings.
 
