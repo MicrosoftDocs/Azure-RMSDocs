@@ -34,7 +34,7 @@ ms.custom: admin
 [!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
 >
 
-An Azure Information Protection policy contains the following elements that you can configure:
+An Azure Information Protection policy contains the following elements:
     
 - Which labels are included that let administrators and users classify (and optionally, protect) documents and emails.
 

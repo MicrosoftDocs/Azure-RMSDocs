@@ -31,7 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-[!INCLUDE [classic-client-deprecation-extended-support](includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
 
 Use the information in this section to learn about the Azure Information Protection classic client scanner, and then how to successfully install, configure, run and if necessary, troubleshoot it.
 

@@ -31,6 +31,8 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
+[!INCLUDE [classic-client-deprecation-extended-support](includes/classic-client-deprecation-extended-support.md)]
+
 This article describes how global administrators with access to the Azure Rights Management service from the Microsoft 365 admin center can activate Azure Rights Management.
 
 ## Prerequisites
