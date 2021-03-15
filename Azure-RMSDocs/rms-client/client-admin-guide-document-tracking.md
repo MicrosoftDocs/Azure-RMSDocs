@@ -32,7 +32,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](track-and-revoke-admin.md).*
 
-[!INCLUDE [classic-client-deprecation-extended-support](includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [classic-client-deprecation-extended-support]../includes/classic-client-deprecation-extended-support.md)]
 
 If you have a [subscription that supports document tracking](https://www.microsoft.com/cloud-platform/azure-information-protection-features) and the AIP classic client, the document tracking site is enabled by default for all users in your organization. Document tracking provides information for users and administrators about when a protected document was accessed and if necessary, a tracked document can be revoked.
 

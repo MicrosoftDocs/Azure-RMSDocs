@@ -30,7 +30,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
+[!INCLUDE [classic-client-deprecation]../includes/classic-client-deprecation.md)]
 
 When you configure and use Azure Information Protection, email addresses and IP addresses are stored and used by the Azure Information Protection service. This personal data can be found in the following items:
 

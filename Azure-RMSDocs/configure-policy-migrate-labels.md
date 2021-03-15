@@ -30,7 +30,7 @@ ms.custom: admin
 >
 > ***Relevant for** [Azure Information Protection clients for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
+[!INCLUDE [classic-client-deprecation]../includes/classic-client-deprecation.md)]
 
 Migrate Azure Information Protection labels to the unified labeling platform so that you can use them as sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling).
 

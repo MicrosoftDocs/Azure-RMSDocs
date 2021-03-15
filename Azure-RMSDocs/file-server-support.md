@@ -33,7 +33,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
+[!INCLUDE [classic-client-deprecation]../includes/classic-client-deprecation.md)]
 
 When you configure Windows Server to use File Classification Infrastructure, this File Server Resource Manager feature can scan local files and determine whether they contain sensitive data. 
 

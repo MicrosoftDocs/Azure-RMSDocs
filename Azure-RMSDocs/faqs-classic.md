@@ -30,7 +30,7 @@ search.appverid:
 >
 >***Relevant for**: [AIP unified labeling classic client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For more information, see [Frequently asked questions for Azure Information Protection](faqs.md).*
 
-[!INCLUDE [classic-client-deprecation-extended-support](includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [classic-client-deprecation-extended-support]../includes/classic-client-deprecation-extended-support.md)]
 
 ## Is the Azure Information Protection client only for subscriptions that include classification and labeling?
 

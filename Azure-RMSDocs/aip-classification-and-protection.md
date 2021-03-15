@@ -32,7 +32,7 @@ search.appverid:
 >
 > ***Relevant for**: [Azure Information Protection unified labeling client and classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
+[!INCLUDE [classic-client-deprecation]../includes/classic-client-deprecation.md)]
 
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to classify and protect documents and emails by applying labels. 
 

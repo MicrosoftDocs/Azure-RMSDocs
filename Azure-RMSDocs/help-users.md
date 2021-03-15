@@ -31,7 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
+[!INCLUDE [classic-client-deprecation]../includes/classic-client-deprecation.md)]
 
 After you have deployed and configured Azure Information Protection for your organization, provide help and guidance for users, administrators, and your help desk:
 

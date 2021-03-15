@@ -33,7 +33,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](clientv2-admin-guide-file-types.md).*
 
-[!INCLUDE [classic-client-deprecation-extended-support](includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [classic-client-deprecation-extended-support]../includes/classic-client-deprecation-extended-support.md)]
 
 The Azure Information Protection classic client can apply the following to documents and emails:
 

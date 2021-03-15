@@ -29,7 +29,7 @@ ms.subservice: aiplabels
 >
 > ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
+[!INCLUDE [classic-client-deprecation]../includes/classic-client-deprecation.md)]
 
 In this quickstart, you'll enable SharePoint to allow scanning, and also install and configure the Azure Information Protection scanner to find any sensitive data you have stored in an on-premises data store.
 

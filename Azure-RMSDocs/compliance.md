@@ -32,7 +32,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
+[!INCLUDE [classic-client-deprecation]../includes/classic-client-deprecation.md)]
 
 Azure Information Protection supports other services and also relies on other services. If you’re looking for information that is related to Azure Information Protection but not about how to use the Azure Information Protection service, check the following resources:
 

@@ -29,7 +29,7 @@ ms.custom: admin
 >
 > ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [classic-client-deprecation-extended-support](includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [classic-client-deprecation-extended-support]../includes/classic-client-deprecation-extended-support.md)]
 
 In this quickstart, you'll create a new Azure Information Protection label that only specific users can see and apply to classify and protect their documents and emails.
 
