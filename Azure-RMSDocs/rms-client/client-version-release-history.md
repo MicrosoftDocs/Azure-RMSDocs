@@ -93,7 +93,7 @@ Minor bug fixes related to Outlook support.
 
 **Supported through**: 03/31/2021
 
-This version includes fixes only. 
+This version includes fixes only.
 
 **Fixes**:
 

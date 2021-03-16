@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/11/2021
+ms.date: 03/16/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -36,7 +36,7 @@ Use the lists and tables below to find details about known issues and limitation
 
 ## Third-party digital signing apps
 
-Azure Information Protection cannot protect or decrypt files that are signed and/or protected by third-party digital signing apps.
+Azure Information Protection cannot protect or decrypt files that are digitally signed.
 
 ## Client support for container files, such as .zip files
 
