@@ -31,7 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 Use these instructions if you want to activate the Rights Management protection service (Azure RMS) from Azure Information Protection, by using the Azure portal.
 

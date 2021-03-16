@@ -29,7 +29,7 @@ ms.custom: user
 >
 >***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [classic-client-deprecation](../includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
 
 The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text file when you can't open them with your regular apps for these file types. For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
 

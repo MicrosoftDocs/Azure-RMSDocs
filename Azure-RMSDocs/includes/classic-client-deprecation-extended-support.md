@@ -1,6 +1,6 @@
 ---
-title: include file
-description: include file
+title: AIP classic client is deprecated and how-to details are provided for those with extended support only.
+description: Notes the AIP classic client deprecation on March 31, 2021, and provides links for next steps and more information for customers with extended support.
 ms.service: information-protection
 author: batamig
 ms.topic: include

@@ -31,7 +31,7 @@ search.appverid:
 >
 >***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [classic-client-deprecation](../includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
 
 
 The Azure Information Protection unified labeling client provides a client-server solution that helps protect an organization's documents and emails, and is an alternative to the [built-in labeling solution for Microsoft Office](/microsoft-365/compliance/sensitivity-labels). 

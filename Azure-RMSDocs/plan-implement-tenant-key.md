@@ -31,7 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 The Azure Information Protection tenant key is a root key for your organization. Other keys can be derived from this root key, including user keys, computer keys, or document encryption keys. Whenever Azure Information Protection uses these keys for your organization, they cryptographically chain to your Azure Information Protection root tenant key.
 

@@ -30,7 +30,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [classic-client-deprecation](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 
 You can download the Active Directory Rights Management Services (AD RMS) mobile device extension from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=43738) and install this extension on top of an existing AD RMS deployment. This lets users  protect and consume sensitive data when their device supports the latest API-enlightened apps. For example, users can do the following:

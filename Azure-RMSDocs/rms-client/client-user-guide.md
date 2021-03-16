@@ -32,7 +32,7 @@ ms.custom: user
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client user guide](clientv2-user-guide.md).*
 
-[!INCLUDE [classic-client-deprecation](../includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
 
 The Azure Information Protection classic client for Windows helps you keep important documents and emails safe from people who shouldn't see them, even if your email is forwarded or your document is saved to another location. You can also use this client to open documents that other people have protected by using the Rights Management protection technology from Azure Information Protection.
 
