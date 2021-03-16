@@ -174,7 +174,7 @@ To register an application account in Azure AD for use with the Quickstarts and 
 When finished, application registration and API permissions should look similar to the following examples:
 
    [![Azure AD app registration](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox)
-   [![Azure AD app registration](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
+   [![Azure AD app API permissions](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
 
 For more information on adding APIs and permissions to a registration, see [Configure a client application to access web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Here you'll find information on adding the APIs and permissions needed by a client application.
 

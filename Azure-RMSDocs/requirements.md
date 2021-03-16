@@ -87,6 +87,7 @@ For more information, see:
 User computers or mobile devices must run on an operating system that supports Azure Information Protection.
 
 - [Supported operating systems for client devices](#supported-operating-systems-for-client-devices)
+- [ARM64](#arm64)
 - [Virtual machines](#virtual-machines)
 - [Server support](#server-support)
 - [Additional requirements per client](#additional-requirements-per-client)
@@ -112,6 +113,8 @@ For details about support in earlier versions of Windows, contact your Microsoft
 > [!NOTE]
 > When the Azure Information Protection clients protect the data by using the Azure Rights Management service, the data can be consumed by the [same devices](#client-devices) that support the Azure Rights Management service.
 >
+
+
 ### ARM64 
 
 ARM64 is **not** currently supported. 
