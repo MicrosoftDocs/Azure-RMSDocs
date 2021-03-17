@@ -49,7 +49,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
      };
 
      // Set a label on input file
-     handler.SetLabel(engine.GetLabelById(labelId), labelingOptions, new ProtectionSettings());
+     handler.SetLabel(fileEngine.GetLabelById(labelId), labelingOptions, new ProtectionSettings());
 
      // Commit changes, save as outputFilePath
      var result = Task.Run(async () => await handler.CommitAsync(outputFilePath)).Result;
