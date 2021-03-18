@@ -170,7 +170,7 @@ For more information, see [**Unified labeling client**: View protected files wit
 
 ### Android devices
 
-The AIP Viewer currently has an known issue on Android devices and Android version 11, which may cause the AIP Viewer app to behave unexpectedly or close.
+The AIP Viewer currently has an known issue on Android devices and Android version 11, which may cause the AIP Viewer app to become unresponsive or close.
 
 ### Landscape views in the AIP viewer
 
