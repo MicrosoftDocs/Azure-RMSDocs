@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure usage rights for Azure Information Protection
+title: Configure usage rights for Azure Information Protection (AIP)
 description: Understand and identify the specific rights that are used when you protect files or emails by using Rights Management protection from Azure Information Protection.
 author: batamig
 ms.author: bagol
@@ -25,16 +25,26 @@ ms.custom: admin
 
 ---
 
-# Configuring usage rights for Azure Information Protection
+# Configure usage rights for Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-When you configure sensitivity labels or protection templates for encryption, you select the usage rights that will then be automatically applied when the label or template is selected by users, administrators, or configured services. For example, in the Azure portal you can select roles that configure a logical grouping of usage rights, or you can configure the individual rights. Alternatively users might select and apply the usage rights themselves.
-
-Use this article to help you configure the usage rights you want for the application you’re using and understand how these rights are designed to be interpreted by applications. However, applications might vary in how they implement the rights so always consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy in production.
-
-> [!NOTE] 
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> 
 > For completeness, this article includes values from the Azure classic portal, which was retired January 08, 2018.
+
+This article describes usage rights you can configure to be automatically applied when a label or template is selected by users, administrators, or configured services.
+
+Usage rights are selected when you configure sensitivity labels or protection templates for encryption. For example, you can select roles that configure a logical grouping of usage rights, or configure the individual rights separately. Alternatively users might select and apply the usage rights themselves.
+
+> [!IMPORTANT]
+> Use this article to understand how usage rights are *designed* to be interpreted by applications. 
+>
+> Applications may vary in how they implement usage rights, and we recommend consulting with your application's documentation and performing your own testing to check application behavior before deploying in production.
+> 
 
 ## Usage rights and descriptions
 The following table lists and describes the usage rights that Rights Management supports, and how they are used and interpreted. They are listed by their **common name**, which is typically how you might see the usage right displayed or referenced, as a more friendly version of the single-word value that is used in the code (the **Encoding in policy** value). 
@@ -43,12 +53,14 @@ In this table:
 
 - The **API Constant or Value** is the SDK name for an MSIPC API call, used when you write an application that checks for a usage right, or adds a usage right to a policy.
 
-- The **labeling admin center** refers to where you configure sensitivity labels and can be either the Microsoft 365 compliance center, the Microsoft 365 security center, or the Office 365 Security & Compliance Center.
+- The **labeling admin center** refers to where you configure sensitivity labels and can be either the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center.
+
+    If you have the classic client, configure your labels and label policies in the Azure portal.
 
 
 |Usage right|Description|Implementation|
 |-------------------------------|---------------------------|-----------------|
-|Common name: **Edit Content, Edit** <br /><br />Encoding in policy: **DOCEDIT**|Allows the user to modify, rearrange, format, or sort the content inside the application. It does not grant the right to save the edited copy.<br /><br />In Word, unless you have Office 365 ProPlus with a minimum version of [1807](https://docs.microsoft.com/officeupdates/monthly-channel-2018#version-1807-july-25), this right isn't  sufficient to turn on or turn off **Track Changes**, or to use all the track changes features as a reviewer. Instead, to use all the track changes options requires the following right: **Full Control**. |Office custom rights: As part of the **Change** and **Full Control** options. <br /><br />Name in the Azure classic portal: **Edit Content**<br /><br />Name in the labeling admin center and Azure portal: **Edit Content, Edit (DOCEDIT)**<br /><br />Name in AD RMS templates: **Edit** <br /><br />API constant or value: Not applicable.|
+|Common name: **Edit Content, Edit** <br /><br />Encoding in policy: **DOCEDIT**|Allows the user to modify, rearrange, format, or sort the content inside the application. It does not grant the right to save the edited copy.<br /><br />In Word, unless you have Office 365 ProPlus with a minimum version of [1807](/officeupdates/monthly-channel-2018#version-1807-july-25), this right isn't  sufficient to turn on or turn off **Track Changes**, or to use all the track changes features as a reviewer. Instead, to use all the track changes options requires the following right: **Full Control**. |Office custom rights: As part of the **Change** and **Full Control** options. <br /><br />Name in the Azure classic portal: **Edit Content**<br /><br />Name in the labeling admin center and Azure portal: **Edit Content, Edit (DOCEDIT)**<br /><br />Name in AD RMS templates: **Edit** <br /><br />API constant or value: Not applicable.|
 |Common name: **Save** <br /><br />Encoding in policy: **EDIT**|Allows the user to save the document to the current location.<br /><br />In Office applications, this right also allows the user to modify the document and save it to a new location and a new name if the selected file format natively supports Rights Management protection. The file format restriction ensures that the original protection cannot be removed from the file.|Office custom rights: As part of the **Change** and **Full Control** options. <br /><br />Name in the Azure classic portal: **Save File**<br /><br />Name in the labeling admin center and Azure portal: **Save (EDIT)**<br /><br />Name in AD RMS templates: **Save** <br /><br />API constant or value: `IPC_GENERIC_WRITE L"EDIT"`|
 |Common name: **Comment** <br /><br />Encoding in policy: **COMMENT**|Enables the option to add annotations or comments to the content.<br /><br />This right is available in the SDK, is available as an ad-hoc policy in the AzureInformationProtection and RMS Protection module for Windows PowerShell, and has been implemented in some software vendor applications. However, it is not widely used and is not supported by Office applications.|Office custom rights: Not implemented. <br /><br />Name in the Azure classic portal: Not implemented.<br /><br />Name in the labeling admin center and Azure portal: Not implemented.<br /><br />Name in AD RMS templates: Not implemented. <br /><br />API constant or value: `IPC_GENERIC_COMMENT L"COMMENT`|
 |Common name: **Save As, Export** <br /><br />Encoding in policy: **EXPORT**|Enables the option to save the content to a different file name (Save As). <br /><br />For the Azure Information Protection client, the file can be saved without protection, and also reprotected with new settings and permissions. These permitted actions mean that a user who has this right can change or remove an Azure Information Protection label from a protected document or email. <br /><br />This right also allows the user to perform other export options in applications, such as **Send to OneNote**.|Office custom rights: As part of the **Full Control** option. <br /><br />Name in the Azure classic portal: **Export Content (Save As)** <br /><br />Name in the labeling admin center and Azure portal: **Save As, Export (EXPORT)**<br /><br />Name in AD RMS templates: **Export (Save As)** <br /><br />API constant or value: `IPC_GENERIC_EXPORT L"EXPORT"`|
@@ -62,6 +74,7 @@ In this table:
 |Common name: **View Rights** <br /><br />Encoding in policy: **VIEWRIGHTSDATA**|Allows the user to see the policy that is applied to the document. <br /><br /> Not supported by Office apps or Azure Information Protection clients.|Office custom rights: Not implemented.<br /><br />Name in the Azure classic portal: **View Assigned Rights**<br /><br />Name in the labeling admin center and Azure portal: **View Rights (VIEWRIGHTSDATA)**.<br /><br />Name in AD RMS templates: **View Rights** <br /><br />API constant or value: `IPC_READ_RIGHTS L"VIEWRIGHTSDATA"`|
 |Common name: **Change Rights** <br /><br />Encoding in policy: **EDITRIGHTSDATA**|Allows the user to change the policy that is applied to the document. Includes including removing protection. <br /><br /> Not supported by Office apps or Azure Information Protection clients.|Office custom rights: Not implemented.<br /><br />Name in the Azure classic portal: **Change Rights**<br /><br />Name in the labeling admin center and Azure portal: **Edit Rights (EDITRIGHTSDATA)**.<br /><br />Name in AD RMS templates: **Edit Rights** <br /><br />API constant or value: `PC_WRITE_RIGHTS L"EDITRIGHTSDATA"`|
 |Common name: **Allow Macros** <br /><br />Encoding in policy: **OBJMODEL**|Enables the option to run macros or perform other programmatic or remote access to the content in a document.|Office custom rights: As the **Allow Programmatic Access** custom policy option. Not a per-recipient setting.<br /><br />Name in the Azure classic portal: **Allow Macros**<br /><br />Name in the labeling admin center and Azure portal: **Allow Macros (OBJMODEL)**<br /><br />Name in AD RMS templates: **Allow Macros** <br /><br />API constant or value: Not implemented.|
+| | | |
 
 ## Rights included in permissions levels
 
@@ -71,12 +84,11 @@ Use the following table for a list of these permissions levels and a complete li
 
 |Permissions level|Applications|Usage rights included|
 |---------------------|----------------|---------------------------------|
-|Viewer|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; View Rights; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Allow Macros [[2]](#footnote-2)<br /><br />Note: For emails, use Reviewer rather than this permission level to ensure that an email reply is received as an email message rather than an attachment. Reviewer is also required when you send an email to another organization that uses the Outlook client or Outlook web app. Or, for users in your organization that are exempt from using the Azure Rights Management service because you have implemented [onboarding controls](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy).|
-|Reviewer|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; View Rights; Reply: Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3); Allow Macros [[2]](#footnote-2)|
-|Co-Author|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export [[4]](#footnote-4); Print; Reply [[3]](#footnote-3); Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3)|
-|Co-Owner|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [[3]](#footnote-3); Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3); Full Control|
-
-----
+|**Viewer**|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; View Rights; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Allow Macros [[2]](#footnote-2)<br /><br />Note: For emails, use Reviewer rather than this permission level to ensure that an email reply is received as an email message rather than an attachment. Reviewer is also required when you send an email to another organization that uses the Outlook client or Outlook web app. Or, for users in your organization that are exempt from using the Azure Rights Management service because you have implemented [onboarding controls](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy).|
+|**Reviewer**|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; View Rights; Reply: Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3); Allow Macros [[2]](#footnote-2)|
+|**Co-Author**|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export [[4]](#footnote-4); Print; Reply [[3]](#footnote-3); Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3)|
+|**Co-Owner**|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [[3]](#footnote-3); Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3); Full Control|
+| | | |
 
 ###### Footnote 1
 
@@ -91,16 +103,6 @@ Not applicable to the Azure Information Protection client for Windows.
 
 ###### Footnote 4
 Not included in the labeling admin center, the Azure portal, or the Azure Information Protection client for Windows.
-
-## Rights included in the default templates
-The following table lists the usage rights that are included when the default templates are created. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
-
-These default templates are created when your subscription was purchased, and the names and usage rights can be [changed](configure-policy-templates.md) in the Azure portal and with [PowerShell](https://docs.microsoft.com/powershell/module/aipservice/set-aipservicetemplateproperty). 
-
-|Display name of template|Usage rights October 6, 2017 to current date|Usage rights before October 6, 2017|
-|----------------|--------------------|----------|
-|\<*organization name> - Confidential View Only* <br /><br />or<br /><br /> *Highly Confidential \ All Employees*|View, Open, Read; Copy; View Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit|View, Open, Read|
-|\<*organization name>- Confidential* <br /><br />or <br /><br />*Confidential \ All Employees*|View, Open, Read; Save As, Export; Copy; View Rights; Change Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control|View, Open, Read; Save As, Export; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
 
 ## Do Not Forward option for emails
 
@@ -125,11 +127,18 @@ A user wants to email some information to specific people in the Marketing depar
 > [!NOTE] 
 > Use **Do Not Forward** when it's important that only the recipients that the sender chooses should see the information in the email. Use a template for emails to restrict rights to a group of people that the administrator specifies in advance, independently from the sender's chosen recipients.
 
-## Encrypt-Only option for emails
+## Encrypt-only option for emails
 
-When Exchange Online uses the new capabilities for Office 365 Message Encryption, a new email option becomes available: **Encrypt-Only**.
+When Exchange Online uses the new capabilities for Office 365 Message Encryption, a new **Encrypt** email option becomes available, to encrypt the data without additional restrictions.
 
-This option is available to tenants who use Exchange Online and can be selected in Outlook on the web, as another rights protection option for a mail flow rule, as an Office 365 DLP action, and from Outlook (minimum version of [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) for Office 365 ProPlus, and minimum version of 1805 when you have [Office 365 apps that support Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). For more information about the Encrypt-Only option, see the following blog post announcement from the Office team: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
+This option is available to tenants who use Exchange Online and can be selected as follows:
+
+- **In Outlook on the web**
+- **As another rights protection option** for a mail flow rule
+- **As an Office 365 DLP action**
+- **From Outlook**, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), when you have [Microsoft 365 apps that support Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
+
+For more information about the encrypt only option, see the following blog post announcement from the Office team: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
 
 When this option is selected, the email is encrypted and recipients must be authenticated. Then, the recipients have all usage rights except **Save As, Export** and **Full Control**. This combination of usage rights means that the recipients have no restrictions except that they cannot remove the protection. For example, a recipient can copy from the email, print it, and forward it. 
 
@@ -139,11 +148,12 @@ Alternatively, you can change this protection inheritance of documents by specif
 
 If you do need an attached document to retain the original protection, see [Secure document collaboration by using Azure Information Protection](secure-collaboration-documents.md).
 
-Note: If you see references to **DecryptAttachmentFromPortal**, this parameter is now deprecated for [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration). Unless you have previously set this parameter, it is not available.
-
+> [!NOTE]
+> If you see references to **DecryptAttachmentFromPortal**, this parameter is now deprecated for [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration). Unless you have previously set this parameter, it is not available.
+> 
 ## Automatically encrypt PDF documents with Exchange Online
 
-When Exchange Online uses the new capabilities for Office 365 Message Encryption, you can automatically encrypt unprotected PDF documents when they are attached to an encrypted email. The document inherits the same permissions as those for the email message. To enable this configuration, set **EnablePdfEncryption $True** with [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration).
+When Exchange Online uses the new capabilities for Office 365 Message Encryption, you can automatically encrypt unprotected PDF documents when they are attached to an encrypted email. The document inherits the same permissions as those for the email message. To enable this configuration, set **EnablePdfEncryption $True** with [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration).
 
 Recipients who don't already have a reader installed that supports the ISO standard for PDF encryption can install one of the readers listed in [PDF readers that support Microsoft Information Protection](./rms-client/protected-pdf-readers.md). Alternatively, recipients can read the protected PDF document in the OME portal.
 
@@ -173,8 +183,9 @@ For example, the user who created the document can print it, even though it's no
 
 The Rights Management owner for a document or email is logged as the **owner-email** field in the [usage logs](log-analyze-usage.md#how-to-interpret-your-usage-logs).
 
-Note that the Rights Management owner is independent from the Windows file system Owner. They are often the same but can be different, even if you don't use the SDKs or PowerShell.
-
+> [!NOTE]
+> The Rights Management owner is independent from the Windows file system Owner. They are often the same but can be different, even if you don't use the SDKs or PowerShell.
+> 
 ## Rights Management use license
 
 When a user opens a document or email that has been protected by Azure Rights Management, a Rights Management use license for that content is granted to the user. This use license is a certificate that contains the user's usage rights for the document or email message, and the encryption key that was used to encrypt the content. The use license also contains an expiry date if this has been set, and how long the use license is valid.
@@ -195,7 +206,21 @@ The default use license validity period for a tenant is 30 days and you can conf
     
     For more information and guidance to configure this setting by using PowerShell, see the help for each cmdlet.
 
-## See Also
-[Configuring and managing templates for Azure Information Protection](configure-policy-templates.md)
+## Rights included in the default templates
 
-[Configuring super users for Azure Information Protection and discovery services or data recovery](configure-super-users.md)
+**Relevant for**: AIP classic client only
+
+The following table lists the usage rights that are included when the default templates are created. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
+
+These default templates are created when your subscription was purchased, and the names and usage rights can be [changed](configure-policy-templates.md) in the Azure portal and with [PowerShell](/powershell/module/aipservice/set-aipservicetemplateproperty). 
+
+|Display name of template|Usage rights October 6, 2017 to current date|Usage rights before October 6, 2017|
+|----------------|--------------------|----------|
+|**\<*organization name> - Confidential View Only*** <br /><br />or<br /><br /> ***Highly Confidential \ All Employees***|View, Open, Read; Copy; View Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit|View, Open, Read|
+|**\<*organization name>- Confidential*** <br /><br />or <br /><br />***Confidential \ All Employees***|View, Open, Read; Save As, Export; Copy; View Rights; Change Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control|View, Open, Read; Save As, Export; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
+| | | |
+
+## See Also
+
+- [Restrict access to content by using sensitivity labels to apply encryption](/microsoft-365/compliance/encryption-sensitivity-labels)
+- [Configuring super users for Azure Information Protection and discovery services or data recovery](configure-super-users.md)

@@ -1,11 +1,11 @@
 ---
 title: File API - Process email .msg files (C#)
-description: This article will help you understand the scenario of how to use MIP SDK file API to process .msg files.
-author: Pathak-Aniket
+description: This article will help you understand the scenario of how to use MIP SDK file API to process .msg files (C#).
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 ---
 
 # File API - Process email .msg files (C#)

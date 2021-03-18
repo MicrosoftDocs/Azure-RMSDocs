@@ -3,8 +3,8 @@
 
 title: Active Directory rights management services mobile device extension for AIP
 description: Learn about Active Directory mobile device extensions for AIP
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 07/28/2020
 ms.topic: conceptual
@@ -26,8 +26,9 @@ ms.custom: admin
 
 # Active Directory Rights Management Services Mobile Device Extension
 
- 
-Applies To: Windows Server 2019, 2016, 2012 R2, and 2012
+>***Applies to**: Windows Server 2019, 2016, 2012 R2, and 2012*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 You can download the Active Directory Rights Management Services (AD RMS) mobile device extension from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=43738) and install this extension on top of an existing AD RMS deployment. This lets users  protect and consume sensitive data when their device supports the latest API-enlightened apps. For example, users can do the following:
 - Use the Azure Information Protection app to consume protected text files in different formats (including .txt, .csv, and .xml).
@@ -36,10 +37,10 @@ You can download the Active Directory Rights Management Services (AD RMS) mobile
 - Use the Azure Information Protection app to open an Office file (Word, Excel, PowerPoint) that is a PDF copy (.pdf and .ppdf format).
 - Use the Azure Information Protection app to open protected email messages (.rpmsg) and protected PDF files on Microsoft SharePoint.
 - Use an AIP-enlightened PDF viewer for cross-platform viewing or to open PDF files that were protected with any AIP-enlightened application.
-- Use your internally developed AIP-enlightened apps that were written by using the [MIP SDK](https://aka.ms/mipsdkdocs).
+- Use your internally developed AIP-enlightened apps that were written by using the [MIP SDK](/information-protection/develop/).
 
 > [!NOTE]
-> You can download the Azure Information Protection app from the [Microsoft Rights Management](https://go.microsoft.com/fwlink/?linkid=303970) page of the Microsoft website. For information about other apps that are supported with the mobile device extension, see the table in the [Applications](https://docs.microsoft.com/azure/information-protection/requirements-applications) page from this documentation. For more information about the different file types that RMS supports, see the [Supported file types and file name extensions](https://docs.microsoft.com/rights-management/rms-client/sharing-app-admin-guide-technical%23supported-file-types-and-file-name-extensions) section from the Rights Management sharing application administrator guide.
+> You can download the Azure Information Protection app from the [Microsoft Rights Management](https://go.microsoft.com/fwlink/?linkid=303970) page of the Microsoft website. For information about other apps that are supported with the mobile device extension, see the table in the [Applications](./requirements-applications.md) page from this documentation. For more information about the different file types that RMS supports, see the [Supported file types and file name extensions](/rights-management/rms-client/sharing-app-admin-guide-technical#supported-file-types-and-file-name-extensions) section from the Rights Management sharing application administrator guide.
 
 > [!IMPORTANT]
 > Be sure to read and configure the prerequisites before you install the mobile device extension.
@@ -54,7 +55,7 @@ Before you install the AD RMS mobile device extension, make sure the following d
 |Requirement|More information|
 |---------------|------------------------|
 |An existing AD RMS deployment on Windows Server 2019, 2016, 2012 R2, or 2012, that includes the following:<br /><br /> - Your AD RMS cluster must be accessible from the Internet. <br /><br /> - AD RMS must be using a full Microsoft SQL Server-based database on a separate server and not the Windows Internal Database that is often used for testing on the same server. <br /><br />- The account that you will use to install the mobile device extension must have sysadmin rights for the SQL Server instance that you're using for AD RMS. <br /><br />- The AD RMS servers must be configured to use SSL/TLS with a valid x.509 certificate that is trusted by the mobile device clients.<br /><br /> - If the AD RMS servers are behind a firewall or published by using a reverse proxy, in addition to publishing the **/_wmcs** folder to the Internet, you must also publish the /my folder (for example: **_https:\/\/RMSserver.contoso.com/my**).|For details about AD RMS prerequisites and deployment information, see the prerequisites section of this article.|
-|AD FS deployed on your Windows Server:<br /><br /> - Your AD FS server farm must be accessible from the Internet (you have deployed federation server proxies). <br /><br />- Forms-based authentication is not supported; you must use Windows Integrated Authentication <br /><br /> **Important**: AD FS must be running a different computer from the computer running AD RMS and the mobile device extension.|For documentation about AD FS, see the [Windows Server AD FS Deployment Guide](https://docs.microsoft.com/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on) in the Windows Server library.<br /><br /> AD FS must be configured for the mobile device extension. For instructions, see the **Configuring AD FS for the AD RMS mobile device extension** section in this topic.|
+|AD FS deployed on your Windows Server:<br /><br /> - Your AD FS server farm must be accessible from the Internet (you have deployed federation server proxies). <br /><br />- Forms-based authentication is not supported; you must use Windows Integrated Authentication <br /><br /> **Important**: AD FS must be running a different computer from the computer running AD RMS and the mobile device extension.|For documentation about AD FS, see the [Windows Server AD FS Deployment Guide](/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on) in the Windows Server library.<br /><br /> AD FS must be configured for the mobile device extension. For instructions, see the **Configuring AD FS for the AD RMS mobile device extension** section in this topic.|
 |Mobile devices must trust the PKI certificates on the RMS server (or servers)|When you purchase your server certificates from a public CA, such as VeriSign or Comodo, it's likely that mobile devices will already trust the root CA for these certificates, so that these devices will trust the server certificates without addition configuration.<br /><br /> However, if you use your own internal CA to deploy the server certificates for RMS, you must take additional steps to install the root CA certificate on the mobile devices. If don't do this, mobile devices will not be able to establish a successful connection with the RMS server.|
 |SRV records in DNS|Create one or more SRV records in your company domain or domains:<br /><br />1: Create a record for each email domain suffix that users will use <br /><br />2: Create a record for every FQDN used by your RMS clusters to protect content, not including the cluster name <br /><br />These records must be resolvable from any network that the connecting mobile devices use, which includes the intranet if your mobile devices connect via the intranet.<br /><br /> When users supply their email address from their mobile device, the domain suffix is used to identify whether they should use an AD RMS infrastructure or Azure AIP. When the SRV record is found, clients are redirected to the AD RMS server that responds to that URL.<br /><br /> When users consume protected content with a mobile device, the client application looks in DNS for a record that matches the FQDN in the URL of the cluster that protected the content (without the cluster name). The device is then directed to the AD RMS cluster specified in the DNS record and acquires a license to open the content. In most cases, the RMS cluster will be the same RMS cluster that protected the content.<br /><br /> For information about how to specify the SRV records, see the **Specifying the DNS SRV records for the AD RMS mobile device extension** section in this topic.|
 |Supported clients using applications that are developed by using the MIP SDK for this platform. |Download the supported apps for the devices that you use by using the links on the [Microsoft Azure Information Protection](https://www.microsoft.com/download/details.aspx?id=40333) download page.|
@@ -135,7 +136,7 @@ Write-Host "Microsoft Rights Management Mobile Device Extension Configured"
 |**Claim rule**|**Attribute store**: Active Directory <br /><br />**E-mail addresses**: E-mail-address<br /><br>**User-Principal-Name**: UPN<br /><br /> **Proxy-Address**: _https:\/\/schemas.xmlsoap.org/claims/ProxyAddresses|
 
 > [!TIP]
-> For step-by-step instructions for an example deployment of AD RMS with AD FS, see [Deploying Active Directory Rights Management Services with Active Directory Federation Services](https://docs.microsoft.com/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on).
+> For step-by-step instructions for an example deployment of AD RMS with AD FS, see [Deploying Active Directory Rights Management Services with Active Directory Federation Services](/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on).
 
 #### Step 2: Authorize apps for your devices
 
@@ -246,6 +247,7 @@ If you use the DNS Server role on Windows Server, use the following tables as a 
 |Weight|0
 |Port number|443
 |Host offering this service|_rmsserver.contoso.com|
+| | |
 
 In addition to these DNS SRV records for your email domain, you must create another DNS SRV record in the RMS cluster domain. This record must specify the FQDNs of your RMS cluster that protects content. Every file that is protected by RMS includes a URL to the cluster that protected that file. Mobile devices use the DNS SRV record and the URL FQDN specified in the record to find the corresponding RMS cluster that can support mobile devices.
 
@@ -262,6 +264,7 @@ If you use the DNS Server role on Windows Server, use the following table as a g
 |Weight|0
 |Port number|443
 |Host offering this service|_rmsserver.contoso.com|
+| | |
 
 ## Deploying the AD RMS mobile device extension
 
@@ -282,25 +285,25 @@ If you have a proxy server between the AD RMS cluster and the AD FS servers, by 
 
 1. Add the following node to the file:
 
-```powershell
-   <system.net>
-    <defaultProxy>
-        <proxy  proxyaddress="http://<proxy server>:<port>"
-                bypassonlocal="true"
-        />
-        <bypasslist>
-            <add address="<AD FS URL>" />
-        </bypasslist>
-    </defaultProxy>
-<system.net>
-```
+    ```PowerShell
+       <system.net>
+        <defaultProxy>
+            <proxy  proxyaddress="http://<proxy server>:<port>"
+                    bypassonlocal="true"
+            />
+            <bypasslist>
+                <add address="<AD FS URL>" />
+            </bypasslist>
+        </defaultProxy>
+    <system.net>
+    ```
 1. Make the following changes, and then save the file:
-- Replace \<proxy-server> with the name or address of your proxy server.
-- Replace \<port> with the port number that the proxy server is configured to use.
-- Replace \<AD FS URL> with the URL of the federation service. Do not include the HTTP prefix.
+    - Replace \<proxy-server> with the name or address of your proxy server.
+    - Replace \<port> with the port number that the proxy server is configured to use.
+    - Replace \<AD FS URL> with the URL of the federation service. Do not include the HTTP prefix.
 
     > [!NOTE]
-    > To learn more about overriding the proxy settings, see [Proxy Configuration](https://msdn.microsoft.com/library/dkwyc043(v=vs.110).aspx) documentation.
+    > To learn more about overriding the proxy settings, see [Proxy Configuration](/dotnet/framework/network-programming/proxy-configuration) documentation.
 
 1. Reset IIS, for example, by running **iisreset** as an administrator from a command prompt.
 
@@ -310,5 +313,3 @@ Repeat this procedure on all the nodes in your RMS cluster.
 ## See Also
 
 Find out more about Azure Information Protection, make contact with other AIP customers, and with AIP product managers using the [API yammer group](https://www.yammer.com/askipteam/). 
-
-"

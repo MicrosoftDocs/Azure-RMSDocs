@@ -3,8 +3,8 @@
 
 title: Prepare the environment for Azure RMS and AD RMS
 description: Guidance for administrators if you have Azure Rights Management with AD RMS deployed.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
@@ -27,14 +27,16 @@ ms.custom: admin
 
 # Prepare the environment for Azure Rights Management when you have AD RMS
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [Azure Information Protection unified labeling client and classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!IMPORTANT]
 > Guidance if you are using Active Directory Rights Management Services (AD RMS)
 
 If the Azure Rights Management service is activated and you are also using AD RMS, this combination isn't compatible. Without additional steps, some computers might automatically start using the Azure Rights Management service and also connect to your AD RMS cluster. This scenario isn't supported and has unreliable results, so it's important that you take additional steps. 
 
-**To check whether you have deployed AD RMS:**
+**To check whether you have deployed AD RMS**:
 
 1. Although optional, most AD RMS deployments publish the service connection point (SCP) to Active Directory so that domain computers can discover the AD RMS cluster. 
     
@@ -44,7 +46,7 @@ If the Azure Rights Management service is activated and you are also using AD RM
     
     For more information about these registry configurations, see [Enabling client-side service discovery by using the Windows registry](./rms-client/client-deployment-notes.md#enabling-client-side-service-discovery-by-using-the-windows-registry) and [Redirecting licensing server traffic](./rms-client/client-deployment-notes.md#redirecting-licensing-server-traffic).   
 
-If AD RMS is deployed for your organization, consider whether you can migrate to Azure Information Protection. Azure Information Protection has many advantages over AD RMS. For example, better support for mobile devices and integration with Office 365 services as well as with Exchange Server and SharePoint Server. For more information, see [Comparing Azure Information Protection and AD RMS](compare-on-premise.md).
+If AD RMS is deployed for your organization, consider whether you can migrate to Azure Information Protection. Azure Information Protection has many advantages over AD RMS. For example, better support for mobile devices and integration with Microsoft 365 services as well as with Exchange Server and SharePoint Server. For more information, see [Comparing Azure Information Protection and AD RMS](compare-on-premise.md).
 
 When you migrate to Azure Information Protection, you won't lose access to previously protected content and you don't have to un-protect or re-protect your content. Documents and emails that were protected by AD RMS can still be opened even after you have de-provisioned AD RMS.
 
@@ -69,9 +71,9 @@ Use one of the following procedures to deactivate Azure Rights Management.
 
 #### To deactivate Rights Management from the Microsoft 365 admin center
 
-1. Go to the [Rights Management page](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) for Office 365 administrators.
+1. Go to the [Rights Management page](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) for Microsoft 365 administrators.
     
-    If you are prompted to sign in, use an account that is a global administrator for Office 365.
+    If you are prompted to sign in, use an account that is a global administrator for Microsoft 365.
 
 2. On the **rights management** page, click **deactivate**.
 

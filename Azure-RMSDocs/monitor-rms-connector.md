@@ -3,10 +3,10 @@
 
 title: Monitor the Rights Management connector - AIP
 description: Information to help you monitor the connector and your organization's use of the Azure Rights Management service from Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 01/20/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,9 @@ ms.custom: admin
 
 # Monitor the Azure Rights Management connector
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 After you install and configure the RMS connector, you can use the following methods and information to help you monitor the connector and your organization’s use of the Azure Rights Management service from Azure Information Protection.
 
@@ -182,21 +184,25 @@ Usage logging helps you identify when emails and documents are protected and con
 
 For more information about usage logging, see [Logging and analyzing the protection usage from Azure Information Protection](log-analyze-usage.md).
 
-If you need more detailed logging for diagnosis purposes, you can use [Debugview](https://go.microsoft.com/fwlink/?LinkID=309277) from Windows Sysinternals. Enable tracing for the RMS connector by modifying the web.config file for the Default site in IIS:
+If you need more detailed logging for diagnosis purposes, use [DebugView](/sysinternals/downloads/debugview) from Windows Sysinternals to output the logs to a debug pipe. 
 
-1. Locate the web.config file from **%programfiles%\Microsoft Rights Management connector\Web Service**.
+1. Launch DebugView as an administrator, and then select **Capture** > **Capture Global Win32**.
 
-2. Locate the following line:
+1. Enable tracing for the RMS connector by modifying the **web.config** file for the Default site in IIS:
 
-    ```sh
-    <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
-    ```
+    1. Locate the **web.config** file in the **%programfiles%\Microsoft Rights Management connector\Web Service** folder.
 
-3. Replace that line with the following text:
-    ```sh
-    <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
-    ```
+    1. Locate the following line:
 
-4.  Stop and start IIS to activate tracing. 
+        ```sh
+        <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+        ```
 
-5.  When you have captured the traces that you need, revert the line in step 3, and stop and start IIS again.
+    1. Replace that line with the following text:
+        ```sh
+        <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+        ```
+
+1.  Stop and start IIS to activate tracing. 
+
+1.  When you have captured the traces in DebugView that you need, revert the line in step 3, and stop and start IIS again.

@@ -3,18 +3,19 @@
 
 title: Configure an Azure Information Protection label for protection - AIP
 description: You can protect your most sensitive documents and emails when you configure a label to use Rights Management protection. 
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 #ms.reviewer: demizets
@@ -27,17 +28,13 @@ ms.custom: admin
 
 # How to configure a label for Rights Management protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and [Restrict access to content by using encryption in sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels) from the Microsoft 365 documentation.*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
-
-> [!NOTE]
-> These instructions apply to the Azure Information Protection client (classic) and not the Azure Information Protection unified labeling client. Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
-> 
-> If you are looking for information to configure a sensitivity label to apply Rights Management protection, see the Microsoft 365 Compliance documentation. For example, [Restrict access to content by using encryption in sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels).
+> [!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 You can protect your most sensitive documents and emails by using a Rights Management service. This service uses encryption, identity, and authorization policies to help prevent data loss. The protection is applied with a label that is configured to use Rights Management protection for documents and emails, and users can also select the **Do not forward** button in Outlook.
 
@@ -63,7 +60,7 @@ For more information about the Azure Rights Management protection and how it wor
 When the label applies protection, a protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following features for protected files: Co-authoring, Office for the web, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP).
 
 > [!TIP]
-> When you [migrate your labels](configure-policy-migrate-labels.md) to unified sensitivity labels and publish them from one of the labeling admin centers such as the Microsoft 365 compliance center, labels that apply protection are then supported for these locations. For more information, see  [Enable sensitivity labels for Office files in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+> When you [migrate your labels](configure-policy-migrate-labels.md) to unified sensitivity labels and publish them from one of the labeling admin centers such as the Microsoft 365 compliance center, labels that apply protection are then supported for these locations. For more information, see  [Enable sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 Exchange does not have to be configured for Azure Information Protection before users can apply labels in Outlook to protect their emails. However, until Exchange is configured for Azure Information Protection, you do not get the full functionality of using Azure Rights Management protection with Exchange. For example, users cannot view protected emails on mobile phones or with Outlook on the web, protected emails cannot be indexed for search, and you cannot configure Exchange Online DLP for Rights Management protection. To ensure that Exchange can support these additional scenarios, see the following resources:
 
@@ -120,7 +117,11 @@ Exchange does not have to be configured for Azure Information Protection before 
        If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the [Do Not Forward](configure-usage-rights.md#do-not-forward-option-for-emails) option.
         
        If you choose the option for Word, Excel, PowerPoint, and File Explorer: When this option is set, the label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users choose one of the [predefined permissions levels](configure-usage-rights.md#rights-included-in-permissions-levels), browse to or specify the users or groups, and optionally, set an expiry date. Make sure that users have instructions and guidance how to supply these values.
-    
+
+        > [!NOTE]
+        > Azure Information Protection support for setting user-defined permissions is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+        >
+     
    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. Note that this option does not display for new labels, or if you are editing a label that previously used the **Set permissions** option.
     
      To select a predefined template, the template must be published (not archived) and must not be linked already to another label. When you select this option, you can use an **Edit Template** button to [convert the template into a label](configure-policy-templates.md#to-convert-templates-to-labels).
@@ -281,7 +282,7 @@ If you specify external users who do not have an account in Azure AD:
 
 
 > [!NOTE]
-> Exchange Online is rolling out a new option, [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). This option is not available for label configuration. However, when you know who the recipients will be, you can use this example to configure a label with the same set of usage rights. 
+> Exchange Online is rolling out a new option, [encrypt-only](configure-usage-rights.md#encrypt-only-option-for-emails). This option is not available for label configuration. However, when you know who the recipients will be, you can use this example to configure a label with the same set of usage rights. 
 
 When your users specify the email addresses in the **To** box, the addresses must be for the same users that you specify for this label configuration. Because users can belong to groups and have more than one email address, the email address that they specify does not have to match the email address that you specify for the permissions. However, specifying the same email address is the easiest way to ensure that the recipient will be successfully authorized. For more information about how users are authorized for permissions, see [Preparing users and groups for Azure Information Protection](prepare.md). 
 
@@ -297,7 +298,7 @@ When your users specify the email addresses in the **To** box, the addresses mus
     
     Note: Do not select **Viewer** for emails and if you do select **Custom**, make sure that you include **Edit and Save**.
     
-    To select the same permissions that match the new **Encrypt-Only** option from Exchange Online, select **Custom**. Then select all permissions except **Save As, Export (EXPORT)** and **Full Control (OWNER)**.
+    To select the same permissions that match the **Encrypt** option from Exchange Online, which applies encryption without additional restrictions, select **Custom**. Then select all permissions except **Save As, Export (EXPORT)** and **Full Control (OWNER)**.
 
 5. To specify additional users who should have different permissions, repeat steps 3 and 4.
 
@@ -341,4 +342,4 @@ The label configuration is deceptively simple:
 
 For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section. 
 
-Exchange mail flow rules can also apply protection, based on your labels. For more information and examples, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).  
+Exchange mail flow rules can also apply protection, based on your labels. For more information and examples, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).

@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: Central reporting for Azure Information Protection
-description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
+title: Analytics and central reporting for Azure Information Protection (AIP)
+description: Learn how to use Azure Information Protection (AIP) analytics and central reporting to track label usage and to identify files that contain sensitive information.
 author: batamig
 ms.author: bagol
-ms.date: 08/17/2020
+ms.date: 03/01/2021
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -25,11 +25,18 @@ ms.custom: admin
 
 ---
 
-# Central reporting for Azure Information Protection (public preview)
+# Analytics and central reporting for Azure Information Protection (public preview)
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Use Azure Information Protection analytics for central reporting to help you track the adoption of your labels that classify and protect your organization's data. In addition:
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+
+This article describes how to use Azure Information Protection (AIP) analytics for central reporting, which can help you track the adoption of your labels that classify and protect your organization's data. 
+
+AIP analytics also enable you to do perform the following steps:
 
 - Monitor labeled and protected documents and emails across your organization
 
@@ -41,56 +48,22 @@ Use Azure Information Protection analytics for central reporting to help you tra
 
 - Identify when protected documents are accessed by internal or external users from Windows computers, and whether access was granted or denied.
 
-The data that you see is aggregated from your Azure Information Protection clients and scanners, from Microsoft Cloud App Security, from Windows 10 computers using Microsoft Defender Advanced Threat Protection, and from [protection usage logs](log-analyze-usage.md).
+The data that you see is aggregated from your Azure Information Protection clients and scanners, from Microsoft Cloud App Security, from Windows 10 computers using Microsoft Defender Advanced Threat Protection, and from [protection usage logs](log-analyze-usage.md). 
 
-For example, you'll be able to see the following:
+Azure Information Protection analytics for central reporting is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
 
-- From the **Usage report**, where you can select a time period:
-    
-    - Which labels are being applied
-    
-    - How many documents and emails are being labeled
-    
-    - How many documents and emails are being protected
-    
-    - How many users and how many devices are labeling documents and emails
-    
-    - Which applications are being used for labeling
 
-- From the **Activity logs**, where you can select a time period:
+## AIP reporting data
 
-    - Which files previously discovered by scanner were deleted from the scanned repository    
-    - What labeling actions were performed by a specific user
-    
-    - What labeling actions were performed from a specific device
-    
-    - Which users have accessed a specific labeled document
-    
-    - What labeling actions were performed for a specific file path
-    
-    - What labeling actions were performed by a specific application, such File Explorer and right-click, PowerShell, the scanner, or Microsoft Cloud App Security
-    
-    - Which protected documents were accessed successfully by users or denied access to users, even if those users don't have the Azure Information Protection client installed or are outside your organization
+For example, the Azure Information Protection analytics for central reporting displays the following data:
 
-    - Drill down into reported files to view **Activity Details** for additional information
-
-- From the **Data discovery** report:
-
-    - What files are on your scanned data repositories, Windows 10 computers, or computers running the Azure Information Protection clients
-    
-    - Which files are labeled and protected, and the location of files by labels
-    
-    - Which files contain sensitive information for known categories, such as financial data and personal information, and the location of files by these categories
-
-- From the **Recommendations** report:
-    
-    - Identify unprotected files that contain a known sensitive information type. A recommendation lets you immediately configure the corresponding condition for one of your labels to apply automatic or recommended labeling.
-        
-        If you follow the recommendation: The next time the files are opened by a user or scanned by the Azure Information Protection scanner, the files can be automatically classified and protected.
-    
-    - Which data repositories have files with identified sensitive information but are not being scanned by the Azure Information Protection. A recommendation lets you immediately add the identified data store to one of your scanner's profiles.
-        
-        If you follow the recommendation: On the next scanner cycle, the files can be automatically classified and protected.
+|Report  |Sample data shown |
+|---------|---------|
+|**Usage report**     |  Select a time period to show any of the following: <br /><br />     - Which labels are being applied <br /><br />- How many documents and emails are being labeled <br /><br />- How many documents and emails are being protected <br /><br />- How many users and how many devices are labeling documents and emails <br /><br />- Which applications are being used for labeling     |
+|**Activity logs**     | Select a time period to show any of the following: <br /><br />      - Which files previously discovered by scanner were deleted from the scanned repository <br /> <br /> - What labeling actions were performed by a specific user <br /><br /> - What labeling actions were performed from a specific device<br /> <br />    - Which users have accessed a specific labeled document<br /> <br />- What labeling actions were performed for a specific file path<br /> <br />- What labeling actions were performed by a specific application, such File Explorer and right-click, PowerShell, the scanner, or Microsoft Cloud App Security <br /> <br />- Which protected documents were accessed successfully by users or denied access to users, even if those users don't have the Azure Information Protection client installed or are outside your organization <br /> <br />- Drill down into reported files to view **Activity Details** for additional information      |
+|**Data discovery report**     |      - What files are on your scanned data repositories, Windows 10 computers, or computers running the Azure Information Protection clients <br /><br />- Which files are labeled and protected, and the location of files by labels <br /><br />- Which files contain sensitive information for known categories, such as financial data and personal information, and the location of files by these categories       |
+|**Recommendations report**     | - Identify unprotected files that contain a known sensitive information type. A recommendation lets you immediately configure the corresponding condition for one of your labels to apply automatic or recommended labeling. **<br />If you follow the recommendation**: The next time the files are opened by a user or scanned by the Azure Information Protection scanner, the files can be automatically classified and protected. <br /><br /> - Which data repositories have files with identified sensitive information but are not being scanned by the Azure Information Protection. A recommendation lets you immediately add the identified data store to one of your scanner's profiles. <br />   **If you follow the recommendation**: On the next scanner cycle, the files can be automatically classified and protected.        |
+| | |
 
 The reports use [Azure Monitor](/azure/log-analytics/log-analytics-overview) to store the data in a Log Analytics workspace that your organization owns. If you're familiar with the query language, you can modify the queries, and create new reports and Power BI dashboards. You might find the following tutorial helpful to understand the query language: [Get started with Azure Monitor log queries](/azure/azure-monitor/log-query/get-started-queries).
 
@@ -123,7 +96,7 @@ To generate these reports, endpoints send the following types of information to 
 
 - For emails: The email subject and email sender  for emails that are labeled. 
 
-- The sensitive information types ([predefined](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) and custom) that were detected in content.
+- The sensitive information types ([predefined](/office365/securitycompliance/what-the-sensitive-information-types-look-for) and custom) that were detected in content.
 
 - The Azure Information Protection client version.
 
@@ -134,18 +107,24 @@ This information is stored in an Azure Log Analytics workspace that your organiz
 For more details, see:
 
 - [Permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics)
-- [Manage access to Log Analytics Workspace using Azure permissions](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)
+- [Manage access to Log Analytics Workspace using Azure permissions](/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)
 - [Azure Information Protection audit log reference](audit-logs.md)
 
-To prevent Azure Information Protection clients (classic) from sending this data, set the [policy setting](configure-policy-settings.md) of **Send audit data to Azure Information Protection analytics** to **Off**:
+#### Prevent the AIP clients from sending auditing data
 
-- For most users to send this data and a subset of users cannot send auditing data: 
-    - Set **Send audit data to Azure Information Protection analytics** to **Off** in a scoped policy for the subset of users. This configuration is typical for production scenarios.
+**Unified labeling client** 
 
-- For only a subset of users to send auditing data: 
-    - Set **Send audit data to Azure Information Protection analytics** to **Off** in the global policy, and **On** in a scoped policy for the subset of users. This configuration is typical for testing scenarios.
+To prevent the Azure Information Protection unified labeling client from sending auditing data, configure a label policy [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics).
 
-To prevent Azure Information Protection unified clients from sending this data, configure a label policy [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics).
+**Classic client**
+
+To prevent the Azure Information Protection classic client from sending this data, set the [policy setting](configure-policy-settings.md) of **Send audit data to Azure Information Protection analytics** to **Off**:
+
+|Requirement  |Instructions  |
+|---------|---------|
+|**To configure most users to send data, with a subset of users who cannot send data**     |  Set **Send audit data to Azure Information Protection analytics** to **Off** in a scoped policy for the subset of users. <br><br> This configuration is typical for production scenarios.     |
+|**To configure only a subset of users who send data**     |  Set **Send audit data to Azure Information Protection analytics** to **Off** in the global policy, and **On** in a scoped policy for the subset of users. <br><br>This configuration is typical for testing scenarios.       |
+| | |
 
 #### Content matches for deeper analysis
 
@@ -153,58 +132,70 @@ Azure Information Protection lets you collect and store the actual data that's i
 
 By default, Azure Information Protection clients don't send content matches. To change this behavior so that content matches are sent:
 
-- For the classic client, select a checkbox as part of the [configuration](#configure-a-log-analytics-workspace-for-the-reports) for Azure Information Protection analytics. The checkbox is named **Enable deeper analytics into your sensitive data**.
-    
-    If you want most users who are using this client to send content matches but a subset of users cannot send content matches, select the checkbox and then configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
+|Client  |Instructions  |
+|---------|---------|
+|**Unified labeling client**      |  Configure an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) in a label policy.       |
+|**Classic client**      |   Select a checkbox as part of the [configuration](#configure-a-log-analytics-workspace-for-the-reports) for Azure Information Protection analytics. The checkbox is named **Enable deeper analytics into your sensitive data**. <br><br> If you want most users who are using this client to send content matches but a subset of users cannot send content matches, select the checkbox and then configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.     |
+|     |         |
 
-- For the unified labeling client, configure an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) in a label policy.
 
 ## Prerequisites
 To view the Azure Information Protection reports and create your own, make sure that the following requirements are in place.
 
-|Requirement|More information|
-|---------------|--------------------|
-|An Azure subscription that includes Log Analytics and that is for the same tenant as Azure Information Protection|See the [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/log-analytics) page.<br /><br />If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.|
-|For reporting information from labeling clients: <br /><br />- Azure Information Protection clients|Both the unified labeling client and the classic client are supported. <br /><br />If not already installed, you can download and install the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). To deploy the AIP classic client, open a support ticket to get download access.|
-|For reporting information from cloud-based data stores: <br /><br />- Microsoft Cloud App Security |To display information from Microsoft Cloud App Security, configure [Azure Information Protection integration](https://docs.microsoft.com/cloud-app-security/azip-integration).|
-|For reporting information from on-premises data stores: <br /><br />- Azure Information Protection scanner |For installation instructions for the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). |
-|For reporting information from Windows 10 computers:  <br /><br />- Minimum build of 1809 with Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)|You must enable the Azure Information Protection integration feature from Microsoft Defender Security Center. For more information, see [Information protection in Windows overview](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
+|Requirement  |Details  |
+|---------|---------|
+|**An Azure subscription**     |   Your Azure subscription must include Log Analytics on the same tenant as Azure Information Protection. <br><br> For more information, see the [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/log-analytics) page. <br><br>If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.   |
+| **Audit logging URL network connectivity** | AIP must be able to access the following URLs in order to support AIP audit logs:<br>- `https://*.events.data.microsoft.com` <br>- `https://*.aria.microsoft.com` (Android device data only)
+|**Azure Information Protection client**    |For reporting from the client. <br><br>If you don't already have a client installed, you can download and install the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).      <br><br>**Note**: Both the unified labeling client and the classic client are supported. To deploy the AIP classic client, open a support ticket to get download access.     |
+|**Azure Information Protection on-premises scanner**    | For reporting from on-premises data stores. <br><br>      For more information, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).   |
+|**Microsoft Cloud App Security (MCAS)**     | For reporting from cloud-based data stores. <br><br>For more information, see [Azure Information Protection integration](/cloud-app-security/azip-integration) in the MCAS documentation.        |
+|**Minimum build of 1809 with Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)**     | For reporting from Windows 10 computers. <br>  <br>   You must enable the Azure Information Protection integration feature from Microsoft Defender Security Center. <br><br>For more information, see [Information protection in Windows overview](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).   |
+|     |         |
+
 
 ### Permissions required for Azure Information Protection analytics
 
 Specific to Azure Information Protection analytics, after you have configured your Azure Log Analytics workspace, you can use the Azure AD administrator role of Security Reader as an alternative to the other Azure AD roles that support managing Azure Information Protection in the Azure portal. This additional role is supported only if your tenant isn't on the [unified labeling platform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
 
-Because Azure Information Protection analytics uses Azure Monitoring, role-based access control (RBAC) for Azure also controls access to your workspace. You therefore need an Azure role as well as an Azure AD administrator role to manage Azure Information Protection analytics. If you're new to Azure roles, you might find it useful to read [Differences between Azure RBAC roles and Azure AD administrator roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles).
+Because Azure Information Protection analytics uses Azure Monitoring, role-based access control (RBAC) for Azure also controls access to your workspace. You therefore need an Azure role as well as an Azure AD administrator role to manage Azure Information Protection analytics. If you're new to Azure roles, you might find it useful to read [Differences between Azure RBAC roles and Azure AD administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles).
 
-Details:
+For more information, see:
 
-1. One of the following [Azure AD administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to access the Azure Information Protection analytics pane:
-    
-    - To create your Log Analytics workspace or to create custom queries:
-    
-        - **Azure Information Protection administrator**
-        - **Security administrator**
-        - **Compliance administrator**
-        - **Compliance data administrator**
-        - **Global administrator**
-    
-    - After the workspace has been created, you can then use the following roles with fewer permissions to view the data collected:
-    
-        - **Security reader**
-        - **Global reader**
+- [Required Azure AD administrator roles](#required-azure-ad-administrator-roles)
+- [Required Azure Log Analytics roles](#required-azure-log-analytics-roles)
+- [Minimum roles to view the reports](#minimum-roles-to-view-the-reports)
 
-2. In addition, you need one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles) to access your Azure Log Analytics workspace:
+#### Required Azure AD administrator roles
+
+You must have one of the following [Azure AD administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to access the Azure Information Protection analytics pane:
+
+- To create your Log Analytics workspace or to create custom queries:
     
-    - To create the workspace or to create custom queries, one of the following:
+    - **Azure Information Protection administrator**
+    - **Security administrator**
+    - **Compliance administrator**
+    - **Compliance data administrator**
+    - **Global administrator**
     
-        - **Log Analytics Contributor**
-        - **Contributor**
-        - **Owner**
+- After the workspace has been created, you can then use the following roles with fewer permissions to view the data collected:
     
-    - After the workspace has been created, you can then use one of the following roles with fewer permissions to view the data collected:
+    - **Security reader**
+    - **Global reader**
+
+#### Required Azure Log Analytics roles
+
+You must have one of the following [Azure Log Analytics roles](/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) or standard [Azure roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles) to access your Azure Log Analytics workspace:
     
-        - **Log Analytics Reader**
-        - **Reader**
+- To create the workspace or to create custom queries, one of the following:
+    
+    - **Log Analytics Contributor**
+    - **Contributor**
+    - **Owner**
+    
+- After the workspace has been created, you can then use one of the following roles with fewer permissions to view the data collected:
+    
+    - **Log Analytics Reader**
+    - **Reader**
 
 #### Minimum roles to view the reports
 
@@ -227,7 +218,7 @@ However, as a starting point, you might find the following estimates useful:
 
 If you use mandatory labeling or you've configured a default label for most users, your rates are likely to be significantly higher.
 
-Azure Monitor Logs has a **Usage and estimated costs** feature to help you estimate and review the amount of data stored, and you can also control the data retention period for your Log Analytics workspace. For more information, see [Manage usage and costs with Azure Monitor Logs](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
+Azure Monitor Logs has a **Usage and estimated costs** feature to help you estimate and review the amount of data stored, and you can also control the data retention period for your Log Analytics workspace. For more information, see [Manage usage and costs with Azure Monitor Logs](/azure/azure-monitor/platform/manage-cost-storage).
 
 ## Configure a Log Analytics workspace for the reports
 
@@ -235,45 +226,38 @@ Azure Monitor Logs has a **Usage and estimated costs** feature to help you estim
     
     For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
     
-2. Locate the **Manage** menu options, and select **Configure analytics (Preview)**.
+1. Locate the **Manage** menu options, and select **Configure analytics (Preview)**.
 
-3. On the **Azure Information Protection log analytics** pane, you see a list of any Log Analytics workspaces that are owned by your tenant. Do one of the following:
+1. On the **Azure Information Protection log analytics** pane, you see a list of any Log Analytics workspaces that are owned by your tenant. Do one of the following:
     
-    - To create a new Log Analytics workspace: Select **Create new workspace**, and on the **Log analytics workspace** pane, supply the requested information.
+    - **To create a new Log Analytics workspace**: Select **Create new workspace**, and on the **Log analytics workspace** pane, supply the requested information.
     
-    - To use an existing Log Analytics workspace: Select the workspace from the list.
+    - **To use an existing Log Analytics workspace**: Select the workspace from the list.
     
-    If you need help with creating the Log Analytics workspace, see [Create a Log Analytics workspace in the Azure portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
+    If you need help with creating the Log Analytics workspace, see [Create a Log Analytics workspace in the Azure portal](/azure/log-analytics/log-analytics-quick-create-workspace).
 
-4. If you have Azure Information Protection clients (classic), select the checkbox **Enable deeper analytics into your sensitive data** if you want to store the actual data that's identified as being a sensitive information type. For more information about this setting, see the [Content matches for deeper analysis](#content-matches-for-deeper-analysis) section on this page.
+1. **AIP classic client only**: Select the checkbox **Enable deeper analytics into your sensitive data** if you want to store the actual data that's identified as being a sensitive information type. 
 
-5. Select **OK**.
+    For more information about this setting, see the [Content matches for deeper analysis](#content-matches-for-deeper-analysis) section on this page.
+
+1. Select **OK**.
 
 You're now ready to view the reports.
 
-## How to view the reports
+## View the AIP analytics reports
 
 From the Azure Information Protection pane, locate the **Dashboards** menu options, and select one of the following options:
 
-- **Usage report (Preview)**: Use this report to see how your labels are being used.
-
-- **Activity logs (Preview)**: Use this report to see labeling actions from users, and on devices and file paths. In addition, for protected documents, you can see access attempts (successful or denied) for users both inside and outside your organization, even if they don't have the Azure Information Protection client installed
-    
-    This report has a **Columns** option that lets you display more activity information than the default display. You can also see more details about a file by selecting it to display **Activity Details**.
-
-- **Data discovery (Preview)**: Use this report to see information about labeled files found by scanners and supported endpoints.
-    
-    Tip: From the information collected, you might find users accessing files that contain sensitive information from location that you didn't know about or aren't currently scanning:
-    
-    - If the locations are on-premises, consider adding the locations as additional data repositories for the Azure Information Protection scanner.
-    - If the locations are in the cloud, consider using Microsoft Cloud App Security to manage them. 
-    
-- **Recommendations (Preview)**: Use this report to identify files that have sensitive information and mitigate your risk by following the recommendations.
-    
-    When you select an item, the **View data** option displays the audit activities that triggered the recommendation.
+|Report  |Description  |
+|---------|---------|
+|**Usage report (Preview)**     |  Use this report to see how your labels are being used.       |
+|**Activity logs (Preview)**     |  Use this report to see labeling actions from users, and on devices and file paths. In addition, for protected documents, you can see access attempts (successful or denied) for users both inside and outside your organization, even if they don't have the Azure Information Protection client installed. <br><br>  This report has a **Columns** option that lets you display more activity information than the default display. You can also see more details about a file by selecting it to display **Activity Details**.     |
+|**Data discovery (Preview)**     |    Use this report to see information about labeled files found by scanners and supported endpoints.  <br><br>**Tip**: From the information collected, you might find users accessing files that contain sensitive information from location that you didn't know about or aren't currently scanning: <br><br>- If the locations are on-premises, consider adding the locations as additional data repositories for the Azure Information Protection scanner. <br>  - If the locations are in the cloud, consider using Microsoft Cloud App Security to manage them.    |
+|**Recommendations (Preview)**     | Use this report to identify files that have sensitive information and mitigate your risk by following the recommendations.  <br><br> When you select an item, the **View data** option displays the audit activities that triggered the recommendation.     |
+|     |         |
 
 
-## How to modify the reports and create custom queries
+## Modify the AIP analytics reports and create custom queries
 
 Select the query icon in the dashboard to open a **Log Search** pane: 
 
@@ -290,43 +274,42 @@ Use the following table to identify the friendly name of event functions that yo
 
 |Column name|Description|
 |-----------|-----------|
-|Time|Event time: UTC in format YYYY-MM-DDTHH:MM:SS|
-|User|User: Format UPN or DOMAIN\USER|
-|ItemPath|Full item path or email subject|
-|ItemName|File name or email subject |
-|Method|Label assigned method: Manual, Automatic, Recommended, Default, or Mandatory|
-|Activity|Audit activity: DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection, NewCustomProtection, or FileRemoved |
-|ResultStatus|Result status of the action:<br /><br /> Succeeded or Failed (reported by AIP scanner only)|
-|ErrorMessage_s|Includes Error message details if ResultStatus=Failed. Reported by AIP scanner only|
-|LabelName|Label name (not localized)|
-|LabelNameBefore |Label name before change (not localized) |
-|ProtectionType|Protection type [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
-|ProtectionBefore|Protection type before change [JSON] |
-|MachineName |FQDN when available; otherwise host name|
-|DeviceRisk|Device risk score from WDATP when available|
-|Platform|Device platform (Win, OSX, Android, iOS) |
-|ApplicationName|Application friendly name|
-|AIPVersion|Version of the Azure Information Protection client that performed the audit action |
-|TenantId|Azure AD tenant ID |
-|AzureApplicationId|Azure AD registered application ID (GUID)|
-|ProcessName|Process that hosts MIP SDK|
-|LabelId|Label GUID or null|
-|IsProtected|Whether protected: Yes/No |
-|ProtectionOwner |Rights Management owner in UPN format|
-|LabelIdBefore|Label GUID or null before change|
-|InformationTypesAbove55|JSON array of [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 55 or above |
-|InformationTypesAbove65|JSON array of [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 65 or above |
-|InformationTypesAbove75|JSON array of [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 75 or above |
-|InformationTypesAbove85|JSON array of [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 85 or above |
-|InformationTypesAbove95|JSON array of [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 95 or above|
-|DiscoveredInformationTypes |JSON array of [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data and their matched content (if enabled) where an empty array means no information types found, and null means no information available |
-|ProtectedBefore|Whether the content was protected before change: Yes/No |
-|ProtectionOwnerBefore|Rights Management owner before change |
-|UserJustification|Justification when downgrading or removing label|
-|LastModifiedBy|User in UPN format who last modified the file. Available for Office and SharePoint only|
-|LastModifiedDate|UTC in format YYYY-MM-DDTHH:MM:SS: Available for Office and SharePoint only |
-
-
+|**Time**|Event time: UTC in format YYYY-MM-DDTHH:MM:SS|
+|**User**|User: Format UPN or DOMAIN\USER|
+|**ItemPath**|Full item path or email subject|
+|**ItemName**|File name or email subject |
+|**Method**|Label assigned method: Manual, Automatic, Recommended, Default, or Mandatory|
+|**Activity**|Audit activity: DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection, NewCustomProtection, or FileRemoved |
+|**ResultStatus**|Result status of the action:<br /><br /> Succeeded or Failed (reported by AIP scanner only)|
+|**ErrorMessage_s**|Includes Error message details if ResultStatus=Failed. Reported by AIP scanner only|
+|**LabelName**|Label name (not localized)|
+|**LabelNameBefore** |Label name before change (not localized) |
+|**ProtectionType**|Protection type [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
+|**ProtectionBefore**|Protection type before change [JSON] |
+|**MachineName** |FQDN when available; otherwise host name|
+|**DeviceRisk**|Device risk score from WDATP when available|
+|**Platform**|Device platform (Win, OSX, Android, iOS) |
+|**ApplicationName**|Application friendly name|
+|**AIPVersion**|Version of the Azure Information Protection client that performed the audit action |
+|**TenantId**|Azure AD tenant ID |
+|**AzureApplicationId**|Azure AD registered application ID (GUID)|
+|**ProcessName**|Process that hosts MIP SDK|
+|**LabelId**|Label GUID or null|
+|**IsProtected**|Whether protected: Yes/No |
+|**ProtectionOwner** |Rights Management owner in UPN format|
+|**LabelIdBefore**|Label GUID or null before change|
+|**InformationTypesAbove55**|JSON array of [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 55 or above |
+|**InformationTypesAbove65**|JSON array of [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 65 or above |
+|**InformationTypesAbove75**|JSON array of [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 75 or above |
+|**InformationTypesAbove85**|JSON array of [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 85 or above |
+|**InformationTypesAbove95**|JSON array of [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 95 or above|
+|**DiscoveredInformationTypes** |JSON array of [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data and their matched content (if enabled) where an empty array means no information types found, and null means no information available |
+|**ProtectedBefore**|Whether the content was protected before change: Yes/No |
+|**ProtectionOwnerBefore**|Rights Management owner before change |
+|**UserJustification**|Justification when downgrading or removing label|
+|**LastModifiedBy**|User in UPN format who last modified the file. Available for Office and SharePoint only|
+|**LastModifiedDate**|UTC in format YYYY-MM-DDTHH:MM:SS: Available for Office and SharePoint only |
+| | |
 #### Examples using InformationProtectionEvents
 
 Use the following examples to see how you might use the friendly schema to create custom queries.
@@ -367,6 +350,13 @@ In this example, a downgraded label is counted only if the label name before the
 
 
 ## Next steps
-After reviewing the information in the reports, if you are using the Azure Information Protection client, you might decide to make changes to your Azure Information Protection policy. For instructions, see [Configuring the Azure Information Protection policy](configure-policy.md).
+After reviewing the information in the reports, if you are using the Azure Information Protection client, you might decide to make changes to your labeling policy. 
 
-If you have a Microsoft 365 subscription, you can also view label usage in the Microsoft 365 compliance center and Microsoft 365 security center. For more information, see [View label usage with label analytics](/microsoft-365/compliance/label-analytics).
+- **Unified labeling client**: Make changes to your labeling policy in your labeling admin center, including the Microsoft 365 security center, Microsoft 365 compliance center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+
+- **Classic client**: Make changes to your policy in the Azure portal. For more information, see [Configuring the Azure Information Protection policy](configure-policy.md).
+
+AIP audit logs are also sent to the Microsoft 365 Activity Explorer, where they may be displayed with different names. For more information, see:
+
+- [Public Preview: AIP audit logs in Activity Explorer](https://www.yammer.com/askipteam/#/Threads/show?threadId=1085834054254592)
+- [Get started with activity explorer](/microsoft-365/compliance/data-classification-activity-explorer).

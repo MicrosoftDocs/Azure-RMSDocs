@@ -3,10 +3,10 @@
 
 title: Log & analyze the protection usage from Azure Information Protection
 description: Information and instructions how to use usage logging for the protection service from Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/03/2019
+ms.date: 11/11/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,12 @@ ms.custom: admin
 
 # Logging and analyzing the protection usage from Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 Use this information to help you understand how you can use usage logging for the protection service (Azure Rights Management) from Azure Information Protection. This protection service provides the data protection for your organization's documents and emails and it can log every request to it. These requests include when users protect documents and email and also consume this content, actions performed by your administrators for this service, and actions performed by Microsoft operators to support your Azure Information Protection deployment. 
 
@@ -51,10 +56,11 @@ In addition to this usage logging, you also have the following logging options:
 
 |Logging option|Description|
 |----------------|---------------|
-|Admin log|Logs administrative tasks for the protection service. For example, if the service is deactivated, when the super user feature is enabled, and when users are delegated admin permissions to the service. <br /><br />For more information, see the PowerShell cmdlet, [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog).|
-|Document tracking|Lets users track and revoke their documents that they have tracked with the Azure Information Protection client. Global administrators can also track these documents on behalf of users. <br /><br />For more information, see [Configuring and using document tracking for Azure Information Protection](./rms-client/client-admin-guide-document-tracking.md).|
-|Client event logs|Usage activity for the Azure Information Protection client, logged in the local Windows **Applications and Services** event log, **Azure Information Protection**. <br /><br />For more information, see [Usage logging for the Azure Information Protection client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
-|Client log files|Troubleshooting logs for the Azure Information Protection client, located in **%localappdata%\Microsoft\MSIP**. <br /><br />These files are designed for Microsoft Support.|
+|**Admin log**|Logs administrative tasks for the protection service. For example, if the service is deactivated, when the super user feature is enabled, and when users are delegated admin permissions to the service. <br /><br />For more information, see the PowerShell cmdlet, [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog).|
+|**Document tracking**|Lets users track and revoke their documents that they have tracked with the Azure Information Protection client. Global administrators can also track these documents on behalf of users. <br /><br />For more information, see [Configuring and using document tracking for Azure Information Protection](./rms-client/client-admin-guide-document-tracking.md).|
+|**Client event logs**|Usage activity for the Azure Information Protection client, logged in the local Windows **Applications and Services** event log, **Azure Information Protection**. <br /><br />For more information, see [Usage logging for the Azure Information Protection client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client).|
+|**Client log files**|Troubleshooting logs for the Azure Information Protection client, located in **%localappdata%\Microsoft\MSIP**. <br /><br />These files are designed for Microsoft Support.|
+| | |
 
 In addition, information from the Azure Information Protection client usage logs and the Azure Information Protection scanner is collected and aggregated to create reports in the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md).
 
@@ -76,13 +82,13 @@ To download your usage logs, you will use the AIPService PowerShell module for A
 
 1.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) cmdlet to connect to Azure Information Protection:
 
-    ```
+    ```PowerShell
     Connect-AipService
     ```
     
 2.  Run the following command to download the logs for a specific date: 
 
-    ```
+    ```PowerShell
     Get-AipServiceUserLog -Path <location> -fordate <date>
     ```
 
@@ -127,26 +133,26 @@ The third line enumerates a list of field names that are separated by tabs:
 
 Each of the subsequent lines is a log record. The values of the fields are in the same order as the preceding line, and are separated by tabs. Use the following table to interpret the fields.
 
-
-|   Field name   | W3C data type |                                                                                                                                                                          Description                                                                                                                                                                          |                                                            Example value                                                            |
-|----------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-|      date      |     Date      |                                                                                                                     UTC date when the request was served.<br /><br />The source is the local clock on the server that served the request.                                                                                                                     |                                                             2013-06-25                                                              |
-|      time      |     Time      |                                                                                                            UTC time in 24-hour format when the request was served.<br /><br />The source is the local clock on the server that served the request.                                                                                                            |                                                              21:59:28                                                               |
-|     row-id     |     Text      |                                                                           Unique GUID for this log record. If a value is not present, use the correlation-id value to identify the entry.<br /><br />This value is useful when you aggregate logs or copy logs into another format.                                                                           |                                                1c3fe7a9-d9e0-4654-97b7-14fafa72ea63                                                 |
-|  request-type  |     Name      |                                                                                                                                                            Name of the RMS API that was requested.                                                                                                                                                            |                                                           AcquireLicense                                                            |
-|    user-id     |    String     |                                                               The user who made the request.<br /><br />The value is enclosed in single quotation marks. Calls from a tenant key that is managed by you (BYOK) have a value of **"**, which also applies when the request types are anonymous.                                                                |                                                          ‘joe@contoso.com’                                                          |
-|     result     |    String     |                                                                                                                  'Success' if the request was served successful.<br /><br />The error type in single quotation marks if the request failed.                                                                                                                   |                                                              'Success'                                                              |
-| correlation-id |     Text      |                                                                                                 GUID that is common between the RMS client log and server log for a given request.<br /><br />This value can be useful to help troubleshooting client issues.                                                                                                 |                                                cab52088-8925-4371-be34-4b71a3112356                                                 |
-|   content-id   |     Text      |                                                                      GUID, enclosed in curly braces that identifies the protected content (for example, a document).<br /><br />This field has a value only if request-type is AcquireLicense and is blank for all other request types.                                                                       |                                               {bb4af47b-cfed-4719-831d-71b98191a4f2}                                                |
-|  owner-email   |    String     |                                                                                                                       Email address of the owner of the document.<br /><br /> This field is blank if the request type is RevokeAccess.                                                                                                                        |                                                          alice@contoso.com                                                          |
-|     issuer     |    String     |                                                                                                                          Email address of the document issuer. <br /><br /> This field is blank if the request type is RevokeAccess.                                                                                                                          |                       alice@contoso.com (or) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'                       |
-|  template-id   |    String     |                                                                                                                    ID of the template used to protect the document. <br /><br /> This field is blank if the request type is RevokeAccess.                                                                                                                     |                                               {6d9371a6-4e2d-4e97-9a38-202233fed26e}                                                |
-|   file-name    |    String     | File name of a protected document that is tracked by using the Azure Information Protection client for Windows. <br /><br />Currently, some files (such as Office documents) display as GUIDs rather than the actual file name.<br /><br /> This field is blank if the request type is RevokeAccess. |                                                       TopSecretDocument.docx                                                        |
-| date-published |     Date      |                                                                                                                          Date when the document was protected.<br /><br /> This field is blank if the request type is RevokeAccess.                                                                                                                           |                                                         2015-10-15T21:37:00                                                         |
-|     c-info     |    String     |                                                                                   Information about the client platform that is making the request.<br /><br />The specific string varies, depending on the application (for example, the operating system or the browser).                                                                                   | 'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64' |
-|      c-ip      |    Address    |                                                                                                                                                       IP address of the client that makes the request.                                                                                                                                                        |                                                            64.51.202.144                                                            |
-|  admin-action  |     Bool      |                                                                                                                                    Whether an administrator has accessed the document tracking site in Administrator mode.                                                                                                                                    |                                                                True                                                                 |
-| acting-as-user |    String     |                                                                                                                               The email address of the user for whom an administrator is accessing the document tracking site.                                                                                                                                |                                                          'joe@contoso.com'                                                          |
+| Field name         | W3C data type | Description                                                                                                                                                                                                                                                                                          | Example value                                                                                                                       |
+| ------------------ | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **date**           | Date          | UTC date when the request was served.<br /><br />The source is the local clock on the server that served the request.                                                                                                                                                                                | 2013-06-25                                                                                                                          |
+| **time**           | Time          | UTC time in 24-hour format when the request was served.<br /><br />The source is the local clock on the server that served the request.                                                                                                                                                              | 21:59:28                                                                                                                            |
+| **row-id**         | Text          | Unique GUID for this log record. If a value is not present, use the correlation-id value to identify the entry.<br /><br />This value is useful when you aggregate logs or copy logs into another format.                                                                                            | 1c3fe7a9-d9e0-4654-97b7-14fafa72ea63                                                                                                |
+| **request-type**  | Name          | Name of the RMS API that was requested.                                                                                                                                                                                                                                                              | AcquireLicense                                                                                                                      |
+| **user-id**        | String        | The user who made the request.<br /><br />The value is enclosed in single quotation marks. Calls from a tenant key that is managed by you (BYOK) have a value of **"**, which also applies when the request types are anonymous.                                                                     | ‘joe@contoso.com’                                                                                                                   |
+| **result**         | String        | 'Success' if the request was served successful.<br /><br />The error type in single quotation marks if the request failed.                                                                                                                                                                           | 'Success'                                                                                                                           |
+| **correlation-id** | Text          | GUID that is common between the RMS client log and server log for a given request.<br /><br />This value can be useful to help troubleshooting client issues.                                                                                                                                        | cab52088-8925-4371-be34-4b71a3112356                                                                                                |
+| **content-id**     | Text          | GUID, enclosed in curly braces that identifies the protected content (for example, a document).<br /><br />This field has a value only if request-type is AcquireLicense and is blank for all other request types.                                                                                   | {bb4af47b-cfed-4719-831d-71b98191a4f2}                                                                                              |
+| **owner-email**    | String        | Email address of the owner of the document.<br /><br /> This field is blank if the request type is RevokeAccess.                                                                                                                                                                                     | alice@contoso.com                                                                                                                   |
+| **issuer**         | String        | Email address of the document issuer. <br /><br /> This field is blank if the request type is RevokeAccess.                                                                                                                                                                                          | alice@contoso.com (or) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'                                             |
+| **template-id**   | String        | ID of the template used to protect the document. <br /><br /> This field is blank if the request type is RevokeAccess.                                                                                                                                                                               | {6d9371a6-4e2d-4e97-9a38-202233fed26e}                                                                                              |
+| **file-name**      | String        | File name of a protected document that is tracked by using the Azure Information Protection client for Windows. <br /><br />Currently, some files (such as Office documents) display as GUIDs rather than the actual file name.<br /><br /> This field is blank if the request type is RevokeAccess. | TopSecretDocument.docx                                                                                                              |
+| **date-published** | Date          | Date when the document was protected.<br /><br /> This field is blank if the request type is RevokeAccess.                                                                                                                                                                                           | 2015-10-15T21:37:00                                                                                                                 |
+| **c-info**         | String        | Information about the client platform that is making the request.<br /><br />The specific string varies, depending on the application (for example, the operating system or the browser).                                                                                                            | 'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64' |
+| **c-ip**           | Address       | IP address of the client that makes the request.                                                                                                                                                                                                                                                     | 64.51.202.144                                                                                                                       |
+| **admin-action**   | Bool          | Whether an administrator has accessed the document tracking site in Administrator mode.                                                                                                                                                                                                              | True                                                                                                                                |
+| **acting-as-user** | String        | The email address of the user for whom an administrator is accessing the document tracking site.                                                                                                                                                                                                     | 'joe@contoso.com'                                                                                                                   |
+|                    |               |                                                                                                                                                                                                                                                                                                      |                                                                                                                                     |
 
 #### Exceptions for the user-id field
 Although the user-id field usually indicates the user who made the request, there are two exceptions where the value does not map to a real user:
@@ -164,47 +170,60 @@ There are many request types for the protection service but the following table 
 
 |Request type|Description|
 |----------------|---------------|
-|AcquireLicense|A client from a Windows-based computer is requesting a license for protected content.|
-|AcquirePreLicense|A client, on behalf of the user, is requesting for a license for protected content.|
-|AcquireTemplates|A call was made to acquires templates based on template IDs|
-|AcquireTemplateInformation|A call was made to get the IDs of the template from the service.|
-|AddTemplate|A call is  made from the Azure portal to add a template.|
-|AllDocsCsv|A call is made from the document tracking site to download the CSV file from the **All Documents** page.|
-|BECreateEndUserLicenseV1|A call is  made from a mobile device to create an end-user license.|
-|BEGetAllTemplatesV1|A call is  made from a mobile device (back-end) to get all the templates.|
-|Certify|The client is certifying the user for the consumption and creation of protected content.|
-|DeleteTemplateById|A call is  made from the Azure portal, to delete a template by template  ID.|
-|DocumentEventsCsv|A call is made from the document tracking site to download the .CSV file for a single document.|
-|ExportTemplateById|A call is  made from the Azure portal to export a template based on a template ID.|
-|FECreateEndUserLicenseV1|Similar to the AcquireLicense request but from mobile devices.|
-|FECreatePublishingLicenseV1|The same as Certify and GetClientLicensorCert combined, from mobile clients.|
-|FEGetAllTemplates|A call is  made, from a mobile device (front-end) to get the templates.|
-|FindServiceLocationsForUser|A call is made to query for URLs, which is used to call Certify or AcquireLicense.|
-|GetAllDocs|A call is made from the document tracking site to load the **all documents** page for a user, or search all documents for the tenant. Use this value with the admin-action and acting-as-admin fields:<br /><br />- admin-action is empty: A user views the **all documents** page for their own documents.<br /><br />- admin-action is true and acting-as-user is empty: An administrator views all documents for their tenant.<br /><br />- admin-action is true and acting-as-user is not empty: An administrator views the **all documents** page for a user.|
-|GetAllTemplates|A call is  made from the Azure portal, to get all the templates.|
-|GetClientLicensorCert|The client is requesting a publishing certificate (that is later used to protect content) from a Windows-based computer.|
-|GetConfiguration|An Azure PowerShell cmdlet is called to get the configuration of the Azure RMS tenant.|
-|GetConnectorAuthorizations|A call  is made from the RMS connectors to get their configuration from the cloud.|
-|GetRecipients|A call is made from the document tracking site to navigate to the list view for a single document.|
-|GetSingle|A call is made from the document tracking site to navigate to a **single document** page.|
-|GetTenantFunctionalState|The Azure portal is checking whether the protection service (Azure Rights Management) is activated.|
-|GetTemplateById|A call is  made from the Azure portal to get a template by specifying a template ID.|
-|KeyVaultDecryptRequest|The client is attempting to decrypt the RMS-protected content. Applicable only for a customer-managed tenant key (BYOK) in Azure Key Vault.|
-|KeyVaultGetKeyInfoRequest|A call is made to verify that the key specified to be used in Azure Key Vault for the Azure Information Protection tenant key is accessible and not already used.|
-|KeyVaultSignDigest|A call is made when a customer-managed key (BYOK) in Azure Key Vault is used for signing purposes. This is called typically once per AcquireLicence (or FECreateEndUserLicenseV1), Certify, and GetClientLicensorCert (or FECreatePublishingLicenseV1).|
-|KMSPDecrypt|The client is attempting to decrypt the RMS-protected content. Applicable only for a legacy customer-managed tenant key (BYOK).|
-|KMSPSignDigest|A call is made when a legacy customer-managed key (BYOK) is used for signing purposes. This is called typically once per AcquireLicence (or FECreateEndUserLicenseV1), Certify, and GetClientLicensorCert (or FECreatePublishingLicenseV1).|
-|LoadEventsForMap|A call is made from the document tracking site to navigate to the map view for a single document.|
-|LoadEventsForSummary|A call is made from the document tracking site to navigate to the timeline view for a single document.|
-|LoadEventsForTimeline|A call is made from the document tracking site to navigate to the map view for a single document.|
-|ImportTemplate|A call is  made from the Azure portal to import a template.|
-|RevokeAccess|A call is made from the document tracking site to revoke a document.|
-|SearchUsers |A call is made from the document tracking site to search all users in a tenant.|
-|ServerCertify|A call is  made from an RMS-enabled client (such as SharePoint) to certify the server.|
-|SetUsageLogFeatureState|A call is  made to enable usage logging.|
-|SetUsageLogStorageAccount|A call is  made to specify the location of the Azure Rights Management service logs.|
-|UpdateNotificationSettings|A call is made from the document tracking site to change the notification settings for a single document.|
-|UpdateTemplate|A call is  made from the Azure portal to update an existing template.|
+|**AcquireLicense**|A client from a Windows-based computer is requesting a license for protected content.|
+|**AcquirePreLicense**|A client, on behalf of the user, is requesting for a license for protected content.|
+|**AcquireTemplates**|A call was made to acquires templates based on template IDs|
+|**AcquireTemplateInformation**|A call was made to get the IDs of the template from the service.|
+|**AddTemplate**|A call is  made from the Azure portal to add a template.|
+|**AllDocsCsv**|A call is made from the document tracking site to download the CSV file from the **All Documents** page.|
+|**BECreateEndUserLicenseV1**|A call is  made from a mobile device to create an end-user license.|
+|**BEGetAllTemplatesV1**|A call is  made from a mobile device (back-end) to get all the templates.|
+|**Certify**|The client is certifying the user for the consumption and creation of protected content.|
+|**FECreateEndUserLicenseV1**|Similar to the AcquireLicense request but from mobile devices.|
+|**FECreatePublishingLicenseV1**|The same as Certify and GetClientLicensorCert combined, from mobile clients.|
+|**FEGetAllTemplates**|A call is  made, from a mobile device (front-end) to get the templates.|
+|**FindServiceLocationsForUser**|A call is made to query for URLs, which is used to call Certify or AcquireLicense.|
+|**GetClientLicensorCert**|The client is requesting a publishing certificate (that is later used to protect content) from a Windows-based computer.|
+|**GetConfiguration**|An Azure PowerShell cmdlet is called to get the configuration of the Azure RMS tenant.|
+|**GetConnectorAuthorizations**|A call  is made from the RMS connectors to get their configuration from the cloud.|
+|**GetRecipients**|A call is made from the document tracking site to navigate to the list view for a single document.|
+|**GetTenantFunctionalState**|The Azure portal is checking whether the protection service (Azure Rights Management) is activated.|
+|**KeyVaultDecryptRequest**|The client is attempting to decrypt the RMS-protected content. Applicable only for a customer-managed tenant key (BYOK) in Azure Key Vault.|
+|**KeyVaultGetKeyInfoRequest**|A call is made to verify that the key specified to be used in Azure Key Vault for the Azure Information Protection tenant key is accessible and not already used.|
+|**KeyVaultSignDigest**|A call is made when a customer-managed key (BYOK) in Azure Key Vault is used for signing purposes. This is called typically once per AcquireLicence (or FECreateEndUserLicenseV1), Certify, and GetClientLicensorCert (or FECreatePublishingLicenseV1).|
+|**KMSPDecrypt**|The client is attempting to decrypt the RMS-protected content. Applicable only for a legacy customer-managed tenant key (BYOK).|
+|**KMSPSignDigest**|A call is made when a legacy customer-managed key (BYOK) is used for signing purposes. This is called typically once per AcquireLicence (or FECreateEndUserLicenseV1), Certify, and GetClientLicensorCert (or FECreatePublishingLicenseV1).|
+|**ServerCertify**|A call is  made from an RMS-enabled client (such as SharePoint) to certify the server.|
+|**SetUsageLogFeatureState**|A call is  made to enable usage logging.|
+|**SetUsageLogStorageAccount**|A call is  made to specify the location of the Azure Rights Management service logs.|
+|**UpdateTemplate**|A call is  made from the Azure portal to update an existing template.|
+| | | 
+
+**Classic client only**
+
+The following request types are relevant for users with the AIP classic client only:
+
+|Request type|Description|
+|----------------|---------------|
+|**DeleteTemplateById**|A call is  made from the Azure portal, to delete a template by template  ID.|
+|**DocumentEventsCsv**|A call is made from the document tracking site to download the .CSV file for a single document.|
+|**ExportTemplateById**|A call is  made from the Azure portal to export a template based on a template ID.|
+|**FEGetAllTemplates**|A call is  made, from a mobile device (front-end) to get the templates.|
+|**GetAllDocs**|A call is made from the document tracking site to load the **all documents** page for a user, or search all documents for the tenant. Use this value with the admin-action and acting-as-admin fields:<br /><br />- admin-action is empty: A user views the **all documents** page for their own documents.<br /><br />- admin-action is true and acting-as-user is empty: An administrator views all documents for their tenant.<br /><br />- admin-action is true and acting-as-user is not empty: An administrator views the **all documents** page for a user.|
+|**GetAllTemplates**|A call is  made from the Azure portal, to get all the templates.|
+|**GetConnectorAuthorizations**|A call  is made from the RMS connectors to get their configuration from the cloud.|
+|**GetSingle**|A call is made from the document tracking site to navigate to a **single document** page.|
+|**GetTemplateById**|A call is  made from the Azure portal to get a template by specifying a template ID.|
+|**LoadEventsForMap**|A call is made from the document tracking site to navigate to the map view for a single document.|
+|**LoadEventsForSummary**|A call is made from the document tracking site to navigate to the timeline view for a single document.|
+|**LoadEventsForTimeline**|A call is made from the document tracking site to navigate to the map view for a single document.|
+|**ImportTemplate**|A call is  made from the Azure portal to import a template.|
+|**RevokeAccess**|A call is made from the document tracking site to revoke a document.|
+|**SearchUsers** |A call is made from the document tracking site to search all users in a tenant.|
+|**UpdateNotificationSettings**|A call is made from the document tracking site to change the notification settings for a single document.|
+|**UpdateTemplate**|A call is  made from the Azure portal to update an existing template.|
+| | | 
+
 
 
 ## PowerShell reference

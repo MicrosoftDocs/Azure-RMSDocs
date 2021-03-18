@@ -3,8 +3,8 @@
 
 title: How Office apps & services support Azure RMS from AIP
 description: How end-user Office applications such as Word and Outlook, and Office services such as Exchange and SharePoint, can use the Azure Rights Management service from AIP to help protect your organization's data.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/31/2020
 ms.topic: conceptual
@@ -27,12 +27,17 @@ ms.custom: admin
 
 # How Office applications and services support Azure Rights Management 
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 End-user Office applications and Office services can use the Azure Rights Management service from Azure Information Protection to help protect your organization’s data. These Office applications are Word, Excel, PowerPoint, and Outlook. The Office services are Exchange and Microsoft SharePoint. The Office configurations that support the Azure Rights Management service often use the term **information rights management (IRM)**.
 
 ## Office applications: Word, Excel, PowerPoint, Outlook
-These applications natively support Azure Rights Management and let users apply protection to a saved document or to an email message to be sent. Users can apply [templates](configure-policy-templates.md) to apply the protection. Or, for Word, Excel, and PowerPoint, users can choose customized settings for access, rights, and usage restrictions.
+These applications support Azure Rights Management built-in, and let users apply protection to a saved document or to an email message to be sent. Users can apply templates to apply the protection. Or, for Word, Excel, and PowerPoint, users can choose customized settings for access, rights, and usage restrictions.
 
 For example, users can configure a Word document so that it can be accessed only by people in your organization. Or, control whether an Excel spreadsheet can be edited, or restricted to read-only, or prevent it from being printed. For time-sensitive files, an expiration time can be configured for when the file can no longer be accessed. This configuration can be made directly by users or by applying a protection template. For Outlook, users can also choose the **Do Not Forward** option to help prevent data leakage.
 
@@ -47,25 +52,29 @@ When you use Exchange Online or Exchange Server, you can configure options for A
 
 -   Email protection support for **Outlook on the web**, which is implemented similarly to the Outlook client. This configuration lets users protect email messages by using protection templates or options. Users can read and use protected email messages that are sent to them.
 
--   **Protection rules** for Outlook clients that an administrator configures to automatically apply protection templates and options to email messages for specified recipients. For example, when internal emails are sent to your legal department, they can only be read by members of the legal department and cannot be forwarded. Users see the protection applied to the email message before sending it, and by default, they can remove this protection if they decide it is not necessary. Emails are encrypted before they are sent. For more information, see [Outlook Protection Rules](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) and [Create an Outlook Protection Rule](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) in the Exchange library.
+-   **Protection rules** for Outlook clients that an administrator configures to automatically apply protection templates and options to email messages for specified recipients. For example, when internal emails are sent to your legal department, they can only be read by members of the legal department and cannot be forwarded. Users see the protection applied to the email message before sending it, and by default, they can remove this protection if they decide it is not necessary. Emails are encrypted before they are sent. For more information, see [Outlook Protection Rules](/exchange/outlook-protection-rules-exchange-2013-help) and [Create an Outlook Protection Rule](/exchange/create-an-outlook-protection-rule-exchange-2013-help) in the Exchange library.
 
--   **Mail flow rules** that an administrator configures to automatically apply protection templates or options to email messages. These rules are based on properties such as sender, recipient, message subject, and content. These rules are similar in concept to protection rules but don't allow users to remove the protection because the protection is set by the Exchange service rather than by the client. Because protection is set by the service, it doesn't matter what device or what operating system the users have. For more information, see [Mail flow rules (transport rules) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) and [Create a Transport Protection Rule](https://technet.microsoft.com/library/dd302432.aspx) for Exchange on-premises.
+-   **Mail flow rules** that an administrator configures to automatically apply protection templates or options to email messages. These rules are based on properties such as sender, recipient, message subject, and content. These rules are similar in concept to protection rules but don't allow users to remove the protection because the protection is set by the Exchange service rather than by the client. Because protection is set by the service, it doesn't matter what device or what operating system the users have. For more information, see [Mail flow rules (transport rules) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) and [Create a Transport Protection Rule](/exchange/create-a-transport-protection-rule-exchange-2013-help) for Exchange on-premises.
 
 -   **Data loss prevention (DLP) policies** that contain sets of conditions to filter email messages and take actions, to help prevent data loss for confidential or sensitive content. One of the actions that you can specify is to apply encryption as protection, by specifying one of the protection templates or options. Policy Tips can be used when sensitive data is detected, to alert users that they might need to apply protection. For more information, see [Data loss prevention](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) in the Exchange Online documentation.
 
--   **Office 365 Message Encryption** that supports sending a protected email message and protected Office documents as attachments to any email address on any device. For user accounts that don't use Azure AD, a web experience supports social identity providers or a one-time passcode. For more information, see [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](/microsoft-365/compliance/set-up-new-message-encryption-capabilities) from the Office 365 documentation. To help you find additional information that is related to this configuration, see [Office 365 Message Encryption](https://docs.microsoft.com/microsoft-365/compliance/ome).
+-   **Message Encryption** that supports sending a protected email message and protected Office documents as attachments to any email address on any device. For user accounts that don't use Azure AD, a web experience supports social identity providers or a one-time passcode. For more information, see [Set up new Microsoft 365 Message Encryption capabilities built on top of Azure Information Protection](/microsoft-365/compliance/set-up-new-message-encryption-capabilities) from the Microsoft 365 documentation. To help you find additional information that is related to this configuration, see [Microsoft 365 Message Encryption](/microsoft-365/compliance/ome).
 
 If you use Exchange on-premises, you can use the IRM features with the Azure Rights Management service by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Azure Rights Management service.
 
-For more information about the protection templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
-
-For more information about the email options that you can use to protect emails, see [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails) and [Encrypt-Only option for emails](configure-usage-rights.md#encrypt-only-option-for-emails).
+For more information about the email options that you can use to protect emails, see [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails) and [encrypt-only option for emails](configure-usage-rights.md#encrypt-only-option-for-emails).
 
 If you're ready to configure Exchange to protect emails:
 
 - For Exchange Online, see [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration).
 
 - For Exchange on-premises, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
+
+For more information, see:
+
+- **Unified labeling client**. Configure sensitivity labels and labeling polices in your labeling admin center, including the Microsoft 365 security center, Microsoft 365 compliance center, or Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+
+- **Classic client**. Configure protection templates in the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
 
 ## SharePoint in Microsoft 365 and SharePoint Server
@@ -93,11 +102,11 @@ If you use SharePoint Server, you can use this IRM protection by deploying the A
 For libraries that are not IRM-protected, if you apply protection-only to a file that you then upload to SharePoint or OneDrive, the following do not work with this file: Co-authoring, Office for the web, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP).
 
 > [!IMPORTANT]
-> SharePoint IRM can be used in combination with sensitivity labels that apply protection. When you use both features together, the behavior changes for protected files. For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+> SharePoint IRM can be used in combination with sensitivity labels that apply protection. When you use both features together, the behavior changes for protected files. For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
-When you use SharePoint IRM protection, the Azure Rights Management service applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive and SharePoint](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
+When you use SharePoint IRM protection, the Azure Rights Management service applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive and SharePoint](/microsoft-365/compliance/data-encryption-in-odb-and-spo?redirectSourcePath=%252fen-us%252farticle%252f6501b5ef-6bf7-43df-b60d-f65781847d6c) from the SharePoint documentation.
 
-Although no longer new, the following post from the Office 365 blog has some additional information that you might find useful: [What’s New with Information Rights Management in SharePoint](https://www.microsoft.com/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
+Although no longer new, the following post from the Microsoft 365 blog has some additional information that you might find useful: [What’s New with Information Rights Management in SharePoint](https://www.microsoft.com/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
 
 For changes that are coming, see [Updates to SharePoint security, administration, and migration](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585).
 
@@ -110,8 +119,8 @@ If you are ready to configure SharePoint for IRM:
 
 ## Next steps
 
-If you have Office 365, you might be interested in reviewing [File Protection Solutions in Office 365](/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect), which provides recommended capabilities for protecting files in Office 365.
+If you have Microsoft 365, you might be interested in reviewing [File Protection Solutions in Microsoft 365](/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect), which provides recommended capabilities for protecting files in Microsoft 365.
 
 To see how other applications and services support the Azure Rights Management service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
 
-If you are ready to start deployment, which includes configuring these applications and services, see the [Azure Information Protection deployment roadmap](deployment-roadmap.md).
+If you are ready to start deployment, which includes configuring these applications and services, see the [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md).

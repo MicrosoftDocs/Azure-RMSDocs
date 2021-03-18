@@ -1,11 +1,11 @@
 ---
 title: Quickstart - List protection templates available to authenticated user in a Microsoft Information Protection (MIP) tenant using MIP SDK C# Wrapper
-description: A quickstart showing you how to use the Microsoft Information Protection SDK Protection API C# wrapper to list the protection templates available to a user.
-author: Pathak-Aniket
+description: A quickstart showing you how to use the Microsoft Information Protection SDK Protection API C# wrapper to list the protection templates available to a user (C#)
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 ms.custom: has-adal-ref
 #Customer intent: As a an application developer, I want to learn how to list protection templates for a user in the MIP SDK, so that I can use the SDK APIs to apply templates later on.
 ---
@@ -19,7 +19,7 @@ This Quickstart shows you how to use the MIP SDK Protection API to list the prot
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
 - Complete [Quickstart: Client application initialization - Protection API (C#)](quick-protection-app-initialization-csharp.md) first, which builds a starter Visual Studio solution. This "List protection templates" Quickstart relies on the previous one, for proper creation of the starter solution.
-- Optionally: Review [RMS Templates](https://docs.microsoft.com/azure/information-protection/configure-policy-templates) concepts.
+- Optionally: Review [RMS Templates](/azure/information-protection/configure-policy-templates) concepts.
 
 ## Add logic to list the protection templates
 

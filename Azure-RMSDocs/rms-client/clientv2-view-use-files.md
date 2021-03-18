@@ -3,11 +3,11 @@
 
 title: View protected files with the Azure Information Protection unified labeling client
 description: Instructions to view a protected file that requires you to have the Azure Information Protection unified labeling viewer installed.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -25,11 +25,11 @@ ms.custom: user
 
 # User Guide: View protected files with the Azure Information Protection unified labeling client
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
->*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
+>*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see the [classic client user guide](client-view-use-files.md).*
 
 You can often view a protected file by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
 
@@ -54,7 +54,7 @@ However, if you have an iOS or Android device, you can use the Azure Information
 
 Before you can view the protected file, the Rights Management service that was used to protect the file must first confirm that you are authorized to view the file. The service does this confirmation by checking your user name and password. In some cases, these credentials might be cached and you do not see a prompt that asks you to sign in. In other cases, you are prompted to supply your credentials.
 
-If your organization does not have a cloud-based account for you to use (for Office 365 or Azure) and does not use an equivalent on-premises version (AD RMS), you have two options:
+If your organization does not have a cloud-based account for you to use (for Microsoft 365 or Azure) and does not use an equivalent on-premises version (AD RMS), you have two options:
 
 - If you were sent a protected email, follow the instructions to sign in with your social identity provider (such as Google for a Gmail account) or apply for a one-time passcode.
 
@@ -80,5 +80,5 @@ If your organization does not have a cloud-based account for you to use (for Off
 ## Other instructions
 More how-to instructions from the Azure Information Protection user guide:
 
-- [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
+- [What do you want to do?](clientv2-user-guide.md#what-do-you-want-to-do)
 

@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Azure Information Protection client admin guide
-description: Instructions and information for admins on an enterprise network who are responsible for deploying the Azure Information Protection client for Windows.
+title: Azure Information Protection classic client admin guide
+description: Instructions and information for admins on an enterprise network who are responsible for deploying the Azure Information Protection classic client for Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -11,10 +11,11 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: v1client
@@ -26,16 +27,16 @@ ms.custom: admin
 ---
 
 
-# Azure Information Protection client administrator guide
+# Azure Information Protection classic client administrator guide
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](clientv2-admin-guide.md).*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
-> **To deploy the AIP classic client,** open a support ticket to get download access.
+> **To deploy the AIP classic client**, open a support ticket to download the installation files.
 
 Use the information in this guide if you are responsible for the Azure Information Protection client on an enterprise network, or if you want more technical information than is in the [Azure Information Protection client user guide](client-user-guide.md). 
 
@@ -65,11 +66,11 @@ The Azure Information Protection client includes the following:
 
 - Windows File Explorer, right-click options for users to apply classification labels and protection to files.
 
-- A viewer to display protected files when a native application cannot open it.
+- A viewer to display protected files when a built-in application cannot open it.
 
 - A PowerShell module to apply and remove classification labels and protection from files. 
     
-    This module includes [cmdlets to install and configure the Azure Information Protection scanner](../deploy-aip-scanner-configure-install.md#list-of-cmdlets-for-the-scanner), which runs as a service on Windows Server. This service lets you discover, classify, and protect files on data stores such as network shares and SharePoint Server libraries.
+    This module includes [cmdlets to install and configure the Azure Information Protection scanner](../deploy-aip-scanner-configure-install-classic.md#list-of-cmdlets-for-the-scanner), which runs as a service on Windows Server. This service lets you discover, classify, and protect files on data stores such as network shares and SharePoint Server libraries.
 
 - The Rights Management client that communicates with Azure Rights Management (Azure RMS) or Active Directory Rights Management Services (AD RMS).
 
@@ -80,7 +81,7 @@ If you have AD RMS and want to migrate to Azure Information Protection, see [Mig
 
 ## Should you deploy the Azure Information Protection client?
 
-Deploy the Azure Information Protection client if you are not using [sensitivity labels in the Office 365 Security & Compliance Center](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) but instead, using Azure Information Protection labels that you download from Azure, and any of the following applies:
+Deploy the Azure Information Protection client if you are not using [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in Microsoft 365 but instead, using Azure Information Protection labels that you download from Azure, and any of the following applies:
 
 - You want to classify (and optionally, protect) documents and email messages by selecting labels from within your Office applications (Word, Excel, PowerPoint, Outlook).
 
@@ -90,7 +91,7 @@ Deploy the Azure Information Protection client if you are not using [sensitivity
 
 - You want to run a service that discovers, classifies (and optionally, protects) files that are stored on-premises.
 
-- You want to view protected documents when a native application to display the file is not installed or cannot open these documents.
+- You want to view protected documents when a built-in application to display the file is not installed or cannot open these documents.
 
 - You want to just protect files by using File Explorer or by using PowerShell commands.
 
@@ -98,8 +99,10 @@ Deploy the Azure Information Protection client if you are not using [sensitivity
 
 - You want to remove encryption from files and containers (unprotect) in bulk for data recovery purposes.
 
-- You run Office 2010 and want to protect documents and email messages by using the Azure Rights Management service.
+- You run Office 2010 and want to protect documents and email messages by using the Azure Rights Management service. 
 
+    Note that Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    
 Example showing the Azure Information Protection client add-in for an Office application, displaying the classification labels for your organization, and the new **Protect** button on the ribbon:
 
 ![Azure Information Protection bar with default policy](../media/word2016-calloutsv2.png)
@@ -163,7 +166,7 @@ The **Reset Settings** signs out the user, deletes the currently downloaded Azur
 
 #### **Client status** section
 
-Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Office 365 or Azure Active Directory. The account must also belong to a tenant that is configured for Azure Information Protection.
+Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Microsoft 365 or Azure Active Directory. The account must also belong to a tenant that is configured for Azure Information Protection.
 
 If you need to sign in as a different user to the one displayed, see the [Sign in as a different user](client-admin-guide-customizations.md#sign-in-as-a-different-user) customization.
 
@@ -175,7 +178,7 @@ Use the **Version** information to confirm which version of the client is instal
 
 ## Support for multiple languages
 
-The Azure Information Protection client supports the same languages that Office 365 supports. For a list of these languages, see the **Office 365, Exchange Online Protection, and Power BI** section from the [International availability](https://products.office.com/business/international-availability) page from Office.
+The Azure Information Protection client supports the same languages that Microsoft 365 supports. For a list of these languages, see the [International availability](https://products.office.com/business/international-availability) page from Office.
 
 For these languages, menu options, dialog boxes, and messages from the Azure Information Protection client display in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the Azure Information Protection client for different languages. 
 
@@ -259,7 +262,7 @@ If you know that you want move the scanner configuration database for the  GA ve
 
 3. Install the scanner by using [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), specifying the new SQL Server instance and profile name.
 
-4. **Optional:** If you do not want the scanner to rescan all files, export the ScannerFiles table and import it to the new database.
+4. **Optional**: If you do not want the scanner to rescan all files, export the ScannerFiles table and import it to the new database.
 
 ## Uninstalling the Azure Information Protection client
 

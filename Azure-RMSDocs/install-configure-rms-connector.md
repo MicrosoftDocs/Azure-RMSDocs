@@ -3,10 +3,10 @@
 
 title: Install & configure the Rights Management connector - AIP
 description: Information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from Deploying the Azure Rights Management connector.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 07/28/2020
+ms.date: 11/11/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,9 @@ ms.custom: admin
 
 # Installing and configuring the Azure Rights Management connector
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, 2016, 2012 R2, and Windows Server 2012*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, 2016, 2012 R2, and Windows Server 2012*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Use the following information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
@@ -137,7 +139,7 @@ If you need to uninstall the RMS connector, run the wizard again and select the 
 
 If you experience any problems during the installation, check the installation log: **%LocalAppData%\Temp\Microsoft Rights Management connector_\<date and time>.log** 
 
-As an example, your install log might look similar to C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log
+As an example, your install log might look similar to **C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log**
 
 ## Authorizing servers to use the RMS connector
 When you have installed the RMS connector on at least two computers, you are ready to authorize the servers and services that you want to use the RMS connector. For example, servers running Exchange Server 2013 or SharePoint Server 2013.
@@ -178,7 +180,7 @@ More information about the different server roles:
         > [!TIP]
         > If these two accounts are different, consider creating a single group that contains both accounts to minimize the administrative overheads.
 
--   For file servers that use File Classification Infrastructure, the associated services run as the Local System account, so you must authorize the computer account for the file servers (for example, SERVERNAME$) or a group that contains those computer accounts.
+-   For file servers that use File Classification Infrastructure, the associated services run as the Local System account, so you must authorize the computer account for the file servers (for example, **SERVERNAME$**) or a group that contains those computer accounts.
 
 When you have finished adding servers to the list, click **Close**.
 
@@ -192,17 +194,17 @@ The connector URL server name can be any name under a namespace that you control
 > [!IMPORTANT]
 > We recommend that you don’t change this name after you have configured Exchange or SharePoint servers to use the connector, because you have to then clear these servers of all IRM configurations and then reconfigure them.
 
-After the name is created in DNS and is configured for an IP address, configure load balancing for that address, which directs traffic to the connector servers. You can use any IP-based load balancer for this purpose, which includes  the Network Load Balancing (NLB) feature in Windows Server. For more information, see [Load Balancing Deployment Guide](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
+After the name is created in DNS and is configured for an IP address, configure load balancing for that address, which directs traffic to the connector servers. You can use any IP-based load balancer for this purpose, which includes  the Network Load Balancing (NLB) feature in Windows Server. For more information, see [Load Balancing Deployment Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754833(v=ws.10)).
 
 Use the following settings to configure the NLB cluster:
 
--   Ports: 80 (for HTTP) or 443 (for HTTPS)
+-   **Ports**: 80 (for HTTP) or 443 (for HTTPS)
 
     For more information about whether to use HTTP or HTTPS, see the next section.
 
--   Affinity: None
+-   **Affinity**: None
 
--   Distribution method: Equal
+-  **Distribution method**: Equal
 
 This name that you define for the load-balanced system (for the servers running the RMS connector service) is your organization’s RMS connector name that you use later, when you configure the on-premises servers to use Azure RMS.
 
@@ -220,8 +222,8 @@ If you use the HTTPS option, ensure that all servers that run the connector have
 > You can use the following information and resources to help you request and install a server authentication certificate, and to bind this certificate to the Default Web Site in IIS:
 >
 > - If you use Active Directory Certificate Services (AD CS) and an enterprise certification authority (CA) to deploy these server authentication certificates, you can duplicate and then use the Web Server certificate template. This certificate template uses **Supplied in the request** for the certificate subject name, which means that you can provide the FQDN of the RMS connector name for the certificate subject name or subject alternative name when you request the certificate.
-> -   If you use a stand-alone CA or purchase this certificate from another company, see [Configuring Internet Server Certificates (IIS 7)](https://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) in the [Web Server (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) documentation library on TechNet.
-> - To configure IIS to use the certificate, see [Add a Binding to a Site (IIS 7)](https://technet.microsoft.com/library/cc731692.aspx) in the [Web Server (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) documentation library on TechNet.
+> -   If you use a stand-alone CA or purchase this certificate from another company, see [Configuring Internet Server Certificates (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731977(v=ws.10)) in the [Web Server (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753433(v=ws.10)) documentation library on TechNet.
+> - To configure IIS to use the certificate, see [Add a Binding to a Site (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731692(v=ws.10)) in the [Web Server (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753433(v=ws.10)) documentation library on TechNet.
 
 ## Configuring the RMS connector for a web proxy server
 If your connector servers are installed in a network that does not have direct internet connectivity and requires manual configuration of a web proxy server for outbound internet access, you must configure the registry on these servers for the RMS connector.
@@ -260,4 +262,3 @@ If you haven’t already downloaded these files, you can do so from the [Microso
 
 ## Next steps
 Now that the RMS connector is installed and configured, you are ready to configure your on-premises servers to use it. Go to [Configuring servers for the Azure Rights Management connector](configure-servers-rms-connector.md).
-

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: quickstart
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -24,12 +24,12 @@ ms.custom: admin
 
 # Quickstart: Configure a label for users to easily protect emails that contain sensitive information
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE]
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 In this quickstart, you'll configure an existing Azure Information Protection label to automatically apply the **Do Not Forward** protection setting.
 
@@ -41,7 +41,7 @@ The current Azure Information Protection policy already contains two labels that
 
 However, if your policy is older, or if protection wasn't activated at the time your organization's policy was created, you won't have these labels.
 
-**Time required:** You can finish this configuration in 5 minutes.
+**Time required**: You can finish this configuration in 5 minutes.
 
 ## Prerequisites
 
@@ -49,11 +49,11 @@ To complete this quickstart, you need:
 
 |Requirement  |Description  |
 |---------|---------|
-|**A supporting subscription**     |  You'll need a subscription that includes [**Azure Information Protection Plan 1 or Plan 2**](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
-|**AIP added to the Azure portal**    |  You've added the Azure Information Protection pane to the Azure portal, and confirmed that the protection service is activated. </br></br>For more information, see [Quickstart: Get started in the Azure portal](quickstart-viewpolicy.md).       |
+|**A supporting subscription**     |  You'll need a subscription that includes [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br><br>If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
+|**AIP added to the Azure portal**    |  You've added the Azure Information Protection pane to the Azure portal, and confirmed that the protection service is activated. <br><br>For more information, see [Quickstart: Get started in the Azure portal](quickstart-viewpolicy.md).       |
 |**An existing Azure Information Protection label to configure**     | Use one of the default labels, or a label that you've created. For more information, see  [Quickstart: Create a new Azure Information Protection label for specific users](quickstart-label-specificusers.md). |
-|**Classic client installed**    |   To test the new label, you'll need the classic client installed on your computer. </br></br>The Azure Information Protection classic client is being deprecated in March  2021. To deploy the AIP classic client, open a support ticket to get download access.  |
-|**A Windows computer, signed into Office apps** |To test the new label, you'll need a  computer running Windows (minimum of Windows 7 with Service Pack 1). </br></br>On this computer, sign into one of the following Office app versions: </br>- Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business when you are assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365). </br>- Office 365 ProPlus. </br>- Office Professional Plus 2019. </br>- Office Professional Plus 2016.</br>- Office Professional Plus 2013 with Service Pack 1. </br>- Office Professional Plus 2010 with Service Pack 2.|
+|**Classic client installed**    |   To test the new label, you'll need the classic client installed on your computer. <br><br>The Azure Information Protection classic client is being deprecated in March  2021. To deploy the AIP classic client, open a support ticket to get download access.  |
+|**A Windows computer, signed into Office apps** |To test the new label, you'll need a  computer running Windows (minimum of Windows 7 with Service Pack 1). <br><br>On this computer, sign into one of the following Office app versions: <br><br>- **Office apps**, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), from Microsoft 365 Apps for Business or Microsoft 365 Business Premium, when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365). <br>- **Microsoft 365 Apps for Enterprise** <br>- **Office Professional Plus 2019** <br>- **Office Professional Plus 2016**<br>- **Office Professional Plus 2013 with Service Pack 1**<br>- **Office Professional Plus 2010 with Service Pack 2**|
 | | |
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).

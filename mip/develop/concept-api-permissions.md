@@ -1,8 +1,8 @@
 ---
 title: Required API permissions - Microsoft Information Protection SDK
 description: Technical details about API permissions needed for Microsoft Information Protection Software Development kit operations.
-author: Pathak-Aniket
-ms.author: v-anikep
+author: msmbaldwin
+ms.author: mbaldwin
 ms.date: 08/20/2020
 ms.topic: conceptual
 ms.service: information-protection
@@ -18,7 +18,8 @@ The MIP SDK uses two backend Azure services for labeling and protection. In the 
 
 Application permissions must be granted to one or more APIs when using the MIP SDK for labeling and protection. Various application authentication scenarios may require different application permissions. For application authentication scenarios, see [Authentication scenarios](https://docs.microsoft.com/azure/active-directory/develop/authentication-flows-app-scenarios).
 
-Tenant-wide admin consent should be granted for application permissions where Administrator consent is required. See [Azure Active Directory documentation](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations).
+Tenant-wide admin consent should be granted for application permissions where Administrator consent is required. For more information, see the [Azure Active Directory documentation](/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations).
+
 
 ## Application Permissions
 

@@ -3,10 +3,10 @@
 
 title: FAQs for classification & labeling - AIP
 description: Have a question that is specifically about classification and labeling using Azure Information Protection? See if it's answered here. 
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 03/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,50 +26,52 @@ ms.custom: admin
 
 # Frequently asked questions about classification and labeling in Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For more information, see also the [FAQs for the classic client only](faqs-classic.md).*
 
 >[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 Have a question about Azure Information Protection that is specifically about classification and labeling?  See if it's answered here. 
 
 ## Which client do I install for testing new functionality?
 
-Currently, there are two Azure Information Protection clients for Windows: 
+We recommend installing the **Azure Information Protection unified labeling client**. The unified labeling client downloads labels and policy settings from one of the following admin centers: 
 
-- The **Azure Information Protection unified labeling client** that downloads labels and policy settings from one of the following admin centers: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center. This client is now in general availability, and might have a preview version for you to test additional functionality for a future release.
+- Office 365 Security & Compliance Center
+- Microsoft 365 security center
+- Microsoft 365 compliance center.
 
-- The **Azure Information Protection client (classic)** that downloads labels and policy settings from the Azure portal. This client builds on previous general availability versions of the client.
+This client is now in general availability, and might have a preview version for you to test additional functionality for a future release.
 
-We recommend you test with the unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](configure-policy-migrate-labels.md), use the classic client. For more information, including a feature and functionality comparison table, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+If you still configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](configure-policy-migrate-labels.md), use the **Azure Information Protection classic client** instead.
 
-The Azure Information Protection client is supported on Windows only. To classify and protect documents and emails on iOS, Android, macOS, and the web, use [Office apps that support built-in labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). 
+For more information, including a feature and functionality comparison table, see [Choose your Windows labeling solution](rms-client/use-client.md#choose-your-windows-labeling-solution).
+
+> [!TIP]
+> The Azure Information Protection client is supported on Windows only. 
+>
+> To classify and protect documents and emails on iOS, Android, macOS, and the web, use [Office apps that support built-in labeling](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). 
+> 
 
 ## Where can I find information about using sensitivity labels for Office apps?
 
 See the following documentation resources:
 
-- [Learn about sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) 
+- [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) 
 
-- [Use sensitivity labels in Office apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+- [Use sensitivity labels in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps)
 
-- [Enable sensitivity labels for Office files in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)
+- [Enable sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)
 
 - [Apply sensitivity labels to your documents and email within Office](https://support.office.com/article/Apply-sensitivity-labels-to-your-documents-and-email-within-Office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9#ID0EBFAAA=Office_365)
 
-For information about other scenarios that support sensitivity labels, see [Common scenarios for sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels).
-
-## Can a file have more than one classification?
-
-Users can select just one label at a time for each document or email, which often results in just one classification. However, if users select a sublabel, this actually applies two labels at the same time; a primary label and a secondary label. By using sublabels, a file can have two classifications that denote a parent\child relationship for an additional level of control.
-
-For example, the label **Confidential** might contain sublabels such as **Legal** and **Finance**. You can apply different classification visual markings and different Rights Management templates to these sublabels. A user cannot select the **Confidential** label by itself; only one of its sublabels, such as **Legal**. As a result, the label that they see set is **Confidential \ Legal**. The metadata for that file includes one custom text property for **Confidential**, one custom text property for **Legal**, and another that contains both values (**Confidential Legal**). 
-
-When you use sublabels, don't configure visual markings, protection, and conditions at the primary label. When you use sublevels, configure these setting on the sublabel only. If you configure these settings on the primary label and its sublabel, the settings at the sublabel take precedence.
+For information about other scenarios that support sensitivity labels, see [Common scenarios for sensitivity labels](/microsoft-365/compliance/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels).
 
 ## How do I prevent somebody from removing or changing a label?
 
-Although there's a [policy setting](configure-policy-settings.md) that requires users to state why they are lowering a classification label, removing a label, or removing protection, this setting does not prevent these actions. To prevent users from removing or changing a label, the content must already be protected and the protection permissions do not grant the user the Export or Full Control [usage right](configure-usage-rights.md). 
+To prevent users from removing or changing a label, the content must already be protected and the protection permissions do not grant the user the Export or Full Control [usage right](configure-usage-rights.md). 
 
 ## When an email is labeled, do any attachments automatically get the same labeling?
 
@@ -79,36 +81,4 @@ No. When you label an email message that has attachments, those attachments do n
 
 Because Azure Information Protection uses persistent metadata for classification, which includes a clear-text label, this information can be read by DLP solutions and other applications. 
 
-For more information about this metadata, see [Label information stored in emails and documents](configure-policy.md#label-information-stored-in-emails-and-documents).
-
 For examples of using this metadata with Exchange Online mail flow rules, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).
-
-## Can I create a document template that automatically includes the classification?
-
-Yes. You can configure a label to [apply a header or footer that includes the label name](configure-policy-markings.md). But if that doesn't meet your requirements, for the Azure Information Protection client (classic) only, you can create a document template that has the formatting you want and add the classification as a field code. 
-
-As an example, you might have a table in your document's header that displays the classification. Or, you use specific wording for an introduction that references the document's classification.
-
-To add this field code in your document:
-
-1. Label the document and save it. This action creates new metadata fields that you can now use for your field code.
-
-2. In the document, position the cursor where you want to add the label's classification and then, from the **Insert** tab, select **Text** > **Quick Parts** > **Field**.
-
-3. In the **Field** dialog box, from the **Categories** dropdown, select **Document Information**. Then, from the **Fields names** dropdown, select **DocProperty**.
-
-4. From the **Property** dropdown, select **Sensitivity**, and select **OK**.
-
-The current label's classification is displayed in the document and this value will be refreshed automatically whenever you open the document or use the template. So if the label changes, the classification that is displayed for this field code is automatically updated in the document.
-
-## How is classification for emails using Azure Information Protection different from Exchange message classification?
-
-Exchange message classification is an older feature that can classify emails and it is implemented independently from Azure Information Protection labels or sensitivity labels that apply classification.
-
-However, you can integrate this older feature with labels, so that when users classify an email by using Outlook on the web and by using some mobile mail applications, the label classification and corresponding label markings are automatically added.
-
-You can use this same technique to use your labels with Outlook on the web and these mobile mail applications.
-
-Note that there's no need to do this if you're using Outlook on the web with Exchange Online, because this combination supports built-in labeling when you publish sensitivity labels from the Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft compliance center.
-
-If you cannot use built-in labeling with Outlook on the web, see the configuration steps for this workaround: [Integration with the legacy Exchange message classification](rms-client/client-admin-guide-customizations.md#integration-with-the-legacy-exchange-message-classification)

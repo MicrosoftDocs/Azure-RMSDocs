@@ -4,14 +4,15 @@ description: Use the Azure Information Protection scanner to find what sensitive
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/19/2020
-ms.topic: quickstart
+ms.date: 02/01/2021
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 #ms.reviewer: demizets
@@ -24,13 +25,16 @@ ms.subservice: aiplabels
 
 # Quickstart: Find what sensitive information you have in files stored on-premises
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection classic or unified labeling clients for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE]
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 In this quickstart, you'll enable SharePoint to allow scanning, and also install and configure the Azure Information Protection scanner to find any sensitive data you have stored in an on-premises data store.
 
-**Time required:** You can finish this configuration in less than 15 minutes.
+**Time required**: You can finish this configuration in less than 15 minutes.
 
 ## Prerequisites
 
@@ -38,7 +42,7 @@ To complete this quickstart, you need:
 
 |Requirement  |Description  |
 |---------|---------|
-|**A supporting subscription**     |  You'll need a subscription that includes [**Azure Information Protection Plan 1 or Plan 2**](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
+|**A supporting subscription**     |  You'll need a subscription that includes [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
 |**Client installed**    |   You'll need the classic or unified labeling client installed on your computer. </br></br>- To install the unified labeling client, go the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=53018) and download **AzInfoProtection_UL.exe** from the Azure Information Protection page. </br>- To deploy the AIP classic client, open a support ticket to get download access.       |
 |**SQL Server Express**     | You'll need SQL Server Express installed on your computer. </br></br> To install, go to the [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) and select **Download now** under the Express option. In the installer, select the **Basic** installation type.        |
 |**Azure AD**     |  Your domain account must be synchronized to Azure AD. </br></br>If you're not sure about your account, contact one of your system administrators.      |
@@ -93,7 +97,7 @@ Before you install the scanner, create a profile for it in the Azure portal. Thi
 
     Optionally, specify a description for administrative purposes, to help you identify the scanner's profile name.
 
-1. Locate the **Policy enforcement** section, where for this quickstart, select just one setting: For **Enforce**, select **Off**. Then select **Save** but do not close the pane.
+1. Locate the **Sensitivity policy** section, where for this quickstart, select just one setting: For **Enforce**, select **Off**. Then select **Save** but do not close the pane.
 
     The settings configure the scanner to do a one-time discovery of all files in your specified data repositories. This scan looks for all known sensitive information types, and doesn't require you to first configure your Azure Information Protection labels or policy settings.
 
@@ -152,7 +156,7 @@ You're now ready to install the scanner with the scanner profile that you've cre
 >
 ## See detailed results
 
-Using File Explorer, locate the scanner reports in **%*localappdata*%\Microsoft\MSIP\Scanner\Reports.** Open the detailed report file that has a **.csv** file format.
+Using File Explorer, locate the scanner reports in **%*localappdata*%\Microsoft\MSIP\Scanner\Reports**. Open the detailed report file that has a **.csv** file format.
 
 In Excel:
 
@@ -196,12 +200,9 @@ Then restart your computer.
 
 This command doesn't remove the following items and you must manually remove them if you don't want them after this quickstart:
 
-- The SQL Server database that was created by running the Install-AIPScanner cmdlet when the Azure Information Protection scanner was installed:
+- The SQL Server database that was created by running the Install-AIPScanner cmdlet when the Azure Information Protection scanner was installed: **AIPScanner_\<profile>**
 
-    - For the classic client: **AIPScanner_\<profile>**
-    - For the unified labeling client: **AIPScannerUL_\<profile_name>**
-
-- The scanner reports located in **%*localappdata*%\Microsoft\MSIP\Scanner\Reports.**
+- The scanner reports located in **%*localappdata*%\Microsoft\MSIP\Scanner\Reports**.
 
 - The **Log on as a service** user right assignment that your domain account was granted for your local computer.
 
@@ -211,12 +212,5 @@ This quickstart includes the minimum configuration so that you can quickly see h
 
 If you want to classify and protect the files that contain sensitive information, you must configure labels for automatic classification and protection:
 
-**For the classic client:**
-
 - [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md)
 - [How to configure a label for Rights Management protection](configure-policy-protection.md)
-
-**For the unified labeling client:**
-
-- [Apply a sensitivity label to content automatically](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
-- [Restrict access to content by using encryption in sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)

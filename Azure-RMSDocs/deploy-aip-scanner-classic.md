@@ -10,10 +10,11 @@ ms.date: 06/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: scanner
@@ -26,23 +27,23 @@ ms.custom: admin
 
 # What is the Azure Information Protection classic scanner?
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
-
->[!NOTE]
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
 >
-> If you're using the unified labeling client, see [What is the Azure Information Protection unified labeling scanner?](deploy-aip-scanner.md).
+>***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [What is the Azure Information Protection unified labeling scanner?](deploy-aip-scanner.md).*
 
-Use the information in this section to learn about the Azure Information Protection scanner, and then how to successfully install, configure, run and if necessary, troubleshoot it.
+> [!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+
+Use the information in this section to learn about the Azure Information Protection classic client scanner, and then how to successfully install, configure, run and if necessary, troubleshoot it.
 
 The AIP scanner runs as a service on Windows Server and lets you discover, classify, and protect files on the following data stores:
 
 - **UNC paths** for network shares that use the Server Message Block (SMB) protocol.
 
-- **SharePoint document libraries and folder** for SharePoint Server 2019 through SharePoint Server 2013. SharePoint 2010 is also supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
+- **SharePoint document libraries and folder** for SharePoint Server 2019 through SharePoint Server 2013. 
 
 > [!NOTE]
-> To scan and label files on cloud repositories, use [Cloud App Security](https://docs.microsoft.com/cloud-app-security/) instead of the scanner.
+> To scan and label files on cloud repositories, use [Cloud App Security](/cloud-app-security/) instead of the scanner.
 >
 ## Azure Information Protection classic scanner overview
 
@@ -52,14 +53,14 @@ The following image shows the AIP scanner architecture, where the scanner discov
 
 :::image type="content" source="media/classic-scanner-arch.png" alt-text="Azure Information Protection classic scanner architecture":::
 
-To inspect your files, the scanner uses IFilters installed on the computer. To determine whether the files need labeling, the scanner uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns.
+To inspect your files, the scanner uses IFilters installed on the computer. To determine whether the files need labeling, the scanner uses the Microsoft 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Microsoft 365 regex patterns.
 
 The scanner uses the Azure Information Protection client, and can classify and protect the same types of files as the client. For more information, see [File types supported by the Azure Information Protection client](./rms-client/client-admin-guide-file-types.md).
 
 Do any of the following to configure your scans as needed:
 
 - **Run the scanner in discovery mode only** to create reports that check to see what happens when your files are labeled.
-- **Run the scanner to discover files with sensitive information,** without configuring labels that apply automatic classification.
+- **Run the scanner to discover files with sensitive information**, without configuring labels that apply automatic classification.
 - **Run the scanner automatically** to apply labels as configured.
 - **Define a file types list** to specify specific files to scan or to exclude.
 
@@ -117,7 +118,7 @@ The AIP scanner cannot label files under the following circumstances:
 
     Other types of files can be added for protection when you [change the types of files to protect](deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect).
 
-**Example:** After inspecting .txt files, the scanner can't apply a label that's configured for classification only, because the .txt file type doesn't support classification only.
+**Example**: After inspecting .txt files, the scanner can't apply a label that's configured for classification only, because the .txt file type doesn't support classification only.
 
 However, if the label is configured for both classification and protection, and the .txt file type is included for the scanner to protect, the scanner can label the file.
 
@@ -129,10 +130,10 @@ For more information about deploying the scanner, see the following articles:
 - [Configuring and installing the AIP scanner](deploy-aip-scanner-configure-install.md)
 - [Running scans using the AIP scanner](deploy-aip-scanner-manage.md)
 
-**More information:**
+**More information**:
 
 - Interested in how the Core Services Engineering and Operations team in Microsoft implemented this scanner?  Read the technical case study: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
-- You might be wondering: [What's the difference between Windows Server FCI and the Azure Information Protection scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
+- You might be wondering: [What's the difference between Windows Server FCI and the Azure Information Protection scanner?](faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 - You can also use PowerShell to interactively classify and protect files from your desktop computer. For more information about this and other scenarios that use PowerShell, see [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md).

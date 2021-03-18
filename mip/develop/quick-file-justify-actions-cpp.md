@@ -1,11 +1,11 @@
 ---
 title: How to - Downgrade/Remove a label that needs a justification (C++)
 description: This article will help you understand the scenario of how to downgrade or remove a label needing justification.
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/14/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 ---
 
 # Microsoft Information Protection SDK File API - Action Justification for lowering a sensitivity label on a file (C++)
@@ -159,16 +159,9 @@ Build and test your client application.
 
 1. Use CTRL-SHIFT-B (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
-2. If your project builds and runs successfully, the application prompts for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. As you did previously in the "Set/get sensitivity labels" Quickstart, run your PowerShell script to acquire the token each time, using the values provided for $authority and $resourceUrl.
+2. If your project builds and runs successfully, the application prompts for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. 
 
-  ```console
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://syncservice.o365syncservice.com/
-    Sign in with user account: user1@tenant.onmicrosoft.com
-    Enter access token: <paste-access-token-here>
-    Press any key to continue . . .
-
+  ```console   
     Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
     Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
     General : f42a3342-8706-4288-bd31-ebb85995028z
@@ -179,12 +172,6 @@ Build and test your client application.
     Applying Label ID f55c2dea-db0f-47cd-8520-a52e1590fb6z to c:\Test\Test.docx
     Committing changes
 
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://aadrm.com
-    Sign in with user account: user1@tenant.onmicrosoft.com
-    Enter access token: <paste-access-token-here>
-    Press any key to continue . . .
 
     Label committed to file: c:\Test\Test.docx
     Press any key to continue . . .
@@ -199,7 +186,7 @@ Build and test your client application.
     Getting the label committed to file: c:\Test\Test_labeled.docx
     Name: Highly Confidential
     Id: f55c2dea-db0f-47cd-8520-a52e1590fb6z
-    Press any key to continue . . .
+    Press any key to continue . . . 
 
     Applying new Label ID f42a3342-8706-4288-bd31-ebb85995028z to c:\Test\Test_labeled.docx
     Please provide justification for downgrading a label:

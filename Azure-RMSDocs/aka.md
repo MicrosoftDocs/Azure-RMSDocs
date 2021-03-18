@@ -3,10 +3,10 @@
 
 title: Azure Information Protection also known as
 description: Azure Information Protection has undergone many name changes, and you might know it as a previous name.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/28/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,9 +27,11 @@ ms.custom: admin
 
 # Azure Information Protection - also known as ...
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-Azure Information Protection (sometimes abbreviated to AIP) has evolved from a long history of established technologies from Microsoft that implement rights management protection. Because of this evolution, you might know this solution by one of its previous names. Or you might see references to these names in documentation, the UI, and log files. 
+Azure Information Protection (AIP) has evolved from a long history of established technologies from Microsoft that implement rights management protection. Because of this evolution, you might know this solution by one of its previous names. Or you might see references to these names in documentation, the UI, and log files. 
 
 The following sections list some of these names.
 
@@ -74,10 +76,18 @@ Note that you might see or hear references to this technology as **DRM**, which 
 
 As the cloud-based solution that you purchase, yes. Azure Information Protection offers the new capabilities of classification and labeling for an organization's documents and emails, which in turn can apply Rights Management protection. 
 
-However, Azure Rights Management is still used as the protection technology for Azure Information Protection, and for Office 365 services that use this cloud-based Rights Management protection. So in the context of the protection technology that is used by Azure Information Protection, "Azure Rights Management" (Azure RMS) remains a current name.
+However, Azure Rights Management is still used as the protection technology for Azure Information Protection, and for Microsoft  365 services that use this cloud-based Rights Management protection. So in the context of the protection technology that is used by Azure Information Protection, "Azure Rights Management" (Azure RMS) remains a current name.
 
 Similarly, "Active Directory Rights Management Services" (AD RMS) remains a current name for the Windows Server server role, which provides on-premises Rights Management protection. This protection technology can be used with Azure Information Protection and might be suitable for a very small percentage of documents and emails that must be protected by an on-premises key. In this scenario, AD RMS is often referred to as the "hold your own key" or HYOK solution.
 
 ## How to evaluate or purchase the latest version
 
 For more information about how you can purchase or evaluate Azure Information Protection, and the different features that are available for the subscription plans, see the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) site.
+
+## Next steps
+
+For more information, see:
+
+- [What is Azure Information Protection?](what-is-information-protection.md)
+- [What is Azure Rights Management?](what-is-azure-rms.md)
+- [Terminology for Azure Information Protection](terminology.md)

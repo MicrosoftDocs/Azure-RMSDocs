@@ -3,11 +3,11 @@
 
 title: Download & install the Azure Information Protection unified labeling client
 description: Instructions for users to install the Azure Information Protection unified labeling client for Windows, so that you can classify and protect your documents and emails. 
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/06/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -25,20 +25,19 @@ ms.custom: user
 
 # User Guide: Download and install the Azure Information Protection unified labeling client
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see the [classic client user guide](install-client-app.md).*
 
 If your administrator does not install the Azure Information Protection unified labeling client for you, you can do this yourself. You must be a local administrator for your PC to install this client so that it can label and protect your documents and emails.
 
-In addition:
-
-- The Azure Information Protection unified labeling client requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, your computer must be restarted.
-
+> [!NOTE]
+> The Azure Information Protection unified labeling client requires a minimum version of Microsoft .NET Framework 4.6.2. If this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, your computer must be restarted.
+>
 
 ## To download and install the Azure Information Protection unified labeling client
 
-Before you install the Azure Information Protection unified labeling client, confirm with your administrator or help desk that you are using [sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) to classify and protect documents and emails.
+Before you install the Azure Information Protection unified labeling client, confirm with your administrator or help desk that you are using [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) to classify and protect documents and emails.
 
 1. Download **AzInfoProtection_UL.exe** from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
@@ -48,13 +47,19 @@ Before you install the Azure Information Protection unified labeling client, con
 
 4. If you are prompted to continue, click **Yes**, and wait for the installation to finish.
 
-6. Click **Close**. Before you start to use the Azure Information Protection unified labeling client:
+6. Click **Close**. 
 
-    - If your computer runs Office 2010, restart your computer and then go to the next section for your final step.    
-        
-    - For other versions of Office, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use the client to label and protect your documents and emails.
+    Before you start to use the Azure Information Protection unified labeling client, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use the client to label and protect your documents and emails.
 
+    > [!NOTE]
+    > If your computer runs Office 2010, restart your computer and then go to the [next section](#installing-the-azure-information-protection-unified-labeling-client-with-office-2010) for your final step.   
+    >
+     
 ### Installing the Azure Information Protection unified labeling client with Office 2010
+
+> [!IMPORTANT]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> 
 
 After you have installed the Azure Information Protection unified labeling client by using the previous instructions:
 
@@ -67,7 +72,7 @@ After you have installed the Azure Information Protection unified labeling clien
 Your installation is now complete and you can use the Azure Information Protection unified labeling client to label and protect your documents and emails.
 
 ## Other instructions    
-More how-to instructions from the Azure Information Protection unified labeling client user guide:
+More how-to instructions from the Azure Information Protection unified labeling client user guide.
 
 - [What do you want to do?](clientv2-user-guide.md#what-do-you-want-to-do)
 

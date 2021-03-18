@@ -1,11 +1,11 @@
 ---
 title: Concepts - Service discovery in the MIP SDK.
 description: This article will help you understand how the MIP SDK implements service discovery
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 05/30/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 ---
 
 # Microsoft Information Protection SDK - Service Discovery
@@ -30,7 +30,7 @@ The `FileEngine::Settings` object accepts a `mip::Identity` as the first paramet
 
 > When an AD RMS cluster is found, the `mip::FileEngine::FileEngineSettings` property `IsProtectionOnlyEngine` must be set to true. The Policy SDK cannot be used in conjuction with AD RMS publishing (Hold Your Own Key).
 
-For example, if the `mip::Identity` is *Bob@contoso.com*, the SDK uses the mail address suffix *contoso.com* to generate a DNS query for SRV record. If the AD RMS Mobile Device Extensions (MDE) SRV record for Contoso (**_rmsdisco._http._tcp.contoso.com**) is found, the SDK will attempt to connect to the service referred to by the SRV record. If the Contoso record isn't found, the SDK defaults to the commercial endpoint at https://api.aadrm.com. For additional details on AD RMS configuration and DNS registration, please review the [AD RMS MDE documentation](https://docs.microsoft.com/information-protection/develop/quick-app-adrms#service-discovery).
+For example, if the `mip::Identity` is *Bob@contoso.com*, the SDK uses the mail address suffix *contoso.com* to generate a DNS query for SRV record. If the AD RMS Mobile Device Extensions (MDE) SRV record for Contoso (**_rmsdisco._http._tcp.contoso.com**) is found, the SDK will attempt to connect to the service referred to by the SRV record. If the Contoso record isn't found, the SDK defaults to the commercial endpoint at https://api.aadrm.com. For additional details on AD RMS configuration and DNS registration, please review the [AD RMS MDE documentation](./quick-app-adrms.md#service-discovery).
 
 ## Service discovery with mip::Cloud
 

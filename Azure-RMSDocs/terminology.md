@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,10 +28,12 @@ search.appverid:
 
 # Terminology for Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 Confused by a word, phrase, or acronym that's related to Microsoft Azure Information Protection? Find the definition here for terms and abbreviations that are either specific to Azure Information Protection or have a specific meaning when used in the context of this service.
 
@@ -46,6 +48,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |**activate**|Enable the Azure Rights Management protection service so that an organization can protect their documents and email. </br></br>This action also enables IRM features in Exchange Online and Microsoft SharePoint.|
 |**Active Directory Rights Management Services**|Frequently abbreviated to *AD RMS*.<br /><br />A Windows Server role that provides rights management protection by using encryption and policy to help secure documents, files, and email.|
 |**AD RMS**|See *Active Directory Rights Management Services*.|
+|**AIP** |See *Azure Information Protection*.|
 |**AIPService**|The current name of the PowerShell module for the protection service, which replaces with the older, AADRM module.|
 |**AzureInformationProtection**|The name of the PowerShell module for the Azure Information Protection classic or unified labeling client.|
 |**Azure Information Protection**|A cloud-based service that uses labels to classify and protect documents and emails. </br></br> Azure Rights Management provides the protection by using encryption, identity, and authorization policies.|
@@ -64,7 +67,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |Term|Definition|
 |--------|--------------|
 |**bring your own key**|Frequently abbreviated to *BYOK*.<br /><br />A configuration and topology option chosen by an organization that wants to generate and manage their own tenant key for Azure Information Protection.|
-|**built-in labeling**|An Office 365 app or service capability to support sensitivity labels without the requirement to install an additional labeling client. Also known as *native labeling*.|
+|**built-in labeling**|A Microsoft 365 app or service capability to support sensitivity labels without the requirement to install an additional labeling client. Also known as *native labeling*.|
 |**BYOK**|See *bring your own key*.|
 | | |
 
@@ -72,7 +75,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 
 |Term|Definition|
 |--------|--------------|
-|**consume**|**In the context of protection only:** </br>To open a document or email to read or use it when that content has been protected by a rights management service. </br>For a document, consuming includes editing and adding new content to a protected document. For an email message, consuming includes replying to a protected message.<br /><br/>**In the context of labeling (with or without protection):** </br>To read and potentially act on the label information stored in the metadata of files and emails.|
+|**consume**|**In the context of protection only**: </br>To open a document or email to read or use it when that content has been protected by a rights management service. </br>For a document, consuming includes editing and adding new content to a protected document. For an email message, consuming includes replying to a protected message.<br /><br/>**In the context of labeling (with or without protection)**: </br>To read and potentially act on the label information stored in the metadata of files and emails.|
 |**content key**|A unique key that is created by RMS-enlightened applications for each document or email that is protected by using Rights Management and that helps to limit the risk of information disclosure.|
 | | |
 
@@ -155,7 +158,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 
 |Term|Definition|
 |--------|--------------|
-|**Office Message Encryption**|Frequently abbreviated to *OME*.<br /><br />The new Office 365 Message Encryption capabilities have native integration with the Azure Rights Management service to provide the same email protection for internal and external users, automatic refresh of templates, and support for the bring your own key (BYOK) scenario. </br></br>The previous OME implementation was designed for external recipients only, required a mail flow rule, and did not support BYOK.|
+|**Office Message Encryption**|Frequently abbreviated to *OME*.<br /><br />The new Office 365 Message Encryption capabilities have built-in integration with the Azure Rights Management service to provide the same email protection for internal and external users, automatic refresh of templates, and support for the bring your own key (BYOK) scenario. </br></br>The previous OME implementation was designed for external recipients only, required a mail flow rule, and did not support BYOK.|
 | | |
 
 ### P
@@ -205,3 +208,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |**unified label**| Also known as *unified sensitivity label*.<br /><br /> A label that can be applied by apps, clients, and services that support the Microsoft Information Protection framework, to apply classification and optionally, protection. </br></br>In Office apps and services, unified labels are implemented as sensitivity labels.|
 |**unprotect**|Remove protection controls from files or email messages, which used encryption, identity, usage rights, and access control policies to help secure your data.|
 |**use license**|A per-document certificate that is granted to a user who opens a file or email message that has been protected by a rights management service. </br></br>This certificate contains that user’s rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document’s policy.|
+
+## Next steps
+
+For more information about AIP names, see [Azure Information Protection - also known as ...](aka.md).

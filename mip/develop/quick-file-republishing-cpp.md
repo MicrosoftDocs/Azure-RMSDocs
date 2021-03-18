@@ -1,11 +1,11 @@
 ---
 title: How to - Republishing scenario C++
-description: This article will help you understand the scenario of how to re-use protection handler for republishing scenarios.
-author: Pathak-Aniket
+description: This article will help you understand the scenario of how to re-use protection handler for republishing scenarios (C++).
+author: msmbaldwin
 ms.service: information-protection
-ms.topic: conceptual
+ms.topic: quickstart
 ms.date: 05/01/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 ---
 
 # File API Re-publishing Quickstart (C++)
@@ -139,14 +139,7 @@ Build and test your client application.
 
 2. If your project builds and runs successfully, the application prompts for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. As you did previously in the "Set/get Sensitivity Label" Quickstart, run your PowerShell script to acquire the token each time, using the values provided for $authority and $resourceUrl.
 
-  ```console
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://syncservice.o365syncservice.com/
-    Sign in with user account: user1@tenant.onmicrosoft.com
-    Enter access token: <paste-access-token-here>
-    Press any key to continue . . .
-
+  ```console   
     Sensitivity labels for your organization:
     Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
     Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
@@ -157,14 +150,7 @@ Build and test your client application.
 
     Applying Label ID 074e457c-5848-4542-9a6f-34a182080e7z to C:\Test\Test.docx
     Committing changes
-
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://aadrm.com
-    Sign in with user account: user1@tenant.onmicrosoft.com
-    Enter access token: <paste-access-token-here>
-    Press any key to continue . . .
-
+    
     Label committed to file: C:\Test\Test_labeled.docx
     Press any key to continue . . .
 

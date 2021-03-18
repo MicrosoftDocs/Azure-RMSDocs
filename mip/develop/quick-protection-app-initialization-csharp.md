@@ -1,11 +1,11 @@
 ---
 title: Quickstart - Client application initialization - Protection API (C#)
-description: A quickstart showing you how to write the initialization logic for a Microsoft Information Protection (MIP) SDK - Protection API C# client applications.
-author: Pathak-Aniket
+description: A quickstart showing you how to write the initialization logic for a Microsoft Information Protection (MIP) SDK - Protection API C# client applications (C#)
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to do SDK .NET wrapper initialization, so that I can use the SDK Protection API.
 ---
 
