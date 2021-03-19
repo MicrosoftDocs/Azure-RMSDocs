@@ -261,7 +261,6 @@ Without any extra configuration, the Azure Information Protection unified labeli
 |**PowerPoint**|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
 |**PDF** |.pdf|
 |**Text**|.txt; .xml; .csv|
-| | | |
 
 With extra configuration, other file types can also be inspected. For example, you can [register a custom file name extension to use the existing Windows filter handler for text files](/windows/desktop/search/-search-ifilter-registering-filters), and you can install other filters from software vendors.
 
