@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/09/2021
+ms.date: 03/21/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -277,6 +277,14 @@ Use the *AdvancedSettings* parameter with [New-Label](/powershell/module/exchang
 |**SMimeEncrypt**|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |**SMimeSign**|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 
+
+## Hide the Classify and Protect menu option in Windows File Explorer
+
+To hide the **Classify and Protect** menu option in the Windows File Explorer, create the following DWORD value name (with any value data):
+
+**HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Microsoft.Azip.RightClick\LegacyDisable**
+
+For more information, see [Using File Explorer to classify files](clientv2-classify.md#using-file-explorer-to-classify-files).
 
 ## Display the Information Protection bar in Office apps
 
