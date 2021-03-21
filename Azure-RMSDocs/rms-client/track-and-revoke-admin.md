@@ -135,7 +135,7 @@ Document tracking and options to revoke access are turned off for your tenant:
 - Access logs are not stored when protected documents that are already registered are opened. Access logs that were stored before turning off these features are still available.
 - Admins will not be able to track or revoke access via PowerShell, and end-users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
 
-> [!NOTE]
+> [!TIP]
 > To turn track and revoke back on, set the [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) to **true**, and also run the [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) cmdlet.
 >
 
@@ -143,8 +143,9 @@ Document tracking and options to revoke access are turned off for your tenant:
 
 If you do not want end-users to have the ability to revoke access to protected documents from their Office apps, you can remove the **Revoke Access** option from your Office apps.
 
-Removing the **Revoke Access** option continues to keep your protected documents tracked in the background, and retains the admin ability to revoke access to documents [via PowerShell](/powershell/module/aipservice/set-aipservicedocumentrevoked).
-
+> [!NOTE]
+> Removing the **Revoke Access** option continues to keep your protected documents tracked in the background, and retains the admin ability to revoke access to documents [via PowerShell](/powershell/module/aipservice/set-aipservicedocumentrevoked).
+> 
 To remove the **Revoke Access** option from Office apps, set the [EnableRevokeGuiSupport](clientv2-admin-guide-customizations.md#turn-off-the-revoke-option-for-end-users-in-office-apps-public-preview) advanced client setting to **false**.
 
 For more information, see [User Guide: Revoke document access with Azure Information Protection (Public preview)](revoke-access-user.md).
