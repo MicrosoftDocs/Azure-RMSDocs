@@ -103,7 +103,7 @@ Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("va
 
 ### Checking your current advanced settings
 
-To check the current advanced settings settings in effect, run the following commands:
+To check the current advanced settings in effect, run the following commands:
 
 **To check your *label policy* advanced settings**, use the following syntax:
 
@@ -426,7 +426,7 @@ Use the following table to identify the string value to specify:
 |\<null value>| Default value behaves like the default protection value.|
 |ConvertTo-Json(".dwg", ".zip")|In addition to the previous list, ".dwg" and ".zip" become P\<EXT>| 
 
-With this setting, the following extensions always become **P\<EXT>**: ".txt", ".xml", ".bmp", ".jt", ".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".tif", ".tiff", ".gif") . Notable exclusion is that "ptxt" does not become "txt.pfile". 
+With this setting, the following extensions always become **P\<EXT>**: ".txt", ".xml", ".bmp", ".jt", ".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".tif", ".tiff", ".gif"). Notable exclusion is that "ptxt" does not become "txt.pfile". 
 
 **AdditionalPPrefixExtensions** only works if protection of PFiles with the advanced property - [**PFileSupportedExtension**](#pfilesupportedextension) is enabled. 
 
@@ -968,7 +968,7 @@ Example PowerShell command, where your label policy is named "Global":
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Warn"}
 ```
 
-For futher customization, see:
+For further customization, see:
 
 - [To define specific file name extensions for the warn, justify, or block pop-up messages for email attachments that don't have a label](#to-define-specific-file-name-extensions-for-the-warn-justify-or-block-pop-up-messages-for-email-attachments-that-dont-have-a-label)
 - [To specify a different action for email messages without attachments](#to-specify-a-different-action-for-email-messages-without-attachments)
@@ -2071,7 +2071,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPa
 
 ## Turn off document tracking features (public preview)
 
-By default, document tracking features are turned on for your tenant. To turn them off, such as for privacy requirements in your orgnization or region, set the **EnableTrackAndRevoke** value to **False**.
+By default, document tracking features are turned on for your tenant. To turn them off, such as for privacy requirements in your organization or region, set the **EnableTrackAndRevoke** value to **False**.
 
 Once turned off, document tracking data will not longer be available in your organization, and users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
 
@@ -2090,9 +2090,9 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableTrackAndRevoke="False
 After setting this value to **False**, track and revoke is turned off as follows: 
 
 - Opening protected documents with the AIP unified labeling client no longer registers the documents for track and revoke.
-- End-users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
+- End users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
 
-However, protected documents that are already registered for tracking will continue to be track, and administrators can still revoke access from PowerShell. To full turn off track and revoke features, also run the [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) cmdlet.
+However, protected documents that are already registered for tracking will continue to be track, and administrators can still revoke access from PowerShell. To fully turn off track and revoke features, also run the [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) cmdlet.
 
 This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
