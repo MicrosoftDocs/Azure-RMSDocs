@@ -127,7 +127,7 @@ If you need to turn off track and revoke features for your tenant, such as for p
 
 1. Run the [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) cmdlet.
 
-1. Set the [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) advanced client setting to **false**.
+1. Set the [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) advanced client setting to **False**.
 
 Document tracking and options to revoke access are turned off for your tenant:
 
