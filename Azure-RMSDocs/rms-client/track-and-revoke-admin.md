@@ -46,15 +46,15 @@ Global admins can track access for protected documents via PowerShell using the 
 Use the following cmdlets to find details for the document you want to track:
 
 1. Find the **ContentID** value for the document you want to track.
-    
+
     Use the [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) to search for a document using the filename and/or the email address of the user who applied protection.
-    
+
     For example;
-        
+
     ```PowerShell
     Get-AipServiceDocumentLog -ContentName "test.docx" -Owner “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
     ```
- 
+
     This command returns the **ContentID** for all matching, protected documents that are registered for tracking.
 
     > [!NOTE]
@@ -63,7 +63,7 @@ Use the following cmdlets to find details for the document you want to track:
 1. Use the [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog) cmdlet with your document's **ContentID** to return your tracking data.
 
     For example:
-    
+
     ```PowerShell
     Get-AipServiceTrackingLog -ContentId c03bf90c-6e40-4f3f-9ba0-2bcd77524b87
     ```
@@ -75,11 +75,11 @@ Use the following cmdlets to find details for the document you want to track:
 Global admins can revoke access for any protected document stored in their local content shares, using the [Set-AIPServiceDocumentRevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) cmdlet.
 
 1. Find the **ContentID** value for the document you want to revoke access for.
-    
+
     Use the [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) to search for a document using the filename and/or the email address of the user who applied protection.
-    
+
     For example:
-        
+
     ```PowerShell
     Get-AipServiceDocumentLog -ContentName "test.docx" -Owner “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
     ```
@@ -101,7 +101,7 @@ Global admins can revoke access for any protected document stored in their local
 
 > [!NOTE]
 > If [offline access](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now) is allowed, users will continue to be able to access the documents that have been revoked until the offline policy period expires. 
-> 
+>
 
 > [!TIP]
 > Users can also revoke access for any documents where they applied protection directly from the **Sensitivity** menu in their Office apps. For more information, see [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
@@ -127,17 +127,27 @@ If you need to turn off track and revoke features for your tenant, such as for p
 
 1. Run the [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) cmdlet.
 
-1. Set the [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) advanced client setting to **false**. 
+1. Set the [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) advanced client setting to **false**.
 
 Document tracking and options to revoke access are turned off for your tenant:
 
 - Opening protected documents with the AIP unified labeling client no longer registers the documents for track and revoke.
-- Access logs are not stored when protected documents that are already registered are opened. Access logs that were stored before turning off these features are still available. 
+- Access logs are not stored when protected documents that are already registered are opened. Access logs that were stored before turning off these features are still available.
 - Admins will not be able to track or revoke access via PowerShell, and end-users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
 
 > [!NOTE]
 > To turn track and revoke back on, set the [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) to **true**, and also run the [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) cmdlet.
 >
+
+## Turn off the ability for end-users to revoke access
+
+If you do not want end-users to have the ability to revoke access to protected documents from their Office apps, you can remove the **Revoke Access** option from your Office apps.
+
+Removing the **Revoke Access** option continues to keep your protected documents tracked in the background, and retains the admin ability to revoke access to documents [via PowerShell](/powershell/module/aipservice/set-aipservicedocumentrevoked).
+
+To remove the **Revoke Access** option from Office apps, set the [EnableRevokeGuiSupport](clientv2-admin-guide-customizations.md#turn-off-revoke-button-for-end-users-public-preview) advanced client setting to **false**.
+
+For more information, see [User Guide: Revoke document access with Azure Information Protection (Public preview)](revoke-access-user.md).
 ## Next steps
 
 For more information, see:
