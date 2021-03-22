@@ -162,15 +162,10 @@ Files of over 2 GB are supported for protection, but not decryption.
 
 ## Known issues for the AIP viewer
 
-- [Android devices](#android-devices)
 - [Landscape views](#landscape-views-in-the-aip-viewer)
 - [External users](#external-users-and-the-aip-viewer)
 
 For more information, see [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md).
-
-### Android devices
-
-The AIP Viewer currently has an known issue on Android devices and Android version 11, which may cause the AIP Viewer app to become unresponsive or close.
 
 ### Landscape views in the AIP viewer
 
