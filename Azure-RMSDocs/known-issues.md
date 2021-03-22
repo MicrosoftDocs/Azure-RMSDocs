@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/18/2021
+ms.date: 03/16/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -166,7 +166,6 @@ Files of over 2 GB are supported for protection, but not decryption.
 - [External users](#external-users-and-the-aip-viewer)
 
 For more information, see [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md).
-
 ### Landscape views in the AIP viewer
 
 The AIP viewer displays images in portrait mode, and some wide, landscape-view images may appear to be stretched.
