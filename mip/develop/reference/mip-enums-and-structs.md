@@ -102,8 +102,8 @@ Values                         | Descriptions
 --------------------------------|---------------------------------------------
 None            | Disable default labeling filtration
 CustomProtection            | Filter labels that may result in custom protection
-TemplateProtection            | Filter labels that may result in do not forward
-DoNotForwardProtection            | Filter labels that may result in template protection
+TemplateProtection            | Filter labels that may result in template protection
+DoNotForwardProtection            | Filter labels that may result in do not forward
 AdhocProtection            | Filter labels that may result in adhoc protection
 HyokProtection            | Filter labels that may result in hyok protection
 PredefinedTemplateProtection            | Filter labels that may result in predefined template protection
