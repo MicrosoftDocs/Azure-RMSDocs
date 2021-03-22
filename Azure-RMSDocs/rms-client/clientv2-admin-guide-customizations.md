@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/21/2021
+ms.date: 03/22/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -590,45 +590,22 @@ For more information, see:
 
 #### Multiline headers or footers
 
-If your header or footer text is more than a single line, your command will depend on what parts you want to remove from the header. In this section, we'll use the following sample, multi-line footer:
+If a header or footer text is more than a single line, create a key and value for each line. For example, if you have the following footer with two lines:
 
-*The file is classified as Confidential*
+**The file is classified as Confidential**
+**Label applied manually**
 
-*Label applied manually*
+To remove this multiline footer, you create the following two entries for the same label policy:
 
-*Share with caution*
+- Key: **ExternalContentMarkingToRemove**
+- Key Value 1: **\*Confidential***
+- Key Value 2: **\*Label applied*** 
 
-Use one of the following methods, depending on which part of the footer you want to remove:
+Example PowerShell command, where your label policy is named "Global":
 
-- **If you want to remove the entire footer**, you only need one key value, with asterisks before and after any single word from your footer. 
-
-    For example, create the following entry in the label policy:
-
-    - Key: **ExternalContentMarkingToRemove**
-
-    - Key Value 1: **\*Confidential***
-    
-    Example PowerShell command, where your label policy is named "Global":
-
-    ```PowerShell
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*"}
-    ```
-
-- **If you want to remove only a specific line**, you need a key value for each specific line you want to remove. Each key value must contain the exact text you want to remove.
-
-    For example, create the following entry in the label policy:
-
-    - Key: **ExternalContentMarkingToRemove**
-
-    - Key Value 1: **Label applied manually**
-
-    - Key Value 2: **Share with caution**
-
-    Example PowerShell command, where your label policy is named "Global":
-
-    ```PowerShell
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="Label applied manually,Share with caution"}
-    ```
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
+```
 
 #### Optimization for PowerPoint
 
