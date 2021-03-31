@@ -69,7 +69,7 @@ Use the following information to see what's new or changed for a supported relea
 Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 > [!NOTE]
-> Minor fixes are not listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
+> Minor fixes are not always listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
 >
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
@@ -215,11 +215,11 @@ For more information, see the [Sensitive information type entity definitions](/m
 
 ### Track document access and revoke access (Public preview)
 
-Once you've upgraded to version 2.9.111.0, any protected documents that are not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed. Protected documents are supported for track and revoke, even if they are not labeled.
+After you've upgraded to version 2.9.111.0, any protected documents that are not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed. Protected documents are supported for track and revoke, even if they are not labeled.
 
 Having your documents registered for tracking enables administrators to use PowerShell to track document access, and revoke access if needed.
 
-Once you've upgraded, end-users can also revoke access for documents that they've protected. To revoke access from Microsoft Office apps, use the new **Revoke access** option on the **Sensitivity** menu.
+After you've upgraded, end-users can also revoke access for documents that they've protected. To revoke access from Microsoft Office apps, use the new **Revoke access** option on the **Sensitivity** menu.
 
 For more information, see:
 

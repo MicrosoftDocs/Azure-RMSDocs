@@ -188,6 +188,7 @@ For even more details, see also:
 |**Support for AD RMS**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png) <sup>6</sup> |  ![no](../media/no-icon.png)|
 |**Support for Microsoft Office 97-2003 formats**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png) <sup>8</sup>|
 |**Double Key Encryption**|  ![no](../media/no-icon.png)| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**Encrypt-Only**|  ![no](../media/no-icon.png)| ![no](../media/no-icon.png) | ![yes](../media/yes-icon.png)|
 |**Government Community Cloud** | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)|
 | | | | |
 

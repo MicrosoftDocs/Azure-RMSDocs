@@ -355,8 +355,6 @@ After reviewing the information in the reports, if you are using the Azure Infor
 
 - **Classic client**: Make changes to your policy in the Azure portal. For more information, see [Configuring the Azure Information Protection policy](configure-policy.md).
 
-If you have a Microsoft 365 subscription, you can also view label usage in the Microsoft 365 compliance center and Microsoft 365 security center. For more information, see [View label usage with label analytics](/microsoft-365/compliance/label-analytics).
-
 AIP audit logs are also sent to the Microsoft 365 Activity Explorer, where they may be displayed with different names. For more information, see:
 
 - [Public Preview: AIP audit logs in Activity Explorer](https://www.yammer.com/askipteam/#/Threads/show?threadId=1085834054254592)

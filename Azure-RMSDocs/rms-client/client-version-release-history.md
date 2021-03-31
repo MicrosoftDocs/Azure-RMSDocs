@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 03/11/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -72,15 +72,23 @@ Use the following information to see what's new or changed for a supported relea
 Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
 
 > [!NOTE]
-> Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
->  
-> For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
+>  For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
+>
+## Version 1.56.25.0
+
+**Released**: 11/05/2020
+
+**Supported through**: 03/31/2021
+
+Minor bug fixes related to Outlook support.
 
 ## Version 1.54.59.0
 
 **Released**: 02/12/2020
 
-This version includes fixes only. 
+**Supported through**: 03/31/2021
+
+This version includes fixes only.
 
 **Fixes**:
 

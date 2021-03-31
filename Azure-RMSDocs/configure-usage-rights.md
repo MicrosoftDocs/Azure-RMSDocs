@@ -132,12 +132,14 @@ When Exchange Online uses the new capabilities for Office 365 Message Encryption
 
 This option is available to tenants who use Exchange Online and can be selected as follows:
 
-- **In Outlook on the web**
+- **In Outlook on the web** with the **Encrypt** option or a sensitivity label that's configured for **Let users assign permissions** and the **Encrypt-Only** option
 - **As another rights protection option** for a mail flow rule
 - **As an Office 365 DLP action**
-- **From Outlook**, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), when you have [Microsoft 365 apps that support Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
+- **From the Outlook app** for desktops:
+    - With the **Encrypt** option on Windows and macOS, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), when you have [Microsoft 365 apps that support Azure Rights Management](requirements-applications.md).
+    - With a sensitivity label that's configured for **Let users assign permissions** and the **Encrypt-Only** option, for Windows and built-in labeling with the minimum version listed in the [table for sensitivity label capabilities in Outlook](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-outlook).
 
-For more information about the encrypt only option, see the following blog post announcement from the Office team: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
+For more information about the encrypt-only option, see the following blog post announcement from the Office team: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
 
 When this option is selected, the email is encrypted and recipients must be authenticated. Then, the recipients have all usage rights except **Save As, Export** and **Full Control**. This combination of usage rights means that the recipients have no restrictions except that they cannot remove the protection. For example, a recipient can copy from the email, print it, and forward it. 
 
