@@ -30,7 +30,7 @@ ms.custom: admin
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
->***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see [Classic client file types](client-admin-guide-file-types.md)*
+>***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 This article lists the file types and sizes supported by the Azure Information Protection (AIP) unified labeling client
 
@@ -261,6 +261,7 @@ Without any extra configuration, the Azure Information Protection unified labeli
 |**PowerPoint**|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
 |**PDF** |.pdf|
 |**Text**|.txt; .xml; .csv|
+| | |
 
 With extra configuration, other file types can also be inspected. For example, you can [register a custom file name extension to use the existing Windows filter handler for text files](/windows/desktop/search/-search-ifilter-registering-filters), and you can install other filters from software vendors.
 

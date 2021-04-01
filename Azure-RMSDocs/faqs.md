@@ -30,8 +30,7 @@ search.appverid:
 >
 >***Relevant for**: [AIP unified labeling client and classic client](#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 Have a question about Azure Information Protection (AIP), or about the Azure Rights Management service (Azure RMS)? 
 
@@ -102,16 +101,14 @@ If you're an admin, learn more in [Choose your Windows labeling solution](rms-cl
 
 ### Classic client deprecation
 
-To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure portal are being **deprecated** as of **March 31, 2021**. 
+To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure portal is **deprecated** as of **March 31, 2021**. 
 
-After deprecation, the client will continue to work as expected. However, administrators will not be able to update policies on the portal, and no more fixes or changes will be supplied for the classic client.
+The client continues to work as expected, but administrators cannot update policies on the portal, and no more fixes or changes will be supplied for the classic client.
 
-This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+We recommend that you [migrate to unified labeling](tutorial-migrating-to-ul.md) and upgrade to the [unified labeling client](rms-client/clientv2-admin-guide-install.md). Learn more in our recent [update](https://techcommunity.microsoft.com/t5/microsoft-security-and/azure-aip-portal-label-amp-policy-management-admin-experience/ba-p/2182678) on the deprecation.
 
-If you currently have the classic client deployed, we recommend that you upgrade to the unified labeling client. For more information, see;
 
-- [Tutorial: Migrating from the classic client to the unified labeling client](tutorial-migrating-to-ul.md)
-- [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md)
+For more information, see: [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md)
 ### Identify the client you have installed
 
 If you are a user who wants to understand whether you have the classic or the unified labeling client installed, you can do one of the following:

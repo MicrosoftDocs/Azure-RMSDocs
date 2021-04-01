@@ -31,8 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 Use this information to help you understand how you can use usage logging for the protection service (Azure Rights Management) from Azure Information Protection. This protection service provides the data protection for your organization's documents and emails and it can log every request to it. These requests include when users protect documents and email and also consume this content, actions performed by your administrators for this service, and actions performed by Microsoft operators to support your Azure Information Protection deployment. 
 
