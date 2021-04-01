@@ -31,8 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Running the Azure Information Protection scanner](deploy-aip-scanner-manage.md)*.
 
-> [!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 Once you've confirmed your [system requirements](deploy-aip-scanner-prereqs-classic.md) and [configured and installed your scanner](deploy-aip-scanner-configure-install-classic.md), [run a discovery scan](#run-a-discovery-cycle-and-view-reports-for-the-scanner) to get started.
 

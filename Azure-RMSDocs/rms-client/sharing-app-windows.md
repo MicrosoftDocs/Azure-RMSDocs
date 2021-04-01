@@ -27,4 +27,4 @@ ms.custom: admin
 
 >***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-**End of support notification**: The Rights Management sharing application for Windows is now replaced by the [Azure Information Protection client](aip-client.md). Support for this older application ended January 31, 2019.
+**End of support notification**: The Rights Management sharing application for Windows is now replaced by the [Azure Information Protection client](aip-clientv2.md). Support for this older application ended January 31, 2019.

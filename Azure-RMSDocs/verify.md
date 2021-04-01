@@ -31,6 +31,8 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
 When the protection service (Azure Rights Management) from Azure Information Protection is activated and you have performed any additional configuration steps that are required for your organization, you are ready to verify that this protection service is working as expected. 
 
 A simple verification test is to protect a document or email message by using one user account, and then attempt to open and use that protected content from another user account on a different computer.
