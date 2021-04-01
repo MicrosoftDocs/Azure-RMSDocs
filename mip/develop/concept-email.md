@@ -14,10 +14,17 @@ MIP SDK supports decryption and encryption for email messages. Both .msg files, 
 
 Some of the popular use cases for this scenario are:
 
-- Decrypt messages for eDiscovery
 - Decrypt mail and attachments for DLP inspection
 - Publish protected messages directly from line-of-business applications
 - Decrypt, modify, and reprotect messages in transit
+
+## MSG File Support Statement
+
+MIP SDK supports protection application and removal for MSG files. Given the variety of encoding types and variables in the format over the years, it's not possible to guarantee that MIP SDK will be able to remove protection from *all* MSG files. The following section describes supportability for MSG files from various sources.
+
+- Removing protection from MSG files that were protected with MIP SDK is fully supported.
+- Removing protection from MSG files created by [currently-supported](https://docs.microsoft.com/lifecycle/faq/office#:~:text=For%20Office%202019%2C%20Microsoft%20will%20provide%205%20years,align%20with%20the%20support%20period%20for%20Office%202016.) versions of the Outlook client is fully supported.
+- Removing protection from MSG files created by out-of-support versions of the Outlook client is supported on a best-effort basis. 
 
 ## File API operations for .msg files
 
@@ -26,7 +33,7 @@ File API supports protection operations for .msg files and in manner identical t
 > [!IMPORTANT]
 > Labeling operations for .msg files are not currently supported.
 
-As discussed previously, instantiation of `mip::FileEngine` requires a setting object, `mip::FileEngineSettings`. `mip::FileEngineSettings` can be used to pass parameters for custom settings the application needs to set for a particular instance. CustomSettings property of the FileEngineSettings is used to set the flag for `enable_msg_file_type` to enable processing of .msg files.
+As discussed previously, instantiation of `mip::FileEngine` requires a settings object, `mip::FileEngineSettings`. `mip::FileEngineSettings` can be used to pass in parameters for custom settings to meet specific application needs. To enable MIP SDK to process MSG files, the `CustomSettings` property of the `FileEngineSettings` object is used to set the flag for `enable_msg_file_type` to enable processing of .msg files.
 
 The .msg file protection operations pseudocode may look like:
 
@@ -45,7 +52,7 @@ Commonly, mail gateway and data loss prevention (DLP) services handle MIME compl
 
 In most cases, the DLP partner needs to be able to get the attachments and plaintext bytes from the message to inspect and evaluate against DLP policies. The inspect API takes the message.rpmsg as input and returns byte streams as output. These byte streams contain the plaintext bytes of the message as well as the attachments. It’s up to the application developer to handle these streams and to do something useful with them (inspect, recursively decrypt, etc.).
 
-The `Inspect` API is implemented through a class `mip::FileInspector` which exposes operations for inspecting supported file types. `mip::MsgInspector` which extends `mip::FileInspector`, exposes decryption operations specific to rpmsg file format. MIP SDK does not support any publishing scenarios for *message.rpmsg* files.
+The `Inspect` API is implemented through a class `mip::FileInspector` which exposes operations for inspecting supported file types. `mip::MsgInspector` which extends `mip::FileInspector`, exposes decryption operations specific to rpmsg file format. MIP SDK does not support any publishing scenarios for *message.rpmsg* files. Additionally, the `FileHandler::RemoveProtection()` API does not support message.rpmsg files. *Message.rpmsg* files can be decrypted only for inspection-type scenarios and **will not output a valid, usable file**. If your application requires a file output, you must pass in an MSG file and remove protection from that object.  
 
 `mip::MsgInspector` class exposes below members:
 
