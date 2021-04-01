@@ -80,7 +80,9 @@ Select the languages that match your users' language setting for Office and Wind
 
 7. When you have edited each .xml file, create a new compressed (zipped) folder that contains these files. The compressed folder can have any name, but must have a .zip extension.
     
-    Tip: You don't have to wait until you've edited each language file that you've downloaded. Instead, you could roll out different languages in a phased mannor, by including in the .zip file a subset of the total files you downloaded. Then repeat steps 7 and 8 when you have completed the translations for more languages.
+    > [!TIP]
+    > You don't have to wait until you've edited each language file that you've downloaded. Instead, you could roll out different languages in a phased manner, by including in the .zip file a subset of the total files you downloaded. Then repeat steps 7 and 8 when you have completed the translations for more languages.
+    >
 
 8. Return to the **Azure Information Protection - Languages** pane, and select **Import**. Note that if this option is unavailable, first clear the check box for **LANGUAGE NAME** or the check boxes for the individually selected languages.
     

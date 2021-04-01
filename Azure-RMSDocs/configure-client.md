@@ -73,9 +73,9 @@ Because the Azure Information Protection viewer app uses the Microsoft Intune Ap
 
 Additional information for when you add the Azure Information Protection app to Intune:
 
-- For iOS: Search for and add the app from Intune.
+- **For iOS**: Search for and add the app from Intune.
 
-- For Android: When you add the app, use the following **Appstore URL**:
+- **For Android**: When you add the app, use the following **Google Play URL**:
 
     ```md
     https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
