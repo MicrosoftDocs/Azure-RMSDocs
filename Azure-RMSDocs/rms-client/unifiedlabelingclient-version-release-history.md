@@ -229,6 +229,10 @@ For more information, see:
 
 If you have privacy requirements in your organization or region that require you to turn off document tracking features, see the [track and revoke administrator procedures](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant).
 
+> [!NOTE]
+> Track and revoke features are supported for Office file types only, and not for other file types, such as images or PDFs.
+>
+
 **Upgrades from the classic client**
 
 The AIP classic client supports track and revoke features using the [Microsoft tracking portal](client-track-revoke.md#using-a-web-browser-to-track-and-revoke-documents-that-you-have-registered). This tracking portal is not relevant when working with the unified labeling client.
