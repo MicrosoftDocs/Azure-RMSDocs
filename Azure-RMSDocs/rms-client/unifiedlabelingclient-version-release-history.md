@@ -30,7 +30,7 @@ ms.custom: admin
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
->***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see [AIP classic client version release history and support policy](client-version-release-history.md).*
+>***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 This article describes the new features available for the unified labeling client, as well as servicing information and support timelines for each AIP unified client version.
 
@@ -286,11 +286,11 @@ For more information, see the [Sensitive information type entity definitions](/m
 
 ### Track document access and revoke access (Public preview)
 
-Once you've upgraded to version 2.9.111.0, any protected documents that are not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed. Protected documents are supported for track and revoke, even if they are not labeled.
+After you've upgraded to version 2.9.111.0, any protected Office documents that are not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed. Protected documents are supported for track and revoke, even if they are not labeled.
 
 Having your documents registered for tracking enables administrators to use PowerShell to track document access, and revoke access if needed.
 
-Once you've upgraded, end-users can also revoke access for documents that they've protected. To revoke access from Microsoft Office apps, use the new **Revoke access** option on the **Sensitivity** menu.
+After you've upgraded, end-users can also revoke access for documents that they've protected. To revoke access from Microsoft Office apps, use the new **Revoke access** option on the **Sensitivity** menu.
 
 For more information, see:
 
@@ -299,6 +299,10 @@ For more information, see:
 - [Known issues for tracking and revoking document access](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)
 
 If you have privacy requirements in your organization or region that require you to turn off document tracking features, see the [track and revoke administrator procedures](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant).
+
+> [!NOTE]
+> Track and revoke features are supported for Office file types only, and not for other file types, such as images or PDFs.
+>
 
 **Upgrades from the classic client**
 

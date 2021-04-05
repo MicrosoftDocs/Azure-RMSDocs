@@ -32,6 +32,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 The applications and solutions listed on this page have built-in support for the Azure Rights Management (Azure RMS) service, which provides data protection for Azure Information Protection.
 
@@ -248,13 +249,7 @@ For more information about deploying and using the classic client, see:
 - [Classic client administrator guide](./rms-client/client-admin-guide.md)
 - [Classic client user guide](./rms-client/client-user-guide.md).
 
-> [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
->
-> This time-frame allows all current Azure Information Protection customers to transition to the Microsoft Information Protection unified labeling solution. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
->
-> 
->
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 ## Rights Management sharing app
 

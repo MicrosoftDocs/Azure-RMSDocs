@@ -32,9 +32,8 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from the Microsoft 365 documentation. To configure different languages for sensitivity labels, use the *LocaleSettings* parameter for the [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label) cmdlet.*
 
-> [!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
->
+[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
+
 
 Although the default labels for Azure Information Protection support multiple languages, you must configure support for label names and descriptions that you specify. This configuration requires you to do the following:
 
@@ -81,7 +80,9 @@ Select the languages that match your users' language setting for Office and Wind
 
 7. When you have edited each .xml file, create a new compressed (zipped) folder that contains these files. The compressed folder can have any name, but must have a .zip extension.
     
-    Tip: You don't have to wait until you've edited each language file that you've downloaded. Instead, you could roll out different languages in a phased mannor, by including in the .zip file a subset of the total files you downloaded. Then repeat steps 7 and 8 when you have completed the translations for more languages.
+    > [!TIP]
+    > You don't have to wait until you've edited each language file that you've downloaded. Instead, you could roll out different languages in a phased manner, by including in the .zip file a subset of the total files you downloaded. Then repeat steps 7 and 8 when you have completed the translations for more languages.
+    >
 
 8. Return to the **Azure Information Protection - Languages** pane, and select **Import**. Note that if this option is unavailable, first clear the check box for **LANGUAGE NAME** or the check boxes for the individually selected languages.
     

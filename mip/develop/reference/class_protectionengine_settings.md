@@ -1,14 +1,14 @@
 ---
-title: class ProtectionEngine::Settings 
-description: Documents the protectionengine::settings class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+title: class ProtectionEngine::Settings duplicate
+description: Duplicate that documents the protectionengine::settings class of the Microsoft Information Protection (MIP) SDK.
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/13/2021
 ---
 
-# class ProtectionEngine::Settings 
+# Duplicate class ProtectionEngine::Settings 
 Settings used by ProtectionEngine during its creation and throughout its lifetime.
   
 ## Summary
