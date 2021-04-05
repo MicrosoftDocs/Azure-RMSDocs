@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/20/2021
+ms.date: 04/05/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -47,19 +47,19 @@ The service resides in the cloud or on-premises:
 
 ## Choose your Windows labeling solution
 
-Labels make it easier for your users to apply protection, and also provide classification so that you can track and manage your data. 
+Labels make it easier for your users to apply protection, and also provide classification so that you can track and manage your data.
 
 When choosing a Windows labeling solution, consider the following basic differences:
 
-- **Where labels and label policies are downloaded from** 
+- **Where labels and label policies are downloaded from**
 
-    The built-in labeling solution and the AIP unified labeling client use one of the following admin centers: 
-    
-    - Office 365 Security & Compliance Center 
-    - Microsoft 365 security center 
+    The built-in labeling solution and the AIP unified labeling client use one of the following admin centers:
+
+    - Office 365 Security & Compliance Center
+    - Microsoft 365 security center
     - Microsoft 365 compliance center
-      
-    If you are using the legacy AIP classic client, your labels and label policies are downloaded and managed in the Azure portal. 
+
+    If you are using the legacy AIP classic client, your labels and label policies are downloaded and managed in the Azure portal.
 
 - **Installation requirements**
 
@@ -162,31 +162,31 @@ For even more details, see also:
 |**User-defined permissions for a label**: <br />Custom permissions for Word, Excel, PowerPoint| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |
 |**Multilanguage support for labels**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |![yes](../media/yes-icon.png) |
 |**Label inheritance from email attachments**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)  | ![no](../media/no-icon.png)|
-|**Customizations that include**:<br />- Default label for email<br />- Pop up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| ![yes](../media/yes-icon.png) <sup>1</sup> | ![yes](../media/yes-icon.png) <sup>2</sup> |  ![no](../media/no-icon.png)|
+|**Customizations, such as**:<br />- Default label for email<br />- Pop up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| ![yes](../media/yes-icon.png) <sup>[1](#1)</sup> | ![yes](../media/yes-icon.png) <sup>[2](#2)</sup> |  ![partial](../media/half-support-icon.png)<sup>[9](#9)</sup>|
 |**Scanner for on-premises data stores**| ![yes](../media/yes-icon.png) |  ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
 |**Central reporting (analytics)**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
-|**Custom permissions set independently from a label**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>3</sup>|  ![no](../media/no-icon.png)|
+|**Custom permissions set independently from a label**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>[3](#3)</sup>|  ![no](../media/no-icon.png)|
 |**Information Protection bar in Office apps**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
 |**Visual markings as a label action**<br> (header, footer, watermark)| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)|
-|**Per app visual markings**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>9</sup>|
-|**Dynamic visual markings with variables**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>9</sup>|
+|**Per app visual markings**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>[8](#8)</sup>|
+|**Dynamic visual markings with variables**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>[8](#8)</sup>|
 |**Remove external content marking in app**| ![yes](../media/yes-icon.png)| ![yes](../media/yes-icon.png)| ![no](../media/no-icon.png)|
 |**Label with File Explorer**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
 |**A viewer for protected files** <br> (text, images, PDF, .pfile)| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![no](../media/no-icon.png)|
 |**PPDF support for applying labels**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
 |**PowerShell labeling cmdlets**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)  |  ![no](../media/no-icon.png)|
-|**Offline support for protection actions**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>4</sup> | ![yes](../media/yes-icon.png) |
+|**Offline support for protection actions**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>[4](#4)</sup> | ![yes](../media/yes-icon.png) |
 |**Manual policy file management for disconnected computers**| ![yes](../media/yes-icon.png) |![yes](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
 |**HYOK support**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
 |**Usage logging in Event Viewer**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)| ![no](../media/no-icon.png)|
 |**Display the Do Not Forward button in Outlook**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
-|**Track protected documents**| ![yes](../media/yes-icon.png) <sup>5</sup> | ![yes](../media/yes-icon.png) <sup>5</sup> |  ![no](../media/no-icon.png)|
-|**Revoke protected documents**| ![yes](../media/yes-icon.png) <sup>5</sup> |  ![yes](../media/yes-icon.png) <sup>5</sup>|  ![no](../media/no-icon.png)|
+|**Track protected documents**| ![yes](../media/yes-icon.png) <sup>[5](#5)</sup> | ![yes](../media/yes-icon.png) <sup>[5](#5)</sup> |  ![no](../media/no-icon.png)|
+|**Revoke protected documents**| ![yes](../media/yes-icon.png) <sup>[5](#5)</sup> |  ![yes](../media/yes-icon.png) <sup>[5](#5)</sup>|  ![no](../media/no-icon.png)|
 |**Protection-only mode** (no labels)| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
 |**Support for account switching**|  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)| ![yes](../media/yes-icon.png) |
 |**Support for Remote Desktop Services**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |
-|**Support for AD RMS**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png) <sup>6</sup> |  ![no](../media/no-icon.png)|
-|**Support for Microsoft Office 97-2003 formats**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png) <sup>8</sup>|
+|**Support for AD RMS**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png) <sup>[6](#6)</sup> |  ![no](../media/no-icon.png)|
+|**Support for Microsoft Office 97-2003 formats**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png) <sup>[7](#7)</sup>|
 |**Double Key Encryption**|  ![no](../media/no-icon.png)| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
 |**Encrypt-Only**|  ![no](../media/no-icon.png)| ![no](../media/no-icon.png) | ![yes](../media/yes-icon.png)|
 |**Government Community Cloud** | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)|
@@ -194,29 +194,32 @@ For even more details, see also:
 
 **Footnotes**:
 
-<sup>1</sup>
+<a name="footnote1"></a><sup>1</sup>
 These settings, and many more are supported as [advanced client settings that you configure in the Azure portal](client-admin-guide-customizations.md#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal).
 
-<sup>2</sup>
+<a name="footnote2"></a><sup>2</sup>
 These settings, and many more are supported as [advanced settings that you configure with PowerShell](clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell).
 
-<sup>3</sup>
+<a name="footnote3"></a><sup>3</sup>
 Supported by File Explorer and PowerShell. In Office apps, users can select **File Info** > **Protect Document** > **Restrict Access**.
 
-<sup>4</sup>
+<a name="footnote4"></a><sup>4</sup>
 For File Explorer and PowerShell commands, the user must be connected to the internet to protect files.
 
-<sup>5</sup>
+<a name="footnote5"></a><sup>5</sup>
 For more information, see: **Unified labeling client**: [Admin guide (Public preview)](track-and-revoke-admin.md) |  [User guide (Public preview)](revoke-access-user.md). Tracking is supported for Global admins only. **Classic client**: [Admin guide](client-admin-guide-document-tracking.md) | [User guide](client-track-revoke.md). Administrators can also use [central reporting](../reports-aip.md) to identify whether protected documents are accessed from Windows computers, and whether access was granted or denied.
 
-<sup>6</sup>
+<a name="footnote6"></a><sup>6</sup>
 Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
-<sup>8</sup>
+<a name="footnote7"></a><sup>7</sup>
 While the AIP clients support both Microsoft Office 97-2003 file formats, such as **.doc**, as well as Office Open XML formats, such as **.docx**, the built-in labeling supports Open XML formats only.
 
-<sup>9</sup>
+<a name="footnote8"></a><sup>8</sup>
 For more information about support for dynamic content markings and per app content markings for the built-in labeling solution, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables).
+
+<a name="footnote9"></a><sup>9</sup>
+For built-in labeling, selected labeling and labeling policy customizations are supported via PowerShell. For more information, see [Manage sensitivity labels in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling)
 
 ### Detailed comparisons for the Azure Information Protection clients
 
