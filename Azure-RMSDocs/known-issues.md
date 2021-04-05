@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2021
+ms.date: 04/05/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -93,11 +93,11 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 
 ### Known issues for co-authoring (Public preview)
 
+Known issues for co-authoring are relevant only when the dedicated AIP client version for co-authoring is deployed in your environment. For more information, see [Version 2.10.46.0 for co-authoring (Public preview)](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview).
+
 - [Use in testing environments only](#use-in-testing-environments-only)
 - [Supported versions for co-authoring and sensitivity labels](#supported-versions-for-co-authoring-and-sensitivity-labels)
 - [Policy updates](#policy-updates)
-- [AIP analytics and audit logs](#aip-analytics-and-audit-logs)
-- [Labels with user-defined permissions](#labels-with-user-defined-permissions)
 - [Unsupported features for co-authoring](#unsupported-features-for-co-authoring)
 
 > [!IMPORTANT]
@@ -127,21 +127,17 @@ If your labeling policy was updated while an Office application was opened with 
 
 If this occurs, close and reopen your Office application to be able to apply your labels.
 
-#### AIP analytics and audit logs
-
-When co-authoring is enabled, the Azure Information Protection client doesn't send any [audit logs](audit-logs.md).
-
-#### Labels with user-defined permissions
-
-In Microsoft Word, Excel, and PowerPoint, labels with user-defined permissions are still available and can be applied to documents, but are not supported for co-authoring features. 
-
-This means that applying a label with user-defined permissions will prevent you from working on the document with others at the same time.
-
 #### Unsupported features for co-authoring
 
 The following features are not supported when working with co-authoring and sensitivity labels:
 
+- **AIP analytics and audit logs**.  When co-authoring is enabled, the Azure Information Protection client doesn't send any [audit logs](audit-logs.md).
+
 - **DKE templates and DKE user-defined properties**. For more information, see [Double Key Encryption (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).
+
+- **Labels with user-defined permissions**. In Microsoft Word, Excel, and PowerPoint, labels with user-defined permissions are still available and can be applied to documents, but are not supported for co-authoring features.
+
+    This means that applying a label with user-defined permissions will prevent you from working on the document with others at the same time.
 
 - **Removing external content marking in apps**. For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
 
@@ -219,6 +215,7 @@ Additionally, revoking access for one of the attachments also revokes access for
 If you have documents stored in OneDrive with a sensitivity label applied, and an administrator changes the label in the labeling policy to add protection, the newly applied protection is not automatically applied to the labeled document. 
 
 In such cases, re-label the document manually to apply the protection as needed.
+
 ## AIP and legacy Windows and Office versions
 
 - [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
