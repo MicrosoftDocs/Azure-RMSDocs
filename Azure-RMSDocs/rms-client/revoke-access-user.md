@@ -35,7 +35,11 @@ This article describes how to revoke access for Office documents that you've pro
 
 Revoking access for a protected document prevents other users from accessing the document, even if you've given them access before. For more information, see [User Guide: Classify and protect with the Azure Information Protection unified labeling client](clientv2-classify-protect.md).
 
-Track and revoke features for the unified labeling client are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+Track and revoke features for the unified labeling client are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+
+> [!NOTE]
+> Track and revoke features are supported for Office types only.
+>
 
 ## Revoke access from Microsoft Office apps
 
@@ -50,9 +54,7 @@ To revoke access from Word, Excel, or PowerPoint:
 
     :::image type="content" source="../media/track-revoke-word.png" alt-text="Select Revoke Access from Microsoft Word":::
 
-    > [!NOTE]
-    > Don't see this option? For more information, see possible scenarios [below](#dont-see-the-revoke-access-option).
-    >
+    If you don't see this option, see a [list of possible scenarios](#dont-see-the-revoke-access-option).
  
 1. In the confirmation message that appears, click **Yes** to continue.
 
