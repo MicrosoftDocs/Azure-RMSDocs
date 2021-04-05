@@ -230,7 +230,7 @@ For more information, see:
 If you have privacy requirements in your organization or region that require you to turn off document tracking features, see the [track and revoke administrator procedures](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant).
 
 > [!NOTE]
-> Track and revoke features are supported for Office types only, and not for other file types, such as images or PDFs.
+> Track and revoke features are supported for Office file types only, and not for other file types, such as images or PDFs.
 >
 
 **Upgrades from the classic client**
