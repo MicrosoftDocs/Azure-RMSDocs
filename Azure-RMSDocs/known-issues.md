@@ -93,7 +93,7 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 
 ### Known issues for co-authoring (Public preview)
 
-Known issues for co-authoring are relevant only when the dedicated AIP client version for co-authoring is deployed in your environment and enabled in your tenant. For more information, see [Version 2.10.46.0 for co-authoring (Public preview)](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) and [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring).
+Known issues for co-authoring are relevant only when the [dedicated AIP client version for co-authoring](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) is deployed in your environment and co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
 
 - [Use in testing environments only](#use-in-testing-environments-only)
 - [Supported versions for co-authoring and sensitivity labels](#supported-versions-for-co-authoring-and-sensitivity-labels)
