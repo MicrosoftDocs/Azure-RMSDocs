@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 04/05/2021
+ms.date: 03/16/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -193,8 +193,6 @@ Tracking and revoking document access using the unified labeling client has the 
 
 For more information, see the [Admin Guide](rms-client/track-and-revoke-admin.md) and [User Guide](rms-client/revoke-access-user.md) procedures.
 
-> [!NOTE]
-> Track and revoke features are supported for Office file types only, and not for other file types, such as image files or PDFs.
 #### Password-protected documents
 
 Password-protected documents are not supported by track and revoke features.
