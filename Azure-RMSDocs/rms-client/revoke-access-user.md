@@ -87,4 +87,4 @@ For more information, see:
 
 - [AIP unified labeling client user guide](clientv2-user-guide.md)
 - [AIP unified labeling client administrator guide](clientv2-admin-guide.md)
-- [Known issues for track and revoke features](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)
+- [Known issues for track and revoke features](../known-issues.md#known-issues-for-track-and-revoke-features)

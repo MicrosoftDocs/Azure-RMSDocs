@@ -225,7 +225,7 @@ For more information, see:
 
 - [Administrator Guide: Track and revoke document access with Azure Information Protection](track-and-revoke-admin.md)
 - [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
-- [Known issues for tracking and revoking document access](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)
+- [Known issues for tracking and revoking document access](../known-issues.md#known-issues-for-track-and-revoke-features)
 
 If you have privacy requirements in your organization or region that require you to turn off document tracking features, see the [track and revoke administrator procedures](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant).
 

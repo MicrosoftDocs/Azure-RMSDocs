@@ -129,7 +129,7 @@ If you need to turn off track and revoke features for your tenant, such as for p
 
 1. Run the [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) cmdlet.
 
-1. Set the [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) advanced client setting to **False**.
+1. Set the [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features) advanced client setting to **False**.
 
 Document tracking and options to revoke access are turned off for your tenant:
 
@@ -138,7 +138,7 @@ Document tracking and options to revoke access are turned off for your tenant:
 - Admins will not be able to track or revoke access via PowerShell, and end-users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
 
 > [!TIP]
-> To turn track and revoke back on, set the [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) to **True**, and also run the [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) cmdlet.
+> To turn track and revoke back on, set the [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features) to **True**, and also run the [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) cmdlet.
 >
 
 ## Turn off the ability for end-users to revoke access
@@ -157,4 +157,4 @@ For more information, see:
 
 - [AIP unified labeling client user guide](clientv2-user-guide.md)
 - [AIP unified labeling client administrator guide](clientv2-admin-guide.md)
-- [Known issues for track and revoke features](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)
+- [Known issues for track and revoke features](../known-issues.md#known-issues-for-track-and-revoke-features)
