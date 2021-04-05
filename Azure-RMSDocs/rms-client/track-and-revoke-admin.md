@@ -148,9 +148,9 @@ If you do not want end-users to have the ability to revoke access to protected d
 > [!NOTE]
 > Removing the **Revoke Access** option continues to keep your protected documents tracked in the background, and retains the admin ability to revoke access to documents [via PowerShell](/powershell/module/aipservice/set-aipservicedocumentrevoked).
 > 
-To remove the **Revoke Access** option from Office apps, set the [EnableRevokeGuiSupport](clientv2-admin-guide-customizations.md#turn-off-the-revoke-option-for-end-users-in-office-apps-public-preview) advanced client setting to **False**.
+To remove the **Revoke Access** option from Office apps, set the [EnableRevokeGuiSupport](clientv2-admin-guide-customizations.md#turn-off-the-revoke-option-for-end-users-in-office-apps) advanced client setting to **False**.
 
-For more information, see [User Guide: Revoke document access with Azure Information Protection (Public preview)](revoke-access-user.md).
+For more information, see [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md).
 ## Next steps
 
 For more information, see:
