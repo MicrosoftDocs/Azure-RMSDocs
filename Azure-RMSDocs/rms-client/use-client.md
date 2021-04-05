@@ -194,31 +194,31 @@ For even more details, see also:
 
 **Footnotes**:
 
-<a name="footnote1"></a><sup>1</sup>
+<a name="1"></a><sup>1</sup>
 These settings, and many more are supported as [advanced client settings that you configure in the Azure portal](client-admin-guide-customizations.md#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal).
 
-<a name="footnote2"></a><sup>2</sup>
+<a name="2"></a><sup>2</sup>
 These settings, and many more are supported as [advanced settings that you configure with PowerShell](clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell).
 
-<a name="footnote3"></a><sup>3</sup>
+<a name="3"></a><sup>3</sup>
 Supported by File Explorer and PowerShell. In Office apps, users can select **File Info** > **Protect Document** > **Restrict Access**.
 
-<a name="footnote4"></a><sup>4</sup>
+<a name="4"></a><sup>4</sup>
 For File Explorer and PowerShell commands, the user must be connected to the internet to protect files.
 
-<a name="footnote5"></a><sup>5</sup>
+<a name="5"></a><sup>5</sup>
 For more information, see: **Unified labeling client**: [Admin guide (Public preview)](track-and-revoke-admin.md) |  [User guide (Public preview)](revoke-access-user.md). Tracking is supported for Global admins only. **Classic client**: [Admin guide](client-admin-guide-document-tracking.md) | [User guide](client-track-revoke.md). Administrators can also use [central reporting](../reports-aip.md) to identify whether protected documents are accessed from Windows computers, and whether access was granted or denied.
 
-<a name="footnote6"></a><sup>6</sup>
+<a name="6"></a><sup>6</sup>
 Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
-<a name="footnote7"></a><sup>7</sup>
+<a name="7"></a><sup>7</sup>
 While the AIP clients support both Microsoft Office 97-2003 file formats, such as **.doc**, as well as Office Open XML formats, such as **.docx**, the built-in labeling supports Open XML formats only.
 
-<a name="footnote8"></a><sup>8</sup>
+<a name="8"></a><sup>8</sup>
 For more information about support for dynamic content markings and per app content markings for the built-in labeling solution, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables).
 
-<a name="footnote9"></a><sup>9</sup>
+<a name="9"></a><sup>9</sup>
 For built-in labeling, selected labeling and labeling policy customizations are supported via PowerShell. For more information, see [Manage sensitivity labels in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling)
 
 ### Detailed comparisons for the Azure Information Protection clients
