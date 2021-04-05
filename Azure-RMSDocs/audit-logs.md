@@ -98,7 +98,6 @@ Microsoft Azure Information Protection generates audit logs at the following act
 | Reported by      | Platform                       | Application              | Action / Description      |
 | ---------------- | ------------------------------ | ------------------------ | --------------- |
 |Azure Information Protection:<br />- Classic scanner and client<br />- Unified labeling scanner and client | Windows, SharePoint, One Drive | Office                   | Generated each time a document label is updated with a less sensitive label.|
-| Microsoft Defender ATP            | Windows                        | OS                       | Generated each time a document label is updated with a less sensitive label. |
 | Microsoft Information Protection (MIP) SDK          | Any                            | Third-party applications | Generated each time a document label is updated with a less sensitive label.<br>Generated only if supported by the third-party application. |
 | | | | |
 
@@ -121,7 +120,6 @@ Microsoft Azure Information Protection generates audit logs at the following act
 | Reported by                                                                      | Platform                       | Application              | Action / Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection:<br />- Classic scanner and client<br />- Unified labeling scanner and client | Windows, SharePoint, One Drive | Office                   | Generated each time new label is applied.                                                                  |
-| Microsoft Defender ATP                                                                            | Windows                        | OS                       | Generated each time a new document label is applied.                                                                  |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Third-party applications | Generated each time a new document label is applied.<br>Generated only when supported by the third-party application. |
 | | | | |
 
@@ -142,7 +140,6 @@ Microsoft Azure Information Protection generates audit logs at the following act
 | Reported by                                                                      | Platform                       | Application              | Action / Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection:<br />- Classic scanner and client<br />- Unified labeling scanner and  client | Windows, SharePoint, One Drive | Office                   | Generated each time a label is removed.                                                                  |
-| Microsoft Defender ATP                                                                            | Windows                        | OS                       | Generated each time a label is removed.                                                                  |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Third-party applications | Generated each time a label is removed.<br>Generated only when supported by the third-party application. |
 | | | | |
 
@@ -163,7 +160,6 @@ Microsoft Azure Information Protection generates audit logs at the following act
 | Reported by                                                                      | Platform                       | Application              | Action / Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection:<br />- Classic scanner and client<br />- Unified labeling scanner and client | Windows, SharePoint, One Drive | Office                   | Generated each time a document label is updated with a more sensitive label.                                                                   |
-| Microsoft Defender ATP                                                                            | Windows                        | OS                       | Generated each time a document label is updated with a more sensitive label.                                                                   |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Third-party applications | Generated each time a document label is updated with a more sensitive label.<br>Generated only when supported by the third-party application. |
 | | | | |
 

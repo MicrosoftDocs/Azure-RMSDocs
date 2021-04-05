@@ -269,8 +269,6 @@ To confirm whether the clients and services you use support unified labeling, re
     
     For more information, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/microsoft-365/compliance/sensitivity-labels-teams-groups-sites).
 
-- **Microsoft Defender Advanced Threat Protection**
-
 - **Microsoft Cloud App Security**
     
     This service supports labels both before the migration to the unified labeling store, and after the migration, using the following logic:
