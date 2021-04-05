@@ -156,7 +156,7 @@ This version includes the following new features, fixes, and enhancements for th
 
 - **New features for the client**:
 
-    - [Track document access and revoke access](#track-document-access-and-revoke-access-public-preview) (Public preview)
+    - [Track document access and revoke access](#track-document-access-and-revoke-access) (Public preview)
     - [Added support for additional sensitive information types](#added-support-for-additional-sensitive-information-types)
 
 - **Fixes and improvements**:
@@ -213,7 +213,7 @@ We’ve added support for additional sensitive information types in Azure Inform
 
 For more information, see the [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in the Microsoft 365 documentation.
 
-### Track document access and revoke access (Public preview)
+### Track document access and revoke access
 
 After you've upgraded to version 2.9.111.0, any protected Office documents that are not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed. Protected documents are supported for track and revoke, even if they are not labeled.
 
