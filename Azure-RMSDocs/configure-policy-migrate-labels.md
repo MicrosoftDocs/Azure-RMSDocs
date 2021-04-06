@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to unified sensitivity 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 04/06/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -260,6 +260,8 @@ To confirm whether the clients and services you use support unified labeling, re
 ##### Services that currently support unified labeling include:
 
 - **[Power BI](/power-bi/admin/service-security-data-protection-overview)**
+
+- **[Endpoint data loss prevention (DLP)](/microsoft-365/compliance/endpoint-dlp-getting-started)**
 
 - **Office Online and Outlook on the web**
 

@@ -5,7 +5,7 @@ title: Analytics and central reporting for Azure Information Protection (AIP)
 description: Learn how to use Azure Information Protection (AIP) analytics and central reporting to track label usage and to identify files that contain sensitive information.
 author: batamig
 ms.author: bagol
-ms.date: 04/05/2021
+ms.date: 04/06/2021
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
