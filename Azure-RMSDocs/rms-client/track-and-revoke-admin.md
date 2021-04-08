@@ -31,6 +31,8 @@ ms.custom: user
 >
 >***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
+Document tracking provides information for administrators about when a protected document was accessed. If necessary, both admins and users can revoke document access for tracked documents. Protected documents are supported for track and revoke, even if they are not labeled.
+
 If you've upgraded to [version 2.9.111.0](unifiedlabelingclient-version-release-history.md#version-291110) or later, any protected Office documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client. Protected documents are supported for track and revoke, even if they are not labeled.
 
 Registering a document for tracking enables [Microsoft 365 global admins](/microsoft-365/admin/add-users/about-admin-roles#commonly-used-microsoft-365-admin-center-roles) to track access details, including successful access events and denied attempts, as well as revoke access if needed.

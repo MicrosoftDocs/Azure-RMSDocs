@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 04/05/2021
+ms.date: 04/08/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -125,13 +125,15 @@ For more information, including licensing requirements, see:
 
 
 
-## Version 2.9.116 
+## Version 2.9.116.0
 
-Unified labeling scanner and client version 2.9.116 
+Unified labeling scanner and client version 2.9.116.0
 
 **Released** 02/08/2021
 
-**Fixed issues** Users are now able to view protected files as expected in the following scenarios:
+**Fixed issues** 
+
+Users are now able to view protected files as expected in the following scenarios:
 
 - When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue had occurred only with the [AIP Viewer app](clientv2-view-use-files.md).
 
@@ -163,12 +165,6 @@ This version includes the following new features, fixes, and enhancements for th
 
     - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client)
-
-- **Known issue**: An issue was identified in the latest GA version (2.9.111) where some users were not able to view protected files in the following scenarios:
-
-    - When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue occurs only with the [AIP Viewer app](clientv2-view-use-files.md).
-
-	- When content with a scoped label is shared with users or groups not included in the label's scope. This issue occurs both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the [File Explorer](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
 
 ### PowerShell support for disconnected scanner servers
 
