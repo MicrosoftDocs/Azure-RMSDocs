@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 04/05/2021
+ms.date: 04/08/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -125,13 +125,15 @@ For more information, including licensing requirements, see:
 
 
 
-## Version 2.9.116 
+## Version 2.9.116.0
 
-Unified labeling scanner and client version 2.9.116 
+Unified labeling scanner and client version 2.9.116.0
 
 **Released** 02/08/2021
 
-**Fixed issues** Users are now able to view protected files as expected in the following scenarios:
+**Fixed issues** 
+
+Users are now able to view protected files as expected in the following scenarios:
 
 - When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue had occurred only with the [AIP Viewer app](clientv2-view-use-files.md).
 
@@ -156,19 +158,13 @@ This version includes the following new features, fixes, and enhancements for th
 
 - **New features for the client**:
 
-    - [Track document access and revoke access](#track-document-access-and-revoke-access-public-preview) (Public preview)
+    - [Track document access and revoke access](#track-document-access-and-revoke-access) (Public preview)
     - [Added support for additional sensitive information types](#added-support-for-additional-sensitive-information-types)
 
 - **Fixes and improvements**:
 
     - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client)
-
-- **Known issue**: An issue was identified in the latest GA version (2.9.111) where some users were not able to view protected files in the following scenarios:
-
-    - When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue occurs only with the [AIP Viewer app](clientv2-view-use-files.md).
-
-	- When content with a scoped label is shared with users or groups not included in the label's scope. This issue occurs both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the [File Explorer](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
 
 ### PowerShell support for disconnected scanner servers
 
@@ -213,7 +209,7 @@ We’ve added support for additional sensitive information types in Azure Inform
 
 For more information, see the [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in the Microsoft 365 documentation.
 
-### Track document access and revoke access (Public preview)
+### Track document access and revoke access
 
 After you've upgraded to version 2.9.111.0, any protected Office documents that are not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed. Protected documents are supported for track and revoke, even if they are not labeled.
 
@@ -225,7 +221,7 @@ For more information, see:
 
 - [Administrator Guide: Track and revoke document access with Azure Information Protection](track-and-revoke-admin.md)
 - [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
-- [Known issues for tracking and revoking document access](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)
+- [Known issues for tracking and revoking document access](../known-issues.md#known-issues-for-track-and-revoke-features)
 
 If you have privacy requirements in your organization or region that require you to turn off document tracking features, see the [track and revoke administrator procedures](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant).
 
