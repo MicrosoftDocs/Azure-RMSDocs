@@ -25,7 +25,7 @@ ms.custom: user
 
 ---
 
-# User Guide: Revoke document access with Azure Information Protection (Public preview)
+# User Guide: Revoke document access with Azure Information Protection
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
@@ -34,8 +34,6 @@ ms.custom: user
 This article describes how to revoke access for Office documents that you've protected from Microsoft Office. Protected documents are supported for track and revoke, even if they are not labeled.
 
 Revoking access for a protected document prevents other users from accessing the document, even if you've given them access before. For more information, see [User Guide: Classify and protect with the Azure Information Protection unified labeling client](clientv2-classify-protect.md).
-
-Track and revoke features for the unified labeling client are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 > [!NOTE]
 > Track and revoke features are supported for Office file types only.
@@ -89,4 +87,4 @@ For more information, see:
 
 - [AIP unified labeling client user guide](clientv2-user-guide.md)
 - [AIP unified labeling client administrator guide](clientv2-admin-guide.md)
-- [Known issues for track and revoke features](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)
+- [Known issues for track and revoke features](../known-issues.md#known-issues-for-track-and-revoke-features)

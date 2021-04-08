@@ -178,7 +178,7 @@ When opening the protected document after installing Adobe Acrobat DC with the M
 
 This is an expected error. In the prompt window, select **Back** to continue opening the protected document.
 
-## Known issues for track and revoke features (Public preview)
+## Known issues for track and revoke features
 
 Tracking and revoking document access using the unified labeling client has the following known issues:
 

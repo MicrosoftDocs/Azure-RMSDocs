@@ -130,9 +130,7 @@ Azure RMS auditing can provide the following information:
 
 - Whether other people, who were not specified, attempted, and failed to open the document. This might happen if the email was forwarded on, or saved to a shared location.
 
-> [!NOTE]
-> For classic client users only, the [document tracking site](./rms-client/client-track-revoke.md) lets users and administrators track, and if necessary, revoke access to protected documents.
-> 
+AIP administrators can [track document usage and revoke access](rms-client/track-and-revoke-admin.md) for Office files. Users can [revoke access](rms-client/revoke-access-user.md) for their protected documents as needed.
 
 #### Ability to scale across your organization
 
