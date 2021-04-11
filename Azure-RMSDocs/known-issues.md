@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 04/07/2021
+ms.date: 04/08/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -151,6 +151,13 @@ The following features are not supported when [co-authoring is enabled](/microso
 
 - Features listed in the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring#limitations) as co-authoring limitations.
 
+## Sharing external doc types across tenants
+
+When sharing external doc types, such as PDFs, across tenants, recipients receive a consent prompt that requires them to accept the sharing of the listed permissions. For example:
+
+:::image type="content" source="media/cross-tenant-consent.png" alt-text="Cross-tenant consent prompt.":::
+
+Depending on your application, you may see this prompt repeatedly for the same document. When the prompt appears, select **Accept** to continue to the shared document.
 ## Known issues in policies
 
 Publishing policies may take up to 24 hours.
