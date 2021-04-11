@@ -128,7 +128,7 @@ When a full scan is complete, the scan type automatically changes to incremental
 > 
 ### Trigger a full rescan by modifying your settings (versions 2.7.101.0 and lower)
 
-In scanner versions [2.7.101.0](rms-client/unifiedlabelingclient-version-release-history.md#version-271010) and lower, all files are scanned whenever the scanner detects new or changed settings for automatic and recommended labeling. The scanner automatically refreshes the policy every four hours.
+In scanner versions 2.7.101.0 and lower, all files are scanned whenever the scanner detects new or changed settings for automatic and recommended labeling. The scanner automatically refreshes the policy every four hours.
 
 To refresh the policy sooner, such as while testing, manually delete the contents of the **%LocalAppData%\Microsoft\MSIP\mip\<processname>\mip** directory and restart the Azure Information Protection service.
 
