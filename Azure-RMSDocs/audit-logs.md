@@ -104,7 +104,7 @@ Microsoft Azure Information Protection generates audit logs at the following act
 ## File removed audit logs
 
 > [!NOTE]
-> File removed audit logs are supported only in Azure Information Protection scanner version [2.7.96.0](rms-client/unifiedlabelingclient-version-release-history.md#version-27960) and later.
+> File removed audit logs are supported only in Azure Information Protection scanner [version 2.7.96.0](rms-client/unifiedlabelingclient-version-release-history.md#general-availability-versions-that-are-no-longer-supported) and later.
 
 **File removed** audit logs are generated for the following activities:
 

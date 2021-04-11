@@ -6,7 +6,7 @@ description: Instructions for troubleshooting your unified labeling on-premises 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/01/2021
+ms.date: 03/10/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -50,7 +50,8 @@ The diagnostics tool checks the following details and then exports a log file wi
 - Whether the rules configured are valid
 
 > [!TIP]
-> If you are running the command under a user that is not the scanner user, be sure to add the **-OnBehalf** parameter. 
+> - If you are running the command under a user that is not the scanner user, be sure to add the **-OnBehalf** parameter. 
+> - To print the last 10 errors from the scanner log, add the **Verbose** parameter. If you want to print more errors, use the **VerboseErrorCount** to define the number of errors you want to print.
 >
 
 > [!NOTE]
@@ -70,6 +71,113 @@ If the scanner stops in the middle unexpectedly and doesn't complete scanning a 
     For more information, see [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 
 
+
+## Verify scanning details per scanner node and repository (Public preview)
+
+Use the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) together with variables to get details about the scanning status on each node in your scanner cluster.
+
+Use one or more of the following methods:
+
+- [Use the NodesInfo variable to get details about the scanning status on each node](#use-the-nodesinfo-variable-to-get-details-about-the-scanning-status-on-each-node)
+- [Use the Verbose parameter to get data for current scan](#use-the-verbose-parameter-to-get-data-for-current-scan)
+### Use the NodesInfo variable to get details about the scanning status on each node
+
+For example, run the following command:
+
+```powershell
+PS C:\> Get-AIPScannerStatus
+
+Cluster        : contoso-test
+ClusterStatus  : Scanning
+StartTime      : 12/22/2020 9:05:02 AM
+TimeFromStart  : 00:00:00:37
+NodesInfo      : {t-contoso1-T298-corp.contoso.com,t-contoso2-T298-corp.contoso.com}
+```
+
+The output displays details about the current scan status, as well as a list of nodes in the cluster.
+
+Use the **NodesInfo** variable to display further details about each node in the cluster:
+
+```powershell
+PS C:\WINDOWS\system32> $x=Get-AIPScannerStatus
+PS C:\WINDOWS\system32> $x.NodesInfo
+```
+
+The output displays details for each node in a table. For example:
+
+```powershell
+NodeName                            Status    IsScanning    Summary
+--------                            --------  ----------    -------
+t-contoso1-T298-corp.contoso.com    Scanning        True    Microsoft.InformationProtection.Scanner.ScanSummaryData
+t-contoso2-T298-corp.contoso.com    Scanning     Pending    Microsoft.InformationProtection.Scanner.ScanSummaryData
+```
+
+To drill down further into each node, use the **NodesInfo** variable again, with the node integer starting with **0**. For example:
+
+```powershell
+PS C:\Windows\system32> $x.NodesInfo[0].Summary
+```
+
+The output displays a long list of details about the scan on the selected node. For example:
+
+```powershell
+ScannerID               : t-contoso1-T298-corp.contoso.com
+ScannedFiles            : 2280
+FailedFiles             : 0
+ScannedBytes            : 78478187
+Classified              : 0
+Labeled                 : 0
+....
+
+```
+
+### Use the Verbose parameter to get data for current scan
+
+
+```
+PS C:\> Get-AIPScannerStatus -Verbose
+
+ScannedFiles    MBScanned    CurrentScanSummary                                         RepositoriesStatus
+------------    ---------    ------------------                                         ------------------
+        2280    78478187     Microsoft.InformationProtection.Scanner.ScanSummaryData    {​​​​​​{​​​​​​ Path = C:\temp, Status = Scanning }​​​​​​
+```
+
+Drill down further to find more details for the repositories by using the **RepositoriesStatus** or the **CurrentScanSummary** variables.
+
+Possible repository statuses include:
+
+- **Skipped**, if the repository was skipped
+- **Pending**, if the current scan has not yet started scanning the repository
+- **Scanning**, if the current scan is running on the repository
+- **Finished**, if the current scan has completed running on the repository
+
+**RepositoriesStatus**
+
+```powershell
+PS C:\Windows\system32> $x.Get-AIPScannerStatus -Verbose
+PS C:\Windows\system32> $x.RepositoriesStatus
+
+Path        Status
+----        ------
+C:\temp     Scanning
+```
+
+**CurrentScanSummary**
+
+```powershell
+PS C:\Windows\system32> $x.CurrentScanSummary
+
+
+ScannerID               : 
+ScannedFiles            : 2280
+FailedFiles             : 0
+ScannedBytes            : 78478187
+Classified              : 0
+Labeled                 : 0
+....
+```
+
+This output shows only a single repository. In cases of multiple repositories, each one will be listed separately.
 ## Scanner error reference
 
 Use the following sections to understand specific error messages generated by the scanner, and troubleshooting or solution actions to fix the issue:
@@ -79,7 +187,7 @@ Use the following sections to understand specific error messages generated by th
 |**Authentication errors**     |  - [Authentication token not accepted](#authentication-token-not-accepted) <br>  - [Authentication token missing](#authentication-token-missing)|
 |**Policy errors**     |  - [Policy missing](#policy-missing) <br>- [Policy doesn't include any automatic labeling condition](#policy-doesnt-include-any-automatic-labeling-condition)      |
 |**DB / Schema errors**     |  - [Database errors](#database-errors) <br> - [Mismatched or outdated schema](#mismatched-or-outdated-schema)  |
-|**Other errors**     |  - [Underlying connection was closed](#underlying-connection-was-closed) <br> - [Stuck scanner processes](#stuck-scanner-processes) <br>- [Unable to connect to remote server](#unable-to-connect-to-remote-server) <br>- [Error occurred while sending the request](#error-occurred-while-sending-the-request) <br>- [Missing content scan job or profile](#missing-content-scan-job-or-profile) <br>- [No repositories configured](#no-repositories-configured) <br>- [No cluster found](#no-cluster-found)   |
+|**Other errors**     |  - [Underlying connection was closed](#underlying-connection-was-closed) <br> - [Stuck scanner processes](#stuck-scanner-processes) <br>- [Unable to connect to remote server](#unable-to-connect-to-remote-server) <br>- [Error occurred while sending the request](#error-occurred-while-sending-the-request) <br>- [Missing content scan job or profile](#missing-content-scan-job-or-profile) <br>- [No repositories configured](#no-repositories-configured) <br>- [No cluster found](#no-cluster-found)  <br>- [Scanner diagnostics errors](#scanner-diagnostics-errors) |
 |     |         |
 
 
@@ -198,6 +306,17 @@ Run the [Update-AIPScanner](/powershell/module/azureinformationprotection/Update
 
 
 <!--Other errors-->
+
+### Scanner diagnostics errors
+
+If you get errors running the [Start-AIPDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) command, make sure that you're using the correct scanner account credentials in the **-OnBehalf** parameter.
+
+For example:
+
+```powershell
+$scanner_account_creds= Get-Credential
+Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds
+```
 
 ### Underlying connection was closed
 
