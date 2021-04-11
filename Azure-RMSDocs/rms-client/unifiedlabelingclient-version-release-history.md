@@ -129,11 +129,9 @@ If you have sensitivity labels that use these sensitive information types, we re
 
 The following fixes were delivered in version 2.11.57.0 of the Azure Information Protection unified labeling client and scanner:
 
-- Fixed issues where the [File Explorer](clientv2-classify-protect.md) would not show inactive labels on protected files.
-
 - Improvements in loading time for the [AIP add-in in Office apps](clientv2-user-guide.md).
 
-- Added support for removing a protected label when the [File API engine](/information-protection/develop/concept-profile-engine-file-engine-cpp) isn't loaded in Outlook.
+- Fixed issues in Outlook where protection wasn't removed when the label was removed.
 
 - The [PowerPointRemoveAllShapesByShapeName](clientv2-admin-guide-customizations.md#remove-all-shapes-of-a-specific-shape-name) advanced setting no longer requires that you also define the [ExternalContentMarkingToRemove](clientv2-admin-guide-customizations.md#how-to-configure-externalcontentmarkingtoremove) setting. Now you can define the **PowerPointRemoveAllShapesByShapeName** advanced setting on its own.
 
