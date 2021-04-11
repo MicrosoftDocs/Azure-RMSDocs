@@ -81,7 +81,7 @@ The Azure Information Protection unified labeling client supports protection at 
 |Type of protection|Native|Generic|
 |----------------------|----------|-----------|
 |**Description**|For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and other application file types that support a Rights Management service, native protection provides a strong level of protection that includes both encryption and enforcement of rights (permissions).|For other supported file types, generic protection provides a level of protection that includes both file encapsulation using the .pfile file type and authentication to verify if a user is authorized to open the file.|
-|**Protection**|Files protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for those users who receive the file through email or are given access to it through file or share permissions.<br /><br />- Additionally, usage rights and policy that were set by the content owner when the files were protected are enforced when the content is rendered in either the Azure Information Protection viewer (for protected text and image files) or the associated application (for all other supported file types).|File protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for people who are authorized to open the file and given access to it. If authorization fails, the file does not open.<br /><br />- Usage rights and policy set by the content owner are displayed to inform authorized users of the intended usage policy.<br /><br />- Audit logging of authorized users opening and accessing files occurs. However, usage rights are not enforced.|
+|**Protection**|File protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for those users who receive the file through email or are given access to it through file or share permissions.<br /><br />- Additionally, usage rights and policy that were set by the content owner when the files were protected are enforced when the content is rendered in either the Azure Information Protection viewer (for protected text and image files) or the associated application (for all other supported file types).|File protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for people who are authorized to open the file and given access to it. If authorization fails, the file does not open.<br /><br />- Usage rights and policy set by the content owner are displayed to inform authorized users of the intended usage policy.<br /><br />- Audit logging of authorized users opening and accessing files occurs. However, usage rights are not enforced.|
 |**Default for file types**|Default level of protection for the following file types:<br /><br />- Text and image files<br /><br />- Microsoft Office (Word, Excel, PowerPoint) files<br /><br />- Portable document format (.pdf)<br /><br />For more information, see the following section, [Supported file types for classification and protection](#supported-file-types-for-classification-and-protection).|Default protection for all other file types (such as .vsdx, .rtf, and so on) that are not supported by native protection.|
 | | |
 
@@ -89,33 +89,8 @@ You cannot change the default protection level that the Azure Information Protec
 
 The protection can be applied automatically when a user selects a sensitivity label that an administrator has configured, or users can specify their own custom protection settings by using [permission levels](../configure-usage-rights.md#rights-included-in-permissions-levels).
 
-### File sizes supported for protection
 
-There are maximum file sizes that the Azure Information Protection unified labeling client supports for protection.
-
-**For Office files**:
-
-|                                                     Office application                                                      |                                                Maximum file size supported                                                 |
-|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-|             Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32-bit: 512 MB<br /><br />64-bit: 512 MB                                          |
-|           Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                       |
-| PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
-| | |
-
-> [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
->
-
-**For all other files**:
-
-- **To protect other file types**, and to open these file types in the Azure Information Protection viewer: The maximum file size is limited only by available disk space and memory.
-
-- **To unprotect files** by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: The maximum file size supported for .pst files is 5 GB. Other file types are limited only by available disk space and memory
-
-> [!TIP]
-> To search or recover protected items in large .pst files, see the [Guidance for using Unprotect-RMSFile for eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
-> 
-### Supported file types for classification and protection
+## Supported file types for classification and protection
 
 The following table lists a subset of file types that support native protection by the Azure Information Protection unified labeling client, and that can also be classified.
 
@@ -236,7 +211,7 @@ By default, the scanner also excludes the same file types as the Azure Informati
 For the scanner, the following file types are also excluded: .msg, .rtf, and .rar
 
 To change the file types included or excluded for file inspection by the scanner, configure the **File types to scan** in the [content scan job](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
-    
+
 > [!NOTE]
 > If you include .rtf files for scanning, we recommend that you carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted.
 
@@ -288,6 +263,37 @@ After inspecting the file, the unified labeling client from your PowerShell sess
 The [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you install the Windows TIFF IFilter feature, and then configure [Windows TIFF IFilter Settings](/previous-versions/windows/it-pro/windows-7/dd744701(v=ws.10)) on the computer running the PowerShell session.
 
 For the scanner: After finding sensitive information, if the .tiff file should be classified and protected with a label, specify this file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) from the scanner deployment instructions.
+
+## Supported file sizes
+
+### Supported file sizes for the Office add-in
+
+The following table lists maximum sizes supported for protection using Office with the AIP add-in:
+
+|                                                     Office application                                                      |                                                Maximum file size supported                                                 |
+|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+|             **Word 2010<br /><br />Word 2013<br /><br />Word 2016**             |                                          32-bit: 512 MB<br /><br />64-bit: 512 MB                                          |
+|           **Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016**           |                      32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                       |
+| **PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016** | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
+| | |
+
+> [!IMPORTANT]
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+>
+
+### Supported file sizes for non-Office files
+
+When protecting non-Office files, and opening them using the [AIP Viewer](clientv2-view-use-files.md), the maximum file size is limited only by available disk size and RAM, the lower of the two.
+
+### Supported file sizes for the File Explorer and PowerShell
+
+The following table lists the maximum sizes support for encryption and decryption using the File Explorer and PowerShell:
+
+| Action |File Explorer  |PowerShell  |
+|---------|---------|---------|
+|**Encryption**     |  2 GB       |   2 GB      |
+|**Decryption**     |   Up to the available disk size, RAM, or architecture limits (lowest of the three).     | Up to the available disk size or RAM, the lower of the two.        |
+|     |         |         |
 
 ## Next steps
 

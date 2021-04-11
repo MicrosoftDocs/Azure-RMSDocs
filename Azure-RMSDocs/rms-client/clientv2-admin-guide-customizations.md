@@ -662,12 +662,6 @@ For example:
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesByShapeName="Arrow: Right"}
 ```
 
-> [!NOTE]
-> To define the **PowerPointRemoveAllShapesByShapeName** setting, you must currently also define the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) setting, even if you do not need the functionality provided by **ExternalContentMarkingToRemove**.
->
-> We recommend that if you want to define **PowerPointRemoveAllShapesByShapeName**, define both [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) and [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers) to avoid removing more shapes than you intend.
->
-
 For more information, see:
 
 - [Find the name of the shape that you're using as a header or footer](#find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer)

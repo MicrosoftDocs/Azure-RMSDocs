@@ -161,11 +161,6 @@ Depending on your application, you may see this prompt repeatedly for the same d
 ## Known issues in policies
 
 Publishing policies may take up to 24 hours.
-
-## Maximum file sizes
-
-Files of over 2 GB are supported for protection, but not decryption.
-
 ## Known issues for the AIP viewer
 
 - [Landscape views](#landscape-views-in-the-aip-viewer)
@@ -265,8 +260,9 @@ For more information, see the [Conditional Access documentation](/azure/active-d
 
 ## More information
 
-The following additional articles may be helpful in answering questions about known issues in Azure Information Protection:
+The following additional articles may be helpful in answering questions you have about Azure Information Protection:
 
+- [File types supported by the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-file-types.md)
 - [Frequently asked questions for Azure Information Protection](faqs.md)
 - [Frequently asked questions about data protection in Azure Information Protection](faqs-rms.md)
 - [Frequently asked questions about classification and labeling in Azure Information Protection](faqs-infoprotect.md)
