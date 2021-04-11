@@ -208,7 +208,7 @@ The following sections list the advanced settings described on this page by prod
 |**Performance improvements settings**     | - [Limit CPU consumption](#limit-cpu-consumption) <br>- [Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner) <br>- [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)        |
 |**Settings for integrations with other labeling solutions**     | - [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions) <br> - [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)    |
 |**AIP analytics settings**     |   - [Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) <br>- [Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)      |
-|**General settings**     | - [Add "Report an Issue" for users](#add-report-an-issue-for-users) <br>- [Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Change the local logging level](#change-the-local-logging-level) <br>- [Change which file types to protect](#change-which-file-types-to-protect)<br>- [Configure the autolabeling timeout on Office files](#configure-the-autolabeling-timeout-on-office-files) <br>- [Configure SharePoint timeouts](#configure-sharepoint-timeouts)<br>- [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps) <br>- [Enable removal of protection from compressed files](#enable-removal-of-protection-from-compressed-files) <br>-  [Preserve NTFS owners during labeling (public preview)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  [Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Specify a color for the label](#specify-a-color-for-the-label)<br>-  [Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label)<br>-  [Support for changing \<EXT>.PFILE to P\<EXT>](#additionalpprefixextensions)  <br>-  [Support for disconnected computers](#support-for-disconnected-computers)     <br>-  [Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Turn off document tracking features (public preview)](#turn-off-document-tracking-features-public-preview)  <br>- [Turn off the Revoke option for end-users in Office apps](#turn-off-the-revoke-option-for-end-users-in-office-apps-public-preview) |
+|**General settings**     | - [Add "Report an Issue" for users](#add-report-an-issue-for-users) <br>- [Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Change the local logging level](#change-the-local-logging-level) <br>- [Change which file types to protect](#change-which-file-types-to-protect)<br>- [Configure the autolabeling timeout on Office files](#configure-the-autolabeling-timeout-on-office-files) <br>- [Configure SharePoint timeouts](#configure-sharepoint-timeouts)<br>- [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps) <br>- [Enable removal of protection from compressed files](#enable-removal-of-protection-from-compressed-files) <br>-  [Preserve NTFS owners during labeling (public preview)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  [Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Specify a color for the label](#specify-a-color-for-the-label)<br>-  [Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label)<br>-  [Support for changing \<EXT>.PFILE to P\<EXT>](#additionalpprefixextensions)  <br>-  [Support for disconnected computers](#support-for-disconnected-computers)     <br>-  [Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Turn off document tracking features](#turn-off-document-tracking-features)  <br>- [Turn off the Revoke option for end-users in Office apps](#turn-off-the-revoke-option-for-end-users-in-office-apps) |
 |     |         |
 
 ### Label policy advanced setting reference
@@ -228,8 +228,8 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |**EnableLabelByMailHeader**|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |**EnableLabelBySharePointProperties**|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
 | **EnableOutlookDistributionListExpansion** | [Expand Outlook distribution lists when searching for email recipients](#expand-outlook-distribution-lists-when-searching-for-email-recipients) |
-|**EnableRevokeGuiSupport**| [Turn off the Revoke option for end-users in Office apps (public preview)](#turn-off-the-revoke-option-for-end-users-in-office-apps-public-preview)|
-| **EnableTrackAndRevoke** | [Turn off document tracking features (public preview)](#turn-off-document-tracking-features-public-preview) |
+|**EnableRevokeGuiSupport**| [Turn off the Revoke option for end-users in Office apps](#turn-off-the-revoke-option-for-end-users-in-office-apps)|
+| **EnableTrackAndRevoke** | [Turn off document tracking features](#turn-off-document-tracking-features) |
 |**HideBarByDefault**|[Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps)|
 |**JustificationTextForUserText** | [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels) |
 |**LogMatchedContent**|[Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
@@ -661,12 +661,6 @@ For example:
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesByShapeName="Arrow: Right"}
 ```
-
-> [!NOTE]
-> To define the **PowerPointRemoveAllShapesByShapeName** setting, you must currently also define the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) setting, even if you do not need the functionality provided by **ExternalContentMarkingToRemove**.
->
-> We recommend that if you want to define **PowerPointRemoveAllShapesByShapeName**, define both [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) and [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers) to avoid removing more shapes than you intend.
->
 
 For more information, see:
 
@@ -2047,7 +2041,7 @@ For example, if your policy is named **Global**, the following sample PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPaneEnabled="true"}
 ```
 
-## Turn off document tracking features (public preview)
+## Turn off document tracking features
 
 By default, document tracking features are turned on for your tenant. To turn them off, such as for privacy requirements in your organization or region, set the **EnableTrackAndRevoke** value to **False**.
 
@@ -2078,7 +2072,7 @@ This configuration uses a policy [advanced setting](#configuring-advanced-settin
 > To turn track and revoke back on, set the **EnableTrackAndRevoke** to **True**, and also run the [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) cmdlet.
 >
 
-## Turn off the Revoke option for end-users in Office apps (Public preview)
+## Turn off the Revoke option for end-users in Office apps
 
 If you do not want end-users to have the ability to revoke access to protected documents from their Office apps, you can remove the **Revoke Access** option from your Office apps.
 

@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to unified sensitivity 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 04/06/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -261,6 +261,8 @@ To confirm whether the clients and services you use support unified labeling, re
 
 - **[Power BI](/power-bi/admin/service-security-data-protection-overview)**
 
+- **[Endpoint data loss prevention (DLP)](/microsoft-365/compliance/endpoint-dlp-getting-started)**
+
 - **Office Online and Outlook on the web**
 
     For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
@@ -268,8 +270,6 @@ To confirm whether the clients and services you use support unified labeling, re
 - **Microsoft SharePoint, OneDrive for work or school, OneDrive for home, Teams, and Microsoft 365 groups**
     
     For more information, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/microsoft-365/compliance/sensitivity-labels-teams-groups-sites).
-
-- **Microsoft Defender Advanced Threat Protection**
 
 - **Microsoft Cloud App Security**
     

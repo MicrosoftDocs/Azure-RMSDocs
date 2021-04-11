@@ -207,7 +207,7 @@ Supported by File Explorer and PowerShell. In Office apps, users can select **Fi
 For File Explorer and PowerShell commands, the user must be connected to the internet to protect files.
 
 <a name="5"></a><sup>5</sup>
-For more information, see: **Unified labeling client**: [Admin guide (Public preview)](track-and-revoke-admin.md) |  [User guide (Public preview)](revoke-access-user.md). Tracking is supported for Global admins only. **Classic client**: [Admin guide](client-admin-guide-document-tracking.md) | [User guide](client-track-revoke.md). Administrators can also use [central reporting](../reports-aip.md) to identify whether protected documents are accessed from Windows computers, and whether access was granted or denied.
+For more information, see: **Unified labeling client**: [Admin guide](track-and-revoke-admin.md) |  [User guide](revoke-access-user.md). Tracking is supported for Global admins only. **Classic client**: [Admin guide](client-admin-guide-document-tracking.md) | [User guide](client-track-revoke.md). Administrators can also use [central reporting](../reports-aip.md) to identify whether protected documents are accessed from Windows computers, and whether access was granted or denied.
 
 <a name="6"></a><sup>6</sup>
 Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).

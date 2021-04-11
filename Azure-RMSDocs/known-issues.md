@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2021
+ms.date: 04/08/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -93,11 +93,13 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 
 ### Known issues for co-authoring (Public preview)
 
+Known issues for co-authoring are relevant only when the [dedicated AIP client version for co-authoring](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) is deployed in your environment and co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
+
+Known issues for co-authoring in AIP include:
+
 - [Use in testing environments only](#use-in-testing-environments-only)
 - [Supported versions for co-authoring and sensitivity labels](#supported-versions-for-co-authoring-and-sensitivity-labels)
 - [Policy updates](#policy-updates)
-- [AIP analytics and audit logs](#aip-analytics-and-audit-logs)
-- [Labels with user-defined permissions](#labels-with-user-defined-permissions)
 - [Unsupported features for co-authoring](#unsupported-features-for-co-authoring)
 
 > [!IMPORTANT]
@@ -127,21 +129,17 @@ If your labeling policy was updated while an Office application was opened with 
 
 If this occurs, close and reopen your Office application to be able to apply your labels.
 
-#### AIP analytics and audit logs
-
-When co-authoring is enabled, the Azure Information Protection client doesn't send any [audit logs](audit-logs.md).
-
-#### Labels with user-defined permissions
-
-In Microsoft Word, Excel, and PowerPoint, labels with user-defined permissions are still available and can be applied to documents, but are not supported for co-authoring features. 
-
-This means that applying a label with user-defined permissions will prevent you from working on the document with others at the same time.
-
 #### Unsupported features for co-authoring
 
-The following features are not supported when working with co-authoring and sensitivity labels:
+The following features are not supported when [co-authoring is enabled](/microsoft-365/compliance/sensitivity-labels-coauthoring) for files encrypted with sensitivity labels:
+
+- **AIP analytics and audit logs**.  When co-authoring is enabled, the Azure Information Protection client doesn't send any [audit logs](audit-logs.md).
 
 - **DKE templates and DKE user-defined properties**. For more information, see [Double Key Encryption (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).
+
+- **Labels with user-defined permissions**. In Microsoft Word, Excel, and PowerPoint, labels with user-defined permissions are still available and can be applied to documents, but are not supported for co-authoring features.
+
+    This means that applying a label with user-defined permissions will prevent you from working on the document with others at the same time.
 
 - **Removing external content marking in apps**. For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
 
@@ -151,14 +149,18 @@ The following features are not supported when working with co-authoring and sens
 
     - **labelByCustomProperties** and **EnableLabelBySharePointProperties**. For more information, see [Migrate labels from Secure Islands and other labeling solutions](rms-client/clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions).
 
+- Features listed in the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring#limitations) as co-authoring limitations.
+
+## Sharing external doc types across tenants
+
+When sharing external doc types, such as PDFs, across tenants, recipients receive a consent prompt that requires them to accept the sharing of the listed permissions. For example:
+
+:::image type="content" source="media/cross-tenant-consent.png" alt-text="Cross-tenant consent prompt.":::
+
+Depending on your application, you may see this prompt repeatedly for the same document. When the prompt appears, select **Accept** to continue to the shared document.
 ## Known issues in policies
 
 Publishing policies may take up to 24 hours.
-
-## Maximum file sizes
-
-Files of over 2 GB are supported for protection, but not decryption.
-
 ## Known issues for the AIP viewer
 
 - [Landscape views](#landscape-views-in-the-aip-viewer)
@@ -183,7 +185,7 @@ When opening the protected document after installing Adobe Acrobat DC with the M
 
 This is an expected error. In the prompt window, select **Back** to continue opening the protected document.
 
-## Known issues for track and revoke features (Public preview)
+## Known issues for track and revoke features
 
 Tracking and revoking document access using the unified labeling client has the following known issues:
 
@@ -219,6 +221,7 @@ Additionally, revoking access for one of the attachments also revokes access for
 If you have documents stored in OneDrive with a sensitivity label applied, and an administrator changes the label in the labeling policy to add protection, the newly applied protection is not automatically applied to the labeled document. 
 
 In such cases, re-label the document manually to apply the protection as needed.
+
 ## AIP and legacy Windows and Office versions
 
 - [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
@@ -257,8 +260,9 @@ For more information, see the [Conditional Access documentation](/azure/active-d
 
 ## More information
 
-The following additional articles may be helpful in answering questions about known issues in Azure Information Protection:
+The following additional articles may be helpful in answering questions you have about Azure Information Protection:
 
+- [File types supported by the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-file-types.md)
 - [Frequently asked questions for Azure Information Protection](faqs.md)
 - [Frequently asked questions about data protection in Azure Information Protection](faqs-rms.md)
 - [Frequently asked questions about classification and labeling in Azure Information Protection](faqs-infoprotect.md)
