@@ -43,7 +43,7 @@ Before deploying Azure Information Protection, ensure that your system meets the
 
 ## Subscription for Azure Information Protection
 
-You must have an [Azure Information Protection plan](https://azure.microsoft.com/pricing/details/information-protection/) for classification, labeling, and protection using the Azure Information Protection scanner or client. To verify that your subscription includes the Azure Information Protection features you want to use, check the feature list at [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection).
+You must have an **Azure Information Protection plan** for classification, labeling, and protection using the Azure Information Protection scanner or client. To verify that your subscription includes the Azure Information Protection features you want to use, check the feature list at [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection).
 
 If you have questions about subscriptions or licensing, do not post them on this page. Instead, see if they are answered in the [frequently asked questions](https://azure.microsoft.com/pricing/details/information-protection#faq) for licensing. If your question is not answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
 
