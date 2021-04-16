@@ -91,8 +91,6 @@ Use the following information to see what’s new or changed for a supported rel
 - Fixed a crash in the .NET wrapper related to `FileEngine` disposal. Native `PolicyEngine` object remained present for some period and would attempt a policy refresh, resulting in a crash. 
 - Fixed a bug where the SDK would ignore labels applied by older versions of AIP due to missing **SiteID** property.
 
-
-
 ## Version 1.8.97
 
 **Release date:** February 24, 2021
