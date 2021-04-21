@@ -1,6 +1,11 @@
 {
     "redirections": [
-		{
+	{
+            "source_path": "Azure-RMSDocs/security-baseline.md",
+            "redirect_url": "/security/benchmark/azure/baselines/information-protection-security-baseline",
+            "redirect_document_id": false
+        },
+	{
             "source_path": "Azure-RMSDocs/rms-client/mobile-app-get-started.md",
             "redirect_url": "/azure/information-protection/rms-client/mobile-app-faq#admins-testing-the-aip-mobile-apps",
             "redirect_document_id": false
