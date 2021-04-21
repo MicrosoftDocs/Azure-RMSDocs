@@ -1,6 +1,11 @@
 {
     "redirections": [
        {
+            "source_path": "Azure-RMSDocs/security-baseline.md",
+            "redirect_url": "/security/benchmark/azure/baselines/information-protection-security-baseline",
+            "redirect_document_id": false
+        },
+       {
             "source_path": "Azure-RMSDocs/develop/ad-rms-client.md",
             "redirect_url": "/previous-versions/azure/rms/ad-rms-client",
             "redirect_document_id": false
