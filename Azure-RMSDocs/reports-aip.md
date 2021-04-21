@@ -354,5 +354,5 @@ After reviewing the information in the reports, if you are using the Azure Infor
 
 AIP audit logs are also sent to the Microsoft 365 Activity Explorer, where they may be displayed with different names. For more information, see:
 
-- [Get started with activity explorer](/microsoft-365/compliance/data-classification-activity-explorer).
+- [Get started with activity explorer](/microsoft-365/compliance/data-classification-activity-explorer)
 - [Labeling activity reference](/microsoft-365/compliance/data-classification-activity-explorer-available-events), including mapping between names shown in the AIP activity logs and names shown in Activity Explorer
