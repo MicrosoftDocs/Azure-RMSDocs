@@ -5,7 +5,7 @@ title: Analytics and central reporting for Azure Information Protection (AIP)
 description: Learn how to use Azure Information Protection (AIP) analytics and central reporting to track label usage and to identify files that contain sensitive information.
 author: batamig
 ms.author: bagol
-ms.date: 04/06/2021
+ms.date: 04/20/2021
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -354,5 +354,5 @@ After reviewing the information in the reports, if you are using the Azure Infor
 
 AIP audit logs are also sent to the Microsoft 365 Activity Explorer, where they may be displayed with different names. For more information, see:
 
-- [Public Preview: AIP audit logs in Activity Explorer](https://www.yammer.com/askipteam/#/Threads/show?threadId=1085834054254592)
-- [Get started with activity explorer](/microsoft-365/compliance/data-classification-activity-explorer).
+- [Get started with activity explorer](/microsoft-365/compliance/data-classification-activity-explorer)
+- [Labeling activity reference](/microsoft-365/compliance/data-classification-activity-explorer-available-events), including mapping between names shown in the AIP activity logs and names shown in Activity Explorer
