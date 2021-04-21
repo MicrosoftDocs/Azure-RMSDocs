@@ -66,7 +66,10 @@
     tocHref: /azure/information-protection/develop/mip/
     topicHref: /azure/information-protection/develop/mip
 
-  - name: AIP security baseline
+  - name: Enterprise Mobility + Security
     tocHref: /security/benchmark/azure/baselines/
-    topicHref: /azure/information-protection/
-
+    topicHref: /enterprise-mobility-security
+    items:
+      - name: Azure Information Protection
+        tocHref: /security/benchmark/azure/baselines/information-protection-security-baseline
+        topicHref: /azure/information-protection
