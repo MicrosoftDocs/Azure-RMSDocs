@@ -42,7 +42,7 @@
   - name: Security
     items:
     - name: Security baseline
-      href: /security/benchmark/azure/baselines/information-protection-security-baseline?context=/azure/information-protection/context/context
+      href: /security/benchmark/azure/baselines/information-protection-security-baseline?toc=/azure/information-protection/toc.json&bc=/azure/information-protection/bread/toc.json
   - name: AIP classification and protection
     href: aip-classification-and-protection.md
   - name: Azure Rights Management
