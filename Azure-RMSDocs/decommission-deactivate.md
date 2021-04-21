@@ -3,8 +3,8 @@
 
 title: Decommission & deactivate Azure RMS
 description: Information and instructions if you decide you no longer want to use the cloud-based protection service from Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/03/2019
 ms.topic: conceptual
@@ -27,7 +27,12 @@ ms.custom: admin
 
 # Decommissioning and deactivating protection for Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
 
 You are always in control of whether your organization protects content by using the Azure Rights Management service from Azure Information Protection. If you decide you no longer want to use this information protection service, you have the assurance that you won’t be locked out of content that was previously protected.
 
@@ -44,10 +49,11 @@ When you have your Azure Information Protection tenant key and the TPD, you can 
 
 |If this applies to you …|… do this:|
 |----------------------------|--------------|
-|You want all users to continue using Rights Management, but use an on-premises solution rather than using Azure Information Protection    →|Redirect your clients to the on-premises deployment by using the **LicensingRedirection** registry key for Office 2016 or Office 2013. For instructions, see the [service discovery section](./rms-client/client-deployment-notes.md) in the RMS client deployment notes. For Office 2010, use the **LicenseServerRedirection** registry key for Office 2010, as described in [Office Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10)).|
+|You want all users to continue using Rights Management, but use an on-premises solution rather than using Azure Information Protection    →|Redirect your clients to the on-premises deployment by using the **LicensingRedirection** registry key for Office 2016 or Office 2013. For instructions, see the [service discovery section](./rms-client/client-deployment-notes.md) in the RMS client deployment notes. <br><br>For Office 2010, use the **LicenseServerRedirection** registry key for Office 2010, as described in [Office Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10)). <br><br>**Important**: Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).|
 |You want to stop using Rights Management technologies completely    →|Grant a designated administrator [super user rights](configure-super-users.md) and install the [Azure Information Protection client](./rms-client/client-admin-guide-install.md) for this user.<br /><br />This administrator can then use the PowerShell module from this client to bulk-decrypt files in folders that were protected by Azure Information Protection. Files revert to being unprotected and can therefore be read without a Rights Management technology such as Azure Information Protection or AD RMS. Because this PowerShell module can be used with both Azure Information Protection and AD RMS, you have the choice of decrypting files before or after you deactivate the protection service from Azure Information Protection, or a combination.|
-|You are not able to identify all the files that were protected by Azure Information Protection. Or, you want all users to be able to automatically read any protected files that were missed    →|Deploy a registry setting on all client computers by using the **LicensingRedirection** registry key for Office 2016 and Office 2013, as described in the [service discovery section](./rms-client/client-deployment-notes.md) in the RMS client deployment notes. For Office 2010, use the **LicenseServerRedirection** registry key, as described in [Office Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10)).<br /><br />Also deploy another registry setting to prevent users from protecting new files by setting **DisableCreation** to **1**, as described in [Office Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10)).|
+|You are not able to identify all the files that were protected by Azure Information Protection. Or, you want all users to be able to automatically read any protected files that were missed    →|Deploy a registry setting on all client computers by using the **LicensingRedirection** registry key for Office 2016 and Office 2013, as described in the [service discovery section](./rms-client/client-deployment-notes.md) in the RMS client deployment notes. <br><br>**For Office 2010**: <br>- Use the **LicenseServerRedirection** registry key, as described in [Office Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10)). <br>- Deploy another registry setting to prevent users from protecting new files by setting **DisableCreation** to **1**, as described in [Office Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10)). <br><br>**Important**: Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).|
 |You want a controlled, manual recovery service for any files that were missed    →|Grant designated users in a data recovery group [super user rights](configure-super-users.md) and install the [Azure Information Protection client](./rms-client/client-admin-guide-install.md) for these users so that they can unprotect files when this action is requested by standard users.<br /><br />On all computers, deploy the registry setting to prevent users from protecting new files by setting **DisableCreation** to **1**, as described in [Office Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10)).|
+| | |
 
 For more information about the procedures in this table, see the following resources:
 

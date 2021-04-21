@@ -1,11 +1,11 @@
 ---
 title: class ComputeEngine 
 description: Documents the computeengine::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class ComputeEngine 
@@ -13,17 +13,17 @@ ms.date: 09/21/2020
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  | _Not yet documented._
+public const std::vector\<std::shared_ptr\<Label\>\> ListSensitivityLabels(const std::vector\<std::string\>& contentFormats)  | _Not yet documented._
 public std::shared_ptr\<ContentLabel\> GetSensitivityLabel(ComputeEngineContext& context, const DocumentState& state)  | _Not yet documented._
 public std::vector\<std::shared_ptr\<Action\>\> ComputeActions(ComputeEngineContext& context, const DocumentState& documentState, const ApplicationActionState& actionState)  | _Not yet documented._
 public std::pair\<std::vector\<std::shared_ptr\<Action\>\>, bool\> ComputeActionsWithRemoteState(ComputeEngineContext& context, const DocumentState& localDocumentState, const DocumentState& remoteDocumentState, const ApplicationActionState& actionState)  |  Computes actions while choosing between remote and local state.
 public void NotifyCommittedActions(ComputeEngineContext& context, const DocumentState& documentState, const ApplicationActionState& actionState)  | _Not yet documented._
-public const std::shared_ptr\<Label\>& GetDefaultLabel() const  | _Not yet documented._
+public const std::shared_ptr\<Label\> GetDefaultLabel(const std::string& contentFormat) const  | _Not yet documented._
 public const std::string& GetMoreInfoUrl() const  | _Not yet documented._
 public const std::string& GetUpn() const  | _Not yet documented._
-public bool IsLabelingRequired() const  | _Not yet documented._
+public bool IsLabelingRequired(const std::string& contentFormat) const  | _Not yet documented._
 public const std::string& GetFileId() const  | _Not yet documented._
-public bool HasClassificationRules() const  | _Not yet documented._
+public bool HasClassificationRules(const std::vector\<std::string\>& contentFormats) const  | _Not yet documented._
 public bool IsEnhancedClassificationEnabled() const  | _Not yet documented._
 public std::shared_ptr\<Label\> GetLabelById(const std::string& id) const  | _Not yet documented._
 public const std::string& GetTenantId() const  | _Not yet documented._
@@ -37,15 +37,15 @@ public virtual ~ComputeEngine()  | _Not yet documented._
 ## Members
   
 ### ListSensitivityLabels function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetSensitivityLabel function
-Not yet documented.
+_Not documented yet._
 
   
 ### ComputeActions function
-Not yet documented.
+_Not documented yet._
 
   
 ### ComputeActionsWithRemoteState function
@@ -70,64 +70,64 @@ Parameters:
 **Returns**: Methods return a pair. first contains a list of the action the second is whether it should be applied on the local, if false actions should be applied on the remote document and that document state should be used.
   
 ### NotifyCommittedActions function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetDefaultLabel function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetMoreInfoUrl function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetUpn function
-Not yet documented.
+_Not documented yet._
 
   
 ### IsLabelingRequired function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetFileId function
-Not yet documented.
+_Not documented yet._
 
   
 ### HasClassificationRules function
-Not yet documented.
+_Not documented yet._
 
   
 ### IsEnhancedClassificationEnabled function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetLabelById function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetTenantId function
-Not yet documented.
+_Not documented yet._
 
   
 ### SetSensitivityTypesRulePackages function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetSensitivityTypesRulePackages function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetCustomSettings function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetOpcMetadataVersion function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetUserObjectId function
-Not yet documented.
+_Not documented yet._
 
   
 ### ~ComputeEngine function
-Not yet documented.
+_Not documented yet._

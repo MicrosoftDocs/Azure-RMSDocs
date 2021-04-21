@@ -3,10 +3,10 @@
 
 title: Install & configure the Rights Management connector - AIP
 description: Information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from Deploying the Azure Rights Management connector.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 07/28/2020
+ms.date: 11/11/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,12 @@ ms.custom: admin
 
 # Installing and configuring the Azure Rights Management connector
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, 2016, 2012 R2, and Windows Server 2012*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, 2016, 2012 R2, and Windows Server 2012*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
 
 Use the following information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
@@ -137,7 +142,7 @@ If you need to uninstall the RMS connector, run the wizard again and select the 
 
 If you experience any problems during the installation, check the installation log: **%LocalAppData%\Temp\Microsoft Rights Management connector_\<date and time>.log** 
 
-As an example, your install log might look similar to C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log
+As an example, your install log might look similar to **C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log**
 
 ## Authorizing servers to use the RMS connector
 When you have installed the RMS connector on at least two computers, you are ready to authorize the servers and services that you want to use the RMS connector. For example, servers running Exchange Server 2013 or SharePoint Server 2013.
@@ -178,7 +183,7 @@ More information about the different server roles:
         > [!TIP]
         > If these two accounts are different, consider creating a single group that contains both accounts to minimize the administrative overheads.
 
--   For file servers that use File Classification Infrastructure, the associated services run as the Local System account, so you must authorize the computer account for the file servers (for example, SERVERNAME$) or a group that contains those computer accounts.
+-   For file servers that use File Classification Infrastructure, the associated services run as the Local System account, so you must authorize the computer account for the file servers (for example, **SERVERNAME$**) or a group that contains those computer accounts.
 
 When you have finished adding servers to the list, click **Close**.
 
@@ -196,13 +201,13 @@ After the name is created in DNS and is configured for an IP address, configure 
 
 Use the following settings to configure the NLB cluster:
 
--   Ports: 80 (for HTTP) or 443 (for HTTPS)
+-   **Ports**: 80 (for HTTP) or 443 (for HTTPS)
 
     For more information about whether to use HTTP or HTTPS, see the next section.
 
--   Affinity: None
+-   **Affinity**: None
 
--   Distribution method: Equal
+-  **Distribution method**: Equal
 
 This name that you define for the load-balanced system (for the servers running the RMS connector service) is your organization’s RMS connector name that you use later, when you configure the on-premises servers to use Azure RMS.
 

@@ -108,5 +108,4 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
 
 To complete the authentication implementation, it's necessary to build the code behind the `AcquireToken()` function. The examples below discuss a few ways to acquire the token.
 
-- [Simple/PowerShell token acquisition example](concept-authentication-acquire-token-ps.md)
 - [Python token acquisition example](concept-authentication-acquire-token-py.md)

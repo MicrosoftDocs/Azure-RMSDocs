@@ -26,13 +26,13 @@ ms.custom: admin
 
 # Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>**Applies to*: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->*Instructions for: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant for**: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 As a system admin, you need to ensure that your organization's content remains secure, and is shared only with trusted users. One of the most common ways that users share content inappropriately is by email. Configure your policy to prevent oversharing via Outlook, such as limiting access to specific users only, or allowing users to share content only with trusted external users.
 
-**Time required:** You can complete this tutorial in 30 minutes.
+**Time required**: You can complete this tutorial in 30 minutes.
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
@@ -48,7 +48,7 @@ Make sure you have the following system requirements before starting this tutori
 |---------|---------|
 |**Machine requirements**     | Make sure that you: <br /><br />- Have a Windows computer, with the Azure Information Protection unified labeling client installed. For more information, see [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md). <br /><br />- Have PowerShell installed, and that you can run PowerShell as an administrator. <br /><br />- Can sign into Outlook. Be prepared to restart Outlook multiple times during this tutorial.     |
 |**Azure Information Protection subscription**     |   You'll need an Azure subscription that includes [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />If you don't have one of these subscriptions, create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
-|**Sensitivity labels and a testing policy**     |  A **General** sensitivity label configured in your policy. <br /><br />Configure sensitivity labels in your labeling admin center, including the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). <br /><br />We recommend using a testing policy for this tutorial so that you don't affect your live policy. <br />Make sure that you have the name of your policy handy, as well as the GUID for your **General** label.   |
+|**Sensitivity labels and a testing policy**     |  A **General** sensitivity label configured in your policy. <br /><br />Configure sensitivity labels in your labeling admin center, including the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/create-sensitivity-labels). <br /><br />We recommend using a testing policy for this tutorial so that you don't affect your live policy. <br />Make sure that you have the name of your policy handy, as well as the GUID for your **General** label.   |
 | | |
 
 Let's get started. 
@@ -230,7 +230,7 @@ This procedure describes how to customize the message that appears when a user t
 > In production, we recommend that you avoid complications by *either* using the **OutlookUnlabeledCollaborationAction** advanced property to define your rules, *or* defining complex rules with a json file as defined below, but not both.
 >
 
-**To define your rule using a json file:**
+**To define your rule using a json file**:
 
 1. Create a **.json** file, named **OutlookCollaborationRule_1.json**, with the following code:
 
@@ -317,15 +317,15 @@ In this tutorial, you learned how to customize AIP's behavior in Outlook to prev
 
 Now you can start the Windows Event Viewer to check the logs for the actions that occurred.
 
-**To check the Event Viewer for AIP logging events:**
+**To check the Event Viewer for AIP logging events**:
 
 On your client machine, open the Windows Event Viewer application, and navigate to **Applications and Services Logs** > **Azure Information Protection**.
 
 You'll see an information event logged for each test you performed, including details about both the message and user response:
 
-- **Warn messages:** Information ID 301
-- **Justify messages:** Information ID 302
-- **Block messages:** Information ID 303
+- **Warn messages**: Information ID 301
+- **Justify messages**: Information ID 302
+- **Block messages**: Information ID 303
 
 For example:
 
@@ -406,7 +406,7 @@ Once you're finished with this tutorial, you can keep the testing policy for fur
 
 If you want to delete your policy, do so in the admin center where it was created, either the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center.
 
-For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)
+For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)
 
 Once deleted, restart Outlook on the client machine so that it's no longer configured with the settings defined in this tutorial.
 
@@ -416,6 +416,6 @@ For quicker testing, this tutorial used an email message to a single recipient, 
 
 Apply the same methods with multiple recipients and labels, or to attachments, where labeling status is sometimes less obvious to users.
 
-For example, you may want to have a popup message appear on email messages labeled **Public,** but have a PowerPoint presentation attached that's labeled **General.**
+For example, you may want to have a popup message appear on email messages labeled **Public**, but have a PowerPoint presentation attached that's labeled **General**.
 
 For more information about advanced properties and Outlook customizations, see [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md).

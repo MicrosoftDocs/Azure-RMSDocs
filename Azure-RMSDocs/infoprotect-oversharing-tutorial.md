@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/17/2020
-ms.topic: tutorial
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -25,14 +25,13 @@ ms.custom: admin
 
 # Tutorial: Configure Azure Information Protection to control oversharing of information using Outlook
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Classic client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
 >
-> **To deploy the AIP classic client,** open a support ticket to get download access.
+> **To deploy the AIP classic client**, open a support ticket to get download access.
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
@@ -61,7 +60,7 @@ To complete this tutorial, you need:
 
 1. A computer running Windows (minimum of Windows 7 with Service Pack 1), and on this computer, you can sign in to Outlook. Be prepared to restart Outlook multiple times during this tutorial.
 
-1. The Azure Information Protection client (classic) installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
+1. The Azure Information Protection classic client installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
 
 > [!TIP]
 > For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
@@ -446,4 +445,4 @@ Restart Outlook so it's no longer configured for the settings we configured for 
 
 For quicker testing, this tutorial used an email message to a single recipient, and without attachments. But you can apply the same method with multiple recipients, multiple labels, and also apply the same logic to email attachments whose labeling status is often less obvious to users. For example, the email message itself is labeled Public but the PowerPoint presentation attached is labeled General. For more information about the configuration options, see the following section from the admin guide: [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
-The admin guide also contains information about other advanced client settings that you can use to customize the behavior of the client. For a full list, see [Available advanced client settings](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings).
+The admin guide also contains information about other advanced client settings that you can use to customize the behavior of the client. For a full list, see [Available advanced client settings](./rms-client/client-admin-guide-customizations.md#available-advanced-classic-client-settings).

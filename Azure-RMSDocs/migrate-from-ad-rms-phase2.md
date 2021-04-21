@@ -3,11 +3,11 @@
 
 title: Migrate AD RMS-Azure Information Protection - Phase 2
 description: Phase 2 of migrating from AD RMS to Azure Information Protection, covering steps 4 though 6 from Migrating from AD RMS to Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/02/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
@@ -27,7 +27,12 @@ ms.custom: admin
 
 # Migration phase 2 - server-side configuration for AD RMS
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
 
 Use the following information for Phase 2 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 4 though 6 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -93,6 +98,7 @@ Use the following table to identify which procedure to use for your migration.
 |Password protection in the AD RMS database|Customer-managed (BYOK)|See the **Software-protected key to HSM-protected key** migration procedure after this table.<br /><br />This requires the Azure Key Vault BYOK toolset and four sets of steps to first extract your software key and import it to an on-premises HSM, then transfer the key from your on-premises HSM to the Azure Information Protection HSMs, next transfer your Key Vault data to Azure Information Protection, and finally to transfer your configuration data to Azure Information Protection.|
 |HSM protection by using a hardware security module (HSM) from a supplier other than nCipher |Customer-managed (BYOK)|Contact the supplier for your HSM for instructions how to transfer your key from this HSM to a nCipher nShield hardware security module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key** migration procedure after this table.|
 |Password protected by using an external cryptographic provider|Customer-managed (BYOK)|Contact the supplier for your cryptographic provider for instructions how to transfer your key to a nCipher nShield hardware security module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key** migration procedure after this table.|
+| | |
 
 If you have an HSM-protected key that you cannot export, you can still migrate to Azure Information Protection by configuring your AD RMS cluster for a read-only mode. In this mode, previously protected content can still be opened but newly protected content uses a new tenant key that is managed by you (BYOK) or managed by Microsoft. For more information, see [An update is available for Office to support migrations from AD RMS to Azure RMS](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to).
 
@@ -113,13 +119,13 @@ Open a PowerShell session and run the following commands:
 
 1. Connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
 
-    ```ps
+    ```PowerShell
     Connect-AipService
     ```
 
 2. Activate the Azure Rights Management service:
 
-    ```ps
+    ```PowerShell
     Enable-AipService
     ```
 
@@ -169,9 +175,9 @@ For more information about this configuration, see [How to configure a label for
 
 This section contains the sample script to help you identify any AD RMS templates that have the ANYONE group defined, as described in the preceding section.
 
-**Disclaimer:** This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
+**Disclaimer**: This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
 
-```ps
+```PowerShell
 import-module adrmsadmin
 
 New-PSDrive -Name MyRmsAdmin -PsProvider AdRmsAdmin -Root https://localhost -Force

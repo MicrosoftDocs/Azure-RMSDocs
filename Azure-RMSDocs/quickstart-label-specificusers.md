@@ -5,14 +5,14 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/19/2020
-ms.topic: quickstart
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: aiplabels
@@ -25,18 +25,17 @@ ms.custom: admin
 
 # Quickstart: Create a new Azure Information Protection label for specific users
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE]
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
 
 In this quickstart, you'll create a new Azure Information Protection label that only specific users can see and apply to classify and protect their documents and emails.
 
 This configuration uses a scoped policy.
 
-**Time required:** You can finish this configuration in less than 10 minutes.
+**Time required**: You can finish this configuration in less than 10 minutes.
 
 ## Prerequisites
 
@@ -104,9 +103,9 @@ Your new label is now published just to the members of the group that you specif
 
 To test this label, you need a minimum of two computers because the Azure Information Protection client does not support multiple users on the same computer:
 
-- **On your first computer,** sign in as a member of the Sales Team group. Open Word and confirm that you can see the new label. If Word is already open, restart it to force a policy refresh.
+- **On your first computer**, sign in as a member of the Sales Team group. Open Word and confirm that you can see the new label. If Word is already open, restart it to force a policy refresh.
 
-- **On your second computer,** sign in as a user who *isn't* a member of the Sales Team group. Open Word and confirm that you can't see the new label. As before, if Word is already open, restart it.
+- **On your second computer**, sign in as a user who *isn't* a member of the Sales Team group. Open Word and confirm that you can't see the new label. As before, if Word is already open, restart it.
 
 ## Clean up resources
 

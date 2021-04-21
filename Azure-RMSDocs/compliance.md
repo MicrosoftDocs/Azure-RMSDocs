@@ -3,9 +3,9 @@
 
 title: Compliance & information for Azure Information Protection
 description: Supporting information for Azure Information Protection that includes legal, compliance, and SLAs.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: batamig
+ms.author: bagol
+manager: rkarlin
 ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -28,6 +28,12 @@ ms.custom: admin
 
 # Compliance and supporting information for Azure Information Protection
 
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
 Azure Information Protection supports other services and also relies on other services. If you’re looking for information that is related to Azure Information Protection but not about how to use the Azure Information Protection service, check the following resources:
 
 ## Suitability for different countries
@@ -40,10 +46,14 @@ However, some relevant information that can help your legal adviser make a deter
 
 - All encryption keys used by Azure Information Protection are protected with a customer-specific root key that uses RSA 2048 bits. RSA 1024 bits is also supported for backwards compatibility. [More information](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- Customer-specific root keys are either managed by Microsoft or provisioned by the customer in a nCipher HSM by using "[bring your own key](plan-implement-tenant-key.md)" (BYOK). Azure Information Protection also supports limited functionality with an on-premises key by using "[hold your own key](configure-adrms-restrictions.md)" (HYOK) for content that is affected by requirements that indicate that it should not be protected with a cloud-based key.
+- Customer-specific root keys are either managed by Microsoft or provisioned by the customer in a nCipher HSM by using "bring your own key" (BYOK). Azure Information Protection also supports features for on-premises protection, for content that cannot be protected with a cloud-based key. For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
 
 - The Azure Information Protection service is hosted in regional data centers across the globe. Azure Information Protection keys and policies always remain within the region in which is originally deployed.
- 
+
+    > [!NOTE]
+    > Azure Information Protection policies are relevant for the AIP classic client only.
+    >
+  
 - Azure Information Protection does not transmit document contents from clients to the Azure Information Protection service. Content encryption and decryption operations are performed in-place in the client device. Or, for service-based rendering, these operations are performed within the service that’s rendering the content. [More information](./how-does-it-work.md)
 
 ## Legal and privacy
@@ -54,7 +64,7 @@ However, some relevant information that can help your legal adviser make a deter
 
 ## Security, compliance, and auditing
 
-See the [Security, compliance, and regulatory requirements](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) section in the [What problems does Azure RMS solve?](./what-is-azure-rms.md#business-problems-solved-by-azure-rights-management) article, for information about specific certifications for the Azure Rights Management service. In addition:
+See the [Security, compliance, and regulatory requirements](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) section in the [What is Azure RMS?](./what-is-azure-rms.md) article, for information about specific certifications for the Azure Rights Management service. In addition:
 
 - For external certifications for Azure Information Protection: [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/)
 

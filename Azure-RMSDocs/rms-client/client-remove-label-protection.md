@@ -3,18 +3,19 @@
 
 title: Remove Azure Information Protection labels
 description: Instructions to remove classification labels and protection from files that have been labeled by Azure Information Protection or protected by Rights Management.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 1/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: v1client
@@ -27,9 +28,11 @@ ms.custom: user
 
 # User Guide: Remove labels and protection from files and emails that have been labeled by Azure Information Protection or protected by Rights Management
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client user guide](client-remove-label-protection.md).*
+
+[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
 
 When the [Azure Information Protection client is installed on your computer](install-client-app.md), you can remove classification labels and protection from files and emails.
 

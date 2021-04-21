@@ -11,10 +11,11 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 #ms.reviewer: demizets
@@ -27,17 +28,12 @@ ms.custom: admin
 
 # How to configure a label for Rights Management protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and [Restrict access to content by using encryption in sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels) from the Microsoft 365 documentation.*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
-
-> [!NOTE]
-> These instructions apply to the Azure Information Protection client (classic) and not the Azure Information Protection unified labeling client. Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
-> 
-> If you are looking for information to configure a sensitivity label to apply Rights Management protection, see the Microsoft 365 Compliance documentation. For example, [Restrict access to content by using encryption in sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels).
+[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
+>
 
 You can protect your most sensitive documents and emails by using a Rights Management service. This service uses encryption, identity, and authorization policies to help prevent data loss. The protection is applied with a label that is configured to use Rights Management protection for documents and emails, and users can also select the **Do not forward** button in Outlook.
 
@@ -285,7 +281,7 @@ If you specify external users who do not have an account in Azure AD:
 
 
 > [!NOTE]
-> Exchange Online is rolling out a new option, [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). This option is not available for label configuration. However, when you know who the recipients will be, you can use this example to configure a label with the same set of usage rights. 
+> Exchange Online is rolling out a new option, [encrypt-only](configure-usage-rights.md#encrypt-only-option-for-emails). This option is not available for label configuration. However, when you know who the recipients will be, you can use this example to configure a label with the same set of usage rights. 
 
 When your users specify the email addresses in the **To** box, the addresses must be for the same users that you specify for this label configuration. Because users can belong to groups and have more than one email address, the email address that they specify does not have to match the email address that you specify for the permissions. However, specifying the same email address is the easiest way to ensure that the recipient will be successfully authorized. For more information about how users are authorized for permissions, see [Preparing users and groups for Azure Information Protection](prepare.md). 
 
@@ -301,7 +297,7 @@ When your users specify the email addresses in the **To** box, the addresses mus
     
     Note: Do not select **Viewer** for emails and if you do select **Custom**, make sure that you include **Edit and Save**.
     
-    To select the same permissions that match the new **Encrypt-Only** option from Exchange Online, select **Custom**. Then select all permissions except **Save As, Export (EXPORT)** and **Full Control (OWNER)**.
+    To select the same permissions that match the **Encrypt** option from Exchange Online, which applies encryption without additional restrictions, select **Custom**. Then select all permissions except **Save As, Export (EXPORT)** and **Full Control (OWNER)**.
 
 5. To specify additional users who should have different permissions, repeat steps 3 and 4.
 
@@ -337,7 +333,7 @@ The label configuration is deceptively simple:
     
 2. Select **OK** without selecting any users, or configuring any settings on this pane.
     
-    Although you can configure settings for **File Content Expiration** and **Allow offline access**, when you do not specify users and their permisisons, these access settings are not applicable. That's because the person who applies the protection is the [Rights Management issuer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for the content, and this role is exempt from these access restrictions.
+    Although you can configure settings for **File Content Expiration** and **Allow offline access**, when you do not specify users and their permissions, these access settings are not applicable. That's because the person who applies the protection is the [Rights Management issuer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for the content, and this role is exempt from these access restrictions.
 
 3. On the **Label** pane, select **Save**.
 

@@ -3,18 +3,19 @@
 
 title: Configuring secure document collaboration with Azure Information Protection
 description: End-to-end workflow for collaborating on documents that are protected by Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 11/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: aiplabels
@@ -27,10 +28,12 @@ ms.custom: admin
 
 # Configuring secure document collaboration by using Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from the Microsoft 365 documentation.*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
+>
 
 When you use Azure Information Protection, you can protect your documents without sacrificing collaboration for authorized users. The majority of documents that one user creates and then shares with others to view and edit will be Office documents from Word, Excel, and PowerPoint. These documents support native protection, which means that in addition to the protection features of authorization and encryption, they also support restricted permission for more fine-grained control. 
 
@@ -143,19 +146,13 @@ In addition, the following scenarios support viewing documents:
 
 |Platforms for viewing and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|
 |---------------|----------|-----------|-----------|
-|Windows|Yes [[1]](#footnote-1)|Yes [[2]](#footnote-2)|
-|iOS|Yes [[1]](#footnote-1)|No|
-|Android|Yes [[1]](#footnote-1)|No|
-|MacOS|Yes [[1]](#footnote-1)|No|
+|Windows|Yes [[1]](#footnote-1)|Yes (Microsoft 365 apps and Microsoft Office 2019)|
+|iOS|Yes [[1]](#footnote-1)|Yes (version 2.42 and higher) |
+|Android|Yes [[1]](#footnote-1)|Yes (version 16.0.13029 and higher)|
+|MacOS|Yes [[1]](#footnote-1)|Yes (Microsoft 365 apps, version 16.42 and higher)|
 
 ###### Footnote 1
 Supports user accounts, email-enabled groups, all members. User accounts and email-enabled groups can include guest accounts. All members exclude guest accounts.
-
-###### Footnote 2
-Currently supported by Microsoft 365 apps (Click-to-Run) only.
-
-
-
 
 ## Next steps
 

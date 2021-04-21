@@ -3,11 +3,11 @@
 
 title: Migrate software-protected key to HSM-protected key  - AIP
 description: Instructions that are part of the migration path from AD RMS to Azure Information Protection, and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Information Protection with a HSM-protected tenant key in Azure Key Vault. 
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/18/2019
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
@@ -27,7 +27,11 @@ ms.custom: admin
 
 # Step 2: Software-protected key to HSM-protected key migration
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 
 These instructions are part of the [migration path from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md), and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Information Protection with a HSM-protected tenant key in Azure Key Vault. 
@@ -63,7 +67,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
 2. Azure Information Protection administrator or Azure Key Vault administrator: On the disconnected workstation, run the TpdUtil tool from the [Azure RMS migration toolkit](https://go.microsoft.com/fwlink/?LinkId=524619). For example, if the tool is installed on your E drive where you copy your configuration data file named ContosoTPD.xml:
 
-    ```ps
+    ```PowerShell
     E:\TpdUtil.exe /tpd:ContosoTPD.xml /otpd:ContosoTPD.xml /opem:ContosoTPD.pem
     ```
 
@@ -135,7 +139,7 @@ When the key uploads to Azure Key Vault, you see the properties of the key displ
 
 Then use the [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) cmdlet to authorize the Azure Rights Management service principal to access the key vault. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
 
-For example, if the key vault that you have created for Azure Information Protection is named contosorms-byok-kv, and your resource group is named contosorms-byok-rg, run the following command:
+For example, if the key vault that you have created for Azure Information Protection is named contosorms-byok-kv, and your resource group is named **contosorms-byok-rg**, run the following command:
 
 ```sh
 Set-AzKeyVaultAccessPolicy -VaultName "contosorms-byok-kv" -ResourceGroupName "contosorms-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
@@ -153,13 +157,13 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
 
     For example, using a configuration data file of C:\contoso_keyless.xml and our key URL value from the previous step, first run the following to store the password:
     
-    ```ps
+    ```PowerShell
 	$TPD_Password = Read-Host -AsSecureString
     ```
     
    Enter the password that you specified to export the configuration data file. Then, run the following command and confirm that you want to perform this action:
 
-    ```ps
+    ```PowerShell
     Import-AipServiceTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword $TPD_Password –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
 
@@ -169,7 +173,7 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
 
 4. Use the [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
 
-    ```ps
+    ```PowerShell
     Disconnect-AipServiceService
     ```
 

@@ -1,20 +1,21 @@
 ---
 # required metadata
 
-title: View protected files with the Azure Information Protection viewer
-description: Instructions to view and use a protected file that requires you to have the Azure Information Protection viewer installed.
-author: mlottner
-ms.author: mlottner
+title: View protected files with the Azure Information Protection classic client viewer
+description: Instructions to view and use a protected file that requires you to have the Azure Information Protection classic client viewer installed.
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 1/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: v1client
@@ -25,11 +26,13 @@ ms.custom: user
 
 ---
 
-# User Guide: View protected files with the Azure Information Protection viewer
+# User Guide: View protected files with the Azure Information Protection classic client viewer
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client user guide](clientv2-view-use-files.md).*
+
+[!INCLUDE [AIP classic client is deprecated - extended support customers](../includes/classic-client-deprecation-extended-support.md)]
 
 You can often view a protected file by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
 

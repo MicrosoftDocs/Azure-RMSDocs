@@ -1,11 +1,11 @@
 ---
 title: class PropertyData 
 description: Documents the propertydata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 01/13/2021
 ---
 
 # class PropertyData 
@@ -20,12 +20,12 @@ public virtual ~PropertyData()  | _Not yet documented._
 ## Members
   
 ### GetId function
-Not yet documented.
+_Not documented yet._
 
   
 ### GetName function
-Not yet documented.
+_Not documented yet._
 
   
 ### ~PropertyData function
-Not yet documented.
+_Not documented yet._

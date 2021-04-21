@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/01/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
@@ -26,7 +26,12 @@ ms.custom: admin
 
 # Installing the AIPService PowerShell module
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
 
 Use the following information to help you install the Windows PowerShell module for the protection service from Azure Information Protection. The name of this module is AIPService, and it replaces the previous version that was named AADRM.
 
@@ -49,7 +54,7 @@ The newer module has aliases to the cmdlet names in the older module so that any
 
 If you installed the AADRM module from the PowerShell Gallery, to uninstall it, start a PowerShell session with the **Run as Administrator** option, and type:
 
-```ps
+```PowerShell
 Uninstall-Module -Name AADRM
 ```
 
@@ -67,7 +72,7 @@ To see details about the AIPService module on the PowerShell Gallery, visit the 
 
 To install the AIPService module, start a PowerShell session with the **Run as Administrator** option, and type:
 
-```ps
+```PowerShell
 Install-Module -Name AIPService
 ```
 
@@ -75,7 +80,7 @@ If you are warned about installing from an untrusted repository, you can press Y
 
 If you have a previous version of the AIPService module installed from the Gallery, update it to the latest by typing:
 
-```ps
+```PowerShell
 Update-Module -Name AIPService
 ```
 
@@ -83,7 +88,7 @@ Update-Module -Name AIPService
 
 In a Windows PowerShell session, confirm the version of the installed module. This check is particularly important if you upgraded from an older version:
 
-```ps
+```PowerShell
 (Get-Module AIPService –ListAvailable).Version
 ```
 
@@ -93,13 +98,13 @@ In a Windows PowerShell session, confirm the version of the installed module. T
 
 To see which cmdlets are available, type the following:
 
-```ps
+```Powershell
 Get-Command -Module AIPService
 ```
 
 Use the `Get-Help <cmdlet_name>` command to see the Help for a specific cmdlet, and use the **-online** parameter to see the latest help on the Microsoft documentation site. For example:
 
-```powershell
+```PowerShell
 Get-Help Connect-AipService -online
 ```
 

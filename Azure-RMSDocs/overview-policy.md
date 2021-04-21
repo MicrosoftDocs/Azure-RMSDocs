@@ -3,17 +3,18 @@
 
 title: Overview of the Azure Information Protection policy
 description: Understand labels and settings in an Azure Information Protection policy that gets downloaded to the Azure Information Protection client. 
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/28/2019
+ms.date: 11/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: aiplabels
@@ -24,18 +25,16 @@ ms.custom: admin
 
 ---
 
-# Overview of the Azure Information Protection policy
+# Overview of the Azure Information Protection policies
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from the Microsoft 365 documentation.*
 
-> [!NOTE]
-> The Azure Information Protection policy applies to the Azure Information Protection client (classic) and not the Azure Information Protection unified labeling client. Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
-> 
-> If you are looking for information about sensitivity labels, see the Microsoft 365 Compliance documentation. For example, [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+>
 
-An Azure Information Protection policy contains the following elements that you can configure:
+An Azure Information Protection policy contains the following elements:
     
 - Which labels are included that let administrators and users classify (and optionally, protect) documents and emails.
 

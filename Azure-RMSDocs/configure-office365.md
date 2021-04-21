@@ -3,8 +3,8 @@
 
 title: Configuration for Microsoft 365 services to use Azure RMS - AIP
 description: Information and instructions for admins to configure Microsoft 365 services to work with the Azure Rights Management service from Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/23/2019
 ms.topic: conceptual
@@ -27,7 +27,12 @@ ms.custom: admin
 
 # Microsoft 365: Configuration for online services to use the Azure Rights Management service
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>****Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
 
 Use the following sections to help you configure Exchange Online, Microsoft SharePoint, and Microsoft OneDrive to use the Azure Rights Management service from Azure Information Protection.
 

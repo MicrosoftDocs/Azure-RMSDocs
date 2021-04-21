@@ -91,12 +91,12 @@
       href: concept-authentication-cpp.md
     - name: Implementing an authentication delegate (C++)
       href: concept-authentication-delegate-cpp.md
-    - name: Acquiring an access token (PowerShell)
-      href: concept-authentication-acquire-token-ps.md
     - name: Acquiring an access token (Python)
       href: concept-authentication-acquire-token-py.md     
   - name: Consent
     href: concept-consent-cpp.md 
+  - name: Delegation
+    href: concept-delegation.md
   - name: Handlers
     items:
     - name: File API handler (C++)
@@ -122,7 +122,9 @@
     - name: Labels   
       href: concept-classification-labels.md
     - name: Labels and Protection Behavior
-      href: concept-labeling-and-protection.md  
+      href: concept-labeling-and-protection.md
+    - name: User-defined Permissions
+      href: concept-user-defined-permissions.md  
   - name: Metadata
     href: concept-mip-metadata.md
   - name: Observers for async (C++)
@@ -139,8 +141,8 @@
     href: concept-mip-proxies.md
   - name: Service Discovery Overview
     href: concept-service-discovery.md
-  - name: SDK Telemetry
-    href: concept-mip-telemetry.md
+  - name: SDK Diagnostics
+    href: concept-mip-diagnostics.md
   - name: Supported File Types
     href: concept-supported-filetypes.md  
   - name: Use Cases
@@ -187,6 +189,10 @@
         href: reference/class_mip_argumentdata.md
       - name: AsyncControl
         href: reference/class_mip_asynccontrol.md
+      - name: AuditDelegate
+        href: reference/class_mip_auditdelegate.md
+      - name: AuditEvent
+        href: reference/class_mip_auditevent.md
       - name: AuthDelegate
         href: reference/class_mip_authdelegate.md
       - name: AuthDelegate::OAuth2Challenge
@@ -213,20 +219,32 @@
         href: reference/class_mip_consentdelegate.md
       - name: ConsentDeniedError
         href: reference/class_mip_consentdeniederror.md
+      - name: ContentFormatNotSupportedError
+        href: reference/class_mip_contentformatnotsupportederror.md
       - name: ContentLabel
         href: reference/class_mip_contentlabel.md
       - name: ContentMarkingActionData
         href: reference/class_mip_contentmarkingactiondata.md
       - name: CustomAction
         href: reference/class_mip_customaction.md
+      - name: DelegationLicense
+        href: reference/class_mip_delegationlicense.md
+      - name: DelegationLicenseSettings
+        href: reference/class_mip_delegationlicensesettings.md
       - name: DeprecatedApiError
         href: reference/class_mip_deprecatedapierror.md
       - name: DetailedClassificationResult
         href: reference/class_mip_detailedclassificationresult.md
+      - name: DiagnosticDelegate
+        href: reference/class_mip_diagnosticdelegate.md
       - name: DocumentState
         href: reference/class_mip_documentstate.md
       - name: Error
         href: reference/class_mip_error.md
+      - name: Event
+        href: reference/class_mip_event.md
+      - name: EventProperty
+        href: reference/class_mip_eventproperty.md
       - name: ExecutionState
         href: reference/class_mip_executionstate.md
       - name: FileEngine
@@ -403,6 +421,10 @@
         href: reference/class_mip_syncfilesensitivitydata.md
       - name: TaskDispatcherDelegate
         href: reference/class_mip_taskdispatcherdelegate.md
+      - name: TelemetryDelegate
+        href: reference/class_mip_telemetrydelegate.md
+      - name: TelemetryEvent
+        href: reference/class_mip_telemetryevent.md
       - name: TemplateDescriptor
         href: reference/class_mip_templatedescriptor.md
       - name: TemplateNotFoundError
