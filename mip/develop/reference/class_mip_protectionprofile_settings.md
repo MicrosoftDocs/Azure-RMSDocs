@@ -5,20 +5,20 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class ProtectionProfile::Settings 
-Settings used by ProtectionProfile during its creation and throughout its lifetime.
+[Settings](undefined) used by [ProtectionProfile](undefined) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<ConsentDelegate\>& consentDelegate, const std::shared_ptr\<ProtectionProfile::Observer\>& observer)  |  ProtectionProfile::Settings constructor that specifies an observer to be used for async operations.
-public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<ConsentDelegate\>& consentDelegate)  |  ProtectionProfile::Settings constructor, used for synchronous operations.
+public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<ConsentDelegate\>& consentDelegate, const std::shared_ptr\<ProtectionProfile::Observer\>& observer)  |  [ProtectionProfile::Settings](undefined) constructor that specifies an observer to be used for async operations.
+public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<ConsentDelegate\>& consentDelegate)  |  [ProtectionProfile::Settings](undefined) constructor, used for synchronous operations.
 public CacheStorageType GetCacheStorageType() const  |  Get whether caches are stored in memory or on disk.
 public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Gets the consent delegate used for connecting to services.
-public std::shared_ptr\<ProtectionProfile::Observer\> GetObserver() const  |  Gets the observer that receives notifications of events related to ProtectionProfile.
+public std::shared_ptr\<ProtectionProfile::Observer\> GetObserver() const  |  Gets the observer that receives notifications of events related to [ProtectionProfile](undefined).
 public std::shared_ptr\<MipContext\> GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Override default HTTP stack with client's own.
@@ -30,11 +30,13 @@ public void SetCanCacheLicenses(bool canCacheLicenses)  |  Configures whether or
 public bool CanCacheLicenses() const  |  Gets whether or not end user licenses (EULs) are cached locally.
 public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& customSettings)  |  Set the custom settings, used for feature gating and testing.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
+public void AddRedirectionUri(const std::string& originalUri, const std::string& redirectUri)  |  Adds a redirect uri.
+public const std::map\<std::string, std::string\>& GetRedirectionUris() const  |  Gets the redirection uris.
   
 ## Members
   
 ### Settings function
-ProtectionProfile::Settings constructor that specifies an observer to be used for async operations.
+[ProtectionProfile::Settings](undefined) constructor that specifies an observer to be used for async operations.
 
 Parameters:  
 * **mipContext**: Global context settings 
@@ -46,7 +48,7 @@ Parameters:
 * **consentDelegate**: Delegate used to obtain user permission to access external resources 
 
 
-* **observer**: Observer instance that will receive notifications of events related to ProtectionProfile
+* **observer**: [Observer](undefined) instance that will receive notifications of events related to [ProtectionProfile](undefined)
 
 
 * **applicationInfo**: Info about application that is consuming the protection SDK
@@ -54,7 +56,7 @@ Parameters:
 
   
 ### Settings function
-ProtectionProfile::Settings constructor, used for synchronous operations.
+[ProtectionProfile::Settings](undefined) constructor, used for synchronous operations.
 
 Parameters:  
 * **mipContext**: Global context settings 
@@ -83,10 +85,10 @@ Gets the consent delegate used for connecting to services.
 **Returns**: Consent delegate used for connecting to services
   
 ### GetObserver function
-Gets the observer that receives notifications of events related to ProtectionProfile.
+Gets the observer that receives notifications of events related to [ProtectionProfile](undefined).
 
   
-**Returns**: Observer that receives notifications of events related to ProtectionProfile
+**Returns**: [Observer](undefined) that receives notifications of events related to [ProtectionProfile](undefined)
   
 ### GetMipContext function
 Get MIP context which represents shared state across all profiles.
@@ -165,3 +167,21 @@ Get the custom settings, used for feature gating and testing.
 
   
 **Returns**: List of name/value pairs.
+  
+### AddRedirectionUri function
+Adds a redirect uri.
+
+Parameters:  
+* **originalUri**: The uri that should be redirected from 
+
+
+* **redirectUri**: The uri that will replace the originalUri
+
+
+Use this function to provide a domain that should be redirected to another Uri The originalUri will be normalized before comparison with the domain for the current request. If the domain of the current request matches that of the originalUri then the redirectUri will be used instead This redirection will occur before DNS lookup redirection
+  
+### GetRedirectionUris function
+Gets the redirection uris.
+
+  
+**Returns**: Map of redirection uris

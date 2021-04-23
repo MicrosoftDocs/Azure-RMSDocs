@@ -1,15 +1,15 @@
 ---
 title: class MipContext 
 description: Documents the mipcontext::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
 # class MipContext 
-MipContext represents state that is shared across all profiles, engines, handlers.
+[MipContext](undefined) represents state that is shared across all profiles, engines, handlers.
   
 ## Summary
  Members                        | Descriptions                                

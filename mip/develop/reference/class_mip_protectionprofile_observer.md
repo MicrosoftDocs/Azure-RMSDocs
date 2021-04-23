@@ -5,11 +5,11 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class ProtectionProfile::Observer 
-Interface that receives notifications related to ProtectionProfile.
+Interface that receives notifications related to [ProtectionProfile](undefined).
 This interface must be implemented by applications using the protection SDK
   
 ## Summary
@@ -30,25 +30,25 @@ public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const
 Called when profile was loaded successfully.
 
 Parameters:  
-* **profile**: A reference to the newly created ProtectionProfile
+* **profile**: A reference to the newly created [ProtectionProfile](undefined)
 
 
-* **context**: The same context that was passed to ProtectionProfile::LoadAsync
+* **context**: The same context that was passed to [ProtectionProfile::LoadAsync](undefined)
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to ProtectionProfile::Observer::OnLoadSuccess or ProtectionProfile::Observer::OnLoadFailure
+An application can pass any type of context (for example, std::promise, std::function) to [ProtectionProfile::LoadAsync](undefined) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](undefined) or [ProtectionProfile::Observer::OnLoadFailure](undefined)
   
 ### OnLoadFailure function
 Called when loading a profile caused an error.
 
 Parameters:  
-* **error**: Error that occurred while loading 
+* **error**: [Error](undefined) that occurred while loading 
 
 
-* **context**: The same context that was passed to ProtectionProfile::LoadAsync
+* **context**: The same context that was passed to [ProtectionProfile::LoadAsync](undefined)
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to ProtectionProfile::Observer::OnLoadSuccess or ProtectionProfile::Observer::OnLoadFailure
+An application can pass any type of context (for example, std::promise, std::function) to [ProtectionProfile::LoadAsync](undefined) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](undefined) or [ProtectionProfile::Observer::OnLoadFailure](undefined)
   
 ### OnListEnginesSuccess function
 Called when list of engines was generated successfully.
@@ -57,7 +57,7 @@ Parameters:
 * **engineIds**: a list of engine IDs the are available. 
 
 
-* **context**: The same context that was passed to ProtectionProfile::ListEnginesAsync
+* **context**: The same context that was passed to [ProtectionProfile::ListEnginesAsync](undefined)
 
 
   
@@ -68,7 +68,7 @@ Parameters:
 * **error**: the error that caused the list engines operation to fail. 
 
 
-* **context**: The same context that was passed to ProtectionProfile::ListEnginesAsync
+* **context**: The same context that was passed to [ProtectionProfile::ListEnginesAsync](undefined)
 
 
   
@@ -79,7 +79,7 @@ Parameters:
 * **engine**: Newly created engine 
 
 
-* **context**: The same context that was passed to ProtectionProfile::AddEngineAsync
+* **context**: The same context that was passed to [ProtectionProfile::AddEngineAsync](undefined)
 
 
   
@@ -90,7 +90,7 @@ Parameters:
 * **error**: the error that caused the add engine operation to fail. 
 
 
-* **context**: The same context that was passed to ProtectionProfile::AddEngineAsync
+* **context**: The same context that was passed to [ProtectionProfile::AddEngineAsync](undefined)
 
 
   
@@ -98,7 +98,7 @@ Parameters:
 Called when an engine was deleted successfully.
 
 Parameters:  
-* **context**: The same context that was passed to ProtectionProfile::DeleteEngineAsync
+* **context**: The same context that was passed to [ProtectionProfile::DeleteEngineAsync](undefined)
 
 
   
@@ -109,5 +109,5 @@ Parameters:
 * **error**: the error that caused the delete engine operation to fail. 
 
 
-* **context**: The same context that was passed to ProtectionProfile::DeleteEngineAsync
+* **context**: The same context that was passed to [ProtectionProfile::DeleteEngineAsync](undefined)
 

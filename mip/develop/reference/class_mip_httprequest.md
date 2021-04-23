@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class HttpRequest 
@@ -27,7 +27,7 @@ Gets request ID.
 
   
 **Returns**: Request ID
-The corresponding HttpResponse will have the same ID
+The corresponding [HttpResponse](undefined) will have the same ID
   
 ### GetRequestType function
 Get request type.

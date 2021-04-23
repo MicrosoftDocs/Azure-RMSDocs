@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class TelemetryDelegate 
@@ -23,7 +23,7 @@ public void Flush()  |  Flush any queued events (e.g. due to shutdown)
 Log a diagnostic event.
 
 Parameters:  
-* **event**: Event to be logged
+* **event**: [Event](undefined) to be logged
 
 
   

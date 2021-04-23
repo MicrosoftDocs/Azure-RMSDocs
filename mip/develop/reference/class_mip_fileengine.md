@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class FileEngine 
@@ -30,6 +30,7 @@ public std::shared_ptr\<AsyncControl\> CreateFileHandlerAsync(const std::shared_
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Logs an application specific event to the audit pipeline.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Gets a list of custom settings.
 public bool HasClassificationRules() const  |  Gets if the policy has automatic or recommendation rules.
+public bool HasWorkloadConsent(Workload workload) const  |  Checks if user has consented to specific workload,.
   
 ## Members
   
@@ -42,7 +43,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: FileEngine::Settings).
+**See also**: [FileEngine::Settings](undefined)).
   
 ### GetDefaultSensitivityLabel function
 Get the default sensitivity label.
@@ -105,7 +106,7 @@ Parameters:
 * **isAuditDiscoveryEnabled**: representing whether audit discovery is enabled or not. 
 
 
-* **fileHandlerObserver**: A class implementing the FileHandler::Observer interface. 
+* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](undefined) interface. 
 
 
 * **context**: Client context that will be opaquely passed back to the observer. 
@@ -131,7 +132,7 @@ Parameters:
 * **isAuditDiscoveryEnabled**: representing whether audit discovery is enabled or not. 
 
 
-* **fileHandlerObserver**: A class implementing the FileHandler::Observer interface. 
+* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](undefined) interface. 
 
 
 * **context**: Client context that will be opaquely passed back to the observer. 
@@ -169,3 +170,9 @@ Gets if the policy has automatic or recommendation rules.
 
   
 **Returns**: A bool that will tell if there any automatic or recommendation rules in the policy
+  
+### HasWorkloadConsent function
+Checks if user has consented to specific workload,.
+
+  
+**Returns**: Bool indicating consent.

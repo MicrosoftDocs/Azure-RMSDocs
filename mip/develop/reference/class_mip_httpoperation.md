@@ -5,11 +5,11 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class HttpOperation 
-Interface that describes a single HTTP operation, implemented by client app when overriding HttpDelegate.
+Interface that describes a single HTTP operation, implemented by client app when overriding [HttpDelegate](undefined).
   
 ## Summary
  Members                        | Descriptions                                
@@ -25,7 +25,7 @@ Gets operation ID.
 
   
 **Returns**: Operation ID
-The corresponding HttpRequest and HttpResponse will have the same ID
+The corresponding [HttpRequest](undefined) and [HttpResponse](undefined) will have the same ID
   
 ### GetResponse function
 Get response, if any.

@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class ComputeEngine 
@@ -32,6 +32,7 @@ public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& GetS
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  | _Not yet documented._
 public uint32_t GetOpcMetadataVersion() const  | _Not yet documented._
 public const std::string& GetUserObjectId() const  | _Not yet documented._
+public bool HasWorkloadConsent(Workload workload) const  | _Not yet documented._
 public virtual ~ComputeEngine()  | _Not yet documented._
   
 ## Members
@@ -50,7 +51,7 @@ _Not documented yet._
   
 ### ComputeActionsWithRemoteState function
 Computes actions while choosing between remote and local state.
-State is selected using this priority. Unknown protection types, (template or ad-hoc not in the policy). Protection state is always preferable to unprotected state. Document state with label is preferred above one without. Label order, higher is preferred. Label timestamp, prefer newest labelled document. DocumentState LastModifiedTime optionally implemented, prefer newly modified file.
+State is selected using this priority. Unknown protection types, (template or ad-hoc not in the policy). Protection state is always preferable to unprotected state. Document state with label is preferred above one without. [Label](undefined) order, higher is preferred. [Label](undefined) timestamp, prefer newest labelled document. [DocumentState](undefined) LastModifiedTime optionally implemented, prefer newly modified file.
 
 Parameters:  
 * **context**: Comput engine context. 
@@ -126,6 +127,10 @@ _Not documented yet._
 
   
 ### GetUserObjectId function
+_Not documented yet._
+
+  
+### HasWorkloadConsent function
 _Not documented yet._
 
   

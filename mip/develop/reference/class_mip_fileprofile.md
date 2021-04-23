@@ -5,11 +5,11 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class FileProfile 
-FileProfile class is the root class for using the Microsoft Information Protection operations.
+[FileProfile](undefined) class is the root class for using the Microsoft Information Protection operations.
 A typical application will only need one Profile.
   
 ## Summary
@@ -32,28 +32,28 @@ Starts list engines operation.
 
   
 **Returns**: Async control object.
-FileProfile::Observer will be called upon success or failure.
+[FileProfile::Observer](undefined) will be called upon success or failure.
   
 ### UnloadEngineAsync function
 Starts unloading the file engine with the given ID.
 
   
 **Returns**: Async control object.
-FileProfile::Observer will be called upon success or failure.
+[FileProfile::Observer](undefined) will be called upon success or failure.
   
 ### AddEngineAsync function
 Starts adding a new file engine to the profile.
 
   
 **Returns**: Async control object.
-FileProfile::Observer will be called upon success or failure.
+[FileProfile::Observer](undefined) will be called upon success or failure.
   
 ### DeleteEngineAsync function
 Starts deleting the file engine with the given ID. All data for the given profile will be deleted.
 
   
 **Returns**: Async control object.
-FileProfile::Observer will be called upon success or failure.
+[FileProfile::Observer](undefined) will be called upon success or failure.
   
 ### AcquirePolicyAuthToken function
 Trigger an authentication callback for policy.

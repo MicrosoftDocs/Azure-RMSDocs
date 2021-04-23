@@ -5,11 +5,11 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class FileProfile::Observer 
-Observer interface for clients to get notifications for profile related events.
+[Observer](undefined) interface for clients to get notifications for profile related events.
 All errors inherit from mip::Error. 
 Client should not call the engine back on the thread that calls the observer.
   

@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class AuthDelegate 
@@ -35,7 +35,7 @@ Parameters:
 
   
 **Returns**: True if token successfully acquired, else false
-On failure, if token output parameter contains an error message, it will be included in the NoAuthTokenError exception that will later be raised to the application.
+On failure, if token output parameter contains an error message, it will be included in the [NoAuthTokenError](undefined) exception that will later be raised to the application.
 > Deprecated: This method will soon be deprecated in favor of the one accepting a context parameter. If the new version has been implemented, there is no need to implement this version.
   
 ### AcquireOAuth2Token function
@@ -57,4 +57,4 @@ Parameters:
 
   
 **Returns**: True if token successfully acquired, else false
-On failure, if token output parameter contains an error message, it will be included in the NoAuthTokenError exception that will later be raised to the application.
+On failure, if token output parameter contains an error message, it will be included in the [NoAuthTokenError](undefined) exception that will later be raised to the application.

@@ -5,11 +5,11 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class PolicyProfile::Settings 
-Settings used by PolicyProfile during its creation and throughout its lifetime.
+[Settings](undefined) used by [PolicyProfile](undefined) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
@@ -40,7 +40,7 @@ Parameters:
 * **cacheStorageType**: Store any cached state in memory or on disk 
 
 
-* **observer**: A class implementing the PolicyProfile::Observer interface. Can be nullptr.
+* **observer**: A class implementing the [PolicyProfile::Observer](undefined) interface. Can be nullptr.
 
 
   

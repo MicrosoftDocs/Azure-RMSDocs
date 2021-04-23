@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class UserRoles 
@@ -14,14 +14,14 @@ A group of users and the roles associated with them.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public UserRoles(const std::vector\<std::string\>& users, const std::vector\<std::string\>& roles)  |  UserRoles constructor.
+public UserRoles(const std::vector\<std::string\>& users, const std::vector\<std::string\>& roles)  |  [UserRoles](undefined) constructor.
 public const std::vector\<std::string\>& Users() const  |  Gets users associated with a set of roles.
 public const std::vector\<std::string\>& Roles() const  |  Gets roles associated with a group of users.
   
 ## Members
   
 ### UserRoles function
-UserRoles constructor.
+[UserRoles](undefined) constructor.
 
 Parameters:  
 * **users**: Group of users that share the same roles 

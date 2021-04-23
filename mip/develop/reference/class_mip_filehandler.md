@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class FileHandler 
@@ -26,8 +26,8 @@ public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Deletes the 
 public void SetProtection(const std::shared_ptr\<ProtectionDescriptor\>& protectionDescriptor, const ProtectionSettings& protectionSettings)  |  Sets either custom or template-based permissions (according to protectionDescriptor->GetProtectionType) to the file.
 public void SetProtection(const std::shared_ptr\<ProtectionHandler\>& protectionHandler)  |  Sets protection on a document using an existing protection handler.
 public void RemoveProtection()  |  Removes protection from the file. If the original file format does not support labeling, the label will be lost when protection is removed. When the native format supports labeling, the label metadata is maintained.
-public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | Writes the changes to the file specified by the \|outputFilePath\|  parameter.
-public void CommitAsync(const std::shared_ptr\<Stream\>& outputStream, const std::shared_ptr\<void\>& context) | Writes the changes to the stream specified by the \|outputStream\| parameter.
+public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | Writes the changes to the file specified by the \|outputFilePath\ |  parameter.
+public void CommitAsync(const std::shared_ptr\<Stream\>& outputStream, const std::shared_ptr\<void\>& context) | Writes the changes to the stream specified by the \|outputStream\ |  parameter.
 public bool IsModified()  |  Checks if there are changes to commit to the file.
 public void GetDecryptedTemporaryFileAsync(const std::shared_ptr\<void\>& context)  |  Returns a path to a temporary file (that will be deleted if possible) - representing the decrypted content.
 public void GetDecryptedTemporaryStreamAsync(const std::shared_ptr\<void\>& context)  |  Returns a stream - representing the decrypted content.
@@ -51,10 +51,10 @@ Parameters:
 * **isOwnerNotificationEnabled**: Set to true to notify the owner via email whenever the document is decrypted, or false to not send the notification. 
 
 
-* **observer**: A class implementing the ProtectionHandler::Observer interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
 
 
 
@@ -65,10 +65,10 @@ Parameters:
 Perform revocation for the content.
 
 Parameters:  
-* **observer**: A class implementing the ProtectionHandler::Observer interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
 
 
 
@@ -90,12 +90,12 @@ Create a file inspector object, used to retrieve file contents from compatible f
 ### SetLabel function
 Sets the sensitivity label to the file.
 Changes won't be written to the file until CommitAsync is called. Privileged and Auto method allows the API to override any existing label 
-Throws JustificationRequiredError when setting the label requires the operation to be justified (via the labelingOptions parameter).
+Throws [JustificationRequiredError](undefined) when setting the label requires the operation to be justified (via the labelingOptions parameter).
   
 ### DeleteLabel function
 Deletes the sensitivity label from the file.
 Changes won't be written to the file until CommitAsync is called. Privileged and Auto method allows the API to override any existing label 
-Throws JustificationRequiredError when setting the label requires the operation to be justified (via the labelingOptions parameter).
+Throws [JustificationRequiredError](undefined) when setting the label requires the operation to be justified (via the labelingOptions parameter).
   
 ### SetProtection function
 Sets either custom or template-based permissions (according to protectionDescriptor->GetProtectionType) to the file.
@@ -111,11 +111,12 @@ Changes won't be written to the file until CommitAsync is called.
   
 ### CommitAsync function
 Writes the changes to the file specified by the |outputFilePath| parameter.
-FileHandler::Observer will be called upon success or failure.
+[FileHandler::Observer](undefined) will be called upon success or failure.
   
 ### CommitAsync function
 Writes the changes to the stream specified by the |outputStream| parameter.
-FileHandler::Observer will be called upon success or failure.
+|outputStream| must not be the same as inputStream used for creating the handler.
+[FileHandler::Observer](undefined) will be called upon success or failure.
   
 ### IsModified function
 Checks if there are changes to commit to the file.
@@ -123,11 +124,11 @@ Changes won't be written to the file until CommitAsync is called.
   
 ### GetDecryptedTemporaryFileAsync function
 Returns a path to a temporary file (that will be deleted if possible) - representing the decrypted content.
-FileHandler::Observer will be called upon success or failure.
+[FileHandler::Observer](undefined) will be called upon success or failure.
   
 ### GetDecryptedTemporaryStreamAsync function
 Returns a stream - representing the decrypted content.
-FileHandler::Observer will be called upon success or failure.
+[FileHandler::Observer](undefined) will be called upon success or failure.
   
 ### NotifyCommitSuccessful function
 To be called when the changes have been committed to disk.

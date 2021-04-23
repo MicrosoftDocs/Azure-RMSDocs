@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class PolicyEngine 
@@ -14,7 +14,7 @@ This class provides an interface for all engine functions.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Get the policy engine Settings.
+public const Settings& GetSettings() const  |  Get the policy engine [Settings](undefined).
 public const std::vector\<std::shared_ptr\<Label\>\> ListSensitivityLabels(const std::vector\<std::string\>& contentFormats)  |  list the sensitivity labels associated with the policy engine according to the provided contentFormats.
 public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
 public const std::string& GetMoreInfoUrl() const  |  Provide a url for looking up more information about the policy/labels.
@@ -32,11 +32,12 @@ public const std::string& GetSensitivityFileId() const  |  Gets the sensitivity 
 public bool HasClassificationRules(const std::vector\<std::string\>& contentFormats) const  |  Gets if the policy has automatic or recommendation rules according to the provided contentFormats.
 public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Gets the time when the policy was last fetched.
 public uint32_t GetWxpMetadataVersion() const  |  Gets the recommended WXP (Word, Excel, Powerpoint) metadata version, currently 0 for old verion 1 for co-authoring enabled version.
+public bool HasWorkloadConsent(Workload workload) const  |  Checks if user has consented to specific workload,.
   
 ## Members
   
 ### GetSettings function
-Get the policy engine Settings.
+Get the policy engine [Settings](undefined).
 
   
 **Returns**: Policy engine settings. 
@@ -60,7 +61,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: PolicyEngine::Settings).
+**See also**: [PolicyEngine::Settings](undefined)).
   
 ### GetMoreInfoUrl function
 Provide a url for looking up more information about the policy/labels.
@@ -99,7 +100,7 @@ Parameters:
 
 
   
-**Returns**: Label
+**Returns**: [Label](undefined)
   
 ### CreatePolicyHandler function
 Create a Policy Handler to execute policy-related functions on a file's execution state.
@@ -185,3 +186,9 @@ Gets the recommended WXP (Word, Excel, Powerpoint) metadata version, currently 0
 
   
 **Returns**: Uint32_t int indecating what version of metadata the tenant supports for WXP files.
+  
+### HasWorkloadConsent function
+Checks if user has consented to specific workload,.
+
+  
+**Returns**: Bool indicating consent.

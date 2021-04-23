@@ -5,11 +5,11 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class LabelDisabledError 
-Label is disabled or inactive.
+[Label](undefined) is disabled or inactive.
   
 ## Summary
  Members                        | Descriptions                                
