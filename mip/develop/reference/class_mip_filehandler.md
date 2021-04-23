@@ -12,6 +12,7 @@ ms.date: 04/23/2021
 Interface for all file handling functions.
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<ContentLabel\> GetLabel()  |  Starts retrieving the sensitivity label from the file.
