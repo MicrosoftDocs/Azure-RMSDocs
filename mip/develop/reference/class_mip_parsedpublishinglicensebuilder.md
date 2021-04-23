@@ -24,7 +24,7 @@ public void SetDescriptor(std::shared_ptr\<LicenseDescriptor\> descriptor)  |  S
 public void SetReferralInfoUrl(const std::string& referralInfoUrl)  |  Sets the referral info url.
 public void SetSignedApplicationData(const std::vector\<std::shared_ptr\<LicenseApplicationData\>\>& signedApplicationData)  |  Sets the signed application data.
 public void SetIssuedTime(const std::chrono::time_point\<std::chrono::system_clock\>& issuedTime)  |  Sets the issued time.
-public std::shared_ptr\<ParsedPublishingLicense\> CreateParsedPublishingLicense()  |  Creates a [ParsedPublishingLicense](#classParsedPublishingLicense) with the properties set on this object instance.
+public std::shared_ptr\<ParsedPublishingLicense\> CreateParsedPublishingLicense()  |  Creates a [ParsedPublishingLicense](class_mip_parsedpublishinglicense.md) with the properties set on this object instance.
   
 ## Members
   
