@@ -1,12 +1,12 @@
 ---
 title: Quickstart - List sensitivity labels in a Microsoft Information Protection (MIP) tenant using MIP SDK C# Wrapper
-description: A quickstart showing you how to use the Microsoft Information Protection SDK C# wrapper to list the sensitivity labels in your tenant.
+description: A quickstart showing you how to use the Microsoft Information Protection SDK C# wrapper to list the sensitivity labels in your tenant (C#).
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
+ms.custom: has-adal-ref
 #Customer intent: As a an application developer, I want to learn how to list labels in the MIP SDK, so that I can use the SDK APIs to apply labels later on.
 ---
 
@@ -23,16 +23,16 @@ If you haven't already, be sure to complete the following prerequisites before c
 
 ## Add logic to list the sensitivity labels
 
-Add logic to list your organization's sensitivity labels, using the File engine object. 
+Add logic to list your organization's sensitivity labels, using the File engine object.
 
 1. Open the Visual Studio solution you created in the previous "Quickstart: Client application initialization (C#)" article.
 
-2. Using **Solution Explorer**, open the .cs file in your project that contains the implementation of the `Main()` method. It defaults to the same name as the project containing it, which you specified during project creation. 
+2. Using **Solution Explorer**, open the .cs file in your project that contains the implementation of the `Main()` method. It defaults to the same name as the project containing it, which you specified during project creation.
 
 3. Toward the end of the `Main()` body, above the application shutdown section of the `Main()` function (where you left off in the previous Quickstart), insert the following code:
 
   ```csharp
-  // List sensitivity labels from fileEngine and display name and id  
+  // List sensitivity labels from fileEngine and display name and id
   foreach(var label in fileEngine.SensitivityLabels)
   {
       Console.WriteLine(string.Format("{0} : {1}", label.Name, label.Id));
@@ -53,7 +53,7 @@ Finally, build and test your client application.
 
 1. Use CTRL-SHIFT-B (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
-2. If your project builds and runs successfully, the application *may* prompt for authentication via ADAL each time the SDK calls your `AcquireToken()` method. If cached credentials already exist, you won't be prompted to sign in and see the list of labels. 
+2. If your project builds and runs successfully, the application *may* prompt for authentication via ADAL each time the SDK calls your `AcquireToken()` method. If cached credentials already exist, you won't be prompted to sign in and see the list of labels.
 
      [![Visual Studio acquire token sign-in](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 

@@ -1,20 +1,20 @@
 ---
-title: class mip::FileEngine::Settings 
-description: Documents the mip::fileengine class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class FileEngine::Settings 
+description: Documents the fileengine::settings class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::FileEngine::Settings 
+# class FileEngine::Settings 
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  FileEngine::Settings constructor for loading an existing engine.
-public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  FileProfile::Settings constructor for creating a new engine.
+public Settings(const std::string& engineId, const std::shared_ptr\<AuthDelegate\>& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  FileEngine::Settings constructor for loading an existing engine.
+public Settings(const Identity& identity, const std::shared_ptr\<AuthDelegate\>& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  FileProfile::Settings constructor for creating a new engine.
 public const std::string& GetEngineId() const  |  Returns the engine ID.
 public void SetEngineId(const std::string& id)  |  Set the engine ID.
 public const Identity& GetIdentity() const  |  Returns the engine Identity.
@@ -25,9 +25,11 @@ public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::st
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Gets a list of name/value pairs used for testing and experimentation.
 public void SetSessionId(const std::string& sessionId)  |  Sets the engine session ID.
 public const std::string& GetSessionId() const  |  Return the engine session ID.
-public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Sets the protection cloud endpoint base url, used to specify cloud boundary.
+public void SetCloud(Cloud cloud)  |  Optionally sets the target cloud.
+public Cloud GetCloud() const  |  Gets the target cloud used by all service requests.
+public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Sets the protection cloud endpoint base URL for custom cloud.
 public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Gets the protection cloud endpoint base url.
-public void SetPolicyCloudEndpointBaseUrl(const std::string& policyCloudEndpointBaseUrl)  |  Sets the policy cloud endpoint base url, used to specify cloud boundary.
+public void SetPolicyCloudEndpointBaseUrl(const std::string& policyCloudEndpointBaseUrl)  |  Sets the policy cloud endpoint base URL for custom cloud.
 public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  Gets the policy cloud endpoint base url.
 public void SetProtectionOnlyEngine(bool protectionOnly)  |  Sets protection only engine indicator - no policy/label.
 public const bool IsProtectionOnlyEngine() const  |  Return protection only engine indicator - no policy/label.
@@ -36,8 +38,12 @@ public void EnablePFile(bool value)  |  Sets the flag indicating if produce PFil
 public const bool IsPFileEnabled()  |  Get the flag indicating if produce PFiles.
 public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
-public void SetLabelFilter(const std::vector\<LabelFilterType\>& labelFilter)  |  Sets the label filter.
-public const std::vector\<LabelFilterType\>& GetLabelFilter() const  |  Gets the label filter.
+public void SetLabelFilter(const std::vector\<LabelFilterType\>& deprecatedLabelFilters)  |  Sets the label filter.
+public const std::vector\<LabelFilterType\>& GetLabelFilter() const  |  Gets the label filters set through deprecated function SetLabelFilter.
+public void ConfigureFunctionality(FunctionalityFilterType functionalityFilterType, bool enabled)  |  Enables or disables functionality.
+public const std::map\<FunctionalityFilterType, bool\>& GetConfiguredFunctionality() const  |  Gets the configured functionality.
+public void SetAuthDelegate(const std::shared_ptr\<AuthDelegate\>& authDelegate)  |  Set the Engine Auth Delegate.
+public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Get the Engine Auth Delegate.
   
 ## Members
   
@@ -46,6 +52,9 @@ FileEngine::Settings constructor for loading an existing engine.
 
 Parameters:  
 * **engineId**: Set it to the unique engine ID generated by AddEngineAsync. 
+
+
+* **authDelegate**: The authentication delegate used by the SDK to acquire authentication tokens, will override the PolicyProfile::Settings::authDelegate if both provided 
 
 
 * **clientData**: customizable client data that can be stored with the engine when unloaded, can be retrieved from a loaded engine. 
@@ -63,6 +72,9 @@ FileProfile::Settings constructor for creating a new engine.
 
 Parameters:  
 * **identity**: Identity info of the user associated with the new engine. 
+
+
+* **authDelegate**: The authentication delegate used by the SDK to acquire authentication tokens, will override the PolicyProfile::Settings::authDelegate if both provided 
 
 
 * **clientData**: customizable client data that can be stored with the engine when unloaded, can be retrieved from a loaded engine. 
@@ -110,22 +122,39 @@ Sets the engine session ID.
 ### GetSessionId function
 Return the engine session ID.
   
+### SetCloud function
+Optionally sets the target cloud.
+
+Parameters:  
+* **cloud**: Cloud
+
+
+If cloud is not specified, then it will default to global cloud.
+  
+### GetCloud function
+Gets the target cloud used by all service requests.
+
+  
+**Returns**: Cloud
+  
 ### SetProtectionCloudEndpointBaseUrl function
-Sets the protection cloud endpoint base url, used to specify cloud boundary.
+Sets the protection cloud endpoint base URL for custom cloud.
 
 Parameters:  
 * **protectionCloudEndpointBaseUrl**: Base url associated with protection endpoints
 
 
+This value will only be read and must be set for Cloud = Custom
   
 ### GetProtectionCloudEndpointBaseUrl function
 Gets the protection cloud endpoint base url.
 
   
 **Returns**: Base url associated with protection endpoints
+This value will only be read and must be set for Cloud = Custom
   
 ### SetPolicyCloudEndpointBaseUrl function
-Sets the policy cloud endpoint base url, used to specify cloud boundary.
+Sets the policy cloud endpoint base URL for custom cloud.
 
 Parameters:  
 * **policyCloudEndpointBaseUrl**: Base url associated with policy endpoints
@@ -182,11 +211,44 @@ Parameters:
 * **labelFilter**: the label filter.
 
 
-Labels are by default filter to scope, this api is to allow filtering by possible actions.
+Labels are by default filter to scope, this api is to allow filtering by possible actions. 
+If not set HyokProtection and DoubleKeyProtection are filtered.
   
 ### GetLabelFilter function
-Gets the label filter.
+Gets the label filters set through deprecated function SetLabelFilter.
 
   
 **Returns**: The label filter.
 Labels are by default filter to scope, this api is to allow filtering by possible actions.
+  
+### ConfigureFunctionality function
+Enables or disables functionality.
+
+Parameters:  
+* **functionalityFilterType**: the type of functionality. 
+
+
+* **enabled**: True to enable, false to disable
+
+
+HyokProtection, DoubleKeyProtection, DoubleKeyUserDefinedProtection are disabled by default and must be enabled
+  
+### GetConfiguredFunctionality function
+Gets the configured functionality.
+
+  
+**Returns**: A map of the types to a boolean value indicating whether or not it is enabled
+  
+### SetAuthDelegate function
+Set the Engine Auth Delegate.
+
+Parameters:  
+* **authDelegate**: the Auth delegate
+
+
+  
+### GetAuthDelegate function
+Get the Engine Auth Delegate.
+
+  
+**Returns**: The Engine Auth Delegate.

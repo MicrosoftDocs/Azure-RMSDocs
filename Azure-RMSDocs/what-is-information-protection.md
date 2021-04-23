@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: What is Azure Information Protection? - AIP
-description: An technical overview of the Azure Information Protection service, which helps an organization label documents and emails to classify and protect its data, wherever it resides.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/18/2019
+title: What is Azure Information Protection (AIP)?
+description: Azure Information Protection (AIP) extends the Microsoft Information Protection (MIP) framework to extend the labeling and classification functionality provided by Microsoft 365.
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 11/09/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
-Customer intent: As an administrator, I want to label documents and emails to classify and protect my organization's data, wherever it resides.
+Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
 
 # optional metadata
 
@@ -20,7 +20,7 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 #ms.reviewer: eymanor
 #ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: admin
+ms.custom: contperf-fy21q2
 search.appverid:
 - MET150
 
@@ -28,144 +28,109 @@ search.appverid:
 
 # What is Azure Information Protection?
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
 
-Azure Information Protection (sometimes referred to as AIP) is a cloud-based solution that helps an organization to classify and optionally, protect its documents and emails by applying labels. Labels can be applied automatically by administrators who define rules and conditions, manually by users, or a combination where users are given recommendations. 
+Azure Information Protection (AIP) is a cloud-based solution that enables organizations to discover, classify, and protect documents and emails by applying labels to content.
 
-The following picture shows an example of Azure Information Protection in action on a user's computer. The administrator has configured a label with rules that detect sensitive data and in our example, this is credit card information. When a user saves a Word document that contains a credit card number, she sees a custom tooltip that recommends the label that the administrator has configured. This label classifies the document and protects it. 
+AIP is part of the Microsoft Information Protection (MIP) solution, and extends the [labeling](/microsoft-365/compliance/sensitivity-labels) and [classification](/microsoft-365/compliance/data-classification-overview) functionality provided by Microsoft 365.
 
-![Example of recommended classification for Azure Information Protection](./media/info-protect-recommend-calloutsv2.png)
+The following image shows the Azure Information Protection additions to MIP, including the [**unified labeling client**](#aip-unified-labeling-client), [**scanner**](#aip-on-premises-scanner), and [**SDK**](#microsoft-information-protection-sdk).
 
-###### Screenshot from the [Azure Information Protection client (classic)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+:::image type="content" source="media/what-is-mip.png" alt-text="The Azure Information Protection areas of the Microsoft Information Protection framework":::
 
-After your content is classified (and optionally protected), you can then track and control how it is used. You can analyze data flows to gain insight into your business, detect risky behaviors and take corrective measures, track access to documents, prevent data leakage or misuse, and so on.
+Microsoft Information Protection is the common information protection stack that's leveraged by AIP's unified labeling client. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/protect-information).
 
-## How labels apply classification
+> [!NOTE]
+> For details about the latest features and public preview version of the unified labeling client, see [Azure Information Protection unified labeling client - Version release history and support policy](rms-client/unifiedlabelingclient-version-release-history.md).
+> 
+## AIP unified labeling client
 
-You use Azure Information Protection labels to apply classification to documents and emails. When you do this, the classification is identifiable regardless of where the data is stored or with whom it’s shared. The labels can include visual markings such as a header, footer, or watermark. Metadata is added to files and email headers in clear text. The clear text ensures that other services, such as data loss prevention solutions, can identify the classification and take appropriate action. 
+The Azure Information Protection unified labeling client extends labeling, classification, and protection capabilities to additional file types, as well as to the File Explorer and PowerShell. 
 
-For example, the following email message has been classified as "General". The label has added a footer of "Sensitivity: General" to the email message. This footer is a visual indicator for all recipients that it's intended for general business data that should not be sent outside the organization. The label is embedded in the email headers so that email services can inspect this value and could create an audit entry or prevent it from being sent outside the organization.
+For example, in the File Explorer, right-click one or more files and select **Classify and protect** to manage the AIP functionality on the selected files.
 
-![Example email footer and headers showing Azure Information Protection classification](./media/example-email-footerv2.png)
+:::image type="content" source="media/protect-from-file-explorer.png" alt-text="Classify and protect from the File Explorer":::
 
-###### Screenshot from the [Azure Information Protection client (classic)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
-## How data is protected
+Download the client from the [Microsoft Azure Information Protection download page](https://www.microsoft.com/download/details.aspx?id=53018).
+    
+## AIP on-premises scanner
 
-The protection technology uses *Azure Rights Management* (often abbreviated to Azure RMS). This technology is integrated with other Microsoft cloud services and applications, such as Office 365 and Azure Active Directory. It can also be used with your own line-of-business applications and information protection solutions from software vendors, whether these applications and solutions are on-premises, or in the cloud.
+The Azure Information Protection on-premises scanner enables administrators to scan their on-premises file repositories for sensitive content that must be labeled, classified, and/or protected.
 
-This protection technology uses encryption, identity, and authorization policies. Similarly to the labels that are applied, protection that is applied by using Rights Management stays with the documents and emails, independently of the location—inside or outside your organization, networks, file servers, and applications. This information protection solution keeps you in control of your data, even when it is shared with other people.
+The on-premises scanner is installed using PowerShell cmdlets provided as part of the unified labeling client, and can be managed using PowerShell and the Azure Information Protection area in the Azure portal.
 
-For example, you can configure a report document or sales forecast spreadsheet so that it can be accessed only by people in your organization, and control whether that document can be edited, or restricted to read-only, or prevent it from being printed. You can configure emails similarly, and also prevent them from being forwarded or prevent the use of the Reply All option. 
+For example, use the scanner data shown on the Azure portal to find repositories on your network that might have sensitive content at risk:
 
-These protection settings can be part of your label configuration, so that users both classify and protect documents and emails simply by applying a label. However, the same protection settings can also be used by applications and services that support protection, but not labeling. For these applications and services, the protection settings become available as *Rights Management templates*.
+:::image type="content" source="media/risky-repos-small.png" alt-text="Check scanned networks for risky repositories" lightbox="media/risky-repos.png":::
 
-### Rights Management templates
+For more information, see:
 
-As soon as the Azure Rights Management service is activated, two default templates are available for you that restrict data access to users within your organization. You can use these templates to immediately help prevent data leaking from your organization. You can also supplement these default templates by configuring your own protection settings that apply more restrictive controls.
+- [What is the AIP unified labeling scanner?](deploy-aip-scanner.md)
+- The scanner sections of the [AIP unified labeling client - Version release history](rms-client/unifiedlabelingclient-version-release-history.md)
 
-When you create a label for Azure Information Protection that includes protection settings, under the covers, this action creates a corresponding Rights Management template. You can then additionally use that template with applications and services that support Azure Rights Management.
+Download the scanner installation together with the client from the [Microsoft Azure Information Protection download page](https://www.microsoft.com/download/details.aspx?id=53018).
 
-For example, from the Exchange admin center, you can configure Exchange Online mail flow rules to use these templates:
 
-![Example of selecting templates for Exchange Online](./media/templates-exchangeonline-callouts.png)
+## Microsoft Information Protection SDK
 
-For more information about Azure Rights Management protection, see [What is Azure Rights Management?](what-is-azure-rms.md)
+The Microsoft Information Protection SDK extends sensitivity labels to third-party apps and services. Developers can use the SDK to build built-in support for applying labels and protection to files.
 
-## Integration with end-user workflows for documents and emails
+For example, you might use the MIP SDK for:
 
-Azure Information Protection integrates with end users' existing workflows when the Azure Information Protection client is installed. This client installs the Information Protection bar to Office applications, which we saw in the first picture that showed this bar in Word. The same Information Protection bar is added to Excel, PowerPoint, and Outlook. For example:
+- A line-of-business application that applies classification labels to files on export.
+- A CAD/CAM design application provides built-in support for Microsoft Information Protection labeling.
+- A cloud access security broker or data loss prevention solution reasons over data encrypted with Azure Information Protection.
 
-![Example of the Azure Information Protection bar in Excel](./media/excelproplus-infoprotect-bar.png)
-
-###### Screenshot from the [Azure Information Protection unified labeling client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) 
-
-This Information Protection bar makes it easy for end users to select labels for the correct classification. If required, labels can also be applied automatically to remove the guesswork for users, or to comply with your organization's policies.
-
-To classify and protect additional file types, and to support multiple files at once, users can right-click files or a folder from Windows File Explorer:
-
-![File Explorer right-click Classify and protect using Azure Information Protection](./media/right-click-classify-protect-folder.png)
-
-When users select the **Classify and protect** menu option from File Explorer, they can then select a label similarly to how they use the Information Protection bar in their Office desktop apps. They can also set their own custom permissions, if required.
-
-Power users (and administrators) might find using PowerShell commands more efficient for managing and setting classification and protection for multiple files. The PowerShell commands to do these actions are automatically included with the client, although you can also install the PowerShell module separately.
-
-After a document has been protected, users and administrators can use a document tracking site to monitor who is accessing these documents and when. If they suspect misuse, they can also revoke access to these documents:
-
-![Revoke access icon in the document tracking site](./media/tracking-site-revoke-access-icon.png)
-
-### Additional integration for email
-
-When you use Azure Information Protection with Exchange Online, you get an additional benefit: The ability to send protected emails to any user, with the assurance that they can read it on any device.
-
-For example, users need to send sensitive information to personal email addresses that use a **Gmail**, **Hotmail**, or a **Microsoft** account. Or, to users who don't have an account in Office 365 or Azure AD. These emails should be encrypted at rest and in transit, and be read only by the original recipients.
-
-This scenario requires the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). If the recipients cannot open the protected email in their native email client, they can use a one-time passcode to read the sensitive information in a browser.
-
-For example, a Gmail user sees the following in an email message:
-
-![Gmail recipient experience for OME and AIP](./media/ome-message.png)
-
-For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, this Do Not Forward functionality can be integrated into a label that users select, so that the email is classified as well as protected. For example:
-
-![Selecting a label configured for Do Not Forward](./media/recipients-only-label2.png)
-
-###### Screenshot from the [Azure Information Protection unified labeling client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
-
-Alternatively, you can automatically provide the protection for users, by using mail flow rules that apply rights protection. 
-
-When you attach Office documents to these emails, these documents are automatically protected as well.
-
-## Classifying and protecting existing documents
-
-Ideally, documents and emails are labeled when they are first created. But you likely have many existing documents in data stores and want to classify and protect these documents as well. These data stores could be on-premises or in the cloud.
-
-For your on-premises data stores, use the Azure Information Protection scanner to  discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries. The scanner runs as a service on Windows Server. You can use the same rules in the policy to detect sensitive information and apply specific labels to documents. Or you can apply a default label to all documents in a data repository without inspecting the file contents. You can also use the scanner in reporting mode only, to help you discover sensitive information that you might not know you had. 
-
-For more information about deploying and using the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
-
-For your cloud data stores, use Microsoft Cloud App Security to apply your labels to documents in Box, SharePoint Online, and OneDrive for Business. For more information, see [Automatically apply Azure Information Protection classification labels](/cloud-app-security/use-case-information-protection) and [Azure Information Protection integration](/cloud-app-security/azip-integration).
-
-## Latest labeling updates for Microsoft 365
-
-See the latest information about how Azure Information Protection helps you to discover, classify, protect, and monitor your sensitive information, wherever it lives:
-
-> [!VIDEO https://www.youtube.com/embed/UI0p9xqMNfI]
-
-## Resources for Azure Information Protection
-
-- Free trial: [Enterprise Mobility + Security E5](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
-
-- Subscription options and pricing: [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection)
-
-- Download the client: [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
-
-- Download a customizable user guide: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
-
-- FAQs: [Frequently asked questions for Azure Information Protection](faqs.md)
-
-- Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
-
-- What's new in the documentation: [Azure Information Protection technical blog](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs)
-
-Additional resources: [Information and support for Azure Information Protection](information-support.md)
-
-### Microsoft Ignite
-
-Microsoft Ignite 2019 in Orlando is just around the corner! There will be lots of good information about Azure Information Protection with the latest updates and improvements. We hope to see you there, but if you can't join us, sessions are recorded for viewing later.
-
-See the following list for our top five sessions that we recommend. Links will be added when the recordings become available:
-
-- BRK2119 - Secure your sensitive data! Understanding the latest Microsoft Information Protection capabilities
- 
-- BRK3100 - What does your sensitive data landscape look like? Best practices in data discovery, classification, analytics, and reports
-
-- BRK3103 - Protecting sensitive files and data can be hard. Choose the right data protection options that balance security and worker productivity
-
-- BRK2120 - Got Azure Information Protection? Navigating unified labeling, policy configuration, clients, and analytics
-
-- BRK2121 - Extend the power of sensitivity labeling and protection to your own apps and ISV solutions with the Microsoft Information Protection SDK
+For more information, see the [Microsoft Information Protection SDK overview](/information-protection/develop/overview).
 
 ## Next steps
 
-Configure and see Azure Information Protection for yourself, with our [quickstarts](quickstart-viewpolicy.md) and [tutorials](infoprotect-quick-start-tutorial.md). Or, if you're ready to deploy this service for your organization, head over to the [how-to guides](how-to-guides.md).
+**To get started with AIP**, download and install the unified labeling client and scanner.
+
+- [Sign up for a free trial](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)  (Enterprise Mobility + Security E5)
+- [Download the client](https://www.microsoft.com/download/details.aspx?id=53018)
+- [Quickstart: Deploy the unified labeling client](quickstart-deploy-client.md)
+
+**Get familiar with AIP** using our initial tutorials:
+
+- [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
+- [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
+- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
+
+**When you're ready to customize AIP further**, see [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md).
+
+**To get started with the MIP SDK**, see [Microsoft Information Protection (MIP) SDK setup and configuration](/information-protection/develop/setup-configure-mip).
+
+### Additional resources
+
+|Resource  |Links and description  |
+|---------|---------|
+|**Subscription options and pricing**     |    [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection)     |
+|**FAQs and known issues**     | [Frequently asked questions for Azure Information Protection](faqs.md) </br> [Known issues - Azure Information Protection](known-issues.md)       |
+|**Support options**     | [Support options for Azure Information Protection](information-support.md)        |
+|**Yammer**     |  [Azure Information Protection](https://www.yammer.com/AskIPTeam)       |
+|**What's new?**     | Watch for new features related to AIP in the Microsoft 365 and SharePoint admin centers:   </br>- [What's new in the Microsoft 365 admin center?](/microsoft-365/admin/whats-new-in-preview) </br>- [What's new in the Sharepoint admin center?](/sharepoint/what-s-new-in-admin-center)     |
+|     |         |
+
+#### Top Ignite sessions
+
+See the following recorded sessions from Ignite 2020:
+
+- [Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)
+
+- [Be a risk management hero with intelligent data protection and compliance solutions](https://myignite.microsoft.com/sessions/9a1e2716-55f5-4c3e-8626-0cb77e60eb87)
+
+- [Know your data, protect your data and prevent data loss with Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)
+
+- [Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d)
+## AIP's classic client
+
+The Azure Information Protection classic client is the earlier version of AIP, and enables administrators to manage classification labels directly in the Azure portal.
+
+AIP labels managed in the Azure portal are *not* supported by the unified labeling platform, are limited to working with the Azure Information Protection client and scanner, and Microsoft Cloud App Security. 
+
+We recommend migrating to unified labeling to support these features, as well as SharePoint, Microsoft 365 apps, Outlook for the web and mobile devices, PowerBI data protection, and more. For more information, see [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md).
+
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]

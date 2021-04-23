@@ -3,11 +3,11 @@
 
 title: Registry settings for the Rights Management connector - AIP
 description: Information about the registry settings on servers using the RMS connector. The recommended method to configure these settings is to use the server configuration tool for Microsoft RMS connector.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/30/2019
-ms.topic: conceptual
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 11/30/2019
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
@@ -28,7 +28,11 @@ ms.custom: admin
 
 # Registry setting for the Rights Management connector
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 
 Use the tables in the following sections only if you want to manually add or check registry settings on the servers that run Exchange, SharePoint, or Windows Server. These registry settings configure the servers to use the [RMS connector](deploy-rms-connector.md). The recommended method to configure these servers is to use the server configuration tool for Microsoft RMS connector.
@@ -48,8 +52,10 @@ Instructions for when you use these settings:
         **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
         
         You can verify that you have correct value by running the following PowerShell command:
-        
-            (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+
+        ```ps
+        (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+        ```
 
 -   *\<ConnectorFQDN>* is the load-balancing name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
 
@@ -58,34 +64,34 @@ Instructions for when you use these settings:
 
 ## Exchange 2016 or Exchange 2013 registry settings
 
-**Registry path:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
+**Registry path**: HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
-**Type:** Reg_SZ
+**Type**: Reg_SZ
 
-**Value:** Default
+**Value**: Default
 
-**Data:** https://*\<YourTenantURL>*/_wmcs/certification
-
----
-
-**Registry path:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
-
-**Type:** Reg_SZ
-
-**Value:** Default
-
-**Data:** https://*\<YourTenantURL>*/_wmcs/Licensing
+**Data**: https://*\<YourTenantURL>*/_wmcs/certification
 
 ---
 
-**Registry path:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\CertificationServerRedirection
+**Registry path**: HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
-**Type:** Reg_SZ
+**Type**: Reg_SZ
 
-**Value:** https://*\<YourTenantURL>*
+**Value**: Default
+
+**Data**: https://*\<YourTenantURL>*/_wmcs/Licensing
+
+---
+
+**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\CertificationServerRedirection
+
+**Type**: Reg_SZ
+
+**Value**: https://*\<YourTenantURL>*
 
 
-**Data:** One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+**Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
 - http://*<\ConnectorFQDN>*
 
@@ -93,14 +99,14 @@ Instructions for when you use these settings:
 
 ---
 
-**Registry path:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
+**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
-**Type:** Reg_SZ
+**Type**: Reg_SZ
 
-**Value:** https://*<\YourTenantURL>*
+**Value**: https://*<\YourTenantURL>*
 
 
-**Data:** One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+**Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
 - http://*<\ConnectorFQDN>*
 
@@ -109,33 +115,33 @@ Instructions for when you use these settings:
 
 ## Exchange 2010 registry settings
 
-**Registry path:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
+**Registry path**: HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
-**Type:** Reg_SZ
+**Type**: Reg_SZ
 
-**Value:** Default
+**Value**: Default
 
-**Data:** https://*<\YourTenantURL>*/_wmcs/certification
+**Data**: https://*<\YourTenantURL>*/_wmcs/certification
 
 ---
 
 **Registry path:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
-**Type:** Reg_SZ
+**Type**: Reg_SZ
 
-**Value:** Default
+**Value**: Default
 
-**Data:** https://*<\YourTenantURL>*/_wmcs/Licensing
+**Data**: https://*<\YourTenantURL>*/_wmcs/Licensing
 
 ---
 
-**Registry path:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\CertificationServerRedirection
+**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\CertificationServerRedirection
 
-**Type:** Reg_SZ
+**Type**: Reg_SZ
 
-**Value:** https://*<\YourTenantURL>*
+**Value**: https://*<\YourTenantURL>*
 
-**Data:** One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+**Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
 - http://*<\ConnectorFQDN>*
 
@@ -143,13 +149,13 @@ Instructions for when you use these settings:
 
 ---
 
-**Registry path:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
+**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
-**Type:** Reg_SZ
+**Type**: Reg_SZ
 
-**Value:** https://*<\YourTenantURL>*
+**Value**: https://*<\YourTenantURL>*
 
-**Data:** One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+**Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
 - http://*<\ConnectorFQDN>*
 
@@ -158,14 +164,14 @@ Instructions for when you use these settings:
 
 ## SharePoint 2016 or SharePoint 2013 registry settings
 
-**Registry path:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
+**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
-**Type:** Reg_SZ
+**Type**: Reg_SZ
 
-**Value:** https://*<\YourTenantURL>*/_wmcs/licensing
+**Value**: https://*<\YourTenantURL>*/_wmcs/licensing
 
 
-**Data:** One of the following, depending on whether you are using HTTP or HTTPS from your SharePoint server to the RMS connector:
+**Data**: One of the following, depending on whether you are using HTTP or HTTPS from your SharePoint server to the RMS connector:
 
 - http://*<\ConnectorFQDN>*/_wmcs/licensing
 
@@ -173,13 +179,13 @@ Instructions for when you use these settings:
 
 ---
 
-**Registry path:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification
+**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification
 
-**Type:** Reg_SZ
+**Type**: Reg_SZ
 
-**Value:** Default
+**Value**: Default
 
-**Data:** One of the following, depending on whether you are using HTTP or HTTPS from your SharePoint server to the RMS connector:
+**Data**: One of the following, depending on whether you are using HTTP or HTTPS from your SharePoint server to the RMS connector:
 
 - http://*<\ConnectorFQDN>*/_wmcs/certification
 
@@ -187,14 +193,14 @@ Instructions for when you use these settings:
 
 ---
 
-**Registry path:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing
+**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing
 
-**Type:** Reg_SZ
+**Type**: Reg_SZ
 
-**Value:** Default
+**Value**: Default
 
 
-**Data:** One of the following, depending on whether you are using HTTP or HTTPS from your SharePoint server to the RMS connector:
+**Data**: One of the following, depending on whether you are using HTTP or HTTPS from your SharePoint server to the RMS connector:
 
 - http://*<\ConnectorFQDN>*/_wmcs/licensing
 
@@ -205,23 +211,23 @@ Instructions for when you use these settings:
 
 ## File server and File Classification Infrastructure registry settings
 
-**Registry path:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
+**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
-**Type:** Reg_SZ
+**Type**: Reg_SZ
 
-**Value:** Default
+**Value**: Default
 
-**Data:** http://*<\ConnectorFQDN>*/_wmcs/licensing
+**Data**: http://*<\ConnectorFQDN>*/_wmcs/licensing
 
 ---
 
-**Registry path:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
+**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
-**Type:** Reg_SZ
+**Type**: Reg_SZ
 
-**Value:** Default
+**Value**: Default
 
-**Data:** http://*<\ConnectorFQDN>*/_wmcs/certification
+**Data**: http://*<\ConnectorFQDN>*/_wmcs/certification
 
 
 Back to [Deploying the Azure Rights Management connector](deploy-rms-connector.md)

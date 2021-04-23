@@ -65,3 +65,11 @@
   - name: Microsoft Information Protection SDK
     tocHref: /azure/information-protection/develop/mip/
     topicHref: /azure/information-protection/develop/mip
+
+  - name: Enterprise Mobility + Security
+    tocHref: /security/benchmark/azure/
+    topicHref: /enterprise-mobility-security
+    items:
+      - name: Azure Information Protection
+        tocHref: /security/benchmark/azure/baselines/
+        topicHref: /azure/information-protection

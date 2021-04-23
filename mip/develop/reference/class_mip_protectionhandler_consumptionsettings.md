@@ -1,26 +1,29 @@
 ---
-title: class mip::ProtectionHandler::ConsumptionSettings 
-description: Documents the mip::protectionhandler class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ProtectionHandler::ConsumptionSettings 
+description: Documents the protectionhandler::consumptionsettings class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::ProtectionHandler::ConsumptionSettings 
+# class ProtectionHandler::ConsumptionSettings 
 Settings used to create a ProtectionHandler to consume existing content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public ConsumptionSettings(const std::vector\<uint8_t\>& serializedPublishingLicense)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
+public ConsumptionSettings(const std::vector\<uint8_t\>& serializedPreLicense, const std::vector\<uint8_t\>& serializedPublishingLicense)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
 public ConsumptionSettings(const std::shared_ptr\<PublishingLicenseInfo\>& licenseInfo)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
 public std::shared_ptr\<PublishingLicenseInfo\> GetPublishingLicenseInfo() const  |  Get the publishing license associated with the protected content.
 public bool GetIsOfflineOnly() const  |  Gets whether or not ProtectionHandler creation allows for online HTTP operations.
 public void SetIsOfflineOnly(bool isOfflineOnly)  |  Sets whether or not ProtectionHandler creation allows for online HTTP operations.
 public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
+public void SetContentName(const std::string& contentName)  | _Not yet documented._
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
+public const std::string& GetContentName() const  | _Not yet documented._
   
 ## Members
   
@@ -28,6 +31,17 @@ public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated u
 ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
 
 Parameters:  
+* **serializedPublishingLicense**: Serialized publishing license from protected content
+
+
+  
+### ConsumptionSettings function
+ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
+
+Parameters:  
+* **serializedPreLicense**: Serialized pre license from attached to the content. 
+
+
 * **serializedPublishingLicense**: Serialized publishing license from protected content
 
 
@@ -72,9 +86,16 @@ Parameters:
 
 A delegated user is specified when the authenticating user/application is acting on behalf of another user
   
+### SetContentName function
+_Not documented yet._
+
+  
 ### GetDelegatedUserEmail function
 Gets the delegated user.
 
   
 **Returns**: Delegated user
 A delegated user is specified when the authenticating user/application is acting on behalf of another user
+  
+### GetContentName function
+_Not documented yet._

@@ -1,20 +1,21 @@
 ---
 # required metadata
 
-title: Classify - Azure Information Protection client
-description: Instructions how to classify your documents and emails when you use the Azure Information Protection client for Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/30/2019
-ms.topic: conceptual
+title: Classify - Azure Information Protection classic client
+description: Instructions how to classify your documents and emails when you use the Azure Information Protection classic client for Windows.
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 03/09/2019
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: v1client
@@ -25,13 +26,15 @@ ms.custom: user
 
 ---
 
-# User Guide: Classify a file or email with the Azure Information Protection client
+# User Guide: Classify a file or email with the Azure Information Protection classic client
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client user guide](clientv2-classify.md).*
 
-> [!NOTE]
+[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
+
+> [!TIP]
 > Use these instructions to help you classify (but not protect) your documents and emails. If you need to also protect your documents and emails, see the [classify and protect instructions](client-classify-protect.md). If you are not sure which set of instructions to use, check with your administrator or help desk.
 
 The easiest way to classify your documents and emails is when you are creating or editing them from within your Office desktop apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 

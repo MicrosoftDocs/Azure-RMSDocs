@@ -3,18 +3,19 @@
 
 title: Configure conditions for an Azure Information Protection label - AIP
 description: Conditions for a label let you automatically assign a label to a document or email. Or, you can prompt users to select a recommended label.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/14/2019
-ms.topic: conceptual
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 09/16/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: aiplabels
@@ -27,14 +28,12 @@ ms.custom: admin
 
 # How to configure conditions for automatic and recommended classification for Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and [Restrict access to content by using encryption in sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels) and [Apply a sensitivity label to content automatically](/microsoft-365/compliance/apply-sensitivity-label-automatically) from the Microsoft 365 documentation.*
 
-> [!NOTE]
-> These instructions apply to the Azure Information Protection client (classic) and not the Azure Information Protection unified labeling client. Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
-> 
-> If you are looking for information to configure automatic and recommended classification for the unified labeling client, see the Office documentation. For example, [Apply a sensitivity label to content automatically](/microsoft-365/compliance/apply-sensitivity-label-automatically).
+[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
+>
 
 When you configure conditions for a label, you can automatically assign a label to a document or email. Or, you can prompt users to select the label that you recommend. 
 
@@ -65,7 +64,7 @@ If you configure automatic classification rather than recommended, the label is 
     
     You cannot use recommended classification for documents that were previously labeled with a higher classification. 
 
-You can change this behavior so that the Azure Information Protection client periodically checks documents for the condition rules that you specify. For example, this would be appropriate if you're using [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office apps that are automatically saved in SharePoint Online, OneDrive, or OneDrive for Business. To support this scenario, you can configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) that is currently in preview. The setting turns on classification to run continuously in the background.
+You can change this behavior so that the Azure Information Protection client periodically checks documents for the condition rules that you specify. For example, this would be appropriate if you're using [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office apps that are automatically saved in Microsoft SharePoint, OneDrive for work or school, or OneDrive for home. To support this scenario, you can configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) that is currently in preview. The setting turns on classification to run continuously in the background.
 
 ### How multiple conditions are evaluated when they apply to more than one label
 
@@ -78,18 +77,18 @@ You can change this behavior so that the Azure Information Protection client per
 
 ## To configure recommended or automatic classification for a label
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane. 
     
-    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
 
-2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label to configure.
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** pane, select the label to configure.
 
-3. On the **Label** blade, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
+3. On the **Label** pane, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
 
-4. On the **Condition** blade, select **Information Types** if you want to use a predefined condition, or **Custom** if you want to specify your own:
+4. On the **Condition** pane, select **Information Types** if you want to use a predefined condition, or **Custom** if you want to specify your own:
     - For **Information Types**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
-        The information types use the Office 365 data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information, see [What the sensitive information types look for](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) from the Office 365 documentation.
+        The information types use the Microsoft 365 data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information, see [What the sensitive information types look for](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) from the Microsoft 365 documentation.
         
         The list of information types that you can select from the Azure portal is periodically updated to include any new Office DLP additions. However, the list excludes any custom sensitive information types that you have defined and uploaded as a rule package to the Office 365 Security & Compliance Center.
         
@@ -100,13 +99,13 @@ You can change this behavior so that the Azure Information Protection client per
     
     - For **Custom**: Specify a name and phrase to match, which must exclude quotation marks and special characters. Then specify whether to match as a regular expression, use case sensitivity, and the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
-        The regular expressions use the Office 365 regex patterns. To help you specify regular expressions for your custom conditions, see the following specific version of [Perl Regular Expression Syntax](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) from Boost.
+        The regular expressions use the Office 365 regex patterns. To help you specify regular expressions for your custom conditions, see the following specific version of [Perl Regular Expression Syntax](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) from Boost. Custom regexes must be compliant with [.NET documentation](/dotnet/standard/base-types/character-escapes-in-regular-expressions#character-escapes-in-net). In addition, the Perl 5 character escape that is used to specify Unicode (the form \x{####…}, where ####… is a series of hexadecimal digits) is **not** supported.
         
 5. Decide whether you need to change the **Minimum number of occurrences** and the **Count occurrence with unique value only**, and then select **Save**. 
     
     Example of the occurrences options: You select the information type for the social security number, set the minimum number of occurrences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique value only** to **On**, the condition is not met. If you set this option to **Off**, the condition is met.
 
-6. Back on the **Label** blade, configure the following, and then click **Save**:
+6. Back on the **Label** pane, configure the following, and then click **Save**:
     
     - Choose automatic or recommended classification: For **Select how this label is applied: automatically or recommended to user**, select **Automatic** or **Recommended**.
     
@@ -116,7 +115,7 @@ When you click **Save**, your changes are automatically available to users and s
 
 ### Sensitive information types that require a minimum version of the client
 
-The following sensitive information types require a minimum version of [1.48.204.0](./rms-client/client-version-release-history.md#version-1482040) of the Azure Information Protection client:
+The following sensitive information types require a minimum version of 1.48.204.0 of the Azure Information Protection client:
 
 - **Azure Service Bus Connection String**
 - **Azure IoT Connection String**

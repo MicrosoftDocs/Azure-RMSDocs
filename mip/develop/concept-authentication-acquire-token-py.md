@@ -4,9 +4,9 @@ description: This article will help you understand how to use Python to acquire 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
+ms.custom: has-adal-ref
 ---
 
 # Acquire an access token (Python)
@@ -18,7 +18,7 @@ This example demonstrates how to call an external Python script to obtain an OAu
 To run the sample below:
 
 - Install Python 2.7 or newer.
-- Implement utils.h/cpp in your project. 
+- Implement utils.h/cpp in your project.
 - Auth.py should be added to your project and exist in same directory as the binaries at build.
 - Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Azure Active Directory (Azure AD) tenant. Azure AD will provide an application ID, also known as client ID, which is used in your token acquisition logic.
 
@@ -37,7 +37,7 @@ In auth.h, `AcquireToken()` is overloaded and the overloaded function and update
 #include <string>
 
 namespace sample {
-  namespace auth {    
+  namespace auth {
     std::string AcquireToken(
         const std::string& userName, //A string value containing the user's UPN.
         const std::string& password, //The user's password in plaintext
@@ -48,7 +48,7 @@ namespace sample {
 }
 ```
 
-The first three parameters will be provided by user input or hard coded in to your application. The last two parameters are provided by the SDK to the auth delegate. 
+The first three parameters will be provided by user input or hard coded in to your application. The last two parameters are provided by the SDK to the auth delegate.
 
 
 ### auth.cpp
@@ -114,7 +114,7 @@ namespace sample {
 
 This script acquires authentication tokens directly via [ADAL for Python](https://github.com/AzureAD/azure-activedirectory-library-for-python). This code is included only as a means to acquire auth tokens for use by the sample apps and is not intended for use in production. The script works only against tenants that support plain old username/password http authentication. MFA or certificate-based authentication will fail.
 
-> [!NOTE] 
+> [!NOTE]
 > Prior to running this sample, you must install ADAL for Python by running one of the following commands:
 
 ```shell
@@ -145,7 +145,7 @@ def main(argv):
   resource = ''
 
   clientId = ''
-    
+
   for option, arg in options:
     if option == '-h':
       printUsage()
@@ -176,13 +176,13 @@ def main(argv):
   token = auth_context.acquire_token_with_username_password(resource, username, password, clientId)
   print(token["accessToken"])
 
-if __name__ == '__main__':  
+if __name__ == '__main__':
   main(sys.argv[1:])
 ```
 
 ## Update AcquireOAuth2Token
 
-Finally, update the `AcquireOAuth2Token` function in `AuthDelegateImpl` to call the overloaded `AcquireToken` function. The resource and authority URLs are obtained by reading `challenge.GetResource()` and `challenge.GetAuthority()`. The `OAuth2Challenge` is passed in to the auth delegate when the engine is added. This work is done by the SDK and requires no additional work on the part of the developer. 
+Finally, update the `AcquireOAuth2Token` function in `AuthDelegateImpl` to call the overloaded `AcquireToken` function. The resource and authority URLs are obtained by reading `challenge.GetResource()` and `challenge.GetAuthority()`. The `OAuth2Challenge` is passed in to the auth delegate when the engine is added. This work is done by the SDK and requires no additional work on the part of the developer.
 
 ```cpp
 bool AuthDelegateImpl::AcquireOAuth2Token(
@@ -198,5 +198,3 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
 ```
 
 When the `engine` is added, the SDK will call the `AcquireOAuth2Token function, passing in the challenge, executing the Python script, receiving a token, then presenting the token to the service.
-
-

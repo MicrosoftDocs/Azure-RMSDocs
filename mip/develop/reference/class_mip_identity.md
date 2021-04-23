@@ -1,14 +1,14 @@
 ---
-title: class mip::Identity 
-description: Documents the mip::identity class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class Identity 
+description: Documents the identity::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::Identity 
+# class Identity 
 Abstraction for identity.
   
 ## Summary
@@ -17,7 +17,9 @@ Abstraction for identity.
 public Identity()  |  Default Identity constructor used when a user email address is not known.
 public Identity(const Identity& other)  |  Identity copy constructor.
 public explicit Identity(const std::string& email)  |  Identity constructor used when a user email address is known.
+public explicit Identity(const std::string& email, const std::string& name)  |  Identity constructor used when a user email address and user name is known.
 public const std::string& GetEmail() const  |  Get the email.
+public const std::string& GetName() const  |  Get the user's friendly name. used for text marking.
   
 ## Members
   
@@ -36,7 +38,18 @@ Parameters:
 Identity constructor used when a user email address is known.
 
 Parameters:  
-* **email**: user email address.
+* **email**: must be valid email address.
+
+
+  
+### Identity function
+Identity constructor used when a user email address and user name is known.
+
+Parameters:  
+* **email**: must be valid email address. 
+
+
+* **name**: user name.
 
 
   
@@ -45,3 +58,9 @@ Get the email.
 
   
 **Returns**: The email.
+  
+### GetName function
+Get the user's friendly name. used for text marking.
+
+  
+**Returns**: The friendly name.

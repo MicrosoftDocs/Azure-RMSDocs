@@ -1,31 +1,30 @@
 ---
-title: class mip::PolicyProfile 
-description: Documents the mip::policyprofile class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class PolicyProfile 
+description: Documents the policyprofile::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::PolicyProfile 
+# class PolicyProfile 
 PolicyProfile class is the root class for using the Microsoft Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Get the settings set on the profile.
-public void ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  Starts list engines operation.
+public std::shared_ptr\<AsyncControl\> ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  Starts list engines operation.
 public std::vector\<std::string\> ListEngines()  |  List of engines.
-public void UnloadEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Starts unloading the policy engine with the given ID.
+public std::shared_ptr\<AsyncControl\> UnloadEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Starts unloading the policy engine with the given ID.
 public void UnloadEngine(const std::string& id)  |  Starts unloading the policy engine with the given ID.
-public void AddEngineAsync(const PolicyEngine::Settings& settings, const std::shared_ptr\<void\>& context)  |  Starts adding a new policy engine to the profile.
+public std::shared_ptr\<AsyncControl\> AddEngineAsync(const PolicyEngine::Settings& settings, const std::shared_ptr\<void\>& context)  |  Starts adding a new policy engine to the profile.
 public std::shared_ptr\<PolicyEngine\> AddEngine(const PolicyEngine::Settings& settings, const std::shared_ptr\<void\>& context)  |  Add a new policy engine to the profile.
-public void DeleteEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Starts deleting the policy engine with the given ID. All data for the given profile will be deleted.
+public std::shared_ptr\<AsyncControl\> DeleteEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Starts deleting the policy engine with the given ID. All data for the given profile will be deleted.
 public void DeleteEngine(const std::string& engineId)  |  Delete the policy engine with the given ID. All data for the given engine will be deleted.
-public static MIP_API void __CDECL mip::PolicyProfile::LoadAsync | Starts loading a profile based on the provided settings.
-public static const MIP_API char* __CDECL mip::PolicyProfile::GetVersion | Get the library version
-
+public void AcquireAuthToken(Cloud cloud, const std::shared_ptr\<AuthDelegate\>& authDelegate) const  |  Trigger an authentication callback.
+  
 ## Members
   
 ### GetSettings function
@@ -76,7 +75,7 @@ Parameters:
 * **settings**: the mip::PolicyEngine::Settings object that specifies the engine's settings. 
 
 
-* **context**: a parameter that will be fowarded opaquely to the observer functions and optional HttpDelegate. 
+* **context**: a parameter that will be forwarded opaquely to the observer functions and optional HttpDelegate. 
 
 
 PolicyProfile::Observer will be called upon success or failure.
@@ -113,14 +112,16 @@ Delete the policy engine with the given ID. All data for the given engine will b
 Parameters:  
 * **id**: the unique engine ID.
 
-### LoadAsync function
-Starts loading a profile based on the provided settings.
+
+  
+### AcquireAuthToken function
+Trigger an authentication callback.
 
 Parameters:  
-* **settings**: the profile settings used to load the profile object. </para>
-* **context**: a context parameter that will be passed into the observer functions.
+* **cloud**: Azure cloud 
 
-### GetVersion function
-Get the library version
 
-**Returns**: A version string.
+* **authDelegate**: Authentication callback that will be invoked
+
+
+MIP will not cache or do anything else with the value returned by the auth delegate. This function is recommended for applications that aren't "logged in" until after MIP requests an auth token. It allows an application to fetch a token before MIP actually requires one.

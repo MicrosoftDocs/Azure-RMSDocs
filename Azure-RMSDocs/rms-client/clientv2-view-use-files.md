@@ -3,11 +3,11 @@
 
 title: View protected files with the Azure Information Protection unified labeling client
 description: Instructions to view a protected file that requires you to have the Azure Information Protection unified labeling viewer installed.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/17/2019
-ms.topic: conceptual
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 09/03/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -25,9 +25,12 @@ ms.custom: user
 
 # User Guide: View protected files with the Azure Information Protection unified labeling client
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+>*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
+>
+>***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+
 
 You can often view a protected file by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
 
@@ -40,7 +43,7 @@ The viewer automatically installs as part of the Azure Information Protection un
 > 
 > Install the viewer if you have been sent a protected document by somebody from another organization or if you do not have local administrator permissions to your PC.
 
-To be able to open a protected document, the application must be "RMS-enlightened". Office apps and the Azure Information Protection viewer are examples of RMS-enlightened applications. To see a list of applications by type and supported devices, see the [RMS-enlightened applications](../requirements-applications.md#rms-enlightened-applications) table. 
+To be able to open a protected document, the application must be "RMS-enlightened". Office apps and the Azure Information Protection viewer are examples of RMS-enlightened applications. To see a list of applications by type and supported devices, see the [RMS-enlightened applications](../requirements-applications.md) tables. 
 
 ## Message.rpmsg as an email attachment
 
@@ -52,7 +55,7 @@ However, if you have an iOS or Android device, you can use the Azure Information
 
 Before you can view the protected file, the Rights Management service that was used to protect the file must first confirm that you are authorized to view the file. The service does this confirmation by checking your user name and password. In some cases, these credentials might be cached and you do not see a prompt that asks you to sign in. In other cases, you are prompted to supply your credentials.
 
-If your organization does not have a cloud-based account for you to use (for Office 365 or Azure) and does not use an equivalent on-premises version (AD RMS), you have two options:
+If your organization does not have a cloud-based account for you to use (for Microsoft 365 or Azure) and does not use an equivalent on-premises version (AD RMS), you have two options:
 
 - If you were sent a protected email, follow the instructions to sign in with your social identity provider (such as Google for a Gmail account) or apply for a one-time passcode.
 
@@ -78,5 +81,5 @@ If your organization does not have a cloud-based account for you to use (for Off
 ## Other instructions
 More how-to instructions from the Azure Information Protection user guide:
 
-- [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
+- [What do you want to do?](clientv2-user-guide.md#what-do-you-want-to-do)
 

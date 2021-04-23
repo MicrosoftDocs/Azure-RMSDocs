@@ -1,14 +1,14 @@
 ---
-title: class mip::ApplicationActionState 
-description: Documents the mip::applicationactionstate class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ApplicationActionState 
+description: Documents the applicationactionstate::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::ApplicationActionState 
+# class ApplicationActionState 
   
 ## Summary
  Members                        | Descriptions                                
@@ -51,7 +51,7 @@ Get the new label's assignment method.
   
 **Returns**: The assignment method STANDARD, PRIVILEGED, AUTO. 
   
-**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod-enum)
+**See also**: mip::AssignmentMethod
   
 ### GetNewLabelExtendedProperties function
 Return new label's extended properties.

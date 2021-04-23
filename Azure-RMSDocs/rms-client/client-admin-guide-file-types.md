@@ -1,20 +1,21 @@
 ---
 # required metadata
 
-title: File types supported - Azure Information Protection client
-description: Technical details about supported file types, file name extensions, and levels of protection for admins who are are responsible for the Azure Information Protection client for Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/26/2019
+title: File types supported - Azure Information Protection classic client
+description: Technical details about supported file types, file name extensions, and levels of protection for admins who are are responsible for the Azure Information Protection classic client for Windows.
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 11/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: v1client
@@ -26,13 +27,15 @@ ms.custom: admin
 ---
 
 
-# Admin Guide: File types supported by the Azure Information Protection client
+# Admin Guide: File types supported by the Azure Information Protection classic client
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](clientv2-admin-guide-file-types.md).*
 
-The Azure Information Protection client can apply the following to documents and emails:
+[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
+
+The Azure Information Protection classic client can apply the following to documents and emails:
 
 - Classification only
 
@@ -86,7 +89,7 @@ The Azure Information Protection client supports protection at two different lev
 
 |Type of protection|Native|Generic|
 |----------------------|----------|-----------|
-|Description|For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and other application file types that support a Rights Management service, native protection provides a strong level of protection that includes both encryption and enforcement of rights (permissions).|For all other applications and file types, generic protection provides a level of protection that includes both file encapsulation using the .pfile file type and authentication to verify if a user is authorized to open the file.|
+|Description|For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and other application file types that support a Rights Management service, native protection provides a strong level of protection that includes both encryption and enforcement of rights (permissions).|For other supported file types, generic protection provides a level of protection that includes both file encapsulation using the .pfile file type and authentication to verify if a user is authorized to open the file.|
 |Protection|Files protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for those who receive the file through email or are given access to it through file or share permissions.<br /><br />- Additionally, usage rights and policy that were set by the content owner when the files were protected are enforced when the content is rendered in either the Azure Information Protection viewer (for protected text and image files) or the associated application (for all other supported file types).|File protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for people who are authorized to open the file and given access to it. If authorization fails, the file does not open.<br /><br />- Usage rights and policy set by the content owner are displayed to inform authorized users of the intended usage policy.<br /><br />- Audit logging of authorized users opening and accessing files occurs. However, usage rights are not enforced.|
 |Default for file types|This is the default level of protection for the following file types:<br /><br />- Text and image files<br /><br />- Microsoft Office (Word, Excel, PowerPoint) files<br /><br />- Portable document format (.pdf)<br /><br />For more information, see the following section, [Supported file types for classification and protection](#supported-file-types-for-classification-and-protection).|This is the default protection for all other file types (such as .vsdx, .rtf, and so on) that are not supported by native protection.|
 
@@ -98,7 +101,7 @@ The data protection can be applied automatically when a user selects a label tha
 
 There are maximum file sizes that the Azure Information Protection client supports for protection.
 
-- **For Office files:**
+- **For Office files**:
 
 
   |                                                     Office application                                                      |                                                Maximum file size supported                                                 |
@@ -157,7 +160,7 @@ You can change how the Azure Information Protection client protects files by edi
 
 Reasons for why you might want to do this:
 
-- To ensure that all users can open the file if they don’t have an application that supports native protection.
+- To ensure that all users can open the file if they don't have an application that supports native protection.
 
 - To accommodate security systems that take action on files by their file name extension and can be reconfigured to accommodate the .pfile file name extension but cannot be reconfigured to accommodate multiple file name extensions for native protection.
 
@@ -201,7 +204,7 @@ You can make similar registry edits for other scenarios by changing the value of
 
 After making these registry changes, there's no need to restart the computer. However, if you're using PowerShell commands to protect files, you must start a new PowerShell session for the changes to take effect.
 
-For more information about editing the registry to change the default protection level of files, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile".
+In this documentation for developers, generic protection is referred to as "PFile".
 
 ## File types that are excluded from classification and protection
 
@@ -224,12 +227,12 @@ By default, the scanner also excludes the same file types as the Azure Informati
 
 You can change the file types included or excluded for file inspection by the scanner:
 
-- Configure **File types to scan** in the scanner profile, by [using the Azure portal](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal).
+- Configure **File types to scan** in the scanner profile, [using the Azure portal](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
 
 > [!NOTE]
 > If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted. 
 
-By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. To change this behavior for the scanner, edit the registry and specify the additional file types that you want to be protected. For instructions, see [Registry edits to change which file types are protected](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) from the scanner deployment instructions.
+By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. To change this behavior for the scanner, edit the registry and specify the additional file types that you want to be protected. For instructions, see [Use the registry to change which file types are protected](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect) from the scanner deployment instructions.
 
 ### Files that cannot be protected by default
 
@@ -245,13 +248,7 @@ If you change the [default behavior](client-admin-guide-customizations.md#dont-p
 
 ### Limitations for container files, such as .zip files
 
-Container files are files that include other files, with a typical example being .zip files that contain compressed files. Other examples include .rar, .7z, .msg files, and PDF documents that include attachments.
-
-You can classify and protect these container files, but the classification and protection is not applied to each file inside the container.
-
-If you have a container file that includes classified and protected files, you must first extract the files to change their classification or protection settings. However, you can remove the protection for all files in supported container files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet.
-
-The Azure Information Protection viewer cannot open attachments in a protected PDF document. In this scenario, when the document is opened in the viewer, the attachments are not visible.
+For more information, see the [collection of Azure Information Protection limitations](../known-issues.md#client-support-for-container-files-such-as-zip-files).
 
 ## File types supported for inspection
 
@@ -265,9 +262,9 @@ Without any additional configuration, the Azure Information Protection client us
 |PDF |.pdf|
 |Text|.txt; .xml; .csv|
 
-With additional configuration, other file types can also be inspected. For example, you can [register a custom file name extension to use the existing Windows filter handler for text files](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters), and you can install additional filters from software vendors.
+With additional configuration, other file types can also be inspected. For example, you can [register a custom file name extension to use the existing Windows filter handler for text files](/windows/desktop/search/-search-ifilter-registering-filters), and you can install additional filters from software vendors.
 
-To check what filters are installed, see the [Finding a Filter Handler for a Given File Extension](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension) section from the Windows Search Developer's Guide.
+To check what filters are installed, see the [Finding a Filter Handler for a Given File Extension](/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension) section from the Windows Search Developer's Guide.
 
 The following sections have configuration instructions to inspect .zip files, and .tiff files.
 
@@ -275,9 +272,9 @@ The following sections have configuration instructions to inspect .zip files, an
 
 The Azure Information Protection scanner and the [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can inspect .zip files when you follow these instructions:
 
-1. For the computer running the scanner or the PowerShell session, install the [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
+1. For the computer running the scanner or the PowerShell session, install the [Office 2010 Filter Pack SP2](https://support.microsoft.com/help/2687447/description-of-office-2010-filter-pack-sp2).
 
-2. For the scanner: After finding sensitive information, if the .zip file should be classified and protected with a label, add a registry entry for this file name extension to have generic protection (pfile), as described in [Registry edits to change which file types are protected](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) from the scanner deployment instructions.
+2. For the scanner: After finding sensitive information, if the .zip file should be classified and protected with a label, add a registry entry for this file name extension to have generic protection (pfile), as described in [Use the registry to change which file types are protected](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect) from the scanner deployment instructions.
 
 Example scenario after doing these steps: 
 
@@ -287,9 +284,9 @@ After inspecting the file, the scanner classifies this file as **Confidential \ 
 
 ### To inspect .tiff files by using OCR
 
-The Azure Information Protection scanner and the [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you install the Windows TIFF IFilter feature, and then configure [Windows TIFF IFilter Settings](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) on the computer running the scanner or the PowerShell session.
+The Azure Information Protection scanner and the [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you install the Windows TIFF IFilter feature, and then configure [Windows TIFF IFilter Settings](/previous-versions/windows/it-pro/windows-7/dd744701(v=ws.10)) on the computer running the scanner or the PowerShell session.
 
-For the scanner: After finding sensitive information, if the .tiff file should be classified and protected with a label, add a registry entry for this file name extension to have native protection, as described in [Registry edits to change which file types are protected](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) from the scanner deployment instructions.
+For the scanner: After finding sensitive information, if the .tiff file should be classified and protected with a label, add a registry entry for this file name extension to have native protection, as described in [Use the registry to change which file types are protected](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect) from the scanner deployment instructions.
 
 ## Next steps
 Now that you've identified the file types supported by the Azure Information Protection client, see the following resources for additional information that you might need to support this client:
@@ -301,4 +298,3 @@ Now that you've identified the file types supported by the Azure Information Pro
 - [Document tracking](client-admin-guide-document-tracking.md)
 
 - [PowerShell commands](client-admin-guide-powershell.md)
-

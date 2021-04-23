@@ -4,7 +4,6 @@ description: This article will help you understand the metadata that is generate
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
 ---
@@ -28,21 +27,21 @@ The GUID is a unique identifier for each label in an organization.
 
 The MIP SDK applies the following set of metadata.
 
-| Attribute | Type or Value                 | Description                                                                                                                                                                                                                                        | Mandatory |
-|-----------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| **Enabled**   | True or False                 | This attribute indicates whether the classification represented by this set of key-value pairs is enabled for the data item. DLP products typically validate the existence of this key to identify the classification label. | Yes       |
-| **SiteId**    | GUID                          | Azure Active Directory Tenant ID                                                                                                                                                                                                                   | Yes       |
-| **ActionId**  | GUID                          | ActionID is changed each time a label is set. Audit logs will include both old and new actionID to allow chaining of labeling activity to the data item.                                                                                 | Yes       |
-| **Method**    | Standard or Privileged        | Set via [mip::AssignmentMethod](reference/mip-enums-and-structs.md#assignmentmethod-enum). Standard implies that the label is applied by default or automatically. Privileged implies that the label was manually selected.                                                                                                                                                                                                                 | No        |
-| **SetDate**   | Extended ISO 8601 Date Format | The timestamp when the label was set.                                                                                                                                                                                                              | No        |
-| **Name**      | string                        | Label unique name within the tenant. It doesn't necessarily correspond to display name.                                                                                                                                                              | No      |
-| **ContentBits** | integer | Bitmask that describes the types of content marking that should be applied to a file. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4, ENCRYPT = 0x8
- | No |
+| Attribute                                       | Type or Value                 | Description                                                                                                                                                                                                                  | Mandatory |
+| ----------------------------------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| **Enabled**                                     | True or False                 | This attribute indicates whether the classification represented by this set of key-value pairs is enabled for the data item. DLP products typically validate the existence of this key to identify the classification label. | Yes       |
+| **SiteId**                                      | GUID                          | Azure Active Directory Tenant ID                                                                                                                                                                                             | Yes       |
+| **ActionId** (Removed in MIP SDK 1.8 and later) | GUID                          | ActionID is changed each time a label is set. Audit logs will include both old and new actionID to allow chaining of labeling activity to the data item.                                                                     | Yes       |
+| **Method**                                      | Standard or Privileged        | Set via [mip::AssignmentMethod](reference/mip-enums-and-structs.md#assignmentmethod-enum). Standard implies that the label is applied by default or automatically. Privileged implies that the label was manually selected.  | No        |
+| **SetDate**                                     | Extended ISO 8601 Date Format | The timestamp when the label was set.                                                                                                                                                                                        | No        |
+| **Name**                                        | string                        | Label unique name within the tenant. It doesn't necessarily correspond to display name.                                                                                                                                      | No        |
+| **ContentBits**                                 | integer                       | Bitmask that describes the types of content marking that should be applied to a file. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4, ENCRYPT = 0x8                                                             |
+| No                                              |
 
 When applied to a file, the result is similar to the table below.
 
 | Key                                                         | Value                                |
-|-------------------------------------------------------------|--------------------------------------|
+| ----------------------------------------------------------- | ------------------------------------ |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | true                                 |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Method      | Privileged                           |
@@ -53,7 +52,7 @@ When applied to a file, the result is similar to the table below.
 
 ## Extending Metadata with Custom Attributes
 
-Custom metadata may be appended via File and Policy API. Custom attributes must maintain the base `MSIP_Label_GUID` prefix. 
+Custom metadata may be appended via File and Policy API. Custom attributes must maintain the base `MSIP_Label_GUID` prefix.
 
 For example, an application written by Contoso Corporation must apply metadata indicating which system generated a labeled file. The application can create a new label, prefixed with `MSIP_Label_GUID`. The software vendor name and custom attribute are appended to the prefix to generate the custom metadata.
 

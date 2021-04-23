@@ -1,21 +1,21 @@
 ---
-title: class mip::PolicyEngine::Settings 
-description: Documents the mip::policyengine class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class PolicyEngine::Settings 
+description: Documents the policyengine::settings class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::PolicyEngine::Settings 
+# class PolicyEngine::Settings 
 Defines the settings associated with a PolicyEngine.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  PolicyEngine::Settings constructor for loading an existing engine.
-public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  PolicyEngine::Settings constructor for creating a new engine.
+public Settings(const std::string& engineId, const std::shared_ptr\<AuthDelegate\>& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  PolicyEngine::Settings constructor for loading an existing engine.
+public Settings(const Identity& identity, const std::shared_ptr\<AuthDelegate\>& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  PolicyEngine::Settings constructor for creating a new engine.
 public const std::string& GetEngineId() const  |  Get the engine ID.
 public void SetEngineId(const std::string& id)  |  Set the engine ID.
 public const Identity& GetIdentity() const  |  Get the Identity object.
@@ -25,15 +25,23 @@ public void SetClientData(const std::string& clientData)  |  Set the Client Data
 public const std::string& GetLocale() const  |  Get the Locale set in the settings.
 public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& customSettings)  |  Set the custom settings, used for feature gating and testing.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
-public void SetSessionId(const std::string& sessionId)  |  Set the session ID, used for client defined telemetry.
+public void SetSessionId(const std::string& sessionId)  |  Set the session ID, used for client defined telemetry and to make it easier to correlate application events with the corresponding policy service REST requests.
 public const std::string& GetSessionId() const  |  Get the session ID, a unique identifier.
 public bool IsLoadSensitivityTypesEnabled() const  |  Get the the flag indicating if load sensitivity labels is enabled.
-public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Optionally sets the cloud endpoint base URL.
+public void SetCloud(Cloud cloud)  |  Optionally sets the target cloud.
+public Cloud GetCloud() const  |  Gets the target cloud used by all service requests.
+public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Sets the cloud endpoint base URL for custom cloud.
 public const std::string& GetCloudEndpointBaseUrl() const  |  Gets the cloud base URL used by all service requests, if specified.
 public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
-public void SetLabelFilter(const std::vector\<LabelFilterType\>& labelFilter)  |  Sets the label filter.
-public const std::vector\<LabelFilterType\>& GetLabelFilter() const  |  Gets the label filter.
+public void SetLabelFilter(const std::vector\<LabelFilterType\>& deprecatedLabelFilters)  |  Sets the label filter.
+public const std::vector\<LabelFilterType\>& GetLabelFilter() const  |  Gets the label filters set through deprecated function SetLabelFilter.
+public void ConfigureFunctionality(FunctionalityFilterType functionalityFilterType, bool enabled)  |  Enables or disables functionality.
+public const std::map\<FunctionalityFilterType, bool\>& GetConfiguredFunctionality() const  |  Gets the configured functionality.
+public void SetVariableTextMarkingType(VariableTextMarkingType variableTextMarkingType)  |  Sets the variable text marking type.
+public VariableTextMarkingType GetVariableTextMarkingType() const  |  Gets the variable text marking type.
+public void SetAuthDelegate(const std::shared_ptr\<AuthDelegate\>& authDelegate)  |  Set the Engine Auth Delegate.
+public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Get the Engine Auth Delegate.
   
 ## Members
   
@@ -42,6 +50,9 @@ PolicyEngine::Settings constructor for loading an existing engine.
 
 Parameters:  
 * **engineId**: Set it to the unique engine ID generated by AddEngineAsync or one self-generated. When loading an existing engine, reuse the ID else a new engine will be created. 
+
+
+* **authDelegate**: The authentication delegate used by the SDK to acquire authentication tokens, will override the PolicyProfile::Settings::authDelegate if both provided 
 
 
 * **clientData**: customizable client data that can be stored with the engine when unloaded, can be retrieved from a loaded engine. 
@@ -59,6 +70,9 @@ PolicyEngine::Settings constructor for creating a new engine.
 
 Parameters:  
 * **identity**: Identity info of the user associated with the new engine. 
+
+
+* **authDelegate**: The authentication delegate used by the SDK to acquire authentication tokens, will override the PolicyProfile::Settings::authDelegate if both provided 
 
 
 * **clientData**: customizable client data that can be stored with the engine when unloaded, can be retrieved from a loaded engine. 
@@ -138,10 +152,10 @@ Get the custom settings, used for feature gating and testing.
 **Returns**: List of name/value pairs.
   
 ### SetSessionId function
-Set the session ID, used for client defined telemetry.
+Set the session ID, used for client defined telemetry and to make it easier to correlate application events with the corresponding policy service REST requests.
 
 Parameters:  
-* **sessionId**: a unique string that connects telemetry events.
+* **sessionId**: An identifier (usually specified as a GUID) to uniquely identify this operation.
 
 
   
@@ -157,13 +171,29 @@ Get the the flag indicating if load sensitivity labels is enabled.
   
 **Returns**: True if enabled else false.
   
+### SetCloud function
+Optionally sets the target cloud.
+
+Parameters:  
+* **cloud**: Cloud
+
+
+If cloud is not specified, then it will default to commercial cloud.
+  
+### GetCloud function
+Gets the target cloud used by all service requests.
+
+  
+**Returns**: Cloud
+  
 ### SetCloudEndpointBaseUrl function
-Optionally sets the cloud endpoint base URL.
+Sets the cloud endpoint base URL for custom cloud.
 
 Parameters:  
 * **cloudEndpointBaseUrl**: the base URL used by all service requests (for example, "https://dataservice.protection.outlook.com")
 
 
+This value will only be read and must be set for Cloud = Custom
   
 ### GetCloudEndpointBaseUrl function
 Gets the cloud base URL used by all service requests, if specified.
@@ -194,11 +224,58 @@ Parameters:
 * **labelFilter**: the label filter.
 
 
-Labels are by default filter to scope, this api is to allow filtering by possible actions.
+Labels are by default filter to scope, this api is to allow filtering by possible actions. 
+If not set HyokProtection and DoubleKeyProtection are filtered.
   
 ### GetLabelFilter function
-Gets the label filter.
+Gets the label filters set through deprecated function SetLabelFilter.
 
   
 **Returns**: The label filter.
 Labels are by default filter to scope, this api is to allow filtering by possible actions.
+  
+### ConfigureFunctionality function
+Enables or disables functionality.
+
+Parameters:  
+* **functionalityFilterType**: the type of functionality. 
+
+
+* **enabled**: True to enable, false to disable
+
+
+HyokProtection, DoubleKeyProtection, DoubleKeyUserDefinedProtection are disabled by default and must be enabled
+  
+### GetConfiguredFunctionality function
+Gets the configured functionality.
+
+  
+**Returns**: A map of the types to a boolean value indicating whether or not it is enabled
+  
+### SetVariableTextMarkingType function
+Sets the variable text marking type.
+
+Parameters:  
+* **variableTextMarkingType**: the variable text marking type.
+
+
+  
+### GetVariableTextMarkingType function
+Gets the variable text marking type.
+
+  
+**Returns**: The variable text marking type.
+  
+### SetAuthDelegate function
+Set the Engine Auth Delegate.
+
+Parameters:  
+* **authDelegate**: the Auth delegate
+
+
+  
+### GetAuthDelegate function
+Get the Engine Auth Delegate.
+
+  
+**Returns**: The Engine Auth Delegate.

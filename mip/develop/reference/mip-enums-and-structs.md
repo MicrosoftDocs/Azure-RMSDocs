@@ -4,14 +4,12 @@ description: Reference documentation for MIP C++ SDK structs and enums.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ---
 
 # Enumerations and Structures
 
-## Namespace mip
 
 Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
@@ -22,10 +20,12 @@ enum ActionSource       |  defines what triggered the SetLabel event
 enum DataState       |  Defines what state of the data is the application acting upon.
 enum ContentFormat       |  Content format.
 enum LabelFilterType       |  Label filter types, optional set of properties that can be used to filter labels when calling list sensitivity labels.
+enum FeatureId       |  Defines new features by name.
+enum VariableTextMarkingType       |  various dynamic fields can be set into the text message of the application Some known: ${Item.Label} ${Item.Name} ${Item.Location} ${User.Name} ${User.PrincipalName} ${Event.DateTime} Others are still not defined: The sdk will replace them with correct values using these control flags.
 enum Consent       |  A user's response when consent is requested to connect to a service endpoint.
 enum CacheStorageType       |  Storage type for the caches.
 enum PFileExtensionBehavior       |  Describes PFile extensions behavior.
-enum ErrorType       | Not yet documented.
+enum ErrorType       | _Not yet documented._
 enum InspectorType       |  Inspector type correlating to supported file types.
 enum BodyType       |  Body type enumerator.
 enum FlightingFeature       |  Defines new features by name.
@@ -33,114 +33,140 @@ enum HttpRequestType       |  HTTP request type.
 enum LogLevel       |  Different log levels used across the MIP SDK.
 enum ProtectionType       |  Describes whether protection is based off a template or ad-hoc (custom)
 enum ActionType       |  Different action types.
-enum LabelState       | Not yet documented.
-enum ActionDataType       | Not yet documented.
-enum ConditionDataType       | Not yet documented.
-enum ContentMarkPlacement       | Not yet documented.
-enum LabelActionDataType       | Not yet documented.
-enum ProtectionActionType       | Not yet documented.
+enum LabelState       | _Not yet documented._
+enum ActionDataType       | _Not yet documented._
+enum ConditionDataType       | _Not yet documented._
+enum ContentMarkPlacement       | _Not yet documented._
+enum LabelActionDataType       | _Not yet documented._
+enum ProtectionActionType       | _Not yet documented._
 struct mip::ApplicationInfo  |  A struct that includes application specific information.
 struct mip::TelemetryConfiguration  |  Custom telemetry settings (not commonly used)
 
-### Enumerations
+## Enumerations
 
-#### WatermarkLayout enum
- Values                         | Descriptions                                
+### WatermarkLayout enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 HORIZONTAL            | Watermark layout is horizontal
 DIAGONAL            | Watermark layout is diagonal
+
 Layout for watermarks.
   
-#### ContentMarkAlignment enum
- Values                         | Descriptions                                
+### ContentMarkAlignment enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 LEFT            | Content marking is aligned to the left
 RIGHT            | Content marking is aligned to the right
 CENTER            | Content marking is centered
+
 Alignment for content marks (content header or content footer).
   
-#### AssignmentMethod enum
- Values                         | Descriptions                                
+### AssignmentMethod enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 STANDARD            | Label assignment method is standard
 PRIVILEGED            | Label assignment method is privileged
 AUTO            | Label assignment method is automatic
+
 The assignment method of the label on the document. Whether the Assignment of the label was done automatically, standard or as a privileged operation (The equivalent to an administrator operation).
   
-#### ActionSource enum
- Values                         | Descriptions                                
+### ActionSource enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 MANUAL            | Selected manually by user
 AUTOMATIC            | Set by policy conditions
 RECOMMENDED            | Set by user after label was recommended by policy conditions
 DEFAULT            | Set by default in policy
-defines what triggered the SetLabel event
+
+Defines what triggered the SetLabel event
   
-#### DataState enum
- Values                         | Descriptions                                
+### DataState enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 REST            | Inactive data stored physically in databases/file/warehouses
 MOTION            | Data traversing a network or temporarily residing in computer memory to be read or updated
 USE            | Active data under constant change stored physically in databases/file/warehouses etc
+
 Defines what state of the data is the application acting upon.
   
-#### ContentFormat enum
- Values                         | Descriptions                                
+### ContentFormat enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 DEFAULT            | Content format is standard file format
 EMAIL            | Content format is email format
+
 Content format.
   
-#### LabelFilterType enum
- Values                         | Descriptions                                
+### LabelFilterType enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 None            | Disable default labeling filtration
-Custom            | Filter labels that may result in custom protection
+CustomProtection            | Filter labels that may result in custom protection
 TemplateProtection            | Filter labels that may result in do not forward
 DoNotForwardProtection            | Filter labels that may result in template protection
 AdhocProtection            | Filter labels that may result in adhoc protection
 HyokProtection            | Filter labels that may result in hyok protection
-PredefinedTemplate            | Filter labels that may result in predefined template protection
+PredefinedTemplateProtection            | Filter labels that may result in predefined template protection
+DoubleKeyProtection            | Filter labels that may result in protection that requires double key, can be template, adhoc, dnf
+
 Label filter types, optional set of properties that can be used to filter labels when calling list sensitivity labels.
   
-#### Consent enum
- Values                         | Descriptions                                
+### FeatureId enum
+Values                         | Descriptions                                
+--------------------------------|---------------------------------------------
+EncryptOnly            | Check if server supports EncryptOnly feature
+
+Defines new features by name.
+  
+### VariableTextMarkingType enum
+Values                         | Descriptions                                
+--------------------------------|---------------------------------------------
+Default            | Known markings are converted unknown marking are removed
+PassThrough            | Known markings are converted unknown marking are passed through
+None            | All markings are passed through
+
+Various dynamic fields can be set into the text message of the application Some known: ${Item.Label} ${Item.Name} ${Item.Location} ${User.Name} ${User.PrincipalName} ${Event.DateTime} Others are still not defined: The sdk will replace them with correct values using these control flags.
+  
+### Consent enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 AcceptAlways            | Consent, and remember this decision
 Accept            | Consent, just one time
 Reject            | Do not consent
+
 A user's response when consent is requested to connect to a service endpoint.
   
-#### CacheStorageType enum
- Values                         | Descriptions                                
+### CacheStorageType enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 InMemory            | In Memory storage
 OnDisk            | On Disk storage
 OnDiskEncrypted            | On Disk storage with encryption (if supported by the platform)
+
 Storage type for the caches.
   
-#### PFileExtensionBehavior enum
- Values                         | Descriptions                                
+### PFileExtensionBehavior enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Default            | Extensions will become as SDK default behavior
 PFileSuffix            | Extensions will become <EXT>.PFILE
 PPrefix            | Extensions will become P<EXT>
+
 Describes PFile extensions behavior.
   
-#### ErrorType enum
- Values                         | Descriptions                                
+### ErrorType enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 BAD_INPUT_ERROR            | Caller passed bad input.
+INSUFFICIENT_BUFFER_ERROR            | Caller passed a buffer that was too small.
 FILE_IO_ERROR            | General File IO error.
 NETWORK_ERROR            | General network issues; for example, unreachable service.
-TRANSIENT_NETWORK_ERROR            | Transient network issues; for example, bad gateway.
 INTERNAL_ERROR            | Internal unexpected errors.
 JUSTIFICATION_REQUIRED            | Justification should be provided to complete the action on the file.
 NOT_SUPPORTED_OPERATION            | The requested operation is not yet supported.
 PRIVILEGED_REQUIRED            | Can't override privileged label when new label method is standard.
 ACCESS_DENIED            | The user could not get access to services.
 CONSENT_DENIED            | An operation that required consent from user was not granted consent.
-POLICY_SYNC_ERROR            | An attempt to sync policy data failed.
 NO_PERMISSIONS            | The user could not get access to the content. For example, no permissions, content revoked
 NO_AUTH_TOKEN            | The user could not get access to the content due to an empty auth token.
 DISABLED_SERVICE            | The user could not get access to the content due to the service being disabled
@@ -153,57 +179,68 @@ TEMPLATE_NOT_FOUND            | Template ID is not recognized
 LABEL_NOT_FOUND            | Label ID is not recognized
 LABEL_DISABLED            | Label is disabled or inactive
   
-#### InspectorType enum
- Values                         | Descriptions                                
+### InspectorType enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unkown file inspector.
 Msg            | Msg style file inspector, rpmsg / msg based.
+
 Inspector type correlating to supported file types.
   
-#### BodyType enum
- Values                         | Descriptions                                
+### BodyType enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 UNKNOWN            | Unkown body type
 TXT            | Text style body type, encoding is returned as utf8
 HTML            | HTML style body type, encoding is returned as utf8
 RTF            | RTF style body type, a binary format
+
 Body type enumerator.
   
-#### FlightingFeature enum
- Values                         | Descriptions                                
+### FlightingFeature enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 ServiceDiscovery            | Rely on separate HTTP call to determine RMS service endpoints
 AuthInfoCache            | Cache OAuth2 challenges per domain/tenant to reduce unnecessary 401 responses. Disable for apps/services that manage their own HTTP auth (like SPO, Edge)
 LinuxEncryptedCache            | Enable encrypted caching for Linux platforms (Please read the prerequisites for this feature)
 SingleDomainName            | Enable single company name for dns lookup. e.g. [https://corprights](https://corprights)
 PolicyAuth            | Enable automatic HTTP authentication for requests sent to Policy service. Disable for apps/services that manage their own HTTP auth (like SPO, Edge)
+UrlRedirectCache            | Cache URL redirects to reduce number of HTTP operations
+PreLicensing            | Enable pre license api check
+DoubleKey            | Enable double key protection feature to use a customer key to encrypt with
+VariablePolicyTtl            | Enable variable policy time to live, disabling reverts to infinite policy
+VariableTextMarking            | Enable variable text marking
+
 Defines new features by name.
   
-#### HttpRequestType enum
- Values                         | Descriptions                                
+### HttpRequestType enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Get            | GET
 Post            | POST
+
 HTTP request type.
   
-#### LogLevel enum
- Values                         | Descriptions                                
+### LogLevel enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Trace            | 
 Info            | 
 Warning            | 
 Error            | 
+
 Different log levels used across the MIP SDK.
   
-#### ProtectionType enum
- Values                         | Descriptions                                
+### ProtectionType enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 TemplateBased            | Handle was created from a template
 Custom            | Handle was created ad hoc
+
 Describes whether protection is based off a template or ad-hoc (custom)
   
-#### ActionType enum
- Values                         | Descriptions                                
+### ActionType enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 ADD_CONTENT_FOOTER            | Add a content footer to the document action type.
 ADD_CONTENT_HEADER            | Add a content header to the document action type.
@@ -220,18 +257,21 @@ REMOVE_PROTECTION            | Remove protection action type.
 REMOVE_WATERMARK            | Remove watermarking action type.
 APPLY_LABEL            | Apply label action type.
 RECOMMEND_LABEL            | Recommend label action type.
-Different action types.
-CUSTOM is the generic action type. Every other action type is a specific action with a specific meaning.
+PROTECT_ADHOC_DK            | A protect by adhoc policy action type.
+PROTECT_BY_TEMPLATE_DK            | A protect by template action type.
+PROTECT_DO_NOT_FORWARD_DK            | A protect by do not forward action type.
+
+Different action types. CUSTOM is the generic action type. Every other action type is a specific action with a specific meaning.
   
-#### LabelState enum
- Values                         | Descriptions                                
+### LabelState enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 NoChange            | 
 Remove            | 
 Update            | 
   
-#### ActionDataType enum
- Values                         | Descriptions                                
+### ActionDataType enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Custom            | 
 Protection            | 
@@ -239,26 +279,26 @@ ContentMarking            |
 AddWatermark            | 
 Label            | 
   
-#### ConditionDataType enum
- Values                         | Descriptions                                
+### ConditionDataType enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Default            | 
 Sensitivity            | 
   
-#### ContentMarkPlacement enum
- Values                         | Descriptions                                
+### ContentMarkPlacement enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Header            | 
 Footer            | 
   
-#### LabelActionDataType enum
- Values                         | Descriptions                                
+### LabelActionDataType enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Recommend            | 
 Apply            | 
   
-#### ProtectionActionType enum
- Values                         | Descriptions                                
+### ProtectionActionType enum
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Custom            | 
 Template            | 
@@ -268,29 +308,90 @@ DoNotForwardWithPrompt            |
 Hyok            | 
 PredefinedTemplate            | 
 RemoveProtection            | 
+ 
 
-### Structures
+## Structures
 
-#### struct mip::ApplicationInfo 
+### struct mip::ApplicationInfo 
 A struct that includes application specific information.
   
- Members                        | Descriptions                                
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string applicationId  |  Application identifier as set in the AAD portal, (Should be a GUID without brackets).
 public std::string applicationName  |  Application name, (Should only contain valid ASCII character excluding ';')
 public std::string applicationVersion  |  The version of the application being used, (Should only contain valid ASCII character excluding ';')
   
 
-##### applicationId struct member
+#### applicationId struct member
 Application identifier as set in the AAD portal, (Should be a GUID without brackets).
   
-##### applicationName struct member
+#### applicationName struct member
 Application name, (Should only contain valid ASCII character excluding ';')
   
-##### applicationVersion struct member
+#### applicationVersion struct member
 The version of the application being used, (Should only contain valid ASCII character excluding ';')
 
-#### struct mip::TelemetryConfiguration 
+### struct DiagnosticConfiguration
+
+Custom diagnostic configurations (not commonly used)
+  
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+public std::string hostNameOverride  |  Host audit/telemetry instance name. If not set, MIP will act as its own host.
+public std::string libraryNameOverride  |  Alternate audit/telemetry library (DLL) filename.
+public std::shared_ptr\<HttpDelegate\> httpDelegateOverride  |  If set, HTTP handling will be managed by this instance
+public std::shared_ptr\<TaskDispatcherDelegate\> taskDispatcherDelegateOverride  |  If set, async task handling will be managed by this instance, taskDispatcherDelegateOverides should not be shared as they can hold audit/telemetry objects, and prevent their release until taskDispatcher is freed.
+public bool isNetworkDetectionEnabled  |  If set, audit/telemetry component will ping network status on background thread
+public bool isLocalCachingEnabled  |  If set, audit/telemetry component will use on-disk caching
+public bool isTraceLoggingEnabled  |  If set, audit/telemetry component will write warning/error logs to disk
+public bool isMinimalTelemetryEnabled  |  If set, only necessary service data telemetry will be sent
+public bool isFastShutdownEnabled  |  If set, No events will be uploaded on shutdown, Audit events will be uploaded immediately upon logging
+public std::map\<std::string, std::string\> customSettings  |  Custom audit/telemetry settings >
+public std::map\<std::string, std::vector\<std::string\>\> maskedProperties  |  Audit/Telemetry events/properties which should be masked
+public std::shared_ptr\<AuditDelegate\> auditPipelineDelegateOverride  |  Audit delegate override for writting audit events
+public Cloud cloud  |  Cloud type for controlling telemetry and audit events for sovereign cloud scenario
+  
+  
+#### hostNameOverride struct member
+Host audit/telemetry instance name. If not set, MIP will act as its own host.
+  
+#### libraryNameOverride struct member
+Alternate audit/telemetry library (DLL) filename.
+  
+#### HttpDelegate
+If set, HTTP handling will be managed by this instance
+  
+#### TaskDispatcherDelegate
+If set, async task handling will be managed by this instance, taskDispatcherDelegateOverides should not be shared as they can hold audit/telemetry objects, and prevent their release until taskDispatcher is freed.
+  
+#### isNetworkDetectionEnabled struct member
+If set, audit/telemetry component will ping network status on background thread
+  
+#### isLocalCachingEnabled struct member
+If set, audit/telemetry component will use on-disk caching
+  
+#### isTraceLoggingEnabled struct member
+If set, audit/telemetry component will write warning/error logs to disk
+  
+#### isMinimalTelemetryEnabled struct member
+If set, only necessary service data telemetry will be sent
+  
+#### isFastShutdownEnabled struct member
+If set, No events will be uploaded on shutdown, Audit events will be uploaded immediately upon logging
+  
+#### customSettings struct member
+Custom audit/telemetry settings >
+  
+#### maskedProperties struct member
+Audit/Telemetry events/properties which should be masked
+  
+#### AuditDelegate
+Audit delegate override for writting audit events
+  
+#### Cloud
+Cloud type for controlling telemetry and audit events for sovereign cloud scenario
+
+### struct mip::TelemetryConfiguration 
 Custom telemetry settings (not commonly used)
   
 Members                        | Descriptions                                
@@ -305,207 +406,52 @@ public bool isTraceLoggingEnabled  |  If set, telemetry component will write war
 public bool isTelemetryOptedOut  |  If set, only necessary service data telemetry will be sent
 public bool isFastShutdownEnabled  |  If set, No events will be uploaded on shutdown, Audit events will be uploaded immediately upon logging
 public std::map\<std::string, std::string\> customSettings  |  Custom telemetry settings >
-    
-##### hostNameOverride struct member
+  
+
+#### hostNameOverride struct member
 Host telemetry instance name. If not set, MIP will act as its own host.
   
-##### libraryNameOverride struct member
+#### libraryNameOverride struct member
 Alternate telemetry library (DLL) filename.
   
-##### HttpDelegate
+#### HttpDelegate
 If set, HTTP handling will be managed by this instance
   
-##### TaskDispatcherDelegate
+#### TaskDispatcherDelegate
 If set, async task handling will be managed by this instance, taskDispatcherDelegateOverides should not be shared as they can hold telemetry objects, and prevent their release until taskDispatcher is freed.
   
-##### isNetworkDetectionEnabled struct member
+#### isNetworkDetectionEnabled struct member
 If set, telemetry component will ping network status on background thread
   
-##### isLocalCachingEnabled struct member
+#### isLocalCachingEnabled struct member
 If set, telemetry component will use on-disk caching
   
-##### isTraceLoggingEnabled struct member
+#### isTraceLoggingEnabled struct member
 If set, telemetry component will write warning/error logs to disk
   
-##### isTelemetryOptedOut struct member
+#### isTelemetryOptedOut struct member
 If set, only necessary service data telemetry will be sent
   
-##### isFastShutdownEnabled struct member
+#### isFastShutdownEnabled struct member
 If set, No events will be uploaded on shutdown, Audit events will be uploaded immediately upon logging
   
-##### customSettings struct member
-Custom telemetry settings >
+#### customSettings struct member
+Custom telemetry settings.
 
-## namespace mip::auditmetadatakeys
+### struct UniqueIdsAndContentFormats 
   
-### Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::string Sender()       |  Audit metadata keys in string representation.
-public std::string Recipients()       | Not yet documented.
-public std::string LastModifiedBy()       | Not yet documented.
-public std::string LastModifiedDate()       | Not yet documented.
+public std::unordered_map\<std::string, std::string\> uniqueIds  | _Not yet documented._
+public std::vector\<std::string\> contentFormats  | _Not yet documented._
   
-### Members
-  
-#### Sender function
-Audit metadata keys in string representation.
-  
-#### Recipients function
-_Not documented yet._
 
   
-#### LastModifiedBy function
-_Not documented yet._
+#### uniqueIds struct member
+
+_Not yet documented._
 
   
-#### LastModifiedDate function
-_Not documented yet._
+#### contentFormats struct member
 
-## namespace mip::rights
-  
-### Summary
- 
- Members                        | Descriptions                                
---------------------------------|---------------------------------------------
-public std::string Owner()       |  Gets string identifier for 'owner' right.
-public std::string View()       |  Gets string identifier for 'view' right.
-public std::string AuditedExtract()       |  Gets string identifier for 'audited extract' right.
-public std::string Edit()       |  Gets string identifier for 'edit' right.
-public std::string Export()       |  Gets string identifier for 'export' right.
-public std::string Extract()       |  Gets string identifier for 'extract' right.
-public std::string Print()       |  Gets string identifier for 'print' right.
-public std::string Comment()       |  Gets string identifier for 'comment' right.
-public std::string Reply()       |  Gets string identifier for 'reply' right.
-public std::string ReplyAll()       |  Gets string identifier for 'reply all' right.
-public std::string Forward()       |  Gets string identifier for 'forward' right.
-public std::vector\<std::string\> EmailRights()       |  Gets a list of rights that apply to emails.
-public std::vector\<std::string\> EditableDocumentRights()       |  Gets a list of rights that apply to documents.
-public std::vector\<std::string\> CommonRights()       |  Gets a list of rights that apply in all scenarios.
-  
-### Members
-  
-#### Owner function
-Gets string identifier for 'owner' right.
-
-  
-**Returns**: String identifier for 'owner' right
-  
-#### View function
-Gets string identifier for 'view' right.
-
-  
-**Returns**: String identifier for 'view' right
-  
-#### AuditedExtract function
-Gets string identifier for 'audited extract' right.
-
-  
-**Returns**: String identifier for 'audited extract' right
-  
-#### Edit function
-Gets string identifier for 'edit' right.
-
-  
-**Returns**: String identifier for 'edit' right
-  
-#### Export function
-Gets string identifier for 'export' right.
-
-  
-**Returns**: String identifier for 'export' right
-  
-#### Extract function
-Gets string identifier for 'extract' right.
-
-  
-**Returns**: String identifier for 'extract' right
-  
-#### Print function
-Gets string identifier for 'print' right.
-
-  
-**Returns**: String identifier for 'print' right
-  
-#### Comment function
-Gets string identifier for 'comment' right.
-
-  
-**Returns**: String identifier for 'comment' right
-  
-#### Reply function
-Gets string identifier for 'reply' right.
-
-  
-**Returns**: String identifier for 'reply' right
-  
-#### ReplyAll function
-Gets string identifier for 'reply all' right.
-
-  
-**Returns**: String identifier for 'reply all' right
-  
-#### Forward function
-Gets string identifier for 'forward' right.
-
-  
-**Returns**: String identifier for 'forward' right
-  
-#### EmailRights function
-Gets a list of rights that apply to emails.
-
-  
-**Returns**: A list of rights that apply to emails
-  
-#### EditableDocumentRights function
-Gets a list of rights that apply to documents.
-
-  
-**Returns**: A list of rights that apply to documents
-  
-#### CommonRights function
-Gets a list of rights that apply in all scenarios.
-
-  
-**Returns**: A list of rights that apply in all scenarios
-
-## namespace mip::roles
-  
-### Summary
- Members                        | Descriptions                                
---------------------------------|---------------------------------------------
-public std::string Viewer()       |  Gets string identifier for 'viewer' role.
-public std::string Reviewer()       |  Gets string identifier for 'reviewer' role.
-public std::string Author()       |  Gets string identifier for 'author' role.
-public std::string CoOwner()       |  Gets string identifier for 'co-owner' role.
-  
-### Members
-  
-#### Viewer function
-Gets string identifier for 'viewer' role.
-
-  
-**Returns**: String identifier for 'viewer' role
-A viewer can only view the content. They cannot edit, copy, or print it.
-  
-#### Reviewer function
-Gets string identifier for 'reviewer' role.
-
-  
-**Returns**: String identifier for 'reviewer' role
-A reviewer can view and edit the content. They cannot copy, or print it.
-  
-#### Author function
-Gets string identifier for 'author' role.
-
-  
-**Returns**: String identifier for 'author' role
-An author can view, edit, copy, and print the content.
-  
-#### CoOwner function
-Gets string identifier for 'co-owner' role.
-
-  
-**Returns**: String identifier for 'co-owner' role
-A co-owner has all permissions
-
+_Not yet documented._

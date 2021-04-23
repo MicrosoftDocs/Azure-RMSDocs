@@ -1,11 +1,10 @@
 ---
 title: Quickstart - Set and get a sensitivity label on a file using the C++ MIP SDK
-description: A quickstart showing you how to use the Microsoft Information Protection C++ SDK to set and get a sensitivity label on a file.
+description: A quickstart showing you how to use the Microsoft Information Protection C++ SDK to set and get a sensitivity label on a file (C++)
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to set and get a sensitivity label, so that I can implement this logic in my own application.
@@ -135,7 +134,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    {
         cout << "An exception occurred... did you specify a valid label ID?\n\n" << e.what() << "'\n";
         system("pause");
-        return 1;
+        return 1; 
    }
 
    // Commit changes, save as a different/output file
@@ -231,11 +230,6 @@ Build and test your client application.
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token: <paste-access-token-here>
-   Press any key to continue . . .
 
    Sensitivity labels for your organization:
    Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
@@ -248,21 +242,7 @@ Build and test your client application.
    Applying Label ID 074e457c-5848-4542-9a6f-34a182080e7z to c:\Test\Test.docx
    Committing changes
 
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://aadrm.com
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token: <paste-access-token-here>
-   Press any key to continue . . .
-
    Label committed to file: c:\Test\Test_labeled.docx
-   Press any key to continue . . .
-
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/94f69844-8d34-4794-bde4-3ac89ad2b664/oauth2/authorize
-   Set $resourceUrl to: https://aadrm.com
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token: <paste-access-token-here>
    Press any key to continue . . .
 
    Getting the label committed to file: c:\Test\Test_labeled.docx

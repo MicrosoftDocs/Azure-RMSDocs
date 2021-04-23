@@ -1,20 +1,21 @@
 ---
 # required metadata
 
-title: Azure Information Protection client files and usage logging
-description: Information about the client files and usage logging for the Azure Information Protection client for Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/26/2019
+title: Azure Information Protection classic client files and usage logging
+description: Information about the classic client files and usage logging for the Azure Information Protection classic client for Windows.
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 09/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: v1client
@@ -26,17 +27,19 @@ ms.custom: admin
 ---
 
 
-# Admin Guide: Azure Information Protection client files and client usage logging
+# Admin Guide: Azure Information Protection classic client files and client usage logging
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](clientv2-admin-guide-files-and-logging.md).*
 
-After you have installed the Azure Information Protection client, you might need to know where files are located and monitor how the client is being used.
+[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
+
+After you have installed the Azure Information Protection classic client, you might need to know where files are located and monitor how the client is being used.
 
 ## File locations for the Azure Information Protection client
 
-Client files:	
+Client files:    
 
 - For 64-bit operating systems: **\ProgramFiles (x86)\Microsoft Azure Information Protection**
 
@@ -46,7 +49,7 @@ Client logs files and currently installed policy file:
 
 - For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP**
 
-## Usage logging for the Azure Information Protection client
+## Usage logging for the Azure Information Protection classic client
 
 The client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**. The events include the following information:
 
@@ -60,9 +63,9 @@ The client logs user activity to the local Windows event log **Applications and 
 
     - Set label: Information ID 101​
     
-    - Set label (lower): Information ID 101​
+    - Set label (lower): Information ID 102
     
-    - Set label (higher): Information ID 101​
+    - Set label (higher): Information ID 103​
     
     - Remove label: Information ID 104​
     

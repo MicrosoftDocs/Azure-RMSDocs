@@ -3,18 +3,19 @@
 
 title: Document tracking for Azure Information Protection
 description: Instructions and information for admins to configure and use document tracking for Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/26/2019
-ms.topic: conceptual
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 03/16/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: doctrack
@@ -25,13 +26,15 @@ ms.custom: admin
 
 ---
 
-# Admin Guide: Configuring and using document tracking for Azure Information Protection
+# Admin Guide: Configuring and using document tracking for Azure Information Protection using the classic client
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](track-and-revoke-admin.md).*
 
-If you have a [subscription that supports document tracking](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), the document tracking site is enabled by default for all users in your organization. Document tracking provides information for users and administrators about when a protected document was accessed and if necessary, a tracked document can be revoked.
+[!INCLUDE [AIP classic client is deprecated - extended support customers](../includes/classic-client-deprecation-extended-support.md)]
+
+If you have a [subscription that supports document tracking](https://www.microsoft.com/cloud-platform/azure-information-protection-features) and the AIP classic client, the document tracking site is enabled by default for all users in your organization. Document tracking provides information for users and administrators about when a protected document was accessed and if necessary, a tracked document can be revoked.
 
 ## Using PowerShell to manage the document tracking site
 
@@ -70,7 +73,7 @@ You can use the following cmdlets to download logging information from the docum
 
 ## Destination URLs used by the document tracking site
 
-The following URLs are used for document tracking and must be allowed on all devices and services between the clients that run the Azure Information Protection client and the Internet. For example, add these URLs to firewalls, or to your Trusted Sites if you're using Internet Explorer with Enhanced Security.
+The following URLs are used for document tracking and must be allowed on all devices and services between the clients that run the Azure Information Protection client and the internet. For example, add these URLs to firewalls, or to your Trusted Sites if you're using Internet Explorer with Enhanced Security.
 
 -  `https://*.azurerms.com`
 
@@ -111,7 +114,9 @@ To be able to track and revoke a document, it must first be registered with the 
 
 If you label and protect files for users by using the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. For example:
 
-	Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
+```ps
+Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
+```
 
 ## Usage logging for the document tracking site
 

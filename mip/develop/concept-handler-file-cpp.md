@@ -4,7 +4,6 @@ description: This article will help you understand how File API handlers are cre
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
@@ -64,7 +63,7 @@ After successfully creating the `FileHandler` object, file operations (get/set/d
 
 There are a few requirements to successfully reading metadata from a file and translating in to something that can be used in applications.
 
-- The label being read must still exist in the O365 service. If it's been deleted entirely, the SDK will fail to obtain information about that label and will return an error.
+- The label being read must still exist in the Microsoft 365 service. If it's been deleted entirely, the SDK will fail to obtain information about that label and will return an error.
 - The file metadata must be intact. This metadata includes:
   - Attribute1
   - Attribute2

@@ -1,17 +1,18 @@
 ---
-title: class mip::ProtectionHandler 
-description: Documents the mip::protectionhandler class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ProtectionHandler 
+description: Documents the protectionhandler::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::ProtectionHandler 
+# class ProtectionHandler 
 Manages protection-related actions for a specific protection configuration.
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<Stream\> CreateProtectedStream(const std::shared_ptr\<Stream\>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Create a protected stream that will allow for encryption/decryption of content.
@@ -28,7 +29,10 @@ public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor()  |  Get
 public const std::string GetContentId()  |  Gets unique identifier for the document/content.
 public bool DoesUseDeprecatedAlgorithms()  |  Gets if protection handler uses deprecated crypto algorithms (ECB) for backward compatibility or not.
 public bool IsAuditedExtractAllowed()  |  Gets if protection handler grants user 'audited extract' right or not.
-public const std::vector\<uint8_t\> GetSerializedPublishingLicense()  |  Serialize ProtectionHandler into a publishing license (PL)
+public const std::vector\<uint8_t\>& GetSerializedPublishingLicense() const  |  Serialize ProtectionHandler into a publishing license (PL)
+public const std::vector\<uint8_t\>& GetSerializedPreLicense(PreLicenseFormat format) const  |  Get pre-license.
+public CipherMode GetCipherMode() const  |  Gets the cipher mode of the protection handler.
+enum PreLicenseFormat  |  Pre-license format.
   
 ## Members
   
@@ -185,3 +189,28 @@ Serialize ProtectionHandler into a publishing license (PL)
 
   
 **Returns**: Serialized publishing license
+  
+### GetSerializedPreLicense function
+Get pre-license.
+
+Parameters:  
+* **format**: Pre-license format
+
+
+
+  
+**Returns**: Serialized pre-license
+A pre-license allows a user to immediately consume content without making an additional HTTP call. The ProtectionHandler must have been created with a ProtectionHandler::PublishingSettings::SetPreLicenseUserEmail value or else this will return an empty vector.
+  
+### GetCipherMode function
+Gets the cipher mode of the protection handler.
+
+  
+**Returns**: The cipher mode
+  
+### PreLicenseFormat enum
+ Values                         | Descriptions                                
+--------------------------------|---------------------------------------------
+Xml            | Legacy XML/SOAP format used by MSIPC
+Json            | JSON/REST format used by MIP SDK and RMS SDK
+Pre-license format.

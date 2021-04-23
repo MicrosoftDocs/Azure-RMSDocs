@@ -3,19 +3,19 @@
 
 title: Add or remove a label to or from an Azure Information Protection policy - AIP
 description: Add or remove an Azure Information Protection label to or from the global policy for all users, or to or from a scoped policy for a subset of users.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/17/2019
-ms.topic: conceptual
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 03/16/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: aiplabels
@@ -28,9 +28,11 @@ ms.custom: admin
 
 # Add or remove a label to or from an Azure Information Protection policy
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from the Microsoft 365 documentation.*
+
+[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
 
 After you create an Azure Information Protection label, you can then add it to a policy so that it is available for users. If the label is for all users, add the label to the global policy. If the label is for a subset of users, add the label to a scoped policy. A label can be added to only one policy. 
 
@@ -44,17 +46,17 @@ If you need to create a scoped policy so that the label applies to a subset of u
 
 ## To add or remove a label to or from a policy
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
     
-    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
 
-2. From the **Classifications** > **Policies** menu option: On the **Azure Information Protection** - **Policies** blade, select **Global** if the label to add or remove applies to all users.
+2. From the **Classifications** > **Policies** menu option: On the **Azure Information Protection** - **Policies** pane, select **Global** if the label to add or remove applies to all users.
 
     If the label to add or remove applies to a subset of users, select your scoped policy instead.
 
-3. On the **Policy** blade, select **Add or remove labels**.
+3. On the **Policy** pane, select **Add or remove labels**.
 
-4. On the **Policy: Add or remove labels** blade, you see all your labels with a checkbox selected if they are already in a policy, and the corresponding policy name in the **POLICY** column.
+4. On the **Policy: Add or remove labels** pane, you see all your labels with a checkbox selected if they are already in a policy, and the corresponding policy name in the **POLICY** column.
      
     Sublabels display as indented. In a scoped policy, labels that are inherited from the global policy display as unavailable.
     

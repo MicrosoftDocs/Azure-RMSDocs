@@ -3,10 +3,10 @@
 
 title: How apps support Azure Rights Management from AIP
 description: Understand how the most commonly used applications (such as Office apps) and services (such as Exchange and SharePoint) can use the Azure Rights Management service from Azure Information Protection to help protect your organization's documents and emails. 
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/02/2019
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,9 +26,14 @@ ms.custom: admin
 
 # How applications support the Azure Rights Management service
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-Use the following information to help you understand how the most commonly used end-user applications and services can use the Azure Rights Management service from Azure Information Protection to help protect your organization’s documents and emails. These applications include Word, Excel, PowerPoint, and Outlook. The services include Exchange and SharePoint.
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
+
+Use the following information to help you understand how the most commonly used end-user applications and services can use the Azure Rights Management service from Azure Information Protection to help protect your organization's documents and emails. These applications include Word, Excel, PowerPoint, and Outlook. The services include Exchange and Microsoft SharePoint.
 
 > [!NOTE]
 > To verify the applications and versions that the Azure Rights Management service supports, see [Applications that support Azure Rights Management data protection](./requirements-applications.md).
@@ -45,9 +50,9 @@ Search services can integrate with Rights Management in different ways. For exam
 
 - Exchange Online and Exchange Server use service-side indexing so that a user's protected emails are automatically displayed in their search results. 
 
-- SharePoint Online and SharePoint Server apply Rights Management protection to files only on download. This implementation means that indexing and search results on SharePoint are not affected by this document protection solution. However, if you have a document that you want to store in SharePoint and this document should not be returned in search results, protect the document before uploading it to SharePoint.
+- SharePoint in Microsoft 365 and SharePoint Server apply Rights Management protection to files only on download. This implementation means that indexing and search results on SharePoint are not affected by this document protection solution. However, if you have a document that you want to store in SharePoint and this document should not be returned in search results, protect the document before uploading it to SharePoint.
 
-- Windows desktop search uses a shared index between different users of the device, so to keep the data in the protected documents secure, it does not index protected files. This means that although your search results don’t include files that you have protected, you can be assured that your files that contain sensitive data are not displayed in search results for other users who might sign in to your PC, or connect to your PC. 
+- Windows desktop search uses a shared index between different users of the device, so to keep the data in the protected documents secure, it does not index protected files. This means that although your search results don't include files that you have protected, you can be assured that your files that contain sensitive data are not displayed in search results for other users who might sign in to your PC, or connect to your PC. 
 
 ## Next steps
 

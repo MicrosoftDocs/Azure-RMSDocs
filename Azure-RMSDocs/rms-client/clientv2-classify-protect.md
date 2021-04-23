@@ -2,12 +2,12 @@
 # required metadata
 
 title: Classify & protect - Azure Information Protection unified labeling client
-description: Instructions how to classify and protect your documents and emails when you use the Azure Information Protection unified labeling client for Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/02/2019
-ms.topic: conceptual
+description: How to instructions about classifying and protecting your documents and emails when using the Azure Information Protection unified labeling client for Windows.
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 09/03/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -25,9 +25,11 @@ ms.custom: user
 
 # User Guide: Classify and protect with the Azure Information Protection unified labeling client
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+>*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
+>
+>***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 > [!NOTE]
 > Use these instructions to help you classify and protect your documents and emails. If you need to only classify and not protect your documents and emails, see the [classify-only instructions](clientv2-classify.md). If you are not sure which set of instructions to use, check with your administrator or help desk.
@@ -36,7 +38,7 @@ The easiest way to classify and protect your documents and emails is when you ar
 
 However, you can also classify and protect files by using **File Explorer**. This method supports additional file types and is a convenient way to classify and protect multiple files at once. This method supports protecting Office documents, PDF files, text and image files, and a wide range of other files. 
 
-If your label applies protection to a document, the protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following for protected files: Co-authoring, Office for the web, search, document preview, thumbnail, and eDiscovery.
+If your label applies protection to a document, the protected document might not be suitable to be saved on SharePoint or OneDrive. Check whether your administrator has [enabled sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 ### Safely share a file with people outside your organization
 
@@ -77,7 +79,7 @@ In addition to manually selecting labels, labels can also be applied in the foll
 
 - You might not have the Azure Information Protection unified labeling client [installed](install-unifiedlabelingclient-app.md).
 
-- If you don't see a **Sensitivity** button on the ribbon, but do see a **Protect** button with labels instead, you have the Azure Information Protection client (classic) installed and not the Azure Information Protection unified labeling client. [More information](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+- If you don't see a **Sensitivity** button on the ribbon, but do see a **Protect** button with labels instead, you have the Azure Information Protection classic client installed and not the Azure Information Protection unified labeling client. [More information](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)
  
 ##### Is the label that you expect to see not displayed? 
 
@@ -85,9 +87,9 @@ Possible reasons:
 
 - If your administrator has recently configured a new label for you, try closing all instances of your Office app and reopening it. This action checks for changes to your labels.
 
-- If the missing label applies protection, you might have an edition of Office that does not support applying Rights Management protection. To verify, click **Protect** > **Help and Feedback**. In the dialog box, check if you have a message in the **Client status** section that says **This client is not licensed for Office Professional Plus.** 
+- If the missing label applies protection, you might have an edition of Office that does not support applying Rights Management protection. To verify, click **Sensitivity** > **Help and Feedback**. In the dialog box, check if you have a message in the **Client status** section that says **This client is not licensed for Office Professional Plus.** 
     
-    You do not need Office Professional Plus if you have Office apps from Office 365 Business or Microsoft 365 Business when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365).
+    You do not need Office Professional Plus if you have Office apps from Microsoft 365 Apps for Business or Microsoft 365 Business Premium when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Microsoft 365).
 
 - The label might be in a scoped policy that doesn't include your account. Check with your help desk or administrator.
 
@@ -96,9 +98,7 @@ Possible reasons:
 
 When you share Office documents by email, you can attach the document to an email that you protect, and the document is automatically protected with the same restrictions that apply to the email. 
 
-However, you might want to protect the document first, and then attach it to the email. Protect the email as well if the email message contains sensitive information. A benefit of protecting the document before you attach it to an email:
-
-- You can apply different permissions to the document than to the email message.
+However, you might want to protect the document first, and then attach it to the email. Protect the email as well if the email message contains sensitive information. A benefit of protecting the document before you attach it to an email is that you can apply different permissions to the document than to the email message.
 
 ## Using File Explorer to classify and protect files
 
@@ -131,15 +131,13 @@ The admin guide contains a full list of the file types supported and the files a
 
 4. If you selected the custom permissions option, now specify the following:
 
-   - **Select permissions**: Select the level of access that you want people to have when you protect the selected file or files.
-    
-   - **Select users, groups, or organizations**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. 
-    
-     Alternatively, you can use the address book icon to select users or groups from the Outlook address book.
-        
-    - **Expire access**: Select this option only for time-sensitive files so that the people you specified can't open your selected file or files after a date that you set. You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
-    
-     Note that if this setting was previously configured by using custom permissions from an Office 2010 app, the specified expiry date does not display in this dialog box but the expiry date is still set. This is a display issue only for when the expiry date was configured in Office 2010.
+    |Option  |Description  |
+    |---------|---------|
+    |**Select permissions**     | Select the level of access that you want people to have when you protect the selected file or files.        |
+    |**Select users, groups, or organizations**     |  Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. <br><br>Alternatively, you can use the address book icon to select users or groups from the Outlook address book.       |
+    |**Expire access**     |  Select this option only for time-sensitive files so that the people you specified can't open your selected file or files after a date that you set. You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file. <br><br>**Note**:If this setting was previously configured by using custom permissions from an Office 2010 app, the specified expiry date does not display in this dialog box but the expiry date is still set. This is a display issue only for when the expiry date was configured in Office 2010.<br><br>   **Important**: Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).       |
+    |     |         |
+
 
 5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
 
@@ -154,8 +152,8 @@ The classification and protection that you specified stays with the file, even i
 ## Other instructions
 More how-to instructions from the user guide for Azure Information Protection unified labeling client:
 
--   [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
+-   [What do you want to do?](clientv2-user-guide.md#what-do-you-want-to-do)
 
 ## Additional information for administrators    
 
-See [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+See [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).

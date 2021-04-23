@@ -1,22 +1,22 @@
 ---
-title: class mip::ArgumentData 
-description: Documents the mip::argumentdata class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ArgumentData 
+description: Documents the argumentdata::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::ArgumentData 
+# class ArgumentData 
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetValue() const  | Not yet documented.
-public const std::string& GetKey() const  | Not yet documented.
-public const std::vector\<std::string\>& GetValues() const  | Not yet documented.
-public virtual ~ArgumentData()  | Not yet documented.
+public const std::string& GetValue() const  | _Not yet documented._
+public const std::string& GetKey() const  | _Not yet documented._
+public const std::vector\<std::string\>& GetValues() const  | _Not yet documented._
+public virtual ~ArgumentData()  | _Not yet documented._
   
 ## Members
   

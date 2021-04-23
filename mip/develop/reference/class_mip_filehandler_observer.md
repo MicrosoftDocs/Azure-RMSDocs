@@ -1,14 +1,14 @@
 ---
-title: class mip::FileHandler::Observer 
-description: Documents the mip::filehandler class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class FileHandler::Observer 
+description: Documents the filehandler::observer class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::FileHandler::Observer 
+# class FileHandler::Observer 
 Observer interface for clients to get notifications events related to file handler.
 All errors inherit from mip::Error. 
 Client should not call the engine back on the thread that calls the observer.

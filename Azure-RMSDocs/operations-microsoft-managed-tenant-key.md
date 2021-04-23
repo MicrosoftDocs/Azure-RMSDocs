@@ -3,11 +3,11 @@
 
 title: Microsoft-managed - AIP tenant key life cycle operations
 description: Information about the life cycle operations that are relevant if Microsoft manages your tenant key for Azure Information Protection (the default).
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 08/23/2019
-ms.topic: conceptual
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 10/23/2019
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
@@ -28,14 +28,21 @@ ms.custom: admin
 
 # Microsoft-managed: Tenant key life cycle operations
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
 
 If Microsoft manages your tenant key for Azure Information Protection (the default), use the following sections for more information about the life cycle operations that are relevant to this topology.
 
 ## Revoke your tenant key
+
 When you cancel your subscription for Azure Information Protection, Azure Information Protection stops using your tenant key and no action is needed from you.
 
 ## Rekey your tenant key
+
 Rekeying is also known as rolling your key. When you do this operation, Azure Information Protection stops using the existing tenant key to protect documents and emails, and starts to use a different key. Policies and templates are immediately resigned but this changeover is gradual for existing clients and services using Azure Information Protection. So for some time, some new content continues to be protected with the old tenant key.
 
 To rekey, you must configure the tenant key object and specify the alternative key to use. Then, the previously used key is automatically marked as archived for Azure Information Protection. This configuration ensures that content that was protected by using this key remains accessible.
@@ -56,9 +63,11 @@ You have more than one Microsoft-managed key if you migrated from Active Directo
 
 To select a different key to be your active tenant key for Azure Information Protection, use the [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) cmdlet from the AIPService module. To help you identify which key to use, use the [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) cmdlet. You can identify the default key that was automatically created for your Azure Information Protection tenant by running the following command:
 
-	(Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+```PowerShell
+(Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+```
 
-To change your key topology to be customer-managed (BYOK), see [Implementing BYOK for your Azure Information Protection tenant key](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+To change your key topology to be customer-managed (BYOK), see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
 
 ## Backup and recover your tenant key
 Microsoft is responsible for backing up your tenant key and no action is required from you.
@@ -78,16 +87,18 @@ You can export your Azure Information Protection configuration and tenant key by
 
 - Microsoft Customer Support Services (CSS) sends you your Azure Information Protection configuration and tenant key encrypted in a password-protected file. This file has a **.tpd** file name extension. To do this, CSS first sends you (as the person who initiated the export) a tool by email. You must run the tool from a command prompt as follows:
 
-    ```
+    ```PowerShell
     AadrmTpd.exe -createkey
     ```
+
     This generates an RSA key pair and saves the public and private halves as files in the current folder. For example: **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** and **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
 
     Respond to the email from CSS, attaching the file that has a name that starts with **PublicKey**. CSS next sends you a TPD file as an .xml file that is encrypted with your RSA key. Copy this file to the same folder as you ran the AadrmTpd tool originally, and run the tool again, using your file that starts with **PrivateKey** and the file from CSS. For example:
 
-    ```
+    ```PowerShell
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
+
     The output of this command should be two files: One contains the plain text password for the password-protected TPD, and the other is the password-protected TPD itself. The files have a new GUID, for example:
      
   - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
@@ -103,6 +114,7 @@ After you receive your tenant key, keep it well-guarded, because if somebody get
 If the reason for exporting your tenant key is because you no longer want to use Azure Information Protection, as a best practice, now deactivate the Azure Rights Management service from your Azure Information Protection tenant. Do not delay doing this after you receive your tenant key because this precaution helps to minimize the consequences if your tenant key is accessed by somebody who should not have it. For instructions, see [Decommissioning and deactivating Azure Rights Management](decommission-deactivate.md).
 
 ## Respond to a breach
+
 No security system, no matter how strong, is complete without a breach response process. Your tenant key might be compromised or stolen. Even when it’s protected well, vulnerabilities might be found in current generation key technology or in current key lengths and algorithms.
 
 Microsoft has a dedicated team to respond to security incidents in its products and services. As soon as there is a credible report of an incident, this team engages to investigate the scope, root cause, and mitigations. If this incident affects your assets, Microsoft will notify the Global administrators for your  tenant by email.
@@ -114,5 +126,4 @@ If you have a breach, the best action that you or Microsoft can take depends on 
 |Your tenant key is leaked.|Rekey your tenant key. See the [Rekey your tenant key](#rekey-your-tenant-key) section in this article.|
 |An unauthorized individual or malware got rights to use your tenant key but the key itself did not leak.|Rekeying your tenant key does not help here and requires root-cause analysis. If a process or software bug was responsible for the unauthorized individual to get access, that situation must be resolved.|
 |Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update Azure Information Protection to support new algorithms and longer key lengths that are resilient, and instruct all customers to rekey their tenant key.|
-
-
+| | |

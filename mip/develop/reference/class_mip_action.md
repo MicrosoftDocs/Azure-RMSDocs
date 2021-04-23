@@ -1,25 +1,19 @@
 ---
-title: class mip::Action 
-description: Documents the mip::action class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class Action 
+description: Documents the action::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::Action 
+# class Action 
 Interface for an action. Each action translates to a step that needs to be taken by the application to apply the label (as defined in the policy)
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ActionType GetType() const  |  Get the type of Action.
   
 ## Members
-  
-### GetType function
-Get the type of Action.
-
-  
-**Returns**: ActionType The type of derived action this base class can be cast to.
+_Not documented yet._

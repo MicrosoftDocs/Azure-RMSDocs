@@ -3,11 +3,11 @@
 
 title: Migrate software-protected key to HSM-protected key  - AIP
 description: Instructions that are part of the migration path from AD RMS to Azure Information Protection, and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Information Protection with a HSM-protected tenant key in Azure Key Vault. 
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/18/2019
-ms.topic: conceptual
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
@@ -27,7 +27,11 @@ ms.custom: admin
 
 # Step 2: Software-protected key to HSM-protected key migration
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 
 These instructions are part of the [migration path from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md), and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Information Protection with a HSM-protected tenant key in Azure Key Vault. 
@@ -51,9 +55,9 @@ Before you begin, make sure that your organization has a key vault that has been
 
 1.  Azure Key Vault administrator: For each exported SLC key that you want to store in Azure Key Vault, use the following steps in the [Implementing bring your own key (BYOK) for Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
 
-    -   **Generate and transfer your key to Azure Key Vault HSM**: [Step 1: Prepare your Internet-connected workstation](/azure/key-vault/key-vault-hsm-protected-keys#step-1-prepare-your-internet-connected-workstation)
+    -   **Generate and transfer your key to Azure Key Vault HSM**: [Step 1: Prepare your internet-connected workstation](/azure/key-vault/key-vault-hsm-protected-keys#step-1-prepare-your-internet-connected-workstation)
 
-    -   **Generate and transfer your tenant key – over the Internet**: [Step 2: Prepare your disconnected workstation](/azure/key-vault/key-vault-hsm-protected-keys#step-2-prepare-your-disconnected-workstation)
+    -   **Generate and transfer your tenant key – over the internet**: [Step 2: Prepare your disconnected workstation](/azure/key-vault/key-vault-hsm-protected-keys#step-2-prepare-your-disconnected-workstation)
 
     Do not follow the steps to generate your tenant key, because you already have the equivalent in the exported configuration data (.xml) file. Instead, you will run a tool to extract this key from the file and import it to your on-premises HSM. The tool creates two files when you run it:
 
@@ -63,8 +67,8 @@ Before you begin, make sure that your organization has a key vault that has been
 
 2. Azure Information Protection administrator or Azure Key Vault administrator: On the disconnected workstation, run the TpdUtil tool from the [Azure RMS migration toolkit](https://go.microsoft.com/fwlink/?LinkId=524619). For example, if the tool is installed on your E drive where you copy your configuration data file named ContosoTPD.xml:
 
-    ```
-    	E:\TpdUtil.exe /tpd:ContosoTPD.xml /otpd:ContosoTPD.xml /opem:ContosoTPD.pem
+    ```PowerShell
+    E:\TpdUtil.exe /tpd:ContosoTPD.xml /otpd:ContosoTPD.xml /opem:ContosoTPD.pem
     ```
 
     If you have more than one RMS configuration data files, run this tool for the remainder of these files.
@@ -83,7 +87,9 @@ Before you begin, make sure that your organization has a key vault that has been
 
 3. On the same disconnected workstation, attach and configure your nCipher HSM, according to your nCipher documentation. You can now import your key into your attached nCipher HSM by using the following command where you need to substitute your own file name for ContosoTPD.pem:
 
-    	generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
+    ```sh
+    generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
+    ```
 
     > [!NOTE]
     >If you have more than one file, choose the file that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration.
@@ -133,15 +139,17 @@ When the key uploads to Azure Key Vault, you see the properties of the key displ
 
 Then use the [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) cmdlet to authorize the Azure Rights Management service principal to access the key vault. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
 
-For example, if the key vault that you have created for Azure Information Protection is named contosorms-byok-kv, and your resource group is named contosorms-byok-rg, run the following command:
-    
-    Set-AzKeyVaultAccessPolicy -VaultName "contosorms-byok-kv" -ResourceGroupName "contosorms-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+For example, if the key vault that you have created for Azure Information Protection is named contosorms-byok-kv, and your resource group is named **contosorms-byok-rg**, run the following command:
+
+```sh
+Set-AzKeyVaultAccessPolicy -VaultName "contosorms-byok-kv" -ResourceGroupName "contosorms-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+```
 
 Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to import your AD RMS configuration data.
 
 ## Part 3: Import the configuration data to Azure Information Protection
 
-1. Azure Information Protection administrator: On the Internet-connected workstation and in the PowerShell session, copy over your new configuration data files (.xml) that have the SLC key removed after running the TpdUtil tool.
+1. Azure Information Protection administrator: On the internet-connected workstation and in the PowerShell session, copy over your new configuration data files (.xml) that have the SLC key removed after running the TpdUtil tool.
 
 2. Upload each .xml file, by using the [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
 
@@ -149,13 +157,13 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
 
     For example, using a configuration data file of C:\contoso_keyless.xml and our key URL value from the previous step, first run the following to store the password:
     
-    ```
+    ```PowerShell
 	$TPD_Password = Read-Host -AsSecureString
     ```
     
    Enter the password that you specified to export the configuration data file. Then, run the following command and confirm that you want to perform this action:
 
-    ```
+    ```PowerShell
     Import-AipServiceTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword $TPD_Password –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
 
@@ -165,7 +173,7 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
 
 4. Use the [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
 
-    ```
+    ```PowerShell
     Disconnect-AipServiceService
     ```
 

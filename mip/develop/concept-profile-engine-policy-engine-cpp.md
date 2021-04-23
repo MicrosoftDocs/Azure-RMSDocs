@@ -4,7 +4,6 @@ description: This article will help you understand the concepts around the Polic
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
@@ -17,13 +16,14 @@ ms.author: mbaldwin
 
 ### Implementation: Create Policy Engine Settings
 
-Similar to a profile, the engine also requires a settings object, `mip::PolicyEngine::Settings`. This object stores the unique engine identifier, customizable client data that can be used for debugging or telemetry, and, optionally, the locale.
+Similar to a profile, the engine also requires a settings object, `mip::PolicyEngine::Settings`. This object stores the unique engine identifier, an object of your `mip::AuthDelegate` implementation, customizable client data that can be used for debugging or telemetry, and, optionally, the locale.
 
 Here we create a `FileEngine::Settings` object called *engineSettings* using the identity of the application user:
 
 ```cpp
 PolicyEngine::Settings engineSettings(
-  mip::Identity(mUsername), // mip::Identity.
+  mip::Identity(mUsername), // mip::Identity.  
+  authDelegateImpl,         // Auth delegate object
   "",                       // Client data. Customizable by developer, stored with engine.
   "en-US",                  // Locale.
   false);                   // Load sensitive information types for driving classification.
@@ -33,10 +33,11 @@ Also valid is providing a custom engine ID:
 
 ```cpp
 PolicyEngine::Settings engineSettings(
-  "myEngineId", // string
-  "",           // Client data in string format. Customizable by developer, stored with engine.
-  "en-US",      // Locale. Default is en-US
-  false);       // Load sensitive information types for driving classification. Default is false.
+  "myEngineId",     // String
+  authDelegateImpl, // Auth delegate object
+  "",               // Client data in string format. Customizable by developer, stored with engine.
+  "en-US",          // Locale. Default is en-US
+  false);           // Load sensitive information types for driving classification. Default is false.
 ```
 
 As a best practice, the first parameter, **id**, should be something that allows the engine to be easily connected to the associated user, preferably the user principal name.
@@ -47,22 +48,26 @@ To add the engine, we'll go back to the future/promise pattern used to load the 
 
 ```cpp
 
-  //auto profile will be std::shared_ptr<mip::Profile>
+  // Auto profile will be std::shared_ptr<mip::Profile>.
   auto profile = profileFuture.get();
 
-  //Create the PolicyEngine::Settings object
-  PolicyEngine::Settings engineSettings("UniqueID", "");
+  // Create the delegate
+  auto authDelegateImpl = std::make_shared<sample::auth::AuthDelegateImpl>(appInfo, userName, password);
 
-  //Create a promise for std::shared_ptr<mip::PolicyEngine>
+
+  // Create the PolicyEngine::Settings object.
+  PolicyEngine::Settings engineSettings("UniqueID", authDelegateImpl, "");
+
+  // Create a promise for std::shared_ptr<mip::PolicyEngine>.
   auto enginePromise = std::make_shared<std::promise<std::shared_ptr<mip::PolicyEngine>>>();
 
-  //Instantiate the future from the promise
+  // Instantiate the future from the promise.
   auto engineFuture = enginePromise->get_future();
 
-  //Add the engine using AddEngineAsync, passing in the engine settings and the promise
+  // Add the engine using AddEngineAsync, passing in the engine settings and the promise.
   profile->AddEngineAsync(engineSettings, enginePromise);
 
-  //get the future value and store in std::shared_ptr<mip::PolicyEngine>
+  // Get the future value and store in std::shared_ptr<mip::PolicyEngine>.
   auto engine = engineFuture.get();
 ```
 

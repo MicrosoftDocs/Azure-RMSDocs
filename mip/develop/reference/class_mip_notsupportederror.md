@@ -1,14 +1,14 @@
 ---
-title: class mip::NotSupportedError 
-description: Documents the mip::notsupportederror class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class NotSupportedError 
+description: Documents the notsupportederror::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::NotSupportedError 
+# class NotSupportedError 
 The operation requested by the application is not supported by the SDK.
   
 ## Summary

@@ -4,7 +4,6 @@ description: This article will help you understand how to implement an authentic
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 
 ms.author: mbaldwin
@@ -109,5 +108,4 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
 
 To complete the authentication implementation, it's necessary to build the code behind the `AcquireToken()` function. The examples below discuss a few ways to acquire the token.
 
-- [Simple/PowerShell token acquisition example](concept-authentication-acquire-token-ps.md)
 - [Python token acquisition example](concept-authentication-acquire-token-py.md)

@@ -1,14 +1,14 @@
 ---
-title: class mip::ProtectionHandler::Observer 
-description: Documents the mip::protectionhandler class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ProtectionHandler::Observer 
+description: Documents the protectionhandler::observer class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::ProtectionHandler::Observer 
+# class ProtectionHandler::Observer 
 Interface that receives notifications related to ProtectionHandler.
 This interface must be implemented by applications using the protection SDK
   

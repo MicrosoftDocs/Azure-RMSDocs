@@ -3,10 +3,10 @@
 
 title: RMS for individuals and Azure Information Protection
 description: Information about RMS for individuals, a free self-service subscription for users who have been sent protected files, but these users cannot be authenticated because their IT department does not manage an account for them in Azure. 
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/30/2019
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,21 +26,30 @@ ms.custom: admin
 
 # RMS for individuals and Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 RMS for individuals is a free self-service subscription for users who need to open files that have been protected by Azure Information Protection. If these users cannot be authenticated by Azure Active Directory, this free sign-up service can create an account in Azure Active Directory for a user. As a result, these users can now authenticate by using their company email address and then read the protected files on computers or mobile devices.
 
 RMS for individuals uses Azure Active Directory self-service signup. If users have created accounts for your organization by using this subscription, as an administrator for your organization, you can claim ownership and [take control of their accounts](/azure/active-directory/users-groups-roles/domains-admin-takeover#external-admin-takeover). 
 
-
-> [!NOTE]
-> This free subscription is one option to help ensure that authorized people outside your organization can always read files that your organization protects. Another option is to email documents by using [Office 365 Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). This email solution works for all email addresses on all devices and is the recommended way to safely share information and view Office documents in a browser with people outside your organization.
-> 
-> Another option is to use Microsoft accounts. However, not all applications can open protected content when a Microsoft account is used for authentication. [More information](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
-
 To sign up for this free account, users go to the [Microsoft Azure Information Protection page](https://aka.ms/rms-signup), and provide their work email address. They receive an email in response from Microsoft, and they can then complete the sign-up process by entering details to create their account. 
 
 When the account is created, the final page displays links to download the Azure Information Protection client or viewer for different devices, a link to the user guide, and a link for a current list of applications that natively support Rights Management protection. 
+
+### Alternatives: Use Office 365 Message Encryption or Microsoft accounts
+
+RMS for individuals is one option to help ensure that authorized people outside your organization can always read files that your organization protects. 
+
+Alternative options include:
+
+- **Email documents by using [Office 365 Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).** This email solution works for all email addresses on all devices and is the recommended way to safely share information and view Office documents in a browser with people outside your organization.
+ 
+- **Use Microsoft accounts.** Not all applications can open protected content when a Microsoft account is used for authentication. [More information](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
+
 
 ## To sign up for RMS for individuals
 
@@ -52,7 +61,7 @@ When the account is created, the final page displays links to download the Azure
 
     Microsoft uses your email address to check whether your organization already has a [subscription for Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) or an [Office 365 subscription that includes data protection by using Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). If either of these subscriptions are found, you don’t need RMS for individuals. You are signed in immediately and the self-service sign up for RMS for individuals is canceled. If one of these subscriptions isn't found, you continue to the next step.
 
-4. Wait for a confirmation email message to be sent to the address that you supplied. It will be from the Office 365 Team (support@email.microsoftonline.com) and has the subject **Finish signing up for Microsoft Azure Information Protection**.
+4. Wait for a confirmation email message to be sent to the address that you supplied. It will be from the Microsoft 365 Team (support@email.microsoftonline.com) and has the subject **Finish signing up for Microsoft Azure Information Protection**.
 
 5. When you receive the email, click **Yes, that's me** to verify your email address and complete the sign-up process.
 

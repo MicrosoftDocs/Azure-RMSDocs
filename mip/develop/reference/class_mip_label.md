@@ -1,14 +1,14 @@
 ---
-title: class mip::Label 
-description: Documents the mip::label class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class Label 
+description: Documents the label::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::Label 
+# class Label 
 Abstraction for a single Microsoft Information Protection label.
   
 ## Summary
@@ -26,6 +26,7 @@ public std::weak_ptr\<Label\> GetParent() const  |  Get the parent label.
 public const std::vector\<std::shared_ptr\<Label\>\>& GetChildren() const  |  Get the children labels of the current label.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings of a label.
 public ActionSource GetActionSource() const  |  Gets the action source of the label.
+public const std::vector\<std::string\>& GetContentFormats() const  |  Gets content types.
   
 ## Members
   
@@ -101,3 +102,9 @@ Gets the action source of the label.
 
   
 **Returns**: Action source
+  
+### GetContentFormats function
+Gets content types.
+
+  
+<Returns>

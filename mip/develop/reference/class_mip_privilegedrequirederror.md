@@ -1,14 +1,14 @@
 ---
-title: class mip::PrivilegedRequiredError 
-description: Documents the mip::privilegedrequirederror class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class PrivilegedRequiredError 
+description: Documents the privilegedrequirederror::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::PrivilegedRequiredError 
+# class PrivilegedRequiredError 
 Current label was assigned as a privileged operation (The equivalent to an administrator operation), therefore it can't be overriden.
   
 ## Summary

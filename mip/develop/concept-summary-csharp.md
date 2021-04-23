@@ -4,7 +4,6 @@ description: A quick overview on how to get started with the MIP SDK .NET wrappe
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
 ---
@@ -37,7 +36,7 @@ The .NET wrapper is a [SWIG](https://swig.org/) generated managed wrapper. The w
 
 There are a few fundamental differences between the C++ version of the SDK and the managed wrapper.
 
-* The .NET wrapper doesn't require the use of Observers for async operations. Any asynchronous operations are implemented via the [Task-based Asynchronous Pattern](https://docs.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
+* The .NET wrapper doesn't require the use of Observers for async operations. Any asynchronous operations are implemented via the [Task-based Asynchronous Pattern](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
 * The .NET wrapper does require the delegates that are part of the C++ SDK: AuthDelegate and ConsentDelegate. These delegates are implemented via the interfaces `IAuthDelegate` and `IConsentDelegate`
 
 ## Next Steps

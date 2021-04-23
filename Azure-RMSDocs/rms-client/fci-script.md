@@ -3,18 +3,19 @@
 
 title: PowerShell script for Azure RMS & FCI - AIP
 description: Sample script to copy and edit, as described in the instructions for RMS protection with Windows Server File Classification Infrastructure.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/30/2019
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: fci
@@ -27,9 +28,11 @@ ms.custom: admin
 
 # Windows PowerShell script for Azure RMS protection by using File Server Resource Manager FCI
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+[!INCLUDE [AIP classic client is deprecated - extended support customers](../includes/classic-client-deprecation-extended-support.md)]
 
 This page contains the sample script to copy and edit, as described in [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).
 

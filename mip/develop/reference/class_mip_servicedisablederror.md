@@ -1,14 +1,14 @@
 ---
-title: class mip::ServiceDisabledError 
-description: Documents the mip::servicedisablederror class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ServiceDisabledError 
+description: Documents the servicedisablederror::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::ServiceDisabledError 
+# class ServiceDisabledError 
 The user could not get access to the content due to a service being disabled.
   
 ## Summary

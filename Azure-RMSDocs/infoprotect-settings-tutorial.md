@@ -3,17 +3,18 @@
 
 title: Tutorial - Use Azure Information Protection policy settings to classify data
 description: An introduction tutorial that steps you through configuring Azure Information Protection policy settings to help classify your organization's documents and emails.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 08/17/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: aiplabels
@@ -26,14 +27,22 @@ ms.custom: admin
 
 # Tutorial: Configure Azure Information Protection policy settings that work together
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
+>
+> **To deploy the AIP classic client**, open a support ticket to get download access.
+
+> [!TIP]
+> If are using a different labeling client to the classic client, see the Microsoft 365 Compliance documentation for information about policy settings for sensitivity labels. For example, [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
 > * Configure policy settings that work together
 > * See your settings in action
+
 
 Rather than relying on users to manually label their documents and emails, you can use Azure Information Protection policy settings to:
 
@@ -47,25 +56,21 @@ You can finish this tutorial in about 15 minutes.
 
 To complete this tutorial, you need:
 
-1. A subscription that includes Azure Information Protection Plan 1 or Plan 2.
+1. A subscription that includes [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/).
     
     If you don't have a subscription that includes this plan, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
-2. The Azure Information Protection blade is added to the Azure portal and you have one or more labels published in the Azure Information Protection global policy.
+2. The Azure Information Protection pane is added to the Azure portal and you have one or more labels published in the Azure Information Protection global policy.
     
     These steps are covered in the [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md).
 
-3. The Azure Information Protection client (classic) is installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
-    
-    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. 
-    
-    If are using a different labeling client to the classic client, see the Office documentation for information about policy settings for sensitivity labels. For example, [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+3. The Azure Information Protection classic client installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
 
 4. You are signed in to Office apps from one of the following categories:
     
-    - Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business when you are assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365).
+    - Office apps, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), from Microsoft 365 Apps for Business or Microsoft 365 Business Premium, when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
     
-    - Office 365 ProPlus.
+    - Microsoft 365 Apps for Enterprise.
     
     - Office Professional Plus 2019.
     
@@ -77,7 +82,7 @@ To complete this tutorial, you need:
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
 
-Let's get started.
+Let's get started. Continue with [Edit the Azure Information Protection policy](#edit-the-azure-information-protection-policy).
 
 ## Edit the Azure Information Protection policy
 
@@ -87,11 +92,11 @@ Using the Azure portal, we'll edit the global policy to change policy settings f
 
 1. Open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a global admin. Then navigate to **Azure Information Protection**. 
     
-    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
     
     If you are not the global admin, use the following link for alternative roles: [Signing in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade. 
+2. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** pane. 
 
 3. Locate the policy settings after the labels, in the **Configure settings to display and apply on Information Protection end users** section. Your settings might have different values to ones shown:
     
@@ -110,7 +115,7 @@ Using the Azure portal, we'll edit the global policy to change policy settings f
     
     ![Azure Information Protection tutorial - default settings changed](./media/defaultsettings-aip-changed.png)
 
-5. Select **Save** on this **Policy: Global** blade, and if you're prompted to confirm your action, select **OK**. 
+5. Select **Save** on this **Policy: Global** pane, and if you're prompted to confirm your action, select **OK**. 
 
 ## See your policy settings in action 
 
@@ -177,7 +182,7 @@ However, you might want to try repeating this exercise but also attach another d
 
 Do the following if you don't want to keep the changes that you made in this tutorial:
 
-1. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade.
+1. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** pane.
 
 2. Return the policy settings to their original values that you took a note of, and then select **Save**.
 

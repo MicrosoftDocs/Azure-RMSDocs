@@ -4,7 +4,6 @@ description: This article will help you understand how the MIP SDK implements au
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
@@ -114,5 +113,4 @@ However, in production code the user may be required to be presented with a choi
 
 For simplicity, samples demonstrating the delegate will implement token acquisition by calling an external script. This script can be replaced by any other type of script, an open-source OAuth2 library, or a custom OAuth2 library.
 
-- [Acquire an access token using PowerShell](concept-authentication-acquire-token-ps.md)
 - [Acquire an access token using Python](concept-authentication-acquire-token-py.md)

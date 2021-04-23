@@ -3,19 +3,19 @@
 
 title: Protection-only mode for Azure Information Protection
 description: Information for users who run the Azure Information Protection client in protection-only mode. 
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/30/2019
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 1/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
+ROBOTS: NOINDEX
 
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: v1client
@@ -28,9 +28,11 @@ ms.custom: user
 
 # User Guide: Protection-only mode for the Azure Information Protection client
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
 
 When the Azure Information Protection client doesn't have labels to classify your documents and emails, it runs in **protection-only** mode. For example, in this mode, you might see the following when you use Windows File Explorer, right-click, **Classify and protect**:
 
@@ -38,7 +40,7 @@ When the Azure Information Protection client doesn't have labels to classify you
 
 Protection-only mode runs in the following scenarios:
 
-- Your organization does not have a subscription for Azure Information Protection that includes classification and labeling features, but has a subscription for Office 365 that includes data protection by using the Azure Rights Management service. 
+- Your organization does not have a subscription for Azure Information Protection that includes classification and labeling features, but has a subscription for Microsoft 365 that includes data protection by using the Azure Rights Management service. 
     
     - You can use the Azure Information Protection client to protect files and view protected files. You can't classify or label documents and emails.
 
@@ -65,7 +67,7 @@ Protection-only mode runs in the following scenarios:
 
 ## Supported tasks for protection-only mode
 
-- Protect (and unprotect) documents and emails from within your Office apps, by using the Office Information Rights Management (IRM) feature: For example: Click **File** > **Info** > **Protect Document** > **Restrict Access**. For more information, see [Using information protection with Office 365, Office 2019, Office 2016, or Office 2013](../help-users.md#using-information-protection-with-Office-365-Office 2019-Office-2016-or-Office-2013).
+- Protect (and unprotect) documents and emails from within your Office apps, by using the Office Information Rights Management (IRM) feature: For example: Click **File** > **Info** > **Protect Document** > **Restrict Access**. For more information, see [Using information protection with Office 365, Office 2019, Office 2016, or Office 2013](../help-users.md#using-information-protection-with-office365-office-2019-office-2016-or-office2013).
 
 - Protect (and unprotect) files by using Windows File Explorer: Right-click the file, files, or folder > **Classify and protect**. To apply protection that has been configured by your administrator, in the **Classify and protect - Azure Information Protection** dialog box, click **Select template** and choose one of the available templates.
 

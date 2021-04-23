@@ -3,10 +3,10 @@
 
 title: How Azure RMS works - Azure Information Protection
 description: Breaking down how Azure RMS works, the cryptographic controls that it uses, and step-by-step diagrams of how this process works.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/30/2019
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,7 +28,12 @@ ms.custom: admin
 
 # How does Azure RMS work? Under the hood
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
 
 An important thing to understand about how Azure RMS works, is that this data protection service from Azure Information Protection, does not see or store your data as part of the protection process. Information that you protect is never sent to or stored in Azure, unless you explicitly store it in Azure or use another cloud service that stores it in Azure. Azure RMS simply makes the data in a document unreadable to anyone other than authorized users and services:
 
@@ -55,6 +60,7 @@ Even if you don't need to know in detail how this technology works, you might be
 |Algorithm: AES<br /><br />Key length: 128 bits and 256 bits [[1]](#footnote-1)|Content protection|
 |Algorithm: RSA<br /><br />Key length: 2048 bits [[2]](#footnote-2)|Key protection|
 |SHA-256|Certificate signing|
+| | |
 
 ###### Footnote 1 
 
@@ -86,6 +92,7 @@ Licenses and certificates that are sent to a Windows device are protected with t
 
 
 ## Walkthrough of how Azure RMS works: First use, content protection, content consumption
+
 To understand in more detail how Azure RMS works, let's walk through a typical flow after the [Azure Rights Management service is activated](activate-service.md) and when a user first uses the Rights Management service on their Windows computer (a process sometimes known as **initializing the user environment** or bootstrapping), **protects content** (a document or email), and then **consumes**  (opens and uses) content that has been protected by somebody else.
 
 After the user environment is initialized, that user can then protect documents or consume protected documents on that computer.
@@ -171,9 +178,14 @@ The preceding walkthroughs cover the standard scenarios but there are some varia
 
 To learn more about the Azure Rights Management service, use the other articles in the **Understand & Explore** section, such as [How applications support the Azure Rights Management service](applications-support.md) to learn how your existing applications can integrate with Azure Rights Management to provide an information protection solution. 
 
-Review [Terminology for Azure Information Protection](./terminology.md) so that you’re familiar with the terms that you might come across as you’re configuring and using the Azure Rights Management service, and be sure to also check [Requirements for Azure Information Protection](requirements.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the [Edit the policy and create a new label](infoprotect-quick-start-tutorial.md) tutorial.
+Review [Terminology for Azure Information Protection](./terminology.md) so that you’re familiar with the terms that you might come across as you’re configuring and using the Azure Rights Management service, and be sure to also check [Requirements for Azure Information Protection](requirements.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the quickstart and tutorials:
 
-If you’re ready to start deploying data protection for your organization, use the [Azure Information Protection deployment roadmap](deployment-roadmap.md) for your deployment steps and links for how-to instructions.
+- [Quickstart: Deploy the unified labeling client](quickstart-deploy-client.md)
+- [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
+- [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
+- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
+
+If you’re ready to start deploying data protection for your organization, use the [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md) for your deployment steps and links for how-to instructions.
 
 > [!TIP]
 > For additional information and help, use the resources and links in [Information and support for Azure Information Protection](information-support.md).

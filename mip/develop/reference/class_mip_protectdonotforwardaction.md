@@ -1,14 +1,14 @@
 ---
-title: class mip::ProtectDoNotForwardAction 
-description: Documents the mip::protectdonotforwardaction class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ProtectDoNotForwardAction 
+description: Documents the protectdonotforwardaction::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::ProtectDoNotForwardAction 
+# class ProtectDoNotForwardAction 
 An action class that specifies adding do not forward protection to the document.
   
 ## Summary

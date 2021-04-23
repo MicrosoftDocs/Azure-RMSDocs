@@ -1,24 +1,32 @@
 ---
-title: class mip::ProtectionEngine::Observer 
-description: Documents the mip::protectionengine class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ProtectionEngine::Observer 
+description: Documents the protectionengine::observer class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::ProtectionEngine::Observer 
+# class ProtectionEngine::Observer 
 Interface that receives notifications related to ProtectionEngine.
 This interface must be implemented by applications using the protection SDK
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnGetTemplatesSuccess(const std::shared_ptr\<std::vector\<std::string\>\>& templateIds, const std::shared_ptr\<void\>& context)  |  Called when templates were retrieved successfully.
+public virtual void OnGetTemplatesSuccess(const std::vector\<std::shared_ptr\<TemplateDescriptor\>\>& templateDescriptors, const std::shared_ptr\<void\>& context)  |  Called when templates were retrieved successfully.
 public virtual void OnGetTemplatesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when retrieving templates generated an error.
 public virtual void OnGetRightsForLabelIdSuccess(const std::shared_ptr\<std::vector\<std::string\>\>& rights, const std::shared_ptr\<void\>& context)  |  Called when rights were retrieved successfully.
 public virtual void OnGetRightsForLabelIdFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when retrieving rights for a label ID for the user.
+public virtual void OnLoadUserCertSuccess(const std::shared_ptr\<void\>& context)  |  Called when user cert loaded successfully.
+public virtual void OnLoadUserCertFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when user cert loaded failed.
+public virtual void OnRegisterContentForTrackingAndRevocationSuccess(const std::shared_ptr\<void\>& context)  |  Called when registration of content for tracking & revocation is successful.
+public virtual void OnRegisterContentForTrackingAndRevocationFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when registration of content for tracking & revocation fails.
+public virtual void OnRevokeContentSuccess(const std::shared_ptr\<void\>& context)  |  Called when revocation of is successful.
+public virtual void OnRevokeContentFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when revocation of content is fails.
+public virtual void OnCreateDelegatedLicensesSuccess(std::vector\<std::shared_ptr\<DelegationLicense\>\> delegatedLicenses, const std::shared_ptr\<void\>& context)  |  Called when create delegated license is successful.
+public virtual void OnCreateDelegatedLicensesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when create delegated license fails.
   
 ## Members
   
@@ -26,7 +34,7 @@ public virtual void OnGetRightsForLabelIdFailure(const std::exception_ptr& error
 Called when templates were retrieved successfully.
 
 Parameters:  
-* **templateIds**: A reference to the list of templates retrieved 
+* **templateDescriptors**: A reference to the list of templates descriptors 
 
 
 * **context**: The same context that was passed to ProtectionEngine::GetTemplatesAsync
@@ -53,7 +61,7 @@ Parameters:
 * **rights**: A reference to the list of rights retrieved 
 
 
-* **context**: The same context that was passed to ProtectionEngine::GetRightsForLabelIdAsync
+* **context**: The same context that was passed to [ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md)
 
 
 An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
@@ -69,3 +77,87 @@ Parameters:
 
 
 An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
+  
+### OnLoadUserCertSuccess function
+Called when user cert loaded successfully.
+
+Parameters:  
+* **context**: The same context that was passed to [ProtectionEngine::LoadUserCert](class_mip_protectionengine.md)
+
+
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::LoadUserCertAsync](class_mip_protectionengine.md) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnLoadUserCertSuccess or ProtectionEngine::Observer::OnLoadUserCertFailure
+  
+### OnLoadUserCertFailure function
+Called when user cert loaded failed.
+
+Parameters:  
+* **error**: Error that occurred while retrieving rights 
+
+
+* **context**: The same context that was passed to ProtectionEngine::LoadUserCert
+
+
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::LoadUserCertAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnLoadUserCertSuccess or ProtectionEngine::Observer::OnLoadUserCertFailure
+  
+### OnRegisterContentForTrackingAndRevocationSuccess function
+Called when registration of content for tracking & revocation is successful.
+
+Parameters:  
+* **context**: The same context that was passed to [ProtectionEngine::RegisterContentForTrackingAndRevocationAsync](class_mip_protectionengine.md)
+
+
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationSuccess or ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationFailure
+  
+### OnRegisterContentForTrackingAndRevocationFailure function
+Called when registration of content for tracking & revocation fails.
+
+Parameters:  
+* **error**: Error that occurred while registering content 
+
+
+* **context**: The same context that was passed to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync
+
+
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationSuccess or ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationFailure
+  
+### OnRevokeContentSuccess function
+Called when revocation of is successful.
+
+Parameters:  
+* **context**: The same context that was passed to [ProtectionEngine::RevokeContentAsync](class_mip_protectionengine.md)
+
+
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RevokeContentAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnRevokeContentSuccess or ProtectionEngine::Observer::OnRevokeContentFailure
+  
+### OnRevokeContentFailure function
+Called when revocation of content is fails.
+
+Parameters:  
+* **error**: Error that occurred while revoking content 
+
+
+* **context**: The same context that was passed to ProtectionEngine::RevokeContentAsync
+
+
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RevokeContentAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnRevokeContentSuccess or ProtectionEngine::Observer::OnRevokeContentFailure
+  
+### OnCreateDelegatedLicensesSuccess function
+Called when create delegated license is successful.
+
+Parameters:  
+* **context**: The same context that was passed to ProtectionEngine::CreateDelegationLicensesAsync
+
+
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::CreateDelegationLicensesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnCreateDelegatedLicensesSuccess or ProtectionEngine::Observer::OnCreateDelegatedLicensesFailure
+  
+### OnCreateDelegatedLicensesFailure function
+Called when create delegated license fails.
+
+Parameters:  
+* **error**: Error that occurred 
+
+
+* **context**: The same context that was passed to ProtectionEngine::CreateDelegationLicensesAsync
+
+
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::CreateDelegationLicensesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnCreateDelegatedLicensesSuccess or ProtectionEngine::Observer::OnCreateDelegatedLicensesFailure

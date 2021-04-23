@@ -3,18 +3,19 @@
 
 title: Configure scoped policies for Azure Information Protection - AIP
 description: To configure different settings and labels for specific users, you must configure a scoped policy for Azure Information Protection. 
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/23/2019
-ms.topic: conceptual
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 08/17/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
+ROBOTS: NOINDEX
+
 
 # optional metadata
 
-#ROBOTS:
 #audience:
 #ms.devlang:
 ms.subservice: aiplabels
@@ -27,11 +28,13 @@ ms.custom: admin
 
 # How to configure the Azure Information Protection policy for specific users by using scoped policies
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from the Microsoft 365 documentation.*
 
-When the Azure Information Protection policy downloads to computers that have installed the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), all users get the settings and labels from the default policy or the changes that you configured for the global policy. If you want to supplement this configuration for specific users, by having different settings and labels, you must create a **scoped policy** that's configured for those users.
+[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
+
+When the Azure Information Protection policy downloads to computers that have installed the Azure Information Protection client, all users get the settings and labels from the default policy or the changes that you configured for the global policy. If you want to supplement this configuration for specific users, by having different settings and labels, you must create a **scoped policy** that's configured for those users.
 
 ## How scoped policies work
 
@@ -49,23 +52,26 @@ For example, if you have a label named **Confidential** in the global policy, al
 
 ## Configure a scoped policy
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
 
-    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
 
-2. From the **Classifications** > **Policies** menu option: On the **Azure Information Protection - Policies** blade, select **Add a new policy**. You then see the **Policy** blade that displays your existing global policy, where you can now configure your new, scoped policy.
+2. From the **Classifications** > **Policies** menu option: On the **Azure Information Protection - Policies** pane, select **Add a new policy**. You then see the **Policy** pane that displays your existing global policy, where you can now configure your new, scoped policy.
 
-3. Specify a policy name and description that only administrators see in the Azure portal. The name must be unique to your tenant. Then select **Specify which users/groups get this policy**, and in the subsequent blades, you can search and select the users and groups for this policy. The labels and settings that you configure in this scoped policy will be applied to these users only.
+3. Specify a policy name and description that only administrators see in the Azure portal. The name must be unique to your tenant. Then select **Specify which users/groups get this policy**, and in the subsequent panes, you can search and select the users and groups for this policy. The labels and settings that you configure in this scoped policy will be applied to these users only.
     
     For performance reasons, group membership for scoped policies is [cached](prepare.md#group-membership-caching-by-azure-information-protection).
+
+    > [!NOTE]
+    > Select up to 200 users or groups. If more than 200 users are needed to get the scoped policy, create a new group, add relevant users to the group, and then set the policy scope to the new group. 
 
 4. Now add new labels or configure the scoped policy settings. The global policy is always applied first, so you can supplement the global policy with new labels and you can override the global settings. For example, the global policy might have no default label specified and you configure a different default label in different scoped policies for specific departments.
 
     If you need help with configuring the labels or settings, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.
 
-6. Just as when you edit the global policy, when you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. 
+6. Just as when you edit the global policy, when you make any changes on an Azure Information Protection pane, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. 
 
-7. When you have finished making the changes that you want for this scoped policy, on the initial **Azure Information Protection - Policies** blade, make sure that this scoped policy is in the order that you want it applied. This is important when you have selected the same user for multiple scoped policies. To change the order, select the context menu (**...**) and select **Move up** or **Move down**. 
+7. When you have finished making the changes that you want for this scoped policy, on the initial **Azure Information Protection - Policies** pane, make sure that this scoped policy is in the order that you want it applied. This is important when you have selected the same user for multiple scoped policies. To change the order, select the context menu (**...**) and select **Move up** or **Move down**. 
 
 The Azure Information Protection client checks for any changes whenever a supported Office application starts or File Explorer is opened. The client downloads any changes to the global policy or scoped policies that apply to that user.
 

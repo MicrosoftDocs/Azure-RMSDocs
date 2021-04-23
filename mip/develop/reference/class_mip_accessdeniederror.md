@@ -1,14 +1,14 @@
 ---
-title: class mip::AccessDeniedError 
-description: Documents the mip::accessdeniederror class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class AccessDeniedError 
+description: Documents the accessdeniederror::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::AccessDeniedError 
+# class AccessDeniedError 
 The user could not get access to the content. For example, no permissions, content revoked.
   
 ## Summary

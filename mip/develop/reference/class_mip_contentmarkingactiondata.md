@@ -1,26 +1,26 @@
 ---
-title: class mip::ContentMarkingActionData 
-description: Documents the mip::contentmarkingactiondata class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ContentMarkingActionData 
+description: Documents the contentmarkingactiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
-# class mip::ContentMarkingActionData 
+# class ContentMarkingActionData 
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | Not yet documented.
-public const std::string& GetFontName() const  | Not yet documented.
-public const std::string& GetFontColor() const  | Not yet documented.
-public ContentMarkAlignment GetContentMarkAlignment() const  | Not yet documented.
-public int GetFontSize() const  | Not yet documented.
-public int GetMargin() const  | Not yet documented.
-public ContentMarkPlacement GetContentMarkPlacement() const  | Not yet documented.
-public virtual ~ContentMarkingActionData()  | Not yet documented.
+public const std::string& GetText() const  | _Not yet documented._
+public const std::string& GetFontName() const  | _Not yet documented._
+public const std::string& GetFontColor() const  | _Not yet documented._
+public ContentMarkAlignment GetContentMarkAlignment() const  | _Not yet documented._
+public int GetFontSize() const  | _Not yet documented._
+public int GetMargin() const  | _Not yet documented._
+public ContentMarkPlacement GetContentMarkPlacement() const  | _Not yet documented._
+public virtual ~ContentMarkingActionData()  | _Not yet documented._
   
 ## Members
   
