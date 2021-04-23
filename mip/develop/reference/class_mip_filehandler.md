@@ -13,7 +13,7 @@ Interface for all file handling functions.
   
 ## Summary
 
- Members                        | Descriptions                                
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<ContentLabel\> GetLabel()  |  Starts retrieving the sensitivity label from the file.
 public std::vector\<std::pair\<std::string, std::string\>\> GetProperties(uint32_t version)  |  Retrievs the file propertries according to version.
