@@ -14,7 +14,7 @@ This class provides an interface for all engine functions.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Get the policy engine [Settings](undefined).
+public const Settings& GetSettings() const  |  Get the policy engine Settings.
 public const std::vector\<std::shared_ptr\<Label\>\> ListSensitivityLabels(const std::vector\<std::string\>& contentFormats)  |  list the sensitivity labels associated with the policy engine according to the provided contentFormats.
 public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
 public const std::string& GetMoreInfoUrl() const  |  Provide a url for looking up more information about the policy/labels.
@@ -37,7 +37,7 @@ public bool HasWorkloadConsent(Workload workload) const  |  Checks if user has c
 ## Members
   
 ### GetSettings function
-Get the policy engine [Settings](undefined).
+Get the policy engine Settings.
 
   
 **Returns**: Policy engine settings. 
@@ -61,7 +61,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: [PolicyEngine::Settings](undefined)).
+**See also**: PolicyEngine::Settings).
   
 ### GetMoreInfoUrl function
 Provide a url for looking up more information about the policy/labels.
@@ -100,7 +100,7 @@ Parameters:
 
 
   
-**Returns**: [Label](undefined)
+**Returns**: Label
   
 ### CreatePolicyHandler function
 Create a Policy Handler to execute policy-related functions on a file's execution state.

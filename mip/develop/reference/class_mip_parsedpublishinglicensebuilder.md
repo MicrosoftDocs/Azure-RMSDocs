@@ -117,7 +117,7 @@ Parameters:
 
   
 ### CreateParsedPublishingLicense function
-Creates a [ParsedPublishingLicense](undefined) with the properties set on this object instance.
+Creates a ParsedPublishingLicense with the properties set on this object instance.
 
   
-**Returns**: New [ParsedPublishingLicense](undefined) instance
+**Returns**: New ParsedPublishingLicense instance
