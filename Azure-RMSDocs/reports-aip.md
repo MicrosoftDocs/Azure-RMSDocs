@@ -348,7 +348,7 @@ In this example, a downgraded label is counted only if the label name before the
 ## Next steps
 After reviewing the information in the reports, if you are using the Azure Information Protection client, you might decide to make changes to your labeling policy. 
 
-- **Unified labeling client**: Make changes to your labeling policy in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+- **Unified labeling client**: Make changes to your labeling policy in the Microsoft 365 Compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
 - **Classic client**: Make changes to your policy in the Azure portal. For more information, see [Configuring the Azure Information Protection policy](configure-policy.md).
 

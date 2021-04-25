@@ -103,7 +103,7 @@ Perform the following steps:
     - Write user guidance to help explain which label should be applied in each scenario.
     - If your default policy was created with labels that automatically apply protection, you may want to temporarily remove the protection settings or disable the label while you test your settings. 
 
-    Sensitivity labels and labeling policies for the unified labeling client are configured in the Microsoft 365 compliance center. For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+    Sensitivity labels and labeling policies for the unified labeling client are configured in the Microsoft 365 Compliance center. For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 1. **Deploy your client for your users**
 

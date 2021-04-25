@@ -149,15 +149,15 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
 
 ### Specifying the label policy or label identity
 
-Finding the label policy name for the PowerShell **Identity** parameter is simple because there is only one policy name in the Microsoft 365 compliance center.
+Finding the label policy name for the PowerShell **Identity** parameter is simple because there is only one policy name in the Microsoft 365 Compliance center.
 
-However, for labels, the Microsoft 365 compliance center show both a **Name** and **Display name** value. In some cases, these values will be the same, but they may be different. To configure advanced settings for labels, use the **Name** value.
+However, for labels, the Microsoft 365 Compliance center show both a **Name** and **Display name** value. In some cases, these values will be the same, but they may be different. To configure advanced settings for labels, use the **Name** value.
 
 For example, to identify the label in the following picture, use the following syntax in your PowerShell command: `-Identity "All Company"`:
 
 ![Use 'Name' rather than 'Display name' to identify a sensitivity label](../media/labelname_scc.png)
 
-If you prefer to specify the label **GUID**, this value is *not* shown in the Microsoft 365 compliance center. Use the [Get-Label](/powershell/module/exchange/get-label) command to find this value, as follows:
+If you prefer to specify the label **GUID**, this value is *not* shown in the Microsoft 365 Compliance center. Use the [Get-Label](/powershell/module/exchange/get-label) command to find this value, as follows:
 
 ```PowerShell
 Get-Label | Format-Table -Property DisplayName, Name, Guid
@@ -175,7 +175,7 @@ For more information about labeling names and display names:
 
 ### Order of precedence - how conflicting settings are resolved
 
-You can use the Microsoft 365 compliance center to configure the following label policy settings:
+You can use the Microsoft 365 Compliance center to configure the following label policy settings:
 
 - **Apply this label by default to documents and emails**
 
@@ -185,7 +185,7 @@ You can use the Microsoft 365 compliance center to configure the following label
 
 - **Provide users with a link to a custom help page**
 
-When more than one label policy is configured for a user, each with potentially different policy settings, the last policy setting is applied according to the order of the policies in the Microsoft 365 compliance center. For more information, see [Label policy priority (order matters)](/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters)
+When more than one label policy is configured for a user, each with potentially different policy settings, the last policy setting is applied according to the order of the policies in the Microsoft 365 Compliance center. For more information, see [Label policy priority (order matters)](/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters)
 
 Label policy advanced settings are applied using the same logic, using the last policy setting.
 
@@ -1333,7 +1333,7 @@ Use these settings only when you have a working [S/MIME deployment](/microsoft-3
 |**S/MIME encryption**     |   To configure an advanced setting for  S/MIME encryption, enter the following strings for the selected label:<br><br>- Key: **SMimeEncrypt**<br><br>- Value: **True**      |
 |     |         |
 
-If the label you specify is configured for encryption, for the Azure Information Protection unified labeling client, S/MIME protection replaces the Rights Management protection only in Outlook. The client continues to use the encryption settings specified for the label in the Microsoft 365 compliance center.
+If the label you specify is configured for encryption, for the Azure Information Protection unified labeling client, S/MIME protection replaces the Rights Management protection only in Outlook. The client continues to use the encryption settings specified for the label in the Microsoft 365 Compliance center.
 
 For Office apps with built-in labeling, these do not apply the S/MIME protection but instead, apply **Do Not Forward** protection.
 
@@ -1433,7 +1433,7 @@ Additionally:
 |**Still signed in to the old account**     |  If the Azure Information Protection unified labeling client is still signed in with the old account after completing these steps, delete all cookies from Internet Explorer, and then repeat steps 1 and 2.       |
 |**Using single sign-on**    |    If you are using single sign-on, you must sign out from Windows and sign in with your different user account after deleting the token file. <br><br>The Azure Information Protection unified labeling client then automatically authenticates by using your currently signed in user account.     |
 |**Different tenants**     |  This solution is supported for signing in as another user from the same tenant. It is not supported for signing in as another user from a different tenant. <br><br>To test Azure Information Protection with multiple tenants, use different computers.       |
-|**Reset settings**     | You can use the **Reset settings** option from **Help and Feedback** to sign out and delete the currently downloaded labels and policy settings from the Microsoft 365 compliance center.        |
+|**Reset settings**     | You can use the **Reset settings** option from **Help and Feedback** to sign out and delete the currently downloaded labels and policy settings from the Microsoft 365 Compliance center.        |
 |     |         |
 
 ## Support for disconnected computers
@@ -1441,7 +1441,7 @@ Additionally:
 > [!IMPORTANT]
 > Disconnected computers are supported for the following labeling scenarios: File Explorer, PowerShell, your Office apps and the scanner.
 
-By default, the Azure Information Protection unified labeling client automatically tries to connect to the internet to download the labels and label policy settings from the Microsoft 365 compliance center. 
+By default, the Azure Information Protection unified labeling client automatically tries to connect to the internet to download the labels and label policy settings from the Microsoft 365 Compliance center. 
 
 If you have computers that cannot connect to the internet for a period of time, you can export and copy files that manually manages the policy for the unified labeling client.
 
