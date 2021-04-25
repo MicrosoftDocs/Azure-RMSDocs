@@ -25,7 +25,7 @@ ms.custom: admin
 
 ---
 
-# Deploying the Azure Rights Management connector
+# Deploying the Microsoft Rights Management connector
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, 2016, Windows Server 2012 R2, Windows Server 2012*
 >
@@ -34,7 +34,7 @@ ms.custom: admin
 [!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 
-Use this information to learn about the Azure Rights Management connector, and then how to successfully deploy it for your organization. This connector provides data protection for existing on-premises deployments that use Microsoft **Exchange Server**, **SharePoint Server**, or file servers that run Windows Server and **File Classification Infrastructure** (FCI).
+Use this information to learn about the Microsoft Rights Management connector, and then how to successfully deploy it for your organization. This connector provides data protection for existing on-premises deployments that use Microsoft **Exchange Server**, **SharePoint Server**, or file servers that run Windows Server and **File Classification Infrastructure** (FCI).
 
 
 ## Overview of the Microsoft Rights Management connector
@@ -107,4 +107,4 @@ The connector does not automatically check all the [prerequisites](deploy-rms-co
 
 ## Next steps
 
-Go to Step 1: [Installing and configuring the Azure Rights Management connector](install-configure-rms-connector.md).
+Go to Step 1: [Installing and configuring the Microsoft Rights Management connector](install-configure-rms-connector.md).
