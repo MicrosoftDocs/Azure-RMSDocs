@@ -230,4 +230,4 @@ Instructions for when you use these settings:
 **Data**: http://*<\ConnectorFQDN>*/_wmcs/certification
 
 
-Back to [Deploying the Azure Rights Management connector](deploy-rms-connector.md)
+Back to [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md)

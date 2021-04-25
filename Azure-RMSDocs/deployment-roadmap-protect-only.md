@@ -142,7 +142,7 @@ Perform the following steps:
     
     If you have on-premises services that you want to use with the protection service, install and configure the Rights Management connector. 
 
-    For more information, see [Deploying the Azure Rights Management connector](./deploy-rms-connector.md).
+    For more information, see [Deploying the Microsoft Rights Management connector](./deploy-rms-connector.md).
 
 ## Use and monitor your data protection solutions
 

@@ -58,7 +58,7 @@ Many software vendors already have solutions or are implementing solutions that 
 
 ## Is there a management pack or similar monitoring mechanism for the RMS connector?
 
-Although the Rights Management connector logs information, warning, and error messages to the event log, there isn't a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Azure Rights Management connector](monitor-rms-connector.md).
+Although the Rights Management connector logs information, warning, and error messages to the event log, there isn't a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Microsoft Rights Management connector](monitor-rms-connector.md).
 
 ## How do I create a new custom template in the Azure portal?
 

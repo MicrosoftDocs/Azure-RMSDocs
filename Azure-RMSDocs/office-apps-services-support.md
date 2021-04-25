@@ -59,7 +59,7 @@ When you use Exchange Online or Exchange Server, you can configure options for A
 
 -   **Message Encryption** that supports sending a protected email message and protected Office documents as attachments to any email address on any device. For user accounts that don't use Azure AD, a web experience supports social identity providers or a one-time passcode. For more information, see [Set up new Microsoft 365 Message Encryption capabilities built on top of Azure Information Protection](/microsoft-365/compliance/set-up-new-message-encryption-capabilities) from the Microsoft 365 documentation. To help you find additional information that is related to this configuration, see [Microsoft 365 Message Encryption](/microsoft-365/compliance/ome).
 
-If you use Exchange on-premises, you can use the IRM features with the Azure Rights Management service by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Azure Rights Management service.
+If you use Exchange on-premises, you can use the IRM features with the Azure Rights Management service by deploying the Microsoft Rights Management connector. This connector acts as a relay between your on-premises servers and the Azure Rights Management service.
 
 For more information about the email options that you can use to protect emails, see [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails) and [encrypt-only option for emails](configure-usage-rights.md#encrypt-only-option-for-emails).
 
@@ -67,7 +67,7 @@ If you're ready to configure Exchange to protect emails:
 
 - For Exchange Online, see [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration).
 
-- For Exchange on-premises, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
+- For Exchange on-premises, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
 For more information, see:
 
@@ -87,7 +87,7 @@ For more fine-grained control, you can configure a list or library in the site t
 
 The IRM service must first be enabled for SharePoint. Then, you specify IRM permissions for a library. For SharePoint and OneDrive, users can also specify IRM permissions for their OneDrive library. SharePoint does not use rights policy templates, although there are SharePoint configuration settings that you can select that match some settings that you can specify in the templates.
 
-If you use SharePoint Server, you can use this IRM protection by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Rights Management cloud service. For more information, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
+If you use SharePoint Server, you can use this IRM protection by deploying the Microsoft Rights Management connector. This connector acts as a relay between your on-premises servers and the Rights Management cloud service. For more information, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
 > [!NOTE]
 > There are some limitations when you use SharePoint IRM:
@@ -111,7 +111,7 @@ If you are ready to configure SharePoint for IRM:
 
 - For SharePoint in Microsoft 365, see [SharePoint in Microsoft 365 and OneDrive: IRM Configuration](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration).
 
-- For Sharepoint Server, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
+- For Sharepoint Server, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
 
 ## Next steps

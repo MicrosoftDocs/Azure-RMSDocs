@@ -206,7 +206,7 @@ Perform the following steps:
     
     If you have SharePoint and Exchange on-premises and want to use their information rights management (IRM) features, install and configure the Rights Management connector. 
 
-    For more information, see [Deploying the Azure Rights Management connector](./deploy-rms-connector.md).
+    For more information, see [Deploying the Microsoft Rights Management connector](./deploy-rms-connector.md).
 
 ## Use and monitor your data protection solutions
 
