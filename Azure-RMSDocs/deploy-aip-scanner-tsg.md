@@ -266,7 +266,7 @@ Verify any or all of following issues:
 |Solution  |Details  |
 |---------|---------|
 |**Check your content scan job settings**     | In the Azure portal, do the following: <br> <br>- [Set the **Info types to be discovered** to **All**](deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types)  <br>- [Define a default label to be applied when scanning](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository)      |
-|**Check your labeling policy settings**     |  In the Microsoft 365 Compliance center, do the following: <br> <br>- [Define a default sensitivity label](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)  <br> - [Define automatic / recommended labeling rules](/microsoft-365/compliance/apply-sensitivity-label-automatically)       |
+|**Check your labeling policy settings**     |  In the Microsoft 365 compliance center, do the following: <br> <br>- [Define a default sensitivity label](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)  <br> - [Define automatic / recommended labeling rules](/microsoft-365/compliance/apply-sensitivity-label-automatically)       |
 |**Verify that your policy is accessible**     | If your settings are defined as expected, the policy file itself may be missing or inaccessible, such as when there's a timeout from the Microsoft 365 Security & Compliance Center. <br>  <br>To verify your policy file, check that the following file exists: **%localappdata%\Microsoft\MSIP\mip\MSIP.Scanner.exe\mip\mip.policies.sqlite3**        |
 | | |
 

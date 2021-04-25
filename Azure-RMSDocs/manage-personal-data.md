@@ -56,7 +56,7 @@ When you configure and use Azure Information Protection, email addresses and IP 
 
 - **Unified labeling client**:
 
-    For the unified labeling client, sensitivity labels and label policies are configured in the Microsoft 365 Compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+    For the unified labeling client, sensitivity labels and label policies are configured in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
 - **Classic client**:
 
@@ -253,7 +253,7 @@ Personal data that you view and specify by using the AIPService module (or the o
 
 **Unified labeling client**:
 
-For the unified labeling client, sensitivity labels and label policies are configured in the Microsoft 365 Compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+For the unified labeling client, sensitivity labels and label policies are configured in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
 **Classic client**:
 
@@ -287,7 +287,7 @@ Run the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipse
 
 - **Unified labeling client**:
 
-    For the unified labeling client, sensitivity labels and label policies are configured in the Microsoft 365 Compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+    For the unified labeling client, sensitivity labels and label policies are configured in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
 - **Classic client**:
 
