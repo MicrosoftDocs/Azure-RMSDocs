@@ -105,11 +105,9 @@ Customized protection templates provide a quick and easy solution for administra
 
 For example, for a company-wide strategy paper to be shared with all employees, apply a read-only policy to all internal employees. For a more sensitive document, such as a financial report, restrict access to executives only.
 
-Configure your labeling policies in your labeling admin center:
+Configure your labeling policies in the Microsoft 365 compliance center:
 
-- **Unified labeling client**: Use the Microsoft 365 security center, the Microsoft 365 compliance center, or the Microsoft 365 Security & Compliance Center.
-
-    For more information, see the [sensitivity labeling documentation for Microsoft 365](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do).        
+- **Unified labeling client**: Use the Microsoft 365 compliance center. For more information, see the [sensitivity labeling documentation for Microsoft 365](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do).        
 
 - **Classic client**: Use the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).      
 

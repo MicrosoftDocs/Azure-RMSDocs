@@ -71,7 +71,7 @@ If you're ready to configure Exchange to protect emails:
 
 For more information, see:
 
-- **Unified labeling client**. Configure sensitivity labels and labeling polices in your labeling admin center, including the Microsoft 365 security center, Microsoft 365 compliance center, or Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+- **Unified labeling client**. Configure sensitivity labels and labeling polices in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
 - **Classic client**. Configure protection templates in the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
