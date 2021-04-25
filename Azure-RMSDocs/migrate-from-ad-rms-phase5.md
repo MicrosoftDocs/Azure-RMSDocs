@@ -57,7 +57,7 @@ When you have confirmed that RMS clients are no longer communicating with these 
 
 After yo have de-provisioned your AD RMS servers, you might want to take the opportunity to review your template and labels. For example, convert templates to labels, consolidate them so that users have fewer to choose from, or reconfigure them. This would also be a good time to publish default templates.
 
-For sensitivity labels and the unified labeling client, use the Microsoft 365 compliance center. For more information, see the Microsoft 365 documentation.
+For sensitivity labels and the unified labeling client, use the Microsoft 365 Compliance center. For more information, see the Microsoft 365 documentation.
 
 If you're using the classic client, use the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](./configure-policy-templates.md).
 

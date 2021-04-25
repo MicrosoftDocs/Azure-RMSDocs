@@ -51,13 +51,13 @@ Before you read the instructions to migrate your labels, you might find the foll
 
 If you use admin roles for delegated administration in your organization, you might need to do some changes for the unified labeling platform:
 
-The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Azure Information Protection administrator** (formerly **Information Protection administrator**) is not supported by the unified labeling platform. If this administrative role is used in your organization to manage Azure Information Protection, add the users who have this role to the Azure AD roles of **Compliance administrator**, **Compliance data administrator**, or **Security administrator**. If you need help with this step, see [Give users access to the Microsoft 365 Security & Compliance Center](/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Azure AD portal and the Microsoft 365 compliance center.
+The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Azure Information Protection administrator** (formerly **Information Protection administrator**) is not supported by the unified labeling platform. If this administrative role is used in your organization to manage Azure Information Protection, add the users who have this role to the Azure AD roles of **Compliance administrator**, **Compliance data administrator**, or **Security administrator**. If you need help with this step, see [Give users access to the Microsoft 365 Security & Compliance Center](/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Azure AD portal and the Microsoft 365 Compliance center.
 
-Alternatively to using roles, in the Microsoft 365 compliance center, you can create a new role group for these users and add either **Sensitivity Label Administrator** or **Organization Configuration** roles to this group.
+Alternatively to using roles, in the Microsoft 365 Compliance center, you can create a new role group for these users and add either **Sensitivity Label Administrator** or **Organization Configuration** roles to this group.
 
-If you do not give these users access to the Microsoft 365 compliance center by using one of these configurations, they won't be able to configure Azure Information Protection in the Azure portal after your labels are migrated.
+If you do not give these users access to the Microsoft 365 Compliance center by using one of these configurations, they won't be able to configure Azure Information Protection in the Azure portal after your labels are migrated.
 
-Global administrators for your tenant can continue to manage labels and policies in both the Azure portal and the Microsoft 365 compliance center after your labels are migrated.
+Global administrators for your tenant can continue to manage labels and policies in both the Azure portal and the Microsoft 365 Compliance center after your labels are migrated.
 
 ## Before you begin
 
@@ -68,41 +68,41 @@ Label migration has many benefits, but is irreversible. Before you migrate, make
 - [Protection templates](#protection-templates)
 - [Display names](#display-names)
 - [Localized strings in labels](#localized-strings-in-labels)
-- [Editing migrated labels in the Microsoft 365 compliance center](#editing-migrated-labels-in-the-microsoft-365-compliance-center)
-- [Label settings that are not supported in the Microsoft 365 compliance center](#label-settings-that-are-not-supported-in-the-microsoft-365-compliance-center)
+- [Editing migrated labels in the Microsoft 365 Compliance center](#editing-migrated-labels-in-the-microsoft-365-compliance-center)
+- [Label settings that are not supported in the Microsoft 365 Compliance center](#label-settings-that-are-not-supported-in-the-microsoft-365-compliance-center)
 - [Comparing the behavior of protection settings for a label](#comparing-the-behavior-of-protection-settings-for-a-label)
 
 ### Client support for unified labeling
 
-Make sure that you have [clients that support unified labels](#clients-and-services-that-support-unified-labeling) and if necessary, be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the Microsoft 365 compliance center (for client that do support unified labels).
+Make sure that you have [clients that support unified labels](#clients-and-services-that-support-unified-labeling) and if necessary, be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the Microsoft 365 Compliance center (for client that do support unified labels).
 
 ### Policy configuration
 
 Policies, including policy settings and who has access to them (scoped policies), and all advanced client settings are not migrated. Your options to configure these settings after your label migration include the following:
 
-- The Microsoft 365 compliance center
+- The Microsoft 365 Compliance center
 - [Office 365 Security & Compliance PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell), which you must use to [configure advanced client settings](rms-client/clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell).
     
 > [!IMPORTANT]
-> Not all settings from a migrated label are supported by the Microsoft 365 compliance center. Use the table in the [Label settings that are not supported in the Microsoft 365 compliance center](#label-settings-that-are-not-supported-in-the-microsoft-365-compliance-center) section to help you identify these settings and the recommended course of action.
+> Not all settings from a migrated label are supported by the Microsoft 365 Compliance center. Use the table in the [Label settings that are not supported in the Microsoft 365 Compliance center](#label-settings-that-are-not-supported-in-the-microsoft-365-compliance-center) section to help you identify these settings and the recommended course of action.
 > 
 
 ### Protection templates
 
 - Templates that use a cloud-based key and that are part of a label configuration are also migrated with the label. Other protection templates are not migrated. 
     
-- If you have labels that are configured for a predefined template, edit these labels and select the **Set permissions** option to configure the same protection settings that you had in your template. Labels with predefined templates will not block label migration but this label configuration is not supported in the Microsoft 365 compliance center.
+- If you have labels that are configured for a predefined template, edit these labels and select the **Set permissions** option to configure the same protection settings that you had in your template. Labels with predefined templates will not block label migration but this label configuration is not supported in the Microsoft 365 Compliance center.
         
     > [!TIP]
     > To help you reconfigure these labels, you might find it useful to have two browser windows: One window in which you select the **Edit Template** button for the label to view the protection settings, and the other window to configure the same settings when you select **Set permissions**.
     
-- After a label with cloud-based protection settings has been migrated, the resulting scope of the protection template is the scoped that is defined in the Azure portal (or by using the AIPService PowerShell module) and the scope that is defined in theMicrosoft 365 compliance center.
+- After a label with cloud-based protection settings has been migrated, the resulting scope of the protection template is the scoped that is defined in the Azure portal (or by using the AIPService PowerShell module) and the scope that is defined in theMicrosoft 365 Compliance center.
 
 ### Display names
 
 For each label, the Azure portal displays only the label display name, which you can edit. Users see this label name in their apps. 
 
-The Microsoft 365 compliance center shows both this display name for a label, and the label name. The label name is the initial name that you specify when the label is first created and this property is used by the back-end service for identification purposes. When you migrate your labels, the display name remains the same and the label name is renamed to the label ID from the Azure portal.
+The Microsoft 365 Compliance center shows both this display name for a label, and the label name. The label name is the initial name that you specify when the label is first created and this property is used by the back-end service for identification purposes. When you migrate your labels, the display name remains the same and the label name is renamed to the label ID from the Azure portal.
 
 #### Conflicting display names
 
@@ -127,33 +127,33 @@ However, sub-labels across different parents, such as **Confidential\HR** and **
 
 Any localized strings for the labels are not migrated. Define new localized strings for the migrated labels by using Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label).
 
-### Editing migrated labels in the Microsoft 365 compliance center
+### Editing migrated labels in the Microsoft 365 Compliance center
 
-After the migration, when you edit a migrated label in the Azure portal, the same change is automatically reflected in the Microsoft 365 compliance center.
+After the migration, when you edit a migrated label in the Azure portal, the same change is automatically reflected in the Microsoft 365 Compliance center.
 
-However, when you edit a migrated label in the Microsoft 365 compliance center, you must return to the Azure portal, **Azure Information Protection - Unified labeling** pane, and select **Publish**. 
+However, when you edit a migrated label in the Microsoft 365 Compliance center, you must return to the Azure portal, **Azure Information Protection - Unified labeling** pane, and select **Publish**. 
 
 This additional action is needed for the Azure Information Protection clients (classic) to pick up the label changes.
 
-### Label settings that are not supported in the Microsoft 365 compliance center
+### Label settings that are not supported in the Microsoft 365 Compliance center
 
-Use the following table to identify which configuration settings of a migrated label are not supported by the Microsoft 365 compliance center. If you have labels with these settings, when the migration is complete, use the administration guidance in the final column before you publish your labels in the Microsoft 365 compliance center.
+Use the following table to identify which configuration settings of a migrated label are not supported by the Microsoft 365 Compliance center. If you have labels with these settings, when the migration is complete, use the administration guidance in the final column before you publish your labels in the Microsoft 365 Compliance center.
 
 If you are not sure how your labels are configured, view their settings in the Azure portal. If you need help with this step, see [Configuring the Azure Information Protection policy](configure-policy.md).
 
 Azure Information Protection clients (classic) can use all label settings listed without any problems because they continue to download the labels from the Azure portal.
 
-|Label configuration|Supported by unified labeling clients| Guidance for the Microsoft 365 compliance center|
+|Label configuration|Supported by unified labeling clients| Guidance for the Microsoft 365 Compliance center|
 |-------------------|---------------------------------------------|-------------------------|
-|**Status of enabled or disabled**<br /><br />This status is not synchronized to the Microsoft 365 compliance center |Not applicable|The equivalent is whether the label is published or not. |
+|**Status of enabled or disabled**<br /><br />This status is not synchronized to the Microsoft 365 Compliance center |Not applicable|The equivalent is whether the label is published or not. |
 |**Label color that you select from list or specify by using RGB code** |Yes|No configuration option for label colors. Instead, you can configure label colors in the Azure portal or use [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).|
 |**Cloud-based protection or HYOK-based protection using a predefined template** |No|No configuration option for predefined templates. We do not recommend you publish a label with this configuration.|
-|**Cloud-based protection using user-defined permissions for Word, Excel, and PowerPoint** |Yes|The Microsoft 365 compliance center supports a configuration option for user-defined permissions. <br /><br /> If you publish a label with this configuration, check the results of applying the label from the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
+|**Cloud-based protection using user-defined permissions for Word, Excel, and PowerPoint** |Yes|The Microsoft 365 Compliance center supports a configuration option for user-defined permissions. <br /><br /> If you publish a label with this configuration, check the results of applying the label from the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |**HYOK-based protection using user-defined permissions for Outlook** (Do Not Forward) |No|No configuration option for HYOK. We do not recommend you publish a label with this configuration. If you do, the results of applying the label are listed in the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
-|**Custom font name, size, and custom font color by RGB code for visual markings** (header, footer, watermark)  |Yes|Configuration for visual markings is limited to a list of colors and font sizes. You can publish this label without changes although you cannot see the configured values in the Microsoft 365 compliance center. <br /><br />To change these options, use the [**New-Label**](/powershell/module/exchange/new-label) Office 365 Security & Compliance Center cmdlet. For easier administration, consider changing the color to one of the listed options in the Microsoft 365 compliance center. <br /><br />**Note**: The Microsoft 365 compliance center supports a predefined list of font definitions. Custom fonts and colors are supported only via the [**New-Label**](/powershell/module/exchange/new-label) cmdlet. <br><br>If you are working with the classic client, make these changes to your label in the Azure portal.|
+|**Custom font name, size, and custom font color by RGB code for visual markings** (header, footer, watermark)  |Yes|Configuration for visual markings is limited to a list of colors and font sizes. You can publish this label without changes although you cannot see the configured values in the Microsoft 365 Compliance center. <br /><br />To change these options, use the [**New-Label**](/powershell/module/exchange/new-label) Office 365 Security & Compliance Center cmdlet. For easier administration, consider changing the color to one of the listed options in the Microsoft 365 Compliance center. <br /><br />**Note**: The Microsoft 365 Compliance center supports a predefined list of font definitions. Custom fonts and colors are supported only via the [**New-Label**](/powershell/module/exchange/new-label) cmdlet. <br><br>If you are working with the classic client, make these changes to your label in the Azure portal.|
 |**Variables in visual markings** (header, footer) |Yes|This label configuration is supported by the AIP clients and Office built-in labeling for select apps. <br /><br />If you are working with built-in labeling using an app that does not support this configuration and publish this label without changes, variables display as text on clients, instead of displaying the dynamic value.<br /><br />For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables). |
 |**Visual markings per app**|Yes|This label configuration is supported only by the AIP clients, and not by Office built-in labeling. <br /><br />If you are working with built-in labeling, and publish this label without changes, the visual marking configuration displays as variable text instead of the visual markings you've configured to display in each app.  |
-|**"Just for me" protection**|Yes|The Microsoft 365 compliance center do not let you save encryption settings that you apply now, without specifying any users. In the Azure portal, this configuration results in a label that applies ["Just for me" protection](configure-policy-protection.md#example-6-label-that-applies-just-for-me-protection). <br /><br /> As an alternative, create a label that applies encryption and specify a user with any permissions, and then edit the associated protection template by using PowerShell. First, use the [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) cmdlet (see Example 3), and then [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) with the *RightsDefinitions* parameter.|
+|**"Just for me" protection**|Yes|The Microsoft 365 Compliance center do not let you save encryption settings that you apply now, without specifying any users. In the Azure portal, this configuration results in a label that applies ["Just for me" protection](configure-policy-protection.md#example-6-label-that-applies-just-for-me-protection). <br /><br /> As an alternative, create a label that applies encryption and specify a user with any permissions, and then edit the associated protection template by using PowerShell. First, use the [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) cmdlet (see Example 3), and then [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) with the *RightsDefinitions* parameter.|
 |**Conditions and associated settings** <br /><br /> Includes automatic and recommended labeling, and their tooltips|Not applicable|Reconfigure your conditions by using auto labeling as a separate configuration from label settings.|
 | | | |
 
@@ -203,14 +203,14 @@ You must be a Compliance administrator, Compliance data administrator, Security 
     
     If the option to activate is not available, check the **Unified labeling status**: If you see **Activated**, your tenant is already using the unified labeling store and there is no need to migrate your labels.
 
-For the labels that successfully migrated, they can now be used by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). However, you must first [publish these labels](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) in the Microsoft 365 compliance center.
+For the labels that successfully migrated, they can now be used by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). However, you must first [publish these labels](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) in the Microsoft 365 Compliance center.
 
 > [!IMPORTANT]
 > If you edit the labels outside the Azure portal, for Azure Information Protection clients (classic), return to this **Azure Information Protection - Unified labeling** pane, and select **Publish**.
 
 ### Copy policies
 
-After you have migrated your labels, you can select an option to copy policies. If you select this option, a one-time copy of your policies with their [policy settings](configure-policy-settings.md) and any [advanced client settings](./rms-client/client-admin-guide-customizations.md#available-advanced-classic-client-settings) is sent to the Microsoft 365 compliance center. 
+After you have migrated your labels, you can select an option to copy policies. If you select this option, a one-time copy of your policies with their [policy settings](configure-policy-settings.md) and any [advanced client settings](./rms-client/client-admin-guide-customizations.md#available-advanced-classic-client-settings) is sent to the Microsoft 365 Compliance center. 
 
 Successfully copied policies with their settings and labels are then automatically published to the users and groups that were assigned to the policies in the Azure portal. Note that for the Global policy, this means all users. If you're not ready for the migrated labels in the copied policies to be published, after the policies are copied, you can remove the labels from the label policies in your admin labeling center.
 
@@ -243,7 +243,7 @@ For more information about configuring the policy settings, advanced client sett
 
 ### Clients and services that support unified labeling
 
-To confirm whether the clients and services you use support unified labeling, refer to their documentation to check whether they can use sensitivity labels that are published from the Microsoft 365 compliance center.
+To confirm whether the clients and services you use support unified labeling, refer to their documentation to check whether they can use sensitivity labels that are published from the Microsoft 365 Compliance center.
 
 ##### Clients that currently support unified labeling include:
 
@@ -275,9 +275,9 @@ To confirm whether the clients and services you use support unified labeling, re
     
     This service supports labels both before the migration to the unified labeling store, and after the migration, using the following logic:
     
-    - If the Microsoft 365 compliance center has sensitivity labels, these labels are retrieved from the Microsoft 365 compliance center. To select these labels in Cloud App Security, at least one label must be published to at least one user.
+    - If the Microsoft 365 Compliance center has sensitivity labels, these labels are retrieved from the Microsoft 365 Compliance center. To select these labels in Cloud App Security, at least one label must be published to at least one user.
     
-    - If the Microsoft 365 compliance center doesn't have sensitivity labels, Azure Information Protection labels are retrieved from the Azure portal.
+    - If the Microsoft 365 Compliance center doesn't have sensitivity labels, Azure Information Protection labels are retrieved from the Azure portal.
 
 - **Services from software vendors and developers** that use the [Microsoft Information Protection SDK](/information-protection/develop/overview).
 

@@ -36,7 +36,7 @@ Have a question about Azure Information Protection that is specifically about cl
 
 ## Which client do I install for testing new functionality?
 
-We recommend installing the **Azure Information Protection unified labeling client**. The unified labeling client downloads labels and policy settings from the Microsoft 365 compliance center.
+We recommend installing the **Azure Information Protection unified labeling client**. The unified labeling client downloads labels and policy settings from the Microsoft 365 Compliance center.
 
 This client is in general availability, and might have a preview version for you to test additional functionality for a future release.
 
