@@ -83,7 +83,7 @@ Finally, if you have imported AD RMS .xml data configuration files that were use
 
 ### Install and configure the RMS connector
 
-Use the instructions in the [Deploying the Azure Rights Management connector](./deploy-rms-connector.md) article, and perform steps 1 though 4. 
+Use the instructions in the [Deploying the Microsoft Rights Management connector](./deploy-rms-connector.md) article, and perform steps 1 though 4. 
 
 Do not start step 5 yet from the connector instructions.
 

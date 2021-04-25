@@ -254,7 +254,7 @@ Make sure to create rules that allow outbound access to these specific IP addres
 
 ## Supported on-premises servers for Azure Rights Management data protection
 
-The following on-premises servers are supported with Azure Information Protection when you use the Azure Rights Management connector.
+The following on-premises servers are supported with Azure Information Protection when you use the Microsoft Rights Management connector.
 
 This connector acts as a communications interface, and relays between on-premises servers and the Azure Rights Management service, which is used by Azure Information Protection to protect Office documents and emails. 
 
@@ -269,7 +269,7 @@ Supported servers include:
 |**File servers that run Windows Server and use File Classification Infrastructure (FCI)**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
 | | |
 
-For more information, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
+For more information, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
 ## Supported operating systems for Azure Rights Management
 

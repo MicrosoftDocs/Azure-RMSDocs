@@ -63,7 +63,7 @@ For information about how these applications and services support the data prote
 
 -   [Azure Information Protection client: Installation and configuration for clients](configure-client.md)
 
-To configure on-premises servers such as Exchange Server and SharePoint Server, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
+To configure on-premises servers such as Exchange Server and SharePoint Server, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
 In addition to these applications and services, there are other applications that support the Rights Management APIs. This category includes line-of-business applications that are written in-house by using the Rights Management SDK, and applications from software vendors that are written by using the Rights Management SDK. For these applications, follow the instructions that are provided with the application.
 

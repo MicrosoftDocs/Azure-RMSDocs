@@ -25,7 +25,7 @@ ms.custom: admin
 
 ---
 
-# Monitor the Azure Rights Management connector
+# Monitor the Microsoft Rights Management connector
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
