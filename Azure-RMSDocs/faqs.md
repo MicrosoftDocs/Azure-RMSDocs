@@ -61,11 +61,7 @@ Originally, Microsoft 365 had only [retention labels](https://support.office.com
 
 In contrast, Azure Information Protection labels, configured at the time using the AIP classic client in the Azure portal, enabled you to apply a consistent classification and protection policy for documents and emails whether they were stored on-premises or in the cloud.
 
-Microsoft 365 now supports [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in addition to retention labels. Sensitivity labels can be created and configured in the following admin centers:
-
-- Office 365 Security & Compliance Center
-- Microsoft 365 security center
-- Microsoft 365 compliance center
+Microsoft 365 supports [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in addition to retention labels. Sensitivity labels can be created and configured in the Microsoft 365 compliance center.
 
 If you have legacy AIP labels configured in the Azure portal, we recommend migrating them to sensitivity labels and unified labeling client. For more information, see [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md).
 
@@ -91,11 +87,7 @@ You can also check by going to **Azure Information Protection** > **Manage** > *
 
 The legacy Azure Information Protection client, referred to as the *classic* client, downloads labels and policy settings from Azure and enables you to configure the [AIP policy](overview-policy.md) from the Azure portal.
 
-The *unified labeling client* is the most current client with the most recent updates, and supports the unified labeling platform used by multiple applications and services. The unified labeling client downloads [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and policy settings from the following admin centers:
-
-- Office 365 Security & Compliance Center
-- Microsoft 365 security center
-- Microsoft 365 compliance center
+The *unified labeling client* is the most current client with the most recent updates, and supports the unified labeling platform used by multiple applications and services. The unified labeling client downloads [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and policy settings from the Microsoft 365 compliance center.
 
 If you're an admin, learn more in [Choose your Windows labeling solution](rms-client/use-client.md#choose-your-windows-labeling-solution).
 
@@ -136,16 +128,16 @@ After you've migrated your labels in the Azure portal, continue managing them in
 
 |Client  |Description  |
 |---------|---------|
-|[Unified labeling clients and services](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) only    |  If you only have unified labeling clients installed, manage your labels in one of the admin centers: Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center. Unified labeling clients download the labels and policy settings from these admin centers. <br /><br />For instructions, see [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels).     |
+|[Unified labeling clients and services](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) only    |  If you only have unified labeling clients installed, manage your labels in the Microsoft 365 compliance center, which is where unified  labeling clients download the labels and their policy settings.<br /><br />For instructions, see [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels).     |
 |[Classic client](./rms-client/aip-client.md) only  | If you've migrated your labels, but still have the classic client installed, continue to use the Azure portal to edit labels and policy settings. The classic client continues to download labels and policy settings from Azure.
-|Both the AIP [classic client](./rms-client/aip-client.md) and [unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) clients     | If you have both of the clients installed, use the admin centers or the Azure portal to make label changes. <br /><br />For the classic clients to pick up label changes made in the admin centers, return to the Azure portal to publish them. In the Azure portal > **Azure Information Protection - Unified labeling** pane, select **Publish**.  <br /><br /> Continue to use the Azure portal for [central reporting](reports-aip.md) and the [scanner](deploy-aip-scanner.md).     |
+|Both the AIP [classic client](./rms-client/aip-client.md) and [unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) clients     | If you have both of the clients installed, use the Microsoft 365 compliance center or the Azure portal to make label changes. <br /><br />For the classic clients to pick up label changes made in the Microsoft 365 compliance center, return to the Azure portal to publish them. In the Azure portal > **Azure Information Protection - Unified labeling** pane, select **Publish**.  <br /><br /> Continue to use the Azure portal for [central reporting](reports-aip.md) and the [scanner](deploy-aip-scanner.md).     |
 | | |
 
 ## Do I need to re-encrypt my files after moving to sensitivity labels and the unified labeling platform?
 
 No, you don’t need to re-encrypt your files after moving to sensitivity labels and the unified labeling platform after migrating from the AIP classic client and the labels managed in the Azure portal.
 
-After migrating, manage your labels and labeling policies from your labeling admin center, including the Microsoft security center, Microsoft compliance center, or the Microsoft Security & Compliance Center. 
+After migrating, manage your labels and labeling policies from the Microsoft 365 compliance center.
 
 For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in the Microsoft 365 documentation and the [Understanding unified labeling migration](https://techcommunity.microsoft.com/t5/microsoft-security-and/understanding-unified-labeling-migration/ba-p/783185) blog.
 
