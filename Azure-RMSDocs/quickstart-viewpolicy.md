@@ -135,9 +135,9 @@ The first time you connect to the Azure Information Protection service from the 
 
 - **Classic client.** For the classic client, both labels and policy settings are downloaded to the client in the Azure Information Protection policy.
 
-- **Unified labeling client.** For the unified labeling client, only labels are downloaded to the client. Policy settings are downloaded from the Office 365 Compliance & Security Center, the Microsoft 365 Compliance center, or the Microsoft 365 Security center. Use those admin centers to edit your labels and label policies instead of the Azure portal.
+- **Unified labeling client.** For the unified labeling client, only labels are downloaded to the client. Policy settings are downloaded from the Microsoft 365 compliance center, which admins can used to edit labels and labe policies instead of the Azure portal.
 
-    For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in the Microsoft 365 documentation for more information.
+    For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in the Microsoft 365 documentation.
 
 **Classic client instructions**:
 

@@ -333,7 +333,7 @@ The following fixes were delivered in version 2.9.111.0 of the [Azure Informatio
 
 - Updates to the [order of precedence](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved) used when more than one label policy is configured for a user, each with conflicting advanced settings.
 
-    In such cases, the advanced settings from the first policy are always applied, according to the order of the policies in the admin center. The exception for the *OutlookDefaultLabel* is now removed.
+    In such cases, the advanced settings from the first policy are always applied, according to the order of the policies in the Microsoft 365 compliance center. The exception for the *OutlookDefaultLabel* is now removed.
 
 - In a scenario where **%APPDATA% (AppData\Roaming)** points to a non-default Windows folder structure, files in folders that are mapped to user directories are now [excluded from labeling and protection](clientv2-admin-guide-file-types.md#file-types-excluded-from-classification-and-protection) as expected, based on the configuration.
 
