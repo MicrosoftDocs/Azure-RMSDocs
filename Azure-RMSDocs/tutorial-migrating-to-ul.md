@@ -71,7 +71,7 @@ Review the following articles to understand how the Information Protection featu
 
 - [Learn about built-in labeling capabilities in Microsoft 365](/microsoft-365/compliance/sensitivity-labels-office-apps)
 - [Compare the labeling solutions for Windows computers](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
-- [Learn how to manage label settings that are not supported out-of-the-box in the Microsoft 365 compliance center](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-admin-centers)
+- [Learn how to manage label settings that are not supported out-of-the-box in the Microsoft 365 compliance center](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-microsoft-365-compliance-center)
 
 > [!TIP]
 > If there are documented differences between the clients that impact your end users' behavior, we recommend communicating these changes effectively to your users before deploying the unified labeling client and publishing your new policy.
@@ -186,7 +186,7 @@ As explained during the [planning phase](#planning-your-migration), some advance
 For more information, see:
 
 - [Configure advanced labeling settings in PowerShell](#configure-advanced-labeling-settings-in-powershell)
-- [Define label conditions in the Microsoft 365 compliance center](#define-label-conditions-in-the-labeling-admin-center)
+- [Define label conditions in the Microsoft 365 compliance center](#define-label-conditions-in-the-microsoft-365-compliance-center)
 
 ### Configure advanced labeling settings in PowerShell
 
