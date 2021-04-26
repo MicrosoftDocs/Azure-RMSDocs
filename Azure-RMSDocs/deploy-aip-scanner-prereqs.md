@@ -234,7 +234,7 @@ The scanner can discover and scan all Sharepoint sites and subsites under a spec
 
 1. Add your scanner user to the new policy and grant **Site collection** in the Permissions list.   
 
-1. Add a URL of the SharePoint that hosts sites or subsites that need to be scanned. For more information, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+1. Add a URL of the SharePoint that hosts sites or subsites that need to be scanned. For more information, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner).
 
 To learn more about how to manage your SharePoint policy levels see, [manage permission policies for a web application](/sharepoint/administration/manage-permission-policies-for-a-web-application).
 
@@ -260,7 +260,7 @@ To support a disconnected computer from the Azure portal, perform the following 
 
     1. Set the scanner to function in **offline** mode, using the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet.
 
-    1. Configure the scanner in the Azure portal by creating a scanner cluster. For more information, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+    1. Configure the scanner in the Azure portal by creating a scanner cluster. For more information, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner).
 
     1. Export your content job from the **Azure Information Protection - Content scan jobs** pane using the **Export** option.
     

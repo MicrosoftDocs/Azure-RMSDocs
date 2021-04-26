@@ -71,7 +71,7 @@ Perform these steps again as needed when your content changes.
 
     - The .csv files have more details for each file. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
 
-[Initial configurations](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) instruct you to set the **Info types to be discovered** to **Policy only**. This configuration means that only files that meet the conditions you've configured for automatic classification are included in the detailed reports.
+[Initial configurations](deploy-aip-scanner-configure-install.md#configure-the-scanner) instruct you to set the **Info types to be discovered** to **Policy only**. This configuration means that only files that meet the conditions you've configured for automatic classification are included in the detailed reports.
 
 If you don't see any labels applied, check that your label configuration includes automatic rather than recommended classification, or enable **Treat recommended labeling as automatic** (available in scanner version 2.7.x.x and above).
 

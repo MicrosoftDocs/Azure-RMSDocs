@@ -38,7 +38,7 @@ Before you start, verify that your system complies with the [required prerequisi
 
 When you're ready, continue with the following steps:
 
-1. [Configure the scanner in the Azure portal](#configure-the-scanner-in-the-azure-portal)
+1. [Configure the scanner in the Azure portal](#configure-the-scanner)
 
 1. [Install the scanner](#install-the-scanner)
 
