@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 04/05/2021
+ms.date: 04/26/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -160,7 +160,7 @@ For even more details, see also:
 |**Label inheritance from email attachments**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)  | ![no](../media/no-icon.png)|
 |**Customizations, such as**:<br />- Default label for email<br />- Pop up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| ![yes](../media/yes-icon.png) <sup>[1](#1)</sup> | ![yes](../media/yes-icon.png) <sup>[2](#2)</sup> |  ![partial](../media/half-support-icon.png) <sup>[9](#9)</sup>|
 |**Scanner for on-premises data stores**| ![yes](../media/yes-icon.png) |  ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
-|**Central reporting (analytics)**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**Central reporting**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![partial](../media/half-support-icon.png) <sup>[10](#10)|
 |**Custom permissions set independently from a label**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>[3](#3)</sup>|  ![no](../media/no-icon.png)|
 |**Information Protection bar in Office apps**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
 |**Visual markings as a label action**<br> (header, footer, watermark)| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)|
@@ -216,6 +216,9 @@ For more information about support for dynamic content markings and per app cont
 
 <a name="9"></a><sup>9</sup>
 For built-in labeling, selected labeling and labeling policy customizations are supported via PowerShell. For more information, see [Manage sensitivity labels in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
+
+<a name="10"></a><sup>10</sup>
+In the Azure portal, see [Azure Information Protection analytics](../reports-aip.md). In the Microsoft 365 compliance center, see the [activity explorer](/microsoft-365/compliance/data-classification-activity-explorer?view=o365-worldwide). For detailed support information, see the **Audit label-related user activity** row in the [capabilities tables](/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide) from the Microsoft 365 Compliance documentation.
 
 ### Detailed comparisons for the Azure Information Protection clients
 
