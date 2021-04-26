@@ -6,7 +6,7 @@ description: Learn how to view protected files on your iOS and Android devices u
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/22/2021
+ms.date: 04/25/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,15 +31,18 @@ ms.custom: user
 
 [!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
 
-The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text file when you can't open them with your regular apps for these file types. For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
-
-**Protection and sensitivity labels are supported in mobile Office versions**. If you have mobile Office apps installed on your device, we recommend that you use the Office apps to view protected files. For more information, see [Sensitivity label capabilities in Word, Excel, and PowerPoint](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-word-excel-and-powerpoint).
-
-**If you are opening your file on a desktop**, use the [desktop version of the AIP Viewer](clientv2-view-use-files.md). 
-
-> [!NOTE]
+> [!TIP]
 > The AIP mobile apps are *viewers only,* and do not enable you to create new emails or reply to emails, or create or edit protected files. The AIP mobile apps also cannot open attachments to protected PDFs or emails.
 > 
+> - **If you have mobile Office apps installed on your mobile device**, we recommend that you use the [Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-word-excel-and-powerpoint) to view protected files.
+> - **If you are opening your file on a desktop**, use the [desktop version of the AIP Viewer](clientv2-view-use-files.md). 
+> 
+
+The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text file when you can't open them with your regular apps for these file types. For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
+
+## What's new for the AIP mobile viewer app
+
+**April 25, 2021**: Version 2.1 of the AIP Viewer mobile app includes fixes for instances where the app would close unexpectedly or display a black screen.
 
 ## AIP mobile viewer app requirements
 
