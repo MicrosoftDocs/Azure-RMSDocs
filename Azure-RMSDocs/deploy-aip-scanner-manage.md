@@ -6,7 +6,7 @@ description: Instructions for running the Azure Information Protection unified l
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/01/2021
+ms.date: 04/26/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -126,6 +126,8 @@ When a full scan is complete, the scan type automatically changes to incremental
 > [!TIP]
 > If you've made changes to your AIP [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), the Azure portal will prompt you to skip a full rescan. To ensure that your rescan occurs, make sure to select **No** in the prompt that appears.
 >
+
+DO WE HAVE POWERSHELL OPTIONS FOR THIS?
 ### Trigger a full rescan by modifying your settings
 
 Earlier versions of the scanner scanned all files whenever the scanner detected new or changed settings for automatic and recommended labeling. The scanner automatically refreshed the policy every four hours.
