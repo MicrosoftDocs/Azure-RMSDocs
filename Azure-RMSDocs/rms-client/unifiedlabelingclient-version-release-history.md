@@ -504,5 +504,9 @@ Not sure if unified labeling is the right client to install?  See [Choose your W
 For more information about installing and using the unified labeling client:
 
 - For users: [Download and install the client](install-unifiedlabelingclient-app.md)
-
 - For admins: [Azure Information Protection unified labeling client administrator guide](clientv2-admin-guide.md)
+
+For information about new features in the Microsoft 365 compliance center, see:
+
+- [What's new in Microsoft 365 compliance?](https://docs.microsoft.com/microsoft-365/compliance/whats-new)
+- [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=Microsoft%2CInformation%2CProtection)
