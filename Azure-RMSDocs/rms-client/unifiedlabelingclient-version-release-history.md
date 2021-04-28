@@ -101,7 +101,7 @@ For more information, see [Usage logging for the Azure Information Protection sc
 
 With the upgrade to version 2.11.57.0, running the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet with the **Verbose** parameter prints the last 10 errors from the scanner log.
 
-To print more or fewer errors, use the new **VerboseErrorCount parameter** to define the number of errors you want to print.
+To print more or fewer errors, use the new **VerboseErrorCount** parameter to define the number of errors you want to print.
 
 For more information, see [Troubleshooting using the scanner diagnostic tool](../deploy-aip-scanner-tsg.md#troubleshooting-using-the-scanner-diagnostic-tool).
 
