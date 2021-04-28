@@ -47,7 +47,7 @@ Client logs files and currently installed policy files:
 - For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP**
 
 
-## Usage logging for the Azure Information Protection scanner (Public preview)
+## Usage logging for the Azure Information Protection scanner
 
 Scanner activities are logged to the following local Windows event log: **Applications and Services Logs** > **Azure Information Protection Scanner**
 
@@ -57,9 +57,9 @@ Logged events include the following information:
 -
 - **SID (Security identifier) of the signed in scanner user**
 
-- **Action**, one of the following:
+- **Action**, one of the following message types:
 
-    - **Info messages**, one of the following:
+    - **Info messages**, one of the following messages:
 
         - Scan started: Information ID 1001
 
@@ -67,7 +67,7 @@ Logged events include the following information:
 
     - **Warning message**: Scan canceled: Information ID 2002
 
-    - **Error message**, one of the following:
+    - **Error message**, one of the following messages:
 
         - Unknown error: Information ID 3001
 
@@ -77,15 +77,16 @@ Logged events include the following information:
 
         - Database schema error: Information ID 3004
 
-        - No policy found: Information ID 3005
+        - No policies found: Information ID 3005
 
-        - No DLP policy found: Information ID 3006
+        - No DLP policies found: Information ID 3006
 
-        - No content scan job found: Information ID 3007
+        - No content scan jobs found: Information ID 3007
 
 - **Event data**, for more information depending on the action type
 ## Next steps
-Now that you've identified all the log files associated with the Azure Information Protection unified labeling client, see the following for additional information that you might need to support this client:
+
+For more information, see:
 
 - [Customizations](clientv2-admin-guide-customizations.md)
 
