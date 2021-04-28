@@ -72,7 +72,7 @@ If the scanner stops in the middle unexpectedly and doesn't complete scanning a 
 
 
 
-## Verify scanning details per scanner node and repository (Public preview)
+## Verify scanning details per scanner node and repository
 
 Use the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) together with variables to get details about the scanning status on each node in your scanner cluster.
 
