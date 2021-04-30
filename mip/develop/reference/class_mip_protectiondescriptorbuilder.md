@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class ProtectionDescriptorBuilder 
@@ -23,6 +23,7 @@ public void SetReferrer(const std::string& uri)  |  Sets protection policy refer
 public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be encrypted.
 public void SetSignedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be signed.
 public void SetDoubleKeyUrl(const std::string& doubleKeyUrl)  |  Sets the double key url to be used for custom protection.
+public void SetLabelId(const std::string& labelId)  |  Sets the labelId for UDP protection. Only allowed for custom protection type.
   
 ## Members
   
@@ -96,4 +97,12 @@ Sets the double key url to be used for custom protection.
 
 Parameters:  
 * **value**: Double key url
+
+
+  
+### SetLabelId function
+Sets the labelId for UDP protection. Only allowed for custom protection type.
+
+Parameters:  
+* **value**: label Id
 

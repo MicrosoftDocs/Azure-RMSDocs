@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class ProtectionDescriptor 
@@ -68,7 +68,7 @@ Gets the label ID, if any.
 
   
 **Returns**: Label ID
-This property will only be populated in ProtectionDescriptors for preexisting protected content. It is a field populated by the server at the moment protected content is consumed.
+This property will be populated in ProtectionDescriptors for preexisting protected content & for UDP label based protection. It is a field populated by the server at the moment protected content is consumed. For UDP label based protection, its populated from appdata labelId value set by client.
   
 ### GetContentId function
 Gets the Content ID, if any.

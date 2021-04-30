@@ -1,11 +1,11 @@
 ---
 title: class ProtectionEngine::Settings 
 description: Documents the protectionengine::settings class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
+ms.author: bryanla
+ms.date: 04/23/2021
 ---
 
 # class ProtectionEngine::Settings 
@@ -35,6 +35,8 @@ public void SetAuthDelegate(const std::shared_ptr\<AuthDelegate\>& authDelegate)
 public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Get the Engine Auth Delegate.
 public const std::string& GetUnderlyingApplicationId() const  |  Gets the Underlying Application ID.
 public void SetUnderlyingApplicationId(const std::string& underlyingApplicationId)  |  Sets the Underlying Application ID.
+public bool GetAllowCloudServiceOnly() const  |  Gets whether or not only cloud service is allowed.
+public void SetAllowCloudServiceOnly(bool allowCloudServiceOnly)  |  Sets whether or not only cloud service is allowed.
   
 ## Members
   
@@ -203,4 +205,18 @@ Sets the Underlying Application ID.
 
 Parameters:  
 * **UnderlyingApplicationId**: Underlying Application ID.
+
+
+  
+### GetAllowCloudServiceOnly function
+Gets whether or not only cloud service is allowed.
+
+  
+**Returns**: A boolean value indicating whether or not only cloud service is allowed
+  
+### SetAllowCloudServiceOnly function
+Sets whether or not only cloud service is allowed.
+
+Parameters:  
+* **allowCloudServiceOnly**: A boolean value indicating whether or not only cloud service is allowed
 
