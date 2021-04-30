@@ -23,7 +23,7 @@ Today in the MIP SDK, non-transparent proxies are supported only on Windows.
 | --------------- | ----------------- | --------------------- | -------------------- | -------------- |
 | **Windows**     | Supported         | Not Supported         | Supported            | Supported      |
 | **Linux (All)** | Supported         | Not Supported         | Not Supported        | Not Supported  |
-| ****       | Supported         | Not Supported         | Not Supported        | Not Supported  |
+| **macOS**       | Supported         | Not Supported         | Not Supported        | Not Supported  |
 | **Android**     | Supported         | Not Supported         | Not Supported        | Not Supported  |
 | **iOS**         | Supported         | Not Supported         | Not Supported        | Not Supported  |
 
