@@ -26,9 +26,9 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
 
-## Verison 1.9.x
+## Verison 1.9.78
 
-**Release date:** April xx, 2021
+**Release date:** April 29, 2021
 
 ### General Changes
 
