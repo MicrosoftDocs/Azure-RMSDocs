@@ -161,8 +161,6 @@
       href: reference/mip-sdk-reference.md
     - name: Enums and structs
       href: reference/mip-enums-and-structs.md
-    - name: Functions
-      href: reference/mip-functions.md
     - name: Classes
       items:
       - name: AccessDeniedError 
