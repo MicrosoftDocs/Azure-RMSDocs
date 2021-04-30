@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class PolicyEngine::Settings 
@@ -25,7 +25,7 @@ public void SetClientData(const std::string& clientData)  |  Set the Client Data
 public const std::string& GetLocale() const  |  Get the Locale set in the settings.
 public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& customSettings)  |  Set the custom settings, used for feature gating and testing.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
-public void SetSessionId(const std::string& sessionId)  |  Set the session ID, used for client defined telemetry.
+public void SetSessionId(const std::string& sessionId)  |  Set the session ID, used for client defined telemetry and to make it easier to correlate application events with the corresponding policy service REST requests.
 public const std::string& GetSessionId() const  |  Get the session ID, a unique identifier.
 public bool IsLoadSensitivityTypesEnabled() const  |  Get the the flag indicating if load sensitivity labels is enabled.
 public void SetCloud(Cloud cloud)  |  Optionally sets the target cloud.
@@ -152,10 +152,10 @@ Get the custom settings, used for feature gating and testing.
 **Returns**: List of name/value pairs.
   
 ### SetSessionId function
-Set the session ID, used for client defined telemetry.
+Set the session ID, used for client defined telemetry and to make it easier to correlate application events with the corresponding policy service REST requests.
 
 Parameters:  
-* **sessionId**: a unique string that connects telemetry events.
+* **sessionId**: An identifier (usually specified as a GUID) to uniquely identify this operation.
 
 
   

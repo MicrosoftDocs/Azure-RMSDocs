@@ -5,14 +5,15 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class FileHandler 
 Interface for all file handling functions.
   
 ## Summary
- Members                        | Descriptions                                
+
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<ContentLabel\> GetLabel()  |  Starts retrieving the sensitivity label from the file.
 public std::vector\<std::pair\<std::string, std::string\>\> GetProperties(uint32_t version)  |  Retrievs the file propertries according to version.
@@ -26,8 +27,8 @@ public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Deletes the 
 public void SetProtection(const std::shared_ptr\<ProtectionDescriptor\>& protectionDescriptor, const ProtectionSettings& protectionSettings)  |  Sets either custom or template-based permissions (according to protectionDescriptor->GetProtectionType) to the file.
 public void SetProtection(const std::shared_ptr\<ProtectionHandler\>& protectionHandler)  |  Sets protection on a document using an existing protection handler.
 public void RemoveProtection()  |  Removes protection from the file. If the original file format does not support labeling, the label will be lost when protection is removed. When the native format supports labeling, the label metadata is maintained.
-public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | Writes the changes to the file specified by the \|outputFilePath\|  parameter.
-public void CommitAsync(const std::shared_ptr\<Stream\>& outputStream, const std::shared_ptr\<void\>& context) | Writes the changes to the stream specified by the \|outputStream\| parameter.
+public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | Writes the changes to the file specified by the \|outputFilePath\ |  parameter.
+public void CommitAsync(const std::shared_ptr\<Stream\>& outputStream, const std::shared_ptr\<void\>& context) | Writes the changes to the stream specified by the \|outputStream\ |  parameter.
 public bool IsModified()  |  Checks if there are changes to commit to the file.
 public void GetDecryptedTemporaryFileAsync(const std::shared_ptr\<void\>& context)  |  Returns a path to a temporary file (that will be deleted if possible) - representing the decrypted content.
 public void GetDecryptedTemporaryStreamAsync(const std::shared_ptr\<void\>& context)  |  Returns a stream - representing the decrypted content.
@@ -115,6 +116,7 @@ FileHandler::Observer will be called upon success or failure.
   
 ### CommitAsync function
 Writes the changes to the stream specified by the |outputStream| parameter.
+|outputStream| must not be the same as inputStream used for creating the handler.
 FileHandler::Observer will be called upon success or failure.
   
 ### IsModified function

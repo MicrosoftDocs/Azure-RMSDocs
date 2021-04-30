@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class ProtectionEngine::Observer 
@@ -61,7 +61,7 @@ Parameters:
 * **rights**: A reference to the list of rights retrieved 
 
 
-* **context**: The same context that was passed to ProtectionEngine::GetRightsForLabelIdAsync
+* **context**: The same context that was passed to [ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md)
 
 
 An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
@@ -82,10 +82,10 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when user cert loaded successfully.
 
 Parameters:  
-* **context**: The same context that was passed to ProtectionEngine::LoadUserCert
+* **context**: The same context that was passed to [ProtectionEngine::LoadUserCert](class_mip_protectionengine.md)
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::LoadUserCertAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnLoadUserCertSuccess or ProtectionEngine::Observer::OnLoadUserCertFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::LoadUserCertAsync](class_mip_protectionengine.md) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnLoadUserCertSuccess or ProtectionEngine::Observer::OnLoadUserCertFailure
   
 ### OnLoadUserCertFailure function
 Called when user cert loaded failed.
@@ -103,7 +103,7 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when registration of content for tracking & revocation is successful.
 
 Parameters:  
-* **context**: The same context that was passed to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync
+* **context**: The same context that was passed to [ProtectionEngine::RegisterContentForTrackingAndRevocationAsync](class_mip_protectionengine.md)
 
 
 An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationSuccess or ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationFailure
@@ -124,7 +124,7 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when revocation of is successful.
 
 Parameters:  
-* **context**: The same context that was passed to ProtectionEngine::RevokeContentAsync
+* **context**: The same context that was passed to [ProtectionEngine::RevokeContentAsync](class_mip_protectionengine.md)
 
 
 An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RevokeContentAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnRevokeContentSuccess or ProtectionEngine::Observer::OnRevokeContentFailure
@@ -145,10 +145,10 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when create delegated license is successful.
 
 Parameters:  
-* **context**: The same context that was passed to ProtectionEngine::CreateDelegationLicensesAsync.
+* **context**: The same context that was passed to ProtectionEngine::CreateDelegationLicensesAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::CreateDelegationLicensesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnCreateDelegatedLicensesSuccess or ProtectionEngine::Observer::OnCreateDelegatedLicensesFailure.
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::CreateDelegationLicensesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnCreateDelegatedLicensesSuccess or ProtectionEngine::Observer::OnCreateDelegatedLicensesFailure
   
 ### OnCreateDelegatedLicensesFailure function
 Called when create delegated license fails.
