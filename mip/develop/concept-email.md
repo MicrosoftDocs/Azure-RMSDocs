@@ -23,7 +23,7 @@ Common use cases for this scenario are:
 MIP SDK supports protection application and removal for MSG files. Given the variety of encoding types and variables in the format over the years, it's not possible to guarantee that MIP SDK can remove protection from *all* MSG files. The following section describes supportability for MSG files from various sources.
 
 - Removing protection from MSG files that were protected with MIP SDK is fully supported.
-- Removing protection from MSG files created by [currently supported](https://docs.microsoft.com/lifecycle/faq/office#:~:text=For%20Office%202019%2C%20Microsoft%20will%20provide%205%20years,align%20with%20the%20support%20period%20for%20Office%202016.) versions of the Outlook client is fully supported.
+- Removing protection from MSG files created by [currently supported](/lifecycle/faq/office) versions of the Outlook client is fully supported.
 - Removing protection from MSG files created by out-of-support versions of the Outlook client is supported on a best-effort basis. 
 
 ## File API operations for .msg files

@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class NoPermissionsError 
@@ -16,6 +16,8 @@ The user could not get access to the content. For example, no permissions, conte
 --------------------------------|---------------------------------------------
 public std::string GetReferrer() const  |  Gets the contact in case of missing rights to the document.
 public std::string GetOwner() const  |  Gets the owner of the document.
+public Category GetCategory() const  |  Gets the category of no permissions failure.
+enum Category  |  Category of no permissions error.
   
 ## Members
   
@@ -30,3 +32,18 @@ Gets the owner of the document.
 
   
 **Returns**: Document owner
+  
+### GetCategory function
+Gets the category of no permissions failure.
+
+  
+**Returns**: Category of no permissions failure
+  
+### Category enum
+ Values                         | Descriptions                                
+--------------------------------|---------------------------------------------
+Unknown            | Unknown no permissions failure
+UserNotFound            | Requested user was not found failure
+AccessDenied            | 
+AccessExpired            | 
+Category of no permissions error.

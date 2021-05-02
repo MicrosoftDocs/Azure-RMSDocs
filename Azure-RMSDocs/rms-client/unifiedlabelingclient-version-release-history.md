@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 04/11/2021
+ms.date: 04/28/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -70,18 +70,23 @@ Use the following information to see what's new or changed for a supported relea
 
 Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
-> [!NOTE]
+> [!TIP]
 > Minor fixes are not always listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
 >
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.11.57.0  (Public preview)
+## Version 2.11.58.0
 
-Unified labeling scanner and client version 2.11.57.0
+Unified labeling scanner and client version 2.11.58.0
 
-**Released** 04/11/2021
+
+**Released** 04/29/2021
+
+> [!NOTE]
+> Version 2.11.58.0 is identical to version 2.11.57.0. Due to an issue in our software packaging system, we needed to repackage this version and provide an updated version number. Users who've installed version 2.11.57.0 can be assured that have a fully supported and functional version.
+>
 
 This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
 
@@ -95,13 +100,13 @@ This version includes the following new features, fixes, and enhancements for th
 
 The unified labeling scanner now logs user activity to the local Windows event log.
 
-For more information, see [Usage logging for the Azure Information Protection scanner](clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-scanner-public-preview).
+For more information, see [Usage logging for the Azure Information Protection scanner](clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-scanner).
 
 ### Scanner diagnostics tool improvements
 
-With the upgrade to version 2.11.57.0, running the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet with the **Verbose** parameter prints the last 10 errors from the scanner log.
+With the upgrade to version 2.11.58.0, running the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet with the **Verbose** parameter prints the last 10 errors from the scanner log.
 
-To print more or fewer errors, use the new **VerboseErrorCount parameter** to define the number of errors you want to print.
+To print more or fewer errors, use the new **VerboseErrorCount** parameter to define the number of errors you want to print.
 
 For more information, see [Troubleshooting using the scanner diagnostic tool](../deploy-aip-scanner-tsg.md#troubleshooting-using-the-scanner-diagnostic-tool).
 
@@ -111,14 +116,14 @@ The unified labeling on-premises scanner has improved outputs for the following 
 
 |Cmdlet  |Improvement  |
 |---------|---------|
-|**Get-AIPScannerStatus**     |  Previously, running the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) command provided only high-level details of the scanner cluster status, without details per node in your cluster.   <br><br> Now, you can use the **NodesInfo** variable and the **Verbose** parameter to drill down into additional levels of detail for each node. <br><br>   For more information, see the [Verify scanning details per scanner node and repository](../deploy-aip-scanner-tsg.md#verify-scanning-details-per-scanner-node-and-repository-public-preview). |
+|**Get-AIPScannerStatus**     |  Previously, running the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) command provided only high-level details of the scanner cluster status, without details per node in your cluster.   <br><br> Now, you can use the **NodesInfo** variable and the **Verbose** parameter to drill down into additional levels of detail for each node. <br><br>   For more information, see the [Verify scanning details per scanner node and repository](../deploy-aip-scanner-tsg.md#verify-scanning-details-per-scanner-node-and-repository). |
 |**Get-AIPScannerConfiguration**     |   Running the [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/get-aipscannerconfiguration) now provides details about the current scanner configuration in addition to the online configuration settings.     |
 |     |         |
 
 
 ### Updates for the scanner's supported information types
 
-Beginning with version 2.11.57.0, the following sensitive information types are not scanned by the unified labeling scanner.
+Beginning with version 2.11.58.0, the following sensitive information types are not scanned by the unified labeling scanner.
 
 If you have sensitivity labels that use these sensitive information types, we recommend that you remove them.
 
@@ -127,7 +132,7 @@ If you have sensitivity labels that use these sensitive information types, we re
 
 ### Fixes and improvements
 
-The following fixes were delivered in version 2.11.57.0 of the Azure Information Protection unified labeling client and scanner:
+The following fixes were delivered in version 2.11.58.0 of the Azure Information Protection unified labeling client and scanner:
 
 - Improvements in loading time for the [AIP add-in in Office apps](clientv2-user-guide.md).
 
@@ -504,5 +509,9 @@ Not sure if unified labeling is the right client to install?  See [Choose your W
 For more information about installing and using the unified labeling client:
 
 - For users: [Download and install the client](install-unifiedlabelingclient-app.md)
-
 - For admins: [Azure Information Protection unified labeling client administrator guide](clientv2-admin-guide.md)
+
+For information about new features in the Microsoft 365 compliance center, see:
+
+- [What's new in Microsoft 365 compliance?](https://docs.microsoft.com/microsoft-365/compliance/whats-new)
+- [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=Microsoft%2CInformation%2CProtection)

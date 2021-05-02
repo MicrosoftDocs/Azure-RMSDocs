@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/22/2021
+ms.date: 04/26/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -345,7 +345,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnable
 
 This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-When you configure this setting, the  [PowerShell](./clientv2-admin-guide-powershell.md) cmdlet **Set-AIPFileLabel** is enabled to allow removal of protection from PST, rar, 7zip, and MSG files.
+When you configure this setting, the  [PowerShell](./clientv2-admin-guide-powershell.md) cmdlet **Set-AIPFileLabel** is enabled to allow removal of protection from PST, rar, and 7zip files.
 
 - Key: **EnableContainerSupport**
 
@@ -1335,7 +1335,7 @@ Use these settings only when you have a working [S/MIME deployment](/microsoft-3
 
 If the label you specify is configured for encryption, for the Azure Information Protection unified labeling client, S/MIME protection replaces the Rights Management protection only in Outlook. The client continues to use the encryption settings specified for the label in the Microsoft 365 compliance center.
 
-For Office apps with built-in labeling, these do not apply the S/MIME protection but instead, apply **Do Not Forward** protection.
+For Office apps with built-in labeling, these labels do not display to users. 
 
 If you want the label to be visible in Outlook only, configure the label to apply encryption to **Only email messages in Outlook**.
 

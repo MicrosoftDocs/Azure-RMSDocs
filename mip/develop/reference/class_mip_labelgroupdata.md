@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class LabelGroupData 
@@ -27,6 +27,7 @@ public const std::pair\<std::string, std::string\>& GetAutoTooltip() const  | _N
 public bool IsEnabled() const  | _Not yet documented._
 public bool IsDowngradeJustificationRequired() const  | _Not yet documented._
 public const std::vector\<std::string\>& GetSupportedContentFormats() const  | _Not yet documented._
+public const std::vector\<std::pair\<Workload, bool\>\>& GetWorkloadConsent() const  | _Not yet documented._
 public const std::string& GetDefaultLabelId() const  | _Not yet documented._
 public const std::string& GetDefaultLabelId(const std::string& contentFormat) const  | _Not yet documented._
 public const std::map\<std::string, mip::DefaultLabelInfo\>& GetDefaultLabelInfoPerContentFormat() const  | _Not yet documented._
@@ -34,7 +35,7 @@ public const std::pair\<std::string, std::string\>& GetMoreInfoUrl() const  | _N
 public bool IsMandatory() const  | _Not yet documented._
 public bool IsMandatory(const std::string& contentFormat) const  | _Not yet documented._
 public const std::vector\<std::shared_ptr\<ProtectionActionData\>\>& GetProtectionActionData() const  | _Not yet documented._
-public bool IsAuditEnabled() const  | _Not yet documented._
+public EnableAuditSetting GetEnableAuditSetting() const  | _Not yet documented._
 public bool IsCoauthEnabled() const  | _Not yet documented._
 public bool IsEnhancedClassificationEnabled() const  | _Not yet documented._
 public bool IsSubLabelPriorityOrderEnabled() const  | _Not yet documented._
@@ -104,6 +105,10 @@ _Not documented yet._
 _Not documented yet._
 
   
+### GetWorkloadConsent function
+_Not documented yet._
+
+  
 ### GetDefaultLabelId function
 _Not documented yet._
 
@@ -132,7 +137,7 @@ _Not documented yet._
 _Not documented yet._
 
   
-### IsAuditEnabled function
+### GetEnableAuditSetting function
 _Not documented yet._
 
   

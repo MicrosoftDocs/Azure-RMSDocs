@@ -24,7 +24,72 @@ Use the following information to see what’s new or changed for a supported rel
 > [!NOTE]
 > Minor fixes are not listed. If you experience a problem with the SDK, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version.
 >  
-> For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
+> For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
+
+## Verison 1.9.78
+
+**Release date:** April 29, 2021
+
+### General Changes
+
+- Added a new parameter that allows developers to provide custom scenario IDs for correlating errors. 
+  - In the event that a support case is required to diagnose a service-side error, this scenario ID may be helpful in troubleshooting. 
+  - **File SDK**: When creating a `FileHandler` set the applicationScenarioID via `FileExecutionState`
+  - **Protection SDK**: Various APIs now support passing in the scenario ID. 
+    - `mip::ProtectionCommonSettings(mApplicationScenarioId)`
+    - `mip::GetTemplatesSettings::CreateGetTemplatesSettings()->SetApplicationScenarioId()`
+    - `mip::ProtectionHandler::PublishingSettings()->SetApplicationScenarioId()`
+    - `mip::ProtectionHandler::ConsumptionSettings()->SetApplicationScenarioId()`
+    - `mip::PolicyEngine::SetSessionId()`
+- Added `Workload` enum and consent checks.
+  - Added `HasWorkloadConsent()` and `GetWorkloadConsent()` to `FileEngine` and `PolicyEngine`.
+  - Use this API to 
+- Added sychronous APIs to Policy SDK .NET wrapper: `AddEngine()`, `ListEngines()`, `DeleteEngine()`, `UnloadEngine()`.
+- Added support for redirecting protection requests via `ProtectionProfile::Settings::AddRedirectionUri()`
+- Added a logger context that can be used with `LoggerDelegate` to write custom context data through to logs.
+  - This API can be useful for correlating error events in services to a single operation or events. 
+  - The following APIs support providing the logger context:
+    - `LoggerDelegate::WriteToLogWithContext`
+    - `TaskDispatcherDelegate::DispatchTask` or `ExecuteTaskOnIndependentThread`    
+    - `FileEngine::Settings::SetLoggerContext(const std::shared_ptr<void>& loggerContext)`
+    - `FileProfile::Settings::SetLoggerContext(const std::shared_ptr<void>& loggerContext)`
+    - `ProtectionEngine::Settings::SetLoggerContext(const std::shared_ptr<void>& loggerContext)`
+    - `ProtectionProfile::Settings::SetLoggerContext(const std::shared_ptr<void>& loggerContext)`
+    - `PolicyEngine::Settings::SetLoggerContext(const std::shared_ptr<void>& loggerContext)`  
+    - `PolicyProfile::Settings::SetLoggerContext(const std::shared_ptr<void>& loggerContext)`      
+    - `FileHandler::IsProtected()`
+    - `FileHandler::IsLabeledOrProtected()`
+    - `FileHanlder::GetSerializedPublishingLicense()`
+    - `PolicyHandler::IsLabeled()`   
+
+### Platform and Dependency Updates
+
+- Added support for CentOS 8
+- Added support for iOS Frameworks
+- Updated OpenSSL to version 1.1.1k
+- Updated SQLite to 3.34.1
+
+### Breaking Changes
+
+- Changed default audit behavior for tenants where [AIP Analytics](https://docs.microsoft.com/azure/information-protection/reports-aip#:~:text=AIP%20analytics%20also%20enable%20you%20to%20do%20perform,documents%20and%20emails%2C%20and%20track%20document%20classification%20changes.) is enabled. It is now mandatory that in addition to configuring the service-side components of the AIP Analytics feature that you also set the EnableAudit property to true in sensitivity label policies. 
+  - `Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="True"}`
+  - Review [this](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configuring-advanced-settings-for-the-client-via-powershell) Docs article for details on setting advanced policy settings.  
+- Added function `GetApplicationScenarioId()` to `FileExecutionState`.
+- Removed `ContentFormat` enum.
+- Added specific errors with categories for a set of errors exposed previously under `NetworkError` via strings/error codes.
+  - `NoPermissionsError::Category::UserNotFound`
+  - `NoPermissionsError::Category::AccessDenied`
+  - `NoPermissionsError::Category::AccessExpired`
+  - `NoPermissionsError::Category::UserNotFound`
+- `Microsoft.RightsManagement.Exceptions.UnknownTenantException` thrown service will now surface as `ServiceDisabledError` instead of `Network Error`
+  
+### Bug Fixes
+
+- Fixed a memory leak when calling `mip::FileHandler::IsLabeledOrProtected()`.
+- Fixed a bug where failure in `FileHandler::InspectAsync()` called incorrect observer.
+- Fixed a bug where SDK attempted to apply co-authoring label format to Office formats that don't support co-authoring (DOC, PPT, XLS).
+- Fixed a crash in the .NET wrapper related to `FileEngine` disposal. Native `PolicyEngine` object remained present for some period and would attempt a policy refresh, resulting in a crash. 
+- Fixed a bug where the SDK would ignore labels applied by older versions of AIP due to missing **SiteID** property.
 
 ## Version 1.8.97
 
