@@ -42,8 +42,7 @@ Use the following information to see what’s new or changed for a supported rel
     - `mip::ProtectionHandler::ConsumptionSettings()->SetApplicationScenarioId()`
     - `mip::PolicyEngine::SetSessionId()`
 - Added `Workload` enum and consent checks.
-  - Added `HasWorkloadConsent()` and `GetWorkloadConsent()` to `FileEngine` and `PolicyEngine`.
-  - Use this API to 
+  - Added `HasWorkloadConsent()` and `GetWorkloadConsent()` to `FileEngine` and `PolicyEngine`.  
 - Added sychronous APIs to Policy SDK .NET wrapper: `AddEngine()`, `ListEngines()`, `DeleteEngine()`, `UnloadEngine()`.
 - Added support for redirecting protection requests via `ProtectionProfile::Settings::AddRedirectionUri()`
 - Added a logger context that can be used with `LoggerDelegate` to write custom context data through to logs.
