@@ -28,7 +28,7 @@ ms.custom: admin
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
 >
->***Relevant for**: [AIP unified labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see [Classic client scanner prerequisites](deploy-aip-scanner-prereqs-classic.md)*
+>***Relevant for**: [AIP unified labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 Before installing the Azure Information Protection on-premises scanner, make sure that your system complies with basic [Azure Information Protection requirements](requirements.md).
 
@@ -117,7 +117,7 @@ To store the scanner configuration data, use an SQL server with the following re
 
 The amount of disk space required for the scanner's configuration database and the specification of the computer running SQL Server can vary for each environment, so we encourage you to do your own testing. Use the following guidance as a starting point.
 
-For more information, see [Optimizing the performance of the scanner](deploy-aip-scanner-configure-install.md#optimizing-scanner-performance).
+For more information, see [Optimizing the performance of the scanner](deploy-aip-scanner-configure-install.md#optimize-scanner-performance).
 
 The disk size for the scanner configuration database will vary for each deployment. Use the following equation as guidance:
 
@@ -150,9 +150,7 @@ For more information, see the [Unified labeling client admin guide](./rms-client
 
 ## Label configuration requirements
 
-You must have at least one sensitivity label configured in one of the Microsoft 365 labeling admin centers for the scanner account, to apply classification and, optionally, protection.
-
-Microsoft 365 labeling admin centers include the Microsoft 365 Security Center, the Microsoft 365 Compliance Center, and the Microsoft 365 Security and Compliance Center. 
+You must have at least one sensitivity label configured in the Microsoft 365 compliance center for the scanner account, to apply classification and, optionally, protection.
 
 The *scanner account* is the account that you'll specify in the **DelegatedUser** parameter of the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet, run when configuring your scanner. 
 
@@ -274,7 +272,7 @@ To support a disconnected computer from the Azure portal, perform the following 
 
     1. Set the Network Discovery service (public preview) to function in offline mode using the [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) cmdlet.
 
-    1. Configure the network scan job in the Azure portal. For more information, see [Creating a network scan job](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
+    1. Configure the network scan job in the Azure portal. For more information, see [Creating a network scan job](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview).
     
     1. Export your network scan job from the **Azure Information Protection - Network scan jobs (Preview)** pane using the **Export** option. 
     
@@ -405,7 +403,11 @@ You can have one account to run the scanner service and use another account to a
 
 - **For the scanner service account**, use a local Windows account or an Active Directory account.
 
-- **For the Azure Active Directory account**, specify your local account for the *OnBehalfOf* parameter with Set-AIPAuthentication. For more information, see [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+- **For the Azure Active Directory account**, specify the AAD user in the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet, in the *DelegatedUser* parameter. 
+
+    If you are running the scan under any user other than the scanner account, make sure to specify the scanner account in *OnBehalfOf* parameter as well. 
+
+    For more information, see [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
 ### Restriction: Your labels do not have auto-labeling conditions
 

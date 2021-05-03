@@ -31,8 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md).*
 
-> [!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
 
 > [!TIP]
 > Alternatively, you may be looking for one of the following articles:
@@ -143,7 +142,7 @@ Perform the following steps:
     
     If you have on-premises services that you want to use with the protection service, install and configure the Rights Management connector. 
 
-    For more information, see [Deploying the Azure Rights Management connector](./deploy-rms-connector.md).
+    For more information, see [Deploying the Microsoft Rights Management connector](./deploy-rms-connector.md).
 
 ## Use and monitor your data protection solutions
 

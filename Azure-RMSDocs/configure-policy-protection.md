@@ -32,8 +32,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and [Restrict access to content by using encryption in sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels) from the Microsoft 365 documentation.*
 
-> [!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
 >
 
 You can protect your most sensitive documents and emails by using a Rights Management service. This service uses encryption, identity, and authorization policies to help prevent data loss. The protection is applied with a label that is configured to use Rights Management protection for documents and emails, and users can also select the **Do not forward** button in Outlook.
@@ -60,7 +59,7 @@ For more information about the Azure Rights Management protection and how it wor
 When the label applies protection, a protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following features for protected files: Co-authoring, Office for the web, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP).
 
 > [!TIP]
-> When you [migrate your labels](configure-policy-migrate-labels.md) to unified sensitivity labels and publish them from one of the labeling admin centers such as the Microsoft 365 compliance center, labels that apply protection are then supported for these locations. For more information, see  [Enable sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+> When you [migrate your labels](configure-policy-migrate-labels.md) to unified sensitivity labels and publish them from the Microsoft 365 compliance center, labels that apply protection are then supported for these locations. For more information, see  [Enable sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 Exchange does not have to be configured for Azure Information Protection before users can apply labels in Outlook to protect their emails. However, until Exchange is configured for Azure Information Protection, you do not get the full functionality of using Azure Rights Management protection with Exchange. For example, users cannot view protected emails on mobile phones or with Outlook on the web, protected emails cannot be indexed for search, and you cannot configure Exchange Online DLP for Rights Management protection. To ensure that Exchange can support these additional scenarios, see the following resources:
 
@@ -334,7 +333,7 @@ The label configuration is deceptively simple:
     
 2. Select **OK** without selecting any users, or configuring any settings on this pane.
     
-    Although you can configure settings for **File Content Expiration** and **Allow offline access**, when you do not specify users and their permisisons, these access settings are not applicable. That's because the person who applies the protection is the [Rights Management issuer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for the content, and this role is exempt from these access restrictions.
+    Although you can configure settings for **File Content Expiration** and **Allow offline access**, when you do not specify users and their permissions, these access settings are not applicable. That's because the person who applies the protection is the [Rights Management issuer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for the content, and this role is exempt from these access restrictions.
 
 3. On the **Label** pane, select **Save**.
 

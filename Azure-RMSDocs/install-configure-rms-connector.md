@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install & configure the Rights Management connector - AIP
-description: Information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from Deploying the Azure Rights Management connector.
+description: Information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from Deploying the Microsoft Rights Management connector.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -25,13 +25,16 @@ ms.custom: admin
 
 ---
 
-# Installing and configuring the Azure Rights Management connector
+# Installing and configuring the Microsoft Rights Management connector
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, 2016, 2012 R2, and Windows Server 2012*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Use the following information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
+
+Use the following information to help you install and configure the Microsoft Rights Management (RMS) connector. These procedures cover steps 1 though 4 from [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
 Before you begin, make sure that you have reviewed and checked the [prerequisites](deploy-rms-connector.md#prerequisites-for-the-rms-connector) for this deployment.
 
@@ -261,4 +264,4 @@ If you haven’t already downloaded these files, you can do so from the [Microso
 
 
 ## Next steps
-Now that the RMS connector is installed and configured, you are ready to configure your on-premises servers to use it. Go to [Configuring servers for the Azure Rights Management connector](configure-servers-rms-connector.md).
+Now that the RMS connector is installed and configured, you are ready to configure your on-premises servers to use it. Go to [Configuring servers for the Microsoft Rights Management connector](configure-servers-rms-connector.md).

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Azure Information Protection unified labeling client - Version history & support policy
+title: What's new in Azure Information Protection (AIP) - Version history & support policy
 description: Find out what's new for the Azure Information Protection (AIP) unified labeling client for Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/02/2021
+ms.date: 04/28/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -30,11 +30,13 @@ ms.custom: admin
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
->***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see [AIP classic client version release history and support policy](client-version-release-history.md).*
+>***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+
+This article describes the new features available for the unified labeling client, as well as servicing information and support timelines for each AIP unified client version.
 
 You can download the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
-After a short delay of typically a couple of weeks, the latest general availability version is also included in the Microsoft Update Catalog. Azure Information Protection versions have a product name of **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Unified Labeling Client**, and a classification of **Updates**.
+After a short delay of typically four weeks, the latest general availability version is also included in the Microsoft Update Catalog. Azure Information Protection versions have a product name of **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Unified Labeling Client**, and a classification of **Updates**.
 
 Including Azure Information Protection in the catalog means that you can upgrade the client using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
 
@@ -44,13 +46,13 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 
 Each general availability (GA) version of the Azure Information Protection unified labeling client is supported for up to six months after the release of the subsequent GA version. The documentation does not include information about unsupported versions of the client. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
 
-Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
-
 ### General availability versions that are no longer supported
 
 |Client version|Date released|
 |--------------|-------------|
-| 2.7.96  |01/20/2021 |
+| 2.7.101.0 | 08/23/2020 |
+| 2.7.99.0 | 07/20/2020 |
+| 2.7.96.0  |06/29/2020 |
 |2.6.111.0 | 03/09/2020|
 |2.5.33.0 |10/23/2019|
 |2.2.21.0|09/03/2019|
@@ -66,20 +68,159 @@ The date format used on this page is *month/day/year*.
 
 Use the following information to see what's new or changed for a supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
 
-The latest version of Azure Information Protection is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
-> [!NOTE]
-> Minor fixes are not listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
->  
+> [!TIP]
+> Minor fixes are not always listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
+>
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
+## Version 2.11.58.0
+
+Unified labeling scanner and client version 2.11.58.0
+
+
+**Released** 04/29/2021
+
+> [!NOTE]
+> Version 2.11.58.0 is identical to version 2.11.57.0. Due to an issue in our software packaging system, we needed to repackage this version and provide an updated version number. Users who've installed version 2.11.57.0 can be assured that have a fully supported and functional version.
+>
+
+This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
+
+- [Scanner usage logging in the Windows event log](#scanner-usage-logging-in-the-windows-event-log)
+- [Scanner diagnostics tool improvements](#scanner-diagnostics-tool-improvements)
+- [Improved scanner details output](#improved-scanner-details-output)
+- [Updates for the scanner's supported information types](#updates-for-the-scanners-supported-information-types)
+- [Fixes and improvements](#fixes-and-improvements)
+
+### Scanner usage logging in the Windows event log
+
+The unified labeling scanner now logs user activity to the local Windows event log.
+
+For more information, see [Usage logging for the Azure Information Protection scanner](clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-scanner).
+
+### Scanner diagnostics tool improvements
+
+With the upgrade to version 2.11.58.0, running the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet with the **Verbose** parameter prints the last 10 errors from the scanner log.
+
+To print more or fewer errors, use the new **VerboseErrorCount** parameter to define the number of errors you want to print.
+
+For more information, see [Troubleshooting using the scanner diagnostic tool](../deploy-aip-scanner-tsg.md#troubleshooting-using-the-scanner-diagnostic-tool).
+
+### Improved scanner details output
+
+The unified labeling on-premises scanner has improved outputs for the following cmdlets:
+
+|Cmdlet  |Improvement  |
+|---------|---------|
+|**Get-AIPScannerStatus**     |  Previously, running the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) command provided only high-level details of the scanner cluster status, without details per node in your cluster.   <br><br> Now, you can use the **NodesInfo** variable and the **Verbose** parameter to drill down into additional levels of detail for each node. <br><br>   For more information, see the [Verify scanning details per scanner node and repository](../deploy-aip-scanner-tsg.md#verify-scanning-details-per-scanner-node-and-repository). |
+|**Get-AIPScannerConfiguration**     |   Running the [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/get-aipscannerconfiguration) now provides details about the current scanner configuration in addition to the online configuration settings.     |
+|     |         |
+
+
+### Updates for the scanner's supported information types
+
+Beginning with version 2.11.58.0, the following sensitive information types are not scanned by the unified labeling scanner.
+
+If you have sensitivity labels that use these sensitive information types, we recommend that you remove them.
+
+- **EU Phone Number**
+- **EU GPS Coordinates**
+
+### Fixes and improvements
+
+The following fixes were delivered in version 2.11.58.0 of the Azure Information Protection unified labeling client and scanner:
+
+- Improvements in loading time for the [AIP add-in in Office apps](clientv2-user-guide.md).
+
+- Fixed issues in Outlook where protection wasn't removed when the label was removed, in some edge cases.
+
+- The [PowerPointRemoveAllShapesByShapeName](clientv2-admin-guide-customizations.md#remove-all-shapes-of-a-specific-shape-name) advanced setting no longer requires that you also define the [ExternalContentMarkingToRemove](clientv2-admin-guide-customizations.md#how-to-configure-externalcontentmarkingtoremove) setting. Now you can define the **PowerPointRemoveAllShapesByShapeName** advanced setting on its own.
+
+- Fixed an issue where an empty option would appear on [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) when only two options for the user to select were configured for the popup message.
+
+- Fixed issues for opening protected **.jt** files in the [AIP Viewer app](clientv2-view-use-files.md).
+
+- [Size limits](clientv2-admin-guide-file-types.md#supported-file-sizes-for-the-file-explorer-and-powershell) for protecting files using the File Explorer and PowerShell are now updated.
+
+- Fixed issues in parsing [sensitivity label policies](/microsoft-365/compliance/create-sensitivity-labels).
+
+## Version 2.10.46.0 for co-authoring (Public preview)
+
+Unified labeling client version 2.10.46.0
+
+**Release** 03/02/2021
+
+This dedicated version of Azure Information Protection provides a public preview of co-authoring features newly supported in Microsoft 365.
+
+Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+
+> [!IMPORTANT]
+> To leverage the co-authoring features in public preview, you must download and install the dedicated installation file for this release. On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `AzInfoProtection_2.10.46_CoAuthoring_PublicPreview.exe`  file.
+>
+> Your system must also comply with the version requirements listed in the [Microsoft 365 prerequisites for co-authoring](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites).
+>
+
+Before you start, we recommend that you review all related prerequisites and limitations. For more information, see:
+
+- [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
+- [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
+
+## Version 2.10.43.0 for DLP policies (Public preview)
+
+Unified labeling scanner version 2.10.43.0
+
+**Release** 03/02/2021
+
+This dedicated version of Azure Information Protection provides a public preview of the support for Data Loss Prevention (DLP) policies supported by Microsoft 365. 
+
+- **Using a DLP policy** enables the scanner to detect potential data leaks by matching DLP rules to files stored in file shares and SharePoint Server. 
+
+- [**Enable DLP rules in your content scan job**](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview) to reduce the exposure of any files that match your DLP policies. 
+
+    The scanner may reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**.
+
+- **Scanning your files with DLP rules enabled also creates file permission reports**. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
+
+Settings for enforcing or testing the DLP policy are configured in the [Microsoft 365 Compliance center](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
+
+> [!IMPORTANT]
+> To leverage the DLP support in public preview, you must download and install the dedicated installation file for this release. On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `AzInfoProtection_2.10.43_DLP_PublicPreview.exe` file.
+> 
+For more information, including licensing requirements, see:
+
+- [Configure a DLP policy in the AIP scanner](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview)
+- [Learn about the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-learn), in the Microsoft 365 documentation
+- [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started)
+- [Use the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-use)
+
+
+
+## Version 2.9.116.0
+
+Unified labeling scanner and client version 2.9.116.0
+
+**Released** 02/08/2021
+
+**Fixed issues** 
+
+Users are now able to view protected files as expected in the following scenarios:
+
+- When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue had occurred only with the [AIP Viewer app](clientv2-view-use-files.md).
+
+- When content with a scoped label is shared with users or groups not included in the label's scope. This issue had occurred both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the [File Explorer](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
+
+For more information, see the [AIP unified labeling client user guide](clientv2-user-guide.md).
 ## Version 2.9.111.0
 
 Unified labeling scanner and client version 2.9.111.0
 
-**Release** 1/13/2021
+**Released** 01/13/2021
+
+**Supported through** 08/08/2021
 
 This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
 
@@ -91,21 +232,13 @@ This version includes the following new features, fixes, and enhancements for th
 
 - **New features for the client**:
 
-    - [Track document access and revoke access](#track-document-access-and-revoke-access-public-preview) (Public preview)
+    - [Track document access and revoke access](#track-document-access-and-revoke-access)
     - [Added support for additional sensitive information types](#added-support-for-additional-sensitive-information-types)
 
 - **Fixes and improvements**:
 
-    - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner)
-    - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client)
-
-- **Known issue**: An issue was identified in the latest GA version (2.9.111) where some users are not able to view protected files in the following scenarios:
-	
-    - When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue occurs only with the [AIP Viewer app](clientv2-view-use-files.md).
-
-	- When content with a scoped label is shared with users or groups not included in the label's scope. This issue occurs both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the [File Explorer](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
-	
-    We are actively working on this issue and an updated delivery plan for the fix.
+    - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner---version-291110)
+    - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client---version-291110)
 
 ### PowerShell support for disconnected scanner servers
 
@@ -150,21 +283,25 @@ We’ve added support for additional sensitive information types in Azure Inform
 
 For more information, see the [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in the Microsoft 365 documentation.
 
-### Track document access and revoke access (Public preview)
+### Track document access and revoke access
 
-Once you've upgraded to version 2.9.111.0, any protected documents that are not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed. Protected documents are supported for track and revoke, even if they are not labeled.
+After you've upgraded to version 2.9.111.0, any protected Office documents that are not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed. Protected documents are supported for track and revoke, even if they are not labeled.
 
 Having your documents registered for tracking enables administrators to use PowerShell to track document access, and revoke access if needed.
 
-Once you've upgraded, end-users can also revoke access for documents that they've protected. To revoke access from Microsoft Office apps, use the new **Revoke access** option on the **Sensitivity** menu.
+After you've upgraded, end-users can also revoke access for documents that they've protected. To revoke access from Microsoft Office apps, use the new **Revoke access** option on the **Sensitivity** menu.
 
 For more information, see:
 
 - [Administrator Guide: Track and revoke document access with Azure Information Protection](track-and-revoke-admin.md)
 - [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
-- [Known issues for tracking and revoking document access](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)
+- [Known issues for tracking and revoking document access](../known-issues.md#known-issues-for-track-and-revoke-features)
 
 If you have privacy requirements in your organization or region that require you to turn off document tracking features, see the [track and revoke administrator procedures](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant).
+
+> [!NOTE]
+> Track and revoke features are supported for Office file types only, and not for other file types, such as images or PDFs.
+>
 
 **Upgrades from the classic client**
 
@@ -172,18 +309,18 @@ The AIP classic client supports track and revoke features using the [Microsoft t
  
 To view tracking data with the unified labeling client, use the PowerShell commands only, as described in the [admin guide](track-and-revoke-admin.md).
 
-### Fixes and improvements for the unified labeling scanner
+### Fixes and improvements for the unified labeling scanner - version 2.9.111.0
 
 The following fixes were delivered in version 2.9.111.0 of the [Azure Information Protection unified labeling scanner](../deploy-aip-scanner.md):
 
 - Added support for hyphens (**-**) in [scanner database](../deploy-aip-scanner-prereqs.md) names
 - Updates in reports for when the **[Label files based on content](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** option is set to **Off**
-- [Improved memory consumption](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) for large numbers of information type matches
+- [Improved memory consumption](../deploy-aip-scanner-configure-install.md#optimize-scanner-performance) for large numbers of information type matches
 - Support for [SharePoint on-premises](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) paths that end in a slash (**/**)
-- Increased SharePoint scanning [speed](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
+- Increased SharePoint scanning [speed](../deploy-aip-scanner-configure-install.md#optimize-scanner-performance)
 - Support for [avoiding a timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) when scanning a SharePoint server.
 
-### Fixes and improvements for the unified labeling client
+### Fixes and improvements for the unified labeling client - version 2.9.111.0
 
 - Issues fixed for [labeling on emails](clientv2-admin-guide-customizations.md#extend-your-label-migration-rules-to-emails) from Office MSI, such as when replying to or forwarding an email.
 
@@ -201,9 +338,9 @@ The following fixes were delivered in version 2.9.111.0 of the [Azure Informatio
 
 - Updates to the [order of precedence](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved) used when more than one label policy is configured for a user, each with conflicting advanced settings.
 
-    In such cases, the advanced settings from the first policy are always applied, according to the order of the policies in the admin center. The exception for the *OutlookDefaultLabel* is now removed.
+    In such cases, the advanced settings from the first policy are always applied, according to the order of the policies in the Microsoft 365 compliance center. The exception for the *OutlookDefaultLabel* is now removed.
 
-- In a scenario where **%APPDATA% (AppData\Roaming)** points to a non-default Windows folder structure, files in folders that are mapped to user directories are now [excluded from labeling and protection](clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection) as expected, based on the configuration.
+- In a scenario where **%APPDATA% (AppData\Roaming)** points to a non-default Windows folder structure, files in folders that are mapped to user directories are now [excluded from labeling and protection](clientv2-admin-guide-file-types.md#file-types-excluded-from-classification-and-protection) as expected, based on the configuration.
 
 - [New advanced client setting](clientv2-admin-guide-customizations.md#remove-all-shapes-of-a-specific-shape-name) (**PowerPointRemoveAllShapesByShapeName**), added to remove shapes from PowerPoint headers or footers, by using the shape name instead of the text inside a shape.
 
@@ -247,7 +384,7 @@ Skip the full, immediate rescan, and return later to [run a full rescan](../depl
 > [!IMPORTANT]
 > Administrators making changes in their policies and content scan jobs must now understand the effects of those changes on the content, and determine whether a full rescan is required.
 >
-> For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
+> For example, if you’ve changed **Sensitivity policy** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
 >
 
 ### Configure SharePoint timeouts
@@ -270,7 +407,7 @@ The **network discovery** service updates **Repository** reports with a list of 
 **To use the Network discovery service**
 
 1. Upgrade your scanner version and make sure that you have your scanner cluster configured correctly. For more information, see:
-    - [Upgrading your scanner](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
+    - [Upgrading your scanner](../deploy-aip-scanner-configure-install.md#upgrade-your-scanner)
     - [Create a scanner cluster](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
 
 1. Make sure that you have Azure Information Protection analytics enabled.
@@ -290,7 +427,7 @@ The **network discovery** service updates **Repository** reports with a list of 
 
 1. Use the generated reports on the new [**Repositories**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) pane to find additional network file shares that may be at risk. Add any risky file shares to your [content scan jobs](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) to scan the added repositories for sensitive content.
 
-#### Network discovery cmdlets (public preview)
+### Network discovery cmdlets (public preview)
 
 PowerShell cmdlets added for Network Discovery include:
 
@@ -323,8 +460,11 @@ For more information, see [Customize justification prompt texts for modified lab
 
 Audit logs for access events from the unified labeling client are now sent only when users open labeled or protected files, providing a clearer indication of user access.
 
+Information types are no longer sent by [audit logs for access events](../audit-logs.md#access-audit-logs), and are now sent only with [audit logs for discover events](../audit-logs.md#discover-audit-logs).
+
 For more information, see [Access audit logs](../audit-logs.md#access-audit-logs).
 
+For more information, see [Azure Information Protection audit log reference](../audit-logs.md).
 ### DKE template-based labeling updates
 
 Azure Information Protection now supports Double Key Encryption (DKE) template-based labeling in the scanner, as well as using the File Explorer and PowerShell.
@@ -362,129 +502,6 @@ The following fixes were delivered in version 2.8.85.0 of the Azure Information 
 - Fixes for [decrypting PST files](clientv2-admin-guide-file-types.md) that contain password-encrypted files. Decrypting PST files no longer fails if the PST file contains a password-protected file.
 - Removing a protection label that is not included in your scoped policy now removes both the label and protection from the content.
 
-## Version 2.7.101.0
-
-Unified labeling scanner and client version 2.7.101.0
-
-**Released** 08/23/2020
-
-**Supported through** 3/22/2021
-
-**Fix**:
-
-Fixed issue for PPT, Excel and Word users which resulted in files freezing, crashing, or being forced to repeat save that was related to mandatory labels configured with protection, watermarking, and/or content marking.
-
-## Version 2.7.99.0
-
-Unified labeling scanner and client version 2.7.99.0
-
-**Released** 07/20/2020
-
-**Supported through** 2/23/2021
-
-**Fixes and improvements**:
-
-Fixed issues in file labeling actions for **New Label** audit logs.
-
-For more information, see [Version 2.7.96.0](#version-27960) and [Azure Information Protection audit log reference (public preview)](../audit-logs.md).
-
-## Version 2.7.96.0
-
-Unified labeling scanner and client version 2.7.96.0
-
-**Released** 06/29/2020
-
-**Supported through** 1/20/2021
-
-- [New features for the unified labeling client, version 2.7.96.0](#new-features-for-the-unified-labeling-client-version-27960)
-- [New features for the unified labeling scanner, version 2.7.96.0](#new-features-for-the-unified-labeling-scanner-version-27960)
-- [New audit logs generated for removed files](#new-audit-logs-generated-for-removed-files)
-- [TLS 1.2 enforcement](#tls-12-enforcement)
-- [Fixes and improvements, version 2.7.96.0](#fixes-and-improvements-version-27960)
-### New features for the unified labeling scanner, version 2.7.96.0
-
-- [Use scanner to apply labels based on recommended conditions](../deploy-aip-scanner-prereqs.md). AIP customers can now choose to implement service side only autolabeling. This feature allows AIP end users to always follow recommendations instead of the previous scenario, which only enabled automatic labeling on the user side.
-
-- [Learn which files previously discovered by scanner were deleted from the scanned repository](../reports-aip.md) These deleted files were not previously reported in AIP analytics and are now available in the scanner discovery report.
-
-- [Get reports from scanner on failures to apply action events](../reports-aip.md#friendly-schema-reference-for-event-functions). Use reports to learn about failed action events and discover ways to prevent future occurrences.
-
-- Introduction of AIP scanner diagnostic analyzer tool for detection and analysis of common scanner errors. To begin using AIP scanner diagnostics, [run the **Start-AIPScannerDiagnostics** cmdlet](../deploy-aip-scanner-tsg.md#troubleshooting-using-the-scanner-diagnostic-tool).
-
-- You can now manage and limit max CPU consumption on the scanner machine. Learn how to prevent 100% CPU usage and manage your CPU usage using [two new advanced settings **ScannerMaxCPU**, and **ScannerMinCPU**](./clientv2-admin-guide-customizations.md#limit-cpu-consumption).
-
-- Now you can configure the unified labeling scanner to skip specific files depending on their file attributes. Define the list of file attributes that triggers a file to be skipped using the new **[ScannerFSAttributesToSkip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes)** advanced setting.
-
-### New features for the unified labeling client, version 2.7.96.0
-
-- [**Justification popups**](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) now appear for changes made to default labels in the unified labeling client.
-
-- Smoother integration with visual content markings applied by Office. For more information about configuring content markings in Office document, see [How to configure a label for visual markings for Azure Information Protections](../configure-policy-markings.md).
-
-- New **WordShapeNameToRemove** advanced property enables removal of content marking in Word documents made by third-party applications. Learn more about how to [identify existing shape names and define them for removal using **WordShapeNameToRemove**](./clientv2-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions).
-
-- Support for **Double Key Encryption (DKE)** (public preview).
-
-    Now you can use the unified labeling client to protect highly sensitive content while maintaining full control of your key. DKE requires two keys to access protected content: one key is stored in Azure, and the other key is held by the customer.
-
-    For more information about the default, cloud-based tenant root keys, see [Planning and implementing your Azure Information Protection tenant key](../plan-implement-tenant-key.md). For information about implementing Double Key Encryption, see [Double key encryption](/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 documentation.
-
-### New audit logs generated for removed files
-
-Audit logs are now generated each time the scanner detects that a file that had previously been scanned is now removed.
-
-For more information, see:
-
-- [File removed audit logs](../audit-logs.md#file-removed-audit-logs)
-- [Central reporting for Azure Information Protection](../reports-aip.md)
-
-> [!IMPORTANT]
-> In this version, file labeling actions do not generate **New Label** audit logs.
-> If you run the scanner in **Enforce=On** mode, we recommend that upgrade to [Version 2.7.99.0](#version-27990).
->
-
-### TLS 1.2 enforcement
-
-Starting with this version of the Azure Information Protection client, only TLS versions 1.2 or later are supported.
-
-Customers that have a TLS setup that does not support TLS 1.2 must move to a setup that supports TLS 1.2 to use Azure Information Protection policies, tokens, audit, and protection, and to receive Azure Information Protection-based communication.
-
-For more requirement details, see [Firewalls and network infrastructure requirements](../requirements.md#firewalls-and-network-infrastructure).
-
-### Fixes and improvements, version 2.7.96.0
-
-- Scanner SQL improvements for:
-    - Performance
-    - Files with large numbers of information types
-
-- SharePoint scanning improvements for:
-    - Scanning performance
-    - Files with special characters in the path
-    - Libraries with large file count
-
-    To view a quickstart for using Azure Information Protection with SharePoint, see [Quickstart: Find what sensitive information you have in files stored on-premises](../quickstart-findsensitiveinfo.md).
-
-- Improved user notifications for missing policies. For more information about label policies for the unified labeling client, see [What label policies can do](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do) in the Microsoft 365 documentation.
-
-- [Automatic labels](../configure-policy-classification.md) are now applied in Excel for scenarios where a user starts to close a file without saving, just as they are when a user actively saves a file.
-
-- Headers and footers are removed as expected, and not on each document save, when the [ExternalContentMarkingToRemove](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) setting is configured.
-
-- [Dynamic user variables](../configure-policy-markings.md#using-variables-in-the-text-string) are now displayed in a document's visual markings as expected.
-
-- Issue where only the first page of content of a PDF was being used for applying autoclassification rules is now resolved, and autoclassification based on all content in the PDF now proceeds as expected. For more information about classification and labeling, see the [classification and labeling FAQ](../faqs-infoprotect.md).
-
-- When multiple Exchange accounts are configured and the Azure Information Protection Outlook client is enabled, mails are sent from the secondary account as expected. For more information about configuring the unified labeling client with Outlook, see [Configure your group policy to prevent disabling AIP](reqs-ul-client.md#configure-your-group-policy-to-prevent-disabling-aip).
-
-- When a document with a higher confidentiality label is dragged and dropped into an email, the email now automatically receives the higher confidentiality label as expected. For more information about labeling client features, see the [labeling client comparison table](use-client.md#compare-the-labeling-solutions-for-windows-computers).
-
-- Custom permissions are now applied to emails as expected, when email addresses include both an apostrophe (') and period (.) For more information about configuring the unified labeling client with Outlook, see [Configure your group policy to prevent disabling AIP](reqs-ul-client.md#configure-your-group-policy-to-prevent-disabling-aip).
-
-
-- By default, a file's NTFS owner is lost when the file is labeled by the unified labeling scanner, PowerShell, or the File Explorer extension. Now you can configure the system to keep the file's NTFS owner by setting the new **[UseCopyAndPreserveNTFSOwner](clientv2-admin-guide-customizations.md#preserve-ntfs-owners-during-labeling-public-preview)** advanced setting to **true**.
-
-    The **UseCopyAndPreserveNTFSOwner** advanced setting requires a low latency, reliable network connection between the scanner and the scanned repository.
-
 ## Next steps
 
 Not sure if unified labeling is the right client to install?  See [Choose your Windows labeling solution](use-client.md#choose-your-windows-labeling-solution).
@@ -492,5 +509,9 @@ Not sure if unified labeling is the right client to install?  See [Choose your W
 For more information about installing and using the unified labeling client:
 
 - For users: [Download and install the client](install-unifiedlabelingclient-app.md)
-
 - For admins: [Azure Information Protection unified labeling client administrator guide](clientv2-admin-guide.md)
+
+For information about new features in the Microsoft 365 compliance center, see:
+
+- [What's new in Microsoft 365 compliance?](https://docs.microsoft.com/microsoft-365/compliance/whats-new)
+- [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=Microsoft%2CInformation%2CProtection)

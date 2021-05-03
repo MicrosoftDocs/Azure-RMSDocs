@@ -4,7 +4,7 @@ description: Use the Azure Information Protection scanner to find what sensitive
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -29,8 +29,7 @@ ms.subservice: aiplabels
 >
 > ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE]
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
 
 In this quickstart, you'll enable SharePoint to allow scanning, and also install and configure the Azure Information Protection scanner to find any sensitive data you have stored in an on-premises data store.
 
@@ -97,7 +96,7 @@ Before you install the scanner, create a profile for it in the Azure portal. Thi
 
     Optionally, specify a description for administrative purposes, to help you identify the scanner's profile name.
 
-1. Locate the **Policy enforcement** section, where for this quickstart, select just one setting: For **Enforce**, select **Off**. Then select **Save** but do not close the pane.
+1. Locate the **Sensitivity policy** section, where for this quickstart, select just one setting: For **Enforce**, select **Off**. Then select **Save** but do not close the pane.
 
     The settings configure the scanner to do a one-time discovery of all files in your specified data repositories. This scan looks for all known sensitive information types, and doesn't require you to first configure your Azure Information Protection labels or policy settings.
 

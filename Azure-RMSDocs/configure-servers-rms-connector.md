@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configure servers for the Rights Management connector - AIP
-description: Information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from Deploying the Azure Rights Management connector.
+description: Information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from Deploying the Microsoft Rights Management connector.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -25,13 +25,16 @@ ms.custom: admin
 
 ---
 
-# Configuring servers for the Azure Rights Management connector
+# Configuring servers for the Microsoft Rights Management connector
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Use the following information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
+
+Use the following information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
 **Prerequisites**: Before you begin, make sure that you have:
     - Installed and configured the RMS connector
@@ -293,4 +296,4 @@ Note that if you configure departmental templates that you want to use with Exch
 
 You can use the [Azure Information Protection deployment roadmap](deployment-roadmap-classify-label-protect.md) to check whether there are other configuration steps that you might want to do before you roll out Azure Rights Management to users and administrators.
 
-To monitor the RMS connector, see [Monitor the Azure Rights Management connector](monitor-rms-connector.md).
+To monitor the RMS connector, see [Monitor the Microsoft Rights Management connector](monitor-rms-connector.md).

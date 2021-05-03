@@ -30,10 +30,7 @@ ms.custom: admin, has-adal-ref
 >
 >***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-> [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
->
-> This time-frame allows all current Azure Information Protection customers to transition to the Microsoft Information Protection unified labeling solution. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 An [Azure AD directory is a requirement](requirements.md#azure-active-directory) for using Azure Information protection. Use an account from an Azure AD directory to sign in to the Azure portal, where you can configure Azure Information Protection settings.
 
@@ -58,8 +55,6 @@ To use multi-factor authentication (MFA) with Azure Information Protection, you 
 > [!NOTE]
 > If you have Office 2013, you might need to install an additional update to support Active Directory Authentication Library (ADAL), such as the [June 9, 2015, update for Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853). 
 >
-> For more information, see [Office 2013 modern authentication public preview announced](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) on the Office blog.       
-
 Once you've confirmed these prerequisites, do one of the following, depending on your tenant configuration:
 
 - **Microsoft-managed tenants, with Azure AD or Microsoft 365**. Configure Azure MFA to enforce MFA for users. 
@@ -70,8 +65,6 @@ Once you've confirmed these prerequisites, do one of the following, depending on
 
 - **Federated tenants, where federation servers operate on-premises**. Configure your federation servers for Azure Active Directory or Microsoft 365. 
 For example, if you are using AD FS, see [Configure Additional Authentication Methods for AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs). 
-
-    For more information about this scenario, see [The Works with Microsoft 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) on the Office blog. 
 
 ## Rights Management connector / AIP scanner requirements
 

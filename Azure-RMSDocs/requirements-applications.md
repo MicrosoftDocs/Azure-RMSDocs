@@ -32,6 +32,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 The applications and solutions listed on this page have built-in support for the Azure Rights Management (Azure RMS) service, which provides data protection for Azure Information Protection.
 
@@ -49,7 +50,7 @@ These applications and solutions are known as "RMS-enlighted", and have Rights M
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [Microsoft 365 apps](#microsoft-365-app-support) <br />- Office 2010 <br />- Office 2013<br />- Office 2016 <br />- Office 2019 <br />- [Office for the web (viewing protected documents)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
 |[**Email**](#viewing-protected-content-in-email-clients)      |   - Outlook 2010<br />- Outlook 2013<br />- Outlook 2016 <br />- Outlook 2019 <br />- Outlook from Microsoft 365 Apps for Enterprise<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
-|[**Other file types**](#supported-text-and-image-file-types)    |  - Visio from Microsoft 365 apps, Office 2019, and Office 2016: **.vsdm**, **.vsdx**, **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Azure Information Protection client for Windows: Text, images, **pfile** <br />- SealPath RMS plugin for AutoCAD: **.dwg**       |
+|[**Other file types**](#supported-text-and-image-file-types)    |  - Visio from Microsoft 365 apps, Office 2019, and Office 2016: **.vsdm**, **.vsdx**, **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Azure Information Protection client for Windows: Text, images, **pfile** <br />- [SealPath RMS plugin for AutoCAD](https://www.sealpath.com/rmscad/): **.dwg**       |
 | | |
 
 ## macOS RMS-enlightened applications
@@ -248,13 +249,7 @@ For more information about deploying and using the classic client, see:
 - [Classic client administrator guide](./rms-client/client-admin-guide.md)
 - [Classic client user guide](./rms-client/client-user-guide.md).
 
-> [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
->
-> This time-frame allows all current Azure Information Protection customers to transition to the Microsoft Information Protection unified labeling solution. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
->
-> 
->
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 ## Rights Management sharing app
 

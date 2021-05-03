@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/12/2020
+ms.date: 03/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -30,20 +30,15 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For more information, see also the [FAQs for the classic client only](faqs-classic.md).*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 Have a question about Azure Information Protection that is specifically about classification and labeling?  See if it's answered here. 
 
 ## Which client do I install for testing new functionality?
 
-We recommend installing the **Azure Information Protection unified labeling client**. The unified labeling client downloads labels and policy settings from one of the following admin centers: 
+We recommend installing the **Azure Information Protection unified labeling client**. The unified labeling client downloads labels and policy settings from the Microsoft 365 compliance center.
 
-- Office 365 Security & Compliance Center
-- Microsoft 365 security center
-- Microsoft 365 compliance center.
-
-This client is now in general availability, and might have a preview version for you to test additional functionality for a future release.
+This client is in general availability, and might have a preview version for you to test additional functionality for a future release.
 
 If you still configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](configure-policy-migrate-labels.md), use the **Azure Information Protection classic client** instead.
 
@@ -68,14 +63,6 @@ See the following documentation resources:
 - [Apply sensitivity labels to your documents and email within Office](https://support.office.com/article/Apply-sensitivity-labels-to-your-documents-and-email-within-Office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9#ID0EBFAAA=Office_365)
 
 For information about other scenarios that support sensitivity labels, see [Common scenarios for sensitivity labels](/microsoft-365/compliance/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels).
-
-## Can a file have more than one classification?
-
-Users can select just one label at a time for each document or email, which often results in just one classification. However, if users select a sublabel, this actually applies two labels at the same time; a primary label and a secondary label. By using sublabels, a file can have two classifications that denote a parent\child relationship for an additional level of control.
-
-For example, the label **Confidential** might contain sublabels such as **Legal** and **Finance**. You can apply different classification visual markings and different Rights Management templates to these sublabels. A user cannot select the **Confidential** label by itself; only one of its sublabels, such as **Legal**. As a result, the label that they see set is **Confidential \ Legal**. The metadata for that file includes one custom text property for **Confidential**, one custom text property for **Legal**, and another that contains both values (**Confidential Legal**). 
-
-When you use sublabels, don't configure visual markings, protection, and conditions at the primary label. When you use sublevels, configure these setting on the sublabel only. If you configure these settings on the primary label and its sublabel, the settings at the sublabel take precedence.
 
 ## How do I prevent somebody from removing or changing a label?
 

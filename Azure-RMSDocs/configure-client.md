@@ -30,8 +30,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE]
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 The AIP unified labeling client is recommended for all Windows computers, because it installs an Office add-in that enables users to easily label and protect documents directly from the Office ribbon. 
 
@@ -74,9 +73,9 @@ Because the Azure Information Protection viewer app uses the Microsoft Intune Ap
 
 Additional information for when you add the Azure Information Protection app to Intune:
 
-- For iOS: Search for and add the app from Intune.
+- **For iOS**: Search for and add the app from Intune.
 
-- For Android: When you add the app, use the following **Appstore URL**:
+- **For Android**: When you add the app, use the following **Google Play URL**:
 
     ```md
     https://play.google.com/store/apps/details?id=com.microsoft.ipviewer

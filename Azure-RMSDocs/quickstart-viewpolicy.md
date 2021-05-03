@@ -29,8 +29,7 @@ ms.custom: admin
 >
 > ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE]
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
 
 In this quickstart, you'll add Azure Information Protection to the Azure portal, confirm the protection service is activated, create default labels if you don't already have labels, and view the policy settings for the Azure Information Protection classic client.
 
@@ -136,9 +135,9 @@ The first time you connect to the Azure Information Protection service from the 
 
 - **Classic client.** For the classic client, both labels and policy settings are downloaded to the client in the Azure Information Protection policy.
 
-- **Unified labeling client.** For the unified labeling client, only labels are downloaded to the client. Policy settings are downloaded from the Office 365 Compliance & Security Center, the Microsoft 365 Compliance center, or the Microsoft 365 Security center. Use those admin centers to edit your labels and label policies instead of the Azure portal.
+- **Unified labeling client.** For the unified labeling client, only labels are downloaded to the client. Policy settings are downloaded from the Microsoft 365 compliance center, which admins can used to edit labels and labe policies instead of the Azure portal.
 
-    For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in the Microsoft 365 documentation for more information.
+    For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in the Microsoft 365 documentation.
 
 **Classic client instructions**:
 

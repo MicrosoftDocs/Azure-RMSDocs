@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class NotSupportedError 

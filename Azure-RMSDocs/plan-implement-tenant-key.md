@@ -6,7 +6,7 @@ description: Instead of Microsoft managing the root key for Azure Information Pr
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/14/2020
+ms.date: 02/14/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,12 +31,12 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 The Azure Information Protection tenant key is a root key for your organization. Other keys can be derived from this root key, including user keys, computer keys, or document encryption keys. Whenever Azure Information Protection uses these keys for your organization, they cryptographically chain to your Azure Information Protection root tenant key.
 
 In addition to your tenant root key, your organization may require on-premises security for specific documents. On-premises key protection is typically required only for a small amount of content, and therefore is configured together with a tenant root key.
+
 
 ## Azure Information Protection key types
 
@@ -114,3 +114,14 @@ Content can be encrypted using HYOK protection only if you have the classic clie
 
 For more information, see [Hold Your Own Key (HYOK) details](configure-adrms-restrictions.md).
 
+
+## Next steps
+
+See any of the following articles for more details about specific types of keys:
+
+- [Getting started with tenant root keys](get-started-tenant-root-keys.md)
+- [Bring your own key (BYOK) details for Azure Information Protection](byok-price-restrictions.md)
+- [Double Key Encryption for Microsoft 365](/microsoft-365/compliance/double-key-encryption)
+
+
+If you are migrating across tenants, such as after a company merger, we recommend that you read our [blog post on mergers and spinoffs](https://techcommunity.microsoft.com/t5/microsoft-security-and/mergers-and-spinoffs/ba-p/910455) for more information.

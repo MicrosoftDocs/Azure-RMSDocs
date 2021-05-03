@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class PolicyEngine 
@@ -32,6 +32,7 @@ public const std::string& GetSensitivityFileId() const  |  Gets the sensitivity 
 public bool HasClassificationRules(const std::vector\<std::string\>& contentFormats) const  |  Gets if the policy has automatic or recommendation rules according to the provided contentFormats.
 public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Gets the time when the policy was last fetched.
 public uint32_t GetWxpMetadataVersion() const  |  Gets the recommended WXP (Word, Excel, Powerpoint) metadata version, currently 0 for old verion 1 for co-authoring enabled version.
+public bool HasWorkloadConsent(Workload workload) const  |  Checks if user has consented to specific workload,.
   
 ## Members
   
@@ -185,3 +186,9 @@ Gets the recommended WXP (Word, Excel, Powerpoint) metadata version, currently 0
 
   
 **Returns**: Uint32_t int indecating what version of metadata the tenant supports for WXP files.
+  
+### HasWorkloadConsent function
+Checks if user has consented to specific workload,.
+
+  
+**Returns**: Bool indicating consent.

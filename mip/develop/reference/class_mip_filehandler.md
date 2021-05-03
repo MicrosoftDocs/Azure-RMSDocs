@@ -5,14 +5,15 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class FileHandler 
 Interface for all file handling functions.
   
 ## Summary
- Members                        | Descriptions                                
+
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<ContentLabel\> GetLabel()  |  Starts retrieving the sensitivity label from the file.
 public std::vector\<std::pair\<std::string, std::string\>\> GetProperties(uint32_t version)  |  Retrievs the file propertries according to version.
@@ -115,6 +116,7 @@ FileHandler::Observer will be called upon success or failure.
   
 ### CommitAsync function
 Writes the changes to the stream specified by the |outputStream| parameter.
+|outputStream| must not be the same as inputStream used for creating the handler.
 FileHandler::Observer will be called upon success or failure.
   
 ### IsModified function

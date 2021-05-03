@@ -31,8 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 End-user Office applications and Office services can use the Azure Rights Management service from Azure Information Protection to help protect your organization’s data. These Office applications are Word, Excel, PowerPoint, and Outlook. The Office services are Exchange and Microsoft SharePoint. The Office configurations that support the Azure Rights Management service often use the term **information rights management (IRM)**.
 
@@ -60,7 +59,7 @@ When you use Exchange Online or Exchange Server, you can configure options for A
 
 -   **Message Encryption** that supports sending a protected email message and protected Office documents as attachments to any email address on any device. For user accounts that don't use Azure AD, a web experience supports social identity providers or a one-time passcode. For more information, see [Set up new Microsoft 365 Message Encryption capabilities built on top of Azure Information Protection](/microsoft-365/compliance/set-up-new-message-encryption-capabilities) from the Microsoft 365 documentation. To help you find additional information that is related to this configuration, see [Microsoft 365 Message Encryption](/microsoft-365/compliance/ome).
 
-If you use Exchange on-premises, you can use the IRM features with the Azure Rights Management service by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Azure Rights Management service.
+If you use Exchange on-premises, you can use the IRM features with the Azure Rights Management service by deploying the Microsoft Rights Management connector. This connector acts as a relay between your on-premises servers and the Azure Rights Management service.
 
 For more information about the email options that you can use to protect emails, see [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails) and [encrypt-only option for emails](configure-usage-rights.md#encrypt-only-option-for-emails).
 
@@ -68,11 +67,11 @@ If you're ready to configure Exchange to protect emails:
 
 - For Exchange Online, see [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration).
 
-- For Exchange on-premises, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
+- For Exchange on-premises, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
 For more information, see:
 
-- **Unified labeling client**. Configure sensitivity labels and labeling polices in your labeling admin center, including the Microsoft 365 security center, Microsoft 365 compliance center, or Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+- **Unified labeling client**. Configure sensitivity labels and labeling polices in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
 - **Classic client**. Configure protection templates in the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
@@ -88,7 +87,7 @@ For more fine-grained control, you can configure a list or library in the site t
 
 The IRM service must first be enabled for SharePoint. Then, you specify IRM permissions for a library. For SharePoint and OneDrive, users can also specify IRM permissions for their OneDrive library. SharePoint does not use rights policy templates, although there are SharePoint configuration settings that you can select that match some settings that you can specify in the templates.
 
-If you use SharePoint Server, you can use this IRM protection by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Rights Management cloud service. For more information, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
+If you use SharePoint Server, you can use this IRM protection by deploying the Microsoft Rights Management connector. This connector acts as a relay between your on-premises servers and the Rights Management cloud service. For more information, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
 > [!NOTE]
 > There are some limitations when you use SharePoint IRM:
@@ -106,15 +105,13 @@ For libraries that are not IRM-protected, if you apply protection-only to a file
 
 When you use SharePoint IRM protection, the Azure Rights Management service applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive and SharePoint](/microsoft-365/compliance/data-encryption-in-odb-and-spo?redirectSourcePath=%252fen-us%252farticle%252f6501b5ef-6bf7-43df-b60d-f65781847d6c) from the SharePoint documentation.
 
-Although no longer new, the following post from the Microsoft 365 blog has some additional information that you might find useful: [What’s New with Information Rights Management in SharePoint](https://www.microsoft.com/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
-
 For changes that are coming, see [Updates to SharePoint security, administration, and migration](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585).
 
 If you are ready to configure SharePoint for IRM:
 
 - For SharePoint in Microsoft 365, see [SharePoint in Microsoft 365 and OneDrive: IRM Configuration](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration).
 
-- For Sharepoint Server, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
+- For Sharepoint Server, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
 
 ## Next steps

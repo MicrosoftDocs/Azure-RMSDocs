@@ -31,7 +31,10 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-> [!NOTE]
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
+
+> [!TIP]
 > This information is for IT administrators and consultants who have deployed Azure Information Protection. If you are looking for user help and information about how to use the Rights Management functionality for a specific application or how to open a file that is rights-protected, use the help and guidance that accompanies your application.
 >
 > For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the Azure Information Protection client for Windows, see the [Azure Information Protection client user guide](./rms-client/clientv2-user-guide.md).
@@ -60,7 +63,7 @@ For information about how these applications and services support the data prote
 
 -   [Azure Information Protection client: Installation and configuration for clients](configure-client.md)
 
-To configure on-premises servers such as Exchange Server and SharePoint Server, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
+To configure on-premises servers such as Exchange Server and SharePoint Server, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
 In addition to these applications and services, there are other applications that support the Rights Management APIs. This category includes line-of-business applications that are written in-house by using the Rights Management SDK, and applications from software vendors that are written by using the Rights Management SDK. For these applications, follow the instructions that are provided with the application.
 

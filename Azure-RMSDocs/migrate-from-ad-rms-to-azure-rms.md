@@ -31,15 +31,11 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
 Use the following set of instructions to migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Information Protection. 
 
 After the migration, your AD RMS servers are no longer in use but users still have access to documents and email messages that your organization protected by using AD RMS. Newly protected content will use the Azure Rights Management service (Azure RMS) from Azure Information Protection.
-
-Not sure whether this AD RMS migration is right for your organization?
-
-- For an introduction to Azure Information Protection, see [What is Azure Information Protection?](./what-is-information-protection.md)
-
-- For a comparison of Azure Information Protection with AD RMS, see [Comparing Azure Information Protection and AD RMS](./compare-on-premise.md).
 
 ## Recommended reading before you migrate to Azure Information Protection
 

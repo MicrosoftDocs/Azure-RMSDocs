@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/02/2020
+ms.date: 02/09/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -30,8 +30,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For more information, see also the [FAQs for the classic client only](faqs-classic.md).*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 Have a question about the data protection service, Azure Rights Management, from Azure Information Protection? See if it's answered here.
 
@@ -59,7 +58,7 @@ Many software vendors already have solutions or are implementing solutions that 
 
 ## Is there a management pack or similar monitoring mechanism for the RMS connector?
 
-Although the Rights Management connector logs information, warning, and error messages to the event log, there isn't a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Azure Rights Management connector](monitor-rms-connector.md).
+Although the Rights Management connector logs information, warning, and error messages to the event log, there isn't a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Microsoft Rights Management connector](monitor-rms-connector.md).
 
 ## How do I create a new custom template in the Azure portal?
 
@@ -167,7 +166,7 @@ Use the [super user feature](configure-super-users.md), which grants the Full Co
 If your content is stored in SharePoint or OneDrive, admins can run the [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) cmdlet, to remove both the sensitivity label and the encryption. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document).
 
 ## Can Rights Management prevent screen captures?
-By not granting the **Copy** [usage right](configure-usage-rights.md), Rights Management can prevent screen captures from many of the commonly used screen capture tools on Windows platforms (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) and Android. However, iOS and Mac devices do not allow any app to prevent screen captures. In addition, browsers on any device cannot prevent screen captures. Browser use includes Outlook on the web and Office for the web.
+By not granting the **Copy** [usage right](configure-usage-rights.md), Rights Management can prevent screen captures from many of the commonly used screen capture tools on Windows platforms (Windows 7, Windows 8.1, Windows 10, and Windows 10 Mobile). However, iOS, Mac,and Android devices do not allow any app to prevent screen captures. In addition, browsers on any device cannot prevent screen captures. Browser use includes Outlook on the web and Office for the web.
 
 Preventing screen captures can help to avoid accidental or negligent disclosure of confidential or sensitive information. But there are many ways that a user can share data that is displayed on a screen, and taking a screenshot is only one method. For example, a user intent on sharing displayed information can take a picture of it using their camera phone, retype the data, or simply verbally relay it to somebody.
 

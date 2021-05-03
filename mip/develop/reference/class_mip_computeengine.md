@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class ComputeEngine 
@@ -32,6 +32,7 @@ public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& GetS
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  | _Not yet documented._
 public uint32_t GetOpcMetadataVersion() const  | _Not yet documented._
 public const std::string& GetUserObjectId() const  | _Not yet documented._
+public bool HasWorkloadConsent(Workload workload) const  | _Not yet documented._
 public virtual ~ComputeEngine()  | _Not yet documented._
   
 ## Members
@@ -126,6 +127,10 @@ _Not documented yet._
 
   
 ### GetUserObjectId function
+_Not documented yet._
+
+  
+### HasWorkloadConsent function
 _Not documented yet._
 
   

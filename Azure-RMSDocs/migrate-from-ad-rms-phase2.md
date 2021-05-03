@@ -31,6 +31,9 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
+
 Use the following information for Phase 2 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 4 though 6 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 ## Step 4. Export configuration data from AD RMS and import it to Azure Information Protection

@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/09/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
@@ -30,18 +30,20 @@ search.appverid:
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to discover, classify, and protect documents and emails by applying labels to content.
 
-AIP is part of the Microsoft Information Protection (MIP) solution, and extends the labeling and classification functionality provided by Microsoft 365.
+AIP is part of the Microsoft Information Protection (MIP) solution, and extends the [labeling](/microsoft-365/compliance/sensitivity-labels) and [classification](/microsoft-365/compliance/data-classification-overview) functionality provided by Microsoft 365.
 
-The following image shows the Azure Information Protection additions to MIP, including the [unified labeling client](#aip-unified-labeling-client), [scanner](#aip-on-premises-scanner), and [SDK](#microsoft-information-protection-sdk).
+The following image shows the Azure Information Protection additions to MIP, including the [**unified labeling client**](#aip-unified-labeling-client), [**scanner**](#aip-on-premises-scanner), and [**SDK**](#microsoft-information-protection-sdk).
 
 :::image type="content" source="media/what-is-mip.png" alt-text="The Azure Information Protection areas of the Microsoft Information Protection framework":::
 
 Microsoft Information Protection is the common information protection stack that's leveraged by AIP's unified labeling client. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/protect-information).
 
+> [!NOTE]
+> For details about the latest features and public preview version of the unified labeling client, see [Azure Information Protection unified labeling client - Version release history and support policy](rms-client/unifiedlabelingclient-version-release-history.md).
+> 
 ## AIP unified labeling client
 
 The Azure Information Protection unified labeling client extends labeling, classification, and protection capabilities to additional file types, as well as to the File Explorer and PowerShell. 
@@ -50,7 +52,6 @@ For example, in the File Explorer, right-click one or more files and select **Cl
 
 :::image type="content" source="media/protect-from-file-explorer.png" alt-text="Classify and protect from the File Explorer":::
 
-For details about the latest features and public preview version of the unified labeling client, see [Azure Information Protection unified labeling client - Version release history and support policy](rms-client/unifiedlabelingclient-version-release-history.md).
 
 Download the client from the [Microsoft Azure Information Protection download page](https://www.microsoft.com/download/details.aspx?id=53018).
     
@@ -132,7 +133,4 @@ AIP labels managed in the Azure portal are *not* supported by the unified labeli
 
 We recommend migrating to unified labeling to support these features, as well as SharePoint, Microsoft 365 apps, Outlook for the web and mobile devices, PowerBI data protection, and more. For more information, see [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md).
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
->
-> This time-frame allows all current Azure Information Protection customers to transition to unified labeling using the Microsoft Information Protection Unified Labeling solution. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]

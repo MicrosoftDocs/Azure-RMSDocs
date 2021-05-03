@@ -31,6 +31,9 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
+
 The super user feature of the Azure Rights Management service from Azure Information Protection ensures that authorized people and services can always read and inspect the data that Azure Rights Management protects for your organization. If necessary, the protection can then be removed or changed.
 
 A super user always has the Rights Management Full Control [usage right](configure-usage-rights.md) for documents and emails that have been protected by your organization’s Azure Information Protection tenant. This ability is sometimes referred to as "reasoning over data" and is a crucial element in maintaining control of your organization’s data. For example, you would use this feature for any of the following scenarios:

@@ -30,8 +30,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 Use the following steps as recommendations to help you prepare for, implement, and manage Azure Information Protection for your organization, when you want to classify, label, and protect your data.
 
@@ -104,7 +103,7 @@ Perform the following steps:
     - Write user guidance to help explain which label should be applied in each scenario.
     - If your default policy was created with labels that automatically apply protection, you may want to temporarily remove the protection settings or disable the label while you test your settings. 
 
-    Sensitivity labels and labeling policies for the unified labeling client are configured in the Microsoft 365 security center, Microsoft 365 compliance center, or the Microsoft 365 Security & Compliance Center. For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+    Sensitivity labels and labeling policies for the unified labeling client are configured in the Microsoft 365 compliance center. For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 1. **Deploy your client for your users**
 
@@ -207,7 +206,7 @@ Perform the following steps:
     
     If you have SharePoint and Exchange on-premises and want to use their information rights management (IRM) features, install and configure the Rights Management connector. 
 
-    For more information, see [Deploying the Azure Rights Management connector](./deploy-rms-connector.md).
+    For more information, see [Deploying the Microsoft Rights Management connector](./deploy-rms-connector.md).
 
 ## Use and monitor your data protection solutions
 

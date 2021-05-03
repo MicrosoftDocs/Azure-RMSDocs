@@ -32,8 +32,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 Azure Information Protection supports other services and also relies on other services. If you’re looking for information that is related to Azure Information Protection but not about how to use the Azure Information Protection service, check the following resources:
 
@@ -65,7 +64,7 @@ However, some relevant information that can help your legal adviser make a deter
 
 ## Security, compliance, and auditing
 
-See the [Security, compliance, and regulatory requirements](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) section in the [What problems does Azure RMS solve?](./what-is-azure-rms.md#business-problems-solved-by-azure-rights-management) article, for information about specific certifications for the Azure Rights Management service. In addition:
+See the [Security, compliance, and regulatory requirements](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) section in the [What is Azure RMS?](./what-is-azure-rms.md) article, for information about specific certifications for the Azure Rights Management service. In addition:
 
 - For external certifications for Azure Information Protection: [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/)
 

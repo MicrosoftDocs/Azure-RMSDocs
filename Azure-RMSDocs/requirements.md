@@ -6,7 +6,7 @@ description: Identify the prerequisites required to deploy Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/12/2021
+ms.date: 04/12/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,9 +27,11 @@ ms.custom: admin
 
 # Azure Information Protection requirements
 
->****Applies to***: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>****Applies to***: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 >***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 Before deploying Azure Information Protection, ensure that your system meets the following prerequisites:
 
@@ -41,34 +43,19 @@ Before deploying Azure Information Protection, ensure that your system meets the
 
 ## Subscription for Azure Information Protection
 
-You must have one of the following, depending on the Azure Information Protection features you'll be using:
-
-- **An [Azure Information Protection plan](https://azure.microsoft.com/pricing/details/information-protection/)**. Required for classification, labeling, and protection by using the Azure Information Protection scanner or client.
-
-- **An [Office 365 plan that includes Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)**. Required for protection only.
-
-To verify that your subscription includes the Azure Information Protection features you want to use, check the feature list at [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection).
-
-If you have questions about licensing, read through the [frequently asked questions](https://azure.microsoft.com/pricing/details/information-protection#faq) for licensing.
-
-> [!TIP]
-> Looking to see if your plan supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
->
-> - [Exchange Online Service Description](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description)
->
-> - [Microsoft 365 Compliance Licensing Comparison](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-business-service-description)
->
-> - [Office 365 Education](/office365/servicedescriptions/office-365-platform-service-description/office-365-education)
->
-> - [Office 365 US Government](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/office-365-us-government)
+You must have an **Azure Information Protection plan** for classification, labeling, and protection using the Azure Information Protection scanner or client. To verify that your subscription includes the Azure Information Protection features you want to use, check the feature list at [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection).
 
 If you have questions about subscriptions or licensing, do not post them on this page. Instead, see if they are answered in the [frequently asked questions](https://azure.microsoft.com/pricing/details/information-protection#faq) for licensing. If your question is not answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
+
+> [!TIP]
+> For a full picture of the Microsoft Information Protection (MIP) licensing requirements per feature, see the [Microsoft 365 Compliance Licensing Comparison spreadsheet](https://opdhsblobprod04.blob.core.windows.net/contents/e0993bf6e82e4fa8ac18b48839521869/93969b96fb41733347b4dbb8bba02771?sv=2018-03-28&sr=b&si=ReadPolicy&sig=JIaks3D97u4pyrS%2Bz6Naqat1v9M9a3Hs2u9m9wY42ww%3D&st=2021-04-12T11%3A01%3A02Z&se=2021-04-13T11%3A11%3A02Z).
+>
 
 ## Azure Active Directory
 
 To support authentication and authorization for Azure Information Protection, you must have an Azure Active Directory (AD). To use user accounts from your on-premises directory (AD DS), you must also configure directory integration.
 
-- **Single sign-on (SSO)** is supported for Azure Information Protection so that users are not repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor for how to configure it for Azure AD. WS-Trust is a common requirement for these solutions to support single sign-on. 
+- **Single sign-on (SSO)** is supported for Azure Information Protection so that users are not repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor for how to configure it for Azure AD. WS-Trust is a common requirement for these solutions to support single sign-on.
 
 - **Multi-factor authentication (MFA)** is supported with Azure Information Protection when you have the required client software and have correctly configured the MFA-supporting infrastructure.
 
@@ -87,6 +74,7 @@ For more information, see:
 User computers or mobile devices must run on an operating system that supports Azure Information Protection.
 
 - [Supported operating systems for client devices](#supported-operating-systems-for-client-devices)
+- [ARM64](#arm64)
 - [Virtual machines](#virtual-machines)
 - [Server support](#server-support)
 - [Additional requirements per client](#additional-requirements-per-client)
@@ -112,6 +100,8 @@ For details about support in earlier versions of Windows, contact your Microsoft
 > [!NOTE]
 > When the Azure Information Protection clients protect the data by using the Azure Rights Management service, the data can be consumed by the [same devices](#client-devices) that support the Azure Rights Management service.
 >
+
+
 ### ARM64 
 
 ARM64 is **not** currently supported. 
@@ -205,6 +195,23 @@ Azure Information Protection has the following additional requirements:
 
 - **TLS version 1.2 or higher** (unified labeling client only). The unified labeling client requires a TLS version of 1.2 or higher to ensure the use of cryptographically secure protocols and align with Microsoft security guidelines.
 
+- **Microsoft 365 Enhanced Configuration Service (ECS)**. AIP must have access to the **config.edge.skype.com** URL, which is a Microsoft 365 Enhanced Configuration Service (ECS).
+ 
+    ECS provides Microsoft the ability to reconfigure AIP installations without the need for you to redeploy AIP. It’s used to control the gradual rollout of features or updates, while the impact of the rollout is monitored from diagnostic data being collected.
+    
+    ECS is also used to mitigate security or performance issues with a feature or update. ECS also supports configuration changes related to diagnostic data, to help ensure that the appropriate events are being collected. 
+ 
+    Limiting the **config.edge.skype.com** URL may affect Microsoft’s ability to mitigate errors and may affect your ability to test preview features.
+ 
+    For more information, see [Essential services for Office - Deploy Office](/deployoffice/privacy/essential-services).
+
+- **Audit logging URL network connectivity**. AIP must be able to access the following URLs in order to support AIP audit logs:
+
+    - `https://*.events.data.microsoft.com`
+    - `https://*.aria.microsoft.com` (Android device data only)
+    
+    For more information, see [Prerequisites for AIP reporting](reports-aip.md#prerequisites).
+
 ### Coexistence of AD RMS with Azure RMS
 
 Using AD RMS and Azure RMS side by side, in the same organization, to protect content by the same user in the same organization, is **only** supported in AD RMS for [HYOK (hold your own key) protection](configure-adrms-restrictions.md) with Azure Information Protection.
@@ -247,7 +254,7 @@ Make sure to create rules that allow outbound access to these specific IP addres
 
 ## Supported on-premises servers for Azure Rights Management data protection
 
-The following on-premises servers are supported with Azure Information Protection when you use the Azure Rights Management connector.
+The following on-premises servers are supported with Azure Information Protection when you use the Microsoft Rights Management connector.
 
 This connector acts as a communications interface, and relays between on-premises servers and the Azure Rights Management service, which is used by Azure Information Protection to protect Office documents and emails. 
 
@@ -257,12 +264,12 @@ Supported servers include:
 
 |Server type  |Supported versions  |
 |---------|---------|
-|**Exchange Server**     | - Exchange Server 2016 </br>- Exchange Server 2013 </br>- Exchange Server 2010       |
+|**Exchange Server**     | - Exchange Server 2019 </br> - Exchange Server 2016 </br>- Exchange Server 2013 </br>- Exchange Server 2010       |
 |**Office SharePoint Server**     |- Office SharePoint Server 2016 </br>- Office SharePoint Server 2013 </br>- Office SharePoint Server 2010         |
 |**File servers that run Windows Server and use File Classification Infrastructure (FCI)**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
 | | |
 
-For more information, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
+For more information, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
 ## Supported operating systems for Azure Rights Management
 

@@ -32,6 +32,9 @@ ms.custom: admin, has-adal-ref
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
+
 Use the following information for Phase 5 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 10 through 12 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 ## Step 10. Deprovision AD RMS
@@ -54,7 +57,7 @@ When you have confirmed that RMS clients are no longer communicating with these 
 
 After yo have de-provisioned your AD RMS servers, you might want to take the opportunity to review your template and labels. For example, convert templates to labels, consolidate them so that users have fewer to choose from, or reconfigure them. This would also be a good time to publish default templates.
 
-For sensitivity labels and the unified labeling client, use your labeling admin center, including the Microsoft 365 security center, Microsoft 365 compliance center, or the Microsoft 365 Security & Compliance Center. For more information, see the Microsoft 365 documentation.
+For sensitivity labels and the unified labeling client, use the Microsoft 365 compliance center. For more information, see the Microsoft 365 documentation.
 
 If you're using the classic client, use the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](./configure-policy-templates.md).
 

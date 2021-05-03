@@ -32,6 +32,9 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+
+
 These instructions are part of the [migration path from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md), and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Information Protection with a software-protected tenant key. 
 
 If this is not your chosen configuration scenario, go back to [Step 4. Export configuration data from AD RMS and import it to Azure RMS](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection) and choose a different configuration.
@@ -66,10 +69,10 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
     
 3. When you have uploaded each file, run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) to identify the imported key that matches the currently active SLC key in AD RMS. This key will become the active tenant key for your Azure Rights Management service.
 
-4.  Use the [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
+4.  Use the [Disconnect-AipService](/powershell/module/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
 
     ```PowerShell
-    Disconnect-AipServiceService
+    Disconnect-AipService
     ```
 
 You’re now ready to go to [Step 5. Activate the Azure Rights Management service](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).

@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/12/2020
+ms.date: 03/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -30,10 +30,7 @@ search.appverid:
 >
 >***Relevant for**: [AIP unified labeling classic client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For more information, see [Frequently asked questions for Azure Information Protection](faqs.md).*
 
-This article lists frequently asked questions that are related to the Azure Information Protection classic client only.
-
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 ## Is the Azure Information Protection client only for subscriptions that include classification and labeling?
 
@@ -75,6 +72,13 @@ Override the default settings as follows:
     > [!NOTE]
     > When the scanner protects files on SharePoint sites and libraries, the Rights Management owner is dynamically set for each file by using the SharePoint Editor value.
 
+## Can a file have more than one classification?
+
+Users can select just one label at a time for each document or email, which often results in just one classification. However, if users select a sublabel, this actually applies two labels at the same time; a primary label and a secondary label. By using sublabels, a file can have two classifications that denote a parent\child relationship for an additional level of control.
+
+For example, the label **Confidential** might contain sublabels such as **Legal** and **Finance**. You can apply different classification visual markings and different Rights Management templates to these sublabels. A user cannot select the **Confidential** label by itself; only one of its sublabels, such as **Legal**. As a result, the label that they see set is **Confidential \ Legal**. The metadata for that file includes one custom text property for **Confidential**, one custom text property for **Legal**, and another that contains both values (**Confidential Legal**). 
+
+When you use sublabels, don't configure visual markings, protection, and conditions at the primary label. When you use sublevels, configure these setting on the sublabel only. If you configure these settings on the primary label and its sublabel, the settings at the sublabel take precedence.
 ## How do I prevent somebody from removing or changing a label?
 
 Although there's a [policy setting](configure-policy-settings.md) that requires users to state why they are lowering a classification label, removing a label, or removing protection, this setting does not prevent these actions. To prevent users from removing or changing a label, the content must already be protected and the protection permissions do not grant the user the Export or Full Control [usage right](configure-usage-rights.md)
@@ -113,7 +117,7 @@ However, you can integrate this older feature with labels, so that when users cl
 
 You can use this same technique to use your labels with Outlook on the web and these mobile mail applications.
 
-Note that there's no need to do this if you're using Outlook on the web with Exchange Online, because this combination supports built-in labeling when you publish sensitivity labels from the Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft compliance center.
+Note that there's no need to do this if you're using Outlook on the web with Exchange Online, because this combination supports built-in labeling when you publish sensitivity labels from the Microsoft 365 compliance center.
 
 If you cannot use built-in labeling with Outlook on the web, see the configuration steps for this workaround: [Integration with the legacy Exchange message classification](rms-client/client-admin-guide-customizations.md#integration-with-the-legacy-exchange-message-classification)
 

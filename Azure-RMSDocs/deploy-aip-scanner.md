@@ -28,7 +28,8 @@ ms.custom: admin
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
 >
->***Relevant for**: [AIP unified labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see [What is the Azure Information Protection classic scanner?](deploy-aip-scanner-classic.md)*
+>***Relevant for**: [AIP unified labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+
 
 >[!NOTE] 
 > To scan and label files on cloud repositories, use [Cloud App Security](/cloud-app-security/) instead of the scanner.
@@ -41,7 +42,7 @@ The AIP scanner runs as a service on Windows Server and lets you discover, class
 
 - **SharePoint document libraries and folder** for SharePoint Server 2019 through SharePoint Server 2013. SharePoint 2010 is also supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
-To classify and protect your files, the scanner uses [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) configured in one of the Microsoft 365 labeling admin centers, including the Microsoft 365 Security Center, the Microsoft 365 Compliance Center, and the Microsoft 365 Security and Compliance Center. 
+To classify and protect your files, the scanner uses [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) configured in the Microsoft 365 compliance center.
 
 ## Azure Information Protection unified labeling scanner overview
 
@@ -85,7 +86,7 @@ For more information, see [Files not labeled by the scanner](#files-not-labeled-
 
 ### 1. Determine whether files are included or excluded for scanning 
 
-The scanner automatically skips files that are excluded from classification and protection, such as executable files and system files. For more information, see [File types that are excluded from classification and protection](./rms-client/clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection).
+The scanner automatically skips files that are excluded from classification and protection, such as executable files and system files. For more information, see [File types excluded from classification and protection](rms-client/clientv2-admin-guide-file-types.md#file-types-excluded-from-classification-and-protection).
 
 The scanner also considers any file lists explicitly defined to scan, or exclude from scanning. File lists apply for all data repositories by default, and can also be defined for specific repositories only.
 
@@ -99,9 +100,9 @@ For more information, see [Deploying the Azure Information Protection scanner to
 
 After identifying excluded files, the scanner filters again to identify files supported for inspection.
 
-These additional filters are the same ones used by the operating system for Windows Search and indexing, and require no additional configuration. Windows IFilter is also used to scan file types that are used by Word, Excel, and PowerPoint, and for PDF documents and text files.
+These filters are the same ones used by the operating system for Windows Search and indexing, and require no extra configuration. Windows IFilter is also used to scan file types that are used by Word, Excel, and PowerPoint, and for PDF documents and text files.
 
-For a full list of file types supported for inspection, and additional instructions for configuring filters to include .zip and .tiff files, see [File types supported for inspection](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection).
+For a full list of file types supported for inspection, and other instructions for configuring filters to include .zip and .tiff files, see [File types supported for inspection](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection).
 
 After inspection, supported file types are labeled using the conditions specified for your labels. If you're using discovery mode, these files can either be reported to contain the conditions specified for your labels, or reported to contain any known sensitive information types.
 
@@ -111,7 +112,7 @@ If the scanner stops and doesn't complete a scan for a large number of files in 
 
 For example, server hardening for SharePoint is one reason why the scanner would exceed the number of allowed network connections, and therefore stop.
 
-To check whether this is the cause of the scanner stopping, check for the following error message in the scanner logs at **%localappdata%\Microsoft\MSIP\Logs\MSIPScanner.iplog** (multiple logs are compressed into a zip file):
+To check whether server hardening for SharePoint is the cause of the scanner stopping, check for the following error message in the scanner logs at **%localappdata%\Microsoft\MSIP\Logs\MSIPScanner.iplog** (multiple logs are compressed into a zip file):
 
 `Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port`
 
@@ -151,6 +152,8 @@ For more information about deploying the scanner, see the following articles:
 - [Running scans using the AIP scanner](deploy-aip-scanner-manage.md)
 
 **More information**:
+
+- [Watch our deployment video!](https://techcommunity.microsoft.com/t5/microsoft-security-and/mip-scanner-deployment-watch-our-video/ba-p/2023277) Watch a step-by-step demo of installing and configuring the unified labeling on-premises scanner.
 
 - Check out our blog on best practices for the unified labeling scanner: [Best practices for deploying and using the AIP UL scanner](https://aka.ms/AIPScannerBestPractices)
 

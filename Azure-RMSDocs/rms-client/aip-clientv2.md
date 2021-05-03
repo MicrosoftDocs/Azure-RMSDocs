@@ -31,7 +31,7 @@ search.appverid:
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
->***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see [Azure Information Protection classic client for Windows](aip-client.md).*
+>***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 The Azure Information Protection unified labeling client for Windows is a downloadable client for organizations that use [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) to classify and protect documents and emails. This client also has a viewer for organizations that don't have their own information protection infrastructure but want to consume content that has been protected by other organizations that use a Rights Management service from Microsoft.
 

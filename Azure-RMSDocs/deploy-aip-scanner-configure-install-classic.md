@@ -6,7 +6,7 @@ description: Instructions for installing and configuring the Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/29/2020
+ms.date: 02/01/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,8 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Installing and configuring the AIP unified labeling scanner](deploy-aip-scanner-configure-install.md).*
 
-> [!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 Before you start configuring and installing the Azure Information Protection scanner, verify that your system complies with the [required prerequisites](deploy-aip-scanner-prereqs.md).
 
@@ -94,7 +93,7 @@ To configure your scanner:
     |Section  |Settings  |
     |---------|---------|
     |**Content scan job settings**     |    - **Schedule**: Keep the default of **Manual** </br>- **Info types to be discovered**: Change to **Policy only** </br>- **Configure repositories**: Do not configure at this time because the content scan job must first be saved.         |
-    |**Policy enforcement**     | - **Enforce**: Select **Off** </br>- **Label files based on content**: Keep the default of **On** </br>- **Default label**: Keep the default of **Policy default** </br>- **Relabel files**: Keep the default of **Off**        |
+    |**Sensitivity policy**     | - **Enforce**: Select **Off** </br>- **Label files based on content**: Keep the default of **On** </br>- **Default label**: Keep the default of **Policy default** </br>- **Relabel files**: Keep the default of **Off**        |
     |**Configure file settings**     | - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On** </br>- **File types to scan**: Keep the default file types for **Exclude** </br>- **Default owner**: Keep the default of **Scanner Account**        |
     | | |
 
@@ -229,7 +228,7 @@ To change these settings, edit the content scan job:
 2. On the Content scan job pane, change the following, and then select **Save**:
 
    - From the **Content scan job** section: Change the **Schedule** to **Always**
-   - From the **Policy enforcement** section: Change **Enforce** to **On**
+   - From the **Sensitivity policy** section: Change **Enforce** to **On**
 
     > [!TIP]
     > You may want to change other settings on this pane, such as whether file attributes are changed and whether the scanner can relabel files. Use the information popup help to learn more information about each configuration setting.

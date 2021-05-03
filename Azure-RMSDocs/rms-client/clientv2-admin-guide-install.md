@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Install the Azure Information Protection unified labeling client for users
-description: Instructions and information for admins to deploy the Azure Information Protection unified labeling client for Windows on enterprise networks.
+title: Install the Azure Information Protection (AIP) unified labeling client for users
+description: Learn how administrators can deploy the Azure Information Protection (AIP) unified labeling client for your users across an enterprise network.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -30,7 +30,9 @@ ms.custom: admin
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
->***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see the [classic client admin guide](client-admin-guide-install.md).*
+>***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+
+This article describes how administrators can deploy the Azure Information Protection (AIP) unified labeling client for your users across an enterprise network.
 
 Before you install the Azure Information Protection unified labeling client on your enterprise network, check that computers have the required operating system versions and applications for Azure Information Protection: [Requirements for Azure Information Protection](../requirements.md) and [Additional requirements for installing the unified labeling client on enterprise networks](reqs-ul-client.md).
 

@@ -30,7 +30,7 @@ ms.custom: admin
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
->***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see the [classic client admin guide](client-admin-guide.md).*
+>***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 Use the information in this guide if you are responsible for the Azure Information Protection unified labeling client on an enterprise network, or if you want more technical information than is in the [Azure Information Protection unified labeling client user guide](clientv2-user-guide.md). 
 
@@ -103,7 +103,7 @@ When the client is installed, use the **Help and Feedback** option to open the *
 
 #### **Help and Feedback** section
 
-The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can configure your own URL link that goes to a custom help page as one of the policy settings in your labeling management center: Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center.
+The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can configure your own URL link that goes to a custom help page as one of the policy settings in the Microsoft 365 compliance center.
 
 The **Report an Issue** link displays only if you specify an [advanced setting](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users). When you configure this setting, you specify an HTTP link such as the email address of your help desk. 
 
@@ -213,7 +213,7 @@ You can now use the rest of the instructions in [Deploying the Azure Information
 
 #### To upgrade the scanner from the classic client
 
-If you are currently using the Azure Information Protection scanner from the Azure Information Protection classic client, you can upgrade it to use sensitive information types and sensitivity labels that are published from the Office 365 Security & Compliance Center (or the Microsoft 365 security center or the Microsoft 365 compliance center).
+If you are currently using the Azure Information Protection scanner from the Azure Information Protection classic client, you can upgrade it to use sensitive information types and sensitivity labels that are published from the Microsoft 365 compliance center.
 
 How to upgrade the scanner depends on the version of the classic client that you are currently running:
 

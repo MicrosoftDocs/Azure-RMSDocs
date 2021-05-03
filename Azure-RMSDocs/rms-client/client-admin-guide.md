@@ -33,8 +33,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](clientv2-admin-guide.md).*
 
-> [!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated - extended support customers](../includes/classic-client-deprecation-extended-support.md)]
 >
 > **To deploy the AIP classic client**, open a support ticket to download the installation files.
 
@@ -70,7 +69,7 @@ The Azure Information Protection client includes the following:
 
 - A PowerShell module to apply and remove classification labels and protection from files. 
     
-    This module includes [cmdlets to install and configure the Azure Information Protection scanner](../deploy-aip-scanner-configure-install.md#list-of-cmdlets-for-the-scanner), which runs as a service on Windows Server. This service lets you discover, classify, and protect files on data stores such as network shares and SharePoint Server libraries.
+    This module includes [cmdlets to install and configure the Azure Information Protection scanner](../deploy-aip-scanner-configure-install-classic.md#list-of-cmdlets-for-the-scanner), which runs as a service on Windows Server. This service lets you discover, classify, and protect files on data stores such as network shares and SharePoint Server libraries.
 
 - The Rights Management client that communicates with Azure Rights Management (Azure RMS) or Active Directory Rights Management Services (AD RMS).
 

@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class TemplateNotFoundError 
@@ -104,10 +104,8 @@ Get debug info.
 **Returns**: Debug info (keys/values)
   
 ### ErrorCode enum
-
-ErrorCode of bad input error.
-
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 General            | General bad input error
 FileIsTooLargeForProtection            | File is too large for protection
+ErrorCode of bad input error.

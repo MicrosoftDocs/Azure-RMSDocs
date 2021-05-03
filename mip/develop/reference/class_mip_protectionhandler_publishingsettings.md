@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class ProtectionHandler::PublishingSettings 
@@ -26,6 +26,10 @@ public bool IsPublishingFormatJson() const  |  Gets whether or not the returned 
 public void SetPublishingFormatJson(bool isPublishingFormatJson)  |  whether or not the returned pl is in json format (xml format is more widely accepted and is the default).
 public void SetPreLicenseUserEmail(const std::string& preLicenseUserEmail)  |  Sets pre-license user.
 public const std::string& GetPreLicenseUserEmail() const  |  Gets the pre-license user.
+public void SetPublishingLicenseForRepublish(const std::vector\<uint8_t\>& serializedPublishingLicense)  |  Sets the serialized publishing license for republishing.
+public const std::vector\<uint8_t\>& GetPublishingLicenseForRepublish() const  |  Gets the serialized republishing license.
+public std::string GetApplicationScenarioId() const  |  Gets the scenario Id provided by the application which is used to correlation with the server.
+public void SetApplicationScenarioId(std::string applicationScenarioId)  |  Sets the scenario Id provided by the application.
   
 ## Members
   
@@ -113,3 +117,31 @@ Gets the pre-license user.
 
   
 **Returns**: Pre-license user
+  
+### SetPublishingLicenseForRepublish function
+Sets the serialized publishing license for republishing.
+
+Parameters:  
+* **serializedPublishingLicense**: The serialized publishing license
+
+
+This is used for republishing
+  
+### GetPublishingLicenseForRepublish function
+Gets the serialized republishing license.
+
+  
+**Returns**: The serialized republishing license
+  
+### GetApplicationScenarioId function
+Gets the scenario Id provided by the application which is used to correlation with the server.
+
+  
+**Returns**: Application scenario Id
+  
+### SetApplicationScenarioId function
+Sets the scenario Id provided by the application.
+
+Parameters:  
+* **The**: application scenario Id
+

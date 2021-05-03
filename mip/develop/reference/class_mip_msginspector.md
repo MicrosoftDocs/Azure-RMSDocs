@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/13/2021
+ms.date: 04/23/2021
 ---
 
 # class MsgInspector 
@@ -34,7 +34,7 @@ Get body encoding code page, relevant for txt, html body formats.
   
 **Returns**: An unsigned code page. 
   
-**See also**: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers)
+**See also**: [https://docs.microsoft.com/windows/win32/intl/code-page-identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers)
   
 ### GetBodyType function
 Get body type.

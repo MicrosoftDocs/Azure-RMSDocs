@@ -39,6 +39,10 @@
     href: tutorial-migrating-to-ul.md
 - name: Concepts
   items:
+  - name: Security
+    items:
+    - name: Security baseline
+      href: /security/benchmark/azure/baselines/information-protection-security-baseline?context=/azure/information-protection/context/context
   - name: AIP classification and protection
     href: aip-classification-and-protection.md
   - name: Azure Rights Management

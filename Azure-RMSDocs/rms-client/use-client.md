@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/20/2021
+ms.date: 04/26/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,8 +31,7 @@ search.appverid:
 >
 >***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
 
 
 The Azure Information Protection unified labeling client provides a client-server solution that helps protect an organization's documents and emails, and is an alternative to the [built-in labeling solution for Microsoft Office](/microsoft-365/compliance/sensitivity-labels). 
@@ -48,19 +47,15 @@ The service resides in the cloud or on-premises:
 
 ## Choose your Windows labeling solution
 
-Labels make it easier for your users to apply protection, and also provide classification so that you can track and manage your data. 
+Labels make it easier for your users to apply protection, and also provide classification so that you can track and manage your data.
 
 When choosing a Windows labeling solution, consider the following basic differences:
 
-- **Where labels and label policies are downloaded from** 
+- **Where labels and label policies are downloaded from**
 
-    The built-in labeling solution and the AIP unified labeling client use one of the following admin centers: 
-    
-    - Office 365 Security & Compliance Center 
-    - Microsoft 365 security center 
-    - Microsoft 365 compliance center
-      
-    If you are using the legacy AIP classic client, your labels and label policies are downloaded and managed in the Azure portal. 
+    The built-in labeling solution and the AIP unified labeling client use the Microsoft 365 compliance center.
+
+    If you are using the legacy AIP classic client, your labels and label policies are downloaded and managed in the Azure portal.
 
 - **Installation requirements**
 
@@ -163,60 +158,67 @@ For even more details, see also:
 |**User-defined permissions for a label**: <br />Custom permissions for Word, Excel, PowerPoint| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |
 |**Multilanguage support for labels**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |![yes](../media/yes-icon.png) |
 |**Label inheritance from email attachments**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)  | ![no](../media/no-icon.png)|
-|**Customizations that include**:<br />- Default label for email<br />- Pop up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| ![yes](../media/yes-icon.png) <sup>1</sup> | ![yes](../media/yes-icon.png) <sup>2</sup> |  ![no](../media/no-icon.png)|
+|**Customizations, such as**:<br />- Default label for email<br />- Pop up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| ![yes](../media/yes-icon.png) <sup>[1](#1)</sup> | ![yes](../media/yes-icon.png) <sup>[2](#2)</sup> |  ![partial](../media/half-support-icon.png) <sup>[9](#9)</sup>|
 |**Scanner for on-premises data stores**| ![yes](../media/yes-icon.png) |  ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
-|**Central reporting (analytics)**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
-|**Custom permissions set independently from a label**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>3</sup>|  ![no](../media/no-icon.png)|
+|**Central reporting**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![partial](../media/half-support-icon.png) <sup>[10](#10)|
+|**Custom permissions set independently from a label**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>[3](#3)</sup>|  ![no](../media/no-icon.png)|
 |**Information Protection bar in Office apps**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
 |**Visual markings as a label action**<br> (header, footer, watermark)| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)|
-|**Per app visual markings**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>9</sup>|
-|**Dynamic visual markings with variables**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>9</sup>|
+|**Per app visual markings**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>[8](#8)</sup>|
+|**Dynamic visual markings with variables**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>[8](#8)</sup>|
 |**Remove external content marking in app**| ![yes](../media/yes-icon.png)| ![yes](../media/yes-icon.png)| ![no](../media/no-icon.png)|
 |**Label with File Explorer**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
 |**A viewer for protected files** <br> (text, images, PDF, .pfile)| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![no](../media/no-icon.png)|
 |**PPDF support for applying labels**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
 |**PowerShell labeling cmdlets**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)  |  ![no](../media/no-icon.png)|
-|**Offline support for protection actions**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>4</sup> | ![yes](../media/yes-icon.png) |
+|**Offline support for protection actions**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>[4](#4)</sup> | ![yes](../media/yes-icon.png) |
 |**Manual policy file management for disconnected computers**| ![yes](../media/yes-icon.png) |![yes](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
 |**HYOK support**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
 |**Usage logging in Event Viewer**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)| ![no](../media/no-icon.png)|
 |**Display the Do Not Forward button in Outlook**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
-|**Track protected documents**| ![yes](../media/yes-icon.png) <sup>5</sup> | ![yes](../media/yes-icon.png) <sup>5</sup> |  ![no](../media/no-icon.png)|
-|**Revoke protected documents**| ![yes](../media/yes-icon.png) <sup>5</sup> |  ![yes](../media/yes-icon.png) <sup>5</sup>|  ![no](../media/no-icon.png)|
+|**Track protected documents**| ![yes](../media/yes-icon.png) <sup>[5](#5)</sup> | ![yes](../media/yes-icon.png) <sup>[5](#5)</sup> |  ![no](../media/no-icon.png)|
+|**Revoke protected documents**| ![yes](../media/yes-icon.png) <sup>[5](#5)</sup> |  ![yes](../media/yes-icon.png) <sup>[5](#5)</sup>|  ![no](../media/no-icon.png)|
 |**Protection-only mode** (no labels)| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
 |**Support for account switching**|  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)| ![yes](../media/yes-icon.png) |
 |**Support for Remote Desktop Services**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |
-|**Support for AD RMS**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png) <sup>6</sup> |  ![no](../media/no-icon.png)|
-|**Support for Microsoft Office 97-2003 formats**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png) <sup>8</sup>|
+|**Support for AD RMS**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png) <sup>[6](#6)</sup> |  ![no](../media/no-icon.png)|
+|**Support for Microsoft Office 97-2003 formats**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png) <sup>[7](#7)</sup>|
 |**Double Key Encryption**|  ![no](../media/no-icon.png)| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**Encrypt-Only**|  ![no](../media/no-icon.png)| ![no](../media/no-icon.png) | ![yes](../media/yes-icon.png)|
 |**Government Community Cloud** | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)|
 | | | | |
 
 **Footnotes**:
 
-<sup>1</sup>
+<a name="1"></a><sup>1</sup>
 These settings, and many more are supported as [advanced client settings that you configure in the Azure portal](client-admin-guide-customizations.md#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal).
 
-<sup>2</sup>
+<a name="2"></a><sup>2</sup>
 These settings, and many more are supported as [advanced settings that you configure with PowerShell](clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell).
 
-<sup>3</sup>
+<a name="3"></a><sup>3</sup>
 Supported by File Explorer and PowerShell. In Office apps, users can select **File Info** > **Protect Document** > **Restrict Access**.
 
-<sup>4</sup>
+<a name="4"></a><sup>4</sup>
 For File Explorer and PowerShell commands, the user must be connected to the internet to protect files.
 
-<sup>5</sup>
-For more information, see: **Unified labeling client**: [Admin guide (Public preview)](track-and-revoke-admin.md) |  [User guide (Public preview)](revoke-access-user.md). Tracking is supported for Global admins only. **Classic client**: [Admin guide](client-admin-guide-document-tracking.md) | [User guide](client-track-revoke.md). Administrators can also use [central reporting](../reports-aip.md) to identify whether protected documents are accessed from Windows computers, and whether access was granted or denied.
+<a name="5"></a><sup>5</sup>
+For more information, see: **Unified labeling client**: [Admin guide](track-and-revoke-admin.md) |  [User guide](revoke-access-user.md). Tracking is supported for Global admins only. **Classic client**: [Admin guide](client-admin-guide-document-tracking.md) | [User guide](client-track-revoke.md). Administrators can also use [central reporting](../reports-aip.md) to identify whether protected documents are accessed from Windows computers, and whether access was granted or denied.
 
-<sup>6</sup>
+<a name="6"></a><sup>6</sup>
 Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
-<sup>8</sup>
+<a name="7"></a><sup>7</sup>
 While the AIP clients support both Microsoft Office 97-2003 file formats, such as **.doc**, as well as Office Open XML formats, such as **.docx**, the built-in labeling supports Open XML formats only.
 
-<sup>9</sup>
+<a name="8"></a><sup>8</sup>
 For more information about support for dynamic content markings and per app content markings for the built-in labeling solution, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables).
+
+<a name="9"></a><sup>9</sup>
+For built-in labeling, selected labeling and labeling policy customizations are supported via PowerShell. For more information, see [Manage sensitivity labels in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
+
+<a name="10"></a><sup>10</sup>
+In the Azure portal, see [Azure Information Protection analytics](../reports-aip.md). In the Microsoft 365 compliance center, see the [activity explorer](/microsoft-365/compliance/data-classification-activity-explorer). For detailed support information, see the **Audit label-related user activity** row in the [capabilities tables](/microsoft-365/compliance/sensitivity-labels-office-apps) from the Microsoft 365 Compliance documentation.
 
 ### Detailed comparisons for the Azure Information Protection clients
 
@@ -236,7 +238,7 @@ When the Azure Information Protection classic client and the Azure Information P
 |**Supported cmdlets**| - Cmdlets for labeling <br> - Cmdlets for protection-only | **Cmdlets for labeling**:<br /> [Set-AIPFileClassification](/powershell/module/azureinformationprotection/get-aipfileclassification) and [Set-AIPFileLabel](/powershell/module/azureinformationprotection/get-aipfilelabel) don't support the **Owner** parameter <br /> In addition, there is a single comment of "No label to apply" for all scenarios where a label isn't applied <br /><br /> [Set-AIPFileClassification](/powershell/module/azureinformationprotection/get-aipfileclassification) supports the **WhatIf** parameter, so it can be run in discovery mode <br /><br /> [Set-AIPFileLabel](/powershell/module/azureinformationprotection/get-aipfilelabel) doesn't support the *EnableTracking* parameter <br /><br /> [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) doesn't return label information from other tenants and doesn't display the **RMSIssuedTime** parameter<br />In addition, the **LabelingMethod** parameter for [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) displays **Privileged** or **Standard**, instead of **Manual** or **Automatic**.|
 |**Justification prompts (if configured) per action in Office** | - Frequency: Per file <br /> - Lowering the sensitivity level <br /> - Removing a label<br /> - Removing protection | - Frequency: Per session <br /> - Lowering the sensitivity level<br />-  Removing a label|
 |**Remove applied label actions** | User is prompted to confirm <br /><br />The default label or an automatic label (if configured) is not automatically applied next time the Office app opens the file  | User is not prompted to confirm<br /><br /> The default label or an automatic label (if configured) is automatically applied next time the Office app opens the file|
-|**Automatic and recommended labels** | Configured as [label conditions](../configure-policy-classification.md) in the Azure portal with built-in information types and custom conditions that use phrases or regular expressions <br /><br />Configuration options include: <br />- Unique / Not unique count <br /> - Minimum count| Configured in the admin centers with built-in sensitive information types and [custom information types](/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Configuration options include:  <br />- Unique count only <br />- Minimum and maximum count <br />- AND and OR support with information types <br />- Keyword dictionary<br />- Customizable confidence level and character proximity|
+|**Automatic and recommended labels** | Configured as [label conditions](../configure-policy-classification.md) in the Azure portal with built-in information types and custom conditions that use phrases or regular expressions <br /><br />Configuration options include: <br />- Unique / Not unique count <br /> - Minimum count| Configured in the Microsoft 365 compliance center with built-in sensitive information types and [custom information types](/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Configuration options include:  <br />- Unique count only <br />- Minimum and maximum count <br />- AND and OR support with information types <br />- Keyword dictionary<br />- Customizable confidence level and character proximity|
 |**Order support for sublabels on attachments** | Enabled with an [advanced client setting](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Enabled by default, no configuration required|
 |**Change the default protection behavior for file types**| Use [registry edits](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) to override the defaults of native and generic protection | Use [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) to change which file types get protected|
 |**Automatic rescans** | Full rescans are automatically run every time the scanner detects a change in policy or labeling settings | Starting in version [2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), administrators can choose to skip a full rescan after making changes to policy or content scan job settings. |
@@ -268,7 +270,7 @@ Although the Azure Information Protection unified labeling client is still under
 
 The Azure Information Protection classic client doesn't support configurations that specify a parent label that has sublabels. These configurations include specifying a default label, and a label for recommended or automatic classification. When a label has sublabels, you can specify one of the sublabels but not the parent label.
 
-For parity, the Azure Information Protection unified labeling client also doesn't support applying parent labels that have sublabels, even though you can select these labels in the admin centers. In this scenario, the Azure Information Protection unified labeling client will not apply the parent label.
+For parity, the Azure Information Protection unified labeling client also doesn't support applying parent labels that have sublabels, even though you can select these labels in the Microsoft 365 compliance center. In this scenario, the Azure Information Protection unified labeling client will not apply the parent label.
 
 ## Next steps
 
