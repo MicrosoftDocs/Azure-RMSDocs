@@ -41,7 +41,7 @@ For more information, see [Deploying the Azure Information Protection scanner to
 
 > [!NOTE]
 > Most customers will perform these procedures in the **Azure Information Protection** area of the Azure portal. If you are working in an environment without access to the Azure portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), authenticate to the [AzureInformationProtection](/powershell/module/azureinformationprotection/?view=azureipps) PowerShell module, and then continue with instructions in this article for PowerShell only.
-> 
+>
 
 ## Run a discovery cycle and view reports for the scanner
 
@@ -73,26 +73,21 @@ Perform these steps again as needed when your content changes.
 
     - The .txt summary files include the time taken to scan, the number of scanned files, and how many files had a match for the information types.
 
-    - The .csv files have more details for each file. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
+    - The .csv files have more details for each file. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space. 
+
+        When a scan is completed, a **Summary_<x>.txt** file is created with the scan summary.
+
+> [!NOTE]
+> Scanners send collected data information to Azure Information Protection every five minutes, so that you can view the results in near real time from the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md).
+> 
+> The Azure portal displays information about the last scan only. If you need to see the results of previous scans, return to the reports that are stored on the scanner computer, in the %*localappdata*%\Microsoft\MSIP\Scanner\Reports folder.
+> 
 
 [Initial configurations](deploy-aip-scanner-configure-install.md#configure-the-scanner) instruct you to set the **Info types to be discovered** to **Policy only**. This configuration means that only files that meet the conditions you've configured for automatic classification are included in the detailed reports.
 
 If you don't see any labels applied, check that your label configuration includes automatic rather than recommended classification, or enable **Treat recommended labeling as automatic** (available in scanner version 2.7.x.x and above).
 
 If the results are still not as you expect, you might need to reconfigure the conditions that you specified for your labels. If that's the case, reconfigure the conditions as needed, and repeat this procedure until you are satisfied with the results. Then, update your configuration automatically, and optionally protection.
-
-### Viewing scanner updates
-
-Scanners send collected data information to Azure Information Protection every five minutes, so that you can view the results in near real time from the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md).
-
-The Azure portal displays information about the last scan only. If you need to see the results of previous scans, return to the reports that are stored on the scanner computer, in the %*localappdata*%\Microsoft\MSIP\Scanner\Reports folder.
-
-> [!NOTE]
-> The **%*localappdata*%\Microsoft\MSIP\** folder includes all AIP client logs, including scanner logs, as well as the scanner reports. 
-> Scanner reports include .csv files, with all the scan operations and details for each scanned file. When a scan is completed, a **Summary_<x>.txt** file is created with the scan summary.
->
-
-If you are working in PowerShell only, run the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus?view=azureipps) command to verify the scanner status.
 
 ### Changing log levels or locations
 
@@ -138,7 +133,6 @@ When a full scan is complete, the scan type automatically changes to incremental
 > If you've made changes to your AIP [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), the Azure portal will prompt you to skip a full rescan. To ensure that your rescan occurs, make sure to select **No** in the prompt that appears.
 >
 
-DO WE HAVE POWERSHELL OPTIONS FOR THIS?
 ### Trigger a full rescan by modifying your settings
 
 Earlier versions of the scanner scanned all files whenever the scanner detected new or changed settings for automatic and recommended labeling. The scanner automatically refreshed the policy every four hours.

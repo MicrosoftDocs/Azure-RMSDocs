@@ -36,9 +36,15 @@ This article describes how to configure and install the Azure Information Protec
 
 Before you start, verify that your system complies with the [required prerequisites](deploy-aip-scanner-prereqs.md).
 
-When you're ready, continue with the following steps:
+> [!TIP]
+> While most customers will perform these procedures in the **Azure Information Protection** area of the Azure portal, you may need to work in PowerShell only.
+>
+> For example, if you are working in an environment without access to the Azure portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), authenticate to the [AzureInformationProtection](/powershell/module/azureinformationprotection/?view=azureipps) PowerShell module, and then continue with [instructions in this article for PowerShell only](#use-powershell-to-configure-and-install-the-scanner).
+>
 
-1. [Configure the scanner settings](#configure-the-scanner)
+To use the Azure portal, use the following steps:
+
+1. [Configure the scanner settings](#configure-the-scanner-settings)
 
 1. [Install the scanner](#install-the-scanner)
 
@@ -59,15 +65,11 @@ Then, perform the following configuration procedures as needed for your system:
 
 For more information, see also [Supported PowerShell cmdlets](#supported-powershell-cmdlets).
 
-## Configure and install the scanner
+## Configure the scanner settings
 
 Before you install the scanner, or upgrade it from an older general availability version, configure or verify your scanner settings.
 
-Most customers will perform these procedures in the **Azure Information Protection** area of the Azure portal. If you are working in an environment without access to the Azure portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), authenticate to the [AzureInformationProtection](/powershell/module/azureinformationprotection/?view=azureipps) PowerShell module, and then continue with instructions in the following sections for PowerShell only.
-
-# [Azure portal](#tab/azure-portal)
-
-**To configure your scanner:**
+**To configure your scanner in the Azure portal:**
 
 1. Sign in to the [Azure portal](https://portal.azure.com) with one of the following roles:
 
@@ -262,7 +264,7 @@ Back on the **Azure Information Protection - Content scan job** pane, your conte
 
 You're now ready to install the scanner with the content scanner job that you've created. Continue with [Install the scanner](#install-the-scanner).
 
-### Install the scanner
+## Install the scanner
 
 After you've [configured the Azure Information Protection scanner](#configure-the-scanner), perform the steps below to install the scanner. This procedure is performed fully in PowerShell.
 
@@ -300,92 +302,6 @@ After you've [configured the Azure Information Protection scanner](#configure-th
 
 Now that you have installed the scanner, you need to [get an Azure AD token for the scanner](#get-an-azure-ad-token-for-the-scanner) service account to authenticate, so that the scanner can run unattended.
 
-# [PowerShell only](#tab/powershell-only)
-
-**To configure your scanner**:
-
-1. Start with PowerShell closed. If you've previously installed the AIP client and scanner, make sure that the **AIPScanner** service is stopped.
-
-1. Open a Windows PowerShell session with the **Run as an administrator** option.
-
-1. Run the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication?view=azureipps) command to authenticate:
-
-    ```powershell
-    Set-AIPAuthentication
-    ```
-
-    When prompted, enter credentials for an account with one of the following administrator roles:
-
-    - **Compliance administrator**
-    - **Compliance data administrator**
-    - **Security administrator**
-    - **Global administrator**
-
-1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/install-aipscanner?view=azureipps) command to install your scanner on your SQL server instance. 
-
-    Define a name for your cluster, using the following naming syntax: `AIPScannerUL_<cluster_name>`. For example:
-
-    ```powershell
-    Install-AIPScanner –SqlServerInstance localhost\sqlexpress -Cluster AIPScannerUL_<cluster_name>
-    ```
-
-1. Run the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the scanner to function in offline mode. Run:
-
-    ```powershell
-    Set-AIPScannerConfiguration -OnlineConfiguration Off
-    ```
-
-1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob?view=azureipps) cmdlet to create a default content scan job. Run:
-
-    ```powershell
-    Set-AIPScannerContentScanJob -Schedule Manual -DiscoverInformationTypes PolicyOnly -Enforce Off -DefaultLabelType PolicyDefault -RelabelFiles Off -PreserveFileDetails On -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp' -DefaultOwner <account running the scanner>
-    ```
-
-    The syntax above configures the following settings while you continue the configuration:
-
-    - Keeps the scanner run scheduling to *manual*
-    - Sets the information types to be discovered based on the sensitivity labeling policy
-    - Does *not* enforce a sensitivity labeling policy
-    - Automatically labels files based on content, using the default label defined for the sensitivity labeling policy
-    - Does *not* allow for relabeling files
-    - Preserves file details while scanning and auto-labeling, including *date modified*, *last modified*, and *modified by* values
-    - Sets the scanner to exclude .msg and .tmp files when running
-    - Sets the default owner to the account you want to use when running the scanner
-
-1. Define the repositories you want to scan in your content scan job. For example, run:
-
-    ```powershell
-    Set-AIPScannerRepository -OverrideContentScanJob Off -Path 'c:\repoToScan'
-    ```
-
-    - For a network share, use `\\Server\Folder`.
-    - For a SharePoint library, use `http://sharepoint.contoso.com/Shared%20Documents/Folder`.
-    - For a local path: `C:\Folder`
-    - For a UNC path: `\\Server\Folder`
-
-    > [!NOTE]
-    > Wildcards are not supported and WebDav locations are not supported.
-    >
-
-    If you add a SharePoint path for **Shared Documents**:
-    - Specify **Shared Documents** in the path when you want to scan all documents and all folders from Shared Documents.
-    For example: `http://sp2013/SharedDocuments`
-    - Specify **Documents** in the path when you want to scan all documents and all folders from a subfolder under Shared Documents.
-    For example: `http://sp2013/Documents/SalesReports`
-    - Or, specify only the **FQDN** of your Sharepoint, for example `http://sp2013` to [discover and scan all SharePoint sites and subsites under a specific URL](deploy-aip-scanner-prereqs.md#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url) and subtitles under this URL. Grant scanner **Site Collector Auditor** rights to enable this.
-
-
-    Use the following syntax when adding SharePoint paths:
-
-    |Path  |Syntax  |
-    |---------|---------|
-    |**Root path**     | `http://<SharePoint server name>` <br /><br />Scans all sites, including any site collections allowed for the scanner user. <br />Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover root content        |
-    |**Specific SharePoint subsite or collection**     | One of the following: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
-    |**Specific SharePoint library**     | One of the following: <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
-    |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
-    | | |
-
----
 
 
 ## Get an Azure AD token for the scanner
@@ -430,11 +346,13 @@ Once you've run your initial discovery scan, continue with [Configure the scanne
 
 ## Configure the scanner to apply classification and protection
 
-The default settings configure the scanner to run once, and in reporting-only mode.
+The default settings configure the scanner to run once, and in reporting-only mode. To change these settings, edit the content scan job.
 
-To change these settings, edit the content scan job:
+> [!TIP]
+> If you're working in PowerShell only, see [Configure the scanner to apply classification and protection - PowerShell only](#configure-the-scanner-to-apply-classification-and-protection---powershell-only).
+>
 
-# [Azure portal](#tab/azure-portal)
+**To configure the scanner to apply classificaiton and protection**:
 
 1. In the Azure portal, on the **Azure Information Protection - Content scan jobs** pane, select the cluster and content scan job to edit it.
 
@@ -450,24 +368,6 @@ To change these settings, edit the content scan job:
 
     :::image type="content" source="media/scanner-scan-now.png" alt-text="Initiate scan for the Azure Information Protection scanner.":::
 
-# [PowerShell only](#tab/powershell-only)
-
-1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) cmdlet to update your content scan job to set your scheduling to always and enforce your sensitivity policy.
-
-    ```powershell
-    Set-AIPScannerContentScanJob -Schedule Always -Enforce On
-    ```
-
-    > [!TIP]
-    > You may want to change other settings on this pane, such as whether file attributes are changed and whether the scanner can relabel files. For more information about the settings available, see the full [PowerShell documentation](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob).
-
-1. Run the [Start-AIPScan]((/powershell/module/azureinformationprotection/start-aipscan) cmdlet to run your content scan job:
-
-    ```PowerShell
-    Start-AIPScan
-    ```
----
-
 The scanner is now scheduled to run continuously. When the scanner works its way through all configured files, it automatically starts a new cycle so that any new and changed files are discovered.
 
 ## Use a DLP policy (public preview)
@@ -478,17 +378,17 @@ Using a Microsoft 365 Data Loss Prevention (DLP) policy enables the scanner to d
 
 - **In the Microsoft 365 compliance center**, determine whether you are just testing your DLP policy or whether you want your rules enforced and your file permissions changed according to those rules. For more information, see [Turn on a DLP policy](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
 
-> [!TIP]
-> Scanning your files, even when just testing the DLP policy, also creates file permission reports. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
->
-
 DLP policies are configured in the Microsoft 365 compliance center, and are supported in Azure Information Protection starting in version [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-dlp-policies-public-preview).
 
 For more information about DLP licensing, see [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started).
 
-**To use a DLP policy with the scanner**:
+> [!TIP]
+> Scanning your files, even when just testing the DLP policy, also creates file permission reports. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
+>
+> To use PowerShell only, see [Use a DLP policy with the scanner - PowerShell only](#use-a-dlp-policy-with-the-scanner---powershell-only).
+>
 
-# [Azure portal](#tab/azure-portal)
+**To use a DLP policy with the scanner**:
 
 1. In the Azure portal, navigate to your content scan job. For more information, see [Create a content scan job](#create-a-content-scan-job).
 
@@ -502,16 +402,6 @@ For more information about DLP licensing, see [Get started with the data loss pr
 
     This option enables the scanner to reduce the exposure of any files found in this repository, which match the DLP policy, to the repository owner defined.
 
-# [PowerShell only](#tab/powershell-only)
-
-1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) cmdlet again with the **-EnableDLP** parameter set to **On**, and with a specific repository owner defined.
-
-    For example:
-
-    ```powershell
-    Set-AIPScannerContentScanJob -EnableDLP On -RepositoryOwner 'domain\user'
-    ```
----
 ### DLP policies and *make private* actions
 
 If you are using a DLP policy with a *make private* action, and are also planning to use the scanner to automatically label your files, we recommend that you also define the unified labeling client's [**UseCopyAndPreserveNTFSOwner**](rms-client/clientv2-admin-guide-customizations.md#preserve-ntfs-owners-during-labeling-public-preview) advanced setting.
@@ -649,9 +539,128 @@ Additional factors that affect the scanner performance include:
 |**Files being scanned**     |- With the exception of Excel files, Office files are more quickly scanned than PDF files. <br /><br />- Unprotected files are quicker to scan than protected files. <br /><br />- Large files obviously take longer to scan than small files.         |
 | | |
 
+## Use PowerShell to configure and install the scanner
+
+This section describes how to configure and install the AIP on-premises scanner when you don't have access to the Azure portal, and must use PowerShell only.
+
+For more information, see [Supported PowerShell cmdlets](#supported-powershell-cmdlets).
+
+**To configure and install your scanner**:
+
+1. Start with PowerShell closed. If you've previously installed the AIP client and scanner, make sure that the **AIPScanner** service is stopped.
+
+1. Open a Windows PowerShell session with the **Run as an administrator** option.
+
+1. Run the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication?view=azureipps) command to authenticate:
+
+    ```powershell
+    Set-AIPAuthentication
+    ```
+
+    When prompted, enter credentials for an account with one of the following administrator roles:
+
+    - **Compliance administrator**
+    - **Compliance data administrator**
+    - **Security administrator**
+    - **Global administrator**
+
+1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/install-aipscanner?view=azureipps) command to install your scanner on your SQL server instance. 
+
+    Define a name for your cluster, using the following naming syntax: `AIPScannerUL_<cluster_name>`. For example:
+
+    ```powershell
+    Install-AIPScanner –SqlServerInstance localhost\sqlexpress -Cluster AIPScannerUL_<cluster_name>
+    ```
+
+1. Run the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the scanner to function in offline mode. Run:
+
+    ```powershell
+    Set-AIPScannerConfiguration -OnlineConfiguration Off
+    ```
+
+1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob?view=azureipps) cmdlet to create a default content scan job. Run:
+
+    ```powershell
+    Set-AIPScannerContentScanJob -Schedule Manual -DiscoverInformationTypes PolicyOnly -Enforce Off -DefaultLabelType PolicyDefault -RelabelFiles Off -PreserveFileDetails On -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp' -DefaultOwner <account running the scanner>
+    ```
+
+    The syntax above configures the following settings while you continue the configuration:
+
+    - Keeps the scanner run scheduling to *manual*
+    - Sets the information types to be discovered based on the sensitivity labeling policy
+    - Does *not* enforce a sensitivity labeling policy
+    - Automatically labels files based on content, using the default label defined for the sensitivity labeling policy
+    - Does *not* allow for relabeling files
+    - Preserves file details while scanning and auto-labeling, including *date modified*, *last modified*, and *modified by* values
+    - Sets the scanner to exclude .msg and .tmp files when running
+    - Sets the default owner to the account you want to use when running the scanner
+
+1. Define the repositories you want to scan in your content scan job. For example, run:
+
+    ```powershell
+    Set-AIPScannerRepository -OverrideContentScanJob Off -Path 'c:\repoToScan'
+    ```
+
+    - For a network share, use `\\Server\Folder`.
+    - For a SharePoint library, use `http://sharepoint.contoso.com/Shared%20Documents/Folder`.
+    - For a local path: `C:\Folder`
+    - For a UNC path: `\\Server\Folder`
+
+    > [!NOTE]
+    > Wildcards are not supported and WebDav locations are not supported.
+    >
+
+    If you add a SharePoint path for **Shared Documents**:
+    - Specify **Shared Documents** in the path when you want to scan all documents and all folders from Shared Documents.
+    For example: `http://sp2013/SharedDocuments`
+    - Specify **Documents** in the path when you want to scan all documents and all folders from a subfolder under Shared Documents.
+    For example: `http://sp2013/Documents/SalesReports`
+    - Or, specify only the **FQDN** of your Sharepoint, for example `http://sp2013` to [discover and scan all SharePoint sites and subsites under a specific URL](deploy-aip-scanner-prereqs.md#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url) and subtitles under this URL. Grant scanner **Site Collector Auditor** rights to enable this.
+
+
+    Use the following syntax when adding SharePoint paths:
+
+    |Path  |Syntax  |
+    |---------|---------|
+    |**Root path**     | `http://<SharePoint server name>` <br /><br />Scans all sites, including any site collections allowed for the scanner user. <br />Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover root content        |
+    |**Specific SharePoint subsite or collection**     | One of the following: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
+    |**Specific SharePoint library**     | One of the following: <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
+    |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
+    | | |
+
+### Configure the scanner to apply classification and protection - PowerShell only
+
+1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) cmdlet to update your content scan job to set your scheduling to always and enforce your sensitivity policy.
+
+    ```powershell
+    Set-AIPScannerContentScanJob -Schedule Always -Enforce On
+    ```
+
+    > [!TIP]
+    > You may want to change other settings on this pane, such as whether file attributes are changed and whether the scanner can relabel files. For more information about the settings available, see the full [PowerShell documentation](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob).
+
+1. Run the [Start-AIPScan]((/powershell/module/azureinformationprotection/start-aipscan) cmdlet to run your content scan job:
+
+    ```PowerShell
+    Start-AIPScan
+    ```
+
+The scanner is now scheduled to run continuously. When the scanner works its way through all configured files, it automatically starts a new cycle so that any new and changed files are discovered.
+
+### Use a DLP policy with the scanner - PowerShell only
+
+1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) cmdlet again with the **-EnableDLP** parameter set to **On**, and with a specific repository owner defined.
+
+    For example:
+
+    ```powershell
+    Set-AIPScannerContentScanJob -EnableDLP On -RepositoryOwner 'domain\user'
+    ```
+
+
 ## Supported PowerShell cmdlets
 
-This section lists PowerShell cmdlets supported for the Azure Information Protection scanner.
+This section lists PowerShell cmdlets supported for the Azure Information Protection scanner and instructions for configuring and installing the scanner with PowerShell only.
 
 Supported cmdlets for the scanner include:
 
