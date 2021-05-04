@@ -32,15 +32,16 @@ ms.custom: admin
 
 This article describes how to configure and install the Azure Information Protection unified labeling, on-premises scanner.
 
-## Overview
-
-Before you start, verify that your system complies with the [required prerequisites](deploy-aip-scanner-prereqs.md).
-
 > [!TIP]
 > While most customers will perform these procedures in the **Azure Information Protection** area of the Azure portal, you may need to work in PowerShell only.
 >
 > For example, if you are working in an environment without access to the Azure portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), authenticate to the [AzureInformationProtection](/powershell/module/azureinformationprotection) PowerShell module, and then continue with [instructions in this article for PowerShell only](#use-powershell-to-configure-and-install-the-scanner).
 >
+
+## Overview
+
+Before you start, verify that your system complies with the [required prerequisites](deploy-aip-scanner-prereqs.md).
+
 
 To use the Azure portal, use the following steps:
 

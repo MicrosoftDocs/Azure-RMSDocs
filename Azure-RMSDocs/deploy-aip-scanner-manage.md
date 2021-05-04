@@ -39,10 +39,11 @@ Use other steps detailed below to manage your scans moving forward.
 
 For more information, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
-> [!NOTE]
-> Most customers will perform these procedures in the **Azure Information Protection** area of the Azure portal. If you are working in an environment without access to the Azure portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), authenticate to the [AzureInformationProtection](/powershell/module/azureinformationprotection) PowerShell module, and then continue with instructions in this article for PowerShell only.
+> [!TIP]
+> While most customers will perform these procedures in the **Azure Information Protection** area of the Azure portal, you may need to work in PowerShell only.
 >
-
+> For example, if you are working in an environment without access to the Azure portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), authenticate to the [AzureInformationProtection](/powershell/module/azureinformationprotection) PowerShell module, and then continue with instructions in this article for PowerShell only.
+>
 ## Run a discovery cycle and view reports for the scanner
 
 Use the following procedure after you've [configured and installed your scanner](deploy-aip-scanner-configure-install.md) to get an initial understanding of your content.
