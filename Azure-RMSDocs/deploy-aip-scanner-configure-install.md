@@ -42,7 +42,6 @@ This article describes how to configure and install the Azure Information Protec
 
 Before you start, verify that your system complies with the [required prerequisites](deploy-aip-scanner-prereqs.md).
 
-
 To use the Azure portal, use the following steps:
 
 1. [Configure the scanner settings](#configure-the-scanner-settings)
