@@ -259,7 +259,7 @@ To support disconnected or Azure China 21Vianet scanner servers, we've added the
 
 The [**Set-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery) cmdlet was also added to provide additional support, enabling you to update the installation settings for the Network Discovery service via PowerShell.
 
-For more information, see [When the scanner server cannot have internet connectivity](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) and [Configure the scanner](../deploy-aip-scanner-configure-install.md#configure-the-scanner).
+For more information, see [When the scanner server cannot have internet connectivity](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) and [Configure the scanner](../deploy-aip-scanner-configure-install.md#configure-the-scanner-settings).
 
 ### Support for NFS repositories in content scan jobs (Public preview)
 
