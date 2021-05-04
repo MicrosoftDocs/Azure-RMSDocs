@@ -38,7 +38,7 @@ Before you start, verify that your system complies with the [required prerequisi
 
 When you're ready, continue with the following steps:
 
-1. [Configure the scanner in the Azure portal](#configure-the-scanner)
+1. [Configure the scanner settings](#configure-the-scanner)
 
 1. [Install the scanner](#install-the-scanner)
 
@@ -59,13 +59,11 @@ Then, perform the following configuration procedures as needed for your system:
 
 For more information, see also [Supported PowerShell cmdlets](#supported-powershell-cmdlets).
 
-## Configure the scanner
+## Configure and install the scanner
 
-Before you install the scanner, or upgrade it from an older general availability version, configure or verify your scanner settings in the Azure Information Protection area of the Azure portal.
+Before you install the scanner, or upgrade it from an older general availability version, configure or verify your scanner settings.
 
-> [!NOTE]
-> If you are working in an environment without access to the Azure portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), authenticate to the AzureInformationProtection PowerShell module, and then continue with instructions in the following sections for PowerShell only.
->
+Most customers will perform these procedures in the **Azure Information Protection** area of the Azure portal. If you are working in an environment without access to the Azure portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), authenticate to the [AzureInformationProtection](/powershell/module/azureinformationprotection/?view=azureipps) PowerShell module, and then continue with instructions in the following sections for PowerShell only.
 
 # [Azure portal](#tab/azure-portal)
 
@@ -264,16 +262,56 @@ Back on the **Azure Information Protection - Content scan job** pane, your conte
 
 You're now ready to install the scanner with the content scanner job that you've created. Continue with [Install the scanner](#install-the-scanner).
 
+### Install the scanner
+
+After you've [configured the Azure Information Protection scanner](#configure-the-scanner), perform the steps below to install the scanner. This procedure is performed fully in PowerShell.
+
+1. Sign in to the Windows Server computer that will run the scanner. Use an account that has local administrator rights and that has permissions to write to the SQL Server master database.
+
+    > [!IMPORTANT]
+    > You must have the AIP unified labeling client installed on your machine before installing the scanner.
+    >
+    > For more information, see [Prerequisites for installing and deploying the Azure Information Protection scanner](deploy-aip-scanner-prereqs.md).
+    >
+
+1. Open a Windows PowerShell session with the **Run as an administrator** option.
+
+1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner, and the scanner cluster name that you [specified in the preceding section](#create-a-scanner-cluster):
+
+    ```PowerShell
+    Install-AIPScanner -SqlServerInstance <name> -Cluster <cluster name>
+    ```
+
+    Examples, using the scanner cluster name of **Europe**:
+
+    - For a default instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster Europe`
+
+    - For a named instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Cluster Europe`
+
+    - For SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster Europe`
+
+    When you are prompted, provide the Active Directory credentials for the scanner service account.
+
+    Use the following syntax: `\<domain\user name>`. For example: `contoso\scanneraccount`
+
+1. Verify that the service is now installed by using **Administrative Tools** > **Services**.
+
+    The installed service is named **Azure Information Protection Scanner** and is configured to run by using the scanner service account that you created.
+
+Now that you have installed the scanner, you need to [get an Azure AD token for the scanner](#get-an-azure-ad-token-for-the-scanner) service account to authenticate, so that the scanner can run unattended.
+
 # [PowerShell only](#tab/powershell-only)
 
 **To configure your scanner**:
 
-1. If you do not have access to the Azure portal, open a Windows PowerShell session with the **Run as an administrator** option.
+1. Start with PowerShell closed. If you've previously installed the AIP client and scanner, make sure that the **AIPScanner** service is stopped.
 
-1. Run the following command to authenticate:
+1. Open a Windows PowerShell session with the **Run as an administrator** option.
+
+1. Run the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication?view=azureipps) command to authenticate:
 
     ```powershell
-    $scanner_account_creds= Get-Credential
+    Set-AIPAuthentication
     ```
 
     When prompted, enter credentials for an account with one of the following administrator roles:
@@ -283,21 +321,21 @@ You're now ready to install the scanner with the content scanner job that you've
     - **Security administrator**
     - **Global administrator**
 
+1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/install-aipscanner?view=azureipps) command to install your scanner on your SQL server instance. 
+
+    Define a name for your cluster, using the following naming syntax: `AIPScannerUL_<cluster_name>`. For example:
+
+    ```powershell
+    Install-AIPScanner –SqlServerInstance localhost\sqlexpress -Cluster AIPScannerUL_<cluster_name>
+    ```
+
 1. Run the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the scanner to function in offline mode. Run:
 
     ```powershell
     Set-AIPScannerConfiguration -OnlineConfiguration Off
     ```
 
-1. Run the [Set-AIPScanner](/powershell/module/azureinformationprotection/set-aipscanner) cmdlet to create a scanner cluster with a meaningful name, using the following naming syntax: `AIPScannerUL_<cluster_name>`. 
-
-    For example:
-
-    ```powershell
-    Set-AIPScanner -Cluster AIPScannerUL_EU
-    ```
-
-1. Run the Set-AIPScannerContentScanJob cmdlet to create a default content scan job. Run:
+1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob?view=azureipps) cmdlet to create a default content scan job. Run:
 
     ```powershell
     Set-AIPScannerContentScanJob -Schedule Manual -DiscoverInformationTypes PolicyOnly -Enforce Off -DefaultLabelType PolicyDefault -RelabelFiles Off -PreserveFileDetails On -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp' -DefaultOwner <account running the scanner>
@@ -348,43 +386,7 @@ You're now ready to install the scanner with the content scanner job that you've
     | | |
 
 ---
-## Install the scanner
 
-After you've [configured the Azure Information Protection scanner](#configure-the-scanner), perform the steps below to install the scanner. This procedure is performed fully in PowerShell.
-
-1. Sign in to the Windows Server computer that will run the scanner. Use an account that has local administrator rights and that has permissions to write to the SQL Server master database.
-
-    > [!IMPORTANT]
-    > You must have the AIP unified labeling client installed on your machine before installing the scanner.
-    >
-    > For more information, see [Prerequisites for installing and deploying the Azure Information Protection scanner](deploy-aip-scanner-prereqs.md).
-    >
-
-1. Open a Windows PowerShell session with the **Run as an administrator** option.
-
-1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner, and the scanner cluster name that you [specified in the preceding section](#create-a-scanner-cluster):
-
-    ```PowerShell
-    Install-AIPScanner -SqlServerInstance <name> -Cluster <cluster name>
-    ```
-
-    Examples, using the scanner cluster name of **Europe**:
-
-    - For a default instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster Europe`
-
-    - For a named instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Cluster Europe`
-
-    - For SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster Europe`
-
-    When you are prompted, provide the Active Directory credentials for the scanner service account.
-
-    Use the following syntax: `\<domain\user name>`. For example: `contoso\scanneraccount`
-
-1. Verify that the service is now installed by using **Administrative Tools** > **Services**.
-
-    The installed service is named **Azure Information Protection Scanner** and is configured to run by using the scanner service account that you created.
-
-Now that you have installed the scanner, you need to [get an Azure AD token for the scanner](#get-an-azure-ad-token-for-the-scanner) service account to authenticate, so that the scanner can run unattended.
 
 ## Get an Azure AD token for the scanner
 

@@ -39,6 +39,10 @@ Use other steps detailed below to manage your scans moving forward.
 
 For more information, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
+> [!NOTE]
+> Most customers will perform these procedures in the **Azure Information Protection** area of the Azure portal. If you are working in an environment without access to the Azure portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), authenticate to the [AzureInformationProtection](/powershell/module/azureinformationprotection/?view=azureipps) PowerShell module, and then continue with instructions in this article for PowerShell only.
+> 
+
 ## Run a discovery cycle and view reports for the scanner
 
 Use the following procedure after you've [configured and installed your scanner](deploy-aip-scanner-configure-install.md) to get an initial understanding of your content.
@@ -77,11 +81,18 @@ If you don't see any labels applied, check that your label configuration include
 
 If the results are still not as you expect, you might need to reconfigure the conditions that you specified for your labels. If that's the case, reconfigure the conditions as needed, and repeat this procedure until you are satisfied with the results. Then, update your configuration automatically, and optionally protection.
 
-### Viewing updates in the Azure portal
+### Viewing scanner updates
 
-Scanners send this information to Azure Information Protection every five minutes, so that you can view the results in near real time from the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md).
+Scanners send collected data information to Azure Information Protection every five minutes, so that you can view the results in near real time from the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md).
 
 The Azure portal displays information about the last scan only. If you need to see the results of previous scans, return to the reports that are stored on the scanner computer, in the %*localappdata*%\Microsoft\MSIP\Scanner\Reports folder.
+
+> [!NOTE]
+> The **%*localappdata*%\Microsoft\MSIP\** folder includes all AIP client logs, including scanner logs, as well as the scanner reports. 
+> Scanner reports include .csv files, with all the scan operations and details for each scanned file. When a scan is completed, a **Summary_<x>.txt** file is created with the scan summary.
+>
+
+If you are working in PowerShell only, run the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus?view=azureipps) command to verify the scanner status.
 
 ### Changing log levels or locations
 
