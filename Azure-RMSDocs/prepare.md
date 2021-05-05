@@ -194,6 +194,10 @@ In most cases, the value for UserPrincipalName matches one of the values in the 
 >
 > For example: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
 
+> [!NOTE]
+> With UPN changes for users, there will be a loss of business continuity for at least 24 hours or until the UPN changes are properly reflected in the system.
+> 
+
 ### Confirm group accounts are ready for Azure Information Protection
 
 To confirm group accounts, use the following command:
