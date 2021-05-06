@@ -168,7 +168,6 @@ If you're unable to open your protected PDF using the recommended reader, the do
 
     - [Azure Information Protection app](mobile-app-faq.md)
     - Foxit MobilePDF with RMS
-    - GigaTrust App for Android
 
 - **iOS**:
 
