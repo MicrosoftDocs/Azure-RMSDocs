@@ -513,5 +513,5 @@ For more information about installing and using the unified labeling client:
 
 For information about new features in the Microsoft 365 compliance center, see:
 
-- [What's new in Microsoft 365 compliance?](https://docs.microsoft.com/microsoft-365/compliance/whats-new)
+- [What's new in Microsoft 365 compliance?](/microsoft-365/compliance/whats-new)
 - [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=Microsoft%2CInformation%2CProtection)
