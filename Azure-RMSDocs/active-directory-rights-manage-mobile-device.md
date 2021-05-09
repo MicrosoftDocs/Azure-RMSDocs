@@ -216,7 +216,7 @@ Set-AdfsClient -TargetClientId d3590ed6-52b3-4102-aeff-aad2292ab01c -RedirectUri
 ### Specifying the DNS SRV records for the AD RMS mobile device extension
 
 You must create DNS SRV records for each email domain that your users use. If all your users use child domains from a single parent domain, and all users from this contiguous namespace use the same RMS cluster, you can use just one SRV record in the parent domain, and RMS will find the appropriate DNS records.
-The SRV records have the following format: _rmsdisco._http._tcp. \<emailsuffix>\<portnumber>\<RMSClusterFQDN>
+The SRV records have the following format: `_rmsdisco._http._tcp.<emailsuffix> <portnumber> <RMSClusterFQDN>`
 
 > [!NOTE]
 > Specify 443 for the \<portnumber>. Although can you specify a different port number in DNS, devices using the mobile device extension will always use 443.
