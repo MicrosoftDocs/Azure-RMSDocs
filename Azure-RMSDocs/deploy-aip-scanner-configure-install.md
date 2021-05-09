@@ -520,7 +520,7 @@ Use the following options and guidance to help you optimize scanner performance:
 |---------|---------|
 |**Have a high speed and reliable network connection between the scanner computer and the scanned data store**     |  For example, place the scanner computer in the same LAN, or preferably, in the same network segment as the scanned data store. <br /><br />The quality of the network connection affects the scanner performance because, to inspect the files, the scanner transfers the contents of the files to the computer running the scanner service. <br /><br />Reducing or eliminating  the network hops required for the data to travel also reduces the load on your network.      |
 |**Make sure the scanner computer has available processor resources**     | Inspecting the file contents and encrypting and decrypting files are processor-intensive actions. <br /><br />Monitor the typical scanning cycles for your specified data stores to identify whether a lack of processor resources is negatively affecting the scanner performance.        |
-|**Install multiple instances of the scanner** | The Azure Information Protection scanner supports multiple configuration databases on the same SQL server instance when you specify a custom cluster name for the scanner. <br /><br />Multiple scanners can also share the same cluster, resulting in quicker scanning times.|
+|**Install multiple instances of the scanner** | The Azure Information Protection scanner supports multiple configuration databases on the same SQL server instance when you specify a custom cluster name for the scanner. <br /><br />**Tip**: Multiple scanners can also share the same cluster, resulting in quicker scanning times. If you plan to install the scanner on multiple machines with the same database instance, and want your scanners to run in parallel, you must install all your scanners using the same cluster name.|
 |**Check your alternative configuration usage** |The scanner runs more quickly when you use the [alternative configuration](#use-the-scanner-with-alternative-configurations) to apply a default label to all files because the scanner does not inspect the file contents. <br/><br />The scanner runs more slowly when you use the [alternative configuration](#use-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.|
 | | |
 
@@ -564,13 +564,17 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
     - **Security administrator**
     - **Global administrator**
 
-1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/install-aipscanner) command to install your scanner on your SQL server instance. 
+1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/install-aipscanner) command to install your scanner on your SQL server instance, with the **Cluster** parameter to define your cluster name.
 
-    Define a name for your cluster, using the following naming syntax: `AIPScannerUL_<cluster_name>`. For example:
+    For example:
 
     ```powershell
     Install-AIPScanner –SqlServerInstance localhost\sqlexpress -Cluster AIPScannerUL_<cluster_name>
     ```
+
+    > [!TIP]
+    > If you plan to install the scanner on multiple machines with the same database instance, and want your scanners to run in parallel, you must install all your scanners using the same cluster name.
+    >
 
 1. Run the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the scanner to function in offline mode. Run:
 
@@ -578,7 +582,9 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
     Set-AIPScannerConfiguration -OnlineConfiguration Off
     ```
 
-1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) cmdlet to create a default content scan job. Run:
+1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) cmdlet to create a default content scan job. 
+
+    The only required parameter in the **Set-AIPScannerContentScanJob** cmdlet is **Enforce**. However, you may want to define other settings for your content scan job at this time. For example:
 
     ```powershell
     Set-AIPScannerContentScanJob -Schedule Manual -DiscoverInformationTypes PolicyOnly -Enforce Off -DefaultLabelType PolicyDefault -RelabelFiles Off -PreserveFileDetails On -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp' -DefaultOwner <account running the scanner>
@@ -595,11 +601,13 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
     - Sets the scanner to exclude .msg and .tmp files when running
     - Sets the default owner to the account you want to use when running the scanner
 
-1. Define the repositories you want to scan in your content scan job. For example, run:
+1. Use the [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository) cmdlet to define the repositories you want to scan in your content scan job. For example, run:
 
     ```powershell
-    Set-AIPScannerRepository -OverrideContentScanJob Off -Path 'c:\repoToScan'
+    Add-AIPScannerRepository -OverrideContentScanJob Off -Path 'c:\repoToScan'
     ```
+
+    Use one of the following syntaxes, depending on the type of repository you're adding:
 
     - For a network share, use `\\Server\Folder`.
     - For a SharePoint library, use `http://sharepoint.contoso.com/Shared%20Documents/Folder`.
@@ -609,6 +617,7 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
     > [!NOTE]
     > Wildcards are not supported and WebDav locations are not supported.
     >
+    > To modify the repository later on, use the [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) cmdlet instead. 
 
     If you add a SharePoint path for **Shared Documents**:
     - Specify **Shared Documents** in the path when you want to scan all documents and all folders from Shared Documents.
@@ -639,7 +648,7 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
     > [!TIP]
     > You may want to change other settings on this pane, such as whether file attributes are changed and whether the scanner can relabel files. For more information about the settings available, see the full [PowerShell documentation](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob).
 
-1. Run the [Start-AIPScan]((/powershell/module/azureinformationprotection/start-aipscan) cmdlet to run your content scan job:
+1. Run the [Start-AIPScan](/powershell/module/azureinformationprotection/start-aipscan) cmdlet to run your content scan job:
 
     ```PowerShell
     Start-AIPScan
