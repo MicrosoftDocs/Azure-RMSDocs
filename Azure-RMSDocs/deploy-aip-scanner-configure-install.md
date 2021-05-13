@@ -331,12 +331,11 @@ For more information, see [How to label files non-interactively for Azure Inform
     Acquired application access token on behalf of CONTOSO\scanner.
     ```
 
-> [!TIP]
-> If your scanner service account cannot be granted the **Log on locally** right for the installation, use the *OnBehalfOf* parameter with [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), as described in [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+    > [!TIP]
+    > If your scanner service account cannot be granted the **Log on locally** right for the installation, use the *OnBehalfOf* parameter with [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), as described in [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+    >
 
-The scanner now has a token to authenticate to Azure AD. This token is valid for one year, two years, or never, according to your configuration of the **Web app /API** client secret in Azure AD.
-
-When the token expires, you must repeat this procedure.
+The scanner now has a token to authenticate to Azure AD. This token is valid for one year, two years, or never, according to your configuration of the **Web app /API** client secret in Azure AD. When the token expires, you must repeat this procedure.
 
 You're now ready to run your first scan in discovery mode. For more information, see [Run a discovery cycle and view reports for the scanner](deploy-aip-scanner-manage.md#run-a-discovery-cycle-and-view-reports-for-the-scanner).
 
@@ -344,6 +343,10 @@ Once you've run your initial discovery scan, continue with [Configure the scanne
 
 > [!NOTE]
 > For more information, see [How to label files non-interactively for Azure Information Protection](rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
+
+> [!IMPORTANT]
+> If you are configuring and installing your scanner using PowerShell instead of the scanner pages in the Azure portal, continue with the next step in [Use PowerShell to configure the scanner](#powershell).
+>
 
 ## Configure the scanner to apply classification and protection
 
@@ -544,7 +547,11 @@ Additional factors that affect the scanner performance include:
 
 This section describes the steps required to configure and install the AIP on-premises scanner when you don't have access to the scanner pages in the Azure portal, and must use PowerShell only.
 
-Some steps require Powershell whether or not you are able to access the scanner pages in the Azure portal, and are identical. For these steps, see the earlier instructions in this article as indicated.
+> [!IMPORTANT]
+> - Some steps require Powershell whether or not you are able to access the scanner pages in the Azure portal, and are identical. For these steps, see the earlier instructions in this article as indicated.
+>
+> - If you are working with the scanner for Azure China 21Vianet, additional steps are required in addition to the instructions detailed here. For more information, see [Azure Information Protection support for Office 365 operated by 21Vianet](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection).
+>
 
 For more information, see [Supported PowerShell cmdlets](#supported-powershell-cmdlets).
 
@@ -554,20 +561,6 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
 
 1. Open a Windows PowerShell session with the **Run as an administrator** option.
 
-1. Run the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) command to authenticate:
-
-    ```powershell
-    Set-AIPAuthentication
-    ```
-
-    When prompted, enter credentials for an account with one of the following administrator roles:
-
-    - **Compliance administrator**
-    - **Compliance data administrator**
-    - **Security administrator**
-    - **Global administrator**
-
-
 1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/install-aipscanner) command to install your scanner on your SQL server instance, with the **Cluster** parameter to define your cluster name.
 
     This step is identical whether or not you are able to access the scanner pages in the Azure portal. For more information, see the earlier instructions in this article: [Install the scanner](#install-the-scanner)
@@ -576,7 +569,7 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
 
     This step is identical whether or not you are able to access the scanner pages in the Azure portal. For more information, see the earlier instructions in this article: [Get an Azure AD token for the scanner](#get-an-azure-ad-token-for-the-scanner).
 
-1. Run the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the scanner to function in offline mode. Run:
+1. <a name="powershell"></a>Run the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the scanner to function in offline mode. Run:
 
     ```powershell
     Set-AIPScannerConfiguration -OnlineConfiguration Off
