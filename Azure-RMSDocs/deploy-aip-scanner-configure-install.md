@@ -640,6 +640,7 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
 
 Continue with the following steps as needed:
 
+- [Configure AIP for customers in China](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection)
 - [Run a discovery cycle and view reports for the scanner](deploy-aip-scanner-manage.md#run-a-discovery-cycle-and-view-reports-for-the-scanner)
 - [Use PowerShell to configure the scanner to apply classification and protection](#use-powershell-to-configure-the-scanner-to-apply-classification-and-protection)
 - [Use PowerShell to configure a DLP policy with the scanner](#use-powershell-to-configure-a-dlp-policy-with-the-scanner)
