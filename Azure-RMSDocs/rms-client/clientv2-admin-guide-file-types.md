@@ -210,7 +210,7 @@ By default, the scanner also excludes the same file types as the Azure Informati
 
 For the scanner, the following file types are also excluded: .msg, .rtf, and .rar
 
-To change the file types included or excluded for file inspection by the scanner, configure the **File types to scan** in the [content scan job](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+To change the file types included or excluded for file inspection by the scanner, configure the **File types to scan** in the [content scan job](../deploy-aip-scanner-configure-install.md#configure-the-scanner-settings).
 
 > [!NOTE]
 > If you include .rtf files for scanning, we recommend that you carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted.
