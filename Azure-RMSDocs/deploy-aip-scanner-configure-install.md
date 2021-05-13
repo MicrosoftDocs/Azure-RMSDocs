@@ -1,10 +1,10 @@
 ---
 # required metadata
 
-title: Install and configure the Azure Information Protection (AIP) unified labeling scanner
+title: Install and configure the Azure Ifnformation Protection (AIP) unified labeling scanner
 description: Learn how to install and configure the Azure Information Protection (AIP) unified labeling scanner to discover, classify, and protect files on data stores.
 author: batamig
-ms.author: bagol
+ms.author: bagolf
 manager: rkarlin
 ms.date: 04/26/2021
 ms.topic: conceptual
@@ -572,7 +572,7 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
 
     This step is identical whether or not you are able to access the scanner pages in the Azure portal. For more information, see the earlier instructions in this article: [Install the scanner](#install-the-scanner)
 
-1. Get an Azure token to use with your scanner, and then re-authenticate. Do this using the same process you'd use if you were completing this entire process in the Azure portal.
+1. Get an Azure token to use with your scanner, and then re-authenticate. 
 
     This step is identical whether or not you are able to access the scanner pages in the Azure portal. For more information, see the earlier instructions in this article: [Get an Azure AD token for the scanner](#get-an-azure-ad-token-for-the-scanner).
 
