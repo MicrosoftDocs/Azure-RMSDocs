@@ -337,16 +337,29 @@ For more information, see [How to label files non-interactively for Azure Inform
 
 The scanner now has a token to authenticate to Azure AD. This token is valid for one year, two years, or never, according to your configuration of the **Web app /API** client secret in Azure AD. When the token expires, you must repeat this procedure.
 
+Continue using one of the following steps, depending on whether you're using the Azure portal to configure your scanner, or PowerShell only:
+
+# [Azure portal only](#tab/azure-portal-only)
+
 You're now ready to run your first scan in discovery mode. For more information, see [Run a discovery cycle and view reports for the scanner](deploy-aip-scanner-manage.md#run-a-discovery-cycle-and-view-reports-for-the-scanner).
 
 Once you've run your initial discovery scan, continue with [Configure the scanner to apply classification and protection](#configure-the-scanner-to-apply-classification-and-protection).
 
+# [PowerShell only](#tab/powershell-only)
+
+If you are configuring and installing your scanner using PowerShell instead of the scanner pages in the Azure portal, continue with the next step in [Use PowerShell to configure the scanner](#powershell).
+
+Then:
+
+- [Run a discovery cycle and view reports for the scanner](deploy-aip-scanner-manage.md#run-a-discovery-cycle-and-view-reports-for-the-scanner)
+- [Use PowerShell to configure the scanner to apply classification and protection](#use-powershell-to-configure-the-scanner-to-apply-classification-and-protection)
+- [Use PowerShell to configure a DLP policy with the scanner](#use-powershell-to-configure-a-dlp-policy-with-the-scanner)
+
+---
+
 > [!NOTE]
 > For more information, see [How to label files non-interactively for Azure Information Protection](rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
 
-> [!IMPORTANT]
-> If you are configuring and installing your scanner using PowerShell instead of the scanner pages in the Azure portal, continue with the next step in [Use PowerShell to configure the scanner](#powershell).
->
 
 ## Configure the scanner to apply classification and protection
 
@@ -485,8 +498,6 @@ Configure the following settings:
 |**Enforce default label**     | Select to have the default label applied to all files, even if they are already labeled.        |
 | | |
 
-Sample PowerShell command:
-
 ### Remove existing labels from all files in a data repository
 
 In this configuration, all existing labels are removed, including protection, if protection was applied with the label. Protection applied independently of a label is retained.
@@ -500,8 +511,6 @@ Configure the following settings:
 |**Relabel files** | Set to **On**, with the **Enforce default label** checkbox selected|
 | | |
 
-Sample PowerShell command:
-
 ### Identify all custom conditions and known sensitive information types
 
 This configuration enables you to find sensitive information that you might not realize you had, at the expense of scanning rates for the scanner.
@@ -509,8 +518,6 @@ This configuration enables you to find sensitive information that you might not 
 Set the **Info types to be discovered** to **All**.
 
 To identify conditions and information types for labeling, the scanner uses any custom sensitive information types specified, and the list of built-in sensitive information types that are available to select, as defined in your labeling management center.
-
-Sample PowerShell command:
 
 ## Optimize scanner performance
 
@@ -630,6 +637,12 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
     |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
     | | |
 
+
+Continue with the following steps as needed:
+
+- [Run a discovery cycle and view reports for the scanner](deploy-aip-scanner-manage.md#run-a-discovery-cycle-and-view-reports-for-the-scanner)
+- [Use PowerShell to configure the scanner to apply classification and protection](#use-powershell-to-configure-the-scanner-to-apply-classification-and-protection)
+- [Use PowerShell to configure a DLP policy with the scanner](#use-powershell-to-configure-a-dlp-policy-with-the-scanner)
 ### Use PowerShell to configure the scanner to apply classification and protection
 
 1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) cmdlet to update your content scan job to set your scheduling to always and enforce your sensitivity policy.
