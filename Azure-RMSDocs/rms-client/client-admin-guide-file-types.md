@@ -227,7 +227,7 @@ By default, the scanner also excludes the same file types as the Azure Informati
 
 You can change the file types included or excluded for file inspection by the scanner:
 
-- Configure **File types to scan** in the scanner profile, [using the Azure portal](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+- Configure **File types to scan** in the scanner profile, [using the Azure portal](../deploy-aip-scanner-configure-install-classic.md#configure-the-scanner-in-the-azure-portal).
 
 > [!NOTE]
 > If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted. 
