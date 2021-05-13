@@ -63,7 +63,8 @@ Then, perform the following configuration procedures as needed for your system:
 |[Optimize performance](#optimize-scanner-performance)| Guidance to optimize your scanner performance|
 | | |
 
-For more information, see also [Supported PowerShell cmdlets](#supported-powershell-cmdlets).
+If you don't have access to the scanner pages in the Azure portal, configure any scanner settings in PowerShell only. For more information, see [Use PowerShell to configure the scanner](#use-powershell-to-configure-the-scanner) and [Supported PowerShell cmdlets](#supported-powershell-cmdlets).
+
 
 ## Configure the scanner settings
 
@@ -310,9 +311,9 @@ An Azure AD token allows the scanner to authenticate to the Azure Information Pr
 
 For more information, see [How to label files non-interactively for Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
-To get an Azure AD token:
+**To get an Azure AD token**:
 
-1. Return to the Azure portal to create an Azure AD application to specify an access token for authentication.
+1. Open the Azure portal to create an Azure AD application to specify an access token for authentication.
 
 1. From the Windows Server computer, if your scanner service account has been granted the **Log on locally** right for the installation, sign in with this account and start a PowerShell session.
 
@@ -539,9 +540,11 @@ Additional factors that affect the scanner performance include:
 |**Files being scanned**     |- With the exception of Excel files, Office files are more quickly scanned than PDF files. <br /><br />- Unprotected files are quicker to scan than protected files. <br /><br />- Large files obviously take longer to scan than small files.         |
 | | |
 
-## Use PowerShell to configure and install the scanner
+## Use PowerShell to configure the scanner
 
-This section describes how to configure and install the AIP on-premises scanner when you don't have access to the Azure portal, and must use PowerShell only.
+This section describes the steps required to configure and install the AIP on-premises scanner when you don't have access to the scanner pages in the Azure portal, and must use PowerShell only.
+
+Some steps require Powershell whether or not you are able to access the scanner pages in the Azure portal, and are identical. For these steps, see the earlier instructions in this article as indicated.
 
 For more information, see [Supported PowerShell cmdlets](#supported-powershell-cmdlets).
 
@@ -564,17 +567,14 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
     - **Security administrator**
     - **Global administrator**
 
+
 1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/install-aipscanner) command to install your scanner on your SQL server instance, with the **Cluster** parameter to define your cluster name.
 
-    For example:
+    This step is identical whether or not you are able to access the scanner pages in the Azure portal. For more information, see the earlier instructions in this article: [Install the scanner](#install-the-scanner)
 
-    ```powershell
-    Install-AIPScanner –SqlServerInstance localhost\sqlexpress -Cluster AIPScannerUL_<cluster_name>
-    ```
+1. Get an Azure token to use with your scanner, and then re-authenticate. Do this using the same process you'd use if you were completing this entire process in the Azure portal.
 
-    > [!TIP]
-    > If you plan to install the scanner on multiple machines with the same database instance, and want your scanners to run in parallel, you must install all your scanners using the same cluster name.
-    >
+    This step is identical whether or not you are able to access the scanner pages in the Azure portal. For more information, see the earlier instructions in this article: [Get an Azure AD token for the scanner](#get-an-azure-ad-token-for-the-scanner).
 
 1. Run the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the scanner to function in offline mode. Run:
 
@@ -582,7 +582,7 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
     Set-AIPScannerConfiguration -OnlineConfiguration Off
     ```
 
-1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) cmdlet to create a default content scan job. 
+1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) cmdlet to create a default content scan job.
 
     The only required parameter in the **Set-AIPScannerContentScanJob** cmdlet is **Enforce**. However, you may want to define other settings for your content scan job at this time. For example:
 
