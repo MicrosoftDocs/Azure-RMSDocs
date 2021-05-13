@@ -35,7 +35,7 @@ This article describes how to configure and install the Azure Information Protec
 > [!TIP]
 > While most customers will perform these procedures in the **Azure Information Protection** area of the Azure portal, you may need to work in PowerShell only.
 >
-> For example, if you are working in an environment without access to the Azure portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), authenticate to the [AzureInformationProtection](/powershell/module/azureinformationprotection) PowerShell module, and then continue with [instructions in this article for PowerShell only](#use-powershell-to-configure-and-install-the-scanner).
+> For example, if you are working in an environment without access to the Azure portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), follow the instructions in [Use PowerShell to configure the scanner](#use-powershell-to-configure-the-scanner).
 >
 
 ## Overview
@@ -350,7 +350,7 @@ Once you've run your initial discovery scan, continue with [Configure the scanne
 The default settings configure the scanner to run once, and in reporting-only mode. To change these settings, edit the content scan job.
 
 > [!TIP]
-> If you're working in PowerShell only, see [Configure the scanner to apply classification and protection - PowerShell only](#configure-the-scanner-to-apply-classification-and-protection---powershell-only).
+> If you're working in PowerShell only, see [Configure the scanner to apply classification and protection - PowerShell only](#use-powershell-to-configure-the-scanner-to-apply-classification-and-protection).
 >
 
 **To configure the scanner to apply classificaiton and protection**:
@@ -386,7 +386,7 @@ For more information about DLP licensing, see [Get started with the data loss pr
 > [!TIP]
 > Scanning your files, even when just testing the DLP policy, also creates file permission reports. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
 >
-> To use PowerShell only, see [Use a DLP policy with the scanner - PowerShell only](#use-a-dlp-policy-with-the-scanner---powershell-only).
+> To use PowerShell only, see [Use a DLP policy with the scanner - PowerShell only](#use-powershell-to-configure-a-dlp-policy-with-the-scanner).
 >
 
 **To use a DLP policy with the scanner**:
@@ -637,7 +637,7 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
     |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
     | | |
 
-### Configure the scanner to apply classification and protection - PowerShell only
+### Use PowerShell to configure the scanner to apply classification and protection
 
 1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) cmdlet to update your content scan job to set your scheduling to always and enforce your sensitivity policy.
 
@@ -656,7 +656,7 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
 
 The scanner is now scheduled to run continuously. When the scanner works its way through all configured files, it automatically starts a new cycle so that any new and changed files are discovered.
 
-### Use a DLP policy with the scanner - PowerShell only
+### Use PowerShell to configure a DLP policy with the scanner
 
 1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) cmdlet again with the **-EnableDLP** parameter set to **On**, and with a specific repository owner defined.
 
