@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install and configure the Azure Ifnformation Protection (AIP) unified labeling scanner
+title: Install and configure the Azure Information Protection (AIP) unified labeling scanner
 description: Learn how to install and configure the Azure Information Protection (AIP) unified labeling scanner to discover, classify, and protect files on data stores.
 author: batamig
 ms.author: bagol
