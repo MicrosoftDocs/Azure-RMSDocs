@@ -369,7 +369,7 @@ The default settings configure the scanner to run once, and in reporting-only mo
 > If you're working in PowerShell only, see [Configure the scanner to apply classification and protection - PowerShell only](#use-powershell-to-configure-the-scanner-to-apply-classification-and-protection).
 >
 
-**To configure the scanner to apply classificaiton and protection**:
+**To configure the scanner to apply classification and protection**:
 
 1. In the Azure portal, on the **Azure Information Protection - Content scan jobs** pane, select the cluster and content scan job to edit it.
 
