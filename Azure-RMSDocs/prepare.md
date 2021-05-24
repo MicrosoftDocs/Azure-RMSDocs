@@ -187,6 +187,8 @@ In most cases, the value for UserPrincipalName matches one of the values in the 
 
 2. If the UPN is not routable (for example, <strong>ankurroy@contoso.local</strong>), configure alternate login ID for users and instruct them how to sign in to Office by using this alternate login. You must also set a registry key for Office.
 
+    With UPN changes for users, there will be a loss of business continuity for at least 24 hours or until the UPN changes are properly reflected in the system.
+
     For more information, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) and [Office applications periodically prompt for credentials to SharePoint, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
 
 > [!TIP]
