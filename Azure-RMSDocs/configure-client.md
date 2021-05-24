@@ -81,8 +81,6 @@ Additional information for when you add the Azure Information Protection app to 
     https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
     ```
 
-When the Azure Information Protection app is configured for an app protection policy for Android devices, in addition to opening protected text, images, and PDF documents, this app can also open audio and video files. For more information, see [View media files with the Azure Information Protection app](/intune/fundamentals/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app).
-
 ## Next steps
 
 After you have installed and configured Azure Information Protection clients, you might need to learn more about how the client interprets the different usage rights that can be used to protect documents and emails. For more information, see [Configuring usage rights for Azure Information Management](configure-usage-rights.md).
