@@ -501,7 +501,7 @@ To use this advanced property, you'll need to find the shape name in the Word do
 Avoid removing shapes that contain the text that you wish to ignore, by defining the name of all shapes to remove and  avoid checking the text in all shapes, which is a resource-intensive process.
 
 > [!NOTE]
-> If you do not specify Word shapes in this additional advanced property setting, and Word is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) value. 
+> In Microsoft Word, shapes can be removed either by defining the shapes name, or by its text, but not both. If the **WordShapeNameToRemove** property is defined, any configurations defined by the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) value are ignored.
 >
 
 **To find the name of the shape that you're using and wish to exclude**:
