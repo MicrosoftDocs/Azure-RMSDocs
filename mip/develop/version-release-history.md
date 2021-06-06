@@ -70,9 +70,9 @@ Use the following information to see what’s new or changed for a supported rel
 
 ### Breaking Changes
 
-- Changed default audit behavior for tenants where [AIP Analytics](https://docs.microsoft.com/azure/information-protection/reports-aip#:~:text=AIP%20analytics%20also%20enable%20you%20to%20do%20perform,documents%20and%20emails%2C%20and%20track%20document%20classification%20changes.) is enabled. It is now mandatory that in addition to configuring the service-side components of the AIP Analytics feature that you also set the EnableAudit property to true in sensitivity label policies. 
+- Changed default audit behavior for tenants where [AIP Analytics](/azure/information-protection/reports-aip) is enabled. It is now mandatory that in addition to configuring the service-side components of the AIP Analytics feature that you also set the EnableAudit property to true in sensitivity label policies. 
   - `Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="True"}`
-  - Review [this](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configuring-advanced-settings-for-the-client-via-powershell) Docs article for details on setting advanced policy settings.  
+  - Review [this](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configuring-advanced-settings-for-the-client-via-powershell) Docs article for details on setting advanced policy settings.  
 - Added function `GetApplicationScenarioId()` to `FileExecutionState`.
 - Removed `ContentFormat` enum.
 - Added specific errors with categories for a set of errors exposed previously under `NetworkError` via strings/error codes.
