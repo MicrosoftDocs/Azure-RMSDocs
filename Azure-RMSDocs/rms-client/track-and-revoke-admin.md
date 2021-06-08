@@ -6,7 +6,7 @@ description: Describes how administrators can track document access for protecte
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 04/05/2021
+ms.date: 08/06/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -43,7 +43,7 @@ Registering a document for tracking enables [Microsoft 365 global admins](/micro
 
 ## Track document access
 
-Global admins can track access for protected documents via PowerShell using the **ContentID** generated for the protected document during registration.
+Admins with an [Azure Information Protection Administrator](/azure/active-directory/roles/permissions-reference#azure-information-protection-administrator) or [Azure Rights Management Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role can track access for protected documents via PowerShell using the **ContentID** generated for the protected document during registration.
 
 **To view document access details**:
 
