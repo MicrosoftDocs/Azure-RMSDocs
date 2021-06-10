@@ -107,7 +107,7 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 
 |Resource  |Links and description  |
 |---------|---------|
-|**Subscription options and pricing**     |    [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection)     |
+|**Subscription options, pricing, and licensing guidance**     |    [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection) <br><br>[Information Protection licensing guidance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)    |
 |**FAQs and known issues**     | [Frequently asked questions for Azure Information Protection](faqs.md) </br> [Known issues - Azure Information Protection](known-issues.md)       |
 |**Support options**     | [Support options for Azure Information Protection](information-support.md)        |
 |**Yammer**     |  [Azure Information Protection](https://www.yammer.com/AskIPTeam)       |
