@@ -28,7 +28,7 @@ search.appverid:
 
 # What is Azure Information Protection?
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
 >
 
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to discover, classify, and protect documents and emails by applying labels to content.
@@ -107,7 +107,7 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 
 |Resource  |Links and description  |
 |---------|---------|
-|**Subscription options, pricing, and licensing guidance**     |    [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection) <br>[Information Protection licensing guidance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)    |
+|**Subscription options and licensing guidance**     |    [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)    |
 |**FAQs and known issues**     | [Frequently asked questions for Azure Information Protection](faqs.md) </br> [Known issues - Azure Information Protection](known-issues.md)       |
 |**Support options**     | [Support options for Azure Information Protection](information-support.md)        |
 |**Yammer**     |  [Azure Information Protection](https://www.yammer.com/AskIPTeam)       |

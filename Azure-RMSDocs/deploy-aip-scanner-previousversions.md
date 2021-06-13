@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Deploying previous versions of the Azure Information Protection classic client scanner
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
+>***Applies to**: Azure Information Protection, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the scanner from the unified labeling client, see [What is the AIP unified labeling scanner?](deploy-aip-scanner.md).*
 

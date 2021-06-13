@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Tutorial: Configure Azure Information Protection policy settings and create a new label
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: Azure Information Protection*
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 

@@ -24,7 +24,7 @@ ms.custom: admin
 
 # Quickstart: Configure a label for users to easily protect emails that contain sensitive information
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: Azure Information Protection*
 >
 > ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -48,7 +48,7 @@ To complete this quickstart, you need:
 
 |Requirement  |Description  |
 |---------|---------|
-|**A supporting subscription**     |  You'll need a subscription that includes [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br><br>If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
+|**A supporting subscription**     |  You'll need a subscription that includes Azure Information Protection. <br><br>If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
 |**AIP added to the Azure portal**    |  You've added the Azure Information Protection pane to the Azure portal, and confirmed that the protection service is activated. <br><br>For more information, see [Quickstart: Get started in the Azure portal](quickstart-viewpolicy.md).       |
 |**An existing Azure Information Protection label to configure**     | Use one of the default labels, or a label that you've created. For more information, see  [Quickstart: Create a new Azure Information Protection label for specific users](quickstart-label-specificusers.md). |
 |**Classic client installed**    |   To test the new label, you'll need the classic client installed on your computer. <br><br>The Azure Information Protection classic client is being deprecated in March  2021. To deploy the AIP classic client, open a support ticket to get download access.  |
