@@ -28,7 +28,7 @@ ms.custom: admin
 
 # Hold your own key (HYOK) details for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: Azure Information Protection*
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Double Key Encryption](plan-implement-tenant-key.md#double-key-encryption-dke).*
 
