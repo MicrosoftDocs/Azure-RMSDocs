@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Azure Information Protection requirements
 
->****Applies to***: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>****Applies to***: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
 >
 >***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
@@ -43,9 +43,9 @@ Before deploying Azure Information Protection, ensure that your system meets the
 
 ## Subscription for Azure Information Protection
 
-You must have an **Azure Information Protection plan** for classification, labeling, and protection using the Azure Information Protection scanner or client. To verify that your subscription includes the Azure Information Protection features you want to use, check the feature list at [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection).
+You must have an **Azure Information Protection plan** for classification, labeling, and protection using the Azure Information Protection scanner or client. For more information, see the [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection) page.
 
-If you have questions about subscriptions or licensing, do not post them on this page. Instead, see if they are answered in the [frequently asked questions](https://azure.microsoft.com/pricing/details/information-protection#faq) for licensing. If your question is not answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
+If you have questions about subscriptions or licensing, do not post them on this page. Instead, see if they are answered in the [frequently asked questions](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection#faq) for licensing. If your question is not answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
 
 > [!TIP]
 > For a full picture of the Microsoft Information Protection (MIP) licensing requirements per feature, see the [Microsoft 365 Compliance Licensing Comparison spreadsheet](https://opdhsblobprod04.blob.core.windows.net/contents/e0993bf6e82e4fa8ac18b48839521869/93969b96fb41733347b4dbb8bba02771?sv=2018-03-28&sr=b&si=ReadPolicy&sig=JIaks3D97u4pyrS%2Bz6Naqat1v9M9a3Hs2u9m9wY42ww%3D&st=2021-04-12T11%3A01%3A02Z&se=2021-04-13T11%3A11%3A02Z).

@@ -26,7 +26,7 @@ search.appverid:
 
 # Frequently asked questions for Azure Information Protection (AIP)
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -158,11 +158,11 @@ To read more about how Azure Information Protection helps to secure your data, s
 
 ## What subscription do I need for Azure Information Protection and what features are included?
 
-To understand more about AIP subscriptions, see the subscription information and feature list on the [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection) page.
+To understand more about AIP subscriptions, see the [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection) page.
 
 If you have a Microsoft 365 subscription that includes Azure Rights Management data protection, download the [Azure Information Protection licensing datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) for more details about integrating with AIP.
 
-Still have questions about licensing? See if they are answered in the [frequently asked questions for licensing](https://azure.microsoft.com/pricing/details/information-protection#faq) section.
+Still have questions about licensing? See if they are answered in the [frequently asked questions for licensing](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection#faq) section.
 
 ## Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?
 
