@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Azure Information Protection deployment roadmap for protection only
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: Azure Information Protection, [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md).*
 
@@ -55,14 +55,12 @@ Perform the following steps:
 
 ## Confirm that you have a subscription that includes the AIP protection service
 
-Verify that your organization has a subscription that includes the functionality and features you expect. For more information, see the [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection) page.
-
-Assign a license from this subscription to each user in your organization who will protect documents and emails.
+Verify that your organization has a subscription that includes the functionality and features you expect. Assign a license from this subscription to each user in your organization who will protect documents and emails.
 
 > [!IMPORTANT]
-> Do not manually assign user licenses from the free RMS for individuals subscription and do not use this license to administer the Azure Rights Management service for your organization. 
+> Do not manually assign user licenses from the free RMS for individuals subscription and do not use this license to administer the Azure Rights Management service for your organization.
 >
-> These licenses display as **Rights Management Adhoc** in the Microsoft 365 admin center, and **RIGHTSMANAGEMENT_ADHOC** when you run the Azure AD PowerShell cmdlet, [Get-MsolAccountSku](/previous-versions/azure/dn194118(v=azure.100)). 
+> These licenses display as **Rights Management Adhoc** in the Microsoft 365 admin center, and **RIGHTSMANAGEMENT_ADHOC** when you run the Azure AD PowerShell cmdlet, [Get-MsolAccountSku](/previous-versions/azure/dn194118(v=azure.100)).
 >
 > For more information about how the RMS for individuals subscription is automatically granted and assigned to users, see [RMS for individuals and Azure Information Protection](./rms-for-individuals.md).
 

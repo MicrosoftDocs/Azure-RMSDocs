@@ -45,7 +45,7 @@ Before deploying Azure Information Protection, ensure that your system meets the
 
 You must have an **Azure Information Protection plan** for classification, labeling, and protection using the Azure Information Protection scanner or client. For more information, see the [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection) page.
 
-If you have questions about subscriptions or licensing, do not post them on this page. Instead, see if they are answered in the [frequently asked questions](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection#faq) for licensing. If your question is not answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
+If your question is not answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
 
 > [!TIP]
 > For a full picture of the Microsoft Information Protection (MIP) licensing requirements per feature, see the [Microsoft 365 Compliance Licensing Comparison spreadsheet](https://opdhsblobprod04.blob.core.windows.net/contents/e0993bf6e82e4fa8ac18b48839521869/93969b96fb41733347b4dbb8bba02771?sv=2018-03-28&sr=b&si=ReadPolicy&sig=JIaks3D97u4pyrS%2Bz6Naqat1v9M9a3Hs2u9m9wY42ww%3D&st=2021-04-12T11%3A01%3A02Z&se=2021-04-13T11%3A11%3A02Z).

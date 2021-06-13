@@ -162,8 +162,6 @@ To understand more about AIP subscriptions, see the [Microsoft 365 licensing gui
 
 If you have a Microsoft 365 subscription that includes Azure Rights Management data protection, download the [Azure Information Protection licensing datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) for more details about integrating with AIP.
 
-Still have questions about licensing? See if they are answered in the [frequently asked questions for licensing](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection#faq) section.
-
 ## Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?
 
 Global administrators for a Microsoft 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure Information Protection. 
