@@ -14,6 +14,9 @@ PolicyProfile class is the root class for using the Microsoft Information Protec
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
+public static std::shared_ptr<AsyncControl> __CDECL LoadAsync(const Settings& settings, const std::shared_ptr<void>& context) | Starts loading a profile based on the provided settings.
+public static std::shared_ptr<PolicyProfile> __CDECL Load(const Settings& settings);
+public static const char* __CDECL GetVersion() | Get the settings set on the profile.
 public const Settings& GetSettings() const  |  Get the settings set on the profile.
 public std::shared_ptr\<AsyncControl\> ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  Starts list engines operation.
 public std::vector\<std::string\> ListEngines()  |  List of engines.
@@ -26,6 +29,34 @@ public void DeleteEngine(const std::string& engineId)  |  Delete the policy engi
 public void AcquireAuthToken(Cloud cloud, const std::shared_ptr\<AuthDelegate\>& authDelegate) const  |  Trigger an authentication callback.
   
 ## Members
+
+### LoadAsync function
+
+Starts loading a profile based on the provided settings.
+
+Parameters:
+
+* **settings** the profile settings used to load the profile object.
+* **context** a context parameter that will be passed into the observer functions.
+
+PolicyProfile::Observer will be called upon success or failure.
+
+### Load function
+
+Loading a profile based on the provided settings.
+
+Parameters:
+
+* **settings** Settings used by PolicyProfile during its initialization and throughout its lifetime
+
+
+**Returns** Newly created profile
+
+### GetVersion function
+
+Get the library version.
+
+**Returns** a version string
   
 ### GetSettings function
 Get the settings set on the profile.

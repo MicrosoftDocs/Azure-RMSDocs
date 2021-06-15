@@ -13,6 +13,11 @@ ms.date: 04/23/2021
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
+public static std::shared_ptr<ProtectionDescriptorBuilder> CreateFromUserRights(const std::vector<UserRights>& usersAndRights) | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and rights
+public static std::shared_ptr<ProtectionDescriptorBuilder> CreateFromUserRoles(const std::vector<UserRoles>& usersAndRoles) | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and roles
+public static std::shared_ptr<ProtectionDescriptorBuilder> CreateFromTemplate(const std::string& templateId) | Creates a ProtectionDescriptorBuilder whose access permissions are defined by the protection template
+public static std::shared_ptr<ProtectionDescriptorBuilder> CreateFromProtectionDescriptor(const ProtectionDescriptor& protectionDescriptor) | Creates a ProtectionDescriptorBuilder whose access permissions are defined by a protection descriptor
+public static std::shared_ptr<ParsedPublishingLicenseBuilder> Create();
 public void SetDomains(const std::vector\<std::string\>& domains)  |  Sets the license domains.
 public void SetServerPublicCert(const std::string& serverPublicCert)  |  Sets the server public cert.
 public void SetContentId(const std::string& contentId)  |  Sets the content id.
@@ -27,7 +32,56 @@ public void SetIssuedTime(const std::chrono::time_point\<std::chrono::system_clo
 public std::shared_ptr\<ParsedPublishingLicense\> CreateParsedPublishingLicense()  |  Creates a [ParsedPublishingLicense](class_mip_parsedpublishinglicense.md) with the properties set on this object instance.
   
 ## Members
-  
+
+### CreateFromUserRights function
+
+Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and rights
+
+Parameters:
+
+* **usersAndRights** Collection of users-to-rights mappings
+
+**Returns** New ProtectionDescriptorBuilder instance
+
+
+### CreateFromUserRoles function
+
+Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and roles
+
+Parameters:
+
+* **usersAndRoles** Collection of users-to-roles mappings
+
+**Returns** New ProtectionDescriptorBuilder instance
+
+
+### CreateFromTemplate function
+
+Creates a ProtectionDescriptorBuilder whose access permissions are defined by the protection template
+
+Parameters:
+
+* **templateId** protection template ID
+
+**Returns** New ProtectionDescriptorBuilder instance
+
+
+### CreateFromProtectionDescriptor function
+
+Creates a ProtectionDescriptorBuilder whose access permissions are defined by a protection descriptor
+
+Parameters:
+
+* **protectionDescriptor** protection descriptor
+
+**Returns** New ProtectionDescriptorBuilder instance
+
+### Create function
+
+Creates a ParsedPublishingLicenseBuilder
+
+**Returns** New ParsedPublishingLicenseBuilder instance
+
 ### SetDomains function
 Sets the license domains.
 
