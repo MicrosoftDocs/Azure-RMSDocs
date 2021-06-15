@@ -48,5 +48,6 @@ Unknown            | Unknown no permissions failure
 UserNotFound            | Requested user was not found failure
 AccessDenied            | 
 AccessExpired            | 
+
 Category of no permissions error.
 
