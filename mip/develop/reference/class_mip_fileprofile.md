@@ -1,10 +1,10 @@
 ---
 title: class FileProfile 
 description: Documents the fileprofile::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 04/23/2021
 ---
 
@@ -15,6 +15,7 @@ A typical application will only need one Profile.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
+public static std::shared_ptr<AsyncControl> __CDECL LoadAsync(const Settings& settings, const std::shared_ptr<void>& context) | Starts loading a profile based on the provided settings 
 public const Settings& GetSettings() const  |  Returns the profile settings.
 public std::shared_ptr\<AsyncControl\> ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  Starts list engines operation.
 public std::shared_ptr\<AsyncControl\> UnloadEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Starts unloading the file engine with the given ID.
@@ -24,6 +25,14 @@ public void AcquirePolicyAuthToken(Cloud cloud, const std::shared_ptr\<AuthDeleg
   
 ## Members
   
+### LoadAsync
+
+Starts loading a profile based on the provided settings.
+
+**Returns**: Async control object.
+
+FileProfile::Observer will be called upon success or failure.
+
 ### GetSettings function
 Returns the profile settings.
   
