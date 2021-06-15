@@ -14,18 +14,6 @@ ms.date: 04/23/2021
 
 Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public static std::shared_ptr\<ParsedPublishingLicenseBuilder\> Create();
-public void SetDomains(const std::vector\<std::string\>& domains)  |  Sets the license domains.
-public void SetServerPublicCert(const std::string& serverPublicCert)  |  Sets the server public cert.
-public void SetContentId(const std::string& contentId)  |  Sets the content id.
-public void SetIssuerId(const std::string& issuerId)  |  Sets the issuer id.
-public void SetDoubleKeyAlgorithm(const std::string& doubleKeyAlgorithm)  |  Sets the double key algorithm.
-public void SetOwner(const std::string& owner)  |  Sets the owner.
-public void SetConnectionInfo(std::shared_ptr\<LicenseConnectionInfo\> licenseConnectionInfo)  |  Sets the connection info.
-public void SetDescriptor(std::shared_ptr\<LicenseDescriptor\> descriptor)  |  Sets the descriptor.
-public void SetReferralInfoUrl(const std::string& referralInfoUrl)  |  Sets the referral info url.
-public void SetSignedApplicationData(const std::vector\<std::shared_ptr\<LicenseApplicationData\>\>& signedApplicationData)  |  Sets the signed application data.
-public void SetIssuedTime(const std::chrono::time_point\<std::chrono::system_clock\>& issuedTime)  |  Sets the issued time.
 public std::shared_ptr\<ParsedPublishingLicense\> CreateParsedPublishingLicense()  |  Creates a [ParsedPublishingLicense](class_mip_parsedpublishinglicense.md) with the properties set on this object instance.
 
 ## Members
