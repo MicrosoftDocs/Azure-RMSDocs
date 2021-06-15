@@ -23,6 +23,22 @@ public void RevokeContentAsync(const std::shared_ptr\<ProtectionEngine::Observer
 public bool IsProtected(const std::shared_ptr<Stream>& stream, const std::string& filePath, const std::shared_ptr<MipContext>& mipContext) | Checks whether a file is protected or not.
 public bool IsLabeledOrProtected(const std::string& filePath, const std::shared_ptr<MipContext>& mipContext) | Checks whether a file is labeled/protected or not.
 public bool IsLabeledOrProtected(const std::shared_ptr<Stream>& stream, const std::string& filePath, const std::shared_ptr<MipContext>& mipContext) | Checks whether a file is labeled/protected or not.
+public static std::vector\<uint8_t\> __CDECL GetSerializedPublishingLicense(const std::string& filePath, const std::shared_ptr\<MipContext\>& mipContext) | Return Publishing License if file has it.
+public static std::vector\<uint8_t\> __CDECL GetSerializedPublishingLicense(const std::shared_ptr\<Stream\>& stream, const std::string& filePath, const std::shared_ptr\<MipContext\>& mipContext) | Return Publishing License if file has it.
+public void ClassifyAsync(const std::shared_ptr\<void\>& context)  |  Executes the rules in the handler and returns the list of actions to be executed.
+public void InspectAsync(const std::shared_ptr\<void\>& context)  |  Create a file inspector object, used to retrieve file contents from compatible file formats.
+public void SetLabel(const std::shared_ptr\<Label\>& label, const LabelingOptions& labelingOptions, const ProtectionSettings& protectionSettings)  |  Sets the sensitivity label to the file.
+public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Deletes the sensitivity label from the file.
+public void SetProtection(const std::shared_ptr\<ProtectionDescriptor\>& protectionDescriptor, const ProtectionSettings& protectionSettings)  |  Sets either custom or template-based permissions (according to protectionDescriptor->GetProtectionType) to the file.
+public void SetProtection(const std::shared_ptr\<ProtectionHandler\>& protectionHandler)  |  Sets protection on a document using an existing protection handler.
+public void RemoveProtection()  |  Removes protection from the file. If the original file format does not support labeling, the label will be lost when protection is removed. When the native format supports labeling, the label metadata is maintained.
+public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | Writes the changes to the file specified by the \|outputFilePath\ |  parameter.
+public void CommitAsync(const std::shared_ptr\<Stream\>& outputStream, const std::shared_ptr\<void\>& context) | Writes the changes to the stream specified by the \|outputStream\ |  parameter.
+public bool IsModified()  |  Checks if there are changes to commit to the file.
+public void GetDecryptedTemporaryFileAsync(const std::shared_ptr\<void\>& context)  |  Returns a path to a temporary file (that will be deleted if possible) - representing the decrypted content.
+public void GetDecryptedTemporaryStreamAsync(const std::shared_ptr\<void\>& context)  |  Returns a stream - representing the decrypted content.
+public void NotifyCommitSuccessful(const std::string& actualFilePath)  |  To be called when the changes have been committed to disk.
+public std::string GetOutputFileName()  |  Calculates the output file name and extension based on the original file name and the accumulated changes.
 
 
 ## Members
