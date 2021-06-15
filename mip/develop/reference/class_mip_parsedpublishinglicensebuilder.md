@@ -12,7 +12,7 @@ ms.date: 04/23/2021
   
 ## Summary
 
- Members                        | Descriptions                                
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public static std::shared_ptr\<ProtectionDescriptorBuilder\> CreateFromUserRights(const std::vector\<UserRights\>& usersAndRights) | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and rights
 public static std::shared_ptr\<ProtectionDescriptorBuilder\> CreateFromUserRoles(const std::vector\<UserRoles\>& usersAndRoles) | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and roles
