@@ -38,7 +38,7 @@ We [recently announced](https://aka.ms/mipsdkmetadata) that we're making a chang
 
 **Question**: Will the existing metadata stored as a custom property in *custom.xml* be kept up to date?
 
-- No. The first time the document is saved after the new storage location is enabled, label metadata will be moved to the new location. Metadata written via [`LabelingOptions.ExtendedProperties`](/dotnet/api/microsoft.informationprotection.file.labelingoptions.extendedproperties?view=mipsdk-dotnet-1.7#Microsoft_InformationProtection_File_LabelingOptions_ExtendedProperties) will remain in *custom.xml*.
+- No. The first time the document is saved after the new storage location is enabled, label metadata will be moved to the new location. Metadata written via [`LabelingOptions.ExtendedProperties`](/dotnet/api/microsoft.informationprotection.file.labelingoptions.extendedproperties?view=mipsdk-dotnet-1.7&preserve-view=true#Microsoft_InformationProtection_File_LabelingOptions_ExtendedProperties) will remain in *custom.xml*.
 
 **Question**: Will it be possible to read the label metadata without MIP SDK? 
 
