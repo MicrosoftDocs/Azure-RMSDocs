@@ -1,10 +1,10 @@
 ---
 title: class LicenseNotRegisteredError 
 description: Documents the licensenotregisterederror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 04/23/2021
 ---
 
