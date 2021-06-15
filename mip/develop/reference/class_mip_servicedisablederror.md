@@ -13,7 +13,7 @@ The user could not get access to the content due to a service being disabled.
   
 ## Summary
 
- Members                        | Descriptions                                
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public Extent GetExtent() const  |  Gets the extent for which the service is disabled.
 enum Extent  |  Describes the extent for which the service is disabled.
@@ -28,7 +28,7 @@ Gets the extent for which the service is disabled.
   
 ### Extent enum
 
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 User            | Service is disabled for the user.
 Device            | Service is disabled for the device.

@@ -12,7 +12,8 @@ ms.date: 04/23/2021
 Apply label actions requires the calling application to apply a specific label.
   
 ## Summary
- Members                        | Descriptions                                
+
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::shared_ptr\<Label\>& GetLabel() const  |  Get the label required.
 public const std::vector\<std::string\>& GetClassificationIds() const  |  Get the Classification IDs that matched and caused this label to appear.

@@ -13,7 +13,7 @@ The user could not get access to the content. For example, no permissions, conte
   
 ## Summary
 
- Members                        | Descriptions                                
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string GetReferrer() const  |  Gets the contact in case of missing rights to the document.
 public std::string GetOwner() const  |  Gets the owner of the document.
@@ -42,7 +42,7 @@ Gets the category of no permissions failure.
   
 ### Category enum
 
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unknown no permissions failure
 UserNotFound            | Requested user was not found failure

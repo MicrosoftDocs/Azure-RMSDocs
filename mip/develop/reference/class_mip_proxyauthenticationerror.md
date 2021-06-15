@@ -13,7 +13,7 @@ Proxy authentication failure.
   
 ## Summary
 
- Members                        | Descriptions                                
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public Category GetCategory() const  |  Gets the category of network failure.
 public int32_t GetResponseStatusCode() const  |  Gets the HTTP response status code.
@@ -35,7 +35,7 @@ Gets the HTTP response status code.
   
 ### Category enum
 
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unknown network failure
 FailureResponseCode            | HTTP response code indicates failure

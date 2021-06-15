@@ -13,7 +13,7 @@ Template ID is not recognized by RMS service.
   
 ## Summary
 
- Members                        | Descriptions                                
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string mMessage  | _Not yet documented._
 public std::map\<std::string, std::string\> mDebugInfo  | _Not yet documented._
@@ -106,7 +106,7 @@ Get debug info.
   
 ### ErrorCode enum
 
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 General            | General bad input error
 FileIsTooLargeForProtection            | File is too large for protection
