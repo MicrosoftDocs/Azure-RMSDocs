@@ -128,7 +128,7 @@ This will only detect Microsoft labels. It will not detect 3rd-party labels, eve
 ### GetSerializedPublishingLicense function
 
 Return Publishing License if file has it.
-  
+
 ### ClassifyAsync function
 Executes the rules in the handler and returns the list of actions to be executed.
 
