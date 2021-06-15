@@ -44,8 +44,8 @@ This means configuring the following servers:
 
 |Environment  |Servers to configure  |
 |---------|---------|
-|**Exchange 2016 and Exchange 2013**     |  Client access servers and mailbox servers       |
-|**Exchange 2019**     |   Client access servers and hub transport servers      |
+|**Exchange 2013**     |  Client Access Servers and Mailbox Servers       |
+|**Exchange 2016 and Exchange 2019**     |   Mailbox Servers (includes Client Access and Hub Transport server roles  )   |
 |**SharePoint**     |    Front-end SharePoint webservers, including those hosting the Central Administration server     |
 |**File Classification Infrastructure**     |   Windows Server computers that have installed File Resource Manager      |
 | | |
