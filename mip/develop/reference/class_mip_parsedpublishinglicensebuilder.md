@@ -11,6 +11,7 @@ ms.date: 04/23/2021
 # class ParsedPublishingLicenseBuilder 
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public static std::shared_ptr\<ProtectionDescriptorBuilder\> CreateFromUserRights(const std::vector\<UserRights\>& usersAndRights) | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and rights
@@ -30,7 +31,7 @@ public void SetReferralInfoUrl(const std::string& referralInfoUrl)  |  Sets the 
 public void SetSignedApplicationData(const std::vector\<std::shared_ptr\<LicenseApplicationData\>\>& signedApplicationData)  |  Sets the signed application data.
 public void SetIssuedTime(const std::chrono::time_point\<std::chrono::system_clock\>& issuedTime)  |  Sets the issued time.
 public std::shared_ptr\<ParsedPublishingLicense\> CreateParsedPublishingLicense()  |  Creates a [ParsedPublishingLicense](class_mip_parsedpublishinglicense.md) with the properties set on this object instance.
-  
+
 ## Members
 
 ### CreateFromUserRights function

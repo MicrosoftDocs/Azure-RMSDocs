@@ -23,8 +23,8 @@ public void RevokeContentAsync(const std::shared_ptr\<ProtectionEngine::Observer
 public bool IsProtected(const std::shared_ptr<Stream>& stream, const std::string& filePath, const std::shared_ptr<MipContext>& mipContext) | Checks whether a file is protected or not.
 public bool IsLabeledOrProtected(const std::string& filePath, const std::shared_ptr<MipContext>& mipContext) | Checks whether a file is labeled/protected or not.
 public bool IsLabeledOrProtected(const std::shared_ptr<Stream>& stream, const std::string& filePath, const std::shared_ptr<MipContext>& mipContext) | Checks whether a file is labeled/protected or not.
-public static std::vector<uint8_t> __CDECL GetSerializedPublishingLicense(const std::string& filePath, const std::shared_ptr<MipContext>& mipContext) | Return Publishing License if file has it.
-public static std::vector<uint8_t> __CDECL GetSerializedPublishingLicense(const std::shared_ptr<Stream>& stream, const std::string& filePath, const std::shared_ptr<MipContext>& mipContext) | Return Publishing License if file has it.
+public static std::vector\<uint8_t\> __CDECL GetSerializedPublishingLicense(const std::string& filePath, const std::shared_ptr\<MipContext\>& mipContext) | Return Publishing License if file has it.
+public static std::vector\<uint8_t\> __CDECL GetSerializedPublishingLicense(const std::shared_ptr\<Stream\>& stream, const std::string& filePath, const std::shared_ptr\<MipContext\>& mipContext) | Return Publishing License if file has it.
 public void ClassifyAsync(const std::shared_ptr\<void\>& context)  |  Executes the rules in the handler and returns the list of actions to be executed.
 public void InspectAsync(const std::shared_ptr\<void\>& context)  |  Create a file inspector object, used to retrieve file contents from compatible file formats.
 public void SetLabel(const std::shared_ptr\<Label\>& label, const LabelingOptions& labelingOptions, const ProtectionSettings& protectionSettings)  |  Sets the sensitivity label to the file.

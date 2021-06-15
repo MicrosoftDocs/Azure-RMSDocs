@@ -214,5 +214,6 @@ Values                         | Descriptions
 --------------------------------|---------------------------------------------
 Xml            | Legacy XML/SOAP format used by MSIPC
 Json            | JSON/REST format used by MIP SDK and RMS SDK
+
 Pre-license format.
 

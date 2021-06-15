@@ -12,7 +12,8 @@ ms.date: 04/23/2021
 PolicyProfile class is the root class for using the Microsoft Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
   
 ## Summary
- Members                        | Descriptions                                
+
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public static std::shared_ptr<AsyncControl> __CDECL LoadAsync(const Settings& settings, const std::shared_ptr<void>& context) | Starts loading a profile based on the provided settings.
 public static std::shared_ptr<PolicyProfile> __CDECL Load(const Settings& settings);

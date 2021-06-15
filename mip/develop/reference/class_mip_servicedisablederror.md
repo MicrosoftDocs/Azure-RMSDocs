@@ -34,5 +34,6 @@ User            | Service is disabled for the user.
 Device            | Service is disabled for the device.
 Platform            | Service is disabled for the platform.
 Tenant            | Service is disabled for the tenant.
+
 Describes the extent for which the service is disabled.
 
