@@ -39,7 +39,8 @@ public void GetDecryptedTemporaryFileAsync(const std::shared_ptr\<void\>& contex
 public void GetDecryptedTemporaryStreamAsync(const std::shared_ptr\<void\>& context)  |  Returns a stream - representing the decrypted content.
 public void NotifyCommitSuccessful(const std::string& actualFilePath)  |  To be called when the changes have been committed to disk.
 public std::string GetOutputFileName()  |  Calculates the output file name and extension based on the original file name and the accumulated changes.
-  
+
+
 ## Members
   
 ### GetLabel function

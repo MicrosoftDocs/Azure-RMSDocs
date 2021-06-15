@@ -14,10 +14,6 @@ ms.date: 04/23/2021
 
 Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public static std::shared_ptr\<ProtectionDescriptorBuilder\> CreateFromUserRights(const std::vector\<UserRights\>& usersAndRights) | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and rights
-public static std::shared_ptr\<ProtectionDescriptorBuilder\> CreateFromUserRoles(const std::vector\<UserRoles\>& usersAndRoles) | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and roles
-public static std::shared_ptr\<ProtectionDescriptorBuilder\> CreateFromTemplate(const std::string& templateId) | Creates a ProtectionDescriptorBuilder whose access permissions are defined by the protection template
-public static std::shared_ptr\<ProtectionDescriptorBuilder\> CreateFromProtectionDescriptor(const ProtectionDescriptor& protectionDescriptor) | Creates a ProtectionDescriptorBuilder whose access permissions are defined by a protection descriptor
 public static std::shared_ptr\<ParsedPublishingLicenseBuilder\> Create();
 public void SetDomains(const std::vector\<std::string\>& domains)  |  Sets the license domains.
 public void SetServerPublicCert(const std::string& serverPublicCert)  |  Sets the server public cert.
