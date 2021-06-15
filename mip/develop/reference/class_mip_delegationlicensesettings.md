@@ -16,7 +16,7 @@ ms.date: 04/23/2021
 public std::shared_ptr\<const PublishingLicenseInfo\> GetLicenseInfo() const  |  Gets the PublishingLicenseInfo, the publishing license.
 public const std::vector\<std::string\>& GetUsers() const  |  Gets the list of users for the request.
 public bool GetAquireEndUserLicenses() const  |  Gets the boolean value that indicates whether or not to obtain end user license in addition to the delegate license.
-public static std::shared_ptr<DelegationLicenseSettings> __CDECL CreateDelegationLicenseSettings(const PublishingLicenseInfo& licenseInfo, const std::vector<std::string>& users, bool aquireEndUserLicenses) | Creates a DelegationLicenseSettings object
+public static std::shared_ptr<DelegationLicenseSettings> __CDECL CreateDelegationLicenseSettings(const PublishingLicenseInfo& licenseInfo, const std::vector\<std::string\>& users, bool aquireEndUserLicenses) | Creates a DelegationLicenseSettings object
 
 ## Members
   
