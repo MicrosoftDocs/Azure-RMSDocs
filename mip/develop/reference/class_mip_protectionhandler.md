@@ -209,6 +209,7 @@ Gets the cipher mode of the protection handler.
 **Returns**: The cipher mode
   
 ### PreLicenseFormat enum
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Xml            | Legacy XML/SOAP format used by MSIPC

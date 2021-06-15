@@ -12,6 +12,7 @@ ms.date: 04/23/2021
 Template ID is not recognized by RMS service.
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string mMessage  | _Not yet documented._
@@ -104,6 +105,7 @@ Get debug info.
 **Returns**: Debug info (keys/values)
   
 ### ErrorCode enum
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 General            | General bad input error

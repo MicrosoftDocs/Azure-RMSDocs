@@ -12,6 +12,7 @@ ms.date: 04/23/2021
 The user could not get access to the content. For example, no permissions, content revoked.
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string GetReferrer() const  |  Gets the contact in case of missing rights to the document.
@@ -40,6 +41,7 @@ Gets the category of no permissions failure.
 **Returns**: Category of no permissions failure
   
 ### Category enum
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unknown no permissions failure

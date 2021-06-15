@@ -12,6 +12,7 @@ ms.date: 04/23/2021
 The user could not get access to the content due to a service being disabled.
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public Extent GetExtent() const  |  Gets the extent for which the service is disabled.
@@ -26,6 +27,7 @@ Gets the extent for which the service is disabled.
 **Returns**: Extent for which the service is disabled
   
 ### Extent enum
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 User            | Service is disabled for the user.

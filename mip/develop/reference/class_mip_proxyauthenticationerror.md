@@ -12,6 +12,7 @@ ms.date: 04/23/2021
 Proxy authentication failure.
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public Category GetCategory() const  |  Gets the category of network failure.
@@ -33,6 +34,7 @@ Gets the HTTP response status code.
 **Returns**: HTTP response status code, 0 if none
   
 ### Category enum
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unknown network failure
