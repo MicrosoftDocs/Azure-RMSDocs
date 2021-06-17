@@ -89,7 +89,7 @@ This version includes the following new features, fixes, and enhancements for th
     For more information, see:
 
     - [Turn on co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
-    - [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
+    - [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring)
 
 - **GA support for Data Loss Prevention (DLP) policies**. This version of the unified labeling scanner provides general availability support for Microsoft 365 DLP policies, which were previously only supported in a dedicated version of the unified labeling client.
 
@@ -135,7 +135,7 @@ This version includes the following new features, fixes, and enhancements for th
 
 - Fixed issues where deferred messages may not be sent in Outlook when a deferral rule set is defined and the [AIP client is installed](clientv2-admin-guide-install.md). 9710944
 
-- Fixed issues where [customized Outlook popup messages](clientv2-admin-guide-customizations.md#admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client#customize-outlook-popup-messages) may not display correctly when an image is found in the email signature. 9778226
+- Fixed issues where [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) may not display correctly when an image is found in the email signature. 9778226
 
 - Fixed issues where [Change protection audit logs](../audit-logs.md#change-protection-audit-logs) may not be sent as expected when a label is removed in Outlook. 9981158
 
@@ -229,7 +229,7 @@ Co-authoring for Office apps enables multiple users to edit documents that are l
 Before you start, we recommend that you review all related prerequisites and limitations. For more information, see:
 
 - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
-- [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
+- [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring)
 
 ## Version 2.10.43.0 for DLP policies (Public preview)
 
@@ -241,7 +241,7 @@ This dedicated version of Azure Information Protection provides a public preview
 
 - **Using a DLP policy** enables the scanner to detect potential data leaks by matching DLP rules to files stored in file shares and SharePoint Server. 
 
-- [**Enable DLP rules in your content scan job**](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview) to reduce the exposure of any files that match your DLP policies. 
+- [**Enable DLP rules in your content scan job**](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy) to reduce the exposure of any files that match your DLP policies. 
 
     The scanner may reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**.
 
@@ -254,7 +254,7 @@ Settings for enforcing or testing the DLP policy are configured in the [Microsof
 > 
 For more information, including licensing requirements, see:
 
-- [Configure a DLP policy in the AIP scanner](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview)
+- [Configure a DLP policy in the AIP scanner](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy)
 - [Learn about the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-learn), in the Microsoft 365 documentation
 - [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started)
 - [Use the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-use)
