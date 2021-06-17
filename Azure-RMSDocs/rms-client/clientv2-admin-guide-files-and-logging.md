@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/09/2021
+ms.date: 06/17/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -46,12 +46,43 @@ Client logs files and currently installed policy files:
 
 - For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP**
 
+## Usage logging for the Azure Information Protection client
+
+The client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**. 
+
+Logged events for the client include the following information:
+
+- **Client version**
+
+- **IP addresses** of the signed in user
+
+- **File name and location**
+
+- **Action**:
+
+    - Set label: Information ID 101​
+    
+    - Remove label: Information ID  104
+
+    - Discover label: Information ID 106
+
+    - Apply custom protection: Information ID 201​
+    
+    - Remove custom protection: Information ID 202​
+    
+    - Outlook warn message: Information ID 301
+    
+    - Outlook justify message: Information ID 302
+    
+    - Outlook block message: Information ID 303
+
+The events for Outlook warn, justify, and block messages require advanced client settings. For more information, see [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
 ## Usage logging for the Azure Information Protection scanner
 
 Scanner activities are logged to the following local Windows event log: **Applications and Services Logs** > **Azure Information Protection Scanner**
 
-Logged events include the following information:
+Logged events for the scanner include the following information:
 
 - **Computer name of the scanner machine**
 -
@@ -65,7 +96,21 @@ Logged events include the following information:
 
         - Scan finished: Information ID 1002
 
-    - **Warning message**: Scan canceled: Information ID 2002
+        - Change event: : Information ID 1003
+
+        - Discover event: Information ID 1004
+
+        - File removed: : Information ID 1005
+
+        - DLP rule matched: Information ID 1006
+
+        - Permissions report: : Information ID 1007
+
+    - **Warning message**:
+
+        - Warning message: Information ID 2001
+
+        - Scan canceled: Information ID 2002
 
     - **Error message**, one of the following messages:
 
