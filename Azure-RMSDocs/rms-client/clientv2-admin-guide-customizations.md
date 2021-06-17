@@ -1072,7 +1072,7 @@ To limit CPU consumption on the scanner machine, it is manageable by creating tw
 
     Set to **100** by default, which means there is no limit of maximum CPU consumption. In this case, the scanner process will try to use all available CPU time to maximize your scan rates. 
 
-    If you set **ScannerMaxCPU** to less than 100, scanner will monitor the CPU consumption over the past 30 minutes, and if the max CPU crossed the limit you set, it will start to reduce number of threads allocated for new files. 
+    If you set **ScannerMaxCPU** to less than 100, the scanner will monitor the CPU consumption over the past 30 minutes. If the average CPU crossed the limit you set, it will start to reduce number of threads allocated for new files. 
 
     The limit on the number of threads will continue as long as CPU consumption is higher than the limit set for **ScannerMaxCPU**.
 
