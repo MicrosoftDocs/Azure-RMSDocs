@@ -6,7 +6,7 @@ description: Learn how to open and view PDFs that are labeled for classification
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/29/2020
+ms.date: 06/21/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -162,7 +162,6 @@ If you're unable to open your protected PDF using the recommended reader, the do
     - Foxit Reader
     - Nitro PDF Reader
     - Nuance Power PDF
-    - Edge Chromium
 
 - **Android**:
 
