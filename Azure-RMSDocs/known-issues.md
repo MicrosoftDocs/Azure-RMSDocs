@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/21/2021
+ms.date: 04/08/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -16,6 +16,7 @@ ms.service: information-protection
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
@@ -87,12 +88,12 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 |**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.       |
 | **S/MIME emails** | Opening S/MIME emails in Outlook's Reading Pane may cause performance issues. <br><br>To prevent performance issues with S/MIME emails, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property. <br><br>**Note**: Enabling this property prevents the AIP bar or the email classification from being displayed in Outlook's Reading Pane. |
 |**Send to File Explorer option** |If you choose to right-click on any file in the File Explorer and select **Send to > Mail recipient**, the Outlook message that opens with the file attached may not display the AIP toolbar. <br><br>If this occurs and you need to use the AIP toolbar options, start your email from within Outlook and then browse to and attach the file you want to send.|
-|**Co-authoring** | For more information, see [Known issues for co-authoring](#known-issues-for-co-authoring). |
+|**Co-authoring** |Co-authoring support is provided by a [dedicated installation](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) of the Azure Information Protection client, and is currently in public preview. <br><br>For more information, see [Known issues for co-authoring (Public preview)](#known-issues-for-co-authoring-public-preview). |
 | | |
 
-### Known issues for co-authoring
+### Known issues for co-authoring (Public preview)
 
-Known issues for co-authoring are relevant only when an [AIP client version](rms-client/unifiedlabelingclient-version-release-history.md) that supports co-authoring is deployed in your environment co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
+Known issues for co-authoring are relevant only when the [dedicated AIP client version for co-authoring](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) is deployed in your environment and co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
 
 Known issues for co-authoring in AIP include:
 
@@ -132,17 +133,23 @@ If this occurs, close and reopen your Office application to be able to apply you
 
 The following features are not supported when [co-authoring is enabled](/microsoft-365/compliance/sensitivity-labels-coauthoring) for files encrypted with sensitivity labels:
 
-|Feature  |Description  |
-|---------|---------|
-|**AIP analytics and audit logs**     |  When co-authoring is enabled, the Azure Information Protection client doesn't send any [audit logs](audit-logs.md).       |
-|**Documents in protected view**     |   When co-authoring is enabled, labels are not shown for documents in [Protected View](https://support.microsoft.com/en-us/topic/what-is-protected-view-d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653).      |
-|**DKE templates and DKE user-defined properties**     |  For more information, see [Double Key Encryption (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).       |
-|**Labels with user-defined permissions**     |  In Microsoft Word, Excel, and PowerPoint, labels with user-defined permissions are still available and can be applied to documents, but are supported only for files saved locally, and not for files saved on OneDrive or SharePoint. <br><br>This means that applying a label with user-defined permissions on a document that's saved on OneDrive or SharePoint will prevent you from working on the document with others at the same time. If you try to save a file with user-defined permissions on OneDrive or SharePoint, you'll be requested to remove the user-defined (restricted) permissions.    |
-|**External content marking in apps**     |  - **Removing and adding external content marking in apps**. External content markings are only removed or added when a label is applied, and not when when a document is saved. <br>- **Changed or deleted content markings**. If a document had content markings that were modified or deleted, the content markings are not restored when the document is saved.<br><br>For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).       |
-|**Added protection from an existing label**     |  If a document was already labeled, and the label was updated to add protection, that protection is not applied to the document when it is next saved. Instead, re-apply the label to add the protection. |
-|     |         |
+- **AIP analytics and audit logs**.  When co-authoring is enabled, the Azure Information Protection client doesn't send any [audit logs](audit-logs.md).
 
-For additional limitations, see the listed items for co-authoring in the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring#limitations).
+- **DKE templates and DKE user-defined properties**. For more information, see [Double Key Encryption (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).
+
+- **Labels with user-defined permissions**. In Microsoft Word, Excel, and PowerPoint, labels with user-defined permissions are still available and can be applied to documents, but are not supported for co-authoring features.
+
+    This means that applying a label with user-defined permissions will prevent you from working on the document with others at the same time.
+
+- **Removing external content marking in apps**. For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
+
+- The following advanced settings:
+
+    - **customPropertiesByLabel**. For more information, see [Applying a custom property when a label is applied](rms-client/clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied).
+
+    - **labelByCustomProperties** and **EnableLabelBySharePointProperties**. For more information, see [Migrate labels from Secure Islands and other labeling solutions](rms-client/clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions).
+
+- Features listed in the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring#limitations) as co-authoring limitations.
 
 ## Sharing external doc types across tenants
 
