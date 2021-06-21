@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/17/2021
+ms.date: 06/21/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -140,8 +140,6 @@ The following features are not supported when [co-authoring is enabled](/microso
 |**Labels with user-defined permissions**     |  In Microsoft Word, Excel, and PowerPoint, labels with user-defined permissions are still available and can be applied to documents, but are supported only for files saved locally, and not for files saved on OneDrive or SharePoint. <br><br>This means that applying a label with user-defined permissions on a document that's saved on OneDrive or SharePoint will prevent you from working on the document with others at the same time. If you try to save a file with user-defined permissions on OneDrive or SharePoint, you'll be requested to remove the user-defined (restricted) permissions.    |
 |**External content marking in apps**     |  - **Removing and adding external content marking in apps**. External content markings are only removed or added when a label is applied, and not when when a document is saved. <br>- **Changed or deleted content markings**. If a document had content markings that were modified or deleted, the content markings are not restored when the document is saved.<br><br>For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).       |
 |**Added protection from an existing label**     |  If a document was already labeled, and the label was updated to add protection, that protection is not applied to the document when it is next saved. Instead, re-apply the label to add the protection. |
-|**Advanced settings**     |The following advanced settings are not supported when co-authoring is enabled:  <br><br>    - **customPropertiesByLabel**. For more information, see [Applying a custom property when a label is applied](rms-client/clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied).<br>
-    - **labelByCustomProperties** and **EnableLabelBySharePointProperties**. For more information, see [Migrate labels from Secure Islands and other labeling solutions](rms-client/clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions).        |
 |     |         |
 
 For additional limitations, see the listed items for co-authoring in the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring#limitations).
