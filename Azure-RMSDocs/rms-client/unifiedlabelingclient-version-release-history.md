@@ -82,6 +82,10 @@ Unified labeling scanner and client version 2.12.61.0 (public preview)
 
 This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
 
+- **Support for DKE labels with user-defined permissions**. This version of the unified labeling client and scanner supports DKE labels with user-defined permissions. 
+
+    For more information, see [Azure Information Protection tenant keys](../plan-implement-tenant-key.md#double-key-encryption-dke) and [Double Key Encryption for Microsoft 365](/microsoft-365/compliance/double-key-encryption).
+
 - **Client usage logging in the Windows event log**.  The unified labeling client now [logs user activity to the local Windows event log](clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
 
 - **Verbose logging for removing protection via PowerShell**    This version of the unified labeling client supports verbose logging for removing protection with the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) PowerShell cmdlet.
