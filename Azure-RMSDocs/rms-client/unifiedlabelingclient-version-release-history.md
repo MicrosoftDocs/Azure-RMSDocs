@@ -82,7 +82,7 @@ Unified labeling scanner and client version 2.12.61.0 (public preview)
 
 This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
 
-- **Support for DKE labels with user-defined permissions**. This version of the unified labeling client and scanner supports DKE labels with user-defined permissions. 
+- **Support for DKE labels with user-defined permissions**. This version of the unified labeling client and scanner supports DKE labels with user-defined permissions.
 
     For more information, see [Azure Information Protection tenant keys](../plan-implement-tenant-key.md#double-key-encryption-dke) and [Double Key Encryption for Microsoft 365](/microsoft-365/compliance/double-key-encryption).
 
@@ -206,7 +206,7 @@ Co-authoring for Office apps enables multiple users to edit documents that are l
 Before you start, we recommend that you review all related prerequisites and limitations. For more information, see:
 
 - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
-- [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring)
+- [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
 
 ## Version 2.10.43.0 for DLP policies (Public preview)
 
@@ -218,7 +218,7 @@ This dedicated version of Azure Information Protection provides a public preview
 
 - **Using a DLP policy** enables the scanner to detect potential data leaks by matching DLP rules to files stored in file shares and SharePoint Server. 
 
-- [**Enable DLP rules in your content scan job**](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy) to reduce the exposure of any files that match your DLP policies. 
+- [**Enable DLP rules in your content scan job**](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview) to reduce the exposure of any files that match your DLP policies. 
 
     The scanner may reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**.
 
@@ -231,7 +231,7 @@ Settings for enforcing or testing the DLP policy are configured in the [Microsof
 > 
 For more information, including licensing requirements, see:
 
-- [Configure a DLP policy in the AIP scanner](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy)
+- [Configure a DLP policy in the AIP scanner](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview)
 - [Learn about the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-learn), in the Microsoft 365 documentation
 - [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started)
 - [Use the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-use)
