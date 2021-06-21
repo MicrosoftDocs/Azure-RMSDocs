@@ -90,13 +90,14 @@ This version includes the following new features, fixes, and enhancements for th
 
 ### Fixes and improvements
 
-- Fixes for errors in [policy](/microsoft-365/compliance/reate-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](../../mip/develop/version-release-history.md). 7066585
+Fixes AIP not loading when policy parsing fails
+- Fixes for errors where AIP may not load if a [policy](/microsoft-365/compliance/reate-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](../../mip/develop/version-release-history.md). 7066585
 
 - Fixed possibly incorrect **method** values in audit logs in [New label audit logs](../audit-logs.md#new-label-audit-logs) for Outlook events. 8891566 9475998
 
 - Fixes for possibly incorrect **label** and **labelBefore** values in [Change protection audit logs](../audit-logs.md#change-protection-audit-logs). 9476012
 
-- Fixes for errors where documents may not be saved because of [edits made in the labeling metadata](/microsoft-365/compliance/create-sensitivity-labels). 9040399
+- Fixes for errors where documents may not be saved because of [edits made in the labeling metadata and lack of permissions](/microsoft-365/compliance/create-sensitivity-labels). 9040399
 
 - Fixes for possible crashes when running PowerShell cmdlets. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](../../mip/develop/version-release-history.md). 9100892
 
