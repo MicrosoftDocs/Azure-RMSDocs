@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/17/2021
+ms.date: 06/21/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -34,9 +34,13 @@ ms.custom: admin
 
 After you have installed the Azure Information Protection unified labeling client, you might need to know where files are located and monitor how the client is being used.
 
+## Turn on usage logging
+
+To turn on support for usage logging for both the unified labeling client and scanner, set the **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnableLoggingAuditEventsToEventLog** registry key on the client machine to **1**.
+
 ## File locations for the Azure Information Protection unified labeling client
 
-Client files:    
+Client files:
 
 - For 64-bit operating systems: **\ProgramFiles (x86)\Microsoft Azure Information Protection**
 
@@ -48,7 +52,7 @@ Client logs files and currently installed policy files:
 
 ## Usage logging for the Azure Information Protection client
 
-The client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**. 
+The unified labeling client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**.
 
 Logged events for the client include the following information:
 
@@ -61,19 +65,19 @@ Logged events for the client include the following information:
 - **Action**:
 
     - Set label: Information ID 101​
-    
+
     - Remove label: Information ID  104
 
     - Discover label: Information ID 106
 
     - Apply custom protection: Information ID 201​
-    
+
     - Remove custom protection: Information ID 202​
-    
+
     - Outlook warn message: Information ID 301
-    
+
     - Outlook justify message: Information ID 302
-    
+
     - Outlook block message: Information ID 303
 
 The events for Outlook warn, justify, and block messages require advanced client settings. For more information, see [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
