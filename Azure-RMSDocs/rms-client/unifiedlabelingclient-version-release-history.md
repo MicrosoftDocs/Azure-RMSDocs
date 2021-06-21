@@ -88,8 +88,6 @@ This version includes the following new features, fixes, and enhancements for th
 
 - **Client usage logging in the Windows event log**.  The unified labeling client now [logs user activity to the local Windows event log](clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
 
-    To turn on support for client usage logging, set the **EnableLoggingAuditEventsToEventLog** registry key. For more information, see <x>.
-
 ### Fixes and improvements
 
 - Fixes for errors in [policy](/microsoft-365/compliance/reate-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](../../mip/develop/version-release-history.md). 7066585
