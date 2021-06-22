@@ -6,7 +6,7 @@ description: Describes how administrators can track document access for protecte
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 04/05/2021
+ms.date: 06/08/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,19 +31,21 @@ ms.custom: user
 >
 >***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-Document tracking provides information for administrators about when a protected document was accessed. If necessary, both admins and users can revoke document access for tracked documents. Protected documents are supported for track and revoke, even if they are not labeled.
+Document tracking provides information for administrators, with either the [Azure Information Protection Administrator](/azure/active-directory/roles/permissions-reference#azure-information-protection-administrator) or [Azure Rights Management Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role, about when a protected document was accessed. If necessary, both admins and users can revoke document access for tracked documents. 
 
 If you've upgraded to [version 2.9.111.0](unifiedlabelingclient-version-release-history.md#version-291110) or later, any protected Office documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client. Protected documents are supported for track and revoke, even if they are not labeled.
 
-Registering a document for tracking enables [Microsoft 365 global admins](/microsoft-365/admin/add-users/about-admin-roles#commonly-used-microsoft-365-admin-center-roles) to track access details, including successful access events and denied attempts, as well as revoke access if needed.
+Registering a document for tracking enables admins to track access details, including successful access events and denied attempts, as well as revoke access if needed.
 
 > [!NOTE]
 > Track and revoke features are supported for Office file types only.
->
+>  
+> Protected documents are supported for track and revoke, even if they are not labeled.
+> 
 
 ## Track document access
 
-Global admins can track access for protected documents via PowerShell using the **ContentID** generated for the protected document during registration.
+Admins can track access for protected documents via PowerShell using the **ContentID** generated for the protected document during registration.
 
 **To view document access details**:
 
@@ -76,7 +78,7 @@ Use the following cmdlets to find details for the document you want to track:
 
 ## Revoke document access from PowerShell
 
-Global admins can revoke access for any protected document stored in their local content shares, using the [Set-AIPServiceDocumentRevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) cmdlet.
+Admins can revoke access for any protected document stored in their local content shares, using the [Set-AIPServiceDocumentRevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) cmdlet.
 
 1. Find the **ContentID** value for the document you want to revoke access for.
 
