@@ -38,19 +38,15 @@ After you have installed the Azure Information Protection unified labeling clien
 
 To turn on support for usage logging for both the unified labeling client and scanner, set the **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnableLoggingAuditEventsToEventLog** registry key on the client machine to **1**.
 
-## File locations for the Azure Information Protection unified labeling client
+## Log file locations
 
-Client files:
+Client and scanner log files are located in the following locations on your unified labeling client machine:
 
-- For 64-bit operating systems: **\ProgramFiles (x86)\Microsoft Azure Information Protection**
+- **\ProgramFiles (x86)\Microsoft Azure Information Protection** (64-bit operating systems only)
+- **\Program Files\Microsoft Azure Information Protection** (32-bit operating systems only)
+- **%localappdata%\Microsoft\MSIP**
 
-- For 32-bit operating systems: **\Program Files\Microsoft Azure Information Protection**
-
-Client logs files and currently installed policy files:
-
-- For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP**
-
-## Usage logging for the Azure Information Protection client
+## Client-side usage logging
 
 The unified labeling client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**.
 
@@ -82,14 +78,14 @@ Logged events for the client include the following information:
 
 The events for Outlook warn, justify, and block messages require advanced client settings. For more information, see [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
-## Usage logging for the Azure Information Protection scanner
+## Scanner-side usage logging
 
 Scanner activities are logged to the following local Windows event log: **Applications and Services Logs** > **Azure Information Protection Scanner**
 
 Logged events for the scanner include the following information:
 
 - **Computer name of the scanner machine**
--
+
 - **SID (Security identifier) of the signed in scanner user**
 
 - **Action**, one of the following message types:
