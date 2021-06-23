@@ -54,7 +54,7 @@ Scanner activities are logged to the following local Windows event log: **Applic
 Logged events include the following information:
 
 - **Computer name of the scanner machine**
--
+
 - **SID (Security identifier) of the signed in scanner user**
 
 - **Action**, one of the following message types:
