@@ -50,7 +50,11 @@ Client and scanner log files are located in the following locations on your unif
 - **\Program Files\Microsoft Azure Information Protection** (32-bit operating systems only)
 - **%localappdata%\Microsoft\MSIP**
 
-## Client-side usage logging
+## Client-side usage logging (Public preview)
+
+> [!NOTE]
+> Client-side usage logging is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+>
 
 The unified labeling client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**.
 
@@ -133,6 +137,7 @@ Logged events for the scanner include the following information:
         - No content scan jobs found: Information ID 3007
 
 - **Event data**, for more information depending on the action type
+
 ## Next steps
 
 For more information, see:
