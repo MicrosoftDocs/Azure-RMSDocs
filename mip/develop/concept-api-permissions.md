@@ -47,7 +47,7 @@ This permission is required when an application must be permitted to decrypt all
 
 ### Content.Writer
 
-This permission is required when an application must be permitted to encrypt content. Examples of services that require `Content.writer` are line-of-business application that applies classification labels to files on export. Content.Writer encrypts the content as the service principal identity and so the owner of the protected files will be the service principal identity.
+This permission is required when an application must be permitted to list templates and encrypt content. A service that attempts to list templates without this permission will receive a token rejected message from the service. Examples of services that require `Content.writer` are line-of-business application that applies classification labels to files on export. Content.Writer encrypts the content as the service principal identity and so the owner of the protected files will be the service principal identity.
 
 ### UnifiedPolicy.Tenant.Read
 
