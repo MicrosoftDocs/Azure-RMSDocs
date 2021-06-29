@@ -82,7 +82,7 @@ Unified labeling scanner and client version 2.12.61.0 (public preview)
 
 This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
 
-- **Support for DKE labels with user-defined permissions**. This version of the unified labeling client and scanner supports DKE labels with user-defined permissions.
+- **Support for DKE labels with user-defined permissions**. This version of the unified labeling client and scanner supports DKE labels with user-defined permissions in Word, Excel, and PowerPoint.
 
     For more information, see [Azure Information Protection tenant keys](../plan-implement-tenant-key.md#double-key-encryption-dke) and [Double Key Encryption for Microsoft 365](/microsoft-365/compliance/double-key-encryption).
 

@@ -1025,7 +1025,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{
 
 This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-The Azure Information Protection unified labeling client supports central reporting and by default, sends its audit data to [Azure Information Protection analytics](../reports-aip.md). For more information about what information is sent and stored, see the [Information collected and sent to Log Analytics](../reports-aip.md#information-collected-and-sent-to-log-analytics) section from the central reporting documentation.
+The Azure Information Protection unified labeling client supports central reporting and by default, sends its audit data to [Azure Information Protection analytics](../reports-aip.md). For more information about what information is sent and stored, see the [Information collected and sent to Microsoft](../reports-aip.md#information-collected-and-sent-to-microsoft) section from the central reporting documentation.
 
 To change this behavior so that this information is not sent by the unified labeling client, enter the following strings for the selected label policy:
 
