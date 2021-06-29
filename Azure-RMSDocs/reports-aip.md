@@ -72,7 +72,7 @@ For more information, read the following blog posts:
 
 ### Information collected and sent to Microsoft
 
-To generate these reports, endpoints send the following types of information to the Microsoft:
+To generate these reports, endpoints send the following types of information to Microsoft:
 
 - The label action. For example, set a label, change a label, add or remove protection, automatic and recommended labels.
 
