@@ -91,7 +91,7 @@ This version includes the following new features, fixes, and enhancements for th
 ### Fixes and improvements
 
 Fixes AIP not loading when policy parsing fails
-- Fixes for errors where AIP may not load if a [policy](/microsoft-365/compliance/reate-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](../../mip/develop/version-release-history.md). 7066585
+- Fixes for errors where AIP may not load if a [policy](/microsoft-365/compliance/reate-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](../../mip/develop/version-release-history.md).
 
 - Fixed possibly incorrect **method** values in audit logs in [New label audit logs](../audit-logs.md#new-label-audit-logs) for Outlook events.
 
