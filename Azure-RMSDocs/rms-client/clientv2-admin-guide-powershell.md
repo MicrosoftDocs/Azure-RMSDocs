@@ -233,6 +233,11 @@ Now you've completed the registration of this app with a secret, you're ready to
     ```PowerShell
     Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
     ```
+    
+## Common parameters for PowerShell cmdlets
+
+For information about common parameters, see [About common parameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+
 ## Next steps
 
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> -online`. For example: 
