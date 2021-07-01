@@ -236,7 +236,7 @@ Now you've completed the registration of this app with a secret, you're ready to
     
 ## Common parameters for PowerShell cmdlets
 
-For information about common parameters, see [About common parameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7.1).
+For information about common parameters, see [About common parameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## Next steps
 
