@@ -1338,7 +1338,7 @@ If the label you specify is configured for encryption, for the Azure Information
 
 For Office apps with built-in labeling, these labels do not display to users. 
 
-If you want the label to be visible in Outlook only, configure the label to apply encryption to **Only email messages in Outlook**.
+If you want the label to be visible in Outlook only, configure the label to apply the **Do Not Forward** encryption option from [Let users assign permissions](/microsoft-365/compliance/encryption-sensitivity-labels#let-users-assign-permissions).
 
 Example PowerShell commands, where your label is named "Recipients Only":
 
