@@ -99,7 +99,6 @@ Known issues for co-authoring are relevant only when co-authoring is [enabled in
 
 Known issues for co-authoring in AIP include:
 
-- [Use in testing environments only](#use-in-testing-environments-only)
 - [Supported versions for co-authoring and sensitivity labels](#supported-versions-for-co-authoring-and-sensitivity-labels)
 - [Policy updates](#policy-updates)
 - [Unsupported features for co-authoring](#unsupported-features-for-co-authoring)
@@ -108,12 +107,6 @@ Known issues for co-authoring in AIP include:
 > Co-authoring and sensitivity labels cannot be deployed to some users only, as any new labels will not be visible to users with an older version of the Office client.
 > 
 For more information about co-authoring support, including limitations and known issues for the public preview, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring).
-
-#### Use in testing environments only
-
-To avoid conflicts between your labeled files, co-authoring cannot be turned off without assistance from customer support during the public preview period.
-
-For this reason, we recommend that you currently turn co-authoring on for your system in testing environments only.
 
 #### Supported versions for co-authoring and sensitivity labels
 
