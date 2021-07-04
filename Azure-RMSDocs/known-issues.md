@@ -95,9 +95,7 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 
 Co-authoring with the unified labeling client is currently in [public preview](rms-client/unifiedlabelingclient-version-release-history.md#version-212620-public-preview) and is supported only for testing environments.
 
-Known issues for co-authoring are relevant only when co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
-
-Known issues for co-authoring in AIP include:
+Known issues for co-authoring are relevant only when co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring), and include:
 
 - [Supported versions for co-authoring and sensitivity labels](#supported-versions-for-co-authoring-and-sensitivity-labels)
 - [Policy updates](#policy-updates)
