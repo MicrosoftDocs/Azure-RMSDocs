@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/17/2021
+ms.date: 07/04/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -76,9 +76,11 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.12.61.0 (Public preview)
+## Version 2.12.62.0 (Public preview)
 
-Unified labeling scanner and client version 2.12.61.0 (public preview)
+Unified labeling scanner and client version 2.12.62.0 (public preview)
+
+**Released** 04/07/2021
 
 This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
 
@@ -92,7 +94,7 @@ This version includes the following new features, fixes, and enhancements for th
 
 - Fixes for errors where AIP may not load if a [policy](/microsoft-365/compliance/reate-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
 
-- Fixed possibly incorrect **method** values in audit logs in [New label audit logs](../audit-logs.md#new-label-audit-logs) for Outlook events.
+- Fixed possibly incorrect **method** values in [New label audit logs](../audit-logs.md#new-label-audit-logs) for Outlook events.
 
 - Fixes for possibly incorrect **label** and **labelBefore** values in [Change protection audit logs](../audit-logs.md#change-protection-audit-logs).
 
