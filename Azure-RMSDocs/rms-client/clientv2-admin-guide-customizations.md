@@ -604,7 +604,7 @@ To remove this multiline footer, you create the following two entries for the sa
 Example PowerShell command, where your label policy is named "Global":
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove=ConvertTo-Json("Confidential","Label applied")}
 ```
 
 #### Optimization for PowerPoint
