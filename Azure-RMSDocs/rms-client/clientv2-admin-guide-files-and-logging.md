@@ -104,15 +104,15 @@ Logged events for the scanner include the following information:
 
         - Scan finished: Information ID 1002
 
-        - Change event: : Information ID 1003
+        - Change event: Information ID 1003
 
         - Discover event: Information ID 1004
 
-        - File removed: : Information ID 1005
+        - File removed: Information ID 1005
 
         - DLP rule matched: Information ID 1006
 
-        - Permissions report: : Information ID 1007
+        - Permissions report: Information ID 1007
 
     - **Warning message**:
 
