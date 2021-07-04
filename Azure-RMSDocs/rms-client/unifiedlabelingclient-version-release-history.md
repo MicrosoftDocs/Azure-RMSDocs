@@ -90,6 +90,15 @@ This version includes the following new features, fixes, and enhancements for th
 
 - **Client usage logging in the Windows event log**.  The unified labeling client now [logs user activity to the local Windows event log](clientv2-admin-guide-files-and-logging.md#client-side-usage-logging-public-preview).
 
+- **Preview support for co-authoring**. This version of the unified labeling client includes support for co-authoring in testing environments.
+Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+
+    For more information, see:
+
+    - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
+    - [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
+
+
 ### Fixes and improvements
 
 - Fixes for errors where AIP may not load if a [policy](/microsoft-365/compliance/reate-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
