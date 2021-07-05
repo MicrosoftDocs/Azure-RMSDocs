@@ -76,9 +76,7 @@ This method is suitable only for Windows clients that run Microsoft 365 apps and
     ```
     
     For *\<AD RMS cluster>*, specify the FQDN of your AD RMS cluster. For example, **rmscluster.contoso.com**.
-    
-    Alternatively, if you have just one AD RMS cluster in that domain, you can specify just the domain name of the AD RMS cluster. In our example, that would be **contoso.com**. When you specify the domain name in this record, the redirection applies to any and all AD RMS clusters in that domain.
-    
+        
     The *\<port>* number is ignored.
     
     For *\<your tenant URL\>*, specify your own [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
