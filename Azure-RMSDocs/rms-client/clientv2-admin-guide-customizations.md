@@ -1027,7 +1027,7 @@ This configuration uses a policy [advanced setting](#configuring-advanced-settin
 
 The Azure Information Protection unified labeling client supports central reporting and by default, sends its audit data to [Azure Information Protection analytics](../reports-aip.md). For more information about what information is sent and stored, see the [Information collected and sent to Microsoft](../reports-aip.md#information-collected-and-sent-to-microsoft) section from the central reporting documentation.
 
-To change this behavior so that this information is not sent by the unified labeling client, enter the following strings for the selected label policy:
+To change this behavior so that audit data is not sent by the unified labeling client, enter the following strings for the selected label policy:
 
 - Key: **EnableAudit**
 
