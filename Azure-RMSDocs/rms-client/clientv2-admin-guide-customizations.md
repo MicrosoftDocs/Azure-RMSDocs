@@ -592,7 +592,7 @@ For more information, see:
 
 If a header or footer text is more than a single line, create a key and value for each line. For example, if you have the following footer with two lines:
 
-**The file is classified as Confidential**
+**The file is classified as Confidential**<br>
 **Label applied manually**
 
 To remove this multiline footer, you create the following two entries for the same label policy:
@@ -604,7 +604,7 @@ To remove this multiline footer, you create the following two entries for the sa
 Example PowerShell command, where your label policy is named "Global":
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove=ConvertTo-Json("Confidential","Label applied")}
 ```
 
 #### Optimization for PowerPoint
@@ -1025,9 +1025,9 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{
 
 This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-The Azure Information Protection unified labeling client supports central reporting and by default, sends its audit data to [Azure Information Protection analytics](../reports-aip.md). For more information about what information is sent and stored, see the [Information collected and sent to Microsoft](../reports-aip.md#information-collected-and-sent-to-microsoft) section from the central reporting documentation.
+The Azure Information Protection unified labeling client supports central reporting and by default, sends its audit data to [Azure Information Protection analytics](../reports-aip.md). For more information about what information is sent and stored, see the [Information collected and sent to Log Analytics](../reports-aip.md#information-collected-and-sent-to-microsoft) section from the central reporting documentation.
 
-To change this behavior so that this information is not sent by the unified labeling client, enter the following strings for the selected label policy:
+To change this behavior so that audit data is not sent by the unified labeling client, enter the following strings for the selected label policy:
 
 - Key: **EnableAudit**
 
@@ -1338,7 +1338,8 @@ If the label you specify is configured for encryption, for the Azure Information
 
 For Office apps with built-in labeling, these labels do not display to users. 
 
-If you want the label to be visible in Outlook only, configure the label to apply encryption to **Only email messages in Outlook**.
+If you want the label to be visible in Outlook only, configure the **Do Not Forward** encryption option from [Let users assign permissions](/microsoft-365/compliance/encryption-sensitivity-labels#let-users-assign-permissions).
+
 
 Example PowerShell commands, where your label is named "Recipients Only":
 
