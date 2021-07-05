@@ -88,14 +88,16 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 |**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.       |
 | **S/MIME emails** | Opening S/MIME emails in Outlook's Reading Pane may cause performance issues. <br><br>To prevent performance issues with S/MIME emails, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property. <br><br>**Note**: Enabling this property prevents the AIP bar or the email classification from being displayed in Outlook's Reading Pane. |
 |**Send to File Explorer option** |If you choose to right-click on any file in the File Explorer and select **Send to > Mail recipient**, the Outlook message that opens with the file attached may not display the AIP toolbar. <br><br>If this occurs and you need to use the AIP toolbar options, start your email from within Outlook and then browse to and attach the file you want to send.|
-|**Co-authoring** |For more information, see [Known issues for co-authoring (Public preview)](#known-issues-for-co-authoring-public-preview). |
+|**Co-authoring** |Co-authoring support is provided by a [dedicated installation](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) of the Azure Information Protection client, and is currently in public preview. <br><br>For more information, see [Known issues for co-authoring (Public preview)](#known-issues-for-co-authoring-public-preview). |
 | | |
 
 ### Known issues for co-authoring (Public preview)
 
+Known issues for co-authoring are relevant only when the [dedicated AIP client version for co-authoring](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) is deployed in your environment and co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
+
 Co-authoring with the unified labeling client is currently in [public preview](rms-client/unifiedlabelingclient-version-release-history.md#version-212620-public-preview) and is supported only for testing environments.
 
-Known issues for co-authoring are relevant only when co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring), and include:
+Known issues for co-authoring in AIP include:
 
 - [Supported versions for co-authoring and sensitivity labels](#supported-versions-for-co-authoring-and-sensitivity-labels)
 - [Policy updates](#policy-updates)
