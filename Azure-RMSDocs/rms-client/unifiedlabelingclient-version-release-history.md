@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 04/28/2021
+ms.date: 07/05/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,7 +17,6 @@ ms.service: information-protection
 #audience:git
 #ms.devlang:
 ms.subservice: v2client
-ms.reviewer: elkamins
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
@@ -77,6 +76,49 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
+## Version 2.12.62.0 (Public preview)
+
+Unified labeling scanner and client version 2.12.62.0 (public preview)
+
+**Released** 05/07/2021
+
+This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
+
+- **Support for DKE labels with user-defined permissions**. This version of the unified labeling client and scanner supports DKE labels with user-defined permissions in Word, Excel, and PowerPoint.
+
+    For more information, see [Azure Information Protection tenant keys](../plan-implement-tenant-key.md#double-key-encryption-dke) and [Double Key Encryption for Microsoft 365](/microsoft-365/compliance/double-key-encryption).
+
+- **Client usage logging in the Windows event log**.  The unified labeling client now [logs user activity to the local Windows event log](clientv2-admin-guide-files-and-logging.md#client-side-usage-logging-public-preview).
+
+
+### Fixes and improvements
+
+- Fixes for errors where AIP may not load if a [policy](/microsoft-365/compliance/reate-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
+
+- Fixed possibly incorrect **method** values in [New label audit logs](../audit-logs.md#new-label-audit-logs) for Outlook events.
+
+- Fixes for possibly incorrect **label** and **labelBefore** values in [Change protection audit logs](../audit-logs.md#change-protection-audit-logs).
+
+- Fixes for errors where documents may not be saved because of [edits made in the labeling metadata and lack of permissions](/microsoft-365/compliance/create-sensitivity-labels).
+
+- Fixes for possible crashes when running PowerShell cmdlets. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
+
+- Fixed errors where [justification popup messages](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) may not appear in Outlook.
+
+- Fixed errors where the [AIP add-in](clientv2-admin-guide-install.md) in Outlook may cause an error message to appear, if a message file that was saved locally was opened, closed, and then opened again.
+
+- Fixed errors where [visual markings](use-client.md#the-client-side-of-azure-information-protection) may not be refreshed as expected after changing a file's label to a label with no content markings.
+
+- Fixed errors where [audit logs](../audit-logs.md) may not be sent when a default label is applied to a document.
+
+- Fixed issues for [content markings](use-client.md#the-client-side-of-azure-information-protection) in Outlook may be duplicated.
+
+- Fixed issues where deferred messages may not be sent in Outlook when a deferral rule set is defined and the [AIP client is installed](clientv2-admin-guide-install.md).
+
+- Fixed issues where [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) may not display correctly when an image is found in the email signature.
+
+- Fixed issues where [Change protection audit logs](../audit-logs.md#change-protection-audit-logs) may not be sent as expected when a label is removed in Outlook.
+
 ## Version 2.11.58.0
 
 Unified labeling scanner and client version 2.11.58.0
@@ -94,13 +136,13 @@ This version includes the following new features, fixes, and enhancements for th
 - [Scanner diagnostics tool improvements](#scanner-diagnostics-tool-improvements)
 - [Improved scanner details output](#improved-scanner-details-output)
 - [Updates for the scanner's supported information types](#updates-for-the-scanners-supported-information-types)
-- [Fixes and improvements](#fixes-and-improvements)
+- [Fixes and improvements](#fixes-and-improvements-211580)
 
 ### Scanner usage logging in the Windows event log
 
 The unified labeling scanner now logs user activity to the local Windows event log.
 
-For more information, see [Usage logging for the Azure Information Protection scanner](clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-scanner).
+For more information, see [Usage logging for the Azure Information Protection scanner](clientv2-admin-guide-files-and-logging.md#scanner-side-usage-logging).
 
 ### Scanner diagnostics tool improvements
 
@@ -130,7 +172,7 @@ If you have sensitivity labels that use these sensitive information types, we re
 - **EU Phone Number**
 - **EU GPS Coordinates**
 
-### Fixes and improvements
+### Fixes and improvements (2.11.58.0)
 
 The following fixes were delivered in version 2.11.58.0 of the Azure Information Protection unified labeling client and scanner:
 
