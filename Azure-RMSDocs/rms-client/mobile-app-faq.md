@@ -57,8 +57,10 @@ The AIP mobile viewer apps for iOS and Android support the following file types 
 | | |
 
 > [!NOTE]
->The AIP mobile viewer apps send system metadata and pseudonymized end-user data to Microsoft, such as device ID, manufacturer, OS, and OS version and build number. Data is sent each time the AIP mobile viewer apps are launched and each time they are used to decrypt and consume protected documents on the device.
-
+>The AIP mobile viewer apps send system metadata and pseudonymized end-user data to Microsoft, such as device ID, manufacturer, OS, and OS version and build number. 
+>
+> Data is sent each time the AIP mobile viewer apps are launched and each time they are used to decrypt and consume protected documents on the device.
+>
 
 ## Download and install the AIP app for your device
 
