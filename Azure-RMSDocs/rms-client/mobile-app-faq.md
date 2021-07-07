@@ -56,6 +56,10 @@ The AIP mobile viewer apps for iOS and Android support the following file types 
 |**Supported file types**     | Supported files types include protected email messages, PDF files, images, and text files. </br></br>For example, these files include the following extensions: **rpmsg**, **.pdf**, **.ppdf**, **.pjpg**, **.pjpeg**, **.ptiff**, **.ppng**, **.ptxt**, **.pxml** </br></br>For a full list of supported file types, see [The AIP client admin guide](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
 | | |
 
+> [!NOTE]
+>The AIP mobile viewer apps send system metadata and pseudonymized end-user data to Microsoft, such as device ID, manufacturer, OS, and OS version and build number. Data is sent each time the AIP mobile viewer apps are launched and each time they are used to decrypt and consume protected documents on the device.
+
+
 ## Download and install the AIP app for your device
 
 If you do not have [Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-word-excel-and-powerpoint) that you can use to open your protected files, download and install AIP mobile viewer apps.
