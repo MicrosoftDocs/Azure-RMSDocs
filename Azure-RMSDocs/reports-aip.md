@@ -33,7 +33,7 @@ ms.custom: admin
 
 [!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
-This article describes how to use Azure Information Protection (AIP) analytics for central reporting, which can help you track the adoption of your labels that classify and protect your organization's data. 
+This article describes how to use Azure Information Protection (AIP) analytics for central reporting, which can help you track the adoption of your labels that classify and protect your organization's data.
 
 AIP analytics also enable you to do perform the following steps:
 
@@ -47,9 +47,9 @@ AIP analytics also enable you to do perform the following steps:
 
 - Identify when protected documents are accessed by internal or external users from Windows computers, and whether access was granted or denied.
 
-The data that you see is aggregated from your Azure Information Protection clients and scanners, from Microsoft Cloud App Security, and from [protection usage logs](log-analyze-usage.md). 
+The data that you see is aggregated from your Azure Information Protection clients and scanners, from Microsoft Cloud App Security, and from [protection usage logs](log-analyze-usage.md).
 
-Azure Information Protection analytics for central reporting is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+Azure Information Protection analytics for central reporting is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 
 ## AIP reporting data
