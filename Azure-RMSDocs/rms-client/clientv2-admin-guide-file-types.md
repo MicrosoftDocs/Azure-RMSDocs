@@ -151,7 +151,7 @@ These file types are identified separately because when they are natively protec
 |.tif|.ptif|
 |.tiff|.ptiff|
 |.txt|.ptxt|
-|.xla |.pxla | 
+|.xla |.pxla |
 |.xlam |.pxlam |
 |.xml|.pxml|
 | | |
@@ -283,11 +283,14 @@ To check what filters are installed, see the [Finding a Filter Handler for a Giv
 
 The following sections have configuration instructions to inspect .zip files, and .tiff files.
 
-### To inspect .zip files
+### To scan .zip files
 
-The Azure Information Protection scanner and the [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can inspect .zip files.
+When your scanner is installed on a Windows server machine, you must also install the Microsoft Office iFilter in order to scan .zip files for sensitive information types. For more information, see the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=17062).
+
+You can use the AIP scanner or the [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command to inspect .zip files.
 
 After finding sensitive information, if the .zip file should be classified and protected with a label, specify the .zip file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) from the scanner deployment instructions.
+
 
 **Example scenario**:
 
