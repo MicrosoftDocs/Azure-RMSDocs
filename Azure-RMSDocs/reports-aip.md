@@ -5,7 +5,7 @@ title: Analytics and central reporting for Azure Information Protection (AIP)
 description: Learn how to use Azure Information Protection (AIP) analytics and central reporting to track label usage and to identify files that contain sensitive information.
 author: batamig
 ms.author: bagol
-ms.date: 06/27/2021
+ms.date: 07/08/2021
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -66,8 +66,9 @@ For example, the Azure Information Protection analytics for central reporting di
 
 The reports use [Azure Monitor](/azure/log-analytics/log-analytics-overview) to store the data in a Log Analytics workspace that your organization owns. If you're familiar with the query language, you can modify the queries, and create new reports and Power BI dashboards. You might find the following tutorial helpful to understand the query language: [Get started with Azure Monitor log queries](/azure/azure-monitor/log-query/get-started-queries).
 
-For more information, read the following blog posts: 
-- [Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)
+AIP audit logs may take up to 24 hours to appear in your Log Analytics workspace.
+
+For more information, see [Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
 
 
 ### Information collected and sent to Log Analytics
