@@ -6,7 +6,7 @@ description: Learn about the file types and sizes supported for the Azure Inform
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/07/2021
+ms.date: 07/08/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -57,7 +57,7 @@ The following file types can be classified even when they are not protected.
 
 - **Digital Negative**: .dng
 
-- **Microsoft Office**: The following file types, including 97-2003 file formats and Office Open XML formats for Word, Excel, and PowerPoint.
+- **Microsoft Office**: The following file types, including 97-2003 file formats and Office Open XML formats for Word, Excel, and PowerPoint:
 
     :::row:::
        :::column span="":::
@@ -112,6 +112,7 @@ Examples:
 > [!TIP]
 > If you need to protect files that don't have built in support for protection, you can use the File Explorer to limit access to specified email addresses only. For more information, see [Using File Explorer to classify and protect files](clientv2-classify-protect.md#use-the-file-explorer-to-classify-and-protect-files).
 >
+
 ## File types supported for protection
 
 The Azure Information Protection unified labeling client supports protection at two different levels, as described in the following table.
