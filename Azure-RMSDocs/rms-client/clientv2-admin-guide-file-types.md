@@ -61,43 +61,43 @@ The following file types can be classified even when they are not protected.
 
     :::row:::
        :::column span="":::
-          .doc
-          .docm
-          .docx
-          .dot
-          .dotm
-          .dotx
-          .potm
+          .doc <br>
+          .docm<br>
+          .docx<br>
+          .dot<br>
+          .dotm<br>
+          .dotx<br>
+          .potm<br>
        :::column-end:::
        :::column span="":::
-          .potx
-          .pps
-          .ppsm
-          .ppsx
-          .ppt
-          .pptm
-          .pptx
-          .vdw
+          .potx<br>
+          .pps<br>
+          .ppsm<br>
+          .ppsx<br>
+          .ppt<br>
+          .pptm<br>
+          .pptx<br>
+          .vdw<br>
        :::column-end:::
        :::column span="":::
-          .vsd
-          .vsdm
-          .vsdx
-          .vss
-          .vssm
-          .vst
-          .vstm
-          .vssx
+          .vsd<br>
+          .vsdm<br>
+          .vsdx<br>
+          .vss<br>
+          .vssm<br>
+          .vst<br>
+          .vstm<br>
+          .vssx<br>
        :::column-end:::
        :::column span="":::
-          .vstx
-          .xls
-          .xlsb
-          .xlt
-          .xlsm
-          .xlsx
-          .xltm
-          .xltx
+          .vstx<br>
+          .xls<br>
+          .xlsb<br>
+          .xlt<br>
+          .xlsm<br>
+          .xlsx<br>
+          .xltm<br>
+          .xltx<br>
        :::column-end:::
     :::row-end:::
 
