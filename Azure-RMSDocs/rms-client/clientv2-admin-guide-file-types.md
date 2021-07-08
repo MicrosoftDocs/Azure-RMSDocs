@@ -57,7 +57,7 @@ The following file types can be classified even when they are not protected.
 
 - **Digital Negative**: .dng
 
-- **Microsoft Office**: The following file types, including 97-2003 file formats and Office Open XML formats for the following Office programs: Word, Excel, and PowerPoint.
+- **Microsoft Office**: The following file types, including 97-2003 file formats and Office Open XML formats for Word, Excel, and PowerPoint.
 
     :::row:::
        :::column span="":::
