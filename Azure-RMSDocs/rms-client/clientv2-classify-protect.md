@@ -99,7 +99,7 @@ When you share Office documents by email, you can attach the document to an emai
 
 However, you might want to protect the document first, and then attach it to the email. Protect the email as well if the email message contains sensitive information. A benefit of protecting the document before you attach it to an email is that you can apply different permissions to the document than to the email message.
 
-## Using File Explorer to classify and protect files
+## Use the File Explorer to classify and protect files
 
 When you use File Explorer, you can quickly classify and protect a single file, multiple files, or a folder.
 
@@ -141,7 +141,7 @@ The selected file or files are now classified and protected, according to your s
 
 If you change your mind about the classification and protection, or later need to modify your settings, simply repeat this process with your new settings.
 
-The classification and protection that you specified stays with the file, even if you email the file or save it to another location. 
+The classification and protection that you specified stays with the file, even if you email the file or save it to another location.
 
 ## Excluded and unsupported files
 

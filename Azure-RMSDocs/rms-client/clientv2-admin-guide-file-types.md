@@ -74,6 +74,9 @@ Examples:
 
 - If the **Confidential \ All Employees** sensitivity label applies classification and protection: You could apply this label to a file named sales.pdf and a file named sales.txt. You could also apply just protection to these files, without classification.
 
+> [!TIP]
+> If you need to protect files that don't have built in support for protection, you can use the File Explorer to limit access to specified email addresses only. For more information, see [Using File Explorer to classify and protect files](clientv2-classify-protect.md#use-the-file-explorer-to-classify-and-protect-files).
+>
 ## File types supported for protection
 
 The Azure Information Protection unified labeling client supports protection at two different levels, as described in the following table.
