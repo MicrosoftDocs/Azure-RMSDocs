@@ -107,6 +107,13 @@ When you select a folder, all the files in that folder and any subfolders it has
 
 When you use File Explorer to classify and protect your files, if one or more of the labels appear dimmed, the files that you selected do not support classification. For these files, you can select a label only if your administrator has configured the label to apply protection. Or, you can specify your own protection settings.
 
+> [!NOTE]
+> Some files, such as executable files and your Windows folder, are automatically excluded from classification and protection, because changing them might stop your PC from running. Although you can select these files, they are skipped as an excluded folder or file.
+>
+> For more information, see [File types supported by the Azure Information Protection unified labeling client](clientv2-admin-guide-file-types.md).
+
+
+
 **To classify and protect a file by using File Explorer**:
 
 1. In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect**. For example:
@@ -143,11 +150,9 @@ If you change your mind about the classification and protection, or later need t
 
 The classification and protection that you specified stays with the file, even if you email the file or save it to another location.
 
-## Excluded and unsupported files
+## Protecting files without built-in support
 
-Some files are automatically excluded from classification and protection, because changing them might stop your PC from running. Although you can select these files, they are skipped as an excluded folder or file. Examples include executable files and your Windows folder.
-
-Other files are not skipped as excluded files, but do not have have built-in support for classification and protection, such as **.pub** files. To protect unsupported files, use the File Explorer to protect the file with custom permissions, and then enter the specific email address for the users who need access to the file.
+To protect files that have built-in support for classification only, such as **pub** files, use the File Explorer to protect the file with custom permissions. In the **Select users, groups, or organizations** box, enter email address for the users who need access to the file.
 
 For example:
 
