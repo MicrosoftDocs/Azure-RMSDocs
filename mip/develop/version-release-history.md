@@ -26,7 +26,18 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
 
-## Verison 1.9.78
+## Version 1.9.90
+
+**Release date:** July 7, 2021
+
+### General Changes
+
+- Fixed a bug in File SDK where legacy documents couldn't be decrypted on 32-bit Windows.
+- Enable bitcode on iOS build. 
+- Updated Ubuntu 16.04 to use OpenSSL 1.1.1k.
+- Fixed an issue in decrypting MSG files that had been previously handled by 3rd party eDiscovery tools.
+
+## Version 1.9.78
 
 **Release date:** April 29, 2021
 
