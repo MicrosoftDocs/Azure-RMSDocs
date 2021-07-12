@@ -6,7 +6,7 @@ description: Learn about the file types and sizes supported for the Azure Inform
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/07/2021
+ms.date: 07/08/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -36,7 +36,10 @@ This article lists the file types and sizes supported by the Azure Information P
 
 > [!NOTE]
 > For the listed file types, WebDav locations are not supported.
-> 
+>
+
+> [!TIP]
+> If you need to protect files that don't have built in support for classification and/ or protection, you can use the File Explorer to limit access to specified email addresses only. For more information, see [Using File Explorer to classify and protect files](clientv2-classify-protect.md#use-the-file-explorer-to-classify-and-protect-files).
 ## File types supported for classification only
 
 The following file types can be classified even when they are not protected.
@@ -57,14 +60,49 @@ The following file types can be classified even when they are not protected.
 
 - **Digital Negative**: .dng
 
-- **Microsoft Office**: File types in the following table.
+- **Microsoft Office**: The following file types, including 97-2003 file formats and Office Open XML formats for Word, Excel, and PowerPoint:
 
-    The supported file formats for these file types are the 97-2003 file formats and Office Open XML formats for the following Office programs: Word, Excel, and PowerPoint.
-
-    |Office file type|Office file type|
-    |----------------------------------|----------------------------------|
-    |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vdw<br /><br />.vsd|.vsdm<br /><br /> .vsdx<br /><br />.vss<br /><br />.vssm<br /><br />.vst<br /><br />.vstm<br /><br />.vssx<br /><br />.vstx<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx|
-    | | |
+    :::row:::
+       :::column span="":::
+          .doc <br>
+          .docm<br>
+          .docx<br>
+          .dot<br>
+          .dotm<br>
+          .dotx<br>
+          .potm<br>
+       :::column-end:::
+       :::column span="":::
+          .potx<br>
+          .pps<br>
+          .ppsm<br>
+          .ppsx<br>
+          .ppt<br>
+          .pptm<br>
+          .pptx<br>
+          .vdw<br>
+       :::column-end:::
+       :::column span="":::
+          .vsd<br>
+          .vsdm<br>
+          .vsdx<br>
+          .vss<br>
+          .vssm<br>
+          .vst<br>
+          .vstm<br>
+          .vssx<br>
+       :::column-end:::
+       :::column span="":::
+          .vstx<br>
+          .xls<br>
+          .xlsb<br>
+          .xlt<br>
+          .xlsm<br>
+          .xlsx<br>
+          .xltm<br>
+          .xltx<br>
+       :::column-end:::
+    :::row-end:::
 
 Other file types support classification when they are also protected. For these file types, see the [Supported file types for classification and protection](#supported-file-types-for-classification-and-protection) section.
 
@@ -73,6 +111,7 @@ Examples:
 - If the **General** sensitivity label applies classification and does not apply protection: You could apply the **General** label to a file named sales.pdf but you could not apply this label to a file named sales.txt.
 
 - If the **Confidential \ All Employees** sensitivity label applies classification and protection: You could apply this label to a file named sales.pdf and a file named sales.txt. You could also apply just protection to these files, without classification.
+
 
 ## File types supported for protection
 
@@ -112,7 +151,7 @@ These file types are identified separately because when they are natively protec
 |.tif|.ptif|
 |.tiff|.ptiff|
 |.txt|.ptxt|
-|.xla |.pxla | 
+|.xla |.pxla |
 |.xlam |.pxlam |
 |.xml|.pxml|
 | | |
@@ -204,6 +243,7 @@ To help prevent users from changing files that are critical for computer operati
     - \ProgramData
     - \AppData (for all users)
 
+
 ### File types that are excluded from classification and protection by the Azure Information Protection scanner
 
 By default, the scanner also excludes the same file types as the Azure Information Protection unified labeling client. 
@@ -244,11 +284,14 @@ To check what filters are installed, see the [Finding a Filter Handler for a Giv
 
 The following sections have configuration instructions to inspect .zip files, and .tiff files.
 
-### To inspect .zip files
+### To scan .zip files
 
-The Azure Information Protection scanner and the [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can inspect .zip files.
+When your scanner is installed on a Windows server machine, you must also install the Microsoft Office iFilter in order to scan .zip files for sensitive information types. For more information, see the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=17062).
+
+You can use the AIP scanner or the [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command to inspect .zip files.
 
 After finding sensitive information, if the .zip file should be classified and protected with a label, specify the .zip file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) from the scanner deployment instructions.
+
 
 **Example scenario**:
 
@@ -256,7 +299,7 @@ A file named **accounts.zip** contains Excel spreadsheets with credit card numbe
 
 After inspecting the file, the unified labeling client from your PowerShell session classifies this file as **Confidential \ Finance**, applies generic protection to the file so that only members of the Finance groups can unzip it, and renames the file **accounts.zip.pfile**.
 
-### To inspect .tiff files by using OCR
+### To scan .tiff files by using OCR
 
 The [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you install the Windows TIFF IFilter feature, and then configure [Windows TIFF IFilter Settings](/previous-versions/windows/it-pro/windows-7/dd744701(v=ws.10)) on the computer running the PowerShell session.
 
