@@ -36,7 +36,10 @@ This article lists the file types and sizes supported by the Azure Information P
 
 > [!NOTE]
 > For the listed file types, WebDav locations are not supported.
-> 
+>
+
+> [!TIP]
+> If you need to protect files that don't have built in support for classification and/ or protection, you can use the File Explorer to limit access to specified email addresses only. For more information, see [Using File Explorer to classify and protect files](clientv2-classify-protect.md#use-the-file-explorer-to-classify-and-protect-files).
 ## File types supported for classification only
 
 The following file types can be classified even when they are not protected.
@@ -334,8 +337,6 @@ The following table lists the maximum sizes support for encryption and decryptio
 |     |         |         |
 
 ## Next steps
-
-If you need to protect files that don't have built in support for classification and/ or protection, you can use the File Explorer to limit access to specified email addresses only. For more information, see [Using File Explorer to classify and protect files](clientv2-classify-protect.md#use-the-file-explorer-to-classify-and-protect-files).
 
 For more information, see:
 
