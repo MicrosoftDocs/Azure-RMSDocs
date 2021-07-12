@@ -33,7 +33,7 @@ Use the following information to see what’s new or changed for a supported rel
 ### General Changes
 
 - Fixed a bug in File SDK where legacy documents couldn't be decrypted on 32-bit Windows.
-- Enable bitcode on iOS build. 
+- Enable bitcode on iOS builds.
 - Updated Ubuntu 16.04 to use OpenSSL 1.1.1k.
 - Fixed an issue in decrypting MSG files that had been previously handled by 3rd party eDiscovery tools.
 
@@ -54,7 +54,7 @@ Use the following information to see what’s new or changed for a supported rel
     - `mip::PolicyEngine::SetSessionId()`
 - Added `Workload` enum and consent checks.
   - Added `HasWorkloadConsent()` and `GetWorkloadConsent()` to `FileEngine` and `PolicyEngine`.  
-- Added sychronous APIs to Policy SDK .NET wrapper: `AddEngine()`, `ListEngines()`, `DeleteEngine()`, `UnloadEngine()`.
+- Added synchronous APIs to Policy SDK .NET wrapper: `AddEngine()`, `ListEngines()`, `DeleteEngine()`, `UnloadEngine()`.
 - Added support for redirecting protection requests via `ProtectionProfile::Settings::AddRedirectionUri()`
 - Added a logger context that can be used with `LoggerDelegate` to write custom context data through to logs.
   - This API can be useful for correlating error events in services to a single operation or events. 
