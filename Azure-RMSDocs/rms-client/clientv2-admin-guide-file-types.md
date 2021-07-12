@@ -109,9 +109,6 @@ Examples:
 
 - If the **Confidential \ All Employees** sensitivity label applies classification and protection: You could apply this label to a file named sales.pdf and a file named sales.txt. You could also apply just protection to these files, without classification.
 
-> [!TIP]
-> If you need to protect files that don't have built in support for protection, you can use the File Explorer to limit access to specified email addresses only. For more information, see [Using File Explorer to classify and protect files](clientv2-classify-protect.md#use-the-file-explorer-to-classify-and-protect-files).
->
 
 ## File types supported for protection
 
@@ -243,6 +240,7 @@ To help prevent users from changing files that are critical for computer operati
     - \ProgramData
     - \AppData (for all users)
 
+
 ### File types that are excluded from classification and protection by the Azure Information Protection scanner
 
 By default, the scanner also excludes the same file types as the Azure Information Protection unified labeling client. 
@@ -298,7 +296,7 @@ A file named **accounts.zip** contains Excel spreadsheets with credit card numbe
 
 After inspecting the file, the unified labeling client from your PowerShell session classifies this file as **Confidential \ Finance**, applies generic protection to the file so that only members of the Finance groups can unzip it, and renames the file **accounts.zip.pfile**.
 
-### To inspect .tiff files by using OCR
+### To scan .tiff files by using OCR
 
 The [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you install the Windows TIFF IFilter feature, and then configure [Windows TIFF IFilter Settings](/previous-versions/windows/it-pro/windows-7/dd744701(v=ws.10)) on the computer running the PowerShell session.
 
@@ -336,6 +334,8 @@ The following table lists the maximum sizes support for encryption and decryptio
 |     |         |         |
 
 ## Next steps
+
+If you need to protect files that don't have built in support for classification and/ or protection, you can use the File Explorer to limit access to specified email addresses only. For more information, see [Using File Explorer to classify and protect files](clientv2-classify-protect.md#use-the-file-explorer-to-classify-and-protect-files).
 
 For more information, see:
 

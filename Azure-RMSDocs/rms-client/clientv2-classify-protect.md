@@ -152,7 +152,9 @@ The classification and protection that you specified stays with the file, even i
 
 ## Protecting files without built-in support
 
-To protect files that have built-in support for classification only, such as **pub** files, use the File Explorer to protect the file with custom permissions. In the **Select users, groups, or organizations** box, enter email address for the users who need access to the file.
+To protect files that do not have built-in support for classification and/or protection, such as such as **pub** files, use the File Explorer to protect the file with custom permissions. 
+
+In the **Select users, groups, or organizations** box, enter email address for the users who need access to the file.
 
 For example:
 
