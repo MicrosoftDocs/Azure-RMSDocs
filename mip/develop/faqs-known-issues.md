@@ -16,13 +16,13 @@ This article provides answers to Frequently Asked Questions (FAQs), and troubles
 
 ### Metadata Storage Changes
 
-We [recently announced](https://aka.ms/mipsdkmetadata) that we're making a change to the label metadata storage location for Office files (Word, Excel, PowerPoint) to support new features in Office 365, SharePoint Online, and other services.
+We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the label metadata storage location for Office files (Word, Excel, PowerPoint) to support new features in Office 365, SharePoint Online, and other services.
 
 #### Metadata FAQ
 
 **Question**: When will the first features become available that require this new storage location?
 
-- We expect that the first features will be available in the second quarter of calendar year 2021. Customers may opt in to private or public previews earlier.  
+- Co-authoring for protected files in Microsoft 365 apps requires this new metadata storage location. For more details, review the [Security, Compliance, and Identity blog post](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-co-authoring-on-microsoft-information-protection/ba-p/2164162).
 
 **Question**: Are other formats impacted, such as PDF?
 
@@ -56,10 +56,10 @@ We [recently announced](https://aka.ms/mipsdkmetadata) that we're making a chang
 
 - The following logic is used to determine which section is read and used to read or write label data.
 
-| Action                                                                                                | Feature Not Enabled                                                                    | Feature Enabled                                              |
-| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| Read                                                                                                  | Label in custom.xml (unprotected) or Doc SummaryInfo (protected).                      | If label exists in labelinfo.xml, it is the effective label.<br> If there is no label in labelinfo.xml, label in custom.xml or Doc SummaryInfo is the effective label. |
-| Write                                                                                                 | All new labels are written to custom.xml (unprotected) or Doc SummaryInfo (protected). | All new labels are written to labelinfo.xml.                 |
+| Action | Feature Not Enabled                                                                    | Feature Enabled                                                                                                                                                        |
+| ------ | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Read   | Label in custom.xml (unprotected) or Doc SummaryInfo (protected).                      | If label exists in labelinfo.xml, it is the effective label.<br> If there is no label in labelinfo.xml, label in custom.xml or Doc SummaryInfo is the effective label. |
+| Write  | All new labels are written to custom.xml (unprotected) or Doc SummaryInfo (protected). | All new labels are written to labelinfo.xml.                                                                                                                           |
 
 
 <br>
@@ -82,6 +82,12 @@ The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transfor
 | Windows native  | For C++ SDK clients, the C++ Standard Library type [`std::string`](https://wikipedia.org/wiki/C%2B%2B_string_handling) is used for passing strings to/from API functions. Conversion to/from UTF-8 is managed internally by the MIP SDK. When a `std::string` is returned from an API, you must expect UTF-8 encoding and manage accordingly if converting the string. In some cases, a string is returned as part of a `uint8_t` vector (such as a publishing license (PL)), but should be treated as an opaque blob.<br><br>For more information and examples, see:<ul><li>[WideCharToMultiByte function](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte) for assistance with converting wide character strings to multi-byte, such as UTF-8.<li>The following sample files included in the [SDK download](setup-configure-mip.md#configure-your-client-workstation):<ul><li>Sample string utility functions in `file\samples\common\string_utils.cpp`, for converting to/from wide UTF-8 strings.<li>An implementation of `wmain(int argc, wchar_t *argv[])` in `file\samples\file\main.cpp`, which uses the preceding string conversion functions.</li></ul></ul> |
 | .NET            | For .NET SDK clients, all strings use the default UTF-16 encoding and no special conversion is needed. Conversion to/from UTF-16 is managed internally by the MIP SDK.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | Other platforms | All other platforms supported by the MIP SDK have native support for UTF-8.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+
+## Compliance
+
+**Question**: Is the Microsoft Information Protection SDK FIPS 140-2 compliant? 
+
+The Microsoft Information Protection SDK uses FIPS 140-2 approved ciphers but not FIPS 140-2 validated cryptographic libraries today. Applications consuming the MIP SDK need to be aware that the SDK is not considered FIPS compliant at this time. For more information, see the article on [FIPS 140-2 compliance](concept-fips-compliance.md). 
 
 ## Issues and errors reference
 
