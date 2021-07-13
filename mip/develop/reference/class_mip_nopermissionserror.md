@@ -1,10 +1,10 @@
 ---
 title: class NoPermissionsError 
 description: Documents the nopermissionserror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 04/23/2021
 ---
 
@@ -12,7 +12,8 @@ ms.date: 04/23/2021
 The user could not get access to the content. For example, no permissions, content revoked.
   
 ## Summary
- Members                        | Descriptions                                
+
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string GetReferrer() const  |  Gets the contact in case of missing rights to the document.
 public std::string GetOwner() const  |  Gets the owner of the document.
@@ -40,10 +41,13 @@ Gets the category of no permissions failure.
 **Returns**: Category of no permissions failure
   
 ### Category enum
- Values                         | Descriptions                                
+
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unknown no permissions failure
 UserNotFound            | Requested user was not found failure
 AccessDenied            | 
 AccessExpired            | 
+
 Category of no permissions error.
+

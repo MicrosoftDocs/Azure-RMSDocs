@@ -1,10 +1,10 @@
 ---
 title: class TemplateNotFoundError 
 description: Documents the templatenotfounderror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 04/23/2021
 ---
 
@@ -12,7 +12,8 @@ ms.date: 04/23/2021
 Template ID is not recognized by RMS service.
   
 ## Summary
- Members                        | Descriptions                                
+
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string mMessage  | _Not yet documented._
 public std::map\<std::string, std::string\> mDebugInfo  | _Not yet documented._
@@ -104,8 +105,11 @@ Get debug info.
 **Returns**: Debug info (keys/values)
   
 ### ErrorCode enum
- Values                         | Descriptions                                
+
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 General            | General bad input error
 FileIsTooLargeForProtection            | File is too large for protection
+
 ErrorCode of bad input error.
+

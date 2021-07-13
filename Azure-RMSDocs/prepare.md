@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Preparing users and groups for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -187,12 +187,18 @@ In most cases, the value for UserPrincipalName matches one of the values in the 
 
 2. If the UPN is not routable (for example, <strong>ankurroy@contoso.local</strong>), configure alternate login ID for users and instruct them how to sign in to Office by using this alternate login. You must also set a registry key for Office.
 
+    With UPN changes for users, there will be a loss of business continuity for at least 24 hours or until the UPN changes are properly reflected in the system.
+
     For more information, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) and [Office applications periodically prompt for credentials to SharePoint, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
 
 > [!TIP]
 > You can use the Export-Csv cmdlet to export the results to a spreadsheet for easier management, such as searching and bulk-editing for import.
 >
 > For example: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
+
+> [!NOTE]
+> With UPN changes for users, there will be a loss of business continuity for at least 24 hours or until the UPN changes are properly reflected in the system.
+> 
 
 ### Confirm group accounts are ready for Azure Information Protection
 

@@ -1,10 +1,10 @@
 ---
 title: class RecommendLabelAction 
 description: Documents the recommendlabelaction::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 04/23/2021
 ---
 
@@ -12,7 +12,8 @@ ms.date: 04/23/2021
 Recommend label actions is meant to suggest a label to the users. Suppressing this call after a user ignores the recommended label should be done through the supported actions on the execution state.
   
 ## Summary
- Members                        | Descriptions                                
+
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::shared_ptr\<Label\>& GetLabel() const  |  Get the label suggested.
 public const std::vector\<std::string\>& GetClassificationIds() const  |  Get the Classification IDs that matched and caused this label to appear.
@@ -29,4 +30,4 @@ Get the label suggested.
 Get the Classification IDs that matched and caused this label to appear.
 
   
-**Returns**: Const std::vector<std::string>& a list of classification IDs that caused this label to appear.
+**Returns**: Const std::vector\<std::string\>& a list of classification IDs that caused this label to appear.

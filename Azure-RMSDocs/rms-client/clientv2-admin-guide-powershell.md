@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Admin Guide: Using PowerShell with the Azure Information Protection unified client
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
@@ -233,6 +233,11 @@ Now you've completed the registration of this app with a secret, you're ready to
     ```PowerShell
     Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
     ```
+    
+## Common parameters for PowerShell cmdlets
+
+For information about common parameters, see [About common parameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+
 ## Next steps
 
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> -online`. For example: 

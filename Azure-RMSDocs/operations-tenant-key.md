@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Operations for your Azure Information Protection tenant key
 
->**Applies to*: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>**Applies to*: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -53,5 +53,5 @@ After you have identified which topology you have implemented, select one of the
 - [Microsoft-managed tenant key](operations-microsoft-managed-tenant-key.md)
 - [Customer-managed tenant key](operations-customer-managed-tenant-key.md)
 
-However, if you want to create an Azure Information Protection tenant key by importing a trusted publishing domain (TPD) from Active Directory Rights Management Services, this import operation is part of the [migration from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).  
+However, if you want to create an Azure Information Protection tenant key by importing a trusted publishing domain (TPD) from Active Directory Rights Management Services, this import operation is part of the [migration from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). As part of the design, an AD RMS TPD can only be imported to one tenant. 
 

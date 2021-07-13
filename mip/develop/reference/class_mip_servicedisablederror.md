@@ -1,10 +1,10 @@
 ---
 title: class ServiceDisabledError 
 description: Documents the servicedisablederror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 04/23/2021
 ---
 
@@ -12,7 +12,8 @@ ms.date: 04/23/2021
 The user could not get access to the content due to a service being disabled.
   
 ## Summary
- Members                        | Descriptions                                
+
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public Extent GetExtent() const  |  Gets the extent for which the service is disabled.
 enum Extent  |  Describes the extent for which the service is disabled.
@@ -26,10 +27,13 @@ Gets the extent for which the service is disabled.
 **Returns**: Extent for which the service is disabled
   
 ### Extent enum
- Values                         | Descriptions                                
+
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 User            | Service is disabled for the user.
 Device            | Service is disabled for the device.
 Platform            | Service is disabled for the platform.
 Tenant            | Service is disabled for the tenant.
+
 Describes the extent for which the service is disabled.
+

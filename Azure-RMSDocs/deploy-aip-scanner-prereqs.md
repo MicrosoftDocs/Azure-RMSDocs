@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Requirements for installing and deploying the Azure Information Protection unified labeling scanner
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
 >
 >***Relevant for**: [AIP unified labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
@@ -61,6 +61,8 @@ You must have a Windows Server computer to run the scanner, which has the follow
 |**Operating system**     |- Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Note**: For testing or evaluation purposes in a non-production environment, you can also use any Windows operating system that is [supported by the Azure Information Protection client](requirements.md#client-devices).
 |**Network connectivity**     | Your scanner computer can be a physical or virtual computer with a fast and reliable network connection to the data stores to be scanned. </br></br> If internet connectivity is not possible because of your organization policies, see [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations). </br></br>Otherwise, make sure that this computer has internet connectivity that allows the following URLs over HTTPS (port 443):</br><br />-  \*.aadrm.com <br />-  \*.azurerms.com<br />-  \*.informationprotection.azure.com <br /> - informationprotection.hosting.portal.azure.net <br /> - \*.aria.microsoft.com <br />-  \*.protection.outlook.com |
 |**NFS shares** |To support scans on NFS shares, services for NFS must be deployed on the scanner machine. <br><br>On your machine, navigate to the **Windows Features (Turn Windows features on or off)** settings dialog, and select the following items: **Services for NFS** > **Administrative Tools** and **Client for NFS**. |
+| **Microsoft Office iFilter** |When your scanner is installed on a Windows server machine, you must also install the Microsoft Office iFilter in order to scan .zip files for sensitive information types. <br><br>For more information, see the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=17062).
+ |
 | | |
 
 ## Service account requirements
@@ -232,9 +234,9 @@ The scanner can discover and scan all Sharepoint sites and subsites under a spec
 
 1. Select **Site Collection Auditor** in the **Site Collection Permissions** options, then grant **View Application Pages** in the Permissions list, and finally, name the new policy level **AIP scanner site collection auditor and viewer**.
 
-1. Add your scanner user to the new policy and grant **Site collection** in the Permissions list.   
+1. Add your scanner user to the new policy and grant **Site collection** in the Permissions list.
 
-1. Add a URL of the SharePoint that hosts sites or subsites that need to be scanned. For more information, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+1. Add a URL of the SharePoint that hosts sites or subsites that need to be scanned. For more information, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-settings).
 
 To learn more about how to manage your SharePoint policy levels see, [manage permission policies for a web application](/sharepoint/administration/manage-permission-policies-for-a-web-application).
 
@@ -260,14 +262,14 @@ To support a disconnected computer from the Azure portal, perform the following 
 
     1. Set the scanner to function in **offline** mode, using the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet.
 
-    1. Configure the scanner in the Azure portal by creating a scanner cluster. For more information, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+    1. Configure the scanner in the Azure portal by creating a scanner cluster. For more information, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-settings).
 
     1. Export your content job from the **Azure Information Protection - Content scan jobs** pane using the **Export** option.
-    
-    1. Import the policy using the [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/import-aipscannerconfiguration) cmdlet. 
-    
+
+    1. Import the policy using the [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/import-aipscannerconfiguration) cmdlet.
+
     Results for offline content scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
-    
+
     **Enable offline management of network scan jobs**:
 
     1. Set the Network Discovery service (public preview) to function in offline mode using the [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) cmdlet.
@@ -286,7 +288,7 @@ Perform the following procedure to support a disconnected computer using PowerSh
 
 > [!IMPORTANT]
 > Admins of [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs) *must* use this procedure in order to manage their content scan jobs.
-> 
+>
 
 **Manage your content scan jobs using PowerShell only**:
 

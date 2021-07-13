@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 04/08/2021
+ms.date: 07/05/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -25,7 +25,7 @@ ms.custom: admin
 
 # Known issues - Azure Information Protection
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -95,9 +95,10 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 
 Known issues for co-authoring are relevant only when the [dedicated AIP client version for co-authoring](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) is deployed in your environment and co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
 
+Co-authoring with the unified labeling client is currently in [public preview](rms-client/unifiedlabelingclient-version-release-history.md#version-212620-public-preview) and is supported only for testing environments.
+
 Known issues for co-authoring in AIP include:
 
-- [Use in testing environments only](#use-in-testing-environments-only)
 - [Supported versions for co-authoring and sensitivity labels](#supported-versions-for-co-authoring-and-sensitivity-labels)
 - [Policy updates](#policy-updates)
 - [Unsupported features for co-authoring](#unsupported-features-for-co-authoring)
@@ -106,12 +107,6 @@ Known issues for co-authoring in AIP include:
 > Co-authoring and sensitivity labels cannot be deployed to some users only, as any new labels will not be visible to users with an older version of the Office client.
 > 
 For more information about co-authoring support, including limitations and known issues for the public preview, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring).
-
-#### Use in testing environments only
-
-To avoid conflicts between your labeled files, co-authoring cannot be turned off without assistance from customer support during the public preview period.
-
-For this reason, we recommend that you currently turn co-authoring on for your system in testing environments only.
 
 #### Supported versions for co-authoring and sensitivity labels
 

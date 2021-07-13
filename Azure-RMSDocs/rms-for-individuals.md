@@ -26,7 +26,7 @@ ms.custom: admin
 
 # RMS for individuals and Azure Information Protection
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
@@ -59,7 +59,7 @@ Alternative options include:
 
 3. Click **Sign up**.
 
-    Microsoft uses your email address to check whether your organization already has a [subscription for Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) or an [Office 365 subscription that includes data protection by using Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). If either of these subscriptions are found, you don’t need RMS for individuals. You are signed in immediately and the self-service sign up for RMS for individuals is canceled. If one of these subscriptions isn't found, you continue to the next step.
+    Microsoft uses your email address to check whether your organization already has a [subscription for Azure Information Protection Premium](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection) or an [Office 365 subscription that includes data protection by using Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). If either of these subscriptions are found, you don’t need RMS for individuals. You are signed in immediately and the self-service sign up for RMS for individuals is canceled. If one of these subscriptions isn't found, you continue to the next step.
 
 4. Wait for a confirmation email message to be sent to the address that you supplied. It will be from the Microsoft 365 Team (support@email.microsoftonline.com) and has the subject **Finish signing up for Microsoft Azure Information Protection**.
 
@@ -72,7 +72,7 @@ Alternative options include:
 Now your account is created, if you're prompted to sign in to read protected files, enter the same email address and password that you used to create the account for RMS for the individuals.
 
 > [!IMPORTANT]
-> Although you can now also protect files with this account, do not do so until your organization has a [trial or paid subscription](https://azure.microsoft.com/pricing/details/information-protection/) for Azure Information Protection. If you protect files and emails by using this free subscription and then your organization takes control of your account, previously protected content might become inaccessible.
+> Although you can now also protect files with this account, do not do so until your organization has a [trial or paid subscription](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection/) for Azure Information Protection. If you protect files and emails by using this free subscription and then your organization takes control of your account, previously protected content might become inaccessible.
 
 
 ## Next steps

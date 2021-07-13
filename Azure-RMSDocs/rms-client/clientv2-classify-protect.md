@@ -6,7 +6,7 @@ description: How to instructions about classifying and protecting your documents
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/03/2020
+ms.date: 07/08/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -25,7 +25,7 @@ ms.custom: user
 
 # User Guide: Classify and protect with the Azure Information Protection unified labeling client
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 10, Windows 8.1, Windows 8*
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
@@ -36,11 +36,11 @@ ms.custom: user
 
 The easiest way to classify and protect your documents and emails is when you are creating or editing them from within your Office desktop apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
-However, you can also classify and protect files by using **File Explorer**. This method supports additional file types and is a convenient way to classify and protect multiple files at once. This method supports protecting Office documents, PDF files, text and image files, and a wide range of other files. 
+However, you can also classify and protect files by using **File Explorer**. This method supports additional file types and is a convenient way to classify and protect multiple files at once. This method supports protecting Office documents, PDF files, text and image files, and a wide range of other files.
 
 If your label applies protection to a document, the protected document might not be suitable to be saved on SharePoint or OneDrive. Check whether your administrator has [enabled sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
-### Safely share a file with people outside your organization
+## Safely share a file with people outside your organization
 
 Files that are protected are safe to share with others. For example, you attach a protected document to an email.
 
@@ -48,10 +48,10 @@ Before you share files with people outside your organization, check with your he
 
 For example, if your organization regularly communicates with people in another organization, your administrator might have configured labels that sets protection such that these people can read and use protected documents. Then, select these labels to classify and protect the documents to share.
 
-Alternatively, if the external users have [business-to-business (B2B) accounts](/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) created for them, you can use [File Explorer to set custom permissions](#using-file-explorer-to-classify-and-protect-files) for a document before you share it. If you set your own custom permissions and the document is already protected for internal use, first make a copy of it to retain the original permissions. Then use the copy to set the custom permissions.
+Alternatively, if the external users have [business-to-business (B2B) accounts](/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) created for them, you can use [File Explorer to set custom permissions](#use-the-file-explorer-to-classify-and-protect-files) for a document before you share it. If you set your own custom permissions and the document is already protected for internal use, first make a copy of it to retain the original permissions. Then use the copy to set the custom permissions.
 
 
-## Using Office apps to classify and protect your documents and emails
+## Use Office apps to classify and protect documents and emails
 
 From the **Home** tab, select the **Sensitivity** button on the ribbon, and then select one of the labels that has been configured for you. For example:
 
@@ -73,25 +73,24 @@ In addition to manually selecting labels, labels can also be applied in the foll
 
 - Your administrator configured recommended labels when sensitive information is detected, and you are prompted to accept the recommendation (and the label is applied), or reject it (the recommended label is not applied).
 
-### Exceptions for the Sensitivity button
+### Don't see the Sensitivity button or expected labels in your Office apps?
 
-##### Don't see the Sensitivity button in your Office apps?
+If you don't see the **Sensitivity** button in your Office apps, you might not have the Azure Information Protection unified labeling client [installed](install-unifiedlabelingclient-app.md).
 
-- You might not have the Azure Information Protection unified labeling client [installed](install-unifiedlabelingclient-app.md).
+If you don't see a **Sensitivity** button on the ribbon, but do see a **Protect** button with labels instead, you have the Azure Information Protection classic client installed and not the Azure Information Protection unified labeling client. For more information, see [What's the difference between the Azure Information Protection classic and unified labeling clients?](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)?
 
-- If you don't see a **Sensitivity** button on the ribbon, but do see a **Protect** button with labels instead, you have the Azure Information Protection classic client installed and not the Azure Information Protection unified labeling client. [More information](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)
- 
-##### Is the label that you expect to see not displayed? 
 
-Possible reasons:
+Your labels may appear differently than you expect for one of the following reasons:
 
-- If your administrator has recently configured a new label for you, try closing all instances of your Office app and reopening it. This action checks for changes to your labels.
+- **Your administrator may have re-configured your labels**. In this case, try closing all instances of your Office app and reopening it. This action checks for changes to your labels.
 
-- If the missing label applies protection, you might have an edition of Office that does not support applying Rights Management protection. To verify, click **Sensitivity** > **Help and Feedback**. In the dialog box, check if you have a message in the **Client status** section that says **This client is not licensed for Office Professional Plus.** 
-    
+- **You may not have a supported Office edition**. If the missing label applies protection, you might have an edition of Office that does not support applying Rights Management protection. 
+
+    To verify, select **Sensitivity** > **Help and Feedback**. In the dialog box, check if you have a message in the **Client status** section that says **This client is not licensed for Office Professional Plus.**
+
     You do not need Office Professional Plus if you have Office apps from Microsoft 365 Apps for Business or Microsoft 365 Business Premium when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Microsoft 365).
 
-- The label might be in a scoped policy that doesn't include your account. Check with your help desk or administrator.
+- **You may not be included in the label's scope**. In this case, the label would be in a scoped policy that doesn't include your account. Check with your help desk or administrator.
 
 
 ### Safely sharing by email
@@ -100,34 +99,36 @@ When you share Office documents by email, you can attach the document to an emai
 
 However, you might want to protect the document first, and then attach it to the email. Protect the email as well if the email message contains sensitive information. A benefit of protecting the document before you attach it to an email is that you can apply different permissions to the document than to the email message.
 
-## Using File Explorer to classify and protect files
+## Use the File Explorer to classify and protect files
 
-When you use File Explorer, you can quickly classify and protect a single file, multiple files, or a folder. 
+When you use File Explorer, you can quickly classify and protect a single file, multiple files, or a folder.
 
 When you select a folder, all the files in that folder and any subfolders it has are automatically selected for the classification and protection options that you set. However, new files that you create in that folder or subfolders are not automatically configured with those options.
 
-When you use File Explorer to classify and protect your files, if one or more of the labels appear dimmed, the files that you selected do not support classification. For these files, you can select a label only if your administrator has configured the label to apply protection. Or, you can specify your own protection settings. 
+When you use File Explorer to classify and protect your files, if one or more of the labels appear dimmed, the files that you selected do not support classification. For these files, you can select a label only if your administrator has configured the label to apply protection. Or, you can specify your own protection settings.
 
-Some files are automatically excluded from classification and protection, because changing them might stop your PC from running. Although you can select these files, they are skipped as an excluded folder or file. Examples include executable files and your Windows folder.
+> [!NOTE]
+> Some files, such as executable files and your Windows folder, are automatically excluded from classification and protection, because changing them might stop your PC from running. Although you can select these files, they are skipped as an excluded folder or file.
+>
+> For more information, see [File types supported by the Azure Information Protection unified labeling client](clientv2-admin-guide-file-types.md).
 
-The admin guide contains a full list of the file types supported and the files and folders that are automatically excluded: [File types supported by the Azure Information Protection unified labeling client](clientv2-admin-guide-file-types.md).
 
 
-### To classify and protect a file by using File Explorer
+**To classify and protect a file by using File Explorer**:
 
 1. In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect**. For example:
-    
+
     ![File Explorer right-click Classify and protect using Azure Information Protection](../media/right-click-classify-protect-folder.png)
 
-2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. 
+2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator.
 
    - If none of the labels can be selected (they appear dimmed): The selected file does not support classification but you can protect it with custom permissions (step 3). For example:
 
      ![No labels available in the Classify and protect - Azure Information Protection** dialog box](../media/v2info-protect-dialog-labels-dimmed.png)
 
 3. You can specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label. To do this, select **Protect with custom permissions**.
-    
-    Any custom permissions that you specify replace rather than supplement protection settings that your administrator might have defined for your chosen label.  
+
+    Any custom permissions that you specify replace rather than supplement protection settings that your administrator might have defined for your chosen label.
 
 4. If you selected the custom permissions option, now specify the following:
 
@@ -147,13 +148,31 @@ The selected file or files are now classified and protected, according to your s
 
 If you change your mind about the classification and protection, or later need to modify your settings, simply repeat this process with your new settings.
 
-The classification and protection that you specified stays with the file, even if you email the file or save it to another location. 
+The classification and protection that you specified stays with the file, even if you email the file or save it to another location.
 
-## Other instructions
-More how-to instructions from the user guide for Azure Information Protection unified labeling client:
+## Protecting generic file types
 
--   [What do you want to do?](clientv2-user-guide.md#what-do-you-want-to-do)
+To protect generic file types, which do not have built-in support for protection, while ensuring that recipients will be able to access them as expected, we recommend that you define the recipient as a co-author or co-owner of the file.
 
-## Additional information for administrators    
+For example, if you are sharing a **.pub** file and want to make sure that your recipient can open it, either choose a label that grants co-authoring or co-owning permissions, or set custom permissions for the file.
 
-See [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+If you set custom permissions for the file, in the **Select users, groups, or organizations** box, make sure that you define the email address for the users who need access to the file.
+
+For example:
+
+:::image type="content" source="../media/protecting-pub-files.png" alt-text="Protecting files without built-in support from the File Explorer.":::
+
+For more information, see [File types supported by the Azure Information Protection unified labeling client](clientv2-admin-guide-file-types.md).
+
+
+## Next steps
+
+For more information, see:
+
+- [Download and install the Azure Information Protection unified labeling client](install-unifiedlabelingclient-app.md)
+- [Classify a file or email](clientv2-classify.md)
+- [Classify and protect a file or email](clientv2-classify-protect.md)
+- [Open files that have been protected](clientv2-view-use-files.md)
+- [Remove labels and protection from files and emails](clientv2-remove-label-protection.md)
+- [Azure Information Protection unified labeling client administrator guide](clientv2-admin-guide.md)
+- [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels)

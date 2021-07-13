@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Azure Information Protection deployment roadmap
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -44,7 +44,7 @@ Use the steps in the following roadmap pages as recommendations to help you prep
 
 Before deploying AIP, review the [AIP system requirements](./requirements.md).
 
-Then, choose one of the following roadmaps, depending on your organization's needs and [subscription](https://azure.microsoft.com/pricing/details/information-protection/):
+Then, choose one of the following roadmaps, depending on your organization's needs and [subscription](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection/):
 
 - **Use classification, labeling, and protection**:
 

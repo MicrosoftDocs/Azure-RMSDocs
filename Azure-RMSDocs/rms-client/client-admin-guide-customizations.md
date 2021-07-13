@@ -28,7 +28,7 @@ ms.custom: admin
 
 # Admin Guide: Custom configurations for the Azure Information Protection classic client
 
->***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](clientv2-admin-guide-customizations.md).*
 
@@ -805,9 +805,10 @@ Because some documents might include invisible characters or different kinds of 
 
 If a header or footer text is more than a single line, create a key and value for each line. For example, you have the following footer with two lines:
 
-**The file is classified as Confidential**
-
-**Label applied manually**
+```
+The file is classified as Confidential
+Label applied manually
+```
 
 To remove this multiline footer, you create the following two entries:
 

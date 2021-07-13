@@ -25,7 +25,7 @@ search.appverid:
 
 # The client side of Azure Information Protection
 
->***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection),[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
@@ -174,7 +174,7 @@ For even more details, see also:
 |**Offline support for protection actions**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <sup>[4](#4)</sup> | ![yes](../media/yes-icon.png) |
 |**Manual policy file management for disconnected computers**| ![yes](../media/yes-icon.png) |![yes](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
 |**HYOK support**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
-|**Usage logging in Event Viewer**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)| ![no](../media/no-icon.png)|
+|**Usage logging in Event Viewer**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![no](../media/no-icon.png)|
 |**Display the Do Not Forward button in Outlook**| ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
 |**Track protected documents**| ![yes](../media/yes-icon.png) <sup>[5](#5)</sup> | ![yes](../media/yes-icon.png) <sup>[5](#5)</sup> |  ![no](../media/no-icon.png)|
 |**Revoke protected documents**| ![yes](../media/yes-icon.png) <sup>[5](#5)</sup> |  ![yes](../media/yes-icon.png) <sup>[5](#5)</sup>|  ![no](../media/no-icon.png)|

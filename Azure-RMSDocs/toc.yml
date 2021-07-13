@@ -356,7 +356,7 @@
   - name: Compliance & supporting information
     href: compliance.md
   - name: PowerShell reference
-    href: /powershell/azure/aip/overview?view=azureipps
+    href: /powershell/azure/aip/overview
   - name: Audit log reference
     href: audit-logs.md
   - name: Terminology

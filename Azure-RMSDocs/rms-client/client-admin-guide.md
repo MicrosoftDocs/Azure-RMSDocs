@@ -29,7 +29,7 @@ ms.custom: admin
 
 # Azure Information Protection classic client administrator guide
 
->***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](clientv2-admin-guide.md).*
 
@@ -220,7 +220,7 @@ Beginning with version 1.48.204.0, the upgrade process from previous versions au
 
 Although it's possible to upgrade the scanner in a different order, we recommend the following steps:
 
-1. Use the Azure portal to create a new scanner profile that includes settings for the scanner and your data repositories with any settings that they need. For help with this step, see [Configure the scanner in the Azure portal](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) from the scanner deployment instructions.
+1. Use the Azure portal to create a new scanner profile that includes settings for the scanner and your data repositories with any settings that they need. For help with this step, see [Configure the scanner in the Azure portal](../deploy-aip-scanner-configure-install-classic.md#configure-the-scanner-in-the-azure-portal) from the scanner deployment instructions.
     
     If the computer running the scanner is disconnected from the internet, you still need to do this step. Then, from the Azure portal, use the **Export** option to export your scanner profile to a file.
 

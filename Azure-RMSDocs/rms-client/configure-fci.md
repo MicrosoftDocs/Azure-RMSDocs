@@ -28,7 +28,7 @@ ms.custom: admin
 
 # RMS protection with Windows Server File Classification Infrastructure (FCI)
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
+>***Applies to**: Azure Information Protection, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 

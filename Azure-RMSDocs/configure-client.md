@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Azure Information Protection client: Installation and configuration for clients
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -80,8 +80,6 @@ Additional information for when you add the Azure Information Protection app to 
     ```md
     https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
     ```
-
-When the Azure Information Protection app is configured for an app protection policy for Android devices, in addition to opening protected text, images, and PDF documents, this app can also open audio and video files. For more information, see [View media files with the Azure Information Protection app](/intune/fundamentals/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app).
 
 ## Next steps
 

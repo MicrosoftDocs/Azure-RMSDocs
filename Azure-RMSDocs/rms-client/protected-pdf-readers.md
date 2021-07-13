@@ -6,7 +6,7 @@ description: Learn how to open and view PDFs that are labeled for classification
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/29/2020
+ms.date: 06/21/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,7 @@ search.appverid:
 
 # Which PDF readers are supported for protected PDFs?
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -162,13 +162,11 @@ If you're unable to open your protected PDF using the recommended reader, the do
     - Foxit Reader
     - Nitro PDF Reader
     - Nuance Power PDF
-    - Edge Chromium
 
 - **Android**:
 
     - [Azure Information Protection app](mobile-app-faq.md)
     - Foxit MobilePDF with RMS
-    - GigaTrust App for Android
 
 - **iOS**:
 

@@ -25,7 +25,7 @@ ms.custom: admin
 
 # Quickstart: Get started with Azure Information Protection in the Azure portal
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: Azure Information Protection*
 >
 > ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -40,16 +40,13 @@ In this quickstart, you'll add Azure Information Protection to the Azure portal,
 To complete this quickstart, you need:
 
 - Access to your [**Azure portal**](https://portal.azure.com/) account.
-
-- A subscription that includes [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/).
-
-    If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
+- A subscription that includes Azure Information Protection.
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
 
 ## Add Azure Information Protection to the Azure portal
 
-Even if you have a subscription that includes [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/), AIP is not automatically available in the Azure portal.
+Even if you have a subscription that includes Azure Information Protection, AIP is not automatically available in the Azure portal.
 
 Perform the following steps to add AIP to the Azure portal:
 

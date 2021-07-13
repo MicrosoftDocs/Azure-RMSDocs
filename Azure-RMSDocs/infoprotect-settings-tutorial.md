@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Tutorial: Configure Azure Information Protection policy settings that work together
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: Azure Information Protection*
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -56,18 +56,16 @@ You can finish this tutorial in about 15 minutes.
 
 To complete this tutorial, you need:
 
-1. A subscription that includes [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/).
-    
-    If you don't have a subscription that includes this plan, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
+1. A subscription that includes Azure Information Protection.
 
 2. The Azure Information Protection pane is added to the Azure portal and you have one or more labels published in the Azure Information Protection global policy.
-    
+
     These steps are covered in the [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md).
 
-3. The Azure Information Protection classic client installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
+3. The Azure Information Protection classic client installed on your Windows computer (minimum of Windows 7 with Service Pack 1).
 
 4. You are signed in to Office apps from one of the following categories:
-    
+
     - Office apps, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), from Microsoft 365 Apps for Business or Microsoft 365 Business Premium, when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
     
     - Microsoft 365 Apps for Enterprise.
