@@ -39,7 +39,9 @@ This article lists the file types and sizes supported by the Azure Information P
 >
 
 > [!TIP]
-> If you need to protect files that don't have built in support for classification and/ or protection, you can use the File Explorer to limit access to specified email addresses only. For more information, see [Using File Explorer to classify and protect files](clientv2-classify-protect.md#use-the-file-explorer-to-classify-and-protect-files).
+> To protect generic file types, which do not have built-in support for protection, while ensuring that recipients will be able to access them as expected, we recommend that you define the recipient as a co-author or co-owner of the file. For more information, see [Protecting generic file types](clientv2-classify-protect.md#protecting-generic-file-types).
+>
+
 ## File types supported for classification only
 
 The following file types can be classified even when they are not protected.

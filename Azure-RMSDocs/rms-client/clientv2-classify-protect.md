@@ -150,17 +150,20 @@ If you change your mind about the classification and protection, or later need t
 
 The classification and protection that you specified stays with the file, even if you email the file or save it to another location.
 
-## Protecting files without built-in support
+## Protecting generic file types
 
-To protect files that do not have built-in support for classification and/or protection, such as such as **pub** files, use the File Explorer to protect the file with custom permissions. 
+To protect generic file types, which do not have built-in support for protection, while ensuring that recipients will be able to access them as expected, we recommend that you define the recipient as a co-author or co-owner of the file.
 
-In the **Select users, groups, or organizations** box, enter email address for the users who need access to the file.
+For example, if you are sharing a **.pub** file and want to make sure that your recipient can open it, either choose a label that grants co-authoring or co-owning permissions, or set custom permissions for the file.
+
+If you set custom permissions for the file, in the **Select users, groups, or organizations** box, make sure that you define the email address for the users who need access to the file.
 
 For example:
 
 :::image type="content" source="../media/protecting-pub-files.png" alt-text="Protecting files without built-in support from the File Explorer.":::
 
 For more information, see [File types supported by the Azure Information Protection unified labeling client](clientv2-admin-guide-file-types.md).
+
 
 ## Next steps
 
