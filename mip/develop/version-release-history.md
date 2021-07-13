@@ -26,6 +26,17 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
 
+## Version 1.9.90
+
+**Release date:** July 7, 2021
+
+### General Changes
+
+- Fixed a bug in File SDK where legacy documents couldn't be decrypted on 32-bit Windows.
+- Enable bitcode on iOS builds.
+- Updated Ubuntu 16.04 to use OpenSSL 1.1.1k.
+- Fixed an issue in decrypting MSG files that had been previously handled by third-party eDiscovery tools.
+
 ## Version 1.9.78
 
 **Release date:** April 29, 2021
@@ -43,7 +54,7 @@ Use the following information to see what’s new or changed for a supported rel
     - `mip::PolicyEngine::SetSessionId()`
 - Added `Workload` enum and consent checks.
   - Added `HasWorkloadConsent()` and `GetWorkloadConsent()` to `FileEngine` and `PolicyEngine`.  
-- Added sychronous APIs to Policy SDK .NET wrapper: `AddEngine()`, `ListEngines()`, `DeleteEngine()`, `UnloadEngine()`.
+- Added synchronous APIs to Policy SDK .NET wrapper: `AddEngine()`, `ListEngines()`, `DeleteEngine()`, `UnloadEngine()`.
 - Added support for redirecting protection requests via `ProtectionProfile::Settings::AddRedirectionUri()`
 - Added a logger context that can be used with `LoggerDelegate` to write custom context data through to logs.
   - This API can be useful for correlating error events in services to a single operation or events. 
@@ -101,7 +112,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 **Release date:** February 8, 2021
 
-- Fixed bug in NuGet package where debug configuration for C++ projects deployed release binaries. Version 1.8.86 may result in a crash with native C++ apps. Please make sure to update to 1.8.94 or later.
+- Fixed bug in NuGet package where debug configuration for C++ projects deployed release binaries. Version 1.8.86 may result in a crash with native C++ apps. Make sure to update to 1.8.94 or later.
 - Fixed a bug where policy engine was required to remove protection. 
   - If policy engine can't be loaded and label metadata is present, it will be discarded if protection is removed. 
 - Fixed a bug where empty `labelInfo.xml` was generated if file was changed to another protected label. 
@@ -425,7 +436,7 @@ This version introduces support for the Protection SDK in the .NET package (Micr
     - libmip_upe_sdk_static.a
     - libmip_protection_sdk_static.a
     - libmip_upe_and_protection_sdk_static.a
-  - 3rd-party dependencies extracted into separate libraries
+  - Third-party dependencies extracted into separate libraries
     - libsqlite3.a
     - libssl.a
 - Removed mip_telemetry.dll (merged into mip_core.dll)
@@ -524,7 +535,7 @@ This version introduces support for the Protection SDK in the .NET package (Micr
  - Improved HTTP caching for Policy SDK reduces # of required HTTP calls by half.
  - Richer logs/audit/telemetry for improved failure detection and debugging.
  - Support for external/foreign labels to facilitate migration to AIP labels.
- - Enabled support for 3rd-party applications to download sensitivity types from SCC.
+ - Enabled support for third-party applications to download sensitivity types from SCC.
  - More telemetry settings are exposed and configurable (caching/threading behavior, etc.).
  
 ### SDK Changes

@@ -465,6 +465,8 @@
     href: https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/bg-p/InformationProtectionDevelopers
   - name: FAQs and known issues
     href: faqs-known-issues.md
+  - name: FIPS 140-2 Compliance
+    href: concept-fips-compliance.md
   - name: Forums 
     href: https://stackoverflow.com/questions/tagged/microsoft-information-protection
   - name: Samples
