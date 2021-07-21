@@ -149,7 +149,7 @@ For more information about deploying the scanner, see the following articles:
 
 **More information**:
 
-- [Watch our deployment video!](https://techcommunity.microsoft.com/t5/microsoft-security-and/mip-scanner-deployment-watch-our-video/ba-p/2023277) Watch a step-by-step demo of installing and configuring the unified labeling on-premises scanner.
+- [Watch our scanner end-to-end demo video!](https://www.youtube.com/watch?v=f1gy1KalSts) Watch a step-by-step review of the AIP scanner architecture, architecture, recommendation, installation and configuration.
 
 - Check out our blog on best practices for the unified labeling scanner: [Best practices for deploying and using the AIP UL scanner](https://aka.ms/AIPScannerBestPractices)
 
