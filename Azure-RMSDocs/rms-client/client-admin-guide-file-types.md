@@ -117,8 +117,9 @@ There are maximum file sizes that the Azure Information Protection client suppor
 
   - To unprotect files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: The maximum file size supported for .pst files is 5 GB. Other file types are limited only by available disk space and memory
 
-    Tip: If you need to search or recover protected items in large .pst files, see [Guidance for using Unprotect-RMSFile for eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
-
+    > [!TIP]
+    > If you need to search or recover protected items in large .pst files, see [Removing protection on PST files](../configure-super-users.md#removing-protection-on-pst-files).
+    >
 ### Supported file types for classification and protection
 
 The following table lists a subset of file types that support native protection by the Azure Information Protection client, and that can also be classified. 
