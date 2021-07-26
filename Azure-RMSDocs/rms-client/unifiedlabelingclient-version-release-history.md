@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2021
+ms.date: 07/26/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -116,20 +116,7 @@ For more information, including licensing requirements, see:
 - [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started)
 - [Use the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-use)
 
-### Built-in co-authoring support (Public preview)
 
-Microsoft 365's co-authoring features are now supported with the Azure Information Protection unified labeling client, for enabled tenants, directly in the main installation instead of a [dedicated version](#version-210460-for-co-authoring-public-preview).
-
-Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
-
-To have co-authoring turned on for your tenant, contact customer support.
-
-> [!NOTE]
-> Before you start, we recommend that you review all related prerequisites and limitations. For more information, see:
->
-> - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
-> - [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
->
 ### Fixes and improvements
 
 - Fixes for errors where AIP may not load if a [policy](/microsoft-365/compliance/reate-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
