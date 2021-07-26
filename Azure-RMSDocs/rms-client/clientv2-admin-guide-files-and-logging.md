@@ -39,7 +39,7 @@ After you have installed the Azure Information Protection unified labeling clien
 To turn on support for usage logging for both the unified labeling client and scanner, set the registry key as follows:
 
 - Registry path: **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnableLoggingAuditEventsToEventLog**
-
+- Type: **DWORD**
 - Value: **1**
 
 ## Log file locations
