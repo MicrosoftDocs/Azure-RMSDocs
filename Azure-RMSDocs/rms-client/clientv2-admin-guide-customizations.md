@@ -1993,7 +1993,7 @@ Since no specific extensions are specified, all supported file types are include
 
 By default, the timeout for SharePoint interactions is two minutes, after which the attempted AIP operation fails.
 
-Starting in [version 2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#general-availability-versions-that-are-no-longer-supported), AIP administrators can control this timeout using the following advanced properties, using an **hh:mm:ss** syntax to define the timeouts:
+Starting in version 2.8.85.0, AIP administrators can control this timeout using the following advanced properties, using an **hh:mm:ss** syntax to define the timeouts:
 
 - **SharepointWebRequestTimeout**. Determines the timeout for all AIP web requests to SharePoint. Default = 2 minutes.
 
