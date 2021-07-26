@@ -95,7 +95,7 @@ For more information, see [Azure Information Protection tenant keys](../plan-imp
 
 The unified labeling client now [logs user activity to the local Windows event log](clientv2-admin-guide-files-and-logging.md#client-side-usage-logging).
 
-### General availability support for DLP policies
+### AIP scanner: General availability support for DLP policies
 
 Microsoft 365 Data Loss Prevention (DLP) policies are now supported with the Azure Information Protection unified labeling scanner directly in the main installation instead of a [dedicated version](#version-210430-for-dlp-policies-public-preview).
 
@@ -236,36 +236,6 @@ Before you start, we recommend that you review all related prerequisites and lim
 
 - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
 - [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
-
-## Version 2.10.43.0 for DLP policies (Public preview)
-
-Unified labeling scanner version 2.10.43.0
-
-**Release** 03/02/2021
-
-This dedicated version of Azure Information Protection provides a public preview of the support for Data Loss Prevention (DLP) policies supported by Microsoft 365. 
-
-- **Using a DLP policy** enables the scanner to detect potential data leaks by matching DLP rules to files stored in file shares and SharePoint Server. 
-
-- [**Enable DLP rules in your content scan job**](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy) to reduce the exposure of any files that match your DLP policies. 
-
-    The scanner may reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**.
-
-- **Scanning your files with DLP rules enabled also creates file permission reports**. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
-
-Settings for enforcing or testing the DLP policy are configured in the [Microsoft 365 Compliance center](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
-
-> [!IMPORTANT]
-> To leverage the DLP support in public preview, you must download and install the dedicated installation file for this release. On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `AzInfoProtection_2.10.43_DLP_PublicPreview.exe` file.
-> 
-For more information, including licensing requirements, see:
-
-- [Configure a DLP policy in the AIP scanner](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy)
-- [Learn about the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-learn), in the Microsoft 365 documentation
-- [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started)
-- [Use the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-use)
-
-
 
 ## Version 2.9.116.0
 
