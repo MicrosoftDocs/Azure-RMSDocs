@@ -248,7 +248,7 @@ Once you have the scanner and the Network Discovery service installed, you're re
 For more information, see [Tutorial: Discovering your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md).
 
 > [!TIP]
-> If you've installed [version 2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#general-availability-versions-that-are-no-longer-supported), we recommend that you scan your network to discover repositories that may have content at risk. 
+> If you've installed version 2.8.85.0, we recommend that you scan your network to discover repositories that may have content at risk. 
 >
 >To scan your risky repositories for sensitive data, and then classify and protect that data from outside users, update your content scan job with the details of the repositories you've found.
 >
