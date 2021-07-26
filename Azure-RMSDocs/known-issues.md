@@ -95,7 +95,7 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 
 Known issues for co-authoring are relevant only when the [dedicated AIP client version for co-authoring](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) is deployed in your environment and co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
 
-Co-authoring with the unified labeling client is currently in [public preview](rms-client/unifiedlabelingclient-version-release-history.md#version-212620-public-preview) and is supported only for testing environments.
+Co-authoring with the unified labeling client is currently in [public preview](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-public-preview) and is supported only for testing environments.
 
 Known issues for co-authoring in AIP include:
 
@@ -153,6 +153,7 @@ When sharing external doc types, such as PDFs, across tenants, recipients receiv
 :::image type="content" source="media/cross-tenant-consent.png" alt-text="Cross-tenant consent prompt.":::
 
 Depending on your application, you may see this prompt repeatedly for the same document. When the prompt appears, select **Accept** to continue to the shared document.
+
 ## Known issues in policies
 
 Publishing policies may take up to 24 hours.

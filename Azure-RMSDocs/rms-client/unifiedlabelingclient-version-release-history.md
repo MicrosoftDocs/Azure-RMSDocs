@@ -97,7 +97,7 @@ The unified labeling client now [logs user activity to the local Windows event l
 
 ### AIP scanner: General availability support for DLP policies
 
-Microsoft 365 Data Loss Prevention (DLP) policies are now supported with the Azure Information Protection unified labeling scanner directly in the main installation instead of a [dedicated version](#version-210430-for-dlp-policies-public-preview).
+Microsoft 365 Data Loss Prevention (DLP) policies are now supported with the Azure Information Protection unified labeling scanner directly in the main installation instead of a dedicated version only.
 
 - **Using a DLP policy** enables the scanner to detect potential data leaks by matching DLP rules to files stored in file shares and SharePoint Server.
 
