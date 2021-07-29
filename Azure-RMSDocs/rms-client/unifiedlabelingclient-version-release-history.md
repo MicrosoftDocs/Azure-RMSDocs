@@ -149,6 +149,7 @@ For more information, including licensing requirements, see:
 
 Unified labeling scanner and client version 2.11.58.0
 
+**Supported through** 02/08/2022
 
 **Released** 04/29/2021
 
@@ -242,6 +243,8 @@ Before you start, we recommend that you review all related prerequisites and lim
 Unified labeling scanner and client version 2.9.116.0
 
 **Released** 02/08/2021
+
+**Supported through** 10/29/2021
 
 **Fixed issues** 
 
