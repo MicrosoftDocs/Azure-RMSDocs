@@ -49,10 +49,6 @@ You must have an **Azure Information Protection plan** for classification, label
 
 If your question is not answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
 
-> [!TIP]
-> For a full picture of the Microsoft Information Protection (MIP) licensing requirements per feature, see the [Microsoft 365 Compliance Licensing Comparison spreadsheet](https://opdhsblobprod04.blob.core.windows.net/contents/e0993bf6e82e4fa8ac18b48839521869/93969b96fb41733347b4dbb8bba02771?sv=2018-03-28&sr=b&si=ReadPolicy&sig=JIaks3D97u4pyrS%2Bz6Naqat1v9M9a3Hs2u9m9wY42ww%3D&st=2021-04-12T11%3A01%3A02Z&se=2021-04-13T11%3A11%3A02Z).
->
-
 ## Azure Active Directory
 
 To support authentication and authorization for Azure Information Protection, you must have an Azure Active Directory (AD). To use user accounts from your on-premises directory (AD DS), you must also configure directory integration.
