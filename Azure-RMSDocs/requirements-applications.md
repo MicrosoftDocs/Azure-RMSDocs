@@ -52,10 +52,20 @@ These applications and solutions are known as "RMS-enlighted", and have Rights M
 |[**Email**](#viewing-protected-content-in-email-clients)      |   - Outlook 2010<br />- Outlook 2013<br />- Outlook 2016 <br />- Outlook 2019 <br />- Outlook from Microsoft 365 Apps for Enterprise<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
 |[**Other file types**](#supported-text-and-image-file-types)    |  - Visio from Microsoft 365 apps, Office 2019, and Office 2016: **.vsdm**, **.vsdx**, **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Azure Information Protection client for Windows: Text, images, **pfile**      |
 | | |
+ 
 
+CAD files, such as **.dwg** files, are supported by partner solution, such as [SealPath RMS plugin for AutoCAD](https://www.sealpath.com/rmscad/)
 
-CAD files, such as **.dwg** files, are supported by partner solutions, such as [SealPath RMS plugin for AutoCAD](https://www.sealpath.com/rmscad/) and [SECUDE's HALOCAD plugin](https://secude.com/halocad/).
+List of file formats supported for various native CAD platforms by SECUDE'S HALOCAD plugin [SECUDE's HALOCAD plugin](https://secude.com/halocad/).
 
+HALOCAD plugin for AutoCAD: .dwg, .dxf
+HALOCAD plugin for Autodesk Inventor: .ipt, .iam, .idw, .ipn
+HALOCAD plugin for RIVET: .rvt, .rfa
+HALOCAD plugin for PTC Creo: .asm, .prt, .mfg, .drw, .frm, .lay, .sec
+HALOCAD plugin for Siemens NX: .prt
+HALOCAD plugin for Solid Edge: .par, .psm, .asm, .dft
+HALOCAD plugin for Solid Works: .sldprt, .sldasm, .slddrw, .slddrt
+HALOCAD plugin for MicroStation: .dgn
 
 ## macOS RMS-enlightened applications
 
