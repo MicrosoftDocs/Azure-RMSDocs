@@ -21,10 +21,21 @@ Preview versions shouldn't be deployed in production. Instead, use the latest pr
 
 Use the following information to see what’s new or changed for a supported release. The most current release is listed first.
 
-> [!NOTE]
-> Minor fixes are not listed. If you experience a problem with the SDK, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version.
->  
+> [!NOTE]  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
+
+## Downloads for Previous Versions
+
+NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions prior to 1.4 are not available. 
+
+| Version | Link                        | Status             |
+| ------- | --------------------------- | ------------------ |
+| 1.9     | https://aka.ms/mipsdkbins19 | **Supported**      |
+| 1.8     | https://aka.ms/mipsdkbins18 | **Supported**      |
+| 1.7     | https://aka.ms/mipsdkbins17 | **Supported**      |
+| 1.6     | https://aka.ms/mipsdkbins16 | **Supported**      |
+| 1.5     | https://aka.ms/mipsdkbins15 | **Out of Support** |
+| 1.4     | https://aka.ms/mipsdkbins14 | **Out of Support** |
 
 ## Version 1.10.xx
 
@@ -32,110 +43,76 @@ Use the following information to see what’s new or changed for a supported rel
 
 ### General Changes
 
-- Improvement of correlating and tracking hundreds of MIP callbacks that can occur per/second into the Logger Delegate.This change allows the initiation of a request to MIP with a logger context and that will get passed back in the log message and essentially tagged for later review. #2772
-  - `LoggerDelegate:: WriteToLogWithContext`
-  - `TaskDispatcherDelegate:: DispatchTask / ExecuteTaskOnIndependentThread`
-        - `Context added incase needed for dispatch logging`
-  - `void SetLoggerContext(const std::shared_ptr<void>& loggerContext)`
-        - `FileEngine::Settings`
-        - `FileProfile::Settings`
-        - `ProtectionEngine::Settings`
-        - `ProtectionProfile::Settings`
-        - `PolicyEngine::Settings`
-        - `PolicyProfile::Settings`
-    `FileHandler static method added to allow passing in context`
-        - `IsProtected`
-        - `IsLabeledOrProtected`
-        - `GetSerializedPublishingLicense`
-    `PolicyHandler` static method added to allow passing in context
-        - `IsLabeled`
 - All engine settings will default to en-US locale in the event that the `.Locale` property is set to `null`.
-- Fixed MIPSDK API calls to respect the declared log level. 
-- Fixed bug where `IsActive` was not returning the same values inside the handler as it was retrieving labels from an engine.
+- Fixed an issue where the SDK wasn't fully honoring the logging level settings.
 
-### File SDK 
+### File SDK
 
-- Added support for labeling MSG files.
+- Added support for reading and writing labels to MSG files.
   - The pattern for labeling this files is that same as any other file type.
   - The **enable_msg_file_type** feature flag must be set to enable MSG file handling.
-  - Attachments will be protected but **not** labeled. (?)
+  - Attachments will be protected but **not** labeled.
 - `FileHandler::IsLabeledOrProtected()` now supports MSG files.
 - File SDK now supports decryption of protected attachments on unprotected MSG files.
+  - This applies only to files and not containers such as MSG or ZIP files.
 - Added new static method `mip::FileHandler::GetFileStatus()`
-  - This function returns a new `mip::FileStatus` object. 
+  - This function returns a new `mip::FileStatus` object that indicates whether the file is labeled, protected, or contains protected objects. 
   - `FileStatus` exposes three properties: `IsProtected`, `IsLabeled`, and `ContainsProtectedObjects`.
   - `ContainsProtectedObjects` is useful for MSG files that have protected attachments.
 - When calling `FileHandler::RemoveProtection()` on a plaintext MSG file with protected attachments, protection will be removed from the attachments.
-- Added support for `applicationScenarioId` in File SDK as part of `FileExecutionState`.
-- Introduction of `applicationScenarioId` per execution state so a host application can correlate calls in logging.
-        - Added method `GetApplicationScenario()` in class `FileExecutionState`  #2732
-        - Added telemetry to support `applicationScenarioId` #2737
-        - Bug fixes for `applicationScenarioId` in 'GetTemplates()`
-- Fixed a scenario where encrypted MSG files handled by third-party eDiscovery applications may fail to decrypt.
 
 ### Policy SDK
 
-- Allow passing the document's timezone to ComputeActions to allow actions to be computed as if the document existed in a different timezone from the machine applying the label. Useful for when labels are applied on behalf of a user through a service, where the server's local time is not necessarily the same as the user's. #2832 #2811
-- Instead of returning the `${Event.DateTime}` in UTC format, we now default to local time without displaying the timezone.
+- The content marking variable `${Event.DateTime}` now defaults to local time rather than UTC.
+  - This new default can be set back to the previous default by using flighting feature `EventDateTimeTokenUseUtc`.
+- Fixed bug where `IsActive` was not returning the same values inside a `PolicyHandler` as it was when retrieving labels from a `PolicyEngine`.
 
 ### Protection SDK
 
-- Introduction of `applicationScenarioId` per execution state so a host application can correlate calls in logging.
-- Feature added to Java wrapper for Protection Engine.
-
+- Added new more specific error types that will surface in both Protection and File SDK. See Breaking Changes section.
 
 ### Breaking Changes
 
-- `FileExecutionState` now has an additional method: `GetApplicationScenario()`.
-- -Introduced new custom settings to govern the default audit settings. #2748
-        - Added new property in audit Delegate to set audit settings.
-        - LabelGroupData class no longer has `IsAuditEnabled()` method. 
-        - You can use instead `GetEnableAuditSetting()` to get `EnableAudit` settings in the policy once policy is loaded. Default audit settings will be `Undefined` as oppose to `true` in older versions.
-- Improvement of Network Error Types for Sharepoint Online. #2783 #2784 #2764 #2785
-  - There are three error types that should be return in specific error messages that today are returning generic network exceptions. The scenarios are:
-        1. The tenant in the request is not recognized.
-        2. The email address is invalid.
-        3. The user was not found.
-  - Changed MIP SDK error output when `UnknownTenant` and `InvalidEmail` exceptions are received from RMS during protection 
-  - Any dependencies on the `NetworkError:FailureResponse` code output when those errors are recieved from RMS will be broken.
-  - `UnknownTenant` exception changed to `ServiceDisabledError::Tenant`
-  - Changes between current 1.7/1.8/1.9 and this edit:
-    - RMS sends 400 response with "is not a valid email address" and "Parameter name: delegatedUserEmail" in the message body:
-        `NetworkError::Category::FailureResponseCode -> NoPermissionsError::Category::InvalidEmail`
-    - RMS sends 400 response with error code Microsoft.RightsManagement.Exceptions.UnknownTenantException:
-        `NetworkError::Category::FailureResponseCode -> NoPermissionsError::Category::UnknownTenant`
-    - RMS sends 400 response with "Could not find delegated user" or "User with the given objectId not found." in the message body:
-        `NetworkError::Category::FailureResponseCode -> NoPermissionsError::Category::UserNotFound`
-- Some previously AccessDeniedError throws will be replaced with NoPermissionsError. (`GetErrorType() will return ErrorType::NO_PERMISSIONS vs       ErrorType::ACCESS_DENIED`)
-  - Specific cases that are no longer AccessDeniedError:
-          - If a caller does not have correct access credentials to get the rights for a label id, they will now get a `NoPermissionsError::Category::AccessDenied`
-          - If a caller has expired access credentials to get the rights for a label id or the content they are attempting to get from the server has expired they will now get a `NoPermissionsError::Category::AccessExpired`
+- Introduced new custom settings to govern the default audit settings. #2748
+  - Added new property in audit Delegate to set audit settings.
+  - `LabelGroupData` class no longer has `IsAuditEnabled()` method. 
+  - You can use instead `GetEnableAuditSetting()` to get `EnableAudit` settings in the policy once policy is loaded. Default audit settings will be `Undefined` as oppose to `true` in older versions. 
 - Allow passing the document's timezone to ComputeActions to allow actions to be computed as if the document existed in a different timezone from the machine applying the label. Useful for when labels are applied on behalf of a user through a service, where the server's local time is not necessarily the same as the user's. #2832 #2811
-        - Instead of returning the `${Event.DateTime}` in UTC format, we now default to local time without displaying the timezone.
-- Extraction of Labels from plaintext and encrypted MSG files functionality added. #2802 #2824 #2818
-        - Addtionally, New static methods have been introduce in `file_handler.h`:
-        - `FILE_API static std::shared_ptr<FileStatus> __CDECL GetFileStatus(`
-              `const std::string& filePath,`
-              `const std::shared_ptr<MipContext>& mipContext,`
-              `const std::shared_ptr<void>& loggerContext = nullptr);`
-        - `FILE_API static std::shared_ptr<FileStatus> __CDECL GetFileStatus(`
-              `const std::shared_ptr<Stream>& stream,`
-              `const std::string& filePath,`
-              `const std::shared_ptr<MipContext>& mipContext`,
-              `const std::shared_ptr<void>& loggerContext = nullptr);`
-        - Add new header `file : file_status.h` which defines class `FileStatus`
-- RMS Error Enhancements #2819 #2860 - #There is a lot of information to convey here. Not sure how to document. Add the XLS File?
-
-### Bug Fixes
-
-- Fixed bug to address SubLabelOrdering functionality. #2759 #2760
-- Fixed Power Bi custom settings `powerbimandatory` and `powerbidefaultlabelid`.  #2743
-        - In 1.8 these were added as first class settings in MIP, so they are no longer custom settings.
-        - This change keeps them as first class settings but adds them back to the custom settings list.
-- All engine settings will default to en-US locale in the event that the `.Locale` property is set to `null`.
-- Fixed MIPSDK API calls to respect the declared log level. #2787
-- Fixed bug where `IsActive` was not returning the same values inside the handler as it was retrieving labels from an engine. #2864 #2865 #2791 
-
+  - Instead of returning the `${Event.DateTime}` in UTC format, we now default to local time without displaying the timezone.
+- Updated existing exceptions for better handling of specific scenarios.
+  - `NoPermissionsError::Category::NotPremiumLicenseUser`
+    - Previously surfaced as `NoPermissionsError::Category::AccessDenied`
+    - Caused by an unlicensed user attempting to revoke protected content. 
+  - `NoPermissionsError::Category::NotOwner`
+    - Previously surfaced as `NoPermissionsError::Category::AccessDenied`
+    - Caused by a user attempting to revoke a document they don't own.
+  - `ServiceDisabledError::Extent::Tenant`
+    - Previously surfaced as `ServiceDisabledError::Extent::User`
+    - Returned when the targeted Azure Rights Management service instead is disabled. 
+  - `NoPermissionsError::Category::AccessDenied`
+    - Previously surfaced as `NetworkError::Category::FailureResponseCode`
+    - Returned when the user has no rights to publish due to licensing or onboarding controls.
+    - How can they distinguish between this and other access denied? 
+  - `BadInputError::ErrorCode::DoubleKey`
+    - Previously surfaced as `NetworkError::Category::FailureResponseCode`
+    - Returned when Double Key Encryption (DKE) parameters are incorrect. 
+  - `CustomerKeyUnavailableError`
+    - New exception.
+    - Returned when the tenant is configured for bring-your-own-key (BYOK) and the key cannot be reached. 
+    - Service returns HTTP424. 
+  - `NetworkError::Category::FunctionNotImplemented`
+    - New exception.
+    - Returned when service returned HTTP501 (Not Implemented).
+  - The following previously surfaced as `NetworkError::Category::FailureResponseCode`
+    - `TemplateArchivedError`: The application attempted to apply a template ID that has been archived.  
+    - `LicenseNotRegisteredError`: ?
+    - `TemplateNotFoundError`: The application attempted to use an invalid template ID. 
+    - `LabelNotFoundError`: The application provided an invalid label ID.  
+    - `NoPermissionsError::Category::UserNotFound`: The provided user doesn't exist in the target tenant. 
+    - `NoPermissionsError::Category::InvalidEmail`: An invalid email address was provided. 
+    - `NoPermissionsError::Category::AccessDenied`: The provided identity is not a principal recognized by RMS or isn't a valid delegator.
+    - `BadInputError::ErrorCode::LicenseNotTrusted`: The provided publishing license isn't from a trusted publisher. (Not in C API)
+    - `BadInputError::ErrorCode::ParameterParsing`: Returned by various XML, JSON, or other parsing issues (Not in C API)
 
 ### Platform and Dependency Updates
 
