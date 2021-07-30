@@ -21,21 +21,21 @@ Preview versions shouldn't be deployed in production. Instead, use the latest pr
 
 Use the following information to see what’s new or changed for a supported release. The most current release is listed first.
 
-> [!NOTE]  
-> For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
+> [!NOTE] For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
 
 ## Downloads for Previous Versions
 
 NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions prior to 1.4 are not available. 
 
-| Version | Link                        | Status             |
-| ------- | --------------------------- | ------------------ |
-| 1.9     | https://aka.ms/mipsdkbins19 | **Supported**      |
-| 1.8     | https://aka.ms/mipsdkbins18 | **Supported**      |
-| 1.7     | https://aka.ms/mipsdkbins17 | **Supported**      |
-| 1.6     | https://aka.ms/mipsdkbins16 | **Supported**      |
-| 1.5     | https://aka.ms/mipsdkbins15 | **Out of Support** |
-| 1.4     | https://aka.ms/mipsdkbins14 | **Out of Support** |
+| Version | Link                        | Status              | End of Support     |
+| ------- | --------------------------- | ------------------- | ------------------ |
+| 1.10    | https://aka.ms/mipsdkbins   | **Current Version** | TBD                |
+| 1.9     | https://aka.ms/mipsdkbins19 | **Supported**       | August xx, 2022    |
+| 1.8     | https://aka.ms/mipsdkbins18 | **Supported**       | April 29, 2022     |
+| 1.7     | https://aka.ms/mipsdkbins17 | **Supported**       | January 14th, 2022 |
+| 1.6     | https://aka.ms/mipsdkbins16 | **Supported**       | September 23, 2021 |
+| 1.5     | https://aka.ms/mipsdkbins15 | **Out of Support**  | April 16, 2021     |
+| 1.4     | https://aka.ms/mipsdkbins14 | **Out of Support**  | March 2, 2021      |
 
 ## Version 1.10.xx
 
@@ -64,7 +64,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 ### Policy SDK
 
 - The content marking variable `${Event.DateTime}` now defaults to local time rather than UTC.
-  - This new default can be set back to the previous default by using flighting feature `EventDateTimeTokenUseUtc`.
+  - This can be set back to the previous default by using flighting feature `EventDateTimeTokenUseUtc`.
 - Fixed bug where `IsActive` was not returning the same values inside a `PolicyHandler` as it was when retrieving labels from a `PolicyEngine`.
 
 ### Protection SDK
