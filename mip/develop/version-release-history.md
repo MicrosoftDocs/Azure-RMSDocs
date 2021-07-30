@@ -92,7 +92,6 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
   - `NoPermissionsError::Category::AccessDenied`
     - Previously surfaced as `NetworkError::Category::FailureResponseCode`
     - Returned when the user has no rights to publish due to licensing or onboarding controls.
-    - How can they distinguish between this and other access denied? 
   - `BadInputError::ErrorCode::DoubleKey`
     - Previously surfaced as `NetworkError::Category::FailureResponseCode`
     - Returned when Double Key Encryption (DKE) parameters are incorrect. 
@@ -105,9 +104,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
     - Returned when service returned HTTP501 (Not Implemented).
   - The following previously surfaced as `NetworkError::Category::FailureResponseCode`
     - `TemplateArchivedError`: The application attempted to apply a template ID that has been archived.  
-    - `LicenseNotRegisteredError`: ?
-    - `TemplateNotFoundError`: The application attempted to use an invalid template ID. 
-    - `LabelNotFoundError`: The application provided an invalid label ID.  
+    - `LicenseNotRegisteredError`: The document publishing license is not registered for revocation. 
     - `NoPermissionsError::Category::UserNotFound`: The provided user doesn't exist in the target tenant. 
     - `NoPermissionsError::Category::InvalidEmail`: An invalid email address was provided. 
     - `NoPermissionsError::Category::AccessDenied`: The provided identity is not a principal recognized by RMS or isn't a valid delegator.
