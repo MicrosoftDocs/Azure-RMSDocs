@@ -54,7 +54,7 @@ These applications and solutions are known as "RMS-enlighted", and have Rights M
 | | |
 
 
-CAD files, such as **.dwg** files, are supported by partner solutions, such as [SealPath RMS plugin for AutoCAD](https://www.sealpath.com/rmscad/) and [SECUDE's HALOCAD plugin](https://secude.com/halocad/).
+CAD files, such as **.dwg** files, are supported by partner solutions, such as [SealPath RMS plugin for AutoCAD](https://www.sealpath.com/rmscad/) and [SECUDE's HALOCAD plugin](https://secude.com/halocad/). For more information, see [How to protect your CAD data files with MIP and HALOCAD](https://www.microsoft.com/security/blog/2021/07/22/how-to-protect-your-cad-data-files-with-mip-and-halocad/).
 
 
 ## macOS RMS-enlightened applications
