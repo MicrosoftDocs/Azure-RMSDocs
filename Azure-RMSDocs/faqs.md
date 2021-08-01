@@ -158,9 +158,10 @@ To read more about how Azure Information Protection helps to secure your data, s
 
 ## What subscription do I need for Azure Information Protection and what features are included?
 
-To understand more about AIP subscriptions, see the [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection) page.
+To understand more about AIP subscriptions, see:
 
-If you have a Microsoft 365 subscription that includes Azure Rights Management data protection, download the [Azure Information Protection licensing datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) for more details about integrating with AIP.
+- [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)
+- [Modern Work Plan Comparison](https://go.microsoft.com/fwlink/?linkid=2139145) (PDF download)
 
 ## Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?
 
