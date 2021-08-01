@@ -26,7 +26,7 @@ search.appverid:
 
 # Frequently asked questions for the Azure Information Protection classic client
 
->***Applies to**: Azure Information Protection, [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: Azure Information Protection, [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
 >
 >***Relevant for**: [AIP unified labeling classic client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For more information, see [Frequently asked questions for Azure Information Protection](faqs.md).*
 

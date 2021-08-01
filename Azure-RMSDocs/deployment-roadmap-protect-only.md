@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Azure Information Protection deployment roadmap for protection only
 
->***Applies to**: Azure Information Protection, [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: Azure Information Protection, [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md).*
 

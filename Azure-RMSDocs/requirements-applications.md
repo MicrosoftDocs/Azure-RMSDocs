@@ -28,7 +28,7 @@ ms.custom: admin
 
 # Applications that support Azure Rights Management data protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
 >
 >***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
@@ -188,7 +188,7 @@ The following Office client suites support protecting files and emails on Window
 
 - **Microsoft 365 Apps for Enterprise**
 
-    These editions of Office are included with most but not all subscriptions that include data protection from Azure Information Protection. Check your subscription information to see if Microsoft 365 Apps for Enterprise ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+    These editions of Office are included with most but not all subscriptions that include data protection from Azure Information Protection. Check your subscription information to see if Microsoft 365 Apps for Enterprise ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M).
 
 - **Office Professional Plus 2019**
 
