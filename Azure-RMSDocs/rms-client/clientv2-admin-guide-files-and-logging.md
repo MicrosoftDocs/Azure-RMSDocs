@@ -34,6 +34,8 @@ ms.custom: admin
 
 After you have installed the Azure Information Protection unified labeling client, you might need to know where files are located and monitor how the client is being used.
 
+Usage logging is supported with the Azure Information Protection unified labeling client [version 2.12.62](unifiedlabelingclient-version-release-history.md#version-212620) and higher.
+
 ## Turn on usage logging
 
 To turn on support for usage logging for both the unified labeling client and scanner, set the registry key as follows:
