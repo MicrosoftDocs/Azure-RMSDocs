@@ -339,7 +339,7 @@ This section describes the steps to disable the Transport Layer Security (TLS) 1
 
 For more information, see:
 
--[Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings)
+- [Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings)
 - [Disabling TLS 1.0 and 1.1 for Microsoft 365](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365)
 
 ## Next steps
