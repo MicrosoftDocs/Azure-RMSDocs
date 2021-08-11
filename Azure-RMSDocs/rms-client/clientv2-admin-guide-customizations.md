@@ -1823,7 +1823,7 @@ In the following example, the attachment list that requires labeling is:
 			]
 		},		
         { 			
-            "type" : "Email Block", 			
+            "type" : "Block", 			
             "LocalizationData": { 				
                 "en-us": { 				  
                     "Title": "Emailed Blocked", 				  
