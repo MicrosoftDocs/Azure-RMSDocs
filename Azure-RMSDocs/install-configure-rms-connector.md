@@ -55,7 +55,7 @@ Make sure you are aware of the correct Azure sovereign cloud instance for your c
 
 2.  Download the source files for the RMS connector from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106).
 
-    To install the RMS connector, download RMSConnectorSetup.exe.
+    To install the RMS connector, download **RMSConnectorSetup.exe**.
 
     In addition:
 
@@ -262,6 +262,85 @@ To install the RMS connector administration tool, run the following files:
 
 If you haven’t already downloaded these files, you can do so from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106).
 
+## Enforce TLS 1.2 for the Azure RMS Connector
+
+Microsoft will disable older, insecure TLS protocols, including TLS 1.0 and TLS 1.1 on RMS Services by default on TBD-DATE. To prepare for this deprecation, you may want to turn off support for these older protocols on your RMS Connector servers and ensure that the system continues to work as expected.
+
+This section describes the steps to disable the Transport Layer Security (TLS) 1.0 and 1.1 on the RMS Connector servers and force the use of TLS 1.2.
+
+**Original product version**:   Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
+
+> [!IMPORTANT]
+> Using the script in this section turns off pre-TLS 1.2 communication on a per-machine basis. If other services on the machine require TLS 1.0 or 1.2, this script may break functionality on those services.
+>
+
+**To turn off TLS 1.0 and 1.1 and force the use of TLS 1.2**:
+
+1. Download and install the latest available version of RMS Connector. For more information, see [Installing the RMS connector](#installing-the-rms-connector).
+
+1. On your RMS Connector machine, run the following PowerShell script:
+
+    ```powershell
+    <Force_TLS1.2.PS1>
+
+    $ProtocolList = @("SSL 2.0", "SSL 3.0", "TLS 1.0", "TLS 1.1", "TLS 1.2")
+
+    $ProtocolSubKeyList = @("Client", "Server")
+
+    $DisabledByDefault = "DisabledByDefault"
+
+    $Enabled = "Enabled"
+
+    $registryPath = "HKLM:\\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\"
+
+    foreach ($Protocol in $ProtocolList) {
+
+        Write-Host " In 1st For loop"
+
+        foreach ($key in $ProtocolSubKeyList) {
+
+            $currentRegPath = $registryPath + $Protocol + "\" + $key
+
+            Write-Host " Current Registry Path $currentRegPath"
+
+            if (!(Test-Path $currentRegPath)) {
+
+                Write-Host "creating the registry"
+
+                New-Item -Path $currentRegPath -Force | out-Null
+
+            }
+
+            if ($Protocol -eq "TLS 1.2") {
+
+                Write-Host "Working for TLS 1.2"
+
+                New-ItemProperty -Path $currentRegPath -Name $DisabledByDefault -Value "0" -PropertyType DWORD -Force | Out-Null
+
+                New-ItemProperty -Path $currentRegPath -Name $Enabled -Value "1" -PropertyType DWORD -Force | Out-Null
+
+            }
+
+            else {
+
+                Write-Host "Working for other protocol"
+
+                New-ItemProperty -Path $currentRegPath -Name $DisabledByDefault -Value "1" -PropertyType DWORD -Force | Out-Null
+
+                New-ItemProperty -Path $currentRegPath -Name $Enabled -Value "0" -PropertyType DWORD -Force | Out-Null
+
+            }
+
+        }
+
+    }
+    ```
+1. Reboot your RMS Connector servers, and test the RMS Connector functionality. For example, make sure that on-premises RMS users are able to read their encrypted documents.
+
+For more information, see:
+
+-[Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings)
+- [Disabling TLS 1.0 and 1.1 for Microsoft 365](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide)
 
 ## Next steps
 Now that the RMS connector is installed and configured, you are ready to configure your on-premises servers to use it. Go to [Configuring servers for the Microsoft Rights Management connector](configure-servers-rms-connector.md).
