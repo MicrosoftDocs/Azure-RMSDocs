@@ -6,7 +6,7 @@ description: Information to help you install and configure the Azure Rights Mana
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/11/2020
+ms.date: 08/12/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -264,11 +264,9 @@ If you haven’t already downloaded these files, you can do so from the [Microso
 
 ## Enforce TLS 1.2 for the Azure RMS Connector
 
-Microsoft will disable older, insecure TLS protocols, including TLS 1.0 and TLS 1.1 on RMS Services by default on TBD-DATE. To prepare for this deprecation, you may want to turn off support for these older protocols on your RMS Connector servers and ensure that the system continues to work as expected.
+Microsoft will disable older, insecure TLS protocols, including TLS 1.0 and TLS 1.1 on RMS Services by default on December 1, 2021. To prepare for this deprecation, you may want to turn off support for these older protocols on your RMS Connector servers and ensure that the system continues to work as expected.
 
 This section describes the steps to disable the Transport Layer Security (TLS) 1.0 and 1.1 on the RMS Connector servers and force the use of TLS 1.2.
-
-**Original product version**:   Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 
 > [!IMPORTANT]
 > Using the script in this section turns off pre-TLS 1.2 communication on a per-machine basis. If other services on the machine require TLS 1.0 or 1.2, this script may break functionality on those services.
