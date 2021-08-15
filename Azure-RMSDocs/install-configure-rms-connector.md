@@ -244,23 +244,28 @@ If your connector servers are installed in a network that does not have direct i
 4.  Close the registry editor, and then restart the server or perform an IISReset command to restart IIS.
 
 ## Installing the RMS connector administration tool on administrative computers
+
 You can run the RMS connector administration tool from a computer that does not have the RMS connector installed, if that computer meets the following requirements:
 
--   A physical or virtual computer running Windows Server 2019, 2016, 2012 or Windows Server 2012 R2 (all editions), Windows 10, Windows 8.1, Windows 8.
+- A physical or virtual computer running Windows Server 2019, 2016, 2012 or Windows Server 2012 R2 (all editions), Windows 10, Windows 8.1, Windows 8.
 
--   At least 1 GB of RAM.
+- At least 1 GB of RAM.
 
--   A minimum of 64 GB of disk space.
+- A minimum of 64 GB of disk space.
 
--   At least one network interface.
+- At least one network interface.
 
--   Access to the internet via a firewall (or web proxy).
+- Access to the internet via a firewall (or web proxy).
+
+- .NET 4.7.2
 
 To install the RMS connector administration tool, run the following files:
 
--   For a 64-bit computer: RMSConnectorSetup.exe
+-   For a 64-bit computer: **RMSConnectorSetup.exe**
 
 If you haven’t already downloaded these files, you can do so from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106).
+
+For more information, see [Prerequisites for the RMS connector](deploy-rms-connector.md#prerequisites-for-the-rms-connector).
 
 ## Enforce TLS 1.2 for the Azure RMS Connector
 
@@ -268,7 +273,7 @@ Microsoft will disable older, insecure TLS protocols, including TLS 1.0 and TLS 
 
 This section describes the steps to disable the Transport Layer Security (TLS) 1.0 and 1.1 on the RMS Connector servers and force the use of TLS 1.2.
 
-> [!IMPORTANT]
+> [!CAUTION]
 > Using the script in this section turns off pre-TLS 1.2 communication on a per-machine basis. If other services on the machine require TLS 1.0 or 1.2, this script may break functionality on those services.
 >
 
@@ -279,8 +284,6 @@ This section describes the steps to disable the Transport Layer Security (TLS) 1
 1. On your RMS Connector machine, run the following PowerShell script:
 
     ```powershell
-    <Force_TLS1.2.PS1>
-
     $ProtocolList = @("SSL 2.0", "SSL 3.0", "TLS 1.0", "TLS 1.1", "TLS 1.2")
 
     $ProtocolSubKeyList = @("Client", "Server")
@@ -292,8 +295,6 @@ This section describes the steps to disable the Transport Layer Security (TLS) 1
     $registryPath = "HKLM:\\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\"
 
     foreach ($Protocol in $ProtocolList) {
-
-        Write-Host " In 1st For loop"
 
         foreach ($key in $ProtocolSubKeyList) {
 
