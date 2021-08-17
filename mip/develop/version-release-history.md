@@ -60,6 +60,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
   - `FileStatus` exposes three properties: `IsProtected`, `IsLabeled`, and `ContainsProtectedObjects`.
   - `ContainsProtectedObjects` is useful for MSG files that have protected attachments.
 - When calling `FileHandler::RemoveProtection()` on a plaintext MSG file with protected attachments, protection will be removed from the attachments.
+- Fixed a bug where `IProtectionHandler` was destroyed when calling `IFileHandler.SetProtection()` in a loop. `IProtectionHandler` instance will no longer be destroyed after use. 
 
 ### Policy SDK
 
@@ -73,11 +74,12 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ### Breaking Changes
 
-- Introduced new custom settings to govern the default audit settings. #2748
+- Introduced new custom settings to govern the default audit settings.
   - Added new property in audit Delegate to set audit settings.
   - `LabelGroupData` class no longer has `IsAuditEnabled()` method. 
   - You can use instead `GetEnableAuditSetting()` to get `EnableAudit` settings in the policy once policy is loaded. Default audit settings will be `Undefined` as oppose to `true` in older versions. 
-- Allow passing the document's timezone to ComputeActions to allow actions to be computed as if the document existed in a different timezone from the machine applying the label. Useful for when labels are applied on behalf of a user through a service, where the server's local time is not necessarily the same as the user's. #2832 #2811
+- Allow passing the document's timezone to ComputeActions to allow actions to be computed as if the document existed in a different timezone from the machine applying the label. 
+  - Useful for when labels are applied on behalf of a user through a service, where the server's local time is not necessarily the same as the user's.
   - Instead of returning the `${Event.DateTime}` in UTC format, we now default to local time without displaying the timezone.
 - Updated existing exceptions for better handling of specific scenarios.
   - `NoPermissionsError::Category::NotPremiumLicenseUser`
