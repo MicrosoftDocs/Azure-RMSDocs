@@ -198,13 +198,12 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
                             "<application-name>",
                             "<application-version>"};
 
-    auto mipContext = mip::MipContext::Create(appInfo,
-                                              "file_sample",
-                                              mip::LogLevel::Trace,
-                                              false,
-                                              nullptr /*loggerDelegateOverride*/,
-                                              nullptr /*telemetryOverride*/);
+    std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
+				                                                                                               "mip_data",
+                                                                                        			         mip::LogLevel::Trace,
+                                                                                                       false);
 
+    std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 
     auto profileObserver = make_shared<ProtectionProfileObserver>(); // Observer object
     auto authDelegateImpl = make_shared<AuthDelegateImpl>("<application-id>"); // Authentication delegate object (App ID)
@@ -212,7 +211,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
 
     // Construct/initialize profile object
     ProtectionProfile::Settings profileSettings(
-      mipContext,
+      mMipContext,
       mip::CacheStorageType::OnDisk,      
       consentDelegateImpl,
       profileObserver);

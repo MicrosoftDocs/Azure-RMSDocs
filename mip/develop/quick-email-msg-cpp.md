@@ -65,12 +65,12 @@ int main()
                               "1.0" 
     };
 
-    auto mipContext = mip::MipContext::Create(appInfo,
-                                                "file_sample",
-                                                mip::LogLevel::Trace,
-                                                false,
-                                                nullptr /*loggerDelegateOverride*/,
-                                                nullptr /*telemetryOverride*/);
+    std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
+				                                                                                        "file_sample",
+                                                                                        				mip::LogLevel::Trace,
+                                                                                                        false);
+
+    std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 
     auto profileObserver = make_shared<ProfileObserver>();                      // Observer object
     auto authDelegateImpl = make_shared<AuthDelegateImpl>("<application-id>");  // Authentication delegate object (App ID)

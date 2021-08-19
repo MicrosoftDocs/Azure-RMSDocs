@@ -45,6 +45,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 - All engine settings will default to en-US locale in the event that the `.Locale` property is set to `null`.
 - Fixed an issue where the SDK wasn't fully honoring the logging level settings.
+- Note on deprecation of flighting feature for MIpConfiguration
 
 ### File SDK
 

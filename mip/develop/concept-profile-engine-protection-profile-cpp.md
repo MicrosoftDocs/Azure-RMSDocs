@@ -30,14 +30,15 @@ The two examples below show how to create the profileSettings object using local
 ```cpp
 mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
 
-mMipContext = mip::MipContext::Create(appInfo,
-                "mip_app_data",
-                mip::LogLevel::Trace,
-                nullptr /*loggerDelegateOverride*/,
-                nullptr /*telemetryOverride*/);
+std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
+				                                                                                    "file_sample",
+                                                                                        			mip::LogLevel::Trace,
+                                                                                                    false);
+
+std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 
 ProtectionProfile::Settings profileSettings(
-    mipContext,                                        // mipContext object
+    mMipContext,                                        // mipContext object
     mip::CacheStorageType::InMemory,                   // use in memory storage    
     std::make_shared<ConsentDelegateImpl>(),           // new consent delegate
     std::make_shared<ProtectionProfileObserverImpl>()); // new protection profile observer
@@ -48,14 +49,15 @@ ProtectionProfile::Settings profileSettings(
 ```cpp
 mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
 
-mMipContext = mip::MipContext::Create(appInfo,
-                "mip_app_data",
-                mip::LogLevel::Trace,
-                nullptr /*loggerDelegateOverride*/,
-                nullptr /*telemetryOverride*/);
+std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
+    		                                                                                       "mip_data",
+                                                                                       			   mip::LogLevel::Trace,
+                                                                                                   false);
+
+std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 
 ProtectionProfile::Settings profileSettings(
-    mipContext,                                         // mipContext object
+    mMipContext,                                         // mipContext object
     mip::CacheStorageType::OnDisk,                      // use on disk storage    
     std::make_shared<ConsentDelegateImpl>(),            // new consent delegate
     std::make_shared<ProtectionProfileObserverImpl>()); // new protection profile
@@ -89,14 +91,15 @@ int main()
 
     mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
 
-    auto mipContext = mip::MipContext::Create(appInfo,
-                        "mip_app_data",
-                        mip::LogLevel::Trace,
-                        nullptr /*loggerDelegateOverride*/,
-                        nullptr /*telemetryOverride*/);
+    std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
+				                                                                                    "file_sample",
+                                                                                        			mip::LogLevel::Trace,
+                                                                                                    false);
+
+    std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 
     ProtectionProfile::Settings profileSettings(
-        mipContext,                                    // mipContext object
+        mMipContext,                                    // mipContext object
         mip::CacheStorageType::OnDisk,                 // use on disk storage        
         std::make_shared<ConsentDelegateImpl>(),       // new consent delegate
         std::make_shared<ProfileObserver>());          // new protection profile observer

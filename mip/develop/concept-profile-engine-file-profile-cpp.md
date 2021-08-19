@@ -39,14 +39,15 @@ The following examples show how to create the `profileSettings` object using loc
 ```cpp
 mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
 
-mMipContext = mip::MipContext::Create(appInfo,
-                "mip_app_data",
-                mip::LogLevel::Trace,
-                nullptr /*loggerDelegateOverride*/,
-                nullptr /*telemetryOverride*/);
+std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
+			                                                                                        "mip_data",
+                                                                                       				mip::LogLevel::Trace,
+                                                                                                    false);
+
+std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 
 FileProfile::Settings profileSettings(
-    mipContext,                                   // mipContext object
+    mMipContext,                                  // mipContext object
     mip::CacheStorageType::InMemory,              // use in memory storage
     std::make_shared<ConsentDelegateImpl>(),      // new consent delegate
     std::make_shared<FileProfileObserverImpl>()); // new protection profile observer
@@ -59,14 +60,15 @@ The following code snip will instruct the `FileProfile` to store all app state d
 ```cpp
 mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
 
-mMipContext = mip::MipContext::Create(appInfo,
-                "mip_app_data",
-                mip::LogLevel::Trace,
-                nullptr /*loggerDelegateOverride*/,
-                nullptr /*telemetryOverride*/);
+std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
+				                                                                                    "mip_data",
+                                                                                        			mip::LogLevel::Trace,
+                                                                                                    false);
+
+std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 
 FileProfile::Settings profileSettings(
-    mipContext,                                    // mipContext object
+    mMipContext,                                   // mipContext object
     mip::CacheStorageType::OnDisk,                 // use on disk storage    
     std::make_shared<ConsentDelegateImpl>(),       // new consent delegate
     std::make_shared<FileProfileObserverImpl>());  // new protection profile observer
@@ -102,14 +104,15 @@ int main()
 
     mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
 
-    auto mipContext = mip::MipContext::Create(appInfo,
-                        "mip_app_data",
-                        mip::LogLevel::Trace,
-                        nullptr /*loggerDelegateOverride*/,
-                        nullptr /*telemetryOverride*/);
+    std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
+				                                                                                        "mip_data",
+                                                                                        				mip::LogLevel::Trace,
+                                                                                                        false);
+
+    std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 
     FileProfile::Settings profileSettings(
-        mipContext,                                    // mipContext object
+        mMipContext,                                   // MipContext object
         mip::CacheStorageType::OnDisk,                 // use on disk storage        
         std::make_shared<ConsentDelegateImpl>(),       // new consent delegate
         std::make_shared<FileProfileObserverImpl>());  // new file profile observer

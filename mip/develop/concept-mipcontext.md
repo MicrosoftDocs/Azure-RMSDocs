@@ -14,32 +14,50 @@ ms.author: mbaldwin
 
 `MipContext` is the highest level object in the SDK. It's responsible for managing state across all profiles that may be created as part of an application or service. Additionally, it handles releasing MIP SDK resources once the MipContext object has been destroyed. Only a single `MipContext` per process is permitted. Creating more than one may result in unexpected behavior.
 
-Specifically, `MipContext` provides settings for the following options:
+Once an object of `mip::MipContext` has been created, the `MipContext` object can be used to create `mip::FileProfile`, `mip::PolicyProfile`, or `mip::ProtectionProfile` objects.
 
-- `mip::ApplicationInfo` across the SDK, used for application ID, version, and application name.
-- The path where MIP state information should be stored, if enabled.
-- Logging level.
-- A custom logger delegate, if desired.
-- Telemetry configuration override.
-- Enable preview features in the SDK that are behind feature flags.
+### Creating MipConfiguration
 
-Once an object of `mip::MipContext` has been created, the `MipContext` object can be used to create `mip::FileProfile` objects (or `PolicyProfile`/`ProtectionProfile`).
+The `mip::MipConfiguration` class allows the application to set various application-wide configuration settings for MIP SDK. These settings include: 
 
-### MipContext Functions
+- Application Info: Name, Application Id, Version
+- Storage directory for logs and cache
+- Logging level
+- Offline mode
+- Feature flighting settings
+- Delegates, including logging, storage, HTTP, JSON parsing, and XML parsing.
+- Diagnostic configuration
 
-`mip::MipContext` exposes three important static functions use to create and destroy `MipContext` objects.
+```cpp
+std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
+				"file_sample",
+				mip::LogLevel::Trace,
+				false);
+```
+Once `MipConfiguration` is initialized, it can be used to create the `MipContext` object.
+
+### Creating MipContext
+
+`mip::MipContext` exposes two important static functions use to create and destroy `MipContext` objects.
 
 #### `mip::MipContext::Create()`
 
-Creates a new MipContext instance to be used when initializing profiles. This function accepts:
+Creates a new MipContext instance to be used when initializing profiles. This function a `MipConfiguration` object.
 
-- `mip::ApplicationInfo`
-- A path for the MIP storage cache.
-- `mip::LogLevel`
-- (Optional) `mip::LoggerDelegate`
-- (Optional) `mip::TelemetryConfiguration`
+```cpp
+std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
+```
+
+Once the `MipContext` object is created, it can be used to create `FileProfile`, `PolicyProfile`, or `ProtectionProfile` objects, depending on which SDK your application is using.
+
+#### `mip::mipContext::Shutdown()`
+
+Releases all MIP resources. Should be called prior to app shutdown. The `MipContext` destructor will also call this function when the `MipContext` object is destroyed.
 
 #### `mip::MipContext::CreateWithCustomFeatureSettings()`
+
+> [!NOTE]
+> This API is deprecated in MIP SDK 1.10 and on. Please update to using `MipConfiguration` and `mip::MipContext::Create()`.
 
 Creates a new MipContext instance to be used when initializing profiles, with custom feature settings enabled.
 
@@ -49,10 +67,6 @@ Creates a new MipContext instance to be used when initializing profiles, with cu
 - (Optional) `mip::LoggerDelegate`
 - (Optional) `mip::TelemetryConfiguration`
 - `mip::FlightingFeature`
-
-#### `mip::mipContext::Shutdown()`
-
-Releases all MIP resources. Should be called prior to app shutdown. The `MipContext` destructor will also call this function when the `MipContext` object is destroyed.
 
 ## Next Steps
 

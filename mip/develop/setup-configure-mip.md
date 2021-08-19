@@ -60,7 +60,7 @@ Next, complete the following steps to ensure your client computer is set up and 
      - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.
      - Close the **Settings** dialog.
 
-2. Install [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/), with the following workloads and optional components:
+2. Install [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/), with the following workloads and optional components:
    - **Universal Windows Platform development** Windows workload, plus the following optional components:
      - **C++ Universal Windows Platform tools**
      - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default
