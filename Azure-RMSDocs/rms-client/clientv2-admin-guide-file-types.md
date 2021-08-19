@@ -39,7 +39,7 @@ This article lists the file types and sizes supported by the Azure Information P
 >
 
 > [!TIP]
-> To protect generic file types, which do not have built-in support for protection, while ensuring that recipients will be able to access them as expected, we recommend that you define the recipient as a co-author or co-owner of the file. For more information, see [Protecting generic file types](clientv2-classify-protect.md#protecting-generic-file-types).
+> To protect generic file types, which do not have built-in support for protection, while ensuring that recipients will be able to access them as expected, we recommend that you define the recipient as a co-owner of the file. For more information, see [Protecting generic file types](clientv2-classify-protect.md#protecting-generic-file-types).
 >
 
 ## File types supported for classification only

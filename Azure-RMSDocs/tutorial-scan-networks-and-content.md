@@ -38,7 +38,7 @@ In this tutorial, you'll learn how to:
 > * Scan your content shares for sensitive content and understand results found
 
 > [!NOTE]
-> Network Discovery is available only starting in version [2.8.85.0 ](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) of the unified labeling client, and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> Network Discovery is available only starting in version [2.8.85.0 ](rms-client/unifiedlabelingclient-version-release-history.md#general-availability-versions-that-are-no-longer-supported) of the unified labeling client, and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 >
 > If you do not have this version of the client and scanner installed, review the [tutorial prerequisites](#tutorial-prerequisites) and then go straight to [Define and run your content scan job](#define-and-run-your-content-scan-job).
 
@@ -66,7 +66,7 @@ When you're ready, continue with [Create a network scan job](#create-a-network-s
 Create a network scan job to scan a specified IP address or IP range for risky repositories.
 
 > [!NOTE]
-> This feature is available only starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> This feature is available only starting in version 2.8.85.0, and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 > 
 
 **To create a network scan job**:
@@ -110,7 +110,7 @@ Once your network scan job is complete, you can check for any risky repositories
 For example, if a repository is found to have both read and write public access, you may want to scan further and confirm that no sensitive data is stored there.
 
 > [!NOTE]
-> This feature is available only starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> This feature is available only starting in version 2.8.85.0, and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 > 
 
 **To add risky repositories to your content scan job**:

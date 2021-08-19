@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/05/2021
+ms.date: 07/22/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -43,7 +43,7 @@ Container files are files that include other files, with a typical example being
 
 You can classify and protect these container files, but the classification and protection is not applied to each file inside the container.
 
-If you have a container file that includes classified and protected files, you must first extract the files to change their classification or protection settings. However, you can remove the protection for all files in supported container files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet.
+If you have a container file that includes classified and protected files, you must first extract the files to change their classification or protection settings. However, you can remove the protection for all files in supported container files by using the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet.
 
 The Azure Information Protection viewer cannot open attachments in a protected PDF document. In this scenario, when the document is opened in the viewer, the attachments are not visible.
 
@@ -95,7 +95,7 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 
 Known issues for co-authoring are relevant only when the [dedicated AIP client version for co-authoring](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) is deployed in your environment and co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
 
-Co-authoring with the unified labeling client is currently in [public preview](rms-client/unifiedlabelingclient-version-release-history.md#version-212620-public-preview) and is supported only for testing environments.
+Co-authoring with the unified labeling client is currently in [public preview](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) and is supported only for testing environments.
 
 Known issues for co-authoring in AIP include:
 
@@ -153,6 +153,7 @@ When sharing external doc types, such as PDFs, across tenants, recipients receiv
 :::image type="content" source="media/cross-tenant-consent.png" alt-text="Cross-tenant consent prompt.":::
 
 Depending on your application, you may see this prompt repeatedly for the same document. When the prompt appears, select **Accept** to continue to the shared document.
+
 ## Known issues in policies
 
 Publishing policies may take up to 24 hours.

@@ -138,7 +138,7 @@ When a full scan is complete, the scan type automatically changes to incremental
 
 Earlier versions of the scanner scanned all files whenever the scanner detected new or changed settings for automatic and recommended labeling. The scanner automatically refreshed the policy every four hours.
 
-In scanner versions [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) or later, AIP skips the full rescan for updated settings to ensure consistent performance. Make sure that you [run a full rescan manually](#rescanning-files) as needed.
+In scanner versions 2.8.85.0 or later, AIP skips the full rescan for updated settings to ensure consistent performance. Make sure that you [run a full rescan manually](#rescanning-files) as needed.
 
 For example, if you’ve changed **Sensitivity policy** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
 

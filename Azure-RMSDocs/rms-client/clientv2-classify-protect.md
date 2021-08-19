@@ -152,9 +152,9 @@ The classification and protection that you specified stays with the file, even i
 
 ## Protecting generic file types
 
-To protect generic file types, which do not have built-in support for protection, while ensuring that recipients will be able to access them as expected, we recommend that you define the recipient as a co-author or co-owner of the file.
+To protect generic file types, which do not have built-in support for protection, while ensuring that recipients will be able to access them as expected, we recommend that you define the recipient as a co-owner of the file.
 
-For example, if you are sharing a **.pub** file and want to make sure that your recipient can open it, either choose a label that grants co-authoring or co-owning permissions, or set custom permissions for the file.
+For example, if you are sharing a **.pub** file and want to make sure that your recipient can open it, either choose a label that grants co-owning permissions, or set custom permissions for the file.
 
 If you set custom permissions for the file, in the **Select users, groups, or organizations** box, make sure that you define the email address for the users who need access to the file.
 

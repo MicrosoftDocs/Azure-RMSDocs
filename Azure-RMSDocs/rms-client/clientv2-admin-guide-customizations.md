@@ -1742,7 +1742,7 @@ Since no specific extensions are specified, all supported file types are include
             "LocalizationData": { 				
                 "en-us": { 				  
                     "Title": "Email Blocked", 				  
-                    "Body": "The email or at least one of the attachments is classified as <Bold>${MatchedLabelName}</Bold>. Documents classified as <Bold> ${MatchedLabelName}</Bold> cannot be sent to external recipients (${MatchedRecipientsList}).<br><br>List of attachments classified as <Bold>${MatchedLabelName}</Bold>:<br><br>${MatchedAttachmentName}<br><br><br>This message will not be sent.<br>You are responsible for ensuring compliance with classification requirements as per Contoso’s policies." 				
+                    "Body": "The email or at least one of the attachments is classified as <Bold>${MatchedLabelName}</Bold>. Documents classified as <Bold> ${MatchedLabelName}</Bold> cannot be sent to external recipients (${MatchedRecipientsList}).<br><br>List of attachments classified as <Bold>${MatchedLabelName}</Bold>:<br><br>${MatchedAttachmentName}<br><br><br>This message will not be sent.<br>You are responsible for ensuring compliance with classification requirements as per Contoso's policies." 				
                 }, 				
                 "es-es": { 				  
                     "Title": "Correo electrónico bloqueado", 				  
@@ -1823,11 +1823,11 @@ In the following example, the attachment list that requires labeling is:
 			]
 		},		
         { 			
-            "type" : "Email Block", 			
+            "type" : "Block", 			
             "LocalizationData": { 				
                 "en-us": { 				  
                     "Title": "Emailed Blocked", 				  
-                    "Body": "Classification is necessary for attachments to be sent to external recipients.<br><br>List of attachments that are not classified:<br><br>${MatchedAttachmentName}<br><br><br>This message will not be sent.<br>You are responsible for ensuring compliance to classification requirement as per Contoso’s policies.<br><br>For MS Office documents, classify and send again.<br><br>For PDF files, classify the document or classify the email (using the most restrictive classification level of any single attachment or the email content) and send again." 				
+                    "Body": "Classification is necessary for attachments to be sent to external recipients.<br><br>List of attachments that are not classified:<br><br>${MatchedAttachmentName}<br><br><br>This message will not be sent.<br>You are responsible for ensuring compliance to classification requirement as per Contoso's policies.<br><br>For MS Office documents, classify and send again.<br><br>For PDF files, classify the document or classify the email (using the most restrictive classification level of any single attachment or the email content) and send again." 				
                 }, 				
                 "es-es": { 				  
                     "Title": "Correo electrónico bloqueado", 				  
@@ -1879,7 +1879,7 @@ Since no specific extensions are specified, all supported file types are include
             "LocalizationData": { 				
                 "en-us": { 				  
                     "Title": "Warning", 				  
-                    "Body": "You are sending a document that is classified as <Bold>${MatchedLabelName}</Bold> to at least one external recipient. Please make sure that the content is correctly classified and that the recipients are entitled to receive this document.<br><br>List of attachments classified as <Bold>${MatchedLabelName}</Bold>:<br><br>${MatchedAttachmentName}<br><br><Bold>List of external email addresses:</Bold><br>${MatchedRecipientsList})<br><br>You are responsible for ensuring compliance to classification requirement as per Contoso’s policies.<br><br><Bold>Acknowledgement</Bold><br>By clicking <Bold>I accept<\Bold> below, you confirm that the recipient is entitled to receive the content and the communication complies with CS Policies and Standards",
+                    "Body": "You are sending a document that is classified as <Bold>${MatchedLabelName}</Bold> to at least one external recipient. Please make sure that the content is correctly classified and that the recipients are entitled to receive this document.<br><br>List of attachments classified as <Bold>${MatchedLabelName}</Bold>:<br><br>${MatchedAttachmentName}<br><br><Bold>List of external email addresses:</Bold><br>${MatchedRecipientsList})<br><br>You are responsible for ensuring compliance to classification requirement as per Contoso's policies.<br><br><Bold>Acknowledgement</Bold><br>By clicking <Bold>I accept</Bold> below, you confirm that the recipient is entitled to receive the content and the communication complies with CS Policies and Standards",
 					"Options": [ 						
                         "I accept"			    
                     ] 
@@ -1993,7 +1993,7 @@ Since no specific extensions are specified, all supported file types are include
 
 By default, the timeout for SharePoint interactions is two minutes, after which the attempted AIP operation fails.
 
-Starting in [version 2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), AIP administrators can control this timeout using the following advanced properties, using an **hh:mm:ss** syntax to define the timeouts:
+Starting in version 2.8.85.0, AIP administrators can control this timeout using the following advanced properties, using an **hh:mm:ss** syntax to define the timeouts:
 
 - **SharepointWebRequestTimeout**. Determines the timeout for all AIP web requests to SharePoint. Default = 2 minutes.
 

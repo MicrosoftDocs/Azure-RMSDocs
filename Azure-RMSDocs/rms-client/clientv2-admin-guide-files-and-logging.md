@@ -34,12 +34,14 @@ ms.custom: admin
 
 After you have installed the Azure Information Protection unified labeling client, you might need to know where files are located and monitor how the client is being used.
 
+Usage logging is supported with the Azure Information Protection unified labeling client [version 2.12.62](unifiedlabelingclient-version-release-history.md#version-212620) and higher.
+
 ## Turn on usage logging
 
 To turn on support for usage logging for both the unified labeling client and scanner, set the registry key as follows:
 
 - Registry path: **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnableLoggingAuditEventsToEventLog**
-
+- Type: **DWORD**
 - Value: **1**
 
 ## Log file locations
@@ -50,7 +52,7 @@ Client and scanner log files are located in the following locations on your unif
 - **\Program Files\Microsoft Azure Information Protection** (32-bit operating systems only)
 - **%localappdata%\Microsoft\MSIP**
 
-## Client-side usage logging (Public preview)
+## Client-side usage logging
 
 > [!NOTE]
 > Client-side usage logging is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.

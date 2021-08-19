@@ -28,7 +28,7 @@ ms.custom: admin
 
 # Applications that support Azure Rights Management data protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
 >
 >***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
@@ -50,8 +50,12 @@ These applications and solutions are known as "RMS-enlighted", and have Rights M
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [Microsoft 365 apps](#microsoft-365-app-support) <br />- Office 2010 <br />- Office 2013<br />- Office 2016 <br />- Office 2019 <br />- [Office for the web (viewing protected documents)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
 |[**Email**](#viewing-protected-content-in-email-clients)      |   - Outlook 2010<br />- Outlook 2013<br />- Outlook 2016 <br />- Outlook 2019 <br />- Outlook from Microsoft 365 Apps for Enterprise<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
-|[**Other file types**](#supported-text-and-image-file-types)    |  - Visio from Microsoft 365 apps, Office 2019, and Office 2016: **.vsdm**, **.vsdx**, **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Azure Information Protection client for Windows: Text, images, **pfile** <br />- [SealPath RMS plugin for AutoCAD](https://www.sealpath.com/rmscad/): **.dwg**       |
+|[**Other file types**](#supported-text-and-image-file-types)    |  - Visio from Microsoft 365 apps, Office 2019, and Office 2016: **.vsdm**, **.vsdx**, **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Azure Information Protection client for Windows: Text, images, **pfile**      |
 | | |
+
+
+CAD files, such as **.dwg** files, are supported by partner solutions, such as [SealPath RMS plugin for AutoCAD](https://www.sealpath.com/rmscad/) and [SECUDE's HALOCAD plugin](https://secude.com/halocad/). For more information, see [How to protect your CAD data files with MIP and HALOCAD](https://www.microsoft.com/security/blog/2021/07/22/how-to-protect-your-cad-data-files-with-mip-and-halocad/).
+
 
 ## macOS RMS-enlightened applications
 
@@ -184,7 +188,7 @@ The following Office client suites support protecting files and emails on Window
 
 - **Microsoft 365 Apps for Enterprise**
 
-    These editions of Office are included with most but not all subscriptions that include data protection from Azure Information Protection. Check your subscription information to see if Microsoft 365 Apps for Enterprise ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+    These editions of Office are included with most but not all subscriptions that include data protection from Azure Information Protection. Check your subscription information to see if Microsoft 365 Apps for Enterprise ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M).
 
 - **Office Professional Plus 2019**
 
