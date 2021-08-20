@@ -30,30 +30,36 @@ The `mip::MipConfiguration` class allows the application to set various applicat
 
 ```cpp
 std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
-				"file_sample",
+				"mip_data",
 				mip::LogLevel::Trace,
 				false);
 ```
+
+```csharp
+MipConfiguration mipConfiguration = new MipConfiguration(appInfo, "mip_data", LogLevel.Trace, false);
+```
+
 Once `MipConfiguration` is initialized, it can be used to create the `MipContext` object.
 
 ### Creating MipContext
 
-`mip::MipContext` exposes two important static functions use to create and destroy `MipContext` objects.
-
-#### `mip::MipContext::Create()`
-
-Creates a new MipContext instance to be used when initializing profiles. This function a `MipConfiguration` object.
+The `MipContext::Create()` function is used, taking the provided `MipConfiguration` object, to create the `MipContext`.
 
 ```cpp
 std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 ```
 
+```csharp
+MipContext = mipContext = MIP.CreateMipContext(mipConfiguration);
+```
+
 Once the `MipContext` object is created, it can be used to create `FileProfile`, `PolicyProfile`, or `ProtectionProfile` objects, depending on which SDK your application is using.
 
-#### `mip::mipContext::Shutdown()`
+#### Shutting Down
 
-Releases all MIP resources. Should be called prior to app shutdown. The `MipContext` destructor will also call this function when the `MipContext` object is destroyed.
+Properly destroying all MIP SDK objects requires shutting down MIPContext. This can be achieved by calling the **Shutdown** function. The `MipContext` destructor will also call `MipContext.Shutdown()` when the `MipContext` object is destroyed.
 
+<!--remove from docs in 1.11 -->
 #### `mip::MipContext::CreateWithCustomFeatureSettings()`
 
 > [!NOTE]
@@ -71,10 +77,10 @@ Creates a new MipContext instance to be used when initializing profiles, with cu
 ## Next Steps
 
 - Next, learn more about [Authentication concepts](concept-authentication-cpp.md) and [Observers](concept-async-observers.md). MIP provides an extensible authentication model, while observers are used to provide event notifications for asynchronous events. Both are fundamental, and apply to all MIP API sets.
-- Then work through the profile and engine concepts for the File, Policy, and Protection APIs
-  - [File API profile concepts](concept-profile-engine-file-profile-cpp.md)
-  - [File API engine concepts](concept-profile-engine-file-engine-cpp.md)
-  - [Policy API profile concepts](concept-profile-engine-file-profile-cpp.md)
-  - [Policy API engine concepts](concept-profile-engine-file-engine-cpp.md)
-  - [Protection API profile concepts](concept-profile-engine-file-profile-cpp.md)
-  - [Protection API engine concepts](concept-profile-engine-file-engine-cpp.md)
+- Then work through the profile and engine concepts for the File, Policy, and Protection SDKs
+  - [File SDK profile concepts](concept-profile-engine-file-profile-cpp.md)
+  - [File SDK engine concepts](concept-profile-engine-file-engine-cpp.md)
+  - [Policy SDK profile concepts](concept-profile-engine-file-profile-cpp.md)
+  - [Policy SDK engine concepts](concept-profile-engine-file-engine-cpp.md)
+  - [Protection SDK profile concepts](concept-profile-engine-file-profile-cpp.md)
+  - [Protection SDK engine concepts](concept-profile-engine-file-engine-cpp.md)

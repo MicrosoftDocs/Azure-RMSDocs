@@ -1,20 +1,20 @@
 ---
-title: Quickstart - Initialization for MIP SDK C++ clients using the Protection API
-description: A quickstart showing you how to write the initialization logic for Microsoft Information Protection (MIP) SDK client applications using the Protection API (C++)
+title: Quickstart - Initialization for MIP SDK C++ clients using the Protection SDK
+description: A quickstart showing you how to write the initialization logic for Microsoft Information Protection (MIP) SDK client applications using the Protection SDK (C++)
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: mbaldwin
-#Customer intent: As a an application developer, I want to learn how to do SDK initialization, so that I can use the SDK Protection API.
+#Customer intent: As a an application developer, I want to learn how to do SDK initialization, so that I can use the Protection SDK.
 ---
 
-# Quickstart: Client application initialization for Protection APIs (C++)
+# Quickstart: Client application initialization for Protection SDKs (C++)
 
 This quickstart shows you how to implement the client initialization pattern, used by the MIP C++ SDK at runtime.
 
 > [!NOTE]
-> The steps outlined in this quickstart are required for any client application that uses the MIP Protection APIs. These Quickstarts should be done serially after Application Initialization and implementation of Authentication delegate and Consent delegate classes.
+> The steps outlined in this quickstart are required for any client application that uses the MIP Protection SDKs. These Quickstarts should be done serially after Application Initialization and implementation of Authentication delegate and Consent delegate classes.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ If you haven't already, be sure to:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md). This "Client application initialization" Quickstart relies on proper SDK setup and configuration.
 - Optionally:
-  - Review [Profile and engine objects](concept-profile-engine-cpp.md). The profile and engine objects are universal concepts, required by clients that use the MIP File/Policy/Protection APIs.
+  - Review [Profile and engine objects](concept-profile-engine-cpp.md). The profile and engine objects are universal concepts, required by clients that use the MIP File/Policy/Protection SDKs.
   - Review [Authentication concepts](concept-authentication-cpp.md) to learn how authentication and consent are implemented by the SDK and the client application.
   - Review [Observer concepts](concept-async-observers.md) to learn more about observers, and how they're implemented. The MIP SDK uses the observer pattern to implement asynchronous event notifications.
 
@@ -38,7 +38,7 @@ First we create and configure the initial Visual Studio solution and project, up
 
      [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
-2. Add the Nuget package for the MIP SDK Protection API to your project:
+2. Add the Nuget package for the MIP Protection SDK to your project:
    - In the **Solution Explorer**, right-click the project node (directly under the top/solution node), and select **Manage NuGet packages...**:
    - When the **NuGet Package Manager** tab opens in the Editor Group tabs area:
      - Select **Browse**.
@@ -160,11 +160,11 @@ Now create a basic implementation for a Protection profile observer class, by ex
 
 The MIP SDK implements authentication using class extensibility, which provides a mechanism to share authentication work with the client application. The client must acquire a suitable OAuth2 access token, and provide to the MIP SDK at runtime.
 
-Create an implementation for an authentication delegate, by extending the SDK's `mip::AuthDelegate` class, and overriding/implementing the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function. **Follow the steps detailed under [File API Applcation Initialization Quickstart](quick-app-initialization-cpp.md).** The authentication delegate is instantiated and used later, by the Protection profile and Protection engine objects.
+Create an implementation for an authentication delegate, by extending the SDK's `mip::AuthDelegate` class, and overriding/implementing the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function. **Follow the steps detailed under [File SDK Applcation Initialization Quickstart](quick-app-initialization-cpp.md).** The authentication delegate is instantiated and used later, by the Protection profile and Protection engine objects.
 
 ## Implement a consent delegate
 
-Now create an implementation for a consent delegate, by extending the SDK's `mip::ConsentDelegate` class, and overriding/implementing the `mip::AuthDelegate::GetUserConsent()` pure virtual function.  **Follow the steps detailed under [File API Applcation Initialization Quickstart](quick-app-initialization-cpp.md).** The consent delegate is instantiated and used later, by the Protection profile and Protection engine objects.
+Now create an implementation for a consent delegate, by extending the SDK's `mip::ConsentDelegate` class, and overriding/implementing the `mip::AuthDelegate::GetUserConsent()` pure virtual function.  **Follow the steps detailed under [File SDK Applcation Initialization Quickstart](quick-app-initialization-cpp.md).** The consent delegate is instantiated and used later, by the Protection profile and Protection engine objects.
 
 ## Construct a Protection profile and engine
 
@@ -288,7 +288,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
 
 ## Next Steps
 
-Now that your initialization code is complete, you're ready for the next quickstart, where you'll start to experience the MIP Protection API.
+Now that your initialization code is complete, you're ready for the next quickstart, where you'll start to experience the MIP Protection SDK.
 
 > [!div class="nextstepaction"]
 > [List protection templates](quick-protection-list-templates-cpp.md)

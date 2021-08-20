@@ -13,7 +13,7 @@ ms.custom: has-adal-ref
 
 # Quickstart: Set and get a sensitivity label (C#)
 
-This Quickstart shows you how to use more of the MIP File APIs. Using one of the sensitivity labels you listed in the previous Quickstart, you use a File handler to set/get the label on a file. The File handler class exposes various operations for setting/getting labels, or protection, for supported file types.
+This Quickstart shows you how to use more of the MIP File SDKs. Using one of the sensitivity labels you listed in the previous Quickstart, you use a File handler to set/get the label on a file. The File handler class exposes various operations for setting/getting labels, or protection, for supported file types.
 
 ## Prerequisites
 

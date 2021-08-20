@@ -10,7 +10,7 @@ ms.service: information-protection
 
 # FIPS 140-2 Compliance
 
-The Microsoft Information Protection SDK uses FIPS 140-2 approved ciphers but not FIPS 140-2 validated cryptographic libraries today. Developers building applications consuming the MIP SDK need to be aware that the SDK is not considered FIPS compliant at this time.
+The Microsoft Information Protection SDK uses FIPS 140-2 approved ciphers but not FIPS 140-2 validated cryptographic libraries today. Developers building applications consuming the MIP SDK need to be aware the SDK is not considered FIPS compliant at this time.
 
 ## Plans for Reaching FIPS 140-2 Compliance
 

@@ -59,11 +59,11 @@ Cache storage is important for maintaining offline access to previously-decrypte
 While the MIP SDK does support other Linux distributions, we didn't test the cache encryption on RedHat Enterprise Linux, CentOS, or Debian.
 
 > [!NOTE]
-> The feature flag to enable cache storage on Linux is set via `mip::MipContext::CreateWithCustomFeatureSettings()`
+> The feature flag to enable cache storage on Linux is set via `mip::MipConfiguration::SetFeatureSettings()`
 
 ## Cache storage database tables
 
-The MIP SDK maintains two databases for cache. One is for the protection APIs, and maintaining protection state details. The other is for the policy APIs and maintaining policy details and service information. Both are stored in the path defined in the settings object, under **mip\mip.policies.sqlite3** and **mip\mip.protection.sqlite3**.
+The MIP SDK maintains two databases for cache. One is for the Protection SDKs, and maintaining protection state details. The other is for the Policy SDKs and maintaining policy details and service information. Both are stored in the path defined in the settings object, under **mip\mip.policies.sqlite3** and **mip\mip.protection.sqlite3**.
 
 ### Protection Database
 
@@ -71,7 +71,7 @@ The MIP SDK maintains two databases for cache. One is for the protection APIs, a
 | ------------- | -------------------------------------------------------------- | --------- |
 | AuthInfoStore | Stores authentication challenge details.                       | No        |
 | ConsentStore  | Stores consent results for each engine.                        | No        |
-| DnsInfoStore  | Stores DNS lookup results for SDK protection operations        | No        |
+| DnsInfoStore  | Stores DNS lookup results for Protection operations        | No        |
 | EngineStore   | Stores engine details, associated user, and custom client data | No        |
 | KeyStore      | Stores symmetric encryption keys for each engine.              | Yes       |
 | LicenseStore  | Stores use license information for previously decrypted data.  | Yes       |
@@ -103,10 +103,14 @@ FileProfile::Settings profileSettings(mMipContext,
 profileSettings.SetCanCacheLicenses(false);
 ```
 
-### Caching API Engines
+### Caching Engines
 
-Typically, in MIP SDK, an API engine is created for each user performing an API operation and provides an interface to all operations that are performed on behalf of an authenticated identity. As discussed in [Profiles and Engines concepts](concept-profile-engine-cpp.md), FileEngine, PolicyEngine or ProtectionEngine each has two states `CREATED` and `LOADED`. An engine needs to be created and loaded for it to be able to perform SDK operations. If an engine is not in use, the API caches the engine and retains it in `CREATED` state as long as possible depending on available resources. Respective API's profile class also provides a method `UnloadEngineAsync` to achieve this explicitly.
+In MIP SDK, an engine is created for each user performing any authenticated operation. Engines provides an interface for all operations that are performed on behalf of an authenticated identity. As discussed in [Profiles and Engines concepts](concept-profile-engine-cpp.md), FileEngine, PolicyEngine or ProtectionEngine each has two states `CREATED` and `LOADED`. An engine needs to be created and loaded for it to be able to perform SDK operations. If an engine is not in use, the SDK caches the engine and retains it in `CREATED` state as long as possible depending on available resources. Each Respective SDK's *profile* class also provides a method `UnloadEngineAsync` to achieve this explicitly.
 
 Each engine has a unique identifier `id` that is used in all engine management operations. The client application can provide an id explicitly, or the SDK can generated one, if it's not provided by the application. If a unique identifier is provided using engine settings objects at the time of engine creation, and caching is enabled in API profile as described above, same engines can be used every time the user performs an operation with the SDK. Follow the code snippets for creating a `[mip::FileEngine](./concept-profile-engine-file-engine-cpp.md#create-file-engine-settings)`, `[mip::PolicyEngine](./concept-profile-engine-policy-engine-cpp.md#implementation-create-policy-engine-settings)`.
 
-Failing to provide an existing engine Id will result in extra service round trips to fetch policy and will fetch licenses that may have already been cached for the existing engine. Caching the engine ID alllows the SDK offline access to previously decrypted information and general performance improvements.
+Failing to provide an existing engineId will result in extra service round trips to fetch policy and will fetch licenses that may have already been cached for the existing engine. Caching the engine ID allows the SDK offline access to previously decrypted information and general performance improvements.
+
+## Next Steps
+
+Next, learn more about [Profile and Engine object concepts](concept-profile-engine-cpp.md) to understand how to properly set MIP engine IDs to properly utilize MIP SDK caching.

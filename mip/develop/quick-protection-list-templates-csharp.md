@@ -1,6 +1,6 @@
 ---
 title: Quickstart - List protection templates available to authenticated user in a Microsoft Information Protection (MIP) tenant using MIP SDK C# Wrapper
-description: A quickstart showing you how to use the Microsoft Information Protection SDK Protection API C# wrapper to list the protection templates available to a user (C#)
+description: A quickstart showing you how to use the Microsoft Information Protection Protection SDK C# wrapper to list the protection templates available to a user (C#)
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
@@ -12,20 +12,20 @@ ms.custom: has-adal-ref
 
 # Quickstart: List Templates (C#)
 
-This Quickstart shows you how to use the MIP SDK Protection API to list the protection templates available to the user.
+This Quickstart shows you how to use the MIP Protection SDK to list the protection templates available to the user.
 
 ## Prerequisites
 
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
-- Complete [Quickstart: Client application initialization - Protection API (C#)](quick-protection-app-initialization-csharp.md) first, which builds a starter Visual Studio solution. This "List protection templates" Quickstart relies on the previous one, for proper creation of the starter solution.
+- Complete [Quickstart: Client application initialization - Protection SDK (C#)](quick-protection-app-initialization-csharp.md) first, which builds a starter Visual Studio solution. This "List protection templates" Quickstart relies on the previous one, for proper creation of the starter solution.
 - Optionally: Review [RMS Templates](/azure/information-protection/configure-policy-templates) concepts.
 
 ## Add logic to list the protection templates
 
 Add logic to list protection templates available to a user, using the Protection engine object.
 
-1. Open the Visual Studio solution you created in the previous "Quickstart - Client application initialization - Protection API (C#)" article.
+1. Open the Visual Studio solution you created in the previous "Quickstart - Client application initialization - Protection SDK (C#)" article.
 
 2. Using **Solution Explorer**, open the .cs file in your project that contains the implementation of the `Main()` method. It defaults to the same name as the project containing it, which you specified during project creation.
 

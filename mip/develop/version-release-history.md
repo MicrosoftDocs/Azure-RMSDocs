@@ -30,7 +30,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | Version | Link                        | Status              | End of Support     |
 | ------- | --------------------------- | ------------------- | ------------------ |
 | 1.10    | https://aka.ms/mipsdkbins   | **Current Version** | TBD                |
-| 1.9     | https://aka.ms/mipsdkbins19 | **Supported**       | August xx, 2022    |
+| 1.9     | https://aka.ms/mipsdkbins19 | **Supported**       | August 23, 2022    |
 | 1.8     | https://aka.ms/mipsdkbins18 | **Supported**       | April 29, 2022     |
 | 1.7     | https://aka.ms/mipsdkbins17 | **Supported**       | January 14th, 2022 |
 | 1.6     | https://aka.ms/mipsdkbins16 | **Supported**       | September 23, 2021 |
@@ -39,20 +39,26 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ## Version 1.10.xx
 
-**Release date:** August x, 2021
+**Release date:** August 23, 2021
 
 ### General Changes
 
+- Added `MipConfiguration` class.
+  - This class controls the configuration settings previously set directly on MipContext.
+  - Delegates, logging location, etc. are set as part of this object.
+  - Review [MipContext Concepts](concept-mipcontext.md) for details.
+- `MipContext::Create()` constructor has been changed to accept only the new `MipConfiguration` object.
+  - Review [MipContext Concepts](concept-mipcontext.md) for details.
 - All engine settings will default to en-US locale in the event that the `.Locale` property is set to `null`.
 - Fixed an issue where the SDK wasn't fully honoring the logging level settings.
-- Note on deprecation of flighting feature for MIpConfiguration
 
 ### File SDK
 
 - Added support for reading and writing labels to MSG files.
   - The pattern for labeling this files is that same as any other file type.
-  - The **enable_msg_file_type** feature flag must be set to enable MSG file handling.
+  - The **enable_msg_file_type** custom setting must be set to enable MSG file handling.
   - Attachments will be protected but **not** labeled.
+  - Review [Set enable_msg_file_type and use File SDK for protecting .msg file](quick-email-msg-csharp.md#set-enable_msg_file_type-and-use-file-sdk-for-protecting-msg-file) for details on custom setting.
 - `FileHandler::IsLabeledOrProtected()` now supports MSG files.
 - File SDK now supports decryption of protected attachments on unprotected MSG files.
   - This applies only to files and not containers such as MSG or ZIP files.
@@ -428,7 +434,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
   - Minor risk of false positives (for example if file contains zombie label metadata)
 - Filter labels associated with specific types of protection
   - Configurable via mip::FileEngine::Settings::SetLabelFilter()
-- Expose policy data to File API
+- Expose policy data to File SDK
   - mip::FileEngine::GetPolicyDataXml()
 
 ### Policy SDK

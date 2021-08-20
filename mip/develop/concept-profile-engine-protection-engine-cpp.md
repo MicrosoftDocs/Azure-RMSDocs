@@ -1,5 +1,5 @@
 ---
-title: Concepts - The Protection API engine object
+title: Concepts - The Protection SDK engine object
 description: This article will help you understand the concepts around the Protection engine object, which is created during application initialization.
 author: msmbaldwin
 ms.service: information-protection
@@ -8,11 +8,11 @@ ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
 
-# Microsoft Information Protection SDK - Protection API engine concepts
+# Microsoft Information Protection SDK - Protection SDK engine concepts
 
 ## Implementation: Add a Protection Engine
 
-In the File API, the `mip::ProtectionProfile` class is the root class for all SDK operations. Having already created the profile, we can now add an engine to the profile.
+In the File SDK, the `mip::ProtectionProfile` class is the root class for all SDK operations. Having already created the profile, we can now add an engine to the profile.
 
 The example below demonstrates using a single engine for a single authenticated user.
 
@@ -88,7 +88,7 @@ for (const auto& temp : *templates) {
 
 Printing the names is an easy way to show that we successfully pulled policy from the service and were able to get the templates. To apply the template, the template identifier is required.
 
-Mapping templates to labels can only be done via Policy API by examining the result of `ComputeActions()`.
+Mapping templates to labels can only be done via Policy SDK by examining the result of `ComputeActions()`.
 
 ## Next Steps
 

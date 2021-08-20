@@ -90,7 +90,7 @@ Next, complete the following steps to ensure your client computer is set up and 
      PS C:\WINDOWS\system32>
      ```
 
-4. Download SDK files:
+4. Download Files:
 
    The MIP SDK is supported on the following platforms, with separate downloads for each supported platform/language:
 
@@ -98,7 +98,7 @@ Next, complete the following steps to ensure your client computer is set up and 
 
    **Tar.gz/.Zip downloads**
 
-   Tar.gz and .Zip downloads contain compressed files, one for each API. The compressed files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. For example, the file for protection API binaries and headers on Debian would be: `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Each contained .tar.gz/.zip is split into three directories:
+   Tar.gz and .Zip downloads contain compressed files, one for each API. The compressed files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. For example, the file for Protection SDK binaries and headers on Debian would be: `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Each contained .tar.gz/.zip is split into three directories:
 
    - **Bins:** Compiled binaries for each platform architecture, where applicable.
    - **Include:** Header files (C++).

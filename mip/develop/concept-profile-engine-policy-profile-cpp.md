@@ -1,5 +1,5 @@
 ---
-title: Concepts - The Policy API profile object
+title: Concepts - The Policy SDK profile object
 description: This article will help you understand the concepts around the Policy profile object, which is created during application initialization.
 author: msmbaldwin
 ms.service: information-protection
@@ -8,9 +8,9 @@ ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
 
-# Microsoft Information Protection SDK - Policy API profile concepts
+# Microsoft Information Protection SDK - Policy SDK profile concepts
 
-The `mip::Profile` must be loaded before any Policy API operations can be performed.
+The `mip::Profile` must be loaded before any Policy SDK operations can be performed.
 
 The two examples below show how to create the profileSettings object using local storage for state storage as well as in-memory only. 
 
@@ -34,9 +34,9 @@ The two examples below show how to create the profileSettings object using local
 mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
 
 std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
-				                                                                                    "mip_data",
-                                                                                        			mip::LogLevel::Trace,
-                                                                                                    false);
+				                                                                                  "mip_data",
+                                                                                        		  mip::LogLevel::Trace,
+                                                                                                  false);
 
 std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 
@@ -52,9 +52,9 @@ PolicyProfile::Settings profileSettings(
 mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
 
 std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
-			                                                                                        "file_sample",
-                                                                                       				mip::LogLevel::Trace,
-                                                                                                    false);
+			                                                                                      "mip_data",
+                                                                                       			  mip::LogLevel::Trace,
+                                                                                                  false);
 
 std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 

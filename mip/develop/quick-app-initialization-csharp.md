@@ -15,7 +15,7 @@ ms.custom: has-adal-ref
 This quickstart will show you how to implement the client initialization pattern, used by the MIP SDK .NET wrapper at runtime.
 
 > [!NOTE]
-> The steps outlined in this quickstart are required for any client application that uses the MIP .NET wrapper's File or Policy APIs. The Protection API is not yet available. Although this Quickstart demonstrates usage of the File APIs, this same pattern is applicable to clients using the Policy and Protection APIs. Future Quickstarts should be done serially, as each one builds on the previous one, with this one being the first.
+> The steps outlined in this quickstart are required for any client application that uses the MIP .NET wrapper's File or Policy SDKs. The Protection SDK is not yet available. Although this Quickstart demonstrates usage of the File SDKs, this same pattern is applicable to clients using the Policy and Protection SDKs. Future Quickstarts should be done serially, as each one builds on the previous one, with this one being the first.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ If you haven't already, be sure to:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md). This "Client application initialization" Quickstart relies on proper SDK setup and configuration.
 - Optionally:
-  - Review [Profile and engine objects](concept-profile-engine-cpp.md). The profile and engine objects are universal concepts, required by clients that use the MIP File/Policy/Protection APIs.
+  - Review [Profile and engine objects](concept-profile-engine-cpp.md). The profile and engine objects are universal concepts, required by clients that use the MIP File/Policy/Protection SDKs.
   - Review [Authentication concepts](concept-authentication-cpp.md) to learn how authentication and consent are implemented by the SDK and client application.
 
 ## Create a Visual Studio solution and project
@@ -38,7 +38,7 @@ First we create and configure the initial Visual Studio solution and project, up
 
      [![Visual Studio solution creation](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
-2. Add the Nuget package for the MIP SDK File API to your project:
+2. Add the Nuget package for the MIP File SDK to your project:
    - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Manage NuGet packages...**:
    - When the **NuGet Package Manager** tab opens in the Editor Group tabs area:
      - Select **Browse**.
@@ -46,7 +46,7 @@ First we create and configure the initial Visual Studio solution and project, up
      - Select the "Microsoft.InformationProtection.File" package.
      - Click "Install", then click "OK" when the **Preview changes** confirmation dialog displays.
 
-3. Repeat the steps above for adding the MIP SDK File API package, but instead add "Microsoft.Identity.Client" to the application.
+3. Repeat the steps above for adding the MIP File SDK package, but instead add "Microsoft.Identity.Client" to the application.
 
 ## Implement an authentication delegate
 
@@ -128,7 +128,7 @@ Now create an implementation for a consent delegate, by extending the SDK's `Mic
 
 2. Remove the generated implementation of `main()`.
 
-3. The managed wrapper includes a static class, `Microsoft.InformationProtection.MIP` used for initialization, creating a `MipContext`, loading profiles, and releasing resources. To initialize the wrapper for file API operations, call `MIP.Initialize()`, passing in `MipComponent.File` to load the libraries necessary for file operations.
+3. The managed wrapper includes a static class, `Microsoft.InformationProtection.MIP` used for initialization, creating a `MipContext`, loading profiles, and releasing resources. To initialize the wrapper for File SDK operations, call `MIP.Initialize()`, passing in `MipComponent.File` to load the libraries necessary for file operations.
 
 4. In `Main()` in *Program.cs* add the following, replacing **\<application-id\>** with the ID of the Azure AD Application Registration created previously.
 
@@ -149,7 +149,7 @@ namespace mip_sdk_dotnet_quickstart
 
         static void Main(string[] args)
         {
-            //Initialize Wrapper for File API operations
+            //Initialize Wrapper for File SDK operations
             MIP.Initialize(MipComponent.File);
         }
     }
@@ -176,7 +176,7 @@ namespace mip_sdk_dotnet_quickstart
 
           static void Main(string[] args)
           {
-               // Initialize Wrapper for File API operations.
+               // Initialize Wrapper for File SDK operations.
                MIP.Initialize(MipComponent.File);
 
                // Create ApplicationInfo, setting the clientID from Azure AD App Registration as the ApplicationId.
@@ -234,7 +234,7 @@ namespace mip_sdk_dotnet_quickstart
 
 ## Next Steps
 
-Now that your initialization code is complete, you're ready for the next quickstart, where you'll start to experience the MIP File APIs.
+Now that your initialization code is complete, you're ready for the next quickstart, where you'll start to experience the MIP File SDKs.
 
 > [!div class="nextstepaction"]
 > [List sensitivity labels](quick-file-list-labels-csharp.md)
