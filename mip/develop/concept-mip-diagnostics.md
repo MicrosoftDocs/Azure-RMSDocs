@@ -148,9 +148,9 @@ diagnosticConfig->isMinimalTelemetryEnabled = true;
 // Create MipConfiguration. 
 // Initialize MipConfiguration.
 std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
-                                                                                                    "file_sample",
-				                                                                                    mip::LogLevel::Trace,
-				                                                                                    false);
+                                                                                                 "file_sample",
+				                                                                                 mip::LogLevel::Trace,
+				                                                                                 false);
 
 // Set DiagnosticConfig
 mipConfiguration->SetDiagnosticConfiguration(diagnosticConfig);
