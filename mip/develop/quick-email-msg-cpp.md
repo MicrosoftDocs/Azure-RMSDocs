@@ -102,7 +102,7 @@ int main()
                             "<engine-state>",                       // User-defined engine state
                             "en-US");                               // Locale (default = en-US)
 
-    //Set enamble_msg_file_type flag as true
+    //Set enable_msg_file_type flag as true
     std::vector<std::pair<string, string>> customSettings;
     customSettings.emplace_back(mip::GetCustomSettingEnableMsgFileType(), "true");
     engineSettings.SetCustomSettings(customSettings);
@@ -156,7 +156,12 @@ int main()
     // Commit changes, save as outputFilePath
     auto commitPromise = std::make_shared<std::promise<bool>>();
     auto commitFuture = commitPromise->get_future();
-    fileHandler->CommitAsync(outputFilePath, commitPromise);
+
+    if(fileHandler->IsModified())
+    {
+        fileHandler->CommitAsync(outputFilePath, commitPromise);
+    }
+    
     if (commitFuture.get()) {
         cout << "\n Protection applied to file: " << outputFilePath << endl;
     }
