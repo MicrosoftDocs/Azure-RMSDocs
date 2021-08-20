@@ -21,7 +21,8 @@ Preview versions shouldn't be deployed in production. Instead, use the latest pr
 
 Use the following information to see what’s new or changed for a supported release. The most current release is listed first.
 
-> [!NOTE] For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
+> [!NOTE]
+> For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
 
 ## Downloads for Previous Versions
 
@@ -545,7 +546,7 @@ This version introduces support for the Protection SDK in the .NET package (Micr
 - RPMSG
   - Encryption
   - Added support for string8 decryption
-- Configurable PFILE extension behavior (default, <EXT>.PFILE, or P<EXT>)
+- Configurable PFILE extension behavior (default, {extension}.PFILE, or P{extension})
   - ProtectionSettings::SetPFileExtensionBehavior
 
 ### Policy SDK
