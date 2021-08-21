@@ -193,8 +193,10 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
   using mip::ProtectionEngine;
 
   int main(){
+
     // Construct/initialize objects required by the application's profile object
-    ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, name, version)
+    // ApplicationInfo object (App ID, name, version)
+    ApplicationInfo appInfo{"<application-id>",                    
                             "<application-name>",
                             "<application-version>"};
 
@@ -234,11 +236,14 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
     auto profile = profileFuture.get();
 
     // Construct/initialize engine object
-    ProtectionEngine::Settings engineSettings(
-       authDelegateImpl,                          // Reference to mip::AuthDelegate implementation
+    ProtectionEngine::Settings engineSettings(       
        mip::Identity("<engine-account>"),         // Engine identity (account used for authentication)
-       "<engine-state>",                          // User-defined engine state
+       authDelegateImpl,                          // Reference to mip::AuthDelegate implementation
+       "",                                        // ClientData field
        "en-US");                                  // Locale (default = en-US)
+
+    // Set the engineId so it can be cached and reused. 
+    engineSettings.SetEngineId("<engine-account>");
 
     // Set up promise/future connection for async engine operations; add engine to profile asynchronously
     auto enginePromise = make_shared<promise<shared_ptr<ProtectionEngine>>>();
@@ -262,6 +267,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
     // Application may crash at shutdown if resources aren't properly released.
     engine = nullptr;
     profile = nullptr;
+    mipContext.Shutdown();
     mipContext = nullptr;
 
     return 0;

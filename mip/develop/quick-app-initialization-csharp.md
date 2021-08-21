@@ -151,6 +151,7 @@ namespace mip_sdk_dotnet_quickstart
         {
             //Initialize Wrapper for File SDK operations
             MIP.Initialize(MipComponent.File);
+            
         }
     }
 }
@@ -190,11 +191,11 @@ namespace mip_sdk_dotnet_quickstart
                // Instantiate the AuthDelegateImpl object, passing in AppInfo.
                AuthDelegateImplementation authDelegate = new AuthDelegateImplementation(appInfo);
 
-               MipContext mipContext = MIP.CreateMipContext(appInfo,
-                                        "mip_data",
-                                        LogLevel.Trace,
-                                        null,
-                                        null);
+               // Create MipConfiguration Object
+               MipConfiguration mipConfiguration = new MipConfiguration(appInfo, "mip_data", LogLevel.Trace, false);
+
+               // Create MipContext using Configuration
+               mipContext = MIP.CreateMipContext(mipConfiguration);
 
                // Initialize and instantiate the File Profile.
                // Create the FileProfileSettings object.
@@ -207,14 +208,17 @@ namespace mip_sdk_dotnet_quickstart
                var fileProfile = Task.Run(async () => await MIP.LoadFileProfileAsync(profileSettings)).Result;
 
                // Create a FileEngineSettings object, then use that to add an engine to the profile.
+               // This pattern sets the engine ID to user1@tenant.com, then sets the identity used to create the engine.
                var engineSettings = new FileEngineSettings("user1@tenant.com", authDelegate, "", "en-US");
                engineSettings.Identity = new Identity("user1@tenant.com");
+
                var fileEngine = Task.Run(async () => await fileProfile.AddEngineAsync(engineSettings)).Result;
 
                // Application Shutdown
                // handler = null; // This will be used in later quick starts.
                fileEngine = null;
                fileProfile = null;
+               mipContext.Shutdown();
                mipContext = null;
           }
      }

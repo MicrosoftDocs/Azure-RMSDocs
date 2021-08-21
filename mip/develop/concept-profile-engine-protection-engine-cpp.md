@@ -27,13 +27,21 @@ ProtectionEngine::Settings engineSettings("UniqueID", "");
 ```
 
 > [!NOTE]
-> If using this method to create the protection settings object, you must also manually set the CloudEndpointBaseUrl to https://api.aadrm.com or tp the Active Directory Rights Management Service cluster URL.
+> If using this method to create the protection settings object, you must also manually set the identity on ProtectionEngineSettings via `setIdentity()` or the target cloud environment via `setCloud()`.
 
 As a best practice, the first parameter, **id**, should be something that allows the engine to be easily connected to the associated user, **or** a `mip::Identity` object. To initialize the settings with `mip::Identity`:
 
 ```cpp
 ProtectionEngine::Settings engineSettings(mip::Identity("Bob@Contoso.com", "");
 ```
+
+When creating engineSettings in this manner, it's important to also explicitly set a unique engineId via:
+
+```cpp
+engineSettings.SetEngineId(engineId);
+```
+
+Using the **username or email** helps to ensure that the same engine is loaded each time the user uses the service or application. 
 
 ### Implementation: Add the Protection Engine
 
