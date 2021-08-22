@@ -179,7 +179,7 @@ For all Exchange servers, add the following registry values to LicenseServerRedi
 
     - **Type**: Reg_SZ
 
-    - **Value**: https://<AD RMS Extranet Licensing URL>/_wmcs/licensing
+    - **Value**: `https://<AD RMS Extranet Licensing URL>/_wmcs/licensing`
 
     - **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
