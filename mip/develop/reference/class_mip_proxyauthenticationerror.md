@@ -1,19 +1,18 @@
 ---
 title: class ProxyAuthenticationError 
 description: Documents the proxyauthenticationerror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.author: bryanla
+ms.date: 08/23/2021
 ---
 
 # class ProxyAuthenticationError 
 Proxy authentication failure.
   
 ## Summary
-
-Members                        | Descriptions                                
+ Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public Category GetCategory() const  |  Gets the category of network failure.
 public int32_t GetResponseStatusCode() const  |  Gets the HTTP response status code.
@@ -34,8 +33,7 @@ Gets the HTTP response status code.
 **Returns**: HTTP response status code, 0 if none
   
 ### Category enum
-
-Values                         | Descriptions                                
+ Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unknown network failure
 FailureResponseCode            | HTTP response code indicates failure
@@ -48,6 +46,5 @@ Timeout            | Connection timed out
 Offline            | Operation requires network connectivity
 Throttled            | HTTP operation failed due to server traffic throttling
 Cancelled            | HTTP operation has been cancelled by the application
-
+FunctionNotImplemented            | HTTP response code indicates called function is not implemented
 Category of network error.
-

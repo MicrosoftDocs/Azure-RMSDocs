@@ -1,11 +1,11 @@
 ---
 title: class PolicyEngine 
 description: Documents the policyengine::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.author: bryanla
+ms.date: 08/23/2021
 ---
 
 # class PolicyEngine 
@@ -14,7 +14,7 @@ This class provides an interface for all engine functions.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Get the policy engine Settings.
+public const Settings& GetSettings() const  |  Get the policy engine [Settings](undefined).
 public const std::vector\<std::shared_ptr\<Label\>\> ListSensitivityLabels(const std::vector\<std::string\>& contentFormats)  |  list the sensitivity labels associated with the policy engine according to the provided contentFormats.
 public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
 public const std::string& GetMoreInfoUrl() const  |  Provide a url for looking up more information about the policy/labels.
@@ -37,7 +37,7 @@ public bool HasWorkloadConsent(Workload workload) const  |  Checks if user has c
 ## Members
   
 ### GetSettings function
-Get the policy engine Settings.
+Get the policy engine [Settings](undefined).
 
   
 **Returns**: Policy engine settings. 
@@ -61,7 +61,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: PolicyEngine::Settings).
+**See also**: [PolicyEngine::Settings](undefined)).
   
 ### GetMoreInfoUrl function
 Provide a url for looking up more information about the policy/labels.
@@ -100,7 +100,7 @@ Parameters:
 
 
   
-**Returns**: Label
+**Returns**: [Label](undefined)
   
 ### CreatePolicyHandler function
 Create a Policy Handler to execute policy-related functions on a file's execution state.

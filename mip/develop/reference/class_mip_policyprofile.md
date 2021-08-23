@@ -1,23 +1,19 @@
 ---
 title: class PolicyProfile 
 description: Documents the policyprofile::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.author: bryanla
+ms.date: 08/23/2021
 ---
 
 # class PolicyProfile 
-PolicyProfile class is the root class for using the Microsoft Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
+[PolicyProfile](undefined) class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile](undefined) but it can create multiple profiles if needed.
   
 ## Summary
-
-Members                        | Descriptions                                
+ Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public static std::shared_ptr\<AsyncControl\> __CDECL LoadAsync(const Settings& settings, const std::shared_ptr\<void\>& context) | Starts loading a profile based on the provided settings.
-public static std::shared_ptr\<PolicyProfile\> __CDECL Load(const Settings& settings) | Loading a profile based on the provided settings.
-public static const char* __CDECL GetVersion() | Get the settings set on the profile.
 public const Settings& GetSettings() const  |  Get the settings set on the profile.
 public std::shared_ptr\<AsyncControl\> ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  Starts list engines operation.
 public std::vector\<std::string\> ListEngines()  |  List of engines.
@@ -30,34 +26,6 @@ public void DeleteEngine(const std::string& engineId)  |  Delete the policy engi
 public void AcquireAuthToken(Cloud cloud, const std::shared_ptr\<AuthDelegate\>& authDelegate) const  |  Trigger an authentication callback.
   
 ## Members
-
-### LoadAsync function
-
-Starts loading a profile based on the provided settings.
-
-Parameters:
-
-* **settings** the profile settings used to load the profile object.
-* **context** a context parameter that will be passed into the observer functions.
-
-PolicyProfile::Observer will be called upon success or failure.
-
-### Load function
-
-Loading a profile based on the provided settings.
-
-Parameters:
-
-* **settings** Settings used by PolicyProfile during its initialization and throughout its lifetime
-
-
-**Returns** Newly created profile
-
-### GetVersion function
-
-Get the library version.
-
-**Returns** a version string
   
 ### GetSettings function
 Get the settings set on the profile.
@@ -72,7 +40,7 @@ Parameters:
 * **context**: a parameter that will be passed into the observer functions. 
 
 
-PolicyProfile::Observer will be called upon success or failure.
+[PolicyProfile::Observer](undefined) will be called upon success or failure.
   
 ### ListEngines function
 List of engines.
@@ -90,7 +58,7 @@ Parameters:
 * **context**: a parameter that will be forwarded opaquely to the observer functions. 
 
 
-PolicyProfile::Observer will be called upon success or failure.
+[PolicyProfile::Observer](undefined) will be called upon success or failure.
   
 ### UnloadEngine function
 Starts unloading the policy engine with the given ID.
@@ -107,10 +75,10 @@ Parameters:
 * **settings**: the mip::PolicyEngine::Settings object that specifies the engine's settings. 
 
 
-* **context**: a parameter that will be forwarded opaquely to the observer functions and optional HttpDelegate. 
+* **context**: a parameter that will be forwarded opaquely to the observer functions and optional [HttpDelegate](undefined). 
 
 
-PolicyProfile::Observer will be called upon success or failure.
+[PolicyProfile::Observer](undefined) will be called upon success or failure.
   
 ### AddEngine function
 Add a new policy engine to the profile.
@@ -119,12 +87,12 @@ Parameters:
 * **settings**: the mip::PolicyEngine::Settings object that specifies the engine's settings. 
 
 
-* **context**: a parameter that will be forwarded opaquely to the optional HttpDelegate
+* **context**: a parameter that will be forwarded opaquely to the optional [HttpDelegate](undefined)
 
 
 
   
-**Returns**: Newly created PolicyEngine
+**Returns**: Newly created [PolicyEngine](undefined)
   
 ### DeleteEngineAsync function
 Starts deleting the policy engine with the given ID. All data for the given profile will be deleted.
@@ -136,7 +104,7 @@ Parameters:
 * **context**: a parameter that will be passed into the observer functions. 
 
 
-PolicyProfile::Observer will be called upon success or failure.
+[PolicyProfile::Observer](undefined) will be called upon success or failure.
   
 ### DeleteEngine function
 Delete the policy engine with the given ID. All data for the given engine will be deleted.

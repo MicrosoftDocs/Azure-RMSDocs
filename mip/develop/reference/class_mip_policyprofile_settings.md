@@ -1,15 +1,15 @@
 ---
 title: class PolicyProfile::Settings 
 description: Documents the policyprofile::settings class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.author: bryanla
+ms.date: 08/23/2021
 ---
 
 # class PolicyProfile::Settings 
-Settings used by PolicyProfile during its creation and throughout its lifetime.
+[Settings](undefined) used by [PolicyProfile](undefined) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
@@ -20,12 +20,16 @@ public const std::shared_ptr\<PolicyProfile::Observer\>& GetObserver() const  | 
 public std::shared_ptr\<MipContext\> GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Override default HTTP stack with client's own.
+public std::shared_ptr\<StorageDelegate\> GetStorageDelegate() const  |  Get the [StorageDelegate](undefined) (if any) provided by the application.
+public void SetStorageDelegate(const std::shared_ptr\<StorageDelegate\>& storageDelegate)  |  Override default storage cache with client's own implementation.
 public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
 public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Override default asynchronous task dispatching handling with client's own.
 public void SetSessionId(const std::string& sessionId)  | _Not yet documented._
 public const std::string& GetSessionId() const  | _Not yet documented._
 public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& customSettings)  |  Set the custom settings, used for feature gating and testing.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
+public const std::shared_ptr\<void\>& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+public void SetLoggerContext(const std::shared_ptr\<void\>& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
 public ~Settings()  | _Not yet documented._
   
 ## Members
@@ -40,7 +44,7 @@ Parameters:
 * **cacheStorageType**: Store any cached state in memory or on disk 
 
 
-* **observer**: A class implementing the PolicyProfile::Observer interface. Can be nullptr.
+* **observer**: A class implementing the [PolicyProfile::Observer](undefined) interface. Can be nullptr.
 
 
   
@@ -73,6 +77,20 @@ Override default HTTP stack with client's own.
 
 Parameters:  
 * **httpDelegate**: Http callback interface implemented by client application
+
+
+  
+### GetStorageDelegate function
+Get the [StorageDelegate](undefined) (if any) provided by the application.
+
+  
+**Returns**: [StorageDelegate](undefined) to be used for cache operations
+  
+### SetStorageDelegate function
+Override default storage cache with client's own implementation.
+
+Parameters:  
+* **storageDelegate**: [StorageDelegate](undefined) implemented by client application
 
 
   
@@ -112,6 +130,20 @@ Get the custom settings, used for feature gating and testing.
 
   
 **Returns**: List of name/value pairs.
+  
+### GetLoggerContext function
+Get logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+
+  
+**Returns**: The logger context
+  
+### SetLoggerContext function
+Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+
+Parameters:  
+* **loggerContext**: The logger context
+
+
   
 ### ~Settings function
 _Not documented yet._

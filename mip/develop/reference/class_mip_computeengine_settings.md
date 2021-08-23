@@ -1,11 +1,11 @@
 ---
 title: class ComputeEngine::Settings 
 description: Documents the computeengine::settings class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.author: bryanla
+ms.date: 08/23/2021
 ---
 
 # class ComputeEngine::Settings 
@@ -31,6 +31,8 @@ public const std::map\<FunctionalityFilterType, bool\>& GetConfiguredFunctionali
 public void SetVariableTextMarkingType(VariableTextMarkingType variableTextMarkingType)  | _Not yet documented._
 public VariableTextMarkingType GetVariableTextMarkingType() const  | _Not yet documented._
 public LogLevel GetThresholdLogLevel() const  | _Not yet documented._
+public const std::shared_ptr\<void\>& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+public void SetLoggerContext(const std::shared_ptr\<void\>& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
   
 ## Members
   
@@ -104,3 +106,17 @@ _Not documented yet._
   
 ### GetThresholdLogLevel function
 _Not documented yet._
+
+  
+### GetLoggerContext function
+Get logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+
+  
+**Returns**: The logger context
+  
+### SetLoggerContext function
+Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+
+Parameters:  
+* **loggerContext**: The logger context
+

@@ -1,21 +1,20 @@
 ---
 title: class FileProfile 
 description: Documents the fileprofile::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.author: bryanla
+ms.date: 08/23/2021
 ---
 
 # class FileProfile 
-FileProfile class is the root class for using the Microsoft Information Protection operations.
+[FileProfile](undefined) class is the root class for using the Microsoft Information Protection operations.
 A typical application will only need one Profile.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public static std::shared_ptr<AsyncControl> __CDECL LoadAsync(const Settings& settings, const std::shared_ptr<void>& context) | Starts loading a profile based on the provided settings 
 public const Settings& GetSettings() const  |  Returns the profile settings.
 public std::shared_ptr\<AsyncControl\> ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  Starts list engines operation.
 public std::shared_ptr\<AsyncControl\> UnloadEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Starts unloading the file engine with the given ID.
@@ -25,14 +24,6 @@ public void AcquirePolicyAuthToken(Cloud cloud, const std::shared_ptr\<AuthDeleg
   
 ## Members
   
-### LoadAsync
-
-Starts loading a profile based on the provided settings.
-
-**Returns**: Async control object.
-
-FileProfile::Observer will be called upon success or failure.
-
 ### GetSettings function
 Returns the profile settings.
   
@@ -41,28 +32,28 @@ Starts list engines operation.
 
   
 **Returns**: Async control object.
-FileProfile::Observer will be called upon success or failure.
+[FileProfile::Observer](undefined) will be called upon success or failure.
   
 ### UnloadEngineAsync function
 Starts unloading the file engine with the given ID.
 
   
 **Returns**: Async control object.
-FileProfile::Observer will be called upon success or failure.
+[FileProfile::Observer](undefined) will be called upon success or failure.
   
 ### AddEngineAsync function
 Starts adding a new file engine to the profile.
 
   
 **Returns**: Async control object.
-FileProfile::Observer will be called upon success or failure.
+[FileProfile::Observer](undefined) will be called upon success or failure.
   
 ### DeleteEngineAsync function
 Starts deleting the file engine with the given ID. All data for the given profile will be deleted.
 
   
 **Returns**: Async control object.
-FileProfile::Observer will be called upon success or failure.
+[FileProfile::Observer](undefined) will be called upon success or failure.
   
 ### AcquirePolicyAuthToken function
 Trigger an authentication callback for policy.

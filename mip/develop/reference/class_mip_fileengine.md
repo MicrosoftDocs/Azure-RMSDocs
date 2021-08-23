@@ -1,11 +1,11 @@
 ---
 title: class FileEngine 
 description: Documents the fileengine::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.author: bryanla
+ms.date: 08/23/2021
 ---
 
 # class FileEngine 
@@ -43,7 +43,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: FileEngine::Settings).
+**See also**: [FileEngine::Settings](undefined)).
   
 ### GetDefaultSensitivityLabel function
 Get the default sensitivity label.
@@ -106,7 +106,7 @@ Parameters:
 * **isAuditDiscoveryEnabled**: representing whether audit discovery is enabled or not. 
 
 
-* **fileHandlerObserver**: A class implementing the FileHandler::Observer interface. 
+* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](undefined) interface. 
 
 
 * **context**: Client context that will be opaquely passed back to the observer. 
@@ -132,7 +132,7 @@ Parameters:
 * **isAuditDiscoveryEnabled**: representing whether audit discovery is enabled or not. 
 
 
-* **fileHandlerObserver**: A class implementing the FileHandler::Observer interface. 
+* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](undefined) interface. 
 
 
 * **context**: Client context that will be opaquely passed back to the observer. 
