@@ -1,5 +1,5 @@
 ---
-title: Concepts - The Protection API profile object
+title: Concepts - The Protection SDK profile object
 description: This article will help you understand the concepts around the Protection profile object, which is created during application initialization.
 author: msmbaldwin
 ms.service: information-protection
@@ -8,7 +8,7 @@ ms.date: 09/27/2018
 ms.author: mbaldwin
 ---
 
-# Microsoft Information Protection SDK - Protection API profile concepts
+# Microsoft Information Protection SDK - Protection SDK profile concepts
 
 The two examples below show how to create the profileSettings object using local storage for state storage as well as in-memory only. 
 
@@ -30,14 +30,15 @@ The two examples below show how to create the profileSettings object using local
 ```cpp
 mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
 
-mMipContext = mip::MipContext::Create(appInfo,
-                "mip_app_data",
-                mip::LogLevel::Trace,
-                nullptr /*loggerDelegateOverride*/,
-                nullptr /*telemetryOverride*/);
+std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
+				                                                                                  "mip_data",
+                                                                                        		  mip::LogLevel::Trace,
+                                                                                                  false);
+
+std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 
 ProtectionProfile::Settings profileSettings(
-    mipContext,                                        // mipContext object
+    mMipContext,                                        // mipContext object
     mip::CacheStorageType::InMemory,                   // use in memory storage    
     std::make_shared<ConsentDelegateImpl>(),           // new consent delegate
     std::make_shared<ProtectionProfileObserverImpl>()); // new protection profile observer
@@ -48,14 +49,15 @@ ProtectionProfile::Settings profileSettings(
 ```cpp
 mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
 
-mMipContext = mip::MipContext::Create(appInfo,
-                "mip_app_data",
-                mip::LogLevel::Trace,
-                nullptr /*loggerDelegateOverride*/,
-                nullptr /*telemetryOverride*/);
+std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
+    		                                                                                       "mip_data",
+                                                                                       			   mip::LogLevel::Trace,
+                                                                                                   false);
+
+std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 
 ProtectionProfile::Settings profileSettings(
-    mipContext,                                         // mipContext object
+    mMipContext,                                         // mipContext object
     mip::CacheStorageType::OnDisk,                      // use on disk storage    
     std::make_shared<ConsentDelegateImpl>(),            // new consent delegate
     std::make_shared<ProtectionProfileObserverImpl>()); // new protection profile
@@ -89,14 +91,15 @@ int main()
 
     mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
 
-    auto mipContext = mip::MipContext::Create(appInfo,
-                        "mip_app_data",
-                        mip::LogLevel::Trace,
-                        nullptr /*loggerDelegateOverride*/,
-                        nullptr /*telemetryOverride*/);
+    std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
+				                                                                                       "mip_data",
+                                                                                        			   mip::LogLevel::Trace,
+                                                                                                       false);
+
+    std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 
     ProtectionProfile::Settings profileSettings(
-        mipContext,                                    // mipContext object
+        mMipContext,                                    // mipContext object
         mip::CacheStorageType::OnDisk,                 // use on disk storage        
         std::make_shared<ConsentDelegateImpl>(),       // new consent delegate
         std::make_shared<ProfileObserver>());          // new protection profile observer

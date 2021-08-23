@@ -1,6 +1,6 @@
 ---
-title: Concepts - File API observers in the MIP SDK.
-description: The MIP SDK is designed to be almost entirely asynchronous. This article will help you understand how File API observers are implemented and used for asynchronicity.
+title: Concepts - File SDK observers in the MIP SDK.
+description: The MIP SDK is designed to be almost entirely asynchronous. This article will help you understand how File SDK observers are implemented and used for asynchronicity.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
@@ -8,9 +8,9 @@ ms.date: 09/27/2018
 ms.author: mbaldwin
 ---
 
-# Microsoft Information Protection SDK - File API Observers
+# Microsoft Information Protection SDK - File SDK Observers
 
-The File API contains two observer classes. Observer members are virtual and can be overridden to handle event callbacks.
+The File SDK contains two observer classes. Observer members are virtual and can be overridden to handle event callbacks.
 
 - [`mip::FileProfile::Observer`](reference/class_mip_fileprofile_observer.md)
 - [`mip::FileHandler::Observer`](reference/class_mip_filehandler_observer.md)

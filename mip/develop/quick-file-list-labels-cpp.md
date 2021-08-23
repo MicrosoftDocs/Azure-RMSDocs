@@ -12,7 +12,7 @@ ms.custom: has-adal-ref
 
 # Quickstart: List sensitivity labels (C++)
 
-This Quickstart shows you how to use the MIP File API, to list the sensitivity labels configured for your organization.
+This Quickstart shows you how to use the MIP File SDK, to list the sensitivity labels configured for your organization.
 
 ## Prerequisites
 
