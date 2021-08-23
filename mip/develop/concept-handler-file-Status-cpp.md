@@ -28,10 +28,10 @@ All that is required is the filename and an creation of mipContext along with a 
 In this article, the following methods will be covered:
 
 - `mip::FileHandler::GetFileStatus()` static function
-- fileStatus Return Object
+- FileStatus object containing labeling and or protection details of a file or container
 - `IsProtected()` Property
 - `IsLabeled()` Property
-- `ContainsProtctedObject()` Property
+- `ContainsProtectedObject()` Property
 
 ## Requirements
 
@@ -42,21 +42,22 @@ Creating a `FileHandler` to work with a specific file requires:
 
 ## Fetching the status of a file.
 
-To use the `mip::FileHandler::GetFileStatus()` static function, you will need to pass in a File Path, File Stream and mipContext
+To use the `mip::FileHandler::GetFileStatus()` static function, you will need to pass in a File Path or File Stream and mipContext
 To execute this function, the developer need not create a file engine, authenticate or be connected to the internet.
 This function is especially helpful for:
 
-- Getting the protection status of a file for decryption scenarios prior to creating an engine, potentially skipping the overhead engine creation process if the file is already protected
-- Status of a file has a label before creating an engine to try to read the label (time saver)
-- Status of an MSG file has attachments and that they may need to be parsed or decrypted in addition to the MSG file itself
+- Getting the protection status of a file for decryption scenarios prior to creating an engine, potentially skipping the overhead of the engine creation process if the file is already protected
+- Getting the status of a file that may already have a label before creating an engine to try to read the label (time saver)
+- Getting the status of an MSG file has attachments and that they may need to be parsed or decrypted in addition to the MSG file itself
 
 The `GetFileStatus()` returns a `fileStatus` Object with the following properties:
 
 - `IsProtected()` Property - returns a bool - The file is protected/encrypted
 - `IsLabeled()` Property - returns a bool - The file is Labeled
-- `ContainsProtctedObject()` Property - returns a bool - The File/Container/Message contians protected object.
+- `ContainsProtectedObject()` Property - returns a bool - The File/Container/Message contains protected object.
 
 It is recommended that all three properties are interrogated as a file can possess zero to all three properties and permutations in between.
+Additionally, since the `GetFileStatus()` function does not require authentication or an engine to execute, the `IsProtected()`, `IsLabeled()` and `ContainsProtectedObject()` methods only reflects if labeling or protection is present in a file. It does not validate if the labeling and or protection is exists within a tenant or is useable by a user which would require going through the authentication and engine creation design patterns to validate.
 
 ```cpp
     if (options.count("getfilestatus")) {
