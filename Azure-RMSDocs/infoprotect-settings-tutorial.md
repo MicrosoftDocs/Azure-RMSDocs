@@ -33,6 +33,8 @@ ms.custom: admin
 
 [!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
 >
+>*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
+>
 > **To deploy the AIP classic client**, open a support ticket to get download access.
 
 > [!TIP]
