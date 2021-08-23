@@ -20,7 +20,7 @@ Once an object of `mip::MipContext` has been created, the `MipContext` object ca
 
 The `mip::MipConfiguration` class allows the application to set various application-wide configuration settings for MIP SDK. These settings include: 
 
-- Application Info: Name, Application Id, Version
+- Application Info: Name, Application ID, Version
 - Storage directory for logs and cache
 - Logging level
 - Offline mode
