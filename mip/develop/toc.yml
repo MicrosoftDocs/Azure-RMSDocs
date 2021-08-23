@@ -481,7 +481,7 @@
         href: reference/class_mip_xml_xmlnode.md
       - name: xml::XmlReader
         href: reference/class_mip_xml_xmlreader.md
- - name: C library
+  - name: C library
     items:
     - name: Overview
       href: reference/c/overview.md
