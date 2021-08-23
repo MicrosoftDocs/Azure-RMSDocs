@@ -30,8 +30,8 @@ ms.custom: admin
 >***Relevant for**: [Classic client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 [!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
->
-> **To deploy the AIP classic client**, open a support ticket to get download access.
+
+**To deploy the AIP classic client**, open a support ticket to get download access.
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]

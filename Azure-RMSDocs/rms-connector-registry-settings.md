@@ -39,7 +39,7 @@ Use the tables in the following sections only if you want to manually add or che
 
 Instructions for when you use these settings:
 
--   *\<YourTenantURL>* is the Azure Rights Management service URL for your Azure Information Protection tenant. To find this value:
+-   `<YourTenantURL>` is the Azure Rights Management service URL for your Azure Information Protection tenant. To find this value:
 
     1.  Run the [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) cmdlet for the Azure Rights Management service. If you haven’t already installed the AIPService module, see [Installing the AIPService PowerShell module](install-powershell.md).
 
@@ -57,7 +57,7 @@ Instructions for when you use these settings:
         (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
         ```
 
--   *\<ConnectorFQDN>* is the load-balancing name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
+-   `<ConnectorFQDN>` is the load-balancing name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
 
 -   Use the HTTPS prefix for the connector URL if you have configured the connector to use HTTPS to communicate with your on-premises servers. For more information, see the [Configuring the RMS connector to use HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https) section from the main instructions. The Azure Rights Management service URL always uses HTTPS.
 
@@ -70,7 +70,7 @@ Instructions for when you use these settings:
 
 **Value**: Default
 
-**Data**: https://*\<YourTenantURL>*/_wmcs/certification
+**Data**: `https://<YourTenantURL>/_wmcs/certification`
 
 ---
 
@@ -80,7 +80,7 @@ Instructions for when you use these settings:
 
 **Value**: Default
 
-**Data**: https://*\<YourTenantURL>*/_wmcs/Licensing
+**Data**: `https://<YourTenantURL>/_wmcs/Licensing`
 
 ---
 
@@ -88,14 +88,14 @@ Instructions for when you use these settings:
 
 **Type**: Reg_SZ
 
-**Value**: https://*\<YourTenantURL>*
+**Value**: `https://<YourTenantURL>`
 
 
 **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-- http://*<\ConnectorFQDN>*
+- `http://<ConnectorFQDN>`
 
-- https://*<\ConnectorFQDN>*
+- `https://<ConnectorFQDN>`
 
 ---
 
@@ -103,14 +103,14 @@ Instructions for when you use these settings:
 
 **Type**: Reg_SZ
 
-**Value**: https://*<\YourTenantURL>*
+**Value**: `https://<YourTenantURL>`
 
 
 **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-- http://*<\ConnectorFQDN>*
+- `http://<ConnectorFQDN>`
 
-- https://*<\ConnectorFQDN>*
+- `https://<ConnectorFQDN>`
 
 
 ## Exchange 2010 registry settings
@@ -121,7 +121,7 @@ Instructions for when you use these settings:
 
 **Value**: Default
 
-**Data**: https://*<\YourTenantURL>*/_wmcs/certification
+**Data**: `https://<YourTenantURL>/_wmcs/certification`
 
 ---
 
@@ -131,7 +131,7 @@ Instructions for when you use these settings:
 
 **Value**: Default
 
-**Data**: https://*<\YourTenantURL>*/_wmcs/Licensing
+**Data**: `https://<YourTenantURL>*/_wmcs/Licensing`
 
 ---
 
@@ -139,13 +139,13 @@ Instructions for when you use these settings:
 
 **Type**: Reg_SZ
 
-**Value**: https://*<\YourTenantURL>*
+**Value**: `https://<YourTenantURL>`
 
 **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-- http://*<\ConnectorFQDN>*
+- `http://<ConnectorFQDN>`
 
-- https://*<\ConnectorFQDN>*
+- `https://<ConnectorFQDN>`
 
 ---
 
@@ -153,13 +153,13 @@ Instructions for when you use these settings:
 
 **Type**: Reg_SZ
 
-**Value**: https://*<\YourTenantURL>*
+**Value**: `https://<YourTenantURL>`
 
 **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-- http://*<\ConnectorFQDN>*
+- `http://<ConnectorFQDN>`
 
-- https://*<\ConnectorFQDN>*
+- `https://<ConnectorFQDN>`
 
 
 ## SharePoint 2016 or SharePoint 2013 registry settings
@@ -168,14 +168,14 @@ Instructions for when you use these settings:
 
 **Type**: Reg_SZ
 
-**Value**: https://*<\YourTenantURL>*/_wmcs/licensing
+**Value**: `https://*<YourTenantURL>*/_wmcs/licensing`
 
 
 **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your SharePoint server to the RMS connector:
 
-- http://*<\ConnectorFQDN>*/_wmcs/licensing
+- `http://*<ConnectorFQDN>*/_wmcs/licensing`
 
-- https://*<\ConnectorFQDN>*/_wmcs/licensing
+- `https://*<ConnectorFQDN>*/_wmcs/licensing`
 
 ---
 
@@ -187,9 +187,9 @@ Instructions for when you use these settings:
 
 **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your SharePoint server to the RMS connector:
 
-- http://*<\ConnectorFQDN>*/_wmcs/certification
+- `http://<ConnectorFQDN>/_wmcs/certification`
 
-- https://*<\ConnectorFQDN>*/_wmcs/certification
+- `https://<ConnectorFQDN>*/_wmcs/certification`
 
 ---
 
@@ -202,9 +202,9 @@ Instructions for when you use these settings:
 
 **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your SharePoint server to the RMS connector:
 
-- http://*<\ConnectorFQDN>*/_wmcs/licensing
+- `http://<ConnectorFQDN>/_wmcs/licensing`
 
-- https://*<\ConnectorFQDN>*/_wmcs/licensing
+- `https://<ConnectorFQDN>/_wmcs/licensing`
 
 
 
@@ -217,7 +217,7 @@ Instructions for when you use these settings:
 
 **Value**: Default
 
-**Data**: http://*<\ConnectorFQDN>*/_wmcs/licensing
+**Data**: `http://<ConnectorFQDN>/_wmcs/licensing`
 
 ---
 
@@ -227,7 +227,7 @@ Instructions for when you use these settings:
 
 **Value**: Default
 
-**Data**: http://*<\ConnectorFQDN>*/_wmcs/certification
+**Data**: `http://<ConnectorFQDN>/_wmcs/certification`
 
 
 Back to [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md)
