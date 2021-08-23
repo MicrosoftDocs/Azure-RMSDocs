@@ -1,10 +1,10 @@
 ---
 title: class ProxyAuthenticationError 
 description: Documents the proxyauthenticationerror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 08/23/2021
 ---
 
@@ -33,7 +33,8 @@ Gets the HTTP response status code.
 **Returns**: HTTP response status code, 0 if none
   
 ### Category enum
- Values                         | Descriptions                                
+
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unknown network failure
 FailureResponseCode            | HTTP response code indicates failure
@@ -47,4 +48,5 @@ Offline            | Operation requires network connectivity
 Throttled            | HTTP operation failed due to server traffic throttling
 Cancelled            | HTTP operation has been cancelled by the application
 FunctionNotImplemented            | HTTP response code indicates called function is not implemented
+
 Category of network error.

@@ -1,10 +1,10 @@
 ---
 title: class ProtectionDescriptorBuilder 
 description: Documents the protectiondescriptorbuilder::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 08/23/2021
 ---
 
@@ -110,8 +110,10 @@ Parameters:
 
   
 ### LicenseType enum
- Values                         | Descriptions                                
+
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 DoNotForward            | Defines a do not forward license type.
 EncryptOnly            | Defines an encrypt only license type.
+
 License type to create a specialized license.

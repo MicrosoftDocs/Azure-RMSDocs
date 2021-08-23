@@ -1,10 +1,10 @@
 ---
 title: class ProtectionHandler 
 description: Documents the protectionhandler::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 08/23/2021
 ---
 
@@ -208,8 +208,10 @@ Gets the cipher mode of the protection handler.
 **Returns**: The cipher mode
   
 ### PreLicenseFormat enum
- Values                         | Descriptions                                
+
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Xml            | Legacy XML/SOAP format used by MSIPC
 Json            | JSON/REST format used by MIP SDK and RMS SDK
+
 Pre-license format.
