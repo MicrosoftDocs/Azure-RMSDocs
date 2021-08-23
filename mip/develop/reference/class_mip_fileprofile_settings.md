@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.date: 08/23/2021
 ---
 
 # class FileProfile::Settings 
@@ -27,6 +27,8 @@ public void SetSessionId(const std::string& sessionId)  |  Sets the session ID.
 public const std::string& GetSessionId() const  |  Gets the session ID.
 public void SetCanCacheLicenses(bool canCacheLicenses)  |  Configures whether or not end user licenses (EULs) will be cached locally.
 public bool CanCacheLicenses() const  |  Gets whether or not end user licenses (EULs) are cached locally.
+public const std::shared_ptr\<void\>& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+public void SetLoggerContext(const std::shared_ptr\<void\>& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
   
 ## Members
   
@@ -128,3 +130,16 @@ Gets whether or not end user licenses (EULs) are cached locally.
 
   
 **Returns**: License caching configuration
+  
+### GetLoggerContext function
+Get logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+
+  
+**Returns**: The logger context
+  
+### SetLoggerContext function
+Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+
+Parameters:  
+* **loggerContext**: The logger context
+

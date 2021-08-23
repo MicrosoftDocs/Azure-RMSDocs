@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.date: 08/23/2021
 ---
 
 # class ProtectionProfile::Settings 
@@ -22,6 +22,8 @@ public std::shared_ptr\<ProtectionProfile::Observer\> GetObserver() const  |  Ge
 public std::shared_ptr\<MipContext\> GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Override default HTTP stack with client's own.
+public std::shared_ptr\<StorageDelegate\> GetStorageDelegate() const  |  Get the StorageDelegate (if any) provided by the application.
+public void SetStorageDelegate(const std::shared_ptr\<StorageDelegate\>& storageDelegate)  |  Override default storage cache with client's own implementation.
 public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
 public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Override default asynchonous task dispatching handling with client's own.
 public void SetSessionId(const std::string& sessionId)  |  Sets the session ID.
@@ -30,6 +32,8 @@ public void SetCanCacheLicenses(bool canCacheLicenses)  |  Configures whether or
 public bool CanCacheLicenses() const  |  Gets whether or not end user licenses (EULs) are cached locally.
 public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& customSettings)  |  Set the custom settings, used for feature gating and testing.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
+public const std::shared_ptr\<void\>& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+public void SetLoggerContext(const std::shared_ptr\<void\>& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
 public void AddRedirectionUri(const std::string& originalUri, const std::string& redirectUri)  |  Adds a redirect uri.
 public const std::map\<std::string, std::string\>& GetRedirectionUris() const  |  Gets the redirection uris.
   
@@ -110,6 +114,20 @@ Parameters:
 
 
   
+### GetStorageDelegate function
+Get the StorageDelegate (if any) provided by the application.
+
+  
+**Returns**: StorageDelegate to be used for caching
+  
+### SetStorageDelegate function
+Override default storage cache with client's own implementation.
+
+Parameters:  
+* **storageDelegate**: StorageDelegate interface implemented by client application
+
+
+  
 ### GetTaskDispatcherDelegate function
 Get the TaskDispatcher delegate (if any) provided by the application.
 
@@ -167,6 +185,20 @@ Get the custom settings, used for feature gating and testing.
 
   
 **Returns**: List of name/value pairs.
+  
+### GetLoggerContext function
+Get logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+
+  
+**Returns**: The logger context
+  
+### SetLoggerContext function
+Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+
+Parameters:  
+* **loggerContext**: The logger context
+
+
   
 ### AddRedirectionUri function
 Adds a redirect uri.

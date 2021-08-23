@@ -5,15 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.date: 08/23/2021
 ---
 
 # class NoPermissionsError 
 The user could not get access to the content. For example, no permissions, content revoked.
   
 ## Summary
-
-Members                        | Descriptions                                
+ Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string GetReferrer() const  |  Gets the contact in case of missing rights to the document.
 public std::string GetOwner() const  |  Gets the owner of the document.
@@ -46,8 +45,11 @@ Values                         | Descriptions
 --------------------------------|---------------------------------------------
 Unknown            | Unknown no permissions failure
 UserNotFound            | Requested user was not found failure
-AccessDenied            | 
-AccessExpired            | 
+AccessDenied            | Access to content or action was not permitted
+AccessExpired            | Access to content or action has expired
+InvalidEmail            | 
+UnknownTenant            | 
+NotOwner            | User needs to be owner to perform action
+NotPremiumLicenseUser            | User needs to be a premium license holder to perform action. Tracking and Revocation for example
 
 Category of no permissions error.
-
