@@ -1,6 +1,6 @@
 ---
 title: Concepts - Policy handlers in the MIP SDK.
-description: This article will help you understand how Policy API handlers are created and used for calling operations.
+description: This article will help you understand how Policy SDK handlers are created and used for calling operations.
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
@@ -9,7 +9,7 @@ ms.author: tommos
 ---
 # Microsoft Information Protection SDK - Policy handler concepts
 
-In the Policy API, `mip::PolicyHandler` exposes operations used to compute policy actions, and submit audit events.
+In the Policy SDK, `mip::PolicyHandler` exposes operations used to compute policy actions, and submit audit events.
 
 ## Policy handler functions
 
@@ -54,4 +54,4 @@ After successfully creating the `PolicyHandler` object, actions may be computed 
 Now that you've learned about creation of a Policy handler:
 
 - Learn how to [create an execution state class](concept-handler-policy-executionstate-cpp.md), which is used for determining compute actions.
-- Download the [Policy API Samples from GitHub and try out the Policy API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
+- Download the [Policy SDK Samples from GitHub and try out the Policy SDK](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

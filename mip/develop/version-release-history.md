@@ -22,9 +22,109 @@ Preview versions shouldn't be deployed in production. Instead, use the latest pr
 Use the following information to see what’s new or changed for a supported release. The most current release is listed first.
 
 > [!NOTE]
-> Minor fixes are not listed. If you experience a problem with the SDK, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version.
->  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
+
+## Downloads for Previous Versions
+
+NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions prior to 1.4 are not available. 
+
+| Version | Link                        | Status              | End of Support     |
+| ------- | --------------------------- | ------------------- | ------------------ |
+| 1.10    | https://aka.ms/mipsdkbins   | **Current Version** | TBD                |
+| 1.9     | https://aka.ms/mipsdkbins19 | **Supported**       | August 23, 2022    |
+| 1.8     | https://aka.ms/mipsdkbins18 | **Supported**       | April 29, 2022     |
+| 1.7     | https://aka.ms/mipsdkbins17 | **Supported**       | January 14th, 2022 |
+| 1.6     | https://aka.ms/mipsdkbins16 | **Supported**       | September 23, 2021 |
+| 1.5     | https://aka.ms/mipsdkbins15 | **Out of Support**  | April 16, 2021     |
+| 1.4     | https://aka.ms/mipsdkbins14 | **Out of Support**  | March 2, 2021      |
+
+## Version 1.10.xx
+
+**Release date:** August 23, 2021
+
+### General Changes
+
+- Added `MipConfiguration` class.
+  - This class controls the configuration settings previously set directly on MipContext.
+  - Delegates, logging location, etc. are set as part of this object.
+  - Review [MipContext Concepts](concept-mipcontext.md) for details.
+- `MipContext::Create()` constructor has been changed to accept only the new `MipConfiguration` object.
+  - Review [MipContext Concepts](concept-mipcontext.md) for details.
+- All engine settings will default to en-US locale in the event that the `.Locale` property is set to `null`.
+- Fixed an issue where the SDK wasn't fully honoring the logging level settings.
+
+### File SDK
+
+- Added support for reading and writing labels to MSG files.
+  - The pattern for labeling this files is that same as any other file type.
+  - The **enable_msg_file_type** custom setting must be set to enable MSG file handling.
+  - Attachments will be protected but **not** labeled.
+  - Review [Set enable_msg_file_type and use File SDK for protecting .msg file](quick-email-msg-csharp.md#set-enable_msg_file_type-and-use-file-sdk-for-protecting-msg-file) for details on custom setting.
+- `FileHandler::IsLabeledOrProtected()` now supports MSG files.
+- File SDK now supports decryption of protected attachments on unprotected MSG files.
+  - This applies only to files and not containers such as MSG or ZIP files.
+- Added new static method `mip::FileHandler::GetFileStatus()`
+  - This function returns a new `mip::FileStatus` object that indicates whether the file is labeled, protected, or contains protected objects. 
+  - `FileStatus` exposes three properties: `IsProtected`, `IsLabeled`, and `ContainsProtectedObjects`.
+  - `ContainsProtectedObjects` is useful for MSG files that have protected attachments.
+- When calling `FileHandler::RemoveProtection()` on a plaintext MSG file with protected attachments, protection will be removed from the attachments.
+- Fixed a bug where `IProtectionHandler` was destroyed when calling `IFileHandler.SetProtection()` in a loop. `IProtectionHandler` instance will no longer be destroyed after use. 
+
+### Policy SDK
+
+- The content marking variable `${Event.DateTime}` now defaults to local time rather than UTC.
+  - This can be set back to the previous default by using flighting feature `EventDateTimeTokenUseUtc`.
+- Fixed bug where `IsActive` was not returning the same values inside a `PolicyHandler` as it was when retrieving labels from a `PolicyEngine`.
+
+### Protection SDK
+
+- Added new more specific error types that will surface in both Protection and File SDK. See Breaking Changes section.
+
+### Breaking Changes
+
+- Introduced new custom settings to govern the default audit settings.
+  - Added new property in audit Delegate to set audit settings.
+  - `LabelGroupData` class no longer has `IsAuditEnabled()` method. 
+  - You can use instead `GetEnableAuditSetting()` to get `EnableAudit` settings in the policy once policy is loaded. Default audit settings will be `Undefined` as oppose to `true` in older versions. 
+- Allow passing the document's timezone to ComputeActions to allow actions to be computed as if the document existed in a different timezone from the machine applying the label. 
+  - Useful for when labels are applied on behalf of a user through a service, where the server's local time is not necessarily the same as the user's.
+  - Instead of returning the `${Event.DateTime}` in UTC format, we now default to local time without displaying the timezone.
+- Updated existing exceptions for better handling of specific scenarios.
+  - `NoPermissionsError::Category::NotPremiumLicenseUser`
+    - Previously surfaced as `NoPermissionsError::Category::AccessDenied`
+    - Caused by an unlicensed user attempting to revoke protected content. 
+  - `NoPermissionsError::Category::NotOwner`
+    - Previously surfaced as `NoPermissionsError::Category::AccessDenied`
+    - Caused by a user attempting to revoke a document they don't own.
+  - `ServiceDisabledError::Extent::Tenant`
+    - Previously surfaced as `ServiceDisabledError::Extent::User`
+    - Returned when the targeted Azure Rights Management service instead is disabled. 
+  - `NoPermissionsError::Category::AccessDenied`
+    - Previously surfaced as `NetworkError::Category::FailureResponseCode`
+    - Returned when the user has no rights to publish due to licensing or onboarding controls.
+  - `BadInputError::ErrorCode::DoubleKey`
+    - Previously surfaced as `NetworkError::Category::FailureResponseCode`
+    - Returned when Double Key Encryption (DKE) parameters are incorrect. 
+  - `CustomerKeyUnavailableError`
+    - New exception.
+    - Returned when the tenant is configured for bring-your-own-key (BYOK) and the key cannot be reached. 
+    - Service returns HTTP424. 
+  - `NetworkError::Category::FunctionNotImplemented`
+    - New exception.
+    - Returned when service returned HTTP501 (Not Implemented).
+  - The following previously surfaced as `NetworkError::Category::FailureResponseCode`
+    - `TemplateArchivedError`: The application attempted to apply a template ID that has been archived.  
+    - `LicenseNotRegisteredError`: The document publishing license is not registered for revocation. 
+    - `NoPermissionsError::Category::UserNotFound`: The provided user doesn't exist in the target tenant. 
+    - `NoPermissionsError::Category::InvalidEmail`: An invalid email address was provided. 
+    - `NoPermissionsError::Category::AccessDenied`: The provided identity is not a principal recognized by RMS or isn't a valid delegator.
+    - `BadInputError::ErrorCode::LicenseNotTrusted`: The provided publishing license isn't from a trusted publisher. (Not in C API)
+    - `BadInputError::ErrorCode::ParameterParsing`: Returned by various XML, JSON, or other parsing issues (Not in C API)
+
+### Platform and Dependency Updates
+
+- Added Support for Debian 10. 
+- Added Support for Ubuntu 20.04.
 
 ## Version 1.9.90
 
@@ -335,7 +435,7 @@ Use the following information to see what’s new or changed for a supported rel
   - Minor risk of false positives (for example if file contains zombie label metadata)
 - Filter labels associated with specific types of protection
   - Configurable via mip::FileEngine::Settings::SetLabelFilter()
-- Expose policy data to File API
+- Expose policy data to File SDK
   - mip::FileEngine::GetPolicyDataXml()
 
 ### Policy SDK
@@ -446,7 +546,7 @@ This version introduces support for the Protection SDK in the .NET package (Micr
 - RPMSG
   - Encryption
   - Added support for string8 decryption
-- Configurable PFILE extension behavior (default, <EXT>.PFILE, or P<EXT>)
+- Configurable PFILE extension behavior (default, {extension}.PFILE, or P{extension})
   - ProtectionSettings::SetPFileExtensionBehavior
 
 ### Policy SDK

@@ -1,5 +1,5 @@
 ---
-title: Concepts - The File API engine object
+title: Concepts - The File SDK engine object
 description: This article will help you understand the concepts around the File engine object, which is created during application initialization.
 author: msmbaldwin
 ms.service: information-protection
@@ -8,9 +8,9 @@ ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
 
-# Microsoft Information Protection SDK - File API engine concepts
+# Microsoft Information Protection SDK - File SDK engine concepts
 
-The `mip::FileEngine` in the MIP SDK File API provides an interface to all operations that are performed on behalf of a specified identity. One engine will be added for each user that signs in to the application and all operations that engine performs will be performed in the context of that identity.
+The `mip::FileEngine` in the MIP File SDK provides an interface to all operations that are performed on behalf of a specified identity. One engine will be added for each user that signs in to the application and all operations that engine performs will be performed in the context of that identity.
 
 The `FileEngine` has two primary responsibilities: Listing labels for an authenticated user and creating file handlers to perform file operations on behalf of the user. 
 
@@ -36,6 +36,14 @@ FileEngine::Settings engineSettings(
   "en-US",                  // Locale.
   false);                   // Load sensitive information types for driving classification.
 ```
+
+When creating engineSettings in this manner, it's important to also explicitly set a unique engineId via:
+
+```cpp
+engineSettings.SetEngineId(engineId);
+```
+
+Using the **username or email** helps to ensure that the same engine is loaded each time the user uses the service or application. 
 
 Also valid is providing a custom engine ID:
 

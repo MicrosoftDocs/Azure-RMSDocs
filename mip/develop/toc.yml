@@ -13,7 +13,7 @@
     href: quick-app-adrms.md
   - name: C++
     items:
-    - name: File API
+    - name: File SDK
       items:
       - name: Application initialization (C++)
         href: quick-app-initialization-cpp.md
@@ -23,11 +23,11 @@
         href: quick-file-set-get-label-cpp.md 
       - name: Lowering a sensitivity label on a file (C++)
         href: quick-file-justify-actions-cpp.md 
-      - name: File API Republishing (C++)
+      - name: File SDK Republishing (C++)
         href: quick-file-republishing-cpp.md 
       - name: Process email .msg files (C++)
         href: quick-email-msg-cpp.md 
-    - name: Protection API
+    - name: Protection SDK
       items:
       - name: Application initialization (C++)
         href: quick-protection-app-initialization-cpp.md
@@ -37,7 +37,7 @@
         href: quick-protection-encrypt-decrypt-text-cpp.md
   - name: C#
     items:    
-    - name: File API
+    - name: File SDK
       items:
       - name: Application initialization (C#)
         href: quick-app-initialization-csharp.md
@@ -47,11 +47,11 @@
         href: quick-file-set-get-label-csharp.md
       - name: Lowering a sensitivity label on a file (C#)
         href: quick-file-justify-actions-csharp.md 
-      - name: File API Republishing (C#)
+      - name: File SDK Republishing (C#)
         href: quick-file-republishing-csharp.md 
       - name: Process email .msg files (C#)
         href: quick-email-msg-csharp.md 
-    - name: Protection API
+    - name: Protection SDK
       items:
       - name: Application initialization (C#)
         href: quick-protection-app-initialization-csharp.md
@@ -73,17 +73,17 @@
     items: 
       - name: Profile and Engine object concepts
         href: concept-profile-engine-cpp.md
-      - name: File API profile (C++)
+      - name: File SDK profile (C++)
         href: concept-profile-engine-file-profile-cpp.md
-      - name: File API engine (C++)
+      - name: File SDK engine (C++)
         href: concept-profile-engine-file-engine-cpp.md
-      - name: Policy API profile (C++)
+      - name: Policy SDK profile (C++)
         href: concept-profile-engine-policy-profile-cpp.md
-      - name: Policy API engine (C++)
+      - name: Policy SDK engine (C++)
         href: concept-profile-engine-policy-engine-cpp.md
-      - name: Protection API profile (C++)
+      - name: Protection SDK profile (C++)
         href: concept-profile-engine-protection-profile-cpp.md
-      - name: Protection API engine (C++)
+      - name: Protection SDK engine (C++)
         href: concept-profile-engine-protection-engine-cpp.md            
   - name: Authentication (C++)
     items:
@@ -99,13 +99,13 @@
     href: concept-delegation.md
   - name: Handlers
     items:
-    - name: File API handler (C++)
+    - name: File SDK handler (C++)
       items:
       - name: File handler concepts
         href: concept-handler-file-cpp.md
       - name: Auditing 
         href: concept-auditing-file-cpp.md
-    - name: Policy API handler (C++)
+    - name: Policy SDK handler (C++)
       items:
       - name: Policy handler concepts
         href: concept-handler-policy-cpp.md
@@ -115,7 +115,7 @@
         href: concept-handler-policy-computeactions-cpp.md  
       - name: Auditing 
         href: concept-handler-policy-auditing-cpp.md
-    - name: Protection API handler (C++)
+    - name: Protection SDK handler (C++)
       href: concept-handler-protection-cpp.md
   - name: Labels and Protection
     items:
@@ -131,11 +131,11 @@
     items:
     - name: Observer concepts
       href: concept-async-observers.md
-    - name: File API observers (C++)
+    - name: File SDK observers (C++)
       href: concept-async-observers-file-cpp.md
-    - name: Policy API observers (C++)
+    - name: Policy SDK observers (C++)
       href: concept-async-observers-policy-cpp.md
-    - name: Protection API observers (C++)
+    - name: Protection SDK observers (C++)
       href: concept-async-observers-protection-cpp.md
   - name: Proxy Support 
     href: concept-mip-proxies.md
@@ -147,11 +147,11 @@
     href: concept-supported-filetypes.md  
   - name: Use Cases
     items:
-    - name: File API - Action justification for lowering a sensitivity label on a file
+    - name: File SDK - Action justification for lowering a sensitivity label on a file
       href: concept-justification.md
-    - name: File API - Republishing
+    - name: File SDK - Republishing
       href: concept-republishing.md 
-    - name: File API - Process email .msg files
+    - name: File SDK - Process email .msg files
       href: concept-email.md 
 - name: Reference
   items:

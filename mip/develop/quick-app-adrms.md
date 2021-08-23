@@ -15,7 +15,7 @@ ms.custom: has-adal-ref
 This quickstart will show you how to implement support for Active Directory Rights Management Server (AD RMS) using MIP SDK.
 
 > [!NOTE]
-> The steps outlined in this quickstart applicable to only File API for C# or C++ and Protection API for C++ only.
+> The steps outlined in this quickstart applicable to only File SDK for C# or C++ and Protection SDK for C++ only.
 
 ## Prerequisites
 
@@ -30,15 +30,19 @@ If you haven't already, be sure to:
 
 The SDK does service discovery based on the `mip::Identity` provided via `FileEngineSettings` or `ProtectionEngineSettings` by using the UPN or mail address suffix. It first searches the domain hierarchy for the *_rmsdisco* record for MDE. For more details on that process, review [Specifying the DNS SRV records for the AD RMS mobile device extension](/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). If that DNS SRV record isn't found, it defaults to the Azure Information Protection service as the service location.
 
+<!-- 
 If an identity isn't available, or the DNS SRV record for MDE hasn't been published, the service discovery process can be overridden by explicitly settings the [cloud endpoint URL](./reference/class_mip_fileengine_settings.md#setpolicycloudendpointbaseurl-function).
+-->
 
-## Configuring File API in C# to use AD RMS
+## Configuring File SDK in C# to use AD RMS
 
-Two minor changes are required if your application is using Active Directory Authentication Library (ADAL) and the File API on C#. The `FileEngineSettings` object and `AuthenticationContext` constructor must be updated to function with AD RMS and Active Directory Federations Services (ADFS).
+Two minor changes are required if your application is using Active Directory Authentication Library (ADAL) and the File SDK on C#. The `FileEngineSettings` object and `AuthenticationContext` constructor must be updated to function with AD RMS and Active Directory Federations Services (ADFS).
 
 If you've deployed the mobile device extension DNS SRV record and plan to pass in a user principal name or email address, [follow the instructions for using an identity](#update-the-file-engine-settings-to-use-ad-rms-with-an-identity).
 
+<!--
 If you don't have the mobile device extension DNS SRV record, or won't have an identity at runtime, [follow the explicit endpoint instructions](#update-the-file-engine-settings-to-use-ad-rms-with-an-explicit-endpoint).
+-->
 
 ### Update the File Engine Settings to use AD RMS with an Identity
 
@@ -55,6 +59,8 @@ var engineSettings = new FileEngineSettings("", authDelegate, "", "en-US")
 };
 ```
 
+<!-- tommos removed because this might be invalid based on testing. -->
+<!-- 
 ### Update the File Engine Settings to use AD RMS with an explicit endpoint
 
 If the DNS SRV record for MDE isn't published, or `Microsoft.InformationProtection.Identity` isn't available to pass in when creating the `FileEngine`, there are two required code changes. is to set `FileEngineSettings.ProtectionOnlyEngine = true`. This property must be set as labeling (policy) operations aren't  supported for AD RMS protection endpoints.
@@ -69,6 +75,7 @@ var engineSettings = new FileEngineSettings("", authDelegate, "", "en-US")
      ProtectionCloudEndpointBaseUrl = "https://rms.contoso.com"
 };
 ```
+-->
 
 ### Update the authentication delegate
 
@@ -78,11 +85,13 @@ If you're using the ADAL in your .NET application, you'll need to make a  change
    AuthenticationContext authContext = new AuthenticationContext(authority, false, tokenCache);
    ```
 
-## Configuring File API in C++ to use AD RMS
+## Configuring File SDK in C++ to use AD RMS
 
 If you've deployed the mobile device extension DNS SRV record and plan to pass in a user principal name or email address, [follow the instructions for using an identity](#update-the-fileenginesettings-to-use-ad-rms-with-an-identity).
 
+<!--
 If you don't have the mobile device extension DNS SRV record, or won't have an identity at runtime, [follow the explicit endpoint instructions](#update-the-fileenginesettings-to-use-ad-rms-with-an-explicit-endpoint).
+-->
 
 ### Update the FileEngine::Settings to use AD RMS with an Identity
 
@@ -93,6 +102,9 @@ FileEngine::Settings engineSettings(mip::Identity(mUsername), "");
 engineSettings.SetProtectionOnlyEngine = true;
 ```
 
+<!-- tommos removed because this might be invalid based on testing. -->
+<!--
+
 ### Update the FileEngine::Settings to use AD RMS with an explicit endpoint
 
 If the DNS SRV record for MDE isn't published, or an identity isn't available for service discovery, then the engine must be set to protection only and the explicit cloud endpoint URL provided via `SetProtectionCloudEndpointBaseUrl()`.
@@ -102,12 +114,15 @@ FileEngine::Settings engineSettings("", authDelegate, "");
 engineSettings.SetProtectionOnlyEngine = true;
 engineSettings.SetProtectionCloudEndpointBaseUrl("https://rms.contoso.com");
 ```
+-->
 
-## Configuring Protection API in C++ to use AD RMS
+## Configuring Protection SDK in C++ to use AD RMS
 
 If you've deployed the mobile device extension DNS SRV record and plan to pass in a user principal name or email address, [follow the instructions for using an identity](#set-the-protectionenginesettings-to-use-ad-rms-with-an-identity).
 
+<!--
 If you don't have the mobile device extension DNS SRV record, or won't have an identity at runtime, [follow the explicit endpoint instructions](#set-the-protectionenginesettings-to-use-ad-rms-with-an-explicit-endpoint).
+-->
 
 ### Set the ProtectionEngine::Settings to use AD RMS with an Identity
 
@@ -117,6 +132,9 @@ If the DNS SRV record for mobile device extension has been published, and an ide
 ProtectionEngine::Settings engineSettings(mip::Identity(mUsername), authDelegate, "");
 ```
 
+<!-- tommos removed because this might be invalid based on testing. -->
+<!--
+
 ### Set the ProtectionEngine::Settings to use AD RMS with an explicit endpoint
 
 If the DNS SRV record isn't published or an identity isn't provided in the `ProtectionEngine::Settings`, then the protection endpoint URL must be set explicitly via `SetProtectionCloudEndpointBaseUrl()`.
@@ -125,6 +143,7 @@ If the DNS SRV record isn't published or an identity isn't provided in the `Prot
 ProtectionEngine::Settings engineSettings("", authDelegate, "");
 engineSettings.SetProtectionCloudEndpointBaseUrl("https://RMS.CONTOSO.COM");
 ```
+-->
 
 ## Remove or Comment Label References
 

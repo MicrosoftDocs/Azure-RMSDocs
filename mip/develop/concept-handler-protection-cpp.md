@@ -1,6 +1,6 @@
 ---
 title: Concepts - Protection handlers in the MIP SDK.
-description: This article will help you understand how Protection API handlers are created and used for calling operations.
+description: This article will help you understand how Protection SDK handlers are created and used for calling operations.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
@@ -9,7 +9,7 @@ ms.author: mbaldwin
 ---
 # Microsoft Information Protection SDK - Protection handler concepts
 
-In the MIP SDK Protection API, the `mip::ProtectionHandler` exposes the functions for encrypting and decrypting protected streams and buffers, performing access checks, obtaining the publishing license, and getting attributes from the protected information.
+In the MIP Protection SDK, the `mip::ProtectionHandler` exposes the functions for encrypting and decrypting protected streams and buffers, performing access checks, obtaining the publishing license, and getting attributes from the protected information.
 
 ## Requirements
 

@@ -1,6 +1,6 @@
 ---
 title: Concepts - File handlers in the MIP SDK.
-description: This article will help you understand how File API handlers are created and used for calling operations.
+description: This article will help you understand how File SDK handlers are created and used for calling operations.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
@@ -9,7 +9,7 @@ ms.author: mbaldwin
 ---
 # Microsoft Information Protection SDK - File handler concepts
 
-In the MIP SDK File API, the `mip::FileHandler` exposes all of the various operations that can be used to read and write labels, or protection, across a set of file types for which support is built-in. 
+In the MIP File SDK, the `mip::FileHandler` exposes all of the various operations that can be used to read and write labels, or protection, across a set of file types for which support is built-in. 
 
 ## Supported file types
 
@@ -40,7 +40,7 @@ Creating a `FileHandler` to work with a specific file requires:
 
 ## Create a file handler
 
-The first step required in managing any files in the File API is to create a `FileHandler` object. This class implements all of the functionality required to get, set, update, delete, and commit label changes to files.
+The first step required in managing any files in the File SDK is to create a `FileHandler` object. This class implements all of the functionality required to get, set, update, delete, and commit label changes to files.
 
 Creating the `FileHandler` is as easy as calling the `FileEngine`'s `CreateFileHandlerAsync` function using the promise/future pattern.
 
