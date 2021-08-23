@@ -9,7 +9,7 @@ ms.date: 08/23/2021
 ---
 
 # class MipContext 
-[MipContext](undefined) represents state that is shared across all profiles, engines, handlers.
+MipContext represents state that is shared across all profiles, engines, handlers.
   
 ## Summary
  Members                        | Descriptions                                
@@ -78,7 +78,7 @@ Get logger implementation.
 Get Http implementation.
 
   
-**Returns**: [HttpDelegate](undefined)
+**Returns**: HttpDelegate
   
 ### GetRawLoggerDelegate function
 Get raw logger implementation.
@@ -90,7 +90,7 @@ Get raw logger implementation.
 Get Storage Delegate implementation if provided.
 
   
-**Returns**: [StorageDelegate](undefined)
+**Returns**: StorageDelegate
   
 ### GetFlightingFeatures function
 Get flighting feature set.

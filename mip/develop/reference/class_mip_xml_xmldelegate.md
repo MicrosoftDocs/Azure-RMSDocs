@@ -15,7 +15,7 @@ Interface for overriding XML handling (must be capable of handling multiple thre
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public XmlReaderResult CreateXmlReader(const std::string& xmlParserInput) const  |  Create an xml reader that can transverse the input.
-public XmlDocumentResult ParseData(const std::string& data) const  |  Parse an xml formatted buffer into an [XmlDocument](undefined).
+public XmlDocumentResult ParseData(const std::string& data) const  |  Parse an xml formatted buffer into an XmlDocument.
   
 ## Members
   
@@ -31,7 +31,7 @@ Parameters:
 **Returns**: A delegate response that contains either a shared pointer to a reader that can look at each node of the xml sequentially, or an exception
   
 ### ParseData function
-Parse an xml formatted buffer into an [XmlDocument](undefined).
+Parse an xml formatted buffer into an XmlDocument.
 
 Parameters:  
 * **data**: A string that should be in xml format
@@ -39,4 +39,4 @@ Parameters:
 
 
   
-**Returns**: A delegate response that contains either a shared_ptr to an [XmlDocument](undefined) or an exception if parsing fails
+**Returns**: A delegate response that contains either a shared_ptr to an XmlDocument or an exception if parsing fails

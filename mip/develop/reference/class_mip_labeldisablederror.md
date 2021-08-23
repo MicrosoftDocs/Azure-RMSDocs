@@ -9,7 +9,7 @@ ms.date: 08/23/2021
 ---
 
 # class LabelDisabledError 
-[Label](undefined) is disabled or inactive.
+Label is disabled or inactive.
   
 ## Summary
  Members                        | Descriptions                                

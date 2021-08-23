@@ -9,7 +9,7 @@ ms.date: 08/23/2021
 ---
 
 # class JsonDocument 
-[JsonDocument](undefined) abstraction class.
+JsonDocument abstraction class.
   
 ## Summary
  Members                        | Descriptions                                

@@ -9,7 +9,7 @@ ms.date: 08/23/2021
 ---
 
 # class xml::XmlReader 
-[XmlReader](undefined) abstraction class.
+XmlReader abstraction class.
   
 ## Summary
  Members                        | Descriptions                                
