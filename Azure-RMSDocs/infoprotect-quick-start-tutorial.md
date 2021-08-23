@@ -32,8 +32,8 @@ ms.custom: admin
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 [!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
->
-> **To deploy the AIP classic client**, open a support ticket to get download access.
+
+**To deploy the AIP classic client**, open a support ticket to get download access.
 
 > [!TIP]
 > If are using a different labeling client to the classic client, see the [Microsoft 365 Compliance documentation](/microsoft-365/compliance/sensitivity-labels)  for equivalent instructions to this tutorial.

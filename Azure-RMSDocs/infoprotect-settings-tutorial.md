@@ -30,10 +30,13 @@ ms.custom: admin
 >***Applies to**: Azure Information Protection*
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>
+>*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).*
+>
 
 [!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
->
-> **To deploy the AIP classic client**, open a support ticket to get download access.
+
+**To deploy the AIP classic client**, open a support ticket to get download access.
 
 > [!TIP]
 > If are using a different labeling client to the classic client, see the Microsoft 365 Compliance documentation for information about policy settings for sensitivity labels. For example, [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
