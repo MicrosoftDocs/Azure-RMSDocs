@@ -163,7 +163,6 @@
       href: reference/mip-enums-and-structs.md
     - name: Classes
       items:
- 
       - name: AccessDeniedError
         href: reference/class_mip_accessdeniederror.md
       - name: Action
