@@ -57,7 +57,7 @@ The `GetFileStatus()` returns a `fileStatus` Object with the following propertie
 - `ContainsProtectedObject()` Property - returns a bool - The File/Container/Message contains protected object.
 
 The recommendation is that all three properties are interrogated as a file can have zero to all three properties and permutations in between.
-Additionally, since the `GetFileStatus()` function doesn't require authentication, or an engine to execute, the `IsProtected()`, `IsLabeled()`, and `ContainsProtectedObject()` methods only reflects if labeling or protection is present in a file. It doesn't validate if the labeling and or protection exists within a tenant or is useable by a user. Validation of the label and or protection would require going through the authentication and engine creation process to validate.
+Additionally, since the `GetFileStatus()` function doesn't require authentication, or an engine to execute, the `IsProtected()`, `IsLabeled()`, and `ContainsProtectedObject()` methods reflect if labeling or protection is present in a file. It doesn't validate if the labeling and or protection exists within a tenant or is useable by a user. Validation of the label and or protection would require going through the authentication and engine creation process to validate.
 
 ```cpp
     if (options.count("getfilestatus")) {
