@@ -43,10 +43,10 @@ Creating a `FileHandler` to work with a specific file requires:
 ## Fetching the status of a file
 
 To use the `mip::FileHandler::GetFileStatus()` static function, the developer will need to pass in a File Path or File Stream and mipContext
-to execute this function. Executing this function will not require the creation a file engine, authentication, or a connection to the internet.
+to execute this function. Executing this function doesn't require the creation a file engine, authentication, or a connection to the internet.
 This function is especially helpful for:
 
-- Getting the protection status of a file for decryption scenarios prior to creating an engine. Knowing this ahead of time can allow the developer to skip the overhead of creating an engine if the file is already protected
+- Getting the protection status of a file for decryption scenarios before creating an engine. Knowing the protection status ahead of time can allow the developer to skip the overhead of creating an engine if the file is already protected
 - Getting the status of a file that may already have a label before creating an engine to try to read the label (time saver)
 - Getting the status of an MSG file that has attachments and that may need to be parsed or decrypted along with the MSG file itself
 
@@ -57,7 +57,7 @@ The `GetFileStatus()` returns a `fileStatus` Object with the following propertie
 - `ContainsProtectedObject()` Property - returns a bool - The File/Container/Message contains protected object.
 
 The recommendation is that all three properties are interrogated as a file can have zero to all three properties and permutations in between.
-Additionally, since the `GetFileStatus()` function doesn't require authentication, or an engine to execute, the `IsProtected()`, `IsLabeled()` and `ContainsProtectedObject()` methods only reflects if labeling or protection is present in a file. It doesn't validate if the labeling and or protection exists within a tenant or is useable by a user. Validation of the label and or protection would require going through the authentication and engine creation process to validate.
+Additionally, since the `GetFileStatus()` function doesn't require authentication, or an engine to execute, the `IsProtected()`, `IsLabeled()`, and `ContainsProtectedObject()` methods only reflects if labeling or protection is present in a file. It doesn't validate if the labeling and or protection exists within a tenant or is useable by a user. Validation of the label and or protection would require going through the authentication and engine creation process to validate.
 
 ```cpp
     if (options.count("getfilestatus")) {
