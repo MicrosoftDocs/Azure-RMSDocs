@@ -33,16 +33,16 @@ Since two `Observer` functions are implemented per asynchronous operation, it ca
 
 ## MIP SDK Observer Classes
 
-The MIP SDK File API contains two observers:
+The MIP File SDK contains two observers:
 
 * `mip::FileProfile::Observer`
 * `mip::FileHandler::Observer`
 
-The MIP SDK Policy API has just a single observer:
+The MIP Policy SDK has just a single observer:
 
 * `mip::Profile::Observer`
 
-The MIP SDK Protection API has three observers:
+The MIP Protection SDK has three observers:
 
 * `mip::ProtectionProfile::Observer`
 * `mip::ProtectionEngine::Observer`
@@ -50,8 +50,8 @@ The MIP SDK Protection API has three observers:
 
 ## Next Steps
 
-Learn more about how observers are implemented and used, by the various APIs:
+Learn more about how observers are implemented and used, by the various SDKs:
 
-* [File API Observers (C++)](concept-async-observers-file-cpp.md)
-* [Policy API Observers (C++)](concept-async-observers-policy-cpp.md)
-* [Protection API Observers (C++)](concept-async-observers-protection-cpp.md)
+* [File SDK Observers (C++)](concept-async-observers-file-cpp.md)
+* [Policy SDK Observers (C++)](concept-async-observers-policy-cpp.md)
+* [Protection SDK Observers (C++)](concept-async-observers-protection-cpp.md)

@@ -1,6 +1,6 @@
 ---
-title: File API - Process email .msg files (C#)
-description: This article will help you understand the scenario of how to use MIP SDK file API to process .msg files (C#).
+title: File SDK - Process email .msg files (C#)
+description: This article will help you understand the scenario of how to use MIP File SDK to process .msg files (C#).
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
@@ -8,9 +8,9 @@ ms.date: 04/08/2020
 ms.author: mbaldwin
 ---
 
-# File API - Process email .msg files (C#)
+# File SDK - Process email .msg files (C#)
 
-File API supports protection operations for .msg files in a manner identical to any other file type, except that the SDK needs the application to enable MSG feature flag. Here, we'll see how to set this flag.
+File SDK supports protection operations for .msg files in a manner identical to any other file type, except that the SDK needs the application to enable MSG feature flag. Here, we'll see how to set this flag.
 
 As discussed previously, instantiation of `IFileEngine` requires a setting object, `FileEngineSettings`. FileEngineSettings can be used to pass parameters for custom settings the application needs to set for a particular instance. `CustomSettings` property of the `FileEngineSettings` is used to set the flag for `enable_msg_file_type` to enable processing of .msg files.
 
@@ -18,16 +18,16 @@ As discussed previously, instantiation of `IFileEngine` requires a setting objec
 
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
-- Complete [Quickstart: File API application initialization (C#)](quick-app-initialization-csharp.md) first, which builds a starter Visual Studio solution. This "How to - process email message .msg files (C#)" quickstart builds on the previous one.
+- Complete [Quickstart: File SDK application initialization (C#)](quick-app-initialization-csharp.md) first, which builds a starter Visual Studio solution. This "How to - process email message .msg files (C#)" quickstart builds on the previous one.
 - Review [Email files MIP SDK](concept-email.md) concepts.
 - Optionally: Review [File engines in the MIP SDK](concept-profile-engine-file-engine-cpp.md) concepts.
 - Optionally: Review [File handlers in the MIP SDK](concept-handler-file-cpp.md) concepts.
 
-## Set enable_msg_file_type and use File API for protecting .msg file
+## Set enable_msg_file_type and use File SDK for protecting .msg file
 
 In continuation of File AI application initialization quickstart, modify the file engine construction code to set `enable_msg_file_type flag` and then use the file engine to protect a .msg file.
 
-1. Open the Visual Studio solution you created in the previous "Quickstart: File API application initialization (C#)".
+1. Open the Visual Studio solution you created in the previous "Quickstart: File SDK application initialization (C#)".
 
 2. Using Solution Explorer, open the .cs file in your project that contains the implementation of the `Main()` method. It defaults to the same name as the project containing it, which you specified during project creation.
 
@@ -36,7 +36,7 @@ In continuation of File AI application initialization quickstart, modify the fil
     ```csharp
     static void Main(string[] args)
     {
-        // Initialize Wrapper for File API operations.
+        // Initialize Wrapper for File SDK operations.
         MIP.Initialize(MipComponent.File);
 
         // Create ApplicationInfo, setting the clientID from Azure AD App Registration as the ApplicationId.

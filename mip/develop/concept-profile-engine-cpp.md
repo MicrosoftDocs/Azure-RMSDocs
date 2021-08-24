@@ -16,9 +16,9 @@ Where the `MipContext` is the class for storing SDK-specific settings, the profi
 
 There are three types of profile in the MIP SDK:
 
-- [`PolicyProfile`](reference/class_mip_policyprofile.md): The profile class for the MIP Policy API.
-- [`ProtectionProfile`](reference/class_mip_protectionprofile.md): The profile class for the MIP Protection API.
-- [`FileProfile`](reference/class_mip_fileprofile.md): The profile class for the MIP File API.
+- [`PolicyProfile`](reference/class_mip_policyprofile.md): The profile class for the MIP Policy SDK.
+- [`ProtectionProfile`](reference/class_mip_protectionprofile.md): The profile class for the MIP Protection SDK.
+- [`FileProfile`](reference/class_mip_fileprofile.md): The profile class for the MIP File SDK.
 
 The API used in the consuming application determines which profile class should be used.
 
@@ -38,7 +38,7 @@ The profile itself provides the following functionality:
 
 ## Engines
 
-The File, Profile, and Protection API engines provide an interface for operations performed on by a specific identity. One engine is added to the Profile object for each user or service principal that signs in to the application. It is possible to perform delegated operations via `mip::ProtectionSettings` and the file or protection handler. See [the protection settings section in the FileHandler concepts](concept-handler-file-cpp.md) for more details.
+The File, Profile, and Protection SDK engines provide an interface for operations performed on by a specific identity. One engine is added to the Profile object for each user or service principal that signs in to the application. It is possible to perform delegated operations via `mip::ProtectionSettings` and the file or protection handler. See [the protection settings section in the FileHandler concepts](concept-handler-file-cpp.md) for more details.
 
 There are three engine classes in the SDK, one for each API. The following list shows the engine classes and a few of the functions associated with each:
 
@@ -72,10 +72,19 @@ The following table describes the possible engine states, and which methods can 
 
 ### Engine ID
 
-Each engine has a unique identifier, `id`, that is used in all engine management operations. The application can provide an `id`, or the SDK can generated one, if it's not provided by the application. All other engine properties (for example, email address in the identity info) are opaque payloads for the SDK. The SDK does NOT perform any logic to keep any of the other properties unique, or enforce any other constraints.
+Each engine has a unique identifier, `id`, that is used in all engine management operations. The application can provide an `id`, or the SDK can generated one, if it's not provided by the application. All other engine properties (for example, email address in the identity info) are opaque payloads for the SDK. The SDK does NOT perform any logic to keep any of the other properties unique, or enforce any other constraints. 
 
 > [!IMPORTANT]
-> As a best practice, use an engine Id that is unique to the user and use that each time the user performs an operation with the SDK. Failing to provide an existing engine Id will result in extra service round trips to fetch policy and will fetch licenses that may have already been cached for the existing engine.
+> **As a best practice, use an engine Id that is unique to the user and use that each time the user performs an operation with the SDK. Failing to provide an existing, unique engineId for a user or service will result in extra service round trips. These service round trips may result in performance degradation and throttling. **
+
+```cpp
+// Create the FileEngineSettings object
+FileEngine::Settings engineSettings(mip::Identity(mUsername), // This will be the engine ID. UPN, email address, or other unique user identifiers are recommended. 
+													          mAuthDelegate,            // authDelegate implementation 
+													          "",                       // ClientData
+													          "en-US",                  // Client Locale
+                                    false);                   // Load Sensitive Information Types
+```
 
 ### Engine Management Methods
 
@@ -85,13 +94,13 @@ As mentioned previously, there are three engine management methods in the SDK: `
 
 This method loads an existing engine, or creates one if one doesn't already exist in local state.
 
-If the application doesn't provide an `id`, `AddEngineAsync` generates a new `id`. It then checks to see if an engine with that `id` already exists in local state. If it does, it loads that engine. If the engine does *not* exist in local state, a new engine is created by calling the necessary APIs and backend services.
+If the application doesn't provide an `id` in `FileEngineSettings`, `AddEngineAsync` generates a new `id`. It then checks to see if an engine with that `id` already exists in local storage cache. If it does, it loads that engine. If the engine does *not* exist in local cache, a new engine is created by calling the necessary APIs and backend services.
 
 In both cases, if the method succeeds, the engine is loaded and ready to use.
 
 #### DeleteEngineAsync
 
-Deletes the engine with the given `id`. All traces of the engine are removed from the local state.
+Deletes the engine with the given `id`. All traces of the engine are removed from the local cache.
 
 #### UnloadEngineAsync
 
@@ -101,11 +110,11 @@ This method allows the application to be judicious about memory usage, by unload
 
 ## Next Steps
 
-- Next, learn more about [Authentication concepts](concept-authentication-cpp.md) and [Observers](concept-async-observers.md). MIP provides an extensible authentication model, while observers are used to provide event notifications for asynchronous events. Both are fundamental, and apply to all MIP API sets.
-- Then work through the profile and engine concepts for the File, Policy, and Protection APIs
-  - [File API profile concepts](concept-profile-engine-file-profile-cpp.md)
-  - [File API engine concepts](concept-profile-engine-file-engine-cpp.md)
-  - [Policy API profile concepts](concept-profile-engine-file-profile-cpp.md)
-  - [Policy API engine concepts](concept-profile-engine-file-engine-cpp.md)
-  - [Protection API profile concepts](concept-profile-engine-file-profile-cpp.md)
-  - [Protection API engine concepts](concept-profile-engine-file-engine-cpp.md)  
+- Next, learn more about [Authentication concepts](concept-authentication-cpp.md) and [Observers](concept-async-observers.md). MIP provides an extensible authentication model, while observers are used to provide event notifications for asynchronous events. Both are fundamental, and apply to all MIP SDKs.
+- Then work through the profile and engine concepts for the File, Policy, and Protection SDKs
+  - [File SDK profile concepts](concept-profile-engine-file-profile-cpp.md)
+  - [File SDK engine concepts](concept-profile-engine-file-engine-cpp.md)
+  - [Policy SDK profile concepts](concept-profile-engine-file-profile-cpp.md)
+  - [Policy SDK engine concepts](concept-profile-engine-file-engine-cpp.md)
+  - [Protection SDK profile concepts](concept-profile-engine-file-profile-cpp.md)
+  - [Protection SDK engine concepts](concept-profile-engine-file-engine-cpp.md)  
