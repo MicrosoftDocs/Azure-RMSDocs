@@ -28,7 +28,7 @@ ms.custom: admin
 
 # Migration phase 4 - supporting services configuration
 
->***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -165,13 +165,13 @@ For all Exchange servers, add the following registry values to LicenseServerRedi
 
     - **Type**: Reg_SZ
 
-    - **Value**: `https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing`
+    - **Value**: `https://<AD RMS Intranet Licensing URL>/_wmcs/licensing`
 
     - **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-        - `http://\<connector FQDN\>/_wmcs/licensing`
+        - `http://<connector FQDN>/_wmcs/licensing`
         
-        - `https://\<connector FQDN\>/_wmcs/licensing`
+        - `https://<connector FQDN>/_wmcs/licensing`
 
 1. For Exchange 2013, add the following additional registry value:
 
@@ -179,13 +179,13 @@ For all Exchange servers, add the following registry values to LicenseServerRedi
 
     - **Type**: Reg_SZ
 
-    - **Value**: https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
+    - **Value**: `https://<AD RMS Extranet Licensing URL>/_wmcs/licensing`
 
     - **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-        - `http://\<connector FQDN\>/_wmcs/licensing`
+        - `http://<connector FQDN>/_wmcs/licensing`
 
-        - `https://\<connector FQDN\>/_wmcs/licensing`
+        - `https://<connector FQDN>/_wmcs/licensing`
 
 ## Next steps
 To continue the migration, go to [phase 5 -post migration tasks](migrate-from-ad-rms-phase5.md).

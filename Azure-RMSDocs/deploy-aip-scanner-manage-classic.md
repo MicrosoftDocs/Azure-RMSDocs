@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Running the Azure Information Protection classic scanner
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
+>***Applies to**: Azure Information Protection, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Running the Azure Information Protection scanner](deploy-aip-scanner-manage.md)*.
 
@@ -81,7 +81,7 @@ Perform these steps again as needed when your content changes.
 
     - The .csv files have more details for each file. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
 
-[Initial configurations](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) instruct you to set the **Info types to be discovered** to **Policy only**. This configuration means that only files that meet the conditions you've configured for automatic classification are included in the detailed reports.
+[Initial configurations](deploy-aip-scanner-configure-install-classic.md#configure-the-scanner-in-the-azure-portal) instruct you to set the **Info types to be discovered** to **Policy only**. This configuration means that only files that meet the conditions you've configured for automatic classification are included in the detailed reports.
 
 If you don't see any labels applied, check that your label configuration includes automatic rather than recommended classification, or enable **Treat recommended labeling as automatic** (available in scanner version 2.7.x.x and above).
 

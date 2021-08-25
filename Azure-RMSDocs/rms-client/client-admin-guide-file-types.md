@@ -29,7 +29,7 @@ ms.custom: admin
 
 # Admin Guide: File types supported by the Azure Information Protection classic client
 
->***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](clientv2-admin-guide-file-types.md).*
 
@@ -117,8 +117,9 @@ There are maximum file sizes that the Azure Information Protection client suppor
 
   - To unprotect files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: The maximum file size supported for .pst files is 5 GB. Other file types are limited only by available disk space and memory
 
-    Tip: If you need to search or recover protected items in large .pst files, see [Guidance for using Unprotect-RMSFile for eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
-
+    > [!TIP]
+    > If you need to search or recover protected items in large .pst files, see [Removing protection on PST files](../configure-super-users.md#removing-protection-on-pst-files).
+    >
 ### Supported file types for classification and protection
 
 The following table lists a subset of file types that support native protection by the Azure Information Protection client, and that can also be classified. 
@@ -227,7 +228,7 @@ By default, the scanner also excludes the same file types as the Azure Informati
 
 You can change the file types included or excluded for file inspection by the scanner:
 
-- Configure **File types to scan** in the scanner profile, [using the Azure portal](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+- Configure **File types to scan** in the scanner profile, [using the Azure portal](../deploy-aip-scanner-configure-install-classic.md#configure-the-scanner-in-the-azure-portal).
 
 > [!NOTE]
 > If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted. 

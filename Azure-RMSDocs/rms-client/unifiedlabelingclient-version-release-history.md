@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 04/28/2021
+ms.date: 07/26/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,7 +17,6 @@ ms.service: information-protection
 #audience:git
 #ms.devlang:
 ms.subservice: v2client
-ms.reviewer: elkamins
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
@@ -26,7 +25,7 @@ ms.custom: admin
 
 # Azure Information Protection unified labeling client - Version release history and support policy
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
@@ -50,6 +49,7 @@ Each general availability (GA) version of the Azure Information Protection unifi
 
 |Client version|Date released|
 |--------------|-------------|
+| 2.8.85.0| 09/22/2020|
 | 2.7.101.0 | 08/23/2020 |
 | 2.7.99.0 | 07/20/2020 |
 | 2.7.96.0  |06/29/2020 |
@@ -77,10 +77,79 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
+## Version 2.12.62.0
+
+Unified labeling scanner and client version 2.12.62.0
+
+**Released** 08/02/2021
+
+This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
+
+### Support for DKE labels with user-defined permissions
+
+This version of the unified labeling client and scanner supports DKE labels with user-defined permissions in Word, Excel, and PowerPoint.
+
+For more information, see [Azure Information Protection tenant keys](../plan-implement-tenant-key.md#double-key-encryption-dke) and [Double Key Encryption for Microsoft 365](/microsoft-365/compliance/double-key-encryption).
+
+### Client usage logging in the Windows event log
+
+The unified labeling client now [logs user activity to the local Windows event log](clientv2-admin-guide-files-and-logging.md#client-side-usage-logging).
+
+### AIP scanner: General availability support for DLP policies
+
+Microsoft 365 Data Loss Prevention (DLP) policies are now supported with the Azure Information Protection unified labeling scanner directly in the main installation instead of a dedicated version only.
+
+- **Using a DLP policy** enables the scanner to detect potential data leaks by matching DLP rules to files stored in file shares and SharePoint Server.
+
+- [**Enable DLP rules in your content scan job**](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy) to reduce the exposure of any files that match your DLP policies.
+
+    The scanner may reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**.
+
+- **Scanning your files with DLP rules enabled also creates file permission reports**. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
+
+Settings for enforcing or testing the DLP policy are configured in the [Microsoft 365 Compliance center](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
+
+For more information, including licensing requirements, see:
+
+- [Configure a DLP policy in the AIP scanner](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy)
+- [Learn about the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-learn), in the Microsoft 365 documentation
+- [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started)
+- [Use the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-use)
+
+
+### Fixes and improvements
+
+- Fixes for errors where AIP may not load if a [policy](/microsoft-365/compliance/reate-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
+
+- Fixed possibly incorrect **method** values in [New label audit logs](../audit-logs.md#new-label-audit-logs) for Outlook events.
+
+- Fixes for possibly incorrect **label** and **labelBefore** values in [Change protection audit logs](../audit-logs.md#change-protection-audit-logs).
+
+- Fixes for errors where documents may not be saved because of [edits made in the labeling metadata and lack of permissions](/microsoft-365/compliance/create-sensitivity-labels).
+
+- Fixes for possible crashes when running PowerShell cmdlets. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
+
+- Fixed errors where [justification popup messages](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) may not appear in Outlook.
+
+- Fixed errors where the [AIP add-in](clientv2-admin-guide-install.md) in Outlook may cause an error message to appear, if a message file that was saved locally was opened, closed, and then opened again.
+
+- Fixed errors where [visual markings](use-client.md#the-client-side-of-azure-information-protection) may not be refreshed as expected after changing a file's label to a label with no content markings.
+
+- Fixed errors where [audit logs](../audit-logs.md) may not be sent when a default label is applied to a document.
+
+- Fixed issues for [content markings](use-client.md#the-client-side-of-azure-information-protection) in Outlook may be duplicated.
+
+- Fixed issues where deferred messages may not be sent in Outlook when a deferral rule set is defined and the [AIP client is installed](clientv2-admin-guide-install.md).
+
+- Fixed issues where [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) may not display correctly when an image is found in the email signature.
+
+- Fixed issues where [Change protection audit logs](../audit-logs.md#change-protection-audit-logs) may not be sent as expected when a label is removed in Outlook.
+
 ## Version 2.11.58.0
 
 Unified labeling scanner and client version 2.11.58.0
 
+**Supported through** 02/08/2022
 
 **Released** 04/29/2021
 
@@ -94,13 +163,13 @@ This version includes the following new features, fixes, and enhancements for th
 - [Scanner diagnostics tool improvements](#scanner-diagnostics-tool-improvements)
 - [Improved scanner details output](#improved-scanner-details-output)
 - [Updates for the scanner's supported information types](#updates-for-the-scanners-supported-information-types)
-- [Fixes and improvements](#fixes-and-improvements)
+- [Fixes and improvements](#fixes-and-improvements-211580)
 
 ### Scanner usage logging in the Windows event log
 
 The unified labeling scanner now logs user activity to the local Windows event log.
 
-For more information, see [Usage logging for the Azure Information Protection scanner](clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-scanner).
+For more information, see [Usage logging for the Azure Information Protection scanner](clientv2-admin-guide-files-and-logging.md#scanner-side-usage-logging).
 
 ### Scanner diagnostics tool improvements
 
@@ -130,7 +199,7 @@ If you have sensitivity labels that use these sensitive information types, we re
 - **EU Phone Number**
 - **EU GPS Coordinates**
 
-### Fixes and improvements
+### Fixes and improvements (2.11.58.0)
 
 The following fixes were delivered in version 2.11.58.0 of the Azure Information Protection unified labeling client and scanner:
 
@@ -169,41 +238,13 @@ Before you start, we recommend that you review all related prerequisites and lim
 - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
 - [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
 
-## Version 2.10.43.0 for DLP policies (Public preview)
-
-Unified labeling scanner version 2.10.43.0
-
-**Release** 03/02/2021
-
-This dedicated version of Azure Information Protection provides a public preview of the support for Data Loss Prevention (DLP) policies supported by Microsoft 365. 
-
-- **Using a DLP policy** enables the scanner to detect potential data leaks by matching DLP rules to files stored in file shares and SharePoint Server. 
-
-- [**Enable DLP rules in your content scan job**](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview) to reduce the exposure of any files that match your DLP policies. 
-
-    The scanner may reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**.
-
-- **Scanning your files with DLP rules enabled also creates file permission reports**. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
-
-Settings for enforcing or testing the DLP policy are configured in the [Microsoft 365 Compliance center](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
-
-> [!IMPORTANT]
-> To leverage the DLP support in public preview, you must download and install the dedicated installation file for this release. On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `AzInfoProtection_2.10.43_DLP_PublicPreview.exe` file.
-> 
-For more information, including licensing requirements, see:
-
-- [Configure a DLP policy in the AIP scanner](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview)
-- [Learn about the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-learn), in the Microsoft 365 documentation
-- [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started)
-- [Use the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-use)
-
-
-
 ## Version 2.9.116.0
 
 Unified labeling scanner and client version 2.9.116.0
 
 **Released** 02/08/2021
+
+**Supported through** 10/29/2021
 
 **Fixed issues** 
 
@@ -211,7 +252,7 @@ Users are now able to view protected files as expected in the following scenario
 
 - When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue had occurred only with the [AIP Viewer app](clientv2-view-use-files.md).
 
-- When content with a scoped label is shared with users or groups not included in the label's scope. This issue had occurred both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the [File Explorer](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
+- When content with a scoped label is shared with users or groups not included in the label's scope. This issue had occurred both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the [File Explorer](clientv2-classify-protect.md#use-the-file-explorer-to-classify-and-protect-files).
 
 For more information, see the [AIP unified labeling client user guide](clientv2-user-guide.md).
 ## Version 2.9.111.0
@@ -259,7 +300,7 @@ To support disconnected or Azure China 21Vianet scanner servers, we've added the
 
 The [**Set-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery) cmdlet was also added to provide additional support, enabling you to update the installation settings for the Network Discovery service via PowerShell.
 
-For more information, see [When the scanner server cannot have internet connectivity](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) and [Configure the scanner](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+For more information, see [When the scanner server cannot have internet connectivity](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) and [Configure the scanner](../deploy-aip-scanner-configure-install.md#configure-the-scanner-settings).
 
 ### Support for NFS repositories in content scan jobs (Public preview)
 
@@ -344,163 +385,6 @@ The following fixes were delivered in version 2.9.111.0 of the [Azure Informatio
 
 - [New advanced client setting](clientv2-admin-guide-customizations.md#remove-all-shapes-of-a-specific-shape-name) (**PowerPointRemoveAllShapesByShapeName**), added to remove shapes from PowerPoint headers or footers, by using the shape name instead of the text inside a shape.
 
-## Version 2.8.85.0
-
-Unified labeling scanner and client version 2.8.85.0
-
-**Released** 09/22/2020
-
-**Supported through** 7/13/2021
-
-This version includes the following new features, fixes, and enhancements, for the unified labeling scanner and client:
-
-- **New features for the scanner**:
-
-    - [Optional full rescans for changes detected](#optional-full-rescans-for-changes-detected)
-    - [Configure SharePoint timeouts](#configure-sharepoint-timeouts)
-    - [Network discovery support](#network-discovery-support-public-preview) (public preview)
-
-- **New features for the client**:
-
-    - [Administrator customizations for AIP popups in Outlook](#administrator-customizations-for-aip-popups-in-outlook)
-    - [Administrator customizations for justification prompts](#administrator-customizations-for-justification-prompts)
-    - [Audit log updates](#audit-log-updates)
-    - [DKE template-based labeling updates](#dke-template-based-labeling-updates)
-
-- **Fixes and improvements:**
-
-    - [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues-version-28850)
-    - [Client fixes and improvements](#azure-information-protection-client-fixed-issues-version-28850)
-
-
-### Optional full rescans for changes detected
-
-Administrators can now skip a full rescan after making changes to policies or content scan jobs. Skipping a full rescan applies your changes only on files that have been modified or created since the last scan.
-
-For example, you may have made changes that only affect the end user, such as in visual markings, and don't want to take the time required to run a full rescan immediately.
-
-Skip the full, immediate rescan, and return later to [run a full rescan](../deploy-aip-scanner-manage.md#rescanning-files) and apply your changes across your repositories.
-
-> [!IMPORTANT]
-> Administrators making changes in their policies and content scan jobs must now understand the effects of those changes on the content, and determine whether a full rescan is required.
->
-> For example, if you’ve changed **Sensitivity policy** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
->
-
-### Configure SharePoint timeouts
-
-The default timeout for SharePoint interactions has been updated to two minutes, after which the attempted AIP operation fails.
-
-AIP administrators can also now configure SharePoint timeouts, separately for all web requests and file web requests.
-
-For more information, see [Configure SharePoint timeouts](clientv2-admin-guide-customizations.md#configure-sharepoint-timeouts).
-
-### Network Discovery support (public preview)
-
-The unified labeling scanner now includes a new **network discovery** service, which enables you to scan specified IP addresses or ranges for network file shares that may have sensitive content.
-
-The **network discovery** service updates **Repository** reports with a list of share locations that may be at risk, based on the discovered permissions and access rights. Check the updated **Repository** reports to ensure that your content scan jobs include all repositories that need to be scanned.
-
-> [!TIP]
-> For more information, see [Network discovery cmdlets](#network-discovery-cmdlets-public-preview).
-
-**To use the Network discovery service**
-
-1. Upgrade your scanner version and make sure that you have your scanner cluster configured correctly. For more information, see:
-    - [Upgrading your scanner](../deploy-aip-scanner-configure-install.md#upgrade-your-scanner)
-    - [Create a scanner cluster](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
-
-1. Make sure that you have Azure Information Protection analytics enabled.
-
-    In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview)**.
-
-    For more information, see [Central reporting for Azure Information Protection (public preview)](../reports-aip.md).
-
-1. Enable Network Discovery by running the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) PowerShell cmdlet.
-
-    > [!IMPORTANT]
-    > When running this cmdlet, make sure to use a weak user as the value for the **StandardDomainsUserAccount** parameter to ensure that any public access to repositories is reported.
-    >
-    > This user must be a member of the **Domain Users** group only, and is used to simulate public access to the repositories.
-
-1. In the Azure portal, go to Azure Information Protection > **Network scan jobs** and [create jobs to scan specific areas of your network](../deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview).
-
-1. Use the generated reports on the new [**Repositories**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) pane to find additional network file shares that may be at risk. Add any risky file shares to your [content scan jobs](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) to scan the added repositories for sensitive content.
-
-### Network discovery cmdlets (public preview)
-
-PowerShell cmdlets added for Network Discovery include:
-
-|Cmdlet  |Description  |
-|---------|---------|
-|[**Get-MIPNetworkDiscoveryConfiguration**](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)     |   Gets the current setting for whether the Network Discovery service pulls network scan data from the default, online configuration, or an offline file exported from the Azure portal.      |
-|[**Get-MIPNetworkDiscoveryJobs**](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)     |    Gets a list of currently configured network scan jobs.     |
-|[**Get-MIPNetworkDiscoveryStatus**](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)     |     Gets the current status of all network scan jobs configured in your tenant.    |
-| [**Import-MIPNetworkDiscoveryConfiguration**](/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)     |    Imports the configuration for a network scan job from a file.     |
-| [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)| Installs the Network Discovery service |
-|[**Set-MIPNetworkDiscoveryConfiguration**](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)     |   Sets the configuration for whether the Network Discovery service pulls network scan data from the default, online configuration, or an offline file exported from the Azure portal.      |
-|[**Start-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)     |  Runs a specific network scan job immediately.       |
-|[**Uninstall-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  Uninstalls the Network Discovery service.       |
-| | |
-
-
-### Administrator customizations for AIP popups in Outlook
-
-AIP administrators can now customize the popups that appear in Outlook for end-users, such as popups for blocked emails, warning messages, and justification prompts.
-
-For more information, including several sample rules for common use case scenarios, see [Customize Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages).
-
-### Administrator customizations for justification prompts
-
-AIP administrators can now customize one of the options in the justification prompts that are displayed when end-users change classification labels on documents and emails.
-
-For more information, see [Customize justification prompt texts for modified labels](clientv2-admin-guide-customizations.md#customize-justification-prompt-texts-for-modified-labels).
-
-### Audit log updates
-
-Audit logs for access events from the unified labeling client are now sent only when users open labeled or protected files, providing a clearer indication of user access.
-
-Information types are no longer sent by [audit logs for access events](../audit-logs.md#access-audit-logs), and are now sent only with [audit logs for discover events](../audit-logs.md#discover-audit-logs).
-
-For more information, see [Access audit logs](../audit-logs.md#access-audit-logs).
-
-For more information, see [Azure Information Protection audit log reference](../audit-logs.md).
-### DKE template-based labeling updates
-
-Azure Information Protection now supports Double Key Encryption (DKE) template-based labeling in the scanner, as well as using the File Explorer and PowerShell.
-
-For more information, see:
-
-- [Planning and implementing your Azure Information Protection tenant key](../plan-implement-tenant-key.md)
-- [Double Key Encryption](/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 docs
-
-### Azure Information Protection scanner fixed issues, version 2.8.85.0
-
-The following fixes were delivered in version 2.8.85.0 of the Azure Information Protection unified labeling scanner:
-
-- Improvements for [scanning files with long paths](../deploy-aip-scanner-prereqs.md#file-path-requirements)
-- The AIP scanner now scans full [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) environments when there are multiple ContentDatabases.
-- The AIP scanner now supports [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) files with a period in the path, but no extension. For example, a file with a path of `https://sharepoint.contoso.com/shared documents/meeting-notes`, with no extension, is now scanned successfully.
-- The AIP scanner now supports [custom sensitive information types](../deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types) that are created in the Microsoft Security and Compliance center, and do not belong to any policy.
-
-### Azure Information Protection client fixed issues, version 2.8.85.0
-
-The following fixes were delivered in version 2.8.85.0 of the Azure Information Protection unified labeling client:
-
-- A new, narrated indication for any items currently selected from the **Sensitivity** ![columns icon](../media/selected-sensitivity-options.png "columns icon") menu in Office apps. For more information, see the page on [Sensitivity labels in the Microsoft 365 docs](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do).
-- Fixes for viewing JPEG files in the [AIP Viewer](clientv2-view-use-files.md)
-- Downgrading a label now automatically includes the **ProtectionOwnerBefore** in [audit events](../audit-logs.md#downgrade-label-audit-logs)
-- Change events now include the **LastModifiedDate** in [audit logs](../audit-logs.md#change-protection-audit-logs)
-- Added support for **Proxy.pac** files when using a proxy to acquire a token. For more information, see [Firewalls and network infrastructure requirements](../requirements.md#firewalls-and-network-infrastructure).
-- Fixes for authenticating when [refreshing policies](../configure-policy.md#making-changes-to-the-policy)
-- Fixes for [automatic content marking](../configure-policy-markings.md) updates for PowerPoint in read-only mode
-- Improvements in popups and error texts
-- Tooltip updates to show the highest [classification for email attachments](../faqs-infoprotect.md#when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling), considering both the classification of the email and the attachment.
-- Fixes to the **Report an Issue** text when modifying sensitivity labeling policies using the [**Set-LabelPolicy**](/powershell/module/exchange/set-labelpolicy) cmdlet
-- Fixes in errors shown when the [**Set-AipFileLabel**](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet is used with an invalid label ID.
-- Performance fixes for decrypting SMIME emails in Outlook's reading pane. To implement this fix, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property.
-- Fixes for [decrypting PST files](clientv2-admin-guide-file-types.md) that contain password-encrypted files. Decrypting PST files no longer fails if the PST file contains a password-protected file.
-- Removing a protection label that is not included in your scoped policy now removes both the label and protection from the content.
 
 ## Next steps
 
@@ -513,5 +397,5 @@ For more information about installing and using the unified labeling client:
 
 For information about new features in the Microsoft 365 compliance center, see:
 
-- [What's new in Microsoft 365 compliance?](https://docs.microsoft.com/microsoft-365/compliance/whats-new)
+- [What's new in Microsoft 365 compliance?](/microsoft-365/compliance/whats-new)
 - [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=Microsoft%2CInformation%2CProtection)

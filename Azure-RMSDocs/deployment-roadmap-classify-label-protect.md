@@ -26,7 +26,7 @@ ms.custom: admin
 
 # AIP deployment roadmap for classification, labeling, and protection
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -61,7 +61,7 @@ Perform the following steps:
 
 ## Confirm your subscription and assign user licenses
 
-Confirm that your organization has a subscription that includes the functionality and features you expect. You can find these details on the [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection) page.
+Confirm that your organization has a subscription that includes the functionality and features you expect. For more information, see the [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection) page.
 
 Then, assign licenses from this subscription to each user in your organization who will classify, label, and protect documents and emails.
 

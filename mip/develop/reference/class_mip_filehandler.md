@@ -1,19 +1,18 @@
 ---
 title: class FileHandler 
 description: Documents the filehandler::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/23/2021
+ms.author: mbaldwin
+ms.date: 08/23/2021
 ---
 
 # class FileHandler 
 Interface for all file handling functions.
   
 ## Summary
-
-Members                        | Descriptions                                
+ Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<ContentLabel\> GetLabel()  |  Starts retrieving the sensitivity label from the file.
 public std::vector\<std::pair\<std::string, std::string\>\> GetProperties(uint32_t version)  |  Retrievs the file propertries according to version.

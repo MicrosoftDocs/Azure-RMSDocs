@@ -1,11 +1,11 @@
 ---
 title: class ApplicationActionState 
 description: Documents the applicationactionstate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/23/2021
+ms.author: mbaldwin
+ms.date: 08/23/2021
 ---
 
 # class ApplicationActionState 
@@ -20,6 +20,7 @@ public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Get the new labe
 public virtual std::vector\<std::pair\<std::string, std::string\>\> GetNewLabelExtendedProperties() const  |  Return new label's extended properties.
 public ActionType GetSupportedActions() const  |  Gets a masked enum describing all the supported action types.
 public bool IsRecommendationEnabled() const  |  Get a bool that signifying recommend action will return. by default should be true unless user specifies else.
+public virtual int GetContentTimeZoneUtcOffset() const  |  Return the content's time zone as an offset from UTC, in seconds, or kTimeZoneOffsetLocalTime to use the machine's local time.
   
 ## Members
   
@@ -72,3 +73,9 @@ Get a bool that signifying recommend action will return. by default should be tr
   
 **Returns**: A bool that signifying recommend action will return.
 ActionType::RecommendLabel must be enable for this field to have an affect.
+  
+### GetContentTimeZoneUtcOffset function
+Return the content's time zone as an offset from UTC, in seconds, or kTimeZoneOffsetLocalTime to use the machine's local time.
+
+  
+**Returns**: The content's time zone as an offset from UTC, in seconds, or kTimeZoneOffsetLocalTime to use the machine's local time.

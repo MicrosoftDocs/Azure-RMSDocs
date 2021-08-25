@@ -1,11 +1,11 @@
 ---
 title: class ProtectionDescriptorBuilder 
 description: Documents the protectiondescriptorbuilder::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/23/2021
+ms.author: mbaldwin
+ms.date: 08/23/2021
 ---
 
 # class ProtectionDescriptorBuilder 
@@ -24,6 +24,7 @@ public void SetEncryptedAppData(const std::map\<std::string, std::string\>& valu
 public void SetSignedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be signed.
 public void SetDoubleKeyUrl(const std::string& doubleKeyUrl)  |  Sets the double key url to be used for custom protection.
 public void SetLabelId(const std::string& labelId)  |  Sets the labelId for UDP protection. Only allowed for custom protection type.
+enum LicenseType  |  License type to create a specialized license.
   
 ## Members
   
@@ -96,7 +97,7 @@ An application can specify a dictionary of app-specific data that will be signed
 Sets the double key url to be used for custom protection.
 
 Parameters:  
-* **value**: Double key url
+* **doubleKeyUrl**: Double key url
 
 
   
@@ -104,5 +105,15 @@ Parameters:
 Sets the labelId for UDP protection. Only allowed for custom protection type.
 
 Parameters:  
-* **value**: label Id
+* **labelId**: label Id
 
+
+  
+### LicenseType enum
+
+Values                         | Descriptions                                
+--------------------------------|---------------------------------------------
+DoNotForward            | Defines a do not forward license type.
+EncryptOnly            | Defines an encrypt only license type.
+
+License type to create a specialized license.

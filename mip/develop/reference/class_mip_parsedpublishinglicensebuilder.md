@@ -1,11 +1,11 @@
 ---
 title: class ParsedPublishingLicenseBuilder 
 description: Documents the parsedpublishinglicensebuilder::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/23/2021
+ms.author: mbaldwin
+ms.date: 08/23/2021
 ---
 
 # class ParsedPublishingLicenseBuilder 
@@ -24,7 +24,7 @@ public void SetDescriptor(std::shared_ptr\<LicenseDescriptor\> descriptor)  |  S
 public void SetReferralInfoUrl(const std::string& referralInfoUrl)  |  Sets the referral info url.
 public void SetSignedApplicationData(const std::vector\<std::shared_ptr\<LicenseApplicationData\>\>& signedApplicationData)  |  Sets the signed application data.
 public void SetIssuedTime(const std::chrono::time_point\<std::chrono::system_clock\>& issuedTime)  |  Sets the issued time.
-public std::shared_ptr\<ParsedPublishingLicense\> CreateParsedPublishingLicense()  |  Creates a [ParsedPublishingLicense](class_mip_parsedpublishinglicense.md) with the properties set on this object instance.
+public std::shared_ptr\<ParsedPublishingLicense\> CreateParsedPublishingLicense()  |  Creates a ParsedPublishingLicense with the properties set on this object instance.
   
 ## Members
   

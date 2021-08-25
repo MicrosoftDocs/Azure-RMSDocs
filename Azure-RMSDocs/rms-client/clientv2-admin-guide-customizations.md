@@ -27,13 +27,13 @@ ms.custom: admin
 
 # Admin Guide: Custom configurations for the Azure Information Protection unified labeling client
 
-<!-- Notes for contributors: In this file, you can add new settings on at the bottom of the page to simplify the content editing. However, remember to add the xref by setting AND by feature to the reference sections at the top. 
+<!-- Notes for contributors: In this file, you can add new settings on at the bottom of the page to simplify the content editing. However, remember to add the xref by setting AND by feature to the reference sections at the top.
 
-There are two types of reference sections - the legacy table by setting name, and a newer section of reference by feature type. This newer section helps admins understand and configure settings that are relevant to eachother, possibly in a sort of a flow. 
+There are two types of reference sections - the legacy table by setting name, and a newer section of reference by feature type. This newer section helps admins understand and configure settings that are relevant to eachother, possibly in a sort of a flow.
 
 FUTURE task - reorganize this topic by feature type so that admins can read related settings together. NOT recommended to reorganize this page into sub-pages as there are too many xrefs out there to this page and you'll need a lot of redirects. Additionally, users might just search for their setting or text on a single page. It would help to have related settings documented one right after the other to help with scrolling. -->
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
@@ -501,7 +501,7 @@ To use this advanced property, you'll need to find the shape name in the Word do
 Avoid removing shapes that contain the text that you wish to ignore, by defining the name of all shapes to remove and  avoid checking the text in all shapes, which is a resource-intensive process.
 
 > [!NOTE]
-> If you do not specify Word shapes in this additional advanced property setting, and Word is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) value. 
+> In Microsoft Word, shapes can be removed either by defining the shapes name, or by its text, but not both. If the **WordShapeNameToRemove** property is defined, any configurations defined by the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) value are ignored.
 >
 
 **To find the name of the shape that you're using and wish to exclude**:
@@ -592,7 +592,7 @@ For more information, see:
 
 If a header or footer text is more than a single line, create a key and value for each line. For example, if you have the following footer with two lines:
 
-**The file is classified as Confidential**
+**The file is classified as Confidential**<br>
 **Label applied manually**
 
 To remove this multiline footer, you create the following two entries for the same label policy:
@@ -604,7 +604,7 @@ To remove this multiline footer, you create the following two entries for the sa
 Example PowerShell command, where your label policy is named "Global":
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove=ConvertTo-Json("Confidential","Label applied")}
 ```
 
 #### Optimization for PowerPoint
@@ -1015,16 +1015,19 @@ To modify this timeout, create the following advanced setting for the selected p
 Example PowerShell command, where your label policy is named "Global":
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableOutlookDistributionListExpansion="true"} @{OutlookGetEmailAddressesTimeOutMSProperty="3000"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{
+  EnableOutlookDistributionListExpansion="true"
+  OutlookGetEmailAddressesTimeOutMSProperty="3000"
+}
 ```
 
 ## Disable sending audit data to Azure Information Protection analytics
 
 This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-The Azure Information Protection unified labeling client supports central reporting and by default, sends its audit data to [Azure Information Protection analytics](../reports-aip.md). For more information about what information is sent and stored, see the [Information collected and sent to Microsoft](../reports-aip.md#information-collected-and-sent-to-microsoft) section from the central reporting documentation.
+The Azure Information Protection unified labeling client supports central reporting and by default, sends its audit data to [Azure Information Protection analytics](../reports-aip.md). For more information about what information is sent and stored, see the [Information collected and sent to Log Analytics](../reports-aip.md#information-collected-and-sent-to-log-analytics) section from the central reporting documentation.
 
-To change this behavior so that this information is not sent by the unified labeling client, enter the following strings for the selected label policy:
+To change this behavior so that audit data is not sent by the unified labeling client, enter the following strings for the selected label policy:
 
 - Key: **EnableAudit**
 
@@ -1056,9 +1059,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
 ## Limit CPU consumption
 
-The AIP unified labeling scanner limits resources consumption to ensure that the overall machine CPU is never higher than 85 percent. 
-
-Starting from scanner version 2.7.x.x, we recommend limiting CPU consumption using the following **ScannerMaxCPU** and **ScannerMinCPU** advanced settings method. 
+Starting from scanner version 2.7.x.x, we recommend limiting CPU consumption using the following **ScannerMaxCPU** and **ScannerMinCPU** advanced settings. 
 
 > [!IMPORTANT]
 > When the following thread limiting policy is in use, **ScannerMaxCPU** and **ScannerMinCPU** advanced settings are ignored. To limit CPU consumption using **ScannerMaxCPU** and **ScannerMinCPU** advanced settings, cancel the use of policies that limit the number of threads. 
@@ -1071,7 +1072,7 @@ To limit CPU consumption on the scanner machine, it is manageable by creating tw
 
     Set to **100** by default, which means there is no limit of maximum CPU consumption. In this case, the scanner process will try to use all available CPU time to maximize your scan rates. 
 
-    If you set **ScannerMaxCPU** to less than 100, scanner will monitor the CPU consumption over the past 30 minutes, and if the max CPU crossed the limit you set, it will start to reduce number of threads allocated for new files. 
+    If you set **ScannerMaxCPU** to less than 100, the scanner will monitor the CPU consumption over the past 30 minutes. If the average CPU crossed the limit you set, it will start to reduce number of threads allocated for new files. 
 
     The limit on the number of threads will continue as long as CPU consumption is higher than the limit set for **ScannerMaxCPU**.
 
@@ -1337,7 +1338,8 @@ If the label you specify is configured for encryption, for the Azure Information
 
 For Office apps with built-in labeling, these labels do not display to users. 
 
-If you want the label to be visible in Outlook only, configure the label to apply encryption to **Only email messages in Outlook**.
+If you want the label to be visible in Outlook only, configure the **Do Not Forward** encryption option from [Let users assign permissions](/microsoft-365/compliance/encryption-sensitivity-labels#let-users-assign-permissions).
+
 
 Example PowerShell commands, where your label is named "Recipients Only":
 
@@ -1740,7 +1742,7 @@ Since no specific extensions are specified, all supported file types are include
             "LocalizationData": { 				
                 "en-us": { 				  
                     "Title": "Email Blocked", 				  
-                    "Body": "The email or at least one of the attachments is classified as <Bold>${MatchedLabelName}</Bold>. Documents classified as <Bold> ${MatchedLabelName}</Bold> cannot be sent to external recipients (${MatchedRecipientsList}).<br><br>List of attachments classified as <Bold>${MatchedLabelName}</Bold>:<br><br>${MatchedAttachmentName}<br><br><br>This message will not be sent.<br>You are responsible for ensuring compliance with classification requirements as per Contoso’s policies." 				
+                    "Body": "The email or at least one of the attachments is classified as <Bold>${MatchedLabelName}</Bold>. Documents classified as <Bold> ${MatchedLabelName}</Bold> cannot be sent to external recipients (${MatchedRecipientsList}).<br><br>List of attachments classified as <Bold>${MatchedLabelName}</Bold>:<br><br>${MatchedAttachmentName}<br><br><br>This message will not be sent.<br>You are responsible for ensuring compliance with classification requirements as per Contoso's policies." 				
                 }, 				
                 "es-es": { 				  
                     "Title": "Correo electrónico bloqueado", 				  
@@ -1821,11 +1823,11 @@ In the following example, the attachment list that requires labeling is:
 			]
 		},		
         { 			
-            "type" : "Email Block", 			
+            "type" : "Block", 			
             "LocalizationData": { 				
                 "en-us": { 				  
                     "Title": "Emailed Blocked", 				  
-                    "Body": "Classification is necessary for attachments to be sent to external recipients.<br><br>List of attachments that are not classified:<br><br>${MatchedAttachmentName}<br><br><br>This message will not be sent.<br>You are responsible for ensuring compliance to classification requirement as per Contoso’s policies.<br><br>For MS Office documents, classify and send again.<br><br>For PDF files, classify the document or classify the email (using the most restrictive classification level of any single attachment or the email content) and send again." 				
+                    "Body": "Classification is necessary for attachments to be sent to external recipients.<br><br>List of attachments that are not classified:<br><br>${MatchedAttachmentName}<br><br><br>This message will not be sent.<br>You are responsible for ensuring compliance to classification requirement as per Contoso's policies.<br><br>For MS Office documents, classify and send again.<br><br>For PDF files, classify the document or classify the email (using the most restrictive classification level of any single attachment or the email content) and send again." 				
                 }, 				
                 "es-es": { 				  
                     "Title": "Correo electrónico bloqueado", 				  
@@ -1877,7 +1879,7 @@ Since no specific extensions are specified, all supported file types are include
             "LocalizationData": { 				
                 "en-us": { 				  
                     "Title": "Warning", 				  
-                    "Body": "You are sending a document that is classified as <Bold>${MatchedLabelName}</Bold> to at least one external recipient. Please make sure that the content is correctly classified and that the recipients are entitled to receive this document.<br><br>List of attachments classified as <Bold>${MatchedLabelName}</Bold>:<br><br>${MatchedAttachmentName}<br><br><Bold>List of external email addresses:</Bold><br>${MatchedRecipientsList})<br><br>You are responsible for ensuring compliance to classification requirement as per Contoso’s policies.<br><br><Bold>Acknowledgement</Bold><br>By clicking <Bold>I accept<\Bold> below, you confirm that the recipient is entitled to receive the content and the communication complies with CS Policies and Standards",
+                    "Body": "You are sending a document that is classified as <Bold>${MatchedLabelName}</Bold> to at least one external recipient. Please make sure that the content is correctly classified and that the recipients are entitled to receive this document.<br><br>List of attachments classified as <Bold>${MatchedLabelName}</Bold>:<br><br>${MatchedAttachmentName}<br><br><Bold>List of external email addresses:</Bold><br>${MatchedRecipientsList})<br><br>You are responsible for ensuring compliance to classification requirement as per Contoso's policies.<br><br><Bold>Acknowledgement</Bold><br>By clicking <Bold>I accept</Bold> below, you confirm that the recipient is entitled to receive the content and the communication complies with CS Policies and Standards",
 					"Options": [ 						
                         "I accept"			    
                     ] 
@@ -1991,7 +1993,7 @@ Since no specific extensions are specified, all supported file types are include
 
 By default, the timeout for SharePoint interactions is two minutes, after which the attempted AIP operation fails.
 
-Starting in [version 2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), AIP administrators can control this timeout using the following advanced properties, using an **hh:mm:ss** syntax to define the timeouts:
+Starting in version 2.8.85.0, AIP administrators can control this timeout using the following advanced properties, using an **hh:mm:ss** syntax to define the timeouts:
 
 - **SharepointWebRequestTimeout**. Determines the timeout for all AIP web requests to SharePoint. Default = 2 minutes.
 

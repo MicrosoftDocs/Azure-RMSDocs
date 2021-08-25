@@ -25,7 +25,7 @@ ms.subservice: aiplabels
 
 # Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
 >
 > ***Relevant for**: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -39,7 +39,7 @@ To install the unified labeling scanner and complete this tutorial, you'll need:
 
 |Requirement  |Description  |
 |---------|---------|
-|**A supporting subscription**     |  You'll need an Azure subscription that includes [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />If you don't have one of these subscriptions, create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
+|**A supporting subscription**     |  You'll need an Azure subscription that includes [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection/). <br /><br />If you don't have one of these subscriptions, create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
 |**Admin access to the Azure portal** |Make sure that you can sign in to the [Azure portal](https://portal.azure.com/) with one of the following administrator accounts: <br /><br />- **Compliance administrator**<br />- **Compliance data administrator**<br />- **Security administrator**<br />- **Global administrator** |
 |**Client installed**    |   Install the AIP unified labeling client on your computer to access the scanner installation. <br /><br />Download and run the **AzInfoProtection_UL.exe** from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). <br /><br />When the installation is complete, you may be prompted to restart your computer or Office software. Restart as needed to continue. <br /><br />For more information, see [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md).|
 |**SQL Server**     | To run the scanner, you'll need SQL Server installed on the scanner machine. <br /><br /> To install, go to the [SQL Server download page](https://www.microsoft.com/sql-server/sql-server-downloads) and select **Download now** under the installation option you want to install. In the installer, select the **Basic** installation type. <br /><br />**Note**: We recommend installing SQL Server Enterprise for production environments, and Express only for testing environments.       |
@@ -190,7 +190,7 @@ Continue with [installing the optional Network Discovery service](#install-the-n
 
 ## Install the Network Discovery service (public preview)
 
-Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) of the AIP unified labeling client, administrators can use the AIP scanner to scan network repositories, and then add any repositories that seem risky to a content scan job.
+Starting in version 2.8.85.0 of the AIP unified labeling client, administrators can use the AIP scanner to scan network repositories, and then add any repositories that seem risky to a content scan job.
 
 Network scan jobs help you understand *where* your content may be at risk, by attempting to access configured repositories as both an administrator and a public user.
 
@@ -248,7 +248,7 @@ Once you have the scanner and the Network Discovery service installed, you're re
 For more information, see [Tutorial: Discovering your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md).
 
 > [!TIP]
-> If you've installed [version 2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), we recommend that you scan your network to discover repositories that may have content at risk. 
+> If you've installed version 2.8.85.0, we recommend that you scan your network to discover repositories that may have content at risk. 
 >
 >To scan your risky repositories for sensitive data, and then classify and protect that data from outside users, update your content scan job with the details of the repositories you've found.
 >

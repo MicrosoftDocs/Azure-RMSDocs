@@ -1,11 +1,11 @@
 ---
 title: class MipContext 
 description: Documents the mipcontext::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/23/2021
+ms.author: mbaldwin
+ms.date: 08/23/2021
 ---
 
 # class MipContext 
@@ -21,7 +21,9 @@ public const std::string& GetMipPath() const  |  Get file path for logs, caches,
 public bool IsOfflineOnly()  |  Get offline-only setting.
 public LogLevel GetThresholdLogLevel() const  |  Get threshold log level.
 public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate()  |  Get logger implementation.
-public LoggerDelegate* GetRawLoggerDelegate()  |  Get logger implementation.
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate()  |  Get Http implementation.
+public LoggerDelegate* GetRawLoggerDelegate()  |  Get raw logger implementation.
+public std::shared_ptr\<StorageDelegate\> GetStorageDelegate()  |  Get Storage Delegate implementation if provided.
 public const std::map\<FlightingFeature, bool\>& GetFlightingFeatures() const  |  Get flighting feature set.
   
 ## Members
@@ -72,11 +74,23 @@ Get logger implementation.
   
 **Returns**: Logger
   
+### GetHttpDelegate function
+Get Http implementation.
+
+  
+**Returns**: HttpDelegate
+  
 ### GetRawLoggerDelegate function
-Get logger implementation.
+Get raw logger implementation.
 
   
 **Returns**: Logger
+  
+### GetStorageDelegate function
+Get Storage Delegate implementation if provided.
+
+  
+**Returns**: StorageDelegate
   
 ### GetFlightingFeatures function
 Get flighting feature set.

@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Configuring servers for the Microsoft Rights Management connector
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -47,8 +47,8 @@ This means configuring the following servers:
 
 |Environment  |Servers to configure  |
 |---------|---------|
-|**Exchange 2016 and Exchange 2013**     |  Client access servers and mailbox servers       |
-|**Exchange 2019**     |   Client access servers and hub transport servers      |
+|**Exchange 2013**     |  Client Access Servers and Mailbox Servers       |
+|**Exchange 2016 and Exchange 2019**     |   Mailbox Servers (includes Client Access and Hub Transport server roles)   |
 |**SharePoint**     |    Front-end SharePoint webservers, including those hosting the Central Administration server     |
 |**File Classification Infrastructure**     |   Windows Server computers that have installed File Resource Manager      |
 | | |

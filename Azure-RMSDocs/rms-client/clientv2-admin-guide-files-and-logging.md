@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/09/2021
+ms.date: 06/21/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Admin Guide: Azure Information Protection unified labeling client files and client usage logging
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
@@ -34,27 +34,68 @@ ms.custom: admin
 
 After you have installed the Azure Information Protection unified labeling client, you might need to know where files are located and monitor how the client is being used.
 
-## File locations for the Azure Information Protection unified labeling client
+Usage logging is supported with the Azure Information Protection unified labeling client [version 2.12.62](unifiedlabelingclient-version-release-history.md#version-212620) and higher.
 
-Client files:    
+## Turn on usage logging
 
-- For 64-bit operating systems: **\ProgramFiles (x86)\Microsoft Azure Information Protection**
+To turn on support for usage logging for both the unified labeling client and scanner, set the registry key as follows:
 
-- For 32-bit operating systems: **\Program Files\Microsoft Azure Information Protection**
+- Registry path: **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnableLoggingAuditEventsToEventLog**
+- Type: **DWORD**
+- Value: **1**
 
-Client logs files and currently installed policy files:
+## Log file locations
 
-- For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP**
+Client and scanner log files are located in the following locations on your unified labeling client machine:
 
+- **\ProgramFiles (x86)\Microsoft Azure Information Protection** (64-bit operating systems only)
+- **\Program Files\Microsoft Azure Information Protection** (32-bit operating systems only)
+- **%localappdata%\Microsoft\MSIP**
 
-## Usage logging for the Azure Information Protection scanner
+## Client-side usage logging
+
+> [!NOTE]
+> Client-side usage logging is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+>
+
+The unified labeling client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**.
+
+Logged events for the client include the following information:
+
+- **Client version**
+
+- **IP addresses** of the signed in user
+
+- **File name and location**
+
+- **Action**:
+
+    - Set label: Information ID 101​
+
+    - Remove label: Information ID  104
+
+    - Discover label: Information ID 106
+
+    - Apply custom protection: Information ID 201​
+
+    - Remove custom protection: Information ID 202​
+
+    - Outlook warn message: Information ID 301
+
+    - Outlook justify message: Information ID 302
+
+    - Outlook block message: Information ID 303
+
+The events for Outlook warn, justify, and block messages require advanced client settings. For more information, see [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
+
+## Scanner-side usage logging
 
 Scanner activities are logged to the following local Windows event log: **Applications and Services Logs** > **Azure Information Protection Scanner**
 
-Logged events include the following information:
+Logged events for the scanner include the following information:
 
 - **Computer name of the scanner machine**
--
+
 - **SID (Security identifier) of the signed in scanner user**
 
 - **Action**, one of the following message types:
@@ -65,7 +106,21 @@ Logged events include the following information:
 
         - Scan finished: Information ID 1002
 
-    - **Warning message**: Scan canceled: Information ID 2002
+        - Change event: Information ID 1003
+
+        - Discover event: Information ID 1004
+
+        - File removed: Information ID 1005
+
+        - DLP rule matched: Information ID 1006
+
+        - Permissions report: Information ID 1007
+
+    - **Warning message**:
+
+        - Warning message: Information ID 2001
+
+        - Scan canceled: Information ID 2002
 
     - **Error message**, one of the following messages:
 
@@ -84,6 +139,7 @@ Logged events include the following information:
         - No content scan jobs found: Information ID 3007
 
 - **Event data**, for more information depending on the action type
+
 ## Next steps
 
 For more information, see:

@@ -25,13 +25,13 @@ ms.custom: admin
 
 # Tutorial: Configure Azure Information Protection to control oversharing of information using Outlook
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: Azure Information Protection*
 >
 >***Relevant for**: [Classic client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 [!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
->
-> **To deploy the AIP classic client**, open a support ticket to get download access.
+
+**To deploy the AIP classic client**, open a support ticket to get download access.
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]

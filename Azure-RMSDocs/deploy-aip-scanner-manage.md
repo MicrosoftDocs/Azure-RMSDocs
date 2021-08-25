@@ -6,7 +6,7 @@ description: Instructions for running the Azure Information Protection unified l
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/01/2021
+ms.date: 04/26/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Running the Azure Information Protection scanner
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
 >
 >***Relevant for**: [AIP unified labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
@@ -39,6 +39,11 @@ Use other steps detailed below to manage your scans moving forward.
 
 For more information, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
+> [!TIP]
+> While most customers will perform these procedures in the **Azure Information Protection** area of the Azure portal, you may need to work in PowerShell only.
+>
+> For example, if you are working in an environment without access to the Azure portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), authenticate to the [AzureInformationProtection](/powershell/module/azureinformationprotection) PowerShell module, and then continue with instructions in this article for PowerShell only.
+>
 ## Run a discovery cycle and view reports for the scanner
 
 Use the following procedure after you've [configured and installed your scanner](deploy-aip-scanner-configure-install.md) to get an initial understanding of your content.
@@ -69,19 +74,21 @@ Perform these steps again as needed when your content changes.
 
     - The .txt summary files include the time taken to scan, the number of scanned files, and how many files had a match for the information types.
 
-    - The .csv files have more details for each file. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
+    - The .csv files have more details for each file. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space. 
 
-[Initial configurations](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) instruct you to set the **Info types to be discovered** to **Policy only**. This configuration means that only files that meet the conditions you've configured for automatic classification are included in the detailed reports.
+        When a scan is completed, a **Summary_<x>.txt** file is created with the scan summary.
+
+> [!NOTE]
+> Scanners send collected data information to Azure Information Protection every five minutes, so that you can view the results in near real time from the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md).
+>
+> The Azure portal displays information about the last scan only. If you need to see the results of previous scans, return to the reports that are stored on the scanner computer, in the %*localappdata*%\Microsoft\MSIP\Scanner\Reports folder.
+>
+
+[Initial configurations](deploy-aip-scanner-configure-install.md#configure-the-scanner-settings) instruct you to set the **Info types to be discovered** to **Policy only**. This configuration means that only files that meet the conditions you've configured for automatic classification are included in the detailed reports.
 
 If you don't see any labels applied, check that your label configuration includes automatic rather than recommended classification, or enable **Treat recommended labeling as automatic** (available in scanner version 2.7.x.x and above).
 
 If the results are still not as you expect, you might need to reconfigure the conditions that you specified for your labels. If that's the case, reconfigure the conditions as needed, and repeat this procedure until you are satisfied with the results. Then, update your configuration automatically, and optionally protection.
-
-### Viewing updates in the Azure portal
-
-Scanners send this information to Azure Information Protection every five minutes, so that you can view the results in near real time from the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md).
-
-The Azure portal displays information about the last scan only. If you need to see the results of previous scans, return to the reports that are stored on the scanner computer, in the %*localappdata*%\Microsoft\MSIP\Scanner\Reports folder.
 
 ### Changing log levels or locations
 
@@ -104,7 +111,7 @@ To stop a currently running scan before it's complete, use one of the following 
 - **Run a PowerShell command.** Run the following command:
 
     ```PowerShell
-    Stop-AIPScan 
+    Stop-AIPScan
     ```
 
 ## Rescanning files
@@ -126,11 +133,12 @@ When a full scan is complete, the scan type automatically changes to incremental
 > [!TIP]
 > If you've made changes to your AIP [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), the Azure portal will prompt you to skip a full rescan. To ensure that your rescan occurs, make sure to select **No** in the prompt that appears.
 >
+
 ### Trigger a full rescan by modifying your settings
 
 Earlier versions of the scanner scanned all files whenever the scanner detected new or changed settings for automatic and recommended labeling. The scanner automatically refreshed the policy every four hours.
 
-In scanner versions [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) or later, AIP skips the full rescan for updated settings to ensure consistent performance. Make sure that you [run a full rescan manually](#rescanning-files) as needed.
+In scanner versions 2.8.85.0 or later, AIP skips the full rescan for updated settings to ensure consistent performance. Make sure that you [run a full rescan manually](#rescanning-files) as needed.
 
 For example, if you’ve changed **Sensitivity policy** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
 

@@ -27,7 +27,7 @@ ms.custom: admin
 
 # How to activate the Rights Management protection service from the Azure portal
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -41,7 +41,7 @@ Use these instructions if you want to activate the Rights Management protection 
     
     If you haven't accessed the Azure Information Protection pane before, see the one-time [additional steps](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time) to add this pane to the portal.
     
-    To open the Azure Information Protection pane, you must have either an [Azure Information Protection Premium plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) or an [Office 365 plan that includes Rights Management](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). If you have one of these subscriptions but see a message that a valid subscription cannot be found, [contact Microsoft Support](information-support.md#to-contact-microsoft-support) or use your standard support channels.
+    To open the Azure Information Protection pane, you must have either an [Azure Information Protection Premium plan](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection) or an [Office 365 plan that includes Rights Management](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M). If you have one of these subscriptions but see a message that a valid subscription cannot be found, [contact Microsoft Support](information-support.md#to-contact-microsoft-support) or use your standard support channels.
 
 2. Locate the **Manage** menu options, and select **Protection activation**. 
     

@@ -29,7 +29,7 @@ search.appverid:
 
 # What is Azure Rights Management?
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
@@ -45,7 +45,7 @@ For example, when employees email a document to a partner company, or save a doc
 
 - **Azure RMS may be legally required** for compliance, legal discovery requirements, or best practices for information management.
 
-- **Use Azure RMS with Microsoft 365 subscriptions or subscriptions for Azure Information Protection**. For more information about individual subscription types and supported features, see the [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection/) site.
+- **Use Azure RMS with Microsoft 365 subscriptions or subscriptions for Azure Information Protection**. For more information, see the [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection/) page.
 
 Azure RMS ensures that authorized people and services, such as search and indexing, can continue to read and inspect the protected data.
 

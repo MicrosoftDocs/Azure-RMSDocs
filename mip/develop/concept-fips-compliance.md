@@ -2,7 +2,7 @@
 title: MIP SDK FIPS Compliance Statement
 description: Details about the MIP SDK and FIPS Compliance Status
 author: tommoser
-ms.author: tommoser
+ms.author: tommos
 ms.date: 07/06/2021
 ms.topic: conceptual
 ms.service: information-protection
@@ -32,6 +32,6 @@ MIP SDK prohibits the use of TLS versions prior to 1.2 unless the connection is 
 ## Next Steps
 
 For details on the internals and specifics of how AIP protects content, review the follow documentation:
-  - [How Azure RMS Works](https://docs.microsoft.com/azure/information-protection/how-does-it-work)
-  - [MS-RMPR Protocol Specification](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rmpr/d8ed4b1e-e605-4668-b173-6312cba6977e)
+  - [How Azure RMS Works](/azure/information-protection/how-does-it-work)
+  - [MS-RMPR Protocol Specification](/openspecs/windows_protocols/ms-rmpr/d8ed4b1e-e605-4668-b173-6312cba6977e)
   - [Licenses, Certificates, and how AD RMS protects and consumes documents](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/licenses-and-certificates-and-how-ad-rms-protects-and-consumes/ba-p/247309)

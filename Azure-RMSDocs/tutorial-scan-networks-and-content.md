@@ -24,7 +24,7 @@ ms.subservice: aiplabels
 
 # Tutorial: Discovering your sensitive content with the Azure Information Protection (AIP) scanner
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
 >
 > ***Relevant for**: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -38,7 +38,7 @@ In this tutorial, you'll learn how to:
 > * Scan your content shares for sensitive content and understand results found
 
 > [!NOTE]
-> Network Discovery is available only starting in version [2.8.85.0 ](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) of the unified labeling client, and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> Network Discovery is available only starting in version [2.8.85.0 ](rms-client/unifiedlabelingclient-version-release-history.md#general-availability-versions-that-are-no-longer-supported) of the unified labeling client, and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 >
 > If you do not have this version of the client and scanner installed, review the [tutorial prerequisites](#tutorial-prerequisites) and then go straight to [Define and run your content scan job](#define-and-run-your-content-scan-job).
 
@@ -49,7 +49,7 @@ In this tutorial, you'll learn how to:
 
 |Requirement  |Description  |
 |---------|---------|
-|**A supporting subscription**     |  You'll need an Azure subscription that includes [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
+|**A supporting subscription**     |  You'll need an Azure subscription that includes [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection/). <br /><br />If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
 |**Admin access to the Azure portal** |Make sure that you can sign in to the [Azure portal](https://portal.azure.com/) with a supported administrator account, and have protection enabled. Supported administrator accounts include: <br /><br />- **Compliance administrator**<br />- **Compliance data administrator**<br />- **Security administrator**<br />- **Global administrator**   |
 |**AIP client, scanner, and Network Discovery service**   |   To fully complete this tutorial, you'll need to have installed the Azure Information Protection unified labeling client and scanner, as well as the Network Discovery service (public preview). <br /><br />For more information, see: <br /><br />- [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md) <br />- [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md) |
 |**A content scan job** | Make sure you have a basic content scan job that you can use for testing. You may have created one when you [installed your scanner](tutorial-install-scanner.md).<br /><br />If you need to create one now, you can use the instructions in [Configure Azure Information Protection in the Azure portal](tutorial-install-scanner.md#configure-azure-information-protection-in-the-azure-portal). When you have a basic content scan job, return here to complete this tutorial. |
@@ -66,7 +66,7 @@ When you're ready, continue with [Create a network scan job](#create-a-network-s
 Create a network scan job to scan a specified IP address or IP range for risky repositories.
 
 > [!NOTE]
-> This feature is available only starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> This feature is available only starting in version 2.8.85.0, and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 > 
 
 **To create a network scan job**:
@@ -110,7 +110,7 @@ Once your network scan job is complete, you can check for any risky repositories
 For example, if a repository is found to have both read and write public access, you may want to scan further and confirm that no sensitive data is stored there.
 
 > [!NOTE]
-> This feature is available only starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> This feature is available only starting in version 2.8.85.0, and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 > 
 
 **To add risky repositories to your content scan job**:

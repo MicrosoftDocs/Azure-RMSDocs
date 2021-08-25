@@ -29,7 +29,7 @@ search.appverid:
 
 # Information and support for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -42,8 +42,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 |----------------|---------------|
 |Learn about new and upcoming releases|See the [Information about new releases and updates](#information-about-new-releases-and-updates) section on this page.|
 |Get help with the product|See the [Support options and community resources](#support-options-and-community-resources) section on this page.|
-|Check subscription information and what features are supported|Use the subscription information and feature list from the [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection) page.|
-|See commonly asked questions about licensing answered|Read through the [frequently asked questions](https://azure.microsoft.com/pricing/details/information-protection#faq) for licensing.|
+|Check subscription information and what features are supported|For more information, see the [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection) page.|
 |Search or browse through a list of current known issues | See the [Known issues - Azure Information Protection](known-issues.md) page.
 |Request a new feature or change of functionality|Visit the [Azure Information Protection feature request form](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRxOwaHW_l8dCpIFVq3iLzSFUQzA0NVJNMktLOE5KRzVYS1VaU0VDVlZURS4u).|
 |Engage with the product team and your peers|Visit the [Yammer site](https://www.yammer.com/AskIPTeam) for Azure Information Protection.|
@@ -64,7 +63,7 @@ The following sections provide information about support and troubleshooting opt
 
 ### To contact Microsoft Support
 
-If you have Premier Support, visit the [Microsoft Services Hub](https://serviceshub.microsoft.com/support/contactsupport) to submit incidents, browse solutions, and get help.
+If you're working with sensitivity labels in the Microsoft 365 security center, see the [Support](/office365/servicedescriptions/office-365-platform-service-description/support) page in the Microsoft 365 and Office 365 platform service descriptions.
 
 You might be eligible for **FastTrack**: You can use the FastTrack Center Benefit when you purchase at least 150 licenses in an eligible plan for Azure Information Protection. The FastTrack Center Benefit lets you work with Microsoft specialists to assess, remediate, and enable eligible services. For more information, see [FastTrack Center Benefit for Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
 

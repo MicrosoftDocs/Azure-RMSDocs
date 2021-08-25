@@ -1,11 +1,11 @@
 ---
 title: class DelegationLicense 
 description: Documents the delegationlicense::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/23/2021
+ms.author: mbaldwin
+ms.date: 08/23/2021
 ---
 
 # class DelegationLicense 
@@ -13,14 +13,15 @@ ms.date: 04/23/2021
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector\<uint8_t\>& GetSerializedDelegationJsonLicense()  |  Gets the delegation license.
+public const std::vector\<uint8_t\>& GetSerializedDelegationJsonLicense()  |  Gets the delegation license in Json format.
 public const std::vector\<uint8_t\>& GetSerializedUserLicense(ProtectionHandler::PreLicenseFormat format)  |  Gets the user license, if requested.
 public const std::string& GetUser()  |  Gets the user that this license was created for.
+public const std::vector\<uint8_t\>& GetSerializedDelegationXrmlLicense()  |  Gets the delegation license in Xrml format.
   
 ## Members
   
 ### GetSerializedDelegationJsonLicense function
-Gets the delegation license.
+Gets the delegation license in Json format.
 
   
 **Returns**: Serialized license
@@ -43,3 +44,10 @@ Gets the user that this license was created for.
 
   
 **Returns**: The user
+  
+### GetSerializedDelegationXrmlLicense function
+Gets the delegation license in Xrml format.
+
+  
+**Returns**: Serialized license
+This license is bound to the identity of the user that made the request

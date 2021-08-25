@@ -1,11 +1,11 @@
 ---
 title: class AuthDelegate::OAuth2Token 
 description: Documents the authdelegate::oauth2token class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/23/2021
+ms.author: mbaldwin
+ms.date: 08/23/2021
 ---
 
 # class AuthDelegate::OAuth2Token 

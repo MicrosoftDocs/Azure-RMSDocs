@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/15/2020
+ms.date: 05/06/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,13 +26,9 @@ ms.custom: admin
 
 # What is the Azure Information Protection unified labeling scanner?
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
 >
 >***Relevant for**: [AIP unified labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
-
-
->[!NOTE] 
-> To scan and label files on cloud repositories, use [Cloud App Security](/cloud-app-security/) instead of the scanner.
 
 Use the information in this section to learn about the Azure Information Protection unified labeling scanner, and then how to successfully install, configure, run and if necessary, troubleshoot it.
 
@@ -153,7 +149,7 @@ For more information about deploying the scanner, see the following articles:
 
 **More information**:
 
-- [Watch our deployment video!](https://techcommunity.microsoft.com/t5/microsoft-security-and/mip-scanner-deployment-watch-our-video/ba-p/2023277) Watch a step-by-step demo of installing and configuring the unified labeling on-premises scanner.
+- [Watch our scanner end-to-end demo video!](https://www.youtube.com/watch?v=f1gy1KalSts) Watch a step-by-step review of the AIP scanner architecture, architecture, recommendation, installation and configuration.
 
 - Check out our blog on best practices for the unified labeling scanner: [Best practices for deploying and using the AIP UL scanner](https://aka.ms/AIPScannerBestPractices)
 

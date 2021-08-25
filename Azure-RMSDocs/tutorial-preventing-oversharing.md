@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)
 
->**Applies to*: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>**Applies to*: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
 >
 > ***Relevant for**: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -47,7 +47,7 @@ Make sure you have the following system requirements before starting this tutori
 |Prerequisites  |Description  |
 |---------|---------|
 |**Machine requirements**     | Make sure that you: <br /><br />- Have a Windows computer, with the Azure Information Protection unified labeling client installed. For more information, see [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md). <br /><br />- Have PowerShell installed, and that you can run PowerShell as an administrator. <br /><br />- Can sign into Outlook. Be prepared to restart Outlook multiple times during this tutorial.     |
-|**Azure Information Protection subscription**     |   You'll need an Azure subscription that includes [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />If you don't have one of these subscriptions, create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
+|**Azure Information Protection subscription**     |   You'll need an Azure subscription that includes [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection/). <br /><br />If you don't have one of these subscriptions, create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
 |**Sensitivity labels and a testing policy**     |  A **General** sensitivity label configured in your policy. <br /><br />Configure sensitivity labels in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/create-sensitivity-labels). <br /><br />We recommend using a testing policy for this tutorial so that you don't affect your live policy. <br />Make sure that you have the name of your policy handy, as well as the GUID for your **General** label.   |
 | | |
 

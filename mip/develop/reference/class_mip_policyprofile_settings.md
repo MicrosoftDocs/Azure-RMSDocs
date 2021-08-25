@@ -1,11 +1,11 @@
 ---
 title: class PolicyProfile::Settings 
 description: Documents the policyprofile::settings class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/23/2021
+ms.author: mbaldwin
+ms.date: 08/23/2021
 ---
 
 # class PolicyProfile::Settings 
@@ -20,12 +20,16 @@ public const std::shared_ptr\<PolicyProfile::Observer\>& GetObserver() const  | 
 public std::shared_ptr\<MipContext\> GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Override default HTTP stack with client's own.
+public std::shared_ptr\<StorageDelegate\> GetStorageDelegate() const  |  Get the StorageDelegate (if any) provided by the application.
+public void SetStorageDelegate(const std::shared_ptr\<StorageDelegate\>& storageDelegate)  |  Override default storage cache with client's own implementation.
 public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
 public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Override default asynchronous task dispatching handling with client's own.
 public void SetSessionId(const std::string& sessionId)  | _Not yet documented._
 public const std::string& GetSessionId() const  | _Not yet documented._
 public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& customSettings)  |  Set the custom settings, used for feature gating and testing.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
+public const std::shared_ptr\<void\>& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+public void SetLoggerContext(const std::shared_ptr\<void\>& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
 public ~Settings()  | _Not yet documented._
   
 ## Members
@@ -76,6 +80,20 @@ Parameters:
 
 
   
+### GetStorageDelegate function
+Get the StorageDelegate (if any) provided by the application.
+
+  
+**Returns**: StorageDelegate to be used for cache operations
+  
+### SetStorageDelegate function
+Override default storage cache with client's own implementation.
+
+Parameters:  
+* **storageDelegate**: StorageDelegate implemented by client application
+
+
+  
 ### GetTaskDispatcherDelegate function
 Get the TaskDispatcher delegate (if any) provided by the application.
 
@@ -112,6 +130,20 @@ Get the custom settings, used for feature gating and testing.
 
   
 **Returns**: List of name/value pairs.
+  
+### GetLoggerContext function
+Get logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+
+  
+**Returns**: The logger context
+  
+### SetLoggerContext function
+Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+
+Parameters:  
+* **loggerContext**: The logger context
+
+
   
 ### ~Settings function
 _Not documented yet._

@@ -1,15 +1,15 @@
 ---
 title: class TelemetryDelegate 
 description: Documents the telemetrydelegate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/23/2021
+ms.author: mbaldwin
+ms.date: 08/23/2021
 ---
 
 # class TelemetryDelegate 
-A class that defines the interface to the MIP SDK audit/telemetry notifications.
+A class that defines the interface to the MIP SDK telemetry notifications.
   
 ## Summary
  Members                        | Descriptions                                

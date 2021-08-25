@@ -6,7 +6,7 @@ description: Understand and implement the super user feature of the Azure Rights
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/29/2020
+ms.date: 07/22/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Configuring super users for Azure Information Protection and discovery services or data recovery
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -57,7 +57,9 @@ If you need to manually enable the super user feature, use the PowerShell cmdlet
 Although using a group for your super users is easier to manage, be aware that for performance reasons, Azure Rights Management [caches the group membership](prepare.md#group-membership-caching-by-azure-information-protection). So if you need to assign a new user to be a super user to decrypt content immediately, add that user by using Add-AipServiceSuperUser, rather than adding the user to an existing group that you have configured by using Set-AipServiceSuperUserGroup.
 
 > [!NOTE]
-> If you have not yet installed the Windows PowerShell module for Azure Rights Management, see [Installing the AIPService PowerShell module](install-powershell.md).
+> - When adding a user with the [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) cmdlet, you must also add the primary mail address or user principal name to the group. Email aliases are not evaluated.
+> 
+> - If you have not yet installed the Windows PowerShell module for Azure Rights Management, see [Installing the AIPService PowerShell module](install-powershell.md).
 
 It doesn't matter when you enable the super user feature or when you add users as super users. For example, if you enable the feature on Thursday and then add a user on Friday, that user can immediately open content that was protected at the very beginning of the week.
 
@@ -95,22 +97,25 @@ In this example, the administrator for Contoso Ltd confirms that the super user 
 `2015-08-01T19:01:45	admin@contoso.com	SetSuperUserFeatureState -state Enabled	Passed	True`
 
 ## Scripting options for super users
-Often, somebody who is assigned a super user for Azure Rights Management will need to remove protection from multiple files, in multiple locations. While it’s possible to do this manually, it’s more efficient (and often more reliable) to script this. To do so, you can use the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet, and [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) cmdlet as required. 
 
-If you are using classification and protection, you can also use the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) to apply a new label that doesn't apply protection, or remove the label that applied protection. 
+Often, somebody who is assigned a super user for Azure Rights Management will need to remove protection from multiple files, in multiple locations. While it’s possible to do this manually, it’s more efficient (and often more reliable) to script this using the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet.
+
+If you are using classification and protection, you can also use the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) to apply a new label that doesn't apply protection, or remove the label that applied protection.
 
 For more information about these cmdlets, see [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) from the Azure Information Protection client admin guide.
 
 > [!NOTE]
 > The AzureInformationProtection module is different from and supplements the [AIPService PowerShell module](administer-powershell.md) that manages the Azure Rights Management service for Azure Information Protection.
 
-### Guidance for using Unprotect-RMSFile for eDiscovery
+### Removing protection on PST files
 
-Although you can use the Unprotect-RMSFile cmdlet to decrypt protected content in PST files, use this cmdlet strategically as part of your eDiscovery process. Running Unprotect-RMSFile on large files on a computer is a resource-intensive (memory and disk space) and the maximum file size supported for this cmdlet is 5 GB.
+To remove protection on PST files, we recommend that you use [eDiscovery in Microsoft 365](/microsoft-365/compliance/ediscovery) to search and extract protected emails and protected attachment in emails.
 
-Ideally, use [eDiscovery in Microsoft 365](/microsoft-365/compliance/ediscovery) to search and extract protected emails and protected attachment in emails. The super user ability is automatically integrated with Exchange Online so that eDiscovery in the Office 365 Security & Compliance Center or Microsoft 365 compliance center can search for encrypted items prior to export, or decrypt encrypted email on export.
+The super user ability is automatically integrated with Exchange Online so that eDiscovery in the Office 365 Security & Compliance Center or Microsoft 365 compliance center can search for encrypted items prior to export, or decrypt encrypted email on export.
 
-If you cannot use Microsoft 365 eDiscovery, you might have another eDiscovery solution that integrates with the Azure Rights Management service to similarly reason over data. Or, if your eDiscovery solution cannot automatically read and decrypt protected content, you can still use this solution in a multi-step process that lets you run Unprotect-RMSFile more efficiently:
+If you cannot use Microsoft 365 eDiscovery, you might have another eDiscovery solution that integrates with the Azure Rights Management service to similarly reason over data. 
+
+Or, if your eDiscovery solution cannot automatically read and decrypt protected content, you can still use this solution in a multi-step process together with the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet:
 
 1. Export the email in question to a PST file from Exchange Online or Exchange Server, or from the workstation where the user stored their email.
 
@@ -118,6 +123,6 @@ If you cannot use Microsoft 365 eDiscovery, you might have another eDiscovery so
 
 3. From all the items that the tool couldn't open, generate a new PST file that this time, contains just protected items. This second PST file will likely be much smaller than the original PST file.
 
-4. Run Unprotect-RMSFile on this second PST file to decrypt the contents of this much smaller file. From the output, import the now-decrypted PST file into your discovery tool.
+4. Run [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)  on this second PST file to decrypt the contents of this much smaller file. From the output, import the now-decrypted PST file into your discovery tool.
 
 For more detailed information and guidance for performing eDiscovery across mailboxes and PST files, see the following blog post: [Azure Information Protection and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216).

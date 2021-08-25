@@ -1,11 +1,11 @@
 ---
 title: class ProtectionHandler::ConsumptionSettings 
 description: Documents the protectionhandler::consumptionsettings class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/23/2021
+ms.author: mbaldwin
+ms.date: 08/23/2021
 ---
 
 # class ProtectionHandler::ConsumptionSettings 

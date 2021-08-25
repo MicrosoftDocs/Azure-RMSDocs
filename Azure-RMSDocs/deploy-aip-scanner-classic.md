@@ -27,7 +27,7 @@ ms.custom: admin
 
 # What is the Azure Information Protection classic scanner?
 
->***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
+>***Applies to**: Azure Information Protection, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
@@ -41,9 +41,6 @@ The AIP scanner runs as a service on Windows Server and lets you discover, class
 
 - **SharePoint document libraries and folder** for SharePoint Server 2019 through SharePoint Server 2013. 
 
-> [!NOTE]
-> To scan and label files on cloud repositories, use [Cloud App Security](/cloud-app-security/) instead of the scanner.
->
 ## Azure Information Protection classic scanner overview
 
 The AIP scanner can inspect any files that Windows can index. If you've configured labels that apply automatic classification, the scanner can label discovered files to apply that classification, and optionally apply or remove protection.
