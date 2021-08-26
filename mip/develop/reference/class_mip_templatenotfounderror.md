@@ -5,19 +5,19 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.date: 08/23/2021
 ---
 
 # class TemplateNotFoundError 
 Template ID is not recognized by RMS service.
   
 ## Summary
-
-Members                        | Descriptions                                
+ Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string mMessage  | _Not yet documented._
 public std::map\<std::string, std::string\> mDebugInfo  | _Not yet documented._
 public std::string mName  | _Not yet documented._
+public ErrorType mType  | _Not yet documented._
 public ErrorCode GetErrorCode() const  |  Gets the errorCode of bad input.
 public char const* what() const  |  Get the error message.
 public std::shared_ptr\<Error\> Clone() const  |  Clone the error.
@@ -40,6 +40,10 @@ _Not documented yet._
 
   
 ### mName
+_Not documented yet._
+
+  
+### ErrorType
 _Not documented yet._
 
   
@@ -110,6 +114,8 @@ Values                         | Descriptions
 --------------------------------|---------------------------------------------
 General            | General bad input error
 FileIsTooLargeForProtection            | File is too large for protection
+ParameterParsing            | Parameter cannot be parsed correctly
+LicenseNotTrusted            | Publishing license not issued by trusted source
+DoubleKey            | A paremeter for double key encryption is needed and missing
 
 ErrorCode of bad input error.
-

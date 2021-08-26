@@ -30,6 +30,8 @@ ms.custom: admin
 >****Applies to***: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
 >
 >***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+>
+>*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).*
 
 [!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 

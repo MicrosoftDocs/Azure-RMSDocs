@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.date: 08/23/2021
 ---
 
 # class FileEngine::Settings 
@@ -44,6 +44,8 @@ public void ConfigureFunctionality(FunctionalityFilterType functionalityFilterTy
 public const std::map\<FunctionalityFilterType, bool\>& GetConfiguredFunctionality() const  |  Gets the configured functionality.
 public void SetAuthDelegate(const std::shared_ptr\<AuthDelegate\>& authDelegate)  |  Set the Engine Auth Delegate.
 public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Get the Engine Auth Delegate.
+public const std::shared_ptr\<void\>& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+public void SetLoggerContext(const std::shared_ptr\<void\>& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
   
 ## Members
   
@@ -252,3 +254,16 @@ Get the Engine Auth Delegate.
 
   
 **Returns**: The Engine Auth Delegate.
+  
+### GetLoggerContext function
+Get logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+
+  
+**Returns**: The logger context
+  
+### SetLoggerContext function
+Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+
+Parameters:  
+* **loggerContext**: The logger context
+

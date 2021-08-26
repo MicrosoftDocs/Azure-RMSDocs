@@ -165,13 +165,13 @@ For all Exchange servers, add the following registry values to LicenseServerRedi
 
     - **Type**: Reg_SZ
 
-    - **Value**: `https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing`
+    - **Value**: `https://<AD RMS Intranet Licensing URL>/_wmcs/licensing`
 
     - **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-        - `http://\<connector FQDN\>/_wmcs/licensing`
+        - `http://<connector FQDN>/_wmcs/licensing`
         
-        - `https://\<connector FQDN\>/_wmcs/licensing`
+        - `https://<connector FQDN>/_wmcs/licensing`
 
 1. For Exchange 2013, add the following additional registry value:
 
@@ -179,13 +179,13 @@ For all Exchange servers, add the following registry values to LicenseServerRedi
 
     - **Type**: Reg_SZ
 
-    - **Value**: https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
+    - **Value**: `https://<AD RMS Extranet Licensing URL>/_wmcs/licensing`
 
     - **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-        - `http://\<connector FQDN\>/_wmcs/licensing`
+        - `http://<connector FQDN>/_wmcs/licensing`
 
-        - `https://\<connector FQDN\>/_wmcs/licensing`
+        - `https://<connector FQDN>/_wmcs/licensing`
 
 ## Next steps
 To continue the migration, go to [phase 5 -post migration tasks](migrate-from-ad-rms-phase5.md).
