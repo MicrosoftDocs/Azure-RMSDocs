@@ -273,9 +273,9 @@ Without any extra configuration, the Azure Information Protection unified labeli
 
 |Application type|File type|
 |--------------------------------|-------------------------------------|
-|**Word**|.doc; docx; .docm; .dot; .dotm; .dotx|
-|**Excel**|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
-|**PowerPoint**|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
+|**Word**|.doc; docx; .docm; .dot; .dotx|
+|**Excel**|.xls; .xlt; .xlsx; .xlsm; .xlsb|
+|**PowerPoint**|.ppt; .pps; .pot; .pptx|
 |**PDF** |.pdf|
 |**Text**|.txt; .xml; .csv|
 | | |
