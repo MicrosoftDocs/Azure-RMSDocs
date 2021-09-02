@@ -113,7 +113,7 @@ For more details, see:
 
 **Unified labeling client**
 
-To prevent the Azure Information Protection unified labeling client from sending auditing data, configure a [label policy advanced setting](rms-client/clientv2-admin-guide-customizations.md#turn-off-audit-data-from-being-sent-to-aip-and-microsoft-365-analytics).
+To prevent the Azure Information Protection unified labeling client from sending auditing data, configure a [label policy advanced setting](rms-client/clientv2-admin-guide-customizations.md#prevent-audit-data-from-being-sent-to-aip-and-microsoft-365-analytics).
 
 **Classic client**
 
