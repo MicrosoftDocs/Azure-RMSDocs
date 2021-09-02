@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 04/26/2021
+ms.date: 09/02/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -1021,23 +1021,34 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{
 }
 ```
 
-## Disable sending audit data to Azure Information Protection analytics
+## Turn off audit data from being sent to AIP and Microsoft 365 analytics
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+By default, the Azure Information Protection unified labeling client supports central reporting and sends its audit data to:
 
-The Azure Information Protection unified labeling client supports central reporting and by default, sends its audit data to [Azure Information Protection analytics](../reports-aip.md). For more information about what information is sent and stored, see the [Information collected and sent to Log Analytics](../reports-aip.md#information-collected-and-sent-to-log-analytics) section from the central reporting documentation.
+- [Azure Information Protection analytics](../reports-aip.md), if you have a [Log Analytics workspace](https://azure.microsoft.com/pricing/details/log-analytics)
+- The [Microsoft 365 Activity Explorer](/microsoft-365/compliance/data-classification-activity-explorer)
 
-To change this behavior so that audit data is not sent by the unified labeling client, enter the following strings for the selected label policy:
+To change this behavior, so that audit data is not sent, do the following:
 
-- Key: **EnableAudit**
+1. Add the following policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) using the Office 365 Security & Compliance Center PowerShell:
 
-- Value: **False**
+    - Key: **EnableAudit**
 
-Example PowerShell command, where your label policy is named "Global":
+    - Value: **False**
 
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
-```
+    For exmaple, if your label policy is named "Global":
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
+    ```
+
+    > [!NOTE]
+    > By default, this advanced setting is not present in the policy, and the audit logs are sent.
+    >
+
+1. In all Azure Information Protection client machines, delete the following folder: **%localappdata%\Microsoft\MSIP\mip**
+
+To enable the client to send audit log data again, to both Azure Information Protection analytics and the Microsoft 365 Activity Explorer, change the advanced setting value to **True**. You do not need to manually create the **%localappdata%\Microsoft\MSIP\mip** folder again on your client machines.
 
 ## Send information type matches to Azure Information Protection analytics
  
