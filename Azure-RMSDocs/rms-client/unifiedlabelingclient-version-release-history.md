@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/26/2021
+ms.date: 09/09/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -84,6 +84,21 @@ Unified labeling scanner and client version 2.12.62.0
 **Released** 08/02/2021
 
 This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
+
+### Built-in co-authoring support
+
+Microsoft 365's co-authoring features are now supported with the Azure Information Protection unified labeling client, for enabled tenants, directly in the main installation instead of the [dedicated version](#version-210460-for-co-authoring-public-preview) that was earlier required.
+
+Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+
+To have co-authoring turned on for your tenant, contact customer support.
+
+> [!NOTE]
+> Before you start, we recommend that you review all related prerequisites and limitations. For more information, see:
+>
+> - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
+> - [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring)
+>
 
 ### Support for DKE labels with user-defined permissions
 
@@ -223,7 +238,7 @@ Unified labeling client version 2.10.46.0
 
 **Release** 03/02/2021
 
-This dedicated version of Azure Information Protection provides a public preview of co-authoring features newly supported in Microsoft 365.
+This dedicated version of Azure Information Protection provided a public preview of co-authoring features newly supported in Microsoft 365. Co-authoring is now supported as built-in to [version 2.12.62.0](#version-212620) of the unified labeling client.
 
 Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
