@@ -232,27 +232,6 @@ The following fixes were delivered in version 2.11.58.0 of the Azure Information
 
 - Fixed issues in parsing [sensitivity label policies](/microsoft-365/compliance/create-sensitivity-labels).
 
-## Version 2.10.46.0 for co-authoring (Public preview)
-
-Unified labeling client version 2.10.46.0
-
-**Release** 03/02/2021
-
-This dedicated version of Azure Information Protection provided a public preview of co-authoring features newly supported in Microsoft 365. Co-authoring is now supported as built-in to [version 2.12.62.0](#version-212620) of the unified labeling client.
-
-Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
-
-> [!IMPORTANT]
-> To leverage the co-authoring features in public preview, you must download and install the dedicated installation file for this release. On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `AzInfoProtection_2.10.46_CoAuthoring_PublicPreview.exe`  file.
->
-> Your system must also comply with the version requirements listed in the [Microsoft 365 prerequisites for co-authoring](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites).
->
-
-Before you start, we recommend that you review all related prerequisites and limitations. For more information, see:
-
-- [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
-- [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring)
-
 ## Version 2.9.116.0
 
 Unified labeling scanner and client version 2.9.116.0
