@@ -152,7 +152,7 @@ For even more details, see also:
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |**Manual labeling**| ![yes](../media/yes-icon.png)   | ![yes](../media/yes-icon.png)   |![yes](../media/yes-icon.png) |
 |**Default label**| ![yes](../media/yes-icon.png)| ![yes](../media/yes-icon.png)| ![yes](../media/yes-icon.png)|
-|**Recommended or automatic labeling** <br />For Word, Excel, PowerPoint, Outlook|![yes](../media/yes-icon.png) |  ![partial](../media/half-support-icon.png) <sup>[11](#11)</sup> | ![yes](../media/yes-icon.png) |
+|**Recommended or automatic labeling** <br />For Word, Excel, PowerPoint, Outlook|![yes](../media/yes-icon.png) |  ![yes](../media/yes-icon.png)  | ![yes, plus additional support](../media/yes-plus-icon.png) <sup>[11](#11)</sup> |
 |**Mandatory labeling**| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![yes](../media/yes-icon.png)|
 |**User-defined permissions for a label**: <br />Do Not Forward for emails| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |
 |**User-defined permissions for a label**: <br />Custom permissions for Word, Excel, PowerPoint| ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |
@@ -221,7 +221,7 @@ For built-in labeling, selected labeling and labeling policy customizations are 
 In the Azure portal, see [Azure Information Protection analytics](../reports-aip.md). In the Microsoft 365 compliance center, see the [activity explorer](/microsoft-365/compliance/data-classification-activity-explorer). For detailed support information, see the **Audit label-related user activity** row in the [capabilities tables](/microsoft-365/compliance/sensitivity-labels-office-apps) from the Microsoft 365 Compliance documentation.
 
 <a name="11"></a><sup>11</sup>
-The Azure Information Protection unified labeling client supports automatic labeling for built-in and custom sensitive info types, but not for other information type, such as trainable classifiers or sensitive info types that use Exact Data Match (EDM). For more information, see [How to configure auto-labeling for Office apps](/microsoft-365/compliance/apply-sensitivity-label-automatically).
+While the Azure Information Protection unified labeling client supports automatic labeling for built-in and custom sensitive info types, built-in labeling also supports other information types, such as trainable classifiers or sensitive info types that use Exact Data Match (EDM). For more information, see [How to configure auto-labeling for Office apps](/microsoft-365/compliance/apply-sensitivity-label-automatically).
 
 ### Detailed comparisons for the Azure Information Protection clients
 
