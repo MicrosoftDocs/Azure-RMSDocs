@@ -87,7 +87,7 @@ This version includes the following new features, fixes, and enhancements for th
 
 ### Built-in co-authoring support
 
-Microsoft 365's co-authoring features are now supported with the Azure Information Protection unified labeling client, for enabled tenants, directly in the main installation instead of the [dedicated version](#version-210460-for-co-authoring-public-preview) that was earlier required.
+Microsoft 365's co-authoring features are now supported directly in the main Azure Information Protection unified labeling client installation, for enabled tenants.
 
 Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
