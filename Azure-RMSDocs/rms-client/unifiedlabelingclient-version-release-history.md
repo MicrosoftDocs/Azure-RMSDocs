@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/09/2021
+ms.date: 09/12/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -90,8 +90,6 @@ This version includes the following new features, fixes, and enhancements for th
 Microsoft 365's co-authoring features are now supported directly in the main Azure Information Protection unified labeling client installation, for enabled tenants.
 
 Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
-
-To have co-authoring turned on for your tenant, contact customer support.
 
 > [!NOTE]
 > Before you start, we recommend that you review all related prerequisites and limitations. For more information, see:

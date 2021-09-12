@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/09/2021
+ms.date: 09/12/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -123,9 +123,7 @@ If this occurs, close and reopen your Office application to be able to apply you
 
 #### Unsupported features for co-authoring
 
-The following features are not supported when [co-authoring is enabled](/microsoft-365/compliance/sensitivity-labels-coauthoring) for files encrypted with sensitivity labels:
-
-- **AIP analytics and audit logs**.  When co-authoring is enabled, the Azure Information Protection client doesn't send any [audit logs](audit-logs.md).
+The following features are not supported or are partially supported when [co-authoring is enabled](/microsoft-365/compliance/sensitivity-labels-coauthoring) for files encrypted with sensitivity labels:
 
 - **DKE templates and DKE user-defined properties**. For more information, see [Double Key Encryption (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).
 
@@ -133,13 +131,7 @@ The following features are not supported when [co-authoring is enabled](/microso
 
     This means that applying a label with user-defined permissions will prevent you from working on the document with others at the same time.
 
-- **Removing external content marking in apps**. For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
-
-- The following advanced settings:
-
-    - **customPropertiesByLabel**. For more information, see [Applying a custom property when a label is applied](rms-client/clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied).
-
-    - **labelByCustomProperties** and **EnableLabelBySharePointProperties**. For more information, see [Migrate labels from Secure Islands and other labeling solutions](rms-client/clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions).
+- **Removing external content marking in apps**. External content marking is removed only when a label is applied, and not when the document is saved. For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
 
 - Features listed in the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring#limitations) as co-authoring limitations.
 
