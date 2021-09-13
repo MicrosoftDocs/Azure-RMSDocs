@@ -125,13 +125,13 @@ This version of the unified labeling client and scanner provides the following f
 - 10171096 Fixed an issue where duplicate [Discover](../audit-logs.md#discover-audit-logs) entries may appear in AIP activity logs after adding an attachment to a mail.
 - 10879169 Fixed an issue where the macro editor in Office apps may not support all Unicode characters after enabling the Azure Information Protection unified labeling client.
 - 10880496 Fixed an issue where an error may appear when labeling an email in a PST file.
-- 7566366 Enhanced support for the [PFileSupportedExtensions](clientv2-admin-guide-customizations#pfilesupportedextension) advanced setting, to add the ability to protect only Office file types and PDF files, without configuring one specific value.
+- 7566366 Enhanced support for the [PFileSupportedExtensions](clientv2-admin-guide-customizations.md#pfilesupportedextension) advanced setting, to add the ability to protect only Office file types and PDF files, without configuring one specific value.
 - 8070538 Fixed an issue where a watermark may not be reflected correctly when a label is changed.
-- 9449266 Fixed  an issue where Office apps may behave unexpectedly if the [`color`](clientv2-admin-guide-customizations#specify-a-color-for-the-label) value for a label has an invalid value.
+- 9449266 Fixed  an issue where Office apps may behave unexpectedly if the [`color`](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label) value for a label has an invalid value.
 - 10211100 Fixed an issue where selecting permissions via the File Explorer **Classify and protect** option may remove email addresses from the defined permissions if multiple email addresses include an apostrophe (**'**).
 - 10240706 Fixed an issue where the auto-labeling custom text tooltip configured may not display as expected in case of an AsyncPolicy applied.
 - 10420686 Fixed an issue where an AIP-related error appeared after a child label is added and scoped to *Groups & Sites*.
-- 10447949 Fixed an issue where the **Delete Label** icon may not appear in the Outlook classification bar when mandatory labeling is enabled across Office, [but not in Outlook](clientv2-admin-guide-customizations#exempt-outlook-messages-from-mandatory-labeling).
+- 10447949 Fixed an issue where the **Delete Label** icon may not appear in the Outlook classification bar when mandatory labeling is enabled across Office, [but not in Outlook](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling).
 - 10525046 Fixed an issue where Excel may not close completely when both the AIP add-in and other add-ins are running.
 - 10565248 Fixed an issue where Outlook may fail to send a message with embedded images in rich-text with rules for [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) configured.
 - 10632840 Fixed an issue where the AIP add-in may fail to load in Office apps with language related errors. <!--To fully apply this fix, you may need to assign the default [UILanguage](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-winpe-uilanguage) value to `en_US`.-->
