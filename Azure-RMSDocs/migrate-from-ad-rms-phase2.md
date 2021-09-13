@@ -155,7 +155,7 @@ If you created custom templates before the migration, either before or after act
 
 2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate).
 
-3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd).
+3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetemplate).
 
 You can then publish or archive these templates as you would any other template that you create after the migration.
 
