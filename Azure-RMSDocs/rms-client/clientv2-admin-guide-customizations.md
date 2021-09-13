@@ -1025,8 +1025,8 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{
 
 By default, the Azure Information Protection unified labeling client supports central reporting and sends its audit data to:
 
-- [Azure Information Protection analytics](../reports-aip.md), if you have a [Log Analytics workspace](https://azure.microsoft.com/pricing/details/log-analytics)
-- The [Microsoft 365 Activity Explorer](/microsoft-365/compliance/data-classification-activity-explorer)
+- [Azure Information Protection analytics](../reports-aip.md), if you've configured a [Log Analytics workspace](https://azure.microsoft.com/pricing/details/log-analytics)
+- [Microsoft 365](/microsoft-365/compliance/data-classification-activity-explorer)
 
 To change this behavior, so that audit data is not sent, do the following:
 
@@ -1048,7 +1048,7 @@ To change this behavior, so that audit data is not sent, do the following:
 
 1. In all Azure Information Protection client machines, delete the following folder: **%localappdata%\Microsoft\MSIP\mip**
 
-To enable the client to send audit log data again, to both Azure Information Protection analytics and the Microsoft 365 Activity Explorer, change the advanced setting value to **True**. You do not need to manually create the **%localappdata%\Microsoft\MSIP\mip** folder again on your client machines.
+To enable the client to send audit log data again, change the advanced setting value to **True**. You do not need to manually create the **%localappdata%\Microsoft\MSIP\mip** folder again on your client machines.
 
 ## Send information type matches to Azure Information Protection analytics
  
