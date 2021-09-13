@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/27/2021
+ms.date: 09/13/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -51,7 +51,7 @@ When you're ready to start installing and deploying your scanner, continue with 
 
 ## Windows Server requirements
 
-You must have a Windows Server computer to run the scanner, which has the following system specifications:
+You must have a 64-bit Windows Server computer to run the scanner, which has the following system specifications:
 
 |Specification  |Details  |
 |---------|---------|
