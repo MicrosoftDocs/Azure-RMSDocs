@@ -6,7 +6,7 @@ description: Get answers to frequently asked questions about Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/02/2020
+ms.date: 09/14/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -198,7 +198,7 @@ Administrators with this role can:
 To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
 > [!NOTE]
-> This role doesn't support tracking and revoking documents for users, and is not supported in the Azure portal if your tenant is on the [unified labeling platform](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
+> This role is not supported in the Azure portal if your tenant is on the [unified labeling platform](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
     
 ### Compliance administrator or Compliance data administrator
 
@@ -244,7 +244,7 @@ The Global Administrator role enables users to run all [PowerShell cmdlets from 
 
 The Connector Administrator role enables users to run only the Rights Management (RMS) connector. 
 
-These administrative roles don't grant permissions to management consoles, or support tracking and revoking documents for users.
+These administrative roles don't grant permissions to management consoles. The Connector Administrator role also does not support tracking and revoking documents for users.
     
 To assign either of these administrative roles, use the AIPService PowerShell cmdlet, [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator).
 
