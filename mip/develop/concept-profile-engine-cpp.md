@@ -114,7 +114,7 @@ This method allows the application to be judicious about memory usage, by unload
 - Then work through the profile and engine concepts for the File, Policy, and Protection SDKs
   - [File SDK profile concepts](concept-profile-engine-file-profile-cpp.md)
   - [File SDK engine concepts](concept-profile-engine-file-engine-cpp.md)
-  - [Policy SDK profile concepts](concept-profile-engine-file-profile-cpp.md)
-  - [Policy SDK engine concepts](concept-profile-engine-file-engine-cpp.md)
-  - [Protection SDK profile concepts](concept-profile-engine-file-profile-cpp.md)
-  - [Protection SDK engine concepts](concept-profile-engine-file-engine-cpp.md)  
+  - [Policy SDK profile concepts](concept-profile-engine-policy-profile-cpp.md)
+  - [Policy SDK engine concepts](concept-profile-engine-policy-engine-cpp.md)
+  - [Protection SDK profile concepts](concept-profile-engine-protection-profile-cpp.md)
+  - [Protection SDK engine concepts](concept-profile-engine-protection-engine-cpp.md)  
