@@ -76,7 +76,7 @@ Perform these steps again as needed when your content changes.
 
     - The .csv files have more details for each file. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space. 
 
-        When a scan is completed, a **Summary_<x>.txt** file is created with the scan summary.
+        When a scan is completed, a `Summary_<x>.txt` file is created with the scan summary.
 
 > [!NOTE]
 > Scanners send collected data information to Azure Information Protection every five minutes, so that you can view the results in near real time from the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md).
