@@ -195,7 +195,7 @@ namespace mip_sdk_dotnet_quickstart
                MipConfiguration mipConfiguration = new MipConfiguration(appInfo, "mip_data", LogLevel.Trace, false);
 
                // Create MipContext using Configuration
-               mipContext = MIP.CreateMipContext(mipConfiguration);
+               MipContext mipContext = MIP.CreateMipContext(mipConfiguration);
 
                // Initialize and instantiate the File Profile.
                // Create the FileProfileSettings object.
@@ -218,7 +218,7 @@ namespace mip_sdk_dotnet_quickstart
                // handler = null; // This will be used in later quick starts.
                fileEngine = null;
                fileProfile = null;
-               mipContext.Shutdown();
+               mipContext.ShutDown();
                mipContext = null;
           }
      }

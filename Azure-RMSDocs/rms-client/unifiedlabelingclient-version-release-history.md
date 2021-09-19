@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/26/2021
+ms.date: 09/12/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -84,6 +84,19 @@ Unified labeling scanner and client version 2.12.62.0
 **Released** 08/02/2021
 
 This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
+
+### Built-in co-authoring support
+
+Microsoft 365's co-authoring features are now supported directly in the main Azure Information Protection unified labeling client installation, for enabled tenants.
+
+Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+
+> [!NOTE]
+> Before you start, we recommend that you review all related prerequisites and limitations. For more information, see:
+>
+> - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
+> - [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring)
+>
 
 ### Support for DKE labels with user-defined permissions
 
@@ -216,27 +229,6 @@ The following fixes were delivered in version 2.11.58.0 of the Azure Information
 - [Size limits](clientv2-admin-guide-file-types.md#supported-file-sizes-for-the-file-explorer-and-powershell) for protecting files using the File Explorer and PowerShell are now updated.
 
 - Fixed issues in parsing [sensitivity label policies](/microsoft-365/compliance/create-sensitivity-labels).
-
-## Version 2.10.46.0 for co-authoring (Public preview)
-
-Unified labeling client version 2.10.46.0
-
-**Release** 03/02/2021
-
-This dedicated version of Azure Information Protection provides a public preview of co-authoring features newly supported in Microsoft 365.
-
-Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
-
-> [!IMPORTANT]
-> To leverage the co-authoring features in public preview, you must download and install the dedicated installation file for this release. On the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=53018), download and install the `AzInfoProtection_2.10.46_CoAuthoring_PublicPreview.exe`  file.
->
-> Your system must also comply with the version requirements listed in the [Microsoft 365 prerequisites for co-authoring](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites).
->
-
-Before you start, we recommend that you review all related prerequisites and limitations. For more information, see:
-
-- [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
-- [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
 
 ## Version 2.9.116.0
 
