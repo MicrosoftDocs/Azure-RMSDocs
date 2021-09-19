@@ -1026,7 +1026,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{
 By default, the Azure Information Protection unified labeling client supports central reporting and sends its audit data to:
 
 - [Azure Information Protection analytics](../reports-aip.md), if you've configured a [Log Analytics workspace](https://azure.microsoft.com/pricing/details/log-analytics)
-- [Microsoft 365](/microsoft-365/compliance/data-classification-activity-explorer)
+- Microsoft 365, where you can view them in the [Activity Explorer](/microsoft-365/compliance/data-classification-activity-explorer)
 
 To change this behavior, so that audit data is not sent, do the following:
 
