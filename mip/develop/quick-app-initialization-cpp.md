@@ -307,7 +307,9 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
                                     mip::Identity("<engine-account>"), // Engine identity (account used for authentication)
                                     "<engine-state>",                  // User-defined engine state
                                     "en-US");                          // Locale (default = en-US)
-
+                                    
+    // Set the engineId for caching. 
+    engineSettings.setEngineId("<engine-account>");
     // Set up promise/future connection for async engine operations; add engine to profile asynchronously
     auto enginePromise = make_shared<promise<shared_ptr<FileEngine>>>();
     auto engineFuture = enginePromise->get_future();
