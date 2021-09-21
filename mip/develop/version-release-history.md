@@ -4,7 +4,7 @@ description: Version release history and change notes for the MIP SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 11/25/2019
+ms.date: 09/21/2021
 ms.author: mbaldwin
 
 ---
@@ -68,7 +68,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
   - The pattern for labeling this files is that same as any other file type.
   - The **enable_msg_file_type** custom setting must be set to enable MSG file handling.
   - Attachments will be protected but **not** labeled.
-  - Review [Set enable_msg_file_type and use File SDK for protecting .msg file](quick-email-msg-csharp.md#set-enable_msg_file_type-and-use-file-sdk-for-protecting-msg-file) for details on custom setting.
+  - Review [Set enable_msg_file_type and use File SDK for protecting .msg file](quick-email-msg-csharp.md#set-enable_msg_file_type-and-use-file-sdk-for-labeling-msg-file) for details on custom setting.
 - `FileHandler::IsLabeledOrProtected()` now supports MSG files.
 - File SDK now supports decryption of protected attachments on unprotected MSG files.
   - This applies only to files and not containers such as MSG or ZIP files.
