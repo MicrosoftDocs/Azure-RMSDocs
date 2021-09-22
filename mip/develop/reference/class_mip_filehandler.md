@@ -12,6 +12,7 @@ ms.date: 08/23/2021
 Interface for all file handling functions.
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<ContentLabel\> GetLabel()  |  Starts retrieving the sensitivity label from the file.
@@ -56,9 +57,6 @@ Parameters:
 
 * **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
-
-
-  
 **Returns**: Async control object.
   
 ### RevokeContentAsync function
@@ -69,9 +67,6 @@ Parameters:
 
 
 * **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
-
-
-
   
 **Returns**: Async control object.
   
