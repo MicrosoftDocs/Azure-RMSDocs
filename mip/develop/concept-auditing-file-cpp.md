@@ -1,6 +1,6 @@
 ---
-title: Concepts - Auditing in the Microsoft Information Protection SDK File API
-description: This article will help you understand how to use the Microsoft Information Protection SDK to submit File API auditing events to Azure Information Protection Analytics.
+title: Concepts - Auditing in the Microsoft Information Protection File SDK
+description: This article will help you understand how to use the Microsoft Information Protection SDK to submit File SDK auditing events to Azure Information Protection Analytics.
 services: information-protection
 author: tommoser
 ms.service: information-protection
@@ -9,7 +9,7 @@ ms.date: 07/30/2019
 ms.author: tommos
 ---
 
-# Auditing in the MIP SDK File API
+# Auditing in the MIP File SDK
 
 The Azure Information Protection administration portal provides access to administrator reports. These reports provide visibility in to which labels users are applying, manually or automatically, across any applications or services that have integrated the MIP SDK. Development partners using the SDK can enable this functionality to surface information from their applications in customer reports.
 
@@ -19,7 +19,7 @@ There are three types of events that can be submitted via the SDK to Azure Infor
 
 ### Heartbeat Events
 
-Heartbeat events are generated automatically for any application that has integrated the File API. Heartbeat events include:
+Heartbeat events are generated automatically for any application that has integrated the File SDK. Heartbeat events include:
 
 * TenantId
 * Time Generated
@@ -33,7 +33,7 @@ These events are useful in detecting applications across your enterprise that ar
 
 ### Discovery Events
 
-Discovery events provide information on labeled information that is read or consumed by the File API. These events are useful as they surface the devices, location, and users who are accessing information across an organization.
+Discovery events provide information on labeled information that is read or consumed by the File SDK. These events are useful as they surface the devices, location, and users who are accessing information across an organization.
 
 These events are submitted to Azure Information Protection Analytics, by setting the `AuditDiscoveryEnabled` parameter to true when creating a new `mip::FileHandler`. Additionally, a content identifier that identifies the file in some human-readable format is provided. It's recommended to use the file path for this identifier.
 

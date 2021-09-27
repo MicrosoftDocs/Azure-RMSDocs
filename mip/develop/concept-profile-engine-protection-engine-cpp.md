@@ -1,5 +1,5 @@
 ---
-title: Concepts - The Protection API engine object
+title: Concepts - The Protection SDK engine object
 description: This article will help you understand the concepts around the Protection engine object, which is created during application initialization.
 author: msmbaldwin
 ms.service: information-protection
@@ -8,11 +8,11 @@ ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
 
-# Microsoft Information Protection SDK - Protection API engine concepts
+# Microsoft Information Protection SDK - Protection SDK engine concepts
 
 ## Implementation: Add a Protection Engine
 
-In the File API, the `mip::ProtectionProfile` class is the root class for all SDK operations. Having already created the profile, we can now add an engine to the profile.
+In the File SDK, the `mip::ProtectionProfile` class is the root class for all SDK operations. Having already created the profile, we can now add an engine to the profile.
 
 The example below demonstrates using a single engine for a single authenticated user.
 
@@ -27,13 +27,21 @@ ProtectionEngine::Settings engineSettings("UniqueID", "");
 ```
 
 > [!NOTE]
-> If using this method to create the protection settings object, you must also manually set the CloudEndpointBaseUrl to https://api.aadrm.com or tp the Active Directory Rights Management Service cluster URL.
+> If using this method to create the protection settings object, you must also manually set the identity on ProtectionEngineSettings via `setIdentity()` or the target cloud environment via `setCloud()`.
 
 As a best practice, the first parameter, **id**, should be something that allows the engine to be easily connected to the associated user, **or** a `mip::Identity` object. To initialize the settings with `mip::Identity`:
 
 ```cpp
 ProtectionEngine::Settings engineSettings(mip::Identity("Bob@Contoso.com", "");
 ```
+
+When creating engineSettings in this manner, it's important to also explicitly set a unique engineId via:
+
+```cpp
+engineSettings.SetEngineId(engineId);
+```
+
+Using the **username or email** helps to ensure that the same engine is loaded each time the user uses the service or application. 
 
 ### Implementation: Add the Protection Engine
 
@@ -88,7 +96,7 @@ for (const auto& temp : *templates) {
 
 Printing the names is an easy way to show that we successfully pulled policy from the service and were able to get the templates. To apply the template, the template identifier is required.
 
-Mapping templates to labels can only be done via Policy API by examining the result of `ComputeActions()`.
+Mapping templates to labels can only be done via Policy SDK by examining the result of `ComputeActions()`.
 
 ## Next Steps
 

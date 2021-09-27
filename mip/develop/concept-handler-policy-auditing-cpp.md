@@ -1,6 +1,6 @@
 ---
-title: Concepts - Auditing in the Microsoft Information Protection SDK Policy API
-description: This article will help you understand how to use the Microsoft Information Protection SDK to submit Policy API auditing events to Azure Information Protection Analytics.
+title: Concepts - Auditing in the Microsoft Information Protection Policy SDK
+description: This article will help you understand how to use the Microsoft Information Protection SDK to submit Policy SDK auditing events to Azure Information Protection Analytics.
 services: information-protection
 author: tommoser
 ms.service: information-protection
@@ -19,7 +19,7 @@ There are three types of events that can be submitted via the SDK to Azure Infor
 
 ### Heartbeat Events
 
-Heartbeat events are generated automatically for any application that has integrated the Policy API. Heartbeat events include:
+Heartbeat events are generated automatically for any application that has integrated the Policy SDK. Heartbeat events include:
 
 * TenantId
 * Time Generated
@@ -33,9 +33,9 @@ These events are useful in detecting applications across your enterprise that ar
 
 ### Discovery Events
 
-Discovery events provide information on labeled information that is read or consumed by the Policy API. These events are useful as they surface the devices, location, and users who are accessing information across an organization.
+Discovery events provide information on labeled information that is read or consumed by the Policy SDK. These events are useful as they surface the devices, location, and users who are accessing information across an organization.
 
-Discovery events are generated in the Policy API, by setting a flag when creating the `mip::PolicyHandler` object. In the example below, the value for **isAuditDiscoveryEnabled** is set to `true`. When `mip::ExecutionState` is passed to `ComputeActions()` or `GetSensitivityLabel()` (with existing metadata information and content identifier), discovery information will be submitted to Azure Information Protection Analytics.
+Discovery events are generated in the Policy SDK, by setting a flag when creating the `mip::PolicyHandler` object. In the example below, the value for **isAuditDiscoveryEnabled** is set to `true`. When `mip::ExecutionState` is passed to `ComputeActions()` or `GetSensitivityLabel()` (with existing metadata information and content identifier), discovery information will be submitted to Azure Information Protection Analytics.
 
 The discovery audit is generated once the application calls `ComputeActions()` or `GetSensitivityLabel()` and provides `mip::ExecutionState`. This event is generated only once per handler.
 
@@ -71,5 +71,5 @@ Events submitted to the Azure Information Protection audit pipeline will surface
 ## Next Steps
 
 - For details on the auditing experience in Azure Information Protection, see the [preview announcement blog on Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
-- Download the [Policy API Samples from GitHub and try out the Policy API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
+- Download the [Policy SDK Samples from GitHub and try out the Policy SDK](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
 

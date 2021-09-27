@@ -1,6 +1,6 @@
 ---
-title: Concepts - Protection API observers in the MIP SDK.
-description: The MIP SDK is designed to be almost entirely asynchronous. This article will help you understand how Protection API observers are implemented and used for asynchronicity.
+title: Concepts - Protection SDK observers in the MIP SDK.
+description: The MIP SDK is designed to be almost entirely asynchronous. This article will help you understand how Protection SDK observers are implemented and used for asynchronicity.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
@@ -8,9 +8,9 @@ ms.date: 09/27/2018
 ms.author: mbaldwin
 ---
 
-# Microsoft Information Protection SDK - Protection API Observers
+# Microsoft Information Protection SDK - Protection SDK Observers
 
-The Protection API contains three observer classes. Observer members are virtual and can be overridden to handle callbacks for asynchronous operations.
+The Protection SDK contains three observer classes. Observer members are virtual and can be overridden to handle callbacks for asynchronous operations.
 
 - [Protection Profile: `mip::ProtectionProfile::Observer`](reference/class_mip_ProtectionProfile_observer.md)
 - [Protection Engine: `mip::ProtectionEngine::Observer`](reference/class_mip_ProtectionEngine_observer.md)

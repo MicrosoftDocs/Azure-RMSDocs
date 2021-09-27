@@ -1,5 +1,5 @@
 ---
-title: Concepts - The Policy API engine object
+title: Concepts - The Policy SDK engine object
 description: This article will help you understand the concepts around the Policy engine object, which is created during application initialization.
 author: msmbaldwin
 ms.service: information-protection
@@ -8,9 +8,9 @@ ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
 
-# Microsoft Information Protection SDK - Policy API engine concepts
+# Microsoft Information Protection SDK - Policy SDK engine concepts
 
-`mip::PolicyEngine` implements all operations that the Policy API can perform, with the exception of loading the profile.
+`mip::PolicyEngine` implements all operations that the Policy SDK can perform, with the exception of loading the profile.
 
 ## Implementation: Add a Policy Engine
 
@@ -28,6 +28,14 @@ PolicyEngine::Settings engineSettings(
   "en-US",                  // Locale.
   false);                   // Load sensitive information types for driving classification.
 ```
+
+When creating engineSettings in this manner, it's important to also explicitly set a unique engineId via:
+
+```cpp
+engineSettings.SetEngineId(engineId);
+```
+
+Using the **username or email** helps to ensure that the same engine is loaded each time the user uses the service or application. 
 
 Also valid is providing a custom engine ID:
 

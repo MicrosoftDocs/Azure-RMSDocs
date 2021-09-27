@@ -608,7 +608,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 18. Click on **Add a permission**.
 
-19. Back on the **API permissions** pane, in the **Grant consent** section, select **Grant admin consent for <your tenant name>** and select **Yes** for the confirmation prompt.
+19. Back on the **API permissions** pane, in the **Grant consent** section, select **`Grant admin consent for <your tenant name>`** and select **Yes** for the confirmation prompt.
 
 20. On the **App registrations** pane, select **+ New application registration** to create your native application now.
 

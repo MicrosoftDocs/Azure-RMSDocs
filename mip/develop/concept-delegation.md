@@ -162,4 +162,3 @@ For a full review of permissions and where to set them, review [API permissions 
 ## Next Steps
 
 - Review the [API permissions for the Microsoft Information Protection SDK](concept-api-permissions.md)
-- Review the <TODO> add service principal auth ref.

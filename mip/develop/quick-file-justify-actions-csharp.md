@@ -8,7 +8,7 @@ ms.date: 05/01/2020
 ms.author: mbaldwin
 ---
 
-# Microsoft Information Protection SDK File API - Action Justification for lowering a sensitivity label on a file (C#)
+# Microsoft Information Protection File SDK - Action Justification for lowering a sensitivity label on a file (C#)
 
 This quickstart addresses handling of a downgrade label operation when the label policy requires justification.Here, we will use `IFileHandler` interface for changing the labels of a file. For further details consult [API reference](/dotnet/api/?term=microsoft.informationprotection).
 

@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.date: 08/23/2021
 ---
 
 # class TelemetryDelegate 
-A class that defines the interface to the MIP SDK audit/telemetry notifications.
+A class that defines the interface to the MIP SDK telemetry notifications.
   
 ## Summary
  Members                        | Descriptions                                

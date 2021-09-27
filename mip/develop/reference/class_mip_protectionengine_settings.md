@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.date: 08/23/2021
 ---
 
 # class ProtectionEngine::Settings 
@@ -37,6 +37,8 @@ public const std::string& GetUnderlyingApplicationId() const  |  Gets the Underl
 public void SetUnderlyingApplicationId(const std::string& underlyingApplicationId)  |  Sets the Underlying Application ID.
 public bool GetAllowCloudServiceOnly() const  |  Gets whether or not only cloud service is allowed.
 public void SetAllowCloudServiceOnly(bool allowCloudServiceOnly)  |  Sets whether or not only cloud service is allowed.
+public const std::shared_ptr\<void\>& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+public void SetLoggerContext(const std::shared_ptr\<void\>& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
   
 ## Members
   
@@ -219,4 +221,18 @@ Sets whether or not only cloud service is allowed.
 
 Parameters:  
 * **allowCloudServiceOnly**: A boolean value indicating whether or not only cloud service is allowed
+
+
+  
+### GetLoggerContext function
+Get logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+
+  
+**Returns**: The logger context
+  
+### SetLoggerContext function
+Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+
+Parameters:  
+* **loggerContext**: The logger context
 

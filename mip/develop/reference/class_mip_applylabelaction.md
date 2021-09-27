@@ -5,15 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/23/2021
+ms.date: 08/23/2021
 ---
 
 # class ApplyLabelAction 
 Apply label actions requires the calling application to apply a specific label.
   
 ## Summary
-
-Members                        | Descriptions                                
+ Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::shared_ptr\<Label\>& GetLabel() const  |  Get the label required.
 public const std::vector\<std::string\>& GetClassificationIds() const  |  Get the Classification IDs that matched and caused this label to appear.
@@ -30,4 +29,4 @@ Get the label required.
 Get the Classification IDs that matched and caused this label to appear.
 
   
-**Returns**: Const std::vector\<std::string\>& a list of classification IDs that caused this label to appear.
+**Returns**: Const std::vector<std::string>& a list of classification IDs that caused this label to appear.

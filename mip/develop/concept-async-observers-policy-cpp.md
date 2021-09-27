@@ -1,6 +1,6 @@
 ---
-title: Concepts - Policy API observers in the MIP SDK.
-description: The MIP SDK is designed to be almost entirely asynchronous. This article will help you understand how Policy API observers are implemented and used for asynchronicity.
+title: Concepts - Policy SDK observers in the MIP SDK.
+description: The MIP SDK is designed to be almost entirely asynchronous. This article will help you understand how Policy SDK observers are implemented and used for asynchronicity.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
@@ -8,9 +8,9 @@ ms.date: 09/27/2018
 ms.author: mbaldwin
 ---
 
-# Microsoft Information Protection SDK - Policy API Observers
+# Microsoft Information Protection SDK - Policy SDK Observers
 
-The Policy API SDK contains one observer class. Observer members are virtual and should be overridden to handle callbacks for asynchronous operations.
+The Policy SDK contains one observer class. Observer members are virtual and should be overridden to handle callbacks for asynchronous operations.
 
 - [`mip::PolicyProfile::Observer`](reference/class_mip_policyprofile_observer.md)
 
