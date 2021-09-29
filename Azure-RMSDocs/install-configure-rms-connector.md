@@ -69,9 +69,7 @@ Before you begin:
     - **AzureUSGovernment2**: Azure Government 2
     - **AzureUSGovernment3**: Azure Government 3
 
-1. Select **Sign In** to sign in to your account. Make sure you enter credentials for an account that has sufficient privileges to configure the RMS connector.
-
-    If you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content. For example, if you restricted the ability to protect content to the "IT department" group, the account that you specify here must be a member of that group. If not, you see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
+1. <a name="signin"></a>Select **Sign In** to sign in to your account. Make sure you enter credentials for an account that has sufficient privileges to configure the RMS connector.
 
     You can use an account that has one of the following privileges:
 
@@ -83,29 +81,13 @@ Before you begin:
 
     The Azure Rights Management global administrator role and Azure Rights Management connector administrator role are assigned to accounts by using the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) cmdlet.
 
-    **To run the RMS connector with least privileges**, create a dedicated account for this purpose that you then assign the Azure RMS connector administrator role:
+    > [!NOTE]
+    > If you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content. For example, if you restricted the ability to protect content to the "IT department" group, the account that you specify here must be a member of that group. If not, you see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
+    >
 
-    1. If you haven't already done so, download and install the AIPService PowerShell module. For more information, see [Installing the AIPService PowerShell module](install-powershell.md).
-
-        Start Windows PowerShell with the **Run as administrator** command, and connect to the protection service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) command:
-
-        ```
-        Connect-AipService                   //provide Microsoft 365 tenant administrator or Azure RMS global administrator credentials
-        ```
-
-    1.  Run the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) command, using just one of the following parameters:
-
-        ``` powershell
-        Add-AipServiceRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
-
-        Add-AipServiceRoleBasedAdministrator -ObjectId <object id> -Role "ConnectorAdministrator"
-
-        Add-AipServiceRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
-        ```
-
-        For example, run: `Add-AipServiceRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"`
-
-    Although these commands assign the connector administrator role, you can also use the GlobalAdministrator role here.
+    > [!TIP]
+    > To run the RMS connector with least privileges, create a dedicated account for this purpose that you then assign the Azure RMS connector administrator role. For more information, see [Create a dedicated account for the RMS connector](#create-a-dedicated-account-for-the-rms-connector).
+    >
 
 1. On the final page of the wizard, do the following, and then click **Finish**:
 
@@ -118,6 +100,33 @@ During the RMS connector installation process, all prerequisite software is vali
 -   **An empty table of servers** that are authorized to use the connector to communicate with Azure RMS. [Add servers](#authorizing-servers-to-use-the-rms-connector) to this table later.
 
 -   **A set of security tokens** for the connector, which authorize operations with Azure RMS. These tokens are downloaded from Azure RMS and installed on the local computer in the registry. They are protected by using the data protection application programming interface (DPAPI) and the Local System account credentials.
+
+### Create a dedicated account for RMS connector
+
+This procedure describes how to create a dedicated account to run the Azure RMS connector with the least privileges possible, to use when [signing in](#signin) during the RMS connector installation.
+
+1. If you haven't already done so, download and install the AIPService PowerShell module. For more information, see [Installing the AIPService PowerShell module](install-powershell.md).
+
+    Start Windows PowerShell with the **Run as administrator** command, and connect to the protection service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) command:
+
+    ```
+    Connect-AipService                   //provide Microsoft 365 tenant administratoror Azure RMS global administrator credentials
+    ```
+
+1.  Run the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) command, using just one of the following parameters:
+
+    ``` powershell
+    Add-AipServiceRoleBasedAdministrator -EmailAddress <email address> -Role"ConnectorAdministrator"
+
+    Add-AipServiceRoleBasedAdministrator -ObjectId <object id> -Role"ConnectorAdministrator"
+
+    Add-AipServiceRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role"ConnectorAdministrator"
+    ```
+
+    For example, run: `Add-AipServiceRoleBasedAdministrator -EmailAddressmelisa@contoso.com -Role "ConnectorAdministrator"`
+
+Although these commands assign the connector administrator role, you can also use the **GlobalAdministrator** role here.
+
 
 ### Verify your installation
 
