@@ -36,14 +36,11 @@ ms.custom: admin
 
 Use the following information to help you install and configure the Microsoft Rights Management (RMS) connector. These procedures cover steps 1 though 4 from [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
-Before you begin, make sure that you have reviewed and checked the [prerequisites](deploy-rms-connector.md#prerequisites-for-the-rms-connector) for this deployment.
+Before you begin:
 
-Make sure you are aware of the correct Azure sovereign cloud instance for your connector to be able to complete setup and configuration: 
-- **AzureCloud**: Commercial offering of Azure
-- **AzureChinaCloud**: Azure Operated by 21Vianet
-- **AzureUSGovernment**: Azure Government (GCC High/DoD)
-- **AzureUSGovernment2**: Azure Government 2
-- **AzureUSGovernment3**: Azure Government 3
+- Make sure that you have reviewed and checked the [prerequisites](deploy-rms-connector.md#prerequisites-for-the-rms-connector) for this deployment.
+
+- Make sure you are aware of the [correct Azure sovereign cloud instance](#cloud) for your connector to be able to complete setup and configuration.
 
 
 ## Installing the RMS connector
@@ -65,14 +62,12 @@ Make sure you are aware of the correct Azure sovereign cloud instance for your c
 
 1.  Read and accept the End-User License Agreement terms, and then click **Next**.
 
-1. In the **Authentication** page, select the Cloud environment that matches your solution. For example, select **AzureCloud** for the Azure commercial offering. Otherwise, select one of the following options:
+1. <a name="cloud"></a>In the **Authentication** page, select the Cloud environment that matches your solution. For example, select **AzureCloud** for the Azure commercial offering. Otherwise, select one of the following options:
 
     - **AzureChinaCloud**: Azure Operated by 21Vianet
     - **AzureUSGovernment**: Azure Government (GCC High/DoD)
     - **AzureUSGovernment2**: Azure Government 2
     - **AzureUSGovernment3**: Azure Government 3
-
-    :::image type="content" source="media/authenticate_tenant_rms_connector.png" alt-text="Select the correct Azure environment to authenticate your new AAD RM connector":::
 
 1. Select **Sign In** to sign in to your account. Make sure you enter credentials for an account that has sufficient privileges to configure the RMS connector.
 
@@ -134,9 +129,11 @@ During the RMS connector installation process, all prerequisite software is vali
 
 - **To verify user ability to read or modify RMS- or AIP-protected documents**:
 
-    On the RMS connector machine, open the Event Viewer and go to the Application Windows Log. Find an entry from the **Microsoft RMS Connector Source**, with a Level of **Information**. 
+    On the RMS connector machine, open the Event Viewer and go to the Application Windows Log. Find an entry from the **Microsoft RMS Connector** source, with a Level of **Information**.
 
     The entry should have a message similar to the following:    `The list of authorized accounts has been updated`
+
+    :::image type="content" source="media/validate-rms-connector.png" alt-text="Screenshot of an RMS connector event in the Event Viewer.":::
 
 If you need to uninstall the RMS connector, uninstall via the system settings page, or by running the wizard again and selecting the uninstall option.
 
