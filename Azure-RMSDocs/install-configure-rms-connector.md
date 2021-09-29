@@ -82,7 +82,9 @@ Before you begin:
     The Azure Rights Management global administrator role and Azure Rights Management connector administrator role are assigned to accounts by using the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) cmdlet.
 
     > [!NOTE]
-    > If you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content. For example, if you restricted the ability to protect content to the "IT department" group, the account that you specify here must be a member of that group. If not, you see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
+    > If you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content.
+    >
+    > For example, if you restricted the ability to protect content to the "IT department" group, the account that you specify here must be a member of that group. If not, you see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
     >
 
     > [!TIP]
@@ -117,15 +119,19 @@ This procedure describes how to create a dedicated account to run the Azure RMS 
 
     ``` powershell
     Add-AipServiceRoleBasedAdministrator -EmailAddress <email address> -Role"ConnectorAdministrator"
+    ```
 
+    ```powershell
     Add-AipServiceRoleBasedAdministrator -ObjectId <object id> -Role"ConnectorAdministrator"
+    ```
 
+    ```powershell
     Add-AipServiceRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role"ConnectorAdministrator"
     ```
 
     For example, run: `Add-AipServiceRoleBasedAdministrator -EmailAddressmelisa@contoso.com -Role "ConnectorAdministrator"`
 
-Although these commands assign the connector administrator role, you can also use the **GlobalAdministrator** role here.
+Although these commands assign the connector administrator role, you can also use the **GlobalAdministrator** role instead.
 
 
 ### Verify your installation
