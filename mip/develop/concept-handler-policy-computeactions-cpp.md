@@ -11,7 +11,7 @@ ms.author: tommos
 
 # Compute an Action
 
-As previously detailed, the primary functions of the Policy API are to:
+As previously detailed, the primary functions of the Policy SDK are to:
 
 - list available labels
 - return a set of actions that should be taken, based on the current and desired state
@@ -55,11 +55,11 @@ Add: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ContentBits : 3
 The `PolicyHandler` computes the actions and returns a `std::vector` of `mip::Action`. It's up to the application developer to apply this metadata to the file or data.
 
 > [!NOTE]
-> The example above displays only the `mip::MetadataAction` output. For an example of displaying additional action types, review the sample bundles with the [policy API download](https://aka.ms/mipsdkbins).
+> The example above displays only the `mip::MetadataAction` output. For an example of displaying additional action types, review the sample bundles with the [Policy SDK download](https://aka.ms/mipsdkbins).
 
 ## Compute Actions with an Existing Label
 
-When using the Policy API, it's up to the application to read metadata from content. This metadata is provided to the API as part of the `mip::ExecutionState`. `ComputeActions()` can handle more complex operations than applying a new label to an unlabeled document. The example below demonstrates downgrading a label from a more sensitive label, to a less sensitive label. This process is simulated by reading a comma-separated string of metadata, and providing to the API via `mip::ExecutionState`.
+When using the Policy SDK, it's up to the application to read metadata from content. This metadata is provided to the API as part of the `mip::ExecutionState`. `ComputeActions()` can handle more complex operations than applying a new label to an unlabeled document. The example below demonstrates downgrading a label from a more sensitive label, to a less sensitive label. This process is simulated by reading a comma-separated string of metadata, and providing to the API via `mip::ExecutionState`.
 
 > [!NOTE]
 > The sample uses a utility function called `SplitString()`. An example can be found [here](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/utils.cpp)
@@ -113,4 +113,4 @@ Remove: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ActionId
 ## Next Steps
 
 - Learn how to [pass audit events to Azure Information Protection Analytics](concept-handler-policy-auditing-cpp.md)
-- Download the [Policy API Samples from GitHub and try out the Policy API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
+- Download the [Policy SDK Samples from GitHub and try out the Policy SDK](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

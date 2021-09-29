@@ -8,7 +8,7 @@ ms.date: 05/01/2020
 ms.author: mbaldwin
 ---
 
-# Microsoft Information Protection SDK - File API Republishing Quickstart (C#)
+# Microsoft Information Protection SDK - File SDK Republishing Quickstart (C#)
 
 ## Overview
 

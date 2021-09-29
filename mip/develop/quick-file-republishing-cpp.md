@@ -8,7 +8,7 @@ ms.date: 05/01/2020
 ms.author: mbaldwin
 ---
 
-# File API Re-publishing Quickstart (C++)
+# File SDK Re-publishing Quickstart (C++)
 
 ## Overview
 

@@ -139,35 +139,40 @@ Review the tables below to see exactly what events and data are sent with minimu
 
 ### Opting out in C++
 
-To set diagnostics to minimum only, create a shared pointer of **mip::DiagnosticConfiguration()** and set **isMinimalTelemetryEnabled** to true. Pass the configuration object in to **MipContent::Create()**.
+To set diagnostics to minimum only, create a shared pointer of **mip::DiagnosticConfiguration()** and set **isMinimalTelemetryEnabled** to true. Pass the object to `MipConfiguration::SetDiagnosticConfiguration()` then use the `MipConfiguration` to generate `MipContext`.
 
 ```cpp
 auto diagnosticConfig = std::make_shared<mip::DiagnosticConfiguration>();
 diagnosticConfig->isMinimalTelemetryEnabled = true;
 					   
-// Create MipContext, passing in mip::TelemetryConfiguration object.
-mMipContext = mip::MipContext::Create(
-    mAppInfo,
-	"mip_data",
-	mip::LogLevel::Trace,
-	false,
-	nullptr /*loggerDelegateOverride*/,
-	diagnosticConfig /*diagnosticOverride*/
-);
+// Create MipConfiguration. 
+// Initialize MipConfiguration.
+std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
+                                                                                                 "file_sample",
+				                                                                                 mip::LogLevel::Trace,
+				                                                                                 false);
+
+// Set DiagnosticConfig
+mipConfiguration->SetDiagnosticConfiguration(diagnosticConfig);
+
+mMipContext = mip::MipContext::Create(mipConfiguration);
 ```
 
 ### Opting out in .NET
 
-To set diagnostic data to minimum only, create a **DiagnosticConfiguration()** object and set **isMinimalTelemetryEnabled** to true. Pass the configuration object in to **MIP.CreateMipContext()**.
+To set diagnostic data to minimum only, create a **DiagnosticConfiguration()** object and set **isMinimalTelemetryEnabled** to true. Set the `DiagnosticOverride` property on `MipConfiguration` then create the `MipContext`.
 
 ```csharp
 DiagnosticConfiguration diagnosticConfiguration = new DiagnosticConfiguration();
-diagnosticConfiguration.IsTelemetryOptedOut = true;
+diagnosticConfiguration.IsMinimalTelemetryEnabled = true;
 
-// Create MipContext, passing in TelemetryConfiguration object.
-mipContext = MIP.CreateMipContext(appInfo, 
-    "mip_data", 
-    LogLevel.Trace, 
-    null, 
-    diagnosticConfiguration);
+// Create MipConfiguration.
+MipConfiguration mipConfiguration = new MipConfiguration(appInfo, "mip_data", LogLevel.Trace, false);
+
+// Set Diagnostic Override.
+mipConfiguration.DiagnosticOverride = diagnosticConfiguration;
+
+// Create MipContext.
+MipContext mipContext = MIP.CreateMipContext(mipConfiguration);
+
 ```

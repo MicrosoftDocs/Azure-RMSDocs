@@ -6,7 +6,7 @@ description: Get answers to frequently asked questions about Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/02/2020
+ms.date: 09/14/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -32,7 +32,7 @@ search.appverid:
 
 [!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
-Have a question about Azure Information Protection (AIP), or about the Azure Rights Management service (Azure RMS)? 
+Have a question about Azure Information Protection (AIP), or about the Azure Rights Management service (Azure RMS)?
 
 See if it's answered below or on the [subsequent, more specific, FAQ pages](#what-do-i-do-if-my-question-isnt-here).
 
@@ -57,7 +57,7 @@ For more information, see [Information protection capabilities to help protect y
 
 ## What's the difference between labels in Microsoft 365 and labels in Azure Information Protection?
 
-Originally, Microsoft 365 had only [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30), which enabled you to classify documents and emails for auditing and retention when that content was stored in Microsoft 365 services. 
+Originally, Microsoft 365 had only [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30), which enabled you to classify documents and emails for auditing and retention when that content was stored in Microsoft 365 services.
 
 In contrast, Azure Information Protection labels, configured at the time using the AIP classic client in the Azure portal, enabled you to apply a consistent classification and protection policy for documents and emails whether they were stored on-premises or in the cloud.
 
@@ -93,7 +93,7 @@ If you're an admin, learn more in [Choose your Windows labeling solution](rms-cl
 
 ### Classic client deprecation
 
-To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure portal is **deprecated** as of **March 31, 2021**. 
+To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure portal is **deprecated** as of **March 31, 2021**.
 
 The client continues to work as expected, but administrators cannot update policies on the portal, and no more fixes or changes will be supplied for the classic client.
 
@@ -105,7 +105,7 @@ For more information, see: [How to migrate Azure Information Protection labels t
 
 If you are a user who wants to understand whether you have the classic or the unified labeling client installed, you can do one of the following:
 
-- In your Office apps, check for the **Sensitivity** or **Protect** toolbar button. The unified labeling client shows the **Sensitivity** :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: button, while the classic client shows the **Protect** button. 
+- In your Office apps, check for the **Sensitivity** or **Protect** toolbar button. The unified labeling client shows the **Sensitivity** :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: button, while the classic client shows the **Protect** button.
 
 - Check the version number for the Azure Information Protection application you have installed.
 
@@ -146,7 +146,7 @@ For more information, see [Learn about sensitivity labels](/microsoft-365/compli
 
 Azure Information Protection (AIP) provides classification, labeling, and protection for an organization's documents and emails.
 
-Content is protected using the Azure Rights Management service, which is now a component of AIP. 
+Content is protected using the Azure Rights Management service, which is now a component of AIP.
 
 For more information, see [How AIP protects your data](aip-classification-and-protection.md#how-aip-protects-your-data) and [What is Azure Rights Management?](what-is-azure-rms.md).
 
@@ -154,7 +154,7 @@ For more information, see [How AIP protects your data](aip-classification-and-pr
 
 Identity management is an important component of AIP, as users must have a valid user name and password to access protected content.
 
-To read more about how Azure Information Protection helps to secure your data, see [The role of Azure Information Protection in securing data](/enterprise-mobility-security/solutions/azure-information-protection-securing-data). 
+To read more about how Azure Information Protection helps to secure your data, see [The role of Azure Information Protection in securing data](/enterprise-mobility-security/solutions/azure-information-protection-securing-data).
 
 ## What subscription do I need for Azure Information Protection and what features are included?
 
@@ -165,7 +165,7 @@ To understand more about AIP subscriptions, see:
 
 ## Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?
 
-Global administrators for a Microsoft 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure Information Protection. 
+Global administrators for a Microsoft 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure Information Protection.
 
 However, if you want to assign administrative permissions to other users, do so using the following roles:
 
@@ -186,7 +186,7 @@ Additionally, note the following when managing administrative tasks and roles:
 | | |
 ### Azure Information Protection administrator
 
-This Azure Active Directory administrator role lets an administrator configure Azure Information Protection but not other services. 
+This Azure Active Directory administrator role lets an administrator configure Azure Information Protection but not other services.
 
 Administrators with this role can:
 
@@ -194,12 +194,12 @@ Administrators with this role can:
 - Configure protection settings and labels
 - Configure the Azure Information Protection policy
 - Run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/clientv2-admin-guide-powershell.md) and from the [AIPService module](administer-powershell.md)
-    
+
 To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
 > [!NOTE]
-> This role doesn't support tracking and revoking documents for users, and is not supported in the Azure portal if your tenant is on the [unified labeling platform](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
-    
+> This role is not supported in the Azure portal if your tenant is on the [unified labeling platform](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
+
 ### Compliance administrator or Compliance data administrator
 
 These Azure Active Directory administrator roles enable administrators to:
@@ -207,16 +207,15 @@ These Azure Active Directory administrator roles enable administrators to:
 - Configure Azure Information Protection, including activating and deactivating the Azure Rights Management protection service
 - Configure protection settings and labels
 - Configure the Azure Information Protection policy
-- Run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/clientv2-admin-guide-powershell.md) and from the [AIPService module](administer-powershell.md). 
+- Run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/clientv2-admin-guide-powershell.md) and from the [AIPService module](administer-powershell.md).
 
-To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). 
+To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
 To see what other permissions a user with these roles have, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Azure Active Directory documentation.
 
 > [!NOTE]
-> These roles don't support tracking and revoking documents for users.
->     
-    
+> These roles don't support [tracking and revoking](rms-client/track-and-revoke-admin.md) documents for users.
+>
 ### Security reader or Global reader
 
 These roles are used for [Azure Information Protection analytics](reports-aip.md) only, and enable administrators to:
@@ -224,17 +223,17 @@ These roles are used for [Azure Information Protection analytics](reports-aip.md
 - View how your labels are being used
 - Monitor user access to labeled documents and emails
 - View changes made to classification
-- Identify documents that contain sensitive information that must be protected 
+- Identify documents that contain sensitive information that must be protected
 
 Because this feature uses Azure Monitor, you must also have a supporting [RBAC role](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
 
 ### Security administrator
 
-This Azure Active Directory administrator role enables administrators to configure Azure Information Protection in the Azure portal and some aspects of other Azure services. 
+This Azure Active Directory administrator role enables administrators to configure Azure Information Protection in the Azure portal and some aspects of other Azure services.
 
-Administrators with this role cannot run any of the [PowerShell cmdlets from the AIPService module](administer-powershell.md), or track and revoke documents for users.
-    
-To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). 
+Administrators with this role cannot run any of the [PowerShell cmdlets from the AIPService module](administer-powershell.md), or [track and revoke](rms-client/track-and-revoke-admin.md) documents for users.
+
+To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
 To see what other permissions a user with this role has, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Azure Active Directory documentation.
 
@@ -242,38 +241,38 @@ To see what other permissions a user with this role has, see the [Available role
 
 The Global Administrator role enables users to run all [PowerShell cmdlets from the AIPService module](administer-powershell.md) without making them a global administrator for other cloud services.
 
-The Connector Administrator role enables users to run only the Rights Management (RMS) connector. 
+The Connector Administrator role enables users to run only the Rights Management (RMS) connector.
 
-These administrative roles don't grant permissions to management consoles, or support tracking and revoking documents for users.
-    
+These administrative roles don't grant permissions to management consoles. The Connector Administrator role also does not support [tracking and revoking](rms-client/track-and-revoke-admin.md) documents for users.
+
 To assign either of these administrative roles, use the AIPService PowerShell cmdlet, [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator).
 
 ## Does Azure Information Protection support on-premises and hybrid scenarios?
 
 Yes. Although Azure Information Protection is a cloud-based solution, it can classify, label, and protect documents and emails that are stored on-premises, as well as in the cloud.
 
-If you have Exchange Server, SharePoint Server, and Windows file servers, use one or both of the following methods:
+If you have Exchange Server, SharePoint Server, and Windows file servers, use one or both of the following methods:
 
 - Deploy the [Rights Management connector](deploy-rms-connector.md) so that these on-premises servers can use the Azure Rights Management service to protect your emails and documents
-- Synchronize and federate your Active Directory domain controllers with Azure AD for a more seamless authentication experience for users. For example, use [Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect).
+- Synchronize and federate your Active Directory domain controllers with Azure AD for a more seamless authentication experience for users. For example, use [Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect).
 
-The Azure Rights Management service automatically generates and manages XrML certificates as required, so it doesn't use an on-premises PKI. 
+The Azure Rights Management service automatically generates and manages XrML certificates as required, so it doesn't use an on-premises PKI.
 
-For more information about how Azure Rights Management uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption).
+For more information about how Azure Rights Management uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption).
 
 ## What types of data can Azure Information Protection classify and protect?
 
-Azure Information Protection can classify and protect email messages and documents, whether they are located on-premises or in the cloud. These documents include Word documents, Excel spreadsheets, PowerPoint presentations, PDF documents, text-based files, and image files. 
+Azure Information Protection can classify and protect email messages and documents, whether they are located on-premises or in the cloud. These documents include Word documents, Excel spreadsheets, PowerPoint presentations, PDF documents, text-based files, and image files.
 
 For more information, see the full list [file types supported](./rms-client/clientv2-admin-guide-file-types.md).
 
 > [!NOTE]
 > Azure Information Protection cannot classify and protect structured data such as database files, calendar items, Yammer posts, Sway content, and OneNote notebooks.
-> 
+>
 
 > [!TIP]
 > Power BI supports classification by using sensitivity labels and can apply protection from those labels to data that is exported to the following file formats: .pdf, .xls, and .ppt. For more information, see [Data protection in Power BI](/power-bi/admin/service-security-data-protection-overview).
-> 
+>
 ## I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?
 
 Yes, as a preview offering, you can configure Azure AD conditional access for Azure Information Protection.
@@ -294,22 +293,22 @@ Additional information:
 | | |
 
 > [!NOTE]
-> The Azure Information Protection support for conditional access is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
-> 
+> The Azure Information Protection support for conditional access is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+>
 
 ## I see Azure Information Protection is listed as a security provider for Microsoft Graph Security—how does this work and what alerts will I receive?
 
 Yes, as a public preview offering, you can now receive an alert for **Azure Information Protection anomalous data access**. This alert is triggered when there are unusual attempts to access data that is protected by Azure Information Protection. For example, accessing an unusually high volume of data, at an unusual time of day, or access from an unknown location.
 
-Such alerts can help you to detect advanced data-related attacks and insider threats in your environment. These alerts use machine learning to profile the behavior of users who access your protected data. 
+Such alerts can help you to detect advanced data-related attacks and insider threats in your environment. These alerts use machine learning to profile the behavior of users who access your protected data.
 
 The Azure Information Protection alerts can be accessed by [using the Microsoft Graph Security API](/graph/api/resources/security-api-overview), or you can [stream alerts](/graph/security-integration) to SIEM solutions, such as Splunk and IBM Qradar, by using Azure Monitor.
 
 For more information about the Microsoft Graph Security API, see [Microsoft Graph Security API overview](/graph/security-concept-overview).
 
 > [!NOTE]
-> The Azure Information Protection support for Microsoft Graph Security is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
-> 
+> The Azure Information Protection support for Microsoft Graph Security is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+>
 
 ## I've heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
@@ -322,18 +321,18 @@ Different countries have different requirements and regulations. To help you ans
 
 [!INCLUDE [gdpr-hybrid-note](includes/gdpr-hybrid-note.md)]
 
-## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
+## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
 See [Compliance and supporting information for Azure Information Protection](./compliance.md).
 
 ## How can I report a problem or send feedback for Azure Information Protection?
 
 For technical support, use your standard support channels or [contact Microsoft Support](information-support.md#to-contact-microsoft-support).
 
-We also invite you to engage with our engineering team, on their [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/). 
+We also invite you to engage with our engineering team, on their [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/).
 
 ## What do I do if my question isn't here?
 
-First, review the frequently asked questions listed below, which are specific to classification and labeling, or specific to data protection. The [Azure Rights Management service (Azure RMS)](what-is-azure-rms.md) provides the data protection technology for Azure Information Protection. Azure RMS can be used with classification and labeling, or by itself. 
+First, review the frequently asked questions listed below, which are specific to classification and labeling, or specific to data protection. The [Azure Rights Management service (Azure RMS)](what-is-azure-rms.md) provides the data protection technology for Azure Information Protection. Azure RMS can be used with classification and labeling, or by itself.
 
 - [FAQs for classification and labeling](faqs-infoprotect.md)
 

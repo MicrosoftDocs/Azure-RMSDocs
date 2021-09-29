@@ -1,6 +1,6 @@
 ---
-title: File API - Process email .msg files (C++)
-description: This article will help you understand the scenario of how to use MIP SDK file API to process .msg files (C++).
+title: File SDK - Process email .msg files (C++)
+description: This article will help you understand the scenario of how to use MIP File SDK to process .msg files (C++).
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
@@ -8,9 +8,9 @@ ms.date: 04/08/2020
 ms.author: mbaldwin
 ---
 
-# File API - Process email .msg files (C++)
+# File SDK - Process email .msg files (C++)
 
-File API supports protection operations for .msg files in a manner identical to any other file type, except that the SDK needs the application to enable MSG feature flag. Here, we'll see how to set this flag.
+File SDK supports labeling operations for .msg files in a manner identical to any other file type, except that the SDK needs the application to enable MSG feature flag. Here, we'll see how to set this flag.
 
 As discussed previously, instantiation of `mip::FileEngine` requires a setting object, `mip::FileEngineSettings`. FileEngineSettings can be used to pass parameters for custom settings the application needs to set for a particular instance. `CustomSettings` property of the `mip::FileEngineSettings` is used to set the flag for `enable_msg_file_type` to enable processing of .msg files.
 
@@ -18,7 +18,7 @@ As discussed previously, instantiation of `mip::FileEngine` requires a setting o
 
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
-- Complete [Quickstart: File API application initialization (C++)](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This "How to - process email message .msg files (C++)" quickstart builds on the previous one.
+- Complete [Quickstart: File SDK application initialization (C++)](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This "How to - process email message .msg files (C++)" quickstart builds on the previous one.
 - Review [Quickstart: List sensitivity labels (C++)](quick-file-list-labels-cpp.md).
 - Review [Quickstart: Set/get sensitivity labels (C++)](quick-file-set-get-label-cpp.md).
 - Review [Email files MIP SDK](concept-email.md) concepts.
@@ -33,9 +33,9 @@ If you haven't already, be sure to complete the following prerequisites before c
 
 3. Implement observer class to monitor `mip::FileHandler` as explained in Quickstart "[Set/get sensitivity labels (C++)](quick-file-set-get-label-cpp.md#implement-an-observer-class-to-monitor-the-file-handler-object)".
 
-## Set enable_msg_file_type and use File API to protect .msg file
+## Set enable_msg_file_type and use File SDK to label .msg file
 
-Add the file engine construction code below to set `enable_msg_file_type flag` and use the file engine to protect a .msg file.
+Add the file engine construction code below to set `enable_msg_file_type flag` and use the file engine to label a .msg file.
 
 1. Using *Solution Explorer*, open the .cpp file in your project that contains the implementation of the `main()` method. It defaults to the same name as the project containing it, which you specified during project creation.
 
@@ -44,13 +44,8 @@ Add the file engine construction code below to set `enable_msg_file_type flag` a
     ```cpp
     #include "filehandler_observer.h" 
     #include "mip/file/file_handler.h" 
-    #include <iostream>
-    #include "mip/protection/protection_descriptor_builder.h"
-    #include "mip/protection_descriptor.h"
-    using mip::FileHandler;
-    using mip::ProtectionDescriptor;
-    using mip::ProtectionDescriptorBuilder;
-    using mip::ProtectionSettings;
+    #include <iostream>    
+    using mip::FileHandler;   
     using std::endl;
     ```
 
@@ -65,12 +60,12 @@ int main()
                               "1.0" 
     };
 
-    auto mipContext = mip::MipContext::Create(appInfo,
-                                                "file_sample",
-                                                mip::LogLevel::Trace,
-                                                false,
-                                                nullptr /*loggerDelegateOverride*/,
-                                                nullptr /*telemetryOverride*/);
+    std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
+				                                                                                       "mip_data",
+                                                                                        			   mip::LogLevel::Trace,
+                                                                                                       false);
+
+    std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
 
     auto profileObserver = make_shared<ProfileObserver>();                      // Observer object
     auto authDelegateImpl = make_shared<AuthDelegateImpl>("<application-id>");  // Authentication delegate object (App ID)
@@ -102,7 +97,7 @@ int main()
                             "<engine-state>",                       // User-defined engine state
                             "en-US");                               // Locale (default = en-US)
 
-    //Set enamble_msg_file_type flag as true
+    //Set enable_msg_file_type flag as true
     std::vector<std::pair<string, string>> customSettings;
     customSettings.emplace_back(mip::GetCustomSettingEnableMsgFileType(), "true");
     engineSettings.SetCustomSettings(customSettings);
@@ -125,9 +120,9 @@ int main()
     }
 
     //Set file paths
-    string inputFilePath = "<input-file-path>"; //.msg file to be protected
+    string inputFilePath = "<input-file-path>"; //.msg file to be labeled
     string actualFilePath = inputFilePath;
-    string outputFilePath = "<output-file-path>"; //protected .msg file
+    string outputFilePath = "<output-file-path>"; //labeled .msg file
     string actualOutputFilePath = outputFilePath;
 
     //Create a file handler for original file
@@ -142,52 +137,67 @@ int main()
 
     auto fileHandler = handlerFuture.get();
 
-    //List templates available to the user and use one of them to protect the mail file.
+    //List labels available to the user    
 
-    ///Listing of protection templates must be performed by creating protection engine as described in protection quick start
+    // Use mip::FileEngine to list all labels
+    labels = mEngine->ListSensitivityLabels();
 
-    string templateId = "<template-id>"; //protection template retrieved using protection engine
+    // Iterate through each label, first listing details
+    for (const auto& label : labels) {
+        cout << label->GetName() << " : " << label->GetId() << endl;
 
-    //Create a protection descriptor using templateID and use it to set protection to the file
-    auto descriptorBuilder = mip::ProtectionDescriptorBuilder::CreateFromTemplate(templateId);
-    const std::shared_ptr<mip::ProtectionDescriptor>& descriptor = descriptorBuilder->Build();
-    fileHandler->SetProtection(descriptor, ProtectionSettings());
+        // get all children for mip::Label and list details
+        for (const auto& child : label->GetChildren()) {
+            cout << "->  " << child->GetName() << " : " << child->GetId() << endl;
+        }
+    }
+
+    string labelId = "<labelId-id>"; //set a label ID to use
+
+    // Labeling requires a mip::LabelingOptions object. 
+    // Review API ref for more details. The sample implies that the file was labeled manually by a user.
+    mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
+
+    fileHandler->SetLabel(labelId, labelingOptions, mip::ProtectionSettings());
 
     // Commit changes, save as outputFilePath
     auto commitPromise = std::make_shared<std::promise<bool>>();
     auto commitFuture = commitPromise->get_future();
-    fileHandler->CommitAsync(outputFilePath, commitPromise);
+
+    if(fileHandler->IsModified())
+    {
+        fileHandler->CommitAsync(outputFilePath, commitPromise);
+    }
+    
     if (commitFuture.get()) {
-        cout << "\n Protection applied to file: " << outputFilePath << endl;
+        cout << "\n Label applied to file: " << outputFilePath << endl;
     }
     else {
-        cout << "Failed to protect: " + outputFilePath << endl;
+        cout << "Failed to label: " + outputFilePath << endl;
         return 1;
     }
 
-    // Create a new handler to read the protected file metadata
-    auto protectedHandlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
-    auto protectedHandlerFuture = protectedHandlerPromise->get_future();
-    engine->CreateFileHandlerAsync(outputFilePath, 
-                                   actualOutputFilePath, 
-                                   true, 
-                                   std::make_shared<FileHandlerObserver>(), 
-                                   protectedHandlerPromise);
+    // Create a new handler to read the label
+    auto msgHandlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
+    auto msgHandlerFuture = handlerPromise->get_future();
 
-    auto protectedFileHandler = protectedHandlerFuture.get();
+    engine->CreateFileHandlerAsync(inputFilePath,
+                                    actualFilePath,
+                                    true,
+                                    std::make_shared<FileHandlerObserver>(),
+                                    msgHandlerPromise);
+
+    auto msgFileHandler = msgHandlerFuture.get();
 
     cout << "Original file: " << inputFilePath << endl;
-    cout << "Protected file: " << outputFilePath << endl;
-    cout << "TemplateID applied to protected file : " 
-            << protectedFileHandler->GetProtection()->GetProtectionDescriptor()->GetTemplateId() 
+    cout << "Labeled file: " << outputFilePath << endl;
+    cout << "Label applied to file : " 
+            << msgFileHandler->GetName() 
             << endl;
-    cout << "Protection Owner of protected file : " 
-            << protectedFileHandler->GetProtection()->GetProtectionDescriptor()->GetOwner() 
-            << endl;
-
-    // Application shutdown. Null out profile and engine, call ReleaseAllResources();
+    
+    // Application shutdown. Null out profile, engine, handler.
     // Application may crash at shutdown if resources aren't properly released.
-    protectedFileHandler = nullptr;
+    msgFileHandler = nullptr;
     fileHandler = nullptr;
     engine = nullptr;
     profile = nullptr;
@@ -207,17 +217,9 @@ For further details on file operations refer to the [File Handler concepts](conc
    | \<engine-account\> | The account used for engine's identity, for example: `user@tenant.onmicrosoft.com`. |
    | \<engine-state\> | User defined application state, for example: `My engine state`. |
    | \<input-file-path\> | The full path to a test input message file, for example: `c:\\Test\\message.msg`. |
-   | \<output-file-path\> | The full path to the output file, which will be a labeled copy of the input file, for example: `c:\\Test\\message_protected.msg`. |
-   | \<template-id\> | The templateId retrieved using protection engine, for example: `667466bf-a01b-4b0a-8bbf-a79a3d96f720`. |
+   | \<output-file-path\> | The full path to the output file, which will be a labeled copy of the input file, for example: `c:\\Test\\message_labeled.msg`. |
+   | \<label-id\> | The labelId retrieved using `ListSensitivityLabels`, for example: `667466bf-a01b-4b0a-8bbf-a79a3d96f720`. |
 
 ## Build and test the application
 
 Use **F6** (Build Solution) to build your client application. If you have no build errors, use **F5** (Start debugging) to run your application.
-
-## Troubleshooting
-
-### Problems during execution of C# application
-
-| Summary | Error message | Solution |
-|---------|---------------|----------|
-| TemplateNotFoundException | Unrecognized template ID., CorrelationId=abb2ef59-ad09-4aa0-b731-f59a92711dad, CorrelationId.Description=FileHandler, HttpRequest.Id=8c688752-ccd2-4dca-ace3-b67b44176689;78538a57-a9fd-4717-8924-33581a04598b| If your project builds successfully, but you see output similar to the left, you likely have an invalid templateID. Go back to code block and correct protection template ID, and rebuild/retest. |

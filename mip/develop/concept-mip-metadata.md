@@ -52,7 +52,7 @@ When applied to a file, the result is similar to the table below.
 
 ## Extending Metadata with Custom Attributes
 
-Custom metadata may be appended via File and Policy API. Custom attributes must maintain the base `MSIP_Label_GUID` prefix.
+Custom metadata may be appended via File and Policy SDK. Custom attributes must maintain the base `MSIP_Label_GUID` prefix.
 
 For example, an application written by Contoso Corporation must apply metadata indicating which system generated a labeled file. The application can create a new label, prefixed with `MSIP_Label_GUID`. The software vendor name and custom attribute are appended to the prefix to generate the custom metadata.
 
