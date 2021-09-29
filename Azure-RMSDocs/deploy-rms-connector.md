@@ -81,11 +81,11 @@ Before you install the RMS connector, make sure that the following requirements 
 
 ## Steps to deploy the RMS connector
 
-The connector does not automatically check all the [prerequisites](deploy-rms-connector.md#prerequisites-for-the-rms-connector) that it needs for a successful deployment, so make sure that these are in place before you start. The deployment requires you to install the connector, configure the connector, and then configure the servers that you want to use the connector. 
+The connector does not automatically check all the [prerequisites](deploy-rms-connector.md#prerequisites-for-the-rms-connector) that it needs for a successful deployment, so make sure that these are in place before you start. The deployment requires you to install the connector, configure the connector, and then configure the servers that you want to use the connector.
 
 -   **Step 1**:  [Installing the RMS connector](install-configure-rms-connector.md#installing-the-rms-connector)
 
--   **Step 2**:  [Entering credentials](install-configure-rms-connector.md#entering-credentials)
+-   **Step 2**:  [Entering credentials](install-configure-rms-connector.md#signin)
 
 -   **Step 3**:  [Authorizing servers to use the RMS connector](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector)
 

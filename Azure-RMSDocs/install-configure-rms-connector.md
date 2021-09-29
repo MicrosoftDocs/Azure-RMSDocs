@@ -101,7 +101,7 @@ During the RMS connector installation process, all prerequisite software is vali
 
 -   **A set of security tokens** for the connector, which authorize operations with Azure RMS. These tokens are downloaded from Azure RMS and installed on the local computer in the registry. They are protected by using the data protection application programming interface (DPAPI) and the Local System account credentials.
 
-### Create a dedicated account for RMS connector
+### Create a dedicated account for the RMS connector
 
 This procedure describes how to create a dedicated account to run the Azure RMS connector with the least privileges possible, to use when [signing in](#signin) during the RMS connector installation.
 
@@ -316,11 +316,11 @@ For more information, see:
 - [Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings)
 - [Disabling TLS 1.0 and 1.1 for Microsoft 365](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365)
 
-### Validate TLS 1.2 usage (advanced)
+### Verify TLS 1.2 usage (advanced)
 
-This procedure requires prior knowledge of Fiddler.
+This procedure provides an example of how to verify that TLS 1.2 is being used, and requires prior knowledge of [Fiddler](https://www.telerik.com/fiddler).
 
-1. Download and install Fiddler on your RMS connector machine.
+1. Download and install [Fiddler](https://www.telerik.com/fiddler) on your RMS connector machine.
 
 1. Open Fiddler, and then open the Microsoft RMS Connector administration tools.
 
