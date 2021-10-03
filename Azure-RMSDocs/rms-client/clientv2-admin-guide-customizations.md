@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 04/26/2021
+ms.date: 09/02/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -204,10 +204,10 @@ The following sections list the advanced settings described on this page by prod
 |---------|---------|
 |**Outlook and email settings**     | - [Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook) <br> - [Customize Outlook popup messages](#customize-outlook-popup-messages) <br>- [Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)<br> - [Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling) <br>- [For emails with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [Expand Outlook distribution lists when searching for email recipients](#expand-outlook-distribution-lists-when-searching-for-email-recipients) <br>- [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)   <br>- [Set a different default label for Outlook](#set-a-different-default-label-for-outlook)     |
 |**PowerPoint settings** | - [Avoid removing shapes from PowerPoint that contain specified text, and are not headers / footers](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)<br>- [Explicitly remove external content markings from inside your PowerPoint custom layouts](#extend-external-marking-removal-to-custom-layouts)<br>- [Remove all shapes of a specific shape name from your headers and footers, instead of removing shapes by text inside the shape](#remove-all-shapes-of-a-specific-shape-name)  |
-|**File Explorer settings**     | - [Always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) <br>  - [Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer) <br>- [Hide the Classify and Protect menu option in Windows File Explorer](#hide-the-classify-and-protect-menu-option-in-windows-file-explorer)     |
+|**File Explorer settings**     | - [Always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) <br>  - [Turn off custom permissions in File Explorer](#turn-off-custom-permissions-in-file-explorer) <br>- [Hide the Classify and Protect menu option in Windows File Explorer](#hide-the-classify-and-protect-menu-option-in-windows-file-explorer)     |
 |**Performance improvements settings**     | - [Limit CPU consumption](#limit-cpu-consumption) <br>- [Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner) <br>- [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)        |
 |**Settings for integrations with other labeling solutions**     | - [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions) <br> - [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)    |
-|**AIP analytics settings**     |   - [Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) <br>- [Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)      |
+|**AIP analytics settings**     |   - [Prevent audit data from being sent to AIP and Microsoft 365 analytics](#prevent-audit-data-from-being-sent-to-aip-and-microsoft-365-analytics) <br>- [Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)      |
 |**General settings**     | - [Add "Report an Issue" for users](#add-report-an-issue-for-users) <br>- [Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Change the local logging level](#change-the-local-logging-level) <br>- [Change which file types to protect](#change-which-file-types-to-protect)<br>- [Configure the autolabeling timeout on Office files](#configure-the-autolabeling-timeout-on-office-files) <br>- [Configure SharePoint timeouts](#configure-sharepoint-timeouts)<br>- [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps) <br>- [Enable removal of protection from compressed files](#enable-removal-of-protection-from-compressed-files) <br>-  [Preserve NTFS owners during labeling (public preview)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  [Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Specify a color for the label](#specify-a-color-for-the-label)<br>-  [Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label)<br>-  [Support for changing \<EXT>.PFILE to P\<EXT>](#additionalpprefixextensions)  <br>-  [Support for disconnected computers](#support-for-disconnected-computers)     <br>-  [Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Turn off document tracking features](#turn-off-document-tracking-features)  <br>- [Turn off the Revoke option for end-users in Office apps](#turn-off-the-revoke-option-for-end-users-in-office-apps) <br>- [Turn on classification globalization features](#turn-on-classification-globalization-features-public-preview) |
 |     |         |
 
@@ -221,9 +221,9 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |**AttachmentAction**|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |**AttachmentActionTip**|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |**DisableMandatoryInOutlook**|[Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)
-|**EnableAudit**|[Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
+|**EnableAudit**|[Prevent audit data from being sent to AIP and Microsoft 365 analytics](#prevent-audit-data-from-being-sent-to-aip-and-microsoft-365-analytics)|
 |**EnableContainerSupport**|[Enable removal of protection from PST, rar, 7zip, and MSG files](#enable-removal-of-protection-from-compressed-files)
-|**EnableCustomPermissions**|[Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)|
+|**EnableCustomPermissions**|[Turn off custom permissions in File Explorer](#turn-off-custom-permissions-in-file-explorer)|
 |**EnableCustomPermissionsForCustomProtectedFiles**|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |**EnableGlobalization** |[Turn on classification globalization features](#turn-on-classification-globalization-features-public-preview) |
 |**EnableLabelByMailHeader**|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -718,7 +718,7 @@ Example PowerShell command, where your label policy is named "Global":
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="True"}
 ```
 
-## Disable custom permissions in File Explorer
+## Turn off custom permissions in File Explorer
 
 This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
@@ -740,7 +740,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="Fa
 
 This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-When you configure the advanced client setting to [disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer), by default, users are not able to see or change custom permissions that are already set in a protected document.
+When you configure the advanced client setting to [turn off custom permissions in File Explorer](#turn-off-custom-permissions-in-file-explorer), by default, users are not able to see or change custom permissions that are already set in a protected document.
 
 However, there's another advanced client setting that you can specify so that in this scenario, users can see and change custom permissions for a protected document when they use File Explorer and right-click the file.
 
@@ -1022,23 +1022,34 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{
 }
 ```
 
-## Disable sending audit data to Azure Information Protection analytics
+## Prevent audit data from being sent to AIP and Microsoft 365 analytics
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+By default, the Azure Information Protection unified labeling client supports central reporting and sends its audit data to:
 
-The Azure Information Protection unified labeling client supports central reporting and by default, sends its audit data to [Azure Information Protection analytics](../reports-aip.md). For more information about what information is sent and stored, see the [Information collected and sent to Log Analytics](../reports-aip.md#information-collected-and-sent-to-log-analytics) section from the central reporting documentation.
+- [Azure Information Protection analytics](../reports-aip.md), if you've configured a [Log Analytics workspace](https://azure.microsoft.com/pricing/details/log-analytics)
+- Microsoft 365, where you can view them in the [Activity Explorer](/microsoft-365/compliance/data-classification-activity-explorer)
 
-To change this behavior so that audit data is not sent by the unified labeling client, enter the following strings for the selected label policy:
+To change this behavior, so that audit data is not sent, do the following:
 
-- Key: **EnableAudit**
+1. Add the following policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) using the Office 365 Security & Compliance Center PowerShell:
 
-- Value: **False**
+    - Key: **EnableAudit**
 
-Example PowerShell command, where your label policy is named "Global":
+    - Value: **False**
 
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
-```
+    For example, if your label policy is named "Global":
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
+    ```
+
+    > [!NOTE]
+    > By default, this advanced setting is not present in the policy, and the audit logs are sent.
+    >
+
+1. In all Azure Information Protection client machines, delete the following folder: **%localappdata%\Microsoft\MSIP\mip**
+
+To enable the client to send audit log data again, change the advanced setting value to **True**. You do not need to manually create the **%localappdata%\Microsoft\MSIP\mip** folder again on your client machines.
 
 ## Send information type matches to Azure Information Protection analytics
 
@@ -1452,7 +1463,7 @@ If you have computers that cannot connect to the internet for a period of time, 
 
 1. Choose or create a user account in Azure AD that you will use to download labels and policy settings that you want to use on your disconnected computer.
 
-2. As an additional label policy setting for this account, [disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) by using the **EnableAudit** advanced setting.
+2. As an additional label policy setting for this account, [turn off sending audit data to Azure Information Protection analytics](#prevent-audit-data-from-being-sent-to-aip-and-microsoft-365-analytics).
     
     We recommend this step because if the disconnected computer does have periodic internet connectivity, it will send logging information to Azure Information Protection analytics that includes the user name from step 1. That user account might be different from the local account you're using on the disconnected computer.
 

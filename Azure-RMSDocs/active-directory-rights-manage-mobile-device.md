@@ -120,7 +120,7 @@ c:[Type == "http://schemas.xmlsoap.org/claims/ProxyAddresses"]
 # Allow All users
 $AuthorizationRules = @"
 @RuleTemplate = "AllowAllAuthzRule"
- => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit",
+ => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit",
 Value = "true");
 "@
 

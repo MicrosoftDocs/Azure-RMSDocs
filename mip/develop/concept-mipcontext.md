@@ -1,6 +1,6 @@
 ---
 title: Concepts - The core concepts in the MIP SDK - MipContext
-description: This article will help you understand the core SDK concept called MipContext which drives application initialization.
+description: This article will help you understand the core SDK concept called MipContext, which drives application initialization.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
@@ -12,7 +12,10 @@ ms.author: mbaldwin
 
 ## MipContext
 
-`MipContext` is the highest level object in the SDK. It's responsible for managing state across all profiles that may be created as part of an application or service. Additionally, it handles releasing MIP SDK resources once the MipContext object has been destroyed. Only a single `MipContext` per process is permitted. Creating more than one may result in unexpected behavior.
+`MipContext` is the highest level object in the SDK. It's responsible for managing state across all profiles that may be created as part of an application or service. Additionally, it handles releasing MIP SDK resources once the MipContext object has been destroyed. 
+
+> [!IMPORTANT]
+> Only a single `MipContext` per process is permitted. Creating more than one may result in unexpected behavior. `MipContext` should be created at app start, and the same MipContext used for the lifetime of the application. 
 
 Once an object of `mip::MipContext` has been created, the `MipContext` object can be used to create `mip::FileProfile`, `mip::PolicyProfile`, or `mip::ProtectionProfile` objects.
 
