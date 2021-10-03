@@ -2131,7 +2131,7 @@ The updated timeout applies to autolabeling on all Office files.
 
 ## Turn on classification globalization features (Public preview)
 
-[Classification globalization features](unifiedlabelingclient-version-release-history.md#increased-accuracy-for-sensitive-information-types), including increased accuracy for East Asian languages, and support for double-byte characters, is turned off by default.
+[Classification globalization features](unifiedlabelingclient-version-release-history.md#increased-accuracy-for-sensitive-information-types), including increased accuracy for East Asian languages and support for double-byte characters. These enhancements are provided only for 64-bit processes, and are turned off by default.
 
 Turn on these features for your policy specify the following strings:
 

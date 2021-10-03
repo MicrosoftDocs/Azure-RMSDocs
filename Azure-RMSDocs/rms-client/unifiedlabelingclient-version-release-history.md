@@ -80,7 +80,7 @@ The unified labeling client replaces the Azure Information Protection classic cl
 
 ## Version 2.13.xx.x (Public preview)
 
-Unified labeling scanner and client version 2.12.xx.x
+Unified labeling scanner and client version 2.13.xx.x
 
 **Released** 10/12/2021
 
@@ -88,27 +88,19 @@ This version includes the following new updates, fixes, and enhancements for the
 
 ### Increased accuracy for sensitive information types
 
-This version of the unified labeling client provides increased accuracy for automatic labeling, especially for content in East Asian languages, and with support for double-byte (full-width and half-width) characters.
+This version of the unified labeling client provides globalization enhancements, including increased accuracy for East Asian languages and support for double-byte characters. These enhancements are provided only for 64-bit processes, and are turned off by default.
 
-- <TBD about analytics>
-
-- Globalization enhancements, including increased accuracy for East Asian languages and support for double-bit characters is provided only for 64-bit processes, and is turned off by default.
-
-    For more information, see [Turn on classification globalization features](clientv2-admin-guide-customizations.md#turn-on-classification-globalization-features-public-preview).
-
-For more information, see [Learn about sensitive information types](/microsoft-365/compliance/sensitive-information-type-learn-about).
+For more information, see [Turn on classification globalization features](clientv2-admin-guide-customizations.md#turn-on-classification-globalization-features-public-preview) and [Learn about sensitive information types](/microsoft-365/compliance/sensitive-information-type-learn-about).
 
 ### Integrated support for MIP SDK version 1.10
 
 This version of the Azure Information Protection client and scanner fully integrates the Microsoft Information Protection (MIP) Software Development Kit (SDK) version 1.10.93.
 
-Among other features, this support includes default protection for .msg files. When protected, **.msg** file types are changed to **.msg.pfile** files.
-
-For more information, see the [File types supported by the Azure Information Protection (AIP) unified labeling client](clientv2-admin-guide-file-types.md) and the [MIP SDK documentation](../information-protection/develop/version-release-history#version-11093).
+For more information, see the [MIP SDK documentation](../information-protection/develop/version-release-history#version-11093).
 
 ### Scanner support for 64-bit versions only
 
-Starting in version 2.12.xx.x, the unified labeling scanner is supported only on 64-bit systems.
+Starting in version 2.13.xx.x, the unified labeling scanner is supported only on 64-bit systems.
 
 For more information, see [Requirements for installing and deploying the Azure Information Protection unified labeling scanner](../deploy-aip-scanner-prereqs.md).
 

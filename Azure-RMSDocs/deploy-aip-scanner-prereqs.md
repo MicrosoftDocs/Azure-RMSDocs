@@ -51,14 +51,14 @@ When you're ready to start installing and deploying your scanner, continue with 
 
 ## Windows Server requirements
 
-You must have a 64-bit Windows Server computer to run the scanner, which has the following system specifications:
+You must have a Windows Server computer to run the scanner, which has the following system specifications:
 
 |Specification  |Details  |
 |---------|---------|
 |**Processor**     |4 core processors         |
 |**RAM**     |8 GB         |
 |**Disk space**     |10-GB free space (average) for temporary files. </br></br>The scanner requires sufficient disk space to create temporary files for each file that it scans, four files per core. </br></br>The recommended disk space of 10 GB allows for 4 core processors scanning 16 files that each have a file size of 625 MB.
-|**Operating system**     |- Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Note**: For testing or evaluation purposes in a non-production environment, you can also use any Windows operating system that is [supported by the Azure Information Protection client](requirements.md#client-devices).
+|**Operating system**     |64-bit versions of: <br><br>- Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Note**: For testing or evaluation purposes in a non-production environment, you can also use any Windows operating system that is [supported by the Azure Information Protection client](requirements.md#client-devices).
 |**Network connectivity**     | Your scanner computer can be a physical or virtual computer with a fast and reliable network connection to the data stores to be scanned. </br></br> If internet connectivity is not possible because of your organization policies, see [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations). </br></br>Otherwise, make sure that this computer has internet connectivity that allows the following URLs over HTTPS (port 443):</br><br />-  \*.aadrm.com <br />-  \*.azurerms.com<br />-  \*.informationprotection.azure.com <br /> - informationprotection.hosting.portal.azure.net <br /> - \*.aria.microsoft.com <br />-  \*.protection.outlook.com |
 |**NFS shares** |To support scans on NFS shares, services for NFS must be deployed on the scanner machine. <br><br>On your machine, navigate to the **Windows Features (Turn Windows features on or off)** settings dialog, and select the following items: **Services for NFS** > **Administrative Tools** and **Client for NFS**. |
 | **Microsoft Office iFilter** |When your scanner is installed on a Windows server machine, you must also install the Microsoft Office iFilter in order to scan .zip files for sensitive information types. <br><br>For more information, see the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=17062).|
