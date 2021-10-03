@@ -116,15 +116,19 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 
 #### Top Ignite sessions
 
+[Register now](https://myignite.microsoft.com/home) for Ignite 2021!
+
 See the following recorded sessions from Ignite 2020:
 
-- [Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)
+- [**Supercharge information protection and governance** across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/archives/IG20-DB163) | [Ask the expert](https://myignite.microsoft.com/archives/IG20-ATE-DB163)
 
-- [Be a risk management hero with intelligent data protection and compliance solutions](https://myignite.microsoft.com/sessions/9a1e2716-55f5-4c3e-8626-0cb77e60eb87)
+- [**Be a risk management hero** with intelligent data protection and compliance solutions](https://myignite.microsoft.com/archives/IG20-DB159) | [Ask the expert session 1](https://myignite.microsoft.com/archives/IG20-ATE-DB159) | [Ask the expert session 2](https://myignite.microsoft.com/archives/IG20-ATE-DB159-R1)
 
-- [Know your data, protect your data and prevent data loss with Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)
+- [**Know your data, protect your data and prevent data loss** with Microsoft Information Protection](https://myignite.microsoft.com/archives/IG20-OD273)
 
-- [Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d)
+- **Ask anything about Microsoft Compliance**: information protection & governance, insider risks, Compliance Management, and more: [Ask the expert session 1](https://myignite.microsoft.com/archives/IG20-ATE-DB163-R1) | [Ask the expert session 2](https://myignite.microsoft.com/archives/IG20-ATE-DB170)
+
+
 ## AIP's classic client
 
 The Azure Information Protection classic client is the earlier version of AIP, and enables administrators to manage classification labels directly in the Azure portal.
