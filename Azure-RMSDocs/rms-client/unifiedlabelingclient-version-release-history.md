@@ -120,20 +120,6 @@ This version of the unified labeling client and scanner provides the following f
 - 10565248 Fixed an issue where Outlook may fail to send a message with embedded images in rich-text with rules for [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) configured.
 - 10632840 Fixed an issue where the AIP add-in may fail to load in Office apps with language related errors. In such cases, override the default language settings for the AIP add-in by defining the [UILanguageOverride](clientv2-admin-guide-customizations.md#override-the-default-language-settings) to match your operating system settings.
 
-<!-->
-- NOT IN 10879169 Fixed an issue where the macro editor in Office apps may not support all Unicode characters after enabling the Azure Information Protection unified labeling client.
-- NOT IN 7562760 Fixed an issue where toggling off the Information Protection bar in Office apps may not work consistently.
-- NOT IN 8605749 Fixed an issue where the *Basic Text* taskpane may become greyed out after a label is applied in Outlook until the user clicks in the body of the email.
-- NOT IN 8789561 Fixed an issue where an error may be displayed after the **Show add-in user interface errors** option is selected, while AIP functionality continues to work as expected.
-- NOT IN 8989279 Fixed an issue where large .PTIF files may fail to open in the AIP Viewer app.
-- NOT IN 9015904 Fixed issue where .PST files may not be completely decrypted using the [Set-AIPFileLabel](xref) PowerShell cmdlet.
-- NOT IN 9036848 Fixed issue where [pop-up messages configured for Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) may be fully applied only after restarting Outlook a second time.
-- NOT IN 9195412 Fixed issue where encrypting a .MSG file using the [Set-AIPFileLabel](xref) PowerShell cmdlet may work unexpectedly.
-- NOT IN 9697560 10666773 Fixed issues where prompts to save changes may appear unexpectedly, either after forwarding or replying to labeled messages, or when working in Outlook online.
-- NOT IN 10171096 Fixed an issue where duplicate [Discover](../audit-logs.md#discover-audit-logs) entries may appear in AIP activity logs after adding an attachment to a mail.
-- NOT IN 10880496 Fixed an issue where an error may appear when labeling an email in a PST file.
--->
-
 ## Version 2.12.62.0
 
 Unified labeling scanner and client version 2.12.62.0
