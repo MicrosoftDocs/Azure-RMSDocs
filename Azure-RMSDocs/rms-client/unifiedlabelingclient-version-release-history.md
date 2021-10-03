@@ -100,9 +100,11 @@ For more information, see [Learn about sensitive information types](/microsoft-3
 
 ### Integrated support for MIP SDK version 1.10
 
-This version of the Azure Information Protection client and scanner fully integrates the Microsoft Information Protection (MIP) Software Development Kit (SDK) version 1.10.93. 
+This version of the Azure Information Protection client and scanner fully integrates the Microsoft Information Protection (MIP) Software Development Kit (SDK) version 1.10.93.
 
-For more information, see the [MIP SDK documentation](../information-protection/develop/version-release-history#version-11093).
+Among other features, this support includes default protection for .msg files. When protected, **.msg** file types are changed to **.msg.pfile** files.
+
+For more information, see the [File types supported by the Azure Information Protection (AIP) unified labeling client](clientv2-admin-guide-file-types.md) and the [MIP SDK documentation](../information-protection/develop/version-release-history#version-11093).
 
 ### Scanner support for 64-bit versions only
 
@@ -134,7 +136,7 @@ This version of the unified labeling client and scanner provides the following f
 - 10447949 Fixed an issue where the **Delete Label** icon may not appear in the Outlook classification bar when mandatory labeling is enabled across Office, [but not in Outlook](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling).
 - 10525046 Fixed an issue where Excel may not close completely when both the AIP add-in and other add-ins are running.
 - 10565248 Fixed an issue where Outlook may fail to send a message with embedded images in rich-text with rules for [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) configured.
-- 10632840 Fixed an issue where the AIP add-in may fail to load in Office apps with language related errors. <!--To fully apply this fix, you may need to assign the default [UILanguage](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-winpe-uilanguage) value to `en_US`.-->
+- 10632840 Fixed an issue where the AIP add-in may fail to load in Office apps with language related errors. In such cases, override the default language settings for the AIP add-in by defining the [UILanguageOverride](clientv2-admin-guide-customizations.md#override-the-default-language-settings) to match your operating system settings.
 - 10350407 Fixed an issue when [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) may behave unexpectedly when attaching an email to another, newly encrypted email.
 
 ## Version 2.12.62.0
