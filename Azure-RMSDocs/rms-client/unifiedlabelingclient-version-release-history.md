@@ -104,6 +104,14 @@ Starting in version 2.13.xx.x, the unified labeling scanner is supported only on
 
 For more information, see [Requirements for installing and deploying the Azure Information Protection unified labeling scanner](../deploy-aip-scanner-prereqs.md).
 
+### Updated audit logs for the AIP viewer
+
+[Access audit](../audit-logs.md#access-audit-logs) logs are now generated each time a labeled or protected file is opened within the organization by the [Azure Information Protection unified labeling viewer app](clientv2-view-use-files.md).
+
+The AIP viewer app no longer generates [Discover audit logs](../audit-logs.md#discover-audit-logs) when labeled or protected files are opened.
+
+For more information, see [Azure Information Protection audit log reference (public preview)](../audit-logs.md) and [Analytics and central reporting for Azure Information Protection (public preview)](../reports-aip.md).
+
 ### Fixes and improvements
 
 This version of the unified labeling client and scanner provides the following fixes and improvements:
