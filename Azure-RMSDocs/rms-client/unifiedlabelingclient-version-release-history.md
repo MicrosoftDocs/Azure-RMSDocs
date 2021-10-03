@@ -116,28 +116,31 @@ For more information, see [Requirements for installing and deploying the Azure I
 
 This version of the unified labeling client and scanner provides the following fixes and improvements:
 
-- 7562760 Fixed an issue where toggling off the Information Protection bar in Office apps may not work consistently.
-- 8605749 Fixed an issue where the *Basic Text* taskpane may become greyed out after a label is applied in Outlook until the user clicks in the body of the email.
-- 8789561 Fixed an issue where an error may be displayed after the **Show add-in user interface errors** option is selected, while AIP functionality continues to work as expected.
-- 8989279 Fixed an issue where large .PTIF files may fail to open in the AIP Viewer app.
-- 9015904 Fixed issue where .PST files may not be completely decrypted using the [Set-AIPFileLabel](xref) PowerShell cmdlet.
-- 9036848 Fixed issue where [pop-up messages configured for Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) may be fully applied only after restarting Outlook a second time.
-- 9195412 Fixed issue where encrypting a .MSG file using the [Set-AIPFileLabel](xref) PowerShell cmdlet may work unexpectedly.
-- 9697560 10666773 Fixed issues where prompts to save changes may appear unexpectedly, either after forwarding or replying to labeled messages, or when working in Outlook online.
-- 10171096 Fixed an issue where duplicate [Discover](../audit-logs.md#discover-audit-logs) entries may appear in AIP activity logs after adding an attachment to a mail.
-- 10879169 Fixed an issue where the macro editor in Office apps may not support all Unicode characters after enabling the Azure Information Protection unified labeling client.
-- 10880496 Fixed an issue where an error may appear when labeling an email in a PST file.
 - 7566366 Enhanced support for the [PFileSupportedExtensions](clientv2-admin-guide-customizations.md#pfilesupportedextension) advanced setting, to add the ability to protect only Office file types and PDF files, without configuring one specific value.
 - 8070538 Fixed an issue where a watermark may not be reflected correctly when a label is changed.
 - 9449266 Fixed  an issue where Office apps may behave unexpectedly if the [`color`](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label) value for a label has an invalid value.
 - 10211100 Fixed an issue where selecting permissions via the File Explorer **Classify and protect** option may remove email addresses from the defined permissions if multiple email addresses include an apostrophe (**'**).
 - 10240706 Fixed an issue where the auto-labeling custom text tooltip configured may not display as expected in case of an AsyncPolicy applied.
+- 10350407 Fixed an issue when [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) may behave unexpectedly when attaching an email to another, newly encrypted email.
 - 10420686 Fixed an issue where an AIP-related error appeared after a child label is added and scoped to *Groups & Sites*.
 - 10447949 Fixed an issue where the **Delete Label** icon may not appear in the Outlook classification bar when mandatory labeling is enabled across Office, [but not in Outlook](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling).
 - 10525046 Fixed an issue where Excel may not close completely when both the AIP add-in and other add-ins are running.
 - 10565248 Fixed an issue where Outlook may fail to send a message with embedded images in rich-text with rules for [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) configured.
 - 10632840 Fixed an issue where the AIP add-in may fail to load in Office apps with language related errors. In such cases, override the default language settings for the AIP add-in by defining the [UILanguageOverride](clientv2-admin-guide-customizations.md#override-the-default-language-settings) to match your operating system settings.
-- 10350407 Fixed an issue when [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) may behave unexpectedly when attaching an email to another, newly encrypted email.
+
+<!-->
+- NOT IN 10879169 Fixed an issue where the macro editor in Office apps may not support all Unicode characters after enabling the Azure Information Protection unified labeling client.
+- NOT IN 7562760 Fixed an issue where toggling off the Information Protection bar in Office apps may not work consistently.
+- NOT IN 8605749 Fixed an issue where the *Basic Text* taskpane may become greyed out after a label is applied in Outlook until the user clicks in the body of the email.
+- NOT IN 8789561 Fixed an issue where an error may be displayed after the **Show add-in user interface errors** option is selected, while AIP functionality continues to work as expected.
+- NOT IN 8989279 Fixed an issue where large .PTIF files may fail to open in the AIP Viewer app.
+- NOT IN 9015904 Fixed issue where .PST files may not be completely decrypted using the [Set-AIPFileLabel](xref) PowerShell cmdlet.
+- NOT IN 9036848 Fixed issue where [pop-up messages configured for Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) may be fully applied only after restarting Outlook a second time.
+- NOT IN 9195412 Fixed issue where encrypting a .MSG file using the [Set-AIPFileLabel](xref) PowerShell cmdlet may work unexpectedly.
+- NOT IN 9697560 10666773 Fixed issues where prompts to save changes may appear unexpectedly, either after forwarding or replying to labeled messages, or when working in Outlook online.
+- NOT IN 10171096 Fixed an issue where duplicate [Discover](../audit-logs.md#discover-audit-logs) entries may appear in AIP activity logs after adding an attachment to a mail.
+- NOT IN 10880496 Fixed an issue where an error may appear when labeling an email in a PST file.
+-->
 
 ## Version 2.12.62.0
 
@@ -262,7 +265,6 @@ The unified labeling on-premises scanner has improved outputs for the following 
 |**Get-AIPScannerStatus**     |  Previously, running the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) command provided only high-level details of the scanner cluster status, without details per node in your cluster.   <br><br> Now, you can use the **NodesInfo** variable and the **Verbose** parameter to drill down into additional levels of detail for each node. <br><br>   For more information, see the [Verify scanning details per scanner node and repository](../deploy-aip-scanner-tsg.md#verify-scanning-details-per-scanner-node-and-repository). |
 |**Get-AIPScannerConfiguration**     |   Running the [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/get-aipscannerconfiguration) now provides details about the current scanner configuration in addition to the online configuration settings.     |
 |     |         |
-
 
 ### Updates for the scanner's supported information types
 
