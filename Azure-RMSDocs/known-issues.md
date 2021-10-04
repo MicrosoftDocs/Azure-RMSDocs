@@ -172,7 +172,7 @@ When opening the protected document after installing Adobe Acrobat DC with the M
 This is an expected error. In the prompt window, select **Back** to continue opening the protected document.
 
 >[!NOTE]
-> The AIP Viewer supports guest organizational accounts in Azure AD, but not personal or Windows Live accounts.
+> The AIP Viewer supports guest *organizational* accounts in Azure AD, but not personal or Windows Live accounts.
 >
 
 ## Known issues for track and revoke features
