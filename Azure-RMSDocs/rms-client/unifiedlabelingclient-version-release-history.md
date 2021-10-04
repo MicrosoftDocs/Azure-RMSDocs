@@ -92,11 +92,16 @@ This version of the unified labeling client provides globalization enhancements,
 
 For more information, see [Turn on classification globalization features](clientv2-admin-guide-customizations.md#turn-on-classification-globalization-features-public-preview) and [Learn about sensitive information types](/microsoft-365/compliance/sensitive-information-type-learn-about).
 
-### Integrated support for MIP SDK version 1.10
+### Updated audit logs for the AIP Viewer app
 
-This version of the Azure Information Protection client and scanner fully integrates the Microsoft Information Protection (MIP) Software Development Kit (SDK) version 1.10.93.
+The [Azure Information Protection Viewer](clientv2-view-use-files.md) app now generates [Access audit logs](../audit-logs.md#access-audit-logs) each time a labeled or protected file is opened within the organization.
 
-For more information, see the [MIP SDK documentation](/information-protection/develop/version-release-history#version-11093).
+The Viewer app no longer generates [Discover audit logs](../audit-logs.md#discover-audit-logs).
+
+For more information, see:
+
+- [Azure Information Protection audit log reference (public preview)](../audit-logs.md)
+- [Analytics and central reporting for Azure Information Protection (public preview)](../reports-aip.md)
 
 ### Scanner support for 64-bit versions only
 
@@ -104,6 +109,11 @@ Starting in version 2.13.44.0, the unified labeling scanner is supported only on
 
 For more information, see [Requirements for installing and deploying the Azure Information Protection unified labeling scanner](../deploy-aip-scanner-prereqs.md).
 
+### Integrated support for MIP SDK version 1.10
+
+This version of the Azure Information Protection client and scanner fully integrates the Microsoft Information Protection (MIP) Software Development Kit (SDK) version 1.10.93.
+
+For more information, see the [MIP SDK documentation](/information-protection/develop/version-release-history#version-11093).
 ### Fixes and improvements
 
 This version of the unified labeling client and scanner provides the following fixes and improvements:
