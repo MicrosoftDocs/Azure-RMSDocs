@@ -78,9 +78,9 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.13.xx.x (Public preview)
+## Version 2.13.44.0 (Public preview)
 
-Unified labeling scanner and client version 2.13.xx.x
+Unified labeling scanner and client version 2.13.44.0
 
 **Released** 10/12/2021
 
@@ -100,7 +100,7 @@ For more information, see the [MIP SDK documentation](/information-protection/de
 
 ### Scanner support for 64-bit versions only
 
-Starting in version 2.13.xx.x, the unified labeling scanner is supported only on 64-bit systems.
+Starting in version 2.13.44.0, the unified labeling scanner is supported only on 64-bit systems.
 
 For more information, see [Requirements for installing and deploying the Azure Information Protection unified labeling scanner](../deploy-aip-scanner-prereqs.md).
 
@@ -118,7 +118,7 @@ This version of the unified labeling client and scanner provides the following f
 - 10447949 Fixed an issue where the **Delete Label** icon may not appear in the Outlook classification bar when mandatory labeling is enabled across Office, [but not in Outlook](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling).
 - 10525046 Fixed an issue where Excel may not close completely when both the AIP add-in and other add-ins are running.
 - 10565248 Fixed an issue where Outlook may fail to send a message with embedded images in rich-text with rules for [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) configured.
-- 10632840 Fixed an issue where the AIP add-in may fail to load in Office apps with language related errors. In such cases, override the default language settings for the AIP add-in by defining the [UILanguageOverride](clientv2-admin-guide-customizations.md#override-the-default-language-settings) to match your operating system settings.
+- 10632840 Fixed an issue where the AIP add-in may fail to load in Office apps with language related errors.
 
 ## Version 2.12.62.0
 

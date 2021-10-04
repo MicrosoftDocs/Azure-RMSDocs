@@ -2145,19 +2145,7 @@ Example PowerShell command, where your label policy is named "Global":
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableGlobalization="True"}
 ```
 
-To turn off support again and revert to the default, set the **EnableGlobalization** advanced setting to `False`.
-
-## Override the default language settings
-
-By default, if the AIP add-in cannot pull a language settings from Microsoft Office, it defaults to a language of **en-US**. If you get language-related errors when loading the AIP add-in in Office apps, you may need to override this default to match your operating system.
-
-In such cases, define the following registry setting to match your operating system:
-
-- Registry path: **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\UILanguageOverride**
-- Type: A string value
-- Value: Any valid language tag. For more information, see [Available language packs for Windows](/windows-hardware/manufacture/desktop/available-language-packs-for-windows).
-
-If this registry setting fails because it's invalid or does not exist, the setting defaults to **en-US**.
+To turn off support again and revert to the default, set the **EnableGlobalization** advanced setting to an empty string.
 
 ## Next steps
 
