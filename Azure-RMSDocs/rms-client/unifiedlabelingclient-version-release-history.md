@@ -96,7 +96,7 @@ For more information, see [Turn on classification globalization features](client
 
 This version of the Azure Information Protection client and scanner fully integrates the Microsoft Information Protection (MIP) Software Development Kit (SDK) version 1.10.93.
 
-For more information, see the [MIP SDK documentation](../information-protection/develop/version-release-history#version-11093).
+For more information, see the [MIP SDK documentation](/information-protection/develop/version-release-history#version-11093).
 
 ### Scanner support for 64-bit versions only
 
