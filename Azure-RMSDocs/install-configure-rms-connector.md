@@ -6,7 +6,7 @@ description: Information to help you install and configure the Azure Rights Mana
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/29/2021
+ms.date: 10/06/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -326,17 +326,23 @@ For more information, see:
 
 This procedure provides an example of how to verify that TLS 1.2 is being used, and requires prior knowledge of [Fiddler](https://www.telerik.com/fiddler).
 
-1. Download and install [Fiddler](https://www.telerik.com/fiddler) on your RMS connector machine.
+1. Download and install [Fiddler](https://www.telerik.com/fiddler) on your RMS Connector machine.
 
 1. Open Fiddler, and then open the Microsoft RMS Connector administration tools.
 
 1. Select **Sign in**, although you don't have to actually sign in to complete the verification.
 
-1. In the Fiddler window, find the **msconnectoradmin** process. This process should be attempting to establish a secure connection with **discover.aadrm.com**.
+1. In the Fiddler window on the left, find the **msconnectoradmin** process. This process should be attempting to establish a secure connection with **discover.aadrm.com**.
 
-1. Switch to the **Inspectors** tab, and view the **Text VIew** tabs for both the request and the response.
+    For example:
 
-    In those tabs, note that communication is performed using TLS 1.2.
+    :::image type="content" source="media/fiddler-tls-secure-connection.png" alt-text="Screenshot of Fiddler showing the msconnectoradmin process trying to establish a secure connection with discover dot addrm dot com.":::
+
+1. In the Fiddler window on the right, select the **Inspectors** tab, and view the **Text View** tabs for both the request and the response.
+
+    In those tabs, note that communication is performed using TLS 1.2. For example:
+
+    :::image type="content" source="media/fiddler-tls-inspection.png" alt-text="Screenshot of a Fiddler window showing TLS 1.2 being used.":::
 
 ### Manually force the use of TLS 1.2
 
