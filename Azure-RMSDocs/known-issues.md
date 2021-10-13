@@ -204,7 +204,7 @@ Additionally, revoking access for one of the attachments also revokes access for
 
     Using the original **ContentID** value to track data will not include any access performed for the user's downloaded file. Additionally, revoking access based on the original **ContentID** value will not revoke access for any of the downloaded files.
 
-    In such cases, administrators may be able to locate the downloaded files using PowerShell to find the new **ContentID** values to track or revoke access.
+    If administrators have access to the downloaded files, they can use PowerShell to identify a document's **ContentID** for track and revoke actions.
 
 ### Known issues for the AIP client and OneDrive
 
