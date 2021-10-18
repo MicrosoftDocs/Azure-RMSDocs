@@ -38,6 +38,13 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15 | **Out of Support**  | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14 | **Out of Support**  | March 2, 2021      |
 
+## Version 1.10.98
+
+**Release Date** September 29th, 2021
+
+### Bug Fixes
+
+- Fixed a bug in iOS where bitcode was not enabled
 
 ## Version 1.10.97
 
