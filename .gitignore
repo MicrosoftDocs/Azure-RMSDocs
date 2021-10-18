@@ -9,6 +9,6 @@ Tools/NuGet/
 .openpublishing.build.mdproj
 .openpublishing.buildcore.ps1
 packages.config
-.vscode/settings.json
+./.vscode/settings.json
 _themes
 
