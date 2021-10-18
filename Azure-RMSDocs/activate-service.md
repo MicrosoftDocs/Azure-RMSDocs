@@ -86,7 +86,7 @@ Use these instructions if you want to activate the Rights Management protection 
 
 When activation is complete, the information bar displays **Activation finished successfully**.
 
-## Activate protection via PowerShellSupported activation methods
+## Activate protection via PowerShell
 
 Use these instructions if you want to activate the Rights Management protection service (Azure RMS) using PowerShell.
 
