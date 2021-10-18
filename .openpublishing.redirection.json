@@ -1606,12 +1606,12 @@
         },
 		{
             "source_path": "Azure-RMSDocs/activate-azure.md",
-            "redirect_url": "Azure-RMSDocs/activate-service#activate-protection-from-the-azure-portal",
+            "redirect_url": "information-protection/activate-service#activate-protection-from-the-azure-portal",
             "redirect_document_id": false
         },
 		{
             "source_path": "Azure-RMSDocs/activate-office365.md",
-            "redirect_url": "Azure-RMSDocs/activate-service",
+            "redirect_url": "information-protection/activate-service",
             "redirect_document_id": false
         }
     ]
