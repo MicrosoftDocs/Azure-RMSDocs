@@ -78,11 +78,11 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.13.44.0 (Public preview)
+## Version 2.13.47.0 (Public preview)
 
-Unified labeling scanner and client version 2.13.44.0
+Unified labeling scanner and client version 2.13.47.0
 
-**Released** 10/12/2021
+**Released** 10/31/2021
 
 This version includes the following new updates, fixes, and enhancements for the unified labeling scanner and client:
 
@@ -105,7 +105,7 @@ For more information, see:
 
 ### Scanner support for 64-bit versions only
 
-Starting in version 2.13.44.0, the unified labeling scanner is supported only on 64-bit systems.
+Starting in version 2.13.47.0, the unified labeling scanner is supported only on 64-bit systems.
 
 For more information, see [Requirements for installing and deploying the Azure Information Protection unified labeling scanner](../deploy-aip-scanner-prereqs.md).
 
