@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/12/2021
+ms.date: 10/04/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -171,6 +171,10 @@ When opening the protected document after installing Adobe Acrobat DC with the M
 
 This is an expected error. In the prompt window, select **Back** to continue opening the protected document.
 
+>[!NOTE]
+> The AIP Viewer supports guest *organizational* accounts in Azure AD, but not personal or Windows Live accounts.
+>
+
 ## Known issues for track and revoke features
 
 Tracking and revoking document access using the unified labeling client has the following known issues:
@@ -200,7 +204,7 @@ Additionally, revoking access for one of the attachments also revokes access for
 
     Using the original **ContentID** value to track data will not include any access performed for the user's downloaded file. Additionally, revoking access based on the original **ContentID** value will not revoke access for any of the downloaded files.
 
-    In such cases, administrators may be able to locate the downloaded files using PowerShell to find the new **ContentID** values to track or revoke access.
+    If administrators have access to the downloaded files, they can use PowerShell to identify a document's **ContentID** for track and revoke actions.
 
 ### Known issues for the AIP client and OneDrive
 
