@@ -105,6 +105,3 @@ Gets the action source of the label.
   
 ### GetContentFormats function
 Gets content types.
-
-  
-<Returns>

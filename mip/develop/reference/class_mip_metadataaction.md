@@ -30,5 +30,5 @@ Removing metadata should be done before adding metadata.
 Get the metadata name/value pairs that should be added to the content.
 
   
-**Returns**: Const std::vector<MetadataEntry>& 
+**Returns**: Const std::vector\<MetadataEntry\>& 
 Removing metadata should be done before adding metadata.

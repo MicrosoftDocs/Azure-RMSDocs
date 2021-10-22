@@ -20,7 +20,7 @@ public std::string GetName() const  |  Returns the name if found, exception othe
 public bool GetName(std::string& name) const  |  Returns if name was found. Sets name only when true. empty name is possible.
 public bool Skip()  |  Skips current node until it finds a non empty node.
 public bool GetValue(std::string& value) const  |  Returns if value was found. Sets value only when true. empty value is possible..
-public std::string GetAncestors() const  |  Returns current node ancestors (for debug text), in the following purpose <node grand="" parent="" attributes="..."><node parent>=""><node>.
+public std::string GetAncestors() const  |  Returns current node ancestors (for debug text), in the following purpose \<node grand="" parent="" attributes="..."\>\<node parent\>=""\>\<node\>.
 public bool IsEmptyElement() const  |  Returns whether the current node as an empty element.
 public bool GetAttribute(const std::string& attributeName, std::string& attribute) const  |  Returns true if attributes was found. Sets attribute only when true. empty attribute is possible..
 public bool HasAttributes() const  |  Returns whether the current node has attributes.
@@ -78,7 +78,7 @@ Parameters:
 **Returns**: True if value exists else false.
   
 ### GetAncestors function
-Returns current node ancestors (for debug text), in the following purpose <node grand="" parent="" attributes="..."><node parent>=""><node>.
+Returns current node ancestors (for debug text), in the following purpose \<node grand="" parent="" attributes="..."\>\<node parent>=""\>\<node\>.
 used for debugging purposes, and error logging.
   
 ### IsEmptyElement function
