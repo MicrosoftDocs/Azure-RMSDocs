@@ -149,8 +149,8 @@ Storage type for the caches.
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Default            | Extensions will become as SDK default behavior
-PFileSuffix            | Extensions will become <EXT>.PFILE
-PPrefix            | Extensions will become P<EXT>
+PFileSuffix            | Extensions will become \<EXT\>.PFILE
+PPrefix            | Extensions will become P\<EXT\>
 
 Describes PFile extensions behavior.
   
