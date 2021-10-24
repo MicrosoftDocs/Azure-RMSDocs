@@ -31,6 +31,7 @@ Application permissions allow an application in Azure Active Directory to act as
 | Azure Rights Management Service | Content.DelegatedReader   | Read protected content on behalf of a user   | Yes                    |
 | Azure Rights Management Service | Content.DelegatedWriter   | Create protected content on behalf of a user | Yes                    |
 | Azure Rights Management Service | Content.Writer            | Create protected content                     | Yes                    |
+| Azure Rights Management Service | Application.Read.All      | Permission not required for MIPSDK use       | Not Applicable         |
 | MIP Sync Service                | UnifiedPolicy.Tenant.Read | Read all unified policies of the tenant      | Yes                    |
 
 ### Content.SuperUser
