@@ -68,9 +68,23 @@ To use this data protection solution, your organization must have a service plan
 
 When the protection service is activated, all users in your organization can apply information protection to their documents and emails, and all users can open (consume) documents and emails that have been protected by this service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
 
+## Activate protection via PowerShell
+
+This procedure describes how to activate the Rights Management protection service (Azure RMS) using PowerShell.
+
+1. Install the AIPService module, to configure and manage the protection service. For instructions, see [Installing the AIPService PowerShell module](install-powershell.md).
+
+2. From a PowerShell session, run [Connect-AipService](/powershell/module/aipservice/connect-aipservice), and when prompted, provide the Global Administrator account details for your Azure Information Protection tenant.
+
+3. Run [Get-AipService](/powershell/module/aipservice/get-aipservice) to confirm whether the protection service is activated. A status of **Enabled** confirms activation; **Disabled** indicates that the service is deactivated.
+
+4. To activate the service, run [Enable-AipService](/powershell/module/aipservice/enable-aipservice).
+
 ## Activate protection from the Azure portal
 
-Use these instructions if you want to activate the Rights Management protection service (Azure RMS) from Azure Information Protection, by using the Azure portal.
+This procedure describes how to activate the Rights Management protection service (Azure RMS) from the Azure portal.
+
+[!INCLUDE [classic-client-deprecation-extended-support](includes/classic-client-deprecation-extended-support.md)]
 
 1. Go to and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
 
@@ -86,17 +100,6 @@ Use these instructions if you want to activate the Rights Management protection 
 
 When activation is complete, the information bar displays **Activation finished successfully**.
 
-## Activate protection via PowerShell
-
-Use these instructions if you want to activate the Rights Management protection service (Azure RMS) using PowerShell.
-
-1. Install the AIPService module, to configure and manage the protection service. For instructions, see [Installing the AIPService PowerShell module](install-powershell.md).
-
-2. From a PowerShell session, run [Connect-AipService](/powershell/module/aipservice/connect-aipservice), and when prompted, provide the Global Administrator account details for your Azure Information Protection tenant.
-
-3. Run [Get-AipService](/powershell/module/aipservice/get-aipservice) to confirm whether the protection service is activated. A status of **Enabled** confirms activation; **Disabled** indicates that the service is deactivated.
-
-4. To activate the service, run [Enable-AipService](/powershell/module/aipservice/enable-aipservice).
 
 
 ## Configuring onboarding controls for a phased deployment
