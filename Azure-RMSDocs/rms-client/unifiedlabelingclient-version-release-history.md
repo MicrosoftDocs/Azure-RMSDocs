@@ -114,6 +114,7 @@ For more information, see [Requirements for installing and deploying the Azure I
 This version of the Azure Information Protection client and scanner fully integrates the Microsoft Information Protection (MIP) Software Development Kit (SDK) version 1.10.93.
 
 For more information, see the [MIP SDK documentation](/information-protection/develop/version-release-history#version-11093).
+
 ### Fixes and improvements
 
 This version of the unified labeling client and scanner provides the following fixes and improvements:
@@ -129,6 +130,7 @@ This version of the unified labeling client and scanner provides the following f
 - Fixed an issue where Excel may not close completely when both the AIP add-in and other add-ins are running.
 - Fixed an issue where Outlook may fail to send a message with embedded images in rich-text with rules for [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) configured.
 - Fixed an issue where the AIP add-in may fail to load in Office apps with language related errors.
+- Fixed an issue to prevent errors from occurring for illegal characters in PST file paths, when performing labeling activities.
 
 ## Version 2.12.62.0
 
