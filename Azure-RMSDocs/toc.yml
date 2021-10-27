@@ -116,13 +116,7 @@
   - name: Configure & use the service
     items:
     - name: Activating protection
-      items:
-      - name: Overview
-        href: activate-service.md
-      - name: Microsoft 365 admin center
-        href: activate-office365.md
-      - name: Azure portal
-        href: activate-azure.md
+      href: activate-service.md
     - name: Configuring applications
       items:
       - name: Overview
