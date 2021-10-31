@@ -31,15 +31,16 @@ ms.custom: user
 
 [!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
 
-> [!TIP]
-> The AIP mobile apps are *viewers only,* and do not enable you to create new emails or reply to emails, or create or edit protected files. The AIP mobile apps also cannot open attachments to protected PDFs or emails.
-> 
-> - **If you have mobile Office apps installed on your mobile device**, we recommend that you use the [Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-word-excel-and-powerpoint) to view protected files.
-> - **If you are opening your file on a desktop**, use the [desktop version of the AIP Viewer](clientv2-view-use-files.md). 
->
-> The AIP mobile apps support only protected files. Unprotected files are not supported and cannot be consumed in the mobile viewer apps. 
-
 The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text files that cannot be opened with your regular apps for these file types. For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
+
+## Scope and recommendations scope
+
+The AIP mobile apps are *viewers only,* and do not enable you to create new emails or reply to emails, or create or edit protected files. The AIP mobile apps also cannot open attachments to protected PDFs or emails.
+ 
+- **If you have mobile Office apps installed on your mobile device**, we recommend that you use the [Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-word-excel-and-powerpoint) to view protected files.
+- **If you are opening your file on a desktop**, use the [desktop version of the AIP Viewer](clientv2-view-use-files.md). 
+
+The AIP mobile apps support only protected files. Unprotected files are not supported and cannot be consumed in the mobile viewer apps. 
 
 ## What's new for the AIP mobile viewer app
 
