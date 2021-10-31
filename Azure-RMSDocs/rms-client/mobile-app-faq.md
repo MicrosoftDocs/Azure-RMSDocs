@@ -36,9 +36,10 @@ ms.custom: user
 > 
 > - **If you have mobile Office apps installed on your mobile device**, we recommend that you use the [Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-word-excel-and-powerpoint) to view protected files.
 > - **If you are opening your file on a desktop**, use the [desktop version of the AIP Viewer](clientv2-view-use-files.md). 
-> 
+>
+> The AIP mobile apps support only protected files. Unprotected files are not supported and cannot be consumed in the mobile viewer apps. 
 
-The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text file when you can't open them with your regular apps for these file types. For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
+The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text files that cannot be opened with your regular apps for these file types. For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
 
 ## What's new for the AIP mobile viewer app
 
@@ -105,8 +106,6 @@ Once you've [installed the AIP mobile app](#download-and-install-the-aip-app-for
 
 
 ## Admins: Testing the AIP mobile viewer apps
-
-Most users will typically use the AIP mobile app to open a protected email or file that cannot be opened using their regular mobile apps.
 
 If you're a system administrator who wants to test the AIP mobile viewer apps for your org, or simply want to try it out for yourself, use the instructions below to walk you through the entire process.
 
