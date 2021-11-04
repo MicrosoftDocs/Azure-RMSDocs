@@ -111,9 +111,9 @@ For more details, see:
 
 #### Prevent the AIP clients from sending auditing data
 
-**Unified labeling client** 
+**Unified labeling client**
 
-To prevent the Azure Information Protection unified labeling client from sending auditing data, configure a label policy [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics).
+To prevent the Azure Information Protection unified labeling client from sending auditing data, configure a [label policy advanced setting](rms-client/clientv2-admin-guide-customizations.md#prevent-audit-data-from-being-sent-to-aip-and-microsoft-365-analytics).
 
 **Classic client**
 
@@ -347,7 +347,8 @@ In this example, a downgraded label is counted only if the label name before the
 
 
 ## Next steps
-After reviewing the information in the reports, if you are using the Azure Information Protection client, you might decide to make changes to your labeling policy. 
+
+After reviewing the information in the reports, if you are using the Azure Information Protection client, you might decide to make changes to your labeling policy.
 
 - **Unified labeling client**: Make changes to your labeling policy in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 

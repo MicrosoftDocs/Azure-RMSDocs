@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/22/2021
+ms.date: 10/04/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -84,18 +84,15 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 |**IRM support in Office 2016**| The [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) registry setting, which controls metadata encryption in Office 2016, is not supported for Azure Information Protection labels.|
 |**Outlook object model access** | - The [PromptOOMAddressBookAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when address books are accessed via the Outlook object model, is not supported with Azure Information Protection labels. <br><br>- The [PromptOOMAddressInformationAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when a program reads address information, is not supported for Azure Information Protection labels.|
 |**Content markings in Word**    | AIP [content markings](configure-policy-markings.md) in Microsoft Word headers or footers may be offset or placed incorrectly, or may be hidden entirely, when that same header or footer also contains a table.<br><br>For more information, see [When visual markings are applied](configure-policy-markings.md#when-visual-markings-are-applied). |
-|**Files attached to emails** |Due to a limitation in recent Windows updates, when [Microsoft Outlook is protected by Azure Rights Management](office-apps-services-support.md), files attached to emails may be locked after opening the file. |
+|**Files attached to emails** |Due to a limitation in recent Windows updates, scanning Outlook messages (**.msg** files) may cause those files to be locked. To unlock the files, stop the scanner service. Starting the scanner service again does not lock the files again until the next time the messages are scanned. <br><br>To clarify whether your system is affected, you might want to start a scan on a specific folder with a single, sample message, and check to see if the file is locked after the scan is complete. <br><br>**Note**: This issue is not relevant when applying and removing protection with PowerShell. |
 |**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.       |
 | **S/MIME emails** | Opening S/MIME emails in Outlook's Reading Pane may cause performance issues. <br><br>To prevent performance issues with S/MIME emails, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property. <br><br>**Note**: Enabling this property prevents the AIP bar or the email classification from being displayed in Outlook's Reading Pane. |
 |**Send to File Explorer option** |If you choose to right-click on any file in the File Explorer and select **Send to > Mail recipient**, the Outlook message that opens with the file attached may not display the AIP toolbar. <br><br>If this occurs and you need to use the AIP toolbar options, start your email from within Outlook and then browse to and attach the file you want to send.|
-|**Co-authoring** |Co-authoring support is provided by a [dedicated installation](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) of the Azure Information Protection client, and is currently in public preview. <br><br>For more information, see [Known issues for co-authoring (Public preview)](#known-issues-for-co-authoring-public-preview). |
 | | |
 
-### Known issues for co-authoring (Public preview)
+### Known issues for co-authoring
 
-Known issues for co-authoring are relevant only when the [dedicated AIP client version for co-authoring](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) is deployed in your environment and co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
-
-Co-authoring with the unified labeling client is currently in [public preview](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) and is supported only for testing environments.
+Known issues for co-authoring are relevant only when co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
 
 Known issues for co-authoring in AIP include:
 
@@ -105,8 +102,8 @@ Known issues for co-authoring in AIP include:
 
 > [!IMPORTANT]
 > Co-authoring and sensitivity labels cannot be deployed to some users only, as any new labels will not be visible to users with an older version of the Office client.
-> 
-For more information about co-authoring support, including limitations and known issues for the public preview, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring).
+>
+For more information about co-authoring support, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring).
 
 #### Supported versions for co-authoring and sensitivity labels
 
@@ -116,19 +113,17 @@ Before you start, make sure that your system complies with the version requireme
 
 > [!NOTE]
 > While sensitivity labels can be applied on files in Office 97-2003 formats, such as  **.doc**, **.ppt**, and **.xls**, co-authoring for these file types is not supported. Once a label is applied on a newly-created file, or a file in the advanced file format, such as **.docx**, **.pptx**, and **.xlsx**, saving the file in an Office 97-2003 format will cause the label to be removed.
-> 
+>
 
 #### Policy updates
 
-If your labeling policy was updated while an Office application was opened with Azure Information Protection, any new labels are displayed, but applying them will result in an error. 
+If your labeling policy was updated while an Office application was opened with Azure Information Protection, any new labels are displayed, but applying them will result in an error.
 
 If this occurs, close and reopen your Office application to be able to apply your labels.
 
 #### Unsupported features for co-authoring
 
-The following features are not supported when [co-authoring is enabled](/microsoft-365/compliance/sensitivity-labels-coauthoring) for files encrypted with sensitivity labels:
-
-- **AIP analytics and audit logs**.  When co-authoring is enabled, the Azure Information Protection client doesn't send any [audit logs](audit-logs.md).
+The following features are not supported or are partially supported when [co-authoring is enabled](/microsoft-365/compliance/sensitivity-labels-coauthoring) for files encrypted with sensitivity labels:
 
 - **DKE templates and DKE user-defined properties**. For more information, see [Double Key Encryption (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).
 
@@ -136,15 +131,10 @@ The following features are not supported when [co-authoring is enabled](/microso
 
     This means that applying a label with user-defined permissions will prevent you from working on the document with others at the same time.
 
-- **Removing external content marking in apps**. For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
-
-- The following advanced settings:
-
-    - **customPropertiesByLabel**. For more information, see [Applying a custom property when a label is applied](rms-client/clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied).
-
-    - **labelByCustomProperties** and **EnableLabelBySharePointProperties**. For more information, see [Migrate labels from Secure Islands and other labeling solutions](rms-client/clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions).
+- **Removing external content marking in apps**. External content marking is removed only when a label is applied, and not when the document is saved. For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
 
 - Features listed in the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring#limitations) as co-authoring limitations.
+
 
 ## Sharing external doc types across tenants
 
@@ -181,6 +171,10 @@ When opening the protected document after installing Adobe Acrobat DC with the M
 
 This is an expected error. In the prompt window, select **Back** to continue opening the protected document.
 
+>[!NOTE]
+> The AIP Viewer supports guest *organizational* accounts in Azure AD, but not personal or Windows Live accounts.
+>
+
 ## Known issues for track and revoke features
 
 Tracking and revoking document access using the unified labeling client has the following known issues:
@@ -210,7 +204,7 @@ Additionally, revoking access for one of the attachments also revokes access for
 
     Using the original **ContentID** value to track data will not include any access performed for the user's downloaded file. Additionally, revoking access based on the original **ContentID** value will not revoke access for any of the downloaded files.
 
-    In such cases, administrators may be able to locate the downloaded files using PowerShell to find the new **ContentID** values to track or revoke access.
+    If administrators have access to the downloaded files, they can use PowerShell to identify a document's **ContentID** for track and revoke actions.
 
 ### Known issues for the AIP client and OneDrive
 
