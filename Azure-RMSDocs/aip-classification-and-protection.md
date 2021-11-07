@@ -157,7 +157,7 @@ Use one of the following methods to classify and protect existing content:
 
     Alternately, use the scanner to apply a default label to all documents in a data repository without inspecting the file contents. Use the scanner in reporting mode only to discover sensitive information that you might not know you had.
 
-- **Cloud data storage**: Use [Microsoft Cloud App Security](/cloud-app-security/azip-integration) to apply your labels to documents in Box, SharePoint, and OneDrive. For a tutorial, see [Automatically apply Azure Information Protection classification labels](/cloud-app-security/use-case-information-protection) 
+- **Cloud data storage**: Use [Microsoft Defender for Cloud Apps](/cloud-app-security/azip-integration) to apply your labels to documents in Box, SharePoint, and OneDrive. For a tutorial, see [Automatically apply Azure Information Protection classification labels](/cloud-app-security/use-case-information-protection) 
 
 
 ## Next steps

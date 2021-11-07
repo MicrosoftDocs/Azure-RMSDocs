@@ -44,7 +44,7 @@ Unlike Azure Information Protection, [Microsoft Information Protection](https://
 - Azure Information Protection
 - Microsoft 365 Information Protection, such as Microsoft 365 DLP
 - Windows Information Protection
-- Microsoft Cloud App Security
+- Microsoft Defender for Cloud Apps
 
 **Microsoft Information Protection capabilities include**:
 - Unified label management
