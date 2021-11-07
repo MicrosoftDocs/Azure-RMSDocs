@@ -47,6 +47,12 @@ Microsoft Azure Information Protection generates audit logs at the following act
 * [Remove protection](#remove-protection-audit-logs)
 * [Upgrade label](#upgrade-label-audit-logs)
 
+> [!NOTE]
+> Azure Information Protection collects data from desktop apps only, and not from mobile devices.
+>
+> For more information, see the details in the **Platform** columns in this article.
+> 
+
 ## Access audit logs
 
 **Access** audit logs are generated for the following activities:
