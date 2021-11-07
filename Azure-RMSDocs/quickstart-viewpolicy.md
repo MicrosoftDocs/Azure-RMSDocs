@@ -75,7 +75,7 @@ The protection service is now automatically activated for new customers. Confirm
 
 ## Create and publish labels
 
-Your organization might already have labels because they were automatically created for your tenant, or because you have sensitivity labels in the Office 365 Security & Compliance center, the Microsoft security center, or the Microsoft compliance center. Let's take a look:
+Your organization might already have labels because they were automatically created for your tenant, or because you have sensitivity labels in the Microsoft 365 Compliance center. Let's take a look:
 
 1. Under **Classifications**, select **Labels**.
 

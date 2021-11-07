@@ -98,7 +98,7 @@ While you migrate, you can continue to use the AIP classic client and the polici
 
     Your labels are copied from Azure Information Protection to the unified labeling platform, and are now stored in both systems.
 
-    Open the Microsoft 365 compliance center to compare the labels displayed there and in the Azure Information Protection area. The two lists should be identical. For example, when comparing to the Microsoft 365 Security & Compliance Center:
+    Open the Microsoft 365 compliance center to compare the labels displayed there and in the Azure Information Protection area. The two lists should be identical. For example, when comparing to the Microsoft 365 Compliance center:
 
     :::image type="content" source="media/qs-tutor/compare-migrated-labels-small.png" alt-text="Compare migrated labels between the Azure portal and the Security & Compliance Center" lightbox="media/qs-tutor/compare-migrated-labels.png":::
 
@@ -173,9 +173,9 @@ This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](htt
     If there are any policies already in the Microsoft 365 compliance center with the same name, the policies are overwritten with the settings from the Azure portal.
 
     > [!IMPORTANT]
-    > If you currently use Microsoft Cloud App Security and Azure Information Protection labels, verify that you have published at least one policy with a minimal set of labels to the Microsoft 365 compliance center, even if the policy is scoped to a single user. 
+    > If you currently use Microsoft Defender for Cloud Apps and Azure Information Protection labels, verify that you have published at least one policy with a minimal set of labels to the Microsoft 365 compliance center, even if the policy is scoped to a single user. 
     >
-    > This policy is required for Microsoft Cloud App Security to identify all the labels in the Microsoft 365 compliance center, and show them in the Microsoft Cloud App Security portal.
+    > This policy is required for Microsoft Defender for Cloud Apps to identify all the labels in the Microsoft 365 compliance center, and show them in the Microsoft Defender for Cloud Apps portal.
 
 Now that you've migrated both your labels and policies, continue with [Configuring advanced labeling settings](#configuring-advanced-labeling-settings) to cover any advanced configurations that were not migrated.
 
@@ -230,7 +230,7 @@ To leverage unified labeling condition features, create your labeling conditions
 For more information, see [What sensitivity labels can do](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) in the Microsoft 365 documentation.
 
 > [!TIP]
-> If you have any custom sensitive information types created for use with Office 365 DLP or Microsoft Cloud App Security, apply them as-is to unified labeling. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/apply-sensitivity-label-automatically).
+> If you have any custom sensitive information types created for use with Office 365 DLP or Microsoft Defender for Cloud Apps, apply them as-is to unified labeling. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/apply-sensitivity-label-automatically).
 >  
 
 ## Deploy a unified labeling client
