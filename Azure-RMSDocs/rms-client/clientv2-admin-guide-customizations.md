@@ -49,7 +49,7 @@ Use the following information for advanced configurations needed for specific sc
 
 ## Configuring advanced settings for the client via PowerShell
 
-Use the Microsoft 365 Security & Compliance Center PowerShell to configure advanced settings for customizing label policies and labels. 
+Use the Microsoft 365 Compliance center PowerShell to configure advanced settings for customizing label policies and labels. 
 
 In both cases, after you [connect to Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell), specify the **AdvancedSettings** parameter with the identity (name or GUID) of the policy or label, with key/value pairs in a [hash table](/powershell/module/microsoft.powershell.core/about/about_hash_tables). 
 
