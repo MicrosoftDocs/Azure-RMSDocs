@@ -41,6 +41,10 @@ The most successful deployments are those that identify specific use cases that 
 - [Migrate from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md)
 - [Migrate from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
+> [!NOTE]
+> For more information, see also [Create and publish sensitivity labels](/microsoft-365/compliance/create-sensitivity-labels) in the Microsoft 365 Compliance documentation.
+> 
+
 ## Additional deployment instructions
 
 Our [Azure Information Protection technical blog](https://aka.ms/AIPblog) includes additional guidance from the trenches.
