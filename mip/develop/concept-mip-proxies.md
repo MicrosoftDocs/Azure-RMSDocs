@@ -22,7 +22,7 @@ Today in the MIP SDK, non-transparent proxies are supported only on Windows.
 | Platform        | Transparent Proxy | Authenticated Proxies | Proxy Auto-discovery | Explicit Proxy |
 | --------------- | ----------------- | --------------------- | -------------------- | -------------- |
 | **Windows**     | Supported         | Not Supported         | Supported            | Supported      |
-| **Linux (All)** | Supported         | Not Supported         | Not Supported        | Not Supported  |
+| **Linux (All)** | Supported         | Not Supported         | Not Supported        | Supported      |
 | **macOS**       | Supported         | Not Supported         | Not Supported        | Not Supported  |
 | **Android**     | Supported         | Not Supported         | Not Supported        | Not Supported  |
 | **iOS**         | Supported         | Not Supported         | Not Supported        | Not Supported  |
@@ -41,7 +41,7 @@ For more on configuring WinHTTP, review the [WinHTTP documentation](/windows/win
 
 ## Proxies on Other Platforms
 
-MIP SDK doesn't support anything but fully transparent proxies of any type on non-Windows platforms. If this functionality is required, review the custom HTTP delegate and workaround sections for more details.
+MIP SDK doesn't support anything but fully transparent proxies of any type on non-Windows platforms except for Linux. Linux supports both Transparent and Explicit Proxy. If this functionality is required, review the custom HTTP delegate and workaround sections for more details.
 
 ## Custom HTTP Delegate
 

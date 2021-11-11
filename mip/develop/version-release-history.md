@@ -26,17 +26,54 @@ Use the following information to see what’s new or changed for a supported rel
 
 ## Downloads for Previous Versions
 
-NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions prior to 1.4 are not available. 
+NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions prior to 1.4 are not available.
 
-| Version | Link                        | Status              | End of Support     |
-| ------- | --------------------------- | ------------------- | ------------------ |
-| 1.10    | https://aka.ms/mipsdkbins   | **Current Version** | TBD                |
-| 1.9     | https://aka.ms/mipsdkbins19 | **Supported**       | August 23, 2022    |
-| 1.8     | https://aka.ms/mipsdkbins18 | **Supported**       | April 29, 2022     |
-| 1.7     | https://aka.ms/mipsdkbins17 | **Supported**       | January 14th, 2022 |
-| 1.6     | https://aka.ms/mipsdkbins16 | **Supported**       | September 23, 2021 |
-| 1.5     | https://aka.ms/mipsdkbins15 | **Out of Support**  | April 16, 2021     |
-| 1.4     | https://aka.ms/mipsdkbins14 | **Out of Support**  | March 2, 2021      |
+| Version | Link                         | Status              | End of Support     |
+| ------- | ---------------------------  | ------------------- | ------------------ |
+| 1.11    | https://aka.ms/mipsdkbins    | **Current Version** | TBD                |
+| 1.10    | https://aka.ms/mipsdkbins110 | **Supported**       | TBD                |
+| 1.9     | https://aka.ms/mipsdkbins19  | **Supported**       | August 23, 2022    |
+| 1.8     | https://aka.ms/mipsdkbins18  | **Supported**       | April 29, 2022     |
+| 1.7     | https://aka.ms/mipsdkbins17  | **Supported**       | January 14th, 2022 |
+| 1.6     | https://aka.ms/mipsdkbins16  | **Supported**       | September 23, 2021 |
+| 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support**  | April 16, 2021     |
+| 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support**  | March 2, 2021      |
+
+## Version 1.11.XX
+
+**Release Date** November XX, 2021
+
+### General Changes
+
+### File SDK
+
+- Fixed bug where IsModified() in mip::FileHandler returns false instead of true for a plaintext .MSG file   with protected attachment. #2931
+- Fixed bug Addressing XML formatting issues in metadata that broke labels with no protection in certain cases #2941
+
+### Policy SDK
+
+- Introduced improved throttling handling from Azure Rights Management Service #2937
+- Introduced improvements to prevent deadlocking in Policy Sync #2938
+
+### Protection SDK
+
+### Breaking Changes
+
+- Previously hidden labels will be visible when calling ListSensitivityLabel() function in the mip::PolicyEngine and mip::ComputeEngine Class. #2920
+  - If a label is configured for "encrypt only" or "do not forward" the label will be switched to adhoc protection type for all contents other than the email.
+  - Previously, "encrypt only" and "do not forward" were filtered out.
+  - As default content type is {"file", "email"} am encrypt only label with no content type will still be visible in a Word document even if "encrypt only" is   disabled.
+
+### Platform and Dependency Updates
+
+- All MIPSDK binaries have been updated to use OpenSSL v1.1.1l
+- All MIPSDK binaries have been updated to use version 2.9.12 of libxml2 static library and libgsf dynamic library for Android and Windows #2942
+- Improved retry logic when making Calls to JNI to decrypt keys in Android WI#10797082 / #2918
+- Proxy support for Linux introduced. Example of how to set proxy below. #2648
+
+```bash
+export HTTP_PROXY="http://10.10.10.10:8080"
+```
 
 ## Version 1.10.98
 

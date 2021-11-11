@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 08/18/2021
 ms.author: GRDININ
 ---
-## Microsoft Information Protection SDK - Fetching the status of a file
+# Microsoft Information Protection SDK - Fetching the status of a file
 
 In the MIP SDK File API, the `mip::FileHandler::GetFileStatus()` static function allows the developer to fetch the status of a file without the requirement of creating a File Engine Object, authentication and even connectivity.
 All that is required is the filename and the creation of mipContext along with a file path and stream.
@@ -23,7 +23,7 @@ All that is required is the filename and the creation of mipContext along with a
 
 ## GetFileStatus() Function
 
-`mip::FileHandler::GetFileStatus()` allows developer to fetch the status of a file. For the full list, consult the [API reference](reference/TBD_XXXXX.md).
+`mip::FileHandler::GetFileStatus()` allows developer to fetch the status of a file. For the full list, consult the [API reference](https://docs.microsoft.com/en-us/information-protection/develop/reference/class_mip_filestatus).
 
 In this article, the following methods will be covered:
 
