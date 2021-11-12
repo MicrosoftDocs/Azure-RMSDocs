@@ -35,41 +35,52 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.9     | https://aka.ms/mipsdkbins19  | **Supported**       | August 23, 2022    |
 | 1.8     | https://aka.ms/mipsdkbins18  | **Supported**       | April 29, 2022     |
 | 1.7     | https://aka.ms/mipsdkbins17  | **Supported**       | January 14th, 2022 |
-| 1.6     | https://aka.ms/mipsdkbins16  | **Supported**       | September 23, 2021 |
+| 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support**  | September 23, 2021 |
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support**  | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support**  | March 2, 2021      |
 
-## Version 1.11.XX
+## Version 1.11.53
 
-**Release Date** November XX, 2021
-
-### General Changes
+**Release Date** November 17th, 2021
 
 ### File SDK
 
-- Fixed bug where IsModified() in mip::FileHandler returns false instead of true for a plaintext .MSG file   with protected attachment. #2931
-- Fixed bug Addressing XML formatting issues in metadata that broke labels with no protection in certain cases #2941
+- Fixed bug where IsModified() in mip::FileHandler returns false instead of true for a plaintext .MSG file with protected attachment.
+- Fixed bug Addressing XML formatting issues in metadata that broke labels with no protection in certain cases.
 
 ### Policy SDK
 
-- Introduced improved throttling handling from Azure Rights Management Service #2937
-- Introduced improvements to prevent deadlocking in Policy Sync #2938
-
-### Protection SDK
+- Introduced improvements to prevent deadlocking in Policy Sync.
 
 ### Breaking Changes
 
-- Previously hidden labels will be visible when calling ListSensitivityLabel() function in the mip::PolicyEngine and mip::ComputeEngine Class. #2920
-  - If a label is configured for "encrypt only" or "do not forward" the label will be switched to adhoc protection type for all contents other than the email.
-  - Previously, "encrypt only" and "do not forward" were filtered out.
-  - As default content type is {"file", "email"} am encrypt only label with no content type will still be visible in a Word document even if "encrypt only" is   disabled.
+- Previously hidden labels will be visible when calling ListSensitivityLabel() function in the mip::PolicyEngine and mip::ComputeEngine Class.
+  - Prior to the fix, if a non-email type label such as “Encrypt Only” that can be applied to an email which also had an attachment like a Word document, the possible labeling options to apply to the Word document would be hidden from view.  
+  - As an example, now, if a user creates a mail with an “Encrypt Only” email label that also requires an ad-hoc label for an attached Word document, the user in Word can now select and apply an ad-hoc label.
+
+- Introduced improved throttling handling from Azure Rights Management Service.
+  - When a MIP SDK network request fails because the client application has made too many requests, the MIP SDK will now return a `Throttled` category rather than the generic `FailureResponseCode` category.
+  - When a network request fails due to a service unavailable error (503), the SDK will now return a `ServiceUnavailable` category rather than the generic `FailureResponseCode` category.
+  - C:
+    - `MIP_NETWORK_ERROR_CATEGORY_SERVICE_UNAVAILABLE` was added as a `mip_cc_network_error_category`
+    - `mip::NetworkError` may use one of the new categories (`MIP_NETWORK_ERROR_CATEGORY_SERVICE_UNAVAILABLE` or `MIP_NETWORK_ERROR_CATEGORY_THROTTLED`) instead of the more generic `MIP_NETWORK_ERROR_CATEGORY_FAILURE_RESPONSE_CODE` category.
+  - C++:
+    - `HTTP_RESPONSE_TOO_MANY_REQUESTS` = 429
+      - Defined as an `HttpStatusCode`.
+    - `NetworkError::Category::ServiceUnavailable` added as a category for a network error.
+    - NetworkError exception may be thrown with one of two new categories (`ServiceUnavailable` or `Throttled`) instead of the generic `NetworkError::Category::FailureResponseCode` category.
+    - Exception text for these new errors:
+      - “Too many requests to the protection service.”
+      - “The protection service is unavailable.”
+  - C#:
+    - `NetworkExceptionCategory.ServiceUnavailable` was added as a category for `NetworkException`.
+    - `NetworkException` may be thrown with a `ServiceUnavailable` or `Throttled` category instead of the generic `FailureResponseCode` category.
 
 ### Platform and Dependency Updates
 
-- All MIPSDK binaries have been updated to use OpenSSL v1.1.1l
-- All MIPSDK binaries have been updated to use version 2.9.12 of libxml2 static library and libgsf dynamic library for Android and Windows #2942
-- Improved retry logic when making Calls to JNI to decrypt keys in Android WI#10797082 / #2918
-- Proxy support for Linux introduced. Example of how to set proxy below. #2648
+- Updated SDK dependencies to latest versions
+- All MIPSDK binaries have been updated to use version 2.9.12 of libxml2 static library and libgsf dynamic library for Android and Windows.
+- Proxy support for Linux introduced. Example of how to set proxy below.
 
 ```bash
 export HTTP_PROXY="http://10.10.10.10:8080"
