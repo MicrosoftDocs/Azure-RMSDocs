@@ -34,14 +34,14 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.10    | https://aka.ms/mipsdkbins110 | **Supported**       | TBD                |
 | 1.9     | https://aka.ms/mipsdkbins19  | **Supported**       | August 23, 2022    |
 | 1.8     | https://aka.ms/mipsdkbins18  | **Supported**       | April 29, 2022     |
-| 1.7     | https://aka.ms/mipsdkbins17  | **Supported**       | January 14th, 2022 |
+| 1.7     | https://aka.ms/mipsdkbins17  | **Supported**       | January 14, 2022 |
 | 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support**  | September 23, 2021 |
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support**  | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support**  | March 2, 2021      |
 
 ## Version 1.11.53
 
-**Release Date** November 17th, 2021
+**Release Date** November 17, 2021
 
 ### File SDK
 
@@ -54,9 +54,9 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ### Breaking Changes
 
-- Previously, when a label was configured for Do Not Forward or Encrypt Only and a file protection action, MIP SDK would not display the label in the label list for the file content type.
+- Previously, when a label was configured for "Do Not Forward" or "Encrypt Only" and a file protection action, MIP SDK would not display the label in the label list for the file content type.
   - The SDK has been updated to fix this issue. The label will not be filtered in either case when configured to apply to both content types.
-  - This does not impact labels where the protection action was only Encrypt Only or DNF.
+  - This change does not impact labels where the protection action was "Encrypt Only" or "Do Not Forward".
   - Lastly, it doesn’t impact labels intended for files where the action was predefined or user-defined protection.
 
 - Introduced improved throttling handling from Azure Rights Management Service.
@@ -95,7 +95,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 ## Version 1.10.98
 
-**Release Date** September 29th, 2021
+**Release Date** September 29, 2021
 
 ### Bug Fixes
 
@@ -103,7 +103,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 ## Version 1.10.97
 
-**Release date:** September 17th, 2021
+**Release date:** September 17, 2021
 
 ### Bug Fixes
 
@@ -751,7 +751,7 @@ This version introduces support for the Protection SDK in the .NET package (Micr
  - mip::PolicyHandler::NotifyCommitedActions renamed to mip::PolicyHandler::NotifyCommittedActions
 
 
-## Version 1.1.0 
+## Version 1.1.0
 
 **Release date**: January 15, 2019
 

@@ -31,9 +31,9 @@ Today in the MIP SDK, non-transparent proxies are supported only on Windows.
 
 MIP SDK applications running on Windows will use WinHTTP to access the network. The WinHTTP configuration setting is independent of the Windows Internet (WinINet) Internet browsing proxy settings and can only discover a proxy server by using the following discovery methods:
 
-* Autodiscovery methods:
+* Auto-discovery methods:
   * Transparent proxy
-  * Web Proxy Autodiscovery Protocol (WPAD)
+  * Web Proxy Auto-discovery Protocol (WPAD)
 * Manual static proxy configuration:
   * WinHTTP configured using netsh command
 
@@ -41,7 +41,7 @@ For more on configuring WinHTTP, review the [WinHTTP documentation](/windows/win
 
 ## Proxies on Other Platforms
 
-MIP SDK supports proxies on Windows and Linux. On Windows, both transparent and explicit proxies are supported. On Linux, MIP SDK will follow the http_proxy environment variable. Authenticated proxies are not supported. If additional proxy support is required, review the custom [`mip::HttpDelegate`](./reference/class_mip_httpdelegate.md) and workaround section or more details.
+MIP SDK supports proxies on Windows and Linux. On Windows, both transparent and explicit proxies are supported. On Linux, MIP SDK will follow the http_proxy environment variable. Authenticated proxies are not supported. If more proxy support is required, review the custom [`mip::HttpDelegate`](./reference/class_mip_httpdelegate.md) and workaround section or more details.
 
 ## Custom HTTP Delegate
 
