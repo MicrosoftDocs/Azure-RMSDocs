@@ -59,29 +59,15 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
   - This change does not impact labels where the protection action was "Encrypt Only" or "Do Not Forward".
   - Lastly, it doesn’t impact labels intended for files where the action was predefined or user-defined protection.
 
-- Introduced improved throttling handling from Azure Rights Management Service.
-  - When a MIP SDK network request fails because the client application has made too many requests, the MIP SDK will now return a `Throttled` category rather than the generic `FailureResponseCode` category.
-  - When a network request fails due to a service unavailable error (503), the SDK will now return a `ServiceUnavailable` category rather than the generic `FailureResponseCode` category.
-
-### `C`
-
-- `MIP_NETWORK_ERROR_CATEGORY_SERVICE_UNAVAILABLE` was added as a `mip_cc_network_error_category`
-- `mip::NetworkError` may use one of the new categories (`MIP_NETWORK_ERROR_CATEGORY_SERVICE_UNAVAILABLE` or `MIP_NETWORK_ERROR_CATEGORY_THROTTLED`) instead of the more generic `MIP_NETWORK_ERROR_CATEGORY_FAILURE_RESPONSE_CODE` category.
-  
-### `C++`
-
-- `HTTP_RESPONSE_TOO_MANY_REQUESTS` = 429
-  - Defined as an `HttpStatusCode`.
-- `NetworkError::Category::ServiceUnavailable` added as a category for a network error.
-- NetworkError exception may be thrown with one of two new categories (`ServiceUnavailable` or `Throttled`) instead of the generic `NetworkError::Category::FailureResponseCode` category.
-- Exception text for these new errors:
-  - “Too many requests to the protection service.”
-  - “The protection service is unavailable.”
-
-### `C#`
-
-- `NetworkExceptionCategory.ServiceUnavailable` was added as a category for `NetworkException`.
-- `NetworkException` may be thrown with a `ServiceUnavailable` or `Throttled` category instead of the generic `FailureResponseCode` category.
+- Updated existing exceptions for better handling of specific scenarios. The following previously surfaced as `NetworkError::Category::FailureResponseCode`
+  - `NetworkError::Category::ServiceUnavailable`
+    - New exception category (`NetworkError` exception).
+    - Returned when the dependent service is unavailable.
+    - Service returns 503
+  - `NetworkError::Category::Throttled`
+    - Exception: `NetworkError`
+    - Returned when too many requests have been made to the dependent service.
+    - Service returns 429
 
 ### Platform and Dependency Updates
 
