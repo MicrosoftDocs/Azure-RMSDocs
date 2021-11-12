@@ -54,32 +54,39 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ### Breaking Changes
 
-- Previously hidden labels will be visible when calling ListSensitivityLabel() function in the mip::PolicyEngine and mip::ComputeEngine Class.
-  - Prior to the fix, if a non-email type label such as “Encrypt Only” that can be applied to an email which also had an attachment like a Word document, the possible labeling options to apply to the Word document would be hidden from view.  
-  - As an example, now, if a user creates a mail with an “Encrypt Only” email label that also requires an ad-hoc label for an attached Word document, the user in Word can now select and apply an ad-hoc label.
+- Previously, when a label was configured for Do Not Forward or Encrypt Only and a file protection action, MIP SDK would not display the label in the label list for the file content type.
+  - The SDK has been updated to fix this issue. The label will not be filtered in either case when configured to apply to both content types.
+  - This does not impact labels where the protection action was only Encrypt Only or DNF.
+  - Lastly, it doesn’t impact labels intended for files where the action was predefined or user-defined protection.
 
 - Introduced improved throttling handling from Azure Rights Management Service.
   - When a MIP SDK network request fails because the client application has made too many requests, the MIP SDK will now return a `Throttled` category rather than the generic `FailureResponseCode` category.
   - When a network request fails due to a service unavailable error (503), the SDK will now return a `ServiceUnavailable` category rather than the generic `FailureResponseCode` category.
-  - C:
-    - `MIP_NETWORK_ERROR_CATEGORY_SERVICE_UNAVAILABLE` was added as a `mip_cc_network_error_category`
-    - `mip::NetworkError` may use one of the new categories (`MIP_NETWORK_ERROR_CATEGORY_SERVICE_UNAVAILABLE` or `MIP_NETWORK_ERROR_CATEGORY_THROTTLED`) instead of the more generic `MIP_NETWORK_ERROR_CATEGORY_FAILURE_RESPONSE_CODE` category.
-  - C++:
-    - `HTTP_RESPONSE_TOO_MANY_REQUESTS` = 429
-      - Defined as an `HttpStatusCode`.
-    - `NetworkError::Category::ServiceUnavailable` added as a category for a network error.
-    - NetworkError exception may be thrown with one of two new categories (`ServiceUnavailable` or `Throttled`) instead of the generic `NetworkError::Category::FailureResponseCode` category.
-    - Exception text for these new errors:
-      - “Too many requests to the protection service.”
-      - “The protection service is unavailable.”
-  - C#:
-    - `NetworkExceptionCategory.ServiceUnavailable` was added as a category for `NetworkException`.
-    - `NetworkException` may be thrown with a `ServiceUnavailable` or `Throttled` category instead of the generic `FailureResponseCode` category.
+
+### `C`
+
+- `MIP_NETWORK_ERROR_CATEGORY_SERVICE_UNAVAILABLE` was added as a `mip_cc_network_error_category`
+- `mip::NetworkError` may use one of the new categories (`MIP_NETWORK_ERROR_CATEGORY_SERVICE_UNAVAILABLE` or `MIP_NETWORK_ERROR_CATEGORY_THROTTLED`) instead of the more generic `MIP_NETWORK_ERROR_CATEGORY_FAILURE_RESPONSE_CODE` category.
+  
+### `C++`
+
+- `HTTP_RESPONSE_TOO_MANY_REQUESTS` = 429
+  - Defined as an `HttpStatusCode`.
+- `NetworkError::Category::ServiceUnavailable` added as a category for a network error.
+- NetworkError exception may be thrown with one of two new categories (`ServiceUnavailable` or `Throttled`) instead of the generic `NetworkError::Category::FailureResponseCode` category.
+- Exception text for these new errors:
+  - “Too many requests to the protection service.”
+  - “The protection service is unavailable.”
+
+### `C#`
+
+- `NetworkExceptionCategory.ServiceUnavailable` was added as a category for `NetworkException`.
+- `NetworkException` may be thrown with a `ServiceUnavailable` or `Throttled` category instead of the generic `FailureResponseCode` category.
 
 ### Platform and Dependency Updates
 
 - Updated SDK dependencies to latest versions
-- All MIPSDK binaries have been updated to use version 2.9.12 of libxml2 static library and libgsf dynamic library for Android and Windows.
+- All MIP SDK binaries have been updated to use version 2.9.12 of libxml2 static library and libgsf dynamic library for Android and Windows.
 - Proxy support for Linux introduced. Example of how to set proxy below.
 
 ```bash
