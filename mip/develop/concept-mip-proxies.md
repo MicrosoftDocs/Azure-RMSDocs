@@ -31,9 +31,9 @@ Today in the MIP SDK, non-transparent proxies are supported only on Windows.
 
 MIP SDK applications running on Windows will use WinHTTP to access the network. The WinHTTP configuration setting is independent of the Windows Internet (WinINet) Internet browsing proxy settings and can only discover a proxy server by using the following discovery methods:
 
-* Auto-discovery methods:
+* Autodiscovery methods:
   * Transparent proxy
-  * Web Proxy Auto-discovery Protocol (WPAD)
+  * Web Proxy Autodiscovery Protocol (WPAD)
 * Manual static proxy configuration:
   * WinHTTP configured using netsh command
 
