@@ -1,11 +1,11 @@
 ---
 title: class AddContentFooterAction 
 description: Documents the addcontentfooteraction::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.author: bryanla
+ms.date: 11/15/2021
 ---
 
 # class AddContentFooterAction 
@@ -28,7 +28,7 @@ public int GetMargin() const  |  Get the margin of the footer from the bottom.
 An API used to mark the content footer element.
 
   
-**Returns**: The name that should be used for the UI element that holds the content footer. The same name will be returned in RemoveContentFooterAction in case the content footer needs to be removed.
+**Returns**: The name that should be used for the UI element that holds the content footer. The same name will be returned in [RemoveContentFooterAction](undefined) in case the content footer needs to be removed.
   
 ### GetText function
 Get the text that is meant to go into the content footer.
@@ -60,7 +60,7 @@ Get the alignment of the footer.
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: ContentMarkAlignment
+**See also**: [ContentMarkAlignment](undefined)
   
 ### GetMargin function
 Get the margin of the footer from the bottom.

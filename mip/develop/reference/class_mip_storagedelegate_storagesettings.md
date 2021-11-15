@@ -1,15 +1,15 @@
 ---
 title: class StorageDelegate::StorageSettings 
 description: Documents the storagedelegate::storagesettings class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.author: bryanla
+ms.date: 11/15/2021
 ---
 
 # class StorageDelegate::StorageSettings 
-Settings used by StorageDelegate.
+Settings used by [StorageDelegate](undefined).
   
 ## Summary
  Members                        | Descriptions                                

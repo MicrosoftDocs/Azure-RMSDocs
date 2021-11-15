@@ -1,11 +1,11 @@
 ---
 title: class MipConfiguration 
 description: Documents the mipconfiguration::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.author: bryanla
+ms.date: 11/15/2021
 ---
 
 # class MipConfiguration 
@@ -21,14 +21,14 @@ public const LogLevel& GetThresholdLogLevel() const  |  Get the Minimum log leve
 public const bool isOfflineOnly() const  |  whether Network operations is enabled or disabled(not all actions supported when offline)
 public std::shared_ptr\<DiagnosticConfiguration\> GetDiagnosticConfiguration() const  |  Get the Diagnostic (if any) provided by the application.
 public void SetDiagnosticConfiguration(const std::shared_ptr\<DiagnosticConfiguration\>& diagnosticConfiguration)  |  Override default configuration of diagnostic.
-public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Get the LoggerDelegate (if any) override implementation.
-public void SetLoggerDelegate(const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Set the LoggerDelegate (if any) override implementation.
-public std::shared_ptr\<StorageDelegate\> GetStorageDelegate() const  |  Get the StorageDelegate (if any) override implementation.
-public void SetStorageDelegate(const std::shared_ptr\<StorageDelegate\>& storageDelegate)  |  Set the StorageDelegate (if any) override implementation. It's a required delegate for MIP Core Context.
-public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HttpDelegate (if any) override implementation.
-public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Set the HttpDelegate (if any) override implementation. It's a required delegate for MIP Core Context.
-public std::shared_ptr\<JsonDelegate\> GetJsonDelegate() const  |  Get the JsonDelegate (if any) override implementation.
-public std::shared_ptr\<xml::XmlDelegate\> GetXmlDelegate() const  |  Get the XmlDelegate (if any) override implementation. MipConfiguration needs to be derived from to override the internal xmlDelegate with an alternative. This delegate is only configurable when using the MIP Core Context and only for the protection and upe sdk.
+public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Get the [LoggerDelegate](undefined) (if any) override implementation.
+public void SetLoggerDelegate(const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Set the [LoggerDelegate](undefined) (if any) override implementation.
+public std::shared_ptr\<StorageDelegate\> GetStorageDelegate() const  |  Get the [StorageDelegate](undefined) (if any) override implementation.
+public void SetStorageDelegate(const std::shared_ptr\<StorageDelegate\>& storageDelegate)  |  Set the [StorageDelegate](undefined) (if any) override implementation. It's a required delegate for MIP Core Context.
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the [HttpDelegate](undefined) (if any) override implementation.
+public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Set the [HttpDelegate](undefined) (if any) override implementation. It's a required delegate for MIP Core Context.
+public std::shared_ptr\<JsonDelegate\> GetJsonDelegate() const  |  Get the [JsonDelegate](undefined) (if any) override implementation.
+public std::shared_ptr\<xml::XmlDelegate\> GetXmlDelegate() const  |  Get the XmlDelegate (if any) override implementation. [MipConfiguration](undefined) needs to be derived from to override the internal xmlDelegate with an alternative. This delegate is only configurable when using the MIP Core Context and only for the protection and upe sdk.
 public std::map\<FlightingFeature, bool\> GetFeatureSettings() const  |  Get the Flighting features which should be set to non-default values.
 public void SetFeatureSettings(const std::map\<FlightingFeature, bool\>& featureSettings)  |  Set the Flighting features which should be set to non-default values.
 public ~MipConfiguration()  | _Not yet documented._
@@ -80,55 +80,55 @@ Parameters:
 
   
 ### GetLoggerDelegate function
-Get the LoggerDelegate (if any) override implementation.
+Get the [LoggerDelegate](undefined) (if any) override implementation.
 
   
-**Returns**: LoggerDelegate (if any) override implementation.
+**Returns**: [LoggerDelegate](undefined) (if any) override implementation.
   
 ### SetLoggerDelegate function
-Set the LoggerDelegate (if any) override implementation.
+Set the [LoggerDelegate](undefined) (if any) override implementation.
 
 Parameters:  
-* **loggerDelegate**: LoggerDelegate override implementation
+* **loggerDelegate**: [LoggerDelegate](undefined) override implementation
 
 
   
 ### GetStorageDelegate function
-Get the StorageDelegate (if any) override implementation.
+Get the [StorageDelegate](undefined) (if any) override implementation.
 
   
-**Returns**: StorageDelegate (if any) override implementation.
+**Returns**: [StorageDelegate](undefined) (if any) override implementation.
   
 ### SetStorageDelegate function
-Set the StorageDelegate (if any) override implementation. It's a required delegate for MIP Core Context.
+Set the [StorageDelegate](undefined) (if any) override implementation. It's a required delegate for MIP Core Context.
 
 Parameters:  
-* **storageDelegate**: StorageDelegate override implementation
+* **storageDelegate**: [StorageDelegate](undefined) override implementation
 
 
   
 ### GetHttpDelegate function
-Get the HttpDelegate (if any) override implementation.
+Get the [HttpDelegate](undefined) (if any) override implementation.
 
   
-**Returns**: HttpDelegate (if any) override implementation.
+**Returns**: [HttpDelegate](undefined) (if any) override implementation.
   
 ### SetHttpDelegate function
-Set the HttpDelegate (if any) override implementation. It's a required delegate for MIP Core Context.
+Set the [HttpDelegate](undefined) (if any) override implementation. It's a required delegate for MIP Core Context.
 
 Parameters:  
-* **httpDelegate**: HttpDelegate override implementation
+* **httpDelegate**: [HttpDelegate](undefined) override implementation
 
 
   
 ### GetJsonDelegate function
-Get the JsonDelegate (if any) override implementation.
+Get the [JsonDelegate](undefined) (if any) override implementation.
 
   
-**Returns**: JsonDelegate (if any) override implementation.
+**Returns**: [JsonDelegate](undefined) (if any) override implementation.
   
 ### GetXmlDelegate function
-Get the XmlDelegate (if any) override implementation. MipConfiguration needs to be derived from to override the internal xmlDelegate with an alternative. This delegate is only configurable when using the MIP Core Context and only for the protection and upe sdk.
+Get the XmlDelegate (if any) override implementation. [MipConfiguration](undefined) needs to be derived from to override the internal xmlDelegate with an alternative. This delegate is only configurable when using the MIP Core Context and only for the protection and upe sdk.
 
   
 **Returns**: XmlDelegate (if any) override implementation. nullptr by default.

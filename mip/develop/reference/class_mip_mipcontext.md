@@ -1,15 +1,15 @@
 ---
 title: class MipContext 
 description: Documents the mipcontext::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.author: bryanla
+ms.date: 11/15/2021
 ---
 
 # class MipContext 
-MipContext represents state that is shared across all profiles, engines, handlers.
+[MipContext](undefined) represents state that is shared across all profiles, engines, handlers.
   
 ## Summary
  Members                        | Descriptions                                
@@ -78,7 +78,7 @@ Get logger implementation.
 Get Http implementation.
 
   
-**Returns**: HttpDelegate
+**Returns**: [HttpDelegate](undefined)
   
 ### GetRawLoggerDelegate function
 Get raw logger implementation.
@@ -90,7 +90,7 @@ Get raw logger implementation.
 Get Storage Delegate implementation if provided.
 
   
-**Returns**: StorageDelegate
+**Returns**: [StorageDelegate](undefined)
   
 ### GetFlightingFeatures function
 Get flighting feature set.

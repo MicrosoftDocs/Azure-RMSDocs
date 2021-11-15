@@ -1,11 +1,11 @@
 ---
 title: class TelemetryDelegate 
 description: Documents the telemetrydelegate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.author: bryanla
+ms.date: 11/15/2021
 ---
 
 # class TelemetryDelegate 
@@ -23,7 +23,7 @@ public void Flush()  |  Flush any queued events (e.g. due to shutdown)
 Log a diagnostic event.
 
 Parameters:  
-* **event**: Event to be logged
+* **event**: [Event](undefined) to be logged
 
 
   

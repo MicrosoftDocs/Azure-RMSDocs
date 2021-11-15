@@ -1,11 +1,11 @@
 ---
 title: class CustomerKeyUnavailableError 
 description: Documents the customerkeyunavailableerror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.author: bryanla
+ms.date: 11/15/2021
 ---
 
 # class CustomerKeyUnavailableError 

@@ -1,15 +1,15 @@
 ---
 title: class ProtectionHandler::PublishingSettings 
 description: Documents the protectionhandler::publishingsettings class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.author: bryanla
+ms.date: 11/15/2021
 ---
 
 # class ProtectionHandler::PublishingSettings 
-Settings used to create a ProtectionHandler to protect new content.
+Settings used to create a [ProtectionHandler](undefined) to protect new content.
   
 ## Summary
  Members                        | Descriptions                                

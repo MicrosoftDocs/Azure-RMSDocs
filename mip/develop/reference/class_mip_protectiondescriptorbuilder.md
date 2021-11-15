@@ -1,20 +1,20 @@
 ---
 title: class ProtectionDescriptorBuilder 
 description: Documents the protectiondescriptorbuilder::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.author: bryanla
+ms.date: 11/15/2021
 ---
 
 # class ProtectionDescriptorBuilder 
-Constructs a ProtectionDescriptor that describes protection associated with a piece of content.
+Constructs a [ProtectionDescriptor](undefined) that describes protection associated with a piece of content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Creates a ProtectionDescriptor whose access permissions are defined by this ProtectionDescriptorBuilder instance.
+public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Creates a [ProtectionDescriptor](undefined) whose access permissions are defined by this [ProtectionDescriptorBuilder](undefined) instance.
 public void SetName(const std::string& value)  |  Sets protection policy name.
 public void SetDescription(const std::string& value)  |  Sets protection policy description.
 public void SetContentValidUntil(const std::chrono::time_point\<std::chrono::system_clock\>& value)  |  Sets protection policy expiration time.
@@ -29,10 +29,10 @@ enum LicenseType  |  License type to create a specialized license.
 ## Members
   
 ### Build function
-Creates a ProtectionDescriptor whose access permissions are defined by this ProtectionDescriptorBuilder instance.
+Creates a [ProtectionDescriptor](undefined) whose access permissions are defined by this [ProtectionDescriptorBuilder](undefined) instance.
 
   
-**Returns**: New ProtectionDescriptor instance
+**Returns**: New [ProtectionDescriptor](undefined) instance
   
 ### SetName function
 Sets protection policy name.
@@ -110,10 +110,8 @@ Parameters:
 
   
 ### LicenseType enum
-
-Values                         | Descriptions                                
+ Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 DoNotForward            | Defines a do not forward license type.
 EncryptOnly            | Defines an encrypt only license type.
-
 License type to create a specialized license.

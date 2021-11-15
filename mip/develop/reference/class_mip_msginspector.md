@@ -1,11 +1,11 @@
 ---
 title: class MsgInspector 
 description: Documents the msginspector::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.author: bryanla
+ms.date: 11/15/2021
 ---
 
 # class MsgInspector 
@@ -34,7 +34,7 @@ Get body encoding code page, relevant for txt, html body formats.
   
 **Returns**: An unsigned code page. 
   
-**See also**: [https://docs.microsoft.com/windows/win32/intl/code-page-identifiers](/windows/win32/intl/code-page-identifiers)
+**See also**: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers)
   
 ### GetBodyType function
 Get body type.
@@ -46,7 +46,7 @@ Get body type.
 Get a list of attachment as msg attachment data objects.
 
   
-**Returns**: A vector of std::unique_ptr\<MsgAttachmentData\>
+**Returns**: A vector of std::unique_ptr<MsgAttachmentData>
   
 ### GetInspectorType function
 Get file types,.

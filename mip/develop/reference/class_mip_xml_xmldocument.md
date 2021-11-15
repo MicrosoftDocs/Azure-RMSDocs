@@ -1,11 +1,11 @@
 ---
 title: class xml::XmlDocument 
 description: Documents the xml::xmldocument class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.author: bryanla
+ms.date: 11/15/2021
 ---
 
 # class xml::XmlDocument 
@@ -32,16 +32,16 @@ Parameters:
 
 
   
-**Returns**: A vector of matching XmlNode shared pointers or an empty vector if none match
+**Returns**: A vector of matching [XmlNode](undefined) shared pointers or an empty vector if none match
   
 ### GetXmlContent function
 Parse an xml formatted buffer into an xmldocument.
 
   
-**Returns**: A utf-8 xml formatted string of the content of this XmlDocument
+**Returns**: A utf-8 xml formatted string of the content of this [XmlDocument](undefined)
   
 ### GetRootNode function
 Get the node that is an ancestor of all other nodes.
 
   
-**Returns**: A shared_ptr to an XmlNode
+**Returns**: A shared_ptr to an [XmlNode](undefined)

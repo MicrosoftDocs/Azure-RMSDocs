@@ -1,11 +1,11 @@
 ---
 title: class NoPermissionsError 
 description: Documents the nopermissionserror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.author: bryanla
+ms.date: 11/15/2021
 ---
 
 # class NoPermissionsError 
@@ -40,8 +40,7 @@ Gets the category of no permissions failure.
 **Returns**: Category of no permissions failure
   
 ### Category enum
-
-Values                         | Descriptions                                
+ Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unknown no permissions failure
 UserNotFound            | Requested user was not found failure
@@ -51,5 +50,4 @@ InvalidEmail            |
 UnknownTenant            | 
 NotOwner            | User needs to be owner to perform action
 NotPremiumLicenseUser            | User needs to be a premium license holder to perform action. Tracking and Revocation for example
-
 Category of no permissions error.
