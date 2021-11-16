@@ -1,10 +1,10 @@
 ---
 title: class HttpResponse 
 description: Documents the httpresponse::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -44,4 +44,4 @@ Get request body.
 Get request headers.
 
   
-**Returns**: Request headers
+**Returns**: Request headersrs

@@ -1,10 +1,10 @@
 ---
 title: class Identity 
 description: Documents the identity::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -63,4 +63,4 @@ Get the email.
 Get the user's friendly name. used for text marking.
 
   
-**Returns**: The friendly name.
+**Returns**: The friendly name.e.

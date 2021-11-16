@@ -1,10 +1,10 @@
 ---
 title: class MipContext 
 description: Documents the mipcontext::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -96,4 +96,4 @@ Get Storage Delegate implementation if provided.
 Get flighting feature set.
 
   
-**Returns**: Flighting feature map
+**Returns**: Flighting feature mapap

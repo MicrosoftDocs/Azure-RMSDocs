@@ -1,10 +1,10 @@
 ---
 title: class xml::XmlReader 
 description: Documents the xml::xmlreader class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -130,4 +130,4 @@ Method returns all node elements in an unmodified way from the original xml.
 
   
 **Returns**: Entire serialized element.
-moved to end of node.
+moved to end of node.e.

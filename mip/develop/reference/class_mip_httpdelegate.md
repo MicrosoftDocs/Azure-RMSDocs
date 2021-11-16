@@ -1,10 +1,10 @@
 ---
 title: class HttpDelegate 
 description: Documents the httpdelegate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -61,4 +61,4 @@ Parameters:
 
   
 ### CancelAllOperations function
-Cancel ongoing HTTP requests.
+Cancel ongoing HTTP requests.s.

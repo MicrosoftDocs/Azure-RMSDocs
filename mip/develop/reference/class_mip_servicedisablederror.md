@@ -1,10 +1,10 @@
 ---
 title: class ServiceDisabledError 
 description: Documents the servicedisablederror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -33,4 +33,4 @@ Device            | Service is disabled for the device.
 Platform            | Service is disabled for the platform.
 Tenant            | Service is disabled for the tenant.
 
-Describes the extent for which the service is disabled.
+Describes the extent for which the service is disabled.d.

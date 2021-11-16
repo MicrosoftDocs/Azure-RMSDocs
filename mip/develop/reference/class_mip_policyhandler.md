@@ -1,10 +1,10 @@
 ---
 title: class PolicyHandler 
 description: Documents the policyhandler::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -49,4 +49,4 @@ Parameters:
 * **state**: the current execution state of the content after the actions have been committed. 
 
 
-: This call sends an audit event.
+: This call sends an audit event.t.

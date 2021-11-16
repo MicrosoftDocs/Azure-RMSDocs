@@ -1,10 +1,10 @@
 ---
 title: class TelemetryDelegate 
 description: Documents the telemetrydelegate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -28,4 +28,4 @@ Parameters:
 
   
 ### Flush function
-Flush any queued events (e.g. due to shutdown)
+Flush any queued events (e.g. due to shutdown)n)

@@ -1,10 +1,10 @@
 ---
 title: class xml::XmlDelegate 
 description: Documents the xml::xmldelegate class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -39,4 +39,4 @@ Parameters:
 
 
   
-**Returns**: A delegate response that contains either a shared_ptr to an XmlDocument or an exception if parsing fails
+**Returns**: A delegate response that contains either a shared_ptr to an XmlDocument or an exception if parsing failsls

@@ -1,10 +1,10 @@
 ---
 title: class LoggerDelegate 
 description: Documents the loggerdelegate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -72,4 +72,6 @@ Parameters:
 
 
 * **context**: Client context that was passed into the call that generated this log message
+
+
 

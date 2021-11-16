@@ -1,10 +1,10 @@
 ---
 title: class ConsentDelegate 
 description: Documents the consentdelegate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -29,4 +29,4 @@ Parameters:
 
   
 **Returns**: A Consent enum with the user's decision.
-When the SDK requests user consent with this method, the client application should present the URL to the user. Client applications should provide some means of obtaining user consent and return the appropriate Consent enum that corresponds to the user's decision.
+When the SDK requests user consent with this method, the client application should present the URL to the user. Client applications should provide some means of obtaining user consent and return the appropriate Consent enum that corresponds to the user's decision.n.

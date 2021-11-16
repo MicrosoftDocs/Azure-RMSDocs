@@ -1,10 +1,10 @@
 ---
 title: class ClassificationRequest 
 description: Documents the classificationrequest::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -29,4 +29,4 @@ Get the ID of the classification policy.
 Get the ID of the rule package.
 
   
-**Returns**: ID of the rule package. prebuilt classifications will be set to empty guid.
+**Returns**: ID of the rule package. prebuilt classifications will be set to empty guid.d.

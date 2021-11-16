@@ -1,10 +1,10 @@
 ---
 title: class MetadataVersion 
 description: Documents the metadataversion::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -48,4 +48,4 @@ Get whether a specific flag is set.
 Get the flags that define how metadata is processed for a given version.
 
   
-**Returns**: The flags that specify how the metadata is processed.
+**Returns**: The flags that specify how the metadata is processed.d.

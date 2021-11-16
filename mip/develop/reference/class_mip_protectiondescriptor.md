@@ -1,10 +1,10 @@
 ---
 title: class ProtectionDescriptor 
 description: Documents the protectiondescriptor::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -133,4 +133,4 @@ Gets the double key url to be used for custom protection.
 
   
 **Returns**: Double key url
-The double key URL that is used in custom requests to protect information with a second key
+The double key URL that is used in custom requests to protect information with a second keyey

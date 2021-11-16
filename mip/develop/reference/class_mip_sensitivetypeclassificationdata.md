@@ -1,10 +1,10 @@
 ---
 title: class SensitiveTypeClassificationData 
 description: Documents the sensitivetypeclassificationdata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -59,3 +59,4 @@ _Not documented yet._
   
 ### Evaluate function
 _Not documented yet._
+_

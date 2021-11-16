@@ -1,10 +1,10 @@
 ---
 title: class ParsedPublishingLicenseBuilder 
 description: Documents the parsedpublishinglicensebuilder::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -120,4 +120,4 @@ Parameters:
 Creates a ParsedPublishingLicense with the properties set on this object instance.
 
   
-**Returns**: New ParsedPublishingLicense instance
+**Returns**: New ParsedPublishingLicense instancece

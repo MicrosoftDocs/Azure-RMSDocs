@@ -1,10 +1,10 @@
 ---
 title: class ProtectionProfile 
 description: Documents the protectionprofile::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -95,4 +95,6 @@ Delete the protection engine with the given ID. All data for the given engine wi
 
 Parameters:  
 * **id**: the unique engine ID.
+
+
 

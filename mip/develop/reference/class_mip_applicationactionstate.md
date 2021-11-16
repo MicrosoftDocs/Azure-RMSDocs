@@ -1,10 +1,10 @@
 ---
 title: class ApplicationActionState 
 description: Documents the applicationactionstate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -78,4 +78,4 @@ ActionType::RecommendLabel must be enable for this field to have an affect.
 Return the content's time zone as an offset from UTC, in seconds, or kTimeZoneOffsetLocalTime to use the machine's local time.
 
   
-**Returns**: The content's time zone as an offset from UTC, in seconds, or kTimeZoneOffsetLocalTime to use the machine's local time.
+**Returns**: The content's time zone as an offset from UTC, in seconds, or kTimeZoneOffsetLocalTime to use the machine's local time.e.

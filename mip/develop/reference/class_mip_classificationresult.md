@@ -1,10 +1,10 @@
 ---
 title: class ClassificationResult 
 description: Documents the classificationresult::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -54,4 +54,4 @@ Get the sensitive information detections.
 Get the specific detection bands if the enchanced classification is enabled.
 
   
-**Returns**: A vector of instance counts at different confidence thresholds
+**Returns**: A vector of instance counts at different confidence thresholdsds

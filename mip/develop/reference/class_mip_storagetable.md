@@ -1,10 +1,10 @@
 ---
 title: class StorageTable 
 description: Documents the storagetable::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -76,4 +76,4 @@ Parameters:
 
 
   
-**Returns**: List of all rows where each row is a list containing column values
+**Returns**: List of all rows where each row is a list containing column valueses

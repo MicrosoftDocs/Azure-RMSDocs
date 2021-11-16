@@ -1,10 +1,10 @@
 ---
 title: class FileExecutionState 
 description: Documents the fileexecutionstate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -51,4 +51,4 @@ Registered Key:Value pairs Sender: Email Id for the sender Recipients: Represent
 Return an identifier which correlates application events with the corresponding protection service REST requests.
 
   
-**Returns**: An identifier (usually specified as a GUID)
+**Returns**: An identifier (usually specified as a GUID)D)

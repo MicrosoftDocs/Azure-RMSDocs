@@ -1,10 +1,10 @@
 ---
 title: class JsonValue 
 description: Documents the jsonvalue::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -205,4 +205,4 @@ If the current value is an bool, return it.
 Serialize the value and all children as a string.
 
   
-**Returns**: This json value and all children serialized as a string.
+**Returns**: This json value and all children serialized as a string.g.

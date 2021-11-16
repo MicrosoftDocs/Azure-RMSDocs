@@ -1,10 +1,10 @@
 ---
 title: class JustificationRequiredError 
 description: Documents the justificationrequirederror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 11/15/2021
 ---
 
@@ -21,4 +21,4 @@ public virtual std::shared_ptr\<Error\> Clone() const  |  Clone the error.
 Clone the error.
 
   
-**Returns**: A clone of the error.
+**Returns**: A clone of the error.r.
