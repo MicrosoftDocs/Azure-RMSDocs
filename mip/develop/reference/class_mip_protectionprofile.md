@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class ProtectionProfile 
@@ -29,7 +29,7 @@ public void DeleteEngine(const std::string& engineId)  |  Delete the protection 
 Gets settings used by ProtectionProfile during its initialization and throughout its lifetime.
 
   
-**Returns**: Settings used by ProtectionProfile during its initialization and throughout its lifetime
+**Returns**: Settings used by [ProtectionProfile during its initialization and throughout its lifetime
   
 ### ListEnginesAsync function
 Starts list engines operation.
@@ -95,4 +95,6 @@ Delete the protection engine with the given ID. All data for the given engine wi
 
 Parameters:  
 * **id**: the unique engine ID.
+
+
 

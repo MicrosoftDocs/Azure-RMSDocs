@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class ProtectionHandler 
@@ -199,7 +199,7 @@ Parameters:
 
   
 **Returns**: Serialized pre-license
-A pre-license allows a user to immediately consume content without making an additional HTTP call. The ProtectionHandler must have been created with a ProtectionHandler::PublishingSettings::SetPreLicenseUserEmail value or else this will return an empty vector.
+A pre-license allows a user to immediately consume content without making an additional HTTP call. The ProtectionHandler must have been created with a [ProtectionHandler::PublishingSettings::SetPreLicenseUserEmail value or else this will return an empty vector.
   
 ### GetCipherMode function
 Gets the cipher mode of the protection handler.
@@ -208,10 +208,9 @@ Gets the cipher mode of the protection handler.
 **Returns**: The cipher mode
   
 ### PreLicenseFormat enum
-
-Values                         | Descriptions                                
+ Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Xml            | Legacy XML/SOAP format used by MSIPC
 Json            | JSON/REST format used by MIP SDK and RMS SDK
 
-Pre-license format.
+Pre-license format.t.

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class DelegateResponseError 
@@ -77,4 +77,6 @@ Creates an error/exception object. Call this method from a MIP delegate function
 
 Parameters:  
 * **message**: Message associated with the exception.
+
+
 

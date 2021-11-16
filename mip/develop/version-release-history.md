@@ -26,21 +26,62 @@ Use the following information to see what’s new or changed for a supported rel
 
 ## Downloads for Previous Versions
 
-NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions prior to 1.4 are not available. 
+NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions prior to 1.4 are not available.
 
-| Version | Link                        | Status              | End of Support     |
-| ------- | --------------------------- | ------------------- | ------------------ |
-| 1.10    | https://aka.ms/mipsdkbins   | **Current Version** | TBD                |
-| 1.9     | https://aka.ms/mipsdkbins19 | **Supported**       | August 23, 2022    |
-| 1.8     | https://aka.ms/mipsdkbins18 | **Supported**       | April 29, 2022     |
-| 1.7     | https://aka.ms/mipsdkbins17 | **Supported**       | January 14th, 2022 |
-| 1.6     | https://aka.ms/mipsdkbins16 | **Supported**       | September 23, 2021 |
-| 1.5     | https://aka.ms/mipsdkbins15 | **Out of Support**  | April 16, 2021     |
-| 1.4     | https://aka.ms/mipsdkbins14 | **Out of Support**  | March 2, 2021      |
+| Version | Link                         | Status              | End of Support     |
+| ------- | ---------------------------  | ------------------- | ------------------ |
+| 1.11    | https://aka.ms/mipsdkbins    | **Current Version** | TBD                |
+| 1.10    | https://aka.ms/mipsdkbins110 | **Supported**       | TBD                |
+| 1.9     | https://aka.ms/mipsdkbins19  | **Supported**       | August 23, 2022    |
+| 1.8     | https://aka.ms/mipsdkbins18  | **Supported**       | April 29, 2022     |
+| 1.7     | https://aka.ms/mipsdkbins17  | **Supported**       | January 14, 2022 |
+| 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support**  | September 23, 2021 |
+| 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support**  | April 16, 2021     |
+| 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support**  | March 2, 2021      |
+
+## Version 1.11.53
+
+**Release Date** November 17, 2021
+
+### File SDK
+
+- Fixed bug where IsModified() in mip::FileHandler returns false instead of true for a plaintext .MSG file with protected attachment.
+- Fixed bug Addressing XML formatting issues in metadata that broke labels with no protection in certain cases.
+
+### Policy SDK
+
+- Introduced improvements to prevent deadlocking in Policy Sync.
+
+### Breaking Changes
+
+- Previously, when a label was configured for "Do Not Forward" or "Encrypt Only" and a file protection action, MIP SDK would not display the label in the label list for the file content type.
+  - The SDK has been updated to fix this issue. The label will not be filtered in either case when configured to apply to both content types.
+  - This change does not impact labels where the protection action was "Encrypt Only" or "Do Not Forward".
+  - Lastly, it doesn’t impact labels intended for files where the action was predefined or user-defined protection.
+
+- Updated existing exceptions for better handling of specific scenarios. The following previously surfaced as `NetworkError::Category::FailureResponseCode`
+  - `NetworkError::Category::ServiceUnavailable`
+    - New exception category (`NetworkError` exception).
+    - Returned when the dependent service is unavailable.
+    - Service returns 503
+  - `NetworkError::Category::Throttled`
+    - Exception: `NetworkError`
+    - Returned when too many requests have been made to the dependent service.
+    - Service returns 429
+
+### Platform and Dependency Updates
+
+- Updated SDK dependencies to latest versions
+- All MIP SDK binaries have been updated to use version 2.9.12 of libxml2 static library and libgsf dynamic library for Android and Windows.
+- Proxy support for Linux introduced. Example of how to set proxy below.
+
+```bash
+export HTTP_PROXY="http://10.10.10.10:8080"
+```
 
 ## Version 1.10.98
 
-**Release Date** September 29th, 2021
+**Release Date** September 29, 2021
 
 ### Bug Fixes
 
@@ -48,7 +89,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ## Version 1.10.97
 
-**Release date:** September 17th, 2021
+**Release date:** September 17, 2021
 
 ### Bug Fixes
 
@@ -696,7 +737,7 @@ This version introduces support for the Protection SDK in the .NET package (Micr
  - mip::PolicyHandler::NotifyCommitedActions renamed to mip::PolicyHandler::NotifyCommittedActions
 
 
-## Version 1.1.0 
+## Version 1.1.0
 
 **Release date**: January 15, 2019
 

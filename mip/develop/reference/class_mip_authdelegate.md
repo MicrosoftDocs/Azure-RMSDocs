@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class AuthDelegate 
@@ -57,4 +57,4 @@ Parameters:
 
   
 **Returns**: True if token successfully acquired, else false
-On failure, if token output parameter contains an error message, it will be included in the NoAuthTokenError exception that will later be raised to the application.
+On failure, if token output parameter contains an error message, it will be included in the NoAuthTokenError exception that will later be raised to the application.n.
