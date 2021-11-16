@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class RemoveContentFooterAction 
@@ -22,4 +22,4 @@ public const std::vector\<std::string\>& GetUIElementNames()  |  Gets a list of 
 Gets a list of names that should be used to find the UI elements that should be removed.
 
   
-**Returns**: A list of ui element names.
+**Returns**: A list of ui element names.s.

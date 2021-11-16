@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class ContentLabel 
@@ -55,4 +55,4 @@ Get the actual label object applied on the content.
   
 **Returns**: The label object applied on the content. 
   
-**See also**: mip::Label
+**See also**: mip::Labelel

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class MsgAttachmentData 
@@ -38,4 +38,4 @@ Get attachment long name as a string.
 Get attachment path name as a string. if path not empty then reference attachment.
   
 ### GetLongPath function
-Get attachment long path name as a string. if path not empty then reference attachment.
+Get attachment long path name as a string. if path not empty then reference attachment.t.

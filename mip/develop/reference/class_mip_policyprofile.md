@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class PolicyProfile 
-PolicyProfile class is the root class for using the Microsoft Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
+PolicyProfile class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile but it can create multiple profiles if needed.
   
 ## Summary
  Members                        | Descriptions                                
@@ -124,4 +124,4 @@ Parameters:
 * **authDelegate**: Authentication callback that will be invoked
 
 
-MIP will not cache or do anything else with the value returned by the auth delegate. This function is recommended for applications that aren't "logged in" until after MIP requests an auth token. It allows an application to fetch a token before MIP actually requires one.
+MIP will not cache or do anything else with the value returned by the auth delegate. This function is recommended for applications that aren't "logged in" until after MIP requests an auth token. It allows an application to fetch a token before MIP actually requires one.e.

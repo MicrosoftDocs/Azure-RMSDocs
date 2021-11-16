@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class TelemetryDelegate 
@@ -28,4 +28,4 @@ Parameters:
 
   
 ### Flush function
-Flush any queued events (e.g. due to shutdown)
+Flush any queued events (e.g. due to shutdown)n)

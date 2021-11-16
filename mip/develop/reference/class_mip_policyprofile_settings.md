@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class PolicyProfile::Settings 
-Settings used by PolicyProfile during its creation and throughout its lifetime.
+Settings used by [PolicyProfile during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
@@ -147,3 +147,4 @@ Parameters:
   
 ### ~Settings function
 _Not documented yet._
+_

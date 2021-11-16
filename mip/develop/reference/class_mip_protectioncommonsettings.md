@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class ProtectionCommonSettings 
@@ -20,3 +20,4 @@ public ProtectionCommonSettings(std::string applicationScenarioId)  | _Not yet d
   
 ### ProtectionCommonSettings function
 _Not documented yet._
+_
