@@ -13,17 +13,17 @@ ms.date: 11/15/2021
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr\<const PublishingLicenseInfo\> GetLicenseInfo() const  |  Gets the [PublishingLicenseInfo](undefined), the publishing license.
+public std::shared_ptr\<const PublishingLicenseInfo\> GetLicenseInfo() const  |  Gets the PublishingLicenseInfo, the publishing license.
 public const std::vector\<std::string\>& GetUsers() const  |  Gets the list of users for the request.
 public bool GetAquireEndUserLicenses() const  |  Gets the boolean value that indicates whether or not to obtain end user license in addition to the delegate license.
   
 ## Members
   
 ### GetLicenseInfo function
-Gets the [PublishingLicenseInfo](undefined), the publishing license.
+Gets the PublishingLicenseInfo, the publishing license.
 
   
-**Returns**: The [PublishingLicenseInfo](undefined)
+**Returns**: The PublishingLicenseInfo
   
 ### GetUsers function
 Gets the list of users for the request.

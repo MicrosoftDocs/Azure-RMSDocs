@@ -9,7 +9,7 @@ ms.date: 11/15/2021
 ---
 
 # class DelegateResponseError 
-Delegate Response [Error](undefined). Thrown or returned in response to encountering an error in a delegate method.
+Delegate Response Error. Thrown or returned in response to encountering an error in a delegate method.
   
 ## Summary
  Members                        | Descriptions                                

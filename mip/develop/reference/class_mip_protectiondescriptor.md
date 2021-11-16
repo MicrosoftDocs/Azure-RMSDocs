@@ -67,7 +67,7 @@ Gets the protection template ID, if any.
 Gets the label ID, if any.
 
   
-**Returns**: [Label](undefined) ID
+**Returns**: Label ID
 This property will be populated in ProtectionDescriptors for preexisting protected content & for UDP label based protection. It is a field populated by the server at the moment protected content is consumed. For UDP label based protection, its populated from appdata labelId value set by client.
   
 ### GetContentId function
@@ -81,7 +81,7 @@ Gets collection of users-to-rights mappings.
 
   
 **Returns**: Collection of users-to-rights mappings
-The value of the [UserRights](undefined) property will be empty if the current user doesn't have access to this information (that is, if the user is not the owner and does not have the VIEWRIGHTSDATA right).
+The value of the UserRights property will be empty if the current user doesn't have access to this information (that is, if the user is not the owner and does not have the VIEWRIGHTSDATA right).
   
 ### GetUserRoles function
 Gets collection of users-to-roles mappings.
@@ -119,14 +119,14 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](undefined) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](#classProtectionDescriptor_1a0624527c7c1237a97ec0f4b02140c42d)
+A ProtectionHandler may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](#classProtectionDescriptor_1a0624527c7c1237a97ec0f4b02140c42d)
   
 ### GetSignedAppData function
 Gets the app-specific data that was signed.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](undefined) may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](#classProtectionDescriptor_1a1cb9a6cb79d37008c3918a6e0e3337c7)
+A ProtectionHandler may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](#classProtectionDescriptor_1a1cb9a6cb79d37008c3918a6e0e3337c7)
   
 ### GetDoubleKeyUrl function
 Gets the double key url to be used for custom protection.

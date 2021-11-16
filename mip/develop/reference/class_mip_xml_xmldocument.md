@@ -32,16 +32,16 @@ Parameters:
 
 
   
-**Returns**: A vector of matching [XmlNode](undefined) shared pointers or an empty vector if none match
+**Returns**: A vector of matching XmlNode shared pointers or an empty vector if none match
   
 ### GetXmlContent function
 Parse an xml formatted buffer into an xmldocument.
 
   
-**Returns**: A utf-8 xml formatted string of the content of this [XmlDocument](undefined)
+**Returns**: A utf-8 xml formatted string of the content of this XmlDocument
   
 ### GetRootNode function
 Get the node that is an ancestor of all other nodes.
 
   
-**Returns**: A shared_ptr to an [XmlNode](undefined)
+**Returns**: A shared_ptr to an XmlNode

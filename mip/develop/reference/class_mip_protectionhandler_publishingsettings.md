@@ -9,7 +9,7 @@ ms.date: 11/15/2021
 ---
 
 # class ProtectionHandler::PublishingSettings 
-Settings used to create a [ProtectionHandler](undefined) to protect new content.
+Settings used to create a ProtectionHandler to protect new content.
   
 ## Summary
  Members                        | Descriptions                                

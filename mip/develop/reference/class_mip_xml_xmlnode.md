@@ -25,8 +25,8 @@ public XmlNamespace GetNamespace() const  | _Not yet documented._
 public bool IsNull() const  |  See if the object has been initialized with an underlying xml node.
 public void AddAttribute(const std::string& attributeName, const std::string& attributeValue)  |  Add a property to an existing node.
 public int RemoveAttribute(const std::string& attributeName)  |  Removes a node property by name.
-public std::shared_ptr\<XmlNode\> AddNewChild(const std::string& name)  |  Add a child to this [XmlNode](undefined). New child is inserted after any existing children.
-public std::shared_ptr\<XmlNode\> AddNewChild(const std::string& name, const std::string& namespaceName)  |  Add a child to this [XmlNode](undefined). New child is inserted after any existing children.
+public std::shared_ptr\<XmlNode\> AddNewChild(const std::string& name)  |  Add a child to this XmlNode. New child is inserted after any existing children.
+public std::shared_ptr\<XmlNode\> AddNewChild(const std::string& name, const std::string& namespaceName)  |  Add a child to this XmlNode. New child is inserted after any existing children.
 public bool AddContent(const std::string& content)  |  Add inner text to this xml node.
 public bool RemoveNodeFromDocument()  |  Remove this node and children from the xml document.
   
@@ -93,7 +93,7 @@ Parameters:
 **Returns**: 0 if the property was found and successfully removed and -1 otherwise
   
 ### AddNewChild function
-Add a child to this [XmlNode](undefined). New child is inserted after any existing children.
+Add a child to this XmlNode. New child is inserted after any existing children.
 
 Parameters:  
 * **name**: The name of the new node
@@ -104,7 +104,7 @@ Parameters:
 **Returns**: A pointer to the node that was added or a nullptr if the operation failed.
   
 ### AddNewChild function
-Add a child to this [XmlNode](undefined). New child is inserted after any existing children.
+Add a child to this XmlNode. New child is inserted after any existing children.
 
 Parameters:  
 * **name**: The name of the new node 
