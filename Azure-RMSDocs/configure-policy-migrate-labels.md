@@ -51,7 +51,7 @@ Before you read the instructions to migrate your labels, you might find the foll
 
 If you use admin roles for delegated administration in your organization, you might need to do some changes for the unified labeling platform:
 
-The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Azure Information Protection administrator** (formerly **Information Protection administrator**) is not supported by the unified labeling platform. If this administrative role is used in your organization to manage Azure Information Protection, add the users who have this role to the Azure AD roles of **Compliance administrator**, **Compliance data administrator**, or **Security administrator**. If you need help with this step, see [Give users access to the Microsoft 365 Security & Compliance Center](/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Azure AD portal and the Microsoft 365 compliance center.
+The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Azure Information Protection administrator** (formerly **Information Protection administrator**) is not supported by the unified labeling platform. If this administrative role is used in your organization to manage Azure Information Protection, add the users who have this role to the Azure AD roles of **Compliance administrator**, **Compliance data administrator**, or **Security administrator**. If you need help with this step, see [Give users access to the Microsoft 365 Compliance center](/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Azure AD portal and the Microsoft 365 compliance center.
 
 Alternatively to using roles, in the Microsoft 365 compliance center, you can create a new role group for these users and add either **Sensitivity Label Administrator** or **Organization Configuration** roles to this group.
 
@@ -220,7 +220,7 @@ Before you select the **Copy policies (preview)** option on the **Azure Informat
 
 - You cannot selectively choose policies and settings to copy. All policies (the **Global** policy and any scoped policies) are automatically selected to be copied, and all settings that are supported as label policy settings are copied. If you already have a label policy with the same name, it will be overwritten with the policy settings in the Azure portal.
 
-- Some advanced client settings are not copied because for the Azure Information Protection unified labeling client, these are supported as *label advanced settings* rather than policy settings. You can configure these label advanced settings with [Microsoft 365 Security & Compliance Center PowerShell](rms-client/clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell). The advanced client settings that are not copied:
+- Some advanced client settings are not copied because for the Azure Information Protection unified labeling client, these are supported as *label advanced settings* rather than policy settings. You can configure these label advanced settings with [Microsoft 365 Compliance center PowerShell](rms-client/clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell). The advanced client settings that are not copied:
     - [LabelbyCustomProperty](./rms-client/client-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [LabelToSMIME](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
@@ -271,7 +271,7 @@ To confirm whether the clients and services you use support unified labeling, re
     
     For more information, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/microsoft-365/compliance/sensitivity-labels-teams-groups-sites).
 
-- **Microsoft Cloud App Security**
+- **Microsoft Defender for Cloud Apps**
     
     This service supports labels both before the migration to the unified labeling store, and after the migration, using the following logic:
     
