@@ -9,7 +9,7 @@ ms.date: 11/15/2021
 ---
 
 # class FileProfile::Settings 
-Settings](undefined) used by [FileProfile during its creation and throughout its lifetime.
+Settings used by [FileProfile during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
@@ -45,7 +45,7 @@ Parameters:
 * **consentDelegate**: Delegate used to obtain user permission to access external resources 
 
 
-* **observer**: Observer](undefined) instance that will receive notifications of events related to [FileProfile
+* **observer**: Observer instance that will receive notifications of events related to [FileProfile
 
 
   
@@ -65,7 +65,7 @@ Gets the consent delegate used to request user consent connecting to services.
 Gets the observer that receives notifications of events related to FileProfile.
 
   
-**Returns**: Observer](undefined) that receives notifications of events related to [FileProfile
+**Returns**: Observer that receives notifications of events related to [FileProfile
   
 ### GetMipContext function
 Get MIP context which represents shared state across all profiles.

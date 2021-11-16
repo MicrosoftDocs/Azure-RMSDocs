@@ -9,7 +9,7 @@ ms.date: 11/15/2021
 ---
 
 # class PolicyProfile::Settings 
-Settings](undefined) used by [PolicyProfile during its creation and throughout its lifetime.
+Settings used by [PolicyProfile during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                

@@ -12,6 +12,7 @@ ms.date: 11/15/2021
 The user could not get access to the content. For example, no permissions, content revoked.
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string GetReferrer() const  |  Gets the contact in case of missing rights to the document.
@@ -50,4 +51,5 @@ InvalidEmail            |
 UnknownTenant            | 
 NotOwner            | User needs to be owner to perform action
 NotPremiumLicenseUser            | User needs to be a premium license holder to perform action. Tracking and Revocation for example
+
 Category of no permissions error.

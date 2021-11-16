@@ -47,4 +47,5 @@ Offline            | Operation requires network connectivity
 Throttled            | HTTP operation failed due to server traffic throttling
 Cancelled            | HTTP operation has been cancelled by the application
 FunctionNotImplemented            | HTTP response code indicates called function is not implemented
+
 Category of network error.

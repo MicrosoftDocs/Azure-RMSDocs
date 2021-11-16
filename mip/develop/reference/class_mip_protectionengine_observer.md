@@ -37,10 +37,10 @@ Parameters:
 * **templateDescriptors**: A reference to the list of templates descriptors 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::GetTemplatesAsync](#classProtectionEngine_1af61106db3fba520d2170de80b0712a69)
+* **context**: The same context that was passed to ProtectionEngine::GetTemplatesAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetTemplatesAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetTemplatesSuccess](#classProtectionEngine_1_1Observer_1a6988e40ff9b8096c12a320e6e0b47de2) or [ProtectionEngine::Observer::OnGetTemplatesFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetTemplatesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetTemplatesSuccess or ProtectionEngine::Observer::OnGetTemplatesFailure
   
 ### OnGetTemplatesFailure function
 Called when retrieving templates generated an error.
@@ -52,7 +52,7 @@ Parameters:
 * **context**: The same context that was passed to ProtectionEngine::GetTemplatesAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetTemplatesAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetTemplatesSuccess](undefined) or [ProtectionEngine::Observer::OnGetTemplatesFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetTemplatesAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetTemplatesSuccess or [ProtectionEngine::Observer::OnGetTemplatesFailure
   
 ### OnGetRightsForLabelIdSuccess function
 Called when rights were retrieved successfully.
@@ -61,10 +61,10 @@ Parameters:
 * **rights**: A reference to the list of rights retrieved 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::GetRightsForLabelIdAsync](#classProtectionEngine_1ab1462bfbece2ce4b357690f1856cc20a)
+* **context**: The same context that was passed to ProtectionEngine::GetRightsForLabelIdAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](#classProtectionEngine_1_1Observer_1acb203e845490619471b3ba75e8a03dde) or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
   
 ### OnGetRightsForLabelIdFailure function
 Called when retrieving rights for a label ID for the user.
@@ -76,7 +76,7 @@ Parameters:
 * **context**: The same context that was passed to ProtectionEngine::GetRightsForLabelIdAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](undefined) or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
   
 ### OnLoadUserCertSuccess function
 Called when user cert loaded successfully.
@@ -85,7 +85,7 @@ Parameters:
 * **context**: The same context that was passed to ProtectionEngine::LoadUserCert
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::LoadUserCertAsync](#classProtectionEngine_1a047594fc160d5243b6883d7e7f37b2bd) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnLoadUserCertSuccess](undefined) or [ProtectionEngine::Observer::OnLoadUserCertFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::LoadUserCertAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnLoadUserCertSuccess or [ProtectionEngine::Observer::OnLoadUserCertFailure
   
 ### OnLoadUserCertFailure function
 Called when user cert loaded failed.
@@ -97,16 +97,16 @@ Parameters:
 * **context**: The same context that was passed to ProtectionEngine::LoadUserCert
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::LoadUserCertAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnLoadUserCertSuccess](undefined) or [ProtectionEngine::Observer::OnLoadUserCertFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::LoadUserCertAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnLoadUserCertSuccess or [ProtectionEngine::Observer::OnLoadUserCertFailure
   
 ### OnRegisterContentForTrackingAndRevocationSuccess function
 Called when registration of content for tracking & revocation is successful.
 
 Parameters:  
-* **context**: The same context that was passed to [ProtectionEngine::RegisterContentForTrackingAndRevocationAsync](#classProtectionEngine_1add428fe5c54b08eb69bbf9ecd133bba1)
+* **context**: The same context that was passed to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationSuccess](undefined) or [ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationSuccess or [ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationFailure
   
 ### OnRegisterContentForTrackingAndRevocationFailure function
 Called when registration of content for tracking & revocation fails.
@@ -118,16 +118,16 @@ Parameters:
 * **context**: The same context that was passed to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationSuccess](undefined) or [ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationSuccess or [ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationFailure
   
 ### OnRevokeContentSuccess function
 Called when revocation of is successful.
 
 Parameters:  
-* **context**: The same context that was passed to [ProtectionEngine::RevokeContentAsync](#classProtectionEngine_1a3830c6093a75b2f5a1109b5bd58c3d80)
+* **context**: The same context that was passed to ProtectionEngine::RevokeContentAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RevokeContentAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnRevokeContentSuccess](undefined) or [ProtectionEngine::Observer::OnRevokeContentFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RevokeContentAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnRevokeContentSuccess or [ProtectionEngine::Observer::OnRevokeContentFailure
   
 ### OnRevokeContentFailure function
 Called when revocation of content is fails.
@@ -139,16 +139,16 @@ Parameters:
 * **context**: The same context that was passed to ProtectionEngine::RevokeContentAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RevokeContentAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnRevokeContentSuccess](undefined) or [ProtectionEngine::Observer::OnRevokeContentFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RevokeContentAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnRevokeContentSuccess or [ProtectionEngine::Observer::OnRevokeContentFailure
   
 ### OnCreateDelegatedLicensesSuccess function
 Called when create delegated license is successful.
 
 Parameters:  
-* **context**: The same context that was passed to [ProtectionEngine::CreateDelegationLicensesAsync](#classProtectionEngine_1a5147b32252069841530e4a634fd40743)
+* **context**: The same context that was passed to ProtectionEngine::CreateDelegationLicensesAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::CreateDelegationLicensesAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnCreateDelegatedLicensesSuccess](#classProtectionEngine_1_1Observer_1ab27b06764aa412a72048bdbd700fed56) or [ProtectionEngine::Observer::OnCreateDelegatedLicensesFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::CreateDelegationLicensesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnCreateDelegatedLicensesSuccess or ProtectionEngine::Observer::OnCreateDelegatedLicensesFailure
   
 ### OnCreateDelegatedLicensesFailure function
 Called when create delegated license fails.
@@ -160,4 +160,4 @@ Parameters:
 * **context**: The same context that was passed to ProtectionEngine::CreateDelegationLicensesAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::CreateDelegationLicensesAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnCreateDelegatedLicensesSuccess](undefined) or [ProtectionEngine::Observer::OnCreateDelegatedLicensesFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::CreateDelegationLicensesAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnCreateDelegatedLicensesSuccess or [ProtectionEngine::Observer::OnCreateDelegatedLicensesFailure

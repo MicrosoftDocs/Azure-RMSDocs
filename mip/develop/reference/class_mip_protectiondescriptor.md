@@ -119,14 +119,14 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A ProtectionHandler may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](#classProtectionDescriptor_1a0624527c7c1237a97ec0f4b02140c42d)
+A ProtectionHandler may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via[ProtectionDescriptor::GetSignedAppData
   
 ### GetSignedAppData function
 Gets the app-specific data that was signed.
 
   
 **Returns**: App-specific data
-A ProtectionHandler may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](#classProtectionDescriptor_1a1cb9a6cb79d37008c3918a6e0e3337c7)
+A ProtectionHandler may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via ProtectionDescriptor::GetEncryptedAppData
   
 ### GetDoubleKeyUrl function
 Gets the double key url to be used for custom protection.

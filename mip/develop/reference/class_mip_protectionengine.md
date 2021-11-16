@@ -129,7 +129,7 @@ Parameters:
 * **observer**: A class implementing the ProtectionEngine::Observer interface 
 
 
-* **context**: This same context will be forwarded to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](undefined) or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
+* **context**: This same context will be forwarded to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
 
 
 

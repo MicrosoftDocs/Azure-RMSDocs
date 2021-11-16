@@ -9,7 +9,7 @@ ms.date: 11/15/2021
 ---
 
 # class MetadataVersion 
-Interface for a MetadataVersion](undefined). [MetadataVersion determines which metadata is active and how it is processed.
+Interface for a MetadataVersion. [MetadataVersion determines which metadata is active and how it is processed.
   
 ## Summary
  Members                        | Descriptions                                

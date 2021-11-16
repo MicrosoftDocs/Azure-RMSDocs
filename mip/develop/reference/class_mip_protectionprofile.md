@@ -29,7 +29,7 @@ public void DeleteEngine(const std::string& engineId)  |  Delete the protection 
 Gets settings used by ProtectionProfile during its initialization and throughout its lifetime.
 
   
-**Returns**: Settings](undefined) used by [ProtectionProfile during its initialization and throughout its lifetime
+**Returns**: Settings used by [ProtectionProfile during its initialization and throughout its lifetime
   
 ### ListEnginesAsync function
 Starts list engines operation.
