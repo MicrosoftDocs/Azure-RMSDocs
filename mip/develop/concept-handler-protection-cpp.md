@@ -30,7 +30,7 @@ Creating a `ProtectionHandler` to work with a specific file requires:
 - `mip::ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync`
   - Requires a `ProtectionDescriptor` as the first parameter.
 - `mip::ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync`
-  - Requires a serialized publishing license, stored in `std::vector<unint8_t>` as the first parameter.
+  - Requires a serialized publishing license, stored in a `std::vector<unint8_t>` as the first parameter.
 
 ### Create from descriptor
 
