@@ -34,7 +34,7 @@ For example, if the `mip::Identity` is *Bob@contoso.com*, the SDK uses the mail 
 
 ## Service discovery with mip::Cloud
 
-If the identity of the user isn't know at engine creation, or the customer is in a sovereign cloud that doesn't support implicit service discovery, the `mip::Cloud` enum can be used to explicitly tell the SDK which cloud to use.
+If the identity of the user isn't known at engine creation, or the customer is in a sovereign cloud that doesn't support implicit service discovery, the `mip::Cloud` enum can be used to explicitly tell the SDK which cloud to use.
 
 ```cpp
 FileEngine::Settings engineSettings("engineGUID",
