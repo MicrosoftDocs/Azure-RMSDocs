@@ -68,7 +68,7 @@ public:
 
 #### consent_delegate_impl.cpp
 
-When the SDK requires consent, the `GetUserConsent` method is called *by the SDK*, and the URL passed in as a parameter. In the sample below, the user is notified that the SDK will connect to that provided URL and provides the user with an option on the commandline. Based on the choice by the user, the user accepts or rejects consent and that is passed to the SDK. If the user declines to consent the application will throw an exception and no call is made to the protection service. 
+When the SDK requires consent, the `GetUserConsent` method is called *by the SDK*, and the URL is passed in as a parameter. In the sample below, the user is notified that the SDK will connect to that provided URL and provides the user with an option on the commandline. Based on the choice by the user, the user accepts or rejects consent and that is passed to the SDK. If the user declines to consent the application will throw an exception and no call is made to the protection service. 
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
