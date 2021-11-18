@@ -123,17 +123,6 @@ var protectionHandler = engine.CreateProtectionHandlerForConsumption(consumption
 
 #### C++
 
-This sample demonstrates how to perform **delegated consumption**.
-
-```c++
-string delegatedUserEmail = "bob@contoso.com";
-mip::ProtectionHandler::PublishingSettings publishingSettings = mip::ProtectionHandler::PublishingSettings(descriptor);
-// Set the delegated mail address 
-publishingSettings.SetDelegatedUserEmail(delegatedUserEmail);
-mEngine->CreateProtectionHandlerForPublishingAsync(publishingSettings, handlerObserver, handlerPromise);
-auto handler = handlerFuture.get();	
-```
-
 This sample demonstrates how to perform **delegated publishing**.
 
 ```c++
@@ -142,6 +131,17 @@ mip::ProtectionHandler::ConsumptionSettings consumptionSettings = mip::Protectio
 // Set the delegated mail address 
 consumptionSettings.SetDelegatedUserEmail(delegatedUserEmail);
 mEngine->CreateProtectionHandlerForConsumptionAsync(consumptionSettings, handlerObserver, handlerPromise);
+auto handler = handlerFuture.get();	
+```
+
+This sample demonstrates how to perform **delegated consumption**.
+
+```c++
+string delegatedUserEmail = "bob@contoso.com";
+mip::ProtectionHandler::PublishingSettings publishingSettings = mip::ProtectionHandler::PublishingSettings(descriptor);
+// Set the delegated mail address 
+publishingSettings.SetDelegatedUserEmail(delegatedUserEmail);
+mEngine->CreateProtectionHandlerForPublishingAsync(publishingSettings, handlerObserver, handlerPromise);
 auto handler = handlerFuture.get();	
 ```
 
