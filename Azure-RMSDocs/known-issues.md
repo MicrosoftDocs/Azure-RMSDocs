@@ -216,7 +216,7 @@ In such cases, re-label the document manually to apply the protection as needed.
 
 - [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
-    We strongly encourage you to upgrade to a newer version of Windows 10.
+    We strongly encourage you to upgrade to a newer version of Windows.
 
     However, if you have Extended Security Updates (ESU) and a support contract, AIP support is available to continue keeping your Windows 7 systems secure.
 
