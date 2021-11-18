@@ -56,7 +56,7 @@ Use the following information to help you quickly transition to the current port
 |Delete a template|Deleting templates can result in inaccessible data, so the Azure portal doesn't support this action. However, you can delete the label and then use the PowerShell [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate) cmdlet to remove the template. <br /><br />For more information, see [How to delete or reorder a label for Azure Information Protection](configure-policy-delete-reorder.md).
 |Multi-language support|From the **Manage** menu selection, select **Languages** to export the customizable fields that include the template name and description. Translate the strings, and then import these strings into the portal. <br /><br />For more information, see [How to configure labels and templates for different languages in Azure Information Protection](configure-policy-languages.md).
 |Rights Management web reports|[Centralized reporting for Azure Information Protection](reports-aip.md) is now in preview.<br /><br />You can also use the PowerShell [Get-AipServiceUsageLog](/powershell/module/aipservice/get-aipserviceuserlog) cmdlet to download usage logs for the Azure Rights Management service. You can then use this data to create customized reports. For more information, see [Logging and analyzing the protection usage from Azure Information Protection](log-analyze-usage.md).
-|Activate and deactivate the Rights Management service|From the **Manage** menu options, select **Protection activation**.<br /><br />For more information, see [How to activate the Rights Management protection service from the Azure portal](activate-azure.md).
+|Activate and deactivate the Rights Management service|From the **Manage** menu options, select **Protection activation**.<br /><br />For more information, see [How to activate the Rights Management protection service from the Azure portal](/azure/information-protection/activate-service#activate-protection-from-the-azure-portalactivate-protection-from-the-azure-portal).
 
 Before you edit your templates or convert them to labels in the Azure portal, see [Considerations for templates in the Azure portal](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
 
@@ -75,4 +75,3 @@ The PowerShell cmdlets to create and manage templates, and to activate or deacti
 
 ## See also
 For more detailed information, see [Configuring and managing templates in the Azure Information Protection policy](configure-policy-templates.md).
-
