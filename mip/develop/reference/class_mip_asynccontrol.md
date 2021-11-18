@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class AsyncControl 
@@ -25,4 +25,4 @@ Calling cancel will result in a attempt to cancel the task, in case of success t
 
   
 **Returns**: False if cancel signal cannot be dispatched, true otherwise.
-Do not hold a strong reference to an AsyncControl object in a task completion block.
+Do not hold a strong reference to an AsyncControl object in a task completion block.k.

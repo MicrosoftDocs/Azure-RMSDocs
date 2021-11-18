@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class PrivilegedRequiredError 
@@ -17,3 +17,4 @@ Current label was assigned as a privileged operation (The equivalent to an admin
   
 ## Members
 _Not documented yet._
+_

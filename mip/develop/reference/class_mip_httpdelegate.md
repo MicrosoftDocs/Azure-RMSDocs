@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class HttpDelegate 
@@ -15,7 +15,7 @@ Interface for overriding HTTP handling.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<HttpOperation\> Send(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context)  |  Send HTTP request.
-public std::shared_ptr\<HttpOperation\> SendAsync(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context, const std::function\<void(std::shared_ptr\<HttpOperation\> )  |  Send HTTP request asynchronously.
+public std::shared_ptr\<HttpOperation\> SendAsync(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context, const std::function\<void(std::shared_ptr\<HttpOperation\>)\>& callbackFn)  |  Send HTTP request asynchronously.
 public void CancelOperation(const std::string& requestId)  |  Cancel a specific HTTP operation.
 public void CancelAllOperations()  |  Cancel ongoing HTTP requests.
   
@@ -61,4 +61,4 @@ Parameters:
 
   
 ### CancelAllOperations function
-Cancel ongoing HTTP requests.
+Cancel ongoing HTTP requests.s.

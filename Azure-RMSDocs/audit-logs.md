@@ -47,6 +47,12 @@ Microsoft Azure Information Protection generates audit logs at the following act
 * [Remove protection](#remove-protection-audit-logs)
 * [Upgrade label](#upgrade-label-audit-logs)
 
+> [!NOTE]
+> Azure Information Protection collects data from desktop apps only, and not from mobile devices.
+>
+> For more information, see the details in the **Platform** columns in this article.
+> 
+
 ## Access audit logs
 
 **Access** audit logs are generated for the following activities:
@@ -56,7 +62,6 @@ Microsoft Azure Information Protection generates audit logs at the following act
 |Azure Information Protection: Classic client only | Windows        | Office        |Generated for the first time in each session that a labeled or protected file is saved.<br>The log includes any information type matches.      |
 |Azure Information Protection: Classic client only     |Windows         |Office         |Generated each time a labeled or protected file is created.       |
 |Azure Information Protection:<br />- Classic client<br />- Unified labeling client     | Windows, SharePoint, OneDrive        | Office        | Generated each time a labeled or protected file is opened. <br /><br />**Note**: For protected files, Access audit logs are generated only when the file is opened and the content is successfully decrypted and exposed to the user. <br />For protected emails in Outlook, Access audit logs are also generated each time the user attempts to open an encrypted email, even if the decryption is blocked due to a lack of permissions.         |
-|Azure Information Protection unified labeling viewer |Windows |AIP Unified Labeling Viewer  | Generated each time a labeled or protected file is opened within the organization. |
 |Microsoft Information Protection (MIP) SDK     | Any        | Third-party applications        | Generated each time a labeled or protected file is accessed by a third-party application that supports it.       |
 |RMS service     | Windows        | Office         |Generated each time a labeled or protected document is accessed.       |
 | | | | |
@@ -89,6 +94,7 @@ Microsoft Azure Information Protection generates audit logs at the following act
 |---------|---------|---------|---------|
 |Azure Information Protection: <br />- Classic scanner <br />- Unified labeling scanner | Windows        | Office        |Generated each time a file is scanned by the AIP scanner.<br>The log includes the following details:<br>- Matched information types<br>- Labels |
 |Microsoft Information Protection (MIP) SDK | Any | Third-party applications | Generated each time a file is scanned by a third-party application that supports it. <br />The log includes the following details:<br />- Matched information types<br />- Labels|
+|Azure Information Protection unified labeling viewer |Windows |AIP Unified Labeling Viewer  | Generated each time a labeled or protected file is opened within the organization. |
 | | | | |
 
 ## Downgrade label audit logs

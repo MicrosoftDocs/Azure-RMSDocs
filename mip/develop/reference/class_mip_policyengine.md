@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class PolicyEngine 
@@ -191,4 +191,4 @@ Gets the recommended WXP (Word, Excel, Powerpoint) metadata version, currently 0
 Checks if user has consented to specific workload,.
 
   
-**Returns**: Bool indicating consent.
+**Returns**: Bool indicating consent.t.

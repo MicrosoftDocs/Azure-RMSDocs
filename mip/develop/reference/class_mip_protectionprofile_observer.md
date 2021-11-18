@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class ProtectionProfile::Observer 
@@ -48,7 +48,7 @@ Parameters:
 * **context**: The same context that was passed to ProtectionProfile::LoadAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to ProtectionProfile::Observer::OnLoadSuccess or ProtectionProfile::Observer::OnLoadFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess or [ProtectionProfile::Observer::OnLoadFailure
   
 ### OnListEnginesSuccess function
 Called when list of engines was generated successfully.
@@ -110,4 +110,6 @@ Parameters:
 
 
 * **context**: The same context that was passed to ProtectionProfile::DeleteEngineAsync
+
+
 

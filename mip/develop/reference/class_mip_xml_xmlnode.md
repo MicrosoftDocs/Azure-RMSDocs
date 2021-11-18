@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class xml::XmlNode 
@@ -132,4 +132,4 @@ Parameters:
 Remove this node and children from the xml document.
 
   
-**Returns**: True if node was successfully deleted or false if failed.
+**Returns**: True if node was successfully deleted or false if failed.d.

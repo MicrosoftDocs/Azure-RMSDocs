@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class StorageDelegate::StorageSettings 
@@ -41,4 +41,4 @@ Gets whether remote storage is used or not.
 Gets whether the delegate supports in-memory storage.
 
   
-**Returns**: True if the delegate supports in-memory storage.
+**Returns**: True if the delegate supports in-memory storage.e.

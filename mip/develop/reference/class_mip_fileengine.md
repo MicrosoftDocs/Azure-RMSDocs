@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class FileEngine 
@@ -175,4 +175,4 @@ Gets if the policy has automatic or recommendation rules.
 Checks if user has consented to specific workload,.
 
   
-**Returns**: Bool indicating consent.
+**Returns**: Bool indicating consent.t.

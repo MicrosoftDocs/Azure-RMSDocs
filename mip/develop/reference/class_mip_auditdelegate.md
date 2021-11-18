@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class AuditDelegate 
@@ -17,3 +17,4 @@ A class that defines the interface to the MIP SDK audit notifications.
   
 ## Members
 _Not documented yet._
+_

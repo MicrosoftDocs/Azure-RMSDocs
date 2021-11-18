@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class MetadataAction 
@@ -30,5 +30,5 @@ Removing metadata should be done before adding metadata.
 Get the metadata name/value pairs that should be added to the content.
 
   
-**Returns**: Const std::vector\<MetadataEntry\>& 
-Removing metadata should be done before adding metadata.
+**Returns**: Const std::vector<MetadataEntry>& 
+Removing metadata should be done before adding metadata.a.

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class ProtectionDescriptor 
@@ -119,7 +119,7 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A ProtectionHandler may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via ProtectionDescriptor::GetSignedAppData
+A ProtectionHandler may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via[ProtectionDescriptor::GetSignedAppData
   
 ### GetSignedAppData function
 Gets the app-specific data that was signed.
@@ -133,4 +133,4 @@ Gets the double key url to be used for custom protection.
 
   
 **Returns**: Double key url
-The double key URL that is used in custom requests to protect information with a second key
+The double key URL that is used in custom requests to protect information with a second keyey

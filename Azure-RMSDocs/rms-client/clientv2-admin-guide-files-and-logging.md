@@ -80,12 +80,6 @@ Logged events for the client include the following information:
 
     - Remove custom protection: Information ID 202​
 
-    - Outlook warn message: Information ID 301
-
-    - Outlook justify message: Information ID 302
-
-    - Outlook block message: Information ID 303
-
 The events for Outlook warn, justify, and block messages require advanced client settings. For more information, see [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
 ## Scanner-side usage logging

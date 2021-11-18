@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class FileHandler::Observer 
@@ -65,4 +65,4 @@ Called when committing the changes to the file failed.
 Called when inspect success.
   
 ### OnInspectFailure function
-Called when inspect failed.
+Called when inspect failed.d.
