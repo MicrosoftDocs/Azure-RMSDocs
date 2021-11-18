@@ -72,7 +72,7 @@ The following table describes the possible engine states, and which methods can 
 
 ### Engine ID
 
-Each engine has a unique identifier, `id`, that is used in all engine management operations. The application can provide an `id`, or the SDK can generated one, if it's not provided by the application. All other engine properties (for example, email address in the identity info) are opaque payloads for the SDK. The SDK does NOT perform any logic to keep any of the other properties unique, or enforce any other constraints. 
+Each engine has a unique identifier, `id`, that is used in all engine management operations. The application can provide an `id`, or the SDK can generate one, if it's not provided by the application. All other engine properties (for example, email address in the identity info) are opaque payloads for the SDK. The SDK does NOT perform any logic to keep any of the other properties unique, or enforce any other constraints. 
 
 > [!IMPORTANT]
 > **As a best practice, use an engine Id that is unique to the user and use that each time the user performs an operation with the SDK. Failing to provide an existing, unique engineId for a user or service will result in extra service round trips. These service round trips may result in performance degradation and throttling. **
