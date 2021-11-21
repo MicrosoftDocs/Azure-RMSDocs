@@ -1,6 +1,11 @@
 {
     "redirections": [
-       {
+        {
+            "source_path": "Azure-RMSDocs/tutorial-preventing-oversharing.md",
+            "redirect_url": "/information-protection/tutorial-scan-networks-and-content",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "Azure-RMSDocs/security-baseline.md",
             "redirect_url": "/security/benchmark/azure/baselines/information-protection-security-baseline",
             "redirect_document_id": false

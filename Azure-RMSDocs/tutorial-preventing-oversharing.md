@@ -286,11 +286,11 @@ This procedure describes how to customize the message that appears when a user t
 
 1. On the client machine, run PowerShell as an administrator.
 
-1. To customize your blocking message, copy the following code, replacing **C:\OutlookCollaborationRule_1.json** with the path to your .json file, and **General** with the name of your policy. 
+1. To customize your blocking message, copy the following code, replacing **C:\OutlookCollaborationRule_1.json** with the path to your .json file, and **General** with the name of your policy.
 
     ```PowerShell
     $filedata = Get-Content "C:\OutlookCollaborationRule_1.json”
-    Set-LabelPolicy -Identity General -AdvancedSettings @{OutlookCollaborationRule_1 ="$filedata"}    
+    Set-LabelPolicy -Identity General -AdvancedSettings @{OutlookCollaborationRule_1 ="$filedata"}
     ```
 
     Run the code to implement the settings defined in your .json file.
@@ -300,11 +300,11 @@ This procedure describes how to customize the message that appears when a user t
     1. On your client computer, open PowerPoint and create a new **.pptx** file, making sure to leave the file unlabeled.
 
     1. Open or restart Outlook to pull the updated settings.
-    
+
     1. Attach your unlabeled PowerPoint file to a new Outlook message.
 
     1. Define the **To** field with your own email address, the **Subject field** as: `Testing customized blocking message for unlabeled PowerPoint files`, and then send the email.
-    
+
         Outlook blocks the email from being sent, and displays the following message:
 
         :::image type="content" source="media/qs-tutor/ul-see-custom-blockmessage.png" alt-text="Custom block message for PowerPoint files with no label":::
