@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Additional requirements for installing the unified labeling client on enterprise networks
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
@@ -81,7 +81,7 @@ Client machines with resolutions of **800x600** and lower can't fully display th
 
 To install the Azure Information Protection unified labeling client, you must have local administrative permissions on the client computer.
         
-## Windows 10 requirements
+## Windows 11 and Windows 10 requirements
 
 Computers running Office 2010 require **Microsoft Online Services Sign-in Assistant version 7.250.4303.0**, which is included with the client installation. 
 

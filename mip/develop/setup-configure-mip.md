@@ -49,18 +49,22 @@ Next, complete the following steps to ensure your client computer is set up and 
 
 1. If you're using a Windows 10 workstation:
 
-   - Using Windows Update, update your machine to Windows 10 Fall Creators Update (version 1709) or later. To verify your current version:
-     - Click the Windows icon in the lower left.
-     - Type "About your PC" and press the "Enter" key.
-     - Scroll down to **Windows specifications** and look under **Version**.
+   Using Windows Update, update your machine to Windows 10 Fall Creators Update (version 1709) or later. To verify your current version:
 
-   - Ensure "Developer Mode" is enabled on your workstation:
-     - Click the Windows icon in the lower left.
-     - Type "Use developer features" and press the "Enter" key, when you see the **Use Developer Features** item show.
-     - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.
-     - Close the **Settings** dialog.
+   - Click the Windows icon in the lower left.
+   - Type "About your PC" and press the "Enter" key.
+   - Scroll down to **Windows specifications** and look under **Version**.
 
-2. Install [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/), with the following workloads and optional components:
+1. If you're using a Windows 11 or Windows 10 workstation:
+
+   Ensure "Developer Mode" is enabled on your workstation:
+   - Click the Windows icon in the lower left.
+   - Type "Use developer features" and press the "Enter" key, when you see the **Use Developer Features** item show.
+   - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.
+   - Close the **Settings** dialog.
+
+1. Install [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/), with the following workloads and optional components:
+
    - **Universal Windows Platform development** Windows workload, plus the following optional components:
      - **C++ Universal Windows Platform tools**
      - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default
@@ -69,7 +73,7 @@ Next, complete the following steps to ensure your client computer is set up and 
 
      [![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
-3. Install the [ADAL.PS PowerShell Module](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2):
+1. Install the [ADAL.PS PowerShell Module](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2):
 
    - Because administrator rights are required to install modules, first you need to either:
 
@@ -90,7 +94,7 @@ Next, complete the following steps to ensure your client computer is set up and 
      PS C:\WINDOWS\system32>
      ```
 
-4. Download Files:
+1. Download Files:
 
    The MIP SDK is supported on the following platforms, with separate downloads for each supported platform/language:
 
@@ -114,9 +118,9 @@ Next, complete the following steps to ensure your client computer is set up and 
     Install-Package Microsoft.InformationProtection.Protection
     ```
 
-5. If you're not using the NuGet package, add the paths of the SDK binaries to the PATH environment variable. The PATH variable allows the dependent binaries (DLLs) to be found at runtime, by client applications (OPTIONAL):
+1. If you're not using the NuGet package, add the paths of the SDK binaries to the PATH environment variable. The PATH variable allows the dependent binaries (DLLs) to be found at runtime, by client applications (OPTIONAL):
 
-   If you're using a Windows 10 workstation:
+   If you're using a Windows 11 or Windows 10 workstation:
 
    - Click the Windows icon in the lower left.
    - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
@@ -129,7 +133,7 @@ Next, complete the following steps to ensure your client computer is set up and 
 
    - When finished updating the **Path** variable, click **OK**. Then click **OK** when returned to the **Environment Variables** dialog.
 
-6. Download SDK samples from GitHub (OPTIONAL):
+1. Download SDK samples from GitHub (OPTIONAL):
 
    - If you don't have one already, first create a [GitHub profile](https://github.com/join).
    - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/download/)
