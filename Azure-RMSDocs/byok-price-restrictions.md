@@ -108,8 +108,6 @@ For more information about key usage logging for BYOK, see [Logging and analyzin
 ## Options for creating and storing your key
 
 > [!NOTE]
-> The Azure Information Protection Azure Key Vault Managed HSM support, for use with non-production tenants only, is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
->
 > For more information about the Managed HSM offering, and how to set up a vault and a key, see the [Azure Key Vault documentation](/azure/key-vault/). 
 >
 > Additional instructions on granting key authorization are described below.
@@ -320,10 +318,6 @@ Where:
 - **ContosoMHSM** is a sample HSM name. When running this command, replace this value with your own HSM name.
 
 The **Managed HSM Crypto User** user role allows the user to decrypt, sign, and get permissions to the key, which are all required for the Managed HSM functionality. 
-
-> [!NOTE]
-> While Managed HSM is in public preview, granting the **Managed HSM Crypto User** role is supported only via Azure CLI.
-> 
 
 ### Configure Azure Information Protection to use your key
 
