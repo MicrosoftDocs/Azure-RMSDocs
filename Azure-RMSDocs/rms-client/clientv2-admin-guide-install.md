@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Admin Guide: Install the Azure Information Protection unified labeling client for users
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
@@ -63,7 +63,7 @@ There are two options for installing the client for users:
 |Option  |Description  | I
 |---------|---------|
 |**Run the executable (.exe) version of the client**     |   The recommended installation method that you can run interactively, or silently. <br><br>This method has the most flexibility and it is recommended because the installer checks for many of the prerequisites, and can automatically install missing prerequisites. <br><br>For more information, see [Install the AIP unified labeling client using the executable installer](#install-the-aip-unified-labeling-client-using-the-executable-installer).|
-|**Deploy the Windows installer (.msi) version of the client**     |     Supported for silent installs only that use a central deployment mechanism, such as group policy, Configuration Manager, and Microsoft Intune. <br><br>This method is necessary for Windows 10 PCs that are managed by Intune and mobile device management (MDM) because for these computers, executable files are not supported for installation. <br><br> However, when you use this installation method, you must manually check and install or uninstall the dependent software that the installer for the executable would perform for each computer. <br><br>For more information, see [Install the unified labeling client using the .msi installer](#install-the-unified-labeling-client-using-the-msi-installer). |
+|**Deploy the Windows installer (.msi) version of the client**     |     Supported for silent installs only that use a central deployment mechanism, such as group policy, Configuration Manager, and Microsoft Intune. <br><br>This method is necessary for Windows 11 and Windows 10 PCs that are managed by Intune and mobile device management (MDM) because for these computers, executable files are not supported for installation. <br><br> However, when you use this installation method, you must manually check and install or uninstall the dependent software that the installer for the executable would perform for each computer. <br><br>For more information, see [Install the unified labeling client using the .msi installer](#install-the-unified-labeling-client-using-the-msi-installer). |
 |     |         |
 
 

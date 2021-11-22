@@ -85,7 +85,7 @@ CAD files, such as **.dwg** files, are supported by partner solutions, such as [
 |[**Other file types**](#supported-text-and-image-file-types)     | - Azure Information Protection app (viewing protecting text and images)<br />- TITUS Docs: **Pfile**  |
 | | |
 
-## Windows 10 mobile RMS-enlightened applications
+## Windows 10 or Windows 11 mobile RMS-enlightened applications
 
 |Type  |Supported applications   |
 |---------|---------|
@@ -206,7 +206,7 @@ When you use the Azure Rights Management service with Office Professional Plus 2
 
 Additionally, this configuration:
 
-- Is not supported on Windows 10.
+- Is not supported on Windows 10 or Windows 11.
 - Does not support forms-based authentication for federated user accounts. These accounts must use Windows-Integrated Authentication.
 - Does not support the ability to override template protection using custom permissions selected with the AIP client. In this scenario, the original protection must first be removed before custom permissions can be applied.
 
