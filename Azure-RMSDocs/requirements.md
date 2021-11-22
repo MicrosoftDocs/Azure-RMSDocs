@@ -86,6 +86,8 @@ User computers or mobile devices must run on an operating system that supports A
 
 The Azure Information Protection clients for Windows are supported are the following operating systems:
 
+- **Windows 11**
+
 - **Windows 10** (x86, x64). Handwriting is not supported in the Windows 10 RS4 build and later.
  
 - **Windows 8.1** (x86, x64)

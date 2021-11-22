@@ -267,7 +267,7 @@ If your connector servers are installed in a network that does not have direct i
 
 You can run the RMS connector administration tool from a computer that does not have the RMS connector installed, if that computer meets the following requirements:
 
-- A physical or virtual computer running Windows Server 2019, 2016, 2012 or Windows Server 2012 R2 (all editions), Windows 10, Windows 8.1, Windows 8.
+- A physical or virtual computer running Windows Server 2019, 2016, 2012 or Windows Server 2012 R2 (all editions), Windows 11, Windows 10, Windows 8.1, Windows 8.
 
 - At least 1 GB of RAM.
 
