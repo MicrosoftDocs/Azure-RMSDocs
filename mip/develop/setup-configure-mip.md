@@ -6,7 +6,7 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
-ms.custom: has-adal-ref
+ms.custom: has-adal-ref, mode-api
 #Customer intent: As a an application developer, I want to learn about setup and configuration, so that I can use the SDK to build applications.
 ---
 

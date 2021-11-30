@@ -6,6 +6,7 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
 ms.author: mbaldwin
+ms.custom: mode-api
 ---
 
 # File SDK - Process email .msg files (C++)

@@ -7,6 +7,7 @@ ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to do SDK initialization, so that I can use the Protection SDK.
+ms.custom: mode-api
 ---
 
 # Quickstart: Client application initialization for Protection SDKs (C++)
