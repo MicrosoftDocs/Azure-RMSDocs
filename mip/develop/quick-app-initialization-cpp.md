@@ -7,6 +7,7 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to do SDK initialization, so that I can use the SDK APIs.
+ms.custom: mode-api
 ---
 
 # Quickstart: Client application initialization (C++) 

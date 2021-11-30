@@ -6,7 +6,7 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: mbaldwin
-ms.custom: has-adal-ref
+ms.custom: has-adal-ref, mode-api
 #Customer intent: As a an application developer, I want to learn how to list protection templates for a user in the MIP SDK, so that I can use the SDK APIs to apply templates later on.
 ---
 
