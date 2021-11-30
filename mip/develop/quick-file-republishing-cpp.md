@@ -6,6 +6,7 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: mbaldwin
+ms.custom: mode-api
 ---
 
 # File SDK Re-publishing Quickstart (C++)

@@ -8,6 +8,7 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to set and get a sensitivity label, so that I can implement this logic in my own application.
+ms.custom: mode-api
 ---
 
 # Quickstart: Set and get a sensitivity label (C++)
