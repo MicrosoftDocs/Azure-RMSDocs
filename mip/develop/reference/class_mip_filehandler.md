@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class FileHandler 
@@ -140,4 +140,4 @@ Parameters:
 Fires an Audit event
   
 ### GetOutputFileName function
-Calculates the output file name and extension based on the original file name and the accumulated changes.
+Calculates the output file name and extension based on the original file name and the accumulated changes.s.

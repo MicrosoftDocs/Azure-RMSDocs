@@ -33,7 +33,7 @@ There are two types of reference sections - the legacy table by setting name, an
 
 FUTURE task - reorganize this topic by feature type so that admins can read related settings together. NOT recommended to reorganize this page into sub-pages as there are too many xrefs out there to this page and you'll need a lot of redirects. Additionally, users might just search for their setting or text on a single page. It would help to have related settings documented one right after the other to help with scrolling. -->
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
@@ -49,7 +49,7 @@ Use the following information for advanced configurations needed for specific sc
 
 ## Configuring advanced settings for the client via PowerShell
 
-Use the Microsoft 365 Security & Compliance Center PowerShell to configure advanced settings for customizing label policies and labels. 
+Use the Microsoft 365 Compliance center PowerShell to configure advanced settings for customizing label policies and labels. 
 
 In both cases, after you [connect to Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell), specify the **AdvancedSettings** parameter with the identity (name or GUID) of the policy or label, with key/value pairs in a [hash table](/powershell/module/microsoft.powershell.core/about/about_hash_tables). 
 
@@ -208,7 +208,7 @@ The following sections list the advanced settings described on this page by prod
 |**Performance improvements settings**     | - [Limit CPU consumption](#limit-cpu-consumption) <br>- [Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner) <br>- [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)        |
 |**Settings for integrations with other labeling solutions**     | - [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions) <br> - [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)    |
 |**AIP analytics settings**     |   - [Prevent audit data from being sent to AIP and Microsoft 365 analytics](#prevent-audit-data-from-being-sent-to-aip-and-microsoft-365-analytics) <br>- [Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)      |
-|**General settings**     | - [Add "Report an Issue" for users](#add-report-an-issue-for-users) <br>- [Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Change the local logging level](#change-the-local-logging-level) <br>- [Change which file types to protect](#change-which-file-types-to-protect)<br>- [Configure the autolabeling timeout on Office files](#configure-the-autolabeling-timeout-on-office-files) <br>- [Configure SharePoint timeouts](#configure-sharepoint-timeouts)<br>- [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps) <br>- [Enable removal of protection from compressed files](#enable-removal-of-protection-from-compressed-files) <br>-  [Preserve NTFS owners during labeling (public preview)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  [Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Specify a color for the label](#specify-a-color-for-the-label)<br>-  [Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label)<br>-  [Support for changing \<EXT>.PFILE to P\<EXT>](#additionalpprefixextensions)  <br>-  [Support for disconnected computers](#support-for-disconnected-computers)     <br>-  [Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Turn off document tracking features](#turn-off-document-tracking-features)  <br>- [Turn off the Revoke option for end-users in Office apps](#turn-off-the-revoke-option-for-end-users-in-office-apps) |
+|**General settings**     | - [Add "Report an Issue" for users](#add-report-an-issue-for-users) <br>- [Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Change the local logging level](#change-the-local-logging-level) <br>- [Change which file types to protect](#change-which-file-types-to-protect)<br>- [Configure the autolabeling timeout on Office files](#configure-the-autolabeling-timeout-on-office-files) <br>- [Configure SharePoint timeouts](#configure-sharepoint-timeouts)<br>- [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps) <br>- [Enable removal of protection from compressed files](#enable-removal-of-protection-from-compressed-files) <br>-  [Preserve NTFS owners during labeling (public preview)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  [Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Specify a color for the label](#specify-a-color-for-the-label)<br>-  [Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label)<br>-  [Support for changing \<EXT>.PFILE to P\<EXT>](#additionalpprefixextensions)  <br>-  [Support for disconnected computers](#support-for-disconnected-computers)     <br>-  [Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Turn off document tracking features](#turn-off-document-tracking-features)  <br>- [Turn off the Revoke option for end-users in Office apps](#turn-off-the-revoke-option-for-end-users-in-office-apps) <br>- [Turn on classification globalization features](#turn-on-classification-globalization-features-public-preview)|
 |     |         |
 
 ### Label policy advanced setting reference
@@ -225,6 +225,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |**EnableContainerSupport**|[Enable removal of protection from PST, rar, 7zip, and MSG files](#enable-removal-of-protection-from-compressed-files)
 |**EnableCustomPermissions**|[Turn off custom permissions in File Explorer](#turn-off-custom-permissions-in-file-explorer)|
 |**EnableCustomPermissionsForCustomProtectedFiles**|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
+|**EnableGlobalization** |[Turn on classification globalization features](#turn-on-classification-globalization-features-public-preview) |
 |**EnableLabelByMailHeader**|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |**EnableLabelBySharePointProperties**|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
 | **EnableOutlookDistributionListExpansion** | [Expand Outlook distribution lists when searching for email recipients](#expand-outlook-distribution-lists-when-searching-for-email-recipients) |
@@ -1051,7 +1052,7 @@ To change this behavior, so that audit data is not sent, do the following:
 To enable the client to send audit log data again, change the advanced setting value to **True**. You do not need to manually create the **%localappdata%\Microsoft\MSIP\mip** folder again on your client machines.
 
 ## Send information type matches to Azure Information Protection analytics
- 
+
 This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 By default, the unified labeling client does not send content matches for sensitive info types to [Azure Information Protection analytics](../reports-aip.md). For more information about this additional information that can be sent, see the [Content matches for deeper analysis](../reports-aip.md#content-matches-for-deeper-analysis) section from the central reporting documentation.
@@ -1669,7 +1670,7 @@ Supported node types include:
 | **Except**	| Returns *not* for its own child, causing it to behave as **All**        |
 | **SentTo**, followed by **Domains: listOfDomains**	|Checks one of the following: <br>- If the Parent is **Except**, checks whether **All** of the recipients are in one of the domains<br>- If the Parent is anything else but **Except**, checks whether **Any** of the recipients are in one of the domains.   |
 | **EMailLabel**, followed by label	| One of the following:  <br>- The label ID <br>- null, if not labeled             |
-| **AttachmentLabel**, followed by **Label** and supported **Extensions**	| One of the following:  <br><br>**true**: <br>- If the Parent is **Except**, checks whether **All** of the attachments with one supported extension exists within the label<br>- 	If the Parent is anything else but **Except**, checks whether **Any** of the attachments with one supported extension exists within the label <br>- If not labeled, and **label = null** <br><br> **false**: For all other cases <br><br>**Note**: If the **Extensions** property is empty or missing, all supported file types (extensions) are included in the rule.
+| **AttachmentLabel**, followed by **Label** and supported **Extensions**	| One of the following:  <br><br>**true**: <br>- If the Parent is **Except**, checks whether **All** of the attachments with one supported extension exists within the label<br>- 	If the Parent is anything else but **Except**, checks whether **Any** of the attachments with one supported extension exists within the label <br>- If not labeled, and **label = null** <br><br> **false**: For all other cases <br><br>**Note**: If the **Extensions** property is empty or missing, all [supported file types (extensions)](clientv2-admin-guide-file-types.md) are included in the rule.
 | | |
 
 #### Rule action syntax
@@ -2127,6 +2128,24 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OfficeContentExtractionTime
 ```
 
 The updated timeout applies to autolabeling on all Office files.
+
+## Turn on classification globalization features (Public preview)
+
+[Classification globalization features](unifiedlabelingclient-version-release-history.md#increased-accuracy-for-sensitive-information-types), including increased accuracy for East Asian languages and support for double-byte characters. These enhancements are provided only for 64-bit processes, and are turned off by default.
+
+Turn on these features for your policy specify the following strings:
+
+- Key: **EnableGlobalization**
+
+- Value: `True`
+
+Example PowerShell command, where your label policy is named "Global":
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableGlobalization="True"}
+```
+
+To turn off support again and revert to the default, set the **EnableGlobalization** advanced setting to an empty string.
 
 ## Next steps
 

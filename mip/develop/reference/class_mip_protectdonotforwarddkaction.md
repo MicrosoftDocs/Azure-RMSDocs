@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class ProtectDoNotForwardDkAction 
@@ -22,4 +22,4 @@ public const std::string& GetDoubleKeyEncryptionUrl() const  |  Get the double k
 Get the double key encryption Url.
 
   
-**Returns**: The double key encryption Url.
+**Returns**: The double key encryption Url.l.

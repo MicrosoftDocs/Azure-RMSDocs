@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class xml::XmlDelegate 
@@ -39,4 +39,4 @@ Parameters:
 
 
   
-**Returns**: A delegate response that contains either a shared_ptr to an XmlDocument or an exception if parsing fails
+**Returns**: A delegate response that contains either a shared_ptr to an XmlDocument or an exception if parsing failsls

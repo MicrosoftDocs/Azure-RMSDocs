@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class ProtectionProfile::Settings 
-Settings used by ProtectionProfile during its creation and throughout its lifetime.
+Settings used by [ProtectionProfile during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
@@ -52,7 +52,7 @@ Parameters:
 * **consentDelegate**: Delegate used to obtain user permission to access external resources 
 
 
-* **observer**: Observer instance that will receive notifications of events related to ProtectionProfile
+* **observer**: Observer instance that will receive notifications of events related to [ProtectionProfile
 
 
 * **applicationInfo**: Info about application that is consuming the protection SDK
@@ -92,7 +92,7 @@ Gets the consent delegate used for connecting to services.
 Gets the observer that receives notifications of events related to ProtectionProfile.
 
   
-**Returns**: Observer that receives notifications of events related to ProtectionProfile
+**Returns**: Observer that receives notifications of events related to [ProtectionProfile
   
 ### GetMipContext function
 Get MIP context which represents shared state across all profiles.

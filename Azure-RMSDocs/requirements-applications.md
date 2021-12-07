@@ -48,8 +48,8 @@ These applications and solutions are known as "RMS-enlighted", and have Rights M
 
 |Type  |Supported applications   |
 |---------|---------|
-|**Word, Excel, PowerPoint**    | - [Microsoft 365 apps](#microsoft-365-app-support) <br />- Office 2010 <br />- Office 2013<br />- Office 2016 <br />- Office 2019 <br />- [Office for the web (viewing protected documents)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
-|[**Email**](#viewing-protected-content-in-email-clients)      |   - Outlook 2010<br />- Outlook 2013<br />- Outlook 2016 <br />- Outlook 2019 <br />- Outlook from Microsoft 365 Apps for Enterprise<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
+|**Word, Excel, PowerPoint**    | - [Microsoft 365 apps](#microsoft-365-app-support) <br />- Office Professional Plus 2010 <br />- Office Professional Plus 2013<br />- Office Professional Plus 2016 <br />- Office Professional Plus 2019 <br />- [Office for the web (viewing protected documents)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
+|[**Email**](#viewing-protected-content-in-email-clients)      |   - Outlook Professional Plus 2010<br />- Outlook Professional Plus 2013<br />- Outlook Professional Plus 2016 <br />- Outlook Professional Plus 2019 <br />- Outlook from Microsoft 365 Apps for Enterprise<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
 |[**Other file types**](#supported-text-and-image-file-types)    |  - Visio from Microsoft 365 apps, Office 2019, and Office 2016: **.vsdm**, **.vsdx**, **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Azure Information Protection client for Windows: Text, images, **pfile**      |
 | | |
 
@@ -85,7 +85,7 @@ CAD files, such as **.dwg** files, are supported by partner solutions, such as [
 |[**Other file types**](#supported-text-and-image-file-types)     | - Azure Information Protection app (viewing protecting text and images)<br />- TITUS Docs: **Pfile**  |
 | | |
 
-## Windows 10 mobile RMS-enlightened applications
+## Windows 10 or Windows 11 mobile RMS-enlightened applications
 
 |Type  |Supported applications   |
 |---------|---------|
@@ -206,7 +206,7 @@ When you use the Azure Rights Management service with Office Professional Plus 2
 
 Additionally, this configuration:
 
-- Is not supported on Windows 10.
+- Is not supported on Windows 10 or Windows 11.
 - Does not support forms-based authentication for federated user accounts. These accounts must use Windows-Integrated Authentication.
 - Does not support the ability to override template protection using custom permissions selected with the AIP client. In this scenario, the original protection must first be removed before custom permissions can be applied.
 

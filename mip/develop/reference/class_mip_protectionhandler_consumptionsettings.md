@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class ProtectionHandler::ConsumptionSettings 
@@ -99,3 +99,4 @@ A delegated user is specified when the authenticating user/application is acting
   
 ### GetContentName function
 _Not documented yet._
+_

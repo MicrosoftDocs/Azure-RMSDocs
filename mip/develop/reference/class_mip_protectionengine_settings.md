@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class ProtectionEngine::Settings 
-Settings used by ProtectionEngine during its creation and throughout its lifetime.
+Settings used by [ProtectionEngine during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
@@ -46,7 +46,7 @@ public void SetLoggerContext(const std::shared_ptr\<void\>& loggerContext)  |  S
 ProtectionEngine::Settings constructor for creating a new engine.
 
 Parameters:  
-* **identity**: Identity that will be associated with ProtectionEngine
+* **identity**: Identity that will be associated with [ProtectionEngine
 
 
 * **authDelegate**: The authentication delegate used by the SDK to acquire authentication tokens, will override the PolicyProfile::Settings::authDelegate if both provided 

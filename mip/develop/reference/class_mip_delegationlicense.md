@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class DelegationLicense 
@@ -50,4 +50,4 @@ Gets the delegation license in Xrml format.
 
   
 **Returns**: Serialized license
-This license is bound to the identity of the user that made the request
+This license is bound to the identity of the user that made the requestst

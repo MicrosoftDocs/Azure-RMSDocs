@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class TelemetryEvent 
@@ -134,4 +134,4 @@ Parameters:
 
 
   
-**Returns**: Property with the given name, or nullptr if none
+**Returns**: Property with the given name, or nullptr if nonene

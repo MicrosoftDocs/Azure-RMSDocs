@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/12/2021
+ms.date: 10/04/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -83,10 +83,11 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 |**Multiple displays** |If you're using multiple displays and have an Office application open: <br><br>- You may experience performance issues in your Office apps.<br>- The Azure Information Protection bar may appear to float in the middle of the Office screen, on one or both displays <br><br>To ensure consistent performance, and that the bar remains in the correct location, open the **Options** dialog for your Office application, and under **General**, select **Optimize for compatibility** instead of **Optimize for best appearance**.    |
 |**IRM support in Office 2016**| The [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) registry setting, which controls metadata encryption in Office 2016, is not supported for Azure Information Protection labels.|
 |**Outlook object model access** | - The [PromptOOMAddressBookAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when address books are accessed via the Outlook object model, is not supported with Azure Information Protection labels. <br><br>- The [PromptOOMAddressInformationAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when a program reads address information, is not supported for Azure Information Protection labels.|
-|**Content markings in Word**    | AIP [content markings](configure-policy-markings.md) in Microsoft Word headers or footers may be offset or placed incorrectly, or may be hidden entirely, when that same header or footer also contains a table.<br><br>For more information, see [When visual markings are applied](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**Files attached to emails** |Due to a limitation in recent Windows updates, scanning Outlook messages (**.msg** files) may cause those files to be locked. To unlock the files, stop the scanner service. Starting the scanner service again does not lock the files again until the next time the messages are scanned. <br><br>To clarify whether your system is affected, you might want to start a scan on a specific folder with a single, sample message, and check to see if the file is locked after the scan is complete. <br><br>**Note**: This issue is not relevant when applying and removing protection with PowerShell. |
 |**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.       |
 | **S/MIME emails** | Opening S/MIME emails in Outlook's Reading Pane may cause performance issues. <br><br>To prevent performance issues with S/MIME emails, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property. <br><br>**Note**: Enabling this property prevents the AIP bar or the email classification from being displayed in Outlook's Reading Pane. |
+| **Online mode in Outlook** | When working in [*Online* mode](/outlook/troubleshoot/installation/cached-exchange-mode) in Outlook, with the Azure Information Protection add-in active, the following known issues may occur: <br><br>- New emails that are created and closed without edits are saved as drafts. <br>- Pop-up messages are displayed, prompting users to save changes, even if no changes were made. In such cases, this message can be ignored.
+|**Content markings in Word**    | AIP [content markings](configure-policy-markings.md) in Microsoft Word headers or footers may be offset or placed incorrectly, or may be hidden entirely, when that same header or footer also contains a table.<br><br>For more information, see [When visual markings are applied](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**Send to File Explorer option** |If you choose to right-click on any file in the File Explorer and select **Send to > Mail recipient**, the Outlook message that opens with the file attached may not display the AIP toolbar. <br><br>If this occurs and you need to use the AIP toolbar options, start your email from within Outlook and then browse to and attach the file you want to send.|
 | | |
 
@@ -171,6 +172,10 @@ When opening the protected document after installing Adobe Acrobat DC with the M
 
 This is an expected error. In the prompt window, select **Back** to continue opening the protected document.
 
+>[!NOTE]
+> The AIP Viewer supports guest *organizational* accounts in Azure AD, but not personal or Windows Live accounts.
+>
+
 ## Known issues for track and revoke features
 
 Tracking and revoking document access using the unified labeling client has the following known issues:
@@ -200,7 +205,7 @@ Additionally, revoking access for one of the attachments also revokes access for
 
     Using the original **ContentID** value to track data will not include any access performed for the user's downloaded file. Additionally, revoking access based on the original **ContentID** value will not revoke access for any of the downloaded files.
 
-    In such cases, administrators may be able to locate the downloaded files using PowerShell to find the new **ContentID** values to track or revoke access.
+    If administrators have access to the downloaded files, they can use PowerShell to identify a document's **ContentID** for track and revoke actions.
 
 ### Known issues for the AIP client and OneDrive
 
@@ -212,7 +217,7 @@ In such cases, re-label the document manually to apply the protection as needed.
 
 - [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
-    We strongly encourage you to upgrade to a newer version of Windows 10.
+    We strongly encourage you to upgrade to a newer version of Windows.
 
     However, if you have Extended Security Updates (ESU) and a support contract, AIP support is available to continue keeping your Windows 7 systems secure.
 

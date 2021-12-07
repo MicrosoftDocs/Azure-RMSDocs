@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class Action 
@@ -17,3 +17,4 @@ Interface for an action. Each action translates to a step that needs to be taken
   
 ## Members
 _Not documented yet._
+_
