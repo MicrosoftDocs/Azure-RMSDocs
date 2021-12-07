@@ -28,28 +28,16 @@ Use the following information to see what’s new or changed for a supported rel
 
 NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions prior to 1.4 are not available.
 
-<<<<<<< HEAD
-| Version | Link                        | Status              | End of Support     |
-| ------- | --------------------------- | ------------------- | ------------------ |
-| 1.10    | https://aka.ms/mipsdkbins   | **Current Version** | TBD                |
-| 1.9     | https://aka.ms/mipsdkbins19 | **Supported**       | August 23, 2022    |
-| 1.8     | https://aka.ms/mipsdkbins18 | **Supported**       | April 29, 2022     |
-| 1.7     | https://aka.ms/mipsdkbins17 | **Supported**       | January 14th, 2022 |
-| 1.6     | https://aka.ms/mipsdkbins16 | **Out of Support**       | September 23, 2021 |
-| 1.5     | https://aka.ms/mipsdkbins15 | **Out of Support**  | April 16, 2021     |
-| 1.4     | https://aka.ms/mipsdkbins14 | **Out of Support**  | March 2, 2021      |
-=======
 | Version | Link                         | Status              | End of Support     |
 | ------- | ---------------------------  | ------------------- | ------------------ |
 | 1.11    | https://aka.ms/mipsdkbins    | **Current Version** | TBD                |
-| 1.10    | https://aka.ms/mipsdkbins110 | **Supported**       | TBD                |
+| 1.10    | https://aka.ms/mipsdkbins110 | **Supported**       | November 17, 2022  |
 | 1.9     | https://aka.ms/mipsdkbins19  | **Supported**       | August 23, 2022    |
 | 1.8     | https://aka.ms/mipsdkbins18  | **Supported**       | April 29, 2022     |
-| 1.7     | https://aka.ms/mipsdkbins17  | **Supported**       | January 14, 2022 |
+| 1.7     | https://aka.ms/mipsdkbins17  | **Supported**       | January 14, 2022   |
 | 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support**  | September 23, 2021 |
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support**  | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support**  | March 2, 2021      |
->>>>>>> 6e26ec8238ec462065a07c3c78ddbe0a1ff95477
 
 ## Version 1.11.53
 
