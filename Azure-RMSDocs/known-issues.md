@@ -33,9 +33,9 @@ ms.custom: admin
 
 Use the lists and tables below to find details about known issues and limitations related to Azure Information Protection features.
 
-## Third-party digital signing apps
+## Other digital signing and encryption solutions
 
-Azure Information Protection cannot protect or decrypt files that are digitally signed.
+Azure Information Protection cannot protect or decrypt files\emails that are digitally signed or encrypted with other solutions, such as removing protection from mails that are signed or encrypted with S/MIME.
 
 ## Client support for container files, such as .zip files
 
