@@ -1617,7 +1617,7 @@ AIP administrators can customize the popup messages that appear to end users in 
     - `<Policy name>` is the name of the policy you want to configure. 
     - `<Key>` is a name for your rule. Use the following syntax, where **<#>** is the serial number for your rule: 
     
-        `OutlookCollaborationRule_<x>` 
+        `OutlookCollaborationRule_<#>` 
 
     For more information, see [Ordering your Outlook customization rules](#ordering-your-outlook-customization-rules) and [Rule value json syntax](#rule-value-json-syntax).
 
