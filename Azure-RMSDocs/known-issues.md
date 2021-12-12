@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/04/2021
+ms.date: 12/12/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -99,6 +99,7 @@ Known issues for co-authoring in AIP include:
 
 - [Supported versions for co-authoring and sensitivity labels](#supported-versions-for-co-authoring-and-sensitivity-labels)
 - [Policy updates](#policy-updates)
+- [User interface changes when applying labels](#user-interface-changes-when-applying-labels)
 - [Unsupported features for co-authoring](#unsupported-features-for-co-authoring)
 
 > [!IMPORTANT]
@@ -126,6 +127,14 @@ If your labeling policy was updated while an Office application was opened with 
 
 If this occurs, close and reopen your Office application to be able to apply your labels.
 
+#### User interface changes when applying labels
+
+When co-authoring is enabled in your tenant, the user interface for selecting labels with user-defined protection comes from the built-in labeling client instead of the Azure Information Protection unified labeling client.
+
+While users can still apply the same labels, advanced, out-of-the-box permission levels like **Reviewer**, **Co-author**, and **Only For Me** are unavailable. Instead, use other permissions, such as **Read**, **Change**, and **Full Control** with customizations to achieve the same permission levels. For example, to set permissions for **Co-author**, select **Change** and then add permissions for **PRINT** and **COPY** separately.
+
+The built-in labeling client does not currently support domain-level permissions.
+ 
 #### Unsupported features for co-authoring
 
 The following features are not supported or are partially supported when [co-authoring is enabled](/microsoft-365/compliance/sensitivity-labels-coauthoring) for files encrypted with sensitivity labels:
