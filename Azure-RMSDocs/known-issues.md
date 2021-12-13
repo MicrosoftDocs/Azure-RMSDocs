@@ -131,9 +131,9 @@ If this occurs, close and reopen your Office application to be able to apply you
 
 When co-authoring is enabled in your tenant, the user interface for selecting labels with user-defined protection comes from the built-in labeling client instead of the Azure Information Protection unified labeling client.
 
-While users can still apply the same labels, advanced, out-of-the-box permission levels like **Reviewer**, **Co-author**, and **Only For Me** are unavailable. Instead, use other permissions, such as **Read**, **Change**, and **Full Control** with customizations to achieve the same permission levels. For example, to set permissions for **Co-author**, select **Change** and then add permissions for **PRINT** and **COPY** separately.
+In such cases, users can still apply the same labels. To apply advanced, out-of-the-box permission levels, use the **Restricted Access** dialog (**File** tab > **Info** > **Protect Document** > **Restrict Access** > **Restricted Access**).
 
-The built-in labeling client does not currently support domain-level permissions.
+The built-in labeling client does not currently support organization-level permissions.
  
 #### Unsupported features for co-authoring
 
