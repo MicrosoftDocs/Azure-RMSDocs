@@ -131,6 +131,7 @@ This version of the unified labeling client and scanner provides the following f
 - Fixed an issue where Outlook may fail to send a message with embedded images in rich-text with rules for [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) configured.
 - Fixed an issue where the AIP add-in may fail to load in Office apps with language related errors.
 - Fixed an issue to prevent errors from occurring when removing protection from a PST file with special characters.
+- Fixed an issue where extra draft emails were kept while working with Outlook in [Online mode](https://support.microsoft.com/en-us/office/switch-from-working-offline-to-online-2460e4a8-16c7-47fc-b204-b1549275aac9)
 
 ## Version 2.12.62.0
 
