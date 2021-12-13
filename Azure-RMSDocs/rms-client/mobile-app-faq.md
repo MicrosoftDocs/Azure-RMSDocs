@@ -39,10 +39,8 @@ The AIP mobile apps are *viewers only,* and do not enable you to create new emai
  
 - **If you have mobile Office apps installed on your mobile device**, we recommend that you use the [Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-word-excel-and-powerpoint) to view protected files.
 - **If you are opening your file on a desktop**, use the [desktop version of the AIP Viewer](clientv2-view-use-files.md). 
-
-> [!NOTE]
-> The AIP mobile apps support only protected files. Unprotected files are not supported and cannot be consumed in the mobile viewer apps.
->
+- **The AIP mobile apps support only protected files.** Unprotected files are not supported and cannot be consumed in the mobile viewer apps.
+- **[Intune's Open-In / Share filtering](/mem/intune/apps/data-transfer-between-apps-manage-ios)** features are not currently supported.
 
 ## What's new for the AIP mobile viewer app
 
