@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/12/2021
+ms.date: 12/13/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -78,11 +78,11 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.13.47.0 (Public preview)
+## Version 2.13.49.0 (Public preview)
 
-Unified labeling scanner and client version 2.13.47.0
+Unified labeling scanner and client version 2.13.49.0
 
-**Released** 11/01/2021
+**Released** 1/12/2022
 
 This version includes the following new updates, fixes, and enhancements for the unified labeling scanner and client:
 
