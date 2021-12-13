@@ -78,7 +78,7 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.13.49.0 (Public preview)
+## Version 2.13.49.0
 
 Unified labeling scanner and client version 2.13.49.0
 
