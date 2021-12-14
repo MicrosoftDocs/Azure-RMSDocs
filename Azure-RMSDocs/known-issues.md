@@ -129,11 +129,9 @@ If this occurs, close and reopen your Office application to be able to apply you
 
 #### User interface changes when applying labels
 
-When co-authoring is enabled in your tenant, the user interface for selecting labels with user-defined protection comes from the built-in labeling client instead of the Azure Information Protection unified labeling client.
+When co-authoring is enabled in your tenant, the user experience for labels that are configured for user-defined permissions changes to the experience for built-in labels: Instead of seeing the Microsoft Azure Information Protection dialog box where users can select [permission levels](configure-usage-rights.md#rights-included-in-permissions-levels) such as **Viewer**, **Reviewer**, and **Only for me**, they see the same dialog box as if they had they selected the **File** tab > **Info** > **Protect Document** > **Restrict Access** > **Restricted Access**.  From this dialog box, they can specify their choice of permissions and users.  For more information, see the [Word, PowerPoint, and Excel permissions](/microsoft-365/compliance/encryption-sensitivity-labels#word-powerpoint-and-excel-permissions) section from the Microsoft 365 compliance documentation.
 
-In such cases, users can still apply the same labels. To apply advanced permission levels, use the **Restricted Access** dialog (**File** tab > **Info** > **Protect Document** > **Restrict Access** > **Restricted Access**).
-
-The built-in labeling client does not currently support organization-level permissions.
+Note that unlike the Microsoft Azure Information Protection dialog box, the **Restricted Access** dialog box doesn't support specifying a domain name to automatically include all users in the organization.
  
 #### Unsupported features for co-authoring
 
