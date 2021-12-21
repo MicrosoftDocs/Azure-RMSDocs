@@ -266,7 +266,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
                             "<application-version>"};
 
     // Create MipConfiguration object.
-    std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,    
+    std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(appInfo,    
 				                                                                                               "mip_data", 
                                                                                         			         mip::LogLevel::Trace, 
                                                                                                        false);
@@ -282,7 +282,6 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
     FileProfile::Settings profileSettings(
                                   mMipContext,
                                   mip::CacheStorageType::OnDisk,
-                                  authDelegateImpl,
                                   consentDelegateImpl,
                                   profileObserver);
 
@@ -306,11 +305,12 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
     // Construct/initialize engine object
     FileEngine::Settings engineSettings(
                                     mip::Identity("<engine-account>"), // Engine identity (account used for authentication)
-                                    "<engine-state>",                  // User-defined engine state
+                                    authDelegateImpl,		       // Token acquisition implementation
+				    "<engine-state>",                  // User-defined engine state
                                     "en-US");                          // Locale (default = en-US)
                                     
     // Set the engineId for caching. 
-    engineSettings.setEngineId("<engine-account>");
+    engineSettings.SetEngineId("<engine-account>");
     // Set up promise/future connection for async engine operations; add engine to profile asynchronously
     auto enginePromise = make_shared<promise<shared_ptr<FileEngine>>>();
     auto engineFuture = enginePromise->get_future();
@@ -333,8 +333,8 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
     // handler = nullptr; // This will be used in later quick starts.
     engine = nullptr;
     profile = nullptr;   
-    mipContext.Shutdown();
-    mipContext = nullptr;
+    mMipContext->ShutDown();
+    mMipContext = nullptr;
 
     return 0;
     }

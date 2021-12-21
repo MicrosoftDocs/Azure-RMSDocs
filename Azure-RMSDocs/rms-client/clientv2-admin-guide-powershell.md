@@ -72,7 +72,7 @@ In addition to the prerequisites for installing the **AzureInformationProtection
 
     For example, you may want to remove protection for others for the sake of data discovery or recovery. If you are using labels to apply protection, you can remove that protection by setting a new label that doesn't apply protection, or you can remove the label.
 
-    To remove protection, use the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet with the *RemoveProtection* parameter. The remove protection capability is disabled by default and must first be enabled using the [Set-LabelPolicy](/powershell/module/azureinformationprotection/set-labelpolicy) cmdlet.
+    To remove protection, use the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet with the *RemoveProtection* parameter. In some cases, the remove protection capability may be disabled by default and must first be enabled using the [Set-LabelPolicy](clientv2-admin-guide-customizations.md#enable-removal-of-protection-from-compressed-files) cmdlet.
 
 ## RMS to unified labeling cmdlet mapping
 
