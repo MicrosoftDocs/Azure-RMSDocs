@@ -80,7 +80,7 @@ You can use different clients in the same environment to support different busin
 
 When you have a Windows computer that runs Microsoft 365 apps that are a minimum version 1910 and one of the Azure Information Protection clients is installed, by default the built-in labeling solution is disabled in Office apps. However, you can change this behavior to use the built-in labeling solution for just your Office apps. With this configuration, the Azure Information Protection client remains available for labeling in File Explorer, PowerShell, and the scanner. For instructions to disable the Azure Information Protection client in Microsoft 365 apps, see the section [Office built-in labeling solution and the Azure Information Protection client](/microsoft-365/compliance/sensitivity-labels-office-apps#office-built-in-labeling-client-and-the-azure-information-protection-client) from the Microsoft 365 Compliance documentation.
 
-#### Rights Management client
+### Rights Management client
 
 The RMS client provides protection only, and is automatically installed with some applications, including Office applications, the AIP unified labeling and classic clients, and RMS-enlightened applications from other software vendors.
 
