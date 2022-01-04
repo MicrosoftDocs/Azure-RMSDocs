@@ -51,7 +51,7 @@ For more information, see
 - [Final reminder to migrate from Azure Information Protection classic client to unified labeling](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/final-reminder-to-migrate-from-azure-information-protection/ba-p/2731734)
 - The [built-in labeling documentation](/microsoft-365/compliance/sensitivity-labels)
 
-## Chose your labeling solution
+## Choose your Windows labeling solution
 
 When considering whether to use the recommended, built-in labeling solution for Office applications, or the additional AIP unified labeling client, consider the following:
 
