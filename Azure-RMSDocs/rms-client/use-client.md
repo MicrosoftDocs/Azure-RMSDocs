@@ -215,7 +215,7 @@ While the AIP clients support both Microsoft Office 97-2003 file formats, such a
 For more information about support for dynamic content markings and per app content markings for the built-in labeling solution, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables).
 
 <a name="9"></a><sup>9</sup>
-For built-in labeling, selected labeling and labeling policy customizations are supported via PowerShell. For more information, see [Manage sensitivity labels in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
+Built-in labeling supports selected PowerShell advanced settings. For a list of these settings, see [New-Label](/powershell/module/exchange/new-label) or [Set-Label](/powershell/module/exchange/set-label), and [New-LabelPolicy](/powershell/module/exchange/new-labelpolicy) or [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy). However, many customizations are now supported by the wizards in the Microsoft 365 compliance center. For more information, see [Manage sensitivity labels in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps).
 
 <a name="10"></a><sup>10</sup>
 In the Azure portal, see [Azure Information Protection analytics](../reports-aip.md). In the Microsoft 365 compliance center, see the [activity explorer](/microsoft-365/compliance/data-classification-activity-explorer). For detailed support information, see the **Audit label-related user activity** row in the [capabilities tables](/microsoft-365/compliance/sensitivity-labels-office-apps) from the Microsoft 365 Compliance documentation.
