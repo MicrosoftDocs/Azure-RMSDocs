@@ -17,8 +17,6 @@ The Azure Information Protection administration portal provides access to admini
 
 By default, MIP SDK **does not** send audit events. Auditing must be enabled in one or more label policies for audit events to fire from MIP SDK-enabled applications.
 
-To enable auditing in MIP SDK, a policy setting called `EnableAudit` must be set to true on any label policies where auditing is desired. 
-
 To change this behavior, so that audit data is sent by all MIP SDK-enabled applications, do the following:
 
 - Add the following policy [advanced setting](https://docs.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configuring-advanced-settings-for-the-client-via-powershell) using the Office 365 Security & Compliance Center PowerShell:
