@@ -13,6 +13,30 @@ ms.author: tommos
 
 The Azure Information Protection administration portal provides access to administrator reports. These reports provide visibility in to which labels users are applying, manually or automatically, across any applications or services that have integrated the MIP SDK. Development partners using the SDK can enable this functionality to surface information from their applications in customer reports.
 
+## Enabling Auditing
+
+By default, MIP SDK **does not** send audit events. Auditing must be enabled in one or more label policies for audit events to fire from MIP SDK-enabled applications.
+
+To enable auditing in MIP SDK, a policy setting called `EnableAudit` must be set to true on any label policies where auditing is desired. 
+
+To change this behavior, so that audit data is sent by all MIP SDK-enabled applications, do the following:
+
+- Add the following policy [advanced setting](https://docs.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configuring-advanced-settings-for-the-client-via-powershell) using the Office 365 Security & Compliance Center PowerShell:
+
+    - Key: **EnableAudit**
+    - Value: **True**
+
+    For example, if your label policy is named "Global":
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="True"}
+    ```
+
+    > [!NOTE]
+    > By default, this advanced setting is not present in the policy, and the audit logs are not sent.
+    >
+
+
 ## Event Types
 
 There are three types of events that can be submitted via the SDK to Azure Information Protection Analytics. **Heartbeat events**, **discovery events**, and **change events**
@@ -56,7 +80,7 @@ Change events provide information about the file, the label that was applied or 
 
 ```cpp
 // Create labeling options, set label
-string contentId = "C:\users\myuser\Documents\MyPlan.docx";
+string contentId = "C:\\users\\myuser\\Documents\\MyPlan.docx";
 mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
 handler->SetLabel(labelId, labelingOptions, mip::ProtectionSettings());
 auto commitPromise = std::make_shared<std::promise<bool>>();
