@@ -39,9 +39,28 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support**  | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support**  | March 2, 2021      |
 
+## Version 1.11.64
+
+**Release Date:** January 12, 2022
+
+### File SDK
+
+- Fixed a bug in pfile-wrapped MSG files using the incorrect content format.
+- Fixed a bug where the `Inspector` class caused a crash on `rpmsg` files.
+- Fixed a bug where SDK wasn't properly compressing files over 4GB, resulting in possible corruption.
+
+### Protection SDK
+
+- Fixed an issue related to chasing DNS records for AD RMS on iOS.
+
+### Platform and Dependency Updates
+
+- Updated log4j in Java sample apps.
+- Rename arm64 ABI on Android to arm64-v8a
+
 ## Version 1.11.53
 
-**Release Date** November 17, 2021
+**Release Date:** November 17, 2021
 
 ### File SDK
 
