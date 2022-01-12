@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/12/2021
+ms.date: 12/13/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -82,11 +82,11 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.13.47.0 (Public preview)
+## Version 2.13.49.0
 
-Unified labeling scanner and client version 2.13.47.0
+Unified labeling scanner and client version 2.13.49.0
 
-**Released** 11/01/2021
+**Released** 1/12/2022
 
 This version includes the following new updates, fixes, and enhancements for the unified labeling scanner and client:
 
@@ -135,6 +135,10 @@ This version of the unified labeling client and scanner provides the following f
 - Fixed an issue where Outlook may fail to send a message with embedded images in rich-text with rules for [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) configured.
 - Fixed an issue where the AIP add-in may fail to load in Office apps with language related errors.
 - Fixed an issue to prevent errors from occurring when removing protection from a PST file with special characters.
+- Fixed an issue where extra draft emails were kept while working with Outlook in [Online mode](https://support.microsoft.com/en-us/office/switch-from-working-offline-to-online-2460e4a8-16c7-47fc-b204-b1549275aac9).
+- Fixed an issue where popup messages were displayed, prompting users to save changes even when no changes were made, when working with Outlook in [Online mode](https://support.microsoft.com/en-us/office/switch-from-working-offline-to-online-2460e4a8-16c7-47fc-b204-b1549275aac9).
+- Fixed an issue where emails to external guest users could not be sent if collaboration rules for [popup messages](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) were configured.
+
 
 ## Version 2.12.62.0
 
