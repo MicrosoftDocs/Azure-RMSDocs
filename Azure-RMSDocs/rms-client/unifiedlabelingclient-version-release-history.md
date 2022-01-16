@@ -39,7 +39,7 @@ This article describes the latest features available for the unified labeling cl
 
 You can download the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
-If you are looking for updates for the recommended built-in labeling solution for Microsoft Office application, see:
+If you are looking for updates for the *built-in labeling solution* for Microsoft Office applications, see:
 
 - Information protection items in [What's new in Microsoft 365 compliance](/microsoft-365/compliance/whats-new)
 - [Microsoft Information Protection in Microsoft 365](/microsoft-365/compliance/information-protection)
