@@ -39,15 +39,25 @@ This article describes the latest features available for the unified labeling cl
 
 You can download the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
+If you are looking for updates for the *built-in labeling solution* for Microsoft Office applications, see:
+
+- Information protection items in [What's new in Microsoft 365 compliance](/microsoft-365/compliance/whats-new)
+- [Microsoft Information Protection in Microsoft 365](/microsoft-365/compliance/information-protection)
+- The [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance
+), filtered for Microsoft 365 compliance items
+
+## Servicing information and timelines
+
+Each general availability (GA) version of the Azure Information Protection unified labeling client is supported for up to six months after the release of the subsequent GA version. The documentation does not include information about unsupported versions of the client. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
+
+### Microsoft Update Catalog availability
+
 After a short delay of typically four weeks, the latest general availability version is also included in the Microsoft Update Catalog. Azure Information Protection versions have a product name of **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Unified Labeling Client**, and a classification of **Updates**.
 
 Including Azure Information Protection in the catalog means that you can upgrade the client using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
 
 For more information, see [Upgrading and maintaining the Azure Information Protection unified labeling client](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
-## Servicing information and timelines
-
-Each general availability (GA) version of the Azure Information Protection unified labeling client is supported for up to six months after the release of the subsequent GA version. The documentation does not include information about unsupported versions of the client. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
 
 ### General availability versions that are no longer supported
 
