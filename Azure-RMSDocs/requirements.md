@@ -169,7 +169,7 @@ For more information, see [Applications that support Azure Rights Management dat
 
 ## Firewalls and network infrastructure
 
-If you have a firewalls or similar intervening network devices that are configured to allow specific connections, the network connectivity requirements are listed in this Office article: [Microsoft 365 Common and Office Online](/office365/enterprise/urls-and-ip-address-ranges#microsoft-365-common-and-office-online).
+If you have firewalls or similar intervening network devices that are configured to allow specific connections, the network connectivity requirements are listed in this Office article: [Microsoft 365 Common and Office Online](/office365/enterprise/urls-and-ip-address-ranges#microsoft-365-common-and-office-online).
 
 Azure Information Protection has the following additional requirements:
 
