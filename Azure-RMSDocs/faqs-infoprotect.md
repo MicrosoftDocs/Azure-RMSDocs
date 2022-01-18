@@ -36,11 +36,9 @@ Have a question about Azure Information Protection that is specifically about cl
 
 ## Which client do I install for testing new functionality?
 
-We recommend using the built-in labeling solution for Office apps by default, and then installing the Azure Information Protection unified labeling client in parallel if you need the extra feaures supported by AIP.
+We recommend using the built-in labeling solution for Office apps by default, and then installing the Azure Information Protection unified labeling client in parallel if you need the extra features supported by AIP.
 
-You can use the AIP client's extra functionality and built-in labeling simultaneously and the unified labeling client downloads labels and policy settings from the Microsoft 365 compliance center.
-
-The unified labeling client is in general availability.
+You can use the AIP client's extra functionality and built-in labeling simultaneously, and the unified labeling client downloads labels and policy settings from the Microsoft 365 compliance center.
 
 For more information, including a feature and functionality comparison table, see [Choose your Windows labeling solution](rms-client/use-client.md#choose-your-windows-labeling-solution).
 
