@@ -100,21 +100,21 @@
     - name: Protection SDK handler (C++)
       href: concept-handler-protection-cpp.md
   - name: Profile and Engine (C++)
-      items: 
-        - name: Profile and Engine object concepts
-          href: concept-profile-engine-cpp.md
-        - name: File SDK profile (C++)
-          href: concept-profile-engine-file-profile-cpp.md
-        - name: File SDK engine (C++)
-          href: concept-profile-engine-file-engine-cpp.md
-        - name: Policy SDK profile (C++)
-          href: concept-profile-engine-policy-profile-cpp.md
-        - name: Policy SDK engine (C++)
-          href: concept-profile-engine-policy-engine-cpp.md
-        - name: Protection SDK profile (C++)
-          href: concept-profile-engine-protection-profile-cpp.md
-        - name: Protection SDK engine (C++)
-          href: concept-profile-engine-protection-engine-cpp.md    
+    items: 
+    - name: Profile and Engine object concepts
+      href: concept-profile-engine-cpp.md
+    - name: File SDK profile (C++)
+      href: concept-profile-engine-file-profile-cpp.md
+    - name: File SDK engine (C++)
+      href: concept-profile-engine-file-engine-cpp.md
+    - name: Policy SDK profile (C++)
+      href: concept-profile-engine-policy-profile-cpp.md
+    - name: Policy SDK engine (C++)
+      href: concept-profile-engine-policy-engine-cpp.md
+    - name: Protection SDK profile (C++)
+      href: concept-profile-engine-protection-profile-cpp.md
+    - name: Protection SDK engine (C++)
+      href: concept-profile-engine-protection-engine-cpp.md    
   - name: Labels and Protection
     items:
     - name: Labels   
