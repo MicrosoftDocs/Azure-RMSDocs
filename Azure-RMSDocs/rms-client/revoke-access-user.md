@@ -48,11 +48,7 @@ To revoke access from Word, Excel, or PowerPoint:
     > [!TIP]
     > If you've only just applied a label and protection, you cannot revoke access in the same session. Reopen the document if you need to revoke access.
 
-1. On the **Home** tab, click the **Sensitivity** button and select **Revoke Access**:
-
-    :::image type="content" source="../media/track-revoke-word.png" alt-text="Select Revoke Access from Microsoft Word":::
-
-    If you don't see this option, see a [list of possible scenarios](#dont-see-the-revoke-access-option).
+1. On the **Home** tab, click the **Sensitivity** button and select **Revoke Access**. If you don't see this option, see a [list of possible scenarios](#dont-see-the-revoke-access-option).
  
 1. In the confirmation message that appears, click **Yes** to continue.
 
