@@ -52,7 +52,9 @@ When applied to a file, the result is similar to the table below.
 
 ## ContentBits
 
-The contentBits metadata property in MIP SDK is used to inform downstream applications of the header, footer, watermark, or protection settings that were applied to the file. Using this property, an application like Word, Excel, or PowerPoint can compare the value on the file metadata to the value it computes based on the policy. If there's a difference, it can apply the missing information. 
+The `contentBits` metadata property in MIP SDK is used to indicate which content-modifying actions were taking on a file by the labeling application. 
+
+`contentBits` can be read by downstream applications to understand which actions were applied to the file. Using this property, an application like Word, Excel, or PowerPoint can compare the value on the file metadata to the value it computes based on the policy. If there's a difference, it may apply the missing information.
 
 Take for example the MIP File SDK. It doesn't support applying header, footer, or watermark directly to a file. When a file is labeled with MIP SDK, the only outcomes for contentBits will be `0x0` if the file is **unprotected** or `0x8` if the file is **protected**. This is true even if the label policy has header, footer, and watermark configured. 
 
@@ -85,6 +87,9 @@ MSIP_Label_f048e7b8-f3aa-4857-bf32-a317f4bc3f29_GeneratedBy = HRReportingSystem
 
 > [!Note]
 > To maintain compatibility across common applications, the maximum length for each a key and a value is 255 characters.
+
+> [!Note]
+> When the [protected co-authoring](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-coauthoring?view=o365-worldwide) experience is enabled, custom metadata properties will be written to the custom.xml component of supported Office file types.
 
 ## Versioning
 
