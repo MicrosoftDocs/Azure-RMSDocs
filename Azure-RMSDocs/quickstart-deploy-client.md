@@ -68,11 +68,11 @@ See any of the following quickstarts and tutorials to get started with the Azure
 
 - [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
 - [Tutorial: Discovering your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
-- [Tutorial: Preventing oversharing using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
+- [Tutorial: Preventing oversharing using Azure Information Protection (AIP)](/azure/information-protection/tutorial-scan-networks-and-content)
 - [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md) 
 
 **See also**:
 
 - [Known issues - Azure Information Protection](known-issues.md) 
 - [Frequently asked questions for Azure Information Protection](faqs.md) 
-- [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md)        
+- [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md)

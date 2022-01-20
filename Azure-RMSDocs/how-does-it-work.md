@@ -183,7 +183,7 @@ Review [Terminology for Azure Information Protection](./terminology.md) so that 
 - [Quickstart: Deploy the unified labeling client](quickstart-deploy-client.md)
 - [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
 - [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
-- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
+- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](/azure/information-protection/tutorial-scan-networks-and-content)
 
 If you’re ready to start deploying data protection for your organization, use the [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md) for your deployment steps and links for how-to instructions.
 
