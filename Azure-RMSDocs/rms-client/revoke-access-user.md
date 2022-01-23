@@ -6,7 +6,7 @@ description: Describes how end users can use the AIP client to revoke document a
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 04/05/2021
+ms.date: 01/23/2022
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -48,11 +48,15 @@ To revoke access from Word, Excel, or PowerPoint:
     > [!TIP]
     > If you've only just applied a label and protection, you cannot revoke access in the same session. Reopen the document if you need to revoke access.
 
-1. On the **Home** tab, click the **Sensitivity** button and select **Revoke Access**. If you don't see this option, see a [list of possible scenarios](#dont-see-the-revoke-access-option).
- 
+1. On the **Home** tab, click the **Sensitivity** button and select **Revoke Access**.
+
+    :::image type="content" source="../media/track-revoke-word.png" alt-text="Screenshot of the Revoke Access option from Microsoft Word.":::
+
+    If you don't see this option, see a [list of possible scenarios](#dont-see-the-revoke-access-option).
+
 1. In the confirmation message that appears, click **Yes** to continue.
 
-Access is revoked, and other users can no longer access the document. If [offline access](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now) is allowed, users will continue to be able to access the documents that have been revoked until the offline policy period expires. 
+Access is revoked, and other users can no longer access the document. If [offline access](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now) is allowed, users will continue to be able to access the documents that have been revoked until the offline policy period expires.
 
 ### Don't see the Revoke Access option?
 
