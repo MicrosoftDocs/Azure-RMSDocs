@@ -187,8 +187,6 @@ If you are using Windows Update, the Azure Information Protection unified labeli
 
 Alternatively, you can manually upgrade the client by downloading the new release from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). Then install the new version to upgrade the client. You must use this method to upgrade preview versions and if you are upgrading from the Azure Information Protection classic client.
 
-If you are upgrading from the Azure Information Protection classic client on Windows 7, any Office applications will automatically restart during the client upgrade. This automatic restart does not apply to later operating systems, or if you are upgrading from an older version of the unified labeling client.
-
 When you manually upgrade, uninstall the previous version first only if you're changing the installation method. For example, you change from the executable (.exe) version of the client to the Windows installer (.msi) version of the client. Or, if you need to install a previous version of the client. For example, you had a preview version installed for testing and now need to revert to the current general availability version.
 
 Use the [Version release history and support policy](unifiedlabelingclient-version-release-history.md) to understand the support policy for the Azure Information Protection unified labeling client, which versions are currently supported, and what's new and changed for the supported releases. 

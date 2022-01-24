@@ -275,7 +275,7 @@ The following operating systems support the Azure Rights Management service, whi
 
 |OS  |Supported versions  |
 |---------|---------|
-|**Windows computers**     |- Windows 7 (x86, x64) </br>- Windows 8 (x86, x64) </br>- Windows 8.1 (x86, x64) </br>- Windows 10 (x86, x64)       | 
+|**Windows computers**     |- Windows 8 (x86, x64) </br>- Windows 8.1 (x86, x64) </br>- Windows 10 (x86, x64)       | 
 |**macOS**     |   Minimum version of macOS 10.8 (Mountain Lion)     |
 |**Android phones and tablets**     | Minimum version of Android 6.0        |
 |**iPhone and iPad**     | Minimum version of iOS 11.0        |

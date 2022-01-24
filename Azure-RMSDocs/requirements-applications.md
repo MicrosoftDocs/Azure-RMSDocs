@@ -264,7 +264,6 @@ Applications not currently supported by Azure RMS include:
 
 - Microsoft OneDrive for SharePoint Server 2013
 - XPS Viewer
-- Applications running on Windows versions earlier than Windows 7, Service Pack 1
 
 
 ## Next steps
