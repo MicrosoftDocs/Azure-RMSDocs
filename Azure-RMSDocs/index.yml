@@ -46,7 +46,7 @@ landingContent:
           - text: Scan networks and content
             url: tutorial-scan-networks-and-content.md
           - text: Prevent oversharing
-            url: tutorial-preventing-oversharing.md
+            url: /azure/information-protection/tutorial-scan-networks-and-content
      - linkListType: how-to-guide
        links:
           - text: View protected, non-Office, files
