@@ -113,54 +113,6 @@ Instructions for when you use these settings:
 - `https://<ConnectorFQDN>`
 
 
-## Exchange 2010 registry settings
-
-**Registry path**: HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
-
-**Type**: Reg_SZ
-
-**Value**: Default
-
-**Data**: `https://<YourTenantURL>/_wmcs/certification`
-
----
-
-**Registry path:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
-
-**Type**: Reg_SZ
-
-**Value**: Default
-
-**Data**: `https://<YourTenantURL>*/_wmcs/Licensing`
-
----
-
-**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\CertificationServerRedirection
-
-**Type**: Reg_SZ
-
-**Value**: `https://<YourTenantURL>`
-
-**Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
-
-- `http://<ConnectorFQDN>`
-
-- `https://<ConnectorFQDN>`
-
----
-
-**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
-
-**Type**: Reg_SZ
-
-**Value**: `https://<YourTenantURL>`
-
-**Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
-
-- `http://<ConnectorFQDN>`
-
-- `https://<ConnectorFQDN>`
-
 
 ## SharePoint 2016 or SharePoint 2013 registry settings
 

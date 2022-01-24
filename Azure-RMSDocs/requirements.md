@@ -31,7 +31,6 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 >
->*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).*
 
 [!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
@@ -149,17 +148,11 @@ The Azure Information Protection clients can label and protect documents and ema
 
 - **Office Professional Plus 2013 with Service Pack 1**
 
-- **Office Professional Plus 2010 with Service Pack 2**
-
 Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only, and labels that apply protection are not displayed for users. 
 
 Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client, or the **Protect** button in the classic client.
 
 For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
-
-> [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
-> 
 
 ### Office features and capabilities not supported
 
@@ -269,8 +262,8 @@ Supported servers include:
 
 |Server type  |Supported versions  |
 |---------|---------|
-|**Exchange Server**     | - Exchange Server 2019 </br> - Exchange Server 2016 </br>- Exchange Server 2013 </br>- Exchange Server 2010       |
-|**Office SharePoint Server**     |- Office SharePoint Server 2019 <br>- Office SharePoint Server 2016 </br>- Office SharePoint Server 2013 </br>- Office SharePoint Server 2010         |
+|**Exchange Server**     | - Exchange Server 2019 </br> - Exchange Server 2016 </br>- Exchange Server 2013       |
+|**Office SharePoint Server**     |- Office SharePoint Server 2019 <br>- Office SharePoint Server 2016 </br>- Office SharePoint Server 2013         |
 |**File servers that run Windows Server and use File Classification Infrastructure (FCI)**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
 | | |
 

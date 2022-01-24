@@ -28,8 +28,6 @@ ms.custom: admin
 
 >***Applies to** [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
->*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
->
 >***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 This article lists the file types and sizes supported by the Azure Information Protection (AIP) unified labeling client
@@ -315,14 +313,11 @@ The following table lists maximum sizes supported for protection using Office wi
 
 |                                                     Office application                                                      |                                                Maximum file size supported                                                 |
 |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-|             **Word 2010<br /><br />Word 2013<br /><br />Word 2016**             |                                          32-bit: 512 MB<br /><br />64-bit: 512 MB                                          |
-|           **Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016**           |                      32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                       |
-| **PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016** | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
+|             **Word 2013<br /><br />Word 2016**             |                                          32-bit: 512 MB<br /><br />64-bit: 512 MB                                          |
+|           **Excel 2013<br /><br />Excel 2016**           |                      32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                       |
+| **PowerPoint 2013<br /><br />PowerPoint 2016** | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
 | | |
 
-> [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
->
 
 ### Supported file sizes for non-Office files
 
