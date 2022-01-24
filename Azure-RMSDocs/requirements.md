@@ -43,7 +43,7 @@ Before deploying Azure Information Protection, ensure that your system meets the
 - [Applications](#applications)
 - [Firewalls and network infrastructure](#firewalls-and-network-infrastructure)
 
-To deploy Azure Information Protection, you must have the AIP client installed on any machines where you want to use AIP features. For more information, see [Install the Azure Information Protection unified labeling client for users](./rms-client/clientv2-admin-guide-install.md) and [The client side of Azure Information Protection](/rms-client/use-client.md).
+To deploy Azure Information Protection, you must have the AIP client installed on any machines where you want to use AIP features. For more information, see [Install the Azure Information Protection unified labeling client for users](./rms-client/clientv2-admin-guide-install.md) and [The client side of Azure Information Protection](./rms-client/use-client.md).
 
 ## Subscription for Azure Information Protection
 
