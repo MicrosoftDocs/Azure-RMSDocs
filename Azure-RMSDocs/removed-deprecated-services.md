@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 01/24/2022
-ms.topic: concept
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -23,7 +23,7 @@ To provide a unified and streamlined customer experience, the **Azure Informatio
 
 The classic client will be officially retired, and will stop functioning, on **March 31, 2022**. At this point, the **Labels** and **Policies** tabs will be removed from the Azure portal, and the classic client will not longer be able to acquire policies from the Azure portal.
 
-We recommend that all customers migrate to unified labeling, and enable [built-in sensitivity labeling for Office applications](/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide).
+We recommend that all customers migrate to unified labeling, and enable [built-in sensitivity labeling for Office applications](/microsoft-365/compliance/sensitivity-labels).
 
 For more information, see:
 
@@ -33,11 +33,11 @@ For more information, see:
 
 ## The AIP unified labeling client
 
-As we continue to bring the customer labeling and protection experience to built-in applications like [Office 365](/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide), the Azure Information Protection unified labeling client has moved into maintenance mode as of **January 1, 2022**.
+As we continue to bring the customer labeling and protection experience to built-in applications like [Office 365](/microsoft-365/compliance/sensitivity-labels), the Azure Information Protection unified labeling client has moved into maintenance mode as of **January 1, 2022**.
 
 Moving forward, no new features will be added to the unified labeling client. In contrast, we are continuously developing new features for sensitivity labeling in Microsoft 365.
 
-We recommend that all customers enable [built-in sensitivity labeling for Office applications](/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide) and use features from the AIP unified labeling client only when they do not yet exist for built-in labeling.
+We recommend that all customers enable [built-in sensitivity labeling for Office applications](/microsoft-365/compliance/sensitivity-labels) and use features from the AIP unified labeling client only when they do not yet exist for built-in labeling.
 
 For more information, see:
 
