@@ -50,6 +50,7 @@ All you need is a computer that runs at least Windows 8. Then download and inst
 - [Remove labels and protection from files and emails](clientv2-remove-label-protection.md)
 
 
+  
 > [!NOTE]
 > If you are an administrator who is responsible for the Azure Information Protection unified labeling client on an enterprise network, see the [Azure Information Protection unified labeling client administrator guide](clientv2-admin-guide.md) for additional technical information. 
 
