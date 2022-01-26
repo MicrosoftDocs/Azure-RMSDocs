@@ -203,7 +203,7 @@ Logs are also stored locally in the **%localappdata%\Microsoft\MSIP\Scanner\Repo
 
 For additional tutorials, see:
 
-- [Tutorial: Preventing oversharing using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
+- [Tutorial: Preventing oversharing using Azure Information Protection (AIP)](/azure/information-protection/tutorial-scan-networks-and-content)
 - [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md)
 
 **See also**:
