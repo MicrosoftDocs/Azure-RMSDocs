@@ -46,9 +46,16 @@ If you are looking for updates for the *built-in labeling solution* for Microsof
 - The [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance
 ), filtered for Microsoft 365 compliance items
 
+
 ## Servicing information and timelines
 
-Each general availability (GA) version of the Azure Information Protection unified labeling client is supported for up to six months after the release of the subsequent GA version. The documentation does not include information about unsupported versions of the client. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
+The lifecycle of each generally available (GA) version of the Azure Information Protection unified labeling client could vary from build to build, depending on the release date of a subsequent GA version. In overall, each GA version is supported until the subsequent GA version is released, plus up to six months more, after the release of the subsequent GA version (could be less than 6 months, if the new subsequent GA version will be released within those 6 months).
+
+For example, version **2.12.62.0** was released on **02.08.2021**, then the next version - **2.13.49.0**, was released on **12.01.2022**. Therefore, version 2.12.62.0 is fully supported six months after 12.01.2022, which is **12.07.2022**.
+
+The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. 
+Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
+
 
 ### Microsoft Update Catalog availability
 
