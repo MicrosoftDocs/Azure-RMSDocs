@@ -64,9 +64,9 @@ When considering whether to use the recommended, built-in labeling solution for 
 
 - Built-in labeling also supports switching accounts and provides better performance in Office applications
 
-- Built-in labeling cannot be disabled.
+- Built-in labeling cannot be disabled by users.
 
-If you are still using the legacy AIP classic client, your labels and label policies are managed by PowerShell only, as labels and label policies are deprecated from the Azure portal. If you need to download and install the legacy classic client, contact support and open a ticket to access the installation file.
+If you are still using the legacy, deprecated AIP classic client, your labels and label policies are managed by PowerShell only, as labels and label policies are deprecated from the Azure portal. If you need to download and install the legacy classic client, contact support and open a ticket to access the installation file.
 
 For more information, see:
 [Detailed comparisons for the AIP clients](#detailed-comparisons-for-the-azure-information-protection-clients) and [Features not planned for the unified labeling client](#features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client).
