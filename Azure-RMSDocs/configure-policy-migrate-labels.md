@@ -275,7 +275,7 @@ To confirm whether the clients and services you use support unified labeling, re
     
     This service supports labels both before the migration to the unified labeling store, and after the migration, using the following logic:
     
-    - If the Microsoft 365 compliance center has sensitivity labels, these labels are retrieved from the Microsoft 365 compliance center. To select these labels in Cloud App Security, at least one label must be published to at least one user.
+    - If the Microsoft 365 compliance center has sensitivity labels, these labels are retrieved from the Microsoft 365 compliance center. To select these labels in Microsoft Defender for Cloud Apps, at least one label must be published to at least one user.
     
     - If the Microsoft 365 compliance center doesn't have sensitivity labels, Azure Information Protection labels are retrieved from the Azure portal.
 
