@@ -1878,6 +1878,17 @@
             "source_path": "Azure-RMSDocs/activate-office365.md",
             "redirect_url": "/information-protection/activate-service",
             "redirect_document_id": false
-        }
-    ]
+        },
+		{
+            "source_path": "Azure-RMSDocs/deployment-roadmap.md",
+            "redirect_url": "/information-protection/deployment-roadmap-classify-label-protect",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "Azure-RMSDocs/how-to-guides.md",
+            "redirect_url": "/information-protection/",
+            "redirect_document_id": false
+        }    ]
 }
+
+

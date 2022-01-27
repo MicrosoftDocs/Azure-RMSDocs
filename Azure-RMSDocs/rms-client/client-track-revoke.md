@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Track & revoke documents - Azure Information Protection classic client
+title: Track & revoke documents with the legacy tracking portal - Azure Information Protection
 description: After you have protected your documents, you can track how people are using them. If necessary, you can also revoke access to these documents if people should no longer be able to read them. 
 author: batamig
 ms.author: bagol
@@ -26,7 +26,7 @@ ms.custom: user
 
 ---
 
-# User Guide: Track and revoke your documents when you use the Azure Information Protection classic client
+# User Guide: Track and revoke your documents with the legacy tracking portal
 
 >***Applies to**: Azure Information Protection, Windows 10, Windows 8.1, Windows 8*
 >

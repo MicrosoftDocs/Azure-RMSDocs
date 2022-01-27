@@ -43,11 +43,6 @@ For an enterprise installation and configuration of the client for Windows, see 
 
 If you want to quickly install and test these clients for a single computer, see [Download and install the Azure Information Protection unified labeling client](./rms-client/install-unifiedlabelingclient-app.md).
 
-**Classic client only**: If you have the classic client installed, use these links instead:
-
-- [Azure Information Protection client administrator guide](./rms-client/client-admin-guide.md)
-- [Download and install the Azure Information Protection client](./rms-client/install-client-app.md).
-
 ## The Azure Information Protection app for iOS and Android: Installation and management
 
 To install the Azure Information Protection app viewer for iOS and Android, use the links on the [Microsoft Azure Information Protection page](https://go.microsoft.com/fwlink/?LinkId=303970). No configuration is required.

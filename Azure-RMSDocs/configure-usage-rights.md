@@ -52,9 +52,6 @@ In this table:
 
 - The **labeling admin center** is the Microsoft 365 compliance center, where you configure sensitivity labels.
 
-    If you have the classic client, configure your labels and label policies in the Azure portal.
-
-
 |Usage right|Description|Implementation|
 |-------------------------------|---------------------------|-----------------|
 |Common name: **Edit Content, Edit** <br /><br />Encoding in policy: **DOCEDIT**|Allows the user to modify, rearrange, format, or sort the content inside the application. It does not grant the right to save the edited copy.<br /><br />In Word, unless you have Office 365 ProPlus with a minimum version of [1807](/officeupdates/monthly-channel-2018#version-1807-july-25), this right isn't  sufficient to turn on or turn off **Track Changes**, or to use all the track changes features as a reviewer. Instead, to use all the track changes options requires the following right: **Full Control**. |Office custom rights: As part of the **Change** and **Full Control** options. <br /><br />Name in the Azure classic portal: **Edit Content**<br /><br />Name in the Microsoft 365 compliance center and Azure portal: **Edit Content, Edit (DOCEDIT)**<br /><br />Name in AD RMS templates: **Edit** <br /><br />API constant or value: Not applicable.|
@@ -205,19 +202,6 @@ The default use license validity period for a tenant is 30 days and you can conf
     
     For more information and guidance to configure this setting by using PowerShell, see the help for each cmdlet.
 
-## Rights included in the default templates
-
-**Relevant for**: AIP classic client only
-
-The following table lists the usage rights that are included when the default templates are created. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
-
-These default templates are created when your subscription was purchased, and the names and usage rights can be [changed](configure-policy-templates.md) in the Azure portal and with [PowerShell](/powershell/module/aipservice/set-aipservicetemplateproperty). 
-
-|Display name of template|Usage rights October 6, 2017 to current date|Usage rights before October 6, 2017|
-|----------------|--------------------|----------|
-|**\<*organization name> - Confidential View Only*** <br /><br />or<br /><br /> ***Highly Confidential \ All Employees***|View, Open, Read; Copy; View Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit|View, Open, Read|
-|**\<*organization name>- Confidential*** <br /><br />or <br /><br />***Confidential \ All Employees***|View, Open, Read; Save As, Export; Copy; View Rights; Change Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control|View, Open, Read; Save As, Export; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
-| | | |
 
 ## See Also
 

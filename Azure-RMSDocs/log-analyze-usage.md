@@ -194,30 +194,6 @@ There are many request types for the protection service but the following table 
 |**UpdateTemplate**|A call is  made from the Azure portal to update an existing template.|
 | | | 
 
-**Classic client only**
-
-The following request types are relevant for users with the AIP classic client only:
-
-|Request type|Description|
-|----------------|---------------|
-|**DeleteTemplateById**|A call is  made from the Azure portal, to delete a template by template  ID.|
-|**DocumentEventsCsv**|A call is made from the document tracking site to download the .CSV file for a single document.|
-|**ExportTemplateById**|A call is  made from the Azure portal to export a template based on a template ID.|
-|**FEGetAllTemplates**|A call is  made, from a mobile device (front-end) to get the templates.|
-|**GetAllDocs**|A call is made from the document tracking site to load the **all documents** page for a user, or search all documents for the tenant. Use this value with the admin-action and acting-as-admin fields:<br /><br />- admin-action is empty: A user views the **all documents** page for their own documents.<br /><br />- admin-action is true and acting-as-user is empty: An administrator views all documents for their tenant.<br /><br />- admin-action is true and acting-as-user is not empty: An administrator views the **all documents** page for a user.|
-|**GetAllTemplates**|A call is  made from the Azure portal, to get all the templates.|
-|**GetConnectorAuthorizations**|A call  is made from the RMS connectors to get their configuration from the cloud.|
-|**GetSingle**|A call is made from the document tracking site to navigate to a **single document** page.|
-|**GetTemplateById**|A call is  made from the Azure portal to get a template by specifying a template ID.|
-|**LoadEventsForMap**|A call is made from the document tracking site to navigate to the map view for a single document.|
-|**LoadEventsForSummary**|A call is made from the document tracking site to navigate to the timeline view for a single document.|
-|**LoadEventsForTimeline**|A call is made from the document tracking site to navigate to the map view for a single document.|
-|**ImportTemplate**|A call is  made from the Azure portal to import a template.|
-|**RevokeAccess**|A call is made from the document tracking site to revoke a document.|
-|**SearchUsers** |A call is made from the document tracking site to search all users in a tenant.|
-|**UpdateNotificationSettings**|A call is made from the document tracking site to change the notification settings for a single document.|
-|**UpdateTemplate**|A call is  made from the Azure portal to update an existing template.|
-| | | 
 
 
 

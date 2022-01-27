@@ -137,8 +137,6 @@ The computer running the **AIPAuthentication** cmdlet downloads the labeling pol
 
 The **Set-AIPAuthentication** cmdlet requires an app registration for the *AppId* and *AppSecret* parameters. 
 
-For users who've recently migrated from the classic client, and had created an app registration for the previous *WebAppID* and *NativeAppId* parameters, you'll need to create a new app registration for the unified labeling client.
-
 **To create a new app registration for the unified labeling client Set-AIPAuthentication cmdlet**:
 
 1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/) to the Azure AD tenant that you use with Azure Information Protection.

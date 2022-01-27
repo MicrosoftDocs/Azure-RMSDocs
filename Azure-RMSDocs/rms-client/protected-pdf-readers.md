@@ -32,8 +32,6 @@ search.appverid:
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 
-[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
-
 This article describes the protected PDF readers that are supported for Azure Information Protection (AIP). Protected PDF readers enable users to open those encrypted PDFs and view the sensitive information contained.
 
 Encrypting your PDFs with AIP ensures that unauthorized people cannot read the file's content. Protected PDF readers that support AIP verify that you've been granted permissions to open the document, and also decrypt the content for you.
@@ -60,10 +58,6 @@ For instructions, see the following sections:
 The PDF readers referenced on this page can all open protected documents that adhere to the ISO standard for PDF encryption. 
 
 This standard is used by default by the AIP client.
-
-> [!NOTE]
-> **Classic client only**: If you have the AIP classic client, this may have been [disabled by an administrator](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
-> 
 
 ### Viewing protected PDFs in Adobe Acrobat Reader
 

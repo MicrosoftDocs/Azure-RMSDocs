@@ -55,12 +55,8 @@ After yo have de-provisioned your AD RMS servers, you might want to take the opp
 
 For sensitivity labels and the unified labeling client, use the Microsoft 365 compliance center. For more information, see the Microsoft 365 documentation.
 
-If you're using the classic client, use the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](./configure-policy-templates.md).
-
 >[!IMPORTANT]
 > At the end of this migration, your AD RMS cluster cannot be used with Azure Information Protection and the hold your own key ([HYOK](configure-adrms-restrictions.md)) option. 
->
-> If you are using the classic client with HYOK, because of the redirections that are now in place, the AD RMS cluster that you use must have different licensing URLs to the ones in the clusters that you migrated.
 >
 ### Additional configuration for computers that run Office 2010
 

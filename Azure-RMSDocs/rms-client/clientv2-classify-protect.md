@@ -77,7 +77,7 @@ In addition to manually selecting labels, labels can also be applied in the foll
 
 If you don't see the **Sensitivity** button in your Office apps, you might not have the Azure Information Protection unified labeling client [installed](install-unifiedlabelingclient-app.md).
 
-If you don't see a **Sensitivity** button on the ribbon, but do see a **Protect** button with labels instead, you have the Azure Information Protection classic client installed and not the Azure Information Protection unified labeling client. For more information, see [What's the difference between the Azure Information Protection classic and unified labeling clients?](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)?
+If you don't see a **Sensitivity** button on the ribbon, but do see a **Protect** button with labels instead, you have the legacy Azure Information Protection *classic client* installed and not the Azure Information Protection unified labeling client. For more information, see the archived [AIP classic client documentation](/previous-versions/azure/information-protection).
 
 
 Your labels may appear differently than you expect for one of the following reasons:

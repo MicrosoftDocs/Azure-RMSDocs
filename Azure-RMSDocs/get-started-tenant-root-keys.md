@@ -38,9 +38,6 @@ For more information about the life-cycle operations supported for your tenant k
 
 If your organization requires on-premises protection for highly sensitive content, configure [DKE protection](plan-implement-tenant-key.md#double-key-encryption-dke) (unified labeling client only).
 
-If you need on-premises protection and are using the classic client, configure [HYOK protection](configure-adrms-restrictions.md) instead.
- 
-
 ## Start using your tenant key
 
 Activate the Rights Management service if it's not yet activated, to enable your organization to start using Azure Information Protection. Users immediately start to use your tenant key.

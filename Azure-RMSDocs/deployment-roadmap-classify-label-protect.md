@@ -219,24 +219,6 @@ As you begin to use the protection service, you might find PowerShell useful to 
 
 For more information, see [Administering protection from Azure Information Protection by using PowerShell](./administer-powershell.md).
 
-## References for classic client environments
-
-**Relevant for**: AIP classic client only
-
-If you're using the classic client, use the following references instead of those linked above:
-
-- **Deploy and run the scanner** that's provided with the classic client. For more information, see [What is the Azure Information Protection classic scanner?](deploy-aip-scanner-classic.md)
-
-- **Configure your policy in the Azure portal.** For more information, see [Configuring Azure Information Protection policy](./configure-policy.md) and [How to configure a label for Rights Management protection](./configure-policy-protection.md).
-
-- **Deploy your client for users** using the [classic client administrator guide](./rms-client/client-admin-guide.md) and [custom configuration instructions for the classic client](rms-client/client-admin-guide-customizations.md).
-
-- **PowerShell instructions**: [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md)
-
-- **Local monitoring**: [Local usage logging with Windows event monitor](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client)
-
-> [!TIP]
-> You may also be interested in the [Azure Information Protection deployment roadmap for protection only](deployment-roadmap-protect-only.md), which is supported for the classic client only.
 
 ## Next steps
 

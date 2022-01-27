@@ -44,11 +44,7 @@ However, some relevant information that can help your legal adviser make a deter
 
 - Customer-specific root keys are either managed by Microsoft or provisioned by the customer in a nCipher HSM by using "bring your own key" (BYOK). Azure Information Protection also supports features for on-premises protection, for content that cannot be protected with a cloud-based key. For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
 
-- The Azure Information Protection service is hosted in regional data centers across the globe. Azure Information Protection keys and policies always remain within the region in which is originally deployed.
-
-    > [!NOTE]
-    > Azure Information Protection policies are relevant for the AIP classic client only.
-    >
+- The Azure Information Protection service is hosted in regional data centers across the globe. Azure Information Protection keys always remain within the region in which is originally deployed.
   
 - Azure Information Protection does not transmit document contents from clients to the Azure Information Protection service. Content encryption and decryption operations are performed in-place in the client device. Or, for service-based rendering, these operations are performed within the service that’s rendering the content. [More information](./how-does-it-work.md)
 
