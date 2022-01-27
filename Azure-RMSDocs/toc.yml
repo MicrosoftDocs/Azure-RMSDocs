@@ -65,10 +65,6 @@
     href: plan-implement-tenant-key.md
   - name: Deployment roadmap
     href: deployment-roadmap-classify-label-protect.md
-  - name: AIP mobile apps for iOS and Android
-    href: ./rms-client/mobile-app-faq.md
-  - name: Protected PDF readers
-    href: ./rms-client/protected-pdf-readers.md
   - name: Security
     items:
     - name: Security baseline
@@ -181,45 +177,49 @@
       href: deploy-aip-scanner-manage.md
     - name: Troubleshoot your scanner
       href: deploy-aip-scanner-tsg.md
-  - name: Monitoring with AIP
-    items:
-    - name: Using AIP reports
-      href: reports-aip.md
-    - name: Logging and analyzing usage
-      href: log-analyze-usage.md
   - name: Deploying & using the client
     items:
     - name: Unified labeling client admin guide
       items:
       - name: Overview
         href: ./rms-client/clientv2-admin-guide.md
-      - name: Install the client for users
+      - name: Installing the client for users
         href: ./rms-client/clientv2-admin-guide-install.md
-      - name: Track and revoke access
+      - name: Tracking and revoking access
         href: ./rms-client/track-and-revoke-admin.md
       - name: Customizations
         href: ./rms-client/clientv2-admin-guide-customizations.md
-      - name: Client files and usage logging
-        href: ./rms-client/clientv2-admin-guide-files-and-logging.md
       - name: PowerShell commands
         href: ./rms-client/clientv2-admin-guide-powershell.md
     - name: Unified labeling client user guide
       items:
       - name: Overview
         href: ./rms-client/clientv2-user-guide.md
-      - name: Download and install the client
+      - name: Downloading and installing the client
         href: ./rms-client/install-unifiedlabelingclient-app.md
-      - name: Classify a file or email
+      - name: Classifying a file or email
         href: ./rms-client/clientv2-classify.md
-      - name: Classify and protect a file or email
+      - name: Classifying and protecting a file or email
         href: ./rms-client/clientv2-classify-protect.md
-      - name: Open files that have been protected
+      - name: Viewing protected files on Windows
         href: ./rms-client/clientv2-view-use-files.md
-      - name: Remove labels and protection
+      - name: Removing labels and protection
         href: ./rms-client/clientv2-remove-label-protection.md
-      - name: Revoke document access
+      - name: Revoking document access
         href: ./rms-client/revoke-access-user.md
-  - name: Develop & customize apps
+  - name: Monitoring with AIP
+    items:
+    - name: Using AIP reports
+      href: reports-aip.md
+    - name: Viewing & analyzing service usage
+      href: log-analyze-usage.md
+    - name: Viewing logs for client files and usage
+      href: ./rms-client/clientv2-admin-guide-files-and-logging.md
+  - name: Viewing protected files with mobile apps for iOS and Android
+    href: ./rms-client/mobile-app-faq.md
+  - name: Viewing protected PDFs
+    href: ./rms-client/protected-pdf-readers.md
+  - name: Developing & customizing apps
     items:
     - name: Microsoft Information Protection SDK
       href: /information-protection/develop/
