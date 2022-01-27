@@ -29,10 +29,6 @@ ms.custom: admin
 
 >***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
 >
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
-
 The Azure Information Protection tenant key is a root key for your organization. Other keys can be derived from this root key, including user keys, computer keys, or document encryption keys. Whenever Azure Information Protection uses these keys for your organization, they cryptographically chain to your Azure Information Protection root tenant key.
 
 In addition to your tenant root key, your organization may require on-premises security for specific documents. On-premises key protection is typically required only for a small amount of content, and therefore is configured together with a tenant root key.

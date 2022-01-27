@@ -30,7 +30,7 @@ ms.custom: user
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
->***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+
 
 When the Azure Information Protection unified client is [installed on your computer](install-unifiedlabelingclient-app.md), you can remove sensitivity labels and protection from files and emails.
 

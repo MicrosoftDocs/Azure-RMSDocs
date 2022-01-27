@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Document tracking for Azure Information Protection
-description: Instructions and information for admins to configure and use document tracking for Azure Information Protection.
+title: Document tracking for Rights Management Service protection via the legacy tracking portal
+description: Instructions and information for admins to configure and use the legacy document tracking portal for the Rights Management Service.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -26,13 +26,10 @@ ms.custom: admin
 
 ---
 
-# Admin Guide: Configuring and using document tracking for Azure Information Protection using the classic client
+# Admin Guide: Configuring and using document tracking for Rights Management Service protection with the legacy tracking portal
 
 >***Applies to**: Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
->***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](track-and-revoke-admin.md).*
-
-[!INCLUDE [AIP classic client is deprecated - extended support customers](../includes/classic-client-deprecation-extended-support.md)]
 
 If you have a [subscription that supports document tracking](https://www.microsoft.com/cloud-platform/azure-information-protection-features) and the AIP classic client, the document tracking site is enabled by default for all users in your organization. Document tracking provides information for users and administrators about when a protected document was accessed and if necessary, a tracked document can be revoked.
 
