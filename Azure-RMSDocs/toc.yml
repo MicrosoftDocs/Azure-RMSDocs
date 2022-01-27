@@ -4,25 +4,12 @@
   items:
   - name: What is Azure Information Protection?
     href: what-is-information-protection.md
+  - name: Comparing built-in labeling and AIP
+    href: ./rms-client/use-client.md
   - name: What's new in AIP?
     href: ./rms-client/unifiedlabelingclient-version-release-history.md
-  - name: AIP requirements
-    items:
-    - name: Overview
-      href: requirements.md
-    - name: Additional Azure Active Directory requirements
-      href: requirements-azure-ad.md
-    - name: Application support for protection
-      href: requirements-applications.md
-    - name: File types supported
-      href: ./rms-client/clientv2-admin-guide-file-types.md
-    - name: Unified labeling client requirements
-      href: ./rms-client/reqs-ul-client.md
-    - name: On-premises scanner requirements
-      href: deploy-aip-scanner-prereqs.md
   - name: AIP is also known as ...
     href: aka.md
-  expanded: true
 - name: Quickstarts
   items:
   - name: Deploying the client
@@ -37,10 +24,20 @@
     href: tutorial-migrating-to-ul.md
 - name: Concepts
   items:
-  - name: Security
+  - name: AIP requirements
     items:
-    - name: Security baseline
-      href: /security/benchmark/azure/baselines/information-protection-security-baseline?context=/azure/information-protection/context/context
+    - name: Overview
+      href: requirements.md
+    - name: Additional Azure Active Directory requirements
+      href: requirements-azure-ad.md
+    - name: Application support for protection
+      href: requirements-applications.md
+    - name: File types supported
+      href: ./rms-client/clientv2-admin-guide-file-types.md
+    - name: Unified labeling client requirements
+      href: ./rms-client/reqs-ul-client.md
+    - name: On-premises scanner requirements
+      href: deploy-aip-scanner-prereqs.md
   - name: AIP classification and protection
     href: aip-classification-and-protection.md
   - name: Azure Rights Management
@@ -65,14 +62,22 @@
       href: ./rms-client/client-deployment-notes.md
   - name: Your Azure Information Protection tenant key
     href: plan-implement-tenant-key.md
+  - name: Deployment roadmap
+    href: deployment-roadmap-classify-label-protect.md
+  - name: AIP mobile apps for iOS and Android
+    href: ./rms-client/mobile-app-faq.md
+  - name: Protected PDF readers
+    href: ./rms-client/protected-pdf-readers.md
+  - name: Security
+    items:
+    - name: Security baseline
+      href: /security/benchmark/azure/baselines/information-protection-security-baseline?context=/azure/information-protection/context/context
 - name: How-to guides
   items:
-  - name: How-tos for common scenarios
+  - name: Overview
     href: how-to-guides.md
-  - name: Plan & prepare for the service
+  - name: Preparing for the protection service
     items:
-    - name: Deployment roadmap
-      href: deployment-roadmap-classify-label-protect.md
     - name: Configure Bring Your Own Key (BYOK) protection
       href: byok-price-restrictions.md
     - name: Get started with tenant root keys
@@ -111,7 +116,7 @@
         href: migrate-from-ad-rms-phase4.md
       - name: Phase 5 - Post migration tasks
         href: migrate-from-ad-rms-phase5.md
-  - name: Configure & use the service
+  - name: Configuring the protection service
     items:
     - name: Activating protection
       href: activate-service.md
@@ -129,52 +134,50 @@
       href: configure-usage-rights.md
     - name: Configuring super users for discovery services or data recovery
       href: configure-super-users.md
-    - name: Deploying the on-premises unified labeling scanner
-      items:
-      - name: Overview
-        href: deploy-aip-scanner.md
-      - name: Configure and install the unified labeling scanner
-        href: deploy-aip-scanner-configure-install.md
-      - name: Run the unified labeling scanner
-        href: deploy-aip-scanner-manage.md
-      - name: Troubleshoot your scanner
-        href: deploy-aip-scanner-tsg.md
-    - name: Deploying the RMS connector
-      items:
-      - name: Overview
-        href: deploy-rms-connector.md
-      - name: Install and configure the connector
-        href: install-configure-rms-connector.md
-      - name: Configure servers
-        items:
-        - name: Overview
-          href: configure-servers-rms-connector.md
-        - name: Registry settings
-          href: rms-connector-registry-settings.md
-      - name: Monitor the connector
-        href: monitor-rms-connector.md
-    - name: Verifying the Azure Rights Management service
-      href: verify.md
-    - name: Using Azure Information Protection reports
-      href: reports-aip.md
-    - name: Helping users to protect files
-      href: help-users.md
-    - name: Logging and analyzing usage
-      href: log-analyze-usage.md
-    - name: Manage personal data for Azure Information Protection
-      href: manage-personal-data.md
-    - name: Decommissioning and deactivating
-      href: decommission-deactivate.md
-    - name: Administering with PowerShell
-      items:
-      - name: Overview
-        href: administer-powershell.md
-      - name: Installing the AIPService PowerShell module
-        href: install-powershell.md
-  - name: Deploy & use the client
+  - name: Deploying the RMS connector
     items:
     - name: Overview
-      href: ./rms-client/use-client.md
+      href: deploy-rms-connector.md
+    - name: Install and configure the connector
+      href: install-configure-rms-connector.md
+    - name: Configure servers
+      items:
+      - name: Overview
+        href: configure-servers-rms-connector.md
+      - name: Registry settings
+        href: rms-connector-registry-settings.md
+    - name: Monitor the connector
+      href: monitor-rms-connector.md
+  - name: Verifying the protection service
+    href: verify.md
+  - name: Deploying the on-premises unified labeling scanner
+    items:
+    - name: Overview
+      href: deploy-aip-scanner.md
+    - name: Configure and install the unified labeling scanner
+      href: deploy-aip-scanner-configure-install.md
+    - name: Run the unified labeling scanner
+      href: deploy-aip-scanner-manage.md
+    - name: Troubleshoot your scanner
+      href: deploy-aip-scanner-tsg.md
+  - name: Using Azure Information Protection reports
+    href: reports-aip.md
+  - name: Logging and analyzing usage
+    href: log-analyze-usage.md
+  - name: Helping users to protect files
+    href: help-users.md
+  - name: Manage personal data
+    href: manage-personal-data.md
+  - name: Decommissioning and deactivating
+    href: decommission-deactivate.md
+  - name: Administering with PowerShell
+    items:
+    - name: Overview
+      href: administer-powershell.md
+    - name: Installing the AIPService PowerShell module
+      href: install-powershell.md
+  - name: Deploy & use the client
+    items:
     - name: Unified labeling client admin guide
       items:
       - name: Overview
@@ -205,34 +208,12 @@
         href: ./rms-client/clientv2-remove-label-protection.md
       - name: Revoke document access
         href: ./rms-client/revoke-access-user.md
-    - name: AIP apps for iOS and Android
-      href: ./rms-client/mobile-app-faq.md
-    - name: Protected PDF readers
-      href: ./rms-client/protected-pdf-readers.md
-  - name: How-tos for classic client scenarios
+  - name: Track and revoke from the tracking portal (legacy)
     items:
-    - name: Configuring the Azure Information Protection policy
-      items:
-      - name: Configure and manage templates
-    - name: Azure Information Protection classic scanner
-    - name: Azure Information Protection classic client
-      items:
-      - name: Admin guide
-        items:
-        - name: Document tracking
-          href: ./rms-client/client-admin-guide-document-tracking.md
-      - name: User guide
-        items:
-        - name: Track and revoke your documents
-          href: ./rms-client/client-track-revoke.md
-    - name: RMS protection with Windows Server FCI
-      items:
-      - name: File servers that run Windows Server and use File Classification Infrastructure
-        href: file-server-support.md
-      - name: Configuring File Classification Infrastructure
-        href: ./rms-client/configure-fci.md
-      - name: PowerShell script
-        href: ./rms-client/fci-script.md
+    - name: Tracking documents for admins
+      href: ./rms-client/client-admin-guide-document-tracking.md
+    - name: Tracking and revoking documents for users
+      href: ./rms-client/client-track-revoke.md
   - name: Develop & customize apps
     items:
     - name: Microsoft Information Protection SDK
