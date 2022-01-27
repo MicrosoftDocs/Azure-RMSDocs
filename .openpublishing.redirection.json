@@ -131,11 +131,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "Azure-RMSDocs/configure-policy-migrate-labels.md",
-      "redirect_url": "/previous-versions/azure/information-protection/configure-policy-migrate-labels",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "Azure-RMSDocs/configure-policy-new-label.md",
       "redirect_url": "/previous-versions/azure/information-protection/configure-policy-new-label",
       "redirect_document_id": false
