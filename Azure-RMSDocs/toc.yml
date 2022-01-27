@@ -1,6 +1,7 @@
 - name: Azure Information Protection Documentation
   href: index.yml
 - name: Overview
+  expanded: true
   items:
   - name: What is Azure Information Protection?
     href: what-is-information-protection.md
@@ -76,80 +77,100 @@
   items:
   - name: Overview
     href: how-to-guides.md
-  - name: Preparing for the protection service
+  - name: Deploying & using the protection service
     items:
-    - name: Configure Bring Your Own Key (BYOK) protection
-      href: byok-price-restrictions.md
-    - name: Get started with tenant root keys
-      href: get-started-tenant-root-keys.md
-    - name: Operations for your tenant key
+    - name: Preparing for the protection service
       items:
-      - name: Overview
-        href: operations-tenant-key.md
-      - name: Microsoft-managed
-        href: operations-microsoft-managed-tenant-key.md
-      - name: Customer-managed
-        href: operations-customer-managed-tenant-key.md
-    - name: Preparing users and groups
-      href: prepare.md
-    - name: Manage Active Directory Mobile Device Extensions
-      href: active-directory-rights-manage-mobile-device.md
-    - name: Migrating from AD RMS
-      items:
-      - name: Overview
-        href: migrate-from-ad-rms-to-azure-rms.md
-      - name: Phase 1 - Preparation
-        href: migrate-from-ad-rms-phase1.md
-      - name: Phase 2 - Server-side configuration
+      - name: Configure Bring Your Own Key (BYOK) protection
+        href: byok-price-restrictions.md
+      - name: Get started with tenant root keys
+        href: get-started-tenant-root-keys.md
+      - name: Operations for your tenant key
         items:
         - name: Overview
-          href: migrate-from-ad-rms-phase2.md
-        - name: Software key to software key
-          href: migrate-softwarekey-to-softwarekey.md
-        - name: HSM key to HSM key
-          href: migrate-hsmkey-to-hsmkey.md
-        - name: Software key to HSM key
-          href: migrate-softwarekey-to-hsmkey.md
-      - name: Phase 3 - Client-side configuration
-        href: migrate-from-ad-rms-phase3.md
-      - name: Phase 4 - Supporting services configuration
-        href: migrate-from-ad-rms-phase4.md
-      - name: Phase 5 - Post migration tasks
-        href: migrate-from-ad-rms-phase5.md
-  - name: Configuring the protection service
-    items:
-    - name: Activating protection
-      href: activate-service.md
-    - name: Configuring applications
+          href: operations-tenant-key.md
+        - name: Microsoft-managed
+          href: operations-microsoft-managed-tenant-key.md
+        - name: Customer-managed
+          href: operations-customer-managed-tenant-key.md
+      - name: Preparing users and groups
+        href: prepare.md
+      - name: Manage Active Directory Mobile Device Extensions
+        href: active-directory-rights-manage-mobile-device.md
+      - name: Migrating from AD RMS
+        items:
+        - name: Overview
+          href: migrate-from-ad-rms-to-azure-rms.md
+        - name: Phase 1 - Preparation
+          href: migrate-from-ad-rms-phase1.md
+        - name: Phase 2 - Server-side configuration
+          items:
+          - name: Overview
+            href: migrate-from-ad-rms-phase2.md
+          - name: Software key to software key
+            href: migrate-softwarekey-to-softwarekey.md
+          - name: HSM key to HSM key
+            href: migrate-hsmkey-to-hsmkey.md
+          - name: Software key to HSM key
+            href: migrate-softwarekey-to-hsmkey.md
+        - name: Phase 3 - Client-side configuration
+          href: migrate-from-ad-rms-phase3.md
+        - name: Phase 4 - Supporting services configuration
+          href: migrate-from-ad-rms-phase4.md
+        - name: Phase 5 - Post migration tasks
+          href: migrate-from-ad-rms-phase5.md
+    - name: Configuring the protection service
+      items:
+      - name: Activating protection
+        href: activate-service.md
+      - name: Configuring applications
+        items:
+        - name: Overview
+          href: configure-applications.md
+        - name: Microsoft 365 services
+          href: configure-office365.md
+        - name: Office apps
+          href: configure-office-apps.md
+        - name: Azure Information Protection client
+          href: configure-client.md
+      - name: Configuring usage rights
+        href: configure-usage-rights.md
+      - name: Configuring super users for discovery services or data recovery
+        href: configure-super-users.md
+    - name: Deploying the RMS connector
       items:
       - name: Overview
-        href: configure-applications.md
-      - name: Microsoft 365 services
-        href: configure-office365.md
-      - name: Office apps
-        href: configure-office-apps.md
-      - name: Azure Information Protection client
-        href: configure-client.md
-    - name: Configuring usage rights
-      href: configure-usage-rights.md
-    - name: Configuring super users for discovery services or data recovery
-      href: configure-super-users.md
-  - name: Deploying the RMS connector
-    items:
-    - name: Overview
-      href: deploy-rms-connector.md
-    - name: Install and configure the connector
-      href: install-configure-rms-connector.md
-    - name: Configure servers
+        href: deploy-rms-connector.md
+      - name: Install and configure the connector
+        href: install-configure-rms-connector.md
+      - name: Configure servers
+        items:
+        - name: Overview
+          href: configure-servers-rms-connector.md
+        - name: Registry settings
+          href: rms-connector-registry-settings.md
+      - name: Monitor the connector
+        href: monitor-rms-connector.md
+    - name: Verifying the protection service
+      href: verify.md
+    - name: Managing personal data
+      href: manage-personal-data.md
+    - name: Helping users to protect files
+      href: help-users.md
+    - name: Administering with PowerShell
       items:
       - name: Overview
-        href: configure-servers-rms-connector.md
-      - name: Registry settings
-        href: rms-connector-registry-settings.md
-    - name: Monitor the connector
-      href: monitor-rms-connector.md
-  - name: Verifying the protection service
-    href: verify.md
+        href: administer-powershell.md
+      - name: Installing the AIPService PowerShell module
+        href: install-powershell.md
+    - name: Decommissioning and deactivating AIP
+      href: decommission-deactivate.md
+    - name: Tracking and revoking with the legacy tracking portal
+      items:
+      - name: Tracking documents for admins
+        href: ./rms-client/client-admin-guide-document-tracking.md
+      - name: Tracking and revoking documents for users
+        href: ./rms-client/client-track-revoke.md
   - name: Deploying the on-premises unified labeling scanner
     items:
     - name: Overview
@@ -160,23 +181,13 @@
       href: deploy-aip-scanner-manage.md
     - name: Troubleshoot your scanner
       href: deploy-aip-scanner-tsg.md
-  - name: Using Azure Information Protection reports
-    href: reports-aip.md
-  - name: Logging and analyzing usage
-    href: log-analyze-usage.md
-  - name: Helping users to protect files
-    href: help-users.md
-  - name: Manage personal data
-    href: manage-personal-data.md
-  - name: Decommissioning and deactivating
-    href: decommission-deactivate.md
-  - name: Administering with PowerShell
+  - name: Monitoring with AIP
     items:
-    - name: Overview
-      href: administer-powershell.md
-    - name: Installing the AIPService PowerShell module
-      href: install-powershell.md
-  - name: Deploy & use the client
+    - name: Using AIP reports
+      href: reports-aip.md
+    - name: Logging and analyzing usage
+      href: log-analyze-usage.md
+  - name: Deploying & using the client
     items:
     - name: Unified labeling client admin guide
       items:
@@ -208,12 +219,6 @@
         href: ./rms-client/clientv2-remove-label-protection.md
       - name: Revoke document access
         href: ./rms-client/revoke-access-user.md
-  - name: Track and revoke from the tracking portal (legacy)
-    items:
-    - name: Tracking documents for admins
-      href: ./rms-client/client-admin-guide-document-tracking.md
-    - name: Tracking and revoking documents for users
-      href: ./rms-client/client-track-revoke.md
   - name: Develop & customize apps
     items:
     - name: Microsoft Information Protection SDK
