@@ -239,9 +239,20 @@ For more information about the Microsoft Graph Security API, see [Microsoft Grap
 > The Azure Information Protection support for Microsoft Graph Security is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 >
 
-## I've heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
+## What's the difference between Windows Server FCI and the Azure Information Protection scanner?
 
-The technical documentation does not contain information about upcoming releases. For this type of information, use the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent).
+Windows Server File Classification Infrastructure has historically been an option to classify documents and then protect them by using the [Rights Management connector](deploy-rms-connector.md) (Office documents only) or a [PowerShell script](./rms-client/configure-fci.md) (all file types). 
+
+We now recommend you use the [Azure Information Protection scanner](deploy-aip-scanner.md). The scanner uses the Azure Information Protection client and your Azure Information Protection policy to label documents (all file types) so that these documents are then classified and optionally, protected.
+
+The main differences between these two solutions:
+
+|  |Windows Server FCI  |Azure Information Protection scanner  |
+|---------|---------|---------|
+|**Supported data stores**    | Local folders on Windows Server        | - Windows file shares and network-attached storage<br /><br />- SharePoint Server 2016 and SharePoint Server 2013. SharePoint Server 2010 is also supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).        |
+|**Operational mode**     |Real time         |Systematically crawls the data stores once or repeatedly         |
+|**Supported file types**     | - All file types are protected by default <br /><br />- Specific file types can be excluded from protection by editing the registry|Support for file types: <br /><br />- Office file types and PDF documents are protected by default <br /><br />- Additional file types can be included for protection by editing the registry|
+
 ## Is Azure Information Protection suitable for my country?
 
 Different countries have different requirements and regulations. To help you answer this question for your organization, see [Suitability for different countries](./compliance.md#suitability-for-different-countries).

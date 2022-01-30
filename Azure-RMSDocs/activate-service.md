@@ -80,8 +80,6 @@ This procedure describes how to activate the Rights Management protection servic
 
 This procedure describes how to activate the Rights Management protection service (Azure RMS) from the Azure portal.
 
-[!INCLUDE [classic-client-deprecation-extended-support](includes/classic-client-deprecation-extended-support.md)]
-
 1. Go to and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
 
     For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
