@@ -165,7 +165,7 @@ Similarly, if you are an existing customer with AIP unified labeling deployed, y
 #### Use both solutions simultaneously
 
 - Use built-in labeling for all default scenarios in Office apps, taking advantage of automatic updates, account switching, and better performance.
-- Check the sections [below](#gap-analysis-between-built-in-labeling-and-the-aip-client) for the extra features supported by the AIP unified labeling client and its plugin for Office applications.
+- Check the sections below for the extra features supported by the AIP unified labeling client and its plugin for Office applications.
 - If your organization requires the extra features supported by AIP, such as PowerShell or File Explorer support, or the AIP scanner, install the unified labeling client in addition to built-in labeling.
 
 #### Microsoft 365 sensitivity labels and labeling policies

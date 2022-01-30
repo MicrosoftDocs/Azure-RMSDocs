@@ -31,37 +31,38 @@ ms.custom: admin
 >
 After you have deployed and configured Azure Information Protection for your organization, provide help and guidance for users, administrators, and your help desk:
 
--   **End-user information**
-    
-    Let users know how and when to protect documents and emails that contain sensitive information. Whenever possible, provide this information for their existing work flows so that they can incorporate the additional steps to an already-familiar process rather than introducing new processes. Be sure to let them know the benefits (and the risks) that are specific to your business, as well as providing guidance for when they should protect files and emails. 
-    
+- **End-user information**
+
+    Let users know how and when to protect documents and emails that contain sensitive information. Whenever possible, provide this information for their existing work flows so that they can incorporate the additional steps to an already-familiar process rather than introducing new processes. Be sure to let them know the benefits (and the risks) that are specific to your business, as well as providing guidance for when they should protect files and emails.
+
     > [!TIP]
     > Example videos for end users:
-    > -   [Microsoft Azure Information Protection](https://youtu.be/ToShAUdlrPo?list=PL8nfc9haGeb6qSm1kLU8n3Zqg398764h5)
-    > -   [Azure RMS Document Tracking and Revocation](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
+    >
+    > - [Microsoft Azure Information Protection](https://youtu.be/ToShAUdlrPo?list=PL8nfc9haGeb6qSm1kLU8n3Zqg398764h5)
+    > - [Azure RMS Document Tracking and Revocation](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
--   **Administrator information**
-    
-    Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services. 
-    
+- **Administrator information**
+
+    Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services.
+
     For more information, see [How applications support the Azure Rights Management service](applications-support.md) and [Configuring applications for the Azure Rights Management service](configure-applications.md).
-    
--   **Help desk information**
-    
+
+- **Help desk information**
+
     If users have the Azure Information Protection client, help desk operators can ask them to use the **Help and Feedback** option for information such as whether the edition of Office is unable to support protection, and the currently signed in user account. You can also use this option to collect log files and reset the client. For more information, see the admin guide: [Install checks and troubleshooting](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting).
-    
+
     If there are legitimate requests to have full rights access to protected documents, make sure the help desk has processes to request this access by using the Azure Information Protection [super user feature](configure-super-users.md). For example, these requests might be from the legal department or a manager after an employee has left the organization.
-    
+
     In  addition, some of the typical problems that users might report include the following categories:
-    
+
     - **Sign in help**
-        
-        Users might be prompted for credentials when the Azure Rights Management service needs to authenticate a user and cannot use cached credentials. The required credentials are usually for the user’s work or school account and password that is associated with your Office 365 tenant or Azure Active Directory tenant. Although the Azure Rights Management service can authenticate Azure AD accounts, some applications can also open protected content when a Microsoft account is used for authentication. [More information](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
-        
+
+        Users might be prompted for credentials when the Azure Rights Management service needs to authenticate a user and cannot use cached credentials. The required credentials are usually for the user’s work or school account and password that is associated with your Office 365 tenant or Azure Active Directory tenant. Although the Azure Rights Management service can authenticate Azure AD accounts, some applications can also open protected content when a Microsoft account is used for authentication. [More information](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+
         Provide users and your help desk with instructions about which account to use when users are prompted for credentials when they have applications that use the Azure Rights Management service.
-        
+
     - **Problems protecting or consuming content**
-        
+
         Make sure that users have the appropriate instructions for the applications that they use, and that they use applications and devices that are supported by the Azure Rights Management service. For more information about supported applications and devices, see [Requirements for Azure Information Protection](requirements.md).
         
         To confirm that a specific user or group can be authorized by Azure Active Directory to protect or consume protected content, use the verification checks in [Preparing users and groups for Azure Information Protection](prepare.md).

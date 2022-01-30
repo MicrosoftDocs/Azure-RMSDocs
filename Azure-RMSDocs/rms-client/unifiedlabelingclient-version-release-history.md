@@ -225,11 +225,11 @@ For more information, including licensing requirements, see:
 
 - Fixed errors where the [AIP add-in](clientv2-admin-guide-install.md) in Outlook may cause an error message to appear, if a message file that was saved locally was opened, closed, and then opened again.
 
-- Fixed errors where [visual markings](use-client.md#the-client-side-of-azure-information-protection) may not be refreshed as expected after changing a file's label to a label with no content markings.
+- Fixed errors where [visual markings](use-client.md#labeling-features-for-office-applications) may not be refreshed as expected after changing a file's label to a label with no content markings.
 
 - Fixed errors where [audit logs](../audit-logs.md) may not be sent when a default label is applied to a document.
 
-- Fixed issues for [content markings](use-client.md#the-client-side-of-azure-information-protection) in Outlook may be duplicated.
+- Fixed issues for [content markings](use-client.md#labeling-features-for-office-applications) in Outlook may be duplicated.
 
 - Fixed issues where deferred messages may not be sent in Outlook when a deferral rule set is defined and the [AIP client is installed](clientv2-admin-guide-install.md).
 
@@ -328,10 +328,9 @@ For more information, see the [AIP unified labeling client user guide](clientv2-
 
 ## Next steps
 
-Not sure if unified labeling is the right client to install?  See [Choose your Windows labeling solution](use-client.md#choose-your-windows-labeling-solution).
+For more information, see:
 
-For more information about installing and using the unified labeling client:
-
+- [Compare Azure Information Protection and MIP built-in labeling](use-client.md)
 - For users: [Download and install the client](install-unifiedlabelingclient-app.md)
 - For admins: [Azure Information Protection unified labeling client administrator guide](clientv2-admin-guide.md)
 

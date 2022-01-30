@@ -54,7 +54,7 @@ For more information, see [Activating the protection service from Azure Informat
 Usage logging logs every transaction that the Azure Rights Management service performs.
 
 Depending on your key management method, logging information may include details about your tenant key. The following image shows an example from a log file displayed in Excel, where the **KeyVaultDecryptRequest** and **KeyVaultSignRequest** request types show that the tenant key is being used.
-    
+
 ![log file in Excel where tenant key is being used](./media/RMS_Logging.png)
-    
+
 For more information about usage logging, see [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md).

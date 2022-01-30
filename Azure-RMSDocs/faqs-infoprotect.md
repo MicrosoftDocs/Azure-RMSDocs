@@ -29,7 +29,7 @@ ms.custom: admin
 >***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
 >
 
-Have a question about Azure Information Protection that is specifically about classification and labeling?  See if it's answered here. 
+Have a question about Azure Information Protection that is specifically about classification and labeling?  See if it's answered here.
 
 ## Which client do I install for testing new functionality?
 
@@ -37,19 +37,19 @@ We recommend using the built-in labeling solution for Office apps by default, an
 
 You can use the AIP client's extra functionality and built-in labeling simultaneously, and the unified labeling client downloads labels and policy settings from the Microsoft 365 compliance center.
 
-For more information, including a feature and functionality comparison table, see [Choose your Windows labeling solution](rms-client/use-client.md#choose-your-windows-labeling-solution).
+For more information, see [Compare Azure Information Protection and MIP built-in labeling](rms-client/use-client.md).
 
 > [!TIP]
-> The Azure Information Protection client is supported on Windows only. 
+> The Azure Information Protection client is supported on Windows only.
 >
-> To classify and protect documents and emails on iOS, Android, macOS, and the web, use [Office apps that support built-in labeling](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). 
-> 
+> To classify and protect documents and emails on iOS, Android, macOS, and the web, use [Office apps that support built-in labeling](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps).
+>
 
 ## Where can I find information about using sensitivity labels for Office apps?
 
 See the following documentation resources:
 
-- [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) 
+- [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels)
 
 - [Use sensitivity labels in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps)
 
@@ -61,7 +61,7 @@ For information about other scenarios that support sensitivity labels, see [Comm
 
 ## How do I prevent somebody from removing or changing a label?
 
-To prevent users from removing or changing a label, the content must already be protected and the protection permissions do not grant the user the Export or Full Control [usage right](configure-usage-rights.md). 
+To prevent users from removing or changing a label, the content must already be protected and the protection permissions do not grant the user the Export or Full Control [usage right](configure-usage-rights.md).
 
 ## When an email is labeled, do any attachments automatically get the same labeling?
 
@@ -69,6 +69,6 @@ No. When you label an email message that has attachments, those attachments do n
 
 ## How can DLP solutions and other applications integrate with Azure Information Protection?
 
-Because Azure Information Protection uses persistent metadata for classification, which includes a clear-text label, this information can be read by DLP solutions and other applications. 
+Because Azure Information Protection uses persistent metadata for classification, which includes a clear-text label, this information can be read by DLP solutions and other applications.
 
 For examples of using this metadata with Exchange Online mail flow rules, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).

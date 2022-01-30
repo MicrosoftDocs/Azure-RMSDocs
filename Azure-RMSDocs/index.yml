@@ -109,10 +109,10 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Choose your Windows labeling solution
-            url: ./rms-client/use-client.md#choose-your-windows-labeling-solution
+          - text: Compare built-in labeling with AIP
+            url: ./rms-client/use-client.md
       - linkListType: tutorial
-        links: 
+        links:
           - text: Migrate to the unified labeling solution
             url: tutorial-migrating-to-ul.md
       - linkListType: how-to-guide

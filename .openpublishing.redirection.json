@@ -1879,11 +1879,6 @@
             "redirect_url": "/information-protection/deployment-roadmap-classify-label-protect",
             "redirect_document_id": false
         },
-		{
-            "source_path": "Azure-RMSDocs/how-to-guides.md",
-            "redirect_url": "/information-protection/",
-            "redirect_document_id": false
-        }    ]
 }
 
 
