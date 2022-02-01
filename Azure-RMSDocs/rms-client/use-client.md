@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/05/2021
+ms.date: 02/01/2022
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
