@@ -79,7 +79,7 @@ The following features are supported by the classic client outside of Office app
 - PPDF support for applying labels
 
 
-## Detailed comparisons for the Azure Information Protection clients
+## Detailed comparisons for the AIP clients
 
 When the Azure Information Protection classic client and the Azure Information Protection unified labeling client both support the same feature, use the following lists to help identify some functional differences between the two clients:
 
