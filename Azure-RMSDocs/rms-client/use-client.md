@@ -175,7 +175,7 @@ To compare features for built-in sensitivity labeling across different platforms
 |**Multilanguage support for labels**|  ![yes](../media/yes-icon.png) |![yes](../media/yes-icon.png) |
 |**Offline support for protection actions**|  ![yes](../media/yes-icon.png)  | ![yes](../media/yes-icon.png) |
 |**Manual policy file management for disconnected computers**| ![yes](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
-| | | | |
+| | | |
 
 
 ## Learn about labeling outside of Office applications

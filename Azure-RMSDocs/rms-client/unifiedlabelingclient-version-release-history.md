@@ -227,11 +227,11 @@ For more information, including licensing requirements, see:
 
 - Fixed errors where the [AIP add-in](clientv2-admin-guide-install.md) in Outlook may cause an error message to appear, if a message file that was saved locally was opened, closed, and then opened again.
 
-- Fixed errors where [visual markings](use-client.md#the-client-side-of-azure-information-protection) may not be refreshed as expected after changing a file's label to a label with no content markings.
+- Fixed errors where [visual markings](use-client.md#visual-marking-features-for-labeling-in-office) may not be refreshed as expected after changing a file's label to a label with no content markings.
 
 - Fixed errors where [audit logs](../audit-logs.md) may not be sent when a default label is applied to a document.
 
-- Fixed issues for [content markings](use-client.md#the-client-side-of-azure-information-protection) in Outlook may be duplicated.
+- Fixed issues for [content markings](use-client.md#visual-marking-features-for-labeling-in-office) in Outlook may be duplicated.
 
 - Fixed issues where deferred messages may not be sent in Outlook when a deferral rule set is defined and the [AIP client is installed](clientv2-admin-guide-install.md).
 
