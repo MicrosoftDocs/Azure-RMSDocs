@@ -85,20 +85,31 @@ When the Azure Information Protection classic client and the Azure Information P
 
 ### AIP client feature comparisons in Office applications
 
+#### User experience features
+
 |Functionality |Classic client|Unified labeling client|
 |--------------|-----------------------------------|-----------------------------------------------------------|
-| **User experience features** | | |
 |**Remove applied label actions** | User is prompted to confirm <br /><br />The default label or an automatic label (if configured) is not automatically applied next time the Office app opens the file  | User is not prompted to confirm<br /><br /> The default label or an automatic label (if configured) is automatically applied next time the Office app opens the file|
 |**Label selection and display when applied in Office apps**|From the **Protect** button on the ribbon <br /><br /> From the Information Protection bar (horizontal bar under the ribbon)|From the **Sensitivity** button on the ribbon<br /><br /> From the Information Protection bar (horizontal bar under the ribbon)|
 |**Manage the Information Protection bar in Office apps**|**For users**:<br />Option to show or hide the bar from the **Protect** button on the ribbon<br /><br>When a user selects to hide the bar, by default, the bar is hidden in that app, but continues to automatically display in newly opened apps <br /><br /> **For admins**: <br />Policy settings to automatically show or hide the bar when an app first opens, and control whether the bar automatically remains hidden for newly opened apps after a user selects to hide the bar|**For users**: <br />Option to show or hide the bar from the **Sensitivity** button on the ribbon. <br><br />When a user selects to hide the bar, the bar is hidden in that app and also in newly opened apps <br /><br />**For admins**: <br />PowerShell setting to manage the bar |
 |**Label color**| Configure in the Azure portal | Retained after label migration and configurable with [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)|
 |**Labels support different languages**| Configure in the Azure portal | Configure by using [Office 365 Security & Compliance PowerShell](/microsoft-365/compliance/create-sensitivity-labels#additional-label-settings-with-office-365-security--compliance-center-powershell)|
 |**Justification prompts (if configured) per action in Office** | - Frequency: Per file <br /> - Lowering the sensitivity level <br /> - Removing a label<br /> - Removing protection | - Frequency: Per session <br /> - Lowering the sensitivity level<br />-  Removing a label|
-| **Enforcement features** | | |
+| | | |
+
+#### Enforcement features
+
+|Functionality |Classic client|Unified labeling client|
+|--------------|-----------------------------------|-----------------------------------------------------------|
 |**Setup**| Option to install local demo policy | No local demo policy|
 |**Policy update**| - When an Office app opens <br /> - When you right-click to classify and protect a file or folder <br />- When you run the PowerShell cmdlets for labeling and protection<br />- Every 24 hours <br />- For the scanner: Every hour and when the service starts and the policy is older than one hour| - When an Office app opens <br />- When you right-click to classify and protect a file or folder <br />- When you run the PowerShell cmdlets for labeling and protection<br />- Every 4 hours <br />- For the scanner: Every 4 hours|
 |**Order support for sublabels on attachments** | Enabled with an [advanced client setting](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Enabled by default, no configuration required|
-|**Automation features** | | |
+| | | |
+
+#### Automation features
+
+|Functionality |Classic client|Unified labeling client|
+|--------------|-----------------------------------|-----------------------------------------------------------|
 |**Automatic and recommended labels** | Configured as [label conditions](../configure-policy-classification.md) in the Azure portal with built-in information types and custom conditions that use phrases or regular expressions <br /><br />Configuration options include: <br />- Unique / Not unique count <br /> - Minimum count| Configured in the Microsoft 365 compliance center with built-in sensitive information types and [custom information types](/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Configuration options include:  <br />- Unique count only <br />- Minimum and maximum count <br />- AND and OR support with information types <br />- Keyword dictionary<br />- Customizable confidence level and character proximity|
 |**Change the default protection behavior for file types**| Use [registry edits](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) to override the defaults of native and generic protection | Use [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) to change which file types get protected|
 | | | |
