@@ -89,8 +89,7 @@ The legacy Azure Information Protection client, referred to as the *classic* cli
 
 The *unified labeling client* is the most current client with the most recent updates, and supports the unified labeling platform used by multiple applications and services. The unified labeling client downloads [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and policy settings from the Microsoft 365 compliance center.
 
-If you're an admin, learn more in [Choose your Windows labeling solution](rms-client/use-client.md#choose-your-windows-labeling-solution).
-
+For more information, see [Azure Information Protection classic client for Windows](rms-client/aip-client.md) and [Learn about about built-in labeling and the AIP unified labeling client](rms-client/use-client.md).
 ### Classic client deprecation
 
 To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure portal is **deprecated** as of **March 31, 2021**.

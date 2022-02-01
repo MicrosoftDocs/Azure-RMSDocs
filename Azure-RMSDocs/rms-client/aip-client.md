@@ -51,7 +51,7 @@ Use the following resources for the classic client:
 
 ## Supported features
 
-The this section lists the features supported by the classic client, in parallel with the comparison section for the unified labeling client and built-in labeling solution in [Compare the labeling solutions for Windows computers](use-client.md#compare-built-in-labeling-with-the-aip-client).
+The this section lists the features supported by the classic client, in parallel with the comparison sections for the unified labeling client and built-in labeling solution in [Learn about about built-in labeling and the AIP unified labeling client](use-client.md).
 
 This section also provides a more detailed comparison of supported features between the classic and unified labeling clients.
 

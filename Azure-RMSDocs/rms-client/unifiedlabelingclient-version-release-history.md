@@ -97,7 +97,7 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 >
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
+The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Supported features for the classic and unified labeling clients](aip-client.md#supported-features).
 
 ## Version 2.13.49.0
 
@@ -330,7 +330,7 @@ For more information, see the [AIP unified labeling client user guide](clientv2-
 
 ## Next steps
 
-Not sure if unified labeling is the right client to install?  See [Choose your Windows labeling solution](use-client.md#choose-your-windows-labeling-solution).
+Not sure if unified labeling is the right client to install?  For more information, see [Learn about about built-in labeling and the AIP unified labeling client](use-client.md).
 
 For more information about installing and using the unified labeling client:
 

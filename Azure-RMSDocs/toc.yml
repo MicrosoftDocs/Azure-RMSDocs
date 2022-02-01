@@ -5,6 +5,8 @@
   items:
   - name: What is Azure Information Protection?
     href: what-is-information-protection.md
+  - name: Built-in labeling and the AIP client
+    href: ./rms-client/use-client.md
   - name: What's new in AIP?
     href: ./rms-client/unifiedlabelingclient-version-release-history.md
   - name: AIP requirements
@@ -173,8 +175,6 @@
         href: install-powershell.md
   - name: Deploy & use the client
     items:
-    - name: Overview
-      href: ./rms-client/use-client.md
     - name: Unified labeling client admin guide
       items:
       - name: Overview
