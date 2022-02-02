@@ -48,8 +48,8 @@ These applications and solutions are known as "RMS-enlighted", and have Rights M
 
 |Type  |Supported applications   |
 |---------|---------|
-|**Word, Excel, PowerPoint**    | - [Microsoft 365 apps](#microsoft-365-app-support) <br />- Office Professional Plus 2013<br />- Office Professional Plus 2016 <br />- Office Professional Plus 2019 <br />- [Office for the web (viewing protected documents)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
-|[**Email**](#viewing-protected-content-in-email-clients)      |   - Outlook Professional Plus 2013<br />- Outlook Professional Plus 2016 <br />- Outlook Professional Plus 2019 <br />- Outlook from Microsoft 365 Apps for Enterprise<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
+|**Word, Excel, PowerPoint**    | - [Microsoft 365 apps](#microsoft-365-app-support) <br />- Office Professional Plus 2010 <br />- Office Professional Plus 2013<br />- Office Professional Plus 2016 <br />- Office Professional Plus 2019 <br />- [Office for the web (viewing protected documents)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
+|[**Email**](#viewing-protected-content-in-email-clients)      |   - Outlook Professional Plus 2010<br />- Outlook Professional Plus 2013<br />- Outlook Professional Plus 2016 <br />- Outlook Professional Plus 2019 <br />- Outlook from Microsoft 365 Apps for Enterprise<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
 |[**Other file types**](#supported-text-and-image-file-types)    |  - Visio from Microsoft 365 apps, Office 2019, and Office 2016: **.vsdm**, **.vsdx**, **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Azure Information Protection client for Windows: Text, images, **pfile**      |
 | | |
 
@@ -71,7 +71,7 @@ CAD files, such as **.dwg** files, are supported by partner solutions, such as [
 |Type  |Supported applications   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |- GigaTrust App for Android<br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- Office Mobile (unless using sensitivity labels, limited to viewing and editing protected documents) <br />- [Web browser](#web-browser-support)      |
-|[**Email**](#viewing-protected-content-in-email-clients)     | - [9Folders](#email-clients-using-exchange-activesync-irm)<br />- Azure Information Protection app (viewing protected emails)<br />- BlackBerry Work <br />- [GigaTrust App for Android](#email-clients-using-exchange-activesync-irm) <br />- Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook for Android](#email-clients-using-exchange-activesync-irm)<br />- [Samsung Email (S3 and later)](#email-clients-using-exchange-activesync-irm)<br />- TITUS Classification for Mobile <br />- [Web browser](#web-browser-support)  <br>- [VMware Workspace ONE Boxer](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Boxer_Admin_Guide/GUID-SecureEmailswithAIP.html)     |
+|[**Email**](#viewing-protected-content-in-email-clients)     | - [9Folders](#email-clients-using-exchange-activesync-irm)<br />- Azure Information Protection app (viewing protected emails)<br />- BlackBerry Work <br />- [GigaTrust App for Android](#email-clients-using-exchange-activesync-irm) <br />- Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook for Android](#email-clients-using-exchange-activesync-irm)<br />- [Samsung Email (S3 and later)](#email-clients-using-exchange-activesync-irm)<br />- TITUS Classification for Mobile <br /><br />- [Web browser](#web-browser-support)       |
 |[**Other file types**](#supported-text-and-image-file-types)    |  Azure Information Protection app (viewing protected text and images)  |
 | | |
 
@@ -80,8 +80,8 @@ CAD files, such as **.dwg** files, are supported by partner solutions, such as [
 
 |Type  |Supported applications   |
 |---------|---------|
-|**Word, Excel, PowerPoint**    |  - GigaTrust<br />- Office Mobile <br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- TITUS Docs<br />- [Web browser](#web-browser-support)   |
-|[**Email**](#viewing-protected-content-in-email-clients)     |   - Azure Information Protection app (viewing protected email)<br />- BlackBerry Work<br />- Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook for iPad and iPhone](#email-clients-using-exchange-activesync-irm)<br />- TITUS Mail <br />- [Web browser](#web-browser-support)  <br>- [VMware Workspace ONE Boxer](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Boxer_Admin_Guide/GUID-SecureEmailswithAIP.html)   |
+|**Word, Excel, PowerPoint**    |  - GigaTrust<br />- Office Mobile <br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- TITUS Docs<br />- [Web browser](#web-browser-support)    |
+|[**Email**](#viewing-protected-content-in-email-clients)     |   - Azure Information Protection app (viewing protected email)<br />- BlackBerry Work<br />- Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook for iPad and iPhone](#email-clients-using-exchange-activesync-irm)<br />- TITUS Mail <br />- [Web browser](#web-browser-support)     |
 |[**Other file types**](#supported-text-and-image-file-types)     | - Azure Information Protection app (viewing protecting text and images)<br />- TITUS Docs: **Pfile**  |
 | | |
 
@@ -196,8 +196,19 @@ The following Office client suites support protecting files and emails on Window
 
 - **Office Professional Plus 2013**
 
+- **Office Professional Plus 2010 with Service Pack 2**
+
 All editions of Office (with the exception of Office 2007) support consuming protected content.
 
+#### Azure Rights Management service with Office Professional Plus 2010 and Service Pack 2 or Office Professional 2010 with Service Pack 2
+
+When you use the Azure Rights Management service with Office Professional Plus 2010 and Service Pack 2 or Office Professional 2010 with Service Pack 2, you must also have the AIP client for Windows.
+
+Additionally, this configuration:
+
+- Is not supported on Windows 10 or Windows 11.
+- Does not support forms-based authentication for federated user accounts. These accounts must use Windows-Integrated Authentication.
+- Does not support the ability to override template protection using custom permissions selected with the AIP client. In this scenario, the original protection must first be removed before custom permissions can be applied.
 
 ### Mac computers for Information Rights Management (IRM)
 
@@ -264,6 +275,7 @@ Applications not currently supported by Azure RMS include:
 
 - Microsoft OneDrive for SharePoint Server 2013
 - XPS Viewer
+- Applications running on Windows versions earlier than Windows 7, Service Pack 1
 
 
 ## Next steps
