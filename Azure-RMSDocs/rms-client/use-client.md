@@ -131,7 +131,7 @@ CONSIDERATIONS - Do we really need a table here? Or is a bulleted list enough (s
 |**Support for account switching**|   ![no](../media/no-icon.png)| ![yes](../media/yes-icon.png) |
 | | | |
 
-The Azure Information Protection unified labeling client doesn't support applying parent labels that have [sublabels](/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide), even though you can select these labels in the Microsoft 365 compliance center.
+The Azure Information Protection unified labeling client doesn't support applying parent labels that have [sublabels](/microsoft-365/compliance/sensitivity-labels), even though you can select these labels in the Microsoft 365 compliance center.
 
 In this scenario, the Azure Information Protection unified labeling client will not apply the parent label.
 
@@ -204,7 +204,7 @@ In contrast, Azure Information Protection labels, configured at the time using t
 
 Microsoft 365 supports [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in addition to retention labels. Sensitivity labels can be created and configured in the Microsoft 365 compliance center.
 
-If you have legacy AIP labels configured in the Azure portal, we recommend migrating them to sensitivity labels and unified labeling client. For more information, see [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md).
+If you have legacy AIP labels configured in the Azure portal, we recommend migrating them to sensitivity labels and unified labeling client. For more information, see [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to unified labeling solution](../tutorial-migrating-to-ul.md).
 
 For more information, see [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
