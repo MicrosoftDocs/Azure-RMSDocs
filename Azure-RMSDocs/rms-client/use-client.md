@@ -52,7 +52,9 @@ For more information, see
 - The [built-in labeling documentation](/microsoft-365/compliance/sensitivity-labels)
 ## Understand more about labeling solution options
 
-Whether you are an existing customer with AIP unified labeling deployed, or a new customer looking for a labeling and protection solution, we recommend enabling built-in labeling for Office apps. Built-in labeling provides automatic updates, account switching, increased performance and more.
+Whether you are an existing customer with AIP unified labeling deployed, or a new customer looking for a labeling and protection solution, we recommend enabling built-in labeling for Office apps.
+
+Built-in labeling provides automatic updates, account switching, increased performance, and more.
 
 - **Both built-in labeling and the unified labeling client use sensitivity labels and label policies downloaded from the Microsoft 365 compliance center.** These label and policy settings can be shared by macOS, iOS, and Android.
 
@@ -78,105 +80,77 @@ Use the following table to understand about the features supported for Office ap
 
 To compare features for built-in sensitivity labeling across different platforms, including Windows, macOS, iOS, and Android, and for the web, see [Support for sensitivity label capabilities in apps](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) in the Microsoft 365 compliance documentation. This documentation also includes the Office build numbers or Office update channel information for the supported features.
 
-### User experience features for labeling in Office
-
-|Feature|Office add-in with AIP|Office built-in labeling solution|
-|:------|:---------------------:|:-----------------------------:|
+<!--
 |**Support for Remote Desktop Services**|  ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |
-|**Information Protection bar in Office apps**|  ![yes](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
-| | | |
+-->
 
-> [!NOTE]
-> The Azure Information Protection unified labeling client doesn't support applying parent labels that have [sublabels], even though you can select these labels in the Microsoft 365 compliance center.
->
-> In this scenario, the Azure Information Protection unified labeling client will not apply the parent label.
->
-### Enforcement features for labeling in Office
+### Supported with both the AIP Office add-in and the built-in labeling solution
 
-|Feature|Office add-in with AIP|Office built-in labeling solution|
+|Feature|AIP Office add-in|Office built-in labeling solution|
 |:------|:---------------------:|:-----------------------------:|
-|**Customizations, such as**:<br />- Default label for email<br />- Pop up messages in Outlook <br />- S/MIME support<br />- Report an Issue option|  ![yes](../media/yes-icon.png) <br>[Learn more](clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell) |  ![partial](../media/half-support-icon.png) <br>[Learn more](/microsoft-365/compliance/sensitivity-labels-office-apps)|
 |**Manual labeling**| ![yes](../media/yes-icon.png)   |![yes](../media/yes-icon.png) |
 |**Mandatory labeling**|  ![yes](../media/yes-icon.png) |  ![yes](../media/yes-icon.png)|
-| | | |
-
-> [!NOTE]
-> Built-in labeling supports selected PowerShell advanced settings. For a list of these settings, see [New-Label](/powershell/module/exchange/new-label) or [Set-Label](/powershell/module/exchange/set-label), and [New-LabelPolicy](/powershell/module/exchange/new-labelpolicy) or [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy).
->
-> However, many customizations are also supported by the wizards in the Microsoft 365 compliance center. For more information, see [Manage sensitivity labels in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps).
->
-### Automation features for labeling in Office
-
-|Feature|Office add-in with AIP|Office built-in labeling solution|
-|:------|:---------------------:|:-----------------------------:|
 |**Default label**| ![yes](../media/yes-icon.png)| ![yes](../media/yes-icon.png)|
 |**Recommended or automatic labeling** <br />For Word, Excel, PowerPoint, Outlook|  ![yes](../media/yes-icon.png)  | ![yes, plus additional support](../media/yes-plus-icon.png) <br>[Learn more](/microsoft-365/compliance/apply-sensitivity-label-automatically) |
-|**Label inheritance from email attachments**|  ![yes](../media/yes-icon.png)  | ![no](../media/no-icon.png)|
-| | | |
-
-
-> [!NOTE]
-> While the Azure Information Protection unified labeling client supports automatic labeling for built-in and custom sensitive info types, built-in labeling also supports other information types, such as trainable classifiers or sensitive info types that use Exact Data Match (EDM).
->
-> For more information, see [How to configure auto-labeling for Office apps](/microsoft-365/compliance/apply-sensitivity-label-automatically).
-
-### Encryption and protection features for labeling in Office
-
-|Feature|Office add-in with AIP|Office built-in labeling solution|
-|:------|:---------------------:|:-----------------------------:|
-|**Track protected documents**|  ![yes](../media/yes-icon.png) <br>Global admins only.[Learn more](track-and-revoke-admin.md) |  ![no](../media/no-icon.png)|
-|**Revoke protected documents**|  ![yes](../media/yes-icon.png) <br>[Learn more](revoke-access-user.md)|  ![no](../media/no-icon.png)|
-|**Double Key Encryption**|  ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
-|**Encrypt-Only**|  ![no](../media/no-icon.png) | ![yes](../media/yes-icon.png)|
-|**Custom permissions set independently from a label**| ![yes](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
+|**Track protected documents**|  ![yes](../media/yes-icon.png) <br>Global admins only.<br>[Learn more](track-and-revoke-admin.md) | ![yes](../media/yes-icon.png) <br>Global admins only.|
 |**User-defined permissions for a label**: <br />Do Not Forward for emails|  ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |
 |**User-defined permissions for a label**: <br />Custom permissions for Word, Excel, PowerPoint|  ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |
-| | | |
-
-> [!NOTE]
-> To set custom permissions independently from a label, using the Office addin with AIP, select **File Info > Protect Document > Restrict Access**, or use the File Explorer or PowerShell options.
->
-
-### Logging and analytics features for labeling in Office
-
-|Feature|Office add-in with AIP|Office built-in labeling solution|
-|:------|:---------------------:|:-----------------------------:|
-|**Central reporting**|  ![yes](../media/yes-icon.png) <br>[Learn more](../reports-aip.md) |  ![partial](../media/half-support-icon.png) <br>[Learn more](/microsoft-365/compliance/data-classification-activity-explorer) |
-|**Usage logging in Event Viewer**| ![yes](../media/yes-icon.png) <br>[Learn more](../log-analyze-usage.md) | ![no](../media/no-icon.png)|
-| | | |
-
-> [!NOTE]
-> - For central reporting from the Azure portal, see [Azure Information Protection analytics](../reports-aip.md).
-> - In the Microsoft 365 compliance center, see the [activity explorer](/microsoft-365/compliance/data-classification-activity-explorer). For detailed support information, see the **Audit label-related user activity** row in the [capabilities tables](/microsoft-365/compliance/sensitivity-labels-office-apps) from the Microsoft 365 Compliance documentation.
->
-
-### Visual marking features for labeling in Office
-
-|Feature|Office add-in with AIP|Office built-in labeling solution|
-|:------|:---------------------:|:-----------------------------:|
 |**Visual markings as a label action**<br> (header, footer, watermark)|  ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)|
 |**Per app visual markings**|  ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <br>[Learn more](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables)|
 |**Dynamic visual markings with variables**|  ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <br>[Learn more](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables)|
-|**Remove external content marking in app**|  ![yes](../media/yes-icon.png)| ![no](../media/no-icon.png)|
-
-### Identity features for labeling in Office
-
-|Feature|Office add-in with AIP|Office built-in labeling solution|
-|:------|:---------------------:|:-----------------------------:|
-|**Support for account switching**|   ![no](../media/no-icon.png)| ![yes](../media/yes-icon.png) |
-| | | |
-
-### Workload environment features for labeling in Office
-
-|Feature|Office add-in with AIP|Office built-in labeling solution|
-|:------|:---------------------:|:-----------------------------:|
-|**Support for Microsoft Office 97-2003 formats**|  ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
 |**Government Community Cloud** |![yes](../media/yes-icon.png) <br>[Learn more](/azure/security/fundamentals/feature-availability#azure-information-protection) | ![yes](../media/yes-icon.png)|
 |**Multilanguage support for labels**|  ![yes](../media/yes-icon.png) |![yes](../media/yes-icon.png) |
 |**Offline support for protection actions**|  ![yes](../media/yes-icon.png)  | ![yes](../media/yes-icon.png) |
-|**Manual policy file management for disconnected computers**| ![yes](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
 | | | |
 
+While the Azure Information Protection unified labeling client supports automatic labeling for built-in and custom sensitive info types, built-in labeling also supports other information types, such as trainable classifiers or sensitive info types that use Exact Data Match (EDM).
+
+For more information, see [How to configure auto-labeling for Office apps](/microsoft-365/compliance/apply-sensitivity-label-automatically).
+
+### Supported differently with the AIP Office add-in and the built-in labeling solution
+
+CONSIDERATIONS - pull this out of a table into two sections, about customizations + reporting? 
+
+|Feature|AIP Office add-in|Office built-in labeling solution|
+|:------|:---------------------:|:-----------------------------:|
+|**Customizations, such as**:<br />- Default label for email<br />- Pop up messages in Outlook <br />- S/MIME support<br />- Report an Issue option|  ![yes](../media/yes-icon.png) <br>[Learn more](clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell) |  ![partial](../media/half-support-icon.png) <br>[Learn more](/microsoft-365/compliance/sensitivity-labels-office-apps)|
+|**Central reporting**|  ![yes](../media/yes-icon.png) <br>[Learn more](../reports-aip.md) |  ![partial](../media/half-support-icon.png) <br>[Learn more](/microsoft-365/compliance/data-classification-activity-explorer) |
+| | | |
+
+Built-in labeling supports selected PowerShell advanced settings for customizations. For more information, see [New-Label](/powershell/module/exchange/new-label), [Set-Label](/powershell/module/exchange/set-label), [New-LabelPolicy](/powershell/module/exchange/new-labelpolicy), and [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy). Many customizations are also supported by the wizards in the Microsoft 365 compliance center. For more information, see [Manage sensitivity labels in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps).
+
+For central reporting from the Azure portal, see [Azure Information Protection analytics](../reports-aip.md). In the Microsoft 365 compliance center, see the [activity explorer](/microsoft-365/compliance/data-classification-activity-explorer). For detailed support information, see the **Audit label-related user activity** row in the [capabilities tables](/microsoft-365/compliance/sensitivity-labels-office-apps) from the Microsoft 365 Compliance documentation.
+
+### Supported only with the built-in labeling solution
+
+CONSIDERATIONS - Do we really need a table here? Or is a bulleted list enough (similar to [Learn about labeling outside of Office applications](#learn-about-labeling-outside-of-office-applications))
+
+|Feature|AIP Office add-in|Office built-in labeling solution|
+|:------|:---------------------:|:-----------------------------:|
+|**Encrypt-Only**|  ![no](../media/no-icon.png) | ![yes](../media/yes-icon.png)|
+|**Support for account switching**|   ![no](../media/no-icon.png)| ![yes](../media/yes-icon.png) |
+| | | |
+
+The Azure Information Protection unified labeling client doesn't support applying parent labels that have [sublabels](/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide), even though you can select these labels in the Microsoft 365 compliance center.
+
+In this scenario, the Azure Information Protection unified labeling client will not apply the parent label.
+
+
+### Supported only with the AIP Office add-in
+
+CONSIDERATIONS - Do we really need a table here? Or is a bulleted list enough (similar to [Learn about labeling outside of Office applications](#learn-about-labeling-outside-of-office-applications))
+
+|Feature|AIP Office add-in|Office built-in labeling solution|
+|:------|:---------------------:|:-----------------------------:|
+|**Highly-visible labeling experience** <!--Information Protection bar in Office apps**-->|  ![yes](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
+|**Label inheritance from email attachments**|  ![yes](../media/yes-icon.png)  | ![no](../media/no-icon.png)|
+|**Revoke protected documents**|  ![yes](../media/yes-icon.png) <br>[Learn more](revoke-access-user.md)|  ![no](../media/no-icon.png)|
+|**Double Key Encryption**|  ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**Usage logging in Event Viewer**| ![yes](../media/yes-icon.png) <br>[Learn more](../log-analyze-usage.md) | ![no](../media/no-icon.png)|
+|**Remove external content marking in app**|  ![yes](../media/yes-icon.png)| ![no](../media/no-icon.png)|
+|**Support for Microsoft Office 97-2003 formats**|  ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**Manual policy file management for disconnected computers**| ![yes](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
+| | | |
 
 ## Learn about labeling outside of Office applications
 
@@ -187,11 +161,52 @@ The following labeling features, used outside of Office applications, are availa
 - [Labeling with right-click options from the File Explorer](clientv2-classify-protect.md#use-the-file-explorer-to-classify-and-protect-files)
 - [A viewer for protected files](clientv2-view-use-files.md), such as text, images, PDF, .pfile
 
-> [!NOTE]
-> For File Explorer and PowerShell commands, the user must be connected to the internet to protect files.
->
+For File Explorer and PowerShell commands, the user must be connected to the internet to protect files.
 
 For more information, see [Admin Guide: Install the Azure Information Protection unified labeling client for users](clientv2-admin-guide-install.md).
+
+## FAQs
+
+### Can AIP and built-in labeling function side-by-side?
+
+Yes. We recommend that you use the built-in labeling solution for Office apps to benefit from features such as automatic updates and increased performance. You can also deploy the AIP unified labeling client across your network to use the additional File Explorer support, PowerShell cmdlets, and the AIP scanner.
+
+MORE TBD
+
+### What's the difference between Azure Information Protection and Microsoft Information Protection?
+
+[Microsoft Information Protection](https://www.microsoft.com/security/business/information-protection) is a framework for products and integrated capabilities that help you protect your organization's sensitive information. Azure Information Protection is only one of the Microsoft services that provide information protection.
+
+**Microsoft Information Protection products include**:
+
+- Microsoft 365 Information Protection, such as Microsoft 365 DLP
+- Windows Information Protection
+- Microsoft Defender for Cloud Apps
+- Azure Information Protection
+
+**Microsoft Information Protection capabilities include**:
+
+- Unified label management
+- End-user labeling experiences built into Office apps
+- The ability for Windows to understand unified labels and apply protection to data
+- The Microsoft Information Protection SDK
+- Functionality in Adobe Acrobat Reader to view labeled and protected PDFs
+
+For more information, see [Information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
+
+### What's the difference between labeling with the built-in labeling solution and labeling with the AIP Office add-in?
+
+THIS NEEDS TO BE RE-WRITTEN
+
+Originally, Microsoft 365 had only [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30), which enabled you to classify documents and emails for auditing and retention when that content was stored in Microsoft 365 services.
+
+In contrast, Azure Information Protection labels, configured at the time using the AIP classic client in the Azure portal, enabled you to apply a consistent classification and protection policy for documents and emails whether they were stored on-premises or in the cloud.
+
+Microsoft 365 supports [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in addition to retention labels. Sensitivity labels can be created and configured in the Microsoft 365 compliance center.
+
+If you have legacy AIP labels configured in the Azure portal, we recommend migrating them to sensitivity labels and unified labeling client. For more information, see [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md).
+
+For more information, see [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 ## The Rights Management client
 
@@ -201,7 +216,11 @@ You can also [install the RMS client yourself](https://www.microsoft.com/downloa
 
 ## Next steps
 
-For more information about using the built-in labeling solution for Microsoft 365 apps, see [Sensitivity labels in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps).
+If you haven't yet enabled the built-in labeling solution for Microsoft 365, we recommend that you analyze the support information in this article and the [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance) for updates in the compliance center.
+
+Enable built-in labeling across your network to benefit from continued enhancements and a unified and streamlined customer experience.
+
+For more information about using the built-in labeling solution, see [Sensitivity labels in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps).
 
 To install and configure the Azure Information Protection unified labeling client, see:
 
