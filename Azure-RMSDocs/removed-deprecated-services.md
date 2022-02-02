@@ -31,31 +31,6 @@ For more information, see:
 ](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/final-reminder-to-migrate-from-azure-information-protection/ba-p/2731734).
 - [Compare the labeling solutions for Windows computers](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
 
-## The AIP unified labeling client
-
-As we continue to bring the customer labeling and protection experience to built-in applications like [Office 365](/microsoft-365/compliance/sensitivity-labels), the Azure Information Protection unified labeling client has moved into maintenance mode as of **January 1, 2022**.
-
-Moving forward, no new features will be added to the unified labeling client. In contrast, we are continuously developing new features for sensitivity labeling in Microsoft 365.
-
-We recommend that all customers enable [built-in sensitivity labeling for Office applications](/microsoft-365/compliance/sensitivity-labels) and use features from the AIP unified labeling client only when they do not yet exist for built-in labeling.
-
-For more information, see:
-
-- [Announcing AIP unified labeling client maintenance mode and sunset of mobile viewer](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613)
-- [Compare the labeling solutions for Windows computers](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
-- [Microsft 365 roadmap](https://aka.ms/MIPC/Roadmap)
-
-
-## The AIP mobile viewer apps
-
-As we continue to bring the customer labeling and protection experience to built-in applications like Office 365, AIP mobile viewer apps for iOS and Android are planned to be sunset on **December 31, 2022**.
-
-After the mobile app sunset date, all relevant supported file types can still be consumed by [AIP viewer for windows](rms-client/clientv2-view-use-files.md). We are evaluating alternative options for our customers that are interested in consuming protected PDF files via mobile.
-
-For consuming protected messages, we recommend that you use the Outlook mobile application, which is supported and aligned with built-in labeling and consuming protected messages.
-
-For more information, see our blog: [Announcing AIP unified labeling client maintenance mode and sunset of mobile viewer](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613).
-
 ## AIP and legacy Windows and Office, SharePoint, and Exchange versions
 
 - [Windows 7 extended supported ended on January 14, 2020](/lifecycle/products/windows-7).
