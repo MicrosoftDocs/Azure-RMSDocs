@@ -23,7 +23,7 @@ search.appverid:
 
 ---
 
-# Learn about about built-in labeling and the AIP unified labeling client
+# Learn about built-in labeling and the AIP unified labeling client
 
 >***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
@@ -65,7 +65,7 @@ Built-in labeling provides automatic updates, account switching, increased perfo
     - The cloud service is *Azure Information Protection*, and uses the Azure Rights Managements service for data protection
     - The on-premises service is *Active Directory Rights Management Services* (AD RMS)
 
-- **Built-in labeling cannot be disabled by users.**
+- **Built-in labeling can be disabled only by admins, and not by users.**
 
 
 > [!TIP]
@@ -96,7 +96,7 @@ To compare features for built-in sensitivity labeling across different platforms
 |**User-defined permissions for a label**: <br />Do Not Forward for emails|  ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |
 |**User-defined permissions for a label**: <br />Custom permissions for Word, Excel, PowerPoint|  ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |
 |**Visual markings as a label action**<br> (header, footer, watermark)|  ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png)|
-|**Per app visual markings**|  ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <br>[Learn more](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables)|
+|**Per app visual markings**|  ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <br>[Learn more](/microsoft-365/compliance/sensitivity-labels-office-apps#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)|
 |**Dynamic visual markings with variables**|  ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) <br>[Learn more](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables)|
 |**Government Community Cloud** |![yes](../media/yes-icon.png) <br>[Learn more](/azure/security/fundamentals/feature-availability#azure-information-protection) | ![yes](../media/yes-icon.png)|
 |**Multilanguage support for labels**|  ![yes](../media/yes-icon.png) |![yes](../media/yes-icon.png) |
@@ -108,8 +108,6 @@ While the Azure Information Protection unified labeling client supports automati
 For more information, see [How to configure auto-labeling for Office apps](/microsoft-365/compliance/apply-sensitivity-label-automatically).
 
 ### Supported differently with the AIP Office add-in and the built-in labeling solution
-
-CONSIDERATIONS - pull this out of a table into two sections, about customizations + reporting? 
 
 |Feature|AIP Office add-in|Office built-in labeling solution|
 |:------|:---------------------:|:-----------------------------:|
@@ -123,8 +121,6 @@ For central reporting from the Azure portal, see [Azure Information Protection a
 
 ### Supported only with the built-in labeling solution
 
-CONSIDERATIONS - Do we really need a table here? Or is a bulleted list enough (similar to [Learn about labeling outside of Office applications](#learn-about-labeling-outside-of-office-applications))
-
 |Feature|AIP Office add-in|Office built-in labeling solution|
 |:------|:---------------------:|:-----------------------------:|
 |**Encrypt-Only**|  ![no](../media/no-icon.png) | ![yes](../media/yes-icon.png)|
@@ -137,8 +133,6 @@ In this scenario, the Azure Information Protection unified labeling client will 
 
 
 ### Supported only with the AIP Office add-in
-
-CONSIDERATIONS - Do we really need a table here? Or is a bulleted list enough (similar to [Learn about labeling outside of Office applications](#learn-about-labeling-outside-of-office-applications))
 
 |Feature|AIP Office add-in|Office built-in labeling solution|
 |:------|:---------------------:|:-----------------------------:|
