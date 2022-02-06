@@ -131,7 +131,6 @@ The Azure Information Protection unified labeling client doesn't support applyin
 
 In this scenario, the Azure Information Protection unified labeling client will not apply the parent label.
 
-
 ### Supported only with the AIP Office add-in
 
 |Feature|AIP Office add-in|Office built-in labeling solution|
@@ -143,6 +142,7 @@ In this scenario, the Azure Information Protection unified labeling client will 
 |**Usage logging in Event Viewer**| ![yes](../media/yes-icon.png) <br>[Learn more](../log-analyze-usage.md) | ![no](../media/no-icon.png)|
 |**Remove external content marking in app**|  ![yes](../media/yes-icon.png)| ![no](../media/no-icon.png)|
 |**Support for Microsoft Office 97-2003 formats**|  ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**Support for perpetual versions of Office**, including Office 2016, 2019, 2021| ![yes](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
 |**Manual policy file management for disconnected computers**| ![yes](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
 | | | |
 
@@ -164,8 +164,6 @@ For more information, see [Admin Guide: Install the Azure Information Protection
 ### Can AIP and built-in labeling function side-by-side?
 
 Yes. We recommend that you use the built-in labeling solution for Office apps to benefit from features such as automatic updates and increased performance. You can also deploy the AIP unified labeling client across your network to use the additional File Explorer support, PowerShell cmdlets, and the AIP scanner.
-
-MORE TBD
 
 ### What's the difference between Azure Information Protection and Microsoft Information Protection?
 
@@ -190,17 +188,14 @@ For more information, see [Information protection capabilities to help protect y
 
 ### What's the difference between labeling with the built-in labeling solution and labeling with the AIP Office add-in?
 
-THIS NEEDS TO BE RE-WRITTEN
+Unlike the AIP Office add-in, the built-in labeling solution provided by [Microsoft Information Protection](https://www.microsoft.com/security/business/information-protection) is part of your Office applications, and will be maintained as part of the Office update strategy.
 
-Originally, Microsoft 365 had only [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30), which enabled you to classify documents and emails for auditing and retention when that content was stored in Microsoft 365 services.
+From a functional perspective, use the sections above to understand the similarities and differences between the two services. For more information, see [Learn about labeling in Office applications](#learn-about-labeling-in-office-applications).
 
-In contrast, Azure Information Protection labels, configured at the time using the AIP classic client in the Azure portal, enabled you to apply a consistent classification and protection policy for documents and emails whether they were stored on-premises or in the cloud.
+While we continue to develop features for built-in labeling with Microsoft Information protection, use the AIP Office add-in provided by the unified labeling client to cover any functionality not currently available with built-in labeling. 
 
-Microsoft 365 supports [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in addition to retention labels. Sensitivity labels can be created and configured in the Microsoft 365 compliance center.
+For more information, see the [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance).
 
-If you have legacy AIP labels configured in the Azure portal, we recommend migrating them to sensitivity labels and unified labeling client. For more information, see [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to unified labeling solution](../tutorial-migrating-to-ul.md).
-
-For more information, see [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 ## The Rights Management client
 
