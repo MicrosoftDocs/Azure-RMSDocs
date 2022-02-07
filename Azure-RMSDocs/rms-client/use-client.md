@@ -77,6 +77,12 @@ Built-in labeling provides more stability, better performance, and the latest fe
 
 If you already have the AIP unified labeling client installed, you'll need to disable it to use built-in labeling with Office apps. For more information, see the [Microsoft 365 compliance documentation](/microsoft-365/compliance/sensitivity-labels-aip#how-to-disable-the-aip-add-in-to-use-built-in-labeling).
 
+### The Rights Management client
+
+The Rights Management Service (RMS) client provides protection only, and is automatically installed with some applications, including Office applications, the AIP unified labeling client, and [RMS-enlightened applications](../requirements-applications.md) from other software vendors.
+
+You can also [install the RMS client yourself](https://www.microsoft.com/download/details.aspx?id=38396), to support [synchronizing files from IRM-protected libraries and OneDrive](/onedrive/deploy-on-windows), and for developers who want to integrate rights management protection into line-of-business applications.
+
 ## Labeling functionality outside of Office applications
 
 Outside of Office applications, the AIP unified labeling client provides the following extra features:
@@ -121,28 +127,19 @@ For more information, see [Information protection capabilities to help protect y
 
 Unlike the AIP Office add-in, the built-in labeling solution provided by [Microsoft Information Protection](https://www.microsoft.com/security/business/information-protection) is part of your Office applications, and will be maintained as part of the Office update strategy.
 
-From a functional perspective, use the sections above to understand the similarities and differences between the two services. For more information, see [Learn about labeling in Office applications](#learn-about-labeling-in-office-applications).
+From a functional perspective, the [feature parity section](/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office) in the Microsoft 365 compliance documentation to understand the similarities and differences between the two services.
 
-While we continue to develop features for built-in labeling with Microsoft Information protection, use the AIP Office add-in provided by the unified labeling client to cover any functionality not currently available with built-in labeling.
+Keep the AIP client installed, but disabled in Office apps in order benefit from right-click options from the File Explorer, the AIP Viewer, PowerShell support, and the AIP scanner.
 
-For more information, see the [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance).
-
-
-## The Rights Management client
-
-The RMS client provides protection only, and is automatically installed with some applications, including Office applications, the AIP unified labeling and classic clients, and RMS-enlightened applications from other software vendors.
-
-You can also [install the RMS client yourself](https://www.microsoft.com/download/details.aspx?id=38396), to support [synchronizing files from IRM-protected libraries and OneDrive](/onedrive/deploy-on-windows), and for developers who want to integrate rights management protection into line-of-business applications.
+For more information, see [Learn about MIP and the AIP client](/microsoft-365/compliance/sensitivity-labels-aip) and the [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance).
 
 ## Next steps
 
-If you haven't yet enabled the built-in labeling solution for Microsoft 365, we recommend that you analyze the support information in this article and the [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance) for updates in the compliance center.
+If you haven't yet enabled the built-in labeling solution for Microsoft 365, we recommend that you analyze the [feature parity information](/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office) in the Microsoft 365 compliance documentation and the [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance) for updates in the compliance center.
 
-Enable built-in labeling across your network to benefit from continued enhancements and a unified and streamlined customer experience.
+Disable the AIP add-in for Office apps to use built-in labeling across your network, with continued enhancements and a unified and streamlined customer experience.
 
-For more information about using the built-in labeling solution, see [Sensitivity labels in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps).
-
-To install and configure the Azure Information Protection unified labeling client, see:
+For the [extra features provided outside of Office apps](#labeling-functionality-outside-of-office-applications), install and configure the Azure Information Protection unified labeling client. For more information, see:
 
 - [Azure Information Protection unified labeling client administrator guide](clientv2-admin-guide.md)
 - [Azure Information Protection unified labeling user guide](clientv2-user-guide.md)
