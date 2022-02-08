@@ -65,8 +65,6 @@ Built-in labeling provides more stability, better performance, and the latest fe
 
 - **Built-in labeling requires no extra installations** and provides automatic updates. You only need a Windows computer with Microsoft 365 applications minimum version 1910. In contrast, the AIP unified labeling client requires a separate [installation](https://www.microsoft.com/download/details.aspx?id=53018) on each client machine.
 
-    After installing, use the AIP client with a cloud or on-premises service.
-
 > [!TIP]
 > Microsoft 365 is constantly developing new features for sensitivity labels with built-in labeling. We recommend checking for updates in the following locations:
 >
