@@ -69,7 +69,7 @@ If you're using the classic client, use the Azure portal. For more information, 
 ### Additional configuration for computers that run Office 2010
 
 > [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](removed-deprecated-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
 > 
 
 If migrated clients run Office 2010, users might experience delays in opening protected content after our AD RMS servers are de-provisioned. Or, users might see messages that they don't have credentials to open protected content. To resolve these problems, create a network redirection for these computers, which redirects the AD RMS URL FQDN to the local IP address of the computer (127.0.0.1). You can do this by configuring the local hosts file on each computer, or by using DNS.
@@ -140,7 +140,7 @@ Finally, if you are using Office 2010 and you have enabled the **AD RMS Rights P
 This task is typically enabled by using group policy and supports an AD RMS deployment. You can find this task in the following location: **Microsoft** > **Windows** > **Active Directory Rights Management Services Client**. 
 
 > [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](removed-deprecated-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
 
 ## Step 12. Rekey your Azure Information Protection tenant key
 

@@ -63,7 +63,7 @@ The Azure Information Protection client requires a minimum version of Microsoft 
 ### Installing the Azure Information Protection client with Office 2010
 
 > [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../removed-deprecated-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
 > 
 
 After you have installed the Azure Information Protection client by using the previous instructions:    
