@@ -65,15 +65,15 @@ Built-in labeling provides more stability, better performance, and the latest fe
 
 - **Built-in labeling requires no extra installations** and provides automatic updates. You only need a Windows computer with Microsoft 365 applications minimum version 1910. In contrast, the AIP unified labeling client requires a separate [installation](https://www.microsoft.com/download/details.aspx?id=53018) on each client machine.
 
-> [!TIP]
-> Microsoft 365 is constantly developing new features for sensitivity labels with built-in labeling. We recommend checking for updates in the following locations:
->
->- [Feature parity for built-in labeling and the AIP add-in for Office](/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office)
->- [What's new in Microsoft 365 compliance](/microsoft-365/compliance/whats-new)
->- The [Microsoft 365 Roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance)
->
-
 If you already have the AIP unified labeling client installed, you'll need to disable it to use built-in labeling with Office apps. For more information, see the [Microsoft 365 compliance documentation](/microsoft-365/compliance/sensitivity-labels-aip#how-to-disable-the-aip-add-in-to-use-built-in-labeling).
+
+### Updates for Microsoft Information Protection in Microsoft 365
+
+Microsoft 365 is constantly developing new features for sensitivity labels with built-in labeling. We recommend checking for updates in the following locations:
+
+- [Feature parity for built-in labeling and the AIP add-in for Office](/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office)
+- [What's new in Microsoft 365 compliance](/microsoft-365/compliance/whats-new)
+- The [Microsoft 365 Roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance)
 
 ### The Rights Management client
 
