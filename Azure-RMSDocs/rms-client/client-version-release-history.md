@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure Information Protection classic client - Version history & support policy
-description: See what's new or changed in a release of the Azure Information Protection classic client, and understand the lifecycle policy for support. 
+description: See the contents included in each release of the Azure Information Protection classic client, and understand the lifecycle policy for support.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -67,9 +67,9 @@ All client versions from 1.4.21.0 released 03/15/2017 support TLS 1.2. Client ve
 
 ### Release history
 
-Use the following information to see what's new or changed for a supported release of the Azure Information Protection classic client for Windows. The most current release is listed first.
+Use the following information to see the contents of a supported release of the Azure Information Protection classic client for Windows. The most current release is listed first.
 
-Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 > [!NOTE]
 >  For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).

@@ -5,7 +5,7 @@
   items:
   - name: What is Azure Information Protection?
     href: what-is-information-protection.md
-  - name: What's new in AIP?
+  - name: Release management and supportability
     href: ./rms-client/unifiedlabelingclient-version-release-history.md
   - name: AIP requirements
     items:
