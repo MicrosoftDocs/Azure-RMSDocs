@@ -61,7 +61,7 @@ landingContent:
        links:
           - text: Top recommended Ignite sessions
             url: what-is-information-protection.md#top-ignite-sessions
-          - text: What's new for the AIP unified labeling client
+          - text: Release management and supportability
             url: ./rms-client/unifiedlabelingclient-version-release-history.md
 
   # Card
@@ -109,8 +109,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Choose your Windows labeling solution
-            url: ./rms-client/use-client.md#choose-your-windows-labeling-solution
+          - text: About built-in labeling and the AIP client
+            url: ./rms-client/use-client.md
       - linkListType: tutorial
         links: 
           - text: Migrate to the unified labeling solution

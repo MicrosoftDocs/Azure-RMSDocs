@@ -23,7 +23,7 @@ ms.custom: admin
 
 ---
 
-# Azure Information Protection unified labeling client - Version release history and support policy
+# Azure Information Protection unified labeling client - Release management and supportability
 
 >***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
