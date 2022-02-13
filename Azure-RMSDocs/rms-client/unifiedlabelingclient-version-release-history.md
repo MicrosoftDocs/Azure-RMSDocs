@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: What's new in Azure Information Protection (AIP) - Version history & support policy
-description: Find out what's new for the Azure Information Protection (AIP) unified labeling client for Windows.
+title: Release management and supportability - Azure Information Protection (AIP)
+description: Learn about the contents of each version of the Azure Information Protection (AIP) unified labeling client for Windows and understand the lifecycle policy for support.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -88,7 +88,7 @@ The date format used on this page is *month/day/year*.
 
 ### Release information
 
-Use the following information to see what's new or changed for a supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
+Use the following information to see the contents of each supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
 
 Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
