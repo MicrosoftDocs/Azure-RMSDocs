@@ -27,8 +27,7 @@ ms.custom: admin
 
 # Analytics and central reporting for Azure Information Protection (public preview)
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
+
 This article describes how to use Azure Information Protection (AIP) analytics for central reporting, which can help you track the adoption of your labels that classify and protect your organization's data.
 
 AIP analytics also enable you to do perform the following steps:

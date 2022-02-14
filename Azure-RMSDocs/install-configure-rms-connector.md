@@ -27,8 +27,7 @@ ms.custom: admin
 
 # Installing and configuring the Microsoft Rights Management connector
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows Server 2019, 2016, 2012 R2, and Windows Server 2012*
->
+
 
 Use the following information to help you install and configure the Microsoft Rights Management (RMS) connector. These procedures cover steps 1 though 4 from [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 

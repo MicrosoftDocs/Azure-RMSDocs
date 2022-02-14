@@ -26,8 +26,7 @@ ms.custom: admin
 
 # AIP deployment roadmap for classification, labeling, and protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
+
 Use the following steps as recommendations to help you prepare for, implement, and manage Azure Information Protection for your organization, when you want to classify, label, and protect your data.
 
 This roadmap is recommended for any customers with a supporting subscription. Additional capabilities include both discovering sensitive information and labeling documents and emails for classification. 

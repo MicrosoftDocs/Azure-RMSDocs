@@ -28,8 +28,7 @@ ms.custom: admin
 
 # Compliance and supporting information for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
+
 Azure Information Protection supports other services and also relies on other services. If you’re looking for information that is related to Azure Information Protection but not about how to use the Azure Information Protection service, check the following resources:
 
 ## Suitability for different countries

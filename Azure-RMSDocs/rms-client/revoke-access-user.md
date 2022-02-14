@@ -27,10 +27,6 @@ ms.custom: user
 
 # User Guide: Revoke document access with Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8*
->
-
-
 This article describes how to revoke access for Office documents that you've protected from Microsoft Office. Protected documents are supported for track and revoke, even if they are not labeled.
 
 Revoking access for a protected document prevents other users from accessing the document, even if you've given them access before. For more information, see [User Guide: Classify and protect with the Azure Information Protection unified labeling client](clientv2-classify-protect.md).

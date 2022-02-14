@@ -29,8 +29,7 @@ ms.custom: admin
 
 # How Windows file servers that use FCI support Azure Rights Management
 
->***Applies to**: Azure Information Protection, [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
+
 
 When you configure Windows Server to use File Classification Infrastructure, this File Server Resource Manager feature can scan local files and determine whether they contain sensitive data. 
 

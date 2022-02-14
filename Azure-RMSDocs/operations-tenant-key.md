@@ -27,9 +27,6 @@ ms.custom: admin
 
 # Operations for your Azure Information Protection tenant key
 
->**Applies to*: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
-
 Depending on your tenant key topology for Azure Information Protection, you have different levels of control and responsibility for your Azure Information Protection tenant key. The two key topologies are **Microsoft-managed** and **customer-managed**.
 
 When you manage your own tenant key in Azure Key Vault, this is often referred to as bring your own key (BYOK). For more information about this scenario and how to choose between the two tenant key topologies, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).

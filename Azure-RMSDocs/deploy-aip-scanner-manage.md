@@ -26,8 +26,6 @@ ms.custom: admin
 
 # Running the Azure Information Protection scanner
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
->
 
 Once you've confirmed your [system requirements](deploy-aip-scanner-prereqs.md) and [configured and installed your scanner](deploy-aip-scanner-configure-install.md), [run a discovery scan](#run-a-discovery-cycle-and-view-reports-for-the-scanner) to get started.
 

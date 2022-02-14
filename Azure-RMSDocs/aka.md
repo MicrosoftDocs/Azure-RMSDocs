@@ -27,8 +27,7 @@ ms.custom: admin
 
 # Azure Information Protection - also known as ...
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
+
 
 
 Azure Information Protection (AIP) has evolved from a long history of established technologies from Microsoft that implement rights management protection. Because of this evolution, you might know this solution by one of its previous names. Or you might see references to these names in documentation, the UI, and log files. 

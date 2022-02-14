@@ -28,8 +28,7 @@ search.appverid:
 
 # Azure Information Protection (AIP) labeling, classification, and protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
+
 
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to classify and protect documents and emails by applying labels. 
 

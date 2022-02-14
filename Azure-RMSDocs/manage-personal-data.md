@@ -26,8 +26,7 @@ ms.custom: admin
 
 # Manage personal data for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
+
 When you configure and use Azure Information Protection, email addresses and IP addresses are stored and used by the Azure Information Protection service. This personal data can be found in the following items:
 
 - Super users and delegated administrators for the protection service 

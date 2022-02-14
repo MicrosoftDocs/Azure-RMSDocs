@@ -28,8 +28,7 @@ ms.custom: admin
 
 # Tutorial: Migrating from the Azure Information Protection (AIP) classic client to unified labeling solution
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
+
 
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are **deprecated** as of **March 31, 2021**. While the classic client continues to work as configured, no further support is provided, and maintenance versions will no longer be released for the classic client. 

@@ -25,8 +25,7 @@ ms.custom: admin
 
 # Known issues - Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
+
 Use the lists and tables below to find details about known issues and limitations related to Azure Information Protection features.
 
 ## Other digital signing and encryption solutions

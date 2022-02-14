@@ -26,8 +26,6 @@ ms.custom: admin
 
 # Admin Guide: Install the Azure Information Protection unified labeling client for users
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
->
 
 
 This article describes how administrators can deploy the Azure Information Protection (AIP) unified labeling client for your users across an enterprise network.

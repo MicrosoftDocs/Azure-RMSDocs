@@ -26,8 +26,7 @@ ms.custom: admin
 
 # Preparing users and groups for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
+
 
 Before you deploy Azure Information Protection for your organization, make sure that you have accounts for users and groups in Azure AD for your organization's tenant.
 

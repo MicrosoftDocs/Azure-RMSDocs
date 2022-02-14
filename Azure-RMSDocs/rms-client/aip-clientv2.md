@@ -27,8 +27,6 @@ search.appverid:
 
 # Azure Information Protection unified labeling client for Windows
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
->
 
 The Azure Information Protection unified labeling client for Windows is a downloadable client for organizations that use [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) to classify and protect documents and emails. This client also has a viewer for organizations that don't have their own information protection infrastructure but want to consume content that has been protected by other organizations that use a Rights Management service from Microsoft.
 

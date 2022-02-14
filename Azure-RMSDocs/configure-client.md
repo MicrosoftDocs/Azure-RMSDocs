@@ -26,8 +26,7 @@ ms.custom: admin
 
 # Azure Information Protection client: Installation and configuration for clients
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
+
 The AIP unified labeling client is recommended for all Windows computers, because it installs an Office add-in that enables users to easily label and protect documents directly from the Office ribbon. 
 
 The client also offers:

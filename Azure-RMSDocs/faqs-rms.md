@@ -26,8 +26,7 @@ ms.custom: admin
 
 # Frequently asked questions about data protection in Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
+
 
 Have a question about the data protection service, Azure Rights Management, from Azure Information Protection? See if it's answered here.
 

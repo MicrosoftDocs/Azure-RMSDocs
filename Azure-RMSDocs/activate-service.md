@@ -27,9 +27,6 @@ ms.custom: admin
 
 # Activating the protection service from Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
-
 This article describes how administrators can activate the Azure Rights Management protection service for Azure Information Protection (AIP). When the protection service is activated for your organization, administrators and users can start to protect important data by using applications and services that support this information protection solution. Administrators can also manage and monitor protected documents and emails that your organization owns.
 
 > [!NOTE]

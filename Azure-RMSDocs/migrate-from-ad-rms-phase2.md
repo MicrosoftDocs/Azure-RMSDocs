@@ -27,8 +27,6 @@ ms.custom: admin
 
 # Migration phase 2 - server-side configuration for AD RMS
 
->***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
 
 Use the following information for Phase 2 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 4 though 6 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 

@@ -26,8 +26,7 @@ ms.custom: admin
 
 # Frequently asked questions about classification and labeling in Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
+
 
 Have a question about Azure Information Protection that is specifically about classification and labeling?  See if it's answered here.
 

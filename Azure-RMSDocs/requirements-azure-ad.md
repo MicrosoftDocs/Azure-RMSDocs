@@ -26,8 +26,7 @@ ms.custom: admin, has-adal-ref
 
 # Additional Azure AD requirements for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
+
 
 An [Azure AD directory is a requirement](requirements.md#azure-active-directory) for using Azure Information protection. Use an account from an Azure AD directory to sign in to the Azure portal, where you can configure Azure Information Protection settings.
 

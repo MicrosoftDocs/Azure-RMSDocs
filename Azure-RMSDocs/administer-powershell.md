@@ -26,8 +26,7 @@ ms.custom: admin
 
 # Administering protection from Azure Information Protection by using PowerShell
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
+
 Do you need to use PowerShell to administer the protection service from Azure Information Protection? You might not need to if all your configuration can be done in the Azure portal or the Microsoft 365 compliance center. However, you need to use PowerShell for some advanced configurations and you might also prefer to use PowerShell for more efficient command-line control and scripting.
 
 The table in the next section includes some of the advanced configuration scenarios that use PowerShell. When the configuration can also be completed without using PowerShell, this information is also included in the table.

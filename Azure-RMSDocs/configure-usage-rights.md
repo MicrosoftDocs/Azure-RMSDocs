@@ -27,8 +27,7 @@ ms.custom: admin
 
 # Configure usage rights for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
+
 > 
 > For completeness, this article includes values from the Azure classic portal, which was retired January 08, 2018.
 

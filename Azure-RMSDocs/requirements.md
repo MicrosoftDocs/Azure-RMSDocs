@@ -27,10 +27,6 @@ ms.custom: admin
 
 # Azure Information Protection requirements
 
->****Applies to***: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
-
-
 Before deploying Azure Information Protection, ensure that your system meets the following prerequisites:
 
 - [Subscription for Azure Information Protection](#subscription-for-azure-information-protection)

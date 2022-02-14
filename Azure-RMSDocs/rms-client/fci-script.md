@@ -28,9 +28,6 @@ ms.custom: admin
 
 # Windows PowerShell script for Azure RMS protection by using File Server Resource Manager FCI
 
->***Applies to**: Azure Information Protection, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
->
-
 This page contains the sample script to copy and edit, as described in [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).
 
 This script uses a minimum version of **1.3.155.2** for the AzureInformationProtection module. Run the following command to check the version: `(Get-Module AzureInformationProtection -ListAvailable).Version` 

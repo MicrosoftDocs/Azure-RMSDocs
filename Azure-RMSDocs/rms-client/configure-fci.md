@@ -28,9 +28,6 @@ ms.custom: admin
 
 # RMS protection with Windows Server File Classification Infrastructure (FCI)
 
->***Applies to**: Azure Information Protection, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
->
-
 Use this article for instructions and a script to use the Azure Information Protection client and PowerShell to configure File Server Resource Manager and File Classification Infrastructure (FCI).
 
 This solution lets you automatically protect all files in a folder on a file server running Windows Server, or automatically protect files that meet a specific criteria. For example, files that have been classified as containing confidential or sensitive information. This solution connects directly to the Azure Rights Management service from Azure Information Protection to protect the files, so you must have this service deployed for your organization.

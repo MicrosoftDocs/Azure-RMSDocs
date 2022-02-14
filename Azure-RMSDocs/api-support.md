@@ -26,8 +26,7 @@ ms.custom: admin
 
 # Other applications that support the Rights Management APIs
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
+
 
 Use the following information to help you understand how the Azure Rights Management service from Azure Information Protection can support other applications to protect your organization's data.
 

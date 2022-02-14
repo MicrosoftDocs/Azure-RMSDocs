@@ -26,8 +26,6 @@ ms.custom: admin
 
 # Configuring and installing the Azure Information Protection (AIP) unified labeling scanner
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
->
 
 This article describes how to configure and install the Azure Information Protection unified labeling, on-premises scanner.
 

@@ -25,9 +25,6 @@ ms.custom: user
 
 # User Guide: Classify and protect with the Azure Information Protection unified labeling client
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8*
->
-
 > [!NOTE]
 > Use these instructions to help you classify and protect your documents and emails. If you need to only classify and not protect your documents and emails, see the [classify-only instructions](clientv2-classify.md). If you are not sure which set of instructions to use, check with your administrator or help desk.
 

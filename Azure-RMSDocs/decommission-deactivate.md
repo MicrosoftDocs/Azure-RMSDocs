@@ -27,8 +27,7 @@ ms.custom: admin
 
 # Decommissioning and deactivating protection for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
+
 
 You are always in control of whether your organization protects content by using the Azure Rights Management service from Azure Information Protection. If you decide you no longer want to use this information protection service, you have the assurance that you won’t be locked out of content that was previously protected.
 

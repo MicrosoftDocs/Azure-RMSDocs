@@ -28,8 +28,6 @@ ms.custom: admin
 
 # Admin Guide: Configuring and using document tracking for Rights Management Service protection with the legacy tracking portal
 
->***Applies to**: Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
->
 
 If you have a [subscription that supports document tracking](https://www.microsoft.com/cloud-platform/azure-information-protection-features), the document tracking site is enabled by default for all users in your organization. Document tracking provides information for users and administrators about when a protected document was accessed and if necessary, a tracked document can be revoked.
 

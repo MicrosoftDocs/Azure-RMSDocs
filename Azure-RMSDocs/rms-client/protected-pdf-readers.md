@@ -27,8 +27,7 @@ search.appverid:
 
 # Which PDF readers are supported for protected PDFs?
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
+
 >
 
 This article describes the protected PDF readers that are supported for Azure Information Protection (AIP). Protected PDF readers enable users to open those encrypted PDFs and view the sensitive information contained.
