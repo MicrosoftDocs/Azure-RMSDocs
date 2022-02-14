@@ -11,10 +11,6 @@
     href: ./rms-client/unifiedlabelingclient-version-release-history.md
   - name: AIP is also known as ...
     href: aka.md
-- name: Quickstarts
-  items:
-  - name: Deploying the client
-    href: quickstart-deploy-client.md
 - name: Tutorials
   items:
   - name: Installing the scanner
@@ -179,6 +175,8 @@
       href: deploy-aip-scanner-tsg.md
   - name: Deploying & using the client
     items:
+    - name: Deploying the client
+      href: quickstart-deploy-client.md
     - name: Unified labeling client admin guide
       items:
       - name: Overview
