@@ -125,7 +125,7 @@ The following table describes prerequisites required for the network discovery s
 > [!IMPORTANT]
 > Azure Information Protection analytics will be deprecated on September 30, 2022, together with the scanner's network discovery capabilities.
 >
-> Starting March 1, 2022, new customers are no longer onboarded to Azure Information Protection analytics. Therefore, starting March 1, 2022, network discovery is available only for existing customers with Azure Information Protection analytics already configured.
+> Starting March 1, 2022, new customers are no longer onboarded to Azure Information Protection analytics. For this reason, starting March 1, 2022, network discovery is available only for existing customers with Azure Information Protection analytics already configured.
 >
 > For more information, see our [TechCommunity blog post](placeholder).
 

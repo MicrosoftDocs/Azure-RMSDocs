@@ -51,7 +51,17 @@ Microsoft Azure Information Protection generates audit logs at the following act
 > Azure Information Protection collects data from desktop apps only, and not from mobile devices.
 >
 > For more information, see the details in the **Platform** columns in this article.
-> 
+>
+
+## Deprecation notice
+
+Azure Information Protection analytics will be deprecated on September 30, 2022.
+
+Starting March 1, 2022, new customers are no longer onboarded to Azure Information Protection analytics.
+
+Instead, we highly recommend that you use the Microsoft 365 compliance center's [activity explorer](/microsoft-365/compliance/data-classification-activity-explorer) and [content explorer](/microsoft-365/compliance/data-classification-content-explorer), which provide comprehensive logging and reporting.
+
+For more information, see our [TechCommunity blog post](placeholder).
 
 ## Access audit logs
 
