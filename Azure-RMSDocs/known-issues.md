@@ -225,23 +225,6 @@ If you have documents stored in OneDrive with a sensitivity label applied, and a
 
 In such cases, re-label the document manually to apply the protection as needed.
 
-## AIP and legacy Windows and Office versions
-
-- [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
-
-    We strongly encourage you to upgrade to a newer version of Windows.
-
-    However, if you have Extended Security Updates (ESU) and a support contract, AIP support is available to continue keeping your Windows 7 systems secure.
-
-    For more information, check with your support contact.
-
-- [**Office 2010 extended support ended on October 13, 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010).
-
-    This support will not be extended, and ESU will not be offered for Office 2010.
-
-    We strongly encourage you to upgrade to a newer version of Office 365.
-
-    For more information, check with your support contact.
 
 ## AIP-based Conditional Access policies
 

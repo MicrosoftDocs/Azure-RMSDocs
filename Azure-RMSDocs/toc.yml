@@ -7,7 +7,7 @@
     href: what-is-information-protection.md
   - name: Comparing built-in labeling and AIP
     href: ./rms-client/use-client.md
-  - name: What's new in AIP?
+  - name: Release management and supportability
     href: ./rms-client/unifiedlabelingclient-version-release-history.md
   - name: AIP is also known as ...
     href: aka.md
@@ -237,6 +237,8 @@
       href: faqs-infoprotect.md
     - name: FAQs - data protection
       href: faqs-rms.md
+  - name: Removed and deprecated services
+    href: removed-deprecated-services.md
   - name: Known issues
     href: known-issues.md
   - name: Information and support

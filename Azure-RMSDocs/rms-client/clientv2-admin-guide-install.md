@@ -28,8 +28,6 @@ ms.custom: admin
 
 >***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
->*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
->
 
 
 This article describes how administrators can deploy the Azure Information Protection (AIP) unified labeling client for your users across an enterprise network.
@@ -45,16 +43,12 @@ The Azure Information Protection unified labeling client can label and protect d
 - **Office Professional Plus 2019**
 - **Office Professional Plus 2016**
 - **Office Professional Plus 2013 with Service Pack 1**
-- **Office Professional Plus 2010 with Service Pack 2**
 
 Other editions of Office (such as **standard**) cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for **labeling** only. 
 
 Consequently, labels that apply protection do not display to users on the Azure Information Protection Sensitivity button or bar.
 
 For information about which Office editions support the protection service, see [Applications that support Azure Rights Management data protection](../requirements-applications.md).
-
-> [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 ## Unified labeling client installation options
 
@@ -97,19 +91,10 @@ Use the following instructions to install the client when you're *not* using the
     |Parameter  |Description  |
     |---------|---------|
     |**AllowTelemetry=0**     |    Use this parameter to disable the install option **Help improve Azure Information Protection by sending usage statistics to Microsoft**.     |
-    |**ServiceLocation**     |  Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted. <br><br>**Important**: Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions). |
     | | |
 
 1. To complete the installation, restart any Office applications and all instances of File Explorer. 
 
-    > [!NOTE]
-    > If your computer runs [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions), restart your computer. 
-    >
-    > If the client was not installed with the **ServiceLocation** parameter, when you first open one of the Office applications that use the Azure Information Protection unified client (for example, Word), you must confirm any prompts to update the registry for this first-time use. 
-    >
-    > [Service discovery](client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys. 
-    > 
-        
 1. Confirm that the installation was successful by checking the install log file, which by default is created in the **%temp%** folder. 
 
     The install log file has the following naming format: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
@@ -120,45 +105,7 @@ Use the following instructions to install the client when you're *not* using the
 
     > [!TIP]
     > You can change the location of the installation log file with the **/log** installation parameter. 
-    >  
-### More information about the ServiceLocation installation parameter
-
-When you install the client for users who have [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions) and they do not have local administrative permissions, specify the **ServiceLocation** parameter and the URL for your Azure Rights Management service. 
-    
-> [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
->
-
-This parameter and value creates and sets the following registry keys:
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation`
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing`
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing`
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation`
-
-
-**To identify the value to specify for the ServiceLocation parameter**:
-
-1. From a PowerShell session, first run [Connect-AipService](/powershell/module/aipservice/connect-aipservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration). 
- 
-    If you haven't already installed the PowerShell module for the Azure Rights Management service, see [Installing the AIPService PowerShell module](../install-powershell.md).
-
-2. From the output, identify the **LicensingIntranetDistributionPointUrl** value.
-
-    For example: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
-
-3. From the value, remove **/_wmcs/licensing** from this string. For example: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
-
-    The remaining string is the value to specify for your ServiceLocation parameter.
-
-For example, to install the client silently for [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions) and Azure RMS:
-
-```powershell
-AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com
-```
+    > 
 
 
 ## Install the unified labeling client using the .msi installer
@@ -183,15 +130,8 @@ If you use Intune for your software deployment method, use these instructions to
     |--------------------|--------------|----------------|---------------------|
     |**All versions except Office 365 1902 or later**|Windows 10 version 1809 only, operation system builds older than 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Install|
     |**Office 2016**|All supported versions|64-bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32-bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version: 1.0|Install|
-    |**Office 2013**|All supported versions|64-bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32-bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version: 1.0|Install|
-    |[**Office 2010**](../known-issues.md#aip-and-legacy-windows-and-office-versions)|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
-    |[**Office 2010**](../known-issues.md#aip-and-legacy-windows-and-office-versions)|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
-    |[**Office 2010**](../known-issues.md#aip-and-legacy-windows-and-office-versions)|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
     | | | | |
 
-    > [!IMPORTANT]
-    > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
-    >
 
 1. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection_UL.msi /quiet`.
 

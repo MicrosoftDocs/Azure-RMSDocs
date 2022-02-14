@@ -131,7 +131,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |--------|--------------|
 |**Microsoft Information Protection**| Sometimes abbreviated to *MIP*.<br /><br /> A framework for products and integrated capabilities that use the same labeling store ("unified labels") and help you protect your organization's sensitive information.|
 |**MIP**| See *Microsoft Information Protection*|
-|**MSDRM**|Sometimes seen as references for the RMS client 1.0, which is replaced with the newer client, MSIPC. </br></br>This older client supports applications that are developed with the RMS SDK 1.0 and supports Office 2010 and Office 2007, Exchange 2010 and Exchange 2013, and SharePoint 2010 and SharePoint 2007.|
+|**MSDRM**|Sometimes seen as references for the RMS client 1.0, which has been replaced with the newer client, MSIPC. This older client works with applications that were developed with the RMS SDK 1.0 like Office 2010 and Office 2007, Exchange 2010 and Exchange 2013, and SharePoint 2010 and SharePoint 2007. <br><br>**Note**: Some of these applications are no longer supported by Microsoft. |
 |**MSIPC**|Sometimes seen as references for the RMS client 2.0, which replaced the older RMS client, MSDRM. </br></br>This later client supports applications that are developed with the RMS SDK 2.0 and supports Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013, and the Azure Information Protection client.|
 | | |
 

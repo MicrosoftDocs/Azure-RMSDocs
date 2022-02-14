@@ -28,9 +28,6 @@ ms.custom: admin
 
 >***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
->*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
->
-
 
 When you install the Azure Information Protection unified labeling client, PowerShell commands are automatically installed as part of the [AzureInformationProtection](/powershell/module/azureinformationprotection) module, with cmdlets for labeling. 
 
