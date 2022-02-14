@@ -121,6 +121,14 @@ The following table describes prerequisites required for the network discovery s
 |**Azure Information Protection analytics**     | Make sure that you have Azure Information Protection analytics enabled. <br /><br />In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview)**. <br /><br />For more information, see [Central reporting for Azure Information Protection (public preview)](reports-aip.md).|
 | | |
 
+
+> [!IMPORTANT]
+> Azure Information Protection analytics will be deprecated on September 30, 2022, together with the scanner's network discovery capabilities.
+>
+> Starting March 1, 2022, new customers are no longer onboarded to Azure Information Protection analytics. Therefore, starting March 1, 2022, network discovery is available only for existing customers with Azure Information Protection analytics already configured.
+>
+> For more information, see our [TechCommunity blog post](placeholder).
+
 **To create a network scan job**
 
 1. Log in to the Azure portal, and go to **Azure Information Protection**. Under the **Scanner** menu on the left, select **Network scan jobs (Preview)** ![network scan jobs icon](media/i-network-scan-jobs.png "network scan jobs icon").
