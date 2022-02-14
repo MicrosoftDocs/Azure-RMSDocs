@@ -109,9 +109,9 @@ Before you install the scanner, or upgrade it from an older general availability
 
 Add one or more of the repositories found to a content scan job to scan them for sensitive content.
 
-> [!NOTE]
-> The Azure Information Protection network discovery feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
->
+The Azure Information Protection network discovery feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+
+Azure Information Protection analytics will be deprecated on September 30, 2022, and with it, the scanner's network discovery features. Starting March 1, 2022, network discovery is available only for existing customers with Azure Information Protection analytics already configured. For more information, see our [TechCommunity blog post](placeholder).
 
 The following table describes prerequisites required for the network discovery service:
 
@@ -121,13 +121,6 @@ The following table describes prerequisites required for the network discovery s
 |**Azure Information Protection analytics**     | Make sure that you have Azure Information Protection analytics enabled. <br /><br />In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview)**. <br /><br />For more information, see [Central reporting for Azure Information Protection (public preview)](reports-aip.md).|
 | | |
 
-
-> [!IMPORTANT]
-> Azure Information Protection analytics will be deprecated on September 30, 2022, together with the scanner's network discovery capabilities.
->
-> Starting March 1, 2022, new customers are no longer onboarded to Azure Information Protection analytics. For this reason, starting March 1, 2022, network discovery is available only for existing customers with Azure Information Protection analytics already configured.
->
-> For more information, see our [TechCommunity blog post](placeholder).
 
 **To create a network scan job**
 
