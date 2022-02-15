@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Configuring applications for Azure Rights Management
 
-[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
+[!INCLUDE [looking-for-mip](/includes/looking-for-mip.md)]
 
 This article is for IT administrators and consultants who have deployed Azure Information Protection. If you are looking for user help and information about how to use the Rights Management functionality for a specific application or how to open a file that is rights-protected, use the help and guidance that accompanies your application.
 

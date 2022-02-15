@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Azure Information Protection - also known as ...
 
-[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
+[!INCLUDE [looking-for-mip](/includes/looking-for-mip.md)]
 
 Azure Information Protection (AIP) has evolved from a long history of established technologies from Microsoft that implement rights management protection. Because of this evolution, you might know this solution by one of its previous names. Or you might see references to these names in documentation, the UI, and log files. 
 

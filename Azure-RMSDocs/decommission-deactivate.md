@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Decommissioning and deactivating protection for Azure Information Protection
 
-[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
+[!INCLUDE [looking-for-mip](/includes/looking-for-mip.md)]
 
 You are always in control of whether your organization protects content by using the Azure Rights Management service from Azure Information Protection. If you decide you no longer want to use this information protection service, you have the assurance that you won’t be locked out of content that was previously protected.
 

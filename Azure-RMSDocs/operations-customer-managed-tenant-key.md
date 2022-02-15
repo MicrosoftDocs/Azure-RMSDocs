@@ -28,6 +28,7 @@ ms.custom: admin
 
 # Customer-managed: Tenant key life cycle operations
 
+[!INCLUDE [looking-for-mip](/includes/looking-for-mip.md)]
 
 
 If you manage your tenant key for Azure Information Protection (the bring your own key, or BYOK, scenario), use the following sections for more information about the life cycle operations that are relevant to this topology.

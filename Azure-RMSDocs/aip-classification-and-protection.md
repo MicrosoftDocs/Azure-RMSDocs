@@ -28,7 +28,7 @@ search.appverid:
 
 # Azure Information Protection (AIP) labeling, classification, and protection
 
-[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
+[!INCLUDE [looking-for-mip](/includes/looking-for-mip.md)]
 
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to classify and protect documents and emails by applying labels. 
 

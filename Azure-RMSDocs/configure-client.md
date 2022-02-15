@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Azure Information Protection client: Installation and configuration for clients
 
-[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
+[!INCLUDE [looking-for-mip](/includes/looking-for-mip.md)]
 
 The AIP unified labeling client installs an Office add-in that enables users to easily label and protect documents directly from the Office ribbon. 
 
