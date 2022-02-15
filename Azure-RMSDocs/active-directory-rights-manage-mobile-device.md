@@ -26,9 +26,8 @@ ms.custom: admin
 
 # Active Directory Rights Management Services Mobile Device Extension
 
-
-
 You can download the Active Directory Rights Management Services (AD RMS) mobile device extension from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=43738) and install this extension on top of an existing AD RMS deployment. This lets users  protect and consume sensitive data when their device supports the latest API-enlightened apps. For example, users can do the following:
+
 - Use the Azure Information Protection app to consume protected text files in different formats (including .txt, .csv, and .xml).
 - Use the Azure Information Protection app  to consume protected image files (including .jpg, .gif, and .tif).
 - Use the Azure Information Protection app to open any file that has been generically protected (.pfile format).

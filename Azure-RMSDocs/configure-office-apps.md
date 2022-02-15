@@ -27,7 +27,6 @@ ms.custom: admin
 # Office apps: Configuration for clients to use the Azure Rights Management service
 
 
-
 Use this information to determine what you need to do so that Office apps work with the Azure Rights Management service from Azure Information Protection.
 
 ## Office 365 apps, Office 2019, Office 2016, and Office 2013

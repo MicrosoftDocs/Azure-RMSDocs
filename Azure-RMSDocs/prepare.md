@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Preparing users and groups for Azure Information Protection
 
-
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Before you deploy Azure Information Protection for your organization, make sure that you have accounts for users and groups in Azure AD for your organization's tenant.
 

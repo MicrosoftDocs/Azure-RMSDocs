@@ -27,8 +27,7 @@ search.appverid:
 
 # Which PDF readers are supported for protected PDFs?
 
-
->
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 This article describes the protected PDF readers that are supported for Azure Information Protection (AIP). Protected PDF readers enable users to open those encrypted PDFs and view the sensitive information contained.
 

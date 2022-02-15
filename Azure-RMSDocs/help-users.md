@@ -27,7 +27,6 @@ ms.custom: admin
 
 # Helping users to protect files by using the Azure Rights Management service
 
-
 After you have deployed and configured Azure Information Protection for your organization, provide help and guidance for users, administrators, and your help desk:
 
 - **End-user information**

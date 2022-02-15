@@ -26,6 +26,7 @@ ms.custom: admin
 
 # Additional requirements for installing the unified labeling client on enterprise networks
 
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 Before you install the Azure Information Protection unified labeling client on your enterprise network, check that computers have the required operating system versions and applications for Azure Information Protection: [Requirements for Azure Information Protection](../requirements.md). 
 

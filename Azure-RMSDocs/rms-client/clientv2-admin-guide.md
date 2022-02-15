@@ -26,6 +26,7 @@ ms.custom: admin
 
 # Azure Information Protection unified labeling client administrator guide
 
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 Use the information in this guide if you are responsible for the Azure Information Protection unified labeling client on an enterprise network, or if you want more technical information than is in the [Azure Information Protection unified labeling client user guide](clientv2-user-guide.md). 
 

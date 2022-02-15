@@ -26,6 +26,7 @@ ms.custom: admin
 
 # Admin Guide: Azure Information Protection unified labeling client files and client usage logging
 
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 After you have installed the Azure Information Protection unified labeling client, you might need to know where files are located and monitor how the client is being used.
 

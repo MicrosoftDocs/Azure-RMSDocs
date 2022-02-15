@@ -27,6 +27,7 @@ ms.custom: admin
 
 # Analytics and central reporting for Azure Information Protection (public preview)
 
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 This article describes how to use Azure Information Protection (AIP) analytics for central reporting, which can help you track the adoption of your labels that classify and protect your organization's data.
 

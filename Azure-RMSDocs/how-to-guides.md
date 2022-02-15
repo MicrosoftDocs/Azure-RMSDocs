@@ -25,12 +25,11 @@ ms.custom: admin
 
 # How-to guides for common scenarios that use Azure Information Protection
 
-
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 There are many ways in which you can use Azure Information Protection to classify and optionally, protect your organization's documents and emails. 
 
 The most successful deployments are those that identify specific use cases that provide the most business benefit to the organization. Use the following list of common scenarios and instructions to get your deployment off the ground.
-
 ## Common scenarios
 
 - [Discover your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)

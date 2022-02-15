@@ -25,6 +25,8 @@ ms.custom: user
 
 # User Guide: View protected files with the Azure Information Protection unified labeling client
 
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
+
 You can often view a protected file by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
 
 If the files don't immediately open, the **Azure Information Protection viewer** might be able to open it. This viewer can open protected text files, protected image files, protected PDF files, and all files that have a **.pfile** file name extension.

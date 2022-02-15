@@ -27,6 +27,7 @@ search.appverid:
 
 # Azure Information Protection unified labeling client for Windows
 
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 The Azure Information Protection unified labeling client for Windows is a downloadable client for organizations that use [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) to classify and protect documents and emails. This client also has a viewer for organizations that don't have their own information protection infrastructure but want to consume content that has been protected by other organizations that use a Rights Management service from Microsoft.
 

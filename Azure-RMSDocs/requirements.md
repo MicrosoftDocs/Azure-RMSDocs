@@ -27,6 +27,8 @@ ms.custom: admin
 
 # Azure Information Protection requirements
 
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
+
 Before deploying Azure Information Protection, ensure that your system meets the following prerequisites:
 
 - [Subscription for Azure Information Protection](#subscription-for-azure-information-protection)

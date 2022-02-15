@@ -25,6 +25,7 @@ ms.custom: user
 
 # Mobile viewer apps for Azure Information Protection on iOS and Android
 
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text files that cannot be opened with your regular apps for these file types. For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
 

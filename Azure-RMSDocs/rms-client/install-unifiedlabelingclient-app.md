@@ -25,6 +25,8 @@ ms.custom: user
 
 # User Guide: Download and install the Azure Information Protection unified labeling client
 
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
+
 If your administrator does not install the Azure Information Protection unified labeling client for you, you can do this yourself. You must be a local administrator for your PC to install this client so that it can label and protect your documents and emails.
 
 > [!NOTE]

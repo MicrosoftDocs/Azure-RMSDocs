@@ -26,6 +26,7 @@ ms.custom: admin
 
 # AIP deployment roadmap for classification, labeling, and protection
 
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Use the following steps as recommendations to help you prepare for, implement, and manage Azure Information Protection for your organization, when you want to classify, label, and protect your data.
 

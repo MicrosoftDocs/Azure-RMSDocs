@@ -15,6 +15,8 @@ ms.service: information-protection
 
 # Removed and deprecated services
 
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
+
 This article describes the current status for removed and deprecated services that you may have used, or may still be using with Azure Information Protection.
 
 ## The AIP classic client

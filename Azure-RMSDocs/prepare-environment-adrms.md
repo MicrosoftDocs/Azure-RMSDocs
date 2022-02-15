@@ -28,8 +28,6 @@ ms.custom: admin
 # Prepare the environment for Azure Rights Management when you have AD RMS
 
 
-
-
 > [!IMPORTANT]
 > Guidance if you are using Active Directory Rights Management Services (AD RMS)
 >

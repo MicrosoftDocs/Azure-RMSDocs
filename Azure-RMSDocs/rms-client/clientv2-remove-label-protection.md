@@ -26,6 +26,8 @@ ms.custom: user
 
 # User Guide: Remove labels and protection from files and emails that have been labeled by Azure Information Protection
 
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
+
 When the Azure Information Protection unified client is [installed on your computer](install-unifiedlabelingclient-app.md), you can remove sensitivity labels and protection from files and emails.
 
 When the sensitivity label that you remove is configured to apply protection, this action also removes protection from the file. You might be prompted to record why you are removing the label.

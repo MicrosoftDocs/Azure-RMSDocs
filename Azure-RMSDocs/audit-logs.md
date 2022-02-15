@@ -25,7 +25,7 @@ ms.custom: admin
 
 # Azure Information Protection audit log reference (public preview)
 
-
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 The Azure Information Protection audit log feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 

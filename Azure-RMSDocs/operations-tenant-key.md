@@ -27,6 +27,8 @@ ms.custom: admin
 
 # Operations for your Azure Information Protection tenant key
 
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
+
 Depending on your tenant key topology for Azure Information Protection, you have different levels of control and responsibility for your Azure Information Protection tenant key. The two key topologies are **Microsoft-managed** and **customer-managed**.
 
 When you manage your own tenant key in Azure Key Vault, this is often referred to as bring your own key (BYOK). For more information about this scenario and how to choose between the two tenant key topologies, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).

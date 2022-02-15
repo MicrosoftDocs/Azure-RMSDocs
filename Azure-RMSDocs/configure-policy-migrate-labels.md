@@ -26,6 +26,7 @@ ms.custom: admin
 
 # How to migrate Azure Information Protection labels to unified sensitivity labels
 
+
 Migrate Azure Information Protection labels to the unified labeling platform so that you can use them as sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling).
 
 > [!NOTE]

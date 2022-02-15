@@ -27,6 +27,7 @@ ms.custom: admin
 
 # Getting started with tenant root keys
 
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 After [planning, creating, and configuring your tenant key](plan-implement-tenant-key.md) as needed, continue with the following steps:
 

@@ -25,12 +25,9 @@ ms.custom: admin
 
 # Azure Information Protection unified labeling client - Release management and supportability
 
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
-> [!NOTE]
-> As we continue to bring the customer labeling and protection experience to built-in applications like Office 365, the **Azure Information Protection unified labeling client** has moved into **maintenance mode** as of **January 1, 2022**. Moving forward, no new features will be added to the unified labeling client. For more information, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613).
->
-
-This article describes the latest features available for the unified labeling client, as well as servicing information and support timelines for each AIP unified client version.
+This article describes the functionality added to each recent version of the unified labeling client, as well as servicing information and support timelines for each AIP unified client version.
 
 You can download the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
@@ -44,13 +41,14 @@ If you are looking for updates for the *built-in labeling solution* for Microsof
 
 ## Servicing information and timelines
 
+As we continue to bring the customer labeling and protection experience to built-in applications like Office 365, the **Azure Information Protection unified labeling client** has moved into **maintenance mode** as of **January 1, 2022**. Moving forward, no new features will be added to the unified labeling client. For more information, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613).
+
 The lifecycle of each generally available (GA) version of the Azure Information Protection unified labeling client could vary from build to build, depending on the release date of a subsequent GA version. In overall, each GA version is supported until the subsequent GA version is released, plus up to six months more, after the release of the subsequent GA version (could be less than 6 months, if the new subsequent GA version will be released within those 6 months).
 
 For example, version **2.12.62.0** was released on **02.08.2021**, then the next version - **2.13.49.0**, was released on **12.01.2022**. Therefore, version 2.12.62.0 is fully supported six months after 12.01.2022, which is **12.07.2022**.
 
-The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. 
+The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. =
 Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
-
 
 ### Microsoft Update Catalog availability
 

@@ -29,7 +29,7 @@ search.appverid:
 
 # Information and support for Azure Information Protection
 
-
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Use the following resources to help you learn about, deploy, and support Azure Information Protection for your organization.
 

@@ -26,7 +26,7 @@ search.appverid:
 
 # Frequently asked questions for Azure Information Protection (AIP)
 
-
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Have a question about Azure Information Protection (AIP), or about the Azure Rights Management service (Azure RMS)?
 

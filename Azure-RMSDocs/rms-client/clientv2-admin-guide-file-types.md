@@ -26,11 +26,9 @@ ms.custom: admin
 
 # File types supported by the Azure Information Protection (AIP) unified labeling client
 
-This article lists the file types and sizes supported by the Azure Information Protection (AIP) unified labeling client
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
-> [!NOTE]
-> For the listed file types, WebDav locations are not supported.
->
+This article lists the file types and sizes supported by the Azure Information Protection (AIP) unified labeling client. For the listed file types, WebDav locations are not supported.
 
 > [!TIP]
 > To protect generic file types, which do not have built-in support for protection, while ensuring that recipients will be able to access them as expected, we recommend that you define the recipient as a co-owner of the file. For more information, see [Protecting generic file types](clientv2-classify-protect.md#protecting-generic-file-types).

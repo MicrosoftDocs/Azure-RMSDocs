@@ -27,6 +27,8 @@ ms.custom: user
 
 # Administrator Guide: Track and revoke document access with Azure Information Protection
 
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
+
 Document tracking provides information for administrators, with either the [Azure Information Protection Administrator](/azure/active-directory/roles/permissions-reference#azure-information-protection-administrator) or [Azure Rights Management Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role, about when a protected document was accessed. If necessary, both admins and users can revoke document access for tracked documents.
 
 In versions [version 2.9.111.0](unifiedlabelingclient-version-release-history.md#general-availability-versions-that-are-no-longer-supported) or later, any protected Office documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client. Protected documents are supported for track and revoke, even if they are not labeled.

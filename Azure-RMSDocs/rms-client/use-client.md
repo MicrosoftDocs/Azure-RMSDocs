@@ -25,6 +25,8 @@ search.appverid:
 
 # Compare Azure Information Protection and MIP built-in labeling
 
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
+
 Sensitivity labels make it easier for your users to apply protection, and also provide classification so that you can track and manage your data.
 
 The Azure Information Protection (AIP) unified labeling client can be installed over the [built-in labeling solution for Microsoft Office](/microsoft-365/compliance/sensitivity-labels), and provides extra features such as support for classifying and protecting files outside of Office using the File Explorer or PowerShell.

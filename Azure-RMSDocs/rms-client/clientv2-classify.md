@@ -25,12 +25,14 @@ ms.custom: user
 
 # User Guide: Classify a file or email by using the Azure Information Protection unified labeling client for Windows
 
-> [!NOTE]
-> Use these instructions to help you classify (but not protect) your documents and emails. If you need to also protect your documents and emails, see the [classify and protect instructions](clientv2-classify-protect.md). If you are not sure which set of instructions to use, check with your administrator or help desk.
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 The easiest way to classify your documents and emails is when you are creating or editing them from within your Office desktop apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
 However, you can also classify files by using **File Explorer**. This method supports additional file types and is a convenient way to classify multiple files at once. 
+
+> [!NOTE]
+> Use these instructions to help you classify (but not protect) your documents and emails. If you need to also protect your documents and emails, see the [classify and protect instructions](clientv2-classify-protect.md). If you are not sure which set of instructions to use, check with your administrator or help desk.
 
 ## Using Office apps to classify your documents and emails
 

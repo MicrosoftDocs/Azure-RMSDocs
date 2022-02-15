@@ -25,7 +25,6 @@ ms.subservice: aiplabels
 # Tutorial: Discovering your sensitive content with the Azure Information Protection (AIP) scanner
 
 
-
 The Azure Information Protection client provides an on-premises scanner that enables system administrators to scan on-premises file repositories for sensitive content. 
 
 In this tutorial, you'll learn how to:

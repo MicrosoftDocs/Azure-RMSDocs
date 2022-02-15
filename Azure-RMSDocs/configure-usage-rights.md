@@ -28,12 +28,11 @@ ms.custom: admin
 # Configure usage rights for Azure Information Protection
 
 
-> 
-> For completeness, this article includes values from the Azure classic portal, which was retired January 08, 2018.
-
 This article describes usage rights you can configure to be automatically applied when a label or template is selected by users, administrators, or configured services.
 
 Usage rights are selected when you configure sensitivity labels or protection templates for encryption. For example, you can select roles that configure a logical grouping of usage rights, or configure the individual rights separately. Alternatively users might select and apply the usage rights themselves.
+
+<!--can we remove classic portal info or do we need to archive this?--> For completeness, this article includes values from the Azure classic portal, which was retired January 08, 2018.
 
 > [!IMPORTANT]
 > Use this article to understand how usage rights are *designed* to be interpreted by applications. 

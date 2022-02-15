@@ -26,6 +26,7 @@ ms.custom: admin
 
 # Manage personal data for Azure Information Protection
 
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 When you configure and use Azure Information Protection, email addresses and IP addresses are stored and used by the Azure Information Protection service. This personal data can be found in the following items:
 

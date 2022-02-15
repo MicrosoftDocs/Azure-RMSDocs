@@ -27,8 +27,6 @@ ms.custom: admin
 
 # Deploying the Microsoft Rights Management connector
 
-
-
 Use this information to learn about the Microsoft Rights Management connector, and then how to successfully deploy it for your organization. This connector provides data protection for existing on-premises deployments that use Microsoft **Exchange Server**, **SharePoint Server**, or file servers that run Windows Server and **File Classification Infrastructure** (FCI).
 
 

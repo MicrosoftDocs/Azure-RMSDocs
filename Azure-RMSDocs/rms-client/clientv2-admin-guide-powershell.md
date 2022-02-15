@@ -26,6 +26,7 @@ ms.custom: admin
 
 # Admin Guide: Using PowerShell with the Azure Information Protection unified client
 
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 When you install the Azure Information Protection unified labeling client, PowerShell commands are automatically installed as part of the [AzureInformationProtection](/powershell/module/azureinformationprotection) module, with cmdlets for labeling. 
 

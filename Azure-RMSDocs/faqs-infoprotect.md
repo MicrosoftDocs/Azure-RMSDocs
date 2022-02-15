@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Frequently asked questions about classification and labeling in Azure Information Protection
 
-
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Have a question about Azure Information Protection that is specifically about classification and labeling?  See if it's answered here.
 

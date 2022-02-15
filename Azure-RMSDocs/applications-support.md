@@ -26,9 +26,6 @@ ms.custom: admin
 
 # How applications support the Azure Rights Management service
 
-
-
-
 Use the following information to help you understand how the most commonly used end-user applications and services can use the Azure Rights Management service from Azure Information Protection to help protect your organization's documents and emails. These applications include Word, Excel, PowerPoint, and Outlook. The services include Exchange and Microsoft SharePoint.
 
 > [!NOTE]

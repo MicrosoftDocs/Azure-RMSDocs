@@ -27,6 +27,7 @@ ms.custom: admin
 
 # Planning and implementing your Azure Information Protection tenant key
 
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 The Azure Information Protection tenant key is a root key for your organization. Other keys can be derived from this root key, including user keys, computer keys, or document encryption keys. Whenever Azure Information Protection uses these keys for your organization, they cryptographically chain to your Azure Information Protection root tenant key.
 

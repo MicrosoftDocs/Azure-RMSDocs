@@ -27,7 +27,6 @@ ms.custom: admin
 # Frequently asked questions about data protection in Azure Information Protection
 
 
-
 Have a question about the data protection service, Azure Rights Management, from Azure Information Protection? See if it's answered here.
 
 ## Do files have to be in the cloud to be protected by Azure Rights Management?

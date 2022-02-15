@@ -25,6 +25,7 @@ ms.custom: admin
 
 # Known issues - Azure Information Protection
 
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Use the lists and tables below to find details about known issues and limitations related to Azure Information Protection features.
 

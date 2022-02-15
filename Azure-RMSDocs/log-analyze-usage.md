@@ -27,6 +27,7 @@ ms.custom: admin
 
 # Logging and analyzing the protection usage from Azure Information Protection
 
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Use this information to help you understand how you can use usage logging for the protection service (Azure Rights Management) from Azure Information Protection. This protection service provides the data protection for your organization's documents and emails and it can log every request to it. These requests include when users protect documents and email and also consume this content, actions performed by your administrators for this service, and actions performed by Microsoft operators to support your Azure Information Protection deployment. 
 

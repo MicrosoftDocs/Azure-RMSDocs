@@ -25,14 +25,16 @@ ms.custom: user
 
 # User Guide: Classify and protect with the Azure Information Protection unified labeling client
 
-> [!NOTE]
-> Use these instructions to help you classify and protect your documents and emails. If you need to only classify and not protect your documents and emails, see the [classify-only instructions](clientv2-classify.md). If you are not sure which set of instructions to use, check with your administrator or help desk.
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 The easiest way to classify and protect your documents and emails is when you are creating or editing them from within your Office desktop apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
 However, you can also classify and protect files by using **File Explorer**. This method supports additional file types and is a convenient way to classify and protect multiple files at once. This method supports protecting Office documents, PDF files, text and image files, and a wide range of other files.
 
 If your label applies protection to a document, the protected document might not be suitable to be saved on SharePoint or OneDrive. Check whether your administrator has [enabled sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+
+> [!NOTE]
+> Use these instructions to help you classify and protect your documents and emails. If you need to only classify and not protect your documents and emails, see the [classify-only instructions](clientv2-classify.md). If you are not sure which set of instructions to use, check with your administrator or help desk.
 
 ## Safely share a file with people outside your organization
 
