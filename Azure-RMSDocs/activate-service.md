@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Activating the protection service from Azure Information Protection
 
-[!INCLUDE [looking-for-mip](/includes/looking-for-mip.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 This article describes how administrators can activate the Azure Rights Management protection service for Azure Information Protection (AIP). When the protection service is activated for your organization, administrators and users can start to protect important data by using applications and services that support this information protection solution. Administrators can also manage and monitor protected documents and emails that your organization owns.
 

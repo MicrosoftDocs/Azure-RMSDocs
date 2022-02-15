@@ -26,7 +26,7 @@ ms.custom: admin, mode-api
 
 # Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client
 
-[!INCLUDE [looking-for-mip](/includes/looking-for-mip.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 The Azure Information Protection (AIP) unified labeling client is part of the [Microsoft Information Protection](/microsoft-365/compliance/information-protection) solution, and  extends the built-in capabilities for sensitivity labeling provided by Microsoft 365. 
 

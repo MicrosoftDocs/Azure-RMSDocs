@@ -28,7 +28,7 @@ ms.custom: admin
 
 # Compliance and supporting information for Azure Information Protection
 
-[!INCLUDE [looking-for-mip](/includes/looking-for-mip.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Azure Information Protection supports other services and also relies on other services. If you’re looking for information that is related to Azure Information Protection but not about how to use the Azure Information Protection service, check the following resources:
 
