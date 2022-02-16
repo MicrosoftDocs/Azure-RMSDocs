@@ -31,6 +31,9 @@ search.appverid:
 >***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
 >
 
+> [!NOTE]
+> Are you looking for [Microsoft Information Protection](/microsoft-365/compliance/information-protection)? The Azure Information Protection unified labeling client is [currently in maintenance mode](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613). We recommend enabling Microsoft Information Protection's built-in labeling for your Office 365 applications. For more information, see the [sensitivity labeling documentation from Microsoft 365](/microsoft-365/compliance/sensitivity-labels#sensitivity-labels-and-azure-information-protection).
+
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to discover, classify, and protect documents and emails by applying labels to content.
 
 AIP is part of the Microsoft Information Protection (MIP) solution, and extends the [labeling](/microsoft-365/compliance/sensitivity-labels) and [classification](/microsoft-365/compliance/data-classification-overview) functionality provided by Microsoft 365.
