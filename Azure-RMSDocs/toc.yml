@@ -7,7 +7,7 @@
     href: what-is-information-protection.md
   - name: Built-in labeling and the AIP client
     href: ./rms-client/use-client.md
-  - name: What's new in AIP?
+  - name: Release management and supportability
     href: ./rms-client/unifiedlabelingclient-version-release-history.md
   - name: AIP requirements
     items:
