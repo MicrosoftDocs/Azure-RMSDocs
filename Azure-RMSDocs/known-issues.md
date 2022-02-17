@@ -242,7 +242,7 @@ We recommend enabling AIP-based conditional access policies for your internal us
 2.	Under **Assignments**, select **Users and groups**, and then select **All users**. Make sure that the **All guest and external users** option is *not* selected.
 3.	Save your changes.
 
-You can also entirely disable CA within Azure Information Protection if the functionality is not required for your organization, in order to avoid this potential issue.
+You can also entirely disable/exclude CA within Azure Information Protection if the functionality is not required for your organization, in order to avoid this potential issue.
 
 For more information, see the [Conditional Access documentation](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 
