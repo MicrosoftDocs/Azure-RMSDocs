@@ -69,9 +69,7 @@ The current release of the **AzureInformationProtection** PowerShell module that
 
 - **Outlook personal folders (*.pst* files)**. Natively protecting *.pst* files is not supported using the **AzureInformationProtection** module.
 
-- **Outlook protected email messages *(.rpmsg* files)**. Unprotecting Outlook protected email messages is supported by the **AzureInformationProtection** module only if they are inside an Outlook personal folder *(.pst* file).
-
-    Unprotecting email messages outside of a *.pst* file is not supported.
+- **Outlook protected email message (.msg files with a .rpmsg attachment)**. Unprotecting Outlook protected email messages is supported by the **AzureInformationProtection** module for messages inside an Outlook personal folder (.pst file), or on disk in an Outlook message file (.msg file).
 
 For more information, see [Admin Guide: Using PowerShell with the Azure Information Protection client](rms-client/client-admin-guide-powershell.md).
 
