@@ -34,7 +34,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.10    | https://aka.ms/mipsdkbins110 | **Supported**       | November 17, 2022  |
 | 1.9     | https://aka.ms/mipsdkbins19  | **Supported**       | August 23, 2022    |
 | 1.8     | https://aka.ms/mipsdkbins18  | **Supported**       | April 29, 2022     |
-| 1.7     | https://aka.ms/mipsdkbins17  | **Supported**       | January 14, 2022   |
+| 1.7     | https://aka.ms/mipsdkbins17  | **Out of Support**       | January 14, 2022   |
 | 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support**  | September 23, 2021 |
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support**  | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support**  | March 2, 2021      |
