@@ -33,19 +33,19 @@ For more information, see:
 
 ## Azure Information Protection analytics
 
-Starting March 1, 2022, Microsoft no longer supports new Log Analytics workspaces to onboard for storing [AIP audit logs](../reports-aip.md).
+Starting March 1, 2022, Microsoft no longer supports new Log Analytics workspaces to onboard for storing [AIP audit logs](reports-aip.md).
 
 Customers who already have AIP audit logs configured will continue to have those audit logs forwarded to their Log Analytics workspaces until September 30, 2022. At that point, customers will not be able to have any new AIP data forwarded to their Log Analytics workspace.
 
 Instead, we highly recommend that you use the Microsoft 365 compliance center's activity explorer and content explorer, which provide comprehensive logging and reporting.
 
-The AIP scanner's [network discovery](../deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview) features also use the AIP audit pipeline, and this feature will also be deprecated with the AIP audit logs on September 30, 2022. Starting March 1, 2022, only existing customers with AIP audit logs already configured will be able to continue using network discovery features.
+The AIP scanner's [network discovery](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview) features also use the AIP audit pipeline, and this feature will also be deprecated with the AIP audit logs on September 30, 2022. Starting March 1, 2022, only existing customers with AIP audit logs already configured will be able to continue using network discovery features.
 
 For more information, see:
 
 - [Get started with activity explorer](/microsoft-365/compliance/data-classification-activity-explorer)
 - [Get started with content explorer](/microsoft-365/compliance/data-classification-content-explorer)
-- [TechCommunity blog](placeholder)
+- [AIP Yammer community post](placeholder)
 
 ## AIP and legacy Windows and Office, SharePoint, and Exchange versions
 
