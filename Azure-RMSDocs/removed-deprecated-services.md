@@ -45,7 +45,7 @@ For more information, see:
 
 - [Get started with activity explorer](/microsoft-365/compliance/data-classification-activity-explorer)
 - [Get started with content explorer](/microsoft-365/compliance/data-classification-content-explorer)
-- [AIP Yammer community post](placeholder)
+- [AIP Yammer community post](https://aka.ms/AIPAuditLogDeprecation)
 
 ## AIP and legacy Windows and Office, SharePoint, and Exchange versions
 
