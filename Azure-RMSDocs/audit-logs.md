@@ -35,17 +35,6 @@ This article lists the activity events for which Azure Information Protection au
 
 The Azure Information Protection audit log feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
-
-## Deprecation notice
-
-Azure Information Protection analytics will be deprecated on September 30, 2022.
-
-Starting March 1, 2022, new customers are no longer onboarded to Azure Information Protection analytics.
-
-Instead, we highly recommend that you use the Microsoft 365 compliance center's [activity explorer](/microsoft-365/compliance/data-classification-activity-explorer) and [content explorer](/microsoft-365/compliance/data-classification-content-explorer), which provide comprehensive logging and reporting.
-
-For more information, see our [TechCommunity blog post](placeholder).
-
 ## Access audit logs
 
 **Access** audit logs are generated for the following activities:

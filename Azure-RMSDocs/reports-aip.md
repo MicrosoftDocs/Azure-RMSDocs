@@ -51,21 +51,6 @@ The data that you see is aggregated from your Azure Information Protection clien
 
 Azure Information Protection analytics for central reporting is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
-## Deprecation notice
-
-Starting March 1, 2022, Microsoft will no longer onboard any new Log Analytics workspaces to store AIP audit logs.
-
-Customers who already have AIP audit logs configured will continue to have those audit logs forwarded to their Log Analytics workspaces until September 30, 2022. At that point, customers will not be able to have any new AIP data forwarded to their Log Analytics workspace.
-
-Instead, we highly recommend that you use the Microsoft 365 compliance center's activity explorer and content explorer, which provide comprehensive logging and reporting.
-
-For more information, see:
-
-- [Get started with activity explorer](/microsoft-365/compliance/data-classification-activity-explorer)
-- [Get started with content explorer](/microsoft-365/compliance/data-classification-content-explorer)
-
-- [TechCommunity blog](placeholder)
-
 ## AIP reporting data
 
 For example, the Azure Information Protection analytics for central reporting displays the following data:

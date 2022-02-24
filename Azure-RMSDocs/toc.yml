@@ -7,6 +7,8 @@
     href: what-is-information-protection.md
   - name: Release management and supportability
     href: ./rms-client/unifiedlabelingclient-version-release-history.md
+  - name: Removed and deprecated services
+    href: removed-deprecated-services.md
   - name: AIP requirements
     items:
     - name: Overview
@@ -341,8 +343,6 @@
       href: faqs-rms.md
     - name: FAQs - classic client only
       href: faqs-classic.md
-  - name: Removed and deprecated services
-    href: removed-deprecated-services.md
   - name: Known issues
     href: known-issues.md
   - name: Information and support
