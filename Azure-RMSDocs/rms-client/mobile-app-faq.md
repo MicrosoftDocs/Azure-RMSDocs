@@ -37,7 +37,7 @@ As we continue to bring the customer labeling and protection experience to built
 
 Client support timelines are as follows:
 
-- The **Azure Information Protection unified labeling client** has moved into maintenance mode as of January 1, 2022. Moving forward, no new features will be added to the unified labeling client. 
+- The **Azure Information Protection unified labeling client** has moved into maintenance mode as of January 1, 2022. Moving forward, no new features will be added to the unified labeling client.
 
 - The **Azure Information Protection classic client** and **Label Management** in the Azure Portal are deprecated as of March 31, 2021. No further support is provided for the classic client and maintenance versions will no longer be released. The classic client will be officially retired, and will stop functioning, on March 31, 2022.
 
