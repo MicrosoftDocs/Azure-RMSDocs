@@ -98,6 +98,15 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 export HTTP_PROXY="http://10.10.10.10:8080"
 ```
 
+## Version 1.10.115
+
+**Release Date** February 25, 2022
+
+- Fixed a bug in pfile-wrapped MSG files using the incorrect content format.
+- Fixed a bug where the `Inspector` class caused a crash on `rpmsg` files.
+- Fixed a bug where SDK wasn't properly compressing files over 4GB, resulting in possible corruption.
+- Fixed a bug in detecting that protected MSG files. Files may have been protected but SDK treated them as plaintext. 
+
 ## Version 1.10.98
 
 **Release Date** September 29, 2021
