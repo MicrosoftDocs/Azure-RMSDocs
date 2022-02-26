@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class JsonValue 
@@ -205,4 +205,4 @@ If the current value is an bool, return it.
 Serialize the value and all children as a string.
 
   
-**Returns**: This json value and all children serialized as a string.
+**Returns**: This json value and all children serialized as a string.g.

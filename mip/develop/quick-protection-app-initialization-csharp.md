@@ -7,6 +7,7 @@ ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to do SDK .NET wrapper initialization, so that I can use the Protection SDK.
+ms.custom: mode-api
 ---
 
 # Quickstart: Client application initialization for Protection SDKs (C#)
@@ -118,12 +119,12 @@ namespace mip_sdk_dotnet_quickstart
                // Instantiate the AuthDelegateImpl object, passing in AppInfo.
                AuthDelegateImplementation authDelegate = new AuthDelegateImplementation(appInfo);
 
-               MipContext mipContext = MIP.CreateMipContext(appInfo,
-                                        "mip_data",
-                                        LogLevel.Trace,
-                                        null,
-                                        null);
+               // Create MipConfiguration Object
+               MipConfiguration mipConfiguration = new MipConfiguration(appInfo, "mip_data", LogLevel.Trace, false);
 
+               // Create MipContext using Configuration
+               mipContext = MIP.CreateMipContext(mipConfiguration);
+                
                // Initialize and instantiate the ProtectionProfile.
                // Create the ProtectionProfileSettings object.
                // Initialize protection profile settings to create/use local state.
@@ -151,10 +152,10 @@ namespace mip_sdk_dotnet_quickstart
 
 3. Replace the placeholder values in the source code that you pasted in, using the following values:
 
-   | Placeholder | Value | Example |
-   |:----------- |:----- |:--------|
-   | \<application-id\> | The Azure AD Application ID assigned to the application registered in "MIP SDK setup and configuration" (2 instances).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
-   | \<friendly-name\> | A user-defined friendly name for your application. | AppInitialization |
+   | Placeholder        | Value                                                                                                                  | Example                              |
+   | :----------------- | :--------------------------------------------------------------------------------------------------------------------- | :----------------------------------- |
+   | \<application-id\> | The Azure AD Application ID assigned to the application registered in "MIP SDK setup and configuration" (2 instances). | 0edbblll-8773-44de-b87c-b8c6276d41eb |
+   | \<friendly-name\>  | A user-defined friendly name for your application.                                                                     | AppInitialization                    |
 
 
 4. Now do a final build of the application and resolve any errors. Your code should build successfully.

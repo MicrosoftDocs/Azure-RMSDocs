@@ -35,7 +35,7 @@ search.appverid:
 
 [!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
 
-This article describes the protected PDF readers that are supported for Azure Information Protection (AIP). Protected PDF readers enable users to open those encrypted PDFs and view the sensitive information contained.
+This article describes the protected PDF readers that are supported for Information Rights Management (IRM) protection in SharePoint Online and Azure Information Protection (AIP). Protected PDF readers enable users to open those encrypted PDFs and view the sensitive information contained.
 
 Encrypting your PDFs with AIP ensures that unauthorized people cannot read the file's content. Protected PDF readers that support AIP verify that you've been granted permissions to open the document, and also decrypt the content for you.
 
@@ -84,7 +84,7 @@ Microsoft Edge offers built-in support for viewing PDF files that are classified
 
 Supported versions include:
 
-- **Windows**: Windows 10 and previous versions through Windows 8. 
+- **Windows**: Windows 11 and previous versions through Windows 8. 
     
     For more information about earlier versions, see [Support for previous formats](#support-for-previous-formats).
 
@@ -154,9 +154,9 @@ For more information, see [Mobile viewer apps for Azure Information Protection (
 
 The following PDF readers support both protected PDFs with a **.ppdf** extension, and older formats with a **.pdf** extension.
 
-If you're unable to open your protected PDF using the recommended reader, the document may be protected in a previous format. For example, Microsoft SharePoint currently uses an older format for PDF documents in IRM-protected libraries.
+If you're unable to open your protected PDF using the recommended reader, the document may be protected in a previous format.
 
-- **Windows 10 / previous versions through Windows 7 Service Pack 1**
+- **Windows 11 / previous versions through Windows 7 Service Pack 1**
 
     - [Azure Information Protection viewer](https://go.microsoft.com/fwlink/?linkid=838993)
     - Gaaiho Doc

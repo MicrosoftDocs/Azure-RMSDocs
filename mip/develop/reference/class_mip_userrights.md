@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class UserRights 
@@ -41,4 +41,4 @@ Gets users associated with a set of rights.
 Gets rights associated with a group of users.
 
   
-**Returns**: Rights associated with a group of users
+**Returns**: Rights associated with a group of usersrs

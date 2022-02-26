@@ -31,14 +31,16 @@ ms.custom: user
 
 [!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
 
-> [!TIP]
-> The AIP mobile apps are *viewers only,* and do not enable you to create new emails or reply to emails, or create or edit protected files. The AIP mobile apps also cannot open attachments to protected PDFs or emails.
-> 
-> - **If you have mobile Office apps installed on your mobile device**, we recommend that you use the [Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-word-excel-and-powerpoint) to view protected files.
-> - **If you are opening your file on a desktop**, use the [desktop version of the AIP Viewer](clientv2-view-use-files.md). 
-> 
+The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text files that cannot be opened with your regular apps for these file types. For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
 
-The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text file when you can't open them with your regular apps for these file types. For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
+## Support scope and recommended usage
+
+The AIP mobile apps are *viewers only,* and do not enable you to create new emails or reply to emails, or create or edit protected files. The AIP mobile apps also cannot open attachments to protected PDFs or emails.
+ 
+- **If you have mobile Office apps installed on your mobile device**, we recommend that you use the [Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-word-excel-and-powerpoint) to view protected files.
+- **If you are opening your file on a desktop**, use the [desktop version of the AIP Viewer](clientv2-view-use-files.md). 
+- **The AIP mobile apps support only protected files.** Unprotected files are not supported and cannot be consumed in the mobile viewer apps.
+- **[Intune's Open-In / Share filtering](/mem/intune/apps/data-transfer-between-apps-manage-ios)** features are not currently supported.
 
 ## What's new for the AIP mobile viewer app
 
@@ -50,10 +52,10 @@ The AIP mobile viewer apps for iOS and Android support the following file types 
 
 |Requirement  |Description  |
 |---------|---------|
-|**Supported OS versions**     | Minimum mobile OSs include: </br>- iOS 11  </br>- Android 6.0 </br></br>**Note**: The AIP mobile viewer apps are not supported on Intel CPUs.  |
+|**Supported OS versions**     | Minimum mobile OSs include: </br>- iOS 11  </br>- Android 8.1 </br></br>**Note**: The AIP mobile viewer apps are not supported on Intel CPUs.  |
 | **Supported mobile ABIs** | Supported Application Binary Interfaces (ABIS) include: <br>- armeabi-v7a <br>- arm64-v8a <br>- x86_64|
 |**Supported sign in credentials**     | Sign in to the AIP mobile viewer apps with one of the following: </br></br>**Work or school credentials.** Try logging in with your work or school credentials. If you have questions, contact your administrator to understand whether your organization has AD RMS on-premises with the mobile device extension, or uses Azure Information Protection. </br></br>**A Microsoft account.** If your personal email address was used to protect the file, sign in with a [Microsoft account](https://signup.live.com). If you need to apply for a Microsoft account, you can use your own Hotmail, Gmail, or any other email address to do so. </br></br>**Note**: Not all applications are able to open content protected with a Microsoft account. For more information, see [Supported scenarios for opening protected documents](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
-|**Supported file types**     | Supported files types include protected email messages, PDF files, images, and text files. </br></br>For example, these files include the following extensions: **rpmsg**, **.pdf**, **.ppdf**, **.pjpg**, **.pjpeg**, **.ptiff**, **.ppng**, **.ptxt**, **.pxml** </br></br>For a full list of supported file types, see [The AIP client admin guide](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
+|**Supported file types**     | Supported files types include protected email messages, PDF files, images, and text files. </br></br>For example, these files include the following extensions: **rpmsg**, **.pdf**, **.ppdf**, **.pjpg**, **.pjpeg**, **.ptiff**, **.ppng**, **.ptxt**, **.pxml** </br></br>For more information, see [above](#support-scope-and-recommended-usage) and [The AIP client admin guide](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
 | | |
 
 > [!NOTE]
@@ -105,8 +107,6 @@ Once you've [installed the AIP mobile app](#download-and-install-the-aip-app-for
 
 
 ## Admins: Testing the AIP mobile viewer apps
-
-Most users will typically use the AIP mobile app to open a protected email or file that cannot be opened using their regular mobile apps.
 
 If you're a system administrator who wants to test the AIP mobile viewer apps for your org, or simply want to try it out for yourself, use the instructions below to walk you through the entire process.
 

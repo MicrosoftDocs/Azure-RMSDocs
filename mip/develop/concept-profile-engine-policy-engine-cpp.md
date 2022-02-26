@@ -29,6 +29,14 @@ PolicyEngine::Settings engineSettings(
   false);                   // Load sensitive information types for driving classification.
 ```
 
+When creating engineSettings in this manner, it's important to also explicitly set a unique engineId via:
+
+```cpp
+engineSettings.SetEngineId(engineId);
+```
+
+Using the **username or email** helps to ensure that the same engine is loaded each time the user uses the service or application. 
+
 Also valid is providing a custom engine ID:
 
 ```cpp

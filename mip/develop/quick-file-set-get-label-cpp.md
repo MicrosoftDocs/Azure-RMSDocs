@@ -8,6 +8,7 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to set and get a sensitivity label, so that I can implement this logic in my own application.
+ms.custom: mode-api
 ---
 
 # Quickstart: Set and get a sensitivity label (C++)
@@ -95,6 +96,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    #include "mip/file/file_handler.h" 
 
    using mip::FileHandler;
+   using mip::ProtectionSettings;
    ```
 3. Toward the end of the `main()` body, below `system("pause");` and above `return 0;` (where you left off in the previous Quickstart), insert the following code:
 
@@ -126,9 +128,9 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    try
    {
         string labelId = "<label-id>";
-        cout << "\nApplying Label ID " << labelId << " to " << filePathIn << endl;
+        cout << "\nApplying Label ID " << labelId << " to " << inputFilePath << endl;
         mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
-        handler->SetLabel(engine->GetLabelById(labelId), labelingOptions, new ProtectionSettings());
+        handler->SetLabel(engine->GetLabelById(labelId), labelingOptions, *(new ProtectionSettings()));
    }
    catch (const std::exception& e)
    {

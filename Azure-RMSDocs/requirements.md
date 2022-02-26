@@ -86,6 +86,8 @@ User computers or mobile devices must run on an operating system that supports A
 
 The Azure Information Protection clients for Windows are supported are the following operating systems:
 
+- **Windows 11**
+
 - **Windows 10** (x86, x64). Handwriting is not supported in the Windows 10 RS4 build and later.
  
 - **Windows 8.1** (x86, x64)
@@ -281,12 +283,13 @@ The following operating systems support the Azure Rights Management service, whi
 |OS  |Supported versions  |
 |---------|---------|
 |**Windows computers**     |- Windows 7 (x86, x64) </br>- Windows 8 (x86, x64) </br>- Windows 8.1 (x86, x64) </br>- Windows 10 (x86, x64)       | 
-|**macOS**     |   Minimum version of macOS 10.8 (Mountain Lion)      |
+|**macOS**     |   Minimum version of macOS 10.8 (Mountain Lion)     |
 |**Android phones and tablets**     | Minimum version of Android 6.0        |
 |**iPhone and iPad**     | Minimum version of iOS 11.0        |
 |**Windows phones and tablets** | Windows 10 Mobile|
 | | |
 
+For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md). 
 
 
 ## Next steps

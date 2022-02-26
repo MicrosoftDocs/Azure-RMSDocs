@@ -26,7 +26,7 @@ ms.custom: admin
 
 # File types supported by the Azure Information Protection (AIP) unified labeling client
 
->***Applies to** [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to** [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
@@ -273,9 +273,9 @@ Without any extra configuration, the Azure Information Protection unified labeli
 
 |Application type|File type|
 |--------------------------------|-------------------------------------|
-|**Word**|.doc; docx; .docm; .dot; .dotm; .dotx|
-|**Excel**|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
-|**PowerPoint**|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
+|**Word**|.doc; docx; .docm; .dot; .dotx|
+|**Excel**|.xls; .xlt; .xlsx; .xlsm; .xlsb|
+|**PowerPoint**|.ppt; .pps; .pot; .pptx|
 |**PDF** |.pdf|
 |**Text**|.txt; .xml; .csv|
 | | |

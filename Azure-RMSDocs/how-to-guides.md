@@ -41,6 +41,10 @@ The most successful deployments are those that identify specific use cases that 
 - [Migrate from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md)
 - [Migrate from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
+> [!NOTE]
+> For more information, see also [Create and publish sensitivity labels](/microsoft-365/compliance/create-sensitivity-labels) in the Microsoft 365 Compliance documentation.
+> 
+
 ## Additional deployment instructions
 
 Our [Azure Information Protection technical blog](https://aka.ms/AIPblog) includes additional guidance from the trenches.
@@ -51,7 +55,7 @@ For more information and step-by-step instructions, see:
 
 - [How to Build a Custom AIP Tracking Portal](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-Build-a-Custom-AIP-Tracking-Portal/ba-p/875849)
 - [Create richer reports with Microsoft Information Protection and Azure AD login data](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
-- [Leverage Microsoft Cloud App Security to apply Azure Information Protection labels in the cloud](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Leverage-Microsoft-Cloud-App-Security-to-apply-Azure-Information/ba-p/388638)
+- [Leverage Microsoft Defender for Cloud Apps to apply Azure Information Protection labels in the cloud](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Leverage-Microsoft-Cloud-App-Security-to-apply-Azure-Information/ba-p/388638)
 - [How to prepare an Azure Information Protection “Cloud Exit” plan](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631)
 - [Cross-Tenant Label Visualization](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cross-Tenant-Label-Visualization/ba-p/356588)
 - [Using Azure Information Protection to protect PDF’s and Adobe Acrobat Reader to view them](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Using-Azure-Information-Protection-to-protect-PDF-s-and-Adobe/ba-p/282010)

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/23/2021
+ms.date: 11/15/2021
 ---
 
 # class AddContentHeaderAction 
@@ -66,4 +66,4 @@ Get the alignment of the header.
 Get the margin of the header from the bottom.
 
   
-**Returns**: The margins from the bottom of the document (for example, 10 mm).
+**Returns**: The margins from the bottom of the document (for example, 10 mm).).

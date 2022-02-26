@@ -6,6 +6,7 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: mbaldwin
+ms.custom: mode-api
 ---
 
 # Microsoft Information Protection File SDK - Action Justification for lowering a sensitivity label on a file (C#)

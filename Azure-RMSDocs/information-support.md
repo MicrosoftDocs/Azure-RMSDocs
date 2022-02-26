@@ -63,7 +63,7 @@ The following sections provide information about support and troubleshooting opt
 
 ### To contact Microsoft Support
 
-If you're working with sensitivity labels in the Microsoft 365 security center, see the [Support](/office365/servicedescriptions/office-365-platform-service-description/support) page in the Microsoft 365 and Office 365 platform service descriptions.
+If you're working with sensitivity labels in the Microsoft 365 Compliance center, see the [Support](/office365/servicedescriptions/office-365-platform-service-description/support) page in the Microsoft 365 and Office 365 platform service descriptions.
 
 You might be eligible for **FastTrack**: You can use the FastTrack Center Benefit when you purchase at least 150 licenses in an eligible plan for Azure Information Protection. The FastTrack Center Benefit lets you work with Microsoft specialists to assess, remediate, and enable eligible services. For more information, see [FastTrack Center Benefit for Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
 

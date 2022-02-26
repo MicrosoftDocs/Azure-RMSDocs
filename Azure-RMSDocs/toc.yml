@@ -33,8 +33,6 @@
     href: tutorial-install-scanner.md
   - name: Discovering your sensitive content
     href: tutorial-scan-networks-and-content.md
-  - name: Preventing oversharing
-    href: tutorial-preventing-oversharing.md
   - name: Migrating from the classic client to the unified labeling client
     href: tutorial-migrating-to-ul.md
 - name: Concepts
@@ -116,13 +114,7 @@
   - name: Configure & use the service
     items:
     - name: Activating protection
-      items:
-      - name: Overview
-        href: activate-service.md
-      - name: Microsoft 365 admin center
-        href: activate-office365.md
-      - name: Azure portal
-        href: activate-azure.md
+      href: activate-service.md
     - name: Configuring applications
       items:
       - name: Overview

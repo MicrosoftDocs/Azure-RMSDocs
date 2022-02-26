@@ -6,7 +6,7 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/15/2020
 ms.author: tommos
-ms.custom: has-adal-ref
+ms.custom: has-adal-ref, mode-api
 #Customer intent: As a an application developer, I want to learn how to do SDK .NET wrapper initialization, so that I can use the SDK APIs.
 ---
 
@@ -195,7 +195,7 @@ namespace mip_sdk_dotnet_quickstart
                MipConfiguration mipConfiguration = new MipConfiguration(appInfo, "mip_data", LogLevel.Trace, false);
 
                // Create MipContext using Configuration
-               mipContext = MIP.CreateMipContext(mipConfiguration);
+               MipContext mipContext = MIP.CreateMipContext(mipConfiguration);
 
                // Initialize and instantiate the File Profile.
                // Create the FileProfileSettings object.
@@ -218,7 +218,7 @@ namespace mip_sdk_dotnet_quickstart
                // handler = null; // This will be used in later quick starts.
                fileEngine = null;
                fileProfile = null;
-               mipContext.Shutdown();
+               mipContext.ShutDown();
                mipContext = null;
           }
      }
