@@ -49,6 +49,7 @@ For more information, see
 - [Final reminder to migrate from Azure Information Protection classic client to unified labeling](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/final-reminder-to-migrate-from-azure-information-protection/ba-p/2731734)
 - The [built-in labeling documentation](/microsoft-365/compliance/sensitivity-labels)
 - [Learn about MIP and the AIP client](/microsoft-365/compliance/sensitivity-labels-aip)
+- [Azure Information Protection servicing information timelines](unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines)
 
 ## Understand more about labeling solution options
 
