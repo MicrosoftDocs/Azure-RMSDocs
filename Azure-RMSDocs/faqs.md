@@ -36,36 +36,6 @@ Have a question about Azure Information Protection (AIP), or about the Azure Rig
 
 See if it's answered below or on the [subsequent, more specific, FAQ pages](#what-do-i-do-if-my-question-isnt-here).
 
-## What's the difference between Azure Information Protection and Microsoft Information Protection?
-
-Unlike Azure Information Protection, [Microsoft Information Protection](https://www.microsoft.com/security/business/information-protection) isn't a subscription or product that you can buy. Instead, it's a framework for products and integrated capabilities that help you protect your organization's sensitive information.
-
-**Microsoft Information Protection products include**:
-- Azure Information Protection
-- Microsoft 365 Information Protection, such as Microsoft 365 DLP
-- Windows Information Protection
-- Microsoft Defender for Cloud Apps
-
-**Microsoft Information Protection capabilities include**:
-- Unified label management
-- End-user labeling experiences built into Office apps
-- The ability for Windows to understand unified labels and apply protection to data
-- The Microsoft Information Protection SDK
-- Functionality in Adobe Acrobat Reader to view labeled and protected PDFs
-
-For more information, see [Information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
-
-## What's the difference between labels in Microsoft 365 and labels in Azure Information Protection?
-
-Originally, Microsoft 365 had only [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30), which enabled you to classify documents and emails for auditing and retention when that content was stored in Microsoft 365 services.
-
-In contrast, Azure Information Protection labels, configured at the time using the AIP classic client in the Azure portal, enabled you to apply a consistent classification and protection policy for documents and emails whether they were stored on-premises or in the cloud.
-
-Microsoft 365 supports [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in addition to retention labels. Sensitivity labels can be created and configured in the Microsoft 365 compliance center.
-
-If you have legacy AIP labels configured in the Azure portal, we recommend migrating them to sensitivity labels and unified labeling client. For more information, see [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md).
-
-For more information, see [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 ## How can I determine if my tenant is on the unified labeling platform?
 
@@ -89,8 +59,7 @@ The legacy Azure Information Protection client, referred to as the *classic* cli
 
 The *unified labeling client* is the most current client with the most recent updates, and supports the unified labeling platform used by multiple applications and services. The unified labeling client downloads [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and policy settings from the Microsoft 365 compliance center.
 
-If you're an admin, learn more in [Choose your Windows labeling solution](rms-client/use-client.md#choose-your-windows-labeling-solution).
-
+For more information, see [Azure Information Protection classic client for Windows](rms-client/aip-client.md) and [Learn about about built-in labeling and the AIP unified labeling client](rms-client/use-client.md).
 ### Classic client deprecation
 
 To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure portal is **deprecated** as of **March 31, 2021**.
