@@ -53,20 +53,23 @@ For more information, see
 
 ## Understand more about labeling solution options
 
-Whether you are an existing customer with AIP unified labeling deployed, or a new customer looking for a labeling and protection solution, we recommend enabling built-in labeling for Office apps. Use the AIP add-in for your Office apps only if:
+Whether you are an existing customer with AIP unified labeling deployed, or a new customer looking for a labeling and protection solution, we recommend enabling built-in labeling for Office apps.
 
-- You've already deployed it to users and you need time to migrate them to built-in labeling.
-- When users need a feature that isn't supported by built-in labeling.
-
-You may also want to use the AIP unified labeling client for [labeling features used outside of Office apps](#labeling-functionality-outside-of-office-applications).
-
-Built-in labeling provides more stability, better performance, and the latest features, such as advanced classifiers.
+Built-in labeling provides more stability than the AIP add-in for Office apps, better performance, and the latest features, such as advanced classifiers.
 
 - **Both built-in labeling and the unified labeling client use sensitivity labels and label policies downloaded from the Microsoft 365 compliance center.** These label and policy settings can be shared by macOS, iOS, and Android.
 
 - **Built-in labeling requires no extra installations** and provides automatic updates. You only need a Windows computer with Microsoft 365 applications minimum version 1910. In contrast, the AIP unified labeling client requires a separate [installation](https://www.microsoft.com/download/details.aspx?id=53018) on each client machine.
 
 If you already have the AIP unified labeling client installed, you'll need to disable it to use built-in labeling with Office apps. For more information, see the [Microsoft 365 compliance documentation](/microsoft-365/compliance/sensitivity-labels-aip#how-to-disable-the-aip-add-in-to-use-built-in-labeling).
+
+Use the AIP add-in for your Office apps only if:
+
+- You've already deployed it to users and you need time to migrate them to built-in labeling.
+- When users need a feature that isn't supported by built-in labeling.
+
+You may also want to use the AIP unified labeling client for [labeling features used outside of Office apps](#labeling-functionality-outside-of-office-applications).
+
 
 ### Updates for Microsoft Information Protection in Microsoft 365
 
