@@ -30,7 +30,7 @@ ms.custom: admin
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](removed-deprecated-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).*
 
-[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-sunset-extended-support.md)]
 
 In this quickstart, you'll configure an existing Azure Information Protection label to automatically apply the **Do Not Forward** protection setting.
 

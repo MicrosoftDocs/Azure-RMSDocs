@@ -34,7 +34,7 @@ ms.custom: admin
 >
 >*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](removed-deprecated-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions)
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-sunset.md)]
 
 Hold Your Own Key (HYOK) configurations enable AIP customers with the classic client to protect highly sensitive content while maintaining full control of their key. HYOK uses an additional, customer-held key that's stored on premises for highly sensitive content, together with the default cloud-based protection used for other content. 
 

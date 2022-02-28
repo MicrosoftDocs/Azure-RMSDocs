@@ -30,7 +30,7 @@ search.appverid:
 >
 >***Relevant for**: [AIP unified labeling client and classic client](#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is deprecated](includes/classic-client-sunset.md)]
 
 Have a question about Azure Information Protection (AIP), or about the Azure Rights Management service (Azure RMS)?
 
@@ -60,13 +60,13 @@ The legacy Azure Information Protection client, referred to as the *classic* cli
 The *unified labeling client* is the most current client with the most recent updates, and supports the unified labeling platform used by multiple applications and services. The unified labeling client downloads [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and policy settings from the Microsoft 365 compliance center.
 
 For more information, see [Azure Information Protection classic client for Windows](rms-client/aip-client.md) and [Learn about about built-in labeling and the AIP unified labeling client](rms-client/use-client.md).
-### Classic client deprecation
+### Classic client sunset
 
 To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure portal is **deprecated** as of **March 31, 2021**.
 
 The client continues to work as expected, but administrators cannot update policies on the portal, and no more fixes or changes will be supplied for the classic client.
 
-We recommend that you [migrate to unified labeling](tutorial-migrating-to-ul.md) and upgrade to the [unified labeling client](rms-client/clientv2-admin-guide-install.md). Learn more in our recent [update](https://techcommunity.microsoft.com/t5/microsoft-security-and/azure-aip-portal-label-amp-policy-management-admin-experience/ba-p/2182678) on the deprecation.
+We recommend that you [migrate to unified labeling](tutorial-migrating-to-ul.md) and upgrade to the [unified labeling client](rms-client/clientv2-admin-guide-install.md). Learn more in our recent [update](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/final-reminder-to-migrate-from-azure-information-protection/ba-p/2731734) on the sunset.
 
 
 For more information, see: [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md)

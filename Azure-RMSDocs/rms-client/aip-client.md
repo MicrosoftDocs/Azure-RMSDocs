@@ -31,7 +31,7 @@ ms.custom: admin
 >
 > ***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the unified labeling client [admin guide](clientv2-admin-guide.md) and [user guide](clientv2-user-guide.md).*
 
-[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-sunset.md)]
 
 The Azure Information Protection classic client is the original downloadable client for organizations that use Azure Information Protection to classify and protect documents and emails, or use a Rights Management service to protect their data. This client also has a viewer for organizations that don't have their own information protection infrastructure but want to consume content that has been protected by other organizations that use a Rights Management service from Microsoft.
 
