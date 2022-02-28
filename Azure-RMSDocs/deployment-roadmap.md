@@ -31,7 +31,7 @@ ms.custom: admin
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-sunset.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 > [!TIP]
 > Alternatively, you may be looking for one of the following articles:

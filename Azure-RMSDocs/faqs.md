@@ -30,7 +30,7 @@ search.appverid:
 >
 >***Relevant for**: [AIP unified labeling client and classic client](#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-sunset.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 Have a question about Azure Information Protection (AIP), or about the Azure Rights Management service (Azure RMS)?
 
@@ -62,7 +62,7 @@ The *unified labeling client* is the most current client with the most recent up
 For more information, see [Azure Information Protection classic client for Windows](rms-client/aip-client.md) and [Learn about about built-in labeling and the AIP unified labeling client](rms-client/use-client.md).
 ### Classic client sunset
 
-To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure portal is **deprecated** as of **March 31, 2021**.
+To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure portal is **sunset** as of **March 31, 2021**.
 
 The client continues to work as expected, but administrators cannot update policies on the portal, and no more fixes or changes will be supplied for the classic client.
 
