@@ -36,7 +36,7 @@ After you migrate your labels, you won't see any difference with the Azure Infor
 
 Before you read the instructions to migrate your labels, you might find the following frequently asked questions useful:
 
-- [Compare the Azure Information Protection classic and unified labeling clients](/previous-versions/azure/information-protection/rms-client/aip-client.md#whats-the-difference-between-labels-in-microsoft-365-and-labels-in-azure-information-protection)
+- [What's the difference between labeling with the built-in labeling solution and labeling with the AIP Office add-in?](rms-client/use-client.md#whats-the-difference-between-labeling-with-the-built-in-labeling-solution-and-labeling-with-the-aip-office-add-in)
 
 - [When is the right time to migrate my labels to unified labeling?](/previous-versions/azure/information-protection/faqs-classic.md#when-is-the-right-time-to-migrate-my-labels-to-unified-labeling)
 

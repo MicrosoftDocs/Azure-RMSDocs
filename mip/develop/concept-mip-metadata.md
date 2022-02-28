@@ -89,7 +89,7 @@ MSIP_Label_f048e7b8-f3aa-4857-bf32-a317f4bc3f29_GeneratedBy = HRReportingSystem
 > To maintain compatibility across common applications, the maximum length for each a key and a value is 255 characters.
 
 > [!Note]
-> When the [protected co-authoring](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-coauthoring?view=o365-worldwide) experience is enabled, custom metadata properties will be written to the custom.xml component of supported Office file types.
+> When the [protected co-authoring](/microsoft-365/compliance/sensitivity-labels-coauthoring?view=o365-worldwide) experience is enabled, custom metadata properties will be written to the custom.xml component of supported Office file types.
 
 ## Versioning
 

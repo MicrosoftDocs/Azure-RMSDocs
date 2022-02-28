@@ -33,6 +33,14 @@ The Azure Information Protection (AIP) mobile apps enable you to view protected 
 
 As we continue to bring the customer labeling and protection experience to built-in applications like Office 365, **AIP mobile viewer apps** for iOS and Android are planned to be sunset on December 31, 2022.
 
+Client support timelines are as follows:
+
+- The **Azure Information Protection unified labeling client** has moved into maintenance mode as of January 1, 2022. Moving forward, no new features will be added to the unified labeling client.
+
+- The **Azure Information Protection classic client** and **Label Management** in the Azure Portal are deprecated as of March 31, 2021. No further support is provided for the classic client and maintenance versions will no longer be released. The classic client will be officially retired, and will stop functioning, on March 31, 2022.
+
+All current Azure Information Protection classic client customers must [migrate to the Microsoft Information Protection unified labeling platform](../tutorial-migrating-to-ul.md) and upgrade to the [unified labeling client](../rms-client/clientv2-admin-guide-install.md). 
+
 Learn more in our TechCommunity blog: [Announcing AIP unified labeling client maintenance mode and sunset of mobile viewer
 ](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613).
 
