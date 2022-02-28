@@ -73,10 +73,6 @@ For documents, the visual markings are applied as follows:
 
     The exception is when you use [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office apps for files that are saved in Microsoft SharePoint, OneDrive for work or school, or OneDrive for home: When AutoSave is on, visual markings are not applied unless you configure the [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) to turn on classification to run continuously in the background.
 
-> [!NOTE]
-> For more information about support for visual markings in the AIP clients and in built-in labeling Office functionality, see [Choose your Windows labeling solution](rms-client/use-client.md#choose-your-windows-labeling-solution).
-> 
-
 ## To configure visual markings for a label
 
 Use the following instructions to configure visual markings for a label.
