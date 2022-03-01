@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Removed and sunset services - Azure Information Protection
+title: Removed and retired services - Azure Information Protection
 description: Learn about sunset services that you may have used or are still using with Azure Information Protection
 author: batamig
 ms.author: bagol
@@ -15,11 +15,11 @@ ms.service: information-protection
 
 # Removed and sunset services
 
-This article describes the current status for removed and sunset services that you may have used, or may still be using with Azure Information Protection.
+This article describes the current status for services that we've removed and retired, or are currently sunsetting, which you may have used or are still using with Azure Information Protection.
 
 ## The AIP classic client
 
-To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **labeling management** pages in the Azure portal are sunset as of **March 31, 2021**. No further support is provided for the classic client, and maintenance versions will no longer be released.
+To provide a unified and streamlined customer experience, we are sunsetting the **Azure Information Protection classic client** and **labeling management** pages in the Azure portal as of **March 31, 2021**. No further support is provided for the classic client, and maintenance versions will no longer be released.
 
 The classic client will be officially retired, and will stop functioning, on **March 31, 2022**. At this point, the **Labels** and **Policies** tabs will be removed from the Azure portal, and the classic client will not longer be able to acquire policies from the Azure portal.
 
