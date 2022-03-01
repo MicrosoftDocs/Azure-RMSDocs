@@ -31,6 +31,8 @@ This article lists the activity events for which Azure Information Protection au
 
 The Azure Information Protection audit log feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
+As of **March 1, 2022**, we are sunsetting the AIP audit log and analytics, with a full retirement date of **September 31, 2022**. For more information, see [Removed and retired services](removed-sunset-services.md).
+
 ## Access audit logs
 
 **Access** audit logs are generated for the following activities:
