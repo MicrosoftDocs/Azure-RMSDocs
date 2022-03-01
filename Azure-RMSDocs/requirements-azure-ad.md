@@ -30,7 +30,7 @@ ms.custom: admin, has-adal-ref
 >
 >***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 An [Azure AD directory is a requirement](requirements.md#azure-active-directory) for using Azure Information protection. Use an account from an Azure AD directory to sign in to the Azure portal, where you can configure Azure Information Protection settings.
 

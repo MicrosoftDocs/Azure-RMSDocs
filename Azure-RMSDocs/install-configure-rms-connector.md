@@ -31,7 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 
 Use the following information to help you install and configure the Microsoft Rights Management (RMS) connector. These procedures cover steps 1 though 4 from [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
@@ -304,7 +304,7 @@ For more information, see [Prerequisites for the RMS connector](deploy-rms-conne
 
 ## Enforce TLS 1.2 for the Azure RMS Connector
 
-Microsoft will disable older, insecure TLS protocols, including TLS 1.0 and TLS 1.1 on RMS Services by default on March 1, 2022. To prepare for this deprecation, you may want to turn off support for these older protocols on your RMS Connector servers and ensure that the system continues to work as expected.
+Microsoft will disable older, insecure TLS protocols, including TLS 1.0 and TLS 1.1 on RMS Services by default on March 1, 2022. To prepare for this change, you may want to turn off support for these older protocols on your RMS Connector servers and ensure that the system continues to work as expected.
 
 This section describes the steps to disable the Transport Layer Security (TLS) 1.0 and 1.1 on the RMS Connector servers and force the use of TLS 1.2.
 

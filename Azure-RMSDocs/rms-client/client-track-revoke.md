@@ -32,7 +32,7 @@ ms.custom: user
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client user guide](revoke-access-user.md).*
 
-[!INCLUDE [AIP classic client is deprecated - extended support customers](../includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [AIP classic client is sunset - extended support customers](../includes/classic-client-sunset-extended-support.md)]
 
 After you have protected your documents by using Azure Information Protection, you can track how people are using these documents. If necessary, you can also revoke access to them if people should no longer be able to read them. To do this, you use the **document tracking site**. You can access this site from Windows computers, Mac computers, and even from tablets and phones.
 

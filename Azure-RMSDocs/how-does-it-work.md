@@ -32,7 +32,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 
 An important thing to understand about how Azure RMS works, is that this data protection service from Azure Information Protection, does not see or store your data as part of the protection process. Information that you protect is never sent to or stored in Azure, unless you explicitly store it in Azure or use another cloud service that stores it in Azure. Azure RMS simply makes the data in a document unreadable to anyone other than authorized users and services:
