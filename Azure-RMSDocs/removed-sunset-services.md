@@ -2,7 +2,7 @@
 # required metadata
 
 title: Removed and retired services - Azure Information Protection
-description: Learn about retired services that you may have used or are still using with Azure Information Protection
+description: Learn about removed or retired services that you may have used or are still using with Azure Information Protection
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -17,7 +17,7 @@ ms.service: information-protection
 
 [!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
-This article describes the current status for removed and deprecated services that you may have used, or may still be using with Azure Information Protection.
+This article describes the current status for services that we've removed and retired, or are currently sunsetting, which you may have used or are still using with Azure Information Protection.
 
 ## The AIP classic client
 
