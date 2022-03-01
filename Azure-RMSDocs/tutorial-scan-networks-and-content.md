@@ -62,7 +62,7 @@ Create a network scan job to scan a specified IP address or IP range for risky r
 > [!NOTE]
 > The Azure Information Protection network discovery feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 >
-> The Azure Information Protection analytics sunset is announced as of March 1, 2022, and full retirement is scheduled for September 30, 2022. The scanner's network discovery features will be also sunset on the same timeline. For more information, see [Removed and sunset services](removed-sunset-services.md#azure-information-protection-analytics).
+> We are sunsetting the Azure Information Protection analytics as of March 1, 2022, with full retirement is scheduled for September 30, 2022. We are also sunsetting the scanner's network discovery features on the same timeline. For more information, see [Removed and retired services](removed-sunset-services.md#azure-information-protection-analytics).
 >
 
 
