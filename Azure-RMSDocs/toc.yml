@@ -9,7 +9,7 @@
     href: ./rms-client/use-client.md
   - name: Release management and supportability
     href: ./rms-client/unifiedlabelingclient-version-release-history.md
-  - name: Removed and sunset services
+  - name: Removed and retired services
     href: removed-sunset-services.md
   - name: AIP is also known as ...
     href: aka.md

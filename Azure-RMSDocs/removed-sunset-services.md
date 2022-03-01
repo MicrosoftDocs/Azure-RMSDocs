@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Removed and sunset services - Azure Information Protection
-description: Learn about sunset services that you may have used or are still using with Azure Information Protection
+title: Removed and retired services - Azure Information Protection
+description: Learn about retired services that you may have used or are still using with Azure Information Protection
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -13,7 +13,7 @@ ms.service: information-protection
 
 ---
 
-# Removed and sunset services
+# Removed and retired services
 
 [!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
@@ -21,9 +21,12 @@ This article describes the current status for removed and deprecated services th
 
 ## The AIP classic client
 
-To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **labeling management** pages in the Azure portal are sunset as of **March 31, 2021**. No further support is provided for the classic client, and maintenance versions will no longer be released.
+To provide a unified and streamlined customer experience, we have retired the **Azure Information Protection classic client** and **labeling management** pages in the Azure portal as of **March 31, 2022**. This means that:
 
-The classic client will be officially retired, and will stop functioning, on **March 31, 2022**. At this point, the **Labels** and **Policies** tabs will be removed from the Azure portal, and the classic client will not longer be able to acquire policies from the Azure portal.
+- No further support is provided for the classic client
+- Maintenance versions will no longer be released
+- The **Labels** and **Policies** tabs have been removed from the Azure portal
+- The classic client can no longer acquire policies from the Azure portal
 
 We recommend that all customers migrate to unified labeling, and enable [built-in sensitivity labeling for Office applications](/microsoft-365/compliance/sensitivity-labels).
 
