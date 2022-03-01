@@ -50,7 +50,7 @@ In this tutorial, you'll:
 
 ## Why migrate to the unified labeling solution?
 
-In addition to the [planned classic client deprecation](https://aka.ms/aipclassicsunset), migrating to the unified labeling solution enables you to effectively protect sensitive data across your digital estate. Once you've migrated, use Microsoft Information Protection (MIP) in Microsoft 365 cloud services, on-premises, in third-party SaaS applications, and more.
+In addition to the [classic client sunset](https://aka.ms/aipclassicsunset), migrating to the unified labeling solution enables you to effectively protect sensitive data across your digital estate. Once you've migrated, use Microsoft Information Protection (MIP) in Microsoft 365 cloud services, on-premises, in third-party SaaS applications, and more.
 
 MIP supports built-in labeling services for many basic information protection features, enabling you to reserve client usage only for extra features not supported by built-in labeling.
 
