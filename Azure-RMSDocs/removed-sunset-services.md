@@ -2,7 +2,7 @@
 # required metadata
 
 title: Removed and retired services - Azure Information Protection
-description: Learn about sunset services that you may have used or are still using with Azure Information Protection
+description: Learn about removed or retired services that you may have used or are still using with Azure Information Protection
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -13,7 +13,7 @@ ms.service: information-protection
 
 ---
 
-# Removed and sunset services
+# Removed and retired services
 
 This article describes the current status for services that we've removed and retired, or are currently sunsetting, which you may have used or are still using with Azure Information Protection.
 
