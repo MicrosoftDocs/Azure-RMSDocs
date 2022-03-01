@@ -343,6 +343,8 @@
       href: faqs-rms.md
     - name: FAQs - classic client only
       href: faqs-classic.md
+  - name: Removed and sunset services
+    href: removed-sunset-services.md
   - name: Known issues
     href: known-issues.md
   - name: Information and support

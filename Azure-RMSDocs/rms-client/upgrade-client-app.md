@@ -33,7 +33,7 @@ ms.custom: user
 >***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 >
 
-[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 Recently upgraded from the Rights Management sharing application (also known as just the "RMS sharing app") to the Azure Information Protection client? 
 

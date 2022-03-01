@@ -29,7 +29,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 This article lists the activity events for which Azure Information Protection audit logs are generated. Azure Information Protection collects data from desktop apps only, and not from mobile devices. For more information, see the details in the **Platform** columns in this article.
 

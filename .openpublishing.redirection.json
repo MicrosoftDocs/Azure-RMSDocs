@@ -1618,6 +1618,12 @@
             "source_path": "Azure-RMSDocs/activate-office365.md",
             "redirect_url": "/information-protection/activate-service",
             "redirect_document_id": false
+        },
+	    
+		{
+            "source_path": "Azure-RMSDocs/removed-deprecated-services.md",
+            "redirect_url": "/information-protection/removed-sunset-services",
+            "redirect_document_id": false
         }
     ]
 }
