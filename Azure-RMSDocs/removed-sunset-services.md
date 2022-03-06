@@ -35,6 +35,7 @@ For more information, see:
 - [Final reminder to migrate from Azure Information Protection classic client to unified labeling
 ](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/final-reminder-to-migrate-from-azure-information-protection/ba-p/2731734).
 - [Learn about built-in labeling and the AIP unified labeling client](rms-client/use-client.md)
+- [Archived classic client documentation](/previous-versions/azure/information-protection/)
 
 ## Azure Information Protection analytics
 
