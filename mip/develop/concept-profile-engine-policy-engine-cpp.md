@@ -122,4 +122,4 @@ for (const auto& label : labels) {
 }
 ```
 
-The collection of `mip::Label` returned by `GetSensitivityLabels()` can be used to display all labels available to the user and then, when selected, use the ID to apply labels to a file.
+The collection of `mip::Label` returned by `ListSensitivityLabels()` can be used to display all labels available to the user and then, when selected, use the ID to apply labels to a file.
