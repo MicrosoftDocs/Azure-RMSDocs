@@ -34,14 +34,33 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.10    | https://aka.ms/mipsdkbins110 | **Supported**       | November 17, 2022  |
 | 1.9     | https://aka.ms/mipsdkbins19  | **Supported**       | August 23, 2022    |
 | 1.8     | https://aka.ms/mipsdkbins18  | **Supported**       | April 29, 2022     |
-| 1.7     | https://aka.ms/mipsdkbins17  | **Supported**       | January 14, 2022   |
+| 1.7     | https://aka.ms/mipsdkbins17  | **Out of Support**       | January 14, 2022   |
 | 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support**  | September 23, 2021 |
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support**  | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support**  | March 2, 2021      |
 
+## Version 1.11.64
+
+**Release Date:** January 12, 2022
+
+### File SDK
+
+- Fixed a bug in pfile-wrapped MSG files using the incorrect content format.
+- Fixed a bug where the `Inspector` class caused a crash on `rpmsg` files.
+- Fixed a bug where SDK wasn't properly compressing files over 4GB, resulting in possible corruption.
+
+### Protection SDK
+
+- Fixed an issue related to chasing DNS records for AD RMS on iOS.
+
+### Platform and Dependency Updates
+
+- Updated log4j in Java sample apps.
+- Rename arm64 ABI on Android to arm64-v8a
+
 ## Version 1.11.53
 
-**Release Date** November 17, 2021
+**Release Date:** November 17, 2021
 
 ### File SDK
 
@@ -78,6 +97,15 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 ```bash
 export HTTP_PROXY="http://10.10.10.10:8080"
 ```
+
+## Version 1.10.115
+
+**Release Date** February 25, 2022
+
+- Fixed a bug in pfile-wrapped MSG files using the incorrect content format.
+- Fixed a bug where the `Inspector` class caused a crash on `rpmsg` files.
+- Fixed a bug where SDK wasn't properly compressing files over 4GB, resulting in possible corruption.
+- Fixed a bug in detecting that protected MSG files. Files may have been protected but SDK treated them as plaintext. 
 
 ## Version 1.10.98
 

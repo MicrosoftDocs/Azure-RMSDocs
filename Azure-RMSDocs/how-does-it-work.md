@@ -32,7 +32,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 
 An important thing to understand about how Azure RMS works, is that this data protection service from Azure Information Protection, does not see or store your data as part of the protection process. Information that you protect is never sent to or stored in Azure, unless you explicitly store it in Azure or use another cloud service that stores it in Azure. Azure RMS simply makes the data in a document unreadable to anyone other than authorized users and services:
@@ -183,7 +183,7 @@ Review [Terminology for Azure Information Protection](./terminology.md) so that 
 - [Quickstart: Deploy the unified labeling client](quickstart-deploy-client.md)
 - [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
 - [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
-- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
+- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](/azure/information-protection/tutorial-scan-networks-and-content)
 
 If you’re ready to start deploying data protection for your organization, use the [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md) for your deployment steps and links for how-to instructions.
 

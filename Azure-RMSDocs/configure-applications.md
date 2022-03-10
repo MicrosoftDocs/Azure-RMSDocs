@@ -31,7 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 
 > [!TIP]
@@ -59,7 +59,7 @@ For information about how these applications and services support the data prote
 
 	-   [Office 365 apps, Office 2019, Office 2016, and Office 2013](configure-office-apps.md#office365-apps-office-2019-office-2016-and-office-2013)
 
-	-   [Office 2010](configure-office-apps.md#office2010)
+	-   [Office 2010](configure-office-apps.md#office-2010)
 
 -   [Azure Information Protection client: Installation and configuration for clients](configure-client.md)
 

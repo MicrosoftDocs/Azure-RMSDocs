@@ -29,7 +29,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 Use the lists and tables below to find details about known issues and limitations related to Azure Information Protection features.
 
@@ -69,9 +69,7 @@ The current release of the **AzureInformationProtection** PowerShell module that
 
 - **Outlook personal folders (*.pst* files)**. Natively protecting *.pst* files is not supported using the **AzureInformationProtection** module.
 
-- **Outlook protected email messages *(.rpmsg* files)**. Unprotecting Outlook protected email messages is supported by the **AzureInformationProtection** module only if they are inside an Outlook personal folder *(.pst* file).
-
-    Unprotecting email messages outside of a *.pst* file is not supported.
+- **Outlook protected email message (.msg files with a .rpmsg attachment)**. Unprotecting Outlook protected email messages is supported by the **AzureInformationProtection** module for messages inside an Outlook personal folder (.pst file), or on disk in an Outlook message file (.msg file).
 
 For more information, see [Admin Guide: Using PowerShell with the Azure Information Protection client](rms-client/client-admin-guide-powershell.md).
 
@@ -86,7 +84,6 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 |**Files attached to emails** |Due to a limitation in recent Windows updates, scanning Outlook messages (**.msg** files) may cause those files to be locked. To unlock the files, stop the scanner service. Starting the scanner service again does not lock the files again until the next time the messages are scanned. <br><br>To clarify whether your system is affected, you might want to start a scan on a specific folder with a single, sample message, and check to see if the file is locked after the scan is complete. <br><br>**Note**: This issue is not relevant when applying and removing protection with PowerShell. |
 |**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.       |
 | **S/MIME emails** | Opening S/MIME emails in Outlook's Reading Pane may cause performance issues. <br><br>To prevent performance issues with S/MIME emails, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property. <br><br>**Note**: Enabling this property prevents the AIP bar or the email classification from being displayed in Outlook's Reading Pane. |
-| **Online mode in Outlook** | When working in [*Online* mode](/outlook/troubleshoot/installation/cached-exchange-mode) in Outlook, with the Azure Information Protection add-in active, the following known issues may occur: <br><br>- New emails that are created and closed without edits are saved as drafts. <br>- Pop-up messages are displayed, prompting users to save changes, even if no changes were made. In such cases, this message can be ignored.
 |**Content markings in Word**    | AIP [content markings](configure-policy-markings.md) in Microsoft Word headers or footers may be offset or placed incorrectly, or may be hidden entirely, when that same header or footer also contains a table.<br><br>For more information, see [When visual markings are applied](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**Send to File Explorer option** |If you choose to right-click on any file in the File Explorer and select **Send to > Mail recipient**, the Outlook message that opens with the file attached may not display the AIP toolbar. <br><br>If this occurs and you need to use the AIP toolbar options, start your email from within Outlook and then browse to and attach the file you want to send.|
 | | |
@@ -230,23 +227,6 @@ If you have documents stored in OneDrive with a sensitivity label applied, and a
 
 In such cases, re-label the document manually to apply the protection as needed.
 
-## AIP and legacy Windows and Office versions
-
-- [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
-
-    We strongly encourage you to upgrade to a newer version of Windows.
-
-    However, if you have Extended Security Updates (ESU) and a support contract, AIP support is available to continue keeping your Windows 7 systems secure.
-
-    For more information, check with your support contact.
-
-- [**Office 2010 extended support ended on October 13, 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010).
-
-    This support will not be extended, and ESU will not be offered for Office 2010.
-
-    We strongly encourage you to upgrade to a newer version of Office 365.
-
-    For more information, check with your support contact.
 
 ## AIP-based Conditional Access policies
 
@@ -262,7 +242,7 @@ We recommend enabling AIP-based conditional access policies for your internal us
 2.	Under **Assignments**, select **Users and groups**, and then select **All users**. Make sure that the **All guest and external users** option is *not* selected.
 3.	Save your changes.
 
-You can also entirely disable CA within Azure Information Protection if the functionality is not required for your organization, in order to avoid this potential issue.
+You can also entirely disable/exclude CA within Azure Information Protection if the functionality is not required for your organization, in order to avoid this potential issue.
 
 For more information, see the [Conditional Access documentation](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 

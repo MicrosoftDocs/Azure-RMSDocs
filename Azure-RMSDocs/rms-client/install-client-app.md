@@ -32,7 +32,7 @@ ms.custom: user
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling user guide](install-unifiedlabelingclient-app.md).*
 
-[!INCLUDE [AIP classic client is deprecated - extended support customers](../includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [AIP classic client is sunset - extended support customers](../includes/classic-client-sunset-extended-support.md)]
 
 If your administrator does not install the Azure Information Protection client for you, you can do this yourself. You must be a local administrator for your PC to install this client so that it can label and protect your documents and emails.
 
@@ -40,7 +40,7 @@ If your administrator does not install the Azure Information Protection client f
 
 ## To download and install the Azure Information Protection client
 
-The Azure Information Protection classic client was deprecated on March 31, 2021. To deploy the AIP classic client, open a support ticket to get download access.
+The Azure Information Protection classic client was sunset on March 31, 2021. To deploy the AIP classic client, open a support ticket to get download access.
 
 The Azure Information Protection client requires a minimum version of Microsoft .NET Framework 4.6.2. If this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, your computer must be restarted.
 
@@ -63,7 +63,7 @@ The Azure Information Protection client requires a minimum version of Microsoft 
 ### Installing the Azure Information Protection client with Office 2010
 
 > [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../removed-sunset-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
 > 
 
 After you have installed the Azure Information Protection client by using the previous instructions:    

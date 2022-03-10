@@ -32,7 +32,7 @@ search.appverid:
 >
 > ***Relevant for**: [Azure Information Protection unified labeling client and classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to classify and protect documents and emails by applying labels. 
 
@@ -167,6 +167,6 @@ Configure and see Azure Information Protection for yourself with our quickstart 
 - [Quickstart: Deploy the unified labeling client](quickstart-deploy-client.md)
 - [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
 - [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
-- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
+- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](/azure/information-protection/tutorial-scan-networks-and-content)
 
 If you're ready to deploy this service for your organization, head over to the [how-to guides](how-to-guides.md).

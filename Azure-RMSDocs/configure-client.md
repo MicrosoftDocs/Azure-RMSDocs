@@ -30,7 +30,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 The AIP unified labeling client is recommended for all Windows computers, because it installs an Office add-in that enables users to easily label and protect documents directly from the Office ribbon. 
 
@@ -40,7 +40,6 @@ The client also offers:
 - A viewer for protected files that can't be opened by Office apps. There's a similar viewer for iOS and Android.
 - Features for tracking and revoking access to protected files.
 
-Computers running Office 2010 require the Azure Information Protection client to authenticate to the Azure Information Protection service. Note that Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
 ## The Azure Information Protection client for Windows: Installation and configuration
 
 For an enterprise installation and configuration of the client for Windows, see the [Azure Information Protection unified labeling client administrator guide](./rms-client/clientv2-admin-guide.md).

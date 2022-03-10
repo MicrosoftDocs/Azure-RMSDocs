@@ -32,7 +32,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from the Microsoft 365 documentation.*
 
-[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [AIP classic client is sunset - extended support customers](includes/classic-client-sunset-extended-support.md)]
 >
 
 When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark.
@@ -72,10 +72,6 @@ For documents, the visual markings are applied as follows:
 - When a document is labeled by using File Explorer, PowerShell, or the Azure Information Protection scanner: Visual markings are not immediately applied but are applied by the Azure Information Protection client when that document is opened in an Office app and the document is first saved.
 
     The exception is when you use [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office apps for files that are saved in Microsoft SharePoint, OneDrive for work or school, or OneDrive for home: When AutoSave is on, visual markings are not applied unless you configure the [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) to turn on classification to run continuously in the background.
-
-> [!NOTE]
-> For more information about support for visual markings in the AIP clients and in built-in labeling Office functionality, see [Choose your Windows labeling solution](rms-client/use-client.md#choose-your-windows-labeling-solution).
-> 
 
 ## To configure visual markings for a label
 

@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Azure Information Protection (AIP) documentation
-summary: Learn how to control and secure emails, documents, and sensitive data inside and outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection, no matter where it's stored or who it's shared with.
+summary: Learn how to control and secure emails, documents, and sensitive data inside and outside your company walls using Azure Information Protection. Note that the AIP unified labeling client is currently in a maintenance mode. For functionality from Office applications, we recommend that you use built-in labeling instead.
 
 metadata:
   title: Azure Information Protection documentation
@@ -46,7 +46,7 @@ landingContent:
           - text: Scan networks and content
             url: tutorial-scan-networks-and-content.md
           - text: Prevent oversharing
-            url: tutorial-preventing-oversharing.md
+            url: /azure/information-protection/tutorial-scan-networks-and-content
      - linkListType: how-to-guide
        links:
           - text: View protected, non-Office, files
@@ -61,7 +61,7 @@ landingContent:
        links:
           - text: Top recommended Ignite sessions
             url: what-is-information-protection.md#top-ignite-sessions
-          - text: What's new for the AIP unified labeling client
+          - text: Release management and supportability
             url: ./rms-client/unifiedlabelingclient-version-release-history.md
 
   # Card
@@ -109,8 +109,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Choose your Windows labeling solution
-            url: ./rms-client/use-client.md#choose-your-windows-labeling-solution
+          - text: About built-in labeling and the AIP client
+            url: ./rms-client/use-client.md
       - linkListType: tutorial
         links: 
           - text: Migrate to the unified labeling solution

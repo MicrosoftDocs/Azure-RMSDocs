@@ -30,7 +30,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 
 Use this information to determine what you need to do so that Office apps work with the Azure Rights Management service from Azure Information Protection.
@@ -55,9 +55,8 @@ Users who have Office for Mac must first verify their credentials before they ca
 
 4. To protect an email message or a document: On the **Options** tab, select **Permissions** and choose an option or template that protects your email or document.
 
-## Office 2010
+## Office 2010
 
-For client computers to use the Azure Rights Management service with Office 2010, they must have the Azure Information Protection client. No further configuration is required other than users must sign in with their Microsoft 365 credentials and they can then protect files and use files that have been protected by others.
+For client computers to use the Azure Rights Management service with Office 2010, they must have the Azure Information Protection client. No further configuration is required other than users must sign in with their Microsoft 365 credentials and they can then protect files and use files that have been protected by others.
 
 For more information, see [Azure Information Protection client: Installation and configuration for clients](configure-client.md).
-

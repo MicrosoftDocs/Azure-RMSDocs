@@ -30,7 +30,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 Use the following steps as recommendations to help you prepare for, implement, and manage Azure Information Protection for your organization, when you want to classify, label, and protect your data.
 
@@ -197,7 +197,7 @@ Perform the following steps:
     
     For files on PCs, use PowerShell cmdlets to classify and protect files. For more information, see [Using PowerShell with the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-powershell.md).
 
-    For cloud-based data stores, use [Azure Cloud App Security](/cloud-app-security). 
+    For cloud-based data stores, use [Microsoft Defender for Cloud Apps](/cloud-app-security). 
 
     > [!TIP]
     > While classifying and protecting existing files in bulk is not one of the main use cases for cloud app security, [documented workarounds](/cloud-app-security/azip-integration#enable-azure-information-protection) can help you get your files classified and protected.

@@ -31,7 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 After you have deployed and configured Azure Information Protection for your organization, provide help and guidance for users, administrators, and your help desk:
 
@@ -81,7 +81,7 @@ Use the following sections for application-specific information to help users pr
 
 ## Using information protection with the Azure Information Protection client
 
-If users have Office 2010, the Azure Information Protection client is required to protect and consume protected documents and emails. However, the Azure Information Protection client is also recommended for all computers and mobile devices that support this service.
+If users have Office 2010, the Azure Information Protection client is required to protect and consume protected documents and emails. However, the Azure Information Protection client is also recommended for all computers and mobile devices that support this service.
 
 In addition to making it easier for users to protect documents and emails, the Azure Information Protection client lets users track the documents that they have protected. Tracked documents can also be revoked if the previously authorized users should no longer have access to them.
 

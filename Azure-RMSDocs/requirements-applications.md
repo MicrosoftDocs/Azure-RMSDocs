@@ -32,7 +32,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 The applications and solutions listed on this page have built-in support for the Azure Rights Management (Azure RMS) service, which provides data protection for Azure Information Protection.
 
@@ -71,7 +71,7 @@ CAD files, such as **.dwg** files, are supported by partner solutions, such as [
 |Type  |Supported applications   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |- GigaTrust App for Android<br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- Office Mobile (unless using sensitivity labels, limited to viewing and editing protected documents) <br />- [Web browser](#web-browser-support)      |
-|[**Email**](#viewing-protected-content-in-email-clients)     | - [9Folders](#email-clients-using-exchange-activesync-irm)<br />- Azure Information Protection app (viewing protected emails)<br />- BlackBerry Work <br />- [GigaTrust App for Android](#email-clients-using-exchange-activesync-irm) <br />- Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook for Android](#email-clients-using-exchange-activesync-irm)<br />- [Samsung Email (S3 and later)](#email-clients-using-exchange-activesync-irm)<br />- TITUS Classification for Mobile <br /><br />- [Web browser](#web-browser-support)       |
+|[**Email**](#viewing-protected-content-in-email-clients)     | - [9Folders](#email-clients-using-exchange-activesync-irm)<br />- Azure Information Protection app (viewing protected emails)<br />- BlackBerry Work <br />- [GigaTrust App for Android](#email-clients-using-exchange-activesync-irm) <br />- Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook for Android](#email-clients-using-exchange-activesync-irm)<br />- [Samsung Email (S3 and later)](#email-clients-using-exchange-activesync-irm)<br />- TITUS Classification for Mobile <br />- [Web browser](#web-browser-support)  <br>- [VMware Workspace ONE Boxer](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Boxer_Admin_Guide/GUID-SecureEmailswithAIP.html)     |
 |[**Other file types**](#supported-text-and-image-file-types)    |  Azure Information Protection app (viewing protected text and images)  |
 | | |
 
@@ -80,8 +80,8 @@ CAD files, such as **.dwg** files, are supported by partner solutions, such as [
 
 |Type  |Supported applications   |
 |---------|---------|
-|**Word, Excel, PowerPoint**    |  - GigaTrust<br />- Office Mobile <br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- TITUS Docs<br />- [Web browser](#web-browser-support)    |
-|[**Email**](#viewing-protected-content-in-email-clients)     |   - Azure Information Protection app (viewing protected email)<br />- BlackBerry Work<br />- Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook for iPad and iPhone](#email-clients-using-exchange-activesync-irm)<br />- TITUS Mail <br />- [Web browser](#web-browser-support)     |
+|**Word, Excel, PowerPoint**    |  - GigaTrust<br />- Office Mobile <br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- TITUS Docs<br />- [Web browser](#web-browser-support)   |
+|[**Email**](#viewing-protected-content-in-email-clients)     |   - Azure Information Protection app (viewing protected email)<br />- BlackBerry Work<br />- Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook for iPad and iPhone](#email-clients-using-exchange-activesync-irm)<br />- TITUS Mail <br />- [Web browser](#web-browser-support)  <br>- [VMware Workspace ONE Boxer](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Boxer_Admin_Guide/GUID-SecureEmailswithAIP.html)   |
 |[**Other file types**](#supported-text-and-image-file-types)     | - Azure Information Protection app (viewing protecting text and images)<br />- TITUS Docs: **Pfile**  |
 | | |
 
@@ -253,7 +253,7 @@ For more information about deploying and using the classic client, see:
 - [Classic client administrator guide](./rms-client/client-admin-guide.md)
 - [Classic client user guide](./rms-client/client-user-guide.md).
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 ## Rights Management sharing app
 

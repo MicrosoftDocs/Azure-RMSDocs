@@ -28,13 +28,12 @@ ms.custom: user
 
 # User Guide: Tasks that you used to do with the RMS sharing application
 
->***Applies to**: Active Directory Rights Management Services, Azure Information Protection, Windows 11, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: Active Directory Rights Management Services, Azure Information Protection, Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 >
->*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 
-[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 Recently upgraded from the Rights Management sharing application (also known as just the "RMS sharing app") to the Azure Information Protection client? 
 

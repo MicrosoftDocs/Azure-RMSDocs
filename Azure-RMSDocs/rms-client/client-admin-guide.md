@@ -33,7 +33,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](clientv2-admin-guide.md).*
 
-[!INCLUDE [AIP classic client is deprecated - extended support customers](../includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [AIP classic client is sunset - extended support customers](../includes/classic-client-sunset-extended-support.md)]
 
 **To deploy the AIP classic client**, open a support ticket to download the installation files.
 
@@ -100,7 +100,7 @@ Deploy the Azure Information Protection client if you are not using [sensitivity
 
 - You run Office 2010 and want to protect documents and email messages by using the Azure Rights Management service. 
 
-    Note that Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    Note that Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../removed-sunset-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
     
 Example showing the Azure Information Protection client add-in for an Office application, displaying the classification labels for your organization, and the new **Protect** button on the ribbon:
 
@@ -173,7 +173,7 @@ The **Last connection** displays when the client last connected to your organiza
 
 If you see **This client is not licensed for Office Professional Plus**: The Azure Information Protection client has detected that the installed edition of Office does not support applying Rights Management protection. When this detection is made, labels that apply protection do not display on the Azure Information Protection bar.
 
-Use the **Version** information to confirm which version of the client is installed. You can check whether this is the latest release version and the corresponding fixes and new features by clicking the **What's New** link, to read the [Version release history](client-version-release-history.md) for the client.
+Use the **Version** information to confirm which version of the client is installed. You can check whether this is the latest release version and the corresponding fixes and new features by clicking the **What's New** link, to read the [Release management and supportability](client-version-release-history.md) for the client.
 
 ## Support for multiple languages
 
@@ -201,7 +201,7 @@ Alternatively, you can manually upgrade the client with a newer release installa
 
 When you manually upgrade, uninstall the previous version first only if you're changing the installation method. For example, you change from the executable (.exe) version of the client to the Windows installer (.msi) version of the client. Or, if you need to install a previous version of the client. For example, you have the current preview version installed for testing and now need to revert to the current general availability version.
 
-Use the [Version release history and support policy](client-version-release-history.md) to understand the support policy for the Azure Information Protection client, which versions are currently supported, and what's new and changed for the supported releases. 
+Use the [Release management and supportability](client-version-release-history.md) to understand the support policy for the Azure Information Protection client, which versions are currently supported, and the content included in each supported release.
 
 ### Upgrading the Azure Information Protection scanner
 
