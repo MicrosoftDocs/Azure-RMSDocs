@@ -109,7 +109,7 @@ Add one or more of the repositories found to a content scan job to scan them for
 > [!NOTE]
 > The Azure Information Protection network discovery feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 >
-> We are sunsetting the Azure Information Protection analytics as of March 1, 2022, with full retirement is scheduled for September 30, 2022. We are also sunsetting the scanner's network discovery features on the same timeline. For more information, see [Removed and retired services](removed-sunset-services.md#azure-information-protection-analytics).
+> We are sunsetting the Azure Information Protection analytics as of March 18, 2022, with full retirement is scheduled for September 30, 2022. We are also sunsetting the scanner's network discovery features on the same timeline. For more information, see [Removed and retired services](removed-sunset-services.md#azure-information-protection-analytics).
 >
 
 The following table describes prerequisites required for the network discovery service:
