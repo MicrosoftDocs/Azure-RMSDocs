@@ -29,7 +29,7 @@ ms.custom: admin
 >
 > ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [AIP classic client is sunset - extended support customers](includes/classic-client-sunset-extended-support.md)]
 
 In this quickstart, you'll create a new Azure Information Protection label that only specific users can see and apply to classify and protect their documents and emails.
 
@@ -46,7 +46,7 @@ To complete this quickstart, you need:
 |**A supporting subscription**     |  You'll need a subscription that includes Azure Information Protection.       |
 |**AIP added to the Azure portal**    |  You've added the Azure Information Protection pane to the Azure portal, and confirmed that the protection service is activated. </br></br>For more information, see [Quickstart: Get started in the Azure portal](quickstart-viewpolicy.md).       |
 |**An emailed-enabled group in Azure AD**     | You'll need an emailed-enabled group in Azure AD that contains the users who will see and apply the new label. </br></br>If you don't have a suitable group, create one named **Sales Team** and add at least one user. |
-|**Classic client installed**    |   To test the new label, you'll need the classic client installed on your computer. </br></br>The Azure Information Protection classic client is being deprecated in March  2021. To deploy the AIP classic client, open a support ticket to get download access.  |
+|**Classic client installed**    |   To test the new label, you'll need the classic client installed on your computer. </br></br>The Azure Information Protection classic client is being sunset in March  2021. To deploy the AIP classic client, open a support ticket to get download access.  |
 | | |
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
