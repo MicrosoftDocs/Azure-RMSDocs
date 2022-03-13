@@ -80,7 +80,6 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 |2.2.14.0|07/15/2019|
 |2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
-| | |
 
 The date format used on this page is *month/day/year*.
 
@@ -95,7 +94,7 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 >
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
+The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Supported features for the classic and unified labeling clients](aip-client.md#supported-features).
 
 ## Version 2.13.49.0
 
@@ -225,11 +224,11 @@ For more information, including licensing requirements, see:
 
 - Fixed errors where the [AIP add-in](clientv2-admin-guide-install.md) in Outlook may cause an error message to appear, if a message file that was saved locally was opened, closed, and then opened again.
 
-- Fixed errors where [visual markings](use-client.md#the-client-side-of-azure-information-protection) may not be refreshed as expected after changing a file's label to a label with no content markings.
+- Fixed errors where [visual markings](use-client.md) may not be refreshed as expected after changing a file's label to a label with no content markings.
 
 - Fixed errors where [audit logs](../audit-logs.md) may not be sent when a default label is applied to a document.
 
-- Fixed issues for [content markings](use-client.md#the-client-side-of-azure-information-protection) in Outlook may be duplicated.
+- Fixed issues for [content markings](use-client.md) in Outlook may be duplicated.
 
 - Fixed issues where deferred messages may not be sent in Outlook when a deferral rule set is defined and the [AIP client is installed](clientv2-admin-guide-install.md).
 
@@ -279,7 +278,6 @@ The unified labeling on-premises scanner has improved outputs for the following 
 |---------|---------|
 |**Get-AIPScannerStatus**     |  Previously, running the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) command provided only high-level details of the scanner cluster status, without details per node in your cluster.   <br><br> Now, you can use the **NodesInfo** variable and the **Verbose** parameter to drill down into additional levels of detail for each node. <br><br>   For more information, see the [Verify scanning details per scanner node and repository](../deploy-aip-scanner-tsg.md#verify-scanning-details-per-scanner-node-and-repository). |
 |**Get-AIPScannerConfiguration**     |   Running the [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/get-aipscannerconfiguration) now provides details about the current scanner configuration in addition to the online configuration settings.     |
-|     |         |
 
 ### Updates for the scanner's supported information types
 
@@ -328,7 +326,7 @@ For more information, see the [AIP unified labeling client user guide](clientv2-
 
 ## Next steps
 
-Not sure if unified labeling is the right client to install?  See [Choose your Windows labeling solution](use-client.md#choose-your-windows-labeling-solution).
+Not sure if unified labeling is the right client to install?  For more information, see [Learn about about built-in labeling and the AIP unified labeling client](use-client.md).
 
 For more information about installing and using the unified labeling client:
 

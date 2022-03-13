@@ -31,7 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md).*
 
-[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [AIP classic client is sunset - extended support customers](includes/classic-client-sunset-extended-support.md)]
 
 > [!TIP]
 > Alternatively, you may be looking for one of the following articles:
@@ -106,7 +106,6 @@ Before you begin using the protection service from Azure Information Protection,
     |---------|---------|
     |**Custom templates for protection settings**     |  If the default templates are not sufficient for your organization, configure custom templates. </br>For more information, see [Configuring and managing templates for Azure Information Protection](./configure-policy-templates.md).       |
     |**Usage logging**     | Configure usage logging to monitor how your organization is using the protection service. </br>For more information, see [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md).        |
-    | | |
 
 ## Install the Azure Information Protection classic and client configure applications and services for Rights Management
 

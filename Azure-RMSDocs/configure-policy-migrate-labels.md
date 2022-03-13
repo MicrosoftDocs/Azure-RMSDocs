@@ -30,7 +30,7 @@ ms.custom: admin
 >
 > ***Relevant for** [Azure Information Protection clients for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 Migrate Azure Information Protection labels to the unified labeling platform so that you can use them as sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling).
 
@@ -41,7 +41,7 @@ After you migrate your labels, you won't see any difference with the Azure Infor
 
 Before you read the instructions to migrate your labels, you might find the following frequently asked questions useful:
 
-- [What's the difference between labels in Microsoft 365 and labels in Azure Information Protection?](faqs.md#whats-the-difference-between-labels-in-microsoft-365-and-labels-in-azure-information-protection)
+- [What's the difference between labeling with the built-in labeling solution and labeling with the AIP Office add-in?](rms-client/use-client.md#whats-the-difference-between-labeling-with-the-built-in-labeling-solution-and-labeling-with-the-aip-office-add-in)
 
 - [When is the right time to migrate my labels to unified labeling?](faqs.md#when-is-the-right-time-to-migrate-my-labels-to-unified-labeling)
 
@@ -155,7 +155,6 @@ Azure Information Protection clients (classic) can use all label settings listed
 |**Visual markings per app**|Yes|This label configuration is supported only by the AIP clients, and not by Office built-in labeling. <br /><br />If you are working with built-in labeling, and publish this label without changes, the visual marking configuration displays as variable text instead of the visual markings you've configured to display in each app.  |
 |**"Just for me" protection**|Yes|The Microsoft 365 compliance center do not let you save encryption settings that you apply now, without specifying any users. In the Azure portal, this configuration results in a label that applies ["Just for me" protection](configure-policy-protection.md#example-6-label-that-applies-just-for-me-protection). <br /><br /> As an alternative, create a label that applies encryption and specify a user with any permissions, and then edit the associated protection template by using PowerShell. First, use the [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) cmdlet (see Example 3), and then [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) with the *RightsDefinitions* parameter.|
 |**Conditions and associated settings** <br /><br /> Includes automatic and recommended labeling, and their tooltips|Not applicable|Reconfigure your conditions by using auto labeling as a separate configuration from label settings.|
-| | | |
 
 ### Comparing the behavior of protection settings for a label
 
@@ -249,7 +248,7 @@ To confirm whether the clients and services you use support unified labeling, re
 
 - **The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md)** 
 
-    For a comparison of this client with the Azure Information Protection classic client, see [Compare the labeling solutions for Windows computers](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers).
+    For a comparison of this client with the Azure Information Protection classic client, see [Azure Information Protection classic client for Windows](rms-client/aip-client.md).
 
 - **Apps from Office that are in different stages of availability** 
 

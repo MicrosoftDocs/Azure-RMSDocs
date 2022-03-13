@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Removed and deprecated services - Azure Information Protection
-description: Learn about deprecated services that you may have used or are still using with Azure Information Protection
+title: Removed and retired services - Azure Information Protection
+description: Learn about removed or retired services that you may have used or are still using with Azure Information Protection
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -13,13 +13,13 @@ ms.service: information-protection
 
 ---
 
-# Removed and deprecated services
+# Removed and retired services
 
-This article describes the current status for removed and deprecated services that you may have used, or may still be using with Azure Information Protection.
+This article describes the current status for services that we've removed and retired, or are currently sunsetting, which you may have used or are still using with Azure Information Protection.
 
 ## The AIP classic client
 
-To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **labeling management** pages in the Azure portal are deprecated as of **March 31, 2021**. No further support is provided for the classic client, and maintenance versions will no longer be released.
+To provide a unified and streamlined customer experience, we are sunsetting the **Azure Information Protection classic client** and **labeling management** pages in the Azure portal as of **March 31, 2021**. No further support is provided for the classic client, and maintenance versions will no longer be released.
 
 The classic client will be officially retired, and will stop functioning, on **March 31, 2022**. At this point, the **Labels** and **Policies** tabs will be removed from the Azure portal, and the classic client will not longer be able to acquire policies from the Azure portal.
 
@@ -29,7 +29,7 @@ For more information, see:
 
 - [Final reminder to migrate from Azure Information Protection classic client to unified labeling
 ](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/final-reminder-to-migrate-from-azure-information-protection/ba-p/2731734).
-- [Compare the labeling solutions for Windows computers](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
+- [Learn about built-in labeling and the AIP unified labeling client](rms-client/use-client.md)
 
 ## AIP and legacy Windows and Office, SharePoint, and Exchange versions
 

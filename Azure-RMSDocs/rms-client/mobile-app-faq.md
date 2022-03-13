@@ -39,7 +39,7 @@ Client support timelines are as follows:
 
 - The **Azure Information Protection unified labeling client** has moved into maintenance mode as of January 1, 2022. Moving forward, no new features will be added to the unified labeling client.
 
-- The **Azure Information Protection classic client** and **Label Management** in the Azure Portal are deprecated as of March 31, 2021. No further support is provided for the classic client and maintenance versions will no longer be released. The classic client will be officially retired, and will stop functioning, on March 31, 2022.
+- The **Azure Information Protection classic client** and **Label Management** in the Azure Portal are sunset as of March 31, 2021. No further support is provided for the classic client and maintenance versions will no longer be released. The classic client will be officially retired, and will stop functioning, on March 31, 2022.
 
 All current Azure Information Protection classic client customers must [migrate to the Microsoft Information Protection unified labeling platform](../tutorial-migrating-to-ul.md) and upgrade to the [unified labeling client](../rms-client/clientv2-admin-guide-install.md). 
 
@@ -69,7 +69,6 @@ The AIP mobile viewer apps for iOS and Android support the following file types 
 | **Supported mobile ABIs** | Supported Application Binary Interfaces (ABIS) include: <br>- armeabi-v7a <br>- arm64-v8a <br>- x86_64|
 |**Supported sign in credentials**     | Sign in to the AIP mobile viewer apps with one of the following: </br></br>**Work or school credentials.** Try logging in with your work or school credentials. If you have questions, contact your administrator to understand whether your organization has AD RMS on-premises with the mobile device extension, or uses Azure Information Protection. </br></br>**A Microsoft account.** If your personal email address was used to protect the file, sign in with a [Microsoft account](https://signup.live.com). If you need to apply for a Microsoft account, you can use your own Hotmail, Gmail, or any other email address to do so. </br></br>**Note**: Not all applications are able to open content protected with a Microsoft account. For more information, see [Supported scenarios for opening protected documents](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
 |**Supported file types**     | Supported files types include protected email messages, PDF files, images, and text files. </br></br>For example, these files include the following extensions: **rpmsg**, **.pdf**, **.ppdf**, **.pjpg**, **.pjpeg**, **.ptiff**, **.ppng**, **.ptxt**, **.pxml** </br></br>For more information, see [above](#support-scope-and-recommended-usage) and [The AIP client admin guide](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
-| | |
 
 > [!NOTE]
 >The AIP mobile viewer apps send system metadata and pseudonymized end-user data to Microsoft, such as device ID, manufacturer, OS, and OS version and build number. 
@@ -88,7 +87,6 @@ Download and install the mobile viewer apps from the following locations:
 |**iTunes**     | [![Install from iTunes.](../media/small/ios-icon-small.png)](https://apps.apple.com/app/microsoft-rights-management/id689516635)        |
 |**Google Play**     |[![Install from Google Play.](../media/small/android-icon-small.png)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)         |
 |**Your company portal**     |  If your mobile device is managed by Microsoft Intune, you may be able to download the AIP mobile viewer apps from your company portal. <br><br>For more information, contact your system administrator.        |
-|     |         |
 
 ## iOS: View protected files on your device
 
@@ -132,7 +130,6 @@ If you're a system administrator who wants to test the AIP mobile viewer apps fo
     |**Email (.rpmsg)**     | Use another device, such as Outlook from a Windows computer, to send yourself a rights-protected email message that you can access from your mobile device.  |
     |**PDF**     | 1. From a Windows computer, [protect a PDF](clientv2-classify-protect.md) file using the AIP client. </br>2. Send yourself the protected PDF, or upload it to a SharePoint protected library and share it to your own email address.        |
     |**Image (.ptxt, .pjpg, or .ppng)**     | 1. From a Windows computer, [protect a text or image file](clientv2-classify-protect.md) using the AIP client. </br></br>2. Send yourself the protected file, or upload it to a SharePoint protected library and share it to your own email address.   |
-| | |
 
 1. Open the protected file on your mobile device using the email attachment or link that you'd sent to yourself.
 

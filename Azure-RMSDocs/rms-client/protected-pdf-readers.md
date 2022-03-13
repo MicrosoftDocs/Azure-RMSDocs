@@ -32,7 +32,7 @@ search.appverid:
 >***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 >
 
-[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 This article describes the protected PDF readers that are supported for Azure Information Protection (AIP). Protected PDF readers enable users to open those encrypted PDFs and view the sensitive information contained.
 
@@ -145,7 +145,6 @@ To open a protected PDF on your iOS or Android device, download and install the 
 |---------|---------|
 |**iTunes**     | [![Install from iTunes.](../media/small/ios-icon-small.png)](https://apps.apple.com/app/microsoft-rights-management/id689516635)        |
 |**Google Play**     |[![Install from Google Play.](../media/small/android-icon-small.png)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)         |
-| | |
 
 For more information, see [Mobile viewer apps for Azure Information Protection (iOS and Android)](mobile-app-faq.md).
 

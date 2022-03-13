@@ -31,7 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Running the Azure Information Protection scanner](deploy-aip-scanner-manage.md)*.
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 Once you've confirmed your [system requirements](deploy-aip-scanner-prereqs-classic.md) and [configured and installed your scanner](deploy-aip-scanner-configure-install-classic.md), [run a discovery scan](#run-a-discovery-cycle-and-view-reports-for-the-scanner) to get started.
 
@@ -202,7 +202,6 @@ The following AIP scanner log events are stored in the Windows **Applications an
 |---------|---------|---------|
 |**910**     | Scanner cycle started        | Logged when the scanner service is started and begins to scan for files in the data repositories that you specified.        |
 |**911**     |   Scanner cycle finished      | Logged when the scanner has finished a manual scan, or the scanner has finished a cycle for a continuous schedule.       |
-| | | |
 
 > [!TIP]
 > If the scanner was configured to run manually rather than continuously, to scan the files again, set the **Schedule** to **Manual** or **Always** in the content scan job, and then restart the service. For more information, see [Rescanning files](#rescanning-files).

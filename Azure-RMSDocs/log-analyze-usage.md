@@ -31,7 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 Use this information to help you understand how you can use usage logging for the protection service (Azure Rights Management) from Azure Information Protection. This protection service provides the data protection for your organization's documents and emails and it can log every request to it. These requests include when users protect documents and email and also consume this content, actions performed by your administrators for this service, and actions performed by Microsoft operators to support your Azure Information Protection deployment. 
 
@@ -59,7 +59,6 @@ In addition to this usage logging, you also have the following logging options:
 |**Document tracking**|Lets users track and revoke their documents that they have tracked with the Azure Information Protection client. Global administrators can also track these documents on behalf of users. <br /><br />For more information, see [Configuring and using document tracking for Azure Information Protection](./rms-client/client-admin-guide-document-tracking.md).|
 |**Client event logs**|Usage activity for the Azure Information Protection client, logged in the local Windows **Applications and Services** event log, **Azure Information Protection**. <br /><br />For more information, see [Usage logging for the Azure Information Protection client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client).|
 |**Client log files**|Troubleshooting logs for the Azure Information Protection client, located in **%localappdata%\Microsoft\MSIP**. <br /><br />These files are designed for Microsoft Support.|
-| | |
 
 In addition, information from the Azure Information Protection client usage logs and the Azure Information Protection scanner is collected and aggregated to create reports in the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md).
 
@@ -151,7 +150,6 @@ Each of the subsequent lines is a log record. The values of the fields are in th
 | **c-ip**           | Address       | IP address of the client that makes the request.                                                                                                                                                                                                                                                     | 64.51.202.144                                                                                                                       |
 | **admin-action**   | Bool          | Whether an administrator has accessed the document tracking site in Administrator mode.                                                                                                                                                                                                              | True                                                                                                                                |
 | **acting-as-user** | String        | The email address of the user for whom an administrator is accessing the document tracking site.                                                                                                                                                                                                     | 'joe@contoso.com'                                                                                                                   |
-|                    |               |                                                                                                                                                                                                                                                                                                      |                                                                                                                                     |
 
 #### Exceptions for the user-id field
 Although the user-id field usually indicates the user who made the request, there are two exceptions where the value does not map to a real user:
@@ -196,7 +194,6 @@ There are many request types for the protection service but the following table 
 |**SetUsageLogFeatureState**|A call is  made to enable usage logging.|
 |**SetUsageLogStorageAccount**|A call is  made to specify the location of the Azure Rights Management service logs.|
 |**UpdateTemplate**|A call is  made from the Azure portal to update an existing template.|
-| | | 
 
 **Classic client only**
 
@@ -221,9 +218,6 @@ The following request types are relevant for users with the AIP classic client o
 |**SearchUsers** |A call is made from the document tracking site to search all users in a tenant.|
 |**UpdateNotificationSettings**|A call is made from the document tracking site to change the notification settings for a single document.|
 |**UpdateTemplate**|A call is  made from the Azure portal to update an existing template.|
-| | | 
-
-
 
 ## PowerShell reference
 

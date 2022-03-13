@@ -29,7 +29,7 @@ ms.subservice: aiplabels
 >
 > ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated - extended support customers](includes/classic-client-deprecation-extended-support.md)]
+[!INCLUDE [AIP classic client is sunset - extended support customers](includes/classic-client-sunset-extended-support.md)]
 
 In this quickstart, you'll enable SharePoint to allow scanning, and also install and configure the Azure Information Protection scanner to find any sensitive data you have stored in an on-premises data store.
 
@@ -46,7 +46,6 @@ To complete this quickstart, you need:
 |**SQL Server Express**     | You'll need SQL Server Express installed on your computer. </br></br> To install, go to the [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) and select **Download now** under the Express option. In the installer, select the **Basic** installation type.        |
 |**Azure AD**     |  Your domain account must be synchronized to Azure AD. </br></br>If you're not sure about your account, contact one of your system administrators.      |
 |**SharePoint access**     | To enable a SharePoint scan, you'll need access and permissions to your SharePoint policy. |
-| | |
 
 ## Prepare a test folder and file
 

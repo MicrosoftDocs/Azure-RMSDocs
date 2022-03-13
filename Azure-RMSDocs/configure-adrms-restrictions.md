@@ -32,9 +32,9 @@ ms.custom: admin
 >
 >***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Double Key Encryption](plan-implement-tenant-key.md#double-key-encryption-dke).*
 >
->*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](removed-deprecated-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions)
+>*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](removed-sunset-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions)
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 Hold Your Own Key (HYOK) configurations enable AIP customers with the classic client to protect highly sensitive content while maintaining full control of their key. HYOK uses an additional, customer-held key that's stored on premises for highly sensitive content, together with the default cloud-based protection used for other content. 
 
@@ -118,14 +118,12 @@ The following tables list the supported scenarios for protecting and consuming c
 |Azure Information Protection Viewer     |   Not applicable      |  ![yes](media/yes-icon.png)       |
 |Azure Information Protection client with PowerShell labeling cmdlets     | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png)        |
 |Azure Information Protection scanner     |![yes](media/yes-icon.png)       |   ![yes](media/yes-icon.png)      |
-| | | |
 
 ### macOS application support for HYOK
 
 |Application|Protection|Consumption|
 |----------------------|----------|-----------|
 |Office for Mac: </br>Word, Excel, PowerPoint, Outlook|![no](media/no-icon.png)|![yes](media/yes-icon.png)|
-| | | |
 
 ### iOS application support for HYOK
 
@@ -166,7 +164,7 @@ An AD RMS deployment must meet the following requirements to provide HYOK protec
 |**AD RMS configuration**     |Your AD RMS system must be configured in specific ways to support HYOK. For more information, see [below](#ad-rms-configuration-requirements).          |
 |**Directory synchronization**     |Directory synchronization must be configured between your on-premises Active Directory and the Azure Active Directory. </br></br>Users who will use HYOK protection labels must be configured for single-sign-on.         |
 |**Configuration for explicitly defined trusts**     |If you share HYOK-protected content with others outside your organization, AD RMS must be configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations. </br></br>Do this using trusted user domains (TUDs) or federated trusts that are created using Active Directory Federation Services (AD FS).         |
-|**Microsoft Office supported version**     | Users who are protecting or consuming HYOK-protected content must have: </br></br>- A version of Office that supports Information Rights Management (IRM) </br>- Microsoft Office Professional Plus version 2013 or later with Service Pack 1, running on Windows 7 Service Pack 1 or later. </br>- For the Office 2016 Microsoft Installer (.msi)-based edition, you must have the [update 4018295 for Microsoft Office 2016 that was released on March 6, 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Note**: Office 2010 and Office 2007 are not supported.  For more information, see [AIP and legacy Windows and Office versions](removed-deprecated-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).      |
+|**Microsoft Office supported version**     | Users who are protecting or consuming HYOK-protected content must have: </br></br>- A version of Office that supports Information Rights Management (IRM) </br>- Microsoft Office Professional Plus version 2013 or later with Service Pack 1, running on Windows 7 Service Pack 1 or later. </br>- For the Office 2016 Microsoft Installer (.msi)-based edition, you must have the [update 4018295 for Microsoft Office 2016 that was released on March 6, 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Note**: Office 2010 and Office 2007 are not supported.  For more information, see [AIP and legacy Windows and Office versions](removed-sunset-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).      |
 
 > [!IMPORTANT]
 > To fulfill the high assurance that HYOK protection offers, we recommend:

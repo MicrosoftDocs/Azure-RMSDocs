@@ -56,8 +56,6 @@ In this tutorial, you'll learn how to:
 |**SQL Server**     | To run the scanner, you'll need SQL Server installed on the scanner machine. <br /><br /> To install, go to the [SQL Server download page](https://www.microsoft.com/sql-server/sql-server-downloads) and select **Download now** under the installation option you want to install. In the installer, select the **Basic** installation type. <br /><br />**Note**: We recommend installing SQL Server Enterprise for production environments, and Express only for testing.    |
 |**Azure Active Directory account**     |  When working with a standard, cloud-connected environment, your domain account must be synchronized to [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). This isn't necessary if you're working offline. <br /><br />If you're not sure about your account, contact one of your system administrators to verify the synch status. For more information, see [Deploying the scanner with alternative configurations](deploy-aip-scanner-prereqs.md#deploying-the-scanner-with-alternative-configurations).  |
 |**Sensitivity labels and a published policy** |You must have created sensitivity labels, and published a policy with at least one label to the Microsoft 365 compliance center, for the scanner service account. <br /><br />Configure sensitivity labels in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/create-sensitivity-labels). |
-| | | 
-
 
 When you're ready, continue with [Create a network scan job](#create-a-network-scan-job).
 
@@ -84,7 +82,6 @@ Create a network scan job to scan a specified IP address or IP range for risky r
     |**Configure IP ranges to discover**     | Select the row to open the **Choose IP ranges** pane. There, enter an IP address or IP range to scan. <br /><br />**Note**: Make sure to enter IP addresses that are accessible from the scanner's machine.      |
     |**Set schedule**     | Keep the default value of **One Time**.        |
     |**Set start time (UTC)**     |  Calculate the current UTC time, considering your current time zone, and set the start time to run within 5 minutes from now.     |
-    |     |         |
 
     For example: 
 
@@ -197,7 +194,6 @@ Logs are also stored locally in the **%localappdata%\Microsoft\MSIP\Scanner\Repo
 |---------|---------|
 |**.txt summary files**     |  Includes the time taken to scan, the number of scanned files, and how many files had a match for the information types.       |
 |**.csv detail files**     | Contains detailed descriptions for each file scanned. The directory can hold up to 60 reports for each scanning cycle.         |
-|     |         |
 
 ## Next steps
 

@@ -31,7 +31,7 @@ ms.custom: admin
 >
 >***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 
 Use the following information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
@@ -51,7 +51,6 @@ This means configuring the following servers:
 |**Exchange 2016 and Exchange 2019**     |   Mailbox Servers (includes Client Access and Hub Transport server roles)   |
 |**SharePoint**     |    Front-end SharePoint webservers, including those hosting the Central Administration server     |
 |**File Classification Infrastructure**     |   Windows Server computers that have installed File Resource Manager      |
-| | |
 
 This configuration requires registry settings, with the following options:
 
@@ -110,7 +109,6 @@ For more information, see [How to use the server configuration tool for Microsof
     |**Locally**     |  Run the tool interactively, from the server to be configured to communicate with the RMS connector. <br><br>**Tip**: This is useful for a one-off configuration, such as a testing environment.       |
     |**Software deployment**     |  Run the tool to produce registry files, which you then deploy to one or more relevant servers. <br><br>Deploy the registry files using a systems management application that supports software deployment, such as System Center Configuration Manager.       |
     |**Group policy**     | Run the tool to produce a script that you give to an administrator who can create Group Policy objects for the servers to be configured. <br><br>This script creates one Group Policy object for each server type to be configured, which the administrator can then assign to the relevant servers.        |
-    | | |
 
     > [!NOTE]
     > This tool configures the servers that will communicate with the RMS connector and that are listed at the beginning of this section. Do not run this tool on the servers that run the RMS connector.
@@ -147,7 +145,7 @@ In addition, if Office 2010 is installed locally on an Exchange server, the clie
 In both scenarios, you must install the client applications on separate computers that are not configured to use the connector. They will then correctly use RMS directly.
 
 > [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](removed-deprecated-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](removed-sunset-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
 > 
 ## Configuring an Exchange server to use the connector
 The following Exchange roles communicate with the RMS connector:
