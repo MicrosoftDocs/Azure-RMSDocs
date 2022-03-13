@@ -88,7 +88,6 @@ Storing your tenant key in the Azure Key Vault provides the following advantages
 |**Master key location**| Azure Key Vault is available in a variety of locations, and supports organizations with restrictions where master keys can live. <br /><br />For more information, see the [Products available by region](https://azure.microsoft.com/regions/services/) page on the Azure site.|
 |**Separated security domains**|Azure Key Vault uses separate security domains for its data centers in regions such as North America, EMEA (Europe, Middle East and Africa), and Asia. <br /><br />Azure Key Vault also uses different instances of Azure, such as Microsoft Azure Germany, and Azure Government. |
 |**Unified experience**| Azure Key Vault also enables security administrators to store, access, and manage certificates and secrets, such as passwords, for other services that use encryption. <br><br />Using Azure Key Vault for your tenant keys provides a seamless user experience for administrators who manage all of these elements.|
-| | |
 
 For the latest updates and to learn how other services use  [Azure Key Vault](/azure/key-vault/general/basic-concepts), visit the [Azure Key Vault team blog](/archive/blogs/kv/).
 
@@ -166,7 +165,6 @@ BYOK prerequisites vary, depending on your system configuration. Verify that you
 |**Azure Key Vault prerequisites for BYOK** | If you are using an HSM-protected key that was created on-premises, ensure that you also comply with the [prerequisites for BYOK](/azure/key-vault/keys/hsm-protected-keys-byok#prerequisites) listed in the Azure Key Vault documentation.         |
 |**Thales firmware version 11.62**    |You must have a Thales firmware version of 11.62 if you are migrating from AD RMS to Azure Information Protection by using software key to hardware key and are using Thales firmware for your HSM.
 |**Firewall bypass for trusted Microsoft services** |If the key vault that contains your tenant key uses Virtual Network Service Endpoints for Azure Key Vault, you must allow trusted Microsoft services to bypass this firewall. <br />For more information, see [Virtual Network Service Endpoints for Azure Key Vault](/azure/key-vault/general/overview-vnet-service-endpoints).       |
-| | |
 
 #### Verifying that you have a BYOK-compatible Azure subscription
 
@@ -221,7 +219,6 @@ The following table lists recommended Azure regions and instances for minimizing
 |rms.**govus**.aadrm.com​|**Central US** or **East US 2**|
 |rms.**aadrm.us**|**US Gov Virginia** or **US Gov Arizona**|
 |rms.**aadrm.cn**|**China East 2** or **China North 2**|
-| | |
 
 ### Create and configure your key
 

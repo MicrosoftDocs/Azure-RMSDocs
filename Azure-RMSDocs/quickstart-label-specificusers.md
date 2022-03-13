@@ -47,7 +47,6 @@ To complete this quickstart, you need:
 |**AIP added to the Azure portal**    |  You've added the Azure Information Protection pane to the Azure portal, and confirmed that the protection service is activated. </br></br>For more information, see [Quickstart: Get started in the Azure portal](quickstart-viewpolicy.md).       |
 |**An emailed-enabled group in Azure AD**     | You'll need an emailed-enabled group in Azure AD that contains the users who will see and apply the new label. </br></br>If you don't have a suitable group, create one named **Sales Team** and add at least one user. |
 |**Classic client installed**    |   To test the new label, you'll need the classic client installed on your computer. </br></br>The Azure Information Protection classic client is being sunset in March  2021. To deploy the AIP classic client, open a support ticket to get download access.  |
-| | |
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
 
@@ -69,7 +68,6 @@ First, create your new label.
     |---------|---------|
     |**Label display name**     |    A name for the new label that users will see, and that identifies the classification for the content. </br>For example: **Sales - Restricted**    |
     |**Description**     |   A tooltip to help users identify when to select this new label. </br> For example: **Business data that is restricted to the Sales Team.**     |
-    | | | 
 
 1. Make sure that **Enabled** is set to **On** (the default), and select  **Save** ![Save](media/qs-tutor/save-icon.png "Save").
 
