@@ -32,7 +32,8 @@ If you know or have previously deployed Active Directory Rights Management S
 
 Some of the main differences for Azure Information Protection include:
 
-|Difference  |Description  |
+
+| Difference  | Description  |
 |---------|---------|
 |**No server infrastructure required**     |  Azure Information Protection doesn't require the extra servers and PKI certificates that AD RMS needs, because Microsoft Azure takes care of those requirements for you. <br><br>That makes this cloud solution quicker to deploy and easier to maintain.       |
 |**Cloud-based authentication**     |  Azure Information Protection uses Azure AD for authentication - for both internal users and users from other organizations. <br><br>That means your users can be authenticated even when they aren't connected to your internal network and it's easier to share protected content with users from other organizations. <br><br>Many organizations already have user accounts in Azure AD because they're running Azure services or have Microsoft 365. But if not, RMS for individuals lets users create a free account, or a Microsoft account can be used for [applications that support this authentication for Azure Information Protection](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents). <br><br>In comparison, to share AD RMS protected content with another organization, you must configure explicit trusts with each organization.       |
