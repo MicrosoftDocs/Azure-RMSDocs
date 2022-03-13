@@ -66,7 +66,6 @@ You can also check by going to **Azure Information Protection** > **Manage** > *
 |---------|---------|
 |**Activated**     |  Your tenant is on the unified labeling platform. <br />You can [create, configure, and publish labels](/microsoft-365/compliance/create-sensitivity-labels) from the Microsoft 365 compliance center.       |
 |**Not activated**    |  Your tenant is not on the unified labeling platform. <br />For migration instructions and guidance, see [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md).       |
-| | |
 
 
 
@@ -111,7 +110,7 @@ Additionally, note the following when managing administrative tasks and roles:
 |**Onboarding controls**     |If you have configured [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), this configuration does not affect the ability to administer Azure Information Protection, except the RMS connector. <br /><br />For example, if you have configured onboarding controls so that the ability to protect content is restricted to the *IT department* group, the account used to install and configure the RMS connector must be a member of that group.          |
 |**Removing protection**     |  Administrators cannot automatically remove protection from documents or emails that were protected by Azure Information Protection. <br /><br />Only users who are assigned as super users can do remove protection, and only when the super user feature is enabled. <br /><br />Any user with administrative permissions to Azure Information Protection can enable the super user feature, and assign users as super users, including their own account.<br /><br />These actions are recorded in an administrator log. <br /><br />For more information, see the security best practices section in [Configuring super users for Azure Information Protection and discovery services or data recovery](configure-super-users.md). <br><br>**Tip**: If your content is stored in SharePoint or OneDrive, admins can run the [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) cmdlet to remove both the sensitivity label and the encryption. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document). |
 |**Migrating to the unified labeling store**      |  If you are migrating your Azure Information Protection labels to the unified labeling store, be sure to read the following section from the label migration documentation: <br />[Administrative roles that support the unified labeling platform](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform). |
-| | |
+
 ### Azure Information Protection administrator
 
 This Azure Active Directory administrator role lets an administrator configure Azure Information Protection but not other services.
@@ -218,7 +217,6 @@ Additional information:
 |**MFA and B2B collaboration**     | If you use MFA in your conditional access policies for collaborating with other organizations (B2B), you must use [Azure AD B2B collaboration](/azure/active-directory/b2b/what-is-b2b) and create guest accounts for the users you want to share with in the other organization.        |
 |**Terms of Use prompts**     |  With the Azure AD December 2018 preview release, you can now [prompt users to accept a terms of use](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822) before they open a protected document for the first time.       |
 |**Cloud apps**     |  If you use many cloud apps for conditional access, you might not see **Microsoft Azure Information Protection** displayed in the list to select. <br /><br />In this case, use the search box at the top of the list. Start typing "Microsoft Azure Information Protection" to filter the available apps. Providing you have a supported subscription, you'll then see **Microsoft Azure Information Protection** to select.        |
-| | |
 
 > [!NOTE]
 > The Azure Information Protection support for conditional access is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.

@@ -136,7 +136,6 @@ To open a protected PDF on your iOS or Android device, download and install the 
 |---------|---------|
 |**iTunes**     | [![Install from iTunes.](../media/small/ios-icon-small.png)](https://apps.apple.com/app/microsoft-rights-management/id689516635)        |
 |**Google Play**     |[![Install from Google Play.](../media/small/android-icon-small.png)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)         |
-| | |
 
 For more information, see [Mobile viewer apps for Azure Information Protection (iOS and Android)](mobile-app-faq.md).
 

@@ -52,8 +52,6 @@ Ensuring ongoing access for authorized people and services, also known as "reaso
 |---------|---------|
 |**Protect multiple file types**     | In early implementations of Rights Management, only Office files could be protected, using built-in Rights Management protection. </br></br>Azure Information Protection provides support for additional file types. For more information, see [Supported file types](rms-client/clientv2-admin-guide-file-types.md).         |
 |**Protect files anywhere** | When a file is [protected](./rms-client/clientv2-classify-protect.md), the protection stays with the file, even if it is saved or copied to storage that is not under the control of IT, such as a cloud storage service.|
-|     |         |
-
 
 ## Collaboration features
 
@@ -61,7 +59,6 @@ Ensuring ongoing access for authorized people and services, also known as "reaso
 |---------|---------|
 |**Safely share information**     |  [Protected files](./rms-client/clientv2-classify-protect.md) are safe to share with others, such as an attachment to an email or a link to a SharePoint site. </br></br> If the sensitive information is within an email message, protect the email, or use the **Do Not Forward** option from Outlook.       |
 |**Support for business-to-business collaboration**     |  Because Azure Rights Management is a cloud service, there’s no need to explicitly configure trusts with other organizations before you can share protected content with them. </br></br>Collaboration with other organizations that already have a Microsoft 365 or an Azure AD directory is automatically supported. </br></br>For organizations without Microsoft 365 or an Azure AD directory, users can sign up for the free [RMS for individuals](rms-for-individuals.md) subscription, or use a Microsoft account for [supported applications](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).       |
-| | |
 
 > [!TIP]
 > Attaching protected files, rather than protecting an entire email message, enables you to keep the email text un-encrypted. 
@@ -77,7 +74,6 @@ Azure RMS supports a broad range of platforms and applications, including:
 |**Commonly used devices** </br>not just Windows computers     | [Client devices](requirements.md#client-devices) include: </br></br>- Windows computers and phones </br>- Mac computers </br>- iOS tablets and phones </br>- Android tablets and phones        |
 |**On-premises services**     | In addition to working [seamlessly with Office 365](office-apps-services-support.md), use Azure Rights Management with the following on-premises services when you deploy the [RMS connector](deploy-rms-connector.md): </br></br>- Exchange Server </br>- SharePoint Server </br>- Windows Server running File Classification Infrastructure        |
 |**Application extensibility**     |Azure Rights Management has tight integration with Microsoft Office applications and services, and extends support for other applications by using the [Azure Information Protection client](./rms-client/use-client.md ). </br></br>The [Microsoft Information Protection SDK](/information-protection/develop/) provide your internal developers and software vendors with APIs to write custom applications that support Azure Information Protection. </br></br>For more information, see [Other applications that support the Rights Management APIs](api-support.md).         |
-| | |
 
 ## Infrastructure features
 
@@ -138,8 +134,6 @@ Organizations can benefit from IT control features, such as:
 |**Active Directory synchronization**     |   Synchronize [just the directory attributes that Azure RMS needs](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#azure-rms) to support a common identity for your on-premises Active Directory accounts, by using [a hybrid identity solution](/azure/active-directory/hybrid/), such as Azure AD Connect.      |
 |**Single-sign on**     | Enable single-sign on without replicating passwords to the cloud, by using AD FS.        |
 |**Migration from AD RMS** |If you've deployed Active Directory Rights Management Services (AD RMS), [migrate to the Azure Rights Management service](migrate-from-ad-rms-to-azure-rms.md) without losing access to data that was previously protected by AD RMS. |
-| | |
-
 
 ## Security, compliance, and regulatory requirements
 Azure Rights Management supports the following security, compliance, and regulatory requirements:

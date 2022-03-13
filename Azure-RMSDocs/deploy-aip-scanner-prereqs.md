@@ -59,7 +59,6 @@ You must have a Windows Server computer to run the scanner, which has the follow
 |**Network connectivity**     | Your scanner computer can be a physical or virtual computer with a fast and reliable network connection to the data stores to be scanned. </br></br> If internet connectivity is not possible because of your organization policies, see [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations). </br></br>Otherwise, make sure that this computer has internet connectivity that allows the following URLs over HTTPS (port 443):</br><br />-  \*.aadrm.com <br />-  \*.azurerms.com<br />-  \*.informationprotection.azure.com <br /> - informationprotection.hosting.portal.azure.net <br /> - \*.aria.microsoft.com <br />-  \*.protection.outlook.com |
 |**NFS shares** |To support scans on NFS shares, services for NFS must be deployed on the scanner machine. <br><br>On your machine, navigate to the **Windows Features (Turn Windows features on or off)** settings dialog, and select the following items: **Services for NFS** > **Administrative Tools** and **Client for NFS**. |
 | **Microsoft Office iFilter** |When your scanner is installed on a Windows server machine, you must also install the Microsoft Office iFilter in order to scan .zip files for sensitive information types. <br><br>For more information, see the [Microsoft download site](https://www.microsoft.com/en-us/download/details.aspx?id=17062).|
-| | |
 
 ## Service account requirements
 
@@ -79,7 +78,6 @@ This service account has the following requirements:
 |**For labels that reprotect or remove protection**     | To ensure that the scanner always has access to protected files, make this account a [super user](configure-super-users.md) for Azure Information Protection, and ensure that the super user feature is enabled. </br></br>Additionally, if you've implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) for a phased deployment, make sure that the service account is included in the onboarding controls you've configured.|
 |**Specific URL level scanning** |To scan and discover sites and subsites [under a specific URL](#deploying-the-scanner-with-alternative-configurations), grant **Site Collector Auditor** rights to the scanner account on the farm level.|
 |**License for information protection** | Required to provide file classification, labeling, or protection capabilities to the scanner service account. <br><br>For more information, see the Azure Information Protection [deployment roadmap](deployment-roadmap-classify-label-protect.md#confirm-your-subscription-and-assign-user-licenses) and the [Microsoft 365 guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-sensitivity-labeling). |
-| | |
 
 ## SQL server requirements
 
@@ -172,7 +170,6 @@ To scan SharePoint document libraries and folders, ensure that your SharePoint s
 |**Versioning**     |  When you use [versioning](/sharepoint/governance/versioning-content-approval-and-check-out-planning), the scanner inspects and labels the last published version. <br><br>If the scanner labels a file and [content approval](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) is required, that labeled file must be approved to be available for users.       |
 |**Large SharePoint farms** |For large SharePoint farms, check whether you need to increase the list view threshold (by default, 5,000) for the scanner to access all files. <br><br>For more information, see [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server). |
 |**Long file paths**  |If you have long file paths in SharePoint, ensure that your SharePoint server's [httpRuntime.maxUrlLength](/dotnet/api/system.web.configuration.httpruntimesection.maxurllength) value is larger than the default 260 characters. <br><br>For more information, see [Avoid scanner timeouts in SharePoint](rms-client/clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint). | 
-| | |
 
 ## Microsoft Office requirements
 
@@ -194,8 +191,6 @@ To scan files with file paths of more than 260 characters, install the scanner o
 |**Windows 2016 or later**     |   Configure the computer to support long paths      |
 |**Windows 10 or Windows Server 2016**     | Define the following [group policy setting](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10): **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths**.    </br></br>For more information long file path support in these versions, see the [Maximum Path Length Limitation](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) section from the Windows 10 developer documentation.    |
 |**Windows 10, version 1607 or later**     |  Opt in for the updated **MAX_PATH** functionality. For more information, see [Enable Long Paths in Windows 10 versions 1607 and later](/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later).      |
-| | |
-
 
 ## Deploying the scanner with alternative configurations
 
@@ -329,7 +324,6 @@ Do one of the following, depending on your organization's requirements:
 |---------|---------|
 |**You can have the Sysadmin role temporarily**     |  If you temporarily have the Sysadmin role, the database is automatically created for you and the service account for the scanner is automatically granted the required permissions. <br><br>However, the user account that configures the scanner still requires the **db_owner** role for the scanner configuration database. If you only have the Sysadmin role until the scanner installation is complete, grant the **db_owner** role to the user account manually.       |
 |**You cannot have the Sysadmin role at all**     |  If you cannot be granted the Sysadmin role even temporarily, you must ask a user with Sysadmin rights to manually create a database before you install the scanner. <br><br>For this configuration, the **db_owner** role must be assigned to the following accounts: <br>- Service account for the scanner<br>- User account for the scanner installation<br>- User account for scanner configuration <br><br>Typically, you will use the same user account to install and configure the scanner. If you use different accounts, they both require the **db_owner** role for the scanner configuration database. Create this user and rights as needed. If you specify your own cluster name, the configuration database is named **AIPScannerUL_<cluster_name>**.  |
-| | |
 
 Additionally:
 
@@ -417,7 +411,6 @@ If your labels do not have any auto-labeling conditions, plan to use one of the 
 |**Discover all info types**     |  In your [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), set the **Info types to be discovered** option to **All**. </br></br>This option sets the content scan job to scan your content for all sensitive information types.      |
 |**Use recommended labeling**     |  In your [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), set the **Treat recommended labeling as automatic** option to **On**.</br></br> This setting configures the scanner to automatically apply all recommended labels on your content.      |
 |**Define a default label**     |   Define a default label in your [policy](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), or [repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In this case the scanner applies the default label on all files found.       |
-| | |
 
 ## Next steps
 

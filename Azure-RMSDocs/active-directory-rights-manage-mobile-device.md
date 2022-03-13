@@ -244,7 +244,6 @@ If you use the DNS Server role on Windows Server, use the following tables as a 
 |Weight|0
 |Port number|443
 |Host offering this service|_rmsserver.contoso.com|
-| | |
 
 In addition to these DNS SRV records for your email domain, you must create another DNS SRV record in the RMS cluster domain. This record must specify the FQDNs of your RMS cluster that protects content. Every file that is protected by RMS includes a URL to the cluster that protected that file. Mobile devices use the DNS SRV record and the URL FQDN specified in the record to find the corresponding RMS cluster that can support mobile devices.
 
@@ -261,7 +260,6 @@ If you use the DNS Server role on Windows Server, use the following table as a g
 |Weight|0
 |Port number|443
 |Host offering this service|_rmsserver.contoso.com|
-| | |
 
 ## Deploying the AD RMS mobile device extension
 

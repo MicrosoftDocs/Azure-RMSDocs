@@ -42,8 +42,6 @@ As of **March 1, 2022**, we are sunsetting the AIP audit log and analytics, with
 |Azure Information Protection unified labeling client     | Windows, SharePoint, OneDrive        | Office        | Generated each time a labeled or protected file is opened. <br /><br />**Note**: For protected files, Access audit logs are generated only when the file is opened and the content is successfully decrypted and exposed to the user. <br />For protected emails in Outlook, Access audit logs are also generated each time the user attempts to open an encrypted email, even if the decryption is blocked due to a lack of permissions.         |
 |Microsoft Information Protection (MIP) SDK     | Any        | Third-party applications        | Generated each time a labeled or protected file is accessed by a third-party application that supports it.       |
 |RMS service     | Windows        | Office         |Generated each time a labeled or protected document is accessed.       |
-| | | | |
-
 
 ## Access denied audit logs
 
@@ -52,7 +50,6 @@ As of **March 1, 2022**, we are sunsetting the AIP audit log and analytics, with
 |Reported by  |Platform  |Application  |Action / Description   |
 |---------|---------|---------|---------|
 |RMS service     | Windows        | Office         |Generated each time a user attempts to access a protected document for which they have no permissions.
-| | | | |
 
 ## Change protection audit logs
 
@@ -62,7 +59,6 @@ As of **March 1, 2022**, we are sunsetting the AIP audit log and analytics, with
 |---------|---------|---------|---------|
 |Azure Information Protection unified labeling client     | Windows, SharePoint, OneDrive        | Office        | Generated each time the protection on an unlabeled document is changed manually.         |
 |Microsoft Information Protection (MIP) SDK     | Any        | Third-party applications        | Generated each time the protection on an unlabeled document is changed manually.<br>Generated only if supported by the third-party application.       |
-| | | | |
 
 ## Discover audit logs
 
@@ -73,7 +69,6 @@ As of **March 1, 2022**, we are sunsetting the AIP audit log and analytics, with
 |Azure Information Protection unified labeling scanner | Windows        | Office        |Generated each time a file is scanned by the AIP scanner.<br>The log includes the following details:<br>- Matched information types<br>- Labels |
 |Microsoft Information Protection (MIP) SDK | Any | Third-party applications | Generated each time a file is scanned by a third-party application that supports it. <br />The log includes the following details:<br />- Matched information types<br />- Labels|
 |Azure Information Protection unified labeling viewer |Windows |AIP Unified Labeling Viewer  | Generated each time a labeled or protected file is opened within the organization. |
-| | | | |
 
 ## Downgrade label audit logs
 
@@ -83,7 +78,6 @@ As of **March 1, 2022**, we are sunsetting the AIP audit log and analytics, with
 | ---------------- | ------------------------------ | ------------------------ | --------------- |
 |Azure Information Protection unified labeling scanner and client | Windows, SharePoint, One Drive | Office                   | Generated each time a document label is updated with a less sensitive label.|
 | Microsoft Information Protection (MIP) SDK          | Any                            | Third-party applications | Generated each time a document label is updated with a less sensitive label.<br>Generated only if supported by the third-party application. |
-| | | | |
 
 ## File removed audit logs
 
@@ -95,7 +89,6 @@ As of **March 1, 2022**, we are sunsetting the AIP audit log and analytics, with
 | Reported by                                                                              | Platform | Application                     | Action / Description                                                          |
 | ---------------------------------------------------------------------------------------- | -------- | ------------------------------- | ------------------------------------------------------------------------------ |
 | Azure Information Protection scanner, Unified labeling client | Windows  | Office and supported file types | Generated each time the AIP scanner detects that a previously scanned file has been removed. |
-| | | | |
 
 ## New label audit logs
 
@@ -105,7 +98,6 @@ As of **March 1, 2022**, we are sunsetting the AIP audit log and analytics, with
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection unified labeling scanner and client | Windows, SharePoint, One Drive | Office                   | Generated each time new label is applied.                                                                  |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Third-party applications | Generated each time a new document label is applied.<br>Generated only when supported by the third-party application. |
-| | | | |
 
 ## New protection audit logs
 
@@ -115,7 +107,6 @@ As of **March 1, 2022**, we are sunsetting the AIP audit log and analytics, with
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection unified labeling client | Windows, SharePoint, One Drive | Office                   | Generated each time protection is newly added manually, without a label.                                                                  |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Third-party applications | Generated each time protection is newly added manually, without a label.<br>Generated only when supported by the third-party application. |
-| | | | |
 
 ## Remove label audit logs
 
@@ -125,7 +116,6 @@ As of **March 1, 2022**, we are sunsetting the AIP audit log and analytics, with
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection unified labeling scanner and  client | Windows, SharePoint, One Drive | Office                   | Generated each time a label is removed.                                                                  |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Third-party applications | Generated each time a label is removed.<br>Generated only when supported by the third-party application. |
-| | | | |
 
 ## Remove protection audit logs
 
@@ -135,7 +125,6 @@ As of **March 1, 2022**, we are sunsetting the AIP audit log and analytics, with
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection unified labeling client | Windows, SharePoint, One Drive | Office                   | Generated each time protection is manually removed, without a label.                                                                  |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Third-party applications | Generated each time protection is  manually removed, without a label.<br>Generated only when supported by the third-party application. |
-| | | | |
 
 ## Upgrade label audit logs
 
@@ -145,7 +134,6 @@ As of **March 1, 2022**, we are sunsetting the AIP audit log and analytics, with
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection unified labeling scanner and client | Windows, SharePoint, One Drive | Office                   | Generated each time a document label is updated with a more sensitive label.                                                                   |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Third-party applications | Generated each time a document label is updated with a more sensitive label.<br>Generated only when supported by the third-party application. |
-| | | | |
 
 ## Next steps
 

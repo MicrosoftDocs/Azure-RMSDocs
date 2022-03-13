@@ -88,8 +88,6 @@ The following table maps RMS-related cmdlets with the updated cmdlets used for u
 |[Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate)     |       Not relevant for unified labeling  |
 |[New-RMSProtectionLicense](/powershell/module/azureinformationprotection/new-rmsprotectionlicense)     |  [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/new-aipcustompermissions), and [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), with the **CustomPermissions** parameter      |
 |[Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), with the **RemoveProtection** parameter |
-| | |
-
 
 ## How to label files non-interactively for Azure Information Protection
 
@@ -119,7 +117,6 @@ To run Azure Information Protection labeling cmdlets unattended, use the followi
     |**Label policy**     |  Make sure that you have a label policy assigned to this account and that the policy contains the published labels you want to use.   <br><br>If you use label policies for different users, you might need to create a new label policy that publishes all your labels, and publish the policy to just this delegated user account.    |
     |**Decrypting content**     |    If this account needs to decrypt content, for example, to reprotect files and inspect files that others have protected, make it a [super user](../configure-super-users.md) for Azure Information Protection and make sure the super user feature is enabled.     |
     |**Onboarding controls**     |    If you have implemented [onboarding controls](../activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) for a phased deployment, make sure that this account is included in your onboarding controls you've configured.     |
-    |     |         |
 
 - **An Azure AD access token**, which sets and stores credentials for the delegated user to authenticate to Azure Information Protection. When the token in Azure AD expires, you must run the cmdlet again to acquire a new token. 
 
@@ -146,7 +143,6 @@ The **Set-AIPAuthentication** cmdlet requires an app registration for the *AppId
     |**Name**     |  `AIP-DelegatedUser` <br>Specify a different name as needed. The name must be unique per tenant.       |
     |**Supported account types**     |   Select **Accounts in this organizational directory only**.      |
     |**Redirect URI (optional)**     |     Select **Web**, and then enter `https://localhost`.    |
-    |     |         |
 
 1. On the **AIP-DelegatedUser** pane, copy the value for the **Application (client) ID**. 
 
@@ -164,7 +160,6 @@ The **Set-AIPAuthentication** cmdlet requires an app registration for the *AppId
     |---------|---------|
     |**Description**     |  `Azure Information Protection unified labeling client`       |
     |**Expires**     |   Specify your choice of duration (1 year, 2 years, or never expires)     |
-    |     |         |
 
 1. Back on the **AIP-DelegatedUser - Certificates & secrets** pane, in the **Client secrets** section, copy the string for the **VALUE**. 
 

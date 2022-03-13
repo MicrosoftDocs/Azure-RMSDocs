@@ -133,8 +133,6 @@ When you use File Explorer to classify and protect your files, if one or more of
     |**Select permissions**     | Select the level of access that you want people to have when you protect the selected file or files.        |
     |**Select users, groups, or organizations**     |  Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. <br><br>Alternatively, you can use the address book icon to select users or groups from the Outlook address book.       |
     |**Expire access**     |  Select this option only for time-sensitive files so that the people you specified can't open your selected file or files after a date that you set. You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.      |
-    |     |         |
-
 
 5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
 

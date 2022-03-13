@@ -205,7 +205,6 @@ The following sections list the advanced settings described on this page by prod
 |**Settings for integrations with other labeling solutions**     | - [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions) <br> - [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)    |
 |**AIP analytics settings**     |   - [Prevent audit data from being sent to AIP and Microsoft 365 analytics](#prevent-audit-data-from-being-sent-to-aip-and-microsoft-365-analytics) <br>- [Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)      |
 |**General settings**     | - [Add "Report an Issue" for users](#add-report-an-issue-for-users) <br>- [Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Change the local logging level](#change-the-local-logging-level) <br>- [Change which file types to protect](#change-which-file-types-to-protect)<br>- [Configure the autolabeling timeout on Office files](#configure-the-autolabeling-timeout-on-office-files) <br>- [Configure SharePoint timeouts](#configure-sharepoint-timeouts)<br>- [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps) <br>- [Enable removal of protection from compressed files](#enable-removal-of-protection-from-compressed-files) <br>-  [Preserve NTFS owners during labeling (public preview)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  [Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Specify a color for the label](#specify-a-color-for-the-label)<br>-  [Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label)<br>-  [Support for changing \<EXT>.PFILE to P\<EXT>](#additionalpprefixextensions)  <br>-  [Support for disconnected computers](#support-for-disconnected-computers)     <br>-  [Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Turn off document tracking features](#turn-off-document-tracking-features)  <br>- [Turn off the Revoke option for end-users in Office apps](#turn-off-the-revoke-option-for-end-users-in-office-apps) <br>- [Turn on classification globalization features](#turn-on-classification-globalization-features-public-preview)|
-|     |         |
 
 ### Label policy advanced setting reference
 
@@ -259,8 +258,6 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |**SharepointWebRequestTimeout**| [Configure SharePoint timeouts](#configure-sharepoint-timeouts)|
 |**SharepointFileWebRequestTimeout** |[Configure SharePoint timeouts](#configure-sharepoint-timeouts)|
 |**UseCopyAndPreserveNTFSOwner** | [Preserve NTFS owners during labeling](#preserve-ntfs-owners-during-labeling-public-preview)
-| | |
-
 
 ### Label advanced setting reference
 
@@ -392,7 +389,6 @@ Use the following table to identify the string value to specify:
 |-------------|-------|--------|
 |\*|Default value: Apply protection to all file types|Apply protection to all file types|
 |ConvertTo-Json(".jpg", ".png")|In addition to Office file types and PDF files, apply protection to the specified file name extensions | In addition to Office file types and PDF files, apply protection to the specified file name extensions
-| | | |
 
 **Example 1**:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
@@ -485,7 +481,6 @@ There are two methods to remove classifications from other labeling solutions:
 |---------|---------|
 |**WordShapeNameToRemove**     |  Removes any shape from Word documents where the shape name matches the name as defined in the **WordShapeNameToRemove** advanced property.  <br><br>For more information, see [Use the WordShapeNameToRemove advanced property](#use-the-wordshapenametoremove-advanced-property).     |
 |**RemoveExternalContentMarkingInApp** <br><br>**ExternalContentMarkingToRemove**   |    Lets you remove or replace text-based headers or footers from Word, Excel, and PowerPoint documents. <br><br>For more information, see: <br>- [Use the RemoveExternalContentMarkingInApp advanced property](#use-the-removeexternalcontentmarkinginapp-advanced-property)<br>- [How to configure ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove).    |
-|     |         |
 
 ### Use the WordShapeNameToRemove advanced property
 
@@ -561,8 +556,6 @@ When you specify the string value for the **ExternalContentMarkingToRemove** key
 |**Partial match to remove everything in the header or footer**     | Your headers or footers contain the string **TEXT TO REMOVE**, and you want to completely remove these headers or footers.   |`*TEXT*`  | 
 |**Complete match to remove just specific words in the header or footer**     |    Your headers or footers contain the string **TEXT TO REMOVE**, and you want to remove the word **TEXT** only, leaving the header or footer string as **TO REMOVE**.      |`TEXT ` |
 |**Complete match to remove everything in the header or footer**     |Your headers or footers have the string **TEXT TO REMOVE**. You want to remove headers or footers that have exactly this string.         |`^TEXT TO REMOVE$`|
-|     |         | |
-
 
 The pattern matching for the string that you specify is case-insensitive. The maximum string length is 255 characters, and cannot include white spaces. 
 
@@ -828,7 +821,6 @@ When these conditions are met, the user sees a pop-up message with one of the fo
 |**Warn**     | The user can confirm and send, or cancel.        |
 |**Justify**     |  The user is prompted for justification (predefined options or free-form), and the user can then send or cancel the email. <br>The justification text is written to the email x-header, so that it can be read by other systems, such as data loss prevention (DLP) services.       |
 |**Block**     |    The user is prevented from sending the email while the condition remains. <br>The message includes the reason for blocking the email, so the user can address the problem. <br>For example, remove specific recipients, or label the email.     |
-|     |         | 
 
 When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
 
@@ -857,9 +849,6 @@ dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df7
 |**Warn**     |  Key: **OutlookWarnUntrustedCollaborationLabel** <br><br>Value: \<**label GUIDs, comma-separated**>       |
 |**Justify**     |  Key: **OutlookJustifyUntrustedCollaborationLabel** <br><br>Value: \<**label GUIDs, comma-separated**>       |
 |**Block**     | Key: **OutlookBlockUntrustedCollaborationLabel** <br><br>Value: \<**label GUIDs, comma-separated**>       |
-|     |         |
-
-
 
 Example PowerShell command, where your label policy is named "Global":
 
@@ -899,8 +888,6 @@ Example value for multiple domains as a comma-separated string: `contoso.com,fab
 |**Warn**     |  Key: **OutlookWarnTrustedDomains** <br><br>Value: **\<**domain names, comma separated**>**     |
 |**Justify**     | Key: **OutlookJustifyTrustedDomains** <br><br>Value: **\<**domain names, comma separated**>**       |
 |**Block**     | Key: **OutlookBlockTrustedDomains** <br><br>Value: **\<**domain names, comma separated**>**      |
-|     |         |
-
 
 For example, let's say you have specified the **OutlookBlockUntrustedCollaborationLabel** advanced client setting for the **Confidential \ All Employees** label. 
 
@@ -928,8 +915,6 @@ For the same label policy, create the following advanced client setting with one
 |**Justify**     |Key: **OutlookUnlabeledCollaborationAction**<br><br>Value: **Justify**       |
 |**Block**     | Key: **OutlookUnlabeledCollaborationAction** <br><br>Value: **Block**      |
 |  **Turn off these messages**   |   Key: **OutlookUnlabeledCollaborationAction** <br><br>Value: **Off**      |
-| | |
-
 
 Example PowerShell command, where your label policy is named "Global":
 
@@ -980,8 +965,6 @@ Create the following advanced client setting with one of the following values:
 |**Justify**     |Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior** <br><br>Value: **Justify**      |
 |**Block**     | Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior** <br><br>Value: **Block**     |
 |  **Turn off these messages**   |    Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior** <br><br>Value: **Off**    |
-| | |
-
 
 If you don't specify this client setting, the value that you specify for [OutlookUnlabeledCollaborationAction](#to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label) is used for unlabeled email messages without attachments as well as unlabeled email messages with attachments.
 
@@ -1284,8 +1267,6 @@ As a result of this configuration option, any additional custom properties are a
 |**Outlook emails**     |    When the email message is labeled in Outlook, the additional properties are applied to the x-header when the email is sent.     |
 |**PowerShell**     |  [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) applies the additional custom properties when the document is labeled and saved. <br><br>[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) displays custom properties as the mapped label if a sensitivity label isn't applied.  |
 |**File Explorer**     |     When the user right-clicks the file and applies the label, the custom properties are applied.     |
-|     |         |
-
 
 This configuration requires you to specify an advanced setting named **customPropertiesByLabel** for each sensitivity label that you want to apply the additional custom properties. Then for each entry, set the value by using the following syntax:
 
@@ -1340,7 +1321,6 @@ Use these settings only when you have a working [S/MIME deployment](/microsoft-3
 |---------|---------|
 |**S/MIME digital signature**     |   To configure an advanced setting for an S/MIME digital signature, enter the following strings for the selected label: <br><br>- Key: **SMimeSign** <br><br>- Value: **True**      |
 |**S/MIME encryption**     |   To configure an advanced setting for  S/MIME encryption, enter the following strings for the selected label:<br><br>- Key: **SMimeEncrypt**<br><br>- Value: **True**      |
-|     |         |
 
 If the label you specify is configured for encryption, for the Azure Information Protection unified labeling client, S/MIME protection replaces the Rights Management protection only in Outlook. The client continues to use the encryption settings specified for the label in the Microsoft 365 compliance center.
 
@@ -1444,7 +1424,6 @@ Additionally:
 |**Using single sign-on**    |    If you are using single sign-on, you must sign out from Windows and sign in with your different user account after deleting the token file. <br><br>The Azure Information Protection unified labeling client then automatically authenticates by using your currently signed in user account.     |
 |**Different tenants**     |  This solution is supported for signing in as another user from the same tenant. It is not supported for signing in as another user from a different tenant. <br><br>To test Azure Information Protection with multiple tenants, use different computers.       |
 |**Reset settings**     | You can use the **Reset settings** option from **Help and Feedback** to sign out and delete the currently downloaded labels and policy settings from the Microsoft 365 compliance center.        |
-|     |         |
 
 ## Support for disconnected computers
 
@@ -1667,7 +1646,6 @@ Supported node types include:
 | **SentTo**, followed by **Domains: listOfDomains**	|Checks one of the following: <br>- If the Parent is **Except**, checks whether **All** of the recipients are in one of the domains<br>- If the Parent is anything else but **Except**, checks whether **Any** of the recipients are in one of the domains.   |
 | **EMailLabel**, followed by label	| One of the following:  <br>- The label ID <br>- null, if not labeled             |
 | **AttachmentLabel**, followed by **Label** and supported **Extensions**	| One of the following:  <br><br>**true**: <br>- If the Parent is **Except**, checks whether **All** of the attachments with one supported extension exists within the label<br>- 	If the Parent is anything else but **Except**, checks whether **Any** of the attachments with one supported extension exists within the label <br>- If not labeled, and **label = null** <br><br> **false**: For all other cases <br><br>**Note**: If the **Extensions** property is empty or missing, all [supported file types (extensions)](clientv2-admin-guide-file-types.md) are included in the rule.
-| | |
 
 #### Rule action syntax
 
@@ -1678,7 +1656,6 @@ Rule actions can be one of the following:
 |**Block**     |    `Block (List<language, [title, body]>)`     |    ***Email Blocked***<br /><br />  *You are about to send content classified as **Secret** to one or more untrusted recipients:*<br />*`rsinclair@contoso.com`*<br /><br />*Your organization policy does not allow this action. Consider removing these recipients or replace the content.*|
 |**Warn**     | `Warn (List<language,[title,body]>)`        |  ***Confirmation Required***<br /><br />*You are about to send content classified as **General** to one or more untrusted recipients:*<br />*`rsinclair@contoso.com`*<br /><br />*Your organization policy requires confirmation for you to send this content.*       |
 |**Justify**     | `Justify (numOfOptions, hasFreeTextOption, List<language, [Title, body, options1,options2….]> )` <br /><br />Including up to three options.        |  ***Justification Required*** <br /><br />*Your organization policy requires justification for you to send content classified as **General** to untrusted recipients.*<br /><br />*- I confirm the recipients are approved for sharing this content*<br />*- My manager approved sharing of this content*<br />*- Other, as explained* |
-| | | |
 
 ##### Action parameters
 
@@ -1691,7 +1668,6 @@ All texts support the following dynamic parameters:
 | `${MatchedRecipientsList}`  | The last match for the **SentTo** conditions       |
 | `${MatchedLabelName}`      | The mail/attachment **Label**, with the localized name from the policy               |
 | `${MatchedAttachmentName}` | The name of the attachment from the last match for the **AttachmentLabel** condition |
-| | |
 
 > [!NOTE]
 > All messages include the **Tell Me More** option, as well as the **Help** and **Feedback** dialogs.
