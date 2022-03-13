@@ -106,7 +106,6 @@ Before you begin using the protection service from Azure Information Protection,
     |---------|---------|
     |**Custom templates for protection settings**     |  If the default templates are not sufficient for your organization, configure custom templates. </br>For more information, see [Configuring and managing templates for Azure Information Protection](./configure-policy-templates.md).       |
     |**Usage logging**     | Configure usage logging to monitor how your organization is using the protection service. </br>For more information, see [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md).        |
-    | | |
 
 ## Install the Azure Information Protection classic and client configure applications and services for Rights Management
 

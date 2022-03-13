@@ -265,7 +265,6 @@ Supported servers include:
 |**Exchange Server**     | - Exchange Server 2019 </br> - Exchange Server 2016 </br>- Exchange Server 2013       |
 |**Office SharePoint Server**     |- Office SharePoint Server 2019 <br>- Office SharePoint Server 2016 </br>- Office SharePoint Server 2013         |
 |**File servers that run Windows Server and use File Classification Infrastructure (FCI)**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
-| | |
 
 For more information, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
@@ -280,7 +279,6 @@ The following operating systems support the Azure Rights Management service, whi
 |**Android phones and tablets**     | Minimum version of Android 6.0        |
 |**iPhone and iPad**     | Minimum version of iOS 11.0        |
 |**Windows phones and tablets** | Windows 10 Mobile|
-| | |
 
 For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md). 
 

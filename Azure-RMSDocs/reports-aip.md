@@ -62,7 +62,6 @@ For example, the Azure Information Protection analytics for central reporting di
 |**Activity logs**     | Select a time period to show any of the following: <br /><br />      - Which files previously discovered by scanner were deleted from the scanned repository <br /> <br /> - What labeling actions were performed by a specific user <br /><br /> - What labeling actions were performed from a specific device<br /> <br />    - Which users have accessed a specific labeled document<br /> <br />- What labeling actions were performed for a specific file path<br /> <br />- What labeling actions were performed by a specific application, such File Explorer and right-click, PowerShell, the scanner, or Microsoft Defender for Cloud Apps <br /> <br />- Which protected documents were accessed successfully by users or denied access to users, even if those users don't have the Azure Information Protection client installed or are outside your organization <br /> <br />- Drill down into reported files to view **Activity Details** for additional information      |
 |**Data discovery report**     |      - What files are on your scanned data repositories, Windows 10 computers, or computers running the Azure Information Protection clients <br /><br />- Which files are labeled and protected, and the location of files by labels <br /><br />- Which files contain sensitive information for known categories, such as financial data and personal information, and the location of files by these categories       |
 |**Recommendations report**     | - Identify unprotected files that contain a known sensitive information type. A recommendation lets you immediately configure the corresponding condition for one of your labels to apply automatic or recommended labeling. **<br />If you follow the recommendation**: The next time the files are opened by a user or scanned by the Azure Information Protection scanner, the files can be automatically classified and protected. <br /><br /> - Which data repositories have files with identified sensitive information but are not being scanned by the Azure Information Protection. A recommendation lets you immediately add the identified data store to one of your scanner's profiles. <br />   **If you follow the recommendation**: On the next scanner cycle, the files can be automatically classified and protected.        |
-| | |
 
 The reports use [Azure Monitor](/azure/log-analytics/log-analytics-overview) to store the data in a Log Analytics workspace that your organization owns. If you're familiar with the query language, you can modify the queries, and create new reports and Power BI dashboards. You might find the following tutorial helpful to understand the query language: [Get started with Azure Monitor log queries](/azure/azure-monitor/log-query/get-started-queries).
 
@@ -123,7 +122,6 @@ To prevent the Azure Information Protection classic client from sending this dat
 |---------|---------|
 |**To configure most users to send data, with a subset of users who cannot send data**     |  Set **Send audit data to Azure Information Protection analytics** to **Off** in a scoped policy for the subset of users. <br><br> This configuration is typical for production scenarios.     |
 |**To configure only a subset of users who send data**     |  Set **Send audit data to Azure Information Protection analytics** to **Off** in the global policy, and **On** in a scoped policy for the subset of users. <br><br>This configuration is typical for testing scenarios.       |
-| | |
 
 #### Content matches for deeper analysis
 
@@ -135,8 +133,6 @@ By default, Azure Information Protection clients don't send content matches. To 
 |---------|---------|
 |**Unified labeling client**      |  Configure an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) in a label policy.       |
 |**Classic client**      |   Select a checkbox as part of the [configuration](#configure-a-log-analytics-workspace-for-the-reports) for Azure Information Protection analytics. The checkbox is named **Enable deeper analytics into your sensitive data**. <br><br> If you want most users who are using this client to send content matches but a subset of users cannot send content matches, select the checkbox and then configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.     |
-|     |         |
-
 
 ## Prerequisites
 To view the Azure Information Protection reports and create your own, make sure that the following requirements are in place.
@@ -148,8 +144,6 @@ To view the Azure Information Protection reports and create your own, make sure 
 |**Azure Information Protection client**    |For reporting from the client. <br><br>If you don't already have a client installed, you can download and install the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).      <br><br>**Note**: Both the unified labeling client and the classic client are supported. To deploy the AIP classic client, open a support ticket to get download access.     |
 |**Azure Information Protection on-premises scanner**    | For reporting from on-premises data stores. <br><br>      For more information, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).   |
 |**Microsoft Defender for Cloud Apps**     | For reporting from cloud-based data stores. <br><br>For more information, see [Azure Information Protection integration](/cloud-app-security/azip-integration) in the MCAS documentation.        |
-|     |         |
-
 
 ### Permissions required for Azure Information Protection analytics
 
@@ -252,8 +246,6 @@ From the Azure Information Protection pane, locate the **Dashboards** menu optio
 |**Activity logs (Preview)**     |  Use this report to see labeling actions from users, and on devices and file paths. In addition, for protected documents, you can see access attempts (successful or denied) for users both inside and outside your organization, even if they don't have the Azure Information Protection client installed. <br><br>  This report has a **Columns** option that lets you display more activity information than the default display. You can also see more details about a file by selecting it to display **Activity Details**.     |
 |**Data discovery (Preview)**     |    Use this report to see information about labeled files found by scanners and supported endpoints.  <br><br>**Tip**: From the information collected, you might find users accessing files that contain sensitive information from location that you didn't know about or aren't currently scanning: <br><br>- If the locations are on-premises, consider adding the locations as additional data repositories for the Azure Information Protection scanner. <br>  - If the locations are in the cloud, consider using Microsoft Defender for Cloud Apps to manage them.    |
 |**Recommendations (Preview)**     | Use this report to identify files that have sensitive information and mitigate your risk by following the recommendations.  <br><br> When you select an item, the **View data** option displays the audit activities that triggered the recommendation.     |
-|     |         |
-
 
 ## Modify the AIP analytics reports and create custom queries
 
@@ -306,7 +298,7 @@ Use the following table to identify the friendly name of event functions that yo
 |**UserJustification**|Justification when downgrading or removing label|
 |**LastModifiedBy**|User in UPN format who last modified the file. Available for Office and SharePoint only|
 |**LastModifiedDate**|UTC in format YYYY-MM-DDTHH:MM:SS: Available for Office and SharePoint only |
-| | |
+
 #### Examples using InformationProtectionEvents
 
 Use the following examples to see how you might use the friendly schema to create custom queries.

@@ -51,8 +51,6 @@ These applications and solutions are known as "RMS-enlighted", and have Rights M
 |**Word, Excel, PowerPoint**    | - [Microsoft 365 apps](#microsoft-365-app-support) <br />- Office Professional Plus 2010 <br />- Office Professional Plus 2013<br />- Office Professional Plus 2016 <br />- Office Professional Plus 2019 <br />- [Office for the web (viewing protected documents)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
 |[**Email**](#viewing-protected-content-in-email-clients)      |   - Outlook Professional Plus 2010<br />- Outlook Professional Plus 2013<br />- Outlook Professional Plus 2016 <br />- Outlook Professional Plus 2019 <br />- Outlook from Microsoft 365 Apps for Enterprise<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
 |[**Other file types**](#supported-text-and-image-file-types)    |  - Visio from Microsoft 365 apps, Office 2019, and Office 2016: **.vsdm**, **.vsdx**, **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Azure Information Protection client for Windows: Text, images, **pfile**      |
-| | |
-
 
 CAD files, such as **.dwg** files, are supported by partner solutions, such as [SealPath RMS plugin for AutoCAD](https://www.sealpath.com/rmscad/) and [SECUDE's HALOCAD plugin](https://secude.com/halocad/). For more information, see [How to protect your CAD data files with MIP and HALOCAD](https://www.microsoft.com/security/blog/2021/07/22/how-to-protect-your-cad-data-files-with-mip-and-halocad/).
 
@@ -64,7 +62,6 @@ CAD files, such as **.dwg** files, are supported by partner solutions, such as [
 |**Word, Excel, PowerPoint**    |  - Microsoft 365 apps, version 16.40 or later <br />- Office 2019 for Mac, version 16.40 or later<br />- Office 2016 for Mac, version 16.16.27 or later<br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)    |
 |[**Email**](#viewing-protected-content-in-email-clients)   |   - Outlook 2019 for Mac, version 16.40 or later<br />- Outlook 2016 for Mac, version 16.16.27 or later<br />- [Web browser](#web-browser-support)     |
 |[**Other file types**](#supported-text-and-image-file-types)    | RMS sharing app (viewing protected text, images, generically protected files)   |
-| | |
 
 ## Android RMS-enlightened applications
 
@@ -73,8 +70,6 @@ CAD files, such as **.dwg** files, are supported by partner solutions, such as [
 |**Word, Excel, PowerPoint**    |- GigaTrust App for Android<br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- Office Mobile (unless using sensitivity labels, limited to viewing and editing protected documents) <br />- [Web browser](#web-browser-support)      |
 |[**Email**](#viewing-protected-content-in-email-clients)     | - [9Folders](#email-clients-using-exchange-activesync-irm)<br />- Azure Information Protection app (viewing protected emails)<br />- BlackBerry Work <br />- [GigaTrust App for Android](#email-clients-using-exchange-activesync-irm) <br />- Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook for Android](#email-clients-using-exchange-activesync-irm)<br />- [Samsung Email (S3 and later)](#email-clients-using-exchange-activesync-irm)<br />- TITUS Classification for Mobile <br />- [Web browser](#web-browser-support)  <br>- [VMware Workspace ONE Boxer](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Boxer_Admin_Guide/GUID-SecureEmailswithAIP.html)     |
 |[**Other file types**](#supported-text-and-image-file-types)    |  Azure Information Protection app (viewing protected text and images)  |
-| | |
-
 
 ## iOS RMS-enlightened applications
 
@@ -83,7 +78,6 @@ CAD files, such as **.dwg** files, are supported by partner solutions, such as [
 |**Word, Excel, PowerPoint**    |  - GigaTrust<br />- Office Mobile <br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- TITUS Docs<br />- [Web browser](#web-browser-support)   |
 |[**Email**](#viewing-protected-content-in-email-clients)     |   - Azure Information Protection app (viewing protected email)<br />- BlackBerry Work<br />- Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook for iPad and iPhone](#email-clients-using-exchange-activesync-irm)<br />- TITUS Mail <br />- [Web browser](#web-browser-support)  <br>- [VMware Workspace ONE Boxer](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Boxer_Admin_Guide/GUID-SecureEmailswithAIP.html)   |
 |[**Other file types**](#supported-text-and-image-file-types)     | - Azure Information Protection app (viewing protecting text and images)<br />- TITUS Docs: **Pfile**  |
-| | |
 
 ## Windows 10 or Windows 11 mobile RMS-enlightened applications
 
@@ -92,7 +86,6 @@ CAD files, such as **.dwg** files, are supported by partner solutions, such as [
 |**Word, Excel, PowerPoint**    | - Office Mobile apps (viewing protected documents using Azure RMS) <br />- [Web browser](#web-browser-support)    |
 |[**Email**](#viewing-protected-content-in-email-clients)    |  - Citrix WorxMail <br />- Outlook Mail (viewing protected emails) <br />- [Web browser](#web-browser-support)     |
 |[**Other file types**](#supported-text-and-image-file-types)    | Not supported   |
-| | |
 
 ## Blackberry 10 RMS-enlightened applications
 
@@ -101,8 +94,6 @@ CAD files, such as **.dwg** files, are supported by partner solutions, such as [
 |**Word, Excel, PowerPoint**    | - [Web browser](#web-browser-support)    |
 |[**Email**](#viewing-protected-content-in-email-clients)   | - [ Blackberry email](#email-clients-using-exchange-activesync-irm) <br />- [Web browser](#web-browser-support)      |
 |[**Other file types**](#supported-text-and-image-file-types)    | Not supported   |
-| | |
-
 
 ## Additional details about RMS-enlightened applications
 

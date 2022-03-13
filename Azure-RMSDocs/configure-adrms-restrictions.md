@@ -118,14 +118,12 @@ The following tables list the supported scenarios for protecting and consuming c
 |Azure Information Protection Viewer     |   Not applicable      |  ![yes](media/yes-icon.png)       |
 |Azure Information Protection client with PowerShell labeling cmdlets     | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png)        |
 |Azure Information Protection scanner     |![yes](media/yes-icon.png)       |   ![yes](media/yes-icon.png)      |
-| | | |
 
 ### macOS application support for HYOK
 
 |Application|Protection|Consumption|
 |----------------------|----------|-----------|
 |Office for Mac: </br>Word, Excel, PowerPoint, Outlook|![no](media/no-icon.png)|![yes](media/yes-icon.png)|
-| | | |
 
 ### iOS application support for HYOK
 

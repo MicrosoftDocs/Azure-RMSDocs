@@ -202,7 +202,6 @@ The following AIP scanner log events are stored in the Windows **Applications an
 |---------|---------|---------|
 |**910**     | Scanner cycle started        | Logged when the scanner service is started and begins to scan for files in the data repositories that you specified.        |
 |**911**     |   Scanner cycle finished      | Logged when the scanner has finished a manual scan, or the scanner has finished a cycle for a continuous schedule.       |
-| | | |
 
 > [!TIP]
 > If the scanner was configured to run manually rather than continuously, to scan the files again, set the **Schedule** to **Manual** or **Always** in the content scan job, and then restart the service. For more information, see [Rescanning files](#rescanning-files).
