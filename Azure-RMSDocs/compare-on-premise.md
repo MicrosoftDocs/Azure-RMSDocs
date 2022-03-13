@@ -33,6 +33,7 @@ If you know or have previously deployed Active Directory Rights Management S
 Some of the main differences for Azure Information Protection include:
 
 
+
 | Difference  | Description  |
 |---------|---------|
 |**No server infrastructure required**     |  Azure Information Protection doesn't require the extra servers and PKI certificates that AD RMS needs, because Microsoft Azure takes care of those requirements for you. <br><br>That makes this cloud solution quicker to deploy and easier to maintain.       |
@@ -42,6 +43,7 @@ Some of the main differences for Azure Information Protection include:
 |**Departmental templates**     | Also known as scoped templates. Azure Information Protection supports departmental templates for additional templates that you create. <br><br>This configuration lets you specify a subset of users to see specific templates in their client applications. Limiting the number of templates that users see makes it easier for them to select the correct policy that you define for different groups of users. <br><br>AD RMS doesn't support departmental templates.        |
 |**Document tracking and revocation**     |  Azure Information Protection supports these features with the Rights Management Service only <!--for vihita: while AD RMS does not at all.-->       |
 |**Classification and labeling**     | Azure Information Protection supports labels that apply classification, and optionally, protection. <br><br>Use the AIP client to integrate classification and labeling with Office applications, File Explorer, PowerShell, and a scanner for on-premises data stores. <br><br>   AD RMS does not support these classification and labeling capabilities.        |
+
 In addition, because Azure Information Protection is a cloud service, it can deliver new features and fixes more quickly than an on-premises server-based solution. There are no new features planned for AD RMS in Windows Server.
 
 
