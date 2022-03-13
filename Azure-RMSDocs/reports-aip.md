@@ -47,7 +47,7 @@ The data that you see is aggregated from your Azure Information Protection clien
 
 Azure Information Protection analytics for central reporting is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
-As of **March 1, 2022**, we are sunsetting the AIP audit log and analytics, with a full retirement date of **September 31, 2022**. For more information, see [Removed and retired services](removed-sunset-services.md).
+As of **March 18, 2022**, we are sunsetting the AIP audit log and analytics, with a full retirement date of **September 31, 2022**. For more information, see [Removed and retired services](removed-sunset-services.md).
 
 
 ## AIP reporting data
