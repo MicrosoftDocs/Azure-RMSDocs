@@ -61,7 +61,6 @@ Then, perform the following configuration procedures as needed for your system:
 |[Editing data repository settings in bulk](#edit-data-repository-settings-in-bulk)| Use import and export options to make changes in bulk for multiple data repositories.|
 |[Use the scanner with alternative configurations](#use-the-scanner-with-alternative-configurations)| Use the scanner without configuring labels with any conditions |
 |[Optimize performance](#optimize-scanner-performance)| Guidance to optimize your scanner performance|
-| | |
 
 If you don't have access to the scanner pages in the Azure portal, configure any scanner settings in PowerShell only. For more information, see [Use PowerShell to configure the scanner](#use-powershell-to-configure-the-scanner) and [Supported PowerShell cmdlets](#supported-powershell-cmdlets).
 
@@ -121,7 +120,6 @@ The following table describes prerequisites required for the network discovery s
 |---------|---------|
 |**Install the Network Discovery service**     |   If you've recently upgraded your scanner, you may need to still install the Network Discovery service. <br /><br />Run the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) cmdlet to enable network scan jobs.      |
 |**Azure Information Protection analytics**     | Make sure that you have Azure Information Protection analytics enabled. <br /><br />In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview)**. <br /><br />For more information, see [Central reporting for Azure Information Protection (public preview)](reports-aip.md).|
-| | |
 
 
 **To create a network scan job**
@@ -140,7 +138,6 @@ The following table describes prerequisites required for the network discovery s
     |**Configure IP ranges to discover**     |   Click to define an IP address or range. <br /><br />In the **Choose IP ranges** pane, enter an optional name, and then a start IP address and end IP address for your range. <br /><br />**Tip**: To scan a specific IP address only, enter the identical IP address in both the **Start IP** and **End IP** fields.      |
     |**Set schedule**     | Define how often you want this network scan job to run.  <br /><br />If you select **Weekly**, the **Run network scan job on** setting appears. Select the days of the week where you want the network scan job to run.       |
     |**Set start time (UTC)**     |Define the date and time that you want this network scan job to start running. If you've selected to run the job daily, weekly, or monthly, the job will run at the defined time, at the recurrence you've selected. <br /><br />**Note**: Be careful when setting the date to any days at the end of the month. If you select **31**, the network scan job will not run in any month that has 30 days or fewer.    |
-    | | |
 
 1. Select **Save** ![save icon](media/qs-tutor/save-icon.png "save icon") to save your changes.
 
@@ -176,8 +173,6 @@ If you've [defined a network scan job](#create-a-network-scan-job-public-preview
     |![add icon](media/i-add.png "add icon")   | Select one or more repositories listed in the table, and then select **Assign Selected Items** to assign them to a content scan job.          |
     |**Filter**     |   The filter row shows any filtering criteria currently applied. Select any of the criteria shown to modify its settings, or select **Add Filter** to add new filtering criteria. <br /><br />Select **Filter** to apply your changes and refresh the table with the updated filter.       |
     |![Log Analytics icon](media/i-log-analytics.png "Log Analytics icon") |In the top-right corner of the unmanaged repositories graph, click the **Log Analytics** icon to jump to Log Analytics data for these repositories. |
-    | | |
-
 
 Repositories where **Public access** is found to have **read** or **read/write** capabilities may have sensitive content that must be secured. If **Public access** is false, the repository not accessible by the public at all.
 
@@ -208,8 +203,6 @@ You may want to do this only after running a network scan job to analyze the rep
     |**DLP policy** | If you are using a Microsoft 365 Data Loss Prevention (DLP) policy, set **Enable DLP rules** to **On**. For more information, see [Use a DLP policy](#use-a-dlp-policy). |
     |**Sensitivity policy**     | - **Enforce**: Select **Off** <br />- **Label files based on content**: Keep the default of **On** <br />- **Default label**: Keep the default of **Policy default** <br />- **Relabel files**: Keep the default of **Off**        |
     |**Configure file settings**     | - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On** <br />- **File types to scan**: Keep the default file types for **Exclude** <br />- **Default owner**: Keep the default of **Scanner Account**  <br /> - **Set repository owner**: Use this option only when [using a DLP policy](#use-a-dlp-policy). |
-    | | |
-
 
 1. Now that the content scan job is created and saved, you're ready to return to the **Configure repositories** option to specify the data stores to be scanned.
 
@@ -257,8 +250,6 @@ You may want to do this only after running a network scan job to analyze the rep
     |**Specific SharePoint subsite or collection**     | One of the following: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
     |**Specific SharePoint library**     | One of the following: <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
     |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
-    | | |
-
 
 1. Repeat the previous steps to add as many repositories as needed.
 
@@ -497,7 +488,6 @@ Configure the following settings:
 |**Label files based on content**    |Set to **Off**         |
 |**Default label**     | Set to **Custom**, and then select the label to use       |
 |**Enforce default label**     | Select to have the default label applied to all files, even if they are already labeled.        |
-| | |
 
 ### Remove existing labels from all files in a data repository
 
@@ -510,7 +500,6 @@ Configure the following settings:
 |**Label files based on content**    |Set to **Off**         |
 |**Default label**     | Set to **None**  |
 |**Relabel files** | Set to **On**, with the **Enforce default label** checkbox selected|
-| | |
 
 ### Identify all custom conditions and known sensitive information types
 
@@ -534,8 +523,6 @@ Use the following options and guidance to help you optimize scanner performance:
 |**Make sure the scanner computer has available processor resources**     | Inspecting the file contents and encrypting and decrypting files are processor-intensive actions. <br /><br />Monitor the typical scanning cycles for your specified data stores to identify whether a lack of processor resources is negatively affecting the scanner performance.        |
 |**Install multiple instances of the scanner** | The Azure Information Protection scanner supports multiple configuration databases on the same SQL server instance when you specify a custom cluster name for the scanner. <br /><br />**Tip**: Multiple scanners can also share the same cluster, resulting in quicker scanning times. If you plan to install the scanner on multiple machines with the same database instance, and want your scanners to run in parallel, you must install all your scanners using the same cluster name.|
 |**Check your alternative configuration usage** |The scanner runs more quickly when you use the [alternative configuration](#use-the-scanner-with-alternative-configurations) to apply a default label to all files because the scanner does not inspect the file contents. <br/><br />The scanner runs more slowly when you use the [alternative configuration](#use-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.|
-| | |
-
 
 ### Additional factors that affect performance
 
@@ -549,7 +536,6 @@ Additional factors that affect the scanner performance include:
 |**Regex constructions**    | Scanner performance is affected by how your regex expressions for custom conditions are constructed. <br /><br /> To avoid heavy memory consumption and the risk of timeouts (15 minutes per file), review your regex expressions for efficient pattern matching. <br /><br />For example: <br />- Avoid [greedy quantifiers](/dotnet/standard/base-types/quantifiers-in-regular-expressions) <br />- Use non-capturing groups such as `(?:expression)` instead of `(expression)`    |
 |**Log level**     |  Log level options include **Debug**, **Info**, **Error** and **Off** for the scanner reports.<br /><br />- **Off** results in the best performance <br />- **Debug** considerably slows down the scanner and should be used only for troubleshooting. <br /><br />For more information, see the *ReportLevel* parameter for the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet.       |
 |**Files being scanned**     |- With the exception of Excel files, Office files are more quickly scanned than PDF files. <br /><br />- Unprotected files are quicker to scan than protected files. <br /><br />- Large files obviously take longer to scan than small files.         |
-| | |
 
 ## Use PowerShell to configure the scanner
 
@@ -636,8 +622,6 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
     |**Specific SharePoint subsite or collection**     | One of the following: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
     |**Specific SharePoint library**     | One of the following: <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
     |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
-    | | |
-
 
 Continue with the following steps as needed:
 

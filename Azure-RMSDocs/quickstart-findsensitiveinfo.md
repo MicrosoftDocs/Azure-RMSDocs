@@ -46,7 +46,6 @@ To complete this quickstart, you need:
 |**SQL Server Express**     | You'll need SQL Server Express installed on your computer. </br></br> To install, go to the [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) and select **Download now** under the Express option. In the installer, select the **Basic** installation type.        |
 |**Azure AD**     |  Your domain account must be synchronized to Azure AD. </br></br>If you're not sure about your account, contact one of your system administrators.      |
 |**SharePoint access**     | To enable a SharePoint scan, you'll need access and permissions to your SharePoint policy. |
-| | |
 
 ## Prepare a test folder and file
 

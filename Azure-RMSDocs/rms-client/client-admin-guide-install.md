@@ -221,8 +221,7 @@ If you use Intune for your software deployment method, use these instructions to
     |**Office 2010**|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
     |**Office 2010**|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
     |**Office 2010**|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
-    | | | | |
-    
+
     > [!IMPORTANT]
     > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../removed-sunset-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
     >

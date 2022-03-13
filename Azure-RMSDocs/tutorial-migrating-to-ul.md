@@ -157,7 +157,6 @@ This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](htt
     |**Copying automatically publishes your policies**     |  Copying your policies to the unified labeling client automatically publishes them to all unified labeling-supported clients. <br /><br />   **Important**: Do not copy your policies if you don't want to publish them.     |
     |**Copying overwrites existing policies of the same name**     |   If you have a policy with the same name already existing in the Microsoft 365 compliance center, copying your policies will overwrite any settings defined in that policy.   <br /><br />All policies copied from the Azure portal are named with the following syntax: `AIP_<policy name>`.    |
     |**Some client settings are not copied**     | Some client settings are not copied to the unified labeling platform, and must be configured manually after migrating. <br /><br />For more information, see [Configuring advanced labeling settings](#configuring-advanced-labeling-settings)|
-    | | |
 
 1. Sign in to the [Azure portal](https://portal.azure.com) as an administrator with one of the following roles:
 

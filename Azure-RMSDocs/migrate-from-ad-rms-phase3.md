@@ -92,7 +92,6 @@ This method is suitable only for Windows clients that run Microsoft 365 apps and
     |**Weight**|0|  
     |**Port number**|80|  
     |**Host offering this service**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
-    | | |
 
 2. Set a deny permission on the AD RMS publishing endpoint for users running Microsoft 365 apps or Office 2016 (or later):
 
