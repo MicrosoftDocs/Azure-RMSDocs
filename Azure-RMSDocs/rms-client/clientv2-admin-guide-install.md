@@ -58,8 +58,6 @@ There are two options for installing the client for users:
 |---------|---------|
 |**Run the executable (.exe) version of the client**     |   The recommended installation method that you can run interactively, or silently. <br><br>This method has the most flexibility and it is recommended because the installer checks for many of the prerequisites, and can automatically install missing prerequisites. <br><br>For more information, see [Install the AIP unified labeling client using the executable installer](#install-the-aip-unified-labeling-client-using-the-executable-installer).|
 |**Deploy the Windows installer (.msi) version of the client**     |     Supported for silent installs only that use a central deployment mechanism, such as group policy, Configuration Manager, and Microsoft Intune. <br><br>This method is necessary for Windows 11 and Windows 10 PCs that are managed by Intune and mobile device management (MDM) because for these computers, executable files are not supported for installation. <br><br> However, when you use this installation method, you must manually check and install or uninstall the dependent software that the installer for the executable would perform for each computer. <br><br>For more information, see [Install the unified labeling client using the .msi installer](#install-the-unified-labeling-client-using-the-msi-installer). |
-|     |         |
-
 
 After the Azure Information Protection unified labeling client is installed, you can update this client by repeating your chosen installation method, or use Windows Update to keep the client automatically upgraded. 
 
@@ -91,7 +89,6 @@ Use the following instructions to install the client when you're *not* using the
     |Parameter  |Description  |
     |---------|---------|
     |**AllowTelemetry=0**     |    Use this parameter to disable the install option **Help improve Azure Information Protection by sending usage statistics to Microsoft**.     |
-    | | |
 
 1. To complete the installation, restart any Office applications and all instances of File Explorer. 
 
@@ -130,8 +127,6 @@ If you use Intune for your software deployment method, use these instructions to
     |--------------------|--------------|----------------|---------------------|
     |**All versions except Office 365 1902 or later**|Windows 10 version 1809 only, operation system builds older than 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Install|
     |**Office 2016**|All supported versions|64-bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32-bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version: 1.0|Install|
-    | | | | |
-
 
 1. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection_UL.msi /quiet`.
 

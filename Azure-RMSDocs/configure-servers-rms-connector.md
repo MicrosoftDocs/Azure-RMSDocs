@@ -51,7 +51,6 @@ This means configuring the following servers:
 |**Exchange 2016 and Exchange 2019**     |   Mailbox Servers (includes Client Access and Hub Transport server roles)   |
 |**SharePoint**     |    Front-end SharePoint webservers, including those hosting the Central Administration server     |
 |**File Classification Infrastructure**     |   Windows Server computers that have installed File Resource Manager      |
-| | |
 
 This configuration requires registry settings, with the following options:
 
@@ -110,7 +109,6 @@ For more information, see [How to use the server configuration tool for Microsof
     |**Locally**     |  Run the tool interactively, from the server to be configured to communicate with the RMS connector. <br><br>**Tip**: This is useful for a one-off configuration, such as a testing environment.       |
     |**Software deployment**     |  Run the tool to produce registry files, which you then deploy to one or more relevant servers. <br><br>Deploy the registry files using a systems management application that supports software deployment, such as System Center Configuration Manager.       |
     |**Group policy**     | Run the tool to produce a script that you give to an administrator who can create Group Policy objects for the servers to be configured. <br><br>This script creates one Group Policy object for each server type to be configured, which the administrator can then assign to the relevant servers.        |
-    | | |
 
     > [!NOTE]
     > This tool configures the servers that will communicate with the RMS connector and that are listed at the beginning of this section. Do not run this tool on the servers that run the RMS connector.

@@ -74,7 +74,6 @@ In this table:
 |Common name: **View Rights** <br /><br />Encoding in policy: **VIEWRIGHTSDATA**|Allows the user to see the policy that is applied to the document. <br /><br /> Not supported by Office apps or Azure Information Protection clients.|Office custom rights: Not implemented.<br /><br />Name in the Azure classic portal: **View Assigned Rights**<br /><br />Name in the Microsoft 365 compliance center and Azure portal: **View Rights (VIEWRIGHTSDATA)**.<br /><br />Name in AD RMS templates: **View Rights** <br /><br />API constant or value: `IPC_READ_RIGHTS L"VIEWRIGHTSDATA"`|
 |Common name: **Change Rights** <br /><br />Encoding in policy: **EDITRIGHTSDATA**|Allows the user to change the policy that is applied to the document. Includes including removing protection. <br /><br /> Not supported by Office apps or Azure Information Protection clients.|Office custom rights: Not implemented.<br /><br />Name in the Azure classic portal: **Change Rights**<br /><br />Name in the Microsoft 365 compliance center and Azure portal: **Edit Rights (EDITRIGHTSDATA)**.<br /><br />Name in AD RMS templates: **Edit Rights** <br /><br />API constant or value: `PC_WRITE_RIGHTS L"EDITRIGHTSDATA"`|
 |Common name: **Allow Macros** <br /><br />Encoding in policy: **OBJMODEL**|Enables the option to run macros or perform other programmatic or remote access to the content in a document.|Office custom rights: As the **Allow Programmatic Access** custom policy option. Not a per-recipient setting.<br /><br />Name in the Azure classic portal: **Allow Macros**<br /><br />Name in the Microsoft 365 compliance center and Azure portal: **Allow Macros (OBJMODEL)**<br /><br />Name in AD RMS templates: **Allow Macros** <br /><br />API constant or value: Not implemented.|
-| | | |
 
 ## Rights included in permissions levels
 
@@ -88,7 +87,6 @@ Use the following table for a list of these permissions levels and a complete li
 |**Reviewer**|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; View Rights; Reply: Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3); Allow Macros [[2]](#footnote-2)|
 |**Co-Author**|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export [[4]](#footnote-4); Print; Reply [[3]](#footnote-3); Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3)|
 |**Co-Owner**|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [[3]](#footnote-3); Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3); Full Control|
-| | | |
 
 ###### Footnote 1
 
@@ -220,7 +218,6 @@ These default templates are created when your subscription was purchased, and th
 |----------------|--------------------|----------|
 |**\<*organization name> - Confidential View Only*** <br /><br />or<br /><br /> ***Highly Confidential \ All Employees***|View, Open, Read; Copy; View Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit|View, Open, Read|
 |**\<*organization name>- Confidential*** <br /><br />or <br /><br />***Confidential \ All Employees***|View, Open, Read; Save As, Export; Copy; View Rights; Change Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control|View, Open, Read; Save As, Export; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
-| | | |
 
 ## See Also
 

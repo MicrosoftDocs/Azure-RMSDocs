@@ -99,7 +99,6 @@ Specify the following programmatic identifiers (ProgID) for AIP, and set the opt
 |Excel     |  `MSIP.ExcelAddin`       |
 |PowerPoint     |   `MSIP.PowerPointAddin`      |
 |Outlook | `MSIP.OutlookAddin` |
-| | | 
 
 ## Next steps
 
