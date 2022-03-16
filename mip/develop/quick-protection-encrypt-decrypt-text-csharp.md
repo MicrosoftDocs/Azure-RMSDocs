@@ -22,7 +22,7 @@ If you haven't already, be sure to complete the following prerequisites before c
 - Complete [Quickstart: List protection templates (C#)](quick-protection-list-templates-csharp.md) first, which builds a starter Visual Studio solution, to list the protection templates available to authenticated user. This "Encrypt/Decrypt text" Quickstart builds on the previous one.
 - Optionally: Review [Protection handlers in the MIP SDK](concept-handler-protection-cpp.md) concepts.
 
-## Add logic to set and get a sensitivity label
+## Add logic to set and get a protection template
 
 Add logic to encrypt ad-hoc text, using the Protection engine object.
 
