@@ -6,7 +6,7 @@ description: Learn about the contents of each version of the Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/13/2022
+ms.date: 12/13/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
