@@ -33,7 +33,7 @@ For more information, see:
 
 ## Azure Information Protection analytics
 
-Starting March 1, 2022, Microsoft no longer supports new Log Analytics workspaces to onboard for storing [AIP audit logs](reports-aip.md).
+Starting March 18, 2022, Microsoft no longer supports new Log Analytics workspaces to onboard for storing [AIP audit logs](reports-aip.md).
 
 Customers who already have AIP audit logs configured will continue to have those audit logs forwarded to their Log Analytics workspaces until September 30, 2022. At that point, customers will not be able to have any new AIP data forwarded to their Log Analytics workspace.
 
