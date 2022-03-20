@@ -39,7 +39,7 @@ Customers who already have AIP audit logs configured will continue to have those
 
 Instead, we highly recommend that you use the Microsoft 365 compliance center's activity explorer and content explorer, which provide comprehensive logging and reporting.
 
-The AIP scanner's [network discovery](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview) features also use the AIP audit pipeline, and we are also sunsetting this feature with the AIP audit logs on September 30, 2022. Starting March 1, 2022, only existing customers with AIP audit logs already configured will be able to continue using network discovery features.
+The AIP scanner's [network discovery](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview) features also use the AIP audit pipeline, and we are also sunsetting this feature with the AIP audit logs on September 30, 2022. Starting March 18, 2022, only existing customers with AIP audit logs already configured will be able to continue using network discovery features.
 
 For more information, see:
 
