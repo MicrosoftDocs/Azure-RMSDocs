@@ -14,7 +14,7 @@ ms.custom: include file
 > To provide a unified and streamlined customer experience, we are sunsetting the **Azure Information Protection classic client** and **Label Management** in the Azure Portal as of **March 31, 2021**. No further support is provided for the classic client, and maintenance versions will no longer be released.
 >
 >- The classic client will be fully retired, and will stop functioning, on **March 31, 2022**.
->- As of **March 1, 2022**, we are also sunsetting the AIP audit log and analytics, with a full retirement date of **September 31, 2022**.
+>- As of **March 18, 2022**, we are also sunsetting the AIP audit log and analytics, with a full retirement date of **September 31, 2022**.
 >
 > The content in this article is provided to support customers with extended support only. For more information, see [Removed and retired services](../removed-sunset-services.md).
 >
