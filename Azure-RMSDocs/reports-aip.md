@@ -143,7 +143,7 @@ To view the Azure Information Protection reports and create your own, make sure 
 | **Audit logging URL network connectivity** | AIP must be able to access the following URLs in order to support AIP audit logs:<br>- `https://*.events.data.microsoft.com` <br>- `https://*.aria.microsoft.com` (Android device data only)
 |**Azure Information Protection client**    |For reporting from the client. <br><br>If you don't already have a client installed, you can download and install the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).      <br><br>**Note**: Both the unified labeling client and the classic client are supported. To deploy the AIP classic client, open a support ticket to get download access.     |
 |**Azure Information Protection on-premises scanner**    | For reporting from on-premises data stores. <br><br>      For more information, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).   |
-|**Microsoft Defender for Cloud Apps**     | For reporting from cloud-based data stores. <br><br>For more information, see [Azure Information Protection integration](/cloud-app-security/azip-integration) in the MCAS documentation.        |
+|**Microsoft Defender for Cloud Apps**     | For reporting from cloud-based data stores. <br><br>For more information, see [Azure Information Protection integration](/cloud-app-security/azip-integration) in the Defender for Cloud Apps documentation.        |
 
 ### Permissions required for Azure Information Protection analytics
 
