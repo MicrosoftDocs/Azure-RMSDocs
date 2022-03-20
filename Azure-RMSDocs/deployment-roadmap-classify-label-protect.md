@@ -196,7 +196,7 @@ Perform the following steps:
     For cloud-based data stores, use [Microsoft Defender for Cloud Apps](/cloud-app-security). 
 
     > [!TIP]
-    > While classifying and protecting existing files in bulk is not one of the main use cases for cloud app security, [documented workarounds](/cloud-app-security/azip-integration#enable-azure-information-protection) can help you get your files classified and protected.
+    > While classifying and protecting existing files in bulk is not one of the main use cases for Defender for Cloud Apps, [documented workarounds](/cloud-app-security/azip-integration#enable-azure-information-protection) can help you get your files classified and protected.
 
 6. **Deploy the connector for IRM-protected libraries on SharePoint Server, and IRM-protected emails for Exchange on-premises**
     
