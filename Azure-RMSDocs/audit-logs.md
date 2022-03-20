@@ -31,27 +31,9 @@ ms.custom: admin
 
 [!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
+This article lists the activity events for which Azure Information Protection audit logs are generated. Azure Information Protection collects data from desktop apps only, and not from mobile devices. For more information, see the details in the **Platform** columns in this article.
+
 The Azure Information Protection audit log feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
-
-Microsoft Azure Information Protection generates audit logs at the following activity events:
-
-* [Access](#access-audit-logs)
-* [Access denied](#access-denied-audit-logs)
-* [Change protection](#change-protection-audit-logs)
-* [Discover](#discover-audit-logs)
-* [Downgrade label](#downgrade-label-audit-logs)
-* [File removed](#file-removed-audit-logs)
-* [New label](#new-label-audit-logs)
-* [New protection](#new-protection-audit-logs)
-* [Remove label](#remove-label-audit-logs)
-* [Remove protection](#remove-protection-audit-logs)
-* [Upgrade label](#upgrade-label-audit-logs)
-
-> [!NOTE]
-> Azure Information Protection collects data from desktop apps only, and not from mobile devices.
->
-> For more information, see the details in the **Platform** columns in this article.
-> 
 
 ## Access audit logs
 

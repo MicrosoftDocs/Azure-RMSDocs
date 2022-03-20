@@ -37,12 +37,6 @@ In this tutorial, you'll learn how to:
 > * Add any risky repositories found to a content scan job
 > * Scan your content shares for sensitive content and understand results found
 
-> [!NOTE]
-> Network Discovery is available only starting in version [2.8.85.0 ](rms-client/unifiedlabelingclient-version-release-history.md#general-availability-versions-that-are-no-longer-supported) of the unified labeling client, and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
->
-> If you do not have this version of the client and scanner installed, review the [tutorial prerequisites](#tutorial-prerequisites) and then go straight to [Define and run your content scan job](#define-and-run-your-content-scan-job).
-
-
 **Time required**: You can finish this configuration in 15 minutes.
 
 ## Tutorial prerequisites
@@ -64,8 +58,11 @@ When you're ready, continue with [Create a network scan job](#create-a-network-s
 Create a network scan job to scan a specified IP address or IP range for risky repositories.
 
 > [!NOTE]
-> This feature is available only starting in version 2.8.85.0, and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
-> 
+> The Azure Information Protection network discovery feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+>
+> We are sunsetting the Azure Information Protection analytics as of March 18, 2022, with full retirement is scheduled for September 30, 2022. We are also sunsetting the scanner's network discovery features on the same timeline. For more information, see [Removed and retired services](removed-sunset-services.md#azure-information-protection-analytics).
+>
+
 
 **To create a network scan job**:
 

@@ -36,12 +36,11 @@ ms.custom: admin
 
 This article describes how administrators can activate the Azure Rights Management protection service for Azure Information Protection (AIP). When the protection service is activated for your organization, administrators and users can start to protect important data by using applications and services that support this information protection solution. Administrators can also manage and monitor protected documents and emails that your organization owns.
 
-> [!NOTE]
-> This configuration information is for administrators who are responsible for a service that applies to all users in an organization. If you are looking for user help and information to use the Rights Management functionality for a specific application or how to open a file or email that is rights-protected, use the help and guidance that accompanies your application.
->
-> For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the Azure Information Protection client for Windows, see the [Azure Information Protection client user guide](./rms-client/clientv2-user-guide.md).
->
-> For technical support and other questions about the service, see the [Support options and community resources](information-support.md#support-options-and-community-resources) information.
+This configuration information in this article is for administrators who are responsible for a service that applies to all users in an organization. If you are looking for user help and information to use the Rights Management functionality for a specific application or how to open a file or email that is rights-protected, use the help and guidance that accompanies your application.
+
+For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the Azure Information Protection client for Windows, see the [Azure Information Protection client user guide](./rms-client/clientv2-user-guide.md).
+
+For technical support and other questions about the service, see the [Support options and community resources](information-support.md#support-options-and-community-resources) information.
 
 ## Automatic activation for Azure Rights Management
 
