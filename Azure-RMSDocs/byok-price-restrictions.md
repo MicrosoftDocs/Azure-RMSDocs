@@ -307,11 +307,10 @@ Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'Contos
 To grant the Azure Rights Management service principal user permissions as a **Managed HSM Crypto** user, run the following command:
 
 ```PowerShell
-az keyvault role assignment create --hsm-name "ContosoMHSM" --role "Managed HSM Crypto User" --assignee 00000012-0000-0000-c000-000000000000 --scope /keys/contosomhsmkey
+az keyvault role assignment create --hsm-name "ContosoMHSM" --role "Managed HSM Crypto User" --assignee-principal-type ServicePrincipal --assignee https://aadrm.com/ --scope /keys/contosomhskey
 ```
 
 Where:
-- **00000012-0000-0000-c000-000000000000** is the GUID to use in this command
 - **ContosoMHSM** is a sample HSM name. When running this command, replace this value with your own HSM name.
 
 The **Managed HSM Crypto User** user role allows the user to decrypt, sign, and get permissions to the key, which are all required for the Managed HSM functionality. 
