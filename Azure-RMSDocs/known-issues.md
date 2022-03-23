@@ -245,6 +245,12 @@ You can also entirely disable/exclude CA within Azure Information Protection if 
 
 For more information, see the [Conditional Access documentation](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 
+## Cannot publish or use labels with sub-labels as standalone labels
+
+If a label contains any sub-labels in the Security and Compliance Center, this label must not be published as standalone label to any AIP users. 
+
+Similarly, AIP doesn’t support labels containing sub-labels as default labels,  also automatic labeling must not be configured on these labels.
+
 ## More information
 
 The following additional articles may be helpful in answering questions you have about Azure Information Protection:
