@@ -102,7 +102,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: API reference for C++
-            url: /information-protection/develop/mip-sdk-reference       
+            url: /information-protection/develop/version-release-history      
 
   # Card
   - title: Activate unified labels
