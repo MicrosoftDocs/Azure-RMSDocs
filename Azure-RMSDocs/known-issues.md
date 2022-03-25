@@ -249,7 +249,7 @@ For more information, see the [Conditional Access documentation](/azure/active-d
 
 If a label contains any sub-labels in the [Microsoft 365 compliance center](/microsoft-365/compliance/sensitivity-labels#sensitivity-labels-and-azure-information-protection), this label must not be published as a standalone label to any AIP users. 
 
-Similarly, AIP doesn’t support labels that contain sub-labels as default labels, and you cannot configure automatic labeleing on these labels.
+Similarly, AIP doesn’t support labels that contain sub-labels as default labels, and you cannot configure automatic labeling on these labels.
 
 ## More information
 
