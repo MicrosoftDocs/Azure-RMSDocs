@@ -27,11 +27,7 @@ ms.custom: admin
 
 # Analytics and central reporting for Azure Information Protection (public preview)
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 This article describes how to use Azure Information Protection (AIP) analytics for central reporting, which can help you track the adoption of your labels that classify and protect your organization's data.
 
@@ -50,6 +46,9 @@ AIP analytics also enable you to do perform the following steps:
 The data that you see is aggregated from your Azure Information Protection clients and scanners, from Microsoft Defender for Cloud Apps, and from [protection usage logs](log-analyze-usage.md). The reports use [Azure Monitor](/azure/log-analytics/log-analytics-overview) to store the data in a Log Analytics workspace that your organization owns.
 
 Azure Information Protection analytics for central reporting is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+
+As of **March 18, 2022**, we are sunsetting the AIP audit log and analytics, with a full retirement date of **September 31, 2022**. For more information, see [Removed and retired services](removed-sunset-services.md).
+
 
 ## AIP reporting data
 
@@ -109,29 +108,13 @@ For more details, see:
 
 #### Prevent the AIP clients from sending auditing data
 
-**Unified labeling client**
-
 To prevent the Azure Information Protection unified labeling client from sending auditing data, configure a [label policy advanced setting](rms-client/clientv2-admin-guide-customizations.md#prevent-audit-data-from-being-sent-to-aip-and-microsoft-365-analytics).
-
-**Classic client**
-
-To prevent the Azure Information Protection classic client from sending this data, set the [policy setting](configure-policy-settings.md) of **Send audit data to Azure Information Protection analytics** to **Off**:
-
-|Requirement  |Instructions  |
-|---------|---------|
-|**To configure most users to send data, with a subset of users who cannot send data**     |  Set **Send audit data to Azure Information Protection analytics** to **Off** in a scoped policy for the subset of users. <br><br> This configuration is typical for production scenarios.     |
-|**To configure only a subset of users who send data**     |  Set **Send audit data to Azure Information Protection analytics** to **Off** in the global policy, and **On** in a scoped policy for the subset of users. <br><br>This configuration is typical for testing scenarios.       |
 
 #### Content matches for deeper analysis
 
 Azure Information Protection lets you collect and store the actual data that's identified as being a sensitive information type (predefined or custom). For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. The content matches are displayed when you select an entry from **Activity logs**, and view the **Activity Details**. 
 
-By default, Azure Information Protection clients don't send content matches. To change this behavior so that content matches are sent:
-
-|Client  |Instructions  |
-|---------|---------|
-|**Unified labeling client**      |  Configure an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) in a label policy.       |
-|**Classic client**      |   Select a checkbox as part of the [configuration](#configure-a-log-analytics-workspace-for-the-reports) for Azure Information Protection analytics. The checkbox is named **Enable deeper analytics into your sensitive data**. <br><br> If you want most users who are using this client to send content matches but a subset of users cannot send content matches, select the checkbox and then configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.     |
+By default, Azure Information Protection clients don't send content matches. To change this behavior so that content matches are sent, configure an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) in a label policy.
 
 ## Prerequisites
 To view the Azure Information Protection reports and create your own, make sure that the following requirements are in place.
@@ -140,7 +123,7 @@ To view the Azure Information Protection reports and create your own, make sure 
 |---------|---------|
 |**An Azure subscription**     |   Your Azure subscription must include Log Analytics on the same tenant as Azure Information Protection. <br><br> For more information, see the [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/log-analytics) page. <br><br>If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.   |
 | **Audit logging URL network connectivity** | AIP must be able to access the following URLs in order to support AIP audit logs:<br>- `https://*.events.data.microsoft.com` <br>- `https://*.aria.microsoft.com` (Android device data only)
-|**Azure Information Protection client**    |For reporting from the client. <br><br>If you don't already have a client installed, you can download and install the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).      <br><br>**Note**: Both the unified labeling client and the classic client are supported. To deploy the AIP classic client, open a support ticket to get download access.     |
+|**Azure Information Protection client**    |For reporting from the client. <br><br>If you don't already have a client installed, you can download and install the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).           |
 |**Azure Information Protection on-premises scanner**    | For reporting from on-premises data stores. <br><br>      For more information, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).   |
 |**Microsoft Defender for Cloud Apps**     | For reporting from cloud-based data stores. <br><br>For more information, see [Azure Information Protection integration](/cloud-app-security/azip-integration) in the Defender for Cloud Apps documentation.        |
 
@@ -226,8 +209,6 @@ Azure Monitor Logs has a **Usage and estimated costs** feature to help you estim
     - **To use an existing Log Analytics workspace**: Select the workspace from the list.
     
     If you need help with creating the Log Analytics workspace, see [Create a Log Analytics workspace in the Azure portal](/azure/log-analytics/log-analytics-quick-create-workspace).
-
-1. **AIP classic client only**: Select the checkbox **Enable deeper analytics into your sensitive data** if you want to store the actual data that's identified as being a sensitive information type. 
 
     For more information about this setting, see the [Content matches for deeper analysis](#content-matches-for-deeper-analysis) section on this page.
 
@@ -339,11 +320,7 @@ In this example, a downgraded label is counted only if the label name before the
 
 ## Next steps
 
-After reviewing the information in the reports, if you are using the Azure Information Protection client, you might decide to make changes to your labeling policy.
-
-- **Unified labeling client**: Make changes to your labeling policy in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
-
-- **Classic client**: Make changes to your policy in the Azure portal. For more information, see [Configuring the Azure Information Protection policy](configure-policy.md).
+After reviewing the information in the reports, if you are using the Azure Information Protection client, you might decide to make changes to your labeling policy in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
 AIP audit logs are also sent to the Microsoft 365 Activity Explorer, where they may be displayed with different names. For more information, see:
 

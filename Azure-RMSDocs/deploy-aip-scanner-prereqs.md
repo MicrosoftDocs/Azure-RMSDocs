@@ -26,9 +26,6 @@ ms.custom: admin
 
 # Requirements for installing and deploying the Azure Information Protection unified labeling scanner
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
->
->***Relevant for**: [AIP unified labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 Before installing the Azure Information Protection on-premises scanner, make sure that your system complies with basic [Azure Information Protection requirements](requirements.md).
 

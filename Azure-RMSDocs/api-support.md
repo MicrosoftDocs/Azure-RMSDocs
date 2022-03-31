@@ -26,12 +26,6 @@ ms.custom: admin
 
 # Other applications that support the Rights Management APIs
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
-
 Use the following information to help you understand how the Azure Rights Management service from Azure Information Protection can support other applications to protect your organization's data.
 
 By using the Azure Information Protection SDKs, your internal developers can write line-of-business applications to natively support the Azure Rights Management service. How information protection is integrated with these applications depends on how they are written. For example, the integration might be automatically applied with minimal user interaction required, or for a more customized experience, users might be prompted to configure settings to apply information protection to files.

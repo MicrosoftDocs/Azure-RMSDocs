@@ -27,12 +27,6 @@ ms.custom: admin
 
 # Prepare the environment for Azure Rights Management when you have AD RMS
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [Azure Information Protection unified labeling client and classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
-
 
 > [!IMPORTANT]
 > Guidance if you are using Active Directory Rights Management Services (AD RMS)

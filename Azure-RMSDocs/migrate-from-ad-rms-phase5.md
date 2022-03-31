@@ -28,12 +28,6 @@ ms.custom: admin, has-adal-ref
 
 # Migration phase 5 - post migration tasks
 
->***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
-
 
 Use the following information for Phase 5 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 10 through 12 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -59,12 +53,8 @@ After yo have de-provisioned your AD RMS servers, you might want to take the opp
 
 For sensitivity labels and the unified labeling client, use the Microsoft 365 compliance center. For more information, see the Microsoft 365 documentation.
 
-If you're using the classic client, use the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](./configure-policy-templates.md).
-
 >[!IMPORTANT]
 > At the end of this migration, your AD RMS cluster cannot be used with Azure Information Protection and the hold your own key ([HYOK](configure-adrms-restrictions.md)) option. 
->
-> If you are using the classic client with HYOK, because of the redirections that are now in place, the AD RMS cluster that you use must have different licensing URLs to the ones in the clusters that you migrated.
 >
 ### Additional configuration for computers that run Office 2010
 

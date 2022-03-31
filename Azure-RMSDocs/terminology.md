@@ -28,17 +28,13 @@ search.appverid:
 
 # Terminology for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
-
-Confused by a word, phrase, or acronym that's related to Microsoft Azure Information Protection? Find the definition here for terms and abbreviations that are either specific to Azure Information Protection or have a specific meaning when used in the context of this service.
+Confused by a word, phrase, or acronym that's related to Azure Information Protection? Find the definition here for terms and abbreviations that are either specific to Azure Information Protection or have a specific meaning when used in the context of this service.
 
 ## Word, phrase, or acronym
 
-[A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [G](#g) | [H](#h) | [I](#i) | [K](#k) | [L](#l) | [M](#m) [N](#n) | [O](#o) | [P](#p) | [R](#r) | [S](#s) | [T](#t) | [U](#u)
+[A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [G](#g) | [I](#i) | [K](#k) | [L](#l) | [M](#m) [N](#n) | [O](#o) | [P](#p) | [R](#r) | [S](#s) | [T](#t) | [U](#u)
 
 ### A
 |Term|Definition|
@@ -51,7 +47,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |**AIPService**|The current name of the PowerShell module for the protection service, which replaces with the older, AADRM module.|
 |**AzureInformationProtection**|The name of the PowerShell module for the Azure Information Protection classic or unified labeling client.|
 |**Azure Information Protection**|A cloud-based service that uses labels to classify and protect documents and emails. </br></br> Azure Rights Management provides the protection by using encryption, identity, and authorization policies.|
-|**Azure Information Protection classic client**|Sometimes abbreviated to *classic client*.<br /><br />The original client side of Azure Information Protection that lets users, administrators, and services use the labels and settings from your Azure Information Protection policy. </br></br> Now being replaced with the Azure Information Protection unified labeling client.|
+|**Azure Information Protection classic client**|Deprecated. Sometimes abbreviated to *classic client*.<br /><br />The original, legacy client side of Azure Information Protection that let users, administrators, and services use the labels and settings from your Azure Information Protection policy. </br></br> Replaced with the Azure Information Protection unified labeling client. |
 |**Azure Information Protection label**|An item that always applies a classification value to documents and emails, and can also protect them. </br></br>When a label is applied, the label information is stored in the metadata for applications and services to read and optionally, act on it.|
 |**Azure Information Protection policy**|Administrator-defined configuration for clients and services that use Azure Information Protection labels and policy settings.|
 |**Azure Information Protection scanner**|A service that runs on Windows Server and lets you discover, classify, and protect documents on network shares, and SharePoint Server sites and libraries.|
@@ -98,12 +94,6 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |--------|--------------|
 |**generic protection**|A level of protection that encrypts any file type and prevents unauthorized people from opening the file. </br></br>After the file is opened, the file is now unencrypted and usable in an application that doesn’t natively support Rights Management.|
 
-### H
-
-|Term|Definition|
-|--------|--------------|
-|**hold your own key**|Frequently abbreviated to *HYOK*.<br /><br />A configuration and topology option for an organization that wants to generate and store their own key on-premises, typically for regulatory or compliance reasons. </br></br>HYOK is supported by the AIP classic client only.|
-|**HYOK**|See *hold your own key*.|
 
 ### I
 

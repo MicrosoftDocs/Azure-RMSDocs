@@ -25,21 +25,16 @@ ms.custom: admin
 
 # How-to guides for common scenarios that use Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
-> ***Relevant for**: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 There are many ways in which you can use Azure Information Protection to classify and optionally, protect your organization's documents and emails. 
 
 The most successful deployments are those that identify specific use cases that provide the most business benefit to the organization. Use the following list of common scenarios and instructions to get your deployment off the ground.
-
 ## Common scenarios
 
-- [Discover your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md) 
+- [Discover your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
 - [Automatically protect users' emails that are sent outside the organization](configure-exo-rules.md)
 - [Use my own key to protect my organization's data](plan-implement-tenant-key.md)
-- [Migrate from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md)
-- [Migrate from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
 > [!NOTE]
 > For more information, see also [Create and publish sensitivity labels](/microsoft-365/compliance/create-sensitivity-labels) in the Microsoft 365 Compliance documentation.

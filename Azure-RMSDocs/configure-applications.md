@@ -27,17 +27,13 @@ ms.custom: admin
 
 # Configuring applications for Azure Rights Management
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
+This article is for IT administrators and consultants who have deployed Azure Information Protection. If you are looking for user help and information about how to use the Rights Management functionality for a specific application or how to open a file that is rights-protected, use the help and guidance that accompanies your application.
 
+For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the Azure Information Protection client for Windows, see the [Azure Information Protection client user guide](./rms-client/clientv2-user-guide.md).
 
-> [!TIP]
-> This information is for IT administrators and consultants who have deployed Azure Information Protection. If you are looking for user help and information about how to use the Rights Management functionality for a specific application or how to open a file that is rights-protected, use the help and guidance that accompanies your application.
->
-> For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the Azure Information Protection client for Windows, see the [Azure Information Protection client user guide](./rms-client/clientv2-user-guide.md).
+## Resources for configuring applications, the AIP client, and services
 
 After you have deployed Azure Information Protection for your organization, use the following information to configure applications, the Azure Information Protection client, and services, such as:
 
@@ -46,8 +42,7 @@ After you have deployed Azure Information Protection for your organization, use 
 
 For information about how these applications and services support the data protection service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
 
-> [!IMPORTANT]
-> For information about supported versions and other requirements, see [Requirements for Azure Information Protection](requirements.md).
+For information about supported versions and other requirements, see [Requirements for Azure Information Protection](requirements.md).
 
 -   [Office 365: Configuration for online services](configure-office365.md)
 
@@ -80,5 +75,3 @@ If not, you might find the following operational information useful:
 - [Logging and analyzing the Azure Rights Management service](log-analyze-usage.md)
 
 - [Operations for your Azure Information Protection tenant key](operations-tenant-key.md)
-
-

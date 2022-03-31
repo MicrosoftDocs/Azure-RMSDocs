@@ -28,11 +28,7 @@ ms.custom: admin
 
 # Compliance and supporting information for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Azure Information Protection supports other services and also relies on other services. If you’re looking for information that is related to Azure Information Protection but not about how to use the Azure Information Protection service, check the following resources:
 
@@ -48,11 +44,7 @@ However, some relevant information that can help your legal adviser make a deter
 
 - Customer-specific root keys are either managed by Microsoft or provisioned by the customer in a nCipher HSM by using "bring your own key" (BYOK). Azure Information Protection also supports features for on-premises protection, for content that cannot be protected with a cloud-based key. For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
 
-- The Azure Information Protection service is hosted in regional data centers across the globe. Azure Information Protection keys and policies always remain within the region in which is originally deployed.
-
-    > [!NOTE]
-    > Azure Information Protection policies are relevant for the AIP classic client only.
-    >
+- The Azure Information Protection service is hosted in regional data centers across the globe. Azure Information Protection keys always remain within the region in which is originally deployed.
   
 - Azure Information Protection does not transmit document contents from clients to the Azure Information Protection service. Content encryption and decryption operations are performed in-place in the client device. Or, for service-based rendering, these operations are performed within the service that’s rendering the content. [More information](./how-does-it-work.md)
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Track & revoke documents - Azure Information Protection classic client
+title: Track & revoke documents with the legacy tracking portal - Azure Information Protection
 description: After you have protected your documents, you can track how people are using them. If necessary, you can also revoke access to these documents if people should no longer be able to read them. 
 author: batamig
 ms.author: bagol
@@ -26,13 +26,7 @@ ms.custom: user
 
 ---
 
-# User Guide: Track and revoke your documents when you use the Azure Information Protection classic client
-
->***Applies to**: Azure Information Protection, Windows 10, Windows 8.1, Windows 8*
->
->***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client user guide](revoke-access-user.md).*
-
-[!INCLUDE [AIP classic client is sunset - extended support customers](../includes/classic-client-sunset-extended-support.md)]
+# User Guide: Track and revoke your documents with the legacy tracking portal
 
 After you have protected your documents by using Azure Information Protection, you can track how people are using these documents. If necessary, you can also revoke access to them if people should no longer be able to read them. To do this, you use the **document tracking site**. You can access this site from Windows computers, Mac computers, and even from tablets and phones.
 

@@ -27,12 +27,7 @@ ms.custom: admin
 
 # Azure Information Protection requirements
 
->****Applies to***: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
->***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
->
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Before deploying Azure Information Protection, ensure that your system meets the following prerequisites:
 
@@ -150,7 +145,7 @@ The Azure Information Protection clients can label and protect documents and ema
 
 Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only, and labels that apply protection are not displayed for users. 
 
-Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client, or the **Protect** button in the classic client.
+Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client.
 
 For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
 

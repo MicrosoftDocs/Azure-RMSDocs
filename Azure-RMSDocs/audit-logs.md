@@ -25,15 +25,13 @@ ms.custom: admin
 
 # Azure Information Protection audit log reference (public preview)
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 This article lists the activity events for which Azure Information Protection audit logs are generated. Azure Information Protection collects data from desktop apps only, and not from mobile devices. For more information, see the details in the **Platform** columns in this article.
 
 The Azure Information Protection audit log feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+
+As of **March 1, 2022**, we are sunsetting the AIP audit log and analytics, with a full retirement date of **September 31, 2022**. For more information, see [Removed and retired services](removed-sunset-services.md).
 
 ## Access audit logs
 
@@ -41,9 +39,7 @@ The Azure Information Protection audit log feature is currently in PREVIEW. The 
 
 |Reported by  |Platform  |Application  |Action / Description  |
 |---------|---------|---------|---------|
-|Azure Information Protection: Classic client only | Windows        | Office        |Generated for the first time in each session that a labeled or protected file is saved.<br>The log includes any information type matches.      |
-|Azure Information Protection: Classic client only     |Windows         |Office         |Generated each time a labeled or protected file is created.       |
-|Azure Information Protection:<br />- Classic client<br />- Unified labeling client     | Windows, SharePoint, OneDrive        | Office        | Generated each time a labeled or protected file is opened. <br /><br />**Note**: For protected files, Access audit logs are generated only when the file is opened and the content is successfully decrypted and exposed to the user. <br />For protected emails in Outlook, Access audit logs are also generated each time the user attempts to open an encrypted email, even if the decryption is blocked due to a lack of permissions.         |
+|Azure Information Protection unified labeling client     | Windows, SharePoint, OneDrive        | Office        | Generated each time a labeled or protected file is opened. <br /><br />**Note**: For protected files, Access audit logs are generated only when the file is opened and the content is successfully decrypted and exposed to the user. <br />For protected emails in Outlook, Access audit logs are also generated each time the user attempts to open an encrypted email, even if the decryption is blocked due to a lack of permissions.         |
 |Microsoft Information Protection (MIP) SDK     | Any        | Third-party applications        | Generated each time a labeled or protected file is accessed by a third-party application that supports it.       |
 |RMS service     | Windows        | Office         |Generated each time a labeled or protected document is accessed.       |
 
@@ -61,7 +57,7 @@ The Azure Information Protection audit log feature is currently in PREVIEW. The 
 
 |Reported by  |Platform  |Application  |Action / Description   |
 |---------|---------|---------|---------|
-|Azure Information Protection:<br />- Classic client<br />- Unified labeling client     | Windows, SharePoint, OneDrive        | Office        | Generated each time the protection on an unlabeled document is changed manually.         |
+|Azure Information Protection unified labeling client     | Windows, SharePoint, OneDrive        | Office        | Generated each time the protection on an unlabeled document is changed manually.         |
 |Microsoft Information Protection (MIP) SDK     | Any        | Third-party applications        | Generated each time the protection on an unlabeled document is changed manually.<br>Generated only if supported by the third-party application.       |
 
 ## Discover audit logs
@@ -70,7 +66,7 @@ The Azure Information Protection audit log feature is currently in PREVIEW. The 
 
 |Reported by  |Platform  |Application  |Action / Description   |
 |---------|---------|---------|---------|
-|Azure Information Protection: <br />- Classic scanner <br />- Unified labeling scanner | Windows        | Office        |Generated each time a file is scanned by the AIP scanner.<br>The log includes the following details:<br>- Matched information types<br>- Labels |
+|Azure Information Protection unified labeling scanner | Windows        | Office        |Generated each time a file is scanned by the AIP scanner.<br>The log includes the following details:<br>- Matched information types<br>- Labels |
 |Microsoft Information Protection (MIP) SDK | Any | Third-party applications | Generated each time a file is scanned by a third-party application that supports it. <br />The log includes the following details:<br />- Matched information types<br />- Labels|
 |Azure Information Protection unified labeling viewer |Windows |AIP Unified Labeling Viewer  | Generated each time a labeled or protected file is opened within the organization. |
 
@@ -80,7 +76,7 @@ The Azure Information Protection audit log feature is currently in PREVIEW. The 
 
 | Reported by      | Platform                       | Application              | Action / Description      |
 | ---------------- | ------------------------------ | ------------------------ | --------------- |
-|Azure Information Protection:<br />- Classic scanner and client<br />- Unified labeling scanner and client | Windows, SharePoint, One Drive | Office                   | Generated each time a document label is updated with a less sensitive label.|
+|Azure Information Protection unified labeling scanner and client | Windows, SharePoint, One Drive | Office                   | Generated each time a document label is updated with a less sensitive label.|
 | Microsoft Information Protection (MIP) SDK          | Any                            | Third-party applications | Generated each time a document label is updated with a less sensitive label.<br>Generated only if supported by the third-party application. |
 
 ## File removed audit logs
@@ -100,7 +96,7 @@ The Azure Information Protection audit log feature is currently in PREVIEW. The 
 
 | Reported by                                                                      | Platform                       | Application              | Action / Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:<br />- Classic scanner and client<br />- Unified labeling scanner and client | Windows, SharePoint, One Drive | Office                   | Generated each time new label is applied.                                                                  |
+| Azure Information Protection unified labeling scanner and client | Windows, SharePoint, One Drive | Office                   | Generated each time new label is applied.                                                                  |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Third-party applications | Generated each time a new document label is applied.<br>Generated only when supported by the third-party application. |
 
 ## New protection audit logs
@@ -109,7 +105,7 @@ The Azure Information Protection audit log feature is currently in PREVIEW. The 
 
 | Reported by                                                                      | Platform                       | Application              | Action / Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:<br />- Classic client<br />- Unified labeling client | Windows, SharePoint, One Drive | Office                   | Generated each time protection is newly added manually, without a label.                                                                  |
+| Azure Information Protection unified labeling client | Windows, SharePoint, One Drive | Office                   | Generated each time protection is newly added manually, without a label.                                                                  |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Third-party applications | Generated each time protection is newly added manually, without a label.<br>Generated only when supported by the third-party application. |
 
 ## Remove label audit logs
@@ -118,7 +114,7 @@ The Azure Information Protection audit log feature is currently in PREVIEW. The 
 
 | Reported by                                                                      | Platform                       | Application              | Action / Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:<br />- Classic scanner and client<br />- Unified labeling scanner and  client | Windows, SharePoint, One Drive | Office                   | Generated each time a label is removed.                                                                  |
+| Azure Information Protection unified labeling scanner and  client | Windows, SharePoint, One Drive | Office                   | Generated each time a label is removed.                                                                  |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Third-party applications | Generated each time a label is removed.<br>Generated only when supported by the third-party application. |
 
 ## Remove protection audit logs
@@ -127,7 +123,7 @@ The Azure Information Protection audit log feature is currently in PREVIEW. The 
 
 | Reported by                                                                      | Platform                       | Application              | Action / Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:<br />- Classic client<br />- Unified labeling client | Windows, SharePoint, One Drive | Office                   | Generated each time protection is manually removed, without a label.                                                                  |
+| Azure Information Protection unified labeling client | Windows, SharePoint, One Drive | Office                   | Generated each time protection is manually removed, without a label.                                                                  |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Third-party applications | Generated each time protection is  manually removed, without a label.<br>Generated only when supported by the third-party application. |
 
 ## Upgrade label audit logs
@@ -136,7 +132,7 @@ The Azure Information Protection audit log feature is currently in PREVIEW. The 
 
 | Reported by                                                                      | Platform                       | Application              | Action / Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:<br />- Classic scanner and client<br />- Unified labeling scanner and client | Windows, SharePoint, One Drive | Office                   | Generated each time a document label is updated with a more sensitive label.                                                                   |
+| Azure Information Protection unified labeling scanner and client | Windows, SharePoint, One Drive | Office                   | Generated each time a document label is updated with a more sensitive label.                                                                   |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Third-party applications | Generated each time a document label is updated with a more sensitive label.<br>Generated only when supported by the third-party application. |
 
 ## Next steps

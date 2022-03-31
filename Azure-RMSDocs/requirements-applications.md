@@ -28,11 +28,7 @@ ms.custom: admin
 
 # Applications that support Azure Rights Management data protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 The applications and solutions listed on this page have built-in support for the Azure Rights Management (Azure RMS) service, which provides data protection for Azure Information Protection.
 
@@ -211,9 +207,6 @@ The following Office client suites support protecting files and emails on macOS 
 
 All editions of Office for Mac 2019 and Office for Mac 2016 support consuming protected content.
 
-> [!TIP]
-> If you are using the classic client on a Mac computer, you might find the following FAQ useful: [How do I configure a Mac computer to protect and track documents?](faqs-classic.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)
-> 
 ## Azure Information Protection apps for iOS and Android
 
 The Azure Information Protection app for iOS and Android provides a viewer for rights-protected email messages **(.rpmsg** files) when these mobile devices don't have an email app that can open protected emails. This app can also open rights-protected PDF files, and pictures and text files that are rights-protected.
@@ -234,17 +227,6 @@ For more information, see:
 - [Unified labeling client administrator guide](./rms-client/clientv2-admin-guide.md)
 - [Unified labeling client user guide](./rms-client/clientv2-user-guide.md)
 
-### AIP's classic client
-
-If you have not yet upgraded, you may still have the legacy [Azure Information Protection classic client](./rms-client/aip-client.md) deployed.
-
-For more information about deploying and using the classic client, see:
-
-- [AIP classic client](./rms-client/aip-client.md)
-- [Classic client administrator guide](./rms-client/client-admin-guide.md)
-- [Classic client user guide](./rms-client/client-user-guide.md).
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 ## Rights Management sharing app
 

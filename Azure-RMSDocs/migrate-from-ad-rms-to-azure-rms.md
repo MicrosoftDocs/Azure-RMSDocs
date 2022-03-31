@@ -27,12 +27,6 @@ ms.custom: admin
 
 # Migrating from AD RMS to Azure Information Protection
 
->***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
-
 Use the following set of instructions to migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Information Protection. 
 
 After the migration, your AD RMS servers are no longer in use but users still have access to documents and email messages that your organization protected by using AD RMS. Newly protected content will use the Azure Rights Management service (Azure RMS) from Azure Information Protection.

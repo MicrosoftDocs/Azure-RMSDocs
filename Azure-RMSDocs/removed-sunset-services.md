@@ -15,13 +15,18 @@ ms.service: information-protection
 
 # Removed and retired services
 
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
+
 This article describes the current status for services that we've removed and retired, or are currently sunsetting, which you may have used or are still using with Azure Information Protection.
 
 ## The AIP classic client
 
-To provide a unified and streamlined customer experience, we are sunsetting the **Azure Information Protection classic client** and **labeling management** pages in the Azure portal as of **March 31, 2021**. No further support is provided for the classic client, and maintenance versions will no longer be released.
+To provide a unified and streamlined customer experience, we have retired the **Azure Information Protection classic client** and **labeling management** pages in the Azure portal as of **March 31, 2022**. This means that:
 
-The classic client will be officially retired, and will stop functioning, on **March 31, 2022**. At this point, the **Labels** and **Policies** tabs will be removed from the Azure portal, and the classic client will not longer be able to acquire policies from the Azure portal.
+- No further support is provided for the classic client
+- Maintenance versions will no longer be released
+- The **Labels** and **Policies** tabs have been removed from the Azure portal
+- The classic client can no longer acquire policies from the Azure portal
 
 We recommend that all customers migrate to unified labeling, and enable [built-in sensitivity labeling for Office applications](/microsoft-365/compliance/sensitivity-labels).
 
@@ -30,6 +35,7 @@ For more information, see:
 - [Final reminder to migrate from Azure Information Protection classic client to unified labeling
 ](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/final-reminder-to-migrate-from-azure-information-protection/ba-p/2731734).
 - [Learn about built-in labeling and the AIP unified labeling client](rms-client/use-client.md)
+- [Archived classic client documentation](/previous-versions/azure/information-protection/)
 
 ## Azure Information Protection analytics
 

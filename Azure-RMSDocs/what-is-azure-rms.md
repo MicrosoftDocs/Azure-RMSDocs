@@ -29,11 +29,7 @@ search.appverid:
 
 # What is Azure Rights Management?
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 Azure Rights Management (Azure RMS) is the cloud-based protection technology used by [Azure Information Protection](what-is-information-protection.md). 
 
@@ -101,11 +97,7 @@ Customized protection templates provide a quick and easy solution for administra
 
 For example, for a company-wide strategy paper to be shared with all employees, apply a read-only policy to all internal employees. For a more sensitive document, such as a financial report, restrict access to executives only.
 
-Configure your labeling policies in the Microsoft 365 compliance center:
-
-- **Unified labeling client**: Use the Microsoft 365 compliance center. For more information, see the [sensitivity labeling documentation for Microsoft 365](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do).        
-
-- **Classic client**: Use the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).      
+Configure your labeling policies in the Microsoft 365 compliance center. For more information, see the [sensitivity labeling documentation for Microsoft 365](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do).        
 
 
 #### Easy activation

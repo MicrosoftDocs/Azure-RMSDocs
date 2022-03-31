@@ -27,12 +27,7 @@ search.appverid:
 
 # Which PDF readers are supported for protected PDFs?
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
->***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
->
-
-[!INCLUDE [AIP classic client is sunset](../includes/classic-client-sunset.md)]
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 This article describes the protected PDF readers that are supported for Azure Information Protection (AIP). Protected PDF readers enable users to open those encrypted PDFs and view the sensitive information contained.
 
@@ -60,10 +55,6 @@ For instructions, see the following sections:
 The PDF readers referenced on this page can all open protected documents that adhere to the ISO standard for PDF encryption. 
 
 This standard is used by default by the AIP client.
-
-> [!NOTE]
-> **Classic client only**: If you have the AIP classic client, this may have been [disabled by an administrator](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
-> 
 
 ### Viewing protected PDFs in Adobe Acrobat Reader
 

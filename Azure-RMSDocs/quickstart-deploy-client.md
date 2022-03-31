@@ -26,9 +26,7 @@ ms.custom: admin, mode-api
 
 # Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
-> ***Relevant for**: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 The Azure Information Protection (AIP) unified labeling client is part of the [Microsoft Information Protection](/microsoft-365/compliance/information-protection) solution, and  extends the built-in capabilities for sensitivity labeling provided by Microsoft 365. 
 
@@ -69,7 +67,6 @@ See any of the following quickstarts and tutorials to get started with the Azure
 - [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
 - [Tutorial: Discovering your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
 - [Tutorial: Preventing oversharing using Azure Information Protection (AIP)](/azure/information-protection/tutorial-scan-networks-and-content)
-- [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md) 
 
 **See also**:
 

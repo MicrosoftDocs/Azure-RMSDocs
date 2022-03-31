@@ -26,11 +26,6 @@ ms.custom: admin
 
 # Frequently asked questions about data protection in Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For more information, see also the [FAQs for the classic client only](faqs-classic.md).*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 Have a question about the data protection service, Azure Rights Management, from Azure Information Protection? See if it's answered here.
 
@@ -178,3 +173,17 @@ As these examples demonstrate, even if all platforms and all software supported 
 ## What's the difference between a user protecting an email with Do Not Forward and a template that doesn't include the Forward right?
 
 Despite its name and appearance, **Do Not Forward** is not the opposite of the Forward right, or a template. It is actually a set of rights that include restricting copying, printing, and saving the email outside the mailbox, in addition to restricting the forwarding of emails. The rights are dynamically applied to users via the chosen recipients, and not statically assigned by the administrator. For more information, see the [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails) section in [Configuring usage rights for Azure Information Protection](configure-usage-rights.md).
+
+## What's the difference between Windows Server FCI and the Azure Information Protection scanner?
+
+Windows Server File Classification Infrastructure has historically been an option to classify documents and then protect them by using the [Rights Management connector](deploy-rms-connector.md) (Office documents only) or a [PowerShell script](./rms-client/configure-fci.md) (all file types). 
+
+We now recommend you use the [Azure Information Protection scanner](deploy-aip-scanner.md). The scanner uses the Azure Information Protection client and your Azure Information Protection policy to label documents (all file types) so that these documents are then classified and optionally, protected.
+
+The main differences between these two solutions:
+
+|  |Windows Server FCI  |Azure Information Protection scanner  |
+|---------|---------|---------|
+|**Supported data stores**    | Local folders on Windows Server        | - Windows file shares and network-attached storage<br /><br />- SharePoint Server 2016 and SharePoint Server 2013. SharePoint Server 2010 is also supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).        |
+|**Operational mode**     |Real time         |Systematically crawls the data stores once or repeatedly         |
+|**Supported file types**     | - All file types are protected by default <br /><br />- Specific file types can be excluded from protection by editing the registry|Support for file types: <br /><br />- Office file types and PDF documents are protected by default <br /><br />- Additional file types can be included for protection by editing the registry|

@@ -24,9 +24,6 @@ ms.subservice: aiplabels
 
 # Tutorial: Discovering your sensitive content with the Azure Information Protection (AIP) scanner
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
-> ***Relevant for**: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 The Azure Information Protection client provides an on-premises scanner that enables system administrators to scan on-premises file repositories for sensitive content. 
 
@@ -105,7 +102,9 @@ For example, if a repository is found to have both read and write public access,
 
 > [!NOTE]
 > This feature is available only starting in version 2.8.85.0, and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
-> 
+>
+> The Azure Information Protection analytics sunset is announced as of March 1, 2022, and full retirement is scheduled for September 30, 2022. The scanner's network discovery features will be also sunset on the same timeline. For more information, see [Removed and sunset services](removed-sunset-services.md#azure-information-protection-analytics).
+>
 
 **To add risky repositories to your content scan job**:
 
@@ -194,13 +193,9 @@ Logs are also stored locally in the **%localappdata%\Microsoft\MSIP\Scanner\Repo
 
 ## Next steps
 
-For additional tutorials, see:
+For more information, see:
 
 - [Tutorial: Preventing oversharing using Azure Information Protection (AIP)](/azure/information-protection/tutorial-scan-networks-and-content)
-- [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md)
-
-**See also**:
-
 - [What is the Azure Information Protection unified labeling scanner?](deploy-aip-scanner.md)
 - [Prerequisites for installing and deploying the Azure Information Protection unified labeling scanner](deploy-aip-scanner-prereqs.md)
 - [Configuring and installing the Azure Information Protection unified labeling scanner](deploy-aip-scanner-configure-install.md)
