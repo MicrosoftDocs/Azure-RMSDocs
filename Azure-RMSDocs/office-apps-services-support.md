@@ -27,11 +27,7 @@ ms.custom: admin
 
 # How Office applications and services support Azure Rights Management 
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 End-user Office applications and Office services can use the Azure Rights Management service from Azure Information Protection to help protect your organization’s data. These Office applications are Word, Excel, PowerPoint, and Outlook. The Office services are Exchange and Microsoft SharePoint. The Office configurations that support the Azure Rights Management service often use the term **information rights management (IRM)**.
 
@@ -69,11 +65,8 @@ If you're ready to configure Exchange to protect emails:
 
 - For Exchange on-premises, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
-For more information, see:
+- Configure sensitivity labels and labeling polices in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
-- **Unified labeling client**. Configure sensitivity labels and labeling polices in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
-
-- **Classic client**. Configure protection templates in the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
 
 ## SharePoint in Microsoft 365 and SharePoint Server

@@ -26,11 +26,6 @@ ms.custom: admin
 
 # Installing the AIPService PowerShell module
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 
 Use the following information to help you install the Windows PowerShell module for the protection service from Azure Information Protection. The name of this module is AIPService, and it replaces the previous version that was named AADRM.
@@ -43,7 +38,7 @@ This table lists the prerequisites to install and use the AIPService PowerShell 
 
 |Requirement|More information|
 |---------------|--------------------|
-|**Minimum version of Windows PowerShell**|Version 3.0 <br><br>You can confirm the version of Windows PowerShell that you are running by typing `$PSVersionTable` in a PowerShell session. If you need to install a later version of Windows PowerShell, see [Upgrading existing Windows PowerShell](/powershell/scripting/install/microsoft-update-faq?view=powershell-7.2).|
+|**Minimum version of Windows PowerShell**|Version 3.0 <br><br>You can confirm the version of Windows PowerShell that you are running by typing `$PSVersionTable` in a PowerShell session. If you need to install a later version of Windows PowerShell, see [Upgrading existing Windows PowerShell](/powershell/scripting/install/microsoft-update-faq).|
 |**Minimum version of the Microsoft .NET Framework**|Version 4.5<br /><br>**Note**: This version of the Microsoft .NET Framework is included with the later operating systems, so you should  need to manually install it only if your client operating system is less than Windows 8.0 or your server operating system is less than Windows Server 2012. <br><br>If the minimum version of the  Microsoft .NET Framework is not already installed, you can download [Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653). This minimum version of the Microsoft .NET Framework is required for some of the classes that the AIPService module uses.|
 |**Required license** | You must have a product license to use this feature. For more information, see [Microsoft 365 licensing guidance for security & compliance - Service Descriptions](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection). |
 

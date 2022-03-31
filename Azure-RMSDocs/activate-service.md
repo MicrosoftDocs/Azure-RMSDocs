@@ -27,12 +27,7 @@ ms.custom: admin
 
 # Activating the protection service from Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
-
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 This article describes how administrators can activate the Azure Rights Management protection service for Azure Information Protection (AIP). When the protection service is activated for your organization, administrators and users can start to protect important data by using applications and services that support this information protection solution. Administrators can also manage and monitor protected documents and emails that your organization owns.
 
@@ -82,8 +77,6 @@ This procedure describes how to activate the Rights Management protection servic
 ## Activate protection from the Azure portal
 
 This procedure describes how to activate the Rights Management protection service (Azure RMS) from the Azure portal.
-
-[!INCLUDE [classic-client-sunset-extended-support](includes/classic-client-sunset-extended-support.md)]
 
 1. Go to and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
 

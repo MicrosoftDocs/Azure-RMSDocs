@@ -26,11 +26,7 @@ ms.custom: admin
 
 # AIP deployment roadmap for classification, labeling, and protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Use the following steps as recommendations to help you prepare for, implement, and manage Azure Information Protection for your organization, when you want to classify, label, and protect your data.
 
@@ -223,24 +219,6 @@ As you begin to use the protection service, you might find PowerShell useful to 
 
 For more information, see [Administering protection from Azure Information Protection by using PowerShell](./administer-powershell.md).
 
-## References for classic client environments
-
-**Relevant for**: AIP classic client only
-
-If you're using the classic client, use the following references instead of those linked above:
-
-- **Deploy and run the scanner** that's provided with the classic client. For more information, see [What is the Azure Information Protection classic scanner?](deploy-aip-scanner-classic.md)
-
-- **Configure your policy in the Azure portal.** For more information, see [Configuring Azure Information Protection policy](./configure-policy.md) and [How to configure a label for Rights Management protection](./configure-policy-protection.md).
-
-- **Deploy your client for users** using the [classic client administrator guide](./rms-client/client-admin-guide.md) and [custom configuration instructions for the classic client](rms-client/client-admin-guide-customizations.md).
-
-- **PowerShell instructions**: [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md)
-
-- **Local monitoring**: [Local usage logging with Windows event monitor](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client)
-
-> [!TIP]
-> You may also be interested in the [Azure Information Protection deployment roadmap for protection only](deployment-roadmap-protect-only.md), which is supported for the classic client only.
 
 ## Next steps
 

@@ -27,11 +27,7 @@ ms.custom: admin
 
 # Logging and analyzing the protection usage from Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Use this information to help you understand how you can use usage logging for the protection service (Azure Rights Management) from Azure Information Protection. This protection service provides the data protection for your organization's documents and emails and it can log every request to it. These requests include when users protect documents and email and also consume this content, actions performed by your administrators for this service, and actions performed by Microsoft operators to support your Azure Information Protection deployment. 
 
@@ -195,29 +191,8 @@ There are many request types for the protection service but the following table 
 |**SetUsageLogStorageAccount**|A call is  made to specify the location of the Azure Rights Management service logs.|
 |**UpdateTemplate**|A call is  made from the Azure portal to update an existing template.|
 
-**Classic client only**
 
-The following request types are relevant for users with the AIP classic client only:
 
-|Request type|Description|
-|----------------|---------------|
-|**DeleteTemplateById**|A call is  made from the Azure portal, to delete a template by template  ID.|
-|**DocumentEventsCsv**|A call is made from the document tracking site to download the .CSV file for a single document.|
-|**ExportTemplateById**|A call is  made from the Azure portal to export a template based on a template ID.|
-|**FEGetAllTemplates**|A call is  made, from a mobile device (front-end) to get the templates.|
-|**GetAllDocs**|A call is made from the document tracking site to load the **all documents** page for a user, or search all documents for the tenant. Use this value with the admin-action and acting-as-admin fields:<br /><br />- admin-action is empty: A user views the **all documents** page for their own documents.<br /><br />- admin-action is true and acting-as-user is empty: An administrator views all documents for their tenant.<br /><br />- admin-action is true and acting-as-user is not empty: An administrator views the **all documents** page for a user.|
-|**GetAllTemplates**|A call is  made from the Azure portal, to get all the templates.|
-|**GetConnectorAuthorizations**|A call  is made from the RMS connectors to get their configuration from the cloud.|
-|**GetSingle**|A call is made from the document tracking site to navigate to a **single document** page.|
-|**GetTemplateById**|A call is  made from the Azure portal to get a template by specifying a template ID.|
-|**LoadEventsForMap**|A call is made from the document tracking site to navigate to the map view for a single document.|
-|**LoadEventsForSummary**|A call is made from the document tracking site to navigate to the timeline view for a single document.|
-|**LoadEventsForTimeline**|A call is made from the document tracking site to navigate to the map view for a single document.|
-|**ImportTemplate**|A call is  made from the Azure portal to import a template.|
-|**RevokeAccess**|A call is made from the document tracking site to revoke a document.|
-|**SearchUsers** |A call is made from the document tracking site to search all users in a tenant.|
-|**UpdateNotificationSettings**|A call is made from the document tracking site to change the notification settings for a single document.|
-|**UpdateTemplate**|A call is  made from the Azure portal to update an existing template.|
 
 ## PowerShell reference
 

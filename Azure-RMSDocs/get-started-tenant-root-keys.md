@@ -27,11 +27,7 @@ ms.custom: admin
 
 # Getting started with tenant root keys
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 After [planning, creating, and configuring your tenant key](plan-implement-tenant-key.md) as needed, continue with the following steps:
 
@@ -41,9 +37,6 @@ After [planning, creating, and configuring your tenant key](plan-implement-tenan
 For more information about the life-cycle operations supported for your tenant key, see [Operations for your Azure Information Protection tenant key](./operations-tenant-key.md).
 
 If your organization requires on-premises protection for highly sensitive content, configure [DKE protection](plan-implement-tenant-key.md#double-key-encryption-dke) (unified labeling client only).
-
-If you need on-premises protection and are using the classic client, configure [HYOK protection](configure-adrms-restrictions.md) instead.
- 
 
 ## Start using your tenant key
 
@@ -61,7 +54,7 @@ For more information, see [Activating the protection service from Azure Informat
 Usage logging logs every transaction that the Azure Rights Management service performs.
 
 Depending on your key management method, logging information may include details about your tenant key. The following image shows an example from a log file displayed in Excel, where the **KeyVaultDecryptRequest** and **KeyVaultSignRequest** request types show that the tenant key is being used.
-    
+
 ![log file in Excel where tenant key is being used](./media/RMS_Logging.png)
-    
+
 For more information about usage logging, see [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md).

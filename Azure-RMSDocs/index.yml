@@ -112,7 +112,7 @@ landingContent:
           - text: About built-in labeling and the AIP client
             url: ./rms-client/use-client.md
       - linkListType: tutorial
-        links: 
+        links:
           - text: Migrate to the unified labeling solution
             url: tutorial-migrating-to-ul.md
       - linkListType: how-to-guide
