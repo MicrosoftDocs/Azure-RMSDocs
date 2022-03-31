@@ -104,7 +104,7 @@ For example, if you initially want only administrators in the “IT department�
 Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fbb99ded-32a0-45f1-b038-38b519009503"
 ```
 
-Note that for this configuration option, you must specify a group; you cannot specify individual users. To obtain the object ID for the group, you can use Azure AD PowerShell—for example, for version 1.0 of the module, use the [Get-MsolGroup](/powershell/msonline/v1/get-msolgroup) command. Or, you can copy the **Object ID** value of the group from the Azure portal.
+Note that for this configuration option, you must specify a group; you cannot specify individual users. To obtain the object ID for the group, you can use Azure AD PowerShell—for example, for version 1.0 of the module, use the [Get-MsolGroup](/powershell/module/msonline/get-msolgroup) command. Or, you can copy the **Object ID** value of the group from the Azure portal.
 
 Alternatively, if you want to ensure that only users who are correctly licensed to use Azure Information Protection can protect content:
 
