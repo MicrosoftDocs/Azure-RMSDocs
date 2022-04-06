@@ -264,9 +264,7 @@ If necessary, add permitted operations by using [Update-AzKeyVaultKey](/powershe
 
 Keys stored in the Azure Key Vault each have a key ID.
 
-The key ID is a URL that contains the name of the key vault, the keys container, the name of the key, and the key version. For example:
-
-**https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**.
+The key ID is a URL that contains the name of the key vault, the keys container, the name of the key, and the key version. For example: `https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333`
 
 Configure Azure Information Protection to use your key by specifying its key vault URL.
 

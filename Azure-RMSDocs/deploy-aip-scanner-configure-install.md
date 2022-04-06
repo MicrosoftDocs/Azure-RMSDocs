@@ -682,7 +682,7 @@ Supported cmdlets for the scanner include:
 
 - [Get-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-mipscannercontentscanjob)
 
-- [Get-MIPScannerRepository](/powershell/module/azureinformationprotection/get-mipscannerrepository)
+- [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository)
 
 - [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
@@ -696,7 +696,7 @@ Supported cmdlets for the scanner include:
 
 - [Remove-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-mipscannercontentscanjob)
 
-- [Remove-MIPScannerRepository](/powershell/module/azureinformationprotection/remove-mipscannerrepository)
+- [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)
 
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
@@ -710,7 +710,7 @@ Supported cmdlets for the scanner include:
 
 - [Set-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-mipscannercontentscanjob)
 
-- [Set-MIPScannerRepository](/powershell/module/azureinformationprotection/set-mipscannerrepository)
+- [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
 
