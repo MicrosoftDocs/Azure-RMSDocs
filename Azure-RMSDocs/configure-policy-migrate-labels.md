@@ -38,7 +38,7 @@ Before you read the instructions to migrate your labels, you might find the foll
 
 - [What's the difference between labeling with the built-in labeling solution and labeling with the AIP Office add-in?](rms-client/use-client.md#whats-the-difference-between-labeling-with-the-built-in-labeling-solution-and-labeling-with-the-aip-office-add-in)
 
-- [When is the right time to migrate my labels to unified labeling?](/previous-versions/azure/information-protection/faqs-classic#when-is-the-right-time-to-migrate-my-labels-to-unified-labeling)
+- [When is the right time to migrate my labels to unified labeling?](/previous-versions/azure/information-protection/faqs-classic.md#when-is-the-right-time-to-migrate-my-labels-to-unified-labeling)
 
 ## Administrative roles that support the unified labeling platform
 
