@@ -289,8 +289,6 @@ After you've migrated your labels in the Azure portal, continue managing them in
 
 - Blog post: [Understanding Unified Labeling Migration](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)
 
-- Webinar: [Unified labeling recording, deck, and FAQs](https://github.com/nihendle/MIP-Comp/tree/master/MIP/Webinars/Unified%20Labeling%20Migration)
-
 **About sensitivity labels**:
 
 - [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels)
