@@ -66,9 +66,6 @@ If you don't have a content scan job yet, perform [Configure initial settings in
     -  **Treat recommended labeling as automatic**. Set to **On**.
     
     - **Configure repositories**. Ensure that there is at least one repository defined. 
-    
-        > [!TIP]
-        > If you've added additional repositories to your content scan job after having scanned your network in [Add risky repositories to a content scan job](#add-risky-repositories-to-a-content-scan-job),  you can select to see them listed here now. 
 
     - **Enforce**. Set to **On**
     
