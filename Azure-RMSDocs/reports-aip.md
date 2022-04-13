@@ -27,7 +27,11 @@ ms.custom: admin
 
 # Analytics and central reporting for Azure Information Protection (public preview)
 
-[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
+> [!NOTE]
+> **Are you looking for [Microsoft Information Protection](/microsoft-365/compliance/information-protection)?** The Azure Information Protection unified labeling client is [currently in maintenance mode](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613). We recommend enabling Microsoft Information Protection's built-in labeling for your Office 365 applications. [Learn more](/microsoft-365/compliance/sensitivity-labels#sensitivity-labels-and-azure-information-protection).
+>
+> As of **March 18, 2022**, we are sunsetting the AIP audit log and analytics, with a full retirement date of **September 31, 2022**. For more information, see [Removed and retired services](removed-sunset-services.md).
+>
 
 This article describes how to use Azure Information Protection (AIP) analytics for central reporting, which can help you track the adoption of your labels that classify and protect your organization's data.
 
@@ -46,8 +50,6 @@ AIP analytics also enable you to do perform the following steps:
 The data that you see is aggregated from your Azure Information Protection clients and scanners, from Microsoft Defender for Cloud Apps, and from [protection usage logs](log-analyze-usage.md). The reports use [Azure Monitor](/azure/log-analytics/log-analytics-overview) to store the data in a Log Analytics workspace that your organization owns.
 
 Azure Information Protection analytics for central reporting is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
-
-As of **March 18, 2022**, we are sunsetting the AIP audit log and analytics, with a full retirement date of **September 31, 2022**. For more information, see [Removed and retired services](removed-sunset-services.md).
 
 
 ## AIP reporting data

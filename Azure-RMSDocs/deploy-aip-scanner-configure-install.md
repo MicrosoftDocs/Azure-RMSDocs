@@ -81,10 +81,6 @@ Before you install the scanner, or upgrade it from an older general availability
 
 1. [Create a scanner cluster](#create-a-scanner-cluster). This cluster defines your scanner and is used to identify the scanner instance, such as during installation, upgrades, and other processes.
 
-1. (Optional) [Scan your network for risky repositories](#create-a-network-scan-job-public-preview). Create a network scan job to scan a specified IP address or range, and provide a list of risky repositories that may contain sensitive content you'll want to secure.
-
-    Run your network scan job and then [analyze any risky repositories found](#analyze-risky-repositories-found-public-preview).
-
 1. [Create a content scan job](#create-a-content-scan-job) to define the repositories you want to scan.
 
 ### Create a scanner cluster
@@ -106,10 +102,12 @@ Before you install the scanner, or upgrade it from an older general availability
 Add one or more of the repositories found to a content scan job to scan them for sensitive content.
 
 > [!NOTE]
-> The Azure Information Protection network discovery feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 >
-> We are sunsetting the Azure Information Protection analytics as of March 18, 2022, with full retirement is scheduled for September 30, 2022. We are also sunsetting the scanner's network discovery features on the same timeline. For more information, see [Removed and retired services](removed-sunset-services.md#azure-information-protection-analytics).
+> We are sunsetting the Azure Information Protection analytics as of March 18, 2022, with full retirement is scheduled for September 30, 2022.
 >
+> We are also sunsetting the scanner's network discovery features on the same timeline. Network scan jobs are currently only available for those customers who have existing Log Analytics workspaces to store [AIP audit logs](reports-aip.md). For more information, see [Removed and retired services](removed-sunset-services.md#azure-information-protection-analytics).
+>
+> The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 The following table describes prerequisites required for the network discovery service:
 
