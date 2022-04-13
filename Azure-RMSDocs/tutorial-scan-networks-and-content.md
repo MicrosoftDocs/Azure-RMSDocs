@@ -30,7 +30,6 @@ The Azure Information Protection client provides an on-premises scanner that ena
 In this tutorial, you'll learn how to:
 
 > [!div class="checklist"]
-> * Create a network scan job and scan for risky repositories
 > * Add any risky repositories found to a content scan job
 > * Scan your content shares for sensitive content and understand results found
 

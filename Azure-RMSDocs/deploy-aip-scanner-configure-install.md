@@ -81,10 +81,6 @@ Before you install the scanner, or upgrade it from an older general availability
 
 1. [Create a scanner cluster](#create-a-scanner-cluster). This cluster defines your scanner and is used to identify the scanner instance, such as during installation, upgrades, and other processes.
 
-1. (Optional) [Scan your network for risky repositories](#create-a-network-scan-job-public-preview). Create a network scan job to scan a specified IP address or range, and provide a list of risky repositories that may contain sensitive content you'll want to secure.
-
-    Run your network scan job and then [analyze any risky repositories found](#analyze-risky-repositories-found-public-preview).
-
 1. [Create a content scan job](#create-a-content-scan-job) to define the repositories you want to scan.
 
 ### Create a scanner cluster
