@@ -678,7 +678,7 @@ Supported cmdlets for the scanner include:
 
 - [Get-MIPNetworkDiscoveryStatus](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)
 
-- [Get-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-mipscannercontentscanjob)
+- Get-MIPScannerContentScanJob
 
 - [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository)
 
@@ -692,7 +692,7 @@ Supported cmdlets for the scanner include:
 
 - [Install-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)
 
-- [Remove-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-mipscannercontentscanjob)
+- Remove-MIPScannerContentScanJob
 
 - [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)
 
@@ -706,7 +706,7 @@ Supported cmdlets for the scanner include:
 
 - [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
 
-- [Set-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-mipscannercontentscanjob)
+- Set-MIPScannerContentScanJob
 
 - [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)
 
