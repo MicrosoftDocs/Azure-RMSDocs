@@ -107,7 +107,7 @@ For instructions how to use the document tracking site, see [Track and revoke yo
 
 To be able to track and revoke a document, it must first be registered with the document tracking site. This action occurs when users select the **Track and revoke** option from File Explorer or their Office apps when they use the Azure Information Protection client.
 
-If you label and protect files for users by using the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. For example:
+If you label and protect files for users by using the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. For example:
 
 ```ps
 Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
