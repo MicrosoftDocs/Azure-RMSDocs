@@ -82,7 +82,7 @@ This means that for a period of time, some clients will be using Azure Informati
 
 1. Make a note of this group's object ID using one of the following methods:
 
-    - **Use Azure AD PowerShell.** For example, for version 1.0 of the module, use the [Get-MsolGroup](/powershell/msonline/v1/Get-MsolGroup) command. 
+    - **Use Azure AD PowerShell.** For example, for version 1.0 of the module, use the [Get-MsolGroup]/powershell/module/msonline/get-msolgroup) command. 
     - **Copy the object ID** of the group from the Azure portal.
 
 1. Configure this group for onboarding controls to allow only people in this group to use Azure Rights Management to protect content. 
