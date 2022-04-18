@@ -71,7 +71,7 @@ You can change the default protection level that the Microsoft Information Prote
 
 ### File sizes supported for protection
 
-Starting in Microsoft Information Protection SDK 1.6, the maximum default file size is 6 GB. This setting can be overridden if required. Lesser defaults for legacy Office platforms still apply.
+Starting in Microsoft Information Protection SDK 1.6, the default maximum file size is 6 GB. This setting can be overridden if required. Lesser defaults for legacy Office platforms still apply.
 
 
 - **For Office files:**
@@ -81,6 +81,10 @@ Starting in Microsoft Information Protection SDK 1.6, the maximum default file s
   | Word 2007 (supported by AD RMS only)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016                         | 32-bit: 512 MB<br /><br />64-bit: 512 MB                                                                                   |
   | Excel 2007 (supported by AD RMS only)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016                     | 32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                                            |
   | PowerPoint 2007 (supported by AD RMS only)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
+
+- **Power BI**
+
+The Microsoft Information Protection SDK supports labeling and protection of Power BI *.pbix* files. These files can be labeled via the File SDK and can be opened in Power BI Desktop or uploaded to the Power BI service.
 
 - **For all other files**:
 
