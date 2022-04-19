@@ -119,7 +119,7 @@ These files change their file name extension after they're natively protected by
 
 Files that cannot be natively protected have a **.pfile** file name extension after they are generically protected by Rights Management.
 
-For more information, see the [File types supported](./rms-client/client-admin-guide-file-types.md).
+For more information, see the [File types supported](/previous-versions/azure/information-protection/rms-client/client-admin-guide-file-types).
 
 ### Microsoft 365 app support
 

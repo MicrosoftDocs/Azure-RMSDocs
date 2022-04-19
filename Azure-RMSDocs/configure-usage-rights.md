@@ -138,7 +138,7 @@ Similarly, by default, unprotected [Office documents](https://support.office.com
 
 Alternatively, you can change this protection inheritance of documents by specifying `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true` with [Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell). Use this configuration when you don't need to retain the original protection for the document after the user is authenticated. When recipients open the email message, the document is not protected.
 
-If you do need an attached document to retain the original protection, see [Secure document collaboration by using Azure Information Protection](secure-collaboration-documents.md).
+If you do need an attached document to retain the original protection, see [Secure document collaboration by using Azure Information Protection](/previous-versions/azure/information-protection/secure-collaboration-documents).
 
 > [!NOTE]
 > If you see references to **DecryptAttachmentFromPortal**, this parameter is now deprecated for [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration). Unless you have previously set this parameter, it is not available.
@@ -192,7 +192,7 @@ The default use license validity period for a tenant is 30 days and you can conf
 
 - When you configure a sensitivity label, the use license validity period takes its value from the **Allow offline access** setting. 
     
-    For more information and guidance to configure this setting, see the [Information about the protection settings](configure-policy-protection.md#information-about-the-protection-settings) table from the instructions how to configure a label for Rights Management protection.
+    For more information and guidance to configure this setting, see the [Information about the protection settings](/previous-versions/azure/information-protection/configure-policy-protection#information-about-the-protection-settings) table from the instructions how to configure a label for Rights Management protection.
 
 - When you configure a template by using PowerShell, the use license validity period takes its value from the *LicenseValidityDuration* parameter in the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) and [Add-AipServiceTemplate](/powershell/module/aipservice/add-aipservicetemplate) cmdlets.
     

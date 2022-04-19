@@ -80,11 +80,11 @@ You should now see **Rights Management is not activated** and the option to acti
 
 #### To deactivate Rights Management from the Azure portal
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](/previous-versions/azure/information-protection/configure-policy#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
     
     For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
     
-    If you haven't accessed the Azure Information Protection pane before, see the one-time [additional steps](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time) to add this pane to the portal.
+    If you haven't accessed the Azure Information Protection pane before, see the one-time [additional steps](/previous-versions/azure/information-protection/configure-policy#to-access-the-azure-information-protection-pane-for-the-first-time) to add this pane to the portal.
 
 2. Select **Protection activation** from the menu options. 
 
@@ -122,7 +122,7 @@ If you are also using AD RMS, do not select the **Activate** option. When the Az
 
 ### Step 1: Configure your Azure Information Protection policy for classification and labeling - without protection
 
-From the **Azure Information Protection - Labels** pane, view and configure the labels that do not include options for data protection. For more information about how to configure the labels and policy settings, see [Configuring Azure Information Protection policy](configure-policy.md).
+From the **Azure Information Protection - Labels** pane, view and configure the labels that do not include options for data protection. For more information about how to configure the labels and policy settings, see [Configuring Azure Information Protection policy](/previous-versions/azure/information-protection/configure-policy).
 
 ### Step 2: Start planning for migration
 
@@ -131,5 +131,3 @@ See the migration guidance: [Migrating from AD RMS to Azure Information Protecti
 ### Step 3: Configure labels for protection
 
 After you have activated the Azure Rights Management service as part of the migration process, you can configure labels for data protection. However, if you migrate users in batches, make sure that labels that apply protection are scoped to migrated users only.
-
-

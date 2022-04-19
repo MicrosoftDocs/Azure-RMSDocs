@@ -87,7 +87,7 @@ For the Office applications, Word, Excel, and PowerPoint:
     
     - Your computer must be restarted to complete the installation.
     
-For more information about how to install the Azure Information Protection client, see [Download and install the Azure Information Protection client](install-client-app.md).
+For more information about how to install the Azure Information Protection client, see [Download and install the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/install-client-app).
 
 ## Using File Explorer to track or revoke the document
 
@@ -120,7 +120,7 @@ After you have registered the protected document by using your Office apps or Fi
 ## Other instructions
 More how-to instructions from the Azure Information Protection user guide:
 
-- [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
+- [What do you want to do?](/previous-versions/azure/information-protection/rms-client/client-user-guide#what-do-you-want-to-do)
 
 ## Additional information for administrators    
-See [Configuring and using document tracking for Azure Information Protection](client-admin-guide-document-tracking.md) from the [admin guide](client-admin-guide.md).
+See [Configuring and using document tracking for Azure Information Protection](client-admin-guide-document-tracking.md) from the [admin guide](/previous-versions/azure/information-protection/rms-client/client-admin-guide).

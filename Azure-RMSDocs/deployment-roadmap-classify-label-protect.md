@@ -36,7 +36,7 @@ Labels can also apply protection, simplifying this step for your users.
 
 > [!TIP]
 > Alternatively, you may be looking for one of the following articles:
-> - [AIP roadmap for data protection only](deployment-roadmap-protect-only.md)
+> - [AIP roadmap for data protection only](/previous-versions/azure/information-protection/deployment-roadmap-protect-only)
 > - [How-to guides for common scenarios that use Azure Information Protection](how-to-guides.md)
 > - [Azure Information Protection release roadmap](information-support.md#information-about-new-releases-and-updates)
 
@@ -117,7 +117,7 @@ Perform the following steps:
     - Customizing headers, footers, or watermarks
     - Recommended and automatic labeling
 
-    For more information, see [Admin Guide: Custom configurations](rms-client/client-admin-guide-customizations.md).
+    For more information, see [Admin Guide: Custom configurations](/previous-versions/azure/information-protection/rms-client/client-admin-guide-customizations).
      
     > [!TIP]
     > If you've configured labels for automatic labeling, run the [Azure Information Protection scanner](deploy-aip-scanner-manage.md) again on your local data stores in discovery mode and to match your policy. 

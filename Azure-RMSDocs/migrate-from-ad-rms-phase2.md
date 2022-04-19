@@ -128,7 +128,7 @@ Open a PowerShell session and run the following commands:
 
 Because the templates that you imported have a default state of **Archived**, you must change this state to be **Published** if you want users to be able to use these templates with the Azure Rights Management service.
 
-Templates that you import from AD RMS look and behave just like custom templates that you can create in the Azure portal. To change imported templates to be published so that users can see them and select them from applications, see [Configuring and managing templates for Azure Information Protection](./configure-policy-templates.md).
+Templates that you import from AD RMS look and behave just like custom templates that you can create in the Azure portal. To change imported templates to be published so that users can see them and select them from applications, see [Configuring and managing templates for Azure Information Protection](/previous-versions/azure/information-protection/configure-policy-templates).
 
 In addition to publishing your newly imported templates, there are just two important changes for the templates that you might need to make before you continue with the migration. For a more consistent experience for users during the migration process, do not make additional changes to the imported templates and do not publish the two default templates that come with Azure Information Protection, or create new templates at this time. Instead, wait until the migration process is complete and you have deprovisioned the AD RMS servers.
 
@@ -162,7 +162,7 @@ If you're not sure whether your AD RMS templates include the ANYONE group, you c
 
 You can easily add external users to templates when you convert these templates to labels in the Azure portal. Then, on the **Add permissions** pane, choose **Enter details** to manually specify the email addresses for these users.
 
-For more information about this configuration, see [How to configure a label for Rights Management protection](./configure-policy-protection.md).
+For more information about this configuration, see [How to configure a label for Rights Management protection](/previous-versions/azure/information-protection/configure-policy-protection).
 
 #### Sample Windows PowerShell script to identify AD RMS templates that include the ANYONE group
 

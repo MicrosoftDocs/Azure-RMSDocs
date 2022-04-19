@@ -281,7 +281,7 @@ Now that the RMS connector is installed and configured, and your servers are con
 
 To make this easy for users, deploy the Azure Information Protection client, which installs an add-on for Office and adds new right-click options to File Explorer. 
 
-For more information, see the [Azure Information Protection client administrator guide](./rms-client/client-admin-guide.md).
+For more information, see the [Azure Information Protection client administrator guide](/previous-versions/azure/information-protection/rms-client/client-admin-guide).
 
 Note that if you configure departmental templates that you want to use with Exchange transport rules or Windows Server FCI, the scope configuration must include the application compatibility option such that the **Show this template to all users when the applications do not support user identity** check box is selected.
 
