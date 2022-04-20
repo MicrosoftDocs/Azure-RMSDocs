@@ -78,11 +78,11 @@ This procedure describes how to activate the Rights Management protection servic
 
 This procedure describes how to activate the Rights Management protection service (Azure RMS) from the Azure portal.
 
-1. Go to and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
+1. Go to and [sign in to the Azure portal](/previous-versions/azure/information-protection/configure-policy#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
 
     For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
 
-    If you haven't accessed the Azure Information Protection pane before, see the one-time [additional steps](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time) to add this pane to the portal.
+    If you haven't accessed the Azure Information Protection pane before, see the one-time [additional steps](/previous-versions/azure/information-protection/configure-policy#to-access-the-azure-information-protection-pane-for-the-first-time) to add this pane to the portal.
 
     To open the Azure Information Protection pane, you must have either an [Azure Information Protection Premium plan](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection) or an [Office 365 plan that includes Rights Management](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M). If you have one of these subscriptions but see a message that a valid subscription cannot be found, [contact Microsoft Support](information-support.md#to-contact-microsoft-support) or use your standard support channels.
 
@@ -125,9 +125,8 @@ When you use these onboarding controls, all users in the organization can always
 
 ## Next steps
 
-When the protection service is activated for your organization, use the [Azure Information Protection deployment roadmap](deployment-roadmap.md) to check whether there are other configuration steps that you might need to do before you roll out Azure Information Protection to users and administrators.
+When the protection service is activated for your organization, use the [Azure Information Protection deployment roadmap](/azure/information-protection/deployment-roadmap-classify-label-protect) to check whether there are other configuration steps that you might need to do before you roll out Azure Information Protection to users and administrators.
 
-For example, you might want to use [templates](configure-policy-templates.md) to make it easier for users to apply protection to files, connect your on-premises servers to use the protection service by installing the [Rights Management connector](deploy-rms-connector.md), and deploy the [Azure Information Protection client](./rms-client/aip-client.md) that supports protecting all file types on all devices. 
+For example, you might want to use [templates](/previous-versions/azure/information-protection/configure-policy-templates) to make it easier for users to apply protection to files, connect your on-premises servers to use the protection service by installing the [Rights Management connector](deploy-rms-connector.md), and deploy the [Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/aip-client) that supports protecting all file types on all devices. 
 
 Office services, such as Exchange Online and Microsoft SharePoint require additional configuration before you can use their Information Rights Management (IRM) features. For information about how your applications work with the protection service, Azure Rights Management, see [How applications support the Azure Rights Management service](applications-support.md).
-

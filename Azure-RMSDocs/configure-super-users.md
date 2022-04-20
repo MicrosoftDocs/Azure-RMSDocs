@@ -95,7 +95,7 @@ Often, somebody who is assigned a super user for Azure Rights Management will ne
 
 If you are using classification and protection, you can also use the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) to apply a new label that doesn't apply protection, or remove the label that applied protection.
 
-For more information about these cmdlets, see [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) from the Azure Information Protection client admin guide.
+For more information about these cmdlets, see [Using PowerShell with the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
 
 > [!NOTE]
 > The AzureInformationProtection module is different from and supplements the [AIPService PowerShell module](administer-powershell.md) that manages the Azure Rights Management service for Azure Information Protection.
