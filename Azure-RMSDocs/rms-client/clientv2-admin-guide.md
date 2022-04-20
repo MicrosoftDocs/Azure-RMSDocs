@@ -231,8 +231,8 @@ If you've already installed the client, see the following for additional informa
 
 - [Customizations](clientv2-admin-guide-customizations.md)
 
-- [Client files and usage logging](client-admin-guide-files-and-logging.md)
+- [Client files and usage logging](/previous-versions/azure/information-protection/rms-client/client-admin-guide-files-and-logging)
 
-- [File types supported](client-admin-guide-file-types.md)
+- [File types supported](/previous-versions/azure/information-protection/rms-client/client-admin-guide-file-types)
 
-- [PowerShell commands](client-admin-guide-powershell.md)
+- [PowerShell commands](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell)

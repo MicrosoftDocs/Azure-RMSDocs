@@ -33,7 +33,7 @@ The most successful deployments are those that identify specific use cases that 
 ## Common scenarios
 
 - [Discover your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
-- [Automatically protect users' emails that are sent outside the organization](configure-exo-rules.md)
+- [Automatically protect users' emails that are sent outside the organization](/previous-versions/azure/information-protection/configure-exo-rules)
 - [Use my own key to protect my organization's data](plan-implement-tenant-key.md)
 
 > [!NOTE]
@@ -60,4 +60,4 @@ For more information and step-by-step instructions, see:
 
 ## Next steps
 
-Don't see your scenario listed? Check the [Deployment roadmaps](deployment-roadmap.md) for a full list of planning and deployment steps.
+Don't see your scenario listed? Check the [Deployment roadmaps](/azure/information-protection/deployment-roadmap-classify-label-protect) for a full list of planning and deployment steps.

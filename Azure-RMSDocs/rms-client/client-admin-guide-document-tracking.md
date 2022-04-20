@@ -128,11 +128,10 @@ For more information about usage logging, see [Logging and analyzing the protect
 ## Next steps
 Now that you've configured the document tracking site for the Azure Information Protection client, see the following for additional information that you might need to support this client:
 
-- [Customizations](client-admin-guide-customizations.md)
+- [Customizations](/previous-versions/azure/information-protection/rms-client/client-admin-guide-customizations)
 
-- [Client files and usage logging](client-admin-guide-files-and-logging.md)
+- [Client files and usage logging](/previous-versions/azure/information-protection/rms-client/client-admin-guide-files-and-logging)
 
-- [File types supported](client-admin-guide-file-types.md)
+- [File types supported](/previous-versions/azure/information-protection/rms-client/client-admin-guide-file-types)
 
-- [PowerShell commands](client-admin-guide-powershell.md)
-
+- [PowerShell commands](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell)
