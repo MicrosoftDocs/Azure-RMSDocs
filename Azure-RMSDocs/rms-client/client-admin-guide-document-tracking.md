@@ -28,6 +28,9 @@ ms.custom: admin
 
 # Admin Guide: Configuring and using document tracking for Rights Management Service protection with the legacy tracking portal
 
+> [!NOTE]
+> The legacy Azure Information Protection doc tracking site is supported only for the classic client, and not for the unified labeling client. For more information, see [Removed and retired services](../removed-sunset-services#the-aip-classic-client.md).
+
 
 If you have a subscription that supports document tracking, the document tracking site is enabled by default for all users in your organization. Document tracking provides information for users and administrators about when a protected document was accessed and if necessary, a tracked document can be revoked.
 
