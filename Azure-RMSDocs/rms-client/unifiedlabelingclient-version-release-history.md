@@ -174,7 +174,7 @@ Co-authoring for Office apps enables multiple users to edit documents that are l
 
 This version of the unified labeling client and scanner supports DKE labels with user-defined permissions in Word, Excel, and PowerPoint.
 
-For more information, see [Azure Information Protection tenant keys](../plan-implement-tenant-key.md#double-key-encryption-dke) and [Double Key Encryption for Microsoft 365](/microsoft-365/compliance/double-key-encryption).
+For more information, see [Azure Information Protection tenant keys](../plan-implement-tenant-key.md#double-key-encryption-dke) and [Microsoft Purview Double Key Encryption](/microsoft-365/compliance/double-key-encryption).
 
 ### Client usage logging in the Windows event log
 
