@@ -79,7 +79,7 @@ Deploy the Azure Information Protection unified labeling client if you are using
 
 - You want to view protected documents when a built-in application to display the file is not installed or cannot open these documents.
 
-Example showing the Office add-in for the Azure Information Protection unified labeling client, displaying the new **Sensitivity** button on the ribbon and the optional Azure Information Protection bar:
+Example showing the Office add-in for the Azure Information Protection unified labeling client, displaying the **Sensitivity** button on the ribbon and the optional Azure Information Protection bar:
 
 ![Azure Information Protection bar with default policy](../media/v2word2016-calloutsv2.png)
 
