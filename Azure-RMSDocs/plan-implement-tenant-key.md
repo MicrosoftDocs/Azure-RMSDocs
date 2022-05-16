@@ -94,7 +94,7 @@ See any of the following articles for more details about specific types of keys:
 
 - [Getting started with tenant root keys](get-started-tenant-root-keys.md)
 - [Bring your own key (BYOK) details for Azure Information Protection](byok-price-restrictions.md)
-- [Double Key Encryption for Microsoft 365](/microsoft-365/compliance/double-key-encryption)
+- [Microsoft Purview Double Key Encryption](/microsoft-365/compliance/double-key-encryption)
 
 
 If you are migrating across tenants, such as after a company merger, we recommend that you read our [blog post on mergers and spinoffs](https://techcommunity.microsoft.com/t5/microsoft-security-and/mergers-and-spinoffs/ba-p/910455) for more information.
