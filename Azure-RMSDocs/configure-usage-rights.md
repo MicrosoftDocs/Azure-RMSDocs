@@ -188,11 +188,11 @@ For the duration of the use license, the user is not reauthenticated or reauthor
 
 When documents and email messages are protected by using a label or a template that defines the protection settings, you can change these settings in your label or template without having to reprotect the content. If the user has already accessed the content, the changes take effect after their use license has expired. However, when users apply custom permissions (also known as an ad-hoc rights policy) and these permissions need to change after the document or email is protected, that content must be protected again with the new permissions. Custom permissions for an email message are implemented with the Do Not Forward option.
 
-The default use license validity period for a tenant is 30 days and you can configure this value by using the PowerShell cmdlet, [Set-AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime). You can configure a more restrictive setting for when protection is applied by using a sensitivity label or template:
+The default use license validity period for a tenant is 30 days and you can configure this value by using the PowerShell cmdlet, [Set-AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime). You can configure a more restrictive setting for when protection is applied by using a sensitivity label that's configured to assign permissions now, or a template:
 
 - When you configure a sensitivity label, the use license validity period takes its value from the **Allow offline access** setting. 
     
-    For more information and guidance to configure this setting, see the [Information about the protection settings](/previous-versions/azure/information-protection/configure-policy-protection#information-about-the-protection-settings) table from the instructions how to configure a label for Rights Management protection.
+    For more information and guidance to configure this setting for a sensitivity label, see the recommendations table from the instructions [how to configure permissions now for a sensitiivty label](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now).
 
 - When you configure a template by using PowerShell, the use license validity period takes its value from the *LicenseValidityDuration* parameter in the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) and [Add-AipServiceTemplate](/powershell/module/aipservice/add-aipservicetemplate) cmdlets.
     
