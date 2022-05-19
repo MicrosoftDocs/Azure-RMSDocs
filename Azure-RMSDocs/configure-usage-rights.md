@@ -192,7 +192,7 @@ The default use license validity period for a tenant is 30 days and you can conf
 
 - When you configure a sensitivity label, the use license validity period takes its value from the **Allow offline access** setting. 
     
-    For more information and guidance to configure this setting for a sensitivity label, see the recommendations table from the instructions [how to configure permissions now for a sensitiivty label](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now).
+    For more information and guidance to configure this setting for a sensitivity label, see the recommendations table from the instructions how to [configure permissions now](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now) for a sensitivit label.
 
 - When you configure a template by using PowerShell, the use license validity period takes its value from the *LicenseValidityDuration* parameter in the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) and [Add-AipServiceTemplate](/powershell/module/aipservice/add-aipservicetemplate) cmdlets.
     
