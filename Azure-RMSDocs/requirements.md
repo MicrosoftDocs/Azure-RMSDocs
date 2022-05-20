@@ -137,6 +137,8 @@ The Azure Information Protection clients can label and protect documents and ema
 
 - **Microsoft 365 Apps for Enterprise**
 
+- **Office Professional Plus 2021**
+
 - **Office Professional Plus 2019**
 
 - **Office Professional Plus 2016**
