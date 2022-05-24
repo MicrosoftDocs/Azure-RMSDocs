@@ -1,6 +1,6 @@
 ---
 title: Labeling and Protection - Microsoft Information Protection SDK
-description:  Microsoft Information Protection Software Development kit operations.
+description:  Microsoft Purview Information Protection Software Development kit operations.
 author: msmbaldwin
 ms.author: mbaldwin
 ms.date: 08/20/2020
@@ -11,7 +11,7 @@ ms.service: information-protection
 
 # Labeling and pre-existing protection in Microsoft Information Protection SDK
 
-Microsoft Information Protection supports labeling and classification services. Users and applications can apply the following to supported files:
+Microsoft Purview Information Protection supports labeling and classification services. Users and applications can apply the following to supported files:
 
 - Classification only through application of a label
 

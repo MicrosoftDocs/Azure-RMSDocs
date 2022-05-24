@@ -1,6 +1,6 @@
 ---
 title: class ConditionData 
-description: Documents the conditiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the conditiondata::undefined class of the Microsoft Purview Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

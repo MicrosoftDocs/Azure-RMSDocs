@@ -1,6 +1,6 @@
 ---
 title: class StorageDelegate::StorageSettings 
-description: Documents the storagedelegate::storagesettings class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the storagedelegate::storagesettings class of the Microsoft Purview Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

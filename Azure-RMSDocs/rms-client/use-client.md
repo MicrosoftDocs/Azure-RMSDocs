@@ -2,7 +2,7 @@
 # required metadata
 
 title: Learn about built-in labeling and the AIP unified labeling client - AIP
-description: Learn about the differences between Azure Information Protection and Microsoft Information Protection's built-in labeling solution for Office apps.
+description: Learn about the differences between Azure Information Protection and Microsoft Purview Information Protection's built-in labeling solution for Office apps.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -40,7 +40,7 @@ As we continue to bring the customer labeling and protection experience to built
 
 Additionally, the we have retired the **Azure Information Protection classic client** and **Label Management** in the Azure Portal as of **March 31, 2022**. No further support is provided for the classic client and maintenance versions will no longer be released.
 
-All current Azure Information Protection classic client customers must [migrate to the Microsoft Information Protection unified labeling platform](../tutorial-migrating-to-ul.md) and upgrade to the [unified labeling client](../rms-client/clientv2-admin-guide-install.md).
+All current Azure Information Protection classic client customers must [migrate to the Microsoft Purview Information Protection unified labeling platform](../tutorial-migrating-to-ul.md) and upgrade to the [unified labeling client](../rms-client/clientv2-admin-guide-install.md).
 
 We also recommend that you use the default labeling that's built-in to Office apps for the extra stability, better performance, and latest features. If you have the AIP unified labeling client installed, you'll need to [disable the AIP add-in for Office apps](/microsoft-365/compliance/sensitivity-labels-aip#how-to-disable-the-aip-add-in-to-use-built-in-labeling).
 
@@ -60,7 +60,7 @@ Whether you are an existing customer with AIP unified labeling deployed, or a ne
 
 Built-in labeling provides more stability than the AIP add-in for Office apps, better performance, and the latest features, such as advanced classifiers.
 
-- **Both built-in labeling and the unified labeling client use sensitivity labels and label policies downloaded from the Microsoft 365 compliance center.** These label and policy settings can be shared by macOS, iOS, and Android.
+- **Both built-in labeling and the unified labeling client use sensitivity labels and label policies downloaded from the Microsoft Purview compliance portal.** These label and policy settings can be shared by macOS, iOS, and Android.
 
 - **Built-in labeling requires no extra installations** and provides automatic updates. You only need a Windows computer with Microsoft 365 applications minimum version 1910. In contrast, the AIP unified labeling client requires a separate [installation](https://www.microsoft.com/download/details.aspx?id=53018) on each client machine.
 
@@ -74,7 +74,7 @@ Use the AIP add-in for your Office apps only if:
 You may also want to use the AIP unified labeling client for [labeling features used outside of Office apps](#labeling-functionality-outside-of-office-applications).
 
 
-### Updates for Microsoft Information Protection in Microsoft 365
+### Updates for Microsoft Purview Information Protection in Microsoft 365
 
 Microsoft 365 is constantly developing new features for sensitivity labels with built-in labeling. We recommend checking for updates in the following locations:
 
@@ -107,18 +107,18 @@ For more information, see [Admin Guide: Install the Azure Information Protection
 
 Yes. We recommend that you use the built-in labeling solution for Office apps to benefit from features such as automatic updates and increased performance. You can also deploy the AIP unified labeling client across your network to use the additional File Explorer support, PowerShell cmdlets, and the AIP Viewer.
 
-### What's the difference between Azure Information Protection and Microsoft Information Protection?
+### What's the difference between Azure Information Protection and Microsoft Purview Information Protection?
 
-[Microsoft Information Protection](https://www.microsoft.com/security/business/information-protection) is a framework for products and integrated capabilities that help you protect your organization's sensitive information. Azure Information Protection is only one of the Microsoft services that provide information protection.
+[Microsoft Purview Information Protection](https://www.microsoft.com/security/business/information-protection) is a framework for products and integrated capabilities that help you protect your organization's sensitive information. Azure Information Protection is only one of the Microsoft services that provide information protection.
 
-**Microsoft Information Protection products include**:
+**Microsoft Purview Information Protection products include**:
 
 - Microsoft 365 Information Protection, such as Microsoft 365 DLP
 - Windows Information Protection
 - Microsoft Defender for Cloud Apps
 - Azure Information Protection
 
-**Microsoft Information Protection capabilities include**:
+**Microsoft Purview Information Protection capabilities include**:
 
 - Unified label management
 - End-user labeling experiences built into Office apps
@@ -130,7 +130,7 @@ For more information, see [Information protection capabilities to help protect y
 
 ### What's the difference between labeling with the built-in labeling solution and labeling with the AIP Office add-in?
 
-Unlike the AIP Office add-in, the built-in labeling solution provided by [Microsoft Information Protection](https://www.microsoft.com/security/business/information-protection) is part of your Office applications, and will be maintained as part of the Office update strategy.
+Unlike the AIP Office add-in, the built-in labeling solution provided by [Microsoft Purview Information Protection](https://www.microsoft.com/security/business/information-protection) is part of your Office applications, and will be maintained as part of the Office update strategy.
 
 From a functional perspective, the [feature parity section](/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office) in the Microsoft 365 compliance documentation to understand the similarities and differences between the two services.
 

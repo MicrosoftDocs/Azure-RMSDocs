@@ -1,6 +1,6 @@
 ---
 title: class FileProfile 
-description: Documents the fileprofile::undefined class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the fileprofile::undefined class of the Microsoft Purview Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
@@ -9,7 +9,7 @@ ms.date: 11/15/2021
 ---
 
 # class FileProfile 
-FileProfile class is the root class for using the Microsoft Information Protection operations.
+FileProfile class is the root class for using the Microsoft Purview Information Protection operations.
 A typical application will only need one Profile.
   
 ## Summary

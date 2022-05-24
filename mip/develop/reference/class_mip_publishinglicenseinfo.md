@@ -1,6 +1,6 @@
 ---
 title: class PublishingLicenseInfo 
-description: Documents the publishinglicenseinfo::undefined class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the publishinglicenseinfo::undefined class of the Microsoft Purview Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

@@ -1,6 +1,6 @@
 ---
 title: class StorageDelegate 
-description: Documents the storagedelegate::undefined class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the storagedelegate::undefined class of the Microsoft Purview Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

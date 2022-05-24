@@ -1,6 +1,6 @@
 ---
 title: class xml::XmlNode 
-description: Documents the xml::xmlnode class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the xml::xmlnode class of the Microsoft Purview Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

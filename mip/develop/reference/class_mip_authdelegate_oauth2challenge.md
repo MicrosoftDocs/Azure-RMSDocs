@@ -1,6 +1,6 @@
 ---
 title: class AuthDelegate::OAuth2Challenge 
-description: Documents the authdelegate::oauth2challenge class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the authdelegate::oauth2challenge class of the Microsoft Purview Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

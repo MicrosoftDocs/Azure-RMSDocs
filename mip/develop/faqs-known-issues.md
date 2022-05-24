@@ -1,6 +1,6 @@
 ---
 title: FAQs and known issues - Microsoft Information Projection SDK.
-description: Microsoft Information Protection (MIP) SDK FAQs and troubleshooting guidance for issues and errors.
+description: Microsoft Purview Information Protection SDK FAQs and troubleshooting guidance for issues and errors.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: troubleshooting
@@ -8,7 +8,7 @@ ms.date: 03/05/2019
 ms.author: mbaldwin
 ---
 
-# Microsoft Information Protection (MIP) SDK FAQs and issues
+# Microsoft Purview Information Protection SDK FAQs and issues
 
 This article provides answers to Frequently Asked Questions (FAQs), and troubleshooting guidance for known issues and common errors.
 
@@ -102,7 +102,7 @@ The Microsoft Information Protection SDK uses FIPS 140-2 approved ciphers but no
 
 > File format not supported
 
-This exception results from attempting to protect or label a PDF file that has been digitally signed or password protected. See [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) for more information on protecting and labeling PDF files.
+This exception results from attempting to protect or label a PDF file that has been digitally signed or password protected. See [New support for PDF encryption with Microsoft Purview Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) for more information on protecting and labeling PDF files.
 
 ### Error: "Failed to parse the acquired Compliance Policy"  
 
@@ -134,4 +134,4 @@ Your application does not have the required runtime, or was not built as Release
 
 > "ProxyAuthenticatonError: Proxy authentication is unsupported"
 
-The MIP SDK doesn't support the use of authenticated proxies. To fix this message, proxy administrators should set the Microsoft Information Protection service endpoints to bypass the proxy. A list of those endpoints is available at the [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges) page. MIP SDK requires that `*.protection.outlook.com` (row 9) and the Azure Information Protection service endpoints (row 73) bypass proxy authentication.
+The MIP SDK doesn't support the use of authenticated proxies. To fix this message, proxy administrators should set the Microsoft Purview Information Protection service endpoints to bypass the proxy. A list of those endpoints is available at the [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges) page. MIP SDK requires that `*.protection.outlook.com` (row 9) and the Azure Information Protection service endpoints (row 73) bypass proxy authentication.

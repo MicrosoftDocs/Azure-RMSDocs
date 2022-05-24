@@ -1,6 +1,6 @@
 ---
 title: class ContentLabel 
-description: Documents the contentlabel::undefined class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the contentlabel::undefined class of the Microsoft Purview Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
@@ -9,7 +9,7 @@ ms.date: 11/15/2021
 ---
 
 # class ContentLabel 
-Abstraction for a Microsoft Information Protection label that is applied to a piece of content, typically a document.
+Abstraction for a Microsoft Purview Information Protection label that is applied to a piece of content, typically a document.
 It also holds properties for a specific applied label instance.
   
 ## Summary

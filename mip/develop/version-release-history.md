@@ -1,5 +1,5 @@
 ---
-title: Microsoft Information Protection (MIP) SDK version release history and support policy
+title: Microsoft Purview Information Protection SDK version release history and support policy
 description: Version release history and change notes for the MIP SDK.
 author: msmbaldwin
 ms.service: information-protection
@@ -9,7 +9,7 @@ ms.author: mbaldwin
 
 ---
 
-# Microsoft Information Protection (MIP) Software Development Kit (SDK) version release history and support policy
+# Microsoft Purview Information Protection Software Development Kit (SDK) version release history and support policy
 
 ## Servicing
 
@@ -22,7 +22,7 @@ Preview versions shouldn't be deployed in production. Instead, use the latest pr
 Use the following information to see what’s new or changed for a supported release. The most current release is listed first.
 
 > [!NOTE]
-> For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
+> For technical support, please visit the [Stack Overflow Microsoft Purview Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
 
 ## Downloads for Previous Versions
 

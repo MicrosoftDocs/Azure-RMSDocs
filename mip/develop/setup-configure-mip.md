@@ -1,5 +1,5 @@
 ---
-title: Microsoft Information Protection (MIP) SDK setup and configuration
+title: Microsoft Purview Information Protection SDK setup and configuration
 description: Provides the setup and configuration prerequisites, in order to use applications built with the Microsoft Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
@@ -10,7 +10,7 @@ ms.custom: has-adal-ref, mode-api
 #Customer intent: As a an application developer, I want to learn about setup and configuration, so that I can use the SDK to build applications.
 ---
 
-# Microsoft Information Protection (MIP) SDK setup and configuration
+# Microsoft Purview Information Protection SDK setup and configuration
 
 The Quickstart and Tutorial articles are centered around building applications that use the MIP SDK libraries and APIs. This article shows you how to set up and configure your Microsoft 365 subscription and client workstation, in preparation for using the SDK.
 
@@ -168,8 +168,8 @@ To register an application account in Azure AD for use with the Quickstarts and 
    - Click **Add permissions** to save.
 
 5. Repeat step #4, but this time when you get to the **Select an API** page, you'll need to search for the API.
-   - On the **Select an API** page, click **APIs my organization uses** then in the search box type "**Microsoft Information Protection Sync Service**", and select it.
-   - On the **Microsoft Information Protection Sync Service** API page, click **Delegated permissions**.
+   - On the **Select an API** page, click **APIs my organization uses** then in the search box type "**Microsoft Purview Information Protection Sync Service**", and select it.
+   - On the **Microsoft Purview Information Protection Sync Service** API page, click **Delegated permissions**.
    - Expand the **UnifiedPolicy** node and check **UnifiedPolicy.User.Read**
    - Click **Add permissions** to save.
 

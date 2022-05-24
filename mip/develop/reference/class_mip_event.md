@@ -1,6 +1,6 @@
 ---
 title: class Event 
-description: Documents the event::undefined class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the event::undefined class of the Microsoft Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

@@ -9,7 +9,7 @@ ms.date: 01/28/2019
 ---
 # MIP SDK for C++ Reference
 
-The Microsoft Information Protection (MIP) SDK for C++ allows developers to manage and apply data protection policies to data and other digital assets.
+The Microsoft Purview Information Protection SDK for C++ allows developers to manage and apply data protection policies to data and other digital assets.
 
 The MIP SDK for C++ includes [Enumerations and structures](mip-enums-and-structs.md), and the following classes:
 
@@ -43,7 +43,7 @@ The MIP SDK for C++ includes [Enumerations and structures](mip-enums-and-structs
 [class ConsentDeniedError](class_mip_consentdeniederror.md)  |  An operation that required consent from user was not granted consent.
 [class ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md)  |  Settings used to create a ProtectionHandler to consume existing content.
 [class ContentFormatNotSupportedError](class_mip_contentformatnotsupportederror.md)  |  Content Format is not supported.
-[class ContentLabel](class_mip_contentlabel.md)  |  Abstraction for a Microsoft Information Protection label that is applied to a piece of content, typically a document.
+[class ContentLabel](class_mip_contentlabel.md)  |  Abstraction for a Microsoft Purview Information Protection label that is applied to a piece of content, typically a document.
 [class ContentMarkingActionData](class_mip_contentmarkingactiondata.md)  | Not yet documented.
 [class CustomAction](class_mip_customaction.md)  |  CustomAction is a generic action class that captures all the sub-properties of the action as a property bag. The caller is responsible to understand the meaning of the action.
 [class DelegationLicense](class_mip_delegationlicense.md)  | Not yet documented.
@@ -61,7 +61,7 @@ The MIP SDK for C++ includes [Enumerations and structures](mip-enums-and-structs
 [class FileHandler](class_mip_filehandler.md)  |  Interface for all file handling functions.
 [class FileInspector](class_mip_fileinspector.md)  | Not yet documented.
 [class FileIOError](class_mip_fileioerror.md)  |  File IO error.
-[class FileProfile](class_mip_fileprofile.md)  |  FileProfile class is the root class for using the Microsoft Information Protection operations.
+[class FileProfile](class_mip_fileprofile.md)  |  FileProfile class is the root class for using the Microsoft Purview Information Protection operations.
 [class GetTemplatesSettings](class_mip_gettemplatessettings.md)  |  Settings to use when obtaining templates.
 [class HttpDelegate](class_mip_httpdelegate.md)  |  Interface for overriding HTTP handling.
 [class HttpOperation](class_mip_httpoperation.md)  |  Interface that describes a single HTTP operation, implemented by client app when overriding HttpDelegate.
@@ -72,7 +72,7 @@ The MIP SDK for C++ includes [Enumerations and structures](mip-enums-and-structs
 [class InternalError](class_mip_internalerror.md)  |  Internal error. This error is thrown when something unexpected happens during execution.
 [class JustificationRequiredError](class_mip_justificationrequirederror.md)  | Not yet documented.
 [class JustifyAction](class_mip_justifyaction.md)  |  Justify Action requires providing a justification to a label downgrade and setting the response in the execution state.
-[class Label](class_mip_label.md)  |  Abstraction for a single Microsoft Information Protection label.
+[class Label](class_mip_label.md)  |  Abstraction for a single Microsoft Purview Information Protection label.
 [class LabelActionData](class_mip_labelactiondata.md)  | Not yet documented.
 [class LabelDisabledError](class_mip_labeldisablederror.md)  |  Label is disabled or inactive.
 [class LabelGroupData](class_mip_labelgroupdata.md)  | Not yet documented.
@@ -109,7 +109,7 @@ The MIP SDK for C++ includes [Enumerations and structures](mip-enums-and-structs
 [class PolicyEngine](class_mip_policyengine.md)  |  This class provides an interface for all engine functions.
 [class PolicyHandler](class_mip_policyhandler.md)  |  This class provides an interface for all policy handler functions on a file.
 [class PolicyPackageData](class_mip_policypackagedata.md)  | Not yet documented.
-[class PolicyProfile](class_mip_policyprofile.md)  |  PolicyProfile class is the root class for using the Microsoft Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
+[class PolicyProfile](class_mip_policyprofile.md)  |  PolicyProfile class is the root class for using the Microsoft Purview Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
 [class PolicyRuleData](class_mip_policyruledata.md)  | Not yet documented.
 [class PrivilegedRequiredError](class_mip_privilegedrequirederror.md)  |  Current label was assigned as a privileged operation (The equivalent to an administrator operation), therefore it can't be overriden.
 [class PropertyData](class_mip_propertydata.md)  | Not yet documented.

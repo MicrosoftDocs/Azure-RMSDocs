@@ -1,6 +1,6 @@
 ---
 title: class GetTemplatesSettings 
-description: Documents the gettemplatessettings::undefined class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the gettemplatessettings::undefined class of the Microsoft Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

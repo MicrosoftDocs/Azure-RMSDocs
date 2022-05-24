@@ -1,6 +1,6 @@
 ---
 title: class Label 
-description: Documents the label::undefined class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the label::undefined class of the Microsoft Purview Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
@@ -9,7 +9,7 @@ ms.date: 11/15/2021
 ---
 
 # class Label 
-Abstraction for a single Microsoft Information Protection label.
+Abstraction for a single Microsoft Purview Information Protection label.
   
 ## Summary
  Members                        | Descriptions                                

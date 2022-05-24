@@ -1,6 +1,6 @@
 ---
 title: class PolicyPackageData 
-description: Documents the policypackagedata::undefined class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the policypackagedata::undefined class of the Microsoft Purview Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

@@ -245,4 +245,4 @@ See also:
 - [How applications support the Azure Rights Management service](./applications-support.md).
 - [Configuring applications for Azure Rights Management](configure-applications.md).
 
-For the latest information about solutions that support the Azure Rights Management service and Azure Information Protection, see the blog post, [Microsoft Ignite 2019 – Microsoft Information Protection solutions Partner ecosystem showcase](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Microsoft-Ignite-2019-Microsoft-Information-Protection-solutions/ba-p/967024).
+For the latest information about solutions that support the Azure Rights Management service and Azure Information Protection, see the blog post, [Microsoft Ignite 2019 – Microsoft Purview Information Protection solutions Partner ecosystem showcase](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Microsoft-Ignite-2019-Microsoft-Information-Protection-solutions/ba-p/967024).

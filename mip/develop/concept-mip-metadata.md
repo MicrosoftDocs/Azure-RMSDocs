@@ -17,7 +17,7 @@ Labels in the Microsoft Information Protection SDK are applied to information to
 
 `DefinedPrefix_ElementType_GlobalIdentifier_AttributeName`
 
-When applied to data labeled with Microsoft Information Protection, the result is:
+When applied to data labeled with Microsoft Purview Information Protection, the result is:
 
 `MSIP_Label_GUID_Enabled = true`
 

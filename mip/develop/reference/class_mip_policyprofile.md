@@ -1,6 +1,6 @@
 ---
 title: class PolicyProfile 
-description: Documents the policyprofile::undefined class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the policyprofile::undefined class of the Microsoft Purview Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
@@ -9,7 +9,7 @@ ms.date: 11/15/2021
 ---
 
 # class PolicyProfile 
-PolicyProfile class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile but it can create multiple profiles if needed.
+PolicyProfile class is the root class for using the Microsoft Purview Information Protection operations. A typical application will only need one [PolicyProfile but it can create multiple profiles if needed.
   
 ## Summary
  Members                        | Descriptions                                
