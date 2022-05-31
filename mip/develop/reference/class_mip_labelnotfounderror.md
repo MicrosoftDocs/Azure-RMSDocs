@@ -1,15 +1,15 @@
 ---
 title: class LabelNotFoundError 
 description: Documents the labelnotfounderror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class LabelNotFoundError 
-Label ID is not recognized.
+[Label](undefined) ID is not recognized.
   
 ## Summary
  Members                        | Descriptions                                
@@ -17,4 +17,3 @@ Label ID is not recognized.
   
 ## Members
 _Not documented yet._
-_

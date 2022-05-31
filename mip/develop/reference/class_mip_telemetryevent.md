@@ -1,11 +1,11 @@
 ---
 title: class TelemetryEvent 
 description: Documents the telemetryevent::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class TelemetryEvent 
@@ -32,7 +32,7 @@ public std::shared_ptr\<EventProperty\> GetProperty(const std::string& name)  | 
 Get event name.
 
   
-**Returns**: Event name
+**Returns**: [Event](undefined) name
   
 ### GetLevel function
 Get level of event, indicating whether it is considered necessary service data (NSD) or not.
@@ -44,7 +44,7 @@ Get level of event, indicating whether it is considered necessary service data (
 Get event start time.
 
   
-**Returns**: Event start time
+**Returns**: [Event](undefined) start time
   
 ### AddProperty function
 Add a property to the event.
@@ -123,7 +123,7 @@ An audit-only property contains sensitive information and must not be written to
 Get all event properties.
 
   
-**Returns**: Event properties
+**Returns**: [Event](undefined) properties
   
 ### GetProperty function
 Get property with the given name, if any.
@@ -134,4 +134,4 @@ Parameters:
 
 
   
-**Returns**: Property with the given name, or nullptr if nonene
+**Returns**: Property with the given name, or nullptr if none

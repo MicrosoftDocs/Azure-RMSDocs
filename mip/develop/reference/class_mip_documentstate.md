@@ -1,11 +1,11 @@
 ---
 title: class DocumentState 
 description: Documents the documentstate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class DocumentState 
@@ -88,4 +88,4 @@ Registered Key:Value pairs Sender: Email Id for the sender Recipients: Represent
 Return a time point to the last time the document was modified.
 
   
-**Returns**: The last modified time of the documents time point.t.
+**Returns**: The last modified time of the documents time point.

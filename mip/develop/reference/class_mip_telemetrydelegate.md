@@ -1,11 +1,11 @@
 ---
 title: class TelemetryDelegate 
 description: Documents the telemetrydelegate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class TelemetryDelegate 
@@ -15,6 +15,7 @@ A class that defines the interface to the MIP SDK telemetry notifications.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public void WriteEvent(const std::shared_ptr\<TelemetryEvent\>& event)  |  Log a diagnostic event.
+public void WriteEvent(const std::shared_ptr\<TelemetryEvent\>& event, const mip::EventContext& eventContext)  |  Log a diagnostic event.
 public void Flush()  |  Flush any queued events (e.g. due to shutdown)
   
 ## Members
@@ -23,9 +24,20 @@ public void Flush()  |  Flush any queued events (e.g. due to shutdown)
 Log a diagnostic event.
 
 Parameters:  
-* **event**: Event to be logged
+* **event**: [Event](undefined) to be logged
+
+
+  
+### WriteEvent function
+Log a diagnostic event.
+
+Parameters:  
+* **event**: [Event](undefined) to be logged 
+
+
+* **eventContext**: [EventContext](#classEventContext) associated with event
 
 
   
 ### Flush function
-Flush any queued events (e.g. due to shutdown)n)
+Flush any queued events (e.g. due to shutdown)

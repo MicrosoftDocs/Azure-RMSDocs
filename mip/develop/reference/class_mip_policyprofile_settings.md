@@ -1,15 +1,15 @@
 ---
 title: class PolicyProfile::Settings 
 description: Documents the policyprofile::settings class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class PolicyProfile::Settings 
-Settings used by [PolicyProfile during its creation and throughout its lifetime.
+[Settings](undefined) used by [PolicyProfile](undefined) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
@@ -20,7 +20,7 @@ public const std::shared_ptr\<PolicyProfile::Observer\>& GetObserver() const  | 
 public std::shared_ptr\<MipContext\> GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Override default HTTP stack with client's own.
-public std::shared_ptr\<StorageDelegate\> GetStorageDelegate() const  |  Get the StorageDelegate (if any) provided by the application.
+public std::shared_ptr\<StorageDelegate\> GetStorageDelegate() const  |  Get the [StorageDelegate](undefined) (if any) provided by the application.
 public void SetStorageDelegate(const std::shared_ptr\<StorageDelegate\>& storageDelegate)  |  Override default storage cache with client's own implementation.
 public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
 public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Override default asynchronous task dispatching handling with client's own.
@@ -44,7 +44,7 @@ Parameters:
 * **cacheStorageType**: Store any cached state in memory or on disk 
 
 
-* **observer**: A class implementing the PolicyProfile::Observer interface. Can be nullptr.
+* **observer**: A class implementing the [PolicyProfile::Observer](undefined) interface. Can be nullptr.
 
 
   
@@ -81,16 +81,16 @@ Parameters:
 
   
 ### GetStorageDelegate function
-Get the StorageDelegate (if any) provided by the application.
+Get the [StorageDelegate](undefined) (if any) provided by the application.
 
   
-**Returns**: StorageDelegate to be used for cache operations
+**Returns**: [StorageDelegate](undefined) to be used for cache operations
   
 ### SetStorageDelegate function
 Override default storage cache with client's own implementation.
 
 Parameters:  
-* **storageDelegate**: StorageDelegate implemented by client application
+* **storageDelegate**: [StorageDelegate](undefined) implemented by client application
 
 
   
@@ -147,4 +147,3 @@ Parameters:
   
 ### ~Settings function
 _Not documented yet._
-_

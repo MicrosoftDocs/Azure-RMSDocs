@@ -1,15 +1,15 @@
 ---
 title: class HttpResponse 
 description: Documents the httpresponse::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class HttpResponse 
-Interface that describes a single HTTP response, implemented by client app when overriding HttpDelegate.
+Interface that describes a single HTTP response, implemented by client app when overriding [HttpDelegate](undefined).
   
 ## Summary
  Members                        | Descriptions                                
@@ -26,7 +26,7 @@ Gets response ID.
 
   
 **Returns**: Response ID
-The corresponding HttpRequest will have had the same ID
+The corresponding [HttpRequest](undefined) will have had the same ID
   
 ### GetStatusCode function
 Get response status code.
@@ -44,4 +44,4 @@ Get request body.
 Get request headers.
 
   
-**Returns**: Request headersrs
+**Returns**: Request headers

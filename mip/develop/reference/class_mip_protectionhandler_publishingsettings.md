@@ -1,21 +1,22 @@
 ---
 title: class ProtectionHandler::PublishingSettings 
 description: Documents the protectionhandler::publishingsettings class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class ProtectionHandler::PublishingSettings 
-Settings used to create a ProtectionHandler to protect new content.
+Settings used to create a [ProtectionHandler](undefined) to protect new content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public PublishingSettings(const std::shared_ptr\<ProtectionDescriptor\>& protectionDescriptor)  |  ProtectionHandler::Settings constructor for creating a new engine.
 public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  | _Not yet documented._
+public std::shared_ptr\<ProtectionHandler\> GetProtectionHandlerForRepublish() const  |  Gets protection handler for republishing scenario.
 public bool GetIsAuditedExtractionAllowed() const  |  Gets whether or not non-MIP-aware applications are allowed to open protected content.
 public void SetIsAuditedExtractionAllowed(bool isAuditedExtractionAllowed)  |  Sets whether or not non-MIP-aware applications are allowed to open protected content.
 public bool GetIsDeprecatedAlgorithmPreferred() const  |  Gets whether or not deprecated crypto algorithm (ECB) is preferred for backwards compatibility.
@@ -27,7 +28,10 @@ public void SetPublishingFormatJson(bool isPublishingFormatJson)  |  whether or 
 public void SetPreLicenseUserEmail(const std::string& preLicenseUserEmail)  |  Sets pre-license user.
 public const std::string& GetPreLicenseUserEmail() const  |  Gets the pre-license user.
 public void SetPublishingLicenseForRepublish(const std::vector\<uint8_t\>& serializedPublishingLicense)  |  Sets the serialized publishing license for republishing.
+public void SetProtectionHandlerForRepublish(const std::shared_ptr\<ProtectionHandler\>& protectionHandler)  |  Sets the protectionHandler to generating of publishing license for offline republishing.
 public const std::vector\<uint8_t\>& GetPublishingLicenseForRepublish() const  |  Gets the serialized republishing license.
+public void SetRequestPreLicense(std::shared_ptr\<PublishingUseLicenseRequest\> publishingUseLicenseRequest)  |  Setting this will cause the publishing request to include a pre-license.
+public std::shared_ptr\<PublishingUseLicenseRequest\> GetPreLicenseRequest() const  |  Gets the pre-license request.
 public std::string GetApplicationScenarioId() const  |  Gets the scenario Id provided by the application which is used to correlation with the server.
 public void SetApplicationScenarioId(std::string applicationScenarioId)  |  Sets the scenario Id provided by the application.
   
@@ -44,6 +48,9 @@ Parameters:
 ### GetProtectionDescriptor function
 _Not documented yet._
 
+  
+### GetProtectionHandlerForRepublish function
+Gets protection handler for republishing scenario.
   
 ### GetIsAuditedExtractionAllowed function
 Gets whether or not non-MIP-aware applications are allowed to open protected content.
@@ -127,11 +134,35 @@ Parameters:
 
 This is used for republishing
   
+### SetProtectionHandlerForRepublish function
+Sets the protectionHandler to generating of publishing license for offline republishing.
+
+Parameters:  
+* **protectionHandler**: Protection Handler
+
+
+This is used for offline republishing
+  
 ### GetPublishingLicenseForRepublish function
 Gets the serialized republishing license.
 
   
 **Returns**: The serialized republishing license
+  
+### SetRequestPreLicense function
+Setting this will cause the publishing request to include a pre-license.
+
+Parameters:  
+* **publishingUseLicenseRequest**: The pre-license request
+
+
+If no pre-license request is specified, a pre-license will not be obtained
+  
+### GetPreLicenseRequest function
+Gets the pre-license request.
+
+  
+**Returns**: Pre-license request
   
 ### GetApplicationScenarioId function
 Gets the scenario Id provided by the application which is used to correlation with the server.
@@ -144,6 +175,4 @@ Sets the scenario Id provided by the application.
 
 Parameters:  
 * **The**: application scenario Id
-
-
 

@@ -1,11 +1,11 @@
 ---
 title: class EventProperty 
 description: Documents the eventproperty::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class EventProperty 
@@ -65,4 +65,4 @@ Get property value (int64)
 Get property value (string)
 
   
-**Returns**: Property valueue
+**Returns**: Property value

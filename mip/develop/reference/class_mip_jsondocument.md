@@ -1,15 +1,15 @@
 ---
 title: class JsonDocument 
 description: Documents the jsondocument::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class JsonDocument 
-JsonDocument abstraction class.
+[JsonDocument](undefined) abstraction class.
   
 ## Summary
  Members                        | Descriptions                                
@@ -36,4 +36,4 @@ Create an Object value to later be added as a child of this document.
 Create an Array value to later be added as a child of this document.
 
   
-**Returns**: An Array value to later be added as a child of this document.t.
+**Returns**: An Array value to later be added as a child of this document.

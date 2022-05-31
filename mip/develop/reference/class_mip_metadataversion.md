@@ -1,20 +1,20 @@
 ---
 title: class MetadataVersion 
 description: Documents the metadataversion::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class MetadataVersion 
-Interface for a MetadataVersion. [MetadataVersion determines which metadata is active and how it is processed.
+Interface for a [MetadataVersion](undefined). [MetadataVersion](undefined) determines which metadata is active and how it is processed.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MetadataVersion(uint32_t version, MetadataVersionFormat flags)  |  MetadataVersion constructor.
+public MetadataVersion(uint32_t version, MetadataVersionFormat flags)  |  [MetadataVersion](undefined) constructor.
 public virtual uint32_t GetValue() const  |  Get the numerical version.
 public virtual bool HasFlag(MetadataVersionFormat flag) const  |  Get whether a specific flag is set.
 public virtual MetadataVersionFormat GetFlags() const  |  Get the flags that define how metadata is processed for a given version.
@@ -22,7 +22,7 @@ public virtual MetadataVersionFormat GetFlags() const  |  Get the flags that def
 ## Members
   
 ### MetadataVersion function
-MetadataVersion constructor.
+[MetadataVersion](undefined) constructor.
 
 Parameters:  
 * **version**: numerical version to use for metadata actions 
@@ -48,4 +48,4 @@ Get whether a specific flag is set.
 Get the flags that define how metadata is processed for a given version.
 
   
-**Returns**: The flags that specify how the metadata is processed.d.
+**Returns**: The flags that specify how the metadata is processed.

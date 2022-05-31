@@ -1,11 +1,11 @@
 ---
 title: class MsgInspector 
 description: Documents the msginspector::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class MsgInspector 
@@ -34,7 +34,7 @@ Get body encoding code page, relevant for txt, html body formats.
   
 **Returns**: An unsigned code page. 
   
-**See also**: [/windows/win32/intl/code-page-identifiers]/windows/win32/intl/code-page-identifiers)
+**See also**: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers)
   
 ### GetBodyType function
 Get body type.
@@ -58,4 +58,4 @@ Get file types,.
 Get the file stream.
 
   
-**Returns**: A shared ptr to the file stream.m.
+**Returns**: A shared ptr to the file stream.

@@ -1,11 +1,11 @@
 ---
 title: class RemoveContentHeaderAction 
 description: Documents the removecontentheaderaction::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class RemoveContentHeaderAction 
@@ -22,4 +22,4 @@ public const std::vector\<std::string\>& GetUIElementNames()  |  Gets a list of 
 Gets a list of names that should be used to find the UI elements that should be removed.
 
   
-**Returns**: A list of ui element names.s.
+**Returns**: A list of ui element names.

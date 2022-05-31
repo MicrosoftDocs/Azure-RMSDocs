@@ -1,11 +1,11 @@
 ---
 title: class SyncFilePolicyData 
 description: Documents the syncfilepolicydata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class SyncFilePolicyData 
@@ -44,4 +44,3 @@ _Not documented yet._
   
 ### ~SyncFilePolicyData function
 _Not documented yet._
-_

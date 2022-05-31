@@ -1,11 +1,11 @@
 ---
 title: class ProtectAdhocDkAction 
 description: Documents the protectadhocdkaction::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class ProtectAdhocDkAction 
@@ -22,4 +22,4 @@ public const std::string& GetDoubleKeyEncryptionUrl() const  |  Get the double k
 Get the double key encryption Url.
 
   
-**Returns**: The double key encryption Url.l.
+**Returns**: The double key encryption Url.

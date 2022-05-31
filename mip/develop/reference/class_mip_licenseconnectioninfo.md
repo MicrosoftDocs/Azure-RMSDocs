@@ -1,11 +1,11 @@
 ---
 title: class LicenseConnectionInfo 
 description: Documents the licenseconnectioninfo::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class LicenseConnectionInfo 
@@ -29,4 +29,4 @@ Gets the extranet url.
 Gets the intranet url.
 
   
-**Returns**: The intranet urlrl
+**Returns**: The intranet url

@@ -1,11 +1,11 @@
 ---
 title: class DelegationLicenseSettings 
 description: Documents the delegationlicensesettings::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class DelegationLicenseSettings 
@@ -13,17 +13,17 @@ ms.date: 11/15/2021
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr\<const PublishingLicenseInfo\> GetLicenseInfo() const  |  Gets the PublishingLicenseInfo, the publishing license.
+public std::shared_ptr\<const PublishingLicenseInfo\> GetLicenseInfo() const  |  Gets the [PublishingLicenseInfo](undefined), the publishing license.
 public const std::vector\<std::string\>& GetUsers() const  |  Gets the list of users for the request.
 public bool GetAquireEndUserLicenses() const  |  Gets the boolean value that indicates whether or not to obtain end user license in addition to the delegate license.
   
 ## Members
   
 ### GetLicenseInfo function
-Gets the PublishingLicenseInfo, the publishing license.
+Gets the [PublishingLicenseInfo](undefined), the publishing license.
 
   
-**Returns**: The PublishingLicenseInfo
+**Returns**: The [PublishingLicenseInfo](undefined)
   
 ### GetUsers function
 Gets the list of users for the request.
@@ -35,4 +35,4 @@ Gets the list of users for the request.
 Gets the boolean value that indicates whether or not to obtain end user license in addition to the delegate license.
 
   
-**Returns**: Whether to aquire end user licenseses
+**Returns**: Whether to aquire end user licenses

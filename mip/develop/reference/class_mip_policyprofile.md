@@ -1,15 +1,15 @@
 ---
 title: class PolicyProfile 
 description: Documents the policyprofile::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class PolicyProfile 
-PolicyProfile class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile but it can create multiple profiles if needed.
+[PolicyProfile](undefined) class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile](undefined) but it can create multiple profiles if needed.
   
 ## Summary
  Members                        | Descriptions                                
@@ -40,7 +40,7 @@ Parameters:
 * **context**: a parameter that will be passed into the observer functions. 
 
 
-PolicyProfile::Observer will be called upon success or failure.
+[PolicyProfile::Observer](undefined) will be called upon success or failure.
   
 ### ListEngines function
 List of engines.
@@ -58,7 +58,7 @@ Parameters:
 * **context**: a parameter that will be forwarded opaquely to the observer functions. 
 
 
-PolicyProfile::Observer will be called upon success or failure.
+[PolicyProfile::Observer](undefined) will be called upon success or failure.
   
 ### UnloadEngine function
 Starts unloading the policy engine with the given ID.
@@ -75,10 +75,10 @@ Parameters:
 * **settings**: the mip::PolicyEngine::Settings object that specifies the engine's settings. 
 
 
-* **context**: a parameter that will be forwarded opaquely to the observer functions and optional HttpDelegate. 
+* **context**: a parameter that will be forwarded opaquely to the observer functions and optional [HttpDelegate](undefined). 
 
 
-PolicyProfile::Observer will be called upon success or failure.
+[PolicyProfile::Observer](undefined) will be called upon success or failure.
   
 ### AddEngine function
 Add a new policy engine to the profile.
@@ -87,12 +87,12 @@ Parameters:
 * **settings**: the mip::PolicyEngine::Settings object that specifies the engine's settings. 
 
 
-* **context**: a parameter that will be forwarded opaquely to the optional HttpDelegate
+* **context**: a parameter that will be forwarded opaquely to the optional [HttpDelegate](undefined)
 
 
 
   
-**Returns**: Newly created PolicyEngine
+**Returns**: Newly created [PolicyEngine](undefined)
   
 ### DeleteEngineAsync function
 Starts deleting the policy engine with the given ID. All data for the given profile will be deleted.
@@ -104,7 +104,7 @@ Parameters:
 * **context**: a parameter that will be passed into the observer functions. 
 
 
-PolicyProfile::Observer will be called upon success or failure.
+[PolicyProfile::Observer](undefined) will be called upon success or failure.
   
 ### DeleteEngine function
 Delete the policy engine with the given ID. All data for the given engine will be deleted.
@@ -124,4 +124,4 @@ Parameters:
 * **authDelegate**: Authentication callback that will be invoked
 
 
-MIP will not cache or do anything else with the value returned by the auth delegate. This function is recommended for applications that aren't "logged in" until after MIP requests an auth token. It allows an application to fetch a token before MIP actually requires one.e.
+MIP will not cache or do anything else with the value returned by the auth delegate. This function is recommended for applications that aren't "logged in" until after MIP requests an auth token. It allows an application to fetch a token before MIP actually requires one.

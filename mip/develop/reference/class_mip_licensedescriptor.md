@@ -1,11 +1,11 @@
 ---
 title: class LicenseDescriptor 
 description: Documents the licensedescriptor::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class LicenseDescriptor 
@@ -29,4 +29,4 @@ Gets the Id.
 Gets the descriptor items.
 
   
-**Returns**: The descriptor itemsms
+**Returns**: The descriptor items

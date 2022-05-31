@@ -1,11 +1,11 @@
 ---
 title: class LicenseApplicationData 
 description: Documents the licenseapplicationdata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class LicenseApplicationData 
@@ -29,4 +29,4 @@ Gets the application data name.
 Gets the application data value.
 
   
-**Returns**: The valueue
+**Returns**: The value

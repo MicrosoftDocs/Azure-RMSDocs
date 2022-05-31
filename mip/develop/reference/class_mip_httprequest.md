@@ -1,11 +1,11 @@
 ---
 title: class HttpRequest 
 description: Documents the httprequest::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class HttpRequest 
@@ -28,7 +28,7 @@ Gets request ID.
 
   
 **Returns**: Request ID
-The corresponding HttpResponse will have the same ID
+The corresponding [HttpResponse](undefined) will have the same ID
   
 ### GetRequestType function
 Get request type.
@@ -58,4 +58,4 @@ Get request headers.
 Get the minimum required TLS version for this request.
 
   
-**Returns**: The minimum required TLS version the Http transport provider should be secured with.h.
+**Returns**: The minimum required TLS version the Http transport provider should be secured with.

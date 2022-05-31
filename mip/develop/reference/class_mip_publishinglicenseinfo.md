@@ -1,11 +1,11 @@
 ---
 title: class PublishingLicenseInfo 
 description: Documents the publishinglicenseinfo::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class PublishingLicenseInfo 
@@ -28,12 +28,12 @@ public bool IsLicenseParsed() const  | _Not yet documented._
 public bool HasPreLicense() const  | _Not yet documented._
 public bool GetIsDoubleKeyLicense() const  | _Not yet documented._
 public const std::string& GetDoubleKeyAlgorithm() const  | _Not yet documented._
-public const std::string& GetOwner()  | _Not yet documented._
-public std::shared_ptr\<LicenseConnectionInfo\> GetConnectionInfo()  | _Not yet documented._
-public std::shared_ptr\<LicenseDescriptor\> GetDescriptor()  | _Not yet documented._
-public const std::string& GetReferralInfoUrl()  | _Not yet documented._
-public const std::vector\<std::shared_ptr\<LicenseApplicationData\>\>& GetSignedApplicationData()  | _Not yet documented._
-public const std::chrono::time_point\<std::chrono::system_clock\>& GetIssuedTime()  | _Not yet documented._
+public const std::string& GetOwner() const  | _Not yet documented._
+public std::shared_ptr\<LicenseConnectionInfo\> GetConnectionInfo() const  | _Not yet documented._
+public std::shared_ptr\<LicenseDescriptor\> GetDescriptor() const  | _Not yet documented._
+public const std::string& GetReferralInfoUrl() const  | _Not yet documented._
+public const std::vector\<std::shared_ptr\<LicenseApplicationData\>\>& GetSignedApplicationData() const  | _Not yet documented._
+public const std::chrono::time_point\<std::chrono::system_clock\>& GetIssuedTime() const  | _Not yet documented._
   
 ## Members
   
@@ -115,4 +115,3 @@ _Not documented yet._
   
 ### GetIssuedTime function
 _Not documented yet._
-_

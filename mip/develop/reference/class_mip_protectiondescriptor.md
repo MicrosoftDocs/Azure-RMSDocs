@@ -1,11 +1,11 @@
 ---
 title: class ProtectionDescriptor 
 description: Documents the protectiondescriptor::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class ProtectionDescriptor 
@@ -30,6 +30,7 @@ public std::string GetReferrer() const  |  Gets protection referrer address.
 public std::map\<std::string, std::string\> GetEncryptedAppData() const  |  Gets app-specific data that was encrypted.
 public std::map\<std::string, std::string\> GetSignedAppData() const  |  Gets the app-specific data that was signed.
 public std::string GetDoubleKeyUrl() const  |  Gets the double key url to be used for custom protection.
+public std::shared_ptr\<const std::vector\<uint8_t\>\> GetSerializedTemplate() const  |  Gets the serialized template, if any.
   
 ## Members
   
@@ -67,7 +68,7 @@ Gets the protection template ID, if any.
 Gets the label ID, if any.
 
   
-**Returns**: Label ID
+**Returns**: [Label](undefined) ID
 This property will be populated in ProtectionDescriptors for preexisting protected content & for UDP label based protection. It is a field populated by the server at the moment protected content is consumed. For UDP label based protection, its populated from appdata labelId value set by client.
   
 ### GetContentId function
@@ -81,7 +82,7 @@ Gets collection of users-to-rights mappings.
 
   
 **Returns**: Collection of users-to-rights mappings
-The value of the UserRights property will be empty if the current user doesn't have access to this information (that is, if the user is not the owner and does not have the VIEWRIGHTSDATA right).
+The value of the [UserRights](undefined) property will be empty if the current user doesn't have access to this information (that is, if the user is not the owner and does not have the VIEWRIGHTSDATA right).
   
 ### GetUserRoles function
 Gets collection of users-to-roles mappings.
@@ -119,18 +120,24 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A ProtectionHandler may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via[ProtectionDescriptor::GetSignedAppData
+A [ProtectionHandler](undefined) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](undefined)
   
 ### GetSignedAppData function
 Gets the app-specific data that was signed.
 
   
 **Returns**: App-specific data
-A ProtectionHandler may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via ProtectionDescriptor::GetEncryptedAppData
+A [ProtectionHandler](undefined) may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](undefined)
   
 ### GetDoubleKeyUrl function
 Gets the double key url to be used for custom protection.
 
   
 **Returns**: Double key url
-The double key URL that is used in custom requests to protect information with a second keyey
+The double key URL that is used in custom requests to protect information with a second key
+  
+### GetSerializedTemplate function
+Gets the serialized template, if any.
+
+  
+**Returns**: Serialized template

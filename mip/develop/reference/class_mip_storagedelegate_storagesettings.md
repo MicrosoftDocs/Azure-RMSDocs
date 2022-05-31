@@ -1,15 +1,15 @@
 ---
 title: class StorageDelegate::StorageSettings 
 description: Documents the storagedelegate::storagesettings class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class StorageDelegate::StorageSettings 
-Settings used by StorageDelegate.
+Settings used by [StorageDelegate](undefined).
   
 ## Summary
  Members                        | Descriptions                                
@@ -41,4 +41,4 @@ Gets whether remote storage is used or not.
 Gets whether the delegate supports in-memory storage.
 
   
-**Returns**: True if the delegate supports in-memory storage.e.
+**Returns**: True if the delegate supports in-memory storage.

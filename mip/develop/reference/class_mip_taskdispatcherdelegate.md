@@ -1,11 +1,11 @@
 ---
 title: class TaskDispatcherDelegate 
 description: Documents the taskdispatcherdelegate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class TaskDispatcherDelegate 
@@ -133,4 +133,4 @@ Parameters:
 **Returns**: True if task was successfully cancelled, else false
   
 ### CancelAllTasks function
-Cancel all background tasks.s.
+Cancel all background tasks.

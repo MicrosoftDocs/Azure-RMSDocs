@@ -1,11 +1,11 @@
 ---
 title: class ProtectByTemplateAction 
 description: Documents the protectbytemplateaction::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class ProtectByTemplateAction 
@@ -27,4 +27,3 @@ Get the protection template ID associated with the action.
   
 ### IsDoubleKey function
 _Not documented yet._
-_

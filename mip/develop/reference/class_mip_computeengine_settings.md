@@ -1,11 +1,11 @@
 ---
 title: class ComputeEngine::Settings 
 description: Documents the computeengine::settings class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class ComputeEngine::Settings 
@@ -119,6 +119,4 @@ Sets the logger context that will be opaquely passed to the logger delegate for 
 
 Parameters:  
 * **loggerContext**: The logger context
-
-
 

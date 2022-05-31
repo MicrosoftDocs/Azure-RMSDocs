@@ -1,11 +1,11 @@
 ---
 title: class SensitivityTypesRulePackage 
 description: Documents the sensitivitytypesrulepackage::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class SensitivityTypesRulePackage 
@@ -28,4 +28,4 @@ Get the Rule Package Id.
 Get the Rule Package.
 
   
-**Returns**: The Rule Packagege
+**Returns**: The Rule Package

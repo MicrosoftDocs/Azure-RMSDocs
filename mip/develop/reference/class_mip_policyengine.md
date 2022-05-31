@@ -1,11 +1,11 @@
 ---
 title: class PolicyEngine 
 description: Documents the policyengine::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class PolicyEngine 
@@ -14,11 +14,12 @@ This class provides an interface for all engine functions.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Get the policy engine Settings.
+public const Settings& GetSettings() const  |  Get the policy engine [Settings](undefined).
 public const std::vector\<std::shared_ptr\<Label\>\> ListSensitivityLabels(const std::vector\<std::string\>& contentFormats)  |  list the sensitivity labels associated with the policy engine according to the provided contentFormats.
 public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
 public const std::string& GetMoreInfoUrl() const  |  Provide a url for looking up more information about the policy/labels.
 public bool IsLabelingRequired(const std::string& contentFormat) const  |  Checks if the policy dictates that a content must be labeled or not according to the provided contentFormat.
+public bool IsDowngradeJustificationRequired() const  |  Checks if the policy dictates that given a label sensitivity level downgrade requires a justification message.
 public const std::shared_ptr\<Label\> GetDefaultSensitivityLabel(const std::string& contentFormat) const  |  Get the default sensitivity label according to the provided contentFormat.
 public std::shared_ptr\<Label\> GetLabelById(const std::string& id) const  |  Gets the label according to the provided id.
 public std::shared_ptr\<PolicyHandler\> CreatePolicyHandler(bool isAuditDiscoveryEnabled, bool isGetSensitivityLabelAuditDiscoveryEnabled)  |  Create a Policy Handler to execute policy-related functions on a file's execution state.
@@ -37,7 +38,7 @@ public bool HasWorkloadConsent(Workload workload) const  |  Checks if user has c
 ## Members
   
 ### GetSettings function
-Get the policy engine Settings.
+Get the policy engine [Settings](undefined).
 
   
 **Returns**: Policy engine settings. 
@@ -61,7 +62,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: PolicyEngine::Settings).
+**See also**: [PolicyEngine::Settings](undefined)).
   
 ### GetMoreInfoUrl function
 Provide a url for looking up more information about the policy/labels.
@@ -79,6 +80,12 @@ Parameters:
 
   
 **Returns**: True if labeling is mandatory, else false.
+  
+### IsDowngradeJustificationRequired function
+Checks if the policy dictates that given a label sensitivity level downgrade requires a justification message.
+
+  
+**Returns**: True if downgrade justification is required, else false.
   
 ### GetDefaultSensitivityLabel function
 Get the default sensitivity label according to the provided contentFormat.
@@ -100,7 +107,7 @@ Parameters:
 
 
   
-**Returns**: Label
+**Returns**: [Label](undefined)
   
 ### CreatePolicyHandler function
 Create a Policy Handler to execute policy-related functions on a file's execution state.
@@ -191,4 +198,4 @@ Gets the recommended WXP (Word, Excel, Powerpoint) metadata version, currently 0
 Checks if user has consented to specific workload,.
 
   
-**Returns**: Bool indicating consent.t.
+**Returns**: Bool indicating consent.

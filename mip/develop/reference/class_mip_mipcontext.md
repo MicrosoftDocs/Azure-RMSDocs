@@ -1,15 +1,15 @@
 ---
 title: class MipContext 
 description: Documents the mipcontext::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class MipContext 
-MipContext represents state that is shared across all profiles, engines, handlers.
+[MipContext](undefined) represents state that is shared across all profiles, engines, handlers.
   
 ## Summary
  Members                        | Descriptions                                
@@ -18,13 +18,14 @@ public void ShutDown()  |  Terminate MIP.
 public bool IsFeatureEnabled(FlightingFeature feature) const  |  Gets whether or not a feature is enabled.
 public const ApplicationInfo& GetApplicationInfo() const  |  Get application description.
 public const std::string& GetMipPath() const  |  Get file path for logs, caches, etc.
-public bool IsOfflineOnly()  |  Get offline-only setting.
+public bool IsOfflineOnly() const  |  Get offline-only setting.
 public LogLevel GetThresholdLogLevel() const  |  Get threshold log level.
-public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate()  |  Get logger implementation.
-public std::shared_ptr\<HttpDelegate\> GetHttpDelegate()  |  Get Http implementation.
-public LoggerDelegate* GetRawLoggerDelegate()  |  Get raw logger implementation.
-public std::shared_ptr\<StorageDelegate\> GetStorageDelegate()  |  Get Storage Delegate implementation if provided.
+public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Get logger implementation.
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get Http implementation.
+public LoggerDelegate* GetRawLoggerDelegate() const  |  Get raw logger implementation.
+public std::shared_ptr\<StorageDelegate\> GetStorageDelegate() const  |  Get Storage Delegate implementation if provided.
 public const std::map\<FlightingFeature, bool\>& GetFlightingFeatures() const  |  Get flighting feature set.
+public const std::shared_ptr\<const MipConfiguration\>& GetMipConfiguration() const  |  Gets the mip configuration that was used to create the [MipContext](undefined).
   
 ## Members
   
@@ -78,7 +79,7 @@ Get logger implementation.
 Get Http implementation.
 
   
-**Returns**: HttpDelegate
+**Returns**: [HttpDelegate](undefined)
   
 ### GetRawLoggerDelegate function
 Get raw logger implementation.
@@ -90,10 +91,16 @@ Get raw logger implementation.
 Get Storage Delegate implementation if provided.
 
   
-**Returns**: StorageDelegate
+**Returns**: [StorageDelegate](undefined)
   
 ### GetFlightingFeatures function
 Get flighting feature set.
 
   
-**Returns**: Flighting feature mapap
+**Returns**: Flighting feature map
+  
+### GetMipConfiguration function
+Gets the mip configuration that was used to create the [MipContext](undefined).
+
+  
+**Returns**: The mip configuration

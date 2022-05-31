@@ -1,11 +1,11 @@
 ---
 title: class JsonValue 
 description: Documents the jsonvalue::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class JsonValue 
@@ -37,7 +37,7 @@ public bool IsUint() const  |  Return true if the current value is an unsigned i
 public unsigned int GetUint() const  |  If the current value is a uint, return it.
 public bool IsNumber() const  |  Return true if the current value is a number of any type.
 public double GetDouble() const  |  If the current value is a double, return it.
-public int GetBool() const  |  If the current value is an bool, return it.
+public bool GetBool() const  |  If the current value is a bool, return it.
 public std::string SerializeToString() const  |  Serialize the value and all children as a string.
   
 ## Members
@@ -196,13 +196,13 @@ If the current value is a double, return it.
 **Returns**: The current value if it is a double.
   
 ### GetBool function
-If the current value is an bool, return it.
+If the current value is a bool, return it.
 
   
-**Returns**: The current value if it is an bool.
+**Returns**: The current value if it is a bool.
   
 ### SerializeToString function
 Serialize the value and all children as a string.
 
   
-**Returns**: This json value and all children serialized as a string.g.
+**Returns**: This json value and all children serialized as a string.

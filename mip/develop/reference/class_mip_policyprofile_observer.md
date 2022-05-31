@@ -1,15 +1,15 @@
 ---
 title: class PolicyProfile::Observer 
 description: Documents the policyprofile::observer class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class PolicyProfile::Observer 
-Observer interface for clients to get notifications for profile related events.
+[Observer](undefined) interface for clients to get notifications for profile related events.
 All errors inherit from mip::Error. 
 Client should not call the engine back on the thread that calls the observer.
   
@@ -151,4 +151,4 @@ Parameters:
 * **engineId**: the engine 
 
 
-To load the new policy it is necessary to call AddEngineAsync again with the engine ID given.n.
+To load the new policy it is necessary to call AddEngineAsync again with the engine ID given.

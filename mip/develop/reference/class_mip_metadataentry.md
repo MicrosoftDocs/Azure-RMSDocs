@@ -1,11 +1,11 @@
 ---
 title: class MetadataEntry 
 description: Documents the metadataentry::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.author: bryanla
+ms.date: 05/31/2022
 ---
 
 # class MetadataEntry 
@@ -14,9 +14,9 @@ An abstraction class for metadata entry.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MetadataEntry(const std::string& key, const std::string& value, uint32_t version)  |  C'tor for a MetadataEntry abstraction.
-public MetadataEntry(const std::string& key, const std::string& value, const MetadataVersion& version)  |  C'tor for a MetadataEntry abstraction.
-public MetadataEntry(const std::string& key, const std::string& value)  |  C'tor for a MetadataEntry abstraction, version is set to a default of 0.
+public MetadataEntry(const std::string& key, const std::string& value, uint32_t version)  |  C'tor for a [MetadataEntry](undefined) abstraction.
+public MetadataEntry(const std::string& key, const std::string& value, const MetadataVersion& version)  |  C'tor for a [MetadataEntry](undefined) abstraction.
+public MetadataEntry(const std::string& key, const std::string& value)  |  C'tor for a [MetadataEntry](undefined) abstraction, version is set to a default of 0.
 public const std::string& GetKey() const  |  Get the metadata entry key.
 public const std::string& GetValue() const  |  Get the metadata entry value.
 public MetadataVersion GetVersion() const  |  Get the metadata entry version.
@@ -24,7 +24,7 @@ public MetadataVersion GetVersion() const  |  Get the metadata entry version.
 ## Members
   
 ### MetadataEntry function
-C'tor for a MetadataEntry abstraction.
+C'tor for a [MetadataEntry](undefined) abstraction.
 
 Parameters:  
 * **key**: metadata key entry. 
@@ -38,7 +38,7 @@ Parameters:
 
   
 ### MetadataEntry function
-C'tor for a MetadataEntry abstraction.
+C'tor for a [MetadataEntry](undefined) abstraction.
 
 Parameters:  
 * **key**: metadata key entry. 
@@ -52,7 +52,7 @@ Parameters:
 
   
 ### MetadataEntry function
-C'tor for a MetadataEntry abstraction, version is set to a default of 0.
+C'tor for a [MetadataEntry](undefined) abstraction, version is set to a default of 0.
 
 Parameters:  
 * **key**: metadata key entry. 
@@ -78,4 +78,4 @@ Get the metadata entry value.
 Get the metadata entry version.
 
   
-**Returns**: Metadata entry version.n.
+**Returns**: Metadata entry version.
