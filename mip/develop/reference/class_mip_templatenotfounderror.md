@@ -15,18 +15,18 @@ Template ID is not recognized by RMS service.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string mMessage  | _Not yet documented._
-public std::map\<std::string, std::string\> mDebugInfo  | _Not yet documented._
+public std::map&lt;std::string, std::string&gt; mDebugInfo  | _Not yet documented._
 public std::string mName  | _Not yet documented._
 public ErrorType mType  | _Not yet documented._
 public ErrorCode GetErrorCode() const  |  Gets the errorCode of bad input.
 public char const* what() const  |  Get the error message.
-public std::shared_ptr\<Error\> Clone() const  |  Clone the error.
+public std::shared_ptr&lt;Error&gt; Clone() const  |  Clone the error.
 public virtual ErrorType GetErrorType() const  |  Get the error type.
 public const std::string& GetErrorName() const  |  Get the error name.
 public const std::string& GetMessage() const  |  Get the error message.
 public void SetMessage(const std::string& msg)  |  Set the error message.
 public void AddDebugInfo(const std::string& key, const std::string& value)  |  Add debug info entry.
-public const std::map\<std::string, std::string\>& GetDebugInfo() const  |  Get debug info.
+public const std::map&lt;std::string, std::string&gt;& GetDebugInfo() const  |  Get debug info.
 enum ErrorCode  |  ErrorCode of bad input error.
   
 ## Members

@@ -17,8 +17,8 @@ Interface that describes a single HTTP request.
 public const std::string& GetId() const  |  Gets request ID.
 public HttpRequestType GetRequestType() const  |  Get request type.
 public const std::string& GetUrl() const  |  Get request url.
-public const std::vector\<uint8_t\>& GetBody() const  |  Get request body.
-public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders() const  |  Get request headers.
+public const std::vector&lt;uint8_t&gt;& GetBody() const  |  Get request body.
+public const std::map&lt;std::string, std::string, CaseInsensitiveComparator&gt;& GetHeaders() const  |  Get request headers.
 public TransportLayerSecurityMinimumVersion GetTransportLayerSecurityMinimumVersion() const  |  Get the minimum required TLS version for this request.
   
 ## Members

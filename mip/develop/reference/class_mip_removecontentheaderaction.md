@@ -14,7 +14,7 @@ An action class that specifies removing the content header from the document.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector\<std::string\>& GetUIElementNames()  |  Gets a list of names that should be used to find the UI elements that should be removed.
+public const std::vector&lt;std::string&gt;& GetUIElementNames()  |  Gets a list of names that should be used to find the UI elements that should be removed.
   
 ## Members
   

@@ -14,9 +14,9 @@ Settings used to create a ProtectionHandler to protect new content.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public PublishingSettings(const std::shared_ptr\<ProtectionDescriptor\>& protectionDescriptor)  |  ProtectionHandler::Settings constructor for creating a new engine.
-public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  | _Not yet documented._
-public std::shared_ptr\<ProtectionHandler\> GetProtectionHandlerForRepublish() const  |  Gets protection handler for republishing scenario.
+public PublishingSettings(const std::shared_ptr&lt;ProtectionDescriptor&gt;& protectionDescriptor)  |  ProtectionHandler::Settings constructor for creating a new engine.
+public std::shared_ptr&lt;ProtectionDescriptor&gt; GetProtectionDescriptor() const  | _Not yet documented._
+public std::shared_ptr&lt;ProtectionHandler&gt; GetProtectionHandlerForRepublish() const  |  Gets protection handler for republishing scenario.
 public bool GetIsAuditedExtractionAllowed() const  |  Gets whether or not non-MIP-aware applications are allowed to open protected content.
 public void SetIsAuditedExtractionAllowed(bool isAuditedExtractionAllowed)  |  Sets whether or not non-MIP-aware applications are allowed to open protected content.
 public bool GetIsDeprecatedAlgorithmPreferred() const  |  Gets whether or not deprecated crypto algorithm (ECB) is preferred for backwards compatibility.
@@ -27,11 +27,11 @@ public bool IsPublishingFormatJson() const  |  Gets whether or not the returned 
 public void SetPublishingFormatJson(bool isPublishingFormatJson)  |  whether or not the returned pl is in json format (xml format is more widely accepted and is the default).
 public void SetPreLicenseUserEmail(const std::string& preLicenseUserEmail)  |  Sets pre-license user.
 public const std::string& GetPreLicenseUserEmail() const  |  Gets the pre-license user.
-public void SetPublishingLicenseForRepublish(const std::vector\<uint8_t\>& serializedPublishingLicense)  |  Sets the serialized publishing license for republishing.
-public void SetProtectionHandlerForRepublish(const std::shared_ptr\<ProtectionHandler\>& protectionHandler)  |  Sets the protectionHandler to generating of publishing license for offline republishing.
-public const std::vector\<uint8_t\>& GetPublishingLicenseForRepublish() const  |  Gets the serialized republishing license.
-public void SetRequestPreLicense(std::shared_ptr\<PublishingUseLicenseRequest\> publishingUseLicenseRequest)  |  Setting this will cause the publishing request to include a pre-license.
-public std::shared_ptr\<PublishingUseLicenseRequest\> GetPreLicenseRequest() const  |  Gets the pre-license request.
+public void SetPublishingLicenseForRepublish(const std::vector&lt;uint8_t&gt;& serializedPublishingLicense)  |  Sets the serialized publishing license for republishing.
+public void SetProtectionHandlerForRepublish(const std::shared_ptr&lt;ProtectionHandler&gt;& protectionHandler)  |  Sets the protectionHandler to generating of publishing license for offline republishing.
+public const std::vector&lt;uint8_t&gt;& GetPublishingLicenseForRepublish() const  |  Gets the serialized republishing license.
+public void SetRequestPreLicense(std::shared_ptr&lt;PublishingUseLicenseRequest&gt; publishingUseLicenseRequest)  |  Setting this will cause the publishing request to include a pre-license.
+public std::shared_ptr&lt;PublishingUseLicenseRequest&gt; GetPreLicenseRequest() const  |  Gets the pre-license request.
 public std::string GetApplicationScenarioId() const  |  Gets the scenario Id provided by the application which is used to correlation with the server.
 public void SetApplicationScenarioId(std::string applicationScenarioId)  |  Sets the scenario Id provided by the application.
   

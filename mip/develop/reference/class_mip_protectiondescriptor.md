@@ -21,16 +21,16 @@ public std::string GetDescription() const  |  Gets protection description.
 public std::string GetTemplateId() const  |  Gets the protection template ID, if any.
 public std::string GetLabelId() const  |  Gets the label ID, if any.
 public std::string GetContentId() const  |  Gets the Content ID, if any.
-public std::vector\<UserRights\> GetUserRights() const  |  Gets collection of users-to-rights mappings.
-public std::vector\<UserRoles\> GetUserRoles() const  |  Gets collection of users-to-roles mappings.
+public std::vector&lt;UserRights&gt; GetUserRights() const  |  Gets collection of users-to-rights mappings.
+public std::vector&lt;UserRoles&gt; GetUserRoles() const  |  Gets collection of users-to-roles mappings.
 public bool DoesContentExpire() const  |  Checks if content has an expiration time or not.
-public std::chrono::time_point\<std::chrono::system_clock\> GetContentValidUntil() const  |  Gets protection expiration time.
+public std::chrono::time_point&lt;std::chrono::system_clock&gt; GetContentValidUntil() const  |  Gets protection expiration time.
 public bool DoesAllowOfflineAccess() const  |  Gets if protection allows offline content access or not.
 public std::string GetReferrer() const  |  Gets protection referrer address.
-public std::map\<std::string, std::string\> GetEncryptedAppData() const  |  Gets app-specific data that was encrypted.
-public std::map\<std::string, std::string\> GetSignedAppData() const  |  Gets the app-specific data that was signed.
+public std::map&lt;std::string, std::string&gt; GetEncryptedAppData() const  |  Gets app-specific data that was encrypted.
+public std::map&lt;std::string, std::string&gt; GetSignedAppData() const  |  Gets the app-specific data that was signed.
 public std::string GetDoubleKeyUrl() const  |  Gets the double key url to be used for custom protection.
-public std::shared_ptr\<const std::vector\<uint8_t\>\> GetSerializedTemplate() const  |  Gets the serialized template, if any.
+public std::shared_ptr&lt;const std::vector&lt;uint8_t&gt;&gt; GetSerializedTemplate() const  |  Gets the serialized template, if any.
   
 ## Members
   

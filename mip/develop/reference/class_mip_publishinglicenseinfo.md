@@ -14,13 +14,13 @@ Holds the details of a Publishing License used to create a protection handler.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public PublishingLicenseInfo(const std::vector\<uint8_t\>& serializedPublishingLicense)  | _Not yet documented._
-public PublishingLicenseInfo(const std::vector\<uint8_t\>& serializedPreLicense, const std::vector\<uint8_t\>& serializedPublishingLicense)  | _Not yet documented._
-public void SetParsedData(std::shared_ptr\<ParsedPublishingLicense\> parsedPublishingLicense)  | _Not yet documented._
-public void SetParsedData(const std::vector\<std::string\>& domains, const std::string& serverPublicCert, const std::string& contentId, const std::string& issuerId)  | _Not yet documented._
-public const std::vector\<uint8_t\>& GetSerializedPublishingLicense() const  | _Not yet documented._
-public const std::vector\<uint8_t\>& GetPreLicense() const  | _Not yet documented._
-public const std::vector\<std::string\>& GetDomains() const  | _Not yet documented._
+public PublishingLicenseInfo(const std::vector&lt;uint8_t&gt;& serializedPublishingLicense)  | _Not yet documented._
+public PublishingLicenseInfo(const std::vector&lt;uint8_t&gt;& serializedPreLicense, const std::vector&lt;uint8_t&gt;& serializedPublishingLicense)  | _Not yet documented._
+public void SetParsedData(std::shared_ptr&lt;ParsedPublishingLicense&gt; parsedPublishingLicense)  | _Not yet documented._
+public void SetParsedData(const std::vector&lt;std::string&gt;& domains, const std::string& serverPublicCert, const std::string& contentId, const std::string& issuerId)  | _Not yet documented._
+public const std::vector&lt;uint8_t&gt;& GetSerializedPublishingLicense() const  | _Not yet documented._
+public const std::vector&lt;uint8_t&gt;& GetPreLicense() const  | _Not yet documented._
+public const std::vector&lt;std::string&gt;& GetDomains() const  | _Not yet documented._
 public const std::string& GetServerPublicCertificate() const  | _Not yet documented._
 public const std::string& GetIssuerId() const  | _Not yet documented._
 public const std::string& GetContentId() const  | _Not yet documented._
@@ -29,11 +29,11 @@ public bool HasPreLicense() const  | _Not yet documented._
 public bool GetIsDoubleKeyLicense() const  | _Not yet documented._
 public const std::string& GetDoubleKeyAlgorithm() const  | _Not yet documented._
 public const std::string& GetOwner() const  | _Not yet documented._
-public std::shared_ptr\<LicenseConnectionInfo\> GetConnectionInfo() const  | _Not yet documented._
-public std::shared_ptr\<LicenseDescriptor\> GetDescriptor() const  | _Not yet documented._
+public std::shared_ptr&lt;LicenseConnectionInfo&gt; GetConnectionInfo() const  | _Not yet documented._
+public std::shared_ptr&lt;LicenseDescriptor&gt; GetDescriptor() const  | _Not yet documented._
 public const std::string& GetReferralInfoUrl() const  | _Not yet documented._
-public const std::vector\<std::shared_ptr\<LicenseApplicationData\>\>& GetSignedApplicationData() const  | _Not yet documented._
-public const std::chrono::time_point\<std::chrono::system_clock\>& GetIssuedTime() const  | _Not yet documented._
+public const std::vector&lt;std::shared_ptr&lt;LicenseApplicationData&gt;&gt;& GetSignedApplicationData() const  | _Not yet documented._
+public const std::chrono::time_point&lt;std::chrono::system_clock&gt;& GetIssuedTime() const  | _Not yet documented._
   
 ## Members
   

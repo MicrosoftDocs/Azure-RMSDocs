@@ -15,7 +15,7 @@ The descriptor from a license.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Gets the Id.
-public const std::vector\<std::shared_ptr\<LicenseNameAndDescriptionItem\>\>& GetDescriptorItems() const  |  Gets the descriptor items.
+public const std::vector&lt;std::shared_ptr&lt;LicenseNameAndDescriptionItem&gt;&gt;& GetDescriptorItems() const  |  Gets the descriptor items.
   
 ## Members
   

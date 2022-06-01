@@ -15,7 +15,7 @@ ms.date: 05/31/2022
 --------------------------------|---------------------------------------------
 public const std::string& GetValue() const  | _Not yet documented._
 public const std::string& GetKey() const  | _Not yet documented._
-public const std::vector\<std::string\>& GetValues() const  | _Not yet documented._
+public const std::vector&lt;std::string&gt;& GetValues() const  | _Not yet documented._
 public virtual ~ArgumentData()  | _Not yet documented._
   
 ## Members

@@ -14,9 +14,9 @@ A group of users and the rights associated with them.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public UserRights(const std::vector\<std::string\>& users, const std::vector\<std::string\>& rights)  |  UserRights constructor.
-public const std::vector\<std::string\>& Users() const  |  Gets users associated with a set of rights.
-public const std::vector\<std::string\>& Rights() const  |  Gets rights associated with a group of users.
+public UserRights(const std::vector&lt;std::string&gt;& users, const std::vector&lt;std::string&gt;& rights)  |  UserRights constructor.
+public const std::vector&lt;std::string&gt;& Users() const  |  Gets users associated with a set of rights.
+public const std::vector&lt;std::string&gt;& Rights() const  |  Gets rights associated with a group of users.
   
 ## Members
   

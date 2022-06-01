@@ -15,8 +15,8 @@ This interface must be implemented by applications using the protection SDK
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnCreateProtectionHandlerSuccess(const std::shared_ptr\<ProtectionHandler\>& protectionHandler, const std::shared_ptr\<void\>& context)  |  Called when ProtectionHandler was created successfully.
-public virtual void OnCreateProtectionHandlerFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when ProtectionHandler creation failed.
+public virtual void OnCreateProtectionHandlerSuccess(const std::shared_ptr&lt;ProtectionHandler&gt;& protectionHandler, const std::shared_ptr&lt;void&gt;& context)  |  Called when ProtectionHandler was created successfully.
+public virtual void OnCreateProtectionHandlerFailure(const std::exception_ptr& error, const std::shared_ptr&lt;void&gt;& context)  |  Called when ProtectionHandler creation failed.
   
 ## Members
   

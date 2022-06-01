@@ -15,7 +15,7 @@ CustomAction is a generic action class that captures all the sub-properties of t
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetName() const  |  Get action name.
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetProperties() const  |  Get the properties key value pair list.
+public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetProperties() const  |  Get the properties key value pair list.
   
 ## Members
   
