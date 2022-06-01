@@ -171,4 +171,3 @@ class [TemplateDescriptor] | _Not yet documented._
 class [TemplateNotFoundError] | Template ID is not recognized by RMS service.
 class [TenantInformation] | Tenant information from RMS.
 class [UserRights] | A group of users and the rights associated with them.
-m
