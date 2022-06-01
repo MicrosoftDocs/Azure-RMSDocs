@@ -1,10 +1,10 @@
 ---
 title: class AsyncControl 
 description: Documents the asynccontrol::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -25,4 +25,4 @@ Calling cancel will result in a attempt to cancel the task, in case of success t
 
   
 **Returns**: False if cancel signal cannot be dispatched, true otherwise.
-Do not hold a strong reference to an AsyncControl object in a task completion block.
+Do not hold a strong reference to an AsyncControl object in a task completion block.k.

@@ -1,10 +1,10 @@
 ---
 title: class LogMessageData 
 description: Documents the logmessagedata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -52,4 +52,4 @@ The logger context for the log statement.
 The message time of the log statement.
   
 ### GetMessageThreadId function
-The thread id of the log statement.
+The thread id of the log statement.t.

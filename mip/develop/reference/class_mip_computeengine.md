@@ -1,10 +1,10 @@
 ---
 title: class ComputeEngine 
 description: Documents the computeengine::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -141,3 +141,4 @@ _Not documented yet._
   
 ### ~ComputeEngine function
 _Not documented yet._
+_

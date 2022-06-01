@@ -1,10 +1,10 @@
 ---
 title: class LabelGroupData 
 description: Documents the labelgroupdata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -179,3 +179,4 @@ _Not documented yet._
   
 ### ~LabelGroupData function
 _Not documented yet._
+_

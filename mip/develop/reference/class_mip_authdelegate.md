@@ -1,10 +1,10 @@
 ---
 title: class AuthDelegate 
 description: Documents the authdelegate::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -57,4 +57,4 @@ Parameters:
 
   
 **Returns**: True if token successfully acquired, else false
-On failure, if token output parameter contains an error message, it will be included in the NoAuthTokenError exception that will later be raised to the application.
+On failure, if token output parameter contains an error message, it will be included in the NoAuthTokenError exception that will later be raised to the application.n.

@@ -1,10 +1,10 @@
 ---
 title: class TelemetryEvent 
 description: Documents the telemetryevent::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -134,4 +134,4 @@ Parameters:
 
 
   
-**Returns**: Property with the given name, or nullptr if none
+**Returns**: Property with the given name, or nullptr if nonene

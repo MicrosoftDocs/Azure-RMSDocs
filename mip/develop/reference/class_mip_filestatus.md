@@ -1,10 +1,10 @@
 ---
 title: class FileStatus 
 description: Documents the filestatus::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -27,4 +27,4 @@ Checks if a file is protected or not.
 Checks if a file is labeled or not.
   
 ### ContainsProtectedObjects function
-Checks if the unprotected container file contains protected objects. Returns false if this file is protected or not a container file
+Checks if the unprotected container file contains protected objects. Returns false if this file is protected or not a container filele

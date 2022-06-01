@@ -1,10 +1,10 @@
 ---
 title: class DelegationLicenseSettings 
 description: Documents the delegationlicensesettings::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -35,4 +35,4 @@ Gets the list of users for the request.
 Gets the boolean value that indicates whether or not to obtain end user license in addition to the delegate license.
 
   
-**Returns**: Whether to aquire end user licenses
+**Returns**: Whether to aquire end user licenseses

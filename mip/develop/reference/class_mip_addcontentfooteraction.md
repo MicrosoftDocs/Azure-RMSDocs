@@ -1,10 +1,10 @@
 ---
 title: class AddContentFooterAction 
 description: Documents the addcontentfooteraction::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -66,4 +66,4 @@ Get the alignment of the footer.
 Get the margin of the footer from the bottom.
 
   
-**Returns**: The margins from the bottom of the document (for example, 10 mm).
+**Returns**: The margins from the bottom of the document (for example, 10 mm).).

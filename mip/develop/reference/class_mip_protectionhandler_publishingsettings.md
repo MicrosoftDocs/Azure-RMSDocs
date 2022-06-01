@@ -1,10 +1,10 @@
 ---
 title: class ProtectionHandler::PublishingSettings 
 description: Documents the protectionhandler::publishingsettings class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -175,4 +175,6 @@ Sets the scenario Id provided by the application.
 
 Parameters:  
 * **The**: application scenario Id
+
+
 

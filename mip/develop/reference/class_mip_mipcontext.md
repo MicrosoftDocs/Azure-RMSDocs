@@ -1,10 +1,10 @@
 ---
 title: class MipContext 
 description: Documents the mipcontext::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -103,4 +103,4 @@ Get flighting feature set.
 Gets the mip configuration that was used to create the MipContext.
 
   
-**Returns**: The mip configuration
+**Returns**: The mip configurationon

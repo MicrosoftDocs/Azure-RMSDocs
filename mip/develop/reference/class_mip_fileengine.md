@@ -1,10 +1,10 @@
 ---
 title: class FileEngine 
 description: Documents the fileengine::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -175,4 +175,4 @@ Gets if the policy has automatic or recommendation rules.
 Checks if user has consented to specific workload,.
 
   
-**Returns**: Bool indicating consent.
+**Returns**: Bool indicating consent.t.

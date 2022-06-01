@@ -1,10 +1,10 @@
 ---
 title: class FileHandler::Observer 
 description: Documents the filehandler::observer class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -65,4 +65,4 @@ Called when committing the changes to the file failed.
 Called when inspect success.
   
 ### OnInspectFailure function
-Called when inspect failed.
+Called when inspect failed.d.

@@ -1,10 +1,10 @@
 ---
 title: class xml::XmlReader 
 description: Documents the xml::xmlreader class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -134,4 +134,4 @@ throws XmlParserException on failure
 
   
 **Returns**: Entire serialized element.
-moved to end of node.
+moved to end of node.e.

@@ -1,10 +1,10 @@
 ---
 title: class MsgAttachmentData 
 description: Documents the msgattachmentdata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -38,4 +38,4 @@ Get attachment long name as a string.
 Get attachment path name as a string. if path not empty then reference attachment.
   
 ### GetLongPath function
-Get attachment long path name as a string. if path not empty then reference attachment.
+Get attachment long path name as a string. if path not empty then reference attachment.t.

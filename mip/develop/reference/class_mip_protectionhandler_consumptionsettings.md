@@ -1,10 +1,10 @@
 ---
 title: class ProtectionHandler::ConsumptionSettings 
 description: Documents the protectionhandler::consumptionsettings class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -99,3 +99,4 @@ A delegated user is specified when the authenticating user/application is acting
   
 ### GetContentName function
 _Not documented yet._
+_

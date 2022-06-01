@@ -1,10 +1,10 @@
 ---
 title: class MsgInspector 
 description: Documents the msginspector::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -58,4 +58,4 @@ Get file types,.
 Get the file stream.
 
   
-**Returns**: A shared ptr to the file stream.
+**Returns**: A shared ptr to the file stream.m.

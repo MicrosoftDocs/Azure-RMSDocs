@@ -1,10 +1,10 @@
 ---
 title: class Label 
 description: Documents the label::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -107,4 +107,4 @@ Gets the action source of the label.
 Gets content types.
 
   
-<Returns>
+<Returns>s>

@@ -1,10 +1,10 @@
 ---
 title: class ParsedPublishingLicense 
 description: Documents the parsedpublishinglicense::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -58,4 +58,4 @@ Gets the referral info url.
 Gets the signed application data.
   
 ### GetIssuedTime function
-Gets the issued time.
+Gets the issued time.e.

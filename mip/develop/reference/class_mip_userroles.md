@@ -1,10 +1,10 @@
 ---
 title: class UserRoles 
 description: Documents the userroles::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -41,4 +41,4 @@ Gets users associated with a set of roles.
 Gets roles associated with a group of users.
 
   
-**Returns**: Roles associated with a group of users
+**Returns**: Roles associated with a group of usersrs

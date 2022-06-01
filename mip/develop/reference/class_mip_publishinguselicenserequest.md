@@ -1,10 +1,10 @@
 ---
 title: class PublishingUseLicenseRequest 
 description: Documents the publishinguselicenserequest::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -33,4 +33,4 @@ Gets the delegated user.
 
   
 **Returns**: Delegated user
-A delegated user is specified when the authenticating user/application is acting on behalf of another user
+A delegated user is specified when the authenticating user/application is acting on behalf of another userer

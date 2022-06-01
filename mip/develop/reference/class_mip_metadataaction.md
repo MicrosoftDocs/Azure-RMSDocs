@@ -1,10 +1,10 @@
 ---
 title: class MetadataAction 
 description: Documents the metadataaction::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -31,4 +31,4 @@ Get the metadata name/value pairs that should be added to the content.
 
   
 **Returns**: Const std::vector<MetadataEntry>& 
-Removing metadata should be done before adding metadata.
+Removing metadata should be done before adding metadata.a.

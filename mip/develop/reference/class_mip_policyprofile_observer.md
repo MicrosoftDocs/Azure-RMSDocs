@@ -1,10 +1,10 @@
 ---
 title: class PolicyProfile::Observer 
 description: Documents the policyprofile::observer class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -151,4 +151,4 @@ Parameters:
 * **engineId**: the engine 
 
 
-To load the new policy it is necessary to call AddEngineAsync again with the engine ID given.
+To load the new policy it is necessary to call AddEngineAsync again with the engine ID given.n.

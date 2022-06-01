@@ -1,10 +1,10 @@
 ---
 title: class ActionData 
 description: Documents the actiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -19,3 +19,4 @@ public virtual ~ActionData()  | _Not yet documented._
   
 ### ~ActionData function
 _Not documented yet._
+_

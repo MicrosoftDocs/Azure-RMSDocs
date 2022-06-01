@@ -1,10 +1,10 @@
 ---
 title: class FileHandler 
 description: Documents the filehandler::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -140,4 +140,4 @@ Parameters:
 Fires an Audit event
   
 ### GetOutputFileName function
-Calculates the output file name and extension based on the original file name and the accumulated changes.
+Calculates the output file name and extension based on the original file name and the accumulated changes.s.

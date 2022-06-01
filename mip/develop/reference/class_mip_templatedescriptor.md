@@ -1,10 +1,10 @@
 ---
 title: class TemplateDescriptor 
 description: Documents the templatedescriptor::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -42,4 +42,4 @@ Get Template description.
 Gets whether or not the owner is in the rights list with full access.
 
   
-**Returns**: Bool
+**Returns**: Boolol

@@ -1,10 +1,10 @@
 ---
 title: class FileProfile::Observer 
 description: Documents the fileprofile::observer class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -81,3 +81,4 @@ This optional callback may be used by an application to be informed whether or n
   
 ### Observer function
 _Not documented yet._
+_

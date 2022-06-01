@@ -1,10 +1,10 @@
 ---
 title: class ContentLabel 
 description: Documents the contentlabel::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -55,4 +55,4 @@ Get the actual label object applied on the content.
   
 **Returns**: The label object applied on the content. 
   
-**See also**: mip::Label
+**See also**: mip::Labelel

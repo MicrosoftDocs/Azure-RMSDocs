@@ -1,10 +1,10 @@
 ---
 title: class ProtectByEncryptOnlyAction 
 description: Documents the protectbyencryptonlyaction::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -21,4 +21,4 @@ public const std::string& GetTemplateId() const  |  #### Returns
 ### GetTemplateId function
 
   
-**Returns**: The Template Id specifically associated with encrypt only action
+**Returns**: The Template Id specifically associated with encrypt only actionon

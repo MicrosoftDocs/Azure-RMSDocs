@@ -1,10 +1,10 @@
 ---
 title: class RemoveWatermarkAction 
 description: Documents the removewatermarkaction::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -29,4 +29,4 @@ Gets a list of names that should be used to find the UI elements that should be 
 Get the type of Action.
 
   
-**Returns**: ActionType The type of derived action this base class can be cast to.
+**Returns**: ActionType The type of derived action this base class can be cast to.o.

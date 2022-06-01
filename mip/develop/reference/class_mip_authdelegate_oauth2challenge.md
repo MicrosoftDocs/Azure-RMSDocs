@@ -1,10 +1,10 @@
 ---
 title: class AuthDelegate::OAuth2Challenge 
 description: Documents the authdelegate::oauth2challenge class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -58,4 +58,4 @@ Get the scope string.
 Get the claims string.
 
   
-**Returns**: The claims string.
+**Returns**: The claims string.g.

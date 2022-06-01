@@ -1,10 +1,10 @@
 ---
 title: class DelegateResponseError 
 description: Documents the delegateresponseerror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -77,4 +77,6 @@ Creates an error/exception object. Call this method from a MIP delegate function
 
 Parameters:  
 * **message**: Message associated with the exception.
+
+
 

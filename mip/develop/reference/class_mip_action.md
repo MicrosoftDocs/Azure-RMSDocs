@@ -1,10 +1,10 @@
 ---
 title: class Action 
 description: Documents the action::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -17,3 +17,4 @@ Interface for an action. Each action translates to a step that needs to be taken
   
 ## Members
 _Not documented yet._
+_

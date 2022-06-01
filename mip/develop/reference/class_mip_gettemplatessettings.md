@@ -1,10 +1,10 @@
 ---
 title: class GetTemplatesSettings 
 description: Documents the gettemplatessettings::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -65,4 +65,4 @@ Parameters:
 Can cache templates or not.
 
   
-**Returns**: True to cache templates. False to not.
+**Returns**: True to cache templates. False to not.t.

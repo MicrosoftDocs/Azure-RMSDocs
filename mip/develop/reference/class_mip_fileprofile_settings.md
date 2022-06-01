@@ -1,10 +1,10 @@
 ---
 title: class FileProfile::Settings 
 description: Documents the fileprofile::settings class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -142,4 +142,6 @@ Sets the logger context that will be opaquely passed to the logger delegate for 
 
 Parameters:  
 * **loggerContext**: The logger context
+
+
 

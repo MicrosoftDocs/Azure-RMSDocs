@@ -1,10 +1,10 @@
 ---
 title: class DetailedClassificationResult 
 description: Documents the detailedclassificationresult::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -29,4 +29,4 @@ Get the confidence in the result.
 Get the instance count.
 
   
-**Returns**: The instance count.
+**Returns**: The instance count.t.

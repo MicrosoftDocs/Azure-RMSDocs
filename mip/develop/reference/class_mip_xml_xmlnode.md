@@ -1,10 +1,10 @@
 ---
 title: class xml::XmlNode 
 description: Documents the xml::xmlnode class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -139,4 +139,4 @@ Parameters:
 Remove this node and children from the xml document.
 
   
-**Returns**: True if node was successfully deleted or false if failed.
+**Returns**: True if node was successfully deleted or false if failed.d.

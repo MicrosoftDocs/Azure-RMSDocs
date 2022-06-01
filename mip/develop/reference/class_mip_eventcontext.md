@@ -1,10 +1,10 @@
 ---
 title: class EventContext 
 description: Documents the eventcontext::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -29,4 +29,4 @@ Gets the cloud type.
 Gets the data boundary region.
 
   
-**Returns**: DataBoundary
+**Returns**: DataBoundaryry

@@ -1,10 +1,10 @@
 ---
 title: class BadInputError 
 description: Documents the badinputerror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -17,3 +17,4 @@ Bad input error, thrown when the input to an SDK API is invalid.
   
 ## Members
 _Not documented yet._
+_

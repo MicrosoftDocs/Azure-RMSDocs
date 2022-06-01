@@ -1,10 +1,10 @@
 ---
 title: class TemplateNotFoundError 
 description: Documents the templatenotfounderror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 05/31/2022
 ---
 
@@ -116,4 +116,4 @@ FileIsTooLargeForProtection            | File is too large for protection
 ParameterParsing            | Parameter cannot be parsed correctly
 LicenseNotTrusted            | Publishing license not issued by trusted source
 DoubleKey            | A paremeter for double key encryption is needed and missing
-ErrorCode of bad input error.
+ErrorCode of bad input error.r.
