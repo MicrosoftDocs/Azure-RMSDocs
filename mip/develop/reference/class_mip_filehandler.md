@@ -18,7 +18,7 @@ Interface for all file handling functions.
 public std::shared_ptr&lt;ContentLabel&gt; GetLabel()  |  Starts retrieving the sensitivity label from the file.
 public std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt; GetProperties(uint32_t version)  |  Retrieves the file properties according to version.
 public std::shared_ptr&lt;ProtectionHandler&gt; GetProtection()  |  Starts retrieving the protection policy from the file.
-public void RegisterContentForTrackingAndRevocationAsync(bool isOwnerNotificationEnabled, const std::shared_ptr&lt;ProtectionEngine::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context)  |  #### Parameters
+public void RegisterContentForTrackingAndRevocationAsync(bool isOwnerNotificationEnabled, const std::shared_ptr&lt;ProtectionEngine::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context)  |  Parameters: isOwnerNotificationEnabled: Set to true to notify the owner via email whenever the document is decrypted, or false to not send the notification; observer: A class implementing the ProtectionHandler::Observer interface; context: Client context that will be opaquely forwarded to observers and optional HttpDelegate.
 public void RevokeContentAsync(const std::shared_ptr&lt;ProtectionEngine::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context)  |  Perform revocation for the content.
 public void ClassifyAsync(const std::shared_ptr&lt;void&gt;& context)  |  Executes the rules in the handler and returns the list of actions to be executed.
 public void InspectAsync(const std::shared_ptr&lt;void&gt;& context)  |  Create a file inspector object, used to retrieve file contents from compatible file formats.
