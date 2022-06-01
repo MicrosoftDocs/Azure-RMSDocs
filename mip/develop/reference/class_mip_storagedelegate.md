@@ -49,4 +49,4 @@ Parameters:
 Gets settings used by StorageDelegate.
 
   
-**Returns**: Settings used by StorageDelegate.e.
+**Returns**: Settings used by StorageDelegate.

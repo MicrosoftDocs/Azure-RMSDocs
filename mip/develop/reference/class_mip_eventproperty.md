@@ -65,4 +65,4 @@ Get property value (int64)
 Get property value (string)
 
   
-**Returns**: Property valueue
+**Returns**: Property value.

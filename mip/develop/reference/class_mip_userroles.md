@@ -41,4 +41,4 @@ Gets users associated with a set of roles.
 Gets roles associated with a group of users.
 
   
-**Returns**: Roles associated with a group of usersrs
+**Returns**: Roles associated with a group of users.

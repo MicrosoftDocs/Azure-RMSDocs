@@ -48,4 +48,4 @@ Get whether a specific flag is set.
 Get the flags that define how metadata is processed for a given version.
 
   
-**Returns**: The flags that specify how the metadata is processed.d.
+**Returns**: The flags that specify how the metadata is processed.

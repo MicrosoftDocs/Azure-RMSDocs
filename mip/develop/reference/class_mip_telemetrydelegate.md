@@ -40,4 +40,4 @@ Parameters:
 
   
 ### Flush function
-Flush any queued events (e.g. due to shutdown)n)
+Flush any queued events (e.g. due to shutdown).

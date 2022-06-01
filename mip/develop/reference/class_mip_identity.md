@@ -63,4 +63,4 @@ Get the email.
 Get the user's friendly name. used for text marking.
 
   
-**Returns**: The friendly name.e.
+**Returns**: The friendly name.

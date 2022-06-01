@@ -28,4 +28,4 @@ Get the Rule Package Id.
 Get the Rule Package.
 
   
-**Returns**: The Rule Packagege
+**Returns**: The Rule Package.

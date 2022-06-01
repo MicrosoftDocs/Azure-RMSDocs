@@ -40,4 +40,4 @@ Parameters:
 The XmlDocument returned should memory manage itself. That is, when it goes out of scope, it should take care of any free functions needed to release memory. In our native implementation, this is achieved with a unique_ptr with a specialized deleter function.
 
   
-**Returns**: A delegate response that contains either a shared_ptr to an XmlDocument or an exception if parsing failsls
+**Returns**: A delegate response that contains either a shared_ptr to an XmlDocument or an exception if parsing fails.

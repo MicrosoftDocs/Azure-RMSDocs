@@ -17,4 +17,3 @@ A single audit event.
   
 ## Members
 _Not documented yet._
-_

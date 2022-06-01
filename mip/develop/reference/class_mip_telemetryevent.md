@@ -134,4 +134,4 @@ Parameters:
 
 
   
-**Returns**: Property with the given name, or nullptr if nonene
+**Returns**: Property with the given name, or nullptr if none.

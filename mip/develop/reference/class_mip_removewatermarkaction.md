@@ -29,4 +29,4 @@ Gets a list of names that should be used to find the UI elements that should be 
 Get the type of Action.
 
   
-**Returns**: ActionType The type of derived action this base class can be cast to.o.
+**Returns**: ActionType The type of derived action this base class can be cast to.

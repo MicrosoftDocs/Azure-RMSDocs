@@ -37,4 +37,4 @@ Get response, if any.
 Get cancellation status of operation.
 
   
-**Returns**: Cancellation statusus
+**Returns**: Cancellation status.

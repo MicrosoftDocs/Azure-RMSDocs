@@ -309,5 +309,4 @@ Get logger context that will be opaquely passed to the logger delegate for logs 
 Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
 
 Parameters:  
-* **loggerContext**: The logger context
-
+* **loggerContext**: The logger context.

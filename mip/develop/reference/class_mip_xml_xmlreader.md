@@ -133,5 +133,4 @@ Method returns all node elements in an unmodified way from the original xml.
 throws XmlParserException on failure
 
   
-**Returns**: Entire serialized element.
-moved to end of node.e.
+**Returns**: Entire serialized element. Moved to end of node.

@@ -183,4 +183,4 @@ Parameters:
 * **context**: The same context that was passed to ProtectionEngine::GetTenantInformationAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetTenantInformationAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetTenantInformationAsyncSuccess or ProtectionEngine::Observer::OnGetTenantInformationAsyncFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetTenantInformationAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetTenantInformationAsyncSuccess or ProtectionEngine::Observer::OnGetTenantInformationAsyncFailure.

@@ -59,6 +59,3 @@ Set the error message.
 
 Parameters:  
 * **errorMessage**: Error message.
-
-
-

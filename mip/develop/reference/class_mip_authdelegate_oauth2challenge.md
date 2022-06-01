@@ -58,4 +58,4 @@ Get the scope string.
 Get the claims string.
 
   
-**Returns**: The claims string.g.
+**Returns**: The claims string.

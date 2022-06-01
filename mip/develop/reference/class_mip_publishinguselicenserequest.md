@@ -33,4 +33,4 @@ Gets the delegated user.
 
   
 **Returns**: Delegated user
-A delegated user is specified when the authenticating user/application is acting on behalf of another userer
+A delegated user is specified when the authenticating user/application is acting on behalf of another user.

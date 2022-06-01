@@ -17,4 +17,3 @@ A class that defines the interface to the MIP SDK audit/telemetry notifications.
   
 ## Members
 _Not documented yet._
-_

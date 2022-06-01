@@ -34,4 +34,3 @@ _Not documented yet._
   
 ### ~ArgumentData function
 _Not documented yet._
-_

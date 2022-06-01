@@ -50,4 +50,4 @@ Gets the delegation license in Xrml format.
 
   
 **Returns**: Serialized license
-This license is bound to the identity of the user that made the requestst
+This license is bound to the identity of the user that made the request.

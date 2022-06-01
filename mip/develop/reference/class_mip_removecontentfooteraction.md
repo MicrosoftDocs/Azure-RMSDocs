@@ -22,4 +22,4 @@ public const std::vector&lt;std::string&gt;& GetUIElementNames()  |  Gets a list
 Gets a list of names that should be used to find the UI elements that should be removed.
 
   
-**Returns**: A list of ui element names.s.
+**Returns**: A list of ui element names.

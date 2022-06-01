@@ -57,4 +57,4 @@ Get the font size used to display the watermark.
 Get the font color used to display the watermark.
 
   
-**Returns**: Font color as a string (for example, "#000000").).
+**Returns**: Font color as a string (for example, "#000000").

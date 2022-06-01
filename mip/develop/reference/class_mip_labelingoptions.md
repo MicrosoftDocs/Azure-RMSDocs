@@ -50,4 +50,4 @@ _Not documented yet._
   
 ### SetExtendedProperties function
 _Not documented yet._
-_
+

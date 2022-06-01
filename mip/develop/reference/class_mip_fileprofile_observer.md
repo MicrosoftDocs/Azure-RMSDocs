@@ -81,4 +81,4 @@ This optional callback may be used by an application to be informed whether or n
   
 ### Observer function
 _Not documented yet._
-_
+

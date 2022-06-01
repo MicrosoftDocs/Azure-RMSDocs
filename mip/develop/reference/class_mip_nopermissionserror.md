@@ -40,6 +40,7 @@ Gets the category of no permissions failure.
 **Returns**: Category of no permissions failure
   
 ### Category enum
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unknown no permissions failure
@@ -50,4 +51,5 @@ InvalidEmail            |
 UnknownTenant            | 
 NotOwner            | User needs to be owner to perform action
 NotPremiumLicenseUser            | User needs to be a premium license holder to perform action. Tracking and Revocation for example
-Category of no permissions error.r.
+
+Category of no permissions error.

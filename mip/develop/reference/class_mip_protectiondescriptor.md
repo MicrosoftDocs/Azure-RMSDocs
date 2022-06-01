@@ -140,4 +140,4 @@ The double key URL that is used in custom requests to protect information with a
 Gets the serialized template, if any.
 
   
-**Returns**: Serialized templatete
+**Returns**: Serialized template.

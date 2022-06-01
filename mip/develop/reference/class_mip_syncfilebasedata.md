@@ -19,4 +19,4 @@ public virtual ~SyncFileBaseData()  | _Not yet documented._
   
 ### ~SyncFileBaseData function
 _Not documented yet._
-_
+

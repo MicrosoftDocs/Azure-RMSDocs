@@ -99,4 +99,4 @@ A delegated user is specified when the authenticating user/application is acting
   
 ### GetContentName function
 _Not documented yet._
-_
+

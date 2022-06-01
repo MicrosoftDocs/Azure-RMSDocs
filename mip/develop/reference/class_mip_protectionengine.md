@@ -376,4 +376,5 @@ Parameters:
 
   
 **Returns**: Async control object.
-- ProtectionEngine::Observer::OnGetTenantInformationAsyncSuccess will be called on success ProtectionEngine::Observer::OnGetTenantInformationAsyncFailure will be called on failure
+- ProtectionEngine::Observer::OnGetTenantInformationAsyncSuccess will be called on success ProtectionEngine::Observer::OnGetTenantInformationAsyncFailure will be called on failure.
+- 

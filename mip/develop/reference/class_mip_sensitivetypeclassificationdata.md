@@ -59,4 +59,4 @@ _Not documented yet._
   
 ### Evaluate function
 _Not documented yet._
-_
+

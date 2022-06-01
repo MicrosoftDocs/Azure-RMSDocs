@@ -58,4 +58,4 @@ Gets the referral info url.
 Gets the signed application data.
   
 ### GetIssuedTime function
-Gets the issued time.e.
+Gets the issued time.

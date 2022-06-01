@@ -38,4 +38,4 @@ Get attachment long name as a string.
 Get attachment path name as a string. if path not empty then reference attachment.
   
 ### GetLongPath function
-Get attachment long path name as a string. if path not empty then reference attachment.t.
+Get attachment long path name as a string. if path not empty then reference attachment.

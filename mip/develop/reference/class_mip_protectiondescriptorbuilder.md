@@ -110,8 +110,10 @@ Parameters:
 
   
 ### LicenseType enum
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 DoNotForward            | Defines a do not forward license type.
 EncryptOnly            | Defines an encrypt only license type.
-License type to create a specialized license.e.
+
+License type to create a specialized license.

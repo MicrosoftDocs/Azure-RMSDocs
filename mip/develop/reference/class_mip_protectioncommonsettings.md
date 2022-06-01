@@ -20,4 +20,4 @@ public ProtectionCommonSettings(std::string applicationScenarioId)  | _Not yet d
   
 ### ProtectionCommonSettings function
 _Not documented yet._
-_
+

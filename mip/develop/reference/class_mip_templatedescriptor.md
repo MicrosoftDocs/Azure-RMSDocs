@@ -42,4 +42,4 @@ Get Template description.
 Gets whether or not the owner is in the rights list with full access.
 
   
-**Returns**: Boolol
+**Returns**: Bool.

@@ -17,4 +17,4 @@ An action class that specifies removing protection from the document.
   
 ## Members
 _Not documented yet._
-_
+

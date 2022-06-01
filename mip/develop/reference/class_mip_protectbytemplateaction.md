@@ -27,4 +27,4 @@ Get the protection template ID associated with the action.
   
 ### IsDoubleKey function
 _Not documented yet._
-_
+

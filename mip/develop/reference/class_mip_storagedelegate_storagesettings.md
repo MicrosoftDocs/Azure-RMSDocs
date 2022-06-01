@@ -41,4 +41,4 @@ Gets whether remote storage is used or not.
 Gets whether the delegate supports in-memory storage.
 
   
-**Returns**: True if the delegate supports in-memory storage.e.
+**Returns**: True if the delegate supports in-memory storage.

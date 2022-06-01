@@ -44,4 +44,3 @@ _Not documented yet._
   
 ### ~AddWatermarkActionData function
 _Not documented yet._
-_

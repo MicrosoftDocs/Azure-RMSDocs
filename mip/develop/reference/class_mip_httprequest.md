@@ -58,4 +58,4 @@ Get request headers.
 Get the minimum required TLS version for this request.
 
   
-**Returns**: The minimum required TLS version the Http transport provider should be secured with.h.
+**Returns**: The minimum required TLS version the Http transport provider should be secured with.

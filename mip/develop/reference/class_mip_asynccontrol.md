@@ -25,4 +25,5 @@ Calling cancel will result in a attempt to cancel the task, in case of success t
 
   
 **Returns**: False if cancel signal cannot be dispatched, true otherwise.
-Do not hold a strong reference to an AsyncControl object in a task completion block.k.
+
+Do not hold a strong reference to an AsyncControl object in a task completion block.

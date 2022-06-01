@@ -49,4 +49,4 @@ Parameters:
 * **state**: the current execution state of the content after the actions have been committed. 
 
 
-: This call sends an audit event.t.
+: This call sends an audit event.

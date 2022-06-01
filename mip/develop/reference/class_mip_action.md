@@ -17,4 +17,3 @@ Interface for an action. Each action translates to a step that needs to be taken
   
 ## Members
 _Not documented yet._
-_

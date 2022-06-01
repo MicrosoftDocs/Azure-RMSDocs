@@ -54,4 +54,4 @@ Get the sensitive information detections.
 Get the specific detection bands if the enchanced classification is enabled.
 
   
-**Returns**: A vector of instance counts at different confidence thresholdsds
+**Returns**: A vector of instance counts at different confidence thresholds.

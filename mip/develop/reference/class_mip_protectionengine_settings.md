@@ -281,4 +281,3 @@ Sets the logger context that will be opaquely passed to the logger delegate for 
 
 Parameters:  
 * **loggerContext**: The logger context
-

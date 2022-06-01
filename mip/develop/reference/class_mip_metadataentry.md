@@ -78,4 +78,4 @@ Get the metadata entry value.
 Get the metadata entry version.
 
   
-**Returns**: Metadata entry version.n.
+**Returns**: Metadata entry version.

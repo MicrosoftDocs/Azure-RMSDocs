@@ -29,4 +29,4 @@ Get the confidence in the result.
 Get the instance count.
 
   
-**Returns**: The instance count.t.
+**Returns**: The instance count.

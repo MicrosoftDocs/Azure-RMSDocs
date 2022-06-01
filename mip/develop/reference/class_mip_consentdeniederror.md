@@ -17,4 +17,3 @@ An operation that required consent from user was not granted consent.
   
 ## Members
 _Not documented yet._
-_

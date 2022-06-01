@@ -29,4 +29,4 @@ Gets the Id.
 Gets the descriptor items.
 
   
-**Returns**: The descriptor itemsms
+**Returns**: The descriptor items.

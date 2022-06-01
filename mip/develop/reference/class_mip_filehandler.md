@@ -140,4 +140,4 @@ Parameters:
 Fires an Audit event
   
 ### GetOutputFileName function
-Calculates the output file name and extension based on the original file name and the accumulated changes.s.
+Calculates the output file name and extension based on the original file name and the accumulated changes.

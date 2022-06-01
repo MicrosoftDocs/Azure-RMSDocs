@@ -29,4 +29,4 @@ Gets the extranet url.
 Gets the intranet url.
 
   
-**Returns**: The intranet urlrl
+**Returns**: The intranet url.

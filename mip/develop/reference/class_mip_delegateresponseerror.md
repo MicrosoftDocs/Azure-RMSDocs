@@ -78,5 +78,3 @@ Creates an error/exception object. Call this method from a MIP delegate function
 Parameters:  
 * **message**: Message associated with the exception.
 
-
-

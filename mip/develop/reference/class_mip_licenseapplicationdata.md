@@ -29,4 +29,4 @@ Gets the application data name.
 Gets the application data value.
 
   
-**Returns**: The valueue
+**Returns**: The value.

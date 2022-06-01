@@ -21,4 +21,4 @@ public const std::string& GetTemplateId() const  |  #### Returns
 ### GetTemplateId function
 
   
-**Returns**: The Template Id specifically associated with encrypt only actionon
+**Returns**: The Template Id specifically associated with encrypt only action.

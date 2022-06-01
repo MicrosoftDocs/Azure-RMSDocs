@@ -66,4 +66,4 @@ Get the alignment of the header.
 Get the margin of the header from the bottom.
 
   
-**Returns**: The margins from the bottom of the document (for example, 10 mm).).
+**Returns**: The margins from the bottom of the document (for example, 10 mm).

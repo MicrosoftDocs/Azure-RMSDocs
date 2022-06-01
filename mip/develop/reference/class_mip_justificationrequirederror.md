@@ -21,4 +21,4 @@ public virtual std::shared_ptr&lt;Error&gt; Clone() const  |  Clone the error.
 Clone the error.
 
   
-**Returns**: A clone of the error.r.
+**Returns**: A clone of the error.

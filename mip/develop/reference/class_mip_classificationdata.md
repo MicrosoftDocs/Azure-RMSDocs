@@ -19,4 +19,3 @@ public virtual ~ClassificationData()  | _Not yet documented._
   
 ### ~ClassificationData function
 _Not documented yet._
-_

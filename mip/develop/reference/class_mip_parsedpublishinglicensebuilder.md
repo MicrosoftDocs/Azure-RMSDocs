@@ -120,4 +120,4 @@ Parameters:
 Creates a ParsedPublishingLicense with the properties set on this object instance.
 
   
-**Returns**: New ParsedPublishingLicense instancece
+**Returns**: New ParsedPublishingLicense instance.

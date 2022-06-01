@@ -29,4 +29,4 @@ Get the ID of the classification policy.
 Get the ID of the rule package.
 
   
-**Returns**: ID of the rule package. prebuilt classifications will be set to empty guid.d.
+**Returns**: ID of the rule package. prebuilt classifications will be set to empty guid.

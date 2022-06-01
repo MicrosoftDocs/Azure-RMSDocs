@@ -17,4 +17,4 @@ Base class for all errors that will be reported (thrown or returned) from MIP SD
   
 ## Members
 _Not documented yet._
-_
+

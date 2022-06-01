@@ -98,5 +98,3 @@ Set the stream size.
 Parameters:  
 * **stream**: size.
 
-
-

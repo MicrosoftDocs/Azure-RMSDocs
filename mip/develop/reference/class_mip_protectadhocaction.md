@@ -17,4 +17,3 @@ An action class that specifies adding adhoc protection to the document.
   
 ## Members
 _Not documented yet._
-_

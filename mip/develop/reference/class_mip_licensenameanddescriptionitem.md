@@ -36,4 +36,4 @@ Gets the name.
 Gets the description.
 
   
-**Returns**: The descriptionon
+**Returns**: The description.

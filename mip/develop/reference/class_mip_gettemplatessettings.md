@@ -65,4 +65,4 @@ Parameters:
 Can cache templates or not.
 
   
-**Returns**: True to cache templates. False to not.t.
+**Returns**: True to cache templates. False to not.

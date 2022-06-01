@@ -61,4 +61,4 @@ Parameters:
 
   
 ### CancelAllOperations function
-Cancel ongoing HTTP requests.s.
+Cancel ongoing HTTP requests.

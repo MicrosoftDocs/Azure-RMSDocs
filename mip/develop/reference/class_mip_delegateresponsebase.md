@@ -17,4 +17,3 @@ Base class for all DelegateResponse classes.
   
 ## Members
 _Not documented yet._
-_

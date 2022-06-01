@@ -19,4 +19,3 @@ public virtual ~ConditionData()  | _Not yet documented._
   
 ### ~ConditionData function
 _Not documented yet._
-_

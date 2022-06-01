@@ -20,4 +20,4 @@ public const std::string& GetIssuerName() const  | _Not yet documented._
   
 ### GetIssuerName function
 _Not documented yet._
-_
+

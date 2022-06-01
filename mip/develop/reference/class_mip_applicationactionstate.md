@@ -78,4 +78,4 @@ ActionType::RecommendLabel must be enable for this field to have an affect.
 Return the content's time zone as an offset from UTC, in seconds, or kTimeZoneOffsetLocalTime to use the machine's local time.
 
   
-**Returns**: The content's time zone as an offset from UTC, in seconds, or kTimeZoneOffsetLocalTime to use the machine's local time.e.
+**Returns**: The content's time zone as an offset from UTC, in seconds, or kTimeZoneOffsetLocalTime to use the machine's local time.

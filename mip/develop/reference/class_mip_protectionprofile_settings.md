@@ -231,4 +231,3 @@ Enables or disables offline publishing.
 
 Parameters:  
 * **offlinePublishing**: A boolean value indicating whether or not offline publishing is enabled
-

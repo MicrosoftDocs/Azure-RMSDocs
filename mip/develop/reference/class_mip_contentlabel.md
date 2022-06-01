@@ -55,4 +55,4 @@ Get the actual label object applied on the content.
   
 **Returns**: The label object applied on the content. 
   
-**See also**: mip::Labelel
+**See also**: mip::Label.

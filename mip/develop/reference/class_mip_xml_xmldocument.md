@@ -44,4 +44,4 @@ Parse an xml formatted buffer into an xmldocument.
 Get the node that is an ancestor of all other nodes.
 
   
-**Returns**: A shared_ptr to an XmlNodede
+**Returns**: A shared_ptr to an XmlNode.

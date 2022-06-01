@@ -52,4 +52,4 @@ The logger context for the log statement.
 The message time of the log statement.
   
 ### GetMessageThreadId function
-The thread id of the log statement.t.
+The thread id of the log statement.

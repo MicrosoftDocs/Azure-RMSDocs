@@ -17,4 +17,3 @@ Bad input error, thrown when the input to an SDK API is invalid.
   
 ## Members
 _Not documented yet._
-_

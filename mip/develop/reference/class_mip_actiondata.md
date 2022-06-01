@@ -19,4 +19,3 @@ public virtual ~ActionData()  | _Not yet documented._
   
 ### ~ActionData function
 _Not documented yet._
-_

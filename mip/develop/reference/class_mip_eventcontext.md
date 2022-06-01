@@ -29,4 +29,4 @@ Gets the cloud type.
 Gets the data boundary region.
 
   
-**Returns**: DataBoundaryry
+**Returns**: DataBoundary.

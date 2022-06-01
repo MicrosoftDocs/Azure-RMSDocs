@@ -205,4 +205,4 @@ If the current value is a bool, return it.
 Serialize the value and all children as a string.
 
   
-**Returns**: This json value and all children serialized as a string.g.
+**Returns**: This json value and all children serialized as a string.

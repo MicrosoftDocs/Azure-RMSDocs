@@ -81,6 +81,3 @@ Write a log statement to a log.
 
 Parameters:  
 * **logMessage**: The log message data containing the logging information
-
-
-
