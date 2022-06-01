@@ -358,7 +358,7 @@ Parameters:
 
 
   
-**Returns**: [TenantInformation](#classTenantInformation)
+**Returns**: TenantInformation
   
 ### GetTenantInformationAsync function
 Loads user licensor certificate and returns information about the tenant.

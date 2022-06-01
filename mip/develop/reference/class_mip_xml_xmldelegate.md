@@ -14,7 +14,7 @@ Interface for overriding XML handling (must be capable of handling multiple thre
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public XmlReaderResult CreateXmlReader(const std::string& xmlParserInput) const  |  Create an xml reader that can transverse the input. This method will throw an [XmlLoadException](#classxml_1_1XmlLoadException) if it cannot initialize an XML reader, if the input is invalid, or if the input is too large to handle.
+public XmlReaderResult CreateXmlReader(const std::string& xmlParserInput) const  |  Create an xml reader that can transverse the input. This method will throw an XmlLoadException if it cannot initialize an XML reader, if the input is invalid, or if the input is too large to handle.
 public XmlDocumentResult ParseData(const std::string& data) const  |  Parse an xml formatted buffer into an XmlDocument.
   
 ## Members

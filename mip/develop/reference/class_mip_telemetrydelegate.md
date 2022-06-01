@@ -35,7 +35,7 @@ Parameters:
 * **event**: Event to be logged 
 
 
-* **eventContext**: [EventContext](#classEventContext) associated with event
+* **eventContext**: EventContext associated with event.
 
 
   

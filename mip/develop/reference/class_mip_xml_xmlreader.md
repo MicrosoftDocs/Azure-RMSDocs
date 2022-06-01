@@ -33,7 +33,7 @@ public std::string DumpNode()  |  Method returns all node elements in an unmodif
   
 ### Read function
 Reads the next node of the element.
-throws [XmlParserException](#classxml_1_1XmlParserException) on failure
+throws XmlParserException on failure
 
   
 **Returns**: True if read node successfully.
