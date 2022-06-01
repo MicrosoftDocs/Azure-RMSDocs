@@ -41,4 +41,4 @@ There are a few fundamental differences between the C++ version of the SDK and t
 
 ## Next Steps
 
-Next, review [Quickstart - Initialization for Microsoft Purview Information Protection SDK C#](quick-app-initialization-csharp.md) to get started on building a basic, MIP-enabled console application.
+Next, review [Quickstart - Initialization for Microsoft Information Protection SDK C#](quick-app-initialization-csharp.md) to get started on building a basic, MIP-enabled console application.

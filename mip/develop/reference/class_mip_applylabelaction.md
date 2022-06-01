@@ -1,6 +1,6 @@
 ---
 title: class ApplyLabelAction 
-description: Documents the applylabelaction::undefined class of the Microsoft Purview Information Protection SDK.
+description: Documents the applylabelaction::undefined class of the Microsoft Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

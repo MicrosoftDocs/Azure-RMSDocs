@@ -9,7 +9,7 @@ ms.date: 01/28/2019
 ---
 # MIP SDK for C++ Reference
 
-The Microsoft Purview Information Protection SDK for C++ allows developers to manage and apply data protection policies to data and other digital assets.
+The Microsoft Information Protection SDK for C++ allows developers to manage and apply data protection policies to data and other digital assets.
 
 The MIP SDK for C++ includes [Enumerations and structures](mip-enums-and-structs.md), and the following classes:
 

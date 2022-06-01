@@ -1,4 +1,4 @@
----
+﻿---
 title: Concepts - APIs in the MIP SDK.
 description: This article will help you understand 3 types of APIs in the MIP SDK, how they're related, and use-cases for using each.
 author: msmbaldwin
@@ -10,7 +10,7 @@ ms.author: mbaldwin
 
 # Microsoft Information Protection SDK - API concepts
 
-The Microsoft Purview Information Protection SDK is composed of three SDKs, as shown in the following diagram:
+The Microsoft Information Protection SDK is composed of three SDKs, as shown in the following diagram:
 
 [![MIP SDK diagram](media/concept-apis-use-cases/mip-sdk-components.png)](media/concept-apis-use-cases/mip-sdk-components.png#lightbox)
 

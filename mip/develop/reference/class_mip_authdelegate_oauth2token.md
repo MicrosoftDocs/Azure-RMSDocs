@@ -1,6 +1,6 @@
 ---
 title: class AuthDelegate::OAuth2Token 
-description: Documents the authdelegate::oauth2token class of the Microsoft Purview Information Protection SDK.
+description: Documents the authdelegate::oauth2token class of the Microsoft Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

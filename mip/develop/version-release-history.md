@@ -1,5 +1,5 @@
----
-title: Microsoft Purview Information Protection SDK version release history and support policy
+﻿---
+title: Microsoft Information Protection SDK version release history and support policy
 description: Version release history and change notes for the MIP SDK.
 author: msmbaldwin
 ms.service: information-protection

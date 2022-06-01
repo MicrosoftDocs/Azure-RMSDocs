@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Release management and supportability - Azure Information Protection (AIP)
@@ -203,7 +203,7 @@ For more information, including licensing requirements, see:
 
 ### Fixes and improvements - version 2.12.62.0
 
-- Fixes for errors where AIP may not load if a [policy](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Purview Information Protection SDK](/information-protection/develop/version-release-history).
+- Fixes for errors where AIP may not load if a [policy](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection SDK](/information-protection/develop/version-release-history).
 
 - Fixed possibly incorrect **method** values in [New label audit logs](../audit-logs.md#new-label-audit-logs) for Outlook events.
 
@@ -211,7 +211,7 @@ For more information, including licensing requirements, see:
 
 - Fixes for errors where documents may not be saved because of [edits made in the labeling metadata and lack of permissions](/microsoft-365/compliance/create-sensitivity-labels).
 
-- Fixes for possible crashes when running PowerShell cmdlets. Fix provided by updates to the [Microsoft Purview Information Protection SDK](/information-protection/develop/version-release-history).
+- Fixes for possible crashes when running PowerShell cmdlets. Fix provided by updates to the [Microsoft Information Protection SDK](/information-protection/develop/version-release-history).
 
 - Fixed errors where [justification popup messages](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) may not appear in Outlook.
 

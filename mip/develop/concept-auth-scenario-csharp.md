@@ -1,5 +1,5 @@
----
-title: Concepts - Authentication Scenarios for Microsoft Purview Information Protection SDK C# clients
+﻿---
+title: Concepts - Authentication Scenarios for Microsoft Information Protection SDK C# clients
 description: Technical details about authentication scenarios for Microsoft Information Protection SDK C# client applications.
 author: msmbaldwin
 ms.author: mbaldwin

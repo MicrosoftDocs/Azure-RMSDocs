@@ -1,6 +1,6 @@
 ---
 title: class RemoveContentHeaderAction 
-description: Documents the removecontentheaderaction::undefined class of the Microsoft Purview Information Protection SDK.
+description: Documents the removecontentheaderaction::undefined class of the Microsoft Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

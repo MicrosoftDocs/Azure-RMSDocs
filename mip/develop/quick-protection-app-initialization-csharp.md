@@ -1,6 +1,6 @@
 ---
 title: Quickstart - Client application initialization - Protection SDK (C#)
-description: A quickstart showing you how to write the initialization logic for a Microsoft Purview Information Protection SDK - Protection SDK C# client applications (C#)
+description: A quickstart showing you how to write the initialization logic for a Microsoft Information Protection SDK - Protection SDK C# client applications (C#)
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
@@ -21,7 +21,7 @@ This quickstart will show you how to implement the client initialization pattern
 
 If you haven't already, be sure to:
 
-- Complete the steps in [Microsoft Purview Information Protection SDK setup and configuration](setup-configure-mip.md). This "Protection Profile and Engine set up" Quickstart relies on proper SDK setup and configuration.
+- Complete the steps in [Microsoft Information Protection SDK setup and configuration](setup-configure-mip.md). This "Protection Profile and Engine set up" Quickstart relies on proper SDK setup and configuration.
 - Optionally:
   - Review [Profile and engine objects](concept-profile-engine-cpp.md). The profile and engine objects are universal concepts, required by clients that use the MIP File/Policy/Protection SDKs.
   - Review [Authentication concepts](concept-authentication-cpp.md) to learn how authentication and consent are implemented by the SDK and client application.

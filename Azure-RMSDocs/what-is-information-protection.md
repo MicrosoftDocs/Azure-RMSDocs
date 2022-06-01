@@ -97,7 +97,7 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 
 **When you're ready to customize AIP further**, see [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md).
 
-**To get started with the MIP SDK**, see [Microsoft Purview Information Protection SDK setup and configuration](/information-protection/develop/setup-configure-mip).
+**To get started with the MIP SDK**, see [Microsoft Information Protection SDK setup and configuration](/information-protection/develop/setup-configure-mip).
 
 ### Additional resources
 
