@@ -28,7 +28,7 @@ public int GetMargin() const  |  Get the margin of the header from the bottom.
 An API used to mark the content header element.
 
   
-**Returns**: The name that should be used for the UI element that holds the content header. The same name will be returned in [RemoveContentHeaderAction](undefined) in case the content header needs to be removed.
+**Returns**: The name that should be used for the UI element that holds the content header. The same name will be returned in RemoveContentHeaderAction in case the content header needs to be removed.
   
 ### GetText function
 Get the text that is meant to go into the content header.
@@ -60,7 +60,7 @@ Get the alignment of the header.
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: [ContentMarkAlignment](undefined)
+**See also**: ContentMarkAlignment
   
 ### GetMargin function
 Get the margin of the header from the bottom.

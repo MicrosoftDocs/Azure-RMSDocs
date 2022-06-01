@@ -9,7 +9,7 @@ ms.date: 05/31/2022
 ---
 
 # class StorageDelegate::StorageSettings 
-Settings used by [StorageDelegate](undefined).
+Settings used by StorageDelegate.
   
 ## Summary
  Members                        | Descriptions                                

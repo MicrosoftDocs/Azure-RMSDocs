@@ -24,7 +24,7 @@ public void Flush()  |  Flush any queued events (e.g. due to shutdown)
 Log a diagnostic event.
 
 Parameters:  
-* **event**: [Event](undefined) to be logged
+* **event**: Event to be logged
 
 
   
@@ -32,7 +32,7 @@ Parameters:
 Log a diagnostic event.
 
 Parameters:  
-* **event**: [Event](undefined) to be logged 
+* **event**: Event to be logged 
 
 
 * **eventContext**: [EventContext](#classEventContext) associated with event

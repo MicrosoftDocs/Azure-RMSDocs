@@ -9,7 +9,7 @@ ms.date: 05/31/2022
 ---
 
 # class MetadataAction 
-An [Action](undefined) that adds metadata information to the content.
+An Action that adds metadata information to the content.
   
 ## Summary
  Members                        | Descriptions                                

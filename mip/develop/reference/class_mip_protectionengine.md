@@ -49,10 +49,10 @@ Gets the engine settings.
 Get collection of templates available to a user.
 
 Parameters:  
-* **observer**: A class implementing the [ProtectionEngine::Observer](undefined) interface 
+* **observer**: A class implementing the ProtectionEngine::Observer interface 
 
 
-* **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely passed back to observers and optional HttpDelegate
 
 
 
@@ -63,10 +63,10 @@ Parameters:
 Get collection of templates available to a user.
 
 Parameters:  
-* **context**: Client context that will be opaquely passed to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely passed to optional HttpDelegate
 
 
-* **templateSettings**: [Settings](undefined) to use when obtaining templates
+* **templateSettings**: Settings to use when obtaining templates
 
 
 
@@ -77,13 +77,13 @@ Parameters:
 Get collection of templates available to a user.
 
 Parameters:  
-* **observer**: A class implementing the [ProtectionEngine::Observer](undefined) interface 
+* **observer**: A class implementing the ProtectionEngine::Observer interface 
 
 
-* **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely passed back to observers and optional HttpDelegate
 
 
-* **templateSettings**: [Settings](undefined) to use when obtaining templates 
+* **templateSettings**: Settings to use when obtaining templates 
 
 
 
@@ -94,7 +94,7 @@ Parameters:
 Get collection of templates available to a user.
 
 Parameters:  
-* **context**: Client context that will be opaquely passed to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely passed to optional HttpDelegate
 
 
 
@@ -119,7 +119,7 @@ Parameters:
 * **documentId**: Document ID associated with the document metadata 
 
 
-* **labelId**: [Label](undefined) ID associated with the document metadata with which the document created 
+* **labelId**: Label ID associated with the document metadata with which the document created 
 
 
 * **ownerEmail**: owner of the document 
@@ -128,10 +128,10 @@ Parameters:
 * **A**: delegated user is specified when the authenticating user/application is acting on behalf of another user, empty if none 
 
 
-* **observer**: A class implementing the [ProtectionEngine::Observer](undefined) interface 
+* **observer**: A class implementing the ProtectionEngine::Observer interface 
 
 
-* **context**: This same context will be forwarded to [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](undefined) or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](undefined)
+* **context**: This same context will be forwarded to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
 
 
 
@@ -145,7 +145,7 @@ Parameters:
 * **documentId**: Document ID associated with the document metadata 
 
 
-* **labelId**: [Label](undefined) ID associated with the document metadata with which the document created 
+* **labelId**: Label ID associated with the document metadata with which the document created 
 
 
 * **ownerEmail**: Owner of the document 
@@ -154,7 +154,7 @@ Parameters:
 * **A**: delegated user is specified when the authenticating user/application is acting on behalf of another user, empty if none 
 
 
-* **context**: This same context will be forwarded to optional [HttpDelegate](undefined)
+* **context**: This same context will be forwarded to optional HttpDelegate
 
 
 
@@ -168,10 +168,10 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
@@ -185,12 +185,12 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
 
   
-**Returns**: [ProtectionHandler](undefined)
+**Returns**: ProtectionHandler
   
 ### CreateProtectionHandlerForConsumptionAsync function
 Creates a protection handler where rights/roles are assigned to specific users.
@@ -199,10 +199,10 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
@@ -216,18 +216,18 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
 
   
-**Returns**: [ProtectionHandler](undefined)
+**Returns**: ProtectionHandler
   
 ### LoadUserCert function
 pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
 
 Parameters:  
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
 
@@ -238,10 +238,10 @@ Parameters:
 pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
 
 Parameters:  
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
@@ -258,7 +258,7 @@ Parameters:
 * **isOwnerNotificationEnabled**: Set to true to notify the owner via email whenever the document is decrypted, or false to not send the notification. 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
   
@@ -275,10 +275,10 @@ Parameters:
 * **isOwnerNotificationEnabled**: Set to true to notify the owner via email whenever the document is decrypted, or false to not send the notification. 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
@@ -292,7 +292,7 @@ Parameters:
 * **serializedPublishingLicense**: Serialized publishing license from protected content 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
   
@@ -303,10 +303,10 @@ Parameters:
 * **serializedPublishingLicense**: Serialized publishing license from protected content 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
@@ -320,7 +320,7 @@ Parameters:
 * **settings**: The delegation settings 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
@@ -335,16 +335,16 @@ Parameters:
 * **settings**: The delegation settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
   
 **Returns**: Async control object.
-Use this method to create licenses for a list of users. Receive the [DelegationLicense](undefined) vector in callback OnCreateDelegatedLicensesSuccess Failures are sent in OnCreateDelegatedLicensesFailure
+Use this method to create licenses for a list of users. Receive the DelegationLicense vector in callback OnCreateDelegatedLicensesSuccess Failures are sent in OnCreateDelegatedLicensesFailure
   
 ### GetTenantInformation function
 Loads user licensor certificate and returns information about the tenant.
@@ -353,7 +353,7 @@ Parameters:
 * **settings**: The common settings 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
 
@@ -367,13 +367,13 @@ Parameters:
 * **settings**: The common settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
   
 **Returns**: Async control object.
-- [ProtectionEngine::Observer::OnGetTenantInformationAsyncSuccess](undefined) will be called on success [ProtectionEngine::Observer::OnGetTenantInformationAsyncFailure](undefined) will be called on failure
+- ProtectionEngine::Observer::OnGetTenantInformationAsyncSuccess will be called on success ProtectionEngine::Observer::OnGetTenantInformationAsyncFailure will be called on failure

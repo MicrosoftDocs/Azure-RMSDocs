@@ -9,7 +9,7 @@ ms.date: 05/31/2022
 ---
 
 # class MipContext 
-[MipContext](undefined) represents state that is shared across all profiles, engines, handlers.
+MipContext represents state that is shared across all profiles, engines, handlers.
   
 ## Summary
  Members                        | Descriptions                                
@@ -25,7 +25,7 @@ public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get Http impl
 public LoggerDelegate* GetRawLoggerDelegate() const  |  Get raw logger implementation.
 public std::shared_ptr\<StorageDelegate\> GetStorageDelegate() const  |  Get Storage Delegate implementation if provided.
 public const std::map\<FlightingFeature, bool\>& GetFlightingFeatures() const  |  Get flighting feature set.
-public const std::shared_ptr\<const MipConfiguration\>& GetMipConfiguration() const  |  Gets the mip configuration that was used to create the [MipContext](undefined).
+public const std::shared_ptr\<const MipConfiguration\>& GetMipConfiguration() const  |  Gets the mip configuration that was used to create the MipContext.
   
 ## Members
   
@@ -79,7 +79,7 @@ Get logger implementation.
 Get Http implementation.
 
   
-**Returns**: [HttpDelegate](undefined)
+**Returns**: HttpDelegate
   
 ### GetRawLoggerDelegate function
 Get raw logger implementation.
@@ -91,7 +91,7 @@ Get raw logger implementation.
 Get Storage Delegate implementation if provided.
 
   
-**Returns**: [StorageDelegate](undefined)
+**Returns**: StorageDelegate
   
 ### GetFlightingFeatures function
 Get flighting feature set.
@@ -100,7 +100,7 @@ Get flighting feature set.
 **Returns**: Flighting feature map
   
 ### GetMipConfiguration function
-Gets the mip configuration that was used to create the [MipContext](undefined).
+Gets the mip configuration that was used to create the MipContext.
 
   
 **Returns**: The mip configuration

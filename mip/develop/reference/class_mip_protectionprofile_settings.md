@@ -9,20 +9,20 @@ ms.date: 05/31/2022
 ---
 
 # class ProtectionProfile::Settings 
-[Settings](undefined) used by [ProtectionProfile](undefined) during its creation and throughout its lifetime.
+Settings used by ProtectionProfile during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<ConsentDelegate\>& consentDelegate, const std::shared_ptr\<ProtectionProfile::Observer\>& observer)  |  [ProtectionProfile::Settings](undefined) constructor that specifies an observer to be used for async operations.
-public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<ConsentDelegate\>& consentDelegate)  |  [ProtectionProfile::Settings](undefined) constructor, used for synchronous operations.
+public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<ConsentDelegate\>& consentDelegate, const std::shared_ptr\<ProtectionProfile::Observer\>& observer)  |  ProtectionProfile::Settings constructor that specifies an observer to be used for async operations.
+public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<ConsentDelegate\>& consentDelegate)  |  ProtectionProfile::Settings constructor, used for synchronous operations.
 public CacheStorageType GetCacheStorageType() const  |  Get whether caches are stored in memory or on disk.
 public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Gets the consent delegate used for connecting to services.
-public std::shared_ptr\<ProtectionProfile::Observer\> GetObserver() const  |  Gets the observer that receives notifications of events related to [ProtectionProfile](undefined).
+public std::shared_ptr\<ProtectionProfile::Observer\> GetObserver() const  |  Gets the observer that receives notifications of events related to ProtectionProfile.
 public std::shared_ptr\<MipContext\> GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Override default HTTP stack with client's own.
-public std::shared_ptr\<StorageDelegate\> GetStorageDelegate() const  |  Get the [StorageDelegate](undefined) (if any) provided by the application.
+public std::shared_ptr\<StorageDelegate\> GetStorageDelegate() const  |  Get the StorageDelegate (if any) provided by the application.
 public void SetStorageDelegate(const std::shared_ptr\<StorageDelegate\>& storageDelegate)  |  Override default storage cache with client's own implementation.
 public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
 public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Override default asynchonous task dispatching handling with client's own.
@@ -42,7 +42,7 @@ public void SetOfflinePublishing(bool offlinePublishing)  |  Enables or disables
 ## Members
   
 ### Settings function
-[ProtectionProfile::Settings](undefined) constructor that specifies an observer to be used for async operations.
+ProtectionProfile::Settings constructor that specifies an observer to be used for async operations.
 
 Parameters:  
 * **mipContext**: Global context settings 
@@ -54,7 +54,7 @@ Parameters:
 * **consentDelegate**: Delegate used to obtain user permission to access external resources 
 
 
-* **observer**: [Observer](undefined) instance that will receive notifications of events related to [ProtectionProfile](undefined)
+* **observer**: Observer instance that will receive notifications of events related to ProtectionProfile
 
 
 * **applicationInfo**: Info about application that is consuming the protection SDK
@@ -62,7 +62,7 @@ Parameters:
 
   
 ### Settings function
-[ProtectionProfile::Settings](undefined) constructor, used for synchronous operations.
+ProtectionProfile::Settings constructor, used for synchronous operations.
 
 Parameters:  
 * **mipContext**: Global context settings 
@@ -91,10 +91,10 @@ Gets the consent delegate used for connecting to services.
 **Returns**: Consent delegate used for connecting to services
   
 ### GetObserver function
-Gets the observer that receives notifications of events related to [ProtectionProfile](undefined).
+Gets the observer that receives notifications of events related to ProtectionProfile.
 
   
-**Returns**: [Observer](undefined) that receives notifications of events related to [ProtectionProfile](undefined)
+**Returns**: Observer that receives notifications of events related to ProtectionProfile
   
 ### GetMipContext function
 Get MIP context which represents shared state across all profiles.
@@ -117,16 +117,16 @@ Parameters:
 
   
 ### GetStorageDelegate function
-Get the [StorageDelegate](undefined) (if any) provided by the application.
+Get the StorageDelegate (if any) provided by the application.
 
   
-**Returns**: [StorageDelegate](undefined) to be used for caching
+**Returns**: StorageDelegate to be used for caching
   
 ### SetStorageDelegate function
 Override default storage cache with client's own implementation.
 
 Parameters:  
-* **storageDelegate**: [StorageDelegate](undefined) interface implemented by client application
+* **storageDelegate**: StorageDelegate interface implemented by client application
 
 
   
