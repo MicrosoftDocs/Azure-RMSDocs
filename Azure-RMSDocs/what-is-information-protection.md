@@ -28,11 +28,7 @@ search.appverid:
 
 # What is Azure Information Protection?
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
-
-> [!NOTE]
-> Are you looking for [Microsoft Information Protection](/microsoft-365/compliance/information-protection)? The Azure Information Protection unified labeling client is [currently in maintenance mode](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613). We recommend enabling Microsoft Information Protection's built-in labeling for your Office 365 applications. For more information, see the [sensitivity labeling documentation from Microsoft 365](/microsoft-365/compliance/sensitivity-labels#sensitivity-labels-and-azure-information-protection).
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to discover, classify, and protect documents and emails by applying labels to content.
 
@@ -126,14 +122,3 @@ See the following recorded sessions from Ignite 2020:
 - [**Know your data, protect your data and prevent data loss** with Microsoft Information Protection](https://myignite.microsoft.com/archives/IG20-OD273)
 
 - **Ask anything about Microsoft Compliance**: information protection & governance, insider risks, Compliance Management, and more: [Ask the expert session 1](https://myignite.microsoft.com/archives/IG20-ATE-DB163-R1) | [Ask the expert session 2](https://myignite.microsoft.com/archives/IG20-ATE-DB170)
-
-
-## AIP's classic client
-
-The Azure Information Protection classic client is the earlier version of AIP, and enables administrators to manage classification labels directly in the Azure portal.
-
-AIP labels managed in the Azure portal are *not* supported by the unified labeling platform, are limited to working with the Azure Information Protection client and scanner, and Microsoft Defender for Cloud Apps. 
-
-We recommend migrating to unified labeling to support these features, as well as SharePoint, Microsoft 365 apps, Outlook for the web and mobile devices, PowerBI data protection, and more. For more information, see [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md).
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]

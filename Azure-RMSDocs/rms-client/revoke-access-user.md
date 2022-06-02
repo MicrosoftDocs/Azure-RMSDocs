@@ -27,9 +27,7 @@ ms.custom: user
 
 # User Guide: Revoke document access with Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8*
->
->***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 This article describes how to revoke access for Office documents that you've protected from Microsoft Office. Protected documents are supported for track and revoke, even if they are not labeled.
 
@@ -68,7 +66,7 @@ If you do not see the option to **Revoke Access** in the **Sensitivity** menu, y
 
 - You may not have the latest AIP unified labeling client version installed, or you may need to restart your Office apps or machine after installation. 
 
-    For more information, see [User Guide: Download and install the Azure Information Protection client](install-client-app.md).
+    For more information, see [User Guide: Download and install the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/install-client-app).
 
 - Your administrator may have [turned off tracking features](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant) in your organization.
 

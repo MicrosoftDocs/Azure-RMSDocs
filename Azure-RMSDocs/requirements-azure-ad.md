@@ -26,11 +26,7 @@ ms.custom: admin, has-adal-ref
 
 # Additional Azure AD requirements for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 An [Azure AD directory is a requirement](requirements.md#azure-active-directory) for using Azure Information protection. Use an account from an Azure AD directory to sign in to the Azure portal, where you can configure Azure Information Protection settings.
 
@@ -98,6 +94,7 @@ If you're using a mobile device or Mac computer that authenticates on-premises u
 
 - A minimum server version of **Windows Server 2012 R2**
 - An alternative authentication provider that supports the OAuth 2.0 protocol
+
 
 ## Next steps
 To check for other requirements, see [Requirements for Azure Information Protection](requirements.md).

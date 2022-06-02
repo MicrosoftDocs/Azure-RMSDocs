@@ -27,17 +27,12 @@ ms.custom: admin
 
 # Configure usage rights for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
-> 
-> For completeness, this article includes values from the Azure classic portal, which was retired January 08, 2018.
 
 This article describes usage rights you can configure to be automatically applied when a label or template is selected by users, administrators, or configured services.
 
 Usage rights are selected when you configure sensitivity labels or protection templates for encryption. For example, you can select roles that configure a logical grouping of usage rights, or configure the individual rights separately. Alternatively users might select and apply the usage rights themselves.
+
+For completeness, this article includes values from the Azure classic portal, which was retired January 08, 2018.
 
 > [!IMPORTANT]
 > Use this article to understand how usage rights are *designed* to be interpreted by applications. 
@@ -54,9 +49,6 @@ In this table:
 - The **API Constant or Value** is the SDK name for an MSIPC API call, used when you write an application that checks for a usage right, or adds a usage right to a policy.
 
 - The **labeling admin center** is the Microsoft 365 compliance center, where you configure sensitivity labels.
-
-    If you have the classic client, configure your labels and label policies in the Azure portal.
-
 
 |Usage right|Description|Implementation|
 |-------------------------------|---------------------------|-----------------|
@@ -146,7 +138,7 @@ Similarly, by default, unprotected [Office documents](https://support.office.com
 
 Alternatively, you can change this protection inheritance of documents by specifying `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true` with [Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell). Use this configuration when you don't need to retain the original protection for the document after the user is authenticated. When recipients open the email message, the document is not protected.
 
-If you do need an attached document to retain the original protection, see [Secure document collaboration by using Azure Information Protection](secure-collaboration-documents.md).
+If you do need an attached document to retain the original protection, see [Secure document collaboration by using Azure Information Protection](/previous-versions/azure/information-protection/secure-collaboration-documents).
 
 > [!NOTE]
 > If you see references to **DecryptAttachmentFromPortal**, this parameter is now deprecated for [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration). Unless you have previously set this parameter, it is not available.
@@ -196,28 +188,16 @@ For the duration of the use license, the user is not reauthenticated or reauthor
 
 When documents and email messages are protected by using a label or a template that defines the protection settings, you can change these settings in your label or template without having to reprotect the content. If the user has already accessed the content, the changes take effect after their use license has expired. However, when users apply custom permissions (also known as an ad-hoc rights policy) and these permissions need to change after the document or email is protected, that content must be protected again with the new permissions. Custom permissions for an email message are implemented with the Do Not Forward option.
 
-The default use license validity period for a tenant is 30 days and you can configure this value by using the PowerShell cmdlet, [Set-AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime). You can configure a more restrictive setting for when protection is applied by using a sensitivity label or template:
+The default use license validity period for a tenant is 30 days and you can configure this value by using the PowerShell cmdlet, [Set-AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime). You can configure a more restrictive setting for when protection is applied by using a sensitivity label that's configured to assign permissions now, or a template:
 
 - When you configure a sensitivity label, the use license validity period takes its value from the **Allow offline access** setting. 
     
-    For more information and guidance to configure this setting, see the [Information about the protection settings](configure-policy-protection.md#information-about-the-protection-settings) table from the instructions how to configure a label for Rights Management protection.
+    For more information and guidance to configure this setting for a sensitivity label, see the recommendations table from the instructions how to [configure permissions now](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now) for a sensitivity label.
 
 - When you configure a template by using PowerShell, the use license validity period takes its value from the *LicenseValidityDuration* parameter in the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) and [Add-AipServiceTemplate](/powershell/module/aipservice/add-aipservicetemplate) cmdlets.
     
     For more information and guidance to configure this setting by using PowerShell, see the help for each cmdlet.
 
-## Rights included in the default templates
-
-**Relevant for**: AIP classic client only
-
-The following table lists the usage rights that are included when the default templates are created. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
-
-These default templates are created when your subscription was purchased, and the names and usage rights can be [changed](configure-policy-templates.md) in the Azure portal and with [PowerShell](/powershell/module/aipservice/set-aipservicetemplateproperty). 
-
-|Display name of template|Usage rights October 6, 2017 to current date|Usage rights before October 6, 2017|
-|----------------|--------------------|----------|
-|**\<*organization name> - Confidential View Only*** <br /><br />or<br /><br /> ***Highly Confidential \ All Employees***|View, Open, Read; Copy; View Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit|View, Open, Read|
-|**\<*organization name>- Confidential*** <br /><br />or <br /><br />***Confidential \ All Employees***|View, Open, Read; Save As, Export; Copy; View Rights; Change Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control|View, Open, Read; Save As, Export; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
 
 ## See Also
 

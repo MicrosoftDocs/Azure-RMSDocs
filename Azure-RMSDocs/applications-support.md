@@ -26,13 +26,6 @@ ms.custom: admin
 
 # How applications support the Azure Rights Management service
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
-
-
 Use the following information to help you understand how the most commonly used end-user applications and services can use the Azure Rights Management service from Azure Information Protection to help protect your organization's documents and emails. These applications include Word, Excel, PowerPoint, and Outlook. The services include Exchange and Microsoft SharePoint.
 
 > [!NOTE]
@@ -40,7 +33,7 @@ Use the following information to help you understand how the most commonly used 
 
 In some cases, the Azure Rights Management service automatically applies protection, according to policies that administrators configure. For example, this is the case with SharePoint libraries and Exchange transport rules. In other cases, end users must apply the protection themselves from their applications. For example, users select a classification label that is configured to apply protection, or they select a template, or select specific options. Protection that is applied by users is typical when users protect a file to share and they also restrict access or usage to selected users or to users outside the organization.
 
-Templates make it easier for users (and administrators who configure policies) to apply the correct level of protection and restrict access to people inside your organization. Although the Azure Rights Management service comes with two default templates, you probably want to create custom templates to reduce the times when users and administrators have to specify individual options. For more information about templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
+Templates make it easier for users (and administrators who configure policies) to apply the correct level of protection and restrict access to people inside your organization. Although the Azure Rights Management service comes with two default templates, you probably want to create custom templates to reduce the times when users and administrators have to specify individual options. For more information about templates, see [Configuring and managing templates for Azure Information Protection](/previous-versions/azure/information-protection/configure-policy-templates).
 
 For the cases where users must apply the protection themselves, be sure to provide them with instructions and guidance how and when to do this. Make the instructions specific for the application and versions that they use and how they use them. Also provide guidance for when and how users should apply the protection that is appropriate for your business. For more information, see [Helping users to protect files by using the Azure Rights Management service](help-users.md).
 
@@ -61,4 +54,3 @@ Learn more about how each of the following applications and services supports th
 -   [File servers that run Windows Server and use File Classification Infrastructure (FCI)](file-server-support.md)
 
 -   [Other applications that support the RMS APIs](api-support.md)
-

@@ -25,23 +25,13 @@ ms.custom: user
 
 # Mobile viewer apps for Azure Information Protection on iOS and Android
 
->***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
->***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text files that cannot be opened with your regular apps for these file types. For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
 
 ## Support timeline
 
-As we continue to bring the customer labeling and protection experience to built-in applications like Office 365, **AIP mobile viewer apps** for iOS and Android are planned to be sunset on December 31, 2022.
-
-Client support timelines are as follows:
-
-- The **Azure Information Protection unified labeling client** has moved into maintenance mode as of January 1, 2022. Moving forward, no new features will be added to the unified labeling client.
-
-- The **Azure Information Protection classic client** and **Label Management** in the Azure Portal are sunset as of March 31, 2021. No further support is provided for the classic client and maintenance versions will no longer be released. The classic client will be officially retired, and will stop functioning, on March 31, 2022.
-
-All current Azure Information Protection classic client customers must [migrate to the Microsoft Information Protection unified labeling platform](../tutorial-migrating-to-ul.md) and upgrade to the [unified labeling client](../rms-client/clientv2-admin-guide-install.md). 
+As we continue to bring the customer labeling and protection experience to built-in applications like Office 365, **AIP mobile viewer apps** for iOS and Android are planned to be sunset on December 31, 2022. The **Azure Information Protection unified labeling client** has also moved into maintenance mode as of January 1, 2022, and moving forward, no new features will be added to the unified labeling client.
 
 Learn more in our TechCommunity blog: [Announcing AIP unified labeling client maintenance mode and sunset of mobile viewer
 ](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613).
@@ -67,7 +57,7 @@ The AIP mobile viewer apps for iOS and Android support the following file types 
 |---------|---------|
 |**Supported OS versions**     | Minimum mobile OSs include: </br>- iOS 11  </br>- Android 8.1 </br></br>**Note**: The AIP mobile viewer apps are not supported on Intel CPUs.  |
 | **Supported mobile ABIs** | Supported Application Binary Interfaces (ABIS) include: <br>- armeabi-v7a <br>- arm64-v8a <br>- x86_64|
-|**Supported sign in credentials**     | Sign in to the AIP mobile viewer apps with one of the following: </br></br>**Work or school credentials.** Try logging in with your work or school credentials. If you have questions, contact your administrator to understand whether your organization has AD RMS on-premises with the mobile device extension, or uses Azure Information Protection. </br></br>**A Microsoft account.** If your personal email address was used to protect the file, sign in with a [Microsoft account](https://signup.live.com). If you need to apply for a Microsoft account, you can use your own Hotmail, Gmail, or any other email address to do so. </br></br>**Note**: Not all applications are able to open content protected with a Microsoft account. For more information, see [Supported scenarios for opening protected documents](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
+|**Supported sign in credentials**     | Sign in to the AIP mobile viewer apps with one of the following: </br></br>**Work or school credentials.** Try logging in with your work or school credentials. If you have questions, contact your administrator to understand whether your organization has AD RMS on-premises with the mobile device extension, or uses Azure Information Protection. </br></br>**A Microsoft account.** If your personal email address was used to protect the file, sign in with a [Microsoft account](https://signup.live.com). If you need to apply for a Microsoft account, you can use your own Hotmail, Gmail, or any other email address to do so. </br></br>**Note**: Not all applications are able to open content protected with a Microsoft account. For more information, see [Supported scenarios for opening protected documents](/previous-versions/azure/information-protection/secure-collaboration-documents#supported-scenarios-for-opening-protected-documents).|
 |**Supported file types**     | Supported files types include protected email messages, PDF files, images, and text files. </br></br>For example, these files include the following extensions: **rpmsg**, **.pdf**, **.ppdf**, **.pjpg**, **.pjpeg**, **.ptiff**, **.ppng**, **.ptxt**, **.pxml** </br></br>For more information, see [above](#support-scope-and-recommended-usage) and [The AIP client admin guide](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
 
 > [!NOTE]

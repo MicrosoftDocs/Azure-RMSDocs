@@ -29,11 +29,7 @@ ms.custom: admin
 
 # How Windows file servers that use FCI support Azure Rights Management
 
->***Applies to**: Azure Information Protection, [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 When you configure Windows Server to use File Classification Infrastructure, this File Server Resource Manager feature can scan local files and determine whether they contain sensitive data. 
 
@@ -42,7 +38,7 @@ Files that meet this criteria are tagged with classification properties that an 
 One of these actions includes applying information protection by using Azure Rights Management and the deployment of the Rights Management connector (also known as the RMS connector). Office files are then automatically protected by Azure RMS.
 
 > [!TIP]
-> To protect all file types, do not use the RMS connector, but instead, run a Windows PowerShell script that uses cmdlets from the [Azure Information Protection module](./rms-client/client-admin-guide-powershell.md).
+> To protect all file types, do not use the RMS connector, but instead, run a Windows PowerShell script that uses cmdlets from the [Azure Information Protection module](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell).
 > 
 
 The classification policies are fully configurable and highly extensible so that you can prevent potential data leakage from unauthorized and authorized users. It can even help to reduce the risk of data leakage by network administrators because you can configure policies that don’t require these administrators to have access to the files.
@@ -58,5 +54,3 @@ For instructions to use the Windows PowerShell script for all file types, see
 ## Next steps
 
 Now that you understand how applications and services support Azure RMS, you might be interested in comparing Azure RMS with the on-premises version of Rights Management, Active Directory Rights Management Services (AD RMS). For a comparison of features, requirements, and security controls, see [Comparing Azure Rights Management and AD RMS](compare-on-premise.md).
-
-

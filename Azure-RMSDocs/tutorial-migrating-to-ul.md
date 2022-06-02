@@ -28,14 +28,11 @@ ms.custom: admin
 
 # Tutorial: Migrating from the Azure Information Protection (AIP) classic client to unified labeling solution
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
-> ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are **sunset** as of **March 31, 2021**. While the classic client continues to work as configured, no further support is provided, and maintenance versions will no longer be released for the classic client. 
->
-> We recommend that you migrate to unified labeling and upgrade to the [unified labeling client](rms-client/clientv2-admin-guide-install.md). Learn more in our recent [update](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/final-reminder-to-migrate-from-azure-information-protection/ba-p/2731734) on the sunset.
+To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are **deprecated** as of **March 31, 2021**. While the classic client continues to work as configured, no further support is provided, and maintenance versions will no longer be released for the classic client. 
+
+We recommend that you migrate to unified labeling and upgrade to the [unified labeling client](rms-client/clientv2-admin-guide-install.md). Learn more in our recent [update](https://techcommunity.microsoft.com/t5/microsoft-security-and/azure-aip-portal-label-amp-policy-management-admin-experience/ba-p/2182678) on the deprecation.
 
 This tutorial describes how to migrate your organization's Azure Information Protection deployment from the classic client, and label/label policy management in the Azure portal, to the unified labeling solution and [Microsoft 365 sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
@@ -70,7 +67,6 @@ While most functionality available for the AIP classic client is also available 
 Review the following articles to understand how the Information Protection features you use may differ when using the unified labeling client:
 
 - [Learn about built-in labeling capabilities in Microsoft 365](/microsoft-365/compliance/sensitivity-labels-office-apps)
-- [Supported features for the classic and unified labeling clients](rms-client/aip-client.md#supported-features)
 - [Learn about about built-in labeling and the AIP unified labeling client](rms-client/use-client.md)
 - [Learn how to manage label settings that are not supported out-of-the-box in the Microsoft 365 compliance center](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-microsoft-365-compliance-center)
 
@@ -263,7 +259,6 @@ For Windows machines with Microsoft 365 Apps for Enterprise, use the built-in la
 
 For more information, see: 
 
-- [Supported features for the classic and unified labeling clients](rms-client/aip-client.md#supported-features)
 - [Learn about about built-in labeling and the AIP unified labeling client](rms-client/use-client.md)
 - [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md)
 
@@ -294,7 +289,54 @@ For example:
 > [!TIP]
 > If you have published your labels and the clients that have built-in support do not show the **Sensitivity** button, review the relevant troubleshooting guide as needed.
 >
- 
+
+## Upgrading the scanner from the classic client
+
+If you are currently using the Azure Information Protection scanner from the Azure Information Protection classic client, you can upgrade it to use sensitive information types and sensitivity labels that are published from the Microsoft 365 compliance center.
+
+How to upgrade the scanner depends on the version of the classic client that you are currently running:
+
+- [Upgrade from version 1.48.204.0 and later versions](#upgrade-from-the-azure-information-protection-classic-client-version-1482040-and-later-versions-of-this-client)
+
+- [Upgrade from versions earlier than 1.48.204.0](#upgrade-from-the-azure-information-protection-classic-client-versions-earlier-than-1482040)
+
+The upgrade creates a new database named **AIPScannerUL_\<profile_name>**, and the previous scanner database is retained in case you need it for the previous version. When you are confident you don't need the previous scanner database, you can delete it. Because the upgrade creates a new database, the scanner rescans all files the first time it runs.
+
+##### Upgrade from the Azure Information Protection classic client version 1.48.204.0 and later versions of this client
+
+If you upgraded the scanner by using the preview version of the unified labeling client, you don't need to run these instructions again.
+
+1. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
+
+2. Upgrade to the Azure Information Protection unified labeling client by downloading and installing the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
+
+3. In a PowerShell session, run the Update-AIPScanner command with your scanner's profile. For example: `Update-AIPScanner –Profile Europe`.
+
+    This step creates a new database with the name **AIPScannerUL_\<profile_name>**
+
+4. Restart the Azure Information Protection Scanner service, **Azure Information Protection Scanner**.
+
+You can now use the rest of the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md), omitting the step to install the scanner. Because the scanner is already installed, there's no reason to install it again.
+
+##### Upgrade from the Azure Information Protection classic client versions earlier than 1.48.204.0
+
+> [!IMPORTANT]
+> For a smooth upgrade path, do not install the the Azure Information Protection unified labeling client on the computer running the scanner as your first step to upgrade the scanner. Instead, use the following upgrade instructions.
+
+Beginning with version 1.48.204.0, the scanner gets its configuration settings from the Azure portal, by using a configuration profile. Upgrading the scanner includes instructing the scanner to use this online configuration and for the unified labeling client, offline configuration for the scanner is not supported.
+
+1. Use the Azure portal to create a new scanner profile that includes settings for the scanner and your data repositories with any settings that they need. For help with this step, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-settings) from the scanner deployment instructions.
+
+2. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
+
+3. Upgrade to the Azure Information Protection unified labeling client by downloading and installing the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
+
+4. In a PowerShell session, run the Update-AIPScanner command with the same profile name that you specified in step 1. For example: `Update-AIPScanner –Profile Europe`
+
+5. Restart the Azure Information Protection Scanner service, **Azure Information Protection Scanner**.
+
+You can now use the rest of the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md), omitting the step to install the scanner. Because the scanner is already installed, there's no reason to install it again.
+
 ## Next steps
 
 Once you've migrated your labels, policies, and deployed clients as needed, continue by [managing labels and labeling policies only in the Microsoft 365 compliance center](/microsoft-365/compliance/create-sensitivity-labels).
@@ -304,6 +346,6 @@ With the unified labeling platform, you'll only need to return to the Azure Info
 - [Use the AIP scanner](deploy-aip-scanner.md)
 - [Monitor labeling activities using AIP analytics](reports-aip.md)
 
-We recommend that end-users leverage built-in labeling capabilities in the latest Office apps for web, Mac, iOS, and Android, as well as Microsoft 365 Apps for Enterprise. 
+We recommend that end-users leverage built-in labeling capabilities in the latest Office apps for web, Mac, iOS, and Android, as well as Microsoft 365 Apps for Enterprise.
 
 To use additional AIP features not yet supported by built-in labeling, we recommend using the latest unified labeling client for Windows.
