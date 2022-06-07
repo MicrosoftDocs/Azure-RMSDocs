@@ -182,13 +182,13 @@ When opening the protected document after installing Adobe Acrobat DC with the M
 
 This is an expected error. In the prompt window, select **Back** to continue opening the protected document.
 
-### ADRMS protected files on Android devices
-
-On Android devices, ADRMS-protected files cannot be opened by the AIP Viewer app.
-
 >[!NOTE]
 > The AIP Viewer supports guest *organizational* accounts in Azure AD, but not personal or Windows Live accounts.
 >
+
+### ADRMS protected files on Android devices
+
+On Android devices, ADRMS-protected files cannot be opened by the AIP Viewer app.
 
 ## Known issues for track and revoke features
 
