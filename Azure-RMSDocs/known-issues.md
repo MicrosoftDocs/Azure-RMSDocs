@@ -161,7 +161,7 @@ Publishing policies may take up to 24 hours.
 
 - [Landscape views](#landscape-views-in-the-aip-viewer)
 - [External users](#external-users-and-the-aip-viewer)
-- [ADRMS protected files on Android devices](#adrms-protected-files-on-Android-devices)
+- [ADRMS protected files on Android devices](#adrms-protected-files-on-android-devices)
 
 For more information, see [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md).
 ### Landscape views in the AIP viewer
