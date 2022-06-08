@@ -356,47 +356,47 @@ Action type bit mask
 
 | Field | Description |
 |---|---|
-|  MIP_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 << 0         | Add a content footer to the document action type. |
-|  MIP_ACTION_TYPE_ADD_CONTENT_HEADER = 1 << 1         | Add a content header to the document action type. |
-|  MIP_ACTION_TYPE_ADD_WATERMARK = 1 << 2              | Add a water mark to the entire document action type. |
-|  MIP_ACTION_TYPE_CUSTOM = 1 << 3                     | A custom defined action type. |
-|  MIP_ACTION_TYPE_JUSTIFY = 1 << 4                    | A justify action type. |
-|  MIP_ACTION_TYPE_METADATA = 1 << 5                   | A Meta data change action type. |
-|  MIP_ACTION_TYPE_PROTECT_ADHOC = 1 << 6              | A protect by adhoc policy action type. |
-|  MIP_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 << 7        | A protect by template action type. |
-|  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 << 8     | A protect by do not forward action type. |
-|  MIP_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 << 9      | Remove content footer action type. |
-|  MIP_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 << 10     | Remove content header action type. |
-|  MIP_ACTION_TYPE_REMOVE_PROTECTION = 1 << 11         | Remove protection action type. |
-|  MIP_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12          | Remove watermarking action type. |
-|  MIP_ACTION_TYPE_APPLY_LABEL = 1 << 13               | Apply label action type. |
-|  MIP_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14           | Recommend label action type. |
-|  MIP_ACTION_TYPE_PROTECT_ADHOC_DK = 1 << 15          | A protect by adhoc policy action type. |
-|  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 << 17 | A protect by do not forward action type. |
-|  MIP_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 << 18   | A protect by encryption action type. |
+|  MIP_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 &lt;&lt; 0         | Add a content footer to the document action type. |
+|  MIP_ACTION_TYPE_ADD_CONTENT_HEADER = 1 &lt;&lt; 1         | Add a content header to the document action type. |
+|  MIP_ACTION_TYPE_ADD_WATERMARK = 1 &lt;&lt; 2              | Add a water mark to the entire document action type. |
+|  MIP_ACTION_TYPE_CUSTOM = 1 &lt;&lt; 3                     | A custom defined action type. |
+|  MIP_ACTION_TYPE_JUSTIFY = 1 &lt;&lt; 4                    | A justify action type. |
+|  MIP_ACTION_TYPE_METADATA = 1 &lt;&lt; 5                   | A Meta data change action type. |
+|  MIP_ACTION_TYPE_PROTECT_ADHOC = 1 &lt;&lt; 6              | A protect by adhoc policy action type. |
+|  MIP_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 &lt;&lt; 7        | A protect by template action type. |
+|  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 &lt;&lt; 8     | A protect by do not forward action type. |
+|  MIP_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 &lt;&lt; 9      | Remove content footer action type. |
+|  MIP_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 &lt;&lt; 10     | Remove content header action type. |
+|  MIP_ACTION_TYPE_REMOVE_PROTECTION = 1 &lt;&lt; 11         | Remove protection action type. |
+|  MIP_ACTION_TYPE_REMOVE_WATERMARK = 1 &lt;&lt; 12          | Remove watermarking action type. |
+|  MIP_ACTION_TYPE_APPLY_LABEL = 1 &lt;&lt; 13               | Apply label action type. |
+|  MIP_ACTION_TYPE_RECOMMEND_LABEL = 1 &lt;&lt; 14           | Recommend label action type. |
+|  MIP_ACTION_TYPE_PROTECT_ADHOC_DK = 1 &lt;&lt; 15          | A protect by adhoc policy action type. |
+|  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 &lt;&lt; 17 | A protect by do not forward action type. |
+|  MIP_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 &lt;&lt; 18   | A protect by encryption action type. |
 
 
 ```c
 typedef enum {
-  MIP_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 << 0,        
-  MIP_ACTION_TYPE_ADD_CONTENT_HEADER = 1 << 1,        
-  MIP_ACTION_TYPE_ADD_WATERMARK = 1 << 2,             
-  MIP_ACTION_TYPE_CUSTOM = 1 << 3,                    
-  MIP_ACTION_TYPE_JUSTIFY = 1 << 4,                   
-  MIP_ACTION_TYPE_METADATA = 1 << 5,                  
-  MIP_ACTION_TYPE_PROTECT_ADHOC = 1 << 6,             
-  MIP_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 << 7,       
-  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 << 8,    
-  MIP_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 << 9,     
-  MIP_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 << 10,    
-  MIP_ACTION_TYPE_REMOVE_PROTECTION = 1 << 11,        
-  MIP_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12,         
-  MIP_ACTION_TYPE_APPLY_LABEL = 1 << 13,              
-  MIP_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14,          
-  MIP_ACTION_TYPE_PROTECT_ADHOC_DK = 1 << 15,         
+  MIP_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 &lt;&lt; 0,        
+  MIP_ACTION_TYPE_ADD_CONTENT_HEADER = 1 &lt;&lt; 1,        
+  MIP_ACTION_TYPE_ADD_WATERMARK = 1 &lt;&lt; 2,             
+  MIP_ACTION_TYPE_CUSTOM = 1 &lt;&lt; 3,                    
+  MIP_ACTION_TYPE_JUSTIFY = 1 &lt;&lt; 4,                   
+  MIP_ACTION_TYPE_METADATA = 1 &lt;&lt; 5,                  
+  MIP_ACTION_TYPE_PROTECT_ADHOC = 1 &lt;&lt; 6,             
+  MIP_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 &lt;&lt; 7,       
+  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 &lt;&lt; 8,    
+  MIP_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 &lt;&lt; 9,     
+  MIP_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 &lt;&lt; 10,    
+  MIP_ACTION_TYPE_REMOVE_PROTECTION = 1 &lt;&lt; 11,        
+  MIP_ACTION_TYPE_REMOVE_WATERMARK = 1 &lt;&lt; 12,         
+  MIP_ACTION_TYPE_APPLY_LABEL = 1 &lt;&lt; 13,              
+  MIP_ACTION_TYPE_RECOMMEND_LABEL = 1 &lt;&lt; 14,          
+  MIP_ACTION_TYPE_PROTECT_ADHOC_DK = 1 &lt;&lt; 15,         
   // Reserved
-  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 << 17,
-  MIP_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 << 18,  
+  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 &lt;&lt; 17,
+  MIP_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 &lt;&lt; 18,  
 } mip_cc_action_type;
 
 ```
@@ -427,47 +427,47 @@ Label-related actions an application understands and supports
 
 | Field | Description |
 |---|---|
-|  MIP_LABEL_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 << 0      | Add a content footer to the document action type.  |
-|  MIP_LABEL_ACTION_TYPE_ADD_CONTENT_HEADER = 1 << 1      | Add a content header to the document action type.  |
-|  MIP_LABEL_ACTION_TYPE_ADD_WATERMARK = 1 << 2           | Add a water mark to the entire document action type.  |
-|  MIP_LABEL_ACTION_TYPE_CUSTOM = 1 << 3                  | A custom defined action type.  |
-|  MIP_LABEL_ACTION_TYPE_JUSTIFY = 1 << 4                 | A justify action type.  |
-|  MIP_LABEL_ACTION_TYPE_METADATA = 1 << 5                | A Meta data change action type.  |
-|  MIP_LABEL_ACTION_TYPE_PROTECT_ADHOC = 1 << 6           | A protect by adhoc policy action type.  |
-|  MIP_LABEL_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 << 7     | A protect by template action type.  |
-|  MIP_LABEL_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 << 8  | A protect by do not forward action type.  |
-|  MIP_LABEL_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 << 9   | Remove content footer action type.  |
-|  MIP_LABEL_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 << 10  | Remove content header action type.  |
-|  MIP_LABEL_ACTION_TYPE_REMOVE_PROTECTION = 1 << 11      | Remove protection action type.  |
-|  MIP_LABEL_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12       | Remove watermarking action type.  |
-|  MIP_LABEL_ACTION_TYPE_APPLY_LABEL = 1 << 13            | Apply label action type.  |
-|  MIP_LABEL_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14        | Recommend label action type.  |
-|  MIP_LABEL_ACTION_TYPE_PROTECT_ADHOC_DK = 1 << 15       | A protect by adhoc policy action type. |
-|  MIP_LABEL_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 << 17  | A protect by do not forward action type. |
-|  MIP_LABEL_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 << 18    | A protect by encryption action type. |
+|  MIP_LABEL_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 &lt;&lt; 0      | Add a content footer to the document action type.  |
+|  MIP_LABEL_ACTION_TYPE_ADD_CONTENT_HEADER = 1 &lt;&lt; 1      | Add a content header to the document action type.  |
+|  MIP_LABEL_ACTION_TYPE_ADD_WATERMARK = 1 &lt;&lt; 2           | Add a water mark to the entire document action type.  |
+|  MIP_LABEL_ACTION_TYPE_CUSTOM = 1 &lt;&lt; 3                  | A custom defined action type.  |
+|  MIP_LABEL_ACTION_TYPE_JUSTIFY = 1 &lt;&lt; 4                 | A justify action type.  |
+|  MIP_LABEL_ACTION_TYPE_METADATA = 1 &lt;&lt; 5                | A Meta data change action type.  |
+|  MIP_LABEL_ACTION_TYPE_PROTECT_ADHOC = 1 &lt;&lt; 6           | A protect by adhoc policy action type.  |
+|  MIP_LABEL_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 &lt;&lt; 7     | A protect by template action type.  |
+|  MIP_LABEL_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 &lt;&lt; 8  | A protect by do not forward action type.  |
+|  MIP_LABEL_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 &lt;&lt; 9   | Remove content footer action type.  |
+|  MIP_LABEL_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 &lt;&lt; 10  | Remove content header action type.  |
+|  MIP_LABEL_ACTION_TYPE_REMOVE_PROTECTION = 1 &lt;&lt; 11      | Remove protection action type.  |
+|  MIP_LABEL_ACTION_TYPE_REMOVE_WATERMARK = 1 &lt;&lt; 12       | Remove watermarking action type.  |
+|  MIP_LABEL_ACTION_TYPE_APPLY_LABEL = 1 &lt;&lt; 13            | Apply label action type.  |
+|  MIP_LABEL_ACTION_TYPE_RECOMMEND_LABEL = 1 &lt;&lt; 14        | Recommend label action type.  |
+|  MIP_LABEL_ACTION_TYPE_PROTECT_ADHOC_DK = 1 &lt;&lt; 15       | A protect by adhoc policy action type. |
+|  MIP_LABEL_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 &lt;&lt; 17  | A protect by do not forward action type. |
+|  MIP_LABEL_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 &lt;&lt; 18    | A protect by encryption action type. |
 
 
 ```c
 typedef enum {
-  MIP_LABEL_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 << 0,     
-  MIP_LABEL_ACTION_TYPE_ADD_CONTENT_HEADER = 1 << 1,     
-  MIP_LABEL_ACTION_TYPE_ADD_WATERMARK = 1 << 2,          
-  MIP_LABEL_ACTION_TYPE_CUSTOM = 1 << 3,                 
-  MIP_LABEL_ACTION_TYPE_JUSTIFY = 1 << 4,                
-  MIP_LABEL_ACTION_TYPE_METADATA = 1 << 5,               
-  MIP_LABEL_ACTION_TYPE_PROTECT_ADHOC = 1 << 6,          
-  MIP_LABEL_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 << 7,    
-  MIP_LABEL_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 << 8, 
-  MIP_LABEL_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 << 9,  
-  MIP_LABEL_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 << 10, 
-  MIP_LABEL_ACTION_TYPE_REMOVE_PROTECTION = 1 << 11,     
-  MIP_LABEL_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12,      
-  MIP_LABEL_ACTION_TYPE_APPLY_LABEL = 1 << 13,           
-  MIP_LABEL_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14,       
-  MIP_LABEL_ACTION_TYPE_PROTECT_ADHOC_DK = 1 << 15,      
+  MIP_LABEL_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 &lt;&lt; 0,     
+  MIP_LABEL_ACTION_TYPE_ADD_CONTENT_HEADER = 1 &lt;&lt; 1,     
+  MIP_LABEL_ACTION_TYPE_ADD_WATERMARK = 1 &lt;&lt; 2,          
+  MIP_LABEL_ACTION_TYPE_CUSTOM = 1 &lt;&lt; 3,                 
+  MIP_LABEL_ACTION_TYPE_JUSTIFY = 1 &lt;&lt; 4,                
+  MIP_LABEL_ACTION_TYPE_METADATA = 1 &lt;&lt; 5,               
+  MIP_LABEL_ACTION_TYPE_PROTECT_ADHOC = 1 &lt;&lt; 6,          
+  MIP_LABEL_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 &lt;&lt; 7,    
+  MIP_LABEL_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 &lt;&lt; 8, 
+  MIP_LABEL_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 &lt;&lt; 9,  
+  MIP_LABEL_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 &lt;&lt; 10, 
+  MIP_LABEL_ACTION_TYPE_REMOVE_PROTECTION = 1 &lt;&lt; 11,     
+  MIP_LABEL_ACTION_TYPE_REMOVE_WATERMARK = 1 &lt;&lt; 12,      
+  MIP_LABEL_ACTION_TYPE_APPLY_LABEL = 1 &lt;&lt; 13,           
+  MIP_LABEL_ACTION_TYPE_RECOMMEND_LABEL = 1 &lt;&lt; 14,       
+  MIP_LABEL_ACTION_TYPE_PROTECT_ADHOC_DK = 1 &lt;&lt; 15,      
   // Reserved
-  MIP_LABEL_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 << 17, 
-  MIP_LABEL_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 << 18,   
+  MIP_LABEL_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 &lt;&lt; 17, 
+  MIP_LABEL_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 &lt;&lt; 18,   
 } mip_cc_label_action_type;
 
 ```

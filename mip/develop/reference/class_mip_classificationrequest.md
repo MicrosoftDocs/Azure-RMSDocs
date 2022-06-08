@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class ClassificationRequest 
@@ -29,4 +29,4 @@ Get the ID of the classification policy.
 Get the ID of the rule package.
 
   
-**Returns**: ID of the rule package. prebuilt classifications will be set to empty guid.d.
+**Returns**: ID of the rule package. prebuilt classifications will be set to empty guid.

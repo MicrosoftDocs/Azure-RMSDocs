@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class Identity 
@@ -63,4 +63,4 @@ Get the email.
 Get the user's friendly name. used for text marking.
 
   
-**Returns**: The friendly name.e.
+**Returns**: The friendly name.
