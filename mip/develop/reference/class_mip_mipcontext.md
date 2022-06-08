@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class MipContext 
@@ -18,13 +18,14 @@ public void ShutDown()  |  Terminate MIP.
 public bool IsFeatureEnabled(FlightingFeature feature) const  |  Gets whether or not a feature is enabled.
 public const ApplicationInfo& GetApplicationInfo() const  |  Get application description.
 public const std::string& GetMipPath() const  |  Get file path for logs, caches, etc.
-public bool IsOfflineOnly()  |  Get offline-only setting.
+public bool IsOfflineOnly() const  |  Get offline-only setting.
 public LogLevel GetThresholdLogLevel() const  |  Get threshold log level.
-public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate()  |  Get logger implementation.
-public std::shared_ptr\<HttpDelegate\> GetHttpDelegate()  |  Get Http implementation.
-public LoggerDelegate* GetRawLoggerDelegate()  |  Get raw logger implementation.
-public std::shared_ptr\<StorageDelegate\> GetStorageDelegate()  |  Get Storage Delegate implementation if provided.
-public const std::map\<FlightingFeature, bool\>& GetFlightingFeatures() const  |  Get flighting feature set.
+public std::shared_ptr&lt;LoggerDelegate&gt; GetLoggerDelegate() const  |  Get logger implementation.
+public std::shared_ptr&lt;HttpDelegate&gt; GetHttpDelegate() const  |  Get Http implementation.
+public LoggerDelegate* GetRawLoggerDelegate() const  |  Get raw logger implementation.
+public std::shared_ptr&lt;StorageDelegate&gt; GetStorageDelegate() const  |  Get Storage Delegate implementation if provided.
+public const std::map&lt;FlightingFeature, bool&gt;& GetFlightingFeatures() const  |  Get flighting feature set.
+public const std::shared_ptr&lt;const MipConfiguration&gt;& GetMipConfiguration() const  |  Gets the mip configuration that was used to create the MipContext.
   
 ## Members
   
@@ -96,4 +97,10 @@ Get Storage Delegate implementation if provided.
 Get flighting feature set.
 
   
-**Returns**: Flighting feature mapap
+**Returns**: Flighting feature map
+  
+### GetMipConfiguration function
+Gets the mip configuration that was used to create the MipContext.
+
+  
+**Returns**: The mip configuration.

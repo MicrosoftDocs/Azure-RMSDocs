@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class NetworkError 
@@ -17,4 +17,4 @@ Networking error. Caused by unexpected behavior when making network calls to ser
   
 ## Members
 _Not documented yet._
-_
+

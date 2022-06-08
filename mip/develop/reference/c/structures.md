@@ -339,14 +339,22 @@ Callback function definition for retrieving document metatdata, filtered by name
 typedef struct {
 
   const char* contentId;
-
-  mip_cc_data_state dataState;
-  mip_cc_metadata_callback contentMetadataCallback;
-  mip_cc_protection_descriptor protectionDescriptor;
-  mip_cc_content_format contentFormat;
-  mip_cc_dictionary auditMetadata;
-  uint32_t contentMetadataVersion;
-  mip_cc_metadata_version_format contentMetadataVersionFormat;
+
+
+  mip_cc_data_state dataState;
+
+  mip_cc_metadata_callback contentMetadataCallback;
+
+  mip_cc_protection_descriptor protectionDescriptor;
+
+  mip_cc_content_format contentFormat;
+
+  mip_cc_dictionary auditMetadata;
+
+  uint32_t contentMetadataVersion;
+
+  mip_cc_metadata_version_format contentMetadataVersionFormat;
+
 } mip_cc_document_state;
 
 ```

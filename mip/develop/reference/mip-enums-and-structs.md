@@ -149,8 +149,8 @@ Storage type for the caches.
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Default            | Extensions will become as SDK default behavior
-PFileSuffix            | Extensions will become \<EXT\>.PFILE
-PPrefix            | Extensions will become P\<EXT\>
+PFileSuffix            | Extensions will become &lt;EXT&gt;.PFILE
+PPrefix            | Extensions will become P&lt;EXT&gt;
 
 Describes PFile extensions behavior.
   
@@ -339,16 +339,16 @@ Custom diagnostic configurations (not commonly used)
 --------------------------------|---------------------------------------------
 public std::string hostNameOverride  |  Host audit/telemetry instance name. If not set, MIP will act as its own host.
 public std::string libraryNameOverride  |  Alternate audit/telemetry library (DLL) filename.
-public std::shared_ptr\<HttpDelegate\> httpDelegateOverride  |  If set, HTTP handling will be managed by this instance
-public std::shared_ptr\<TaskDispatcherDelegate\> taskDispatcherDelegateOverride  |  If set, async task handling will be managed by this instance, taskDispatcherDelegateOverides should not be shared as they can hold audit/telemetry objects, and prevent their release until taskDispatcher is freed.
+public std::shared_ptr&lt;HttpDelegate&gt; httpDelegateOverride  |  If set, HTTP handling will be managed by this instance
+public std::shared_ptr&lt;TaskDispatcherDelegate&gt; taskDispatcherDelegateOverride  |  If set, async task handling will be managed by this instance, taskDispatcherDelegateOverides should not be shared as they can hold audit/telemetry objects, and prevent their release until taskDispatcher is freed.
 public bool isNetworkDetectionEnabled  |  If set, audit/telemetry component will ping network status on background thread
 public bool isLocalCachingEnabled  |  If set, audit/telemetry component will use on-disk caching
 public bool isTraceLoggingEnabled  |  If set, audit/telemetry component will write warning/error logs to disk
 public bool isMinimalTelemetryEnabled  |  If set, only necessary service data telemetry will be sent
 public bool isFastShutdownEnabled  |  If set, No events will be uploaded on shutdown, Audit events will be uploaded immediately upon logging
-public std::map\<std::string, std::string\> customSettings  |  Custom audit/telemetry settings >
-public std::map\<std::string, std::vector\<std::string\>\> maskedProperties  |  Audit/Telemetry events/properties which should be masked
-public std::shared_ptr\<AuditDelegate\> auditPipelineDelegateOverride  |  Audit delegate override for writting audit events
+public std::map&lt;std::string, std::string&gt; customSettings  |  Custom audit/telemetry settings &gt;
+public std::map&lt;std::string, std::vector&lt;std::string&gt;&gt; maskedProperties  |  Audit/Telemetry events/properties which should be masked
+public std::shared_ptr&lt;AuditDelegate&gt; auditPipelineDelegateOverride  |  Audit delegate override for writting audit events
 public Cloud cloud  |  Cloud type for controlling telemetry and audit events for sovereign cloud scenario
   
   
@@ -380,7 +380,7 @@ If set, only necessary service data telemetry will be sent
 If set, No events will be uploaded on shutdown, Audit events will be uploaded immediately upon logging
   
 #### customSettings struct member
-Custom audit/telemetry settings >
+Custom audit/telemetry settings &gt;
   
 #### maskedProperties struct member
 Audit/Telemetry events/properties which should be masked
@@ -398,14 +398,14 @@ Members                        | Descriptions
 --------------------------------|---------------------------------------------
 public std::string hostNameOverride  |  Host telemetry instance name. If not set, MIP will act as its own host.
 public std::string libraryNameOverride  |  Alternate telemetry library (DLL) filename.
-public std::shared_ptr\<HttpDelegate\> httpDelegateOverride  |  If set, HTTP handling will be managed by this instance
-public std::shared_ptr\<TaskDispatcherDelegate\> taskDispatcherDelegateOverride  |  If set, async task handling will be managed by this instance, taskDispatcherDelegateOverides should not be shared as they can hold telemetry objects, and prevent their release until taskDispatcher is freed.
+public std::shared_ptr&lt;HttpDelegate&gt; httpDelegateOverride  |  If set, HTTP handling will be managed by this instance
+public std::shared_ptr&lt;TaskDispatcherDelegate&gt; taskDispatcherDelegateOverride  |  If set, async task handling will be managed by this instance, taskDispatcherDelegateOverides should not be shared as they can hold telemetry objects, and prevent their release until taskDispatcher is freed.
 public bool isNetworkDetectionEnabled  |  If set, telemetry component will ping network status on background thread
 public bool isLocalCachingEnabled  |  If set, telemetry component will use on-disk caching
 public bool isTraceLoggingEnabled  |  If set, telemetry component will write warning/error logs to disk
 public bool isTelemetryOptedOut  |  If set, only necessary service data telemetry will be sent
 public bool isFastShutdownEnabled  |  If set, No events will be uploaded on shutdown, Audit events will be uploaded immediately upon logging
-public std::map\<std::string, std::string\> customSettings  |  Custom telemetry settings >
+public std::map&lt;std::string, std::string&gt; customSettings  |  Custom telemetry settings &gt;
   
 
 #### hostNameOverride struct member
@@ -442,8 +442,8 @@ Custom telemetry settings.
   
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::unordered_map\<std::string, std::string\> uniqueIds  | _Not yet documented._
-public std::vector\<std::string\> contentFormats  | _Not yet documented._
+public std::unordered_map&lt;std::string, std::string&gt; uniqueIds  | _Not yet documented._
+public std::vector&lt;std::string&gt; contentFormats  | _Not yet documented._
   
 
   
