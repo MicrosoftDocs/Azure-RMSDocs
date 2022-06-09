@@ -26,11 +26,6 @@ ms.custom: admin
 
 # Frequently asked questions about data protection in Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For more information, see also the [FAQs for the classic client only](faqs-classic.md).*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 Have a question about the data protection service, Azure Rights Management, from Azure Information Protection? See if it's answered here.
 
@@ -64,7 +59,7 @@ Although the Rights Management connector logs information, warning, and error me
 
 Custom templates have moved to the Azure portal where you can continue to manage them as templates, or convert them to labels. To create a new template, create a new label and configure the data protection settings for Azure RMS. Under the covers, this creates a new template that can then be accessed by services and applications that integrate with Rights Management templates.
 
-For more information about templates in the Azure portal, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
+For more information about templates in the Azure portal, see [Configuring and managing templates for Azure Information Protection](/previous-versions/azure/information-protection/configure-policy-templates).
 
 ## I've protected a document and now want to change the usage rights or add users—do I need to reprotect the document?
 
@@ -104,13 +99,13 @@ Other authentication methods:
 
 - If you protect an email with an Office document attachment to a user who doesn't have an account in Azure AD, the authentication method changes. The Azure Rights Management service is federated with some popular social identity providers, such as Gmail. If the user's email provider is supported, the user can sign in to that service and their email provider is responsible for authenticating them. If the user's email provider is not supported, or as a preference, the user can apply for a one-time passcode that authenticates them and displays the email with the protected document in a web browser.
 
-- Azure Information Protection can use Microsoft accounts for supported applications. Currently, not all applications can open protected content when a Microsoft account is used for authentication. [More information](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Azure Information Protection can use Microsoft accounts for supported applications. Currently, not all applications can open protected content when a Microsoft account is used for authentication. [More information](/previous-versions/azure/information-protection/secure-collaboration-documents#supported-scenarios-for-opening-protected-documents)
 
 ## Can I add external users (people from outside my company) to custom templates?
 
-Yes. The [protection settings](configure-policy-protection.md) that you can configure in the Azure portal let you add permissions to users and groups from outside your organization, and even all users in another organization. You might find it useful to reference the step-by-step example, [Secure document collaboration by using Azure Information Protection](secure-collaboration-documents.md). 
+Yes. The [protection settings](/previous-versions/azure/information-protection/configure-policy-protection) that you can configure in the Azure portal let you add permissions to users and groups from outside your organization, and even all users in another organization. You might find it useful to reference the step-by-step example, [Secure document collaboration by using Azure Information Protection](/previous-versions/azure/information-protection/secure-collaboration-documents). 
 
-Note that if you have Azure Information Protection labels, you must first convert your custom template to a label before you can configure these protection settings in the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
+Note that if you have Azure Information Protection labels, you must first convert your custom template to a label before you can configure these protection settings in the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](/previous-versions/azure/information-protection/configure-policy-templates).
 
 Alternatively, you can add external users to custom templates (and labels) by using PowerShell. This configuration requires you to use a rights definition object that you use to update your template:
 
@@ -178,3 +173,17 @@ As these examples demonstrate, even if all platforms and all software supported 
 ## What's the difference between a user protecting an email with Do Not Forward and a template that doesn't include the Forward right?
 
 Despite its name and appearance, **Do Not Forward** is not the opposite of the Forward right, or a template. It is actually a set of rights that include restricting copying, printing, and saving the email outside the mailbox, in addition to restricting the forwarding of emails. The rights are dynamically applied to users via the chosen recipients, and not statically assigned by the administrator. For more information, see the [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails) section in [Configuring usage rights for Azure Information Protection](configure-usage-rights.md).
+
+## What's the difference between Windows Server FCI and the Azure Information Protection scanner?
+
+Windows Server File Classification Infrastructure has historically been an option to classify documents and then protect them by using the [Rights Management connector](deploy-rms-connector.md) (Office documents only) or a [PowerShell script](./rms-client/configure-fci.md) (all file types). 
+
+We now recommend you use the [Azure Information Protection scanner](deploy-aip-scanner.md). The scanner uses the Azure Information Protection client and your Azure Information Protection policy to label documents (all file types) so that these documents are then classified and optionally, protected.
+
+The main differences between these two solutions:
+
+|  |Windows Server FCI  |Azure Information Protection scanner  |
+|---------|---------|---------|
+|**Supported data stores**    | Local folders on Windows Server        | - Windows file shares and network-attached storage<br /><br />- SharePoint Server 2016 and SharePoint Server 2013. SharePoint Server 2010 is also supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).        |
+|**Operational mode**     |Real time         |Systematically crawls the data stores once or repeatedly         |
+|**Supported file types**     | - All file types are protected by default <br /><br />- Specific file types can be excluded from protection by editing the registry|Support for file types: <br /><br />- Office file types and PDF documents are protected by default <br /><br />- Additional file types can be included for protection by editing the registry|

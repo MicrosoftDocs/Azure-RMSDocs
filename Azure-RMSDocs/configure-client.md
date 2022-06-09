@@ -26,13 +26,9 @@ ms.custom: admin
 
 # Azure Information Protection client: Installation and configuration for clients
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
-
-The AIP unified labeling client is recommended for all Windows computers, because it installs an Office add-in that enables users to easily label and protect documents directly from the Office ribbon. 
+The AIP unified labeling client installs an Office add-in that enables users to easily label and protect documents directly from the Office ribbon. 
 
 The client also offers:
 
@@ -45,11 +41,6 @@ The client also offers:
 For an enterprise installation and configuration of the client for Windows, see the [Azure Information Protection unified labeling client administrator guide](./rms-client/clientv2-admin-guide.md).
 
 If you want to quickly install and test these clients for a single computer, see [Download and install the Azure Information Protection unified labeling client](./rms-client/install-unifiedlabelingclient-app.md).
-
-**Classic client only**: If you have the classic client installed, use these links instead:
-
-- [Azure Information Protection client administrator guide](./rms-client/client-admin-guide.md)
-- [Download and install the Azure Information Protection client](./rms-client/install-client-app.md).
 
 ## The Azure Information Protection app for iOS and Android: Installation and management
 

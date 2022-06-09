@@ -27,13 +27,6 @@ ms.custom: admin
 
 # Configuring super users for Azure Information Protection and discovery services or data recovery
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
-
-
 The super user feature of the Azure Rights Management service from Azure Information Protection ensures that authorized people and services can always read and inspect the data that Azure Rights Management protects for your organization. If necessary, the protection can then be removed or changed.
 
 A super user always has the Rights Management Full Control [usage right](configure-usage-rights.md) for documents and emails that have been protected by your organization’s Azure Information Protection tenant. This ability is sometimes referred to as "reasoning over data" and is a crucial element in maintaining control of your organization’s data. For example, you would use this feature for any of the following scenarios:
@@ -102,7 +95,7 @@ Often, somebody who is assigned a super user for Azure Rights Management will ne
 
 If you are using classification and protection, you can also use the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) to apply a new label that doesn't apply protection, or remove the label that applied protection.
 
-For more information about these cmdlets, see [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) from the Azure Information Protection client admin guide.
+For more information about these cmdlets, see [Using PowerShell with the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
 
 > [!NOTE]
 > The AzureInformationProtection module is different from and supplements the [AIPService PowerShell module](administer-powershell.md) that manages the Azure Rights Management service for Azure Information Protection.

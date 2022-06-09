@@ -26,9 +26,6 @@ ms.custom: admin
 
 # Configuring and installing the Azure Information Protection (AIP) unified labeling scanner
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
->
->***Relevant for**: [AIP unified labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 This article describes how to configure and install the Azure Information Protection unified labeling, on-premises scanner.
 
@@ -84,10 +81,6 @@ Before you install the scanner, or upgrade it from an older general availability
 
 1. [Create a scanner cluster](#create-a-scanner-cluster). This cluster defines your scanner and is used to identify the scanner instance, such as during installation, upgrades, and other processes.
 
-1. (Optional) [Scan your network for risky repositories](#create-a-network-scan-job-public-preview). Create a network scan job to scan a specified IP address or range, and provide a list of risky repositories that may contain sensitive content you'll want to secure.
-
-    Run your network scan job and then [analyze any risky repositories found](#analyze-risky-repositories-found-public-preview).
-
 1. [Create a content scan job](#create-a-content-scan-job) to define the repositories you want to scan.
 
 ### Create a scanner cluster
@@ -109,8 +102,12 @@ Before you install the scanner, or upgrade it from an older general availability
 Add one or more of the repositories found to a content scan job to scan them for sensitive content.
 
 > [!NOTE]
-> The Azure Information Protection network discovery feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 >
+> We are sunsetting the Azure Information Protection analytics as of March 18, 2022, with full retirement is scheduled for September 30, 2022.
+>
+> We are also sunsetting the scanner's network discovery features on the same timeline. Network scan jobs are currently only available for those customers who have existing Log Analytics workspaces to store [AIP audit logs](reports-aip.md). For more information, see [Removed and retired services](removed-sunset-services.md#azure-information-protection-analytics).
+>
+> The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 The following table describes prerequisites required for the network discovery service:
 
@@ -118,6 +115,7 @@ The following table describes prerequisites required for the network discovery s
 |---------|---------|
 |**Install the Network Discovery service**     |   If you've recently upgraded your scanner, you may need to still install the Network Discovery service. <br /><br />Run the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) cmdlet to enable network scan jobs.      |
 |**Azure Information Protection analytics**     | Make sure that you have Azure Information Protection analytics enabled. <br /><br />In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview)**. <br /><br />For more information, see [Central reporting for Azure Information Protection (public preview)](reports-aip.md).|
+
 
 **To create a network scan job**
 
@@ -243,8 +241,8 @@ You may want to do this only after running a network scan job to analyze the rep
 
     |Path  |Syntax  |
     |---------|---------|
-    |**Root path**     | `http://<SharePoint server name>` <br /><br />Scans all sites, including any site collections allowed for the scanner user. <br />Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover root content        |
-    |**Specific SharePoint subsite or collection**     | One of the following: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
+    |**Root path**     | `http://<SharePoint server name>` <br /><br />Scans all sites, including any site collections allowed for the scanner user. <br />Requires [additional permissions](/previous-versions/azure/information-protection/quickstart-findsensitiveinfo#permission-users-to-scan-sharepoint-repositories) to automatically discover root content        |
+    |**Specific SharePoint subsite or collection**     | One of the following: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Requires [additional permissions](/previous-versions/azure/information-protection/quickstart-findsensitiveinfo#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
     |**Specific SharePoint library**     | One of the following: <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
     |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
 
@@ -442,7 +440,7 @@ For more information, see [Change which file types to protect](./rms-client/clie
 
 ## Upgrade your scanner
 
-If you have previously installed the scanner and want to upgrade, use the instructions described in [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
+If you have previously installed the scanner and want to upgrade, use the instructions described in [Upgrading the Azure Information Protection scanner](/previous-versions/azure/information-protection/rms-client/client-admin-guide#upgrading-the-azure-information-protection-scanner).
 
 Then, [configure](deploy-aip-scanner-configure-install.md) and [use your scanner](deploy-aip-scanner-manage.md) as usual, skipping the steps to install your scanner.
 
@@ -615,8 +613,8 @@ For more information, see [Supported PowerShell cmdlets](#supported-powershell-c
 
     |Path  |Syntax  |
     |---------|---------|
-    |**Root path**     | `http://<SharePoint server name>` <br /><br />Scans all sites, including any site collections allowed for the scanner user. <br />Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover root content        |
-    |**Specific SharePoint subsite or collection**     | One of the following: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
+    |**Root path**     | `http://<SharePoint server name>` <br /><br />Scans all sites, including any site collections allowed for the scanner user. <br />Requires [additional permissions](/previous-versions/azure/information-protection/quickstart-findsensitiveinfo#permission-users-to-scan-sharepoint-repositories) to automatically discover root content        |
+    |**Specific SharePoint subsite or collection**     | One of the following: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Requires [additional permissions](/previous-versions/azure/information-protection/quickstart-findsensitiveinfo#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
     |**Specific SharePoint library**     | One of the following: <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
     |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
 
@@ -680,9 +678,9 @@ Supported cmdlets for the scanner include:
 
 - [Get-MIPNetworkDiscoveryStatus](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)
 
-- [Get-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-mipscannercontentscanjob)
+- Get-MIPScannerContentScanJob
 
-- [Get-MIPScannerRepository](/powershell/module/azureinformationprotection/get-mipscannerrepository)
+- [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository)
 
 - [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
@@ -694,9 +692,9 @@ Supported cmdlets for the scanner include:
 
 - [Install-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)
 
-- [Remove-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-mipscannercontentscanjob)
+- Remove-MIPScannerContentScanJob
 
-- [Remove-MIPScannerRepository](/powershell/module/azureinformationprotection/remove-mipscannerrepository)
+- [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)
 
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
@@ -708,9 +706,9 @@ Supported cmdlets for the scanner include:
 
 - [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
 
-- [Set-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-mipscannercontentscanjob)
+- Set-MIPScannerContentScanJob
 
-- [Set-MIPScannerRepository](/powershell/module/azureinformationprotection/set-mipscannerrepository)
+- [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
 

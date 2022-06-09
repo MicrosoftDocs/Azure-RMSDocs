@@ -28,11 +28,7 @@ ms.custom: admin
 
 # Applications that support Azure Rights Management data protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 The applications and solutions listed on this page have built-in support for the Azure Rights Management (Azure RMS) service, which provides data protection for Azure Information Protection.
 
@@ -48,8 +44,8 @@ These applications and solutions are known as "RMS-enlighted", and have Rights M
 
 |Type  |Supported applications   |
 |---------|---------|
-|**Word, Excel, PowerPoint**    | - [Microsoft 365 apps](#microsoft-365-app-support) <br />- Office Professional Plus 2010 <br />- Office Professional Plus 2013<br />- Office Professional Plus 2016 <br />- Office Professional Plus 2019 <br />- [Office for the web (viewing protected documents)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
-|[**Email**](#viewing-protected-content-in-email-clients)      |   - Outlook Professional Plus 2010<br />- Outlook Professional Plus 2013<br />- Outlook Professional Plus 2016 <br />- Outlook Professional Plus 2019 <br />- Outlook from Microsoft 365 Apps for Enterprise<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
+|**Word, Excel, PowerPoint**    | - [Microsoft 365 apps](#microsoft-365-app-support) <br />- Office Professional Plus 2013<br />- Office Professional Plus 2016 <br />- Office Professional Plus 2019 <br />- [Office for the web (viewing protected documents)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
+|[**Email**](#viewing-protected-content-in-email-clients)      |   - Outlook Professional Plus 2013<br />- Outlook Professional Plus 2016 <br />- Outlook Professional Plus 2019 <br />- Outlook from Microsoft 365 Apps for Enterprise<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
 |[**Other file types**](#supported-text-and-image-file-types)    |  - Visio from Microsoft 365 apps, Office 2019, and Office 2016: **.vsdm**, **.vsdx**, **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Azure Information Protection client for Windows: Text, images, **pfile**      |
 
 CAD files, such as **.dwg** files, are supported by partner solutions, such as [SealPath RMS plugin for AutoCAD](https://www.sealpath.com/rmscad/) and [SECUDE's HALOCAD plugin](https://secude.com/halocad/). For more information, see [How to protect your CAD data files with MIP and HALOCAD](https://www.microsoft.com/security/blog/2021/07/22/how-to-protect-your-cad-data-files-with-mip-and-halocad/).
@@ -123,7 +119,7 @@ These files change their file name extension after they're natively protected by
 
 Files that cannot be natively protected have a **.pfile** file name extension after they are generically protected by Rights Management.
 
-For more information, see the [File types supported](./rms-client/client-admin-guide-file-types.md).
+For more information, see the [File types supported](/previous-versions/azure/information-protection/rms-client/client-admin-guide-file-types).
 
 ### Microsoft 365 app support
 
@@ -187,20 +183,6 @@ The following Office client suites support protecting files and emails on Window
 
 - **Office Professional Plus 2013**
 
-- **Office Professional Plus 2010 with Service Pack 2**
-
-All editions of Office (with the exception of Office 2007) support consuming protected content.
-
-#### Azure Rights Management service with Office Professional Plus 2010 and Service Pack 2 or Office Professional 2010 with Service Pack 2
-
-When you use the Azure Rights Management service with Office Professional Plus 2010 and Service Pack 2 or Office Professional 2010 with Service Pack 2, you must also have the AIP client for Windows.
-
-Additionally, this configuration:
-
-- Is not supported on Windows 10 or Windows 11.
-- Does not support forms-based authentication for federated user accounts. These accounts must use Windows-Integrated Authentication.
-- Does not support the ability to override template protection using custom permissions selected with the AIP client. In this scenario, the original protection must first be removed before custom permissions can be applied.
-
 ### Mac computers for Information Rights Management (IRM)
 
 The following Office client suites support protecting files and emails on macOS by using Azure RMS:
@@ -211,9 +193,6 @@ The following Office client suites support protecting files and emails on macOS 
 
 All editions of Office for Mac 2019 and Office for Mac 2016 support consuming protected content.
 
-> [!TIP]
-> If you are using the classic client on a Mac computer, you might find the following FAQ useful: [How do I configure a Mac computer to protect and track documents?](faqs-classic.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)
-> 
 ## Azure Information Protection apps for iOS and Android
 
 The Azure Information Protection app for iOS and Android provides a viewer for rights-protected email messages **(.rpmsg** files) when these mobile devices don't have an email app that can open protected emails. This app can also open rights-protected PDF files, and pictures and text files that are rights-protected.
@@ -234,17 +213,6 @@ For more information, see:
 - [Unified labeling client administrator guide](./rms-client/clientv2-admin-guide.md)
 - [Unified labeling client user guide](./rms-client/clientv2-user-guide.md)
 
-### AIP's classic client
-
-If you have not yet upgraded, you may still have the legacy [Azure Information Protection classic client](./rms-client/aip-client.md) deployed.
-
-For more information about deploying and using the classic client, see:
-
-- [AIP classic client](./rms-client/aip-client.md)
-- [Classic client administrator guide](./rms-client/client-admin-guide.md)
-- [Classic client user guide](./rms-client/client-user-guide.md).
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 ## Rights Management sharing app
 

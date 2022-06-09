@@ -25,16 +25,14 @@ ms.custom: user
 
 # User Guide: Classify a file or email by using the Azure Information Protection unified labeling client for Windows
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8*
->
->***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
-
-> [!NOTE]
-> Use these instructions to help you classify (but not protect) your documents and emails. If you need to also protect your documents and emails, see the [classify and protect instructions](clientv2-classify-protect.md). If you are not sure which set of instructions to use, check with your administrator or help desk.
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 The easiest way to classify your documents and emails is when you are creating or editing them from within your Office desktop apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
 However, you can also classify files by using **File Explorer**. This method supports additional file types and is a convenient way to classify multiple files at once. 
+
+> [!NOTE]
+> Use these instructions to help you classify (but not protect) your documents and emails. If you need to also protect your documents and emails, see the [classify and protect instructions](clientv2-classify-protect.md). If you are not sure which set of instructions to use, check with your administrator or help desk.
 
 ## Using Office apps to classify your documents and emails
 
@@ -64,8 +62,7 @@ In addition to manually selecting labels, labels can also be applied in the foll
 
 - You might not have the Azure Information Protection unified labeling client [installed](install-unifiedlabelingclient-app.md).
 
-- If you don't see a **Sensitivity** button on the ribbon, but do see a **Protect** button with labels instead, you have the Azure Information Protection classic client installed and not the Azure Information Protection unified labeling client. [More information](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)
-
+- If you don't see a **Sensitivity** button on the ribbon, but do see a **Protect** button with labels instead, you have the legacy Azure Information Protection *classic client* installed and not the Azure Information Protection unified labeling client. For more information, see the archived [AIP classic client documentation](/previous-versions/azure/information-protection).
 ##### Is the label that you expect to see not displayed? 
 
 - If your administrator has recently configured a new label for you, try closing all instances of your Office app and reopening it. This action checks for changes to your labels.

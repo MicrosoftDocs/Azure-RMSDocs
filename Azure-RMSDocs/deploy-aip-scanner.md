@@ -26,9 +26,6 @@ ms.custom: admin
 
 # What is the Azure Information Protection unified labeling scanner?
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
->
->***Relevant for**: [AIP unified labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 Use the information in this section to learn about the Azure Information Protection unified labeling scanner, and then how to successfully install, configure, run and if necessary, troubleshoot it.
 

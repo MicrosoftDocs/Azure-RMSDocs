@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class CustomerKeyUnavailableError 
@@ -17,4 +17,3 @@ Bring your own encryption key needed and unavailable.
   
 ## Members
 _Not documented yet._
-_

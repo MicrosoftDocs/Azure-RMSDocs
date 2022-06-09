@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class PolicyEngine 
@@ -15,22 +15,23 @@ This class provides an interface for all engine functions.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Get the policy engine Settings.
-public const std::vector\<std::shared_ptr\<Label\>\> ListSensitivityLabels(const std::vector\<std::string\>& contentFormats)  |  list the sensitivity labels associated with the policy engine according to the provided contentFormats.
-public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
+public const std::vector&lt;std::shared_ptr&lt;Label&gt;&gt; ListSensitivityLabels(const std::vector&lt;std::string&gt;& contentFormats)  |  list the sensitivity labels associated with the policy engine according to the provided contentFormats.
+public const std::vector&lt;std::shared_ptr&lt;SensitivityTypesRulePackage&gt;&gt;& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
 public const std::string& GetMoreInfoUrl() const  |  Provide a url for looking up more information about the policy/labels.
 public bool IsLabelingRequired(const std::string& contentFormat) const  |  Checks if the policy dictates that a content must be labeled or not according to the provided contentFormat.
-public const std::shared_ptr\<Label\> GetDefaultSensitivityLabel(const std::string& contentFormat) const  |  Get the default sensitivity label according to the provided contentFormat.
-public std::shared_ptr\<Label\> GetLabelById(const std::string& id) const  |  Gets the label according to the provided id.
-public std::shared_ptr\<PolicyHandler\> CreatePolicyHandler(bool isAuditDiscoveryEnabled, bool isGetSensitivityLabelAuditDiscoveryEnabled)  |  Create a Policy Handler to execute policy-related functions on a file's execution state.
+public bool IsDowngradeJustificationRequired() const  |  Checks if the policy dictates that given a label sensitivity level downgrade requires a justification message.
+public const std::shared_ptr&lt;Label&gt; GetDefaultSensitivityLabel(const std::string& contentFormat) const  |  Get the default sensitivity label according to the provided contentFormat.
+public std::shared_ptr&lt;Label&gt; GetLabelById(const std::string& id) const  |  Gets the label according to the provided id.
+public std::shared_ptr&lt;PolicyHandler&gt; CreatePolicyHandler(bool isAuditDiscoveryEnabled, bool isGetSensitivityLabelAuditDiscoveryEnabled)  |  Create a Policy Handler to execute policy-related functions on a file's execution state.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Logs an application specific event to the audit pipeline.
 public const std::string& GetTenantId() const  |  Gets tenant ID associated with engine.
 public const std::string& GetPolicyDataXml() const  |  Gets policy data XML which describes the settings, labels, and rules associated with this policy.
 public const std::string& GetSensitivityTypesDataXml() const  |  Gets sensitivity types data XML which describes the sensitivity types associated with this policy.
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Gets a list of custom settings.
+public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetCustomSettings() const  |  Gets a list of custom settings.
 public const std::string& GetPolicyFileId() const  |  Gets the policy file ID.
 public const std::string& GetSensitivityFileId() const  |  Gets the sensitivity file ID.
-public bool HasClassificationRules(const std::vector\<std::string\>& contentFormats) const  |  Gets if the policy has automatic or recommendation rules according to the provided contentFormats.
-public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Gets the time when the policy was last fetched.
+public bool HasClassificationRules(const std::vector&lt;std::string&gt;& contentFormats) const  |  Gets if the policy has automatic or recommendation rules according to the provided contentFormats.
+public std::chrono::time_point&lt;std::chrono::system_clock&gt; GetLastPolicyFetchTime() const  |  Gets the time when the policy was last fetched.
 public uint32_t GetWxpMetadataVersion() const  |  Gets the recommended WXP (Word, Excel, Powerpoint) metadata version, currently 0 for old verion 1 for co-authoring enabled version.
 public bool HasWorkloadConsent(Workload workload) const  |  Checks if user has consented to specific workload,.
   
@@ -79,6 +80,12 @@ Parameters:
 
   
 **Returns**: True if labeling is mandatory, else false.
+  
+### IsDowngradeJustificationRequired function
+Checks if the policy dictates that given a label sensitivity level downgrade requires a justification message.
+
+  
+**Returns**: True if downgrade justification is required, else false.
   
 ### GetDefaultSensitivityLabel function
 Get the default sensitivity label according to the provided contentFormat.
@@ -191,4 +198,4 @@ Gets the recommended WXP (Word, Excel, Powerpoint) metadata version, currently 0
 Checks if user has consented to specific workload,.
 
   
-**Returns**: Bool indicating consent.t.
+**Returns**: Bool indicating consent.

@@ -27,11 +27,6 @@ ms.custom: admin
 
 # Monitor the Microsoft Rights Management connector
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
 
 
 After you install and configure the RMS connector, you can use the following methods and information to help you monitor the connector and your organization’s use of the Azure Rights Management service from Azure Information Protection.

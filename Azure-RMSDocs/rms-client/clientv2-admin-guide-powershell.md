@@ -26,9 +26,7 @@ ms.custom: admin
 
 # Admin Guide: Using PowerShell with the Azure Information Protection unified client
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
->
->***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 When you install the Azure Information Protection unified labeling client, PowerShell commands are automatically installed as part of the [AzureInformationProtection](/powershell/module/azureinformationprotection) module, with cmdlets for labeling. 
 
@@ -131,8 +129,6 @@ The computer running the **AIPAuthentication** cmdlet downloads the labeling pol
 ### Create and configure Azure AD applications for Set-AIPAuthentication
 
 The **Set-AIPAuthentication** cmdlet requires an app registration for the *AppId* and *AppSecret* parameters. 
-
-For users who've recently migrated from the classic client, and had created an app registration for the previous *WebAppID* and *NativeAppId* parameters, you'll need to create a new app registration for the unified labeling client.
 
 **To create a new app registration for the unified labeling client Set-AIPAuthentication cmdlet**:
 

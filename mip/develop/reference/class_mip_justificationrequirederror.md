@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class JustificationRequiredError 
@@ -13,7 +13,7 @@ ms.date: 11/15/2021
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual std::shared_ptr\<Error\> Clone() const  |  Clone the error.
+public virtual std::shared_ptr&lt;Error&gt; Clone() const  |  Clone the error.
   
 ## Members
   
@@ -21,4 +21,4 @@ public virtual std::shared_ptr\<Error\> Clone() const  |  Clone the error.
 Clone the error.
 
   
-**Returns**: A clone of the error.r.
+**Returns**: A clone of the error.

@@ -27,13 +27,6 @@ ms.custom: admin
 
 # Configuring servers for the Microsoft Rights Management connector
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
-
-
 Use the following information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
 **Prerequisites**: Before you begin, make sure that you have:
@@ -140,13 +133,8 @@ Use the following sections for specific information for each service type:
 
 After these servers are configured to use the connector, client applications that are installed locally on these servers might not work with RMS. When this happens, it is because the applications try to use the connector rather than use RMS directly, which is not supported.
 
-In addition, if Office 2010 is installed locally on an Exchange server, the client app's IRM features might work from that computer after the server is configured to use the connector, but this is not supported. 
+You must install the client applications on separate computers that are not configured to use the connector. They will then correctly use RMS directly.
 
-In both scenarios, you must install the client applications on separate computers that are not configured to use the connector. They will then correctly use RMS directly.
-
-> [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](removed-sunset-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
-> 
 ## Configuring an Exchange server to use the connector
 The following Exchange roles communicate with the RMS connector:
 
@@ -204,8 +192,6 @@ To use the RMS connector, these servers running SharePoint must be running one o
 
 -   SharePoint Server 2013
 
--   SharePoint Server 2010
-
 A server running SharePoint 2019, 2016 or SharePoint 2013 must also be running a version of the MSIPC client 2.1 that is supported with the RMS connector. 
 
 To make sure that you have a supported version, download the latest client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396).
@@ -214,8 +200,6 @@ To make sure that you have a supported version, download the latest client from 
 > There are multiple versions of the MSIPC 2.1 client, so make sure that you have version 1.0.2004.0 or later.
 >
 > You can verify the client version by checking the version number of MSIPC.dll, which is located in **\Program Files\Active Directory Rights Management Services Client 2.1**. The properties dialog box  shows the version number of the MSIPC 2.1 client.
-
-Servers running SharePoint 2010 must have installed a version of the MSDRM client that includes support for RMS Cryptographic Mode 2. Windows Server 2012 and Windows Server 2012 R2 natively support Cryptographic Mode 2.
 
 ### To configure SharePoint servers to use the connector
 
@@ -237,8 +221,7 @@ Servers running SharePoint 2010 must have installed a version of the MSDRM clien
 
     -   **If you are using SharePoint 2019, 2016 or SharePoint 2013, make manual registry edits** by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
-3.  Enable IRM in SharePoint. For more information, see [Configure Information Rights Management (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/hh545607(v=office.14)) in the SharePoint library.
-
+3.  Enable IRM in SharePoint. 
     When you follow these instructions, you must configure SharePoint to use the connector by specifying **Use this RMS server**, and then enter the load-balancing connector URL that you configured. 
 
     Enter the protocol prefix (HTTP:// or HTTPS://) and the name of the connector that you defined in DNS for the load balanced address of your connector. 
@@ -288,7 +271,7 @@ Now that the RMS connector is installed and configured, and your servers are con
 
 To make this easy for users, deploy the Azure Information Protection client, which installs an add-on for Office and adds new right-click options to File Explorer. 
 
-For more information, see the [Azure Information Protection client administrator guide](./rms-client/client-admin-guide.md).
+For more information, see the [Azure Information Protection client administrator guide](/previous-versions/azure/information-protection/rms-client/client-admin-guide).
 
 Note that if you configure departmental templates that you want to use with Exchange transport rules or Windows Server FCI, the scope configuration must include the application compatibility option such that the **Show this template to all users when the applications do not support user identity** check box is selected.
 

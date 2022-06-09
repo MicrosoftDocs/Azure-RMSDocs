@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class HttpResponse 
@@ -16,8 +16,8 @@ Interface that describes a single HTTP response, implemented by client app when 
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Gets response ID.
 public int32_t GetStatusCode() const  |  Get response status code.
-public const std::vector\<uint8_t\>& GetBody() const  |  Get request body.
-public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders() const  |  Get request headers.
+public const std::vector&lt;uint8_t&gt;& GetBody() const  |  Get request body.
+public const std::map&lt;std::string, std::string, CaseInsensitiveComparator&gt;& GetHeaders() const  |  Get request headers.
   
 ## Members
   
@@ -44,4 +44,4 @@ Get request body.
 Get request headers.
 
   
-**Returns**: Request headersrs
+**Returns**: Request headers.

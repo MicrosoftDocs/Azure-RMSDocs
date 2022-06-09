@@ -27,12 +27,6 @@ ms.custom: admin
 
 # Microsoft 365: Configuration for online services to use the Azure Rights Management service
 
->****Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is sunset](includes/classic-client-sunset.md)]
-
 
 Use the following sections to help you configure Exchange Online, Microsoft SharePoint, and Microsoft OneDrive to use the Azure Rights Management service from Azure Information Protection.
 
@@ -525,7 +519,7 @@ Although you cannot configure IRM for users' OneDrive by using the SharePoint ad
 
       You'll find this value as the base URL when you go into the SharePoint admin center, and it has the following format: https://*&lt;tenant_name&gt;*-admin.sharepoint.com
 
-      For example, if the tenant name is "contoso", then you would specify: **https://contoso-admin.sharepoint.com**
+      For example, if the tenant name is "contoso", then you would specify: **https:\//contoso-admin.sharepoint.com**
 
    2. Search for `$tenantAdmin` and replace the example value with your own fully qualified global administrator account for Microsoft 365.
 
@@ -539,7 +533,7 @@ Although you cannot configure IRM for users' OneDrive by using the SharePoint ad
 
       The web URL for the user's OneDrive is in the following format: https://*&lt;tenant name&gt;*-my.sharepoint.com/personal/*&lt;user_name&gt;*_*&lt;tenant name&gt;*_com
 
-      For example, if the user in the contoso tenant has a user name of "rsimone", you would specify: **https://contoso-my.sharepoint.com/personal/rsimone_contoso_com**
+      For example, if the user in the contoso tenant has a user name of "rsimone", you would specify: **https:\//contoso-my.sharepoint.com/personal/rsimone_contoso_com**
 
    4. Because we are using the script to configure OneDrive, do not change the value of **Documents** for the `$listTitle` variable.
 
