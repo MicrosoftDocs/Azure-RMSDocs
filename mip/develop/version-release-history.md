@@ -53,9 +53,10 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
   
 ### Policy SDK
 
+- Policy SDK now supports data boundary via `PolicyEngineSettings.DataBoundary`. 
 - Fixed a bug where in certain conditions policy changes resulted in a crash. 
 - Fixed an issue where Encrypt Only labels with DKE protection were not filtered when they should have been. 
-- Policy SDK now supports data boundary via `PolicyEngineSettings.DataBoundary` 
+
 
 ### Protection SDK
 
