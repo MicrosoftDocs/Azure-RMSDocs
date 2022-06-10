@@ -49,7 +49,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Fixed a bug in `GetCodePage` in `MsgInspector`.
 - Fixed bug where **BodyType** always returned **TXT** in `MsgInspector`.
 - Fixed a bug in Java wrapper where using `UserRoles` threw *java.util.Collections$UnmodifiableCollection cannot be cast to java.util.List* exception.
-- Fixed a bug when decrypting files >2GB with `GetDecryptedTemporaryStreamAsync()`.
+- Fixed a bug when decrypting text files >2GB with `GetDecryptedTemporaryStreamAsync()`.
   
 ### Policy SDK
 
@@ -62,6 +62,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 - **Preview**: Added support for offline protection.
   - Enable offline protection by setting `ProtectionProfile.OfflinePublishing` to true when creating a `ProtectionProfile`.
+  - Caching templates requires setting `ProtectionEngineSettings.SetTemplateRefreshArgs(std::chrono::hours)` (C++) or `ProtectionEngineSettings.TemplateRefreshArgs` (.NET) to enable protection template caching. 
 - Protection SDK now supports data boundary via `ProtectionEngineSettings.DataBoundary`
  
 ### Breaking Changes
@@ -70,7 +71,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Passing a plaintext MSG file to the `MsgInspector` will result in a **NotSupportedError**
 - `MsgInpector` will no longer attempt to decrypt attachments that are part of the **message.rpmsg** file.
 - `MsgInpector` will now return a fully-functional **MSG** file if the **message.rpmsg** file had MSG attachments. These MSG files can be decrypted with the `FileHandler.RemoveProtection` API.
-- Telemetry and Audit wrappers have second parameter for Write method: `EventContext`.
+- `TelemetryDelegate` and `AuditDelegate` **WriteEvent** method now requires a second parameter, `EventContext`. The `EventContext` class exposes information on the target cloud and data boundary for the event. 
 
 
 ### Platform and Dependency Updates
