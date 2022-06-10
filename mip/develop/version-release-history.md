@@ -70,6 +70,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Passing a plaintext MSG file to the `MsgInspector` will result in a **NotSupportedError**
 - `MsgInpector` will no longer attempt to decrypt attachments that are part of the **message.rpmsg** file.
 - `MsgInpector` will now return a fully-functional **MSG** file if the **message.rpmsg** file had MSG attachments. These MSG files can be decrypted with the `FileHandler.RemoveProtection` API.
+- Telemetry and Audit wrappers have second parameter for Write method: `EventContext`.
 
 
 ### Platform and Dependency Updates
