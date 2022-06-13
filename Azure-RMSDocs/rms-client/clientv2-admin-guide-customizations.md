@@ -1322,9 +1322,7 @@ Use these settings only when you have a working [S/MIME deployment](/microsoft-3
 |**S/MIME digital signature**     |   To configure an advanced setting for an S/MIME digital signature, enter the following strings for the selected label: <br><br>- Key: **SMimeSign** <br><br>- Value: **True**      |
 |**S/MIME encryption**     |   To configure an advanced setting for  S/MIME encryption, enter the following strings for the selected label:<br><br>- Key: **SMimeEncrypt**<br><br>- Value: **True**      |
 
-If the label you specify is configured for encryption, for the Azure Information Protection unified labeling client, S/MIME protection replaces the Rights Management protection only in Outlook. The client continues to use the encryption settings specified for the label in the Microsoft 365 compliance center.
-
-For Office apps with built-in labeling, these labels do not display to users. 
+When a user selects the label in Outlook, your configured S/MIME settings are applied. If the label is also configured for the default Rights Management encryption that you can specify in the compliance portal, your S/MIME settings replace the Rights Management protection only in Outlook. For the other apps that the unified labeling client supports, the client continues to use the encryption settings specified in the Microsoft 365 compliance portal.
 
 If you want the label to be visible in Outlook only, configure the **Do Not Forward** encryption option from [Let users assign permissions](/microsoft-365/compliance/encryption-sensitivity-labels#let-users-assign-permissions).
 
