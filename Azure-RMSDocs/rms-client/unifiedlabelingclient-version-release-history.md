@@ -45,7 +45,7 @@ As we continue to bring the customer labeling and protection experience to built
 
 The lifecycle of each generally available (GA) version of the Azure Information Protection unified labeling client could vary from build to build, depending on the release date of a subsequent GA version. In overall, each GA version is supported until the subsequent GA version is released, plus up to six months more, after the release of the subsequent GA version (could be less than 6 months, if the new subsequent GA version will be released within those 6 months).
 
-For example, version **2.12.62.0** was released on **02.08.2021**, then the next version - **2.13.49.0**, was released on **12.01.2022**. Therefore, version 2.12.62.0 is fully supported six months after 12.01.2022, which is **12.07.2022**.
+For example, version **2.12.62.0** was released on Aug 2, 2021, then the next version - **2.13.49.0**, was released on Jan 12, 2022. Therefore, version **2.12.62.0** is fully supported six months after Jan 12, 2022, which is Jul 12, 2022.
 
 The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. =
 Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
@@ -151,7 +151,7 @@ This version of the unified labeling client and scanner provides the following f
 
 Unified labeling scanner and client version 2.12.62.0
 
-**Supported through** 07/12/2022
+**Supported through** 09/30/2022
 
 **Released** 08/02/2021
 
@@ -174,7 +174,7 @@ Co-authoring for Office apps enables multiple users to edit documents that are l
 
 This version of the unified labeling client and scanner supports DKE labels with user-defined permissions in Word, Excel, and PowerPoint.
 
-For more information, see [Azure Information Protection tenant keys](../plan-implement-tenant-key.md#double-key-encryption-dke) and [Double Key Encryption for Microsoft 365](/microsoft-365/compliance/double-key-encryption).
+For more information, see [Azure Information Protection tenant keys](../plan-implement-tenant-key.md#double-key-encryption-dke) and [Microsoft Purview Double Key Encryption](/microsoft-365/compliance/double-key-encryption).
 
 ### Client usage logging in the Windows event log
 

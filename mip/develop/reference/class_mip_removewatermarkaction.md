@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class RemoveWatermarkAction 
@@ -14,7 +14,7 @@ An action class that specifies removing the watermarking from the document.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector\<std::string\>& GetUIElementNames()  |  Gets a list of names that should be used to find the UI elements that should be removed.
+public const std::vector&lt;std::string&gt;& GetUIElementNames()  |  Gets a list of names that should be used to find the UI elements that should be removed.
 public ActionType GetType() const  |  Get the type of Action.
   
 ## Members
@@ -29,4 +29,4 @@ Gets a list of names that should be used to find the UI elements that should be 
 Get the type of Action.
 
   
-**Returns**: ActionType The type of derived action this base class can be cast to.o.
+**Returns**: ActionType The type of derived action this base class can be cast to.

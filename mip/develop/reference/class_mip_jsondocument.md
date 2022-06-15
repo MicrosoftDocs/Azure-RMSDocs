@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class JsonDocument 
@@ -14,9 +14,9 @@ JsonDocument abstraction class.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr\<JsonValue\> Root() const  |  Gets a pointer to the root node of the document.
-public std::shared_ptr\<JsonValue\> CreateObjectValue()  |  Create an Object value to later be added as a child of this document.
-public std::shared_ptr\<JsonValue\> CreateArrayValue()  |  Create an Array value to later be added as a child of this document.
+public std::shared_ptr&lt;JsonValue&gt; Root() const  |  Gets a pointer to the root node of the document.
+public std::shared_ptr&lt;JsonValue&gt; CreateObjectValue()  |  Create an Object value to later be added as a child of this document.
+public std::shared_ptr&lt;JsonValue&gt; CreateArrayValue()  |  Create an Array value to later be added as a child of this document.
   
 ## Members
   
@@ -36,4 +36,4 @@ Create an Object value to later be added as a child of this document.
 Create an Array value to later be added as a child of this document.
 
   
-**Returns**: An Array value to later be added as a child of this document.t.
+**Returns**: An Array value to later be added as a child of this document.
