@@ -49,24 +49,12 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
     To sign in, first type:
 
     ```markdown
-    $Cred = Get-Credential
+    Connect-ExchangeOnline
     ```
 
     Then, in the **Windows PowerShell credential request** dialog box, supply your Microsoft 365 user name and password.
 
-3. Connect to the Exchange Online service by first setting a variable:
-
-    ```md
-    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic –AllowRedirection
-    ```
-
-    Then run the following command:
-
-    ```md
-    Import-PSSession $Session
-    ```
-
-4. Run the [Get-IRMConfiguration](/powershell/module/exchange/get-irmconfiguration) command to view your Exchange Online configuration for the protection service:
+3. Run the [Get-IRMConfiguration](/powershell/module/exchange/get-irmconfiguration) command to view your Exchange Online configuration for the protection service:
 
     ```md
     Get-IRMConfiguration
@@ -78,7 +66,7 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
 
     - If AzureRMSLicensingEnabled is set **False**, run the follow command to enable Exchange Online for the Azure Rights Management service: `Set-IRMConfiguration -AzureRMSLicensingEnabled $true`
 
-5. To test that Exchange Online is configured successfully, run the following command:
+4. To test that Exchange Online is configured successfully, run the following command:
 
     ```md
     Test-IRMConfiguration -Sender <user email address>
@@ -88,7 +76,15 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
 
     This command runs a series of checks that includes verifying connectivity to the service, retrieving the configuration, retrieving URIs, licenses, and any templates. In the Windows PowerShell session, you will see the results of each and at the end, if everything passes these checks: **OVERALL RESULT: PASS**
 
-When Exchange Online is enabled to use the Azure Rights Management service, you can configure features that apply information protection automatically, such as [mail flow rules](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8), [data loss prevention (DLP) policies](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention), and [protected voice mail](/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/protect-voice-mail) (Unified Messaging).
+When Exchange Online is enabled to use the Azure Rights Management service, you can configure the following features:
+
+- Purview Message Encryption using [mail flow rules](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8).
+
+- Encryption using [data loss prevention (DLP) policies](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention).
+
+- Sensitivity labels with encryption using Outlook on the Web, Mac, iOS and Android.
+
+- [Auto-labeling policies](/microsoft-365/compliance/apply-sensitivity-label-automatically) in Exchange to apply sensitivity labels with encryption to mail and [protected voice mail](/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/protect-voice-mail) messages.
 
 ## SharePoint in Microsoft 365 and OneDrive: IRM Configuration
 

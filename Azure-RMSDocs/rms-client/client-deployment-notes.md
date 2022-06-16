@@ -58,14 +58,7 @@ You can install the  RMS client by using either of the following installation me
 The following section contains frequently asked questions about the RMS client and the answers to them.
 
 ### Which operating systems support the RMS client?
-The RMS client is supported with the following operating systems:
-
-|Windows Server Operating System|Windows Client Operating System|
-|-----------------------------------|-----------------------------------|
-|Windows Server 2016|Windows 10|
-|Windows Server 2012 R2|Windows 8.1|
-|Windows Server 2012|Windows 8|
-|Windows Server 2008 R2|Windows 7 with minimum of SP1|
+The RMS client is supported on Windows Server 2012 and later, and Windows 8.1 and later.
 
 ### Which processors or platforms support the  RMS client?
 The  RMS client is supported on x86 and x64 computing platforms.
