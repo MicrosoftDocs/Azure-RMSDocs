@@ -37,7 +37,7 @@ These applications and solutions are known as "RMS-enlighted", and have Rights M
 > [!NOTE]
 > Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. 
 >
-> AD RMS support on iOS, Android, macOS, and Windows Phone 8.1 also requires the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
+> AD RMS support on iOS, Android and macOS also requires the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 > 
 
 ## Windows RMS-enlightened applications
@@ -234,7 +234,7 @@ Applications not currently supported by Azure RMS include:
 
 - Microsoft OneDrive for SharePoint Server 2013
 - XPS Viewer
-- Applications running on Windows versions earlier than Windows 7, Service Pack 1
+- Applications running on Windows versions Windows 8 and earlier, Service Pack 1
 
 
 ## Next steps
@@ -245,4 +245,4 @@ See also:
 - [How applications support the Azure Rights Management service](./applications-support.md).
 - [Configuring applications for Azure Rights Management](configure-applications.md).
 
-For the latest information about solutions that support the Azure Rights Management service and Azure Information Protection, see the blog post, [Microsoft Ignite 2019 – Microsoft Information Protection solutions Partner ecosystem showcase](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Microsoft-Ignite-2019-Microsoft-Information-Protection-solutions/ba-p/967024).
+For the latest information about solutions that support the Azure Rights Management service and Azure Information Protection, see the blog post, [Microsoft Information Protection solutions Partner ecosystem showcase](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Microsoft-Ignite-2019-Microsoft-Information-Protection-solutions/ba-p/967024).
