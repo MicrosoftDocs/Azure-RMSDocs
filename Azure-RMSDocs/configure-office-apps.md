@@ -29,7 +29,7 @@ ms.custom: admin
 
 Use this information to determine what you need to do so that Office apps work with the Azure Rights Management service from Azure Information Protection.
 
-## Office 365 apps, Office 2019, Office 2016, and Office 2013
+## Microsoft 365 apps, Office 2019, Office 2016, and Office 2013
 
 Because these later versions of Office provide built-in support for the Azure Rights Management service, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook, and Outlook on the web. 
 
