@@ -52,7 +52,7 @@ For information about supported versions and other requirements, see [Requiremen
 
 - [Office applications: Configuration for clients](configure-office-apps.md)
 
-	-   [Microsoft 365 apps, Office 2021, Office 2019, Office 2016, and Office 2013](configure-office-apps.md#microsoft-365-apps-office-2021-office-2019-office-2016-and-office-2013)
+	-   [Microsoft 365 apps, Office 2021, Office 2019, Office 2016, and Office 2013](configure-office-apps.md#microsoft365-apps-office-2021-office-2019-office-2016-and-office-2013)
 
 -   [Azure Information Protection client: Installation and configuration for clients](configure-client.md)
 
