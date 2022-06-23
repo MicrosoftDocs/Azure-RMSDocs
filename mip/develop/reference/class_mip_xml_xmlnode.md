@@ -5,28 +5,29 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class xml::XmlNode 
-brief defines abstraction over XML node.
+brief defines abstraction over XML node. XmlNodes will be treated as memory managed by XmlDocument except for RemoveNodeFromDocument() which should handle its own memory clean up
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string GetAttributeValue(const std::string& attributeName) const  | _Not yet documented._
-public std::vector\<std::pair\<std::string, std::string\>\> GetAttributes() const  | _Not yet documented._
-public std::shared_ptr\<XmlNode\> GetNextNode() const  | _Not yet documented._
-public std::shared_ptr\<XmlNode\> GetFirstChild() const  | _Not yet documented._
+public std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt; GetAttributes() const  | _Not yet documented._
+public std::shared_ptr&lt;XmlNode&gt; GetNextNode() const  | _Not yet documented._
+public std::shared_ptr&lt;XmlNode&gt; GetFirstChild() const  | _Not yet documented._
 public std::string GetName() const  | _Not yet documented._
 public std::string GetContent() const  | _Not yet documented._
 public std::string GetInnerText() const  | _Not yet documented._
 public XmlNamespace GetNamespace() const  | _Not yet documented._
+public XmlNodeType GetNodeType() const  |  Get the type of node this xml is represented as.
 public bool IsNull() const  |  See if the object has been initialized with an underlying xml node.
 public void AddAttribute(const std::string& attributeName, const std::string& attributeValue)  |  Add a property to an existing node.
 public int RemoveAttribute(const std::string& attributeName)  |  Removes a node property by name.
-public std::shared_ptr\<XmlNode\> AddNewChild(const std::string& name)  |  Add a child to this XmlNode. New child is inserted after any existing children.
-public std::shared_ptr\<XmlNode\> AddNewChild(const std::string& name, const std::string& namespaceName)  |  Add a child to this XmlNode. New child is inserted after any existing children.
+public std::shared_ptr&lt;XmlNode&gt; AddNewChild(const std::string& name)  |  Add a child to this XmlNode. New child is inserted after any existing children.
+public std::shared_ptr&lt;XmlNode&gt; AddNewChild(const std::string& name, const std::string& namespaceName)  |  Add a child to this XmlNode. New child is inserted after any existing children.
 public bool AddContent(const std::string& content)  |  Add inner text to this xml node.
 public bool RemoveNodeFromDocument()  |  Remove this node and children from the xml document.
   
@@ -63,6 +64,12 @@ _Not documented yet._
 ### GetNamespace function
 _Not documented yet._
 
+  
+### GetNodeType function
+Get the type of node this xml is represented as.
+
+  
+**Returns**: A member of the enum describing the node type
   
 ### IsNull function
 See if the object has been initialized with an underlying xml node.
@@ -132,4 +139,4 @@ Parameters:
 Remove this node and children from the xml document.
 
   
-**Returns**: True if node was successfully deleted or false if failed.d.
+**Returns**: True if node was successfully deleted or false if failed.

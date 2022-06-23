@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class GetTemplatesSettings 
@@ -16,6 +16,10 @@ Settings to use when obtaining templates.
 --------------------------------|---------------------------------------------
 public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
+public void ForceRefresh(bool enabled)  |  Can enable force refresh of templates, ignoring former cached response.
+public bool ShouldRefreshTemplates() const  |  Can enable force refresh of templates, ignoring former cached response.
+public void EnableCaching(bool cachingAllowed)  |  Can disable caching of template response. Will cache by default.
+public bool ShouldCacheResponse() const  |  Can cache templates or not.
   
 ## Members
   
@@ -33,4 +37,32 @@ Gets the delegated user.
 
   
 **Returns**: Delegated user
-A delegated user is specified when the authenticating user/application is acting on behalf of another userer
+A delegated user is specified when the authenticating user/application is acting on behalf of another user
+  
+### ForceRefresh function
+Can enable force refresh of templates, ignoring former cached response.
+
+Parameters:  
+* **enabled**: True to force the refresh. False to use the cached templates if available.
+
+
+  
+### ShouldRefreshTemplates function
+Can enable force refresh of templates, ignoring former cached response.
+
+  
+**Returns**: True to ignore cached templates. False to use if available.
+  
+### EnableCaching function
+Can disable caching of template response. Will cache by default.
+
+Parameters:  
+* **cachingAllowed**: False to disallow template caching.
+
+
+  
+### ShouldCacheResponse function
+Can cache templates or not.
+
+  
+**Returns**: True to cache templates. False to not.

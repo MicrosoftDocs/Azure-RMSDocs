@@ -161,6 +161,7 @@ Publishing policies may take up to 24 hours.
 
 - [Landscape views](#landscape-views-in-the-aip-viewer)
 - [External users](#external-users-and-the-aip-viewer)
+- [ADRMS protected files on Android devices](#adrms-protected-files-on-android-devices)
 
 For more information, see [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md).
 ### Landscape views in the AIP viewer
@@ -184,6 +185,10 @@ This is an expected error. In the prompt window, select **Back** to continue ope
 >[!NOTE]
 > The AIP Viewer supports guest *organizational* accounts in Azure AD, but not personal or Windows Live accounts.
 >
+
+### ADRMS protected files on Android devices
+
+On Android devices, ADRMS-protected files cannot be opened by the AIP Viewer app.
 
 ## Known issues for track and revoke features
 

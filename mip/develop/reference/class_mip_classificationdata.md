@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class ClassificationData 
@@ -19,4 +19,3 @@ public virtual ~ClassificationData()  | _Not yet documented._
   
 ### ~ClassificationData function
 _Not documented yet._
-_

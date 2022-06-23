@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class FileExecutionState 
@@ -14,8 +14,8 @@ ms.date: 11/15/2021
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public virtual DataState GetDataState() const  |  Gets the state of the content while the application is interacting with it.
-public virtual std::shared_ptr\<ClassificationResults\> GetClassificationResults(const std::shared_ptr\<FileHandler\> &, const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Return a map of classification results.
-public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  Return a map of application specific audit key-value pairs.
+public virtual std::shared_ptr&lt;ClassificationResults&gt; GetClassificationResults(const std::shared_ptr&lt;FileHandler&gt; &, const std::vector&lt;std::shared_ptr&lt;ClassificationRequest&gt;&gt; &) const  |  Return a map of classification results.
+public virtual std::map&lt;std::string, std::string&gt; GetAuditMetadata() const  |  Return a map of application specific audit key-value pairs.
 public virtual const std::string GetApplicationScenarioId() const  |  Return an identifier which correlates application events with the corresponding protection service REST requests.
   
 ## Members
@@ -51,4 +51,4 @@ Registered Key:Value pairs Sender: Email Id for the sender Recipients: Represent
 Return an identifier which correlates application events with the corresponding protection service REST requests.
 
   
-**Returns**: An identifier (usually specified as a GUID)D)
+**Returns**: An identifier (usually specified as a GUID).

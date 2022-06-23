@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class MetadataEntry 
@@ -78,4 +78,4 @@ Get the metadata entry value.
 Get the metadata entry version.
 
   
-**Returns**: Metadata entry version.n.
+**Returns**: Metadata entry version.

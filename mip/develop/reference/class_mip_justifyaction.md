@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class JustifyAction 
@@ -19,4 +19,4 @@ Justify Action requires providing a justification to a label downgrade and setti
   
 ## Members
 _Not documented yet._
-_
+

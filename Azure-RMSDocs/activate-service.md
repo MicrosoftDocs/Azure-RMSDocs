@@ -27,13 +27,9 @@ ms.custom: admin
 
 # Activating the protection service from Azure Information Protection
 
-[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
-
 This article describes how administrators can activate the Azure Rights Management protection service for Azure Information Protection (AIP). When the protection service is activated for your organization, administrators and users can start to protect important data by using applications and services that support this information protection solution. Administrators can also manage and monitor protected documents and emails that your organization owns.
 
 This configuration information in this article is for administrators who are responsible for a service that applies to all users in an organization. If you are looking for user help and information to use the Rights Management functionality for a specific application or how to open a file or email that is rights-protected, use the help and guidance that accompanies your application.
-
-For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the Azure Information Protection client for Windows, see the [Azure Information Protection client user guide](./rms-client/clientv2-user-guide.md).
 
 For technical support and other questions about the service, see the [Support options and community resources](information-support.md#support-options-and-community-resources) information.
 
@@ -120,13 +116,10 @@ Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
 
 For more information about this cmdlet and additional examples, see the [Set-AipServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy) help.
 
-When you use these onboarding controls, all users in the organization can always consume protected content that has been protected by your subset of users, but they won’t be able to apply information protection themselves from client applications. For example, they won’t see in their Office apps the default protection templates that are automatically published when the protection service is activated, or custom templates that you might configure. Server-side applications, such as Exchange, can implement their own per-user controls to achieve the same result. For example, to prevent users from protecting emails in Outlook on the web, use [Set-OwaMailboxPolicy](/powershell/module/exchange/client-access/set-owamailboxpolicy) to set the *IRMEnabled* parameter to *$false*.
+When you use these onboarding controls, all users in the organization can always consume protected content that has been protected by your subset of users, but they won’t be able to apply information protection themselves from client applications. Server-side applications, such as Exchange, can implement their own per-user controls to achieve the same result. For example, to prevent users from protecting emails in Outlook on the web, use [Set-OwaMailboxPolicy](/powershell/module/exchange/client-access/set-owamailboxpolicy) to set the *IRMEnabled* parameter to *$false*.
 
 
 ## Next steps
 
-When the protection service is activated for your organization, use the [Azure Information Protection deployment roadmap](/azure/information-protection/deployment-roadmap-classify-label-protect) to check whether there are other configuration steps that you might need to do before you roll out Azure Information Protection to users and administrators.
+Now that the protection service is activated for your organization, apps and services can apply encryption to help protect your data. One of the easiest ways to apply encryption, is by using [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from Microsoft Purview Information Protection.
 
-For example, you might want to use [templates](/previous-versions/azure/information-protection/configure-policy-templates) to make it easier for users to apply protection to files, connect your on-premises servers to use the protection service by installing the [Rights Management connector](deploy-rms-connector.md), and deploy the [Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/aip-client) that supports protecting all file types on all devices. 
-
-Office services, such as Exchange Online and Microsoft SharePoint require additional configuration before you can use their Information Rights Management (IRM) features. For information about how your applications work with the protection service, Azure Rights Management, see [How applications support the Azure Rights Management service](applications-support.md).

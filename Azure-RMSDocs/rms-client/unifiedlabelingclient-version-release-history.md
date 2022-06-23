@@ -151,7 +151,7 @@ This version of the unified labeling client and scanner provides the following f
 
 Unified labeling scanner and client version 2.12.62.0
 
-**Supported through** 07/12/2022
+**Supported through** 09/30/2022
 
 **Released** 08/02/2021
 
