@@ -15,7 +15,7 @@ The managed wrapper and all dependencies can be installed via NuGet in Visual St
 
 ## Supported Platforms
 
-The Microsoft Purview Information Protection .NET Wrapper is supported on the following .NET platforms:
+The Microsoft Information Protection .NET Wrapper is supported on the following .NET platforms:
 
 * .NET Standard 2.0
 * .NET 4.0
