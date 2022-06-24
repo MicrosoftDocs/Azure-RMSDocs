@@ -1,6 +1,6 @@
 ---
 title: Labeling and Protection - Microsoft Information Protection SDK
-description:  Microsoft Purview Information Protection Software Development kit operations.
+description:  Microsoft Information Protection Software Development kit operations.
 author: msmbaldwin
 ms.author: mbaldwin
 ms.date: 08/20/2020
