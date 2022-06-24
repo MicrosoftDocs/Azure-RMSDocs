@@ -8,7 +8,7 @@ ms.date: 09/21/2021
 ms.author: mbaldwin
 ---
 
-# Microsoft Purview Information Protection Software Development Kit (SDK) version release history and support policy
+# Microsoft Information Protection Software Development Kit (SDK) version release history and support policy
 
 ## Servicing
 
@@ -21,7 +21,7 @@ Preview versions shouldn't be deployed in production. Instead, use the latest pr
 Use the following information to see what’s new or changed for a supported release. The most current release is listed first.
 
 > [!NOTE]
-> For technical support, please visit the [Stack Overflow Microsoft Purview Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
+> For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
 
 ## Downloads for Previous Versions
 
