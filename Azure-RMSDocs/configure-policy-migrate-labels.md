@@ -74,7 +74,7 @@ Make sure that you have [clients that support unified labels](#clients-and-servi
 Policies, including policy settings and who has access to them (scoped policies), and all advanced client settings are not migrated. Your options to configure these settings after your label migration include the following:
 
 - The Microsoft Purview compliance portal
-- [Office 365 Security & Compliance PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell), which you must use to [configure advanced client settings](rms-client/clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell).
+- [Security & Compliance PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell), which you must use to [configure advanced client settings](rms-client/clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell).
 
 > [!IMPORTANT]
 > Not all settings from a migrated label are supported by the Microsoft Purview compliance portal. Use the table in the [Label settings that are not supported in the Microsoft Purview compliance portal](#label-settings-that-are-not-supported-in-the-microsoft-365-compliance-center) section to help you identify these settings and the recommended course of action.
@@ -118,7 +118,7 @@ However, sub-labels across different parents, such as **Confidential\HR** and **
 
 ### Localized strings in labels
 
-Any localized strings for the labels are not migrated. Define new localized strings for the migrated labels by using Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label).
+Any localized strings for the labels are not migrated. Define new localized strings for the migrated labels by using Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label).
 
 ### Editing migrated labels in the Microsoft Purview compliance portal
 
@@ -212,12 +212,12 @@ Before you select the **Copy policies (preview)** option on the **Azure Informat
 
 - You cannot selectively choose policies and settings to copy. All policies (the **Global** policy and any scoped policies) are automatically selected to be copied, and all settings that are supported as label policy settings are copied. If you already have a label policy with the same name, it will be overwritten with the policy settings in the Azure portal.
 
-- Some advanced client settings are not copied because for the Azure Information Protection unified labeling client, these are supported as *label advanced settings* rather than policy settings. You can configure these label advanced settings with [Microsoft Purview compliance portal PowerShell](rms-client/clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell). The advanced client settings that are not copied:
+- Some advanced client settings are not copied because for the Azure Information Protection unified labeling client, these are supported as *label advanced settings* rather than policy settings. You can configure these label advanced settings with [Security & Compliance PowerShell](rms-client/clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell). The advanced client settings that are not copied:
 
     - [LabelbyCustomProperty](/previous-versions/azure/information-protection/rms-client/client-admin-guide-customizations#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [LabelToSMIME](/previous-versions/azure/information-protection/rms-client/client-admin-guide-customizations#configure-a-label-to-apply-smime-protection-in-outlook)
 
-- Unlike label migration where subsequent changes to labels are synchronized, the **Copy policies** action doesn't synchronize any subsequent changes to your policies or policy settings. You can repeat the copy policy action after making changes in the Azure portal, and any existing policies and their settings will be overwritten again. Or, use the Set-LabelPolicy or Set-Label cmdlets with the *AdvancedSettings* parameter from Office 365 Security & Compliance Center PowerShell.
+- Unlike label migration where subsequent changes to labels are synchronized, the **Copy policies** action doesn't synchronize any subsequent changes to your policies or policy settings. You can repeat the copy policy action after making changes in the Azure portal, and any existing policies and their settings will be overwritten again. Or, use the Set-LabelPolicy or Set-Label cmdlets with the *AdvancedSettings* parameter from Security & Compliance PowerShell.
 
 - The **Copy policies** action verifies the following for each policy before it is copied:
 
