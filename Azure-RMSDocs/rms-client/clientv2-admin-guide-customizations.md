@@ -768,11 +768,15 @@ To configure this advanced setting, enter the following strings for the selected
 
 - Key Value 1: **Recommended** or **Automatic**
 
-- Key 2: **AttachmentActionTip**
+- Key 2 (optional): **AttachmentActionTip**
 
 - Key Value 2: "\<customized tooltip>"
 
-The customized tooltip supports a single language only.
+The optional customized tooltip supports a single language only. If this setting isn't specified, the following messages are displayed to users:
+
+Recommended message: **It is recommended to label this email as \<label name>**
+
+Automatic message: **This email was automatically labeled as \<label name>**
 
 Example PowerShell command, where your label policy is named "Global":
 
