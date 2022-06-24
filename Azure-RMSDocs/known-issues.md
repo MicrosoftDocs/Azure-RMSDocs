@@ -252,6 +252,8 @@ If a label contains any sub-labels in the [Microsoft 365 compliance center](/mic
 
 Similarly, AIP doesn’t support labels that contain sub-labels as default labels, and you cannot configure automatic labeling on these labels.
 
+Additionally, using a label with UDP (User Defined Permissions) as a default label is not supported in the Unified Labeling Client. 
+
 ## More information
 
 The following additional articles may be helpful in answering questions you have about Azure Information Protection:
