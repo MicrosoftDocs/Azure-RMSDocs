@@ -1,6 +1,6 @@
 ---
 title: Quickstart - List protection templates available to an authenticated user in a Microsoft Purview Information Protection tenant using C++ MIP SDK
-description: A quickstart showing you how to use the Microsoft Purview Information Protection C++ Protection SDK to list the protection templates available to a user (C++)
+description: A quickstart showing you how to use the Microsoft Information Protection C++ Protection SDK to list the protection templates available to a user (C++)
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
