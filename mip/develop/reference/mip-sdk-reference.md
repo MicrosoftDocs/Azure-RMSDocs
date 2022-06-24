@@ -64,7 +64,7 @@ class [FileExecutionState](class_mip_fileexecutionstate.md) | _Not yet documente
 class [FileHandler](class_mip_filehandler.md) | Interface for all file handling functions.
 class [FileInspector](class_mip_fileinspector.md) | _Not yet documented._
 class [FileIOError](class_mip_fileioerror.md) | File IO error.
-class [FileProfile](class_mip_fileprofile.md) | FileProfile class is the root class for using the Microsoft Purview Information Protection operations.
+class [FileProfile](class_mip_fileprofile.md) | FileProfile class is the root class for using the Microsoft Information Protection operations.
 class [FileStatus](class_mip_filestatus.md) | Interface for all file status functions.
 class [GetTemplatesSettings](class_mip_gettemplatessettings.md) | Settings to use when obtaining templates.
 class [HttpDelegate](class_mip_httpdelegate.md) | Interface for overriding HTTP handling.
