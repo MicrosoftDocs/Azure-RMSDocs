@@ -1,6 +1,6 @@
 ---
 title: File types supported - Microsoft Information Protection SDK
-description: Technical details about supported file types, file name extensions, and levels of protection for admins who are are responsible for the Microsoft Purview Information Protection Software Development kit.
+description: Technical details about supported file types, file name extensions, and levels of protection for admins who are are responsible for the Microsoft  Information Protection Software Development kit.
 author: msmbaldwin
 ms.author: mbaldwin
 ms.date: 08/16/2020
