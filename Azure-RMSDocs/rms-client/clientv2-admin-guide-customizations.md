@@ -774,9 +774,8 @@ To configure this advanced setting, enter the following strings for the selected
 
 The optional customized tooltip supports a single language only. If this setting isn't specified, the following messages are displayed to users:
 
-Recommended message: **It is recommended to label this email as \<label name>**
-
-Automatic message: **This email was automatically labeled as \<label name>**
+- Recommended message: **It is recommended to label this email as \<label name>**
+- Automatic message: **This email was automatically labeled as \<label name>**
 
 Example PowerShell command, where your label policy is named "Global":
 
