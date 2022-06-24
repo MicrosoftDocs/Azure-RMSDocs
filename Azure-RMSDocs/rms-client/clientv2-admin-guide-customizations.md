@@ -753,7 +753,7 @@ This setting is for when users attach labeled documents to an email, and do not 
 
 The attachment must be a physical file, and cannot be a link to a file (for example, a link to a file on Microsoft SharePoint or OneDrive).
 
-You can configure this setting to **Recommended**, so that users are prompted to apply the selected label to their email message, with a customizable tooltip. Users can accept the recommendation or dismiss it. Or, you can configure this setting to **Automatic**, where the selected label is automatically applied but users can remove the label or select a different label before sending the email.
+You can configure this setting to **Recommended**, so that users are prompted to apply the selected label to their email message. Users can then accept the recommendation or dismiss it without applying the label. Or, you can configure this setting to **Automatic**, where the selected label is automatically applied, but users can remove the label or select a different label before sending the email. Both scenarios support a customized message.
 
 > [!NOTE]
 > When the attachment with the highest classification label is configured for protection with the setting of user-defined permissions:
