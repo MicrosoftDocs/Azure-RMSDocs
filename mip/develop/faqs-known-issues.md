@@ -102,7 +102,7 @@ The Microsoft Information Protection SDK uses FIPS 140-2 approved ciphers but no
 
 > File format not supported
 
-This exception results from attempting to protect or label a PDF file that has been digitally signed or password protected. See [New support for PDF encryption with Microsoft Purview Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) for more information on protecting and labeling PDF files.
+This exception results from attempting to protect or label a PDF file that has been digitally signed or password protected. See [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) for more information on protecting and labeling PDF files.
 
 ### Error: "Failed to parse the acquired Compliance Policy"  
 
@@ -110,7 +110,7 @@ This exception results from attempting to protect or label a PDF file that has b
 
 > Something bad happened: Failed to parse the acquired Compliance Policy. Failed with: [class mip::CompliancePolicyParserException] Tag not found: policy, NodeType: 15, Name: No Name Found, Value: , Ancestors: `<SyncFile><Content>`, correlationId:[34668a40-blll-4ef8-b2af-00005aa674z9]
 
-This error indicates that you haven't migrated your labels from Azure Information Protection to the unified labeling experience. Follow [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels) to migrate the labels, then create a Label Policy in Office 365 Security and Compliance Center. 
+This error indicates that you haven't migrated your labels from Azure Information Protection to the unified labeling experience. Follow [How to migrate Azure Information Protection labels to unified sensitivity labels](/azure/information-protection/configure-policy-migrate-labels) to migrate the labels, then create a Label Policy in Office 365 Security and Compliance Center. 
 
 ### Error: "NoPolicyException: Label policy did not contain data"
 
@@ -118,7 +118,7 @@ This error indicates that you haven't migrated your labels from Azure Informatio
 
 > NoPolicyException: Label policy did not contain data, CorrelationId=GUID, CorrelationId.Description=PolicyProfile, NoPolicyError.Category=SyncFile, NoPolicyError.Category=SyncFile
 
-This error indicates that a label policy has not been published in Microsoft Security and Compliance Center. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
+This error indicates that a label policy has not been published in the Microsoft Purview compliance portal. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
 
 ### Error: "System.ComponentModel.Win32Exception: LoadLibrary failed"
 
