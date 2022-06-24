@@ -9,7 +9,7 @@ ms.date: 05/31/2022
 ---
 
 # class FileProfile 
-FileProfile class is the root class for using the Microsoft Purview Information Protection operations.
+FileProfile class is the root class for using the Microsoft Information Protection operations.
 A typical application will only need one Profile.
   
 ## Summary
