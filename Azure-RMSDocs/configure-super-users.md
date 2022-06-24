@@ -102,11 +102,11 @@ For more information about these cmdlets, see [Using PowerShell with the Azure I
 
 ### Removing protection on PST files
 
-To remove protection on PST files, we recommend that you use [eDiscovery in Microsoft 365](/microsoft-365/compliance/ediscovery) to search and extract protected emails and protected attachment in emails.
+To remove protection on PST files, we recommend that you use [eDiscovery from Microsoft Purview](/microsoft-365/compliance/ediscovery) to search and extract protected emails and protected attachment in emails.
 
-The super user ability is automatically integrated with Exchange Online so that eDiscovery in the Office 365 Security & Compliance Center or Microsoft Purview compliance portal can search for encrypted items prior to export, or decrypt encrypted email on export.
+The super user ability is automatically integrated with Exchange Online so that eDiscovery in the Microsoft Purview compliance portal can search for encrypted items prior to export, or decrypt encrypted email on export.
 
-If you cannot use Microsoft 365 eDiscovery, you might have another eDiscovery solution that integrates with the Azure Rights Management service to similarly reason over data. 
+If you cannot use Microsoft Purview eDiscovery, you might have another eDiscovery solution that integrates with the Azure Rights Management service to similarly reason over data. 
 
 Or, if your eDiscovery solution cannot automatically read and decrypt protected content, you can still use this solution in a multi-step process together with the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet:
 
