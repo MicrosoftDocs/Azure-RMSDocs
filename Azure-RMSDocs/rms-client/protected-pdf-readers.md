@@ -64,9 +64,9 @@ The Adobe Acrobat Reader with Microsoft Purview Information Protection integrati
 
 For more information, see the following blog posts: 
 
-- [General Availability of Adobe Acrobat Reader Integration with Microsoft Purview Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-Integration-with/ba-p/298396)
+- [General Availability of Adobe Acrobat Reader Integration with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-Integration-with/ba-p/298396)
 
-- [Adobe reader and Microsoft Purview Information Protection integration FAQs](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Adobe-reader-and-Microsoft-Information-Protection-integration/ba-p/482219)
+- [Adobe reader and Microsoft Information Protection integration FAQs](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Adobe-reader-and-Microsoft-Information-Protection-integration/ba-p/482219)
 
 ## Viewing protected PDFs in Microsoft Edge on Windows or Mac
 
