@@ -66,9 +66,9 @@ While most functionality available for the AIP classic client is also available 
 
 Review the following articles to understand how the Information Protection features you use may differ when using the unified labeling client:
 
-- [Learn about built-in labeling capabilities in Microsoft 365](/microsoft-365/compliance/sensitivity-labels-office-apps)
+- [Learn about built-in labeling capabilities in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps)
 - [Learn about about built-in labeling and the AIP unified labeling client](rms-client/use-client.md)
-- [Learn how to manage label settings that are not supported out-of-the-box in the Microsoft Purview compliance portal](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-microsoft-365-compliance-center)
+- [Learn how to manage label settings that are not supported out-of-the-box in the Microsoft Purview compliance portal](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-microsoft-purview-compliance-portal)
 
 > [!TIP]
 > If there are documented differences between the clients that impact your end users' behavior, we recommend communicating these changes effectively to your users before deploying the unified labeling client and publishing your new policy.
@@ -182,7 +182,7 @@ As explained during the [planning phase](#planning-your-migration), some advance
 For more information, see:
 
 - [Configure advanced labeling settings in PowerShell](#configure-advanced-labeling-settings-in-powershell)
-- [Define label conditions in the Microsoft Purview compliance portal](#define-label-conditions-in-the-microsoft-365-compliance-center)
+- [Define label conditions in the Microsoft Purview compliance portal](#define-label-conditions-in-the-microsoft-purview-compliance-portal)
 
 ### Configure advanced labeling settings in PowerShell
 
