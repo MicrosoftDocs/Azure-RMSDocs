@@ -61,8 +61,8 @@ Label migration has many benefits, but is irreversible. Before you migrate, make
 - [Protection templates](#protection-templates)
 - [Display names](#display-names)
 - [Localized strings in labels](#localized-strings-in-labels)
-- [Editing migrated labels in the Microsoft Purview compliance portal](#editing-migrated-labels-in-the-microsoft-365-compliance-center)
-- [Label settings that are not supported in the Microsoft Purview compliance portal](#label-settings-that-are-not-supported-in-the-microsoft-365-compliance-center)
+- [Editing migrated labels in the Microsoft Purview compliance portal](#editing-migrated-labels-in-the-microsoft-purview-compliance-portal)
+- [Label settings that are not supported in the Microsoft Purview compliance portal](#label-settings-that-are-not-supported-in-the-microsoft-purview-compliance-portal)
 - [Comparing the behavior of protection settings for a label](#comparing-the-behavior-of-protection-settings-for-a-label)
 
 ### Client support for unified labeling
@@ -77,7 +77,7 @@ Policies, including policy settings and who has access to them (scoped policies)
 - [Security & Compliance PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell), which you must use to [configure advanced client settings](rms-client/clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell).
 
 > [!IMPORTANT]
-> Not all settings from a migrated label are supported by the Microsoft Purview compliance portal. Use the table in the [Label settings that are not supported in the Microsoft Purview compliance portal](#label-settings-that-are-not-supported-in-the-microsoft-365-compliance-center) section to help you identify these settings and the recommended course of action.
+> Not all settings from a migrated label are supported by the Microsoft Purview compliance portal. Use the table in the [Label settings that are not supported in the Microsoft Purview compliance portal](#label-settings-that-are-not-supported-in-the-microsoft-purview-compliance-portal) section to help you identify these settings and the recommended course of action.
 >
 
 ### Protection templates
