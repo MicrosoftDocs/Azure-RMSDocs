@@ -168,8 +168,8 @@ To register an application account in Azure AD for use with the Quickstarts and 
    - Click **Add permissions** to save.
 
 5. Repeat step #4, but this time when you get to the **Select an API** page, you'll need to search for the API.
-   - On the **Select an API** page, click **APIs my organization uses** then in the search box type "**Microsoft Purview Information Protection Sync Service**", and select it.
-   - On the **Microsoft Purview Information Protection Sync Service** API page, click **Delegated permissions**.
+   - On the **Select an API** page, click **APIs my organization uses** then in the search box type "**Microsoft Information Protection Sync Service**", and select it.
+   - On the **Microsoft Information Protection Sync Service** API page, click **Delegated permissions**.
    - Expand the **UnifiedPolicy** node and check **UnifiedPolicy.User.Read**
    - Click **Add permissions** to save.
 
