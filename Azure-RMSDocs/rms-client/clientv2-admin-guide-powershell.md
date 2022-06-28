@@ -186,7 +186,7 @@ The **Set-AIPAuthentication** cmdlet requires an app registration for the *AppId
 
 1. Back on the **AIP-DelegatedUser - API permissions** pane, select **Add a permission** again.
 
-    On the **Request AIP permissions** pane, select **APIs my organization uses**, and search for **Microsoft Purview Information Protection Sync Service**.
+    On the **Request AIP permissions** pane, select **APIs my organization uses**, and search for **Microsoft Information Protection Sync Service**.
 
 1. On the **Request API permissions** pane, select **Application permissions**.
     
