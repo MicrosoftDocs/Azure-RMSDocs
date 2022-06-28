@@ -1,6 +1,6 @@
 ---
 title: class LicenseNameAndDescriptionItem 
-description: Documents the licensenameanddescriptionitem::undefined class of the Microsoft Information Protection SDK.
+description: Documents the licensenameanddescriptionitem::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

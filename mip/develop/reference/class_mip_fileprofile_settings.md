@@ -1,6 +1,6 @@
 ---
 title: class FileProfile::Settings 
-description: Documents the fileprofile::settings class of the Microsoft Information Protection SDK.
+description: Documents the fileprofile::settings class of the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

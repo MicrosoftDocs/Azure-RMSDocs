@@ -1,5 +1,5 @@
 ﻿---
-title: Microsoft Information Protection SDK version release history and support policy
+title: Microsoft Information Protection (MIP) SDK version release history and support policy
 description: Version release history and change notes for the MIP SDK.
 author: msmbaldwin
 ms.service: information-protection
@@ -8,7 +8,7 @@ ms.date: 09/21/2021
 ms.author: mbaldwin
 ---
 
-# Microsoft Information Protection Software Development Kit (SDK) version release history and support policy
+# Microsoft Information Protection (MIP) Software Development Kit (SDK) version release history and support policy
 
 ## Servicing
 

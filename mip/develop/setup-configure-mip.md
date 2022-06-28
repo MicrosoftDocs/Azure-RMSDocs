@@ -1,5 +1,5 @@
 ﻿---
-title: Microsoft Information Protection SDK setup and configuration
+title: Microsoft Information Protection (MIP) SDK setup and configuration
 description: Provides the setup and configuration prerequisites, in order to use applications built with the Microsoft Information Protection SDK.
 author: msmbaldwin
 ms.service: information-protection
@@ -10,7 +10,7 @@ ms.custom: has-adal-ref, mode-api
 #Customer intent: As a an application developer, I want to learn about setup and configuration, so that I can use the SDK to build applications.
 ---
 
-# Microsoft Information Protection SDK setup and configuration
+# Microsoft Information Protection (MIP) SDK setup and configuration
 
 The Quickstart and Tutorial articles are centered around building applications that use the MIP SDK libraries and APIs. This article shows you how to set up and configure your Microsoft 365 subscription and client workstation, in preparation for using the SDK.
 

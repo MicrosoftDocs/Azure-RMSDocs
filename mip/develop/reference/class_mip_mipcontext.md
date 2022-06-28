@@ -1,6 +1,6 @@
 ---
 title: class MipContext 
-description: Documents the mipcontext::undefined class of the Microsoft Information Protection SDK.
+description: Documents the mipcontext::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

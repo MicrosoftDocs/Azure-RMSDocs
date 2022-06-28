@@ -1,6 +1,6 @@
 ---
 title: class PolicyRuleData 
-description: Documents the policyruledata::undefined class of the Microsoft Information Protection SDK.
+description: Documents the policyruledata::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference

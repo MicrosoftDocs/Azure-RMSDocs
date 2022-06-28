@@ -1,5 +1,5 @@
 ---
-title: FAQs and known issues - Microsoft Information Projection SDK.
+title: FAQs and known issues - Microsoft Information Projection (MIP) SDK.
 description: Microsoft Information Protection SDK FAQs and troubleshooting guidance for issues and errors.
 author: msmbaldwin
 ms.service: information-protection
@@ -8,7 +8,7 @@ ms.date: 03/05/2019
 ms.author: mbaldwin
 ---
 
-# Microsoft Information Protection SDK FAQs and issues
+# Microsoft Information Protection (MIP) SDK FAQs and issues
 
 This article provides answers to Frequently Asked Questions (FAQs), and troubleshooting guidance for known issues and common errors.
 

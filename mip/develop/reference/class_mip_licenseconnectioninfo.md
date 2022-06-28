@@ -1,6 +1,6 @@
 ---
 title: class LicenseConnectionInfo 
-description: Documents the licenseconnectioninfo::undefined class of the Microsoft Information Protection SDK.
+description: Documents the licenseconnectioninfo::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
