@@ -757,7 +757,7 @@
         },
         {
             "source_path": "Azure-RMSDocs/rms-client/info-protect-client.md",
-            "redirect_url": "https://docs.microsoft.com/information-protection/rms-client/client-admin-guide",
+            "redirect_url": "/information-protection/rms-client/client-admin-guide",
             "redirect_document_id": false
         },
         {
@@ -1656,7 +1656,7 @@
         },
         {
             "source_path": "Azure-RMSDocs/configure-exchange-with-imported-tpd.md",
-            "redirect_url": "https://docs.microsoft.com/azure/information-protection/deploy-use/configure-office365#exchange-online-irm-configuration",
+            "redirect_url": "/azure/information-protection/deploy-use/configure-office365#exchange-online-irm-configuration",
             "redirect_document_id": false
         },
         {
