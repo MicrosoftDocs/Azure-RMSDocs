@@ -18,7 +18,7 @@ The Quickstart and Tutorial articles are centered around building applications t
 
 Be sure to review the following topics before getting started:
 
-- [What is Office 365 Security and Compliance Center?](/microsoft-365/compliance/microsoft-365-compliance-center?view=o365-worldwide)
+- [Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center)
 - [What is Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 - [How does the protection work in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
