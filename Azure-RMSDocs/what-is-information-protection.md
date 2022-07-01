@@ -110,7 +110,7 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 |**Release management and supportability**     | Learn about the content included in each version of the Azure Information Protection client. <br><br>See also: <br>-  [What's new in Microsoft Purview risk and compliance solutions(/microsoft-365/compliance/whats-new)<br>- [Protect your sensitive data with Microsoft Purview](/microsoft-365/compliance/information-protection)<br>- The [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance) |
 
 
-#### Recommended Ignite sessions
+#### Top Ignite sessions
 
 See the following recorded sessions from Ignite 2020:
 

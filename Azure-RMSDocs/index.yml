@@ -60,7 +60,7 @@ landingContent:
      - linkListType: whats-new
        links:
           - text: Recommended Ignite sessions
-            url: what-is-information-protection.md#recommended-ignite-sessions
+            url: what-is-information-protection.md#top-ignite-sessions
           - text: Release management and supportability
             url: ./rms-client/unifiedlabelingclient-version-release-history.md
 
