@@ -2,7 +2,7 @@
 # required metadata
 
 title: What is Azure Information Protection (AIP)?
-description: Azure Information Protection (AIP) extends the Microsoft Information Protection (MIP) framework to extend the labeling and classification functionality provided by Microsoft 365.
+description: Azure Information Protection (AIP) extends the Microsoft Purview Information Protection framework to extend the labeling and classification functionality provided by Microsoft 365.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -32,13 +32,13 @@ search.appverid:
 
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to discover, classify, and protect documents and emails by applying labels to content.
 
-AIP is part of the Microsoft Information Protection (MIP) solution, and extends the [labeling](/microsoft-365/compliance/sensitivity-labels) and [classification](/microsoft-365/compliance/data-classification-overview) functionality provided by Microsoft 365.
+AIP is part of the Microsoft Purview Information Protection solution, and extends the [labeling](/microsoft-365/compliance/sensitivity-labels) and [classification](/microsoft-365/compliance/data-classification-overview) functionality provided by Microsoft 365.
 
 The following image shows the Azure Information Protection additions to MIP, including the [**unified labeling client**](#aip-unified-labeling-client), [**scanner**](#aip-on-premises-scanner), and [**SDK**](#microsoft-information-protection-sdk).
 
-:::image type="content" source="media/what-is-mip.png" alt-text="The Azure Information Protection areas of the Microsoft Information Protection framework":::
+:::image type="content" source="media/what-is-mip.png" alt-text="The Azure Information Protection areas of the Microsoft Purview Information Protection framework":::
 
-Microsoft Information Protection is the common information protection stack that's leveraged by AIP's unified labeling client. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/protect-information).
+Microsoft Purview Information Protection is the common information protection stack that's leveraged by AIP's unified labeling client. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/protect-information).
 
 ## AIP unified labeling client
 
@@ -76,7 +76,7 @@ The Microsoft Information Protection SDK extends sensitivity labels to third-par
 For example, you might use the MIP SDK for:
 
 - A line-of-business application that applies classification labels to files on export.
-- A CAD/CAM design application provides built-in support for Microsoft Information Protection labeling.
+- A CAD/CAM design application provides built-in support for Microsoft Purview Information Protection labeling.
 - A cloud access security broker or data loss prevention solution reasons over data encrypted with Azure Information Protection.
 
 For more information, see the [Microsoft Information Protection SDK overview](/information-protection/develop/overview).
@@ -107,7 +107,7 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 |**FAQs and known issues**     | [Frequently asked questions for Azure Information Protection](faqs.md) </br> [Known issues - Azure Information Protection](known-issues.md)       |
 |**Support options**     | [Support options for Azure Information Protection](information-support.md)        |
 |**Yammer**     |  [Azure Information Protection](https://www.yammer.com/AskIPTeam)       |
-|**Release management and supportability**     | Learn about the content included in each version of the Azure Information Protection client. <br><br>See also: <br>-  [What's new in Microsoft 365 compliance](/microsoft-365/compliance/whats-new)<br>- [Microsoft Information Protection in Microsoft 365](/microsoft-365/compliance/information-protection)<br>- The [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance) |
+|**Release management and supportability**     | Learn about the content included in each version of the Azure Information Protection client. <br><br>See also: <br>-  [What's new in Microsoft 365 compliance](/microsoft-365/compliance/whats-new)<br>- [Microsoft Purview Information Protection in Microsoft 365](/microsoft-365/compliance/information-protection)<br>- The [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance) |
 
 #### Top Ignite sessions
 
@@ -119,6 +119,6 @@ See the following recorded sessions from Ignite 2020:
 
 - [**Be a risk management hero** with intelligent data protection and compliance solutions](https://myignite.microsoft.com/archives/IG20-DB159) | [Ask the expert session 1](https://myignite.microsoft.com/archives/IG20-ATE-DB159) | [Ask the expert session 2](https://myignite.microsoft.com/archives/IG20-ATE-DB159-R1)
 
-- [**Know your data, protect your data and prevent data loss** with Microsoft Information Protection](https://myignite.microsoft.com/archives/IG20-OD273)
+- [**Know your data, protect your data and prevent data loss** with Microsoft Purview Information Protection](https://myignite.microsoft.com/archives/IG20-OD273)
 
 - **Ask anything about Microsoft Compliance**: information protection & governance, insider risks, Compliance Management, and more: [Ask the expert session 1](https://myignite.microsoft.com/archives/IG20-ATE-DB163-R1) | [Ask the expert session 2](https://myignite.microsoft.com/archives/IG20-ATE-DB170)

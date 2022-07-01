@@ -43,7 +43,7 @@ Starting March 18, 2022, Microsoft no longer supports new Log Analytics workspac
 
 Customers who already have AIP audit logs configured will continue to have those audit logs forwarded to their Log Analytics workspaces until September 30, 2022. At that point, customers will not be able to have any new AIP data forwarded to their Log Analytics workspace.
 
-Instead, we highly recommend that you use the Microsoft 365 compliance center's activity explorer and content explorer, which provide comprehensive logging and reporting.
+Instead, we highly recommend that you use the Microsoft Purview compliance portal's activity explorer and content explorer, which provide comprehensive logging and reporting.
 
 The AIP scanner's [network discovery](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview) features also use the AIP audit pipeline, and we are also sunsetting this feature with the AIP audit logs on September 30, 2022. Starting March 18, 2022, only existing customers with AIP audit logs already configured will be able to continue using network discovery features.
 

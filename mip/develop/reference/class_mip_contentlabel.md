@@ -9,7 +9,7 @@ ms.date: 05/31/2022
 ---
 
 # class ContentLabel 
-Abstraction for a Microsoft Information Protection label that is applied to a piece of content, typically a document.
+Abstraction for a Microsoft Purview Information Protection label that is applied to a piece of content, typically a document.
 It also holds properties for a specific applied label instance.
   
 ## Summary

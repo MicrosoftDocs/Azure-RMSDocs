@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Protected PDF viewers for Microsoft Information Protection
+title: Protected PDF viewers for Microsoft Purview Information Protection
 description: Learn how to open and view PDFs that are labeled for classification and protection.
 author: batamig
 ms.author: bagol
@@ -33,7 +33,7 @@ This article describes the protected PDF readers that are supported for Azure In
 
 Encrypting your PDFs with AIP ensures that unauthorized people cannot read the file's content. Protected PDF readers that support AIP verify that you've been granted permissions to open the document, and also decrypt the content for you.
 
-For example, the following image shows an encrypted document open in Adobe Acrobat Reader. The bar at the top indicates that the document is protected by a Microsoft Information Protection solution.
+For example, the following image shows an encrypted document open in Adobe Acrobat Reader. The bar at the top indicates that the document is protected by a Microsoft Purview Information Protection solution.
 
 :::image type="content" source="../media/protected-pdf-in-adobe-reader.png" alt-text="Protected PDF open in Adobe Acrobat Reader":::
 
@@ -58,9 +58,9 @@ This standard is used by default by the AIP client.
 
 ### Viewing protected PDFs in Adobe Acrobat Reader
 
-Adobe Acrobat Reader integrates with Microsoft Information Protection solutions, such as Azure Information Protection to provide users with a simplified and consistent experience for classified and/or protected PDFs.
+Adobe Acrobat Reader integrates with Microsoft Purview Information Protection solutions, such as Azure Information Protection to provide users with a simplified and consistent experience for classified and/or protected PDFs.
 
-The Adobe Acrobat Reader with Microsoft Information Protection integration is supported for [Windows](#installing-a-protected-pdf-reader-for-windows-or-mac) and [macOS](#installing-a-protected-pdf-reader-for-windows-or-mac).
+The Adobe Acrobat Reader with Microsoft Purview Information Protection integration is supported for [Windows](#installing-a-protected-pdf-reader-for-windows-or-mac) and [macOS](#installing-a-protected-pdf-reader-for-windows-or-mac).
 
 For more information, see the following blog posts: 
 
@@ -92,7 +92,7 @@ Supported versions include:
  
 ## Installing a protected PDF reader for Windows or Mac
 
-To open a protected PDF document on your desktop computer, we recommend that you install the relevant [Microsoft Information Protection (MIP) plug-in for Acrobat and Acrobat Reader](https://go.microsoft.com/fwlink/?linkid=2050049) for your operating system.
+To open a protected PDF document on your desktop computer, we recommend that you install the relevant [Microsoft Purview Information Protection plug-in for Acrobat and Acrobat Reader](https://go.microsoft.com/fwlink/?linkid=2050049) for your operating system.
 
 **Instructions**:
 
@@ -117,7 +117,7 @@ To open a protected PDF document on your desktop computer, we recommend that you
     :::image type="content" source="../media/admin-approval-for-mip-in-adobe-reader.png" alt-text="Admin approval required to install the MIP plug-in for Acrobat and Acrobat Reader":::
     
 > [!NOTE]
-> For more information, see the [Microsoft Information Protection and Adobe release announcement](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
+> For more information, see the [Microsoft Purview Information Protection and Adobe release announcement](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
 > 
 
 ### Alternative protected PDF readers for Windows

@@ -97,7 +97,7 @@ Customized protection templates provide a quick and easy solution for administra
 
 For example, for a company-wide strategy paper to be shared with all employees, apply a read-only policy to all internal employees. For a more sensitive document, such as a financial report, restrict access to executives only.
 
-Configure your labeling policies in the Microsoft 365 compliance center. For more information, see the [sensitivity labeling documentation for Microsoft 365](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do).        
+Configure your labeling policies in the Microsoft Purview compliance portal. For more information, see the [sensitivity labeling documentation for Microsoft 365](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do).        
 
 
 #### Easy activation

@@ -44,7 +44,7 @@ When you configure and use Azure Information Protection, email addresses and IP 
 
 - **Unified labeling client**:
 
-    For the unified labeling client, sensitivity labels and label policies are configured in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+    For the unified labeling client, sensitivity labels and label policies are configured in the Microsoft Purview compliance portal. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
 > [!NOTE]
 > When Azure Information Protection is used to classify and protect documents and emails, email addresses and the users' IP addresses might be saved in log files.
@@ -200,7 +200,7 @@ Personal data that you view and specify by using the AIPService module (or the o
 
 ## Updating personal data
 
-Sensitivity labels and label policies are configured in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+Sensitivity labels and label policies are configured in the Microsoft Purview compliance portal. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
 For the protection settings, you can update the same information by using PowerShell cmdlets from the [AIPService module](/powershell/module/aipservice).
 
@@ -222,7 +222,7 @@ When you need update an email address for a delegated administrator:
 
 ## Deleting personal data
 
-Sensitivity labels and label policies are configured in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+Sensitivity labels and label policies are configured in the Microsoft Purview compliance portal. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
 For the protection settings, you can delete the same information by using PowerShell cmdlets from the [AIPService module](/powershell/module/aipservice).
 
