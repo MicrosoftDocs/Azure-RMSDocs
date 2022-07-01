@@ -19,7 +19,7 @@ By default, MIP SDK **does not** send audit events. Auditing must be enabled in 
 
 To change this behavior, so that audit data is sent by all MIP SDK-enabled applications, do the following:
 
-- Add the following policy [advanced setting](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configuring-advanced-settings-for-the-client-via-powershell) using the Office 365 Security & Compliance Center PowerShell:
+- Add the following policy [advanced setting](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configuring-advanced-settings-for-the-client-via-powershell) using Security & Compliance Center PowerShell:
 
     - Key: **EnableAudit**
     - Value: **True**
