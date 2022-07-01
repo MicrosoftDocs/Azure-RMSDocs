@@ -118,6 +118,6 @@ See the following recorded sessions from Ignite 2020:
 
 - [**Be a risk management hero** with intelligent data protection and compliance solutions](https://myignite.microsoft.com/archives/IG20-DB159) | [Ask the expert session 1](https://myignite.microsoft.com/archives/IG20-ATE-DB159) | [Ask the expert session 2](https://myignite.microsoft.com/archives/IG20-ATE-DB159-R1)
 
-- [**Know your data, protect your data and prevent data loss** with Microsoft Purview Information Protection](https://myignite.microsoft.com/archives/IG20-OD273)
+- [**Know your data, protect your data and prevent data loss** with Microsoft Information Protection](https://myignite.microsoft.com/archives/IG20-OD273)
 
 - **Ask anything about Microsoft Compliance**: information protection & governance, insider risks, Compliance Management, and more: [Ask the expert session 1](https://myignite.microsoft.com/archives/IG20-ATE-DB163-R1) | [Ask the expert session 2](https://myignite.microsoft.com/archives/IG20-ATE-DB170)
