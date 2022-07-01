@@ -14,6 +14,6 @@ ms.custom: include file
 
 
 > [!NOTE]
-> **Are you looking for [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection)**, formerly Microsoft Information Protection?
+> **Are you looking for [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection)**, formerly Microsoft Information Protection (MIP)?
 > 
 > The Azure Information Protection unified labeling client is [now in maintenance mode](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613). We recommend you use labels that are built in to your Office 365 apps and services. [Learn more ](/microsoft-365/compliance/sensitivity-labels#sensitivity-labels-and-azure-information-protection)
