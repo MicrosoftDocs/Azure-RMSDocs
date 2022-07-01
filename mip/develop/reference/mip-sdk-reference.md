@@ -42,7 +42,7 @@ class [ConsentDelegate](class_mip_consentdelegate.md) | Delegate for consent rel
 class [ConsentDeniedError](class_mip_consentdeniederror.md) | An operation that required consent from user was not granted consent.
 class [ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) | Settings used to create a ProtectionHandler to consume existing content.
 class [ContentFormatNotSupportedError](class_mip_contentformatnotsupportederror.md) | Content Format is not supported.
-class [ContentLabel](class_mip_contentlabel.md) | Abstraction for a Microsoft Information Protection label that is applied to a piece of content, typically a document.
+class [ContentLabel](class_mip_contentlabel.md) | Abstraction for a Microsoft Purview Information Protection label that is applied to a piece of content, typically a document.
 class [ContentMarkingActionData](class_mip_contentmarkingactiondata.md) | _Not yet documented._
 class [CustomAction](class_mip_customaction.md) | CustomAction is a generic action class that captures all the sub-properties of the action as a property bag. The caller is responsible to understand the meaning of the action.
 class [CustomerKeyUnavailableError](class_mip_customerkeyunavailableerror.md) | Bring your own encryption key needed and unavailable.
@@ -79,7 +79,7 @@ class [JsonDocument](class_mip_jsondocument.md) | JsonDocument abstraction class
 class [JsonValue](class_mip_jsonvalue.md) | _Not yet documented._
 class [JustificationRequiredError](class_mip_justificationrequirederror.md) | _Not yet documented._
 class [JustifyAction](class_mip_justifyaction.md) | Justify Action requires providing a justification to a label downgrade and setting the response in the execution state.
-class [Label](class_mip_label.md) | Abstraction for a single Microsoft Information Protection label.
+class [Label](class_mip_label.md) | Abstraction for a single Microsoft Purview Information Protection label.
 class [LabelActionData](class_mip_labelactiondata.md) | _Not yet documented._
 class [LabelDisabledError](class_mip_labeldisablederror.md) | Label is disabled or inactive.
 class [LabelGroupData](class_mip_labelgroupdata.md) | _Not yet documented._
@@ -118,7 +118,7 @@ class [ParsedPublishingLicenseBuilder](class_mip_parsedpublishinglicensebuilder.
 class [PolicyEngine](class_mip_policyengine.md) | This class provides an interface for all engine functions.
 class [PolicyHandler](class_mip_policyhandler.md) | This class provides an interface for all policy handler functions on a file.
 class [PolicyPackageData](class_mip_policypackagedata.md) | _Not yet documented._
-class [PolicyProfile](class_mip_policyprofile.md) | PolicyProfile class is the root class for using the Microsoft Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
+class [PolicyProfile](class_mip_policyprofile.md) | PolicyProfile class is the root class for using the Microsoft Purview Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
 class [PolicyRuleData](class_mip_policyruledata.md) | _Not yet documented._
 class [PrivilegedRequiredError](class_mip_privilegedrequirederror.md) | Current label was assigned as a privileged operation (The equivalent to an administrator operation), therefore it can't be overridden.
 class [PropertyData](class_mip_propertydata.md) | _Not yet documented._

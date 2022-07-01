@@ -147,7 +147,7 @@ For more information, see the [Unified labeling client admin guide](./rms-client
 
 ## Label configuration requirements
 
-You must have at least one sensitivity label configured in the Microsoft 365 compliance center for the scanner account, to apply classification and, optionally, protection.
+You must have at least one sensitivity label configured in the Microsoft Purview compliance portal for the scanner account, to apply classification and, optionally, protection.
 
 The *scanner account* is the account that you'll specify in the **DelegatedUser** parameter of the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet, run when configuring your scanner. 
 

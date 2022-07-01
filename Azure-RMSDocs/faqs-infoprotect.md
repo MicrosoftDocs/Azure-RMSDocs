@@ -34,7 +34,7 @@ Have a question about Azure Information Protection that is specifically about cl
 
 We recommend using the built-in labeling solution for Office apps by default, and then installing the Azure Information Protection unified labeling client in parallel if you need the extra features supported by AIP.
 
-You can use the AIP client's extra functionality and built-in labeling simultaneously, and the unified labeling client downloads labels and policy settings from the Microsoft 365 compliance center.
+You can use the AIP client's extra functionality and built-in labeling simultaneously, and the unified labeling client downloads labels and policy settings from the Microsoft Purview compliance portal.
 
 For more information, see [Learn about about built-in labeling and the AIP unified labeling client](rms-client/use-client.md).
 

@@ -51,7 +51,7 @@ Confused by a word, phrase, or acronym that's related to Azure Information Prote
 |**Azure Information Protection label**|An item that always applies a classification value to documents and emails, and can also protect them. </br></br>When a label is applied, the label information is stored in the metadata for applications and services to read and optionally, act on it.|
 |**Azure Information Protection policy**|Administrator-defined configuration for clients and services that use Azure Information Protection labels and policy settings.|
 |**Azure Information Protection scanner**|A service that runs on Windows Server and lets you discover, classify, and protect documents on network shares, and SharePoint Server sites and libraries.|
-|**Azure Information Protection unified labeling client**|Sometimes abbreviated to *unified labeling client*.<br /><br />The client for Windows computers that lets users, administrators, and services use the sensitivity labels and label policy settings from the Microsoft 365 compliance center. </br></br>Replaces the Azure Information Protection classic client.|
+|**Azure Information Protection unified labeling client**|Sometimes abbreviated to *unified labeling client*.<br /><br />The client for Windows computers that lets users, administrators, and services use the sensitivity labels and label policy settings from the Microsoft Purview compliance portal. </br></br>Replaces the Azure Information Protection classic client.|
 |**Azure RMS**|See *Azure Rights Management*.|
 |**Azure Information Protection viewer**|An app that runs on Windows computers and mobile devices, to display protected files.|
 |**Azure Rights Management**|Also known as *Azure Rights Management service*, and Frequently abbreviated to *Azure RMS*.<br /><br />An Azure service used by Azure Information Protection that uses encryption and policy to help secure documents, files, and email. </br></br>Previous names have included:<br /><br />- *Windows Azure Active Directory Rights Management*: Frequently abbreviated to Windows Azure AD Rights Management Service.<br /><br />- *RMS Online*: The original, proposed name, which you might sometimes see in error messages and log file entries.|
@@ -119,8 +119,8 @@ Confused by a word, phrase, or acronym that's related to Azure Information Prote
 
 |Term|Definition|
 |--------|--------------|
-|**Microsoft Information Protection**| Previously Microsoft Information Protection that was sometimes abbreviated to *MIP*.<br /><br /> A framework for products and integrated capabilities that use the same labeling store ("unified labels") and help you protect your organization's sensitive information.|
-|**MIP**| See *Microsoft Information Protection*|
+|**Microsoft Purview Information Protection**| Formerly Microsoft Information Protection that was sometimes abbreviated to *MIP*.<br /><br /> A framework for products and integrated capabilities that use the same labeling store ("unified labels") and help you protect your organization's sensitive information.|
+|**MIP**| See *Microsoft Purview Information Protection*|
 |**MSDRM**|Sometimes seen as references for the RMS client 1.0, which has been replaced with the newer client, MSIPC. This older client works with applications that were developed with the RMS SDK 1.0 like Office 2010 and Office 2007, Exchange 2010 and Exchange 2013, and SharePoint 2010 and SharePoint 2007. <br><br>**Note**: Some of these applications are no longer supported by Microsoft. |
 |**MSIPC**|Sometimes seen as references for the RMS client 2.0, which replaced the older RMS client, MSDRM. </br></br>This later client supports applications that are developed with the RMS SDK 2.0 and supports Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013, and the Azure Information Protection client.|
 
@@ -179,7 +179,7 @@ Confused by a word, phrase, or acronym that's related to Azure Information Prote
 
 |Term|Definition|
 |--------|--------------|
-|**unified label**| Also known as *unified sensitivity label* or just *sensitivity label*.<br /><br /> A label that can be applied by apps, clients, and services that support the Microsoft Information Protection framework, to apply classification and optionally, protection. </br></br>In Office apps and services, unified labels are implemented as sensitivity labels.|
+|**unified label**| Also known as *unified sensitivity label*.<br /><br /> A label that can be applied by apps, clients, and services that support Microsoft Purview Information Protection, to apply classification and optionally, protection. </br></br>In Office apps and services, unified labels are implemented as sensitivity labels.|
 |**unprotect**|Remove protection controls from files or email messages, which used encryption, identity, usage rights, and access control policies to help secure your data.|
 |**use license**|A per-document certificate that is granted to a user who opens a file or email message that has been protected by a rights management service. </br></br>This certificate contains that user’s rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document’s policy.|
 

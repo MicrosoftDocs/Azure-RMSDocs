@@ -37,7 +37,6 @@ If you are looking for updates for the *built-in labeling solution* for Microsof
 - [Protect your sensitive data with Microsoft Purview](/microsoft-365/compliance/information-protection)
 - The [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance), filtered for Microsoft 365 compliance items
 
-
 ## Servicing information and timelines
 
 As we continue to bring the customer labeling and protection experience to built-in applications like Office 365, the **Azure Information Protection unified labeling client** has moved into **maintenance mode** as of **January 1, 2022**. Moving forward, no new features will be added to the unified labeling client. For more information, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613).
@@ -121,7 +120,7 @@ For more information, see [Requirements for installing and deploying the Azure I
 
 ### Integrated support for MIP SDK version 1.10
 
-This version of the Azure Information Protection client and scanner fully integrates the Microsoft Information Protection (MIP) Software Development Kit (SDK) version 1.10.93.
+This version of the Azure Information Protection client and scanner fully integrates the Microsoft Purview Information Protection Software Development Kit (SDK) version 1.10.93.
 
 For more information, see the [MIP SDK documentation](/information-protection/develop/version-release-history#version-11093).
 
@@ -191,7 +190,7 @@ Microsoft 365 Data Loss Prevention (DLP) policies are now supported with the Azu
 
 - **Scanning your files with DLP rules enabled also creates file permission reports**. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
 
-Settings for enforcing or testing the DLP policy are configured in the [Microsoft 365 Compliance center](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
+Settings for enforcing or testing the DLP policy are configured in the [Microsoft Purview compliance portal](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
 
 For more information, including licensing requirements, see:
 
@@ -324,7 +323,7 @@ For more information, see:
 - For users: [Download and install the client](install-unifiedlabelingclient-app.md)
 - For admins: [Azure Information Protection unified labeling client administrator guide](clientv2-admin-guide.md)
 
-For information about new features in the Microsoft 365 compliance center, see:
+For information about new features in the Microsoft Purview compliance portal, see:
 
 - [What's new in Microsoft 365 compliance?](/microsoft-365/compliance/whats-new)
 - [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=Microsoft%2CInformation%2CProtection)
