@@ -49,7 +49,7 @@ Now monitor your AD RMS servers for activity. For example, check the [requests 
 
 When you have confirmed that RMS clients are no longer communicating with these servers and that clients are successfully using Azure Information Protection, you can remove the AD RMS server role from these servers. If you're using dedicated servers, you might prefer the cautionary step of first shutting down the servers for a period of time. This gives you time to make sure that there are no reported problems that might require you to restart these servers for service continuity while you investigate why clients are not using Azure Information Protection.
 
-After yo have de-provisioned your AD RMS servers, you might want to take the opportunity to review your template and labels. For example, convert templates to labels, consolidate them so that users have fewer to choose from, or reconfigure them. This would also be a good time to publish default templates.
+After you have de-provisioned your AD RMS servers, you might want to take the opportunity to review your template and labels. For example, convert templates to labels, consolidate them so that users have fewer to choose from, or reconfigure them. This would also be a good time to publish default templates.
 
 For sensitivity labels and the unified labeling client, use the Microsoft 365 compliance center. For more information, see the Microsoft 365 documentation.
 

@@ -74,12 +74,12 @@ Use the AIP add-in for your Office apps only if:
 You may also want to use the AIP unified labeling client for [labeling features used outside of Office apps](#labeling-functionality-outside-of-office-applications).
 
 
-### Updates for Microsoft Information Protection in Microsoft 365
+### Updates for Microsoft Information Protection
 
-Microsoft 365 is constantly developing new features for sensitivity labels with built-in labeling. We recommend checking for updates in the following locations:
+Microsoft is constantly developing new features for sensitivity labels that use built-in labeling. We recommend checking for updates in the following locations:
 
 - [Feature parity for built-in labeling and the AIP add-in for Office](/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office)
-- [What's new in Microsoft 365 compliance](/microsoft-365/compliance/whats-new)
+- [What's new in Microsoft Purview risk and compliance solutions](/microsoft-365/compliance/whats-new)
 - The [Microsoft 365 Roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance)
 
 ### The Rights Management client
@@ -113,8 +113,7 @@ Yes. We recommend that you use the built-in labeling solution for Office apps to
 
 **Microsoft Information Protection products include**:
 
-- Microsoft 365 Information Protection, such as Microsoft 365 DLP
-- Windows Information Protection
+- Microsoft Purview Data Loss Prevention
 - Microsoft Defender for Cloud Apps
 - Azure Information Protection
 
@@ -132,15 +131,15 @@ For more information, see [Information protection capabilities to help protect y
 
 Unlike the AIP Office add-in, the built-in labeling solution provided by [Microsoft Information Protection](https://www.microsoft.com/security/business/information-protection) is part of your Office applications, and will be maintained as part of the Office update strategy.
 
-From a functional perspective, the [feature parity section](/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office) in the Microsoft 365 compliance documentation to understand the similarities and differences between the two services.
+From a functional perspective, use the [feature parity section](/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office) in the Microsoft Purview compliance documentation to understand the similarities and differences between the two services.
 
-Keep the AIP client installed, but disabled in Office apps in order benefit from right-click options from the File Explorer, the AIP Viewer, PowerShell support, and the AIP scanner.
+Keep the AIP client installed, but disabled in Office apps to benefit from right-click options from File Explorer, the AIP Viewer, PowerShell support, and the AIP scanner.
 
-For more information, see [Learn about MIP and the AIP client](/microsoft-365/compliance/sensitivity-labels-aip) and the [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance).
+For more information, see [Why choose built-in labeling over the AIP add-in for Office apps](/microsoft-365/compliance/sensitivity-labels-aip) and the [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance).
 
 ## Next steps
 
-If you haven't yet enabled the built-in labeling solution for Microsoft 365, we recommend that you analyze the [feature parity information](/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office) in the Microsoft 365 compliance documentation and the [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance) for updates in the compliance center.
+If you haven't yet enabled the built-in labeling solution, we recommend that you analyze the [feature parity information](/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office) in the Microsoft Purview compliance documentation and the [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance) for updates in the compliance center.
 
 Disable the AIP add-in for Office apps to use built-in labeling across your network, with continued enhancements and a unified and streamlined customer experience.
 

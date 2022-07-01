@@ -6,7 +6,7 @@ description: Learn about the contents of each version of the Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/13/2021
+ms.date: 06/24/2022
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -33,10 +33,9 @@ You can download the Azure Information Protection unified labeling client from t
 
 If you are looking for updates for the *built-in labeling solution* for Microsoft Office applications, see:
 
-- Information protection items in [What's new in Microsoft 365 compliance](/microsoft-365/compliance/whats-new)
-- [Microsoft Information Protection in Microsoft 365](/microsoft-365/compliance/information-protection)
-- The [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance
-), filtered for Microsoft 365 compliance items
+- Information protection items, such as the "Sensitivity labels" sections in [What's new in Microsoft Purview risk and compliance solutions](/microsoft-365/compliance/whats-new)
+- [Protect your sensitive data with Microsoft Purview](/microsoft-365/compliance/information-protection)
+- The [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance), filtered for Microsoft 365 compliance items
 
 
 ## Servicing information and timelines
