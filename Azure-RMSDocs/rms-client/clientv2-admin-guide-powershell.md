@@ -44,7 +44,7 @@ The **AzureInformationProtection** module is installed in the **\ProgramFiles (x
 > [!IMPORTANT]
 > The **AzureInformationProtection** module doesn't support configuring advanced settings for labels or label policies. 
 >
->For these settings, you need the Office 365 Security & Compliance Center PowerShell. For more information, see [Custom configurations for the Azure Information Protection unified labeling client](clientv2-admin-guide-customizations.md).
+>For these settings, you need Security & Compliance Center PowerShell. For more information, see [Custom configurations for the Azure Information Protection unified labeling client](clientv2-admin-guide-customizations.md).
 
 > [!TIP]
 > To use cmdlets with path lengths greater than 260 characters, use the following [group policy setting](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10) that is available starting Windows 10, version 1607:<br /> **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths** 
