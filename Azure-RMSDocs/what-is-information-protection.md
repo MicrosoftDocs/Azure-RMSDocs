@@ -42,7 +42,7 @@ Microsoft Purview Information Protection is the common information protection st
 
 ## AIP unified labeling client
 
-The Azure Information Protection unified labeling client extends labeling, classification, and protection capabilities to additional file types, as well as to the File Explorer and PowerShell.
+The Azure Information Protection unified labeling client extends labeling, classification, and protection capabilities to additional file types, as well as to File Explorer and PowerShell.
 
 For example, in File Explorer, right-click one or more files and select **Classify and protect** to manage the AIP functionality on the selected files.
 
@@ -106,8 +106,8 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 |**Subscription options and licensing guidance**     |    [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)    |
 |**FAQs and known issues**     | [Frequently asked questions for Azure Information Protection](faqs.md) </br> [Known issues - Azure Information Protection](known-issues.md)       |
 |**Support options**     | [Support options for Azure Information Protection](information-support.md)        |
-|**Yammer**     |  [Azure Information Protection](https://www.yammer.com/AskIPTeam)       |
-|**Release management and supportability**     | Learn about the content included in each version of the Azure Information Protection client. <br><br>See also: <br>-  [What's new in Microsoft Purview risk and compliance solutions(/microsoft-365/compliance/whats-new)<br>- [Protect your sensitive data with Microsoft Purview](/microsoft-365/compliance/information-protection)<br>- The [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance) |
+|**Yammer**     |  [Information protection team](https://www.yammer.com/AskIPTeam)       |
+|**Release management and supportability**     | Learn about the content included in each version of the Azure Information Protection client. <br><br>See also: <br>-  [What's new in Microsoft Purview risk and compliance solutions](/microsoft-365/compliance/whats-new)<br>- [Protect your sensitive data with Microsoft Purview](/microsoft-365/compliance/information-protection)<br>- The [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance) |
 
 
 #### Top Ignite sessions
