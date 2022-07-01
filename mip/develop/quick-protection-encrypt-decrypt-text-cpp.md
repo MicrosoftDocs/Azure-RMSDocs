@@ -1,6 +1,6 @@
 ---
 title: Quickstart - Encrypt/Decrypt text using the C++ MIP Protection SDK
-description: A quickstart showing you how to use the C++ Microsoft Information Protection Protection SDK to encrypt and decrypt ad hoc text using a protection template (C++)
+description: A quickstart showing you how to use the C++ Microsoft Purview Information Protection Protection SDK to encrypt and decrypt ad hoc text using a protection template (C++)
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection

@@ -35,7 +35,7 @@ The AIP scanner runs as a service on Windows Server and lets you discover, class
 
 - **SharePoint document libraries and folder** for SharePoint Server 2019 through SharePoint Server 2013.
 
-To classify and protect your files, the scanner uses [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) configured in the Microsoft 365 compliance center.
+To classify and protect your files, the scanner uses [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) configured in the Microsoft Purview compliance portal.
 
 ## Azure Information Protection unified labeling scanner overview
 

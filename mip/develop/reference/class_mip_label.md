@@ -9,7 +9,7 @@ ms.date: 05/31/2022
 ---
 
 # class Label 
-Abstraction for a single Microsoft Information Protection label.
+Abstraction for a single Microsoft Purview Information Protection label.
   
 ## Summary
  Members                        | Descriptions                                

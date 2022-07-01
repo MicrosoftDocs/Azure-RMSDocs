@@ -1,6 +1,6 @@
 ---
 title: Overview - Microsoft Information Protection SDK.
-description: Microsoft Information Protection (MIP) is the unification of Microsoft's classification, labeling, and protection services, into a single  administration experience and software development kit (SDK).
+description: Microsoft Purview Information Protection is the unification of Microsoft's classification, labeling, and protection services, into a single  administration experience and software development kit (SDK).
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: overview
@@ -10,9 +10,9 @@ ms.author: mbaldwin
 ---
 # Overview
 
-## Microsoft Information Protection
+## Microsoft Purview Information Protection
 
-Microsoft Information Protection (MIP) is the unification of Microsoft's classification, labeling, and protection services:
+Microsoft Purview Information Protection is the unification of Microsoft's classification, labeling, and protection services:
 
 - Unified administration is provided across Microsoft 365, Azure Information Protection, Windows Information Protection, and other Microsoft services. 
 - Third parties can use the MIP SDK to integrate with applications, using a standard, consistent data labeling schema and protection service.
@@ -30,7 +30,7 @@ The labels and protection applied to information across the suite of Microsoft s
 High-level MIP SDK use cases include:
 
 * A line-of-business application that applies classification labels to files on export.
-* A CAD/CAM design application provides native support for Microsoft Information Protection labeling.
+* A CAD/CAM design application provides native support for Microsoft Purview Information Protection labeling.
 * A cloud access security broker or data loss prevention solution reasons over data encrypted with Azure Information Protection.
 
 For a more exhaustive list, review [API concepts](concept-apis-use-cases.md).
