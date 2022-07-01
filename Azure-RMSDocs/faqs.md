@@ -32,17 +32,17 @@ Have a question about Azure Information Protection (AIP), or about the Azure Rig
 
 See if it's answered below or on the [subsequent, more specific, FAQ pages](#what-do-i-do-if-my-question-isnt-here).
 
-## What's the difference between Azure Information Protection and Microsoft Information Protection?
+## What's the difference between Azure Information Protection and Microsoft Purview Information Protection?
 
-Unlike Azure Information Protection, [Microsoft Information Protection](https://www.microsoft.com/security/business/information-protection) isn't a subscription or product that you can buy. Instead, it's a framework for products and integrated capabilities that help you protect your organization's sensitive information.
+Unlike Azure Information Protection, [Microsoft Purview Information Protection](https://www.microsoft.com/security/business/information-protection) isn't a subscription or product that you can buy. Instead, it's a framework for products and integrated capabilities that help you protect your organization's sensitive information.
 
-**Microsoft Information Protection products include**:
+**Microsoft Purview Information Protection products include**:
 - Azure Information Protection
 - Microsoft 365 Information Protection, such as Microsoft 365 DLP
 - Windows Information Protection
 - Microsoft Defender for Cloud Apps
 
-**Microsoft Information Protection capabilities include**:
+**Microsoft Purview Information Protection capabilities include**:
 - Unified label management
 - End-user labeling experiences built into Office apps
 - The ability for Windows to understand unified labels and apply protection to data
@@ -64,7 +64,7 @@ You can also check by going to **Azure Information Protection** > **Manage** > *
 
 |Status |Description  |
 |---------|---------|
-|**Activated**     |  Your tenant is on the unified labeling platform. <br />You can [create, configure, and publish labels](/microsoft-365/compliance/create-sensitivity-labels) from the Microsoft 365 compliance center.       |
+|**Activated**     |  Your tenant is on the unified labeling platform. <br />You can [create, configure, and publish labels](/microsoft-365/compliance/create-sensitivity-labels) from the Microsoft Purview compliance portal.       |
 |**Not activated**    |  Your tenant is not on the unified labeling platform. <br />For migration instructions and guidance, see [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md).       |
 
 

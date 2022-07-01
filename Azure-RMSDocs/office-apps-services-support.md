@@ -65,7 +65,7 @@ If you're ready to configure Exchange to protect emails:
 
 - For Exchange on-premises, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
-- Configure sensitivity labels and labeling polices in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+- Configure sensitivity labels and labeling polices in the Microsoft Purview compliance portal. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
 
 
@@ -87,7 +87,7 @@ If you use SharePoint Server, you can use this IRM protection by deploying the M
 > 
 > - You cannot use the default or custom protection templates that you manage in the Azure portal. 
 > 
-> - Files that have a .ppdf file name extension for protected PDF files are not supported. For more information about viewing protected PDF documents, see [Protected PDF readers for Microsoft Information Protection](./rms-client/protected-pdf-readers.md).
+> - Files that have a .ppdf file name extension for protected PDF files are not supported. For more information about viewing protected PDF documents, see [Protected PDF readers for Microsoft Purview Information Protection](./rms-client/protected-pdf-readers.md).
 > 
 > - Coauthoring, when more than one person edits a document at the same time, is not supported. To edit a document in an IRM-protected library, you must first check out the document and download it, and then edit it in your Office application. Consequently, only one person can edit the document at a time.
 

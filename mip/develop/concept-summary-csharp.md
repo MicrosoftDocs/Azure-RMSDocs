@@ -9,7 +9,7 @@ ms.author: tommos
 ---
 # Getting Started with the Microsoft Information Protection .NET Wrapper
 
-The Microsoft Information Protection SDK .NET Wrapper enables developers to integrate the Microsoft Information Protection experience in to their own applications and services. The SDK's classification, labeling, and protection features help to ensure that information is classified, labeled, and protected no matter where it travels. 
+The Microsoft Information Protection SDK .NET Wrapper enables developers to integrate the Microsoft Purview Information Protection experience in to their own applications and services. The SDK's classification, labeling, and protection features help to ensure that information is classified, labeled, and protected no matter where it travels. 
 
 The managed wrapper and all dependencies can be installed via NuGet in Visual Studio.
 

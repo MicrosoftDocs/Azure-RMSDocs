@@ -9,7 +9,8 @@ ms.date: 05/31/2022
 ---
 
 # class PolicyProfile 
-PolicyProfile class is the root class for using the Microsoft Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
+
+PolicyProfile class is the root class for using the Microsoft Purview Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
   
 ## Summary
  Members                        | Descriptions                                

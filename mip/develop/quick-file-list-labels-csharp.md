@@ -1,5 +1,5 @@
 ---
-title: Quickstart - List sensitivity labels in a Microsoft Information Protection (MIP) tenant using MIP SDK C# Wrapper
+title: Quickstart - List sensitivity labels in a Microsoft Purview Information Protection tenant using MIP SDK C# Wrapper
 description: A quickstart showing you how to use the Microsoft Information Protection SDK C# wrapper to list the sensitivity labels in your tenant (C#).
 author: msmbaldwin
 ms.service: information-protection

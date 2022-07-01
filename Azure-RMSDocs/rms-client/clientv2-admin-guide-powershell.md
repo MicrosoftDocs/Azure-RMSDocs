@@ -124,7 +124,7 @@ To run Azure Information Protection labeling cmdlets unattended, use the followi
 
 Run the labeling cmdlets non-interactively by first running the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet.
 
-The computer running the **AIPAuthentication** cmdlet downloads the labeling policy that's assigned to your delegated user account in the Microsoft 365 Compliance center.
+The computer running the **AIPAuthentication** cmdlet downloads the labeling policy that's assigned to your delegated user account in the Microsoft Purview compliance portal.
 
 ### Create and configure Azure AD applications for Set-AIPAuthentication
 

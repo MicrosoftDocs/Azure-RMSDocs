@@ -11,7 +11,7 @@ ms.service: information-protection
 
 # Labeling and pre-existing protection in Microsoft Information Protection SDK
 
-Microsoft Information Protection supports labeling and classification services. Users and applications can apply the following to supported files:
+Microsoft Purview Information Protection supports labeling and classification services. Users and applications can apply the following to supported files:
 
 - Classification only through application of a label
 
