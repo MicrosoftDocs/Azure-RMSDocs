@@ -186,7 +186,7 @@ For more information, see:
 
 ### Configure advanced labeling settings in PowerShell
 
-1. Connect to the Office 365 Security & Compliance Center PowerShell module. For more information, see [Security & Compliance Center PowerShell documentation](/powershell/exchange/connect-to-scc-powershell).
+1. Connect to the Security & Compliance Center PowerShell module. For more information, see [Security & Compliance Center PowerShell documentation](/powershell/exchange/connect-to-scc-powershell).
 
 1. To define an advanced label setting, use the **Set-Label** cmdlet, specifying the **AdvancedSettings** parameter, the label you want to apply the setting to, as well as key/value pairs to define your setting.
     
