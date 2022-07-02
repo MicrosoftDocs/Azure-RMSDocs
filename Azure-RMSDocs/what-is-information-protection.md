@@ -6,7 +6,7 @@ description: Azure Information Protection (AIP) extends the Microsoft Purview In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/05/2022
+ms.date: 11/09/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -37,6 +37,8 @@ AIP extends the [labeling](/microsoft-365/compliance/sensitivity-labels) and [cl
 - The [**unified labeling client**](#aip-unified-labeling-client)
 - An on-premises [**scanner**](#aip-on-premises-scanner)
 - The [**SDK**](#microsoft-information-protection-sdk)
+
+AIP also provides the encryption service, [Azure Rights Management](information-protection/what-is-azure-rms.md), that's used by Microsoft Purview Information Protection.
 
 For a comprehensive list of capabilities from Microsoft Purview Information Protection, see [Protect your sensitive data with Microsoft Purview](/microsoft-365/compliance/information-protection).
 
