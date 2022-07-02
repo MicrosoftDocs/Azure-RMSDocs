@@ -6,7 +6,7 @@ description: Azure Information Protection (AIP) extends the Microsoft Purview In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 07/05/2022
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -30,15 +30,15 @@ search.appverid:
 
 [!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
-Azure Information Protection (AIP) is a cloud-based solution that enables organizations to discover, classify, and protect documents and emails by applying labels to content.
+Azure Information Protection (AIP) is part of **Microsoft Purview Information Protection** (formerly Microsoft Information Protection or MIP). Microsoft Purview Information Protection helps you discover, classify, protect, and govern sensitive information wherever it lives or travels.
 
-AIP is part of Microsoft Purview Information Protection (formerly Microsoft Information Protection or MIP), and extends the [labeling](/microsoft-365/compliance/sensitivity-labels) and [classification](/microsoft-365/compliance/data-classification-overview) functionality provided by Microsoft Purview.
+AIP extends the [labeling](/microsoft-365/compliance/sensitivity-labels) and [classification](/microsoft-365/compliance/data-classification-overview) functionality provided by Microsoft Purview with the following capabilities:
 
-The following image shows the Azure Information Protection additions to Microsoft Purview Information Protection, including the [**unified labeling client**](#aip-unified-labeling-client), [**scanner**](#aip-on-premises-scanner), and [**SDK**](#microsoft-information-protection-sdk).
+- The [**unified labeling client**](#aip-unified-labeling-client)
+- An on-premises [**scanner**](#aip-on-premises-scanner)
+- The [**SDK**](#microsoft-information-protection-sdk)
 
-:::image type="content" source="media/what-is-mip.png" alt-text="The Azure Information Protection areas of the Microsoft Purview Information Protection framework":::
-
-Microsoft Purview Information Protection is the common information protection stack that's leveraged by AIP's unified labeling client. For more information, see the [Microsoft Purview documentation](/microsoft-365/compliance/information-protection).
+For a comprehensive list of capabilities from Microsoft Purview Information Protection, see [Protect your sensitive data with Microsoft Purview](/microsoft-365/compliance/information-protection).
 
 ## AIP unified labeling client
 
@@ -47,7 +47,6 @@ The Azure Information Protection unified labeling client extends labeling, class
 For example, in File Explorer, right-click one or more files and select **Classify and protect** to manage the AIP functionality on the selected files.
 
 :::image type="content" source="media/protect-from-file-explorer.png" alt-text="Classify and protect from the File Explorer":::
-
 
 Download the client from the [Microsoft Azure Information Protection download page](https://www.microsoft.com/download/details.aspx?id=53018).
     
@@ -75,9 +74,9 @@ The Microsoft Information Protection SDK extends sensitivity labels to third-par
 
 For example, you might use the MIP SDK for:
 
-- A line-of-business application that applies classification labels to files on export.
-- A CAD/CAM design application provides built-in support for Microsoft Purview Information Protection labeling.
-- A cloud access security broker or data loss prevention solution reasons over data encrypted with Azure Information Protection.
+- A line-of-business application that applies sensitivity labels to files on export.
+- A CAD/CAM design application that provides support for built-in labeling.
+- A cloud access security broker or data loss prevention solution that reasons over data encrypted with Azure Information Protection.
 
 For more information, see the [Microsoft Information Protection SDK overview](/information-protection/develop/overview).
 
@@ -93,7 +92,6 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 
 - [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
 - [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
-- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](/azure/information-protection/tutorial-scan-networks-and-content)
 
 **When you're ready to customize AIP further**, see [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md).
 
@@ -107,7 +105,7 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 |**FAQs and known issues**     | [Frequently asked questions for Azure Information Protection](faqs.md) </br> [Known issues - Azure Information Protection](known-issues.md)       |
 |**Support options**     | [Support options for Azure Information Protection](information-support.md)        |
 |**Yammer**     |  [Information protection team](https://www.yammer.com/AskIPTeam)       |
-|**Release management and supportability**     | Learn about the content included in each version of the Azure Information Protection client. <br><br>See also: <br>-  [What's new in Microsoft Purview risk and compliance solutions](/microsoft-365/compliance/whats-new)<br>- [Protect your sensitive data with Microsoft Purview](/microsoft-365/compliance/information-protection)<br>- The [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance) |
+|**Release management and supportability**     | Learn about the content included in each version of the Azure Information Protection client. <br><br>See also: <br>-  [What's new in Microsoft Purview risk and compliance solutions](/microsoft-365/compliance/whats-new)<br>- [Protect your sensitive data with Microsoft Purview](/microsoft-365/compliance/information-protection)<br>- [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance) |
 
 
 #### Top Ignite sessions
