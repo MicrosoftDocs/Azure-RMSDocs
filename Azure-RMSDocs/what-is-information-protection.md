@@ -38,7 +38,7 @@ AIP extends the [labeling](/microsoft-365/compliance/sensitivity-labels) and [cl
 - An on-premises [**scanner**](#aip-on-premises-scanner)
 - The [**SDK**](#microsoft-information-protection-sdk)
 
-AIP also provides the encryption service, [Azure Rights Management](information-protection/what-is-azure-rms.md), that's used by Microsoft Purview Information Protection.
+AIP also provides the encryption service, [Azure Rights Management](what-is-azure-rms.md), that's used by Microsoft Purview Information Protection.
 
 For a comprehensive list of capabilities from Microsoft Purview Information Protection, see [Protect your sensitive data with Microsoft Purview](/microsoft-365/compliance/information-protection).
 
