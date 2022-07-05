@@ -59,7 +59,7 @@ Although no new features will be added for the unified labeling client, we're co
 - [Features supported only by built-in labeling](/microsoft-365/compliance/sensitivity-labels-aip#features-supported-only-by-built-in-labeling-for-office-apps)
 - [Feature parity for built-in labeling and the AIP Add-in for Office](/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office)
 - [What's new in Microsoft Purview risk and compliance solutions](/microsoft-365/compliance/whats-new)
-- [Microsoft 365 Roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance)
+- [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=1&filters=&searchterms=compliance)
 
 ## Labeling outside Office apps
 
