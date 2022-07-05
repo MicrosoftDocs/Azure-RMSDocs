@@ -43,24 +43,18 @@ When you have a service plan that includes Azure Rights Management, you may not 
 
 If neither of the listed scenarios apply to you, you must manually activate the protection service.
 
-When the service is activated, all users in your organization can apply information protection to their documents and emails, and all users can open (consume) documents and emails that have been protected by the Azure Rights Management service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
-
 ## How to activate or confirm the status of the protection service
 
 > [!IMPORTANT]
 > Do not activate the protection service if you have Active Directory Rights Management Services (AD RMS) deployed for your organization. [More information](prepare-environment-adrms.md)
 
-To use this data protection solution, your organization must have a service plan that includes the Azure Rights Management service from Azure Information Protection. Without this, the protection service cannot be activated. You must have one of the following:
-
-- An [Azure Information Protection plan](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection) 
-
-- An [Office 365 plan that includes Rights Management](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M).
+To activate the protection service, your organization must have a service plan that includes the Azure Rights Management service from Azure Information Protection. For more information, see [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
 When the protection service is activated, all users in your organization can apply information protection to their documents and emails, and all users can open (consume) documents and emails that have been protected by this service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
 
-## Activate protection via PowerShell
+### Activate protection via PowerShell
 
-This procedure describes how to activate the Rights Management protection service (Azure RMS) using PowerShell.
+You must use PowerShell to activate the Rights Management protection service (Azure RMS). You can no longer activate or deactivate this service from the Azure portal.
 
 1. Install the AIPService module, to configure and manage the protection service. For instructions, see [Installing the AIPService PowerShell module](install-powershell.md).
 
@@ -69,25 +63,6 @@ This procedure describes how to activate the Rights Management protection servic
 3. Run [Get-AipService](/powershell/module/aipservice/get-aipservice) to confirm whether the protection service is activated. A status of **Enabled** confirms activation; **Disabled** indicates that the service is deactivated.
 
 4. To activate the service, run [Enable-AipService](/powershell/module/aipservice/enable-aipservice).
-
-## Activate protection from the Azure portal
-
-This procedure describes how to activate the Rights Management protection service (Azure RMS) from the Azure portal.
-
-1. Go to and [sign in to the Azure portal](/previous-versions/azure/information-protection/configure-policy#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
-
-    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
-
-    If you haven't accessed the Azure Information Protection pane before, see the one-time [additional steps](/previous-versions/azure/information-protection/configure-policy#to-access-the-azure-information-protection-pane-for-the-first-time) to add this pane to the portal.
-
-    To open the Azure Information Protection pane, you must have either an [Azure Information Protection Premium plan](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection) or an [Office 365 plan that includes Rights Management](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M). If you have one of these subscriptions but see a message that a valid subscription cannot be found, [contact Microsoft Support](information-support.md#to-contact-microsoft-support) or use your standard support channels.
-
-1. Locate the **Manage** menu options, and select **Protection activation**.
-
-    Click **Activate**, and then confirm your action.
-
-When activation is complete, the information bar displays **Activation finished successfully**.
-
 
 
 ## Configuring onboarding controls for a phased deployment
