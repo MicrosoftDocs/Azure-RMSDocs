@@ -43,8 +43,6 @@ When you have a service plan that includes Azure Rights Management, you may not 
 
 If neither of the listed scenarios apply to you, you must manually activate the protection service.
 
-When the service is activated, all users in your organization can apply information protection to their documents and emails, and all users can open (consume) documents and emails that have been protected by the Azure Rights Management service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
-
 ## How to activate or confirm the status of the protection service
 
 > [!IMPORTANT]
