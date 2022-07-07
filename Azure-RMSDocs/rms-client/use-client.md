@@ -76,9 +76,14 @@ For more information, see [Admin Guide: Install the Azure Information Protection
 
 ## The Rights Management client
 
-The Rights Management Service (RMS) client provides protection only, and is automatically installed with some applications, including Office apps and [RMS-enlightened applications](../requirements-applications.md) from other software vendors.
+The Rights Management Service (RMS) client provides protection only, and is automatically installed with some applications. For example, this client is included in Office apps where it's implemented as Information Rights Management (IRM) with protection templates, restrict access options, and Encrypt menu options for Outlook. It can also be included in [RMS-enlightened applications](../requirements-applications.md) from other software vendors.
 
-We recommend you use sensitivity labels to apply protection, rather than just the Rights Management Service client. Labels abstract the complexity of encryption for users, and can offer other benefits, such as visual markings, and metadata that can be read by other apps and services.
+We recommend you use sensitivity labels to apply protection, rather than the Rights Management Service client. Labels abstract the complexity of encryption for users, and can offer other benefits, such as visual markings, and metadata that can be read by other apps and services.
+
+For Office apps, you might find it helpful to read how the two methods of applying encryption interact, and how to disable IRM options for Outlook:
+
+- [Protection templates and sensitivity labels](/microsoft-365/compliance/sensitivity-labels-office-apps#protection-templates-and-sensitivity-labels)
+- [Information Rights Management (IRM) options and sensitivity labels](/microsoft-365/compliance/sensitivity-labels-office-apps#information-rights-management-irm-options-and-sensitivity-labels)
 
 ## FAQs
 
