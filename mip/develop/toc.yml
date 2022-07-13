@@ -514,7 +514,7 @@
   - name: Forums 
     href: https://stackoverflow.com/questions/tagged/microsoft-information-protection
   - name: Samples
-    href: https://aka.ms/MIPSDKSamples
+    href: /samples/browse/?terms=mip%20sdk
   - name: Security best practices
     href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc
   - name: Version release history
