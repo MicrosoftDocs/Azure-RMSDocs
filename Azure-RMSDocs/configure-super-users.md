@@ -95,18 +95,18 @@ Often, somebody who is assigned a super user for Azure Rights Management will ne
 
 If you are using classification and protection, you can also use the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) to apply a new label that doesn't apply protection, or remove the label that applied protection.
 
-For more information about these cmdlets, see [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) from the Azure Information Protection client admin guide.
+For more information about these cmdlets, see [Using PowerShell with the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
 
 > [!NOTE]
 > The AzureInformationProtection module is different from and supplements the [AIPService PowerShell module](administer-powershell.md) that manages the Azure Rights Management service for Azure Information Protection.
 
 ### Removing protection on PST files
 
-To remove protection on PST files, we recommend that you use [eDiscovery in Microsoft 365](/microsoft-365/compliance/ediscovery) to search and extract protected emails and protected attachment in emails.
+To remove protection on PST files, we recommend that you use [eDiscovery from Microsoft Purview](/microsoft-365/compliance/ediscovery) to search and extract protected emails and protected attachment in emails.
 
-The super user ability is automatically integrated with Exchange Online so that eDiscovery in the Office 365 Security & Compliance Center or Microsoft 365 compliance center can search for encrypted items prior to export, or decrypt encrypted email on export.
+The super user ability is automatically integrated with Exchange Online so that eDiscovery in the Microsoft Purview compliance portal can search for encrypted items prior to export, or decrypt encrypted email on export.
 
-If you cannot use Microsoft 365 eDiscovery, you might have another eDiscovery solution that integrates with the Azure Rights Management service to similarly reason over data. 
+If you cannot use Microsoft Purview eDiscovery, you might have another eDiscovery solution that integrates with the Azure Rights Management service to similarly reason over data. 
 
 Or, if your eDiscovery solution cannot automatically read and decrypt protected content, you can still use this solution in a multi-step process together with the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet:
 

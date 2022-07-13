@@ -247,6 +247,8 @@
         href: ./reference/class_mip_error.md
       - name: Event
         href: ./reference/class_mip_event.md
+      - name: EventContext
+        href: ./reference/class_mip_eventcontext.md
       - name: EventProperty
         href: ./reference/class_mip_eventproperty.md
       - name: ExecutionState
@@ -321,6 +323,8 @@
         href: ./reference/class_mip_licensenameanddescriptionitem.md
       - name: LicenseNotRegisteredError
         href: ./reference/class_mip_licensenotregisterederror.md
+      - name: LogMessageData
+        href: ./reference/class_mip_logmessagedata.md
       - name: LoggerDelegate
         href: ./reference/class_mip_loggerdelegate.md
       - name: MetadataAction
@@ -419,6 +423,8 @@
         href: ./reference/class_mip_proxyauthenticationerror.md
       - name: PublishingLicenseInfo
         href: ./reference/class_mip_publishinglicenseinfo.md
+      - name: PublishingUseLicenseRequest
+        href: ./reference/class_mip_publishinguselicenserequest.md
       - name: RecommendLabelAction
         href: ./reference/class_mip_recommendlabelaction.md
       - name: RemoveContentFooterAction
@@ -465,6 +471,8 @@
         href: ./reference/class_mip_templatedescriptor.md
       - name: TemplateNotFoundError
         href: ./reference/class_mip_templatenotfounderror.md
+      - name: TenantInformation
+        href: ./reference/class_mip_tenantinformation.md
       - name: UserRights
         href: ./reference/class_mip_userrights.md
       - name: UserRoles
@@ -473,8 +481,12 @@
         href: ./reference/class_mip_xml_xmldelegate.md
       - name: xml::XmlDocument
         href: ./reference/class_mip_xml_xmldocument.md
+      - name: xml::XmlLoadException
+        href: ./reference/class_mip_xml_xmlloadexception.md
       - name: xml::XmlNode
         href: ./reference/class_mip_xml_xmlnode.md
+      - name: xml::XmlParserException
+        href: ./reference/class_mip_xml_xmlparserexception.md
       - name: xml::XmlReader
         href: ./reference/class_mip_xml_xmlreader.md
   - name: C library
@@ -502,7 +514,7 @@
   - name: Forums 
     href: https://stackoverflow.com/questions/tagged/microsoft-information-protection
   - name: Samples
-    href: https://azure.microsoft.com/resources/samples/?sort=0&term=mip+sdk
+    href: /samples/browse/?terms=mip%20sdk
   - name: Security best practices
     href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc
   - name: Version release history

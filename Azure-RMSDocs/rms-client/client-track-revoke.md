@@ -28,6 +28,10 @@ ms.custom: user
 
 # User Guide: Track and revoke your documents with the legacy tracking portal
 
+> [!NOTE]
+> The legacy Azure Information Protection doc tracking site is supported only for the classic client, and not for the unified labeling client. For more information, see [Removed and retired services](../removed-sunset-services.md#the-aip-classic-client).
+
+
 After you have protected your documents by using Azure Information Protection, you can track how people are using these documents. If necessary, you can also revoke access to them if people should no longer be able to read them. To do this, you use the **document tracking site**. You can access this site from Windows computers, Mac computers, and even from tablets and phones.
 
 When you access this site, sign in to track your documents. When your organization has a subscription that supports document tracking and revocation and you are assigned a license for this subscription, you can see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. You also see each time they tried to access the document, and their location at the time. However, in rare cases, the location reported might not be accurate. For example, when a user opening a protected document is using a VPN connection, or their computer has an IPv6 address.
@@ -87,7 +91,7 @@ For the Office applications, Word, Excel, and PowerPoint:
     
     - Your computer must be restarted to complete the installation.
     
-For more information about how to install the Azure Information Protection client, see [Download and install the Azure Information Protection client](install-client-app.md).
+For more information about how to install the Azure Information Protection client, see [Download and install the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/install-client-app).
 
 ## Using File Explorer to track or revoke the document
 
@@ -120,7 +124,7 @@ After you have registered the protected document by using your Office apps or Fi
 ## Other instructions
 More how-to instructions from the Azure Information Protection user guide:
 
-- [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
+- [What do you want to do?](/previous-versions/azure/information-protection/rms-client/client-user-guide#what-do-you-want-to-do)
 
 ## Additional information for administrators    
-See [Configuring and using document tracking for Azure Information Protection](client-admin-guide-document-tracking.md) from the [admin guide](client-admin-guide.md).
+See [Configuring and using document tracking for Azure Information Protection](client-admin-guide-document-tracking.md) from the [admin guide](/previous-versions/azure/information-protection/rms-client/client-admin-guide).

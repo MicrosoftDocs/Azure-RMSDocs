@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class AuthDelegate 
@@ -15,7 +15,7 @@ Delegate for auth related operations.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public virtual bool AcquireOAuth2Token(const Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token)  |  This method is called when an auth token is required for the policy engine with the given identity and the given challenge. The client should return whether acquiring token was successful. If successful, it should initialize the given token object.
-public virtual bool AcquireOAuth2Token(const Identity& identity, const OAuth2Challenge& challenge, const std::shared_ptr\<void\>& context, OAuth2Token& token)  |  This method is called when an auth token is required for the policy engine with the given identity and the given challenge. The client should return whether acquiring token was successful. If successful, it should initialize the given token object.
+public virtual bool AcquireOAuth2Token(const Identity& identity, const OAuth2Challenge& challenge, const std::shared_ptr&lt;void&gt;& context, OAuth2Token& token)  |  This method is called when an auth token is required for the policy engine with the given identity and the given challenge. The client should return whether acquiring token was successful. If successful, it should initialize the given token object.
   
 ## Members
   
@@ -36,7 +36,7 @@ Parameters:
   
 **Returns**: True if token successfully acquired, else false
 On failure, if token output parameter contains an error message, it will be included in the NoAuthTokenError exception that will later be raised to the application.
-> Deprecated: This method will soon be deprecated in favor of the one accepting a context parameter. If the new version has been implemented, there is no need to implement this version.
+&gt; Deprecated: This method will soon be deprecated in favor of the one accepting a context parameter. If the new version has been implemented, there is no need to implement this version.
   
 ### AcquireOAuth2Token function
 This method is called when an auth token is required for the policy engine with the given identity and the given challenge. The client should return whether acquiring token was successful. If successful, it should initialize the given token object.
@@ -57,4 +57,4 @@ Parameters:
 
   
 **Returns**: True if token successfully acquired, else false
-On failure, if token output parameter contains an error message, it will be included in the NoAuthTokenError exception that will later be raised to the application.n.
+On failure, if token output parameter contains an error message, it will be included in the NoAuthTokenError exception that will later be raised to the application.

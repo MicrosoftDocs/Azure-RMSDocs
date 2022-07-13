@@ -36,7 +36,7 @@ Labels can also apply protection, simplifying this step for your users.
 
 > [!TIP]
 > Alternatively, you may be looking for one of the following articles:
-> - [AIP roadmap for data protection only](deployment-roadmap-protect-only.md)
+> - [AIP roadmap for data protection only](/previous-versions/azure/information-protection/deployment-roadmap-protect-only)
 > - [How-to guides for common scenarios that use Azure Information Protection](how-to-guides.md)
 > - [Azure Information Protection release roadmap](information-support.md#information-about-new-releases-and-updates)
 
@@ -99,7 +99,7 @@ Perform the following steps:
     - Write user guidance to help explain which label should be applied in each scenario.
     - If your default policy was created with labels that automatically apply protection, you may want to temporarily remove the protection settings or disable the label while you test your settings. 
 
-    Sensitivity labels and labeling policies for the unified labeling client are configured in the Microsoft 365 compliance center. For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+    Sensitivity labels and labeling policies for the unified labeling client are configured in the Microsoft Purview compliance portal. For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 1. **Deploy your client for your users**
 
@@ -117,7 +117,7 @@ Perform the following steps:
     - Customizing headers, footers, or watermarks
     - Recommended and automatic labeling
 
-    For more information, see [Admin Guide: Custom configurations](rms-client/client-admin-guide-customizations.md).
+    For more information, see [Admin Guide: Custom configurations](/previous-versions/azure/information-protection/rms-client/client-admin-guide-customizations).
      
     > [!TIP]
     > If you've configured labels for automatic labeling, run the [Azure Information Protection scanner](deploy-aip-scanner-manage.md) again on your local data stores in discovery mode and to match your policy. 

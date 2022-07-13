@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft Information Protection (MIP) SDK version release history and support policy
 description: Version release history and change notes for the MIP SDK.
 author: msmbaldwin
@@ -6,7 +6,6 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/21/2021
 ms.author: mbaldwin
-
 ---
 
 # Microsoft Information Protection (MIP) Software Development Kit (SDK) version release history and support policy
@@ -28,16 +27,61 @@ Use the following information to see what’s new or changed for a supported rel
 
 NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions prior to 1.4 are not available.
 
-| Version | Link                         | Status              | End of Support     |
-| ------- | ---------------------------  | ------------------- | ------------------ |
-| 1.11    | https://aka.ms/mipsdkbins    | **Current Version** | TBD                |
-| 1.10    | https://aka.ms/mipsdkbins110 | **Supported**       | November 17, 2022  |
-| 1.9     | https://aka.ms/mipsdkbins19  | **Supported**       | August 23, 2022    |
-| 1.8     | https://aka.ms/mipsdkbins18  | **Supported**       | April 29, 2022     |
-| 1.7     | https://aka.ms/mipsdkbins17  | **Out of Support**       | January 14, 2022   |
-| 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support**  | September 23, 2021 |
-| 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support**  | April 16, 2021     |
-| 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support**  | March 2, 2021      |
+| Version | Link                         | Status             | End of Support     |
+| ------- | ---------------------------- | ------------------ | ------------------ |
+| 1.12    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
+| 1.11    | https://aka.ms/mipsdkbins111 | **Supported**      | June 9, 2023       |
+| 1.10    | https://aka.ms/mipsdkbins110 | **Supported**      | November 17, 2022  |
+| 1.9     | https://aka.ms/mipsdkbins19  | **Supported**      | August 23, 2022    |
+| 1.8     | https://aka.ms/mipsdkbins18  | **Out of Support** | April 29, 2022     |
+| 1.7     | https://aka.ms/mipsdkbins17  | **Out of Support** | January 14, 2022   |
+| 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support** | September 23, 2021 |
+| 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
+| 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
+
+## Version 1.12.61
+
+**Release Date:** June 9, 2022
+
+### File SDK
+
+- File SDK now supports data boundary via `FileEngineSettings.DataBoundary`
+- Fixed a bug in `GetCodePage` in `MsgInspector`.
+- Fixed bug where **BodyType** always returned **TXT** in `MsgInspector`.
+- Fixed a bug in Java wrapper where using `UserRoles` threw *java.util.Collections$UnmodifiableCollection cannot be cast to java.util.List* exception.
+- Fixed a bug when decrypting text files >2GB with `GetDecryptedTemporaryStreamAsync()`.
+  
+### Policy SDK
+
+- Policy SDK now supports data boundary via `PolicyEngineSettings.DataBoundary`. 
+- Fixed a bug where in certain conditions policy changes resulted in a crash. 
+- Fixed an issue where Encrypt Only labels with DKE protection were not filtered when they should have been. 
+
+
+### Protection SDK
+
+- **Preview**: Added support for offline protection.
+  - Enable offline protection by setting `ProtectionProfile.OfflinePublishing` to true when creating a `ProtectionProfile`.
+  - Caching templates requires setting `ProtectionEngineSettings.SetTemplateRefreshArgs(std::chrono::hours)` (C++) or `ProtectionEngineSettings.TemplateRefreshArgs` (.NET) to enable protection template caching. 
+- Protection SDK now supports data boundary via `ProtectionEngineSettings.DataBoundary`
+ 
+### Breaking Changes
+
+- `FileHandler.SetLabel()` API no longer supports **rpmsg** files as input.
+- Passing a plaintext MSG file to the `MsgInspector` will result in a **NotSupportedError**
+- `MsgInpector` will no longer attempt to decrypt attachments that are part of the **message.rpmsg** file.
+- `MsgInpector` will now return a fully-functional **MSG** file if the **message.rpmsg** file had MSG attachments. These MSG files can be decrypted with the `FileHandler.RemoveProtection` API.
+- `TelemetryDelegate` and `AuditDelegate` **WriteEvent** method now requires a second parameter, `EventContext`. The `EventContext` class exposes information on the target cloud and data boundary for the event. 
+
+
+### Platform and Dependency Updates
+
+- Added support across all three SDKs for setting European Union data boundary. 
+  - When `DataBoundary` is set to EU, all telemetry and audit events will flow directly to the EU region.
+  - Setting `DataBoundary` to any other region results in emitting data to nearest service entry point.
+- Updated libxml2 to 2.9.13.
+- Fixed a crash specific to Android. 
+- Fixed an issue where SDK wasn't fully honoring log level
 
 ## Version 1.11.64
 
@@ -74,6 +118,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 ### Breaking Changes
 
 - Previously, when a label was configured for "Do Not Forward" or "Encrypt Only" and a file protection action, MIP SDK would not display the label in the label list for the file content type.
+
   - The SDK has been updated to fix this issue. The label will not be filtered in either case when configured to apply to both content types.
   - This change does not impact labels where the protection action was "Encrypt Only" or "Do Not Forward".
   - Lastly, it doesn’t impact labels intended for files where the action was predefined or user-defined protection.
@@ -105,7 +150,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Fixed a bug in pfile-wrapped MSG files using the incorrect content format.
 - Fixed a bug where the `Inspector` class caused a crash on `rpmsg` files.
 - Fixed a bug where SDK wasn't properly compressing files over 4GB, resulting in possible corruption.
-- Fixed a bug in detecting that protected MSG files. Files may have been protected but SDK treated them as plaintext. 
+- Fixed a bug in detecting that protected MSG files. Files may have been protected but SDK treated them as plaintext.
 
 ## Version 1.10.98
 
@@ -149,11 +194,11 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - File SDK now supports decryption of protected attachments on unprotected MSG files.
   - This applies only to files and not containers such as MSG or ZIP files.
 - Added new static method `mip::FileHandler::GetFileStatus()`
-  - This function returns a new `mip::FileStatus` object that indicates whether the file is labeled, protected, or contains protected objects. 
+  - This function returns a new `mip::FileStatus` object that indicates whether the file is labeled, protected, or contains protected objects.
   - `FileStatus` exposes three properties: `IsProtected`, `IsLabeled`, and `ContainsProtectedObjects`.
   - `ContainsProtectedObjects` is useful for MSG files that have protected attachments.
 - When calling `FileHandler::RemoveProtection()` on a plaintext MSG file with protected attachments, protection will be removed from the attachments.
-- Fixed a bug where `IProtectionHandler` was destroyed when calling `IFileHandler.SetProtection()` in a loop. `IProtectionHandler` instance will no longer be destroyed after use. 
+- Fixed a bug where `IProtectionHandler` was destroyed when calling `IFileHandler.SetProtection()` in a loop. `IProtectionHandler` instance will no longer be destroyed after use.
 
 ### Policy SDK
 
@@ -169,46 +214,46 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 - Introduced new custom settings to govern the default audit settings.
   - Added new property in audit Delegate to set audit settings.
-  - `LabelGroupData` class no longer has `IsAuditEnabled()` method. 
-  - You can use instead `GetEnableAuditSetting()` to get `EnableAudit` settings in the policy once policy is loaded. Default audit settings will be `Undefined` as oppose to `true` in older versions. 
-- Allow passing the document's timezone to ComputeActions to allow actions to be computed as if the document existed in a different timezone from the machine applying the label. 
+  - `LabelGroupData` class no longer has `IsAuditEnabled()` method.
+  - You can use instead `GetEnableAuditSetting()` to get `EnableAudit` settings in the policy once policy is loaded. Default audit settings will be `Undefined` as oppose to `true` in older versions.
+- Allow passing the document's timezone to ComputeActions to allow actions to be computed as if the document existed in a different timezone from the machine applying the label.
   - Useful for when labels are applied on behalf of a user through a service, where the server's local time is not necessarily the same as the user's.
   - Instead of returning the `${Event.DateTime}` in UTC format, we now default to local time without displaying the timezone.
 - Updated existing exceptions for better handling of specific scenarios.
   - `NoPermissionsError::Category::NotPremiumLicenseUser`
     - Previously surfaced as `NoPermissionsError::Category::AccessDenied`
-    - Caused by an unlicensed user attempting to revoke protected content. 
+    - Caused by an unlicensed user attempting to revoke protected content.
   - `NoPermissionsError::Category::NotOwner`
     - Previously surfaced as `NoPermissionsError::Category::AccessDenied`
     - Caused by a user attempting to revoke a document they don't own.
   - `ServiceDisabledError::Extent::Tenant`
     - Previously surfaced as `ServiceDisabledError::Extent::User`
-    - Returned when the targeted Azure Rights Management service instead is disabled. 
+    - Returned when the targeted Azure Rights Management service instead is disabled.
   - `NoPermissionsError::Category::AccessDenied`
     - Previously surfaced as `NetworkError::Category::FailureResponseCode`
     - Returned when the user has no rights to publish due to licensing or onboarding controls.
   - `BadInputError::ErrorCode::DoubleKey`
     - Previously surfaced as `NetworkError::Category::FailureResponseCode`
-    - Returned when Double Key Encryption (DKE) parameters are incorrect. 
+    - Returned when Double Key Encryption (DKE) parameters are incorrect.
   - `CustomerKeyUnavailableError`
     - New exception.
-    - Returned when the tenant is configured for bring-your-own-key (BYOK) and the key cannot be reached. 
-    - Service returns HTTP424. 
+    - Returned when the tenant is configured for bring-your-own-key (BYOK) and the key cannot be reached.
+    - Service returns HTTP424.
   - `NetworkError::Category::FunctionNotImplemented`
     - New exception.
     - Returned when service returned HTTP501 (Not Implemented).
   - The following previously surfaced as `NetworkError::Category::FailureResponseCode`
-    - `TemplateArchivedError`: The application attempted to apply a template ID that has been archived.  
-    - `LicenseNotRegisteredError`: The document publishing license is not registered for revocation. 
-    - `NoPermissionsError::Category::UserNotFound`: The provided user doesn't exist in the target tenant. 
-    - `NoPermissionsError::Category::InvalidEmail`: An invalid email address was provided. 
+    - `TemplateArchivedError`: The application attempted to apply a template ID that has been archived.
+    - `LicenseNotRegisteredError`: The document publishing license is not registered for revocation.
+    - `NoPermissionsError::Category::UserNotFound`: The provided user doesn't exist in the target tenant.
+    - `NoPermissionsError::Category::InvalidEmail`: An invalid email address was provided.
     - `NoPermissionsError::Category::AccessDenied`: The provided identity is not a principal recognized by RMS or isn't a valid delegator.
     - `BadInputError::ErrorCode::LicenseNotTrusted`: The provided publishing license isn't from a trusted publisher. (Not in C API)
     - `BadInputError::ErrorCode::ParameterParsing`: Returned by various XML, JSON, or other parsing issues (Not in C API)
 
 ### Platform and Dependency Updates
 
-- Added Support for Debian 10. 
+- Added Support for Debian 10.
 - Added Support for Ubuntu 20.04.
 
 ## Version 1.9.90
@@ -228,34 +273,34 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 ### General Changes
 
-- Added a new parameter that allows developers to provide custom scenario IDs for correlating errors. 
-  - In the event that a support case is required to diagnose a service-side error, this scenario ID may be helpful in troubleshooting. 
+- Added a new parameter that allows developers to provide custom scenario IDs for correlating errors.
+  - In the event that a support case is required to diagnose a service-side error, this scenario ID may be helpful in troubleshooting.
   - **File SDK**: When creating a `FileHandler` set the applicationScenarioID via `FileExecutionState`
-  - **Protection SDK**: Various APIs now support passing in the scenario ID. 
+  - **Protection SDK**: Various APIs now support passing in the scenario ID.
     - `mip::ProtectionCommonSettings(mApplicationScenarioId)`
     - `mip::GetTemplatesSettings::CreateGetTemplatesSettings()->SetApplicationScenarioId()`
     - `mip::ProtectionHandler::PublishingSettings()->SetApplicationScenarioId()`
     - `mip::ProtectionHandler::ConsumptionSettings()->SetApplicationScenarioId()`
     - `mip::PolicyEngine::SetSessionId()`
 - Added `Workload` enum and consent checks.
-  - Added `HasWorkloadConsent()` and `GetWorkloadConsent()` to `FileEngine` and `PolicyEngine`.  
+  - Added `HasWorkloadConsent()` and `GetWorkloadConsent()` to `FileEngine` and `PolicyEngine`.
 - Added synchronous APIs to Policy SDK .NET wrapper: `AddEngine()`, `ListEngines()`, `DeleteEngine()`, `UnloadEngine()`.
 - Added support for redirecting protection requests via `ProtectionProfile::Settings::AddRedirectionUri()`
 - Added a logger context that can be used with `LoggerDelegate` to write custom context data through to logs.
-  - This API can be useful for correlating error events in services to a single operation or events. 
+  - This API can be useful for correlating error events in services to a single operation or events.
   - The following APIs support providing the logger context:
     - `LoggerDelegate::WriteToLogWithContext`
-    - `TaskDispatcherDelegate::DispatchTask` or `ExecuteTaskOnIndependentThread`    
+    - `TaskDispatcherDelegate::DispatchTask` or `ExecuteTaskOnIndependentThread`
     - `FileEngine::Settings::SetLoggerContext(const std::shared_ptr<void>& loggerContext)`
     - `FileProfile::Settings::SetLoggerContext(const std::shared_ptr<void>& loggerContext)`
     - `ProtectionEngine::Settings::SetLoggerContext(const std::shared_ptr<void>& loggerContext)`
     - `ProtectionProfile::Settings::SetLoggerContext(const std::shared_ptr<void>& loggerContext)`
-    - `PolicyEngine::Settings::SetLoggerContext(const std::shared_ptr<void>& loggerContext)`  
-    - `PolicyProfile::Settings::SetLoggerContext(const std::shared_ptr<void>& loggerContext)`      
+    - `PolicyEngine::Settings::SetLoggerContext(const std::shared_ptr<void>& loggerContext)`
+    - `PolicyProfile::Settings::SetLoggerContext(const std::shared_ptr<void>& loggerContext)`
     - `FileHandler::IsProtected()`
     - `FileHandler::IsLabeledOrProtected()`
     - `FileHanlder::GetSerializedPublishingLicense()`
-    - `PolicyHandler::IsLabeled()`   
+    - `PolicyHandler::IsLabeled()`
 
 ### Platform and Dependency Updates
 
@@ -266,9 +311,9 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 ### Breaking Changes
 
-- Changed default audit behavior for tenants where [AIP Analytics](/azure/information-protection/reports-aip) is enabled. It is now mandatory that in addition to configuring the service-side components of the AIP Analytics feature that you also set the EnableAudit property to true in sensitivity label policies. 
+- Changed default audit behavior for tenants where [AIP Analytics](/azure/information-protection/reports-aip) is enabled. It is now mandatory that in addition to configuring the service-side components of the AIP Analytics feature that you also set the EnableAudit property to true in sensitivity label policies.
   - `Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="True"}`
-  - Review [this](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configuring-advanced-settings-for-the-client-via-powershell) Docs article for details on setting advanced policy settings.  
+  - Review [this](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configuring-advanced-settings-for-the-client-via-powershell) Docs article for details on setting advanced policy settings.
 - Added function `GetApplicationScenarioId()` to `FileExecutionState`.
 - Removed `ContentFormat` enum.
 - Added specific errors with categories for a set of errors exposed previously under `NetworkError` via strings/error codes.
@@ -277,30 +322,30 @@ export HTTP_PROXY="http://10.10.10.10:8080"
   - `NoPermissionsError::Category::AccessExpired`
   - `NoPermissionsError::Category::UserNotFound`
 - `Microsoft.RightsManagement.Exceptions.UnknownTenantException` thrown service will now surface as `ServiceDisabledError` instead of `Network Error`
-  
+
 ### Bug Fixes
 
 - Fixed a memory leak when calling `mip::FileHandler::IsLabeledOrProtected()`.
 - Fixed a bug where failure in `FileHandler::InspectAsync()` called incorrect observer.
 - Fixed a bug where SDK attempted to apply co-authoring label format to Office formats that don't support co-authoring (DOC, PPT, XLS).
-- Fixed a crash in the .NET wrapper related to `FileEngine` disposal. Native `PolicyEngine` object remained present for some period and would attempt a policy refresh, resulting in a crash. 
+- Fixed a crash in the .NET wrapper related to `FileEngine` disposal. Native `PolicyEngine` object remained present for some period and would attempt a policy refresh, resulting in a crash.
 - Fixed a bug where the SDK would ignore labels applied by older versions of AIP due to missing **SiteID** property.
 
 ## Version 1.8.97
 
 **Release date:** February 24, 2021
 
-- Fixed a bug where child labels were not filtered properly and included all types of labels, even if not requested. 
-- Fixed a bug where labels weren't maintained on `RemoveProtection()` if label metadata was incomplete. 
+- Fixed a bug where child labels were not filtered properly and included all types of labels, even if not requested.
+- Fixed a bug where labels weren't maintained on `RemoveProtection()` if label metadata was incomplete.
 
 ## Version 1.8.94
 
 **Release date:** February 8, 2021
 
 - Fixed bug in NuGet package where debug configuration for C++ projects deployed release binaries. Version 1.8.86 may result in a crash with native C++ apps. Make sure to update to 1.8.94 or later.
-- Fixed a bug where policy engine was required to remove protection. 
-  - If policy engine can't be loaded and label metadata is present, it will be discarded if protection is removed. 
-- Fixed a bug where empty `labelInfo.xml` was generated if file was changed to another protected label. 
+- Fixed a bug where policy engine was required to remove protection.
+  - If policy engine can't be loaded and label metadata is present, it will be discarded if protection is removed.
+- Fixed a bug where empty `labelInfo.xml` was generated if file was changed to another protected label.
 
 ## Version 1.8.86
 
@@ -314,7 +359,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Rename `TelemetryConfiguration` to `DiagnosticConfiguration`.
 - Updated `MipContext` to accept `DiagnosticConfiguration` instead of `TelemetryConfiguration`.
 - Exposed new `AuditDelegate`.
-- Several custom settings have had their name changed and will be removed in version 1.9. These will continue to function in parallel with their updates names in version 1.8. 
+- Several custom settings have had their name changed and will be removed in version 1.9. These will continue to function in parallel with their updates names in version 1.8.
 
 | New Name          | Old Name                   |
 | ----------------- | -------------------------- |
@@ -327,7 +372,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Added an API, `MsgInspector.BodyType` to expose body encoding type for MSG files.
 - Added APIs to support Double Key Encryption with User-Defined Permissions.
 - Added flag for `mip::FileHandler` that will allow the caller to disable audit discover event send. This fixes a scenario where using the `ClassifyAsync()` API would result in duplicate discovery events.
-- Fixed bugs where: 
+- Fixed bugs where:
   - Setting protection on XPS file fails.
   - A file cannot be opened after upload/download from SharePoint Online and removing custom permissions.
   - `RemoveProtection()` function would accept a message.rpmsg input. Now accepts only MSG files.
@@ -341,8 +386,8 @@ export HTTP_PROXY="http://10.10.10.10:8080"
   - Audit delegate provides the ability to send AIP auditing events to a destination other than AIP Analytics, or in addition to AIP Analytics.
 - Added flag for `mip::PolicyHandler` that will allow the caller to discover audit discover event send. This fixes a scenario where using the `ClassifyAsync()` API would result in duplicate discovery events.
 - Fixed a bug where encrypted policy database couldn't be opened in certain scenarios.
-- Exposed new `AuditDelegate` that allows developers to override default MIP SDK audit pipeline and send events to their own infrastructure. 
-- `mip::ClassifierUniqueIdsAndContentFormats` and `GetContentFormat()` now return `std::string` instead of `mip::ContentFormat`. This change is replicated in .NET and Java wrappers. 
+- Exposed new `AuditDelegate` that allows developers to override default MIP SDK audit pipeline and send events to their own infrastructure.
+- `mip::ClassifierUniqueIdsAndContentFormats` and `GetContentFormat()` now return `std::string` instead of `mip::ContentFormat`. This change is replicated in .NET and Java wrappers.
 - `ContentFormat.Default` is now `ContentFormat.File`.
 
 ### Protection SDK
@@ -350,7 +395,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Added a `ProtectionEngineSettings.SetAllowCloudServiceOnly` property that will prohibit any connections to Active Directory Rights Management Services clusters when true. Only cloud environments will be used.
 - Added support for acquiring delegation licenses.
   - Delegations licenses enable services to fetch a license for content on behalf of a user.
-  - This lets the service view rights data and decrypt on behalf of the user without additional calls to service.  
+  - This lets the service view rights data and decrypt on behalf of the user without additional calls to service.
 
 ### Java Wrapper (Public Preview)
 
@@ -365,7 +410,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 ### File SDK
 
-- Minor bug fix for the PBIX file format. 
+- Minor bug fix for the PBIX file format.
 
 ## Version 1.7.145
 
@@ -394,7 +439,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 - Fixed UTF-16/UTF-8 body conversion in `MSGInspector`.
 - Set a default max file size limit for files protected by the File SDK to 6GB.
-  - Change made due to decryption of large files requiring *at least* the file size in available memory.
+  - Change made due to decryption of large files requiring _at least_ the file size in available memory.
   - Can be overridden by custom setting `max_file_size_for_protection`.
 - Added support for linearized PDFs.
 - Fixed a bug where LastModifiedDate wasn't updated on Change event.
@@ -433,7 +478,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 #### Common
 
-- `TelemetryConfiguration::isTelemetryOptedOut` renamed to `isMinimalTelemetryEnabled`. 
+- `TelemetryConfiguration::isTelemetryOptedOut` renamed to `isMinimalTelemetryEnabled`.
 
 #### C API
 
@@ -462,7 +507,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 ### File SDK
 
 - Added `IFileHandler::InspectAsync` to C# and Java Wrappers
-- New support via `FileProfile::AcquirePolicyAuthToken` for triggering policy token acquisition to allow an application to warm up its token cache.    
+- New support via `FileProfile::AcquirePolicyAuthToken` for triggering policy token acquisition to allow an application to warm up its token cache.
 - `MsgInspector::GetAttachments` returns `vector<shared_ptr<MsgAttachmentData>>` instead of `vector<unique_ptr<MsgAttachmentData>>`
 - `TelemetryConfiguration::isOptedOut` setting now completely disables telemetry. Previously a set of minimum telemetry was sent.
 
@@ -485,16 +530,16 @@ export HTTP_PROXY="http://10.10.10.10:8080"
     - `mip_cc_metadata_callback`
     - `mip_cc_document_state`
     - `MIP_CC_PolicyEngine_GetWxpMetadataVersion`
-- `TelemetryConfiguration::isOptedOut` setting now completely disables telemetry. Previously a set of minimum telemetry was sent. 
+- `TelemetryConfiguration::isOptedOut` setting now completely disables telemetry. Previously a set of minimum telemetry was sent.
 
 ### Protection SDK
 
 - New support for registration and revocation for doc tracking.
 - New support for generating a pre-license when publishing.
 - Exposed public Microsoft TLS cert used by protection service.
-   - `GetMsftCert` and `GetMsftCertPEM`
-   - If an application overrides `HttpDelegate` interface, it must trust server certificates issued by this CA.
-   - This requirement is expected to be removed late in 2020.    
+  - `GetMsftCert` and `GetMsftCertPEM`
+  - If an application overrides `HttpDelegate` interface, it must trust server certificates issued by this CA.
+  - This requirement is expected to be removed late in 2020.
 
 ## Version 1.5.124
 
@@ -507,7 +552,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
   - All async calls return mip::AsyncControl object with a Cancel() method
 - Delay-load dependent binaries
 - Optionally mask specific telemetry/audit properties
-   - Configurable via mip::TelemetryConfiguration::maskedProperties
+  - Configurable via mip::TelemetryConfiguration::maskedProperties
 - Improved exceptions:
   - All errors include actionable correlation IDs in description string
   - Network error has 'Category', 'BaseUrl', 'RequestId', and 'StatusCode' fields
@@ -562,53 +607,53 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 ### C API
 
-- **Breaking Changes**: Updated most functions to include mip_cc_error* parameter, can be NULL
-  
+- **Breaking Changes**: Updated most functions to include mip_cc_error\* parameter, can be NULL
 
 ### Error/Exception Updates
 
 - Error handling summary:
-  - AccessDeniedError:        User has not been granted rights to access content
-      - NoAuthTokenError:          App did not provide auth token
-      - NoPermissionsError:        User has not been granted rights to specific content, but referrer/owner is available
-      - ServiceDisabledError:      Service is disabled for user/device/platform/tenant
+  - AccessDeniedError: User has not been granted rights to access content
+    - NoAuthTokenError: App did not provide auth token
+    - NoPermissionsError: User has not been granted rights to specific content, but referrer/owner is available
+    - ServiceDisabledError: Service is disabled for user/device/platform/tenant
   - AdhocProtectionRequiredError: Ad hoc protection must be set before setting a label
-  - BadInputError:           Invalid input from user/app
-      - InsufficientBufferError:   Invalid buffer input from user/app
-      - LabelDisabledError:        Label ID is recognized but disabled for use
-      - LabelNotFoundError:        Unrecognized label ID
-      - TemplateNotFoundError:     Unrecognized template ID
-  - ConsentDeniedError:      An operation that required consent from user/app was not granted consent
-  - DeprecatedApiError:      This API has been deprecated
-  - FileIOError:             Failed to read/write file
-  - InternalError:           Unexpected internal failure
+  - BadInputError: Invalid input from user/app
+    - InsufficientBufferError: Invalid buffer input from user/app
+    - LabelDisabledError: Label ID is recognized but disabled for use
+    - LabelNotFoundError: Unrecognized label ID
+    - TemplateNotFoundError: Unrecognized template ID
+  - ConsentDeniedError: An operation that required consent from user/app was not granted consent
+  - DeprecatedApiError: This API has been deprecated
+  - FileIOError: Failed to read/write file
+  - InternalError: Unexpected internal failure
   - NetworkError
-      - ProxyAuthenticationError:   Proxy authentication is required
-    - Category=BadResponse:         Server returned unreadable HTTP response (retry might succeed)
-    - Category=Cancelled:           Failed to establish HTTP connection because operation was canceled by user/app (retry will probably succeed)
+    - ProxyAuthenticationError: Proxy authentication is required
+    - Category=BadResponse: Server returned unreadable HTTP response (retry might succeed)
+    - Category=Cancelled: Failed to establish HTTP connection because operation was canceled by user/app (retry will probably succeed)
     - Category=FailureResponseCode: Server returned a generic failure response (retry might succeed)
-    - Category=NoConnection:        Failed to establish HTTP connection (retry might succeed)
-    - Category=Offline:             Failed to establish HTTP connection because application is in offline mode (retry won't succeed)
-    - Category=Proxy:               Failed to establish HTTP connection due to proxy issue (retry probably won't succeed)
-    - Category=SSL:                 Failed to establish HTTP connection due to SSL issue (retry probably won't succeed)
-    - Category=Throttled:           Server returned "throttled" response (backoff/retry will probably succeed)
-    - Category=Timeout:             Failed to establish HTTP connection after timeout (retry will probably succeed)
-    - Category=UnexpectedResponse:  Server returned unexpected data (retry might succeed)
-  - NoPolicyError:           Tenant or user is not configured for labels
-  - NotSupportedError:       Operation not supported in current state
+    - Category=NoConnection: Failed to establish HTTP connection (retry might succeed)
+    - Category=Offline: Failed to establish HTTP connection because application is in offline mode (retry won't succeed)
+    - Category=Proxy: Failed to establish HTTP connection due to proxy issue (retry probably won't succeed)
+    - Category=SSL: Failed to establish HTTP connection due to SSL issue (retry probably won't succeed)
+    - Category=Throttled: Server returned "throttled" response (backoff/retry will probably succeed)
+    - Category=Timeout: Failed to establish HTTP connection after timeout (retry will probably succeed)
+    - Category=UnexpectedResponse: Server returned unexpected data (retry might succeed)
+  - NoPolicyError: Tenant or user is not configured for labels
+  - NotSupportedError: Operation not supported in current state
   - OperationCancelledError: Operation was canceled
   - PrivilegedRequiredError: Cannot modify label unless assignment method = priviledged
 - Changes
   - Removed unused PolicySyncError. Replaced by NetworkError
   - Removed unused TransientNetworkError. Replaced by NetworkError categories
 
-## Version 1.4.0 
+## Version 1.4.0
 
 **Release date**: November 6, 2019
 
 This version introduces support for the Protection SDK in the .NET package (Microsoft.InformationProtection.File).
 
 ### SDK changes
+
 - Performance improvements and bug fixes
 - Renamed StorageType enum to CacheStorageType
 - Android links to libc++ instead of gnustl
@@ -673,7 +718,6 @@ This version introduces support for the Protection SDK in the .NET package (Micr
     - MIP_CC_TelemetryConfiguration_SetCustomSettings now takes 'mip_cc_dictionary-' param instead of 'mip_cc_dictionary'
     - MIP_CC_CreateMipContext takes 'isOfflineOnly' and 'loggerDelegateOverride' params
 
-
 ## Version 1.3.0
 
 **Release date**: August 22, 2019
@@ -695,15 +739,14 @@ This version introduces support for the Protection SDK in the .NET package (Micr
 
 ### Changes
 
-* In previous versions, we required that you called `mip::ReleaseAllResources`. Version 1.3 replaces this with `mip::MipContext::~MipContext` or `mip::MipContext::Shutdown`.
-* Removed `ActionSource` from `mip::LabelingOptions` and `mip::ExecutionState::GetNewLabelActionSource`
-* Replaced `mip::ProtectionEngine::CreateProtectionHandlerFromDescriptor` with `mip::ProtectionEngine::CreateProtectionHandlerForPublishing`.
-* Replaced `mip::ProtectionEngine::CreateProtectionHandlerFromPublishingLicense` with `mip::ProtectionEngine::CreateProtectionHandlerForConsumption`.
-* Renamed `mip::PublishingLicenseContext` to `mip::PublishingLicenseInfo` and updated to contain rich fields instead of raw serialized bytes.
-* `mip::PublishingLicenseInfo` contains the data relevant to MIP after parsing a publishing license (PL).
-* `mip::TemplateNotFoundError` and `mip::LabelNotFoundError` thrown when application passes MIP a template ID or label ID that is not recognized.
-* Added support for label-based conditional access via the claims parameter of `AcquireToken()` and `mip::AuthDelegate::OAuth2Challenge()`. This functionality hasn't yet been exposed via the Security and Compliance Center portal.
-
+- In previous versions, we required that you called `mip::ReleaseAllResources`. Version 1.3 replaces this with `mip::MipContext::~MipContext` or `mip::MipContext::Shutdown`.
+- Removed `ActionSource` from `mip::LabelingOptions` and `mip::ExecutionState::GetNewLabelActionSource`
+- Replaced `mip::ProtectionEngine::CreateProtectionHandlerFromDescriptor` with `mip::ProtectionEngine::CreateProtectionHandlerForPublishing`.
+- Replaced `mip::ProtectionEngine::CreateProtectionHandlerFromPublishingLicense` with `mip::ProtectionEngine::CreateProtectionHandlerForConsumption`.
+- Renamed `mip::PublishingLicenseContext` to `mip::PublishingLicenseInfo` and updated to contain rich fields instead of raw serialized bytes.
+- `mip::PublishingLicenseInfo` contains the data relevant to MIP after parsing a publishing license (PL).
+- `mip::TemplateNotFoundError` and `mip::LabelNotFoundError` thrown when application passes MIP a template ID or label ID that is not recognized.
+- Added support for label-based conditional access via the claims parameter of `AcquireToken()` and `mip::AuthDelegate::OAuth2Challenge()`. This functionality hasn't yet been exposed via the Security and Compliance Center portal.
 
 ## Version 1.2.0
 
@@ -711,59 +754,59 @@ This version introduces support for the Protection SDK in the .NET package (Micr
 
 ### New Features
 
- - Telemetry component now uses same HTTP stack as the rest of MIP, even if client application has overridden it with HttpDelegate.
- - Client applications can control the threading behavior of async tasks by overriding TaskDispatcherDelegate in Profiles.
- - RPMSG encryption now in preview.
- - Align File/Policy SDK exception handling behavior with Protection SDK:
-    - ProxyAuthError thrown by all SDKs if a proxy is configured to require authentication.
-    - NoAuthTokenError thrown by all SDKs if empty auth token is provided by application's implementation of mip::AuthDelegate::AcquireOAuth2Token.
- - Improved HTTP caching for Policy SDK reduces # of required HTTP calls by half.
- - Richer logs/audit/telemetry for improved failure detection and debugging.
- - Support for external/foreign labels to facilitate migration to AIP labels.
- - Enabled support for third-party applications to download sensitivity types from SCC.
- - More telemetry settings are exposed and configurable (caching/threading behavior, etc.).
- 
+- Telemetry component now uses same HTTP stack as the rest of MIP, even if client application has overridden it with HttpDelegate.
+- Client applications can control the threading behavior of async tasks by overriding TaskDispatcherDelegate in Profiles.
+- RPMSG encryption now in preview.
+- Align File/Policy SDK exception handling behavior with Protection SDK:
+  - ProxyAuthError thrown by all SDKs if a proxy is configured to require authentication.
+  - NoAuthTokenError thrown by all SDKs if empty auth token is provided by application's implementation of mip::AuthDelegate::AcquireOAuth2Token.
+- Improved HTTP caching for Policy SDK reduces # of required HTTP calls by half.
+- Richer logs/audit/telemetry for improved failure detection and debugging.
+- Support for external/foreign labels to facilitate migration to AIP labels.
+- Enabled support for third-party applications to download sensitivity types from SCC.
+- More telemetry settings are exposed and configurable (caching/threading behavior, etc.).
+
 ### SDK Changes
 
- - mip_common.dll split into mip_core.dll and mip_telemetry.dll.
- - Renamed mip::ContentState to mip::DataState to describe how an application interacts with data at a high level.
- - mip::AdhocProtectionRequiredError exception is thrown by FileHandler::SetLabel to notify an application that it must first apply ad hoc protection before applying a label.
- - mip::OperationCancelledError exception is thrown when an operation has been canceled (for example due to shutdown or HTTP cancellation).
- - New APIs:
-    - mip::ClassificationResult::GetSensitiveInformationDetections
-    - mip::FileEngine::GetLastPolicyFetchTime
-    - mip::FileEngine::GetDefaultSensitivityLabel
-    - mip::FileEngine::GetPolicyId
-    - mip::FileEngine::HasClassificationRules
-    - mip::FileEngine::Settings::SetPolicyCloudEndpointBaseUrl
-    - mip::FileHandler::GetDecryptedTemporaryFileAsync
-    - mip::FileHandler::Observer::OnGetDecryptedTemporaryFileFailure
-    - mip::FileHandler::Observer::OnGetDecryptedTemporaryFileSuccess
-    - mip::File/Policy/ProtectionProfile::SetTaskDispatcherDelegate
-    - mip::File/Policy/ProtectionProfile::SetTelemetryConfiguration
-    - mip::HttpRequest::GetBody returns std::vector<uint8_t> instead of std::string
-    - mip::HttpRequest::GetId
-    - mip::PolicyEngine::GetLastPolicyFetchTime
-    - mip::PolicyEngine::GetPolicyId
-    - mip::PolicyEngine::HasClassificationRules
-    - mip::PolicyEngine::Settings::SetCloudEndpointBaseUrl
-    - mip::ProtectionDescriptor::GetContentId
-    - (interface) mip::TaskDispatcherDelegate
- 
-### New Requirements
- - mip::ReleaseAllResources must be called prior to process termination (after clearing references to all Profiles, Engines, and Handlers)
- - (interface) mip::ExecutionState::GetClassificationResults return type and "classificationIds" parameter has changed
- - (interface) mip::FileExecutionState::GetAuditMetadata can be implemented by applications to specify detailed information to surface to a tenant admin's audit dashboard (for example sender, recipients, last modified, etc.)
- - (interface) mip::FileExecutionState::GetClassificationResults return type has changed, and it now requires a FileHandler parameter
- - (interface) mip::FileExecutionState::GetDataState should be implemented by applications to specify how an application is interacting with contentIdentifier
- - (interface) mip::HttpDelegate interface requires 'CancelOperation' and 'CancelAllOperations' methods
- - (interface) mip::HttpDelegate interface 'Send' and 'SendAsync' return mip::HttpOperation instead of mip::HttpResponse
- - (interface) mip::HttpResponse::GetBody returns std::vector<uint8_t> instead of std::string
- - (interface) mip::HttpResponse interface requires 'GetId' method implementation
- - mip::ContentLabel::GetCreationTime return std::chrono::time_point instead of std::string
- - mip::FileEngine::CreateFileHandlerAsync no longer accepts 'contentIdentifier' parameter
- - mip::PolicyHandler::NotifyCommitedActions renamed to mip::PolicyHandler::NotifyCommittedActions
+- mip_common.dll split into mip_core.dll and mip_telemetry.dll.
+- Renamed mip::ContentState to mip::DataState to describe how an application interacts with data at a high level.
+- mip::AdhocProtectionRequiredError exception is thrown by FileHandler::SetLabel to notify an application that it must first apply ad hoc protection before applying a label.
+- mip::OperationCancelledError exception is thrown when an operation has been canceled (for example due to shutdown or HTTP cancellation).
+- New APIs:
+  - mip::ClassificationResult::GetSensitiveInformationDetections
+  - mip::FileEngine::GetLastPolicyFetchTime
+  - mip::FileEngine::GetDefaultSensitivityLabel
+  - mip::FileEngine::GetPolicyId
+  - mip::FileEngine::HasClassificationRules
+  - mip::FileEngine::Settings::SetPolicyCloudEndpointBaseUrl
+  - mip::FileHandler::GetDecryptedTemporaryFileAsync
+  - mip::FileHandler::Observer::OnGetDecryptedTemporaryFileFailure
+  - mip::FileHandler::Observer::OnGetDecryptedTemporaryFileSuccess
+  - mip::File/Policy/ProtectionProfile::SetTaskDispatcherDelegate
+  - mip::File/Policy/ProtectionProfile::SetTelemetryConfiguration
+  - mip::HttpRequest::GetBody returns std::vector<uint8_t> instead of std::string
+  - mip::HttpRequest::GetId
+  - mip::PolicyEngine::GetLastPolicyFetchTime
+  - mip::PolicyEngine::GetPolicyId
+  - mip::PolicyEngine::HasClassificationRules
+  - mip::PolicyEngine::Settings::SetCloudEndpointBaseUrl
+  - mip::ProtectionDescriptor::GetContentId
+  - (interface) mip::TaskDispatcherDelegate
 
+### New Requirements
+
+- mip::ReleaseAllResources must be called prior to process termination (after clearing references to all Profiles, Engines, and Handlers)
+- (interface) mip::ExecutionState::GetClassificationResults return type and "classificationIds" parameter has changed
+- (interface) mip::FileExecutionState::GetAuditMetadata can be implemented by applications to specify detailed information to surface to a tenant admin's audit dashboard (for example sender, recipients, last modified, etc.)
+- (interface) mip::FileExecutionState::GetClassificationResults return type has changed, and it now requires a FileHandler parameter
+- (interface) mip::FileExecutionState::GetDataState should be implemented by applications to specify how an application is interacting with contentIdentifier
+- (interface) mip::HttpDelegate interface requires 'CancelOperation' and 'CancelAllOperations' methods
+- (interface) mip::HttpDelegate interface 'Send' and 'SendAsync' return mip::HttpOperation instead of mip::HttpResponse
+- (interface) mip::HttpResponse::GetBody returns std::vector<uint8_t> instead of std::string
+- (interface) mip::HttpResponse interface requires 'GetId' method implementation
+- mip::ContentLabel::GetCreationTime return std::chrono::time_point instead of std::string
+- mip::FileEngine::CreateFileHandlerAsync no longer accepts 'contentIdentifier' parameter
+- mip::PolicyHandler::NotifyCommitedActions renamed to mip::PolicyHandler::NotifyCommittedActions
 
 ## Version 1.1.0
 
@@ -771,9 +814,9 @@ This version introduces support for the Protection SDK in the .NET package (Micr
 
 This version introduces support for the following platforms:
 
-  - .NET
-  - iOS SDK (Policy SDK)
-  - Android SDK (Policy SDK and Protection SDK)
+- .NET
+- iOS SDK (Policy SDK)
+- Android SDK (Policy SDK and Protection SDK)
 
 ### New Features
 
@@ -792,31 +835,31 @@ This version introduces support for the following platforms:
     - Pass results to MIP via mip::FileExecutionState::GetClassificationResults/mip::ExecutionState::GetClassificationResults
     - mip::ApplyLabelAction and mip::RecommendLabelAction can be returned by mip::PolicyEngine::ComputeActions when classification results match a policy rule indicating required/recommended labels
 
-### New Requirements 
+### New Requirements
 
-  - Enforced population of ID/name/version fields mip::ApplicationInfo when creating mip::FileProfile, mip::PolicyProfile, and mip::ProtectionProfile
-  - Applications must implement new mip::FileExecutionState interface when creating mip::FileHandlers
-  
-### New Exceptions 
+- Enforced population of ID/name/version fields mip::ApplicationInfo when creating mip::FileProfile, mip::PolicyProfile, and mip::ProtectionProfile
+- Applications must implement new mip::FileExecutionState interface when creating mip::FileHandlers
 
-  - mip::NoAuthTokenError thrown if application's AuthDelegate returns an empty token (due to cancellation)
-    - Applies to creation of:
-      - mip::FileEngine
-      - mip::FileHandler
-      - mip::PolicyEngine
-      - mip::ProtectionHandler
-  - mip::NoPolicyError thrown if tenant isn't configured for labels
-    - Applies to creation of:
-      - mip::FileEngine
-      - mip::PolicyEngine
-  - mip::ServiceDisabledError thrown if RMS service is disabled for a specific user/device/platform/tenant
-    - Applies to creation of:
-      - mip::FileHandler
-      - mip::ProtectionHandler
-  - mip::NoPermissionsError thrown if a user doesn't have rights to decrypt a document or the content is expired
-    - Applies to creation of:
-      - mip::FileHandler
-      - mip::ProtectionHandler
+### New Exceptions
+
+- mip::NoAuthTokenError thrown if application's AuthDelegate returns an empty token (due to cancellation)
+  - Applies to creation of:
+    - mip::FileEngine
+    - mip::FileHandler
+    - mip::PolicyEngine
+    - mip::ProtectionHandler
+- mip::NoPolicyError thrown if tenant isn't configured for labels
+  - Applies to creation of:
+    - mip::FileEngine
+    - mip::PolicyEngine
+- mip::ServiceDisabledError thrown if RMS service is disabled for a specific user/device/platform/tenant
+  - Applies to creation of:
+    - mip::FileHandler
+    - mip::ProtectionHandler
+- mip::NoPermissionsError thrown if a user doesn't have rights to decrypt a document or the content is expired
+  - Applies to creation of:
+    - mip::FileHandler
+    - mip::ProtectionHandler
 
 ## Next steps
 

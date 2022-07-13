@@ -33,7 +33,7 @@ The most successful deployments are those that identify specific use cases that 
 ## Common scenarios
 
 - [Discover your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
-- [Automatically protect users' emails that are sent outside the organization](configure-exo-rules.md)
+- [Automatically protect users' emails that are sent outside the organization](/previous-versions/azure/information-protection/configure-exo-rules)
 - [Use my own key to protect my organization's data](plan-implement-tenant-key.md)
 
 > [!NOTE]
@@ -49,7 +49,7 @@ For example, for a methodology with best practices for business decision makers 
 For more information and step-by-step instructions, see:
 
 - [How to Build a Custom AIP Tracking Portal](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-Build-a-Custom-AIP-Tracking-Portal/ba-p/875849)
-- [Create richer reports with Microsoft Information Protection and Azure AD login data](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
+- [Create richer reports with Microsoft Purview Information Protection and Azure AD login data](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
 - [Leverage Microsoft Defender for Cloud Apps to apply Azure Information Protection labels in the cloud](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Leverage-Microsoft-Cloud-App-Security-to-apply-Azure-Information/ba-p/388638)
 - [How to prepare an Azure Information Protection “Cloud Exit” plan](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631)
 - [Cross-Tenant Label Visualization](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cross-Tenant-Label-Visualization/ba-p/356588)
@@ -60,4 +60,4 @@ For more information and step-by-step instructions, see:
 
 ## Next steps
 
-Don't see your scenario listed? Check the [Deployment roadmaps](deployment-roadmap.md) for a full list of planning and deployment steps.
+Don't see your scenario listed? Check the [Deployment roadmaps](/azure/information-protection/deployment-roadmap-classify-label-protect) for a full list of planning and deployment steps.

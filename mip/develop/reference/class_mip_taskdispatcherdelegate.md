@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class TaskDispatcherDelegate 
@@ -14,14 +14,14 @@ A class that defines the interface to the MIP SDK task dispatcher.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public void DispatchTask(const std::string& taskId, std::function\<void()\> task)  |  Execute a task on a background thread.
-public virtual void DispatchTask(const std::string& taskId, std::function\<void()\> task, const std::shared_ptr\<void\> &)  |  Execute a task on a background thread.
-public void DispatchTask(const std::string& taskId, std::function\<void()\> task, int64_t delaySeconds)  |  Execute a task on a background thread with the given delay.
-public virtual void DispatchTask(const std::string& taskId, std::function\<void()\> task, int64_t delaySeconds, const std::shared_ptr\<void\> &)  |  Execute a task on a background thread with the given delay.
-public void ExecuteTaskOnIndependentThread(const std::string& taskId, std::function\<void()\> task)  |  Immediately execute a task on an independent thread.
-public virtual void ExecuteTaskOnIndependentThread(const std::string& taskId, std::function\<void()\> task, const std::shared_ptr\<void\> &)  |  Immediately execute a task on an independent thread.
+public void DispatchTask(const std::string& taskId, std::function&lt;void()&gt; task)  |  Execute a task on a background thread.
+public virtual void DispatchTask(const std::string& taskId, std::function&lt;void()&gt; task, const std::shared_ptr&lt;void&gt; &)  |  Execute a task on a background thread.
+public void DispatchTask(const std::string& taskId, std::function&lt;void()&gt; task, int64_t delaySeconds)  |  Execute a task on a background thread with the given delay.
+public virtual void DispatchTask(const std::string& taskId, std::function&lt;void()&gt; task, int64_t delaySeconds, const std::shared_ptr&lt;void&gt; &)  |  Execute a task on a background thread with the given delay.
+public void ExecuteTaskOnIndependentThread(const std::string& taskId, std::function&lt;void()&gt; task)  |  Immediately execute a task on an independent thread.
+public virtual void ExecuteTaskOnIndependentThread(const std::string& taskId, std::function&lt;void()&gt; task, const std::shared_ptr&lt;void&gt; &)  |  Immediately execute a task on an independent thread.
 public bool CancelTask(const std::string& taskId)  |  Cancel a background task.
-public virtual bool CancelTask(const std::string& taskId, const std::shared_ptr\<void\> &)  |  Cancel a background task.
+public virtual bool CancelTask(const std::string& taskId, const std::shared_ptr&lt;void&gt; &)  |  Cancel a background task.
 public void CancelAllTasks()  |  Cancel all background tasks.
   
 ## Members
@@ -133,4 +133,4 @@ Parameters:
 **Returns**: True if task was successfully cancelled, else false
   
 ### CancelAllTasks function
-Cancel all background tasks.s.
+Cancel all background tasks.

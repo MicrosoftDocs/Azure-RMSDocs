@@ -29,7 +29,7 @@ ms.custom: admin
 
 Use this information to determine what you need to do so that Office apps work with the Azure Rights Management service from Azure Information Protection.
 
-## Office 365 apps, Office 2019, Office 2016, and Office 2013
+## Microsoft 365 apps, Office 2021, Office 2019, Office 2016, and Office 2013
 
 Because these later versions of Office provide built-in support for the Azure Rights Management service, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook, and Outlook on the web. 
 
@@ -48,9 +48,5 @@ Users who have Office for Mac must first verify their credentials before they ca
 3. You can now cancel this new message.
 
 4. To protect an email message or a document: On the **Options** tab, select **Permissions** and choose an option or template that protects your email or document.
-
-## Office 2010
-
-For client computers to use the Azure Rights Management service with Office 2010, they must have the Azure Information Protection client. No further configuration is required other than users must sign in with their Microsoft 365 credentials and they can then protect files and use files that have been protected by others.
 
 For more information, see [Azure Information Protection client: Installation and configuration for clients](configure-client.md).

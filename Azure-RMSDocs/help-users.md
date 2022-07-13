@@ -55,7 +55,7 @@ After you have deployed and configured Azure Information Protection for your org
 
     - **Sign in help**
 
-        Users might be prompted for credentials when the Azure Rights Management service needs to authenticate a user and cannot use cached credentials. The required credentials are usually for the user’s work or school account and password that is associated with your Office 365 tenant or Azure Active Directory tenant. Although the Azure Rights Management service can authenticate Azure AD accounts, some applications can also open protected content when a Microsoft account is used for authentication. [More information](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+        Users might be prompted for credentials when the Azure Rights Management service needs to authenticate a user and cannot use cached credentials. The required credentials are usually for the user’s work or school account and password that is associated with your Office 365 tenant or Azure Active Directory tenant. Although the Azure Rights Management service can authenticate Azure AD accounts, some applications can also open protected content when a Microsoft account is used for authentication. [More information](/previous-versions/azure/information-protection/secure-collaboration-documents#supported-scenarios-for-opening-protected-documents)
 
         Provide users and your help desk with instructions about which account to use when users are prompted for credentials when they have applications that use the Azure Rights Management service.
 
@@ -73,7 +73,7 @@ Use the following sections for application-specific information to help users pr
 
 ## Using information protection with the Azure Information Protection client
 
-If users have Office 2010, the Azure Information Protection client is required to protect and consume protected documents and emails. However, the Azure Information Protection client is also recommended for all computers and mobile devices that support this service.
+The Azure Information Protection client is recommended for all computers and mobile devices that support this service.
 
 In addition to making it easier for users to protect documents and emails, the Azure Information Protection client lets users track the documents that they have protected. Tracked documents can also be revoked if the previously authorized users should no longer have access to them.
 

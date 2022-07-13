@@ -66,7 +66,7 @@ If you do not see the option to **Revoke Access** in the **Sensitivity** menu, y
 
 - You may not have the latest AIP unified labeling client version installed, or you may need to restart your Office apps or machine after installation. 
 
-    For more information, see [User Guide: Download and install the Azure Information Protection client](install-client-app.md).
+    For more information, see [User Guide: Download and install the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/install-client-app).
 
 - Your administrator may have [turned off tracking features](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant) in your organization.
 

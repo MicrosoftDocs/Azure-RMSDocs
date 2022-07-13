@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 05/31/2022
 ---
 
 # class ProtectionProfile::Observer 
@@ -15,14 +15,14 @@ This interface must be implemented by applications using the protection SDK
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnLoadSuccess(const std::shared_ptr\<ProtectionProfile\>& profile, const std::shared_ptr\<void\>& context)  |  Called when profile was loaded successfully.
-public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when loading a profile caused an error.
-public virtual void OnListEnginesSuccess(const std::vector\<std::string\>& engineIds, const std::shared_ptr\<void\>& context)  |  Called when list of engines was generated successfully.
-public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when listing engines resulted in an error.
-public virtual void OnAddEngineSuccess(const std::shared_ptr\<ProtectionEngine\>& engine, const std::shared_ptr\<void\>& context)  |  Called when a new engine was added successfully.
-public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when adding a new engine resulted in an error.
-public virtual void OnDeleteEngineSuccess(const std::shared_ptr\<void\>& context)  |  Called when an engine was deleted successfully.
-public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when deleting an engine resulted in an error.
+public virtual void OnLoadSuccess(const std::shared_ptr&lt;ProtectionProfile&gt;& profile, const std::shared_ptr&lt;void&gt;& context)  |  Called when profile was loaded successfully.
+public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr&lt;void&gt;& context)  |  Called when loading a profile caused an error.
+public virtual void OnListEnginesSuccess(const std::vector&lt;std::string&gt;& engineIds, const std::shared_ptr&lt;void&gt;& context)  |  Called when list of engines was generated successfully.
+public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr&lt;void&gt;& context)  |  Called when listing engines resulted in an error.
+public virtual void OnAddEngineSuccess(const std::shared_ptr&lt;ProtectionEngine&gt;& engine, const std::shared_ptr&lt;void&gt;& context)  |  Called when a new engine was added successfully.
+public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr&lt;void&gt;& context)  |  Called when adding a new engine resulted in an error.
+public virtual void OnDeleteEngineSuccess(const std::shared_ptr&lt;void&gt;& context)  |  Called when an engine was deleted successfully.
+public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr&lt;void&gt;& context)  |  Called when deleting an engine resulted in an error.
   
 ## Members
   
@@ -48,7 +48,7 @@ Parameters:
 * **context**: The same context that was passed to ProtectionProfile::LoadAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess or [ProtectionProfile::Observer::OnLoadFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to ProtectionProfile::Observer::OnLoadSuccess or ProtectionProfile::Observer::OnLoadFailure
   
 ### OnListEnginesSuccess function
 Called when list of engines was generated successfully.

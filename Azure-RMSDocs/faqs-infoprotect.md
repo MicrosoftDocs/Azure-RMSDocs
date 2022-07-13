@@ -34,7 +34,7 @@ Have a question about Azure Information Protection that is specifically about cl
 
 We recommend using the built-in labeling solution for Office apps by default, and then installing the Azure Information Protection unified labeling client in parallel if you need the extra features supported by AIP.
 
-You can use the AIP client's extra functionality and built-in labeling simultaneously, and the unified labeling client downloads labels and policy settings from the Microsoft 365 compliance center.
+You can use the AIP client's extra functionality and built-in labeling simultaneously, and the unified labeling client downloads labels and policy settings from the Microsoft Purview compliance portal.
 
 For more information, see [Learn about about built-in labeling and the AIP unified labeling client](rms-client/use-client.md).
 
@@ -70,4 +70,4 @@ No. When you label an email message that has attachments, those attachments do n
 
 Because Azure Information Protection uses persistent metadata for classification, which includes a clear-text label, this information can be read by DLP solutions and other applications.
 
-For examples of using this metadata with Exchange Online mail flow rules, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).
+For examples of using this metadata with Exchange Online mail flow rules, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](/previous-versions/azure/information-protection/configure-exo-rules).

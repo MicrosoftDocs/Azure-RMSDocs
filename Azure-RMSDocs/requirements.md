@@ -127,7 +127,7 @@ Each Azure Information Protection client has additional requirements. For detail
 
 - [Azure Information Protection unified labeling client requirements](./rms-client/reqs-ul-client.md)
 
-- [Azure Information Protection client requirements](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
+- [Azure Information Protection client requirements](/previous-versions/azure/information-protection/rms-client/client-admin-guide-install#additional-prerequisites-for-the-azure-information-protection-client)
 
 ## Applications
 
@@ -136,6 +136,8 @@ The Azure Information Protection clients can label and protect documents and ema
 - **Office apps**, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), from Microsoft 365 Apps for Business or Microsoft 365 Business Premium, when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
 
 - **Microsoft 365 Apps for Enterprise**
+
+- **Office Professional Plus 2021**
 
 - **Office Professional Plus 2019**
 
@@ -207,7 +209,7 @@ Azure Information Protection has the following additional requirements:
 
 ### Coexistence of AD RMS with Azure RMS
 
-Using AD RMS and Azure RMS side by side, in the same organization, to protect content by the same user in the same organization, is **only** supported in AD RMS for [HYOK (hold your own key) protection](configure-adrms-restrictions.md) with Azure Information Protection.
+Using AD RMS and Azure RMS side by side, in the same organization, to protect content by the same user in the same organization, is **only** supported in AD RMS for [HYOK (hold your own key) protection](/previous-versions/azure/information-protection/configure-adrms-restrictions) with Azure Information Protection.
 
 This scenario is *not* supported during [migration](migrate-from-ad-rms-to-azure-rms.md).
  Supported migration paths include:

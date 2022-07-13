@@ -79,7 +79,7 @@ Deploy the Azure Information Protection unified labeling client if you are using
 
 - You want to view protected documents when a built-in application to display the file is not installed or cannot open these documents.
 
-Example showing the Office add-in for the Azure Information Protection unified labeling client, displaying the new **Sensitivity** button on the ribbon and the optional Azure Information Protection bar:
+Example showing the Office add-in for the Azure Information Protection unified labeling client, displaying the **Sensitivity** button on the ribbon and the optional Azure Information Protection bar:
 
 ![Azure Information Protection bar with default policy](../media/v2word2016-calloutsv2.png)
 
@@ -99,7 +99,7 @@ When the client is installed, use the **Help and Feedback** option to open the *
 
 #### **Help and Feedback** section
 
-The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can configure your own URL link that goes to a custom help page as one of the policy settings in the Microsoft 365 compliance center.
+The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can configure your own URL link that goes to a custom help page as one of the policy settings in the Microsoft Purview compliance portal.
 
 The **Report an Issue** link displays only if you specify an [advanced setting](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users). When you configure this setting, you specify an HTTP link such as the email address of your help desk. 
 
@@ -231,8 +231,8 @@ If you've already installed the client, see the following for additional informa
 
 - [Customizations](clientv2-admin-guide-customizations.md)
 
-- [Client files and usage logging](client-admin-guide-files-and-logging.md)
+- [Client files and usage logging](/previous-versions/azure/information-protection/rms-client/client-admin-guide-files-and-logging)
 
-- [File types supported](client-admin-guide-file-types.md)
+- [File types supported](/previous-versions/azure/information-protection/rms-client/client-admin-guide-file-types)
 
-- [PowerShell commands](client-admin-guide-powershell.md)
+- [PowerShell commands](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell)

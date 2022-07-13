@@ -35,7 +35,7 @@ The following file types can be classified even when they are not protected.
 
 - **Microsoft XPS**: .xps .oxps
 
-- **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi. png, .tif, .tiff
+- **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi, .png, .tif, .tiff
 
 - **Autodesk Design Review 2013**: .dwfx
 

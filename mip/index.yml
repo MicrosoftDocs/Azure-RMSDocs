@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
-title: Microsoft Information Protection documentation
-summary: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Information Protection — no matter where it's stored or who it's shared with.
+title: Microsoft Purview Information Protection documentation
+summary: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Purview Information Protection — no matter where it's stored or who it's shared with.
 
 metadata:
-  title: Microsoft Information Protection documentation
-  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Information Protection — no matter where it's stored or who it's shared with.
+  title: Microsoft Purview Information Protection documentation
+  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Purview Information Protection — no matter where it's stored or who it's shared with.
   services: information-protection
   ms.service: information-protection
   ms.topic: landing-page # Required
