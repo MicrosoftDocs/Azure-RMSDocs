@@ -59,9 +59,9 @@ For more information about the procedures in this table, see the following resou
 
 When you are ready to deactivate the protection service from Azure Information Protection, use the following instructions.
 
-## Deactivating Rights Management
+## Deactivating the protection service
 
-You must use PowerShell to deactivate the protection service, Azure Rights Management. You can no longer activate or deactivate this service from admin portals.
+You must use PowerShell to deactivate the protection service from Azure Information Protection. You can no longer activate or deactivate this service from admin portals.
 
 1. Install the AIPService module, to configure and manage the protection service. For instructions, see [Installing the AIPService PowerShell module](install-powershell.md).
 
@@ -72,3 +72,5 @@ You must use PowerShell to deactivate the protection service, Azure Rights Manag
 4. To deactivate the service, run [Disable-AipService](/powershell/module/aipservice/disable-aipservice).
 
 5. Run [Get-AipService](/powershell/module/aipservice/get-aipservice) again to confirm the protection service is now deactivated. This time, the status should display **Disabled**.
+
+6. Run [Disconnect-AipService](/powershell/module/aipservice/disconnect-aipservice) to disconnect from the service, and close your PowerShell session.
