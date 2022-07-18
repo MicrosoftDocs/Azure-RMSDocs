@@ -59,32 +59,18 @@ For more information about the procedures in this table, see the following resou
 
 When you are ready to deactivate the protection service from Azure Information Protection, use the following instructions.
 
-## Deactivating Rights Management
-Use one of the following procedures to deactivate the protection service, Azure Rights Management.
+## Deactivating the protection service
 
-> [!TIP]
-> You can also use the PowerShell cmdlet, [Disable-AipService](/powershell/module/aipservice/disable-aipservice), to deactivate Rights Management.
+You must use PowerShell to deactivate the protection service from Azure Information Protection. You can no longer activate or deactivate this service from admin portals.
 
-#### To deactivate Rights Management from the Microsoft 365 admin center
+1. Install the AIPService module, to configure and manage the protection service. For instructions, see [Installing the AIPService PowerShell module](install-powershell.md).
 
-1. Go to the [Rights Management page](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) for Microsoft 365 administrators.
-    
-    If you are prompted to sign in, use an account that is a global administrator for Microsoft 365.
+2. From a PowerShell session, run [Connect-AipService](/powershell/module/aipservice/connect-aipservice), and when prompted, provide the Global Administrator account details for your Azure Information Protection tenant.
 
-2. On the **rights management** page, click **deactivate**.
+3. Run [Get-AipService](/powershell/module/aipservice/get-aipservice) to confirm the current status of the protection service. A status of **Enabled** confirms activation; **Disabled** indicates that the service is deactivated.
 
-3.  When prompted **Do you want to deactivate Rights Management?** click **deactivate**.
+4. To deactivate the service, run [Disable-AipService](/powershell/module/aipservice/disable-aipservice).
 
-You should now see **Rights Management is not activated** and the option to activate.
+5. Run [Get-AipService](/powershell/module/aipservice/get-aipservice) again to confirm the protection service is now deactivated. This time, the status should display **Disabled**.
 
-#### To deactivate Rights Management from the Azure portal
-
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](/previous-versions/azure/information-protection/configure-policy#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
-
-    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
-
-2. On the initial **Azure Information Protection** pane, select **Protection activation**. 
-
-3.  On the **Azure Information Protection - Protection activation** pane, select **Deactivate**. Select **Yes** to confirm your choice.
-
-The information bar displays **Deactivation finished successfully** and **Deactivate** is now replaced with **Activate**.
+6. Run [Disconnect-AipService](/powershell/module/aipservice/disconnect-aipservice) to disconnect from the service, and close your PowerShell session.
