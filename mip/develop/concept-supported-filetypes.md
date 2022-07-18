@@ -115,7 +115,7 @@ These file types are identified separately because when they are natively protec
 | .jfif                        | .pjfif                        |
 
 > [!NOTE]
-> When using the File SDK's FileHandler to add or remove a label, with or without protection, and using streams for output, a **read/write** stream is required. Failure to use a read/write stream will result in an "Unknown Error." 
+> When using the File SDK's FileHandler with an output stream, the stream must be opened with **read/write** access. Failure to use a read and write stream may result in an "Unknown Error." 
 
 ###### Footnote 1
 With the latest version of the Microsoft Information Protection SDK, the file name extension of the protected PDF document remains as .pdf.

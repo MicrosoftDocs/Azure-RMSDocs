@@ -138,7 +138,7 @@ The MIP SDK doesn't support the use of authenticated proxies. To fix this messag
 
 ### Error: "Unknown Error" when labeling an image file using a stream output
 
-**Question:** When I attempt to add/remove a label, with or without protection, from an image file type using a stream for output, why do I get an "unknown error?"
+**Question:** Why do I get an "unknown error" when I attempt to add or remove a label or protection from an image file type using a stream for output?
 
-Reading or writing labels, with or without protection, on image files requries that the output stream is both **read and write**. 
+When using a stream for output, the stream must have both read and write access to modify the label or protection for an image file.
 
