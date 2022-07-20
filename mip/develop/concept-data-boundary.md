@@ -26,7 +26,7 @@ Possible values for the DataBoundary enum are:
 
 ## When to set the Data Boundary
 
-Your application will need to provide an interface that allows users or administrators to set this property based on their data residency requirements. For applications with an adminsitrative interface, this can be done inside the admin portal. For client applications, you may need to enable deployment of a registry key, configuration value, or other setting. Your application will need to read this value and set the data boundary appropriately.
+Your application will need to provide an interface that allows users or administrators to set this property based on their data residency requirements. For applications with an administrative interface, this option can be done inside the admin portal. For client applications, you may need to enable deployment of a registry key, configuration value, or other setting. Your application will need to read this value and set the data boundary appropriately.
 
 In coming releases, we'll make this setting transparent based on the data boundary defined in the customer tenancy.
 
