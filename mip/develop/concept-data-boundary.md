@@ -14,7 +14,7 @@ To support requirements around data privacy regulations, the Microsoft Informati
 
 ## Data Boundary Values and Behaviors
 
-Possible values for the DataBoundary enum are:
+Possible values for the `DataBoundary` enum are:
 
 | Value                    | Details                                                                                                                 |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------- |

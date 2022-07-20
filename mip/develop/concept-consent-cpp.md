@@ -10,7 +10,7 @@ ms.author: mbaldwin
 
 # Microsoft Information Protection SDK - Consent
 
-The `mip::Consent` enum class implements an easy-to-use approach that permits application developers to provide a custom consent experience based on the endpoint that is being accessed by the SDK. The notification can inform a user of the data that will be collected, how to get the data removed, or any other information that is required by law or compliance policies. Once the user grants consent, the application can continue. This delegate is called only when attempting to access Active Directory Rights Management Services (AD RMS). It isn't called when accessing cloud services. If your application won't support AD RMS, you can implement a simple delegate that always returns `Consent.AcceptAlways`.
+The `mip::Consent` enum class implements an easy-to-use approach that permits application developers to provide a custom consent experience based on the endpoint that is being accessed by the SDK. The notification can inform a user of the data that will be collected, how to get the data removed, or any other information that is required by law or compliance policies. Once the user grants consent, the application can continue. This delegate is called only when attempting to access Active Directory Rights Management Services (AD RMS). It isn't called when accessing cloud services. If your application won't support AD RMS, you can implement a delegate that always returns `Consent.AcceptAlways`.
 
 ### Implementation
 
