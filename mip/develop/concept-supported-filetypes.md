@@ -29,6 +29,8 @@ The following file types can be classified even when they are not protected.
 
 - **Adobe Portable Document Format**: .pdf
 
+- **Microsoft Power BI**: .pbit, .pbix
+
 - **Microsoft Project**: .mpp, .mpt
 
 - **Microsoft Publisher**: .pub
