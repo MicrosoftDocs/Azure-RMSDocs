@@ -76,7 +76,9 @@ Parameters:
 **Returns**: True if value exists else false.
   
 ### GetAncestors function
+
 Returns current node ancestors (for debug text), in the following purpose &lt;node grand parent attributes=...&gt;&gt;&lt;node parent&gt;&lt;node&gt;.
+
 used for debugging purposes, and error logging.
   
 ### IsEmptyElement function
