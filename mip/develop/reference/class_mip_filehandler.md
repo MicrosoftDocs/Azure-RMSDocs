@@ -13,6 +13,7 @@ Interface for all file handling functions.
   
 ## Summary
 
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr&lt;ContentLabel&gt; GetLabel()  |  Starts retrieving the sensitivity label from the file.
@@ -34,6 +35,7 @@ public void GetDecryptedTemporaryFileAsync(const std::shared_ptr&lt;void&gt;& co
 public void GetDecryptedTemporaryStreamAsync(const std::shared_ptr&lt;void&gt;& context)  |  Returns a stream - representing the decrypted content.
 public void NotifyCommitSuccessful(const std::string& actualFilePath)  |  To be called when the changes have been committed to disk.
 public std::string GetOutputFileName()  |  Calculates the output file name and extension based on the original file name and the accumulated changes.
+
   
 ## Members
   
