@@ -34,7 +34,7 @@
       "feedback_system": "GitHub",
       "uhfHeaderId": "azure",
       "feedback_github_repo": "MicrosoftDocs/azure-rmsdocs",
-      "feedback_product_url": "https://office365.uservoice.com/forums/928576-microsoft-information-protection-mip",
+      "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/",
       "layout": "Conceptual",
       "breadcrumb_path": "/azure/information-protection/bread/toc.json",
       "searchScope": [
