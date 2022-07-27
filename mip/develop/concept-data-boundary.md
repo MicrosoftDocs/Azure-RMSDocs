@@ -1,5 +1,5 @@
 ---
-title: Concepts - Data Boundary
+title: Concepts - Data boundary
 description: This article will help you understand the concepts around data compliance boundaries in MIP SDK.
 author: tommoser
 ms.service: information-protection
@@ -8,11 +8,11 @@ ms.date: 07/20/2022
 ms.author: tommos
 ---
 
-# Concept - Data Boundaries in the MIP SDK
+# Concept - Data boundaries in the MIP SDK
 
 To support requirements around data privacy regulations, the Microsoft Information Protection SDK allows developers to specify a data boundary. This data boundary controls the region to which audit and telemetry events are sent and in certain cases, where these events are stored and processed.
 
-## Data Boundary values and behaviors
+## Data boundary values and behaviors
 
 Possible values for the `DataBoundary` enum are:
 
@@ -24,13 +24,13 @@ Possible values for the `DataBoundary` enum are:
 | European_Union           | Audit and telemetry events are emitted to a collector in the European Union region and remain in region for processing. |
 | North_America            | Audit and telemetry events are emitted to North America region and remain in region for processing.                     |
 
-## When to set the Data Boundary
+## When to set the data boundary
 
 Your application will need to provide an interface that allows users or administrators to set this property based on their data residency requirements. For applications with an administrative interface, this option can be done inside the admin portal. For client applications, you may need to enable deployment of a registry key, configuration value, or other setting. Your application will need to read this value and set the data boundary appropriately.
 
 In coming releases, we'll make this setting transparent based on the data boundary defined in the customer tenancy.
 
-## Setting the Data Boundary
+## Setting the data boundary
 
 The `DataBoundary` is set on the `FileEngineSettings`, `ProtectionEngineSettings`, or `PolicyEngineSettings` objects. 
 
