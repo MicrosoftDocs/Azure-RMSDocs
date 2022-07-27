@@ -7,7 +7,7 @@
 - name: Quickstarts
   expanded: true
   items:
-  - name: Setup and configure MIP SDK
+  - name: Set up and configure MIP SDK
     href: setup-configure-mip.md
   - name: Implement AD RMS support with the MIP SDK
     href: quick-app-adrms.md
