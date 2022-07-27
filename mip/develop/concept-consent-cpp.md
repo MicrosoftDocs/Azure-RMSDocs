@@ -10,7 +10,7 @@ ms.author: mbaldwin
 
 # Microsoft Information Protection SDK - Consent
 
-The `mip::Consent` enum class implements an easy-to-use approach that permits application developers to provide a custom consent experience based on the endpoint that is being accessed by the SDK. The notification can inform a user of the data that will be collected, how to get the data removed, or any other information that is required by law or compliance policies. Once the user grants consent, the application can continue. 
+The `mip::Consent` enum class implements an easy-to-use approach that permits application developers to provide a custom consent experience based on the endpoint that is being accessed by the SDK. The notification can inform a user of the data that will be collected, how to get the data removed, or any other information that is required by law or compliance policies. Once the user grants consent, the application can continue. This delegate is called only when attempting to access Active Directory Rights Management Services (AD RMS). It isn't called when accessing cloud services. If your application won't support AD RMS, you can implement a delegate that always returns `Consent.AcceptAlways`.
 
 ### Implementation
 
@@ -24,7 +24,7 @@ When a user performs an operation that would require providing consent, the SDK 
 
 - **AcceptAlways**: Consent and remember the decision.
 - **Accept**: Consent once.
-- **Reject**: Do not consent.
+- **Reject**: Don't consent.
 
 When the SDK requests user consent with this method, the client
 application should present the URL to the user. Client applications should
@@ -47,7 +47,7 @@ public:
 
 #### consent_delegate_impl.cpp
 
-When the SDK requires consent, the `GetUserConsent` method is called *by the SDK*, and the URL passed in as a parameter. In the sample below, the user is notified that the SDK will connect to that provided URL and provides the user with an option on the commandline. Based on the choice by the user, the user accepts or rejects consent and that is passed to the SDK. If the user declines to consent the application will throw an exception and no call is made to the protection service. 
+When the SDK requires consent, the `GetUserConsent` method is called *by the SDK*, and the URL passed in as a parameter. In the sample below, the user is notified that the SDK will connect to that provided URL and provides the user with an option on the commandline. Based on the choice by the user, the user accepts or rejects consent and that is passed to the SDK. If the user declines to consent, the application will throw an exception, and no call is made to the protection service.
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
@@ -78,7 +78,7 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
 }
 ```
 
-For testing and development purposes, a simple `ConsentDelegate` can be implemented that looks like:
+When in testing, or development, or when using only the cloud-based services, a basic `ConsentDelegate` can be implemented.
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
