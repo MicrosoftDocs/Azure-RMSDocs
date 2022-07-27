@@ -12,7 +12,7 @@ ms.author: tommos
 
 To support requirements around data privacy regulations, the Microsoft Information Protection SDK allows developers to specify a data boundary. This data boundary controls the region to which audit and telemetry events are sent and in certain cases, where these events are stored and processed.
 
-## Data Boundary Values and Behaviors
+## Data Boundary values and behaviors
 
 Possible values for the `DataBoundary` enum are:
 
@@ -24,7 +24,7 @@ Possible values for the `DataBoundary` enum are:
 | European_Union           | Audit and telemetry events are emitted to a collector in the European Union region and remain in region for processing. |
 | North_America            | Audit and telemetry events are emitted to North America region and remain in region for processing.                     |
 
-## When to Set the Data Boundary
+## When to set the Data Boundary
 
 Your application will need to provide an interface that allows users or administrators to set this property based on their data residency requirements. For applications with an administrative interface, this option can be done inside the admin portal. For client applications, you may need to enable deployment of a registry key, configuration value, or other setting. Your application will need to read this value and set the data boundary appropriately.
 
@@ -45,6 +45,6 @@ var engineSettings = new FileEngineSettings(identity.Email, authDelegate, "", "e
 
 In the example above, all telemetry and audit events will be sent directly to the European Union.
 
-## Sovereign Cloud Support
+## Sovereign Cloud support
 
 The `DataBoundary` setting has no effect on clouds other than the default commercial cloud. Clouds such as Government Community Cloud High (GCC High) and 21-Vianet send data directly to those clouds by default.

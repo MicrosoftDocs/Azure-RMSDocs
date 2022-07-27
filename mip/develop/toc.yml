@@ -77,7 +77,7 @@
     href: concept-cache-storage.md  
   - name: Consent
     href: concept-consent-cpp.md 
-  - name: Data Privacy and Compliance
+  - name: Data privacy and compliance
     href: concept-data-boundary.md  
   - name: Delegation
     href: concept-delegation.md
