@@ -103,11 +103,6 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 - Fixed an issue where policy change would cause a crash due to mismatch between native and managed map during `OnPolicyChanged` call
 
-### Breaking Changes
-
-- Static `FileHandler::GetProperties` has been removed
-  - Use non-static `FileHandler::GetProperties` method
-
 ### Platform and Dependency Changes
 
 - Fixed an issue where telemetry and audit data may not be sent when using C# or Java interface 
