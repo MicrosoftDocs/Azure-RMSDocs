@@ -83,6 +83,37 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Fixed a crash specific to Android. 
 - Fixed an issue where SDK wasn't fully honoring log level
 
+## Version 1.11.96
+
+**Release Date:** July 20, 2022
+
+### File SDK
+
+- Fixed a bug in `MemoryStream` for `GetDecryptedTemporaryStream` large file types 
+- Fixed a bug causing data loss during PDF encryption due to stack overflow crash 
+  - With `OptimizePdfMemory`, if /Info is an `ObjStm` with an internal indirect object, it will now return `PDFPARSER_ERROR_FORMAT` instead of stack overflow 
+- Fixed a bug where supporting MIP libraries were not loading in Java 
+- Fixed a bug where MSG files with protected MSG file attachments would experience corruption when `rpmsg` extension had a trailing null terminator 
+- Fixed a crash in MSG files with link attachments 
+- Fixed a bug where sequence of label application was not honored correctly using AIP Unified Client app for Windows 
+- Fixed a bug where `RemoveProtection` thew `LabelDisabledError` exception stating inactive label was specified 
+- Fixed a bug where `DeleteLabel` threw invalid metadata exception while input file is protected by templateID
+
+### Policy SDK
+
+- Fixed an issue where policy change would cause a crash due to mismatch between native and managed map during `OnPolicyChanged` call
+
+### Platform and Dependency Changes
+
+- Fixed an issue where telemetry and audit data may not be sent when using C# or Java interface 
+- Fixed a bug where clouds with the same base URL were not treated consistently 
+- Updated version of Adobe XMP to 6.0.0 and pushed security fix for expat vulnerability in 2.1.0 `storeAtts()` function 
+- Exposed `EnableAuditAndTelemetryForSovereignClouds` flag for .NET 
+- Fixed a crash caused by control flow integrity performing vtable security checks 
+  - Disabled these checks because Android doesn't support cross-library vtable checks 
+- Fixed a bug in Windows crypto delegate for use after free vulnerability. Applies only to applications that set `EnableFipsValidatedCryptography` on Windows 
+  - `hashObject` vector was being cleaned up before the handle and caused a use after free when the handle was cleaned up in the destructor of `BcryptData`
+
 ## Version 1.11.64
 
 **Release Date:** January 12, 2022
