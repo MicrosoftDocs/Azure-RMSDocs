@@ -99,11 +99,11 @@ This version includes the following new features, fixes, and enhancements for th
 
 Starting in 2.14.85.0, MSAL will be the default authentication library.
 
-All authentication flows will not be able to automatically login as the cached token will not be applicable for MSAL. The current authentication flow includes three methods: Cache Token - 'TokenCache' file located in MSIP folder, integrated Windows authentication (SSO) and interactive flow that prompts user for credentials.
+All authentication flows will not be able to automatically login as the cached token in the MSIP folder will not be applicable for MSAL.
 
 To reauthenticate, use the PSH cmdlet `Set-AIPAuthentication` with application details. For Scanner Users, the AIP product enables users to authenticate with two different auth flows and will require application details or "on behalf of" user details.
 
-If there is a failure to sign in with MSAL, a registry key `AuthenticateUsingAdal` was exposed as a local manual switch back to ADAL.
+If there is a failure to sign in with MSAL, a registry key `AuthenticateUsingAdal` enables a local manual switch back to ADAL.
 
 Path: Computer\HKEY_LOCAL_MACHINE\WOW6432Node\Microsoft\MSIP
 Key: AuthenticateUsingAdal
