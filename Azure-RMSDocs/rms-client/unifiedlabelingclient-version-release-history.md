@@ -87,6 +87,28 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 >
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
+## Version 2.14.85.0
+
+Unified labeling scanner and client version 2.14.85.0
+
+**Released** 8/31/2022
+
+This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
+
+## Fixes and improvements
+
+This version of the unified labeling client and scanner provides the following fixes and improvements:
+
+- Fixed an issue where msg.pfile was not opening in Classify And Protect right-click interface
+- Fixed an issue where AIP was calling `CompleteInit` multiple times in succession before calling `GetLabel`/`SetLabel` which increased usage of User resources.
+- Fixed an issue with AIP UL double protection of IQP protected files; `Set-AIPFileLabel` and `Set-AIPFileClassification` PSH cmdlets blocked for relabel of IQP protected file 
+- Fixed an issue where licensing redirection for IQP protected files were not working for PDF and CSV files with AIP UL Client 2.12 & up. 
+- Fixed an issue with SharpZipLib component governance security
+- Fixed an issue with Office content bits
+- Fixed an issue with `Set-AIPFileLabel` PSH crash when parsing MSG file with link attachment
+- Fixed an issue where Discover event logs could not verify audit logs in Log Analytics when opening a protected PDF file with AIP Viewer 
+
+
 ## Version 2.13.49.0
 
 Unified labeling scanner and client version 2.13.49.0
