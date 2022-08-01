@@ -3,9 +3,9 @@
 
 title: Known issues - Azure Information Protection
 description: Search and browse through known issues and limitations for Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 12/12/2021
 ms.topic: reference
 ms.collection: M365-security-compliance

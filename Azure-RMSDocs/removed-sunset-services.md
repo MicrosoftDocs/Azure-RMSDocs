@@ -3,9 +3,9 @@
 
 title: Removed and retired services - Azure Information Protection
 description: Learn about removed or retired services that you may have used or are still using with Azure Information Protection
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 02/16/2022
 ms.topic: conceptual
 ms.collection: M365-security-compliance

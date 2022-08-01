@@ -3,9 +3,9 @@
 
 title: Track and revoke access - Azure Information Protection
 description: Describes how administrators can track document access for protected documents, as well as revoke access if needed.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 06/08/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance

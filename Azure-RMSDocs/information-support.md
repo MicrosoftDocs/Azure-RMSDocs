@@ -3,9 +3,9 @@
 
 title: Information & support for Azure Information Protection - AIP
 description: Resources for administrators, which include information about new releases, support options, and how to contact Microsoft to report a problem. 
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

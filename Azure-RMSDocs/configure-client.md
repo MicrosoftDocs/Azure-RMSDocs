@@ -3,9 +3,9 @@
 
 title: Azure Information Protection client - Install & configure
 description: Information for admins about deploying the Azure Information Protection clients on Windows computers and mobile devices.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 03/16/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance

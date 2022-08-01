@@ -3,9 +3,9 @@
 
 title: Tutorial - Migrating from the Azure Information Protection (AIP) classic client to the unified labeling solution
 description: A step-by-step tutorial for migrating from the Azure Information Protection (AIP) classic client to the unified labeling client.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 10/19/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
