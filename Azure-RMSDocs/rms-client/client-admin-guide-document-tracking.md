@@ -3,9 +3,9 @@
 
 title: Document tracking for Rights Management Service protection via the legacy tracking portal
 description: Instructions and information for admins to configure and use the legacy document tracking portal for the Rights Management Service.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 03/16/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance

@@ -3,9 +3,9 @@
 
 title: Additional prerequisites for Azure AD and Azure Information Protection
 description: Understand additional Azure AD prerequisites for Azure Information Protection in specific scenarios, such as multi-factor or certificate-based authentication and more.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 07/22/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

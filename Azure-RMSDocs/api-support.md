@@ -3,9 +3,9 @@
 
 title: Other apps that support RMS APIs - Install & config - AIP
 description: Understand how the Azure Rights Management service from Azure Information Protection can support other applications to protect your organization's data.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

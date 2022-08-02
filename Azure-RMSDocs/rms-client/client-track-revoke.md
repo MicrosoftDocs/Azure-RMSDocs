@@ -3,9 +3,9 @@
 
 title: Track & revoke documents with the legacy tracking portal - Azure Information Protection
 description: After you have protected your documents, you can track how people are using them. If necessary, you can also revoke access to these documents if people should no longer be able to read them. 
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 1/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

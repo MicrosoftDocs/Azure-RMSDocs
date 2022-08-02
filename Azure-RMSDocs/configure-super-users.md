@@ -3,9 +3,9 @@
 
 title: Configure super users for Azure Rights Management - AIP
 description: Understand and implement the super user feature of the Azure Rights Management service from Azure Information Protection, so that authorized people and services can always read and inspect ("reason over") your organization's protected data.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 07/22/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance

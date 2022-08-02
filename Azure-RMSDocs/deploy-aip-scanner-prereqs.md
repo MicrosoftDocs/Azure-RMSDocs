@@ -3,9 +3,9 @@
 
 title: Azure Information Protection (AIP) unified labeling scanner prerequisites 
 description: Lists prerequisites for installing and deploying the Azure Information Protection unified labeling scanner.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/13/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance

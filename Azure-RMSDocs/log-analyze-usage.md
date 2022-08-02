@@ -3,9 +3,9 @@
 
 title: Log & analyze the protection usage from Azure Information Protection
 description: Information and instructions how to use usage logging for the protection service from Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/11/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

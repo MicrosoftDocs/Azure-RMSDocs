@@ -3,9 +3,9 @@
 
 title: Protected PDF viewers for Microsoft Purview Information Protection
 description: Learn how to open and view PDFs that are labeled for classification and protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 06/21/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance

@@ -3,9 +3,9 @@
 
 title: How apps support Azure Rights Management from AIP
 description: Understand how the most commonly used applications (such as Office apps) and services (such as Exchange and SharePoint) can use the Azure Rights Management service from Azure Information Protection to help protect your organization's documents and emails. 
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 06/06/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance

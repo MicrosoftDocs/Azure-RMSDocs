@@ -3,9 +3,9 @@
 
 title: Learn about built-in labeling and the AIP unified labeling client - AIP
 description: Learn about the differences between the Azure Information Protection client and built-in labeling from Microsoft Purview Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 01/20/2022
 ms.topic: conceptual
 ms.collection: M365-security-compliance

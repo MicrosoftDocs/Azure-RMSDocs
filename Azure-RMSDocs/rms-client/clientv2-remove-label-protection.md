@@ -3,9 +3,9 @@
 
 title: Remove labels using the Azure Information Protection unified labeling client
 description: Instructions about how to remove sensitivity labels and protection from files and emails using the Azure Information Protection unified labeling client.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/03/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
