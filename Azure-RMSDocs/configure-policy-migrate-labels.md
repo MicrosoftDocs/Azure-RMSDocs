@@ -3,9 +3,9 @@
 
 title: Migrate Azure Information Protection labels to unified sensitivity labels - AIP
 description: Migrate Azure Information Protection labels to unified sensitivity labels for clients and services that support the Microsoft Purview Information Protection framework. 
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 04/06/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance

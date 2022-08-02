@@ -3,9 +3,9 @@
 
 title: Azure Information Protection (AIP) labeling, classification, and protection
 description: Learn how Azure Information Protection (AIP) can label documents and emails to classify and protect your data.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

@@ -3,9 +3,9 @@
 
 title: Use PowerShell with the Azure Information Protection unified labeling client
 description: Instructions and information for admins to manage the Azure Information Protection unified labeling client by using PowerShell.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 01/14/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance

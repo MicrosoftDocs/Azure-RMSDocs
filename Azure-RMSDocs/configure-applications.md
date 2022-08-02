@@ -3,9 +3,9 @@
 
 title: Configuring applications for Azure Rights Management - AIP
 description: Instructions for admins to configure applications and services to support the Azure Rights Management protection service for Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/11/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

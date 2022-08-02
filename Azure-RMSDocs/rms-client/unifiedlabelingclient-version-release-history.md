@@ -3,9 +3,9 @@
 
 title: Release management and supportability - Azure Information Protection (AIP)
 description: Learn about the contents of each version of the Azure Information Protection (AIP) unified labeling client for Windows and understand the lifecycle policy for support.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 06/24/2022
 ms.topic: conceptual
 ms.collection: M365-security-compliance

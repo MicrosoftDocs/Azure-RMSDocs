@@ -1,9 +1,9 @@
 ---
 title: Tutorial - Discovering your sensitive content with the Azure Information Protection (AIP) scanner
 description: Use the Azure Information Protection (AIP) scanner to locate repositories that may be at risk. Then, drill down to scan those file shares for sensitive content.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/09/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance

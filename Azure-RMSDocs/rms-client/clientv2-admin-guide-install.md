@@ -3,9 +3,9 @@
 
 title: Install the Azure Information Protection (AIP) unified labeling client for users
 description: Learn how administrators can deploy the Azure Information Protection (AIP) unified labeling client for your users across an enterprise network.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 12/21/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance

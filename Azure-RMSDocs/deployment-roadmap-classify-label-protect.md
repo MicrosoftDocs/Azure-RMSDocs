@@ -3,9 +3,9 @@
 
 title: Deploy Azure Information Protection (AIP) for classification, labeling, and protection
 description: Use these steps to prepare for, implement, and manage Azure Information Protection (AIP) for your organization, when you want to classify, label, and protect your data.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/11/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

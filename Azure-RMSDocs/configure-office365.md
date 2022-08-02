@@ -3,9 +3,9 @@
 
 title: Configuration for Microsoft 365 services to use Azure RMS - AIP
 description: Information and instructions for admins to configure Microsoft 365 services to work with the Azure Rights Management service from Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

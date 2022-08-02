@@ -3,9 +3,9 @@
 
 title: Activating the protection service from Azure Information Protection (AIP)
 description: Learn about activating the Azure Rights Management protection service in order to protect your documents and emails.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/30/2019
 ms.topic: how-to
 ms.collection: M365-security-compliance

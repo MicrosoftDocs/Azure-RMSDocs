@@ -3,9 +3,9 @@
 
 title: View protected files with the Azure Information Protection unified labeling client
 description: Instructions to view a protected file that requires you to have the Azure Information Protection unified labeling viewer installed.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/03/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
