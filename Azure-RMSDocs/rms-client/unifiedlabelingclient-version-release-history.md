@@ -93,7 +93,7 @@ Unified labeling scanner and client version 2.14.85.0
 
 **Released** 8/31/2022
 
-This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
+This version includes the following fixes and enhancements for the unified labeling scanner and client:
 
 ## Migration from ADAL Library to MSAL Library for Authentication
 
