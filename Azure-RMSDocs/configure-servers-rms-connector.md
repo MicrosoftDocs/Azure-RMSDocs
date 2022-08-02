@@ -3,9 +3,9 @@
 
 title: Configure servers for the Rights Management connector - AIP
 description: Information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from Deploying the Microsoft Rights Management connector.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

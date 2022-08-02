@@ -3,9 +3,9 @@
 
 title: File types supported by the Azure Information Protection (AIP) unified labeling client
 description: Learn about the file types and sizes supported for the Azure Information Protection (AIP) unified labeling client for Windows.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 07/08/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance

@@ -3,9 +3,9 @@
 
 title: FAQs for Azure Information Protection (AIP)
 description: Get answers to frequently asked questions about Azure Information Protection (AIP) and its protection service, Azure Rights Management (Azure RMS).
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/14/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance

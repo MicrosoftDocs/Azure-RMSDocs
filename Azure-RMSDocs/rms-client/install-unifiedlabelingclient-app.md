@@ -3,9 +3,9 @@
 
 title: Download & install the Azure Information Protection unified labeling client
 description: Instructions for users to install the Azure Information Protection unified labeling client for Windows, so that you can classify and protect your documents and emails. 
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 05/06/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance

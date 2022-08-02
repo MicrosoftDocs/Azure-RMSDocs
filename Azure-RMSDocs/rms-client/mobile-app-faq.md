@@ -3,9 +3,9 @@
 
 title: Mobile viewer apps for Azure Information Protection (iOS and Android) - AIP
 description: Learn how to view protected files on your iOS and Android devices using the Azure Information Protection (AIP) viewer apps.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 04/25/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance

@@ -3,9 +3,9 @@
 
 title: Compliance & information for Azure Information Protection
 description: Supporting information for Azure Information Protection that includes legal, compliance, and SLAs.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

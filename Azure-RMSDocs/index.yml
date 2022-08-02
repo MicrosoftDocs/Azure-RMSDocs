@@ -10,9 +10,9 @@ metadata:
   ms.service: information-protection
   ms.topic: landing-page # Required
   ms.collection: M365-security-compliance
-  author: batamig
-  ms.author: bagol
-  manager: rkarlin
+  author: aashishr
+  ms.author: aashishr
+  manager: aashishr
   ms.date: 12/08/2020 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | deploy | download | get-started | how-to-guide | learn | overview | quickstart | tutorial

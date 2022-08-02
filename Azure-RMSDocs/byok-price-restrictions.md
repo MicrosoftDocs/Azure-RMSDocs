@@ -3,9 +3,9 @@
 
 title: Bring Your Own Key (BYOK) details - Azure Information Protection
 description: Understand details and restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

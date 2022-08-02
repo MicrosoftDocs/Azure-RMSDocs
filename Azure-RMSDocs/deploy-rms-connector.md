@@ -3,9 +3,9 @@
 
 title: Deploy the Rights Management connector - AIP
 description: Instructions to deploy the RMS connector, which provides the data protection service for existing on-premises deployments that use Exchange Server, SharePoint Server, or Windows Server and File Classification Infrastructure (FCI).
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 04/12/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance

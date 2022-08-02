@@ -3,9 +3,9 @@
 
 title: Monitor the Rights Management connector - AIP
 description: Information to help you monitor the connector and your organization's use of the Azure Rights Management service from Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 01/20/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
