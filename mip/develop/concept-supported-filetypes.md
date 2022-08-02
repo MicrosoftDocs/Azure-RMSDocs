@@ -1,6 +1,6 @@
 ---
 title: File types supported - Microsoft Information Protection SDK
-description: Technical details about supported file types, file name extensions, and levels of protection for admins who are are responsible for the Microsoft Information Protection Software Development kit.
+description: Technical details about supported file types, file name extensions, and levels of protection for admins who are responsible for the Microsoft Information Protection Software Development kit.
 author: msmbaldwin
 ms.author: mbaldwin
 ms.date: 08/16/2020
@@ -28,6 +28,8 @@ Use the following information to check which file types the Microsoft Informatio
 The following file types can be classified even when they are not protected.
 
 - **Adobe Portable Document Format**: .pdf
+
+- **Microsoft Power BI**: .pbit, .pbix
 
 - **Microsoft Project**: .mpp, .mpt
 
@@ -71,7 +73,7 @@ You can change the default protection level that the Microsoft Information Prote
 
 ### File sizes supported for protection
 
-Starting in Microsoft Information Protection SDK 1.6, the maximum default file size is 6 GB. This setting can be overridden if required. Lesser defaults for legacy Office platforms still apply.
+Starting in Microsoft Information Protection SDK 1.6, the default maximum file size is 6 GB. This setting can be overridden if required. Lesser defaults for legacy Office platforms still apply.
 
 
 - **For Office files:**
@@ -81,6 +83,10 @@ Starting in Microsoft Information Protection SDK 1.6, the maximum default file s
   | Word 2007 (supported by AD RMS only)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016                         | 32-bit: 512 MB<br /><br />64-bit: 512 MB                                                                                   |
   | Excel 2007 (supported by AD RMS only)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016                     | 32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                                            |
   | PowerPoint 2007 (supported by AD RMS only)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
+
+- **Power BI**
+
+The Microsoft Information Protection SDK supports labeling and protection of Power BI *.pbix* files. These files can be labeled via the File SDK and can be opened in Power BI Desktop or uploaded to the Power BI service.
 
 - **For all other files**:
 
@@ -109,6 +115,9 @@ These file types are identified separately because when they are natively protec
 | .gif                         | .pgif                         |
 | .jpe                         | .pjpe                         |
 | .jfif                        | .pjfif                        |
+
+> [!NOTE]
+> When using the File SDK's FileHandler with an output stream, the stream must be opened with **read/write** access. Failure to use a read and write stream may result in an "Unknown Error." 
 
 ###### Footnote 1
 With the latest version of the Microsoft Information Protection SDK, the file name extension of the protected PDF document remains as .pdf.

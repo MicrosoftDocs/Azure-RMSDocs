@@ -46,7 +46,9 @@ Get body type.
 Get a list of attachment as msg attachment data objects.
 
   
-**Returns**: A vector of std::unique_ptr&lt;MsgAttachmentData&gt;
+
+**Returns**: A vector of std::unique_ptr\<MsgAttachmentData\>
+
   
 ### GetInspectorType function
 Get file types,.
