@@ -15,7 +15,7 @@ ms.custom: has-adal-ref, mode-api
 This quickstart will show you how to implement the client initialization pattern, used by the MIP SDK .NET wrapper at runtime.
 
 > [!NOTE]
-> The steps outlined in this quickstart are required for any client application that uses the MIP .NET wrapper's File or Policy SDKs. The Protection SDK is not yet available. Although this Quickstart demonstrates usage of the File SDKs, this same pattern is applicable to clients using the Policy and Protection SDKs. Future Quickstarts should be done serially, as each one builds on the previous one, with this one being the first.
+> The steps outlined in this quickstart are required for any client application that uses the MIP .NET wrapper's File, Policy, or Protection SDKs. Although this Quickstart demonstrates usage of the File SDKs, this same pattern is applicable to clients using the Policy and Protection SDKs. Future Quickstarts should be done serially, as each one builds on the previous one, with this one being the first. This code is intended to demonstrate how to get started with the MIP SDK and is **not intended for production use.**
 
 ## Prerequisites
 
