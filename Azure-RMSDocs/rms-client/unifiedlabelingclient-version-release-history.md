@@ -97,7 +97,7 @@ This version includes the following fixes and enhancements for the unified label
 
 ## Migration from ADAL Library to MSAL Library for Authentication
 
-Starting in 2.14.85.0, MSAL will be the default authentication library for AIP UL client and AIP Scanner.
+Starting in 2.14.89.0, MSAL will be the default authentication library for AIP UL client and AIP Scanner.
 
 All authentication flows will not be able to automatically login. The previously cached authentication token in the MSIP folder will not be applicable for MSAL.
 
