@@ -95,21 +95,13 @@ Unified labeling scanner and client version 2.14.89.0
 
 This version includes the following fixes and enhancements for the unified labeling scanner and client:
 
-### Migration from ADAL Library to MSAL Library for Authentication
+### Updating Authentication Library to MSAL
 
-Starting in 2.14.89.0, MSAL will be the default authentication library for AIP UL client and AIP Scanner.
+Starting in 2.14.89.0, MSAL will be the default authentication library for AIP UL client and AIP Scanner, replacing ADAL from the previous versions.
 
-All authentication flows will not be able to automatically login. The previously cached authentication token in the MSIP folder will not be applicable for MSAL.
+For the AIP add-in, users should see no impact as we will use token cache or the integrated Windows authentication (SSO) before prompting the use to log in again. 
 
-To reauthenticate, use the PSH cmdlet `Set-AIPAuthentication` with application details. For Scanner Users, the AIP product enables users to authenticate with two different authentication flows and will require application details or "on behalf of" user details.
-
-If there is a failure to sign in with MSAL, a registry key `AuthenticateUsingAdal` enables a local manual switch back to ADAL.
-
-Path: Computer\HKEY_LOCAL_MACHINE\WOW6432Node\Microsoft\MSIP
-Key: AuthenticateUsingAdal
-Value (DWORD):
-1 - ADAL
-0 - MSAL
+For the AIP PowerShell and AIP Scanner, reauthentication is required. To reauthenticate, use the PowerShell cmdlet [Set-AIPAuthentication](https://docs.microsoft.com/en-us/powershell/module/azureinformationprotection/set-aipauthentication?view=azureipps) after uprading to this version. 
 
 ### Fixes and improvements
 
