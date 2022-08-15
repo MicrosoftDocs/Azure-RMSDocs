@@ -107,19 +107,13 @@ For the AIP PowerShell and AIP Scanner, reauthentication is required. To reauthe
 
 This version of the unified labeling client and scanner provides the following fixes and improvements:
 
-- Fixed an issue where msg.pfile was not opening in AIP Viewer "Classify And Protect" right-click interface.
-- Fixed an issue where AIP was calling `CompleteInit` multiple times in succession before calling `GetLabel`/`SetLabel` which increased usage of User resources.
-- Fixed an issue with AIP UL Client double protection of IQP protected files; `Set-AIPFileLabel` and `Set-AIPFileClassification` PowerShell cmdlets blocked for relabel of IQP protected file.
-- Fixed an issue where AIP UL PowerShell did not list filename of IQP protected files by folder list.
-- Fixed an issue where licensing redirection for IQP protected files were not working for PDF and CSV files with AIP UL Client 2.12 & up. 
-- Fixed an issue with SharpZipLib component governance security.
-- Fixed an issue with Office content bits.
-- Fixed an crash with `Set-AIPFileLabel` PowerShell cmdlet when mip_file_sdk.dll was called to parse MSG file with link attachment.
-- Fixed a bug where sequence of label application was not honored correctly using AIP UL Client for Windows.
-- Fixed an issue where double key encryption on Outlook with AIP UL would not work with UDP-enabled labels.
-- Fixed an issue where discover event logs could not verify audit logs in Log Analytics when opening a protected PDF file with AIP Viewer.
-- Fixed an issue with co-authoring where users could not apply labels for certain cultures (i.e. "tr-TR").
-- Fixed an issue where a Super User was unable to remove protection with `Set-AIPFileLabel` -RemoveProtection if label was not published by Super User.
+- Fixed an issue where msg.pfile was not opening in AIP Viewer.
+- Fixed an issue with the performance of `GetLabel`/`SetLabel`.
+- Fixed issues with handling of IQP protected files.
+- Fixed an issue with `Set-AIPFileLabel` crashes.
+- Fixed an issue with audit logging in AIP Viewer for protected PDFs.
+- Fixed an issue with co-authoring where users could not apply labels for certain cultures with special characters (i.e. "tr-TR").
+- Fixed an issue with super user protection for `Set-AIPFileLabel` -RemoveProtection if label was not published by super user.
 
 
 ## Version 2.13.49.0
