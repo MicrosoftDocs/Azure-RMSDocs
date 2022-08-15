@@ -95,7 +95,7 @@ Unified labeling scanner and client version 2.14.89.0
 
 This version includes the following fixes and enhancements for the unified labeling scanner and client:
 
-## Migration from ADAL Library to MSAL Library for Authentication
+### Migration from ADAL Library to MSAL Library for Authentication
 
 Starting in 2.14.89.0, MSAL will be the default authentication library for AIP UL client and AIP Scanner.
 
@@ -111,7 +111,7 @@ Value (DWORD):
 1 - ADAL
 0 - MSAL
 
-## Fixes and improvements
+### Fixes and improvements
 
 This version of the unified labeling client and scanner provides the following fixes and improvements:
 
