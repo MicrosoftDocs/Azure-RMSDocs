@@ -63,6 +63,8 @@
   items:
   - name: SDK Overview
     href: concept-apis-use-cases.md
+  - name: Access checks and rights
+    href: concept-accesscheck.md
   - name: API Permissions
     href: concept-api-permissions.md            
   - name: Authentication (C++)

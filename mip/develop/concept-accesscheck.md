@@ -9,13 +9,13 @@ ms.service: information-protection
 
 ---
 
-# Access checks in the Microsoft Information Protection SDK
+# Access checks in the Microsoft Purview Information Protection SDK
 
 Enforcement of the rights defined by the encryption configuration in Complaince Center is the responsibility of the application developer. The SDK provides an API and set of enumerators to simplify these access checks. 
 
 The examples and tables below will demonstrate which scenarios require the access check, the list of rights to check against, and how to perform the check.
 
-## Rights List and Outcomes
+## Rights list and outcomes
 
 For a full list of the usage rights and descriptions, refer to [Configure usage rights for Azure Information Protection](../../Azure-RMSDocs/configure-usage-rights.md).
 
@@ -26,10 +26,10 @@ This section defines the responsibilities of an **application** when specific ri
 
 | Right                                                                                                  | Permits                                                                                       | If Not Present                                      | Does Not Permit                                                          | Application Responsibility                                                           |
 | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| OWNER                                                                                                  | Perform all operations, including remove protection.                                          | Review set of granular rights.                      | Not applicable.                                                          | Not applicable.                                                                      |
+| OWNER                                                                                                  | Grants all rights to the document and all available actions can be performed.                                          | Review set of granular rights.                      | Not applicable.                                                          | Not applicable.                                                                      |
 | EDIT                                                                                                   | User can edit the content and save changes. User cannot remove protection.                    | Cannot edit or save the document.                   | Print, export/save as, copy/extract, forward/reply/reply all.            | Prohibit all edit/save controls if EDIT not present.                                 |
-| EXPORT                                                                                                 | User can save the file to a different format. The format does not need to support protection. | Cannot export to a different format.                | Print, edit/save, copy/extract, forward/reply/reply all.                 | Prohibit all export/save as controls if EXPORT not set.                              |
-| PRINT                                                                                                  | User can print to a printer.                                                                  | Cannot print.                                       | edit/save, export/save as, copy/extract, forward/reply/reply all.        | Prohibit printing if PRINT right is not set.                                         |
+| EXPORT                                                                                                 | User can save the file to a different format. The format should support protection and maintain label information. | Cannot export to a different format.                | Print, edit/save, copy/extract, forward/reply/reply all.                 | Prohibit all export/save as controls if EXPORT not set.                              |
+| PRINT                                                                                                  | Enables the options to print the content.                                                                  | Cannot print.                                       | edit/save, export/save as, copy/extract, forward/reply/reply all.        | Prohibit printing if PRINT right is not set.                                         |
 | REPLY                                                                                                  | User can reply to an email.                                                                   | Cannot reply to or edit the email.                  | Print, edit/save, export/save as, copy/extract, forward/reply all.       | Prohibit user from replying to email, including editing or changing recipient lists. |
 | REPLY ALL                                                                                              | User can reply all to an email.                                                               | Cannot reply all to the email.                      | Print, edit/save, export/save as, copy/extract, forward/reply.           | Prohibit user from using the reply all button.                                       |
 | FORWARD                                                                                                | User can forward the email.                                                                   | Cannot forward the email. Recipient list is locked. | Print, edit/save, export/save as, copy/extract, reply/reply all.         | Prohibit the user from using the reply all button.                                                     |
@@ -37,18 +37,40 @@ This section defines the responsibilities of an **application** when specific ri
 
 ## Scenarios
 
+Where and how your application performs access checks will depend upon the type of application you're developing. Applications that handle full-file output and have no user interface will use the `EXTRACT` or `OWNER` most frequently. Applications with a user interface will require most granular controls, blocking access to user controls and export paths in the application. See the [performing access checks](#performing-access-checks)section for code examples.
 
+### Applications without a user interface
+
+Applications without a user interface are often service-based or commandline interfaces (CLI). When handling files protected by Purview Information Protection, your application **must** ensure that a user without the correct rights can't use the service or CLI to export the file in an unprotected format. 
+
+These applications should validate that the **OWNER** or **EXPORT** rights are present. Users with **OWNER** can perform any operation. Users with **EXPORT** can directly remove protection or save to a new format, even if that format doesn't support protection.
+
+### Applications with a user interface
+
+File SDK applications with a user interface must implement controls restricting access to operations the user is not permitted to perform. One example of such an application is the Azure Information Protection Viewer. The viewer temporarily decrypts the file and renders contents in the application window. It performs granular access checks before displaying the document and disables user interface elements based on the result.
+
+A partial workflow of performing access checks could look like:
+
+- Does the user have the **OWNER** right? If yes, enable all controls and stop processing additional rights.
+- Does the user have the **PRINT** right? If yes, enable the print control. If not, disable the print control.
+- Does the user have the **EXPORT** right? If yes, enable export controls and UI elements. If not, disable these elements.
+- Does the user have the **EXTRACT** right? If yes, enable copying and screenshots. If not, disable these functions.
+- Does the user have the **EDIT** right? If yes, enable editing and saving the current item. If not, make the item read only.
+
+These checks should be performed for all permissions in the [rights list and outcomes](#rights-list-and-outcomes) table, except for the **VIEW** right. The file won't be accessible without this right.
 
 ## Performing Access Checks
 
+The following code snip is written in C#. It assumes that a FileHandler has been instantiated and points to a protected file.
 
 ```csharp
+// Validate that the file referred to by the FileHandler is protected.
 if(handler.Protection != null)
 {                
     // Validate that user has rights to remove protection from the file.                    
     if(handler.Protection.AccessCheck(Rights.Extract))
     {
-        // If user has Extract right, return decrypted copy. Otherwise, throw exception. 
+        // If user has Extract right, remove protection and commit the change. Otherwise, throw exception. 
         handler.RemoveProtection();
         bool result = handler.CommitAsync(outputPath).GetAwaiter().GetResult();     
         return result;   
