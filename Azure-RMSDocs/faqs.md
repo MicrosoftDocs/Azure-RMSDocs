@@ -222,21 +222,6 @@ Additional information:
 > The Azure Information Protection support for conditional access is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 >
 
-## I see Azure Information Protection is listed as a security provider for Microsoft Graph Security—how does this work and what alerts will I receive?
-
-Yes, as a public preview offering, you can now receive an alert for **Azure Information Protection anomalous data access**. This alert is triggered when there are unusual attempts to access data that is protected by Azure Information Protection. For example, accessing an unusually high volume of data, at an unusual time of day, or access from an unknown location.
-
-Such alerts can help you to detect advanced data-related attacks and insider threats in your environment. These alerts use machine learning to profile the behavior of users who access your protected data.
-
-The Azure Information Protection alerts can be accessed by [using the Microsoft Graph Security API](/graph/api/resources/security-api-overview), or you can [stream alerts](/graph/security-integration) to SIEM solutions, such as Splunk and IBM Qradar, by using Azure Monitor.
-
-For more information about the Microsoft Graph Security API, see [Microsoft Graph Security API overview](/graph/security-concept-overview).
-
-> [!NOTE]
-> The Azure Information Protection support for Microsoft Graph Security is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
->
-
-
 ## Is Azure Information Protection suitable for my country?
 
 Different countries have different requirements and regulations. To help you answer this question for your organization, see [Suitability for different countries](./compliance.md#suitability-for-different-countries).
