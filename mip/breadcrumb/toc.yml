@@ -1,16 +1,15 @@
 - name: Docs
-  href: /
+  tocHref: /
+  topicHref: /
   items:
     - name: Enterprise Mobility + Security
-      href: /enterprise-mobility-security/
+      tocHref: /enterprise-mobility-security/
+      topicHref: /enterprise-mobility-security/index
       items:
       - name: Microsoft Information Protection
+        tocHref: /mip/
+        topicHref: /mip/index
         items:
         - name: Develop
-          href: /information-protection/develop/
-        - name: Develop
-          href: /information-protection/test/
-        - name: Develop
-          href: /azure/information-protection/develop/
-
-
+          tocHref: /mip/develop/
+          topicHref: /mip/develop/index

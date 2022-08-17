@@ -203,7 +203,7 @@ Values                         | Descriptions
 ServiceDiscovery            | Rely on separate HTTP call to determine RMS service endpoints
 AuthInfoCache            | Cache OAuth2 challenges per domain/tenant to reduce unnecessary 401 responses. Disable for apps/services that manage their own HTTP auth (like SPO, Edge)
 LinuxEncryptedCache            | Enable encrypted caching for Linux platforms (Please read the prerequisites for this feature)
-SingleDomainName            | Enable single company name for dns lookup. e.g. [https://corprights](https://corprights)
+SingleDomainName            | Enable single company name for dns lookup. e.g. `https://corprights`
 PolicyAuth            | Enable automatic HTTP authentication for requests sent to Policy service. Disable for apps/services that manage their own HTTP auth (like SPO, Edge)
 UrlRedirectCache            | Cache URL redirects to reduce number of HTTP operations
 PreLicensing            | Enable pre license api check
