@@ -188,18 +188,22 @@ The `RemoveProtection()` function behaves in a manner similar to `SetLabel()` or
 // Validate that the file referred to by the FileHandler is protected.
 if (fileHandler->GetProtection() != nullptr)
 {
-   // Validate 
+    // Validate that user is allowed to remove protection.
     if (fileHandler->GetProtection()->AccessCheck(mip::rights::Export() || fileHandler->GetProtection()->AccessCheck(mip::rights::Owner()))
     {
         auto commitPromise = std::make_shared<std::promise<bool>>();
         auto commitFuture = commitPromise->get_future();
+        // Remove protection and commit changes to file.
         fileHandler->RemoveProtection();
         fileHandler->CommitAsync(outputFile, commitPromise);
         result = commitFuture.get();
     }
     else
     {
+        // Throw an exception if the user doesn't have rights to remove protection.
         throw std::runtime_error("User doesn't have EXPORT or OWNER right.");
     }
 }
 ```
+
+
