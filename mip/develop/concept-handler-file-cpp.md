@@ -13,7 +13,7 @@ In the MIP File SDK, the `mip::FileHandler` exposes all of the various operation
 
 ## Supported file types
 
-- Office File Formats based on OCP (Office 2010 and later)
+- Office File Formats based on OPC (Office 2010 and later)
 - Legacy Office File Formats (Office 2007)
 - PDF
 - Generic PFILE support
@@ -28,7 +28,9 @@ In this article, the following methods will be covered:
 - `GetLabelAsync()`
 - `SetLabel()`
 - `DeleteLabel()`
+- `RemoveProtection()`
 - `CommitAsync()`
+
 
 ## Requirements
 
@@ -46,13 +48,13 @@ Creating the `FileHandler` is as easy as calling the `FileEngine`'s `CreateFileH
 
 `CreateFileHandlerAsync` accepts three parameters: The path to the file that should be read or modified, the `mip::FileHandler::Observer` for asynchronous event notifications, and the promise for the `FileHandler`.
 
-**Note:** The `mip::FileHandler::Observer` class must be implemented in a derived class as `CreateFileHandler` requires the `Observer` object. 
+**Note:** The `mip::FileHandler::Observer` class must be implemented in a derived class as `CreateFileHandler` requires the `Observer` object.
 
 ```cpp
 auto createFileHandlerPromise = std::make_shared<std::promise<std::shared_ptr<mip::FileHandler>>>();
 auto createFileHandlerFuture = createFileHandlerPromise->get_future();
 fileEngine->CreateFileHandlerAsync(filePath, std::make_shared<FileHandlerObserver>(), createFileHandlerPromise);
-auto handler = createFileHandlerFuture.get();
+auto fileHandler = createFileHandlerFuture.get();
 ```
 
 After successfully creating the `FileHandler` object, file operations (get/set/delete/commit) can be performed.
@@ -72,12 +74,12 @@ There are a few requirements to successfully reading metadata from a file and tr
 
 Having created the handler to point to a specific file, we return to the promise/future pattern to asynchronously read the label. The promise is for a `mip::ContentLabel` object that contains all of the information about the applied label.
 
-After instantiating the `promise` and `future` objects, we read the label by calling `handler->GetLabelAsync()` and providing the `promise` as the lone parameter. Finally, the label can be stored in a `mip::ContentLabel` object that will we get from the `future`.
+After instantiating the `promise` and `future` objects, we read the label by calling `fileHandler->GetLabelAsync()` and providing the `promise` as the lone parameter. Finally, the label can be stored in a `mip::ContentLabel` object that will we get from the `future`.
 
 ```cpp
 auto loadPromise = std::make_shared<std::promise<std::shared_ptr<mip::ContentLabel>>>();
 auto loadFuture = loadPromise->get_future();
-handler->GetLabelAsync(loadPromise);
+fileHandler->GetLabelAsync(loadPromise);
 auto label = loadFuture.get();
 ```
 
@@ -99,7 +101,7 @@ mip::Label label = mEngine->GetLabelById(labelId);
 
 ### Labeling options
 
-The second parameter required to set the label is `mip::LabelingOptions`. 
+The second parameter required to set the label is `mip::LabelingOptions`.
 
 `LabelingOptions` specifies additional information about the label such as the `AssignmentMethod` and justification for an action.
 
@@ -131,13 +133,13 @@ Having fetched the `mip::Label` from the id, set the labeling options, and, opti
 If you didn't set protection settings, set the label by calling `SetLabel` on the handler:
 
 ```cpp
-handler->SetLabel(label, labelingOptions, mip::ProtectionSettings());
+fileHandler->SetLabel(label, labelingOptions, mip::ProtectionSettings());
 ```
 
 If you did require protection settings to perform a delegated operation, then:
 
 ```cpp
-handler->SetLabel(label, labelingOptions, protectionSettings);
+fileHandler->SetLabel(label, labelingOptions, protectionSettings);
 ```
 
 Having now set the label on the file referenced by the handler, there's still one more step to commit the change and write a file to disk or create an output stream.
@@ -153,7 +155,7 @@ After creating the `promise` and `future`, `CommitAsync()` is called and two par
 ```cpp
 auto commitPromise = std::make_shared<std::promise<bool>>();
 auto commitFuture = commitPromise->get_future();
-handler->CommitAsync(outputFile, commitPromise);
+fileHandler->CommitAsync(outputFile, commitPromise);
 auto wasCommitted = commitFuture.get();
 ```
 
@@ -166,9 +168,38 @@ If writing a label to **FileA.docx**, a copy of the file, **FileB.docx**, will b
 ## Delete a label
 
 ```cpp
-auto handler = mEngine->CreateFileHandler(filePath, std::make_shared<FileHandlerObserverImpl>());
-handler->DeleteLabel(mip::AssignmentMethod::PRIVILEGED, "Label unnecessary.");
+auto fileHandler = mEngine->CreateFileHandler(filePath, std::make_shared<FileHandlerObserverImpl>());
+fileHandler->DeleteLabel(mip::AssignmentMethod::PRIVILEGED, "Label unnecessary.");
 auto commitPromise = std::make_shared<std::promise<bool>>();
 auto commitFuture = commitPromise->get_future();
-handler->CommitAsync(outputFile, commitPromise);
+fileHandler->CommitAsync(outputFile, commitPromise);
+```
+
+## Remove protection
+
+Your File SDK-based application must validate that the user has rights to remove protection from the file being accessed. This can be accomplished by performing an [access check](./concept-accesscheck.md) prior to removing protection.
+
+The `RemoveProtection()` function behaves in a manner similar to `SetLabel()` or `DeleteLabel()`. The method is called on the existing `FileHandler` object, then must be committed. 
+
+>[!IMPORTANT]
+> As the application developer, it's your reponsibility to perform this access check. Failure to properly perform the access check can reuslt in data leakage.
+
+```cpp
+// Validate that the file referred to by the FileHandler is protected.
+if (fileHandler->GetProtection() != nullptr)
+{
+   // Validate 
+    if (fileHandler->GetProtection()->AccessCheck(mip::rights::Export() || fileHandler->GetProtection()->AccessCheck(mip::rights::Owner()))
+    {
+        auto commitPromise = std::make_shared<std::promise<bool>>();
+        auto commitFuture = commitPromise->get_future();
+        fileHandler->RemoveProtection();
+        fileHandler->CommitAsync(outputFile, commitPromise);
+        result = commitFuture.get();
+    }
+    else
+    {
+        throw std::runtime_error("User doesn't have EXPORT or OWNER right.");
+    }
+}
 ```
