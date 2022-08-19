@@ -184,7 +184,7 @@ The `RemoveProtection()` function behaves in a manner similar to `SetLabel()` or
 >[!IMPORTANT]
 > As the application developer, it's your reponsibility to perform this access check. Failure to properly perform the access check can reuslt in data leakage.
 
-C++ Example: 
+C++ example: 
 
 ```cpp
 // Validate that the file referred to by the FileHandler is protected.
@@ -208,7 +208,7 @@ if (fileHandler->GetProtection() != nullptr)
 }
 ```
 
-.NET Example: 
+.NET example: 
 
 ```csharp
 if(handler.Protection != null)
