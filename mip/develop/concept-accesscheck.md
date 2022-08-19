@@ -62,7 +62,14 @@ These checks should be performed for all permissions in the [rights list and out
 
 ## Performing access checks
 
-Patterns for performing the access check are similar across the File and Protection SDK for C++, .NET, and Java. 
+Patterns for performing the access check are similar across the File and Protection SDK for C++, .NET, and Java.
+
+These code samples assume you've gone through the steps to initialize the SDK and have instantiated an engine and handler.
+
+- [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md)
+- [Quickstart: Client application initialization (C#)](quick-app-initialization-csharp.md)
+- [Quickstart: Client application initialization for Protection SDKs (C++)](quick-protection-app-initialization-cpp.md)
+- [Quickstart: Client application initialization for Protection SDKs (C#)](quick-protection-app-initialization-csharp.md)
 
 ### Performing Access Checks in the File SDK with .NET
 
