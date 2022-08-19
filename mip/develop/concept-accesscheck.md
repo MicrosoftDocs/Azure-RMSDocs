@@ -11,7 +11,7 @@ ms.service: information-protection
 
 # Access checks in the Microsoft Purview Information Protection SDK
 
-Enforcement of the rights defined by the encryption configuration in Complaince Center is the responsibility of the application developer. The SDK provides an API and set of enumerators to simplify these access checks. 
+Enforcement of the rights defined by the encryption configuration in Compliance Center is the responsibility of the application developer. The SDK provides an API and set of enumerators to simplify these access checks. 
 
 The examples and tables below will demonstrate which scenarios require the access check, the list of rights to check against, and how to perform the check.
 
@@ -19,7 +19,7 @@ The examples and tables below will demonstrate which scenarios require the acces
 
 For a full list of the usage rights and descriptions, refer to [Configure usage rights for Azure Information Protection](../../Azure-RMSDocs/configure-usage-rights.md).
 
-This section defines the responsibilities of an **application** when specific rights are, or are not, present. 
+This section defines the responsibilities of an **application** when specific rights are, or aren't, present. 
 
 > [!NOTE]
 > It's the responsbility of application developers to both **check and enforce** rights. Failure to perform checks may result in data loss. 
@@ -30,10 +30,10 @@ This section defines the responsibilities of an **application** when specific ri
 | EDIT      | Allows the user to save the document to the current location.                                                                                             | Prohibit all edit/save controls if EDIT not present.                                                   |
 | EXPORT    | Enables the option to save the content to a different file name (Save As). The output format must support protection.                                     | Prohibit all *save as* controls if EXPORT not set.                                                     |
 | EXTRACT   | Enables options to copy data (including screen captures) from the document into the same or another document.                                             | Prohibit screenshots, copy, or any features that result in unprotected output.                         |
-| PRINT     | Enables the options to print the content.                                                                                                                 | Prohibit printing if PRINT right is not set.                                                           |
+| PRINT     | Enables the options to print the content.                                                                                                                 | Prohibit printing if PRINT right isn't set.                                                           |
 | REPLY     | Enables the Reply option in an email client, without allowing changes in the To or Cc lines.                                                              | Prohibit user from replying to email, including editing or changing recipient lists.                   |
 | REPLY ALL | Enables the Reply All option in an email client, but doesn’t allow the user to add recipients to the To or Cc lines.                                      | Prohibit user from using the reply all button.                                                         |
-| FORWARD   | Enables the option to forward an email message and to add recipients to the To and Cc lines. This right does not apply to documents; only email messages. | Prohibit the user from using the reply all button.                                                     |
+| FORWARD   | Enables the option to forward an email message and to add recipients to the To and Cc lines. This right doesn't apply to documents; only email messages. | Prohibit the user from using the reply all button.                                                     |
 | VIEW      | Allows the user to open the document and see the content.                                                                                                 | Prohibit all screenshot, save, print, export, or any scenario that grants access to plaintext content. |
 
 ## Scenarios
@@ -42,17 +42,17 @@ Where and how your application performs access checks will depend upon the type 
 
 ### Applications without a user interface
 
-Applications without a user interface are often service-based or commandline interfaces (CLI). When handling files protected by Purview Information Protection, your application **must** ensure that a user without the correct rights can't use the service or CLI to export the file in an unprotected format.
+Applications without a user interface are often service-based or commandline interfaces (CLI). When your application is handling files protected by Purview Information Protection, it **must** ensure that a user without the correct rights can't use the service or CLI to export the file in an unprotected format.
 
 These applications should validate that the **OWNER** or **EXPORT** rights are present. Users with **OWNER** can perform any operation. Users with **EXPORT** can directly remove protection or save to a new format, even if that format doesn't support protection.
 
 ### Applications with a user interface
 
-File SDK applications with a user interface must implement controls restricting access to operations the user is not permitted to perform. One example of such an application is the Azure Information Protection Viewer. The viewer temporarily decrypts the file and renders contents in the application window. It performs granular access checks before displaying the document and disables user interface elements based on the result.
+File SDK applications with a user interface must implement controls restricting access to operations the user isn't permitted to perform. One example of such an application is the Azure Information Protection Viewer. The viewer temporarily decrypts the file and renders contents in the application window. It performs granular access checks before displaying the document and disables user interface elements based on the result.
 
 A partial workflow of performing access checks could look like:
 
-- Does the user have the **OWNER** right? If yes, enable all controls and stop processing additional rights.
+- Does the user have the **OWNER** right? If yes, enable all controls and stop processing other rights.
 - Does the user have the **PRINT** right? If yes, enable the print control. If not, disable the print control.
 - Does the user have the **EXPORT** right? If yes, enable export controls and UI elements. If not, disable these elements.
 - Does the user have the **EXTRACT** right? If yes, enable copying and screenshots. If not, disable these functions.
