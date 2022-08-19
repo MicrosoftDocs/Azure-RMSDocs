@@ -60,7 +60,11 @@ A partial workflow of performing access checks could look like:
 
 These checks should be performed for all permissions in the [rights list and outcomes](#rights-list-and-outcomes) table, except for the **VIEW** right. The file won't be accessible without this right.
 
-## Performing Access Checks in the File SDK with .NET
+## Performing access checks
+
+Patterns for performing the access check are similar across the File and Protection SDK for C++, .NET, and Java. 
+
+### Performing Access Checks in the File SDK with .NET
 
 This code snip assumes that a FileHandler has been created and points to a valid file.
 
