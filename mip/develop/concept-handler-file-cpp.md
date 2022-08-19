@@ -177,9 +177,9 @@ fileHandler->CommitAsync(outputFile, commitPromise);
 
 ## Remove protection
 
-Your File SDK-based application must validate that the user has rights to remove protection from the file being accessed. This can be accomplished by performing an [access check](./concept-accesscheck.md) prior to removing protection.
+Your MIP File SDK application must validate that the user has rights to remove protection from the file being accessed. This can be accomplished by performing an [access check](./concept-accesscheck.md) prior to removing protection.
 
-The `RemoveProtection()` function behaves in a manner similar to `SetLabel()` or `DeleteLabel()`. The method is called on the existing `FileHandler` object, then must be committed. 
+The `RemoveProtection()` function behaves in a manner similar to `SetLabel()` or `DeleteLabel()`. The method is called on the existing `FileHandler` object, then the change must be committed.
 
 >[!IMPORTANT]
 > As the application developer, it's your reponsibility to perform this access check. Failure to properly perform the access check can reuslt in data leakage.
@@ -206,4 +206,20 @@ if (fileHandler->GetProtection() != nullptr)
 }
 ```
 
-
+```csharp
+if(handler.Protection != null)
+{                
+    // Validate that user has rights to remove protection from the file.                    
+    if(handler.Protection.AccessCheck(Rights.Extract) || handler.Protection.AccessCheck(Rights.Owner))
+    {
+        // If user has Extract right, remove protection and commit the change. Otherwise, throw exception. 
+        handler.RemoveProtection();
+        bool result = handler.CommitAsync(outputPath).GetAwaiter().GetResult();     
+        return result;   
+    }
+    else
+    {
+        throw new Microsoft.InformationProtection.Exceptions.AccessDeniedException("User lacks EXPORT right.");
+    }
+}
+```

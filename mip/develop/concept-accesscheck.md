@@ -24,21 +24,21 @@ This section defines the responsibilities of an **application** when specific ri
 > [!NOTE]
 > It's the responsbility of application developers to both **check and enforce** rights. Failure to perform checks may result in data loss. 
 
-| Right              | Permits                                                                                                            | If Not Present                                      | Does Not Permit                                                          | Application Responsibility                                                                             |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| OWNER              | Grants all rights to the document and all available actions can be performed.                                      | Review set of granular rights.                      | Not applicable.                                                          | Not applicable.                                                                                        |
-| EDIT               | User can edit the content and save changes. User cannot remove protection.                                         | Cannot edit or save the document.                   | Print, export/save as, copy/extract, forward/reply/reply all.            | Prohibit all edit/save controls if EDIT not present.                                                   |
-| EXPORT             | User can save the file to a different format. The format should support protection and maintain label information. | Cannot export to a different format.                | Print, edit/save, copy/extract, forward/reply/reply all.                 | Prohibit all export/save as controls if EXPORT not set.                                                |
-| //TODO Add EXTRACT |    asd                                                                                                                |                                                     |                                                                          |                                                                                                        |
-| PRINT              | Enables the options to print the content.                                                                          | Cannot print.                                       | edit/save, export/save as, copy/extract, forward/reply/reply all.        | Prohibit printing if PRINT right is not set.                                                           |
-| REPLY              | User can reply to an email.                                                                                        | Cannot reply to or edit the email.                  | Print, edit/save, export/save as, copy/extract, forward/reply all.       | Prohibit user from replying to email, including editing or changing recipient lists.                   |
-| REPLY ALL          | User can reply all to an email.                                                                                    | Cannot reply all to the email.                      | Print, edit/save, export/save as, copy/extract, forward/reply.           | Prohibit user from using the reply all button.                                                         |
-| FORWARD            | User can forward the email.                                                                                        | Cannot forward the email. Recipient list is locked. | Print, edit/save, export/save as, copy/extract, reply/reply all.         | Prohibit the user from using the reply all button.                                                     |
-| VIEW               | Viewing of the content. This is the base right required for access.                                                | VIEW is required.                                   | Print, edit/save, export/save as, copy/extract, forward/reply/reply all. | Prohibit all screenshot, save, print, export, or any scenario that grants access to plaintext content. |
+| Right     | Permits                                                                                                                                                   | Application Responsibility                                                                             |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| OWNER     | Grants all rights to the document and all available actions can be performed.                                                                             | Permit all functionality.                                                                              |
+| EDIT      | Allows the user to save the document to the current location.                                                                                             | Prohibit all edit/save controls if EDIT not present.                                                   |
+| EXPORT    | Enables the option to save the content to a different file name (Save As). The output format must support protection.                                     | Prohibit all *save as* controls if EXPORT not set.                                                     |
+| EXTRACT   | Enables options to copy data (including screen captures) from the document into the same or another document.                                             | Prohibit screenshots, copy, or any features that result in unprotected output.                         |
+| PRINT     | Enables the options to print the content.                                                                                                                 | Prohibit printing if PRINT right is not set.                                                           |
+| REPLY     | Enables the Reply option in an email client, without allowing changes in the To or Cc lines.                                                              | Prohibit user from replying to email, including editing or changing recipient lists.                   |
+| REPLY ALL | Enables the Reply All option in an email client, but doesn’t allow the user to add recipients to the To or Cc lines.                                      | Prohibit user from using the reply all button.                                                         |
+| FORWARD   | Enables the option to forward an email message and to add recipients to the To and Cc lines. This right does not apply to documents; only email messages. | Prohibit the user from using the reply all button.                                                     |
+| VIEW      | Allows the user to open the document and see the content.                                                                                                 | Prohibit all screenshot, save, print, export, or any scenario that grants access to plaintext content. |
 
 ## Scenarios
 
-Where and how your application performs access checks will depend upon the type of application you're developing. Applications that handle full-file output and have no user interface will use the `EXTRACT` or `OWNER` most frequently. Applications with a user interface will require most granular controls, blocking access to user controls and export paths in the application. See the [performing access checks](#performing-access-checks)section for code examples.
+Where and how your application performs access checks will depend upon the type of application you're building. Applications that handle full-file output and have no user interface will use the `EXTRACT` or `OWNER` most frequently. Applications with a user interface will require most granular controls, blocking access to user controls and export paths in the application. See the [performing access checks](#performing-access-checks)section for code examples.
 
 ### Applications without a user interface
 
@@ -115,7 +115,7 @@ This code snip assumes that a FileHandler has been created and points to a valid
 // Validate that the file referred to by the FileHandler is protected.
 if (fileHandler->GetProtection() != nullptr)
 {
-    if (fileHandler->GetProtection()->AccessCheck(mip::rights::Export()))
+    if (fileHandler->GetProtection()->AccessCheck(mip::rights::Extract()))
     {
         auto commitPromise = std::make_shared<std::promise<bool>>();
         auto commitFuture = commitPromise->get_future();
@@ -125,7 +125,7 @@ if (fileHandler->GetProtection() != nullptr)
     }
     else
     {
-        throw std::runtime_error("User doesn't have EXPORT right.");
+        throw std::runtime_error("User doesn't have EXTRACT right.");
     }
 }
 ```
