@@ -48,7 +48,7 @@ These applications should validate that the **OWNER** or **EXPORT** rights are p
 
 ### Applications with a user interface
 
-File SDK applications with a user interface must implement controls restricting access to operations the user isn't permitted to perform. One example of such an application is the Azure Information Protection Viewer. The viewer temporarily decrypts the file and renders contents in the application window. It performs granular access checks before displaying the document and disables user interface elements based on the result.
+File SDK applications with a user interface must implement controls restricting access to operations the user isn't permitted to perform. One example of such an application is the Azure Information Protection Viewer. The viewer temporarily decrypts the file and renders contents in the application window. It performs granular access checks before displaying the document and disables user interface elements based on the results of the access checks.
 
 A partial workflow of performing access checks could look like:
 
