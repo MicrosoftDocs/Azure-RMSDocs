@@ -89,9 +89,9 @@ Label data can be read from the `label` object and passed to any other component
 
 ## Set a label
 
-Setting a label is a two part process. First, having created a handler that points to the file in question, the label can be set by calling `FileHandler->SetLabel()` with some parameters: `mip::Label`, `mip::LabelingOptions`, and `mip::ProtectionOptions`. First, we must resolve the label id to a label and then define the labeling options. 
+Setting a label is a two part process. First, having created a handler that points to the file in question, the label can be set by calling `FileHandler->SetLabel()` with some parameters: `mip::Label`, `mip::LabelingOptions`, and `mip::ProtectionOptions`. First, we must resolve the label ID to a label and then define the labeling options. 
 
-### Resolve label id to mip::Label
+### Resolve label ID to mip::Label
 
 The **SetLabel** function's first parameter is a `mip::Label`. Often, the application is working with label identifiers rather than labels. The label identifier can be resolved to the `mip::Label` by calling **GetLabelById** on the file or policy engine:
 
@@ -105,7 +105,7 @@ The second parameter required to set the label is `mip::LabelingOptions`.
 
 `LabelingOptions` specifies additional information about the label such as the `AssignmentMethod` and justification for an action.
 
-- `mip::AssignmentMethod` is simply an enumerator that has three values: `STANDARD`, `PRIVILEGED`, or `AUTO`. Review the `mip::AssignmentMethod` reference for more details.
+- `mip::AssignmentMethod` is an enumerator that has three values: `STANDARD`, `PRIVILEGED`, or `AUTO`. Review the `mip::AssignmentMethod` reference for more details.
 - Justification is required only if the service policy requires it *and* when lowering the *existing* sensitivity of a file.
 
 This snip demonstrates creating the `mip::LabelingOptions` object and setting downgrade justification and message.
@@ -119,7 +119,7 @@ labelingOptions.SetDowngradeJustification(true, "Because I made an educated deci
 
 Some applications may need to perform operations on behalf of a delegated user identity. The `mip::ProtectionSettings` class allows the application to define the delegated identity *per handler*. Previously, the delegation was performed by the engine classes. This had significant disadvantages in application overhead and service round trips. By moving the delegated user settings to `mip::ProtectionSettings` and making that part of the handler class, we eliminate this overhead, resulting in better performance for applications that are performing many operations on behalf of diverse sets of user identities. 
 
-If delegation isn't required, then simply pass `mip::ProtectionSettings()` to the **SetLabel** function. If delegation is required, it can be achieved by creating a `mip::ProtectionSettings` object and setting the delegated mail address:
+If delegation isn't required, then pass `mip::ProtectionSettings()` to the **SetLabel** function. If delegation is required, it can be achieved by creating a `mip::ProtectionSettings` object and setting the delegated mail address:
 
 ```cpp
 mip::ProtectionSettings protectionSettings; 
@@ -128,7 +128,7 @@ protectionSettings.SetDelegatedUserEmail("alice@contoso.com");
 
 ### Set the label
 
-Having fetched the `mip::Label` from the id, set the labeling options, and, optionally, set the protection settings, the label can now be set.
+Having fetched the `mip::Label` using the ID, set the labeling options, and, optionally, set the protection settings, the label can now be set on the handler.
 
 If you didn't set protection settings, set the label by calling `SetLabel` on the handler:
 
@@ -159,7 +159,7 @@ fileHandler->CommitAsync(outputFile, commitPromise);
 auto wasCommitted = commitFuture.get();
 ```
 
-**Important:** The `FileHandler` will not update or overwrite existing files. It's up to the developer to implement **replacing** the file that is being labeled. 
+**Important:** The `FileHandler` won't update or overwrite existing files. It's up to the developer to implement **replacing** the file that is being labeled. 
 
 If writing a label to **FileA.docx**, a copy of the file, **FileB.docx**, will be created with the label applied. Code must be written to remove/rename **FileA.docx** and rename **FileB.docx**.
 
