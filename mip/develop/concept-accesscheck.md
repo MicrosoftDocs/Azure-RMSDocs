@@ -13,7 +13,7 @@ ms.service: information-protection
 
 Enforcement of the information rights management rights [defined in Compliance Center](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide) is the responsibility of the application developer. The SDK provides an API and set of enumerators to simplify these access checks. 
 
-The examples and tables below will demonstrate which scenarios require the access check, the list of rights to check against, and how to perform the check.
+The examples and tables below will demonstrate which scenarios require an access check, the list of rights to check against, and how to perform the check.
 
 ## Rights list and outcomes
 
