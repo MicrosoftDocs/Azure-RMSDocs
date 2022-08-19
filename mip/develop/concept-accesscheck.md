@@ -11,7 +11,7 @@ ms.service: information-protection
 
 # Access checks in the Microsoft Purview Information Protection SDK
 
-Enforcement of the information rights management rights [defined in Compliance Center](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide) is the responsibility of the application developer. The SDK provides an API and set of enumerators to simplify these access checks. 
+Enforcement of the information rights management rights [defined in Compliance Center](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels) is the responsibility of the application developer. The SDK provides an API and set of enumerators to simplify these access checks. 
 
 The examples and tables below will demonstrate which scenarios require an access check, the list of rights to check against, and how to perform the check.
 
@@ -24,17 +24,17 @@ This section defines the responsibilities of an **application** when specific ri
 > [!NOTE]
 > It's the responsbility of application developers to both **check and enforce** rights. Failure to perform checks may result in data loss. 
 
-| Right     | Permits                                                                                                                                                  | Application Responsibility When Right is Absent                                                             |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| OWNER     | Grants all rights to the document and all available actions can be performed.                                                                            | Permit all functionality.                                                                                   |
-| EDIT      | Allows the user to save the document to the current location.                                                                                            | Prohibit all edit/save controls if EDIT not present.                                                        |
-| EXPORT    | Enables the option to save the content to a different file name (Save As). The output format must support protection.                                    | Prohibit all save as controls if EXPORT right isn't present.                                                |
-| EXTRACT   | Enables options to copy data (including screen captures) from the document into the same or another document.                                            | Prohibit screenshots, copy, or any features that result in unprotected output if EXTRACT isn't present.     |
-| PRINT     | Enables the options to print the content.                                                                                                                | Prohibit printing if PRINT right isn't present.                                                             |
-| REPLY     | Enables the Reply option in an email client, without allowing changes in the To or Cc lines.                                                             | Prohibit user from replying to email, including editing or changing recipient lists if REPLY isn't present. |
-| REPLYALL | Enables the Reply All option in an email client, but doesn’t allow the user to add recipients to the To or Cc lines.                                     | Prohibit user from using the reply all button if REPLYALL right isn't present.                                                            |
-| FORWARD   | Enables the option to forward an email message and to add recipients to the To and Cc lines. This right doesn't apply to documents; only email messages. | Prohibit the user from forwarding or updating to/cc/bcc if FORWARD right isn't present.                                                          |
-| VIEW      | Allows the user to open the document and see the content.                                                                                                | Prohibit all screenshot, save, print, export, or any scenario that grants access to plaintext content.      |
+| Right    | Permits                                                                                                                                                  | Application Responsibility When Right is Absent                                                             |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| OWNER    | Grants all rights to the document and all available actions can be performed.                                                                            | Permit all functionality.                                                                                   |
+| EDIT     | Allows the user to save the document to the current location.                                                                                            | Prohibit all edit/save controls if EDIT not present.                                                        |
+| EXPORT   | Enables the option to save the content to a different file name (Save As). The output format must support protection.                                    | Prohibit all save as controls if EXPORT right isn't present.                                                |
+| EXTRACT  | Enables options to copy data (including screen captures) from the document into the same or another document.                                            | Prohibit screenshots, copy, or any features that result in unprotected output if EXTRACT isn't present.     |
+| PRINT    | Enables the options to print the content.                                                                                                                | Prohibit printing if PRINT right isn't present.                                                             |
+| REPLY    | Enables the Reply option in an email client, without allowing changes in the To or Cc lines.                                                             | Prohibit user from replying to email, including editing or changing recipient lists if REPLY isn't present. |
+| REPLYALL | Enables the Reply All option in an email client, but doesn’t allow the user to add recipients to the To or Cc lines.                                     | Prohibit user from using the reply all button if REPLYALL right isn't present.                              |
+| FORWARD  | Enables the option to forward an email message and to add recipients to the To and Cc lines. This right doesn't apply to documents; only email messages. | Prohibit the user from forwarding or updating to/cc/bcc if FORWARD right isn't present.                     |
+| VIEW     | Allows the user to open the document and see the content.                                                                                                | Document is inaccessible without VIEW right.                                                                |
 
 ## Scenarios
 
