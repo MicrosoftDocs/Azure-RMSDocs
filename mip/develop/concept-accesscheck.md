@@ -94,9 +94,9 @@ if(handler.Protection != null)
 }
 ```
 
-## Performing Access Checks in the Protection SDK with .NET
+### Performing Access Checks in the Protection SDK with .NET
 
-This code snip assumes that a Protection has been created and points to a valid file.
+This code snip assumes that a ProtectionHandler has been created for consumption.
 
 ```csharp
 // Validate that the file referred to by the FileHandler is protected.
@@ -118,7 +118,7 @@ if(protectionHandler != null)
 }
 ```
 
-## Performing Access Checks in the File SDK with C++
+### Performing Access Checks in the File SDK with C++
 
 This code snip assumes that a FileHandler has been created and points to a valid file.
 
@@ -141,9 +141,9 @@ if (fileHandler->GetProtection() != nullptr)
 }
 ```
 
-## Performing Access Checks in the Protection SDK with C++
+### Performing Access Checks in the Protection SDK with C++
 
-This code snip assumes that a FileHandler has been created and points to a valid file.
+This code snip assumes that a ProtectionHandler has been created for consumption.
 
 ```cpp
 // Validate that the file referred to by the FileHandler is protected.
