@@ -165,7 +165,7 @@ If writing a label to **FileA.docx**, a copy of the file, **FileB.docx**, will b
 
 ***
 
-## Delete a label
+### Delete a label
 
 ```cpp
 auto fileHandler = mEngine->CreateFileHandler(filePath, std::make_shared<FileHandlerObserverImpl>());
@@ -175,7 +175,7 @@ auto commitFuture = commitPromise->get_future();
 fileHandler->CommitAsync(outputFile, commitPromise);
 ```
 
-## Remove protection
+### Remove protection
 
 Your MIP File SDK application must validate that the user has rights to remove protection from the file being accessed. This can be accomplished by performing an [access check](./concept-accesscheck.md) prior to removing protection.
 
@@ -183,6 +183,8 @@ The `RemoveProtection()` function behaves in a manner similar to `SetLabel()` or
 
 >[!IMPORTANT]
 > As the application developer, it's your reponsibility to perform this access check. Failure to properly perform the access check can reuslt in data leakage.
+
+C++ Example: 
 
 ```cpp
 // Validate that the file referred to by the FileHandler is protected.
@@ -205,6 +207,8 @@ if (fileHandler->GetProtection() != nullptr)
     }
 }
 ```
+
+.NET Example: 
 
 ```csharp
 if(handler.Protection != null)
