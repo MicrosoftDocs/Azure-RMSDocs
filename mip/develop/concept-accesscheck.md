@@ -17,34 +17,20 @@ The examples and tables below will demonstrate which scenarios require an access
 
 ## Rights list and outcomes
 
-For a full list of the usage rights and descriptions, refer to [Configure usage rights for Azure Information Protection](../../Azure-RMSDocs/configure-usage-rights.md).
+For a full list of the usage rights and descriptions, refer to [Configure usage rights for Azure Information Protection](../../Azure-RMSDocs/configure-usage-rights.md). This article defines the responsibilities of an application developer in rights enforcement and enabled functions when specific rights are, or are not, present. 
 
-This section defines the responsibilities of an **application** when specific rights are, or aren't, present. 
-
-> [!NOTE]
-> It's the responsbility of application developers to both **check and enforce** rights. Failure to perform checks may result in data loss. 
-
-| Right    | Permits                                                                                                                                                  | Application Responsibility When Right is Absent                                                             |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| OWNER    | Grants all rights to the document and all available actions can be performed.                                                                            | Permit all functionality.                                                                                   |
-| EDIT     | Allows the user to save the document to the current location.                                                                                            | Prohibit all edit/save controls if EDIT not present.                                                        |
-| EXPORT   | Enables the option to save the content to a different file name (Save As). The output format must support protection.                                    | Prohibit all save as controls if EXPORT right isn't present.                                                |
-| EXTRACT  | Enables options to copy data (including screen captures) from the document into the same or another document.                                            | Prohibit screenshots, copy, or any features that result in unprotected output if EXTRACT isn't present.     |
-| PRINT    | Enables the options to print the content.                                                                                                                | Prohibit printing if PRINT right isn't present.                                                             |
-| REPLY    | Enables the Reply option in an email client, without allowing changes in the To or Cc lines.                                                             | Prohibit user from replying to email, including editing or changing recipient lists if REPLY isn't present. |
-| REPLYALL | Enables the Reply All option in an email client, but doesn’t allow the user to add recipients to the To or Cc lines.                                     | Prohibit user from using the reply all button if REPLYALL right isn't present.                              |
-| FORWARD  | Enables the option to forward an email message and to add recipients to the To and Cc lines. This right doesn't apply to documents; only email messages. | Prohibit the user from forwarding or updating to/cc/bcc if FORWARD right isn't present.                     |
-| VIEW     | Allows the user to open the document and see the content.                                                                                                | Document is inaccessible without VIEW right.                                                                |
+> [!IMPORTANT]
+> It's the responsbility of application developers to both **check and enforce** rights. Failure to perform checks may result in data loss.
 
 ## Scenarios
 
-Where and how your application performs access checks will depend upon the type of application you're building. Applications that handle full-file output and have no user interface will use the `EXTRACT` or `OWNER` most frequently. Applications with a user interface will require most granular controls, blocking access to user controls and export paths in the application. See the [performing access checks](#performing-access-checks)section for code examples.
+Where and how your application performs access checks will depend upon the type of application you're building. Applications that handle full-file output and have no user interface will use the `EXTRACT` or `OWNER` rights most frequently. Applications with a user interface will require most granular controls, blocking access to user controls and export paths in the application. See the [performing access checks](#performing-access-checks)section for code examples.
 
 ### Applications without a user interface
 
 Applications without a user interface are often service-based or commandline interfaces (CLI). When your application is handling files protected by Purview Information Protection, it **must** ensure that a user without the correct rights can't use the service or CLI to export the file in an unprotected format.
 
-These applications should validate that the **OWNER** or **EXPORT** rights are present. Users with **OWNER** can perform any operation. Users with **EXPORT** can directly remove protection or save to a new format, even if that format doesn't support protection.
+These applications should validate that the **OWNER** or **EXTRACT** rights are present. Users with **OWNER** can perform any operation. Users with **EXTRACT** can directly remove protection or save to a new format, even if that format doesn't support protection.
 
 ### Applications with a user interface
 
