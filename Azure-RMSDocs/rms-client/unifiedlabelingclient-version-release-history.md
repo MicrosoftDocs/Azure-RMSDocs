@@ -105,7 +105,7 @@ Starting in 2.14.89.0, MSAL will be the default authentication library for AIP U
 
 For the AIP add-in, users should see no impact as we will use token cache or the integrated Windows authentication (SSO) before prompting the use to log in again. 
 
-For the AIP PowerShell and AIP Scanner, reauthentication is required. To reauthenticate, use the PowerShell cmdlet [Set-AIPAuthentication](../../powershell/module/azureinformationprotection/set-aipauthentication) after uprading to this version. 
+For the AIP PowerShell and AIP Scanner, reauthentication is required. To reauthenticate, use the PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) after uprading to this version. 
 
 ### Fixes and improvements
 
