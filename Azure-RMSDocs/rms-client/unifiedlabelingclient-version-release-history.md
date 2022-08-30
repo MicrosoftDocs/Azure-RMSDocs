@@ -91,9 +91,9 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 >
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Version 2.14.89.0
+## Version 2.14.90.0
 
-Unified labeling scanner and client version 2.14.89.0
+Unified labeling scanner and client version 2.14.90.0
 
 **Released** 09/01/2022
 
