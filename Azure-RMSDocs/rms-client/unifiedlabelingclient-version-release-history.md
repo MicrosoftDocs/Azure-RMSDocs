@@ -59,20 +59,24 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 
 ### General availability versions that are no longer supported
 
-|Client version|Date released|
-|--------------|-------------|
-| 2.9.111.0 |01/13/2021 |
-| 2.8.85.0| 09/22/2020|
-| 2.7.101.0 | 08/23/2020 |
-| 2.7.99.0 | 07/20/2020 |
-| 2.7.96.0  |06/29/2020 |
-|2.6.111.0 | 03/09/2020|
-|2.5.33.0 |10/23/2019|
-|2.2.21.0|09/03/2019|
-|2.2.19.0|08/06/2019|
-|2.2.14.0|07/15/2019|
-|2.0.779.0|05/01/2019|
-|2.0.778.0|04/16/2019|
+|Client version|Date released|Supported through|
+|--------------|-------------|-------------|
+|2.13.49.0|01/12/2022|03/01/2023|
+|2.12.62.0|08/02/2021|09/30/2022|
+|2.11.58.0 |04/29/2021|02/08/2022|
+|2.9.116.0|02/08/2021|10/29/2021|
+|2.9.111.0|01/13/2021|Deprecated|
+|2.8.85.0|09/22/2020|Deprecated|
+|2.7.101.0|08/23/2020|Deprecated|
+|2.7.99.0|07/20/2020|Deprecated|
+|2.7.96.0|06/29/2020|Deprecated|
+|2.6.111.0|03/09/2020|Deprecated|
+|2.5.33.0|10/23/2019|Deprecated|
+|2.2.21.0|09/03/2019|Deprecated|
+|2.2.19.0|08/06/2019|Deprecated|
+|2.2.14.0|07/15/2019|Deprecated|
+|2.0.779.0|05/01/2019|Deprecated|
+|2.0.778.0|04/16/2019|Deprecated|
 
 The date format used on this page is *month/day/year*.
 
@@ -87,11 +91,42 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 >
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
+## Version 2.14.90.0
+
+Unified labeling scanner and client version 2.14.90.0
+
+**Released** 09/01/2022
+
+This version includes the following fixes and enhancements for the unified labeling scanner and client:
+
+### Updating Authentication Library to MSAL
+
+Starting in 2.14.90.0, MSAL will be the default authentication library for AIP UL client and AIP Scanner, replacing ADAL from the previous versions.
+
+For the AIP add-in, users should see no impact as we will use token cache or the integrated Windows authentication (SSO) before prompting the use to log in again. 
+
+For the AIP PowerShell and AIP Scanner, reauthentication is required. To reauthenticate, use the PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) after uprading to this version. 
+
+### Fixes and improvements
+
+This version of the unified labeling client and scanner provides the following fixes and improvements:
+
+- Fixed an issue where msg.pfile was not opening in AIP Viewer.
+- Fixed an issue with the performance of `GetLabel`/`SetLabel`.
+- Fixed issues with handling of IQP protected files.
+- Fixed an issue with `Set-AIPFileLabel` crashes.
+- Fixed an issue with audit logging in AIP Viewer for protected PDFs.
+- Fixed an issue with co-authoring where users could not apply labels for certain cultures with special characters (i.e. "tr-TR").
+- Fixed an issue with super user protection for `Set-AIPFileLabel` -RemoveProtection if label was not published by super user.
+
+
 ## Version 2.13.49.0
 
 Unified labeling scanner and client version 2.13.49.0
 
-**Released** 1/12/2022
+**Supported through** 03/01/2023
+
+**Released** 01/12/2022
 
 This version includes the following new updates, fixes, and enhancements for the unified labeling scanner and client:
 
