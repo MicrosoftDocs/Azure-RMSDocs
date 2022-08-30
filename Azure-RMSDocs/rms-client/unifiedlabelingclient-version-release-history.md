@@ -101,7 +101,7 @@ This version includes the following fixes and enhancements for the unified label
 
 ### Updating Authentication Library to MSAL
 
-Starting in 2.14.89.0, MSAL will be the default authentication library for AIP UL client and AIP Scanner, replacing ADAL from the previous versions.
+Starting in 2.14.90.0, MSAL will be the default authentication library for AIP UL client and AIP Scanner, replacing ADAL from the previous versions.
 
 For the AIP add-in, users should see no impact as we will use token cache or the integrated Windows authentication (SSO) before prompting the use to log in again. 
 
