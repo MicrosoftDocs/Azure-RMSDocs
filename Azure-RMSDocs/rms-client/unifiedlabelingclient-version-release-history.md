@@ -97,7 +97,7 @@ Unified labeling scanner and client version 2.14.90.0
 
 **Released** 09/01/2022
 
-This version includes the following fixes and enhancements for the unified labeling scanner and client:
+This version includes the following fixes for the unified labeling scanner and client:
 
 ### Updating Authentication Library to MSAL
 
@@ -107,9 +107,9 @@ For the AIP add-in, users should see no impact as we will use token cache or the
 
 For the AIP PowerShell and AIP Scanner, reauthentication is required. To reauthenticate, use the PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) after uprading to this version. 
 
-### Fixes and improvements
+### Fixes
 
-This version of the unified labeling client and scanner provides the following fixes and improvements:
+This version of the unified labeling client and scanner provides the following fixes:
 
 - Fixed an issue where msg.pfile was not opening in AIP Viewer.
 - Fixed an issue with the performance of `GetLabel`/`SetLabel`.
