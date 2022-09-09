@@ -17,7 +17,7 @@ The examples and tables below will demonstrate which scenarios require an access
 
 ## Rights list and outcomes
 
-For a full list of the usage rights and descriptions, refer to [Configure usage rights for Azure Information Protection](../../Azure-RMSDocs/configure-usage-rights.md). This article defines the responsibilities of an application developer in rights enforcement and enabled functions when specific rights are, or are not, present. 
+For a full list of the usage rights and descriptions, refer to [Configure usage rights for Azure Information Protection](/azure/information-protection/configure-usage-rights). This article defines the responsibilities of an application developer in rights enforcement and enabled functions when specific rights are, or are not, present. 
 
 > [!IMPORTANT]
 > It's the responsbility of application developers to both **check and enforce** rights. Failure to perform checks may result in data loss.
