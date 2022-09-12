@@ -836,7 +836,7 @@ When these conditions are met, the user sees a pop-up message with one of the fo
 
 When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
 
-See the video [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) for a walkthrough example of how to configure these settings.
+See the following [Custom configurations - Azure Information Protection unified labeling client | Microsoft Docs](https://docs.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
 > [!TIP]
 > To ensure that popups are displayed even when documents are shared from outside Outlook **(File > Share > Attach a copy)**, also configure the [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) advanced setting.
