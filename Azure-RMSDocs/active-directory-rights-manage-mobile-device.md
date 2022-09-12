@@ -50,6 +50,8 @@ You can download the Active Directory Rights Management Services (AD RMS) mobile
 
 For additional information, download the "Microsoft Azure Information Protection" white paper and accompanying scripts from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=40333).
 
+Please note AIP mobile app on Android no longer support ADRMS protected files [Review Known issues ](https://docs.microsoft.com/en-us/azure/information-protection/known-issues#known-issues-for-the-aip-viewer)
+
 ## Prerequisites for AD RMS mobile device extension
 
 Before you install the AD RMS mobile device extension, make sure the following dependencies are in place.
@@ -195,12 +197,8 @@ Grant-AdfsApplicationPermission -ClientRoleIdentifier '9D7590FB-9536-4D87-B5AA-F
 ```
 
 - For Android devices (using the Azure Information Protection app), make sure to run both commands in the order shown:
-```powershell
-Add-AdfsClient -Name "Azure Information Protection app for Android" -ClientId "ECAD3080-3AE9-4782-B763-2DF1B1373B3A" -RedirectUri @("com.microsoft.rms-sharing-for-android://authorize")
-```
-```powershell
-Grant-AdfsApplicationPermission -ClientRoleIdentifier 'ECAD3080-3AE9-4782-B763-2DF1B1373B3A' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
-```
+- Please note AIP mobile app on Android no longer support ADRMS protected files
+
 
 Run the following PowerShell commands to add support for Microsoft Office apps on your devices:
 - For Mac, iOS, Android devices (make sure to run both commands in the order shown):
