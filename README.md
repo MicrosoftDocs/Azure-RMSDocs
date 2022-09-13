@@ -1,6 +1,6 @@
 # Github repository for Microsoft technical documentation
 
-You've found one of the GitHub repositories that houses the source for [Microsoft technical content](https://docs.microsoft.com/).
+You've found one of the GitHub repositories that houses the source for [Microsoft technical content](https://learn.microsoft.com/).
 
 ## Microsoft Open Source Code of Conduct
 
