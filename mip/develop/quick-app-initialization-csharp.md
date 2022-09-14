@@ -56,7 +56,7 @@ Now create an implementation for an authentication delegate, by extending the SD
 
 1. Right-click the project name in Visual Studio, select **Add** then **Class**.
 2. Enter "AuthDelegateImplementation" in the **Name** field. Click **Add**.
-3. Add using statements for the Microsoft Authentication Library (ADAL) and the MIP library:
+3. Add using statements for the Microsoft Authentication Library (MSAL) and the MIP library:
 
      ```csharp
      using Microsoft.InformationProtection;
