@@ -67,7 +67,7 @@ The current release of the **AzureInformationProtection** PowerShell module that
 
 - **Outlook protected email message (.msg files with a .rpmsg attachment)**. Unprotecting Outlook protected email messages is supported by the **AzureInformationProtection** module for messages inside an Outlook personal folder (.pst file), or on disk in an Outlook message file (.msg file).
 
--  **PowerShell 7**. currently PowerShell 7 is not supported by the AIP Client. using PS7 will result in the error: "Object reference not set to an instance of an object".
+-  **PowerShell 7**. Currently PowerShell 7 is not supported by the AIP Client. using PS7 will result in the error: "Object reference not set to an instance of an object".
 
 For more information, see [Admin Guide: Using PowerShell with the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell).
 
