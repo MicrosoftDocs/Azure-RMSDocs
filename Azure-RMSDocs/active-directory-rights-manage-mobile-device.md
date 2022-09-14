@@ -50,7 +50,7 @@ You can download the Active Directory Rights Management Services (AD RMS) mobile
 
 For additional information, download the "Microsoft Azure Information Protection" white paper and accompanying scripts from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=40333).
 
-Please note AIP mobile app on Android no longer support ADRMS protected files [Review Known issues ](https://docs.microsoft.com/en-us/azure/information-protection/known-issues#known-issues-for-the-aip-viewer)
+Please note AIP mobile app on Android no longer support ADRMS protected files. [Review known issues](https://docs.microsoft.com/azure/information-protection/known-issues#known-issues-for-the-aip-viewer).
 
 ## Prerequisites for AD RMS mobile device extension
 
