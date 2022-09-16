@@ -62,7 +62,7 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 |Client version|Date released|Supported through|
 |--------------|-------------|-------------|
 |2.13.49.0|01/12/2022|03/01/2023|
-|2.12.62.0|08/02/2021|09/30/2022|
+|2.12.62.0|08/02/2021|07/12/2022|
 |2.11.58.0 |04/29/2021|02/08/2022|
 |2.9.116.0|02/08/2021|10/29/2021|
 |2.9.111.0|01/13/2021|Deprecated|
