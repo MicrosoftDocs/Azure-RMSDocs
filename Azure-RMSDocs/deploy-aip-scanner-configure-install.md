@@ -116,7 +116,7 @@ Before you install the scanner, or upgrade it from an older general availability
 
 1. On the **Clusters** tab, select **Add** ![add icon](media/i-add.png "add icon").
 
-1. On the **Add a new cluster** pane, enter a meaningful name for the scanner, and an optional description.
+1. On the **New cluster** pane, enter a meaningful name for the scanner, and an optional description.
 
     The cluster name is used to identify the scanner's configurations and repositories. For example, you might enter **Europe** to identify the geographical locations of the data repositories you want to scan.
 
@@ -238,7 +238,7 @@ You may want to do this only after running a network scan job to analyze the rep
     |---------|---------|
     |**Content scan job settings**     |    - **Schedule**: Keep the default of **Manual** <br />- **Info types to be discovered**: Change to **Policy only**
     |**DLP policy** | If you are using a Microsoft 365 Data Loss Prevention (DLP) policy, set **Enable DLP rules** to **On**. For more information, see [Use a DLP policy](#use-a-dlp-policy). |
-    |**Sensitivity policy**     | - **Enforce**: Select **Off** <br />- **Label files based on content**: Keep the default of **On** <br />- **Default label**: Keep the default of **Policy default** <br />- **Relabel files**: Keep the default of **Off**        |
+    |**Sensitivity policy**     | - **Enforce sensitivity labeling policy**: Select **Off** <br />- **Label files based on content**: Keep the default of **On** <br />- **Default label**: Keep the default of **Policy default** <br />- **Relabel files**: Keep the default of **Off**        |
     |**Configure file settings**     | - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On** <br />- **File types to scan**: Keep the default file types for **Exclude** <br />- **Default owner**: Keep the default of **Scanner Account**  <br /> - **Set repository owner**: Use this option only when [using a DLP policy](#use-a-dlp-policy). |
     | | |
 
