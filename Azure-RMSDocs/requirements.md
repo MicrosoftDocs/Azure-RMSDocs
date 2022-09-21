@@ -191,9 +191,13 @@ Azure Information Protection has the following additional requirements:
     To determine whether your client connection is terminated before it reaches the Azure Rights Management service, use the following PowerShell commands:
 
     ```PowerShell
-    $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
-    $request.GetResponse()
-    $request.ServicePoint.Certificate.Issuer
+    . {
+    $HostName = 'admin.na.aadrm.com'
+    $Request = [System.Net.Sockets.TcpClient]::New($HostName, '443')
+    $Stream = [System.Net.Security.SslStream]::new($request.GetStream())
+    $Stream.AuthenticateAsClient($HostName)
+    $Stream.RemoteCertificate.Issuer
+}
     ```
 
     The result should show that the issuing CA is from a Microsoft CA, for example: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`. 
