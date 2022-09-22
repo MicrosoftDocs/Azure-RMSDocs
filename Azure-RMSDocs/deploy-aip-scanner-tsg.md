@@ -416,7 +416,7 @@ For more information, see [Configuring and installing the  Azure Information Pro
 
 **Error message**
 
-In the Azure portal, on the **Nodes** page: `No repositories are configured`
+In the Azure portal or Purview compliance portal, on the **Nodes** page: `No repositories are configured`
 
 **Description**
 
@@ -432,7 +432,7 @@ For more information, see [Create a content scan job](deploy-aip-scanner-configu
 
 **Error message**
 
-In the Azure portal, on the **Nodes** page: `No cluster found`
+In the Azure portal or the Purview compliance portal, on the **Nodes** page: `No cluster found`
 
 **Description**
 
