@@ -41,7 +41,16 @@ For more on configuring WinHTTP, review the [WinHTTP documentation](/windows/win
 
 ## Proxies on Other Platforms
 
-MIP SDK supports proxies on Windows and Linux. On Windows, both transparent and explicit proxies are supported. On Linux, MIP SDK will follow the http_proxy environment variable. Authenticated proxies are not supported. If more proxy support is required, review the custom [`mip::HttpDelegate`](./reference/class_mip_httpdelegate.md) and workaround section or more details.
+MIP SDK supports proxies on Windows and Linux. On Windows, both transparent and explicit proxies are supported. Authenticated proxies are not supported.
+
+On Linux, MIP SDK will follow the http_proxy environment variable.
+
+```bash
+export http_proxy=http://192.168.1.1:8080
+export https_proxy=https://192.168.1.1:8080
+```
+
+If proxy support beyond this is required, review the custom [`mip::HttpDelegate`](./reference/class_mip_httpdelegate.md) and workaround section or more details.
 
 ## Custom HTTP Delegate
 
