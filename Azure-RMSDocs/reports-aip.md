@@ -135,15 +135,7 @@ Azure Information Protection lets you collect and store the actual data that's i
 By default, Azure Information Protection clients don't send content matches. To change this behavior so that content matches are sent, configure an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) in a label policy.
 
 ## Prerequisites
-To view audit events in Microsoft Purview, make sure that the following requirements are in place.
-
-|Requirement  |Details  |
-|---------|---------|
-|**An Azure subscription**     |   For users exporting audit events to Log Analytics. <br><br> For more information, see the [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/log-analytics) page. <br><br>If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.   |
-|**Azure Information Protection client**    |For reporting from the client. <br><br>If you don't already have a client installed, you can download and install the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).           |
-|**Azure Information Protection on-premises scanner**    | For reporting from on-premises data stores. <br><br>      For more information, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).   |
-|**Microsoft Defender for Cloud Apps**     | For reporting from cloud-based data stores. <br><br>For more information, see [Azure Information Protection integration](/cloud-app-security/azip-integration) in the Defender for Cloud Apps documentation.        |
-
+To view audit events in Microsoft Purview, review the [licensing requirements](/microsoft-365/compliance/auditing-solutions-overview?view=o365-worldwide#licensing-requirements) for basic and advanced audit solutions.
 
 ## Next steps
 
