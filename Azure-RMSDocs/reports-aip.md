@@ -94,7 +94,7 @@ Audit events from the M365 unified audit log can be exported out of Microsoft Pu
 Microsoft Purview provides PowerShell commands to export data from the unified audit log. To continuously export data from the unified audit log to Azure Log Analytics, this sample PowerShell script will help you ingest the audit data into a custom table of your choice:
 - [AIP Audit Export](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AIP-Audit-Export)
 
-### Information collected and sent to Microsoft Purview from the AIP unified labeling client
+### Information collected and sent to Microsoft Purview from the AIP Unified Labeling client
 
 To generate these reports, endpoints send the following types of information to the M365 unified audit log:
 
