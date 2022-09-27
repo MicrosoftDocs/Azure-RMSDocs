@@ -47,7 +47,7 @@ Audit events enable an administrator to:
 - Monitor user access to labeled documents and emails, and track document classification changes.
 - Identify when protected documents are accessed by internal or external users from Windows computers, and whether access was granted or denied.
 
-#### Protected documents access granted or denied events
+#### Access granted or denied events for protected documents
 File access and denied eventsare currently not accessible in the M365 audit log. These events will be added from the Rights Management Service at a later date.
 
 ## M365 unified audit log event schema
