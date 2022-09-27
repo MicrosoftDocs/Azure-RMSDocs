@@ -31,24 +31,26 @@ ms.custom: admin
 > **Are you looking for [Microsoft Information Protection](/microsoft-365/compliance/information-protection)?** The Azure Information Protection unified labeling client is [currently in maintenance mode](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613). We recommend enabling Microsoft Information Protection's built-in labeling for your Office 365 applications. [Learn more](/microsoft-365/compliance/sensitivity-labels#sensitivity-labels-and-azure-information-protection).
 >
 
-This article describes how to use the [auditing solution from Microsoft Purview](/microsoft-365/compliance/auditing-solutions-overview), [M365 unified audit log](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance) and [Activity explorer](https://compliance.microsoft.com/dataclassification?viewid=activitiesexplorer) for central reporting, which can help you track the adoption of your labels that classify and protect your organization's data.
+This article describes how to use the [auditing solution from Microsoft Purview](/microsoft-365/compliance/auditing-solutions-overview) to view audit events generated from the Azure Information Protection Unified Labeling client. Audit events emitted to the [M365 unified audit log](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance) for central reporting are viewable in the [Activity explorer](https://compliance.microsoft.com/dataclassification?viewid=activitiesexplorer), which can help you track the adoption of your labels that classify and protect your organization's data.
 
 Audit enables you to do perform the following steps:
 
-- Monitor labeled and protected documents and emails across your organization
-
-- Identify documents that contain sensitive information within your organization
-
-- Monitor user access to labeled documents and emails, and track document classification changes.
-
-- Identify documents that contain sensitive information that might be putting your organization at risk if they are not protected, and mitigate your risk by following recommendations.
-
-- Identify when protected documents are accessed by internal or external users from Windows computers, and whether access was granted or denied.
-
-The data that you see is aggregated from your Azure Information Protection clients and scanners, from Microsoft Defender for Cloud Apps, and from [protection usage logs](log-analyze-usage.md). Audit events generated from the AIP unified labeling client are included in the [M365 unified audit log](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance) and Office 365 activity log for your organization. [Activity explorer](https://compliance.microsoft.com/dataclassification?viewid=activitiesexplorer) enables you to view, query and detect audit events with a graphical interface in the [compliance portal](https://compliance.microsoft.com).
+- Aggregate data from your Azure Information Protection clients and scanners, from Microsoft Defender for Cloud Apps, and from [protection usage logs](log-analyze-usage.md) into audit events.
+- View audit events in the [M365 unified audit log](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance) and Office 365 activity log for your organization.
+- Query, view and detect audit events in [Activity explorer](https://compliance.microsoft.com/dataclassification?viewid=activitiesexplorer) with a graphical interface in the compliance portal.
 
 ### Audit events from the M365 unified audit log
 The AIP Unified Labeling client includes the Add-in for Office, the Scanner, the Viewer for Windows, the client PowerShell, and the Classify-and-Protect shell extension for Windows. All these components generate audit events that show up in the Office 365 activity logs and can be queried using the [Office 365 Management Activity API](/office/office-365-management-api/office-365-management-activity-api-reference).
+
+Audit events enable an administrator to:
+- Monitor labeled and protected documents and emails across your organization.
+- Monitor user access to labeled documents and emails, and track document classification changes.
+- Identify when protected documents are accessed by internal or external users from Windows computers, and whether access was granted or denied.
+
+#### Protected documents access granted or denied events
+File access and denied eventsare currently not accessible in the M365 audit log. These events will be added from the Rights Management Service at a later date.
+
+## M365 unified audit log event schema
 
 The five events (also called “AuditLogRecordType”) specific to AIP listed below, and more details about each can be found within the [API reference](/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
@@ -60,7 +62,7 @@ The five events (also called “AuditLogRecordType”) specific to AIP listed be
 | 96 | AipFileDeleted | AIP file deletion events. |
 | 97 | AipHeartBeat | AIP heartbeat events. |
 
-This information is accessible in the M365 unified audit log for your organization and can be viewed in the Activity explorer.
+This information is accessible in the M365 unified audit log for your organization and can be viewed in the Activity explorer. 
 
 ### Query Audit Events in Activity Explorer
 ![image](https://user-images.githubusercontent.com/25543918/190709059-fd1f51bb-db75-41d8-a131-f647c5a8d8e4.png)
@@ -141,68 +143,6 @@ To view audit events in Microsoft Purview, make sure that the following requirem
 |**Azure Information Protection client**    |For reporting from the client. <br><br>If you don't already have a client installed, you can download and install the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).           |
 |**Azure Information Protection on-premises scanner**    | For reporting from on-premises data stores. <br><br>      For more information, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).   |
 |**Microsoft Defender for Cloud Apps**     | For reporting from cloud-based data stores. <br><br>For more information, see [Azure Information Protection integration](/cloud-app-security/azip-integration) in the Defender for Cloud Apps documentation.        |
-
-### Storage requirements and data retention
-
-The amount of data collected and stored in your Azure Information Protection workspace will vary significantly for each tenant, depending on factors such as how many Azure Information Protection clients and other supported endpoints you have, whether you're collecting endpoint discovery data, you've deployed scanners, the number of protected documents that are accessed, and so on.
-
-However, as a starting point, you might find the following estimates useful:
-
-- For audit data generated by Azure Information Protection clients only: 2 GB per 10,000 active users per month.
-
-- For audit data generated by Azure Information Protection clients, and scanners: 20 GB per 10,000 active users per month.
-
-If you use mandatory labeling or you've configured a default label for most users, your rates are likely to be significantly higher.
-
-Azure Monitor Logs has a **Usage and estimated costs** feature to help you estimate and review the amount of data stored, and you can also control the data retention period for your Log Analytics workspace. For more information, see [Manage usage and costs with Azure Monitor Logs](/azure/azure-monitor/platform/manage-cost-storage).
-
-## Create custom queries in Azure Log Analytics
-
-Select the query icon in the dashboard to open a **Log Search** pane: 
-
-![Log Analytics icon to customize Azure Information Protection reports](./media/log-analytics-icon.png)
-
-
-The logged data for Azure Information Protection is stored in the following table: **UnifiedLogs_CL**
-
-
-#### Examples using UnifiedLog
-
-Use the following examples to see how you might use the friendly schema to create custom queries.
-
-##### Example 1: Return all users who sent audit data in the last 31 days 
-
-```
-UnifiedLog 
-| where Time > ago(31d) 
-| distinct User 
-```
-
- 
-##### Example 2: Return the number of labels that were downgraded per day in the last 31 days 
-
-
-```
-UnifiedLog 
-| where Time > ago(31d) 
-| where Activity == "DowngradeLabel"  
-| summarize Label_Downgrades_per_Day = count(Activity) by bin(Time, 1d) 
- 
-```
- 
-##### Example 3: Return the number of labels that were downgraded from Confidential by user, in the last 31 days 
-
-```
-
-UnifiedLog 
-| where Time > ago(31d) 
-| where Activity == "DowngradeLabel"  
-| where LabelNameBefore contains "Confidential" and LabelName !contains "Confidential"  
-| summarize Label_Downgrades_by_User = count(Activity) by User | sort by Label_Downgrades_by_User desc 
-
-```
-
-In this example, a downgraded label is counted only if the label name before the action contained the name **Confidential** and the label name after the action didn't contain the name of **Confidential**. 
 
 
 ## Next steps
