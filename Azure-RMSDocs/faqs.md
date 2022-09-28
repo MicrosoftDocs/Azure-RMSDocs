@@ -98,7 +98,6 @@ However, if you want to assign administrative permissions to other users, do so 
 
 - [Azure Information Protection administrator](#azure-information-protection-administrator)
 - [Compliance administrator or Compliance data administrator](#compliance-administrator-or-compliance-data-administrator)
-- [Security reader or Global reader](#security-reader-or-global-reader)
 - [Security administrator](#security-administrator)
 - [Azure Rights Management Global Administrator and Connector Administrator](#azure-rights-management-global-administrator-and-connector-administrator)
 
