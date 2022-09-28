@@ -125,7 +125,7 @@ Azure Information Protection lets you collect and store the actual data that's i
 By default, Azure Information Protection clients don't send content matches. To change this behavior so that content matches are sent, configure an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) in a label policy.
 
 ## Prerequisites
-Audit events are enabled by default for your organization. To view audit events in Microsoft Purview, review the [licensing requirements](/microsoft-365/compliance/auditing-solutions-overview?view=o365-worldwide#licensing-requirements) for basic and advanced audit solutions.
+Audit events are enabled by default for your organization. To view audit events in Microsoft Purview, review the [licensing requirements](/microsoft-365/compliance/auditing-solutions-overview#licensing-requirements) for basic and advanced audit solutions.
 
 ## Next steps
 After reviewing the information in the reports, you may want to learn more about how to configure Microsoft Purview's auditing solution for your organization.
