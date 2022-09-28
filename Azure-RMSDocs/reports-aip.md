@@ -35,7 +35,7 @@ This article describes how to use the [auditing solution from Microsoft Purview]
 
 Audit enables you to do perform the following steps:
 
-- Aggregate data from your Azure Information Protection clients and scanners, from Microsoft Defender for Cloud Apps, and from [protection usage logs](log-analyze-usage.md) into audit events.
+- Aggregate data from your Azure Information Protection clients, Azure Information Protection scanners and Microsoft Defender for Cloud Apps.
 - View audit events in the [M365 unified audit log](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance) and Office 365 activity log for your organization.
 - Query, view and detect audit events in [Activity explorer](https://compliance.microsoft.com/dataclassification?viewid=activitiesexplorer) with a graphical interface in the compliance portal.
 
@@ -45,10 +45,7 @@ The AIP Unified Labeling client includes the Add-in for Office, the Scanner, the
 Audit events enable an administrator to:
 - Monitor labeled and protected documents and emails across your organization.
 - Monitor user access to labeled documents and emails, and track document classification changes.
-- Identify when protected documents are accessed by internal or external users from Windows computers, and whether access was granted or denied.
 
-#### Access granted or denied events for protected documents
-File access and denied events do not currently include file name and are not accessible in the M365 audit log. These events will be enhanced to be standalone useful and added from the Rights Management Service at a later date.
 
 ## M365 unified audit log event schema
 
@@ -86,13 +83,6 @@ An adminstrator might not see all the options in the filter, or may see more; th
 
 - [Get started with activity explorer](/microsoft-365/compliance/data-classification-activity-explorer)
 - [Labeling activity reference](/microsoft-365/compliance/data-classification-activity-explorer-available-events)
-
-### Continuously export data from the unified audit log to Azure Log Analytics
-
-Audit events from the M365 unified audit log can be exported out of Microsoft Purview and into an instance of Azure Log Analytics. Azure Log analytics enables ingestion and storage of massive amount of data, indexes the data and allows complex querying through an inferface or API using the Kusto Query Language.
-
-Microsoft Purview provides PowerShell commands to export data from the unified audit log. To continuously export data from the unified audit log to Azure Log Analytics, this sample PowerShell script will help you ingest the audit data into a custom table of your choice:
-- [AIP Audit Export](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AIP-Audit-Export)
 
 ### Information collected and sent to Microsoft Purview from the AIP Unified Labeling client
 
@@ -138,5 +128,8 @@ By default, Azure Information Protection clients don't send content matches. To 
 Audit events are enabled by default for your organization. To view audit events in Microsoft Purview, review the [licensing requirements](/microsoft-365/compliance/auditing-solutions-overview?view=o365-worldwide#licensing-requirements) for basic and advanced audit solutions.
 
 ## Next steps
-
-After reviewing the information in the reports, if you are using the Azure Information Protection client, you might decide to make changes to your labeling policy in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+After reviewing the information in the reports, you may want to learn more about how to configure Microsoft Purview's auditing solution for your organization.
+- Learn how to export audit events from the M365 unified audit log to an Azure log analytics workspace with [AIP Audit Export on GitHub](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AIP-Audit-Export).
+- Read the [Admin guide to auditing and reporting for the AIP Unified Labeling client](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/admin-guide-to-auditing-and-reporting-for-the-aip-unified/ba-p/3610727) for a deep dive into Microsoft Purview's auditing solution.
+- Review the [protection usage logs documentation](log-analyze-usage.md) for file access and denied events generated from the Rights Management Service. These events are handled separately from events generated from the Azure Information Protection Unified Labeling client.
+- Refer to the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels) about sensitivity labels to learn how to make changes to your labeling policy in the Microsoft 365 compliance center.
