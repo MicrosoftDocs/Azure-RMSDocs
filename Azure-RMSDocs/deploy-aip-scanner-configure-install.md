@@ -27,12 +27,16 @@ ms.custom: admin
 # Configuring and installing the Azure Information Protection (AIP) unified labeling scanner
 
 
+> [!NOTE]
+> The Azure Information Protection unified labeling scanner is being renamed **Microsoft Purview Information Protection scanner**. At the same time, configuration (currently in preview) is moving to the Microsoft Purview compliance portal. Currently, you can configure the scanner in both the Azure portal and the compliance portal. Instructions in this article refer to both admin portals.
+> 
+
 This article describes how to configure and install the Azure Information Protection unified labeling, on-premises scanner.
 
 > [!TIP]
-> While most customers will perform these procedures in the **Azure Information Protection** area of the Azure portal or the information protection scanner area of the Purview compliance portal, you may need to work in PowerShell only.
+> While most customers will perform these procedures in the admin portal, you may need to work in PowerShell only.
 >
-> For example, if you are working in an environment without access to the Azure portal or Purview compliance portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), follow the instructions in [Use PowerShell to configure the scanner](#use-powershell-to-configure-the-scanner).
+> For example, if you are working in an environment without access to the admin portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), follow the instructions in [Use PowerShell to configure the scanner](#use-powershell-to-configure-the-scanner).
 >
 
 ## Overview
@@ -59,7 +63,7 @@ Then, perform the following configuration procedures as needed for your system:
 |[Use the scanner with alternative configurations](#use-the-scanner-with-alternative-configurations)| Use the scanner without configuring labels with any conditions |
 |[Optimize performance](#optimize-scanner-performance)| Guidance to optimize your scanner performance|
 
-If you don't have access to the scanner pages in the Azure portal or Purview compliance portal, configure any scanner settings in PowerShell only. For more information, see [Use PowerShell to configure the scanner](#use-powershell-to-configure-the-scanner) and [Supported PowerShell cmdlets](#supported-powershell-cmdlets).
+If you don't have access to the scanner pages in the admin portal, configure any scanner settings in PowerShell only. For more information, see [Use PowerShell to configure the scanner](#use-powershell-to-configure-the-scanner) and [Supported PowerShell cmdlets](#supported-powershell-cmdlets).
 
 
 ## Configure the scanner settings
@@ -426,7 +430,7 @@ The scanner now has a token to authenticate to Azure AD. This token is valid for
 
 Continue using one of the following steps, depending on whether you're using the Azure portal to configure your scanner, or PowerShell only:
 
-# [Azure portal and Purview compliance portal only](#tab/azure-portal-only)
+# [Admin portal only](#tab/azure-portal-only)
 
 You're now ready to run your first scan in discovery mode. For more information, see [Run a discovery cycle and view reports for the scanner](deploy-aip-scanner-manage.md#run-a-discovery-cycle-and-view-reports-for-the-scanner).
 

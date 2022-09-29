@@ -27,6 +27,10 @@ ms.custom: admin
 # Troubleshooting your unified labeling on-premises scanner deployment
 
 
+> [!NOTE]
+> The Azure Information Protection unified labeling scanner is being renamed **Microsoft Purview Information Protection scanner**. At the same time, configuration (currently in preview) is moving to the Microsoft Purview compliance portal. Currently, you can configure the scanner in both the Azure portal and the compliance portal. Instructions in this article refer to both admin portals.
+> 
+
 Use the content in this article to help you troubleshoot your on-premises scanner deployment.
 
 ## Troubleshooting using the scanner diagnostic tool
@@ -416,7 +420,7 @@ For more information, see [Configuring and installing the  Azure Information Pro
 
 **Error message**
 
-In the Azure portal or Purview compliance portal, on the **Nodes** page: `No repositories are configured`
+In the admin portal, on the **Nodes** page: `No repositories are configured`
 
 **Description**
 
@@ -432,7 +436,7 @@ For more information, see [Create a content scan job](deploy-aip-scanner-configu
 
 **Error message**
 
-In the Azure portal or the Purview compliance portal, on the **Nodes** page: `No cluster found`
+In the admin portal, on the **Nodes** page: `No cluster found`
 
 **Description**
 
