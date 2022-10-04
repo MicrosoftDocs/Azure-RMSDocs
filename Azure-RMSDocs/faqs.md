@@ -98,7 +98,6 @@ However, if you want to assign administrative permissions to other users, do so 
 
 - [Azure Information Protection administrator](#azure-information-protection-administrator)
 - [Compliance administrator or Compliance data administrator](#compliance-administrator-or-compliance-data-administrator)
-- [Security reader or Global reader](#security-reader-or-global-reader)
 - [Security administrator](#security-administrator)
 - [Azure Rights Management Global Administrator and Connector Administrator](#azure-rights-management-global-administrator-and-connector-administrator)
 
@@ -143,16 +142,6 @@ To see what other permissions a user with these roles have, see the [Available r
 > [!NOTE]
 > These roles don't support [tracking and revoking](rms-client/track-and-revoke-admin.md) documents for users.
 >
-### Security reader or Global reader
-
-These roles are used for [Azure Information Protection analytics](reports-aip.md) only, and enable administrators to:
-
-- View how your labels are being used
-- Monitor user access to labeled documents and emails
-- View changes made to classification
-- Identify documents that contain sensitive information that must be protected
-
-Because this feature uses Azure Monitor, you must also have a supporting [RBAC role](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
 
 ### Security administrator
 
