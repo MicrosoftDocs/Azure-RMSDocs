@@ -88,10 +88,10 @@ The scanner also considers any file lists explicitly defined to scan, or exclude
 
 To define file lists for scanning or exclusion, use the **File types to scan** setting in the content scan job. For example within the Azure portal:
 
-![Configure file types to scan for the Azure Information Protection scanner](./media/scanner-file-types-purview.png)
+![Configure file types to scan for the Azure Information Protection scanner](./media/scanner-file-types.png)
 
 Example within the Microsoft Purview compliance portal:
-![Configure file types to scan for the Azure Information Protection scanner](./media/scanner-file-types.png)
+![Configure file types to scan for the Azure Information Protection scanner](./media/scanner-file-types-purview.png)
 
 
 For more information, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner-configure-install.md).
