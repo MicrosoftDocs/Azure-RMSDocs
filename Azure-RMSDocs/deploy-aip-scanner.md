@@ -86,12 +86,13 @@ The scanner automatically skips files that are excluded from classification and 
 
 The scanner also considers any file lists explicitly defined to scan, or exclude from scanning. File lists apply for all data repositories by default, and can also be defined for specific repositories only.
 
-To define file lists for scanning or exclusion, use the **File types to scan** setting in the content scan job. For example within the Azure portal:
+To define file lists for scanning or exclusion, use the **File types to scan** setting in the content scan job. 
 
-![Configure file types to scan for the Azure Information Protection scanner](./media/scanner-file-types.png)
+Example within the Azure portal:
+![Configure file types to scan for the Azure Information Protection scanner within the Azure portal](./media/scanner-file-types.png)
 
 Example within the Microsoft Purview compliance portal:
-![Configure file types to scan for the Azure Information Protection scanner](./media/scanner-file-types-purview.png)
+![Configure file types to scan within the Purview compliance portal](./media/scanner-file-types-purview.png)
 
 
 For more information, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner-configure-install.md).
