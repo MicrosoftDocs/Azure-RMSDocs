@@ -26,6 +26,9 @@ ms.custom: admin
 
 # What is the Azure Information Protection unified labeling scanner?
 
+> [!NOTE]
+> The Azure Information Protection unified labeling scanner is being renamed **Microsoft Purview Information Protection scanner**. At the same time, configuration (currently in preview) is moving to the Microsoft Purview compliance portal. Currently, you can configure the scanner in both the Azure portal and the compliance portal.
+> 
 
 Use the information in this section to learn about the Azure Information Protection unified labeling scanner, and then how to successfully install, configure, run and if necessary, troubleshoot it.
 
@@ -83,9 +86,13 @@ The scanner automatically skips files that are excluded from classification and 
 
 The scanner also considers any file lists explicitly defined to scan, or exclude from scanning. File lists apply for all data repositories by default, and can also be defined for specific repositories only.
 
-To define file lists for scanning or exclusion, use the **File types to scan** setting in the content scan job. For example:
+To define file lists for scanning or exclusion, use the **File types to scan** setting in the content scan job. For example within the Azure portal:
 
+![Configure file types to scan for the Azure Information Protection scanner](./media/scanner-file-types-purview.png)
+
+Example within the Microsoft Purview compliance portal:
 ![Configure file types to scan for the Azure Information Protection scanner](./media/scanner-file-types.png)
+
 
 For more information, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner-configure-install.md).
 
