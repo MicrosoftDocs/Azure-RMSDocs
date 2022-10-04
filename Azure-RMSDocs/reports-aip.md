@@ -31,15 +31,15 @@ ms.custom: admin
 > **Are you looking for [Microsoft Information Protection](/microsoft-365/compliance/information-protection)?** The Azure Information Protection unified labeling client is [currently in maintenance mode](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613). We recommend enabling Microsoft Information Protection's built-in labeling for your Office 365 applications. [Learn more](/microsoft-365/compliance/sensitivity-labels#sensitivity-labels-and-azure-information-protection).
 >
 
-This article describes how to use the [auditing solution from Microsoft Purview](/microsoft-365/compliance/auditing-solutions-overview) to view audit events generated from the Azure Information Protection Unified Labeling client. Audit events emitted to the [M365 unified audit log](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance) for central reporting are viewable in the [Activity explorer](https://compliance.microsoft.com/dataclassification?viewid=activitiesexplorer), which can help you track the adoption of your labels that classify and protect your organization's data.
+This article describes how to use the [auditing solution from Microsoft Purview](/microsoft-365/compliance/auditing-solutions-overview) to view audit events generated from the Azure Information Protection Unified Labeling client. Audit events emitted to the [Microsoft 365 unified audit log](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance) for central reporting are viewable in the [Activity explorer](https://compliance.microsoft.com/dataclassification?viewid=activitiesexplorer), which can help you track the adoption of your labels that classify and protect your organization's data.
 
 Audit enables you to do perform the following steps:
 
 - Aggregate data from your Azure Information Protection clients, Azure Information Protection scanners and Microsoft Defender for Cloud Apps.
-- View audit events in the [M365 unified audit log](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance) and Office 365 activity log for your organization.
+- View audit events in the [Microsoft 365 unified audit log](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance) and Office 365 activity log for your organization.
 - Query, view and detect audit events in [Activity explorer](https://compliance.microsoft.com/dataclassification?viewid=activitiesexplorer) with a graphical interface in the compliance portal.
 
-### Audit events from the M365 unified audit log
+### Audit events from the Microsoft 365 unified audit log
 The AIP Unified Labeling client includes the Add-in for Office, the Scanner, the Viewer for Windows, the client PowerShell, and the Classify-and-Protect shell extension for Windows. All these components generate audit events that show up in the Office 365 activity logs and can be queried using the [Office 365 Management Activity API](/office/office-365-management-api/office-365-management-activity-api-reference).
 
 Audit events enable an administrator to:
@@ -47,7 +47,7 @@ Audit events enable an administrator to:
 - Monitor user access to labeled documents and emails, and track document classification changes.
 
 
-## M365 unified audit log event schema
+## Microsoft 365 unified audit log event schema
 
 The five events (also called “AuditLogRecordType”) specific to AIP listed below, and more details about each can be found within the [API reference](/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
@@ -59,12 +59,12 @@ The five events (also called “AuditLogRecordType”) specific to AIP listed be
 | 96 | AipFileDeleted | AIP file deletion events. |
 | 97 | AipHeartBeat | AIP heartbeat events. |
 
-This information is accessible in the M365 unified audit log for your organization and can be viewed in the Activity explorer. 
+This information is accessible in the Microsoft 365 unified audit log for your organization and can be viewed in the Activity explorer. 
 
 ### Query Audit Events in Activity Explorer
 ![image](https://user-images.githubusercontent.com/25543918/190709059-fd1f51bb-db75-41d8-a131-f647c5a8d8e4.png)
 
-The Activity explorer in the Microsoft Purview compliance portal is a graphical interface to view audit events emitted to the M365 unified audit log. An administrator of the tenant can use built-in queries to determine whether the policies and controls implemented by your organization is effective. With up to 30 days of data available, an administrator can set filters and clearly see when and how sensitive data is handled within your organization.
+The Activity explorer in the Microsoft Purview compliance portal is a graphical interface to view audit events emitted to the Microsoft 365 unified audit log. An administrator of the tenant can use built-in queries to determine whether the policies and controls implemented by your organization is effective. With up to 30 days of data available, an administrator can set filters and clearly see when and how sensitive data is handled within your organization.
 
 To see AIP-specific activity, an adminstrator can begin with the following filters:
 
@@ -86,7 +86,7 @@ An adminstrator might not see all the options in the filter, or may see more; th
 
 ### Information collected and sent to Microsoft Purview from the AIP Unified Labeling client
 
-To generate these reports, endpoints send the following types of information to the M365 unified audit log:
+To generate these reports, endpoints send the following types of information to the Microsoft 365 unified audit log:
 
 - The label action. For example, set a label, change a label, add or remove protection, automatic and recommended labels.
 
@@ -125,11 +125,11 @@ Azure Information Protection lets you collect and store the actual data that's i
 By default, Azure Information Protection clients don't send content matches. To change this behavior so that content matches are sent, configure an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) in a label policy.
 
 ## Prerequisites
-Audit events are enabled by default for your organization. To view audit events in Microsoft Purview, review the [licensing requirements](/microsoft-365/compliance/auditing-solutions-overview#licensing-requirements) for basic and advanced audit solutions.
+Audit events are enabled by default for your organization. To view audit events in Microsoft Purview, review the [licensing requirements](/microsoft-365/compliance/auditing-solutions-overview#licensing-requirements) for basic and Audit (Premium) solutions.
 
 ## Next steps
 After reviewing the information in the reports, you may want to learn more about how to configure Microsoft Purview's auditing solution for your organization.
-- Learn how to export audit events from the M365 unified audit log to an Azure log analytics workspace with [AIP Audit Export on GitHub](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AIP-Audit-Export).
+- Learn how to export audit events from the Microsoft 365 unified audit log to an Azure log analytics workspace with [AIP Audit Export on GitHub](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AIP-Audit-Export).
 - Read the [Admin guide to auditing and reporting for the AIP Unified Labeling client](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/admin-guide-to-auditing-and-reporting-for-the-aip-unified/ba-p/3610727) for a deep dive into Microsoft Purview's auditing solution.
 - Review the [protection usage logs documentation](log-analyze-usage.md) for file access and denied events generated from the Rights Management Service. These events are handled separately from events generated from the Azure Information Protection Unified Labeling client.
 - Refer to the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels) about sensitivity labels to learn how to make changes to your labeling policy in the Microsoft 365 compliance center.
