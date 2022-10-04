@@ -66,7 +66,7 @@ This information is accessible in the Microsoft 365 unified audit log for your o
 
 The Activity explorer in the Microsoft Purview compliance portal is a graphical interface to view audit events emitted to the Microsoft 365 unified audit log. An administrator of the tenant can use built-in queries to determine whether the policies and controls implemented by your organization is effective. With up to 30 days of data available, an administrator can set filters and clearly see when and how sensitive data is handled within your organization.
 
-To see AIP-specific activity, an adminstrator can begin with the following filters:
+To see AIP-specific activity, an administrator can begin with the following filters:
 
 - Activity type:
     - Label applied
@@ -74,12 +74,12 @@ To see AIP-specific activity, an adminstrator can begin with the following filte
     - Label removed
     - Label file read
 - Application:
-    - Microsoft Azure Information Protection Word Add-In
-    - Microsoft Azure Information Protection Excel Add-in
-    - Microsoft Azure Information Protection PowerPoint Add-In
-    - Microsoft Azure Information Protection Outlook Add-in
+    - Microsoft Azure Information Protection Word add-in
+    - Microsoft Azure Information Protection Excel add-in
+    - Microsoft Azure Information Protection PowerPoint add-in
+    - Microsoft Azure Information Protection Outlook add-in
 
-An adminstrator might not see all the options in the filter, or may see more; the filter values depend on what activities are captured for your tenant. For more information about the Activity explorer, see:
+An administrator might not see all the options in the filter, or may see more; the filter values depend on what activities are captured for your tenant. For more information about the Activity explorer, see:
 
 - [Get started with activity explorer](/microsoft-365/compliance/data-classification-activity-explorer)
 - [Labeling activity reference](/microsoft-365/compliance/data-classification-activity-explorer-available-events)
@@ -132,4 +132,4 @@ After reviewing the information in the reports, you may want to learn more about
 - Learn how to export audit events from the Microsoft 365 unified audit log to an Azure log analytics workspace with [AIP Audit Export on GitHub](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AIP-Audit-Export).
 - Read the [Admin guide to auditing and reporting for the AIP Unified Labeling client](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/admin-guide-to-auditing-and-reporting-for-the-aip-unified/ba-p/3610727) for a deep dive into Microsoft Purview's auditing solution.
 - Review the [protection usage logs documentation](log-analyze-usage.md) for file access and denied events generated from the Rights Management Service. These events are handled separately from events generated from the Azure Information Protection Unified Labeling client.
-- Refer to the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels) about sensitivity labels to learn how to make changes to your labeling policy in the Microsoft 365 compliance center.
+- Refer to the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels) about sensitivity labels to learn how to make changes to your labeling policy in the compliance portal.
