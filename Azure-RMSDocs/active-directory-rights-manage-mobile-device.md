@@ -3,9 +3,9 @@
 
 title: Active Directory rights management services mobile device extension for AIP
 description: Learn about Active Directory mobile device extensions for AIP
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 07/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

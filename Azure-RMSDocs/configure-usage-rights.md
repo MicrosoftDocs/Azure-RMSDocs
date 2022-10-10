@@ -3,9 +3,9 @@
 
 title: Configure usage rights for Azure Information Protection (AIP)
 description: Understand and identify the specific rights that are used when you protect files or emails by using Rights Management protection from Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

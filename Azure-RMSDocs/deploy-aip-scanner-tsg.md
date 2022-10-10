@@ -3,9 +3,9 @@
 
 title: Troubleshoot your on-premises scanner deployment
 description: Instructions for troubleshooting your unified labeling on-premises scanner deployment
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 03/10/2021
 ms.topic: reference
 ms.collection: M365-security-compliance

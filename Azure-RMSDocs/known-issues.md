@@ -3,9 +3,9 @@
 
 title: Known issues - Azure Information Protection
 description: Search and browse through known issues and limitations for Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 12/12/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
@@ -66,6 +66,8 @@ The current release of the **AzureInformationProtection** PowerShell module that
 - **Outlook personal folders (*.pst* files)**. Natively protecting *.pst* files isn't supported using the **AzureInformationProtection** module.
 
 - **Outlook protected email message (.msg files with a .rpmsg attachment)**. Unprotecting Outlook protected email messages is supported by the **AzureInformationProtection** module for messages inside an Outlook personal folder (.pst file), or on disk in an Outlook message file (.msg file).
+
+-  **PowerShell 7**. Currently PowerShell 7 is not supported by the AIP Client. using PS7 will result in the error: "Object reference not set to an instance of an object".
 
 For more information, see [Admin Guide: Using PowerShell with the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell).
 

@@ -2,11 +2,11 @@
 title: AIP classic client is sunset
 description: Notes the AIP classic client sunset on March 31, 2021, and provides links for next steps and more information.
 ms.service: information-protection
-author: batamig
+author: aashishr
 ms.topic: include
 ms.collection: M365-security-compliance
 ms.date: 10/25/2021
-ms.author: bagol
+ms.author: aashishr
 ms.custom: include file
 ---
 

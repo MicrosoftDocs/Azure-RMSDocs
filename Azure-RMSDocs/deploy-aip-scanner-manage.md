@@ -3,9 +3,9 @@
 
 title: Running the Azure Information Protection unified labeling scanner (AIP)
 description: Instructions for running the Azure Information Protection unified labeling scanner to discover, classify, and protect files on data stores.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 04/26/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance

@@ -3,9 +3,9 @@
 
 title: Azure Information Protection unified labeling client admin guide
 description: Instructions and information for admins on an enterprise network who are responsible for deploying the Azure Information Protection unified labeling client for Windows.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

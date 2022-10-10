@@ -29,4 +29,6 @@ Get the label required.
 Get the Classification IDs that matched and caused this label to appear.
 
   
-**Returns**: Const std::vector&lt;std::string&gt;& a list of classification IDs that caused this label to appear.
+
+**Returns**: Const std::vector\<std::string\>& a list of classification IDs that caused this label to appear.r.
+

@@ -3,9 +3,9 @@
 
 title: Terminology for Azure Information Protection (AIP)
 description: Confused by a word, phrase, or acronym that's related to Microsoft Azure Information Protection (AIP)? Find the definition here for terms and abbreviations that are either specific to AIP or have a specific meaning when used in the context of this service.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

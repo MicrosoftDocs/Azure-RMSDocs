@@ -3,9 +3,9 @@
 
 title: Log & analyze the protection usage from Azure Information Protection
 description: Information and instructions how to use usage logging for the protection service from Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/11/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -191,8 +191,8 @@ There are many request types for the protection service but the following table 
 |**SetUsageLogStorageAccount**|A call is  made to specify the location of the Azure Rights Management service logs.|
 |**UpdateTemplate**|A call is  made from the Azure portal to update an existing template.|
 
-
-
+#### Protection usage logs and Microsoft 365 unified audit log
+File access and denied events do not currently include file name and are not accessible in the Microsoft 365 unified audit log. These events will be enhanced to be standalone useful and added from the Rights Management Service at a later date.
 
 ## PowerShell reference
 

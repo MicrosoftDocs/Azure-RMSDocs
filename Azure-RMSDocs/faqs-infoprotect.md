@@ -3,9 +3,9 @@
 
 title: FAQs for classification & labeling - AIP
 description: Have a question that is specifically about classification and labeling using Azure Information Protection? See if it's answered here. 
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 03/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance

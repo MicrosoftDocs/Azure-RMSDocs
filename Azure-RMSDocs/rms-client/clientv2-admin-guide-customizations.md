@@ -3,9 +3,9 @@
 
 title: Custom configurations - Azure Information Protection unified labeling client
 description: Information about customizing the Azure Information Protection unified labeling client for Windows.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/02/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -827,7 +827,7 @@ When these conditions are met, the user sees a pop-up message with one of the fo
 
 When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
 
-See the video [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) for a walkthrough example of how to configure these settings.
+See the tech community blog [Customizing Outlook pop-up messages for the AIP UL client](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/customizing-outlook-pop-up-messages-for-the-aip-ul-client/ba-p/1772306) for a walkthrough example of how to configure these settings.
 
 > [!TIP]
 > To ensure that popups are displayed even when documents are shared from outside Outlook **(File > Share > Attach a copy)**, also configure the [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) advanced setting.

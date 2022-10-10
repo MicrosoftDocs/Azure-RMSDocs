@@ -3,9 +3,9 @@
 
 title: What is Azure Information Protection (AIP)?
 description: Azure Information Protection (AIP) extends the Microsoft Purview Information Protection framework to extend the labeling and classification functionality provided by Microsoft 365.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/09/2020
 ms.topic: overview
 ms.collection: M365-security-compliance

@@ -3,9 +3,9 @@
 
 title: FAQs for Azure Information Protection (AIP)
 description: Get answers to frequently asked questions about Azure Information Protection (AIP) and its protection service, Azure Rights Management (Azure RMS).
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/14/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -98,7 +98,6 @@ However, if you want to assign administrative permissions to other users, do so 
 
 - [Azure Information Protection administrator](#azure-information-protection-administrator)
 - [Compliance administrator or Compliance data administrator](#compliance-administrator-or-compliance-data-administrator)
-- [Security reader or Global reader](#security-reader-or-global-reader)
 - [Security administrator](#security-administrator)
 - [Azure Rights Management Global Administrator and Connector Administrator](#azure-rights-management-global-administrator-and-connector-administrator)
 
@@ -143,16 +142,6 @@ To see what other permissions a user with these roles have, see the [Available r
 > [!NOTE]
 > These roles don't support [tracking and revoking](rms-client/track-and-revoke-admin.md) documents for users.
 >
-### Security reader or Global reader
-
-These roles are used for [Azure Information Protection analytics](reports-aip.md) only, and enable administrators to:
-
-- View how your labels are being used
-- Monitor user access to labeled documents and emails
-- View changes made to classification
-- Identify documents that contain sensitive information that must be protected
-
-Because this feature uses Azure Monitor, you must also have a supporting [RBAC role](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
 
 ### Security administrator
 
@@ -221,21 +210,6 @@ Additional information:
 > [!NOTE]
 > The Azure Information Protection support for conditional access is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 >
-
-## I see Azure Information Protection is listed as a security provider for Microsoft Graph Security—how does this work and what alerts will I receive?
-
-Yes, as a public preview offering, you can now receive an alert for **Azure Information Protection anomalous data access**. This alert is triggered when there are unusual attempts to access data that is protected by Azure Information Protection. For example, accessing an unusually high volume of data, at an unusual time of day, or access from an unknown location.
-
-Such alerts can help you to detect advanced data-related attacks and insider threats in your environment. These alerts use machine learning to profile the behavior of users who access your protected data.
-
-The Azure Information Protection alerts can be accessed by [using the Microsoft Graph Security API](/graph/api/resources/security-api-overview), or you can [stream alerts](/graph/security-integration) to SIEM solutions, such as Splunk and IBM Qradar, by using Azure Monitor.
-
-For more information about the Microsoft Graph Security API, see [Microsoft Graph Security API overview](/graph/security-concept-overview).
-
-> [!NOTE]
-> The Azure Information Protection support for Microsoft Graph Security is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
->
-
 
 ## Is Azure Information Protection suitable for my country?
 

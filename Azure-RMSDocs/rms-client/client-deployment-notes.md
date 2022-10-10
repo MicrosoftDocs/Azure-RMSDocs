@@ -3,9 +3,9 @@
 
 title: RMS client deployment notes - Azure Information Protection
 description: Information about installation, supported operating systems, registry settings, and service discovery for the Rights Management Service client (RMS client) version 2, also known as the MSIPC client. 
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

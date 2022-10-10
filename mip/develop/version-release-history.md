@@ -32,7 +32,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.12    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
 | 1.11    | https://aka.ms/mipsdkbins111 | **Supported**      | June 9, 2023       |
 | 1.10    | https://aka.ms/mipsdkbins110 | **Supported**      | November 17, 2022  |
-| 1.9     | https://aka.ms/mipsdkbins19  | **Supported**      | August 23, 2022    |
+| 1.9     | https://aka.ms/mipsdkbins19  | **Out of Support** | August 23, 2022    |
 | 1.8     | https://aka.ms/mipsdkbins18  | **Out of Support** | April 29, 2022     |
 | 1.7     | https://aka.ms/mipsdkbins17  | **Out of Support** | January 14, 2022   |
 | 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support** | September 23, 2021 |
@@ -82,6 +82,37 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Updated libxml2 to 2.9.13.
 - Fixed a crash specific to Android. 
 - Fixed an issue where SDK wasn't fully honoring log level
+
+## Version 1.11.96
+
+**Release Date:** July 20, 2022
+
+### File SDK
+
+- Fixed a bug in `MemoryStream` for `GetDecryptedTemporaryStream` large file types 
+- Fixed a bug causing data loss during PDF encryption due to stack overflow crash 
+  - With `OptimizePdfMemory`, if /Info is an `ObjStm` with an internal indirect object, it will now return `PDFPARSER_ERROR_FORMAT` instead of stack overflow 
+- Fixed a bug where supporting MIP libraries were not loading in Java 
+- Fixed a bug where MSG files with protected MSG file attachments would experience corruption when `rpmsg` extension had a trailing null terminator 
+- Fixed a crash in MSG files with link attachments 
+- Fixed a bug where sequence of label application was not honored correctly using AIP Unified Client app for Windows 
+- Fixed a bug where `RemoveProtection` thew `LabelDisabledError` exception stating inactive label was specified 
+- Fixed a bug where `DeleteLabel` threw invalid metadata exception while input file is protected by templateID
+
+### Policy SDK
+
+- Fixed an issue where policy change would cause a crash due to mismatch between native and managed map during `OnPolicyChanged` call
+
+### Platform and Dependency Changes
+
+- Fixed an issue where telemetry and audit data may not be sent when using C# or Java interface 
+- Fixed a bug where clouds with the same base URL were not treated consistently 
+- Updated version of Adobe XMP to 6.0.0 and pushed security fix for expat vulnerability in 2.1.0 `storeAtts()` function 
+- Exposed `EnableAuditAndTelemetryForSovereignClouds` flag for .NET 
+- Fixed a crash caused by control flow integrity performing vtable security checks 
+  - Disabled these checks because Android doesn't support cross-library vtable checks 
+- Fixed a bug in Windows crypto delegate for use after free vulnerability. Applies only to applications that set `EnableFipsValidatedCryptography` on Windows 
+  - `hashObject` vector was being cleaned up before the handle and caused a use after free when the handle was cleaned up in the destructor of `BcryptData`
 
 ## Version 1.11.64
 
