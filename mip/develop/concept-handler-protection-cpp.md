@@ -72,7 +72,7 @@ Protected content without the corresponding publishing license **cannot be decry
 Creating a publishing handler requires three steps:
 
  1) Extract a serialized publishing license as `std::vector<uint8_t>` from the protected content.
- 2) Use the `mip::ProtectionDescriptor` to instantiate `mip::ProtectionHandler::ConsumptionSettings`.
+ 2) Use the serialized publishing license to instantiate `mip::ProtectionHandler::ConsumptionSettings`.
  3) Call `mip::ProtectionEngine::CreateProtectionHandlerForConsumptionAsync()` passing in the `ConsumptionSettings` object, observer, and promise.
 
 This example assumes that the publishing license has already been read from some source and stored in `std::vector<uint8_t> serializedPublishingLicense`.
