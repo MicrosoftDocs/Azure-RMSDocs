@@ -3,9 +3,9 @@
 
 title: Microsoft-managed - AIP tenant key life cycle operations
 description: Information about the life cycle operations that are relevant if Microsoft manages your tenant key for Azure Information Protection (the default).
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 10/23/2019
 ms.topic: how-to
 ms.collection: M365-security-compliance

@@ -3,9 +3,9 @@
 
 title: Azure Information Protection (AIP) unified labeling scanner prerequisites 
 description: Lists prerequisites for installing and deploying the Azure Information Protection unified labeling scanner.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/13/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -248,7 +248,7 @@ To support a disconnected computer from the Azure portal, perform the following 
 
 1.	Configure labels in your policy, and then use the [procedure to support disconnected computers](rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers) to enable offline classification and labeling.
 
-1. Enable offline management for content and network scan jobs as follows:
+1. Enable offline management for content jobs as follows:
 
     **Enable offline management for content scan jobs**:
 
@@ -261,18 +261,6 @@ To support a disconnected computer from the Azure portal, perform the following 
     1. Import the policy using the [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/import-aipscannerconfiguration) cmdlet.
 
     Results for offline content scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
-
-    **Enable offline management of network scan jobs**:
-
-    1. Set the Network Discovery service (public preview) to function in offline mode using the [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) cmdlet.
-
-    1. Configure the network scan job in the Azure portal. For more information, see [Creating a network scan job](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview).
-    
-    1. Export your network scan job from the **Azure Information Protection - Network scan jobs (Preview)** pane using the **Export** option. 
-    
-    1.  Import the network scan job using the file that matches our cluster name using the [Import-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) cmdlet.  
-    
-    Results for offline network scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
 
 #### Use PowerShell with a disconnected computer
 
@@ -314,7 +302,6 @@ Perform the following procedure to support a disconnected computer using PowerSh
 Use the following procedures to manually create databases and grant the **db_owner** role, as needed.
 
 - [Procedure for the scanner database](#manually-create-a-database-and-user-for-the-scanner-and-grant-db_owner-rights)
-- [Procedure for the Network Discovery database](#manually-create-a-database-and-user-for-the-network-discovery-service-and-grant-db_owner-rights)
 
 If you can be granted the Sysadmin role *temporarily* to install the scanner, you can remove this role when the scanner installation is complete.
 
@@ -360,30 +347,6 @@ If you need to manually create your scanner database and/or create a user and gr
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     ```
 
-#### Manually create a database and user for the Network Discovery service, and grant db_owner rights
-
-If you need to manually create your [Network Discovery](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview) database and/or create a user and grant **db_owner** rights on the database, ask your Sysadmin to perform the following steps:
-
-1. Create a database for the Network Discovery service:
-
-    ```sql
-    **CREATE DATABASE AIPNetworkDiscovery_[clustername]**
-
-    **ALTER DATABASE AIPNetworkDiscovery_[clustername] SET TRUSTWORTHY ON**
-    ```
-
-2. Grant rights to the user that runs the installation command and is used to run scanner management commands. Use the following script:
-
-    ```sql
-    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
-    USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
-    ```
-
-3. Grant rights to the scanner service account. Use the following script:
-
-    ```sql
-    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
-    ```
 ### Restriction: The service account for the scanner cannot be granted the **Log on locally** right
 
 If your organization policies prohibit the **Log on locally** right for service accounts, use the *OnBehalfOf* parameter with Set-AIPAuthentication.

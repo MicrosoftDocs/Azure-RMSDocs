@@ -3,9 +3,9 @@
 
 title: Administering protection from Azure Information Protection by using PowerShell
 description: Learn how you can use the PowerShell module for the protection service from Azure Information Protection, to administer this service for your tenant.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 04/28/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance

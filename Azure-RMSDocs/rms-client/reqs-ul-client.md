@@ -3,9 +3,9 @@
 
 title: Additional requirements for installing the Azure Information Protection unified labeling client
 description: Information for admins who need to understand the additional system requirements for installing the Unified Labeling client on enterprise networks.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 01/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance

@@ -3,9 +3,9 @@
 
 title: Revoke document access - Azure Information Protection
 description: Describes how end users can use the AIP client to revoke document access for documents they've protected.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 01/23/2022
 ms.topic: how-to
 ms.collection: M365-security-compliance

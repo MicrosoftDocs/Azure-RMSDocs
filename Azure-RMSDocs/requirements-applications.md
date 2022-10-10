@@ -3,9 +3,9 @@
 
 title: Application support for RMS data protection for Azure Information Protection
 description: Identify the applications and solutions that have built-in support for the Azure Rights Management (Azure RMS) service. Azure RMS provides data protection for Azure Information Protection (AIP).
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

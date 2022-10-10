@@ -1,9 +1,9 @@
 ---
 title: Tutorial - Install the Azure Information Protection (AIP) unified labeling scanner
 description: Install the Azure Information Protection (AIP) unified labeling scanner to discover sensitive data stored in your on-premises network shares.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/09/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance

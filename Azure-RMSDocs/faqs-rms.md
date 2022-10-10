@@ -3,9 +3,9 @@
 
 title: FAQs for Azure RMS - AIP
 description: Some frequently asked questions about the data protection service, Azure Rights Management (Azure RMS), from Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/11/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance

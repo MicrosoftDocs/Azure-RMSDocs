@@ -2,13 +2,13 @@
 title: include file
 description: include file
 services: azure-policy
-author: batamig
+author: aashishr
  
 ms.service: azure-policy
 ms.topic: include
 ms.collection: M365-security-compliance
 ms.date: 02/15/2022
-ms.author: batamig
+ms.author: aashishr
 ms.custom: include file
 ---
 

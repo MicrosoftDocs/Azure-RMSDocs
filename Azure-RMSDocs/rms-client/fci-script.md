@@ -3,9 +3,9 @@
 
 title: PowerShell script for Azure RMS & FCI - AIP
 description: Sample script to copy and edit, as described in the instructions for RMS protection with Windows Server File Classification Infrastructure.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
