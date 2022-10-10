@@ -42,7 +42,7 @@ Creating a publishing handler requires three steps:
 
 #### Create from descriptor
 
-If protecting content that hasn't yet been protected, or when applying new protection to content, which implies that it's been decrypted, a `mip::ProtectionDescriptor` must be constructed. Once constructed, it is used to instantiate the `mip::ProtectionHandler::PublishingSettings()` object.  The result is returned via the `mip::ProtectionHandler::Observer`.
+If protecting content that hasn't yet been protected, or when applying new protection to content, which implies that it's been decrypted, a `mip::ProtectionDescriptor` must be constructed. Once constructed, it's used to instantiate the `mip::ProtectionHandler::PublishingSettings()` object.  The result is returned via the `mip::ProtectionHandler::Observer`.
 
 ```cpp
 // Create the protection descriptor, passing in a templateId. 
@@ -63,7 +63,7 @@ auto handler = handlerFuture.get();
 return handler;
 ```
 
-After successfully creating the `ProtectionHandler` object, protection operations (encrypt/decrypt) can be performed. The **publishing license** must be fetched from the handler and stored with the encrypted content. The publishing license can be fetched by calling: `handler->GetSerializedPublishingLicense();`
+After you successfully create the `ProtectionHandler` object, protection operations (encrypt/decrypt) can be performed. The **publishing license** must be fetched from the handler and stored with the encrypted content. The publishing license can be fetched by calling: `handler->GetSerializedPublishingLicense();`
 
 Protected content without the corresponding publishing license **cannot be decrypted**.
 
