@@ -23,60 +23,74 @@ Creating a `ProtectionHandler` to work with a specific file requires:
 
 ## Create a protection handler
 
-`mip::ProtectionHandler` objects are constructed by providing either a `ProtectionDescriptor` or a serialized publishing license to one of two `ProtectionEngine` functions. The protection descriptor must be generated for protecting plaintext information that doesn't already have a publishing license. The **publishing license** will be used when decrypting already-protected content or when protecting content where the license has already been constructed. Protected content cannot be decrypted without the associated publishing license.
+`mip::ProtectionHandler` objects are constructed for either **protection** or **consumption** operations. The handler is created using one of four functions, depending on the scenario.
 
-`mip::ProtectionEngine` exposes two functions for creating a `ProtectionHandler`. The parameters are the same, with the exception of the handler or the publishing license as the first parameter.
+- `mip::ProtectionEngine->CreateProtectionHandlerForConsumptionAsync()`
+- `mip::ProtectionEngine->CreateProtectionHandlerForConsumption()`
+- `mip::ProtectionEngine->CreateProtectionHandlerForPublishingAsync()`
+- `mip::ProtectionEngine->CreateProtectionHandlerForPublishing()`
 
-- `mip::ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync`
-  - Requires a `ProtectionDescriptor` as the first parameter.
-- `mip::ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync`
-  - Requires a serialized publishing license, stored in `std::vector<unint8_t>` as the first parameter.
+These functions accept either a `mip::ProtectionHandler::PublishingSettings` or `mip::ProtectionHandler::ConsumptionSettings` object.
 
-### Create from descriptor
+### Create a publishing handler
 
-If protecting content that hasn't yet been protected, or when applying new protection to content, which implies that it's been decrypted, a `mip::ProtectionDescriptor` must be constructed. Once constructed, is passed in to `mip::ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync()` and the result is returned via the `mip::ProtectionHandler::Observer`.
+Creating a publishing handler requires three steps:
+
+ 1) Create a `mip::ProtectionDescriptor` object.
+ 2) Use the `mip::ProtectionDescriptor` to instantiate `mip::ProtectionHandler::PublishingSettings`.
+ 3) Call `mip::ProtectionEngine::CreateProtectionHandlerForPublishingAsync()` passing in the `PublishingSettings` object, observer, and promise.
+
+#### Create from descriptor
+
+If protecting content that hasn't yet been protected, or when applying new protection to content, which implies that it's been decrypted, a `mip::ProtectionDescriptor` must be constructed. Once constructed, it's used to instantiate the `mip::ProtectionHandler::PublishingSettings()` object.  The result is returned via the `mip::ProtectionHandler::Observer`.
 
 ```cpp
+// Create the protection descriptor, passing in a templateId. 
+auto descriptorBuilder = mip::ProtectionDescriptorBuilder::CreateFromTemplate(protectionOptions.templateId);
+std::shared_ptr<mip::ProtectionDescriptor> descriptor = descriptorBuilder->Build();
+
+// Define the handler promise, future, and observer.
 auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<ProtectionHandler>>>();
 auto handlerFuture = handlerPromise->get_future();
-auto observer = std::make_shared<ProtectionHandlerObserverImpl>();
+auto handlerObserver = std::make_shared<ProtectionHandlerObserverImpl>();
 
-//Refer to ProtectionDescriptor docs for details on creating the descriptor
-auto descriptor = CreateProtectionDescriptor(); //Stub function
+// Create the PublishingSettings object using the previously-created descriptor as input.
+mip::ProtectionHandler::PublishingSettings publishingSettings = mip::ProtectionHandler::PublishingSettings(descriptor);
 
-mEngine->CreateProtectionHandlerFromDescriptorAsync(
-    descriptor,
-    mip::ProtectionHandlerCreationOptions::None,
-    observer,
-    handlerPromise);
-
+// Create/get the publishing handler from the publishing settings, observer, and promise.
+mEngine->CreateProtectionHandlerForPublishingAsync(publishingSettings, handlerObserver, handlerPromise);
 auto handler = handlerFuture.get();
+return handler;
 ```
 
-After successfully creating the `ProtectionHandler` object, file operations (get/set/delete/commit) can be performed.
+After you successfully create the `ProtectionHandler` object, protection operations (encrypt/decrypt) can be performed. The **publishing license** must be fetched from the handler and stored with the encrypted content. The publishing license can be fetched by calling: `handler->GetSerializedPublishingLicense();`
 
-### Create from publishing license
+Protected content without the corresponding publishing license **cannot be decrypted**.
+
+### Create the consumption handler
+
+Creating a publishing handler requires three steps:
+
+ 1) Extract a serialized publishing license as `std::vector<uint8_t>` from the protected content.
+ 2) Use the serialized publishing license to instantiate `mip::ProtectionHandler::ConsumptionSettings`.
+ 3) Call `mip::ProtectionEngine::CreateProtectionHandlerForConsumptionAsync()` passing in the `ConsumptionSettings` object, observer, and promise.
 
 This example assumes that the publishing license has already been read from some source and stored in `std::vector<uint8_t> serializedPublishingLicense`.
 
 ```cpp
-
 //TODO: Implement GetPublishingLicense()
 //Snip implies that function reads PL from source file, database, stream, etc.
 std::vector<uint8_t> serializedPublishingLicense = GetPublishingLicense(filePath);
 
+// Define the handler promise, future, and observer.
 auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<ProtectionHandler>>>();
 auto handlerFuture = handlerPromise->get_future();
+shared_ptr<ProtectionHandlerObserverImpl> handlerObserver = std::make_shared<ProtectionHandlerObserverImpl>();
 
-shared_ptr<ProtectionHandlerObserverImpl> handleObserver =
-    std::make_shared<ProtectionHandlerObserverImpl>();
+// Create the consumption settings object from the publishing license.
+mip::ProtectionHandler::ConsumptionSettings consumptionSettings = mip::ProtectionHandler::ConsumptionSettings(serializedPublishingLicense);
 
-mEngine->CreateProtectionHandlerFromPublishingLicenseAsync(
-    serializedPublishingLicense,
-    mip::ProtectionHandlerCreationOptions::None,
-    handleObserver,
-    handlerPromise);
-
+// Create/get the publishing handler from the publishing settings, observer, and promise.
+mEngine->CreateProtectionHandlerForConsumptionAsync(consumptionSettings, handlerObserver, handlerPromise);
 auto handler = handlerFuture.get();
 ```
-
