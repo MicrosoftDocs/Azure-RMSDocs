@@ -31,7 +31,7 @@ Both the Azure Information Protection (AIP) unified labeling client and labels b
 
 For example, if you've applied sensitivity labels in Outlook for the web, or in Office for Mac, these apps use built-in labels rather than the AIP unified labeling client.
 
-Although you can use the AIP unified labeling client for your Office apps on Windows computers, we recommend you use the labels that are built into Office apps, rather than the Office Add-in provided by the unified labeling client. For more information, see [Why choose built-in labeling over the AIP add-in for Office apps](/microsoft-365/compliance/sensitivity-labels-aip).
+Although you can use the AIP unified labeling client for your Office apps on Windows computers, we recommend you use the labels that are built into Office apps, rather than the Office Add-in provided by the unified labeling client. For more information, see [Migrate the Azure Information Protection (AIP) add-in to built-in labeling for Office apps](/microsoft-365/compliance/sensitivity-labels-aip).
 
 The AIP unified labeling client provides labeling support outside Office apps by using File Explorer, PowerShell, and a scanner.
 
@@ -116,7 +116,7 @@ Unlike the AIP Office Add-in, labels built into Office apps require no extra ins
 
 The latest labeling features are [supported only by built-in labeling](/microsoft-365/compliance/sensitivity-labels-aip#features-supported-only-by-built-in-labeling-for-office-apps). If users are already using the AIP Office Add-in, use the [feature parity information](/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office) to identify whether there's a required feature that isn't yet supported by built-in labeling.
 
-For more information, see [Why choose built-in labeling over the AIP add-in for Office apps](/microsoft-365/compliance/sensitivity-labels-aip).
+For more information, see [Migrate the Azure Information Protection (AIP) add-in to built-in labeling for Office apps](/microsoft-365/compliance/sensitivity-labels-aip).
 
 ## Next steps
 
