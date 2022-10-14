@@ -27,6 +27,10 @@ ms.custom: admin
 # Running the Azure Information Protection scanner
 
 
+> [!NOTE]
+> The Azure Information Protection unified labeling scanner is being renamed **Microsoft Purview Information Protection scanner**. At the same time, configuration (currently in preview) is moving to the Microsoft Purview compliance portal. Currently, you can configure the scanner in both the Azure portal and the compliance portal. Instructions in this article refer to both admin portals.
+> 
+
 Once you've confirmed your [system requirements](deploy-aip-scanner-prereqs.md) and [configured and installed your scanner](deploy-aip-scanner-configure-install.md), [run a discovery scan](#run-a-discovery-cycle-and-view-reports-for-the-scanner) to get started.
 
 Use other steps detailed below to manage your scans moving forward.
@@ -37,7 +41,7 @@ Use other steps detailed below to manage your scans moving forward.
 For more information, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
 > [!TIP]
-> While most customers will perform these procedures in the **Azure Information Protection** area of the Azure portal, you may need to work in PowerShell only.
+> While most customers will perform these procedures in the admin portal, you may need to work in PowerShell only.
 >
 > For example, if you are working in an environment without access to the Azure portal, such as [Azure China 21Vianet scanner servers](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs), authenticate to the [AzureInformationProtection](/powershell/module/azureinformationprotection) PowerShell module, and then continue with instructions in this article for PowerShell only.
 >
@@ -47,21 +51,27 @@ Use the following procedure after you've [configured and installed your scanner]
 
 Perform these steps again as needed when your content changes.
 
-1. In the Azure portal, on the **Azure Information Protection - Content scan jobs** pane, select your content scan jobs, and then select the **Scan now** option:
+1. Start a scan on your content scan job.
 
-    ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
+    Do any of the following to start a content scan job:
 
-    Alternatively, in your PowerShell session, run the following command:
+    - **Use the Microsoft Purview compliance portal.**  On the **Information protection scanner - Content scan jobs** pane, select your content scan jobs, and then select the **Scan now** option. The **Scan now** option only appears once a content scan job is selected. 
+        
+    - **Use the Azure portal.**  On the **Azure Information Protection - Content scan jobs** pane, select your content scan jobs, and then select the **Scan now** option.
 
-    ```PowerShell
-    Start-AIPScan
-    ```
+        ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
+
+    - **Use a PowerShell command.** Run `Start-AIPScan` to start the scan.
 
 1. Wait for the scanner to complete its cycle. The scan completes when the scanner has crawled through all the files in the specified data stores.
 
     Do any of the following to monitor scanner progress:
 
-    - **Refresh the scan jobs.**  On the **Azure Information Protection - Content scan jobs** pane, select **Refresh**.
+    - **Use the Microsoft Purview compliance portal.**  On the **Information protection scanner - Content scan jobs** pane, select **Refresh**.
+
+        Wait until you see values for the **LAST SCAN RESULTS** column and the **LAST SCAN (END TIME)** column.
+        
+    - **Use the Azure portal.**  On the **Azure Information Protection - Content scan jobs** pane, select **Refresh**.
 
         Wait until you see values for the **LAST SCAN RESULTS** column and the **LAST SCAN (END TIME)** column.
 
@@ -76,22 +86,22 @@ Perform these steps again as needed when your content changes.
         When a scan is completed, a `Summary_<x>.txt` file is created with the scan summary.
 
 > [!NOTE]
-> Scanners send collected data information to Azure Information Protection every five minutes, so that you can view the results in near real time from the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md).
+> Scanners send collected data information to Azure Information Protection every five minutes, so that you can view the results in near real time from the admin portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md).
 >
-> The Azure portal displays information about the last scan only. If you need to see the results of previous scans, return to the reports that are stored on the scanner computer, in the %*localappdata*%\Microsoft\MSIP\Scanner\Reports folder.
+> The admin portal displays information about the last scan only. If you need to see the results of previous scans, return to the reports that are stored on the scanner computer, in the %*localappdata*%\Microsoft\MSIP\Scanner\Reports folder.
 >
 
 [Initial configurations](deploy-aip-scanner-configure-install.md#configure-the-scanner-settings) instruct you to set the **Info types to be discovered** to **Policy only**. This configuration means that only files that meet the conditions you've configured for automatic classification are included in the detailed reports.
 
 If you don't see any labels applied, check that your label configuration includes automatic rather than recommended classification, or enable **Treat recommended labeling as automatic** (available in scanner version 2.7.x.x and above).
 
-If the results are still not as you expect, you might need to reconfigure the conditions that you specified for your labels. If that's the case, reconfigure the conditions as needed, and repeat this procedure until you are satisfied with the results. Then, update your configuration automatically, and optionally protection.
+If the results are still not as you expect, you might need to reconfigure the conditions that you specified for your labels. If that's the case, reconfigure the conditions as needed, and repeat this procedure until you're satisfied with the results. Then, update your configuration automatically, and optionally protection.
 
 ### Changing log levels or locations
 
 Change the level of logging by using the *ReportLevel* parameter with [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration).
 
-The report folder location or name cannot be changed. If you want to store reports in a different location, consider using a directory junction for the folder.
+The report folder location or name can't be changed. If you want to store reports in a different location, consider using a directory junction for the folder.
 
 For example, use the [Mklink](/windows-server/administration/windows-commands/mklink) command: `mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
 
@@ -100,6 +110,8 @@ If you've performed these steps after an initial configuration and installation,
 ## Stopping a scan
 
 To stop a currently running scan before it's complete, use one of the following methods:
+
+- **Microsoft Purview compliance portal.** Select **Stop scan**:
 
 - **Azure portal.** Select **Stop scan**:
 
@@ -115,9 +127,15 @@ To stop a currently running scan before it's complete, use one of the following 
 
 For the [first scan cycle](#run-a-discovery-cycle-and-view-reports-for-the-scanner), the scanner inspects all files in the configured data stores. For subsequent scans, only new or modified files are inspected.
 
-Inspecting all files again is typically useful when you want the reports to include all files, when you have changes that you want to apply across all files, and when the scanner runs in discovery mode.
+It is useful to inspect all files again when you want the reports to include all files, when you have changes that you want to apply across all files, and when the scanner runs in discovery mode.
 
-**To manually run a full rescan**:
+**To manually run a full rescan in the Microsoft Purview compliance portal**:
+
+1. Navigate to the **Information protection scanner - Content scan jobs** pane in the Microsoft Purview compliance portal.
+
+2. Select your content scan job from the list, and then select the **Rescan all files** option:
+
+**To manually run a full rescan in the Azure portal**:
 
 1. Navigate to the **Azure Information Protection - Content scan jobs** pane in the Azure portal.
 
@@ -147,6 +165,6 @@ For example, if you’ve changed **Sensitivity policy** settings from **Enforce 
 
 ## Next steps
 
-- Interested in how the Core Services Engineering and Operations team in Microsoft implemented this scanner?  Read the technical case study: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
+- Interested in how the Core Services Engineering and Operations team at Microsoft implemented this scanner?  Read the technical case study: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
 - You can also use PowerShell to interactively classify and protect files from your desktop computer. For more information about this and other scenarios that use PowerShell, see [Using PowerShell with the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-powershell.md).
