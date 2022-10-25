@@ -61,7 +61,6 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 
 |Client version|Date released|Supported through|
 |--------------|-------------|-------------|
-|2.13.49.0|01/12/2022|03/01/2023|
 |2.12.62.0|08/02/2021|07/12/2022|
 |2.11.58.0 |04/29/2021|02/08/2022|
 |2.9.116.0|02/08/2021|10/29/2021|
@@ -105,7 +104,7 @@ Starting in 2.14.90.0, MSAL will be the default authentication library for AIP U
 
 For the AIP add-in, users should see no impact as we will use token cache or the integrated Windows authentication (SSO) before prompting the use to log in again. 
 
-For the AIP PowerShell and AIP Scanner, reauthentication is required. To reauthenticate, use the PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) after uprading to this version. 
+For the AIP PowerShell and AIP Scanner, reauthentication is required. To reauthenticate, use the PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) after upgrading to this version. 
 
 ### Fixes
 
