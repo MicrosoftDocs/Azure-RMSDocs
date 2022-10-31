@@ -83,6 +83,8 @@ Before you install the scanner, or upgrade it from an older general availability
 
     Within the Settings pane, select **Information protection scanner**.
 
+    ![Information protection scanner within the Microsoft Purview compliance portal](./media/deploy-aip-scanner-manage.png)
+
 1. [Create a scanner cluster](#create-a-scanner-cluster). This cluster defines your scanner and is used to identify the scanner instance, such as during installation, upgrades, and other processes.
 
 1. [Create a content scan job](#create-a-content-scan-job) to define the repositories you want to scan.
