@@ -83,8 +83,6 @@ Before you install the scanner, or upgrade it from an older general availability
 
     Within the Settings pane, select **Information protection scanner**.
 
-    ![Screenshot of Information protection scanner within the Microsoft Purview compliance portal.](./media/information-protection-scanner.png)
-
     :::image type="content" source="media/information-protection-scanner.png" alt-text="Screenshot of Information protection scanner within the Microsoft Purview compliance portal..":::
 
 1. [Create a scanner cluster](#create-a-scanner-cluster). This cluster defines your scanner and is used to identify the scanner instance, such as during installation, upgrades, and other processes.
