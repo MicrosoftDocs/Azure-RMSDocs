@@ -4,7 +4,7 @@ description: This article will help you understand proxy support in the MIP SDK.
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 07/29/2020
+ms.date: 11/14/2022
 ms.author: tommos
 ---
 

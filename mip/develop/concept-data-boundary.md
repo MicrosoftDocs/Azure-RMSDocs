@@ -4,7 +4,7 @@ description: This article will help you understand the concepts around data comp
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 07/20/2022
+ms.date: 11/14/2022
 ms.author: tommos
 ---
 

@@ -5,7 +5,7 @@ services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 07/30/2019
+ms.date: 11/14/2022
 ms.author: tommos
 ---
 
