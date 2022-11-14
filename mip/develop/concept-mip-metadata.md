@@ -4,7 +4,7 @@ description: This article will help you understand the metadata that is generate
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 11/08/2018
+ms.date: 11/14/2022
 ms.author: tommos
 ---
 # Microsoft Information Protection SDK - Metadata

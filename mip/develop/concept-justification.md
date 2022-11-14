@@ -4,7 +4,7 @@ description: This article will help you understand the scenario of how to downgr
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 04/14/2020
+ms.date: 11/14/2022
 ms.author: mbaldwin
 ---
 

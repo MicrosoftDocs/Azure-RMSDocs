@@ -4,7 +4,7 @@ description: This quickstart describes the steps to downgrade label operation wh
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 04/14/2020
+ms.date: 11/14/2022
 ms.author: mbaldwin
 ms.custom: mode-api
 ---

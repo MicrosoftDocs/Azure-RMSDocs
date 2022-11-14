@@ -4,7 +4,7 @@ description: This article will help you understand the scenario of how to use MI
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 04/08/2020
+ms.date: 11/14/2022
 ms.author: mbaldwin
 ms.custom: mode-api
 ---

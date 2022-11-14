@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.date: 11/14/2022
 ---
 
 # Enumerations and Structures

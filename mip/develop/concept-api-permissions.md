@@ -3,7 +3,7 @@ title: Required API permissions - Microsoft Information Protection SDK
 description: Technical details about API permissions needed for Microsoft Purview Information Protection Software Development kit operations.
 author: msmbaldwin
 ms.author: mbaldwin
-ms.date: 08/20/2020
+ms.date: 11/14/2022
 ms.topic: conceptual
 ms.service: information-protection
 
