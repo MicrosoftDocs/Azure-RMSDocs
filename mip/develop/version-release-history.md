@@ -4,7 +4,7 @@ description: Version release history and change notes for the MIP SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 09/21/2021
+ms.date: 11/14/2022
 ms.author: mbaldwin
 ---
 

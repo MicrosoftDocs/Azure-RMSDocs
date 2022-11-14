@@ -5,7 +5,7 @@ services: information-protection
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 03/30/2020
+ms.date: 11/14/2022
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to encrypt text with the MIP SDK, so that I can use the SDK APIs to apply protection to my own data.
 ms.custom: mode-api

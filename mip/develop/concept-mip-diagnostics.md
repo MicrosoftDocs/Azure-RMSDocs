@@ -4,7 +4,7 @@ description: This article will help you understand how to opt out of diagnostic 
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 10/01/2019
+ms.date: 11/14/2022
 ms.author: tommos
 ---
 

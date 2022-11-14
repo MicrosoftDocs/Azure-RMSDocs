@@ -4,7 +4,7 @@ description: This article will help you understand the scenario of how to re-use
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 05/01/2020
+ms.date: 11/14/2022
 ms.author: mbaldwin
 ms.custom: mode-api
 ---
