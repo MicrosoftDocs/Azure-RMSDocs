@@ -39,13 +39,55 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
+## Version 1.12.101
+
+**Release Date:** November 18, 2022
+
+### File SDK
+
+- Fixed an issue where including special characters in a label name may cause a message to be unopenable by Microsoft Outlook.
+- Fixed a bug when protection was removed for inactive labels.
+- Fixed a bug where changing label permissions with co-auth enabled produced protected documents that could not be opened.
+- Upgraded libgsf to 1.14.50 and LibXML2 to 2.9.14.
+- Upgraded XMP use an upgraded version of Expat – version 2.4.7 
+
+### POlicy SDK
+
+- Fixed a bug with invalid metadata exception for `ComputeActions`.
+
+### Protection SDK
+
+- Added accessors to retrieve the intranet and extranet URLs from `TenantInformation`.
+- Exposed a C API for acquiring delegation licenses.
+- Fixed a bug for inconsistent parent label metadata when child labels are removed.
+- Fixed an auth cache bug for `CreateFromLicenseType`.
+- Fix an issue where the engine being cleaned up during a `GetTemplatesAsync()` call would cause a crash.
+- Added `GetLicenseRightsData` to get user/objectId/puid and rights from publishing license.
+- Fixed a bug where descriptor tag could not be added to license if there are no descriptors.
+- Fixed a .NET crash on Linux.
+- Fixed a desk space issue; an error is now reported when MIP runs out of disc space when protecting content.
+- Upgraded OpenSSL dependency to 1.1.1-r.1.
+
+### Platform and Dependency Updates
+
+- Fixed a bug where clouds were not treated consistently.
+- Added support for offline publishing preview feature.
+- Fixed a bug where wrappers were missing telemetry cloud for sovereign cloud scenarios.
+- Removed PII from audit telemetry of debug builds.
+
+### Breaking Changes
+
+- If both `usersWithDefaultRights` and `additionalUsersAndRights` are empty, `CreateFromLicenseType` will throw a `BadInputError`.
+- Added new methods `GetLicenseRightsData` and `GetLicenseRightsDataAsync` in class `ProtectionEngine`.
+
+
 ## Version 1.12.61
 
 **Release Date:** June 9, 2022
 
 ### File SDK
 
-- File SDK now supports data boundary via `FileEngineSettings.DataBoundary`
+- File SDK now supports data boundary via `FileEngineSettings.DataBoundary`.
 - Fixed a bug in `GetCodePage` in `MsgInspector`.
 - Fixed bug where **BodyType** always returned **TXT** in `MsgInspector`.
 - Fixed a bug in Java wrapper where using `UserRoles` threw *java.util.Collections$UnmodifiableCollection cannot be cast to java.util.List* exception.
@@ -56,7 +98,6 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Policy SDK now supports data boundary via `PolicyEngineSettings.DataBoundary`. 
 - Fixed a bug where in certain conditions policy changes resulted in a crash. 
 - Fixed an issue where Encrypt Only labels with DKE protection were not filtered when they should have been. 
-
 
 ### Protection SDK
 
@@ -72,7 +113,6 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - `MsgInpector` will no longer attempt to decrypt attachments that are part of the **message.rpmsg** file.
 - `MsgInpector` will now return a fully-functional **MSG** file if the **message.rpmsg** file had MSG attachments. These MSG files can be decrypted with the `FileHandler.RemoveProtection` API.
 - `TelemetryDelegate` and `AuditDelegate` **WriteEvent** method now requires a second parameter, `EventContext`. The `EventContext` class exposes information on the target cloud and data boundary for the event. 
-
 
 ### Platform and Dependency Updates
 
