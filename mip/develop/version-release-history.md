@@ -51,7 +51,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Upgraded libgsf to 1.14.50 and LibXML2 to 2.9.14.
 - Upgraded XMP use an upgraded version of Expat – version 2.4.7 
 
-### POlicy SDK
+### Policy SDK
 
 - Fixed a bug with invalid metadata exception for `ComputeActions`.
 
