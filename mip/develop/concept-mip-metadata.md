@@ -52,7 +52,7 @@ When applied to a file, the result is similar to the table below.
 
 ## ContentBits
 
-The `contentBits` metadata property in MIP SDK is used to indicate which content-modifying actions were taking on a file by the labeling application. 
+The `contentBits` metadata property in MIP SDK is used to indicate which content-modifying actions were taken on a file by the labeling application. 
 
 `contentBits` can be read by downstream applications to understand which actions were applied to the file. Using this property, an application like Word, Excel, or PowerPoint can compare the value on the file metadata to the value it computes based on the policy. If there's a difference, it may apply the missing information.
 
