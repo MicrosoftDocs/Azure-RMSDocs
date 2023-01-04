@@ -29,12 +29,6 @@ ms.custom: user
 
 The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text files that cannot be opened with your regular apps for these file types. For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
 
-## Support timeline
-
-The **Azure Information Protection unified labeling client** has also moved into maintenance mode as of January 1, 2022, and moving forward, no new features will be added to the unified labeling client.
-
-Learn more in our TechCommunity blog: [Announcing AIP unified labeling client maintenance mode and sunset of mobile viewer](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613).
-
 ## Support scope and recommended usage
 
 The AIP mobile apps are *viewers only,* and do not enable you to create new emails or reply to emails, or create or edit protected files. The AIP mobile apps also cannot open attachments to protected PDFs or emails.
