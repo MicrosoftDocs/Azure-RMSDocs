@@ -15,10 +15,6 @@
     href: aka.md
 - name: Tutorials
   items:
-  - name: Installing the scanner
-    href: tutorial-install-scanner.md
-  - name: Discovering your sensitive content
-    href: tutorial-scan-networks-and-content.md
   - name: Migrating from the classic client to the unified labeling client
     href: tutorial-migrating-to-ul.md
 - name: Concepts
@@ -35,8 +31,6 @@
       href: ./rms-client/clientv2-admin-guide-file-types.md
     - name: Unified labeling client requirements
       href: ./rms-client/reqs-ul-client.md
-    - name: On-premises scanner requirements
-      href: deploy-aip-scanner-prereqs.md
   - name: AIP classification and protection
     href: aip-classification-and-protection.md
   - name: Azure Rights Management
@@ -165,16 +159,6 @@
         href: ./rms-client/client-admin-guide-document-tracking.md
       - name: Tracking and revoking documents for users
         href: ./rms-client/client-track-revoke.md
-  - name: Deploying the on-premises unified labeling scanner
-    items:
-    - name: Overview
-      href: deploy-aip-scanner.md
-    - name: Configure and install the unified labeling scanner
-      href: deploy-aip-scanner-configure-install.md
-    - name: Run the unified labeling scanner
-      href: deploy-aip-scanner-manage.md
-    - name: Troubleshoot your scanner
-      href: deploy-aip-scanner-tsg.md
   - name: Deploying & using the client
     items:
     - name: Deploying the client
