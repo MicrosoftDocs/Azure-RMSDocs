@@ -18,7 +18,7 @@ ms.author: mbaldwin
 
 Similar to a profile, the engine also requires a settings object, `mip::PolicyEngine::Settings`. This object stores the unique engine identifier, an object of your `mip::AuthDelegate` implementation, customizable client data that can be used for debugging or telemetry, and, optionally, the locale.
 
-Here we create a `FileEngine::Settings` object called *engineSettings* using the identity of the application user:
+Here we create a `PolicyEngine::Settings` object called *engineSettings* using the identity of the application user:
 
 ```cpp
 PolicyEngine::Settings engineSettings(
