@@ -20,7 +20,7 @@ Now that the `MipContext` and `ProfileObserver` are defined, we'll use the them 
 
 ### Profile::Settings Parameters
 
-The `PolicyProfile::Settings` constructor accepts four parameters, listed below:
+The `PolicyProfile::Settings` constructor accepts three parameters, listed below:
 
 - `const std::shared_ptr<MipContext>`: The `mip::MipContext` object that was initialized to store application info, state path, etc.
 - `mip::CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted. For more details, see the [Cache storage concepts](concept-cache-storage.md).
