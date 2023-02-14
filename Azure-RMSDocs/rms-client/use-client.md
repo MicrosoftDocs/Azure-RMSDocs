@@ -37,7 +37,7 @@ The **Azure Information Protection unified labeling client** has [multiple compo
 
 Moving forward, no new features will be added to the AIP add-in. Instead, new features are being added to Office built-in labeling that is supported across multiple platforms. You might find it helpful to reference [Features supported only by built-in labeling for Office apps](/microsoft-365/compliance/sensitivity-labels-aip#features-supported-only-by-built-in-labeling-for-office-apps).
 
-Additionally, we have retired the **Azure Information Protection classic client** and **Label Management** in the Azure portal as of **March 31, 2022**. No further support is provided for the classic client and maintenance versions will no longer be released.
+We have also retired the **Azure Information Protection classic client** and **Label Management** in the Azure portal as of **March 31, 2022**. No further support is provided for the classic client and maintenance versions will no longer be released. For more information on other retired Azure Information Protection services, see [removed and retired services](../removed-sunset-services.md)
 
 All current Azure Information Protection classic client customers must [migrate to the unified labeling platform](../tutorial-migrating-to-ul.md) and upgrade to the [unified labeling client](../rms-client/clientv2-admin-guide-install.md).
 
