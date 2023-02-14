@@ -27,17 +27,15 @@ search.appverid:
 
 [!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
-Both the Azure Information Protection (AIP) unified labeling client and labels built into Office apps use [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) that make it easier for users to protect their data.
+Both the Azure Information Protection (AIP) add-in and Office built-in labeling use [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) to help users protect their sensitive data within Office apps. Since the AIP add-in is in maintenance mode, we recommend you use Office built-in labeling. For more information, see [Why choose built-in labeling over the AIP add-in for Office apps](/microsoft-365/compliance/sensitivity-labels-aip).
 
-For example, if you've applied sensitivity labels in Outlook for the web, or in Office for Mac, these apps use built-in labels rather than the AIP unified labeling client.
-
-Although you can use the AIP unified labeling client for your Office apps on Windows computers, we recommend you use the labels that are built into Office apps, rather than the Office Add-in provided by the unified labeling client. For more information, see [Why choose built-in labeling over the AIP add-in for Office apps](/microsoft-365/compliance/sensitivity-labels-aip).
-
-The AIP unified labeling client provides labeling support outside Office apps by using File Explorer, PowerShell, and a scanner.
+For labeling support outside of Office apps, the AIP unified client can still be used for scanning on-premises files, classify and protect within File Explorer, labeling within PowerShell, and viewing files thorugh the AIP Viewer.  
 
 ## AIP client support and timelines
 
-The **Azure Information Protection unified labeling client** has moved into **maintenance mode** as of **January 1, 2022**. Moving forward, no new features will be added to the unified labeling client. Instead, new features are being added to labeling built into Office apps that are supported across multiple platforms. You might find it helpful to reference [Features supported only by built-in labeling for Office apps](/microsoft-365/compliance/sensitivity-labels-aip#features-supported-only-by-built-in-labeling-for-office-apps).
+The **Azure Information Protection unified labeling client** has [multiple components bundled up into a single downloadable package](clientv2-admin-guide.md#technical-overview-of-the-azure-information-protection-unified-labeling-client). The Azure Information Protection add-in [part of the unified labeling client] is the only component in **maintenance mode** as of **Jan 1, 2022**, driven by the modernization effort to make sensitivity labeling and protection built-in to Office applications. All other components within the unified labeling client are not in maintenance mode and are fully supported. For more information, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/azure-information-protection-and-the-information-protection/ba-p/3671070#:~:text=Azure%20Information%20Protection%20%28AIP%29%20has%20been%20on%20a,management%20experience%20into%20the%20Microsoft%20Purview%20compliance%20portal).
+
+Moving forward, no new features will be added to the AIP add-in. Instead, new features are being added to Office built-in labeling that is supported across multiple platforms. You might find it helpful to reference [Features supported only by built-in labeling for Office apps](/microsoft-365/compliance/sensitivity-labels-aip#features-supported-only-by-built-in-labeling-for-office-apps).
 
 Additionally, we have retired the **Azure Information Protection classic client** and **Label Management** in the Azure portal as of **March 31, 2022**. No further support is provided for the classic client and maintenance versions will no longer be released.
 
@@ -54,7 +52,7 @@ For more information, see
 
 ## Latest labeling features 
 
-Although no new features will be added for the unified labeling client, we're constantly developing new features and improvements for sensitivity labels that use built-in labeling. Check for updates in the following locations:
+Although no new features will be added for the AIP add-in, we're constantly developing new features and improvements for sensitivity labels that use built-in labeling. Check for updates in the following locations:
 
 - [Features supported only by built-in labeling](/microsoft-365/compliance/sensitivity-labels-aip#features-supported-only-by-built-in-labeling-for-office-apps)
 - [Feature parity for built-in labeling and the AIP Add-in for Office](/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office)
