@@ -114,7 +114,7 @@ Unlike the AIP Office Add-in, labels built into Office apps require no extra ins
 
 The latest labeling features are [supported only by built-in labeling](/microsoft-365/compliance/sensitivity-labels-aip#features-supported-only-by-built-in-labeling-for-office-apps). If users are already using the AIP Office Add-in, use the [feature parity information](/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office) to identify whether there's a required feature that isn't yet supported by built-in labeling.
 
-For more information, see [Why choose built-in labeling over the AIP add-in for Office apps](/microsoft-365/compliance/sensitivity-labels-aip).
+For more information, see [Migrate the Azure Information Protection (AIP) add-in to built-in labeling for Office apps](/microsoft-365/compliance/sensitivity-labels-aip).
 
 ## Next steps
 

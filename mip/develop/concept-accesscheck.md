@@ -3,7 +3,7 @@ title: Access Check - Microsoft Information Protection SDK
 description: Technical details about performing access checks with the Microsoft Purview Information Protection Software Development kit.
 author: tommoser
 ms.author: tommos
-ms.date: 08/16/2022
+ms.date: 11/14/2022
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -24,7 +24,7 @@ For a full list of the usage rights and descriptions, refer to [Configure usage 
 
 ## Scenarios
 
-Where and how your application performs access checks will depend upon the type of application you're building. Applications that handle full-file output and have no user interface will use the `EXTRACT` or `OWNER` rights most frequently. Applications with a user interface will require most granular controls, blocking access to user controls and export paths in the application. See the [performing access checks](#performing-access-checks)section for code examples.
+Where and how your application performs access checks will depend upon the type of application you're building. Applications that handle full-file output and have no user interface will use the `EXTRACT` or `OWNER` rights most frequently. Applications with a user interface will require most granular controls, blocking access to user controls and export paths in the application. See the [performing access checks](#performing-access-checks) section for code examples.
 
 ### Applications without a user interface
 

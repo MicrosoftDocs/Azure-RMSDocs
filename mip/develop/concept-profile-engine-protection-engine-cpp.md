@@ -4,7 +4,7 @@ description: This article will help you understand the concepts around the Prote
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 07/30/2019
+ms.date: 11/14/2022
 ms.author: mbaldwin
 ---
 

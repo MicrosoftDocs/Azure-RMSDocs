@@ -4,7 +4,7 @@ description: This article will help you understand how the MIP SDK implements se
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 05/30/2020
+ms.date: 11/14/2022
 ms.author: mbaldwin
 ---
 
