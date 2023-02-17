@@ -106,7 +106,7 @@ Starting in 2.15.33.0, data from the AIP UL Client can be sent to the EU for sto
 
 This version of the unified labeling client and scanner provides the following fixes and impreovements:
 
-- [Double Key Encryption](/microsoft-365/compliance/double-key-encryption?view=o365-worldwide) templates are supported in Outlook.
+- [Double Key Encryption](/microsoft-365/compliance/double-key-encryption) templates are supported in Outlook.
 - Updated to [MIP SDK 1.12.101](/information-protection/develop/version-release-history#version-112101) for classification, labeling and protection services.
 
 
