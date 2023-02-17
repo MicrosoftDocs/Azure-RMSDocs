@@ -43,10 +43,9 @@ The Azure Information Protection unified labeling client has [multiple component
 
 The lifecycle of each generally available (GA) version of the Azure Information Protection unified labeling client could vary from build to build, depending on the release date of a subsequent GA version. In overall, each GA version is supported until the subsequent GA version is released, plus up to six months more, after the release of the subsequent GA version (could be less than 6 months, if the new subsequent GA version will be released within those 6 months).
 
-For example, version **2.12.62.0** was released on Aug 2, 2021, then the next version - **2.13.49.0**, was released on Jan 12, 2022. Therefore, version **2.12.62.0** is fully supported six months after Jan 12, 2022, which is Jul 12, 2022.
+For example, version **2.12.62.0** is released on Aug 2, 2021, then the next version - **2.13.49.0**, is released on Jan 12, 2022. Therefore, version **2.12.62.0** is fully supported six months after Jan 12, 2022, which is Jul 12, 2022.
 
-The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. =
-Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
+The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client.Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
 
 ### Microsoft Update Catalog availability
 
@@ -100,13 +99,13 @@ This version includes the following fixes for the unified labeling scanner and c
 
 ### EU Data Boundary Support
 
-Starting in 2.15.33.0, data from the AIP UL Client can be sent to the EU for storage and processing. To enable the EU data boundary setting, configure this [registry key](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-data-boundary-settings).
+Starting in 2.15.33.0, EU customers can send data from the AIP UL Client to the EU for storage and processing. To enable the EU data boundary setting, configure this [registry key](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-data-boundary-settings).
 
 ### Fixes and improvements
 
 This version of the unified labeling client and scanner provides the following fixes and impreovements:
 
-- [Double Key Encryption](/microsoft-365/compliance/double-key-encryption) templates are supported in Outlook.
+- Outlook supports [Double Key Encryption](/microsoft-365/compliance/double-key-encryption) templates.
 - Updated to [MIP SDK 1.12.101](/information-protection/develop/version-release-history#version-112101) for classification, labeling and protection services.
 
 
@@ -120,7 +119,7 @@ This version includes the following fixes for the unified labeling scanner and c
 
 ### Updating Authentication Library to MSAL
 
-Starting in 2.14.90.0, MSAL will be the default authentication library for AIP UL client and AIP Scanner, replacing ADAL from the previous versions.
+Starting in 2.14.90.0, MSAL is the default authentication library for AIP UL client and AIP Scanner, replacing ADAL from the previous versions.
 
 For the AIP add-in, users should see no impact as we will use token cache or the integrated Windows authentication (SSO) before prompting the use to log in again. 
 
