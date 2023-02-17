@@ -90,6 +90,26 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 >
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
+## Version 2.15.33.0
+
+Unified labeling scanner and client version 2.15.33.0
+
+**Released** 02/17/2023
+
+This version includes the following fixes for the unified labeling scanner and client:
+
+### EU Data Boundary Support
+
+Starting in 2.15.33.0, data from the AIP UL Client can be sent to the EU for storage and processing. To enable the EU data boundary setting, configure this [registry key](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-data-boundary-settings).
+
+### Fixes and improvements
+
+This version of the unified labeling client and scanner provides the following fixes and impreovements:
+
+- [Double Key Encryption](/microsoft-365/compliance/double-key-encryption?view=o365-worldwide) templates are supported in Outlook.
+- Updated to [MIP SDK 1.12.101](/information-protection/develop/version-release-history#version-112101) for classification, labeling and protection services.
+
+
 ## Version 2.14.90.0
 
 Unified labeling scanner and client version 2.14.90.0
