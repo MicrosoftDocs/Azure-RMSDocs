@@ -60,7 +60,7 @@ The on-premises scanner is installed using PowerShell cmdlets provided as part o
 
 For example, configure the content scan job setting for the on-premises scanner within the Microsoft Purview compliance portal:
 
-:::image type="content" source="media/information-protection-scanner.png" alt-text="Configure content scan jobs on information protection scanner" lightbox="media/information-protection-scanner.png":::
+:::image type="content" source="media/information-protection-scanner.png" alt-text="Screenshot of how to configure content scan jobs on information protection scanner." lightbox="media/information-protection-scanner.png":::
 
 For more information, see:
 
@@ -114,7 +114,7 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 
 See the following recorded sessions from Ignite 2020:
 
-- [**Supercharge information protection and governance** across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/archives/IG20-DB163) | [Ask the expert](https://myignite.microsoft.com/archives/IG20-ATE-DB163)
+- [**Supercharge information protection and governance** across cloud, on-premises, endpoints and remote work environments](https://myignite.microsoft.com/archives/IG20-DB163) | [Ask the expert](https://myignite.microsoft.com/archives/IG20-ATE-DB163)
 
 - [**Be a risk management hero** with intelligent data protection and compliance solutions](https://myignite.microsoft.com/archives/IG20-DB159) | [Ask the expert session 1](https://myignite.microsoft.com/archives/IG20-ATE-DB159) | [Ask the expert session 2](https://myignite.microsoft.com/archives/IG20-ATE-DB159-R1)
 
