@@ -6,7 +6,7 @@ ms.service: information-protection
 ms.topic: reference
 
 ms.author: mbaldwin
-ms.date: 9/22/2020
+ms.date: 11/14/2022
 ---
 
 # Structures

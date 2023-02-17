@@ -4,7 +4,7 @@ description: A quickstart showing you how to use the Microsoft Information Prote
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 01/18/2019
+ms.date: 11/14/2022
 ms.author: mbaldwin
 ms.custom: has-adal-ref, mode-api
 #Customer intent: As a an application developer, I want to learn how to list protection templates for a user in the MIP SDK, so that I can use the SDK APIs to apply templates later on.

@@ -4,7 +4,7 @@ description: This article will help you understand the metadata that is generate
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 11/08/2018
+ms.date: 11/14/2022
 ms.author: tommos
 ---
 # Microsoft Information Protection SDK - Metadata
@@ -52,7 +52,7 @@ When applied to a file, the result is similar to the table below.
 
 ## ContentBits
 
-The `contentBits` metadata property in MIP SDK is used to indicate which content-modifying actions were taking on a file by the labeling application. 
+The `contentBits` metadata property in MIP SDK is used to indicate which content-modifying actions were taken on a file by the labeling application. 
 
 `contentBits` can be read by downstream applications to understand which actions were applied to the file. Using this property, an application like Word, Excel, or PowerPoint can compare the value on the file metadata to the value it computes based on the policy. If there's a difference, it may apply the missing information.
 

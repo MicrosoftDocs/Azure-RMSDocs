@@ -49,7 +49,7 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
     To sign in, first type:
 
     ```markdown
-    Connect-Exchange Online
+    Connect-ExchangeOnline
     ```
 
     Then, in the **Windows PowerShell credential request** dialog box, supply your Microsoft 365 user name and password.
