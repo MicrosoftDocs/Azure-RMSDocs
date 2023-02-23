@@ -158,7 +158,7 @@ In scanner versions 2.8.85.0 or later, AIP skips the full rescan for updated set
 For example, if you’ve changed **Sensitivity policy** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
 
 > [!NOTE]
-> In scanner version [2.7.101.0](rms-client/unifiedlabelingclient-version-release-history.md#general-availability-versions-that-are-no-longer-supported) and lower, you may want to refresh the policy sooner than every four hours, such as while testing. In such cases, manually delete the contents of the **%LocalAppData%\Microsoft\MSIP\mip\<processname>\mip** directory and restart the Azure Information Protection service.
+> In scanner version [2.7.101.0](rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines) and lower, you may want to refresh the policy sooner than every four hours, such as while testing. In such cases, manually delete the contents of the **%LocalAppData%\Microsoft\MSIP\mip\<processname>\mip** directory and restart the Azure Information Protection service.
 >
 > If you've also changed protection settings for your labels, wait an extra 15 minutes from when you saved the updated protection settings before restarting the Azure Information Protection service.
 >
