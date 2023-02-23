@@ -41,28 +41,16 @@ If you're looking for updates for the *built-in labeling solution* for Microsoft
 
 The Azure Information Protection unified labeling client has [multiple components bundled up into a single downloadable package](clientv2-admin-guide.md#technical-overview-of-the-azure-information-protection-unified-labeling-client). The Azure Information Protection add-in [part of the unified labeling client] is the only component in maintenance mode as of Jan 1, 2022, driven by the modernization effort to make sensitivity labeling and protection built-in to Office applications. All other components within the unified labeling client aren't in maintenance mode and are fully supported. For more information, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/azure-information-protection-and-the-information-protection/ba-p/3671070#:~:text=Azure%20Information%20Protection%20%28AIP%29%20has%20been%20on%20a,management%20experience%20into%20the%20Microsoft%20Purview%20compliance%20portal).
 
-The lifecycle of each generally available (GA) version of the Azure Information Protection unified labeling client could vary from build to build, depending on the release date of a subsequent GA version. In overall, each GA version is supported until the subsequent GA version is released, plus up to six months more, after the release of the subsequent GA version (could be less than 6 months, if the new subsequent GA version will be released within those 6 months).
-
-For example, version **2.12.62.0** is released on Aug 2, 2021, then the next version - **2.13.49.0**, is released on Jan 12, 2022. Therefore, version **2.12.62.0** is fully supported six months after Jan 12, 2022, which is Jul 12, 2022.
-
-The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. Fixes and new functionality are always applied to the latest GA version and won't be applied to older GA versions.
-
-### Microsoft Update Catalog availability
-
-After a short delay of typically four weeks, the latest general availability version is also included in the Microsoft Update Catalog. Azure Information Protection versions have a product name of **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Unified Labeling Client**, and a classification of **Updates**.
-
-Including Azure Information Protection in the catalog means that you can upgrade the client using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
-
-For more information, see [Upgrading and maintaining the Azure Information Protection unified labeling client](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
-
-
-### General availability versions that are no longer supported
+The lifecycle of each generally available (GA) version of the Azure Information Protection unified labeling client could vary from build to build, depending on the release date of a subsequent GA version.
 
 |Client version|Date released|Supported through|
 |--------------|-------------|-------------|
-|2.12.62.0|08/02/2021|07/12/2022|
-|2.11.58.0 |04/29/2021|02/08/2022|
-|2.9.116.0|02/08/2021|10/29/2021|
+|2.15.33.0|02/17/2023|02/17/2024|
+|2.14.90.0|09/01/2022|09/01/2023|
+|2.13.49.0|01/12/2022|03/01/2023|
+|2.12.62.0|08/02/2021|Deprecated|
+|2.11.58.0 |04/29/2021|Deprecated|
+|2.9.116.0|02/08/2021|Deprecated|
 |2.9.111.0|01/13/2021|Deprecated|
 |2.8.85.0|09/22/2020|Deprecated|
 |2.7.101.0|08/23/2020|Deprecated|
@@ -78,6 +66,16 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 
 The date format used on this page is *month/day/year*.
 
+The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. Fixes and new functionality are always applied to the latest GA version and won't be applied to older GA versions.
+
+### Microsoft Update Catalog availability
+
+After a short delay of typically four weeks, the latest general availability version is also included in the Microsoft Update Catalog. Azure Information Protection versions have a product name of **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Unified Labeling Client**, and a classification of **Updates**.
+
+Including Azure Information Protection in the catalog means that you can upgrade the client using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
+
+For more information, see [Upgrading and maintaining the Azure Information Protection unified labeling client](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
+
 ### Release information
 
 Use the following information to see the contents of each supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
@@ -92,6 +90,8 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 ## Version 2.15.33.0
 
 Unified labeling scanner and client version 2.15.33.0
+
+**Supported through** 02/17/2024
 
 **Released** 02/17/2023
 
@@ -112,6 +112,8 @@ This version of the unified labeling client and scanner provides the following f
 ## Version 2.14.90.0
 
 Unified labeling scanner and client version 2.14.90.0
+
+**Supported through** 09/01/2023
 
 **Released** 09/01/2022
 
