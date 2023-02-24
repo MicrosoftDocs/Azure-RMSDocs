@@ -35,7 +35,7 @@ Azure Information Protection (AIP) is part of **Microsoft Purview Information Pr
 AIP extends the [labeling](/microsoft-365/compliance/sensitivity-labels) and [classification](/microsoft-365/compliance/data-classification-overview) functionality provided by Microsoft Purview with the following capabilities:
 
 - The [**unified labeling client**](#aip-unified-labeling-client)
-- An on-premises [**scanner**](#aip-on-premises-scanner)
+- An on-premises [**scanner**](#on-premises-scanner)
 - The [**SDK**](#microsoft-information-protection-sdk)
 
 AIP also provides the encryption service, [Azure Rights Management](what-is-azure-rms.md), that's used by Microsoft Purview Information Protection.
@@ -52,19 +52,19 @@ For example, in File Explorer, right-click one or more files and select **Classi
 
 Download the client from the [Microsoft Azure Information Protection download page](https://www.microsoft.com/download/details.aspx?id=53018).
     
-## AIP on-premises scanner
+## On-premises scanner
 
-The Azure Information Protection on-premises scanner enables administrators to scan their on-premises file repositories for sensitive content that must be labeled, classified, and/or protected.
+The on-premises scanner enables administrators to scan their on-premises file repositories for sensitive content that must be labeled, classified, and/or protected.
 
-The on-premises scanner is installed using PowerShell cmdlets provided as part of the unified labeling client, and can be managed using PowerShell and the Azure Information Protection area in the Azure portal.
+The on-premises scanner is installed using PowerShell cmdlets provided as part of the unified labeling client, and can be managed using PowerShell and the information protection scanner area in the Microsoft Purview compliance portal.
 
-For example, use the scanner data shown on the Azure portal to find repositories on your network that might have sensitive content at risk:
+For example, configure the content scan job setting for the on-premises scanner within the Microsoft Purview compliance portal:
 
-:::image type="content" source="media/risky-repos-small.png" alt-text="Check scanned networks for risky repositories" lightbox="media/risky-repos.png":::
+:::image type="content" source="media/information-protection-scanner.png" alt-text="Screenshot of how to configure content scan jobs on information protection scanner." lightbox="media/information-protection-scanner.png":::
 
 For more information, see:
 
-- [What is the AIP unified labeling scanner?](deploy-aip-scanner.md)
+- [Learn about the information protection scanner](/microsoft-365/compliance/deploy-scanner)
 - The scanner sections of the [AIP unified labeling client - Version release history](rms-client/unifiedlabelingclient-version-release-history.md)
 
 Download the scanner installation together with the client from the [Microsoft Azure Information Protection download page](https://www.microsoft.com/download/details.aspx?id=53018).
@@ -114,7 +114,7 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 
 See the following recorded sessions from Ignite 2020:
 
-- [**Supercharge information protection and governance** across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/archives/IG20-DB163) | [Ask the expert](https://myignite.microsoft.com/archives/IG20-ATE-DB163)
+- [**Supercharge information protection and governance** across cloud, on-premises, endpoints and remote work environments](https://myignite.microsoft.com/archives/IG20-DB163) | [Ask the expert](https://myignite.microsoft.com/archives/IG20-ATE-DB163)
 
 - [**Be a risk management hero** with intelligent data protection and compliance solutions](https://myignite.microsoft.com/archives/IG20-DB159) | [Ask the expert session 1](https://myignite.microsoft.com/archives/IG20-ATE-DB159) | [Ask the expert session 2](https://myignite.microsoft.com/archives/IG20-ATE-DB159-R1)
 

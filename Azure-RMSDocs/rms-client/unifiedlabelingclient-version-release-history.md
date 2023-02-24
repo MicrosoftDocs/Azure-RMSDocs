@@ -31,7 +31,7 @@ This article describes the functionality added to each recent version of the uni
 
 You can download the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
-If you are looking for updates for the *built-in labeling solution* for Microsoft Office applications, see:
+If you're looking for updates for the *built-in labeling solution* for Microsoft Office applications, see:
 
 - Information protection items, such as the "Sensitivity labels" sections in [What's new in Microsoft Purview risk and compliance solutions](/microsoft-365/compliance/whats-new)
 - [Protect your sensitive data with Microsoft Purview](/microsoft-365/compliance/information-protection)
@@ -39,31 +39,18 @@ If you are looking for updates for the *built-in labeling solution* for Microsof
 
 ## Servicing information and timelines
 
-As we continue to bring the customer labeling and protection experience to built-in applications like Office 365, the **Azure Information Protection unified labeling client** has moved into **maintenance mode** as of **January 1, 2022**. Moving forward, no new features will be added to the unified labeling client. For more information, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613).
+The Azure Information Protection unified labeling client has [multiple components bundled up into a single downloadable package](clientv2-admin-guide.md#technical-overview-of-the-azure-information-protection-unified-labeling-client). The Azure Information Protection add-in [part of the unified labeling client] is the only component in maintenance mode as of Jan 1, 2022, driven by the modernization effort to make sensitivity labeling and protection built-in to Office applications. All other components within the unified labeling client aren't in maintenance mode and are fully supported. For more information, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/azure-information-protection-and-the-information-protection/ba-p/3671070#:~:text=Azure%20Information%20Protection%20%28AIP%29%20has%20been%20on%20a,management%20experience%20into%20the%20Microsoft%20Purview%20compliance%20portal).
 
-The lifecycle of each generally available (GA) version of the Azure Information Protection unified labeling client could vary from build to build, depending on the release date of a subsequent GA version. In overall, each GA version is supported until the subsequent GA version is released, plus up to six months more, after the release of the subsequent GA version (could be less than 6 months, if the new subsequent GA version will be released within those 6 months).
-
-For example, version **2.12.62.0** was released on Aug 2, 2021, then the next version - **2.13.49.0**, was released on Jan 12, 2022. Therefore, version **2.12.62.0** is fully supported six months after Jan 12, 2022, which is Jul 12, 2022.
-
-The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. =
-Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
-
-### Microsoft Update Catalog availability
-
-After a short delay of typically four weeks, the latest general availability version is also included in the Microsoft Update Catalog. Azure Information Protection versions have a product name of **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Unified Labeling Client**, and a classification of **Updates**.
-
-Including Azure Information Protection in the catalog means that you can upgrade the client using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
-
-For more information, see [Upgrading and maintaining the Azure Information Protection unified labeling client](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
-
-
-### General availability versions that are no longer supported
+The lifecycle of each generally available (GA) version of the Azure Information Protection unified labeling client could vary from build to build, depending on the release date of a subsequent GA version.
 
 |Client version|Date released|Supported through|
 |--------------|-------------|-------------|
-|2.12.62.0|08/02/2021|07/12/2022|
-|2.11.58.0 |04/29/2021|02/08/2022|
-|2.9.116.0|02/08/2021|10/29/2021|
+|2.15.33.0|02/17/2023|02/17/2024|
+|2.14.90.0|09/01/2022|09/01/2023|
+|2.13.49.0|01/12/2022|03/01/2023|
+|2.12.62.0|08/02/2021|Deprecated|
+|2.11.58.0 |04/29/2021|Deprecated|
+|2.9.116.0|02/08/2021|Deprecated|
 |2.9.111.0|01/13/2021|Deprecated|
 |2.8.85.0|09/22/2020|Deprecated|
 |2.7.101.0|08/23/2020|Deprecated|
@@ -79,6 +66,16 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 
 The date format used on this page is *month/day/year*.
 
+The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. Fixes and new functionality are always applied to the latest GA version and won't be applied to older GA versions.
+
+### Microsoft Update Catalog availability
+
+After a short delay of typically four weeks, the latest general availability version is also included in the Microsoft Update Catalog. Azure Information Protection versions have a product name of **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Unified Labeling Client**, and a classification of **Updates**.
+
+Including Azure Information Protection in the catalog means that you can upgrade the client using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
+
+For more information, see [Upgrading and maintaining the Azure Information Protection unified labeling client](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
+
 ### Release information
 
 Use the following information to see the contents of each supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
@@ -86,13 +83,37 @@ Use the following information to see the contents of each supported release of t
 Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 > [!TIP]
-> Minor fixes are not always listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
+> Minor fixes aren't always listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
 >
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
+
+## Version 2.15.33.0
+
+Unified labeling scanner and client version 2.15.33.0
+
+**Supported through** 02/17/2024
+
+**Released** 02/17/2023
+
+This version includes the following fixes for the unified labeling scanner and client:
+
+### EU Data Boundary Support
+
+Starting in 2.15.33.0, EU customers can send data from the AIP UL Client to the EU for storage and processing. To enable the EU data boundary setting, configure this [registry key](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-data-boundary-settings).
+
+### Fixes and improvements
+
+This version of the unified labeling client and scanner provides the following fixes and improvements:
+
+- Outlook supports [Double Key Encryption](/microsoft-365/compliance/double-key-encryption) templates.
+- Updated to [MIP SDK 1.12.101](/information-protection/develop/version-release-history#version-112101) for classification, labeling and protection services.
+
 
 ## Version 2.14.90.0
 
 Unified labeling scanner and client version 2.14.90.0
+
+**Supported through** 09/01/2023
 
 **Released** 09/01/2022
 
@@ -100,9 +121,9 @@ This version includes the following fixes for the unified labeling scanner and c
 
 ### Updating Authentication Library to MSAL
 
-Starting in 2.14.90.0, MSAL will be the default authentication library for AIP UL client and AIP Scanner, replacing ADAL from the previous versions.
+Starting in 2.14.90.0, MSAL is the default authentication library for AIP UL client and AIP Scanner, replacing ADAL from the previous versions.
 
-For the AIP add-in, users should see no impact as we will use token cache or the integrated Windows authentication (SSO) before prompting the use to log in again. 
+For the AIP add-in, users should see no impact as we'll use token cache or the integrated Windows authentication (SSO) before prompting the use to log in again. 
 
 For the AIP PowerShell and AIP Scanner, reauthentication is required. To reauthenticate, use the PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) after upgrading to this version. 
 
@@ -110,13 +131,13 @@ For the AIP PowerShell and AIP Scanner, reauthentication is required. To reauthe
 
 This version of the unified labeling client and scanner provides the following fixes:
 
-- Fixed an issue where msg.pfile was not opening in AIP Viewer.
+- Fixed an issue where msg.pfile wasn't opening in AIP Viewer.
 - Fixed an issue with the performance of `GetLabel`/`SetLabel`.
 - Fixed issues with handling of IQP protected files.
 - Fixed an issue with `Set-AIPFileLabel` crashes.
 - Fixed an issue with audit logging in AIP Viewer for protected PDFs.
-- Fixed an issue with co-authoring where users could not apply labels for certain cultures with special characters (i.e. "tr-TR").
-- Fixed an issue with super user protection for `Set-AIPFileLabel` -RemoveProtection if label was not published by super user.
+- Fixed an issue with co-authoring where users couldn't apply labels for certain cultures with special characters (i.e. "tr-TR").
+- Fixed an issue with super user protection for `Set-AIPFileLabel` -RemoveProtection if label wasn't published by super user.
 
 
 ## Version 2.13.49.0
@@ -176,7 +197,7 @@ This version of the unified labeling client and scanner provides the following f
 - Fixed an issue to prevent errors from occurring when removing protection from a PST file with special characters.
 - Fixed an issue where extra draft emails were kept while working with Outlook in [Online mode](https://support.microsoft.com/en-us/office/switch-from-working-offline-to-online-2460e4a8-16c7-47fc-b204-b1549275aac9).
 - Fixed an issue where popup messages were displayed, prompting users to save changes even when no changes were made, when working with Outlook in [Online mode](https://support.microsoft.com/en-us/office/switch-from-working-offline-to-online-2460e4a8-16c7-47fc-b204-b1549275aac9).
-- Fixed an issue where emails to external guest users could not be sent if collaboration rules for [popup messages](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) were configured.
+- Fixed an issue where emails to external guest users couldn't be sent if collaboration rules for [popup messages](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) were configured.
 
 
 ## Version 2.12.62.0
@@ -306,7 +327,7 @@ The unified labeling on-premises scanner has improved outputs for the following 
 
 ### Updates for the scanner's supported information types
 
-Beginning with version 2.11.58.0, the following sensitive information types are not scanned by the unified labeling scanner.
+Beginning with version 2.11.58.0, the following sensitive information types aren't scanned by the unified labeling scanner.
 
 If you have sensitivity labels that use these sensitive information types, we recommend that you remove them.
 
