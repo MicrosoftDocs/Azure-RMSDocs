@@ -1878,6 +1878,41 @@
             "source_path": "Azure-RMSDocs/deployment-roadmap.md",
             "redirect_url": "/information-protection/deployment-roadmap-classify-label-protect",
             "redirect_document_id": false
+       },
+		{
+            "source_path": "Azure-RMSDocs/deploy-aip-scanner.md",
+            "redirect_url": "/microsoft-365/compliance/deploy-scanner",
+            "redirect_document_id": false
+       },
+		{
+            "source_path": "Azure-RMSDocs/deploy-aip-scanner-configure-install.md",
+            "redirect_url": "/microsoft-365/compliance/deploy-scanner-configure-install",
+            "redirect_document_id": false
+       },
+		{
+            "source_path": "Azure-RMSDocs/deploy-aip-scanner-manage.md",
+            "redirect_url": "/microsoft-365/compliance/deploy-scanner-manage",
+            "redirect_document_id": false
+       },
+		{
+            "source_path": "Azure-RMSDocs/tutorial-install-scanner.md",
+            "redirect_url": "/microsoft-365/compliance/deploy-scanner-configure-install",
+            "redirect_document_id": false
+       },
+		{
+            "source_path": "Azure-RMSDocs/tutorial-scan-networks-and-content.md",
+            "redirect_url": "/microsoft-365/compliance/deploy-scanner-manage",
+            "redirect_document_id": false
+       },
+		{
+            "source_path": "Azure-RMSDocs/deploy-aip-scanner-prereqs.md",
+            "redirect_url": "/microsoft-365/compliance/deploy-scanner-prereqs",
+            "redirect_document_id": false
+       },
+		{
+            "source_path": "Azure-RMSDocs/deploy-aip-scanner-tsg.md",
+            "redirect_url": "/microsoft-365/troubleshoot/information-protection-scanner/resolve-deployment-issues",
+            "redirect_document_id": false
         },
 		{
             "source_path": "Azure-RMSDocs/removed-deprecated-services.md",
