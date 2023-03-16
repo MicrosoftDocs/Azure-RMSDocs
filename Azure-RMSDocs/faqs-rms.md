@@ -178,7 +178,7 @@ Despite its name and appearance, **Do Not Forward** is not the opposite of the F
 
 Windows Server File Classification Infrastructure has historically been an option to classify documents and then protect them by using the [Rights Management connector](deploy-rms-connector.md) (Office documents only) or a [PowerShell script](./rms-client/configure-fci.md) (all file types). 
 
-We now recommend you use the [Azure Information Protection scanner](deploy-aip-scanner.md). The scanner uses the Azure Information Protection client and your Azure Information Protection policy to label documents (all file types) so that these documents are then classified and optionally, protected.
+We now recommend you use the [Azure Information Protection scanner](/microsoft-365/compliance/deploy-scanner). The scanner uses the Azure Information Protection client and your Azure Information Protection policy to label documents (all file types) so that these documents are then classified and optionally, protected.
 
 The main differences between these two solutions:
 

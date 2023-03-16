@@ -316,7 +316,7 @@ If you upgraded the scanner by using the preview version of the unified labeling
 
 4. Restart the Azure Information Protection Scanner service, **Azure Information Protection Scanner**.
 
-You can now use the rest of the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md), omitting the step to install the scanner. Because the scanner is already installed, there's no reason to install it again.
+You can now use the rest of the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](/microsoft-365/compliance/deploy-scanner), omitting the step to install the scanner. Because the scanner is already installed, there's no reason to install it again.
 
 ##### Upgrade from the Azure Information Protection classic client versions earlier than 1.48.204.0
 
@@ -325,7 +325,7 @@ You can now use the rest of the instructions in [Deploying the Azure Information
 
 Beginning with version 1.48.204.0, the scanner gets its configuration settings from the Azure portal, by using a configuration profile. Upgrading the scanner includes instructing the scanner to use this online configuration and for the unified labeling client, offline configuration for the scanner is not supported.
 
-1. Use the Azure portal to create a new scanner profile that includes settings for the scanner and your data repositories with any settings that they need. For help with this step, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-settings) from the scanner deployment instructions.
+1. Use the Azure portal to create a new scanner profile that includes settings for the scanner and your data repositories with any settings that they need. For help with this step, see [Configure the scanner in the Azure portal](/microsoft-365/compliance/deploy-scanner-configure-install#configure-the-scanner-settings) from the scanner deployment instructions.
 
 2. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
 
@@ -335,7 +335,7 @@ Beginning with version 1.48.204.0, the scanner gets its configuration settings f
 
 5. Restart the Azure Information Protection Scanner service, **Azure Information Protection Scanner**.
 
-You can now use the rest of the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md), omitting the step to install the scanner. Because the scanner is already installed, there's no reason to install it again.
+You can now use the rest of the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](/microsoft-365/compliance/deploy-scanner), omitting the step to install the scanner. Because the scanner is already installed, there's no reason to install it again.
 
 ## Next steps
 
@@ -343,7 +343,7 @@ Once you've migrated your labels, policies, and deployed clients as needed, cont
 
 With the unified labeling platform, you'll only need to return to the Azure Information Protection area in the Azure portal to:
 
-- [Use the AIP scanner](deploy-aip-scanner.md)
+- [Use the AIP scanner](/microsoft-365/compliance/deploy-scanner)
 - [Monitor labeling activities using AIP analytics](reports-aip.md)
 
 We recommend that end-users leverage built-in labeling capabilities in the latest Office apps for web, Mac, iOS, and Android, as well as Microsoft 365 Apps for Enterprise.

@@ -82,7 +82,7 @@ Perform the following steps:
 
 1. **Scan your files (optional but recommended)**
 
-    [Deploy the Azure Information Protection client](quickstart-deploy-client.md), and then [install](tutorial-install-scanner.md) and [run the scanner](tutorial-scan-networks-and-content.md) to discover the sensitive information you have on your local data stores. 
+    [Deploy the Azure Information Protection client](quickstart-deploy-client.md), and then [install](/microsoft-365/compliance/deploy-scanner-configure-install) and [run the scanner](/microsoft-365/compliance/deploy-scanner-manage) to discover the sensitive information you have on your local data stores. 
 
     The information that the scanner finds can help you with your classification taxonomy, provide valuable information about what labels you need, and which files need protecting.
 
@@ -120,7 +120,7 @@ Perform the following steps:
     For more information, see [Admin Guide: Custom configurations](/previous-versions/azure/information-protection/rms-client/client-admin-guide-customizations).
      
     > [!TIP]
-    > If you've configured labels for automatic labeling, run the [Azure Information Protection scanner](deploy-aip-scanner-manage.md) again on your local data stores in discovery mode and to match your policy. 
+    > If you've configured labels for automatic labeling, run the [Azure Information Protection scanner](/microsoft-365/compliance/deploy-scanner-manage) again on your local data stores in discovery mode and to match your policy. 
     > 
     > Running the scanner in discovery mode tells you which labels would be applied to files, which helps you fine-tune your label configuration and prepares you for classifying and protecting files in bulk. 
     > 
@@ -189,7 +189,7 @@ Perform the following steps:
 
 1. **Classify and protect existing files in bulk**
     
-    For your on-premises data stores, now run the [Azure Information Protection scanner](deploy-aip-scanner.md) in enforcement mode so that files are automatically labeled.
+    For your on-premises data stores, now run the [Azure Information Protection scanner](/microsoft-365/compliance/deploy-scanner) in enforcement mode so that files are automatically labeled.
     
     For files on PCs, use PowerShell cmdlets to classify and protect files. For more information, see [Using PowerShell with the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-powershell.md).
 

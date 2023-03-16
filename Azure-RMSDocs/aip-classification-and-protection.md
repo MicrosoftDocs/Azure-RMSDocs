@@ -147,7 +147,7 @@ Ideally, you'll be labeling documents and emails as they're created. However, yo
 
 Use one of the following methods to classify and protect existing content:
 
-- **On-premises storage**: Use the [Azure Information Protection scanner](deploy-aip-scanner.md) to discover, classify, and protect documents on network shares and Microsoft SharePoint Server sites and libraries.
+- **On-premises storage**: Use the [Azure Information Protection scanner](/microsoft-365/compliance/deploy-scanner) to discover, classify, and protect documents on network shares and Microsoft SharePoint Server sites and libraries.
 
     The scanner runs as a service on Windows Server, and uses the same policy rules to detect sensitive information and apply specific labels to documents. 
 
@@ -161,8 +161,8 @@ Use one of the following methods to classify and protect existing content:
 Configure and see Azure Information Protection for yourself with our quickstart and tutorials:
 
 - [Quickstart: Deploy the unified labeling client](quickstart-deploy-client.md)
-- [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
-- [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
+- [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](/microsoft-365/compliance/deploy-scanner-configure-install)
+- [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](/microsoft-365/compliance/deploy-scanner-manage)
 - [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](/azure/information-protection/tutorial-scan-networks-and-content)
 
 If you're ready to deploy this service for your organization, head over to the [how-to guides](how-to-guides.md).
