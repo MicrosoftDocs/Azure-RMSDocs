@@ -42,9 +42,9 @@ landingContent:
      - linkListType: tutorial
        links:
           - text: Install the scanner
-            url: tutorial-install-scanner.md
+            url: /microsoft-365/compliance/deploy-scanner-configure-install
           - text: Scan networks and content
-            url: tutorial-scan-networks-and-content.md
+            url: /microsoft-365/compliance/deploy-scanner-manage
           - text: Prevent oversharing
             url: /azure/information-protection/tutorial-scan-networks-and-content
      - linkListType: how-to-guide
@@ -70,13 +70,13 @@ landingContent:
       - linkListType: overview
         links:
           - text: About the on-premises scanner
-            url: deploy-aip-scanner.md
+            url: /microsoft-365/compliance/deploy-scanner
       - linkListType: how-to-guide
         links:
           - text: Configure and install the scanner
-            url: deploy-aip-scanner-configure-install.md
+            url: /microsoft-365/compliance/deploy-scanner-configure-install
           - text: Run the scanner
-            url: deploy-aip-scanner-manage.md
+            url: /microsoft-365/compliance/deploy-scanner-manage
 
   # Card
   - title: Customize the client
