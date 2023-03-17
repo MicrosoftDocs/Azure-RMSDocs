@@ -242,12 +242,12 @@ By default, the scanner also excludes the same file types as the Azure Informati
 
 For the scanner, the following file types are also excluded: .msg, .rtf, and .rar
 
-To change the file types included or excluded for file inspection by the scanner, configure the **File types to scan** in the [content scan job](../deploy-aip-scanner-configure-install.md#configure-the-scanner-settings).
+To change the file types included or excluded for file inspection by the scanner, configure the **File types to scan** in the [content scan job](/microsoft-365/compliance/deploy-scanner-configure-install#configure-the-scanner-settings).
 
 > [!NOTE]
 > If you include .rtf files for scanning, we recommend that you carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted.
 
-By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. To change this behavior for the scanner, use the PowerShell advanced setting, **PFileSupportedExtensions**. For more information, see [Use PowerShell to change which file types are protected](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) from the scanner deployment instructions.
+By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. To change this behavior for the scanner, use the PowerShell advanced setting, **PFileSupportedExtensions**. For more information, see [Use PowerShell to change which file types are protected](/microsoft-365/compliance/deploy-scanner-configure-install#change-which-file-types-to-protect) from the scanner deployment instructions.
 
 ### Files that cannot be protected by default
 
@@ -281,7 +281,7 @@ When your scanner is installed on a Windows server machine, you must also instal
 
 You can use the AIP scanner or the [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command to inspect .zip files.
 
-After finding sensitive information, if the .zip file should be classified and protected with a label, specify the .zip file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) from the scanner deployment instructions.
+After finding sensitive information, if the .zip file should be classified and protected with a label, specify the .zip file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](/microsoft-365/compliance/deploy-scanner-configure-install#change-which-file-types-to-protect) from the scanner deployment instructions.
 
 
 **Example scenario**:
@@ -294,7 +294,7 @@ After inspecting the file, the unified labeling client from your PowerShell sess
 
 The [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you install the Windows TIFF IFilter feature, and then configure [Windows TIFF IFilter Settings](/previous-versions/windows/it-pro/windows-7/dd744701(v=ws.10)) on the computer running the PowerShell session.
 
-For the scanner: After finding sensitive information, if the .tiff file should be classified and protected with a label, specify this file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) from the scanner deployment instructions.
+For the scanner: After finding sensitive information, if the .tiff file should be classified and protected with a label, specify this file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](/microsoft-365/compliance/deploy-scanner-configure-install#change-which-file-types-to-protect) from the scanner deployment instructions.
 
 ## Supported file sizes
 

@@ -32,7 +32,7 @@ There are many ways in which you can use Azure Information Protection to classif
 The most successful deployments are those that identify specific use cases that provide the most business benefit to the organization. Use the following list of common scenarios and instructions to get your deployment off the ground.
 ## Common scenarios
 
-- [Discover your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
+- [Discover your sensitive content with the Azure Information Protection (AIP) scanner](/microsoft-365/compliance/deploy-scanner-manage)
 - [Automatically protect users' emails that are sent outside the organization](/previous-versions/azure/information-protection/configure-exo-rules)
 - [Use my own key to protect my organization's data](plan-implement-tenant-key.md)
 

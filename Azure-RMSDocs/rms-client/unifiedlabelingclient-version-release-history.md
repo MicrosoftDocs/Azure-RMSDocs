@@ -171,7 +171,7 @@ For more information, see:
 
 Starting in version 2.13.47.0, the unified labeling scanner is supported only on 64-bit systems.
 
-For more information, see [Requirements for installing and deploying the Azure Information Protection unified labeling scanner](../deploy-aip-scanner-prereqs.md).
+For more information, see [Requirements for installing and deploying the Azure Information Protection unified labeling scanner](/microsoft-365/compliance/deploy-scanner-prereqs).
 
 ### Integrated support for MIP SDK version 1.10
 
@@ -239,7 +239,7 @@ Microsoft 365 Data Loss Prevention (DLP) policies are now supported with the Azu
 
 - **Using a DLP policy** enables the scanner to detect potential data leaks by matching DLP rules to files stored in file shares and SharePoint Server.
 
-- [**Enable DLP rules in your content scan job**](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy) to reduce the exposure of any files that match your DLP policies.
+- [**Enable DLP rules in your content scan job**](/microsoft-365/compliance/deploy-scanner-configure-install#use-a-dlp-policy) to reduce the exposure of any files that match your DLP policies.
 
     The scanner may reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**.
 
@@ -249,7 +249,7 @@ Settings for enforcing or testing the DLP policy are configured in the [Microsof
 
 For more information, including licensing requirements, see:
 
-- [Configure a DLP policy in the AIP scanner](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy)
+- [Configure a DLP policy in the AIP scanner](/microsoft-365/compliance/deploy-scanner-configure-install#use-a-dlp-policy)
 - [Learn about the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-learn), in the Microsoft 365 documentation
 - [Get started with the data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-get-started)
 - [Use the Microsoft 365 data loss prevention on-premises scanner](/microsoft-365/compliance/dlp-on-premises-scanner-use)
@@ -314,7 +314,7 @@ With the upgrade to version 2.11.58.0, running the [Start-AIPScannerDiagnostics]
 
 To print more or fewer errors, use the new **VerboseErrorCount** parameter to define the number of errors you want to print.
 
-For more information, see [Troubleshooting using the scanner diagnostic tool](../deploy-aip-scanner-tsg.md#troubleshooting-using-the-scanner-diagnostic-tool).
+For more information, see [Troubleshooting using the scanner diagnostic tool](/microsoft-365/troubleshoot/information-protection-scanner/resolve-deployment-issues#troubleshooting-using-the-scanner-diagnostic-tool).
 
 ### Improved scanner details output
 
@@ -322,7 +322,7 @@ The unified labeling on-premises scanner has improved outputs for the following 
 
 |Cmdlet  |Improvement  |
 |---------|---------|
-|**Get-AIPScannerStatus**     |  Previously, running the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) command provided only high-level details of the scanner cluster status, without details per node in your cluster.   <br><br> Now, you can use the **NodesInfo** variable and the **Verbose** parameter to drill down into additional levels of detail for each node. <br><br>   For more information, see the [Verify scanning details per scanner node and repository](../deploy-aip-scanner-tsg.md#verify-scanning-details-per-scanner-node-and-repository). |
+|**Get-AIPScannerStatus**     |  Previously, running the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) command provided only high-level details of the scanner cluster status, without details per node in your cluster.   <br><br> Now, you can use the **NodesInfo** variable and the **Verbose** parameter to drill down into additional levels of detail for each node. <br><br>   For more information, see the [Verify scanning details per scanner node and repository](/microsoft-365/troubleshoot/information-protection-scanner/resolve-deployment-issues#verify-scanning-details-per-scanner-node-and-repository). |
 |**Get-AIPScannerConfiguration**     |   Running the [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/get-aipscannerconfiguration) now provides details about the current scanner configuration in addition to the online configuration settings.     |
 
 ### Updates for the scanner's supported information types

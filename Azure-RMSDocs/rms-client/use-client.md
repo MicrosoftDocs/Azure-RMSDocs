@@ -63,7 +63,7 @@ Although no new features will be added for the AIP add-in, we're constantly deve
 
 Outside Office apps, the AIP unified labeling client provides the following extra features:
 
-- [A scanner for on-premises data stores](../deploy-aip-scanner.md)
+- [A scanner for on-premises data stores](/microsoft-365/compliance/deploy-scanner)
 - [PowerShell labeling cmdlets](clientv2-admin-guide-powershell.md)
 - [Labeling with right-click options from File Explorer](clientv2-classify-protect.md#use-the-file-explorer-to-classify-and-protect-files)
 - [A viewer for protected files](clientv2-view-use-files.md), such as text, images, PDF, .pfile
