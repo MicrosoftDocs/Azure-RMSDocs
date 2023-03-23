@@ -141,6 +141,8 @@
       href: concept-async-observers-policy-cpp.md
     - name: Protection SDK observers (C++)
       href: concept-async-observers-protection-cpp.md  
+  - name: Offline Publishing
+    href: concept-offline-publishing.md
   - name: Proxy Support 
     href: concept-mip-proxies.md  
   - name: SDK Diagnostics  
