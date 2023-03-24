@@ -12,7 +12,7 @@ ms.author: tommos
 
 ## Overview
 
-Microsoft Information Protection SDK 1.13 adds support for offline publishing. Offline publishing allows a client, after making an initial connection to the rights management service, to generate [publishing licenses](https://learn.microsoft.com/openspecs/windows_protocols/ms-rmsod/0af175ee-d54d-4d70-b169-b0ade1ab9bf4#gt_3b0362d9-f209-48d2-afd0-0c0f6531a7d1) for newly-protected content without making a service call. Offline protection is useful for applications that either need to function in an offline mode, or want to avoid making service calls.
+Microsoft Information Protection SDK 1.13 adds support for offline publishing. Offline publishing allows a client, after making an initial connection to the rights management service, to generate [publishing licenses](/openspecs/windows_protocols/ms-rmsod/0af175ee-d54d-4d70-b169-b0ade1ab9bf4#gt_3b0362d9-f209-48d2-afd0-0c0f6531a7d1) for newly-protected content without making a service call. Offline protection is useful for applications that either need to function in an offline mode, or want to avoid making service calls.
 
 This feature is in **public preview** for the 1.13 release. Support is provided on a best effort basis and fixes may be delayed.
 
@@ -21,7 +21,7 @@ This feature is in **public preview** for the 1.13 release. Support is provided 
 The offline publishing feature requires the following:
 
 - MIP Protection SDK 1.13 or later.
-- A user licensed for Microsoft Purview Information Protection. [Licensing requirements](https://learn.microsoft.com/microsoft-365/compliance/information-protection?view=o365-worldwide#licensing-requirements)
+- A user licensed for Microsoft Purview Information Protection. [Licensing requirements](/microsoft-365/compliance/information-protection?view=o365-worldwide#licensing-requirements)
 - Internet connectivity for the application to initialize and cache data offline.
   
 ## Not Supported
