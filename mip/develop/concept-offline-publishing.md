@@ -1,6 +1,6 @@
 ---
 title: Offline publishing in MIP SDK
-description: This article will help you understand how to enable and use offline publishing in MIP SDK.
+description: This article helps you to understand how to enable and use offline publishing in MIP SDK.
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
@@ -18,7 +18,7 @@ This feature is in **public preview** for the 1.13 release. Support is provided 
 
 ## Requirements
 
-The offline publishing feature requires the following:
+The offline publishing feature has the following requirements:
 
 - MIP Protection SDK 1.13 or later.
 - A user licensed for Microsoft Purview Information Protection. [Licensing requirements](/microsoft-365/compliance/information-protection?view=o365-worldwide#licensing-requirements)
@@ -37,7 +37,7 @@ The following items aren't supported as part of the offline publishing feature:
 Offline publishing requires three steps to enable the application to publish without calling the service:
 
 1. Enable the offline publishing setting on `ProtectionProfileSettings`.
-2. Set the protection refresh rate. This sets the validity period for the cached templates.
+2. Set the protection refresh rate. This API sets the validity period for the cached templates.
 3. Call the `GetTemplatesAsync()` or  API.
 
 ## Caching Behavior
@@ -46,7 +46,7 @@ An application won't contact the service to get templates until the refresh peri
 
 ## Examples
 
-The code snippets below are taken from these sample applications:
+The followin gcode snippets are taken from these sample applications:
 
 - [
 mipsdk-protectionapi-cpp-sample-basic](https://github.com/Azure-Samples/mipsdk-protectionapi-cpp-sample-basic)
