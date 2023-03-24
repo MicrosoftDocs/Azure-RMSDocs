@@ -21,7 +21,7 @@ This feature is in **public preview** for the 1.13 release. Support is provided 
 The offline publishing feature has the following requirements:
 
 - MIP Protection SDK 1.13 or later.
-- A user licensed for Microsoft Purview Information Protection. [Licensing requirements](/microsoft-365/compliance/information-protection?view=o365-worldwide#licensing-requirements)
+- A user licensed for Microsoft Purview Information Protection. [Licensing requirements](/microsoft-365/compliance/information-protection#licensing-requirements)
 - Internet connectivity for the application to initialize and cache data offline.
   
 ## Not Supported
