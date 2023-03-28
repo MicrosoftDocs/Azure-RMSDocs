@@ -3,9 +3,9 @@
 
 title: Azure Information Protection unified labeling client files and usage logging
 description: Information about the client files and usage logging for the Azure Information Protection unified labeling client for Windows.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 06/21/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -26,11 +26,7 @@ ms.custom: admin
 
 # Admin Guide: Azure Information Protection unified labeling client files and client usage logging
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
->
->*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
->
->***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 After you have installed the Azure Information Protection unified labeling client, you might need to know where files are located and monitor how the client is being used.
 

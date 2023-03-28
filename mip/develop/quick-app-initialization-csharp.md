@@ -4,7 +4,7 @@ description: A quickstart showing you how to write the initialization logic for 
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/15/2020
+ms.date: 11/14/2022
 ms.author: tommos
 ms.custom: has-adal-ref, mode-api
 #Customer intent: As a an application developer, I want to learn how to do SDK .NET wrapper initialization, so that I can use the SDK APIs.
@@ -15,7 +15,7 @@ ms.custom: has-adal-ref, mode-api
 This quickstart will show you how to implement the client initialization pattern, used by the MIP SDK .NET wrapper at runtime.
 
 > [!NOTE]
-> The steps outlined in this quickstart are required for any client application that uses the MIP .NET wrapper's File or Policy SDKs. The Protection SDK is not yet available. Although this Quickstart demonstrates usage of the File SDKs, this same pattern is applicable to clients using the Policy and Protection SDKs. Future Quickstarts should be done serially, as each one builds on the previous one, with this one being the first.
+> The steps outlined in this quickstart are required for any client application that uses the MIP .NET wrapper's File, Policy, or Protection SDKs. Although this Quickstart demonstrates usage of the File SDKs, this same pattern is applicable to clients using the Policy and Protection SDKs. Future Quickstarts should be done serially, as each one builds on the previous one, with this one being the first. This code is intended to demonstrate how to get started with the MIP SDK and is **not intended for production use.**
 
 ## Prerequisites
 
@@ -56,7 +56,7 @@ Now create an implementation for an authentication delegate, by extending the SD
 
 1. Right-click the project name in Visual Studio, select **Add** then **Class**.
 2. Enter "AuthDelegateImplementation" in the **Name** field. Click **Add**.
-3. Add using statements for the Microsoft Authentication Library (ADAL) and the MIP library:
+3. Add using statements for the Microsoft Authentication Library (MSAL) and the MIP library:
 
      ```csharp
      using Microsoft.InformationProtection;

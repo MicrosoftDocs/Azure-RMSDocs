@@ -3,9 +3,9 @@
 
 title: Known issues - Azure Information Protection
 description: Search and browse through known issues and limitations for Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 12/12/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
@@ -25,33 +25,29 @@ ms.custom: admin
 
 # Known issues - Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Use the lists and tables below to find details about known issues and limitations related to Azure Information Protection features.
 
 ## Other digital signing and encryption solutions
 
-Azure Information Protection cannot protect or decrypt files\emails that are digitally signed or encrypted with other solutions, such as removing protection from mails that are signed or encrypted with S/MIME.
+Azure Information Protection can't protect or decrypt files\emails that are digitally signed or encrypted with other solutions, such as removing protection from mails that are signed or encrypted with S/MIME.
 
 ## Client support for container files, such as .zip files
 
 Container files are files that include other files, with a typical example being .zip files that contain compressed files. Other examples include .rar, .7z, .msg files, and PDF documents that include attachments.
 
-You can classify and protect these container files, but the classification and protection is not applied to each file inside the container.
+You can classify and protect these container files, but the classification and protection isn't applied to each file inside the container.
 
 If you have a container file that includes classified and protected files, you must first extract the files to change their classification or protection settings. However, you can remove the protection for all files in supported container files by using the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet.
 
-The Azure Information Protection viewer cannot open attachments in a protected PDF document. In this scenario, when the document is opened in the viewer, the attachments are not visible.
+The Azure Information Protection viewer can't open attachments in a protected PDF document. In this scenario, when the document is opened in the viewer, the attachments aren't visible.
 
-For more information, see [Admin Guide: File types supported by the Azure Information Protection client](rms-client/client-admin-guide-file-types.md).
+For more information, see [Admin Guide: File types supported by the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-file-types).
 
 ## Known issues for AIP and Exploit Protection
 
-The Azure Information Protection client is not supported on machines that have .NET 2 or 3, where [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled, and will cause Office apps to behave unexpectedly.
+The Azure Information Protection client isn't supported on machines that have .NET 2 or 3, where [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled, and will cause Office apps to behave unexpectedly.
 
 In such cases, we recommend that you upgrade your .NET version. For more information, see [Microsoft .NET Framework requirements](rms-client/reqs-ul-client.md#microsoft-net-framework-requirements).
 
@@ -67,29 +63,27 @@ Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus
 
 The current release of the **AzureInformationProtection** PowerShell module that's installed with the Azure Information Protection client has the following known issues:
 
-- **Outlook personal folders (*.pst* files)**. Natively protecting *.pst* files is not supported using the **AzureInformationProtection** module.
+- **Outlook personal folders (*.pst* files)**. Natively protecting *.pst* files isn't supported using the **AzureInformationProtection** module.
 
-- **Outlook protected email messages *(.rpmsg* files)**. Unprotecting Outlook protected email messages is supported by the **AzureInformationProtection** module only if they are inside an Outlook personal folder *(.pst* file).
+- **Outlook protected email message (.msg files with a .rpmsg attachment)**. Unprotecting Outlook protected email messages is supported by the **AzureInformationProtection** module for messages inside an Outlook personal folder (.pst file), or on disk in an Outlook message file (.msg file).
 
-    Unprotecting email messages outside of a *.pst* file is not supported.
+-  **PowerShell 7**. Currently PowerShell 7 is not supported by the AIP Client. using PS7 will result in the error: "Object reference not set to an instance of an object".
 
-For more information, see [Admin Guide: Using PowerShell with the Azure Information Protection client](rms-client/client-admin-guide-powershell.md).
+For more information, see [Admin Guide: Using PowerShell with the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell).
 
 ## AIP known issues in Office applications
 
 |Feature  |Known issues  |
 |---------|---------|
-|**Multiple versions of Office<br> <br> Multiple Office accounts**    | The Azure Information Protection clients, including both classic and unified labeling, do not support:  <br><br>-	Multiple versions of Office on the same computer <br>-	Multiple Office accounts, or switching user accounts in Office <br>-	Shared mailboxes     |
+|**Multiple versions of Office<br> <br> Multiple Office accounts**    | The Azure Information Protection unified labeling client doesn't support:  <br><br>-	Multiple versions of Office on the same computer <br>-	Multiple Office accounts, or switching user accounts in Office <br>-	Shared mailboxes     |
 |**Multiple displays** |If you're using multiple displays and have an Office application open: <br><br>- You may experience performance issues in your Office apps.<br>- The Azure Information Protection bar may appear to float in the middle of the Office screen, on one or both displays <br><br>To ensure consistent performance, and that the bar remains in the correct location, open the **Options** dialog for your Office application, and under **General**, select **Optimize for compatibility** instead of **Optimize for best appearance**.    |
-|**IRM support in Office 2016**| The [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) registry setting, which controls metadata encryption in Office 2016, is not supported for Azure Information Protection labels.|
-|**Outlook object model access** | - The [PromptOOMAddressBookAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when address books are accessed via the Outlook object model, is not supported with Azure Information Protection labels. <br><br>- The [PromptOOMAddressInformationAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when a program reads address information, is not supported for Azure Information Protection labels.|
-|**Files attached to emails** |Due to a limitation in recent Windows updates, scanning Outlook messages (**.msg** files) may cause those files to be locked. To unlock the files, stop the scanner service. Starting the scanner service again does not lock the files again until the next time the messages are scanned. <br><br>To clarify whether your system is affected, you might want to start a scan on a specific folder with a single, sample message, and check to see if the file is locked after the scan is complete. <br><br>**Note**: This issue is not relevant when applying and removing protection with PowerShell. |
-|**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.       |
+|**IRM support in Office 2016**| The [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) registry setting, which controls metadata encryption in Office 2016, isn't supported for Azure Information Protection labels.|
+|**Outlook object model access** | - The [PromptOOMAddressBookAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when address books are accessed via the Outlook object model, isn't supported with Azure Information Protection labels. <br><br>- The [PromptOOMAddressInformationAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when a program reads address information, is't supported for Azure Information Protection labels.|
+|**Files attached to emails** |Due to a limitation in recent Windows updates, scanning Outlook messages (**.msg** files) may cause those files to be locked. To unlock the files, stop the scanner service. Starting the scanner service again doesn't lock the files again until the next time the messages are scanned. <br><br>To clarify whether your system is affected, you might want to start a scan on a specific folder with a single, sample message, and check to see if the file is locked after the scan is complete. <br><br>**Note**: This issue isn't relevant when applying and removing protection with PowerShell. |
+|**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature isn't supported with any Azure Information Protection feature.       |
 | **S/MIME emails** | Opening S/MIME emails in Outlook's Reading Pane may cause performance issues. <br><br>To prevent performance issues with S/MIME emails, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property. <br><br>**Note**: Enabling this property prevents the AIP bar or the email classification from being displayed in Outlook's Reading Pane. |
-| **Online mode in Outlook** | When working in [*Online* mode](/outlook/troubleshoot/installation/cached-exchange-mode) in Outlook, with the Azure Information Protection add-in active, the following known issues may occur: <br><br>- New emails that are created and closed without edits are saved as drafts. <br>- Pop-up messages are displayed, prompting users to save changes, even if no changes were made. In such cases, this message can be ignored.
-|**Content markings in Word**    | AIP [content markings](configure-policy-markings.md) in Microsoft Word headers or footers may be offset or placed incorrectly, or may be hidden entirely, when that same header or footer also contains a table.<br><br>For more information, see [When visual markings are applied](configure-policy-markings.md#when-visual-markings-are-applied). |
+|**Content markings in Word**    | AIP [content markings](/previous-versions/azure/information-protection/configure-policy-markings) in Microsoft Word headers or footers may be offset or placed incorrectly, or may be hidden entirely, when that same header or footer also contains a table.<br><br>For more information, see [When visual markings are applied](/previous-versions/azure/information-protection/configure-policy-markings#when-visual-markings-are-applied). |
 |**Send to File Explorer option** |If you choose to right-click on any file in the File Explorer and select **Send to > Mail recipient**, the Outlook message that opens with the file attached may not display the AIP toolbar. <br><br>If this occurs and you need to use the AIP toolbar options, start your email from within Outlook and then browse to and attach the file you want to send.|
-| | |
 
 ### Known issues for co-authoring
 
@@ -103,7 +97,7 @@ Known issues for co-authoring in AIP include:
 - [Unsupported features for co-authoring](#unsupported-features-for-co-authoring)
 
 > [!IMPORTANT]
-> Co-authoring and sensitivity labels cannot be deployed to some users only, as any new labels will not be visible to users with an older version of the Office client.
+> Co-authoring and sensitivity labels can't be deployed to some users only, as any new labels won't be visible to users with an older version of the Office client.
 >
 > For more information about co-authoring support, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring), especially [documented limitations](/microsoft-365/compliance/sensitivity-labels-coauthoring).
 >
@@ -118,7 +112,7 @@ We recommend that you always use the latest Office version available. Earlier ve
 
 
 > [!NOTE]
-> While sensitivity labels can be applied on files in Office 97-2003 formats, such as  **.doc**, **.ppt**, and **.xls**, co-authoring for these file types is not supported. Once a label is applied on a newly-created file, or a file in the advanced file format, such as **.docx**, **.pptx**, and **.xlsx**, saving the file in an Office 97-2003 format will cause the label to be removed.
+> While sensitivity labels can be applied on files in Office 97-2003 formats, such as  **.doc**, **.ppt**, and **.xls**, co-authoring for these file types isn't supported. Once a label is applied on a newly-created file, or a file in the advanced file format, such as **.docx**, **.pptx**, and **.xlsx**, saving the file in an Office 97-2003 format will cause the label to be removed.
 >
 
 #### Policy updates
@@ -133,7 +127,8 @@ When co-authoring is enabled in your tenant, the user experience for labels that
 
 Instead of seeing the Microsoft Azure Information Protection dialog box where users can select [permission levels](configure-usage-rights.md#rights-included-in-permissions-levels) such as **Viewer**, **Reviewer**, and **Only for me**, they see the same dialog box as if they had they selected the **File** tab > **Info** > **Protect Document** > **Restrict Access** > **Restricted Access**.  From this dialog box, they can specify their choice of permissions and users.  
 
-For more information, see the [Word, PowerPoint, and Excel permissions](/microsoft-365/compliance/encryption-sensitivity-labels#word-powerpoint-and-excel-permissions) section from the Microsoft 365 compliance documentation.
+For more information, see the [Word, PowerPoint, andCould you use contractions to make it less formal?
+ Excel permissions](/microsoft-365/compliance/encryption-sensitivity-labels#word-powerpoint-and-excel-permissions) section from the Microsoft Purview documentation.
 
 > [!NOTE]
 > Unlike the Microsoft Azure Information Protection dialog box, the **Restricted Access** dialog box doesn't support specifying a domain name to automatically include all users in the organization.
@@ -141,11 +136,11 @@ For more information, see the [Word, PowerPoint, and Excel permissions](/microso
  
 #### Unsupported features for co-authoring
 
-The following features are not supported or are partially supported when [co-authoring is enabled](/microsoft-365/compliance/sensitivity-labels-coauthoring) for files encrypted with sensitivity labels:
+The following features aren't supported or are partially supported when [co-authoring is enabled](/microsoft-365/compliance/sensitivity-labels-coauthoring) for files encrypted with sensitivity labels:
 
 - **DKE templates and DKE user-defined properties**. For more information, see [Double Key Encryption (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).
 
-- **Labels with user-defined permissions**. In Microsoft Word, Excel, and PowerPoint, labels with user-defined permissions are still available and can be applied to documents, but are not supported for co-authoring features.
+- **Labels with user-defined permissions**. In Microsoft Word, Excel, and PowerPoint, labels with user-defined permissions are still available and can be applied to documents, but aren't supported for co-authoring features.
 
     This means that applying a label with user-defined permissions will prevent you from working on the document with others at the same time.
 
@@ -156,7 +151,7 @@ The following features are not supported or are partially supported when [co-aut
 
 ## Sharing external doc types across tenants
 
-When sharing external doc types, such as PDFs, across tenants, recipients receive a consent prompt that requires them to accept the sharing of the listed permissions. For example:
+When users share external doc types, such as PDFs, across tenants, recipients receive a consent prompt that requires them to accept the sharing of the listed permissions. For example:
 
 :::image type="content" source="media/cross-tenant-consent.png" alt-text="Cross-tenant consent prompt.":::
 
@@ -169,6 +164,7 @@ Publishing policies may take up to 24 hours.
 
 - [Landscape views](#landscape-views-in-the-aip-viewer)
 - [External users](#external-users-and-the-aip-viewer)
+- [ADRMS protected files on Android devices](#adrms-protected-files-on-android-devices)
 
 For more information, see [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md).
 ### Landscape views in the AIP viewer
@@ -181,17 +177,21 @@ For example, an original image is shown below on the left, with a stretched, por
 
 ### External users and the AIP viewer 
 
-If an external user already has a guest account in Azure AD, the AIP Viewer may display an error when the user opens a protected document, telling them that they cannot sign in with a personal account.
+If an external user already has a guest account in Azure AD, the AIP Viewer may display an error when the user opens a protected document, telling them that they can't sign in with a personal account.
 
 If such an error appears, the user must install [Adobe Acrobat DC with the MIP extension](https://helpx.adobe.com/il_en/acrobat/kb/mip-plugin-download.html) in order to open the protected document.
 
-When opening the protected document after installing Adobe Acrobat DC with the MIP extension, the user may still see an error showing that the selected user account does not exist in the tenant, and prompting them to select an account. 
+When a user opens the protected document after installing Adobe Acrobat DC with the MIP extension, that user might still see an error showing that the selected user account doesn't exist in the tenant, and prompting them to select an account. 
 
 This is an expected error. In the prompt window, select **Back** to continue opening the protected document.
 
 >[!NOTE]
 > The AIP Viewer supports guest *organizational* accounts in Azure AD, but not personal or Windows Live accounts.
 >
+
+### ADRMS protected files on Android devices
+
+On Android devices, ADRMS-protected files can't be opened by the AIP Viewer app.
 
 ## Known issues for track and revoke features
 
@@ -205,48 +205,31 @@ For more information, see the [Admin Guide](rms-client/track-and-revoke-admin.md
 
 #### Password-protected documents
 
-Password-protected documents are not supported by track and revoke features.
+Password-protected documents aren't supported by track and revoke features.
 #### Multiple attachments in a protected email
 
-If you attach multiple documents to an email, and then protect the email and send it, each of the attachments get the same ContentID value.
+If you attach multiple documents to an email, and then protect the email and send it, each of the attachments gets the same ContentID value.
 
-This ContentID value will be returned only with the first file that had been opened. Searching for the other attachments will not return the ContentID value required to get tracking data.
+This ContentID value will be returned only with the first file that had been opened. Searching for the other attachments won't return the ContentID value required to get tracking data.
 
 Additionally, revoking access for one of the attachments also revokes access for the other attachments in the same protected email.
 
 #### Documents accessed via SharePoint or OneDrive
 
-- Protected documents that are uploaded to SharePoint or OneDrive lose their **ContentID** value, and access cannot be tracked or revoked.
+- Protected documents that are uploaded to SharePoint or OneDrive lose their **ContentID** value, and access can't be tracked or revoked.
 
 - If a user downloads the file from SharePoint or OneDrive and accesses it from their local machine, a new **ContentID** is applied to the document when they open it locally.
 
-    Using the original **ContentID** value to track data will not include any access performed for the user's downloaded file. Additionally, revoking access based on the original **ContentID** value will not revoke access for any of the downloaded files.
+    Using the original **ContentID** value to track data won't include any access performed for the user's downloaded file. Additionally, revoking access based on the original **ContentID** value won't revoke access for any of the downloaded files.
 
     If administrators have access to the downloaded files, they can use PowerShell to identify a document's **ContentID** for track and revoke actions.
 
 ### Known issues for the AIP client and OneDrive
 
-If you have documents stored in OneDrive with a sensitivity label applied, and an administrator changes the label in the labeling policy to add protection, the newly applied protection is not automatically applied to the labeled document. 
+If you have documents stored in OneDrive with a sensitivity label applied, and an administrator changes the label in the labeling policy to add protection, the newly applied protection isn't automatically applied to the labeled document. 
 
-In such cases, re-label the document manually to apply the protection as needed.
+In such cases, relabel the document manually to apply the protection as needed.
 
-## AIP and legacy Windows and Office versions
-
-- [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
-
-    We strongly encourage you to upgrade to a newer version of Windows.
-
-    However, if you have Extended Security Updates (ESU) and a support contract, AIP support is available to continue keeping your Windows 7 systems secure.
-
-    For more information, check with your support contact.
-
-- [**Office 2010 extended support ended on October 13, 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010).
-
-    This support will not be extended, and ESU will not be offered for Office 2010.
-
-    We strongly encourage you to upgrade to a newer version of Office 365.
-
-    For more information, check with your support contact.
 
 ## AIP-based Conditional Access policies
 
@@ -262,9 +245,17 @@ We recommend enabling AIP-based conditional access policies for your internal us
 2.	Under **Assignments**, select **Users and groups**, and then select **All users**. Make sure that the **All guest and external users** option is *not* selected.
 3.	Save your changes.
 
-You can also entirely disable CA within Azure Information Protection if the functionality is not required for your organization, in order to avoid this potential issue.
+You can also entirely disable/exclude CA within Azure Information Protection if the functionality isn't required for your organization, in order to avoid this potential issue.
 
 For more information, see the [Conditional Access documentation](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
+
+## Cannot publish or use labels with sub-labels as standalone labels
+
+If a label contains any sub-labels in the [Microsoft Purview compliance portal](/microsoft-365/compliance/sensitivity-labels#sensitivity-labels-and-azure-information-protection), this label must not be published as a standalone label to any AIP users. 
+
+Similarly, AIP doesn’t support labels that contain sub-labels as default labels, and you can't configure automatic labeling for these labels.
+
+Additionally, using a label with UDP (User Defined Permissions) as a default label is not supported in the Unified Labeling Client. 
 
 ## More information
 

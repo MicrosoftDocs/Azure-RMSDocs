@@ -4,7 +4,7 @@ description: This article will help you understand the concepts around the Polic
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 07/30/2019
+ms.date: 11/14/2022
 ms.author: mbaldwin
 ---
 
@@ -122,4 +122,4 @@ for (const auto& label : labels) {
 }
 ```
 
-The collection of `mip::Label` returned by `GetSensitivityLabels()` can be used to display all labels available to the user and then, when selected, use the ID to apply labels to a file.
+The collection of `mip::Label` returned by `ListSensitivityLabels()` can be used to display all labels available to the user and then, when selected, use the ID to apply labels to a file.

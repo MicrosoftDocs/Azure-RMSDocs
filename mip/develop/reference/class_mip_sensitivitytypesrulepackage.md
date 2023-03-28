@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class SensitivityTypesRulePackage 
@@ -28,4 +28,4 @@ Get the Rule Package Id.
 Get the Rule Package.
 
   
-**Returns**: The Rule Packagege
+**Returns**: The Rule Package.

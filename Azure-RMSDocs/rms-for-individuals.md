@@ -3,9 +3,9 @@
 
 title: RMS for individuals and Azure Information Protection
 description: Information about RMS for individuals, a free self-service subscription for users who have been sent protected files, but these users cannot be authenticated because their IT department does not manage an account for them in Azure. 
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -26,11 +26,7 @@ ms.custom: admin
 
 # RMS for individuals and Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 RMS for individuals is a free self-service subscription for users who need to open files that have been protected by Azure Information Protection. If these users cannot be authenticated by Azure Active Directory, this free sign-up service can create an account in Azure Active Directory for a user. As a result, these users can now authenticate by using their company email address and then read the protected files on computers or mobile devices.
 
@@ -48,7 +44,7 @@ Alternative options include:
 
 - **Email documents by using [Office 365 Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).** This email solution works for all email addresses on all devices and is the recommended way to safely share information and view Office documents in a browser with people outside your organization.
  
-- **Use Microsoft accounts.** Not all applications can open protected content when a Microsoft account is used for authentication. [More information](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
+- **Use Microsoft accounts.** Not all applications can open protected content when a Microsoft account is used for authentication. [More information](/previous-versions/azure/information-protection/secure-collaboration-documents#supported-scenarios-for-opening-protected-documents) 
 
 
 ## To sign up for RMS for individuals
@@ -67,7 +63,7 @@ Alternative options include:
 
 6. You now see a **One last thing ...** page for you to supply details for your account. Type in your first name, your last name, enter and confirm a password of your choice, and then click **Start**.
 
-7. When your account is created, you see a new Microsoft Azure Information Protection page where you can download and install the Azure Information Protection client, or click the [User guide](./rms-client/client-user-guide.md) link for how-to instructions for Windows computers.
+7. When your account is created, you see a new Microsoft Azure Information Protection page where you can download and install the Azure Information Protection client, or click the [User guide](/previous-versions/azure/information-protection/rms-client/client-user-guide) link for how-to instructions for Windows computers.
 
 Now your account is created, if you're prompted to sign in to read protected files, enter the same email address and password that you used to create the account for RMS for the individuals.
 
@@ -77,4 +73,3 @@ Now your account is created, if you're prompted to sign in to read protected fil
 
 ## Next steps
 RMS for individuals is an example of using the self-service signup feature that is supported by Azure Active Directory. For more information about how this feature works, see [What is Self-Service Signup for Azure Active Directory?](/azure/active-directory/users-groups-roles/directory-self-service-signup) in the Azure Active Directory documentation.
-

@@ -3,9 +3,9 @@
 
 title: View protected files with the Azure Information Protection unified labeling client
 description: Instructions to view a protected file that requires you to have the Azure Information Protection unified labeling viewer installed.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/03/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
@@ -25,12 +25,7 @@ ms.custom: user
 
 # User Guide: View protected files with the Azure Information Protection unified labeling client
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8*
->
->*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
->
->***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
-
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 You can often view a protected file by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
 
@@ -48,8 +43,6 @@ To be able to open a protected document, the application must be "RMS-enlightene
 ## Message.rpmsg as an email attachment
 
 If you see **message.rpmsg** as a file attachment in an email, this file is not a protected document but a protected email message that displays as an attachment. You can't use the Azure Information Protection viewer for Windows to view this protected email message on your Windows PC. Instead, you need an email application for Windows that supports Rights Management protection, such as Office Outlook. Or you can use Outlook on the web.
-
-However, if you have an iOS or Android device, you can use the Azure Information Protection app to open these protected email messages. You can download this app for these mobile devices from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
 
 ## Prompts for authentication
 

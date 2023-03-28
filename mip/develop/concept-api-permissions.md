@@ -1,9 +1,9 @@
 ---
 title: Required API permissions - Microsoft Information Protection SDK
-description: Technical details about API permissions needed for Microsoft Information Protection Software Development kit operations.
+description: Technical details about API permissions needed for Microsoft Purview Information Protection Software Development kit operations.
 author: msmbaldwin
 ms.author: mbaldwin
-ms.date: 08/20/2020
+ms.date: 11/14/2022
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -14,7 +14,7 @@ ms.service: information-protection
 The MIP SDK uses two backend Azure services for labeling and protection. In the Azure Active Directory app permissions blade, these services are:
 
 - Azure Rights Management Service
-- Microsoft Information Protection Sync Service
+- Microsoft Purview Information Protection Sync Service
 
 Application permissions must be granted to one or more APIs when using the MIP SDK for labeling and protection. Various application authentication scenarios may require different application permissions. For application authentication scenarios, see [Authentication scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios).
 

@@ -3,9 +3,9 @@
 
 title: Remove labels using the Azure Information Protection unified labeling client
 description: Instructions about how to remove sensitivity labels and protection from files and emails using the Azure Information Protection unified labeling client.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/03/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
@@ -26,11 +26,7 @@ ms.custom: user
 
 # User Guide: Remove labels and protection from files and emails that have been labeled by Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8*
->
->*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
->
->***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 When the Azure Information Protection unified client is [installed on your computer](install-unifiedlabelingclient-app.md), you can remove sensitivity labels and protection from files and emails.
 

@@ -3,9 +3,9 @@
 
 title: Migrate AD RMS-Azure Information Protection
 description: Instructions to migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Information Protection. After the migration, users still have access to documents and email messages that your organization protected by using AD RMS.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/11/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -26,12 +26,6 @@ ms.custom: admin
 ---
 
 # Migrating from AD RMS to Azure Information Protection
-
->***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 Use the following set of instructions to migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Information Protection. 
 
@@ -92,7 +86,7 @@ Before you start the migration to Azure Information Protection, make sure that t
     If you have computers that run Office 2010, you must install the [Azure Information Protection client](rms-client/use-client.md) to provide the ability to authenticate users to cloud services. 
 
     > [!IMPORTANT]
-    > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+    > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](removed-sunset-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
     >  
     
 
@@ -234,7 +228,7 @@ The onboarding controls that you configured during the preparation phase are no 
 If your Windows computers are running Office 2010, check whether you need to disable the **AD RMS Rights Policy Template Management (Automated)** task.
 
 > [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](removed-sunset-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
 
 **Step 12: Rekey your Azure Information Protection tenant key**
 

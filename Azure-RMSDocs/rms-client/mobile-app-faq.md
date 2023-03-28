@@ -3,9 +3,9 @@
 
 title: Mobile viewer apps for Azure Information Protection (iOS and Android) - AIP
 description: Learn how to view protected files on your iOS and Android devices using the Azure Information Protection (AIP) viewer apps.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 04/25/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -25,11 +25,7 @@ ms.custom: user
 
 # Mobile viewer apps for Azure Information Protection on iOS and Android
 
->***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
->***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated](../includes/classic-client-deprecation.md)]
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text files that cannot be opened with your regular apps for these file types. For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
 
@@ -54,9 +50,8 @@ The AIP mobile viewer apps for iOS and Android support the following file types 
 |---------|---------|
 |**Supported OS versions**     | Minimum mobile OSs include: </br>- iOS 11  </br>- Android 8.1 </br></br>**Note**: The AIP mobile viewer apps are not supported on Intel CPUs.  |
 | **Supported mobile ABIs** | Supported Application Binary Interfaces (ABIS) include: <br>- armeabi-v7a <br>- arm64-v8a <br>- x86_64|
-|**Supported sign in credentials**     | Sign in to the AIP mobile viewer apps with one of the following: </br></br>**Work or school credentials.** Try logging in with your work or school credentials. If you have questions, contact your administrator to understand whether your organization has AD RMS on-premises with the mobile device extension, or uses Azure Information Protection. </br></br>**A Microsoft account.** If your personal email address was used to protect the file, sign in with a [Microsoft account](https://signup.live.com). If you need to apply for a Microsoft account, you can use your own Hotmail, Gmail, or any other email address to do so. </br></br>**Note**: Not all applications are able to open content protected with a Microsoft account. For more information, see [Supported scenarios for opening protected documents](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
+|**Supported sign in credentials**     | Sign in to the AIP mobile viewer apps with one of the following: </br></br>**Work or school credentials.** Try logging in with your work or school credentials. If you have questions, contact your administrator to understand whether your organization has AD RMS on-premises with the mobile device extension, or uses Azure Information Protection. </br></br>**A Microsoft account.** If your personal email address was used to protect the file, sign in with a [Microsoft account](https://signup.live.com). If you need to apply for a Microsoft account, you can use your own Hotmail, Gmail, or any other email address to do so. </br></br>**Note**: Not all applications are able to open content protected with a Microsoft account. For more information, see [Supported scenarios for opening protected documents](/previous-versions/azure/information-protection/secure-collaboration-documents#supported-scenarios-for-opening-protected-documents).|
 |**Supported file types**     | Supported files types include protected email messages, PDF files, images, and text files. </br></br>For example, these files include the following extensions: **rpmsg**, **.pdf**, **.ppdf**, **.pjpg**, **.pjpeg**, **.ptiff**, **.ppng**, **.ptxt**, **.pxml** </br></br>For more information, see [above](#support-scope-and-recommended-usage) and [The AIP client admin guide](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
-| | |
 
 > [!NOTE]
 >The AIP mobile viewer apps send system metadata and pseudonymized end-user data to Microsoft, such as device ID, manufacturer, OS, and OS version and build number. 
@@ -75,7 +70,6 @@ Download and install the mobile viewer apps from the following locations:
 |**iTunes**     | [![Install from iTunes.](../media/small/ios-icon-small.png)](https://apps.apple.com/app/microsoft-rights-management/id689516635)        |
 |**Google Play**     |[![Install from Google Play.](../media/small/android-icon-small.png)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)         |
 |**Your company portal**     |  If your mobile device is managed by Microsoft Intune, you may be able to download the AIP mobile viewer apps from your company portal. <br><br>For more information, contact your system administrator.        |
-|     |         |
 
 ## iOS: View protected files on your device
 
@@ -119,7 +113,6 @@ If you're a system administrator who wants to test the AIP mobile viewer apps fo
     |**Email (.rpmsg)**     | Use another device, such as Outlook from a Windows computer, to send yourself a rights-protected email message that you can access from your mobile device.  |
     |**PDF**     | 1. From a Windows computer, [protect a PDF](clientv2-classify-protect.md) file using the AIP client. </br>2. Send yourself the protected PDF, or upload it to a SharePoint protected library and share it to your own email address.        |
     |**Image (.ptxt, .pjpg, or .ppng)**     | 1. From a Windows computer, [protect a text or image file](clientv2-classify-protect.md) using the AIP client. </br></br>2. Send yourself the protected file, or upload it to a SharePoint protected library and share it to your own email address.   |
-| | |
 
 1. Open the protected file on your mobile device using the email attachment or link that you'd sent to yourself.
 

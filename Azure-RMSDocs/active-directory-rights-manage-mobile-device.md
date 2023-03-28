@@ -3,9 +3,9 @@
 
 title: Active Directory rights management services mobile device extension for AIP
 description: Learn about Active Directory mobile device extensions for AIP
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 07/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -26,14 +26,8 @@ ms.custom: admin
 
 # Active Directory Rights Management Services Mobile Device Extension
 
->***Applies to**: Windows Server 2019, 2016, 2012 R2, and 2012*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+You can download the Active Directory Rights Management Services (AD RMS) mobile device extension from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=43738) and install this extension on top of an existing AD RMS deployment. This lets users  protect and consume sensitive data when their device supports the latest API-enlightened apps. For example, users can do the following on their mobile devices:
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
-
-
-You can download the Active Directory Rights Management Services (AD RMS) mobile device extension from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=43738) and install this extension on top of an existing AD RMS deployment. This lets users  protect and consume sensitive data when their device supports the latest API-enlightened apps. For example, users can do the following:
 - Use the Azure Information Protection app to consume protected text files in different formats (including .txt, .csv, and .xml).
 - Use the Azure Information Protection app  to consume protected image files (including .jpg, .gif, and .tif).
 - Use the Azure Information Protection app to open any file that has been generically protected (.pfile format).
@@ -250,7 +244,6 @@ If you use the DNS Server role on Windows Server, use the following tables as a 
 |Weight|0
 |Port number|443
 |Host offering this service|_rmsserver.contoso.com|
-| | |
 
 In addition to these DNS SRV records for your email domain, you must create another DNS SRV record in the RMS cluster domain. This record must specify the FQDNs of your RMS cluster that protects content. Every file that is protected by RMS includes a URL to the cluster that protected that file. Mobile devices use the DNS SRV record and the URL FQDN specified in the record to find the corresponding RMS cluster that can support mobile devices.
 
@@ -267,7 +260,6 @@ If you use the DNS Server role on Windows Server, use the following table as a g
 |Weight|0
 |Port number|443
 |Host offering this service|_rmsserver.contoso.com|
-| | |
 
 ## Deploying the AD RMS mobile device extension
 

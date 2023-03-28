@@ -3,9 +3,9 @@
 
 title: PowerShell script for Azure RMS & FCI - AIP
 description: Sample script to copy and edit, as described in the instructions for RMS protection with Windows Server File Classification Infrastructure.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -28,24 +28,16 @@ ms.custom: admin
 
 # Windows PowerShell script for Azure RMS protection by using File Server Resource Manager FCI
 
->***Applies to**: Azure Information Protection, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
->
->***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated - extended support customers](../includes/classic-client-deprecation-extended-support.md)]
-
 This page contains the sample script to copy and edit, as described in [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).
 
-This script uses a minimum version of **1.3.155.2** for the AzureInformationProtection module. Run the following command to check the version: `(Get-Module AzureInformationProtection -ListAvailable).Version` 
-
-*&#42;&#42;Disclaimer&#42;&#42;: This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.*
+This script uses a minimum version of **2.13** for the AzureInformationProtection module. Run the following command to check the version: `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
 ```
 <#
 .SYNOPSIS 
      Helper script to protect all file types using the Azure Rights Management service and FCI.
 .DESCRIPTION
-     Protect files with the Azure Rights Management service and Windows Server FCI, using an RMS template ID and AzureInformationProtection module minimum version 1.3.155.2.   
+     Protect files with the Azure Rights Management service and Windows Server FCI, using an AIP label ID and AzureInformationProtection module minimum version 2.13.  
 #>
 param(
             [Parameter(Mandatory = $false)]
@@ -53,19 +45,16 @@ param(
             [string]$File,
 
             [Parameter(Mandatory = $false)]
-            [string]$TemplateID,
+            [string]$LabelID,
 
             [Parameter(Mandatory = $false)]
-            [string]$OwnerMail,
+            [string]$AppId = "<enter your AppId here>",
 
             [Parameter(Mandatory = $false)]
-            [string]$AppPrincipalId = "<enter your AppPrincipalId here>",
+            [string]$AppSecret = "<enter your secret here>",
 
             [Parameter(Mandatory = $false)]
-            [string]$SymmetricKey = "<enter your key here>",
-
-            [Parameter(Mandatory = $false)]
-            [string]$BposTenantId = "<enter your BposTenantId here>"
+            [string]$TenantId = "<enter your TenantId here>"
 ) 
 
 # script information
@@ -103,36 +92,28 @@ function Check-Module{
     return $isResult
 }
 
-function Protect-File ($ffile, $ftemplateId, $fownermail) {
+function Protect-File ($ffile, $flabelId) {
 
     [bool] $returnValue = $false
     try {
-        If ($OwnerMail -eq $null -or $OwnerMail -eq "") {
-            $protectReturn = Protect-RMSFile -File $ffile -InPlace -DoNotPersistEncryptionKey All -TemplateID $ftemplateId
+            $protectReturn = Set-AIPFileLabel -File $ffile -LabelID $flabelId
             $returnValue = $true
-            Write-Host ( "Information: " + "Protected File: $ffile with Template: $ftemplateId")
-        } else {
-            $protectReturn = Protect-RMSFile -File $ffile -InPlace -DoNotPersistEncryptionKey All -TemplateID $ftemplateId -OwnerEmail $fownermail
-            $returnValue = $true
-            Write-Host ( "Information: " + "Protected File: $ffile with Template: $ftemplateId, set Owner: $fownermail")
-        }
+            Write-Host ( "Information: " + "Protected File: $ffile with Template: $flabelId")
     } catch {
-        Write-Host ( "ERROR" + "During protection of file: $ffile with Template: $ftemplateId")
-            }
+        Write-Host ( "ERROR" + "During protection of file: $ffile with Template: $flabelId")
+    }
     return $returnValue
 }
 
-function Set-RMSConnection ($fappId, $fkey, $fbposId) {
+function Set-AIPConnection ($fappId, $fsecret, $ftenantId) {
 
 	[bool] $returnValue = $false
     try {
-               Set-RMSServerAuthentication -AppPrincipalId $fappId -Key $fkey -BposTenantId $fbposId
-        Write-Host ("Information: " + "Connected to Azure RMS Service with BposTenantId: $fbposId using AppPrincipalId: $fappId")
-#       Get-RMSTemplate -Force
+               Set-AIPAuthentication -AppId $fappId -AppSecret $fsecret -TenantId $ftenantId
+        Write-Host ("Information: " + "Connected to Azure Information Protection Service with TenantId: $ftenantId using AppId: $fappId")
         $returnValue = $true
     } catch {
-        Write-Host ("ERROR" + "During connection to Azure RMS Service with BposTenantId: $fbposId using AppPrincipalId: $fappId")
-
+        Write-Host ("ERROR" + "During connection to Azure Information Protection Service with TenantId: $ftenantId using AppId: $fappId")
     }
     return $returnValue
 }
@@ -142,7 +123,7 @@ Write-Host ("-== " + $Script:Name + " " + $Version + " ==-")
 
 $Script:isScriptProcess = $True
 
-# Validate Azure RMS connection by checking the module and then connection
+# Validate Azure Information Protection connection by checking the module and then connection
 if ($Script:isScriptProcess) {
  		if (Check-Module -Module AzureInformationProtection){
     	$Script:isScriptProcess = $True
@@ -154,12 +135,12 @@ if ($Script:isScriptProcess) {
 }
 
 if ($Script:isScriptProcess) {
-	#Write-Host ("Try to connect to Azure RMS with AppId: $AppPrincipalId and BPOSID: $BposTenantId" )	
-    if (Set-RMSConnection $AppPrincipalId $SymmetricKey $BposTenantId) {
-	    Write-Host ("Connected to Azure RMS")
+	#Write-Host ("Try to connect to Azure Information Protection with AppId: $AppId and TenantID: $TenantId" )	
+    if (Set-AIPConnection $AppId $AppSecret $TenantId) {
+	    Write-Host ("Connected to Azure Information Protection")
 
     } else {
-		Write-Host ("Couldn't connect to Azure RMS") -foregroundcolor "yellow" -backgroundcolor "black"
+		Write-Host ("Couldn't connect to Azure Information Protection") -foregroundcolor "yellow" -backgroundcolor "black"
 		$Script:isScriptProcess = $False
 	}
 }
@@ -167,7 +148,7 @@ if ($Script:isScriptProcess) {
 #  Start working loop
 if ($Script:isScriptProcess) {
     if ( !(($File -eq $null) -or ($File -eq "")) ) {
-        if (!(Protect-File -ffile $File -ftemplateId $TemplateID -fownermail $OwnerMail)) {
+        if (!(Protect-File -ffile $File -ftemplateId $TemplateID)) {
             $Script:isScriptProcess = $False           
         }
     }

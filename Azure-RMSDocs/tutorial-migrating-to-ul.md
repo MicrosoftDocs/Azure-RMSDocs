@@ -3,9 +3,9 @@
 
 title: Tutorial - Migrating from the Azure Information Protection (AIP) classic client to the unified labeling solution
 description: A step-by-step tutorial for migrating from the Azure Information Protection (AIP) classic client to the unified labeling client.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 10/19/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
@@ -28,14 +28,11 @@ ms.custom: admin
 
 # Tutorial: Migrating from the Azure Information Protection (AIP) classic client to unified labeling solution
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
-> ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are **deprecated** as of **March 31, 2021**. While the classic client continues to work as configured, no further support is provided, and maintenance versions will no longer be released for the classic client. 
->
-> We recommend that you migrate to unified labeling and upgrade to the [unified labeling client](rms-client/clientv2-admin-guide-install.md). Learn more in our recent [update](https://techcommunity.microsoft.com/t5/microsoft-security-and/azure-aip-portal-label-amp-policy-management-admin-experience/ba-p/2182678) on the deprecation.
+To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are **deprecated** as of **March 31, 2021**. While the classic client continues to work as configured, no further support is provided, and maintenance versions will no longer be released for the classic client. 
+
+We recommend that you migrate to unified labeling and upgrade to the [unified labeling client](rms-client/clientv2-admin-guide-install.md). Learn more in our recent [update](https://techcommunity.microsoft.com/t5/microsoft-security-and/azure-aip-portal-label-amp-policy-management-admin-experience/ba-p/2182678) on the deprecation.
 
 This tutorial describes how to migrate your organization's Azure Information Protection deployment from the classic client, and label/label policy management in the Azure portal, to the unified labeling solution and [Microsoft 365 sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
@@ -47,19 +44,19 @@ In this tutorial, you'll:
 > [!div class="checklist"]
 > * Learn about planning your migration
 > * Migrate your labels to the unified labeling platform
-> * Learn how to configure advanced settings in the Microsoft 365 compliance center
+> * Learn how to configure advanced settings in the Microsoft Purview compliance portal
 > * Copy your policies to the unified labeling platform
 > * Deploy the unified labeling client
 
 ## Why migrate to the unified labeling solution?
 
-In addition to the [planned classic client deprecation](https://aka.ms/aipclassicsunset), migrating to the unified labeling solution enables you to effectively protect sensitive data across your digital estate. Once you've migrated, use Microsoft Information Protection (MIP) in Microsoft 365 cloud services, on-premises, in third-party SaaS applications, and more.
+In addition to the [classic client sunset](https://aka.ms/aipclassicsunset), migrating to the unified labeling solution enables you to effectively protect sensitive data across your digital estate. Once you've migrated, use Microsoft Purview Information Protection in Microsoft 365 cloud services, on-premises, in third-party SaaS applications, and more.
 
 MIP supports built-in labeling services for many basic information protection features, enabling you to reserve client usage only for extra features not supported by built-in labeling.
 
 - **Lower your maintenance costs**, by deploying and maintaining less additional software
 - **Increase Office performance**, without the need for additional add-ins
-- **Streamline your labeling and protection policy management** across AIP, Office 365, and Windows, using the Microsoft 365 compliance center.
+- **Streamline your labeling and protection policy management** across AIP, Office 365, and Windows, using the Microsoft Purview compliance portal.
 
 For more information, see the [Understanding unified labeling migration blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/understanding-unified-labeling-migration/ba-p/783185).
 
@@ -69,9 +66,9 @@ While most functionality available for the AIP classic client is also available 
 
 Review the following articles to understand how the Information Protection features you use may differ when using the unified labeling client:
 
-- [Learn about built-in labeling capabilities in Microsoft 365](/microsoft-365/compliance/sensitivity-labels-office-apps)
-- [Compare the labeling solutions for Windows computers](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
-- [Learn how to manage label settings that are not supported out-of-the-box in the Microsoft 365 compliance center](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-microsoft-365-compliance-center)
+- [Learn about built-in labeling capabilities in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps)
+- [Learn about about built-in labeling and the AIP unified labeling client](rms-client/use-client.md)
+- [Learn how to manage label settings that are not supported out-of-the-box in the Microsoft Purview compliance portal](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-microsoft-purview-compliance-portal)
 
 > [!TIP]
 > If there are documented differences between the clients that impact your end users' behavior, we recommend communicating these changes effectively to your users before deploying the unified labeling client and publishing your new policy.
@@ -98,7 +95,7 @@ While you migrate, you can continue to use the AIP classic client and the polici
 
     Your labels are copied from Azure Information Protection to the unified labeling platform, and are now stored in both systems.
 
-    Open the Microsoft 365 compliance center to compare the labels displayed there and in the Azure Information Protection area. The two lists should be identical. For example, when comparing to the Microsoft 365 Compliance center:
+    Open the Microsoft Purview compliance portal to compare the labels displayed there and in the Azure Information Protection area. The two lists should be identical. For example, when comparing to the Microsoft Purview compliance portal:
 
     :::image type="content" source="media/qs-tutor/compare-migrated-labels-small.png" alt-text="Compare migrated labels between the Azure portal and the Security & Compliance Center" lightbox="media/qs-tutor/compare-migrated-labels.png":::
 
@@ -109,9 +106,9 @@ Continue with [Copy policies to the unified labeling platform](#copy-policies-to
 
 ### Synchronizing labeling edits
 
-Once you've migrated your labels to the Microsoft 365 compliance center, any edits you continue to make to the migrated labels in the Azure portal are automatically synchronized to the same label in the Microsoft 365 compliance center.
+Once you've migrated your labels to the Microsoft Purview compliance portal, any edits you continue to make to the migrated labels in the Azure portal are automatically synchronized to the same label in the Microsoft Purview compliance portal.
 
-However, edits made to migrated labels in Microsoft 365 compliance center are *not* synchronized back to the Azure portal. If you make edits in the Microsoft 365 compliance center and need them updated in the Azure portal, return to the portal to publish the update.
+However, edits made to migrated labels in Microsoft Purview compliance portal are *not* synchronized back to the Azure portal. If you make edits in the Microsoft Purview compliance portal and need them updated in the Azure portal, return to the portal to publish the update.
 
 **To publish an updated label in the Azure portal**:
 
@@ -143,7 +140,7 @@ Copy any policies you have stored in the Azure portal that you want to have avai
 This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 > [!NOTE]
-> Copying policies has certain limitations. You can also start from scratch and create your policies manually in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
+> Copying policies has certain limitations. You can also start from scratch and create your policies manually in the Microsoft Purview compliance portal. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
 > 
 
 **To copy your policies**: 
@@ -154,9 +151,8 @@ This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](htt
     |---------|---------|
     |**Copying policies copies *all* your policies**     |     Copying policies does not support copying specific policies only - it's all of your policies, or none of them now.   |
     |**Copying automatically publishes your policies**     |  Copying your policies to the unified labeling client automatically publishes them to all unified labeling-supported clients. <br /><br />   **Important**: Do not copy your policies if you don't want to publish them.     |
-    |**Copying overwrites existing policies of the same name**     |   If you have a policy with the same name already existing in the Microsoft 365 compliance center, copying your policies will overwrite any settings defined in that policy.   <br /><br />All policies copied from the Azure portal are named with the following syntax: `AIP_<policy name>`.    |
+    |**Copying overwrites existing policies of the same name**     |   If you have a policy with the same name already existing in the Microsoft Purview compliance portal, copying your policies will overwrite any settings defined in that policy.   <br /><br />All policies copied from the Azure portal are named with the following syntax: `AIP_<policy name>`.    |
     |**Some client settings are not copied**     | Some client settings are not copied to the unified labeling platform, and must be configured manually after migrating. <br /><br />For more information, see [Configuring advanced labeling settings](#configuring-advanced-labeling-settings)|
-    | | |
 
 1. Sign in to the [Azure portal](https://portal.azure.com) as an administrator with one of the following roles:
 
@@ -168,14 +164,14 @@ This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](htt
 
 1. On the Azure Information Protection area, under **Manage** on the left, select **Unified labeling**.
 
-1. Select :::image type="icon" source="media/i-copy-policies.PNG" border="false"::: **Copy policies (preview)**. All of the policies you have stored in the Azure portal are copied to the Microsoft 365 compliance center.
+1. Select :::image type="icon" source="media/i-copy-policies.PNG" border="false"::: **Copy policies (preview)**. All of the policies you have stored in the Azure portal are copied to the Microsoft Purview compliance portal.
 
-    If there are any policies already in the Microsoft 365 compliance center with the same name, the policies are overwritten with the settings from the Azure portal.
+    If there are any policies already in the Microsoft Purview compliance portal with the same name, the policies are overwritten with the settings from the Azure portal.
 
     > [!IMPORTANT]
-    > If you currently use Microsoft Defender for Cloud Apps and Azure Information Protection labels, verify that you have published at least one policy with a minimal set of labels to the Microsoft 365 compliance center, even if the policy is scoped to a single user. 
+    > If you currently use Microsoft Defender for Cloud Apps and Azure Information Protection labels, verify that you have published at least one policy with a minimal set of labels to the Microsoft Purview compliance portal, even if the policy is scoped to a single user. 
     >
-    > This policy is required for Microsoft Defender for Cloud Apps to identify all the labels in the Microsoft 365 compliance center, and show them in the Microsoft Defender for Cloud Apps portal.
+    > This policy is required for Microsoft Defender for Cloud Apps to identify all the labels in the Microsoft Purview compliance portal, and show them in the Microsoft Defender for Cloud Apps portal.
 
 Now that you've migrated both your labels and policies, continue with [Configuring advanced labeling settings](#configuring-advanced-labeling-settings) to cover any advanced configurations that were not migrated.
 
@@ -186,11 +182,11 @@ As explained during the [planning phase](#planning-your-migration), some advance
 For more information, see:
 
 - [Configure advanced labeling settings in PowerShell](#configure-advanced-labeling-settings-in-powershell)
-- [Define label conditions in the Microsoft 365 compliance center](#define-label-conditions-in-the-microsoft-365-compliance-center)
+- [Define label conditions in the Microsoft Purview compliance portal](#define-label-conditions-in-the-microsoft-purview-compliance-portal)
 
 ### Configure advanced labeling settings in PowerShell
 
-1. Connect to the Office 365 Security & Compliance Center PowerShell module. For more information, see [Security & Compliance Center PowerShell documentation](/powershell/exchange/connect-to-scc-powershell).
+1. Connect to the Security & Compliance Center PowerShell module. For more information, see [Security & Compliance Center PowerShell documentation](/powershell/exchange/connect-to-scc-powershell).
 
 1. To define an advanced label setting, use the **Set-Label** cmdlet, specifying the **AdvancedSettings** parameter, the label you want to apply the setting to, as well as key/value pairs to define your setting.
     
@@ -221,11 +217,11 @@ For more information, see:
 > These advanced settings are not available for users who have only built-in labeling provided by Office 365.
 > 
 
-### Define label conditions in the Microsoft 365 compliance center
+### Define label conditions in the Microsoft Purview compliance portal
 
 Unified labeling conditions provide more flexibility and better accuracy than their counterparts that had been created in the Azure portal. 
 
-To leverage unified labeling condition features, create your labeling conditions manually in the Microsoft 365 compliance center.
+To leverage unified labeling condition features, create your labeling conditions manually in the Microsoft Purview compliance portal.
 
 For more information, see [What sensitivity labels can do](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) in the Microsoft 365 documentation.
 
@@ -237,7 +233,7 @@ For more information, see [What sensitivity labels can do](/microsoft-365/compli
 
 Deploy a client that supports unified labeling across your users' machines to ensure that they will be able to use your unified labeling policies and labels. 
 
-Users must have a supported client that can connect to the Microsoft 365 compliance center and pull the unified labeling policy. 
+Users must have a supported client that can connect to the Microsoft Purview compliance portal and pull the unified labeling policy. 
 
 For more information, see:
 - [Non-Windows platforms](#non-windows-platforms)
@@ -263,7 +259,7 @@ For Windows machines with Microsoft 365 Apps for Enterprise, use the built-in la
 
 For more information, see: 
 
-- [Compare the labeling solutions for Windows computers](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
+- [Learn about about built-in labeling and the AIP unified labeling client](rms-client/use-client.md)
 - [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md)
 
 The Azure Information Protection unified labeling client can be downloaded from the [Microsoft Download Center](https://aka.ms/aipclient). 
@@ -293,16 +289,63 @@ For example:
 > [!TIP]
 > If you have published your labels and the clients that have built-in support do not show the **Sensitivity** button, review the relevant troubleshooting guide as needed.
 >
- 
+
+## Upgrading the scanner from the classic client
+
+If you are currently using the Azure Information Protection scanner from the Azure Information Protection classic client, you can upgrade it to use sensitive information types and sensitivity labels that are published from the Microsoft Purview compliance portal.
+
+How to upgrade the scanner depends on the version of the classic client that you are currently running:
+
+- [Upgrade from version 1.48.204.0 and later versions](#upgrade-from-the-azure-information-protection-classic-client-version-1482040-and-later-versions-of-this-client)
+
+- [Upgrade from versions earlier than 1.48.204.0](#upgrade-from-the-azure-information-protection-classic-client-versions-earlier-than-1482040)
+
+The upgrade creates a new database named **AIPScannerUL_\<profile_name>**, and the previous scanner database is retained in case you need it for the previous version. When you are confident you don't need the previous scanner database, you can delete it. Because the upgrade creates a new database, the scanner rescans all files the first time it runs.
+
+##### Upgrade from the Azure Information Protection classic client version 1.48.204.0 and later versions of this client
+
+If you upgraded the scanner by using the preview version of the unified labeling client, you don't need to run these instructions again.
+
+1. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
+
+2. Upgrade to the Azure Information Protection unified labeling client by downloading and installing the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
+
+3. In a PowerShell session, run the Update-AIPScanner command with your scanner's profile. For example: `Update-AIPScanner –Profile Europe`.
+
+    This step creates a new database with the name **AIPScannerUL_\<profile_name>**
+
+4. Restart the Azure Information Protection Scanner service, **Azure Information Protection Scanner**.
+
+You can now use the rest of the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](/microsoft-365/compliance/deploy-scanner), omitting the step to install the scanner. Because the scanner is already installed, there's no reason to install it again.
+
+##### Upgrade from the Azure Information Protection classic client versions earlier than 1.48.204.0
+
+> [!IMPORTANT]
+> For a smooth upgrade path, do not install the the Azure Information Protection unified labeling client on the computer running the scanner as your first step to upgrade the scanner. Instead, use the following upgrade instructions.
+
+Beginning with version 1.48.204.0, the scanner gets its configuration settings from the Azure portal, by using a configuration profile. Upgrading the scanner includes instructing the scanner to use this online configuration and for the unified labeling client, offline configuration for the scanner is not supported.
+
+1. Use the Azure portal to create a new scanner profile that includes settings for the scanner and your data repositories with any settings that they need. For help with this step, see [Configure the scanner in the Azure portal](/microsoft-365/compliance/deploy-scanner-configure-install#configure-the-scanner-settings) from the scanner deployment instructions.
+
+2. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
+
+3. Upgrade to the Azure Information Protection unified labeling client by downloading and installing the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
+
+4. In a PowerShell session, run the Update-AIPScanner command with the same profile name that you specified in step 1. For example: `Update-AIPScanner –Profile Europe`
+
+5. Restart the Azure Information Protection Scanner service, **Azure Information Protection Scanner**.
+
+You can now use the rest of the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](/microsoft-365/compliance/deploy-scanner), omitting the step to install the scanner. Because the scanner is already installed, there's no reason to install it again.
+
 ## Next steps
 
-Once you've migrated your labels, policies, and deployed clients as needed, continue by [managing labels and labeling policies only in the Microsoft 365 compliance center](/microsoft-365/compliance/create-sensitivity-labels).
+Once you've migrated your labels, policies, and deployed clients as needed, continue by [managing labels and labeling policies only in the Microsoft Purview compliance portal](/microsoft-365/compliance/create-sensitivity-labels).
 
 With the unified labeling platform, you'll only need to return to the Azure Information Protection area in the Azure portal to:
 
-- [Use the AIP scanner](deploy-aip-scanner.md)
+- [Use the AIP scanner](/microsoft-365/compliance/deploy-scanner)
 - [Monitor labeling activities using AIP analytics](reports-aip.md)
 
-We recommend that end-users leverage built-in labeling capabilities in the latest Office apps for web, Mac, iOS, and Android, as well as Microsoft 365 Apps for Enterprise. 
+We recommend that end-users leverage built-in labeling capabilities in the latest Office apps for web, Mac, iOS, and Android, as well as Microsoft 365 Apps for Enterprise.
 
 To use additional AIP features not yet supported by built-in labeling, we recommend using the latest unified labeling client for Windows.

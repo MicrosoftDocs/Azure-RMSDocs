@@ -4,7 +4,7 @@ description: A quickstart showing you how to write the initialization logic for 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 03/30/2020
+ms.date: 11/14/2022
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to do SDK initialization, so that I can use the Protection SDK.
 ms.custom: mode-api
@@ -161,11 +161,11 @@ Now create a basic implementation for a Protection profile observer class, by ex
 
 The MIP SDK implements authentication using class extensibility, which provides a mechanism to share authentication work with the client application. The client must acquire a suitable OAuth2 access token, and provide to the MIP SDK at runtime.
 
-Create an implementation for an authentication delegate, by extending the SDK's `mip::AuthDelegate` class, and overriding/implementing the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function. **Follow the steps detailed under [File SDK Applcation Initialization Quickstart](quick-app-initialization-cpp.md).** The authentication delegate is instantiated and used later, by the Protection profile and Protection engine objects.
+Create an implementation for an authentication delegate, by extending the SDK's `mip::AuthDelegate` class, and overriding/implementing the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function. **Follow the steps detailed under [File SDK Application Initialization Quickstart](quick-app-initialization-cpp.md).** The authentication delegate is instantiated and used later, by the Protection profile and Protection engine objects.
 
 ## Implement a consent delegate
 
-Now create an implementation for a consent delegate, by extending the SDK's `mip::ConsentDelegate` class, and overriding/implementing the `mip::AuthDelegate::GetUserConsent()` pure virtual function.  **Follow the steps detailed under [File SDK Applcation Initialization Quickstart](quick-app-initialization-cpp.md).** The consent delegate is instantiated and used later, by the Protection profile and Protection engine objects.
+Now create an implementation for a consent delegate, by extending the SDK's `mip::ConsentDelegate` class, and overriding/implementing the `mip::AuthDelegate::GetUserConsent()` pure virtual function.  **Follow the steps detailed under [File SDK Application Initialization Quickstart](quick-app-initialization-cpp.md).** The consent delegate is instantiated and used later, by the Protection profile and Protection engine objects.
 
 ## Construct a Protection profile and engine
 

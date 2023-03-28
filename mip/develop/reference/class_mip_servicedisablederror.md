@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class ServiceDisabledError 
@@ -26,6 +26,7 @@ Gets the extent for which the service is disabled.
 **Returns**: Extent for which the service is disabled
   
 ### Extent enum
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 User            | Service is disabled for the user.
@@ -33,4 +34,4 @@ Device            | Service is disabled for the device.
 Platform            | Service is disabled for the platform.
 Tenant            | Service is disabled for the tenant.
 
-Describes the extent for which the service is disabled.d.
+Describes the extent for which the service is disabled.

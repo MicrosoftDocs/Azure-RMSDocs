@@ -3,9 +3,9 @@
 
 title: FAQs for Azure Information Protection (AIP)
 description: Get answers to frequently asked questions about Azure Information Protection (AIP) and its protection service, Azure Rights Management (Azure RMS).
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/14/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -26,27 +26,23 @@ search.appverid:
 
 # Frequently asked questions for Azure Information Protection (AIP)
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Have a question about Azure Information Protection (AIP), or about the Azure Rights Management service (Azure RMS)?
 
 See if it's answered below or on the [subsequent, more specific, FAQ pages](#what-do-i-do-if-my-question-isnt-here).
 
-## What's the difference between Azure Information Protection and Microsoft Information Protection?
+## What's the difference between Azure Information Protection and Microsoft Purview Information Protection?
 
-Unlike Azure Information Protection, [Microsoft Information Protection](https://www.microsoft.com/security/business/information-protection) isn't a subscription or product that you can buy. Instead, it's a framework for products and integrated capabilities that help you protect your organization's sensitive information.
+Unlike Azure Information Protection, [Microsoft Purview Information Protection](https://www.microsoft.com/security/business/information-protection) isn't a subscription or product that you can buy. Instead, it's a framework for products and integrated capabilities that help you protect your organization's sensitive information.
 
-**Microsoft Information Protection products include**:
+**Microsoft Purview Information Protection products include**:
 - Azure Information Protection
 - Microsoft 365 Information Protection, such as Microsoft 365 DLP
 - Windows Information Protection
 - Microsoft Defender for Cloud Apps
 
-**Microsoft Information Protection capabilities include**:
+**Microsoft Purview Information Protection capabilities include**:
 - Unified label management
 - End-user labeling experiences built into Office apps
 - The ability for Windows to understand unified labels and apply protection to data
@@ -55,17 +51,6 @@ Unlike Azure Information Protection, [Microsoft Information Protection](https://
 
 For more information, see [Information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
-## What's the difference between labels in Microsoft 365 and labels in Azure Information Protection?
-
-Originally, Microsoft 365 had only [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30), which enabled you to classify documents and emails for auditing and retention when that content was stored in Microsoft 365 services.
-
-In contrast, Azure Information Protection labels, configured at the time using the AIP classic client in the Azure portal, enabled you to apply a consistent classification and protection policy for documents and emails whether they were stored on-premises or in the cloud.
-
-Microsoft 365 supports [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in addition to retention labels. Sensitivity labels can be created and configured in the Microsoft 365 compliance center.
-
-If you have legacy AIP labels configured in the Azure portal, we recommend migrating them to sensitivity labels and unified labeling client. For more information, see [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md).
-
-For more information, see [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 ## How can I determine if my tenant is on the unified labeling platform?
 
@@ -79,67 +64,9 @@ You can also check by going to **Azure Information Protection** > **Manage** > *
 
 |Status |Description  |
 |---------|---------|
-|**Activated**     |  Your tenant is on the unified labeling platform. <br />You can [create, configure, and publish labels](/microsoft-365/compliance/create-sensitivity-labels) from the Microsoft 365 compliance center.       |
+|**Activated**     |  Your tenant is on the unified labeling platform. <br />You can [create, configure, and publish labels](/microsoft-365/compliance/create-sensitivity-labels) from the Microsoft Purview compliance portal.       |
 |**Not activated**    |  Your tenant is not on the unified labeling platform. <br />For migration instructions and guidance, see [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md).       |
-| | |
 
-## What's the difference between the Azure Information Protection classic and unified labeling clients?
-
-The legacy Azure Information Protection client, referred to as the *classic* client, downloads labels and policy settings from Azure and enables you to configure the [AIP policy](overview-policy.md) from the Azure portal.
-
-The *unified labeling client* is the most current client with the most recent updates, and supports the unified labeling platform used by multiple applications and services. The unified labeling client downloads [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and policy settings from the Microsoft 365 compliance center.
-
-If you're an admin, learn more in [Choose your Windows labeling solution](rms-client/use-client.md#choose-your-windows-labeling-solution).
-
-### Classic client deprecation
-
-To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure portal is **deprecated** as of **March 31, 2021**.
-
-The client continues to work as expected, but administrators cannot update policies on the portal, and no more fixes or changes will be supplied for the classic client.
-
-We recommend that you [migrate to unified labeling](tutorial-migrating-to-ul.md) and upgrade to the [unified labeling client](rms-client/clientv2-admin-guide-install.md). Learn more in our recent [update](https://techcommunity.microsoft.com/t5/microsoft-security-and/azure-aip-portal-label-amp-policy-management-admin-experience/ba-p/2182678) on the deprecation.
-
-
-For more information, see: [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md)
-### Identify the client you have installed
-
-If you are a user who wants to understand whether you have the classic or the unified labeling client installed, you can do one of the following:
-
-- In your Office apps, check for the **Sensitivity** or **Protect** toolbar button. The unified labeling client shows the **Sensitivity** :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: button, while the classic client shows the **Protect** button.
-
-- Check the version number for the Azure Information Protection application you have installed.
-
-    - Versions **1.x** indicate that you have the classic client. Example: **1.54.59.0**
-    - Versions **2.x** indicate that you have the unified labeling client. Example: **2.8.85.0**
-
-    For example, in the **Windows Settings > Apps and features** area, scroll down to the **Microsoft Azure Information Protection** application, and check the version number.
-
-    :::image type="content" source="media/client-about.png" alt-text="Check the Azure Information Protection client version":::
-
-## When is the right time to migrate my labels to unified labeling?
-
-We recommend that you migrate your Azure Information Protection labels to the unified labeling platform so that you can use them as sensitivity labels with other [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
-
-For more information and instructions, see [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md).
-
-## After I've migrated my labels to unified labeling, which management portal do I use?
-
-After you've migrated your labels in the Azure portal, continue managing them in one of the following locations, depending on the clients you have installed:
-
-|Client  |Description  |
-|---------|---------|
-|[Unified labeling clients and services](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) only    |  If you only have unified labeling clients installed, manage your labels in the Microsoft 365 compliance center, which is where unified  labeling clients download the labels and their policy settings.<br /><br />For instructions, see [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels).     |
-|[Classic client](./rms-client/aip-client.md) only  | If you've migrated your labels, but still have the classic client installed, continue to use the Azure portal to edit labels and policy settings. The classic client continues to download labels and policy settings from Azure.
-|Both the AIP [classic client](./rms-client/aip-client.md) and [unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) clients     | If you have both of the clients installed, use the Microsoft 365 compliance center or the Azure portal to make label changes. <br /><br />For the classic clients to pick up label changes made in the Microsoft 365 compliance center, return to the Azure portal to publish them. In the Azure portal > **Azure Information Protection - Unified labeling** pane, select **Publish**.  <br /><br /> Continue to use the Azure portal for [central reporting](reports-aip.md) and the [scanner](deploy-aip-scanner.md).     |
-| | |
-
-## Do I need to re-encrypt my files after moving to sensitivity labels and the unified labeling platform?
-
-No, you don’t need to re-encrypt your files after moving to sensitivity labels and the unified labeling platform after migrating from the AIP classic client and the labels managed in the Azure portal.
-
-After migrating, manage your labels and labeling policies from the Microsoft 365 compliance center.
-
-For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in the Microsoft 365 documentation and the [Understanding unified labeling migration](https://techcommunity.microsoft.com/t5/microsoft-security-and/understanding-unified-labeling-migration/ba-p/783185) blog.
 
 
 ## What's the difference between Azure Information Protection and Azure Rights Management?
@@ -171,7 +98,6 @@ However, if you want to assign administrative permissions to other users, do so 
 
 - [Azure Information Protection administrator](#azure-information-protection-administrator)
 - [Compliance administrator or Compliance data administrator](#compliance-administrator-or-compliance-data-administrator)
-- [Security reader or Global reader](#security-reader-or-global-reader)
 - [Security administrator](#security-administrator)
 - [Azure Rights Management Global Administrator and Connector Administrator](#azure-rights-management-global-administrator-and-connector-administrator)
 
@@ -183,7 +109,7 @@ Additionally, note the following when managing administrative tasks and roles:
 |**Onboarding controls**     |If you have configured [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), this configuration does not affect the ability to administer Azure Information Protection, except the RMS connector. <br /><br />For example, if you have configured onboarding controls so that the ability to protect content is restricted to the *IT department* group, the account used to install and configure the RMS connector must be a member of that group.          |
 |**Removing protection**     |  Administrators cannot automatically remove protection from documents or emails that were protected by Azure Information Protection. <br /><br />Only users who are assigned as super users can do remove protection, and only when the super user feature is enabled. <br /><br />Any user with administrative permissions to Azure Information Protection can enable the super user feature, and assign users as super users, including their own account.<br /><br />These actions are recorded in an administrator log. <br /><br />For more information, see the security best practices section in [Configuring super users for Azure Information Protection and discovery services or data recovery](configure-super-users.md). <br><br>**Tip**: If your content is stored in SharePoint or OneDrive, admins can run the [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) cmdlet to remove both the sensitivity label and the encryption. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document). |
 |**Migrating to the unified labeling store**      |  If you are migrating your Azure Information Protection labels to the unified labeling store, be sure to read the following section from the label migration documentation: <br />[Administrative roles that support the unified labeling platform](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform). |
-| | |
+
 ### Azure Information Protection administrator
 
 This Azure Active Directory administrator role lets an administrator configure Azure Information Protection but not other services.
@@ -216,16 +142,6 @@ To see what other permissions a user with these roles have, see the [Available r
 > [!NOTE]
 > These roles don't support [tracking and revoking](rms-client/track-and-revoke-admin.md) documents for users.
 >
-### Security reader or Global reader
-
-These roles are used for [Azure Information Protection analytics](reports-aip.md) only, and enable administrators to:
-
-- View how your labels are being used
-- Monitor user access to labeled documents and emails
-- View changes made to classification
-- Identify documents that contain sensitive information that must be protected
-
-Because this feature uses Azure Monitor, you must also have a supporting [RBAC role](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
 
 ### Security administrator
 
@@ -290,29 +206,11 @@ Additional information:
 |**MFA and B2B collaboration**     | If you use MFA in your conditional access policies for collaborating with other organizations (B2B), you must use [Azure AD B2B collaboration](/azure/active-directory/b2b/what-is-b2b) and create guest accounts for the users you want to share with in the other organization.        |
 |**Terms of Use prompts**     |  With the Azure AD December 2018 preview release, you can now [prompt users to accept a terms of use](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822) before they open a protected document for the first time.       |
 |**Cloud apps**     |  If you use many cloud apps for conditional access, you might not see **Microsoft Azure Information Protection** displayed in the list to select. <br /><br />In this case, use the search box at the top of the list. Start typing "Microsoft Azure Information Protection" to filter the available apps. Providing you have a supported subscription, you'll then see **Microsoft Azure Information Protection** to select.        |
-| | |
 
 > [!NOTE]
 > The Azure Information Protection support for conditional access is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 >
 
-## I see Azure Information Protection is listed as a security provider for Microsoft Graph Security—how does this work and what alerts will I receive?
-
-Yes, as a public preview offering, you can now receive an alert for **Azure Information Protection anomalous data access**. This alert is triggered when there are unusual attempts to access data that is protected by Azure Information Protection. For example, accessing an unusually high volume of data, at an unusual time of day, or access from an unknown location.
-
-Such alerts can help you to detect advanced data-related attacks and insider threats in your environment. These alerts use machine learning to profile the behavior of users who access your protected data.
-
-The Azure Information Protection alerts can be accessed by [using the Microsoft Graph Security API](/graph/api/resources/security-api-overview), or you can [stream alerts](/graph/security-integration) to SIEM solutions, such as Splunk and IBM Qradar, by using Azure Monitor.
-
-For more information about the Microsoft Graph Security API, see [Microsoft Graph Security API overview](/graph/security-concept-overview).
-
-> [!NOTE]
-> The Azure Information Protection support for Microsoft Graph Security is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
->
-
-## I've heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
-
-The technical documentation does not contain information about upcoming releases. For this type of information, use the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent).
 ## Is Azure Information Protection suitable for my country?
 
 Different countries have different requirements and regulations. To help you answer this question for your organization, see [Suitability for different countries](./compliance.md#suitability-for-different-countries).
@@ -337,7 +235,5 @@ First, review the frequently asked questions listed below, which are specific to
 - [FAQs for classification and labeling](faqs-infoprotect.md)
 
 - [FAQs for data protection](faqs-rms.md)
-
-- [FAQs for the classic client only](faqs-classic.md)
 
 If your question isn't answered, see the links and resources listed in [Information and support for Azure Information Protection](information-support.md).

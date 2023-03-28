@@ -3,9 +3,9 @@
 
 title: Information & support for Azure Information Protection - AIP
 description: Resources for administrators, which include information about new releases, support options, and how to contact Microsoft to report a problem. 
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -29,12 +29,7 @@ search.appverid:
 
 # Information and support for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
-
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Use the following resources to help you learn about, deploy, and support Azure Information Protection for your organization.
 
@@ -63,7 +58,7 @@ The following sections provide information about support and troubleshooting opt
 
 ### To contact Microsoft Support
 
-If you're working with sensitivity labels in the Microsoft 365 Compliance center, see the [Support](/office365/servicedescriptions/office-365-platform-service-description/support) page in the Microsoft 365 and Office 365 platform service descriptions.
+If you're working with sensitivity labels in the Microsoft Purview compliance portal, see the [Support](/office365/servicedescriptions/office-365-platform-service-description/support) page in the Microsoft 365 and Office 365 platform service descriptions.
 
 You might be eligible for **FastTrack**: You can use the FastTrack Center Benefit when you purchase at least 150 licenses in an eligible plan for Azure Information Protection. The FastTrack Center Benefit lets you work with Microsoft specialists to assess, remediate, and enable eligible services. For more information, see [FastTrack Center Benefit for Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
 
@@ -75,7 +70,6 @@ For other customers, use the support channels in the following table, depending 
 |**Azure Information Protection and an Microsoft 365 subscription**<br /><br />**Azure Rights Management with a Microsoft 365 subscription**|See [Contact support for business products - Admin Help](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) for information about how to contact Support by using the Microsoft 365 admin center, and for contact telephone numbers.|
 |**Azure Information Protection with Enterprise Mobility + Security (EMS)**|1. Select **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal.<br /><br />2. When you are prompted, on the **Basics** pane, choose **Technical** for the **Issue type** and **Information Protection** for the service. <br /><br />3. In addition, make sure that one of the following options is selected:<br /><br />- **Subscription with technical support included**: You see this option if you have a paid or trial subscription for Azure.<br /><br /> - **Technical support - Included**: You see this option if you don't have an Azure subscription.|
 |**Azure Information Protection with Microsoft 365 Enterprise**|Use the [Microsoft 365 support channels](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
-| | |
 
 For additional support options, ask your Microsoft contact. 
 

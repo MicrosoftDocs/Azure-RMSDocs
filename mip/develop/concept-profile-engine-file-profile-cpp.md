@@ -4,7 +4,7 @@ description: This article will help you understand the concepts around the File 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 07/30/2019
+ms.date: 11/14/2022
 ms.author: mbaldwin
 ---
 
@@ -16,7 +16,7 @@ There are a few code-prerequisites that should be met prior to attempting to ins
 
 - `MipContext` has been created and stored in an object accessible to the `mip::FileProfile` object.
 - `ConsentDelegateImpl` implements `mip::ConsentDelegate`.
-- The application has been [registered in Azure Active Directory](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad.md) and the client ID is hard-coded in to the application or configuration files.
+- The application has been [registered in Azure Active Directory](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad) and the client ID is hard-coded in to the application or configuration files.
 - A class inheriting `mip::FileProfile::Observer` has been appropriately implemented.
 
 ## Load a Profile

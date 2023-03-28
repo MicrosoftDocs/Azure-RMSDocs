@@ -3,9 +3,9 @@
 
 title: Azure Information Protection (AIP) labeling, classification, and protection
 description: Learn how Azure Information Protection (AIP) can label documents and emails to classify and protect your data.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -28,11 +28,7 @@ search.appverid:
 
 # Azure Information Protection (AIP) labeling, classification, and protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
-> ***Relevant for**: [Azure Information Protection unified labeling client and classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to classify and protect documents and emails by applying labels. 
 
@@ -151,7 +147,7 @@ Ideally, you'll be labeling documents and emails as they're created. However, yo
 
 Use one of the following methods to classify and protect existing content:
 
-- **On-premises storage**: Use the [Azure Information Protection scanner](deploy-aip-scanner.md) to discover, classify, and protect documents on network shares and Microsoft SharePoint Server sites and libraries.
+- **On-premises storage**: Use the [Azure Information Protection scanner](/microsoft-365/compliance/deploy-scanner) to discover, classify, and protect documents on network shares and Microsoft SharePoint Server sites and libraries.
 
     The scanner runs as a service on Windows Server, and uses the same policy rules to detect sensitive information and apply specific labels to documents. 
 
@@ -165,8 +161,8 @@ Use one of the following methods to classify and protect existing content:
 Configure and see Azure Information Protection for yourself with our quickstart and tutorials:
 
 - [Quickstart: Deploy the unified labeling client](quickstart-deploy-client.md)
-- [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
-- [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
-- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
+- [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](/microsoft-365/compliance/deploy-scanner-configure-install)
+- [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](/microsoft-365/compliance/deploy-scanner-manage)
+- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](/azure/information-protection/tutorial-scan-networks-and-content)
 
 If you're ready to deploy this service for your organization, head over to the [how-to guides](how-to-guides.md).

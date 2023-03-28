@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Azure Information Protection (AIP) documentation
-summary: Learn how to control and secure emails, documents, and sensitive data inside and outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection, no matter where it's stored or who it's shared with.
+summary: Learn how to control and secure emails, documents, and sensitive data inside and outside your company walls using Azure Information Protection. Note that the AIP unified labeling client is currently in a maintenance mode. For functionality from Office applications, we recommend that you use built-in labeling instead.
 
 metadata:
   title: Azure Information Protection documentation
@@ -10,9 +10,9 @@ metadata:
   ms.service: information-protection
   ms.topic: landing-page # Required
   ms.collection: M365-security-compliance
-  author: batamig
-  ms.author: bagol
-  manager: rkarlin
+  author: aashishr
+  ms.author: aashishr
+  manager: aashishr
   ms.date: 12/08/2020 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | deploy | download | get-started | how-to-guide | learn | overview | quickstart | tutorial
@@ -42,11 +42,11 @@ landingContent:
      - linkListType: tutorial
        links:
           - text: Install the scanner
-            url: tutorial-install-scanner.md
+            url: /microsoft-365/compliance/deploy-scanner-configure-install
           - text: Scan networks and content
-            url: tutorial-scan-networks-and-content.md
+            url: /microsoft-365/compliance/deploy-scanner-manage
           - text: Prevent oversharing
-            url: tutorial-preventing-oversharing.md
+            url: /azure/information-protection/tutorial-scan-networks-and-content
      - linkListType: how-to-guide
        links:
           - text: View protected, non-Office, files
@@ -61,7 +61,7 @@ landingContent:
        links:
           - text: Top recommended Ignite sessions
             url: what-is-information-protection.md#top-ignite-sessions
-          - text: What's new for the AIP unified labeling client
+          - text: Release management and supportability
             url: ./rms-client/unifiedlabelingclient-version-release-history.md
 
   # Card
@@ -70,13 +70,13 @@ landingContent:
       - linkListType: overview
         links:
           - text: About the on-premises scanner
-            url: deploy-aip-scanner.md
+            url: /microsoft-365/compliance/deploy-scanner
       - linkListType: how-to-guide
         links:
           - text: Configure and install the scanner
-            url: deploy-aip-scanner-configure-install.md
+            url: /microsoft-365/compliance/deploy-scanner-configure-install
           - text: Run the scanner
-            url: deploy-aip-scanner-manage.md
+            url: /microsoft-365/compliance/deploy-scanner-manage
 
   # Card
   - title: Customize the client
@@ -102,17 +102,17 @@ landingContent:
       - linkListType: reference
         links:
           - text: API reference for C++
-            url: /information-protection/develop/mip-sdk-reference       
+            url: /information-protection/develop/version-release-history      
 
   # Card
   - title: Activate unified labels
     linkLists:
       - linkListType: overview
         links:
-          - text: Choose your Windows labeling solution
-            url: ./rms-client/use-client.md#choose-your-windows-labeling-solution
+          - text: About built-in labeling and the AIP client
+            url: ./rms-client/use-client.md
       - linkListType: tutorial
-        links: 
+        links:
           - text: Migrate to the unified labeling solution
             url: tutorial-migrating-to-ul.md
       - linkListType: how-to-guide

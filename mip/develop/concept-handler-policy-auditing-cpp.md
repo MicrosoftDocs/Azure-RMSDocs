@@ -1,11 +1,11 @@
 ---
-title: Concepts - Auditing in the Microsoft Information Protection Policy SDK
+title: Concepts - Auditing in the Microsoft Purview Information Protection Policy SDK
 description: This article will help you understand how to use the Microsoft Information Protection SDK to submit Policy SDK auditing events to Azure Information Protection Analytics.
 services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 11/07/2018
+ms.date: 11/14/2022
 ms.author: tommos
 ---
 

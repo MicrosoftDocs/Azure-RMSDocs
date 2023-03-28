@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class ProtectByTemplateAction 
@@ -27,4 +27,4 @@ Get the protection template ID associated with the action.
   
 ### IsDoubleKey function
 _Not documented yet._
-_
+

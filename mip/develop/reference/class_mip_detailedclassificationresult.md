@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class DetailedClassificationResult 
@@ -29,4 +29,4 @@ Get the confidence in the result.
 Get the instance count.
 
   
-**Returns**: The instance count.t.
+**Returns**: The instance count.

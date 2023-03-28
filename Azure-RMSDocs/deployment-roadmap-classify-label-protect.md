@@ -3,9 +3,9 @@
 
 title: Deploy Azure Information Protection (AIP) for classification, labeling, and protection
 description: Use these steps to prepare for, implement, and manage Azure Information Protection (AIP) for your organization, when you want to classify, label, and protect your data.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/11/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -26,11 +26,7 @@ ms.custom: admin
 
 # AIP deployment roadmap for classification, labeling, and protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Use the following steps as recommendations to help you prepare for, implement, and manage Azure Information Protection for your organization, when you want to classify, label, and protect your data.
 
@@ -40,7 +36,7 @@ Labels can also apply protection, simplifying this step for your users.
 
 > [!TIP]
 > Alternatively, you may be looking for one of the following articles:
-> - [AIP roadmap for data protection only](deployment-roadmap-protect-only.md)
+> - [AIP roadmap for data protection only](/previous-versions/azure/information-protection/deployment-roadmap-protect-only)
 > - [How-to guides for common scenarios that use Azure Information Protection](how-to-guides.md)
 > - [Azure Information Protection release roadmap](information-support.md#information-about-new-releases-and-updates)
 
@@ -86,7 +82,7 @@ Perform the following steps:
 
 1. **Scan your files (optional but recommended)**
 
-    [Deploy the Azure Information Protection client](quickstart-deploy-client.md), and then [install](tutorial-install-scanner.md) and [run the scanner](tutorial-scan-networks-and-content.md) to discover the sensitive information you have on your local data stores. 
+    [Deploy the Azure Information Protection client](quickstart-deploy-client.md), and then [install](/microsoft-365/compliance/deploy-scanner-configure-install) and [run the scanner](/microsoft-365/compliance/deploy-scanner-manage) to discover the sensitive information you have on your local data stores. 
 
     The information that the scanner finds can help you with your classification taxonomy, provide valuable information about what labels you need, and which files need protecting.
 
@@ -103,7 +99,7 @@ Perform the following steps:
     - Write user guidance to help explain which label should be applied in each scenario.
     - If your default policy was created with labels that automatically apply protection, you may want to temporarily remove the protection settings or disable the label while you test your settings. 
 
-    Sensitivity labels and labeling policies for the unified labeling client are configured in the Microsoft 365 compliance center. For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+    Sensitivity labels and labeling policies for the unified labeling client are configured in the Microsoft Purview compliance portal. For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 1. **Deploy your client for your users**
 
@@ -121,10 +117,10 @@ Perform the following steps:
     - Customizing headers, footers, or watermarks
     - Recommended and automatic labeling
 
-    For more information, see [Admin Guide: Custom configurations](rms-client/client-admin-guide-customizations.md).
+    For more information, see [Admin Guide: Custom configurations](/previous-versions/azure/information-protection/rms-client/client-admin-guide-customizations).
      
     > [!TIP]
-    > If you've configured labels for automatic labeling, run the [Azure Information Protection scanner](deploy-aip-scanner-manage.md) again on your local data stores in discovery mode and to match your policy. 
+    > If you've configured labels for automatic labeling, run the [Azure Information Protection scanner](/microsoft-365/compliance/deploy-scanner-manage) again on your local data stores in discovery mode and to match your policy. 
     > 
     > Running the scanner in discovery mode tells you which labels would be applied to files, which helps you fine-tune your label configuration and prepares you for classifying and protecting files in bulk. 
     > 
@@ -193,14 +189,14 @@ Perform the following steps:
 
 1. **Classify and protect existing files in bulk**
     
-    For your on-premises data stores, now run the [Azure Information Protection scanner](deploy-aip-scanner.md) in enforcement mode so that files are automatically labeled.
+    For your on-premises data stores, now run the [Azure Information Protection scanner](/microsoft-365/compliance/deploy-scanner) in enforcement mode so that files are automatically labeled.
     
     For files on PCs, use PowerShell cmdlets to classify and protect files. For more information, see [Using PowerShell with the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-powershell.md).
 
-    For cloud-based data stores, use [Azure Cloud App Security](/cloud-app-security). 
+    For cloud-based data stores, use [Microsoft Defender for Cloud Apps](/cloud-app-security). 
 
     > [!TIP]
-    > While classifying and protecting existing files in bulk is not one of the main use cases for cloud app security, [documented workarounds](/cloud-app-security/azip-integration#enable-azure-information-protection) can help you get your files classified and protected.
+    > While classifying and protecting existing files in bulk is not one of the main use cases for Defender for Cloud Apps, [documented workarounds](/cloud-app-security/azip-integration#enable-azure-information-protection) can help you get your files classified and protected.
 
 6. **Deploy the connector for IRM-protected libraries on SharePoint Server, and IRM-protected emails for Exchange on-premises**
     
@@ -223,24 +219,6 @@ As you begin to use the protection service, you might find PowerShell useful to 
 
 For more information, see [Administering protection from Azure Information Protection by using PowerShell](./administer-powershell.md).
 
-## References for classic client environments
-
-**Relevant for**: AIP classic client only
-
-If you're using the classic client, use the following references instead of those linked above:
-
-- **Deploy and run the scanner** that's provided with the classic client. For more information, see [What is the Azure Information Protection classic scanner?](deploy-aip-scanner-classic.md)
-
-- **Configure your policy in the Azure portal.** For more information, see [Configuring Azure Information Protection policy](./configure-policy.md) and [How to configure a label for Rights Management protection](./configure-policy-protection.md).
-
-- **Deploy your client for users** using the [classic client administrator guide](./rms-client/client-admin-guide.md) and [custom configuration instructions for the classic client](rms-client/client-admin-guide-customizations.md).
-
-- **PowerShell instructions**: [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md)
-
-- **Local monitoring**: [Local usage logging with Windows event monitor](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client)
-
-> [!TIP]
-> You may also be interested in the [Azure Information Protection deployment roadmap for protection only](deployment-roadmap-protect-only.md), which is supported for the classic client only.
 
 ## Next steps
 

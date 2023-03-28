@@ -3,9 +3,9 @@
 
 title: How Office apps & services support Azure RMS from AIP
 description: How end-user Office applications such as Word and Outlook, and Office services such as Exchange and SharePoint, can use the Azure Rights Management service from AIP to help protect your organization's data.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 05/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -27,11 +27,7 @@ ms.custom: admin
 
 # How Office applications and services support Azure Rights Management 
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 End-user Office applications and Office services can use the Azure Rights Management service from Azure Information Protection to help protect your organization’s data. These Office applications are Word, Excel, PowerPoint, and Outlook. The Office services are Exchange and Microsoft SharePoint. The Office configurations that support the Azure Rights Management service often use the term **information rights management (IRM)**.
 
@@ -69,11 +65,8 @@ If you're ready to configure Exchange to protect emails:
 
 - For Exchange on-premises, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
-For more information, see:
+- Configure sensitivity labels and labeling polices in the Microsoft Purview compliance portal. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
-- **Unified labeling client**. Configure sensitivity labels and labeling polices in the Microsoft 365 compliance center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
-
-- **Classic client**. Configure protection templates in the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
 
 ## SharePoint in Microsoft 365 and SharePoint Server
@@ -94,7 +87,7 @@ If you use SharePoint Server, you can use this IRM protection by deploying the M
 > 
 > - You cannot use the default or custom protection templates that you manage in the Azure portal. 
 > 
-> - Files that have a .ppdf file name extension for protected PDF files are not supported. For more information about viewing protected PDF documents, see [Protected PDF readers for Microsoft Information Protection](./rms-client/protected-pdf-readers.md).
+> - Files that have a .ppdf file name extension for protected PDF files are not supported. For more information about viewing protected PDF documents, see [Protected PDF readers for Microsoft Purview Information Protection](./rms-client/protected-pdf-readers.md).
 > 
 > - Coauthoring, when more than one person edits a document at the same time, is not supported. To edit a document in an IRM-protected library, you must first check out the document and download it, and then edit it in your Office application. Consequently, only one person can edit the document at a time.
 

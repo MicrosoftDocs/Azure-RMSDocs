@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class RulePackageData 
@@ -14,8 +14,8 @@ ms.date: 11/15/2021
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const PolicyRuleData* GetRuleData() const  | _Not yet documented._
-public const std::pair\<std::string, std::string\>& GetLabelToTemplateId() const  | _Not yet documented._
-public const std::pair\<std::string, std::shared_ptr\<ProtectionActionData\>\>& GetLabelToProtectionType() const  | _Not yet documented._
+public const std::pair&lt;std::string, std::string&gt;& GetLabelToTemplateId() const  | _Not yet documented._
+public const std::pair&lt;std::string, std::shared_ptr&lt;ProtectionActionData&gt;&gt;& GetLabelToProtectionType() const  | _Not yet documented._
 public virtual ~RulePackageData()  | _Not yet documented._
   
 ## Members
@@ -34,4 +34,4 @@ _Not documented yet._
   
 ### ~RulePackageData function
 _Not documented yet._
-_
+

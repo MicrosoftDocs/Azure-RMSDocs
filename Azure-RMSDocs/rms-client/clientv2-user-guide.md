@@ -3,9 +3,9 @@
 
 title: Azure Information Protection user guide - unified labeling
 description: Azure Information Protection unified labeling client for Windows helps you keep important documents and emails safe from people who shouldn't see them, even if your email is forwarded or your document is saved to another location. 
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -26,11 +26,7 @@ ms.custom: user
 
 # Azure Information Protection unified labeling user guide 
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8*
->
->*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
->
->***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 The Azure Information Protection unified labeling client for Windows helps you keep important documents and emails safe from people who shouldn't see them, even if your email is forwarded or your document is saved to another location. You can also use this client to open documents that other people have protected by using the Rights Management protection technology from Azure Information Protection.
 
@@ -50,6 +46,7 @@ All you need is a computer that runs at least Windows 8. Then download and inst
 - [Remove labels and protection from files and emails](clientv2-remove-label-protection.md)
 
 
+  
 > [!NOTE]
 > If you are an administrator who is responsible for the Azure Information Protection unified labeling client on an enterprise network, see the [Azure Information Protection unified labeling client administrator guide](clientv2-admin-guide.md) for additional technical information. 
 

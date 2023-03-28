@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class OperationCancelledError 
@@ -17,4 +17,4 @@ Operation was cancelled.
   
 ## Members
 _Not documented yet._
-_
+

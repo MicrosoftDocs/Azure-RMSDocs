@@ -3,9 +3,9 @@
 
 title: Azure Information Protection client - Install & configure
 description: Information for admins about deploying the Azure Information Protection clients on Windows computers and mobile devices.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 03/16/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
@@ -26,13 +26,9 @@ ms.custom: admin
 
 # Azure Information Protection client: Installation and configuration for clients
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
-
-The AIP unified labeling client is recommended for all Windows computers, because it installs an Office add-in that enables users to easily label and protect documents directly from the Office ribbon. 
+The AIP unified labeling client installs an Office add-in that enables users to easily label and protect documents directly from the Office ribbon. 
 
 The client also offers:
 
@@ -40,17 +36,11 @@ The client also offers:
 - A viewer for protected files that can't be opened by Office apps. There's a similar viewer for iOS and Android.
 - Features for tracking and revoking access to protected files.
 
-Computers running Office 2010 require the Azure Information Protection client to authenticate to the Azure Information Protection service. Note that Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
 ## The Azure Information Protection client for Windows: Installation and configuration
 
 For an enterprise installation and configuration of the client for Windows, see the [Azure Information Protection unified labeling client administrator guide](./rms-client/clientv2-admin-guide.md).
 
 If you want to quickly install and test these clients for a single computer, see [Download and install the Azure Information Protection unified labeling client](./rms-client/install-unifiedlabelingclient-app.md).
-
-**Classic client only**: If you have the classic client installed, use these links instead:
-
-- [Azure Information Protection client administrator guide](./rms-client/client-admin-guide.md)
-- [Download and install the Azure Information Protection client](./rms-client/install-client-app.md).
 
 ## The Azure Information Protection app for iOS and Android: Installation and management
 

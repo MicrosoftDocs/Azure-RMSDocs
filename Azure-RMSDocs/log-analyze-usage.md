@@ -3,9 +3,9 @@
 
 title: Log & analyze the protection usage from Azure Information Protection
 description: Information and instructions how to use usage logging for the protection service from Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/11/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -27,11 +27,7 @@ ms.custom: admin
 
 # Logging and analyzing the protection usage from Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Use this information to help you understand how you can use usage logging for the protection service (Azure Rights Management) from Azure Information Protection. This protection service provides the data protection for your organization's documents and emails and it can log every request to it. These requests include when users protect documents and email and also consume this content, actions performed by your administrators for this service, and actions performed by Microsoft operators to support your Azure Information Protection deployment. 
 
@@ -57,9 +53,8 @@ In addition to this usage logging, you also have the following logging options:
 |----------------|---------------|
 |**Admin log**|Logs administrative tasks for the protection service. For example, if the service is deactivated, when the super user feature is enabled, and when users are delegated admin permissions to the service. <br /><br />For more information, see the PowerShell cmdlet, [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog).|
 |**Document tracking**|Lets users track and revoke their documents that they have tracked with the Azure Information Protection client. Global administrators can also track these documents on behalf of users. <br /><br />For more information, see [Configuring and using document tracking for Azure Information Protection](./rms-client/client-admin-guide-document-tracking.md).|
-|**Client event logs**|Usage activity for the Azure Information Protection client, logged in the local Windows **Applications and Services** event log, **Azure Information Protection**. <br /><br />For more information, see [Usage logging for the Azure Information Protection client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client).|
+|**Client event logs**|Usage activity for the Azure Information Protection client, logged in the local Windows **Applications and Services** event log, **Azure Information Protection**. <br /><br />For more information, see [Usage logging for the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-files-and-logging#usage-logging-for-the-azure-information-protection-classic-client).|
 |**Client log files**|Troubleshooting logs for the Azure Information Protection client, located in **%localappdata%\Microsoft\MSIP**. <br /><br />These files are designed for Microsoft Support.|
-| | |
 
 In addition, information from the Azure Information Protection client usage logs and the Azure Information Protection scanner is collected and aggregated to create reports in the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md).
 
@@ -151,7 +146,6 @@ Each of the subsequent lines is a log record. The values of the fields are in th
 | **c-ip**           | Address       | IP address of the client that makes the request.                                                                                                                                                                                                                                                     | 64.51.202.144                                                                                                                       |
 | **admin-action**   | Bool          | Whether an administrator has accessed the document tracking site in Administrator mode.                                                                                                                                                                                                              | True                                                                                                                                |
 | **acting-as-user** | String        | The email address of the user for whom an administrator is accessing the document tracking site.                                                                                                                                                                                                     | 'joe@contoso.com'                                                                                                                   |
-|                    |               |                                                                                                                                                                                                                                                                                                      |                                                                                                                                     |
 
 #### Exceptions for the user-id field
 Although the user-id field usually indicates the user who made the request, there are two exceptions where the value does not map to a real user:
@@ -196,34 +190,9 @@ There are many request types for the protection service but the following table 
 |**SetUsageLogFeatureState**|A call is  made to enable usage logging.|
 |**SetUsageLogStorageAccount**|A call is  made to specify the location of the Azure Rights Management service logs.|
 |**UpdateTemplate**|A call is  made from the Azure portal to update an existing template.|
-| | | 
 
-**Classic client only**
-
-The following request types are relevant for users with the AIP classic client only:
-
-|Request type|Description|
-|----------------|---------------|
-|**DeleteTemplateById**|A call is  made from the Azure portal, to delete a template by template  ID.|
-|**DocumentEventsCsv**|A call is made from the document tracking site to download the .CSV file for a single document.|
-|**ExportTemplateById**|A call is  made from the Azure portal to export a template based on a template ID.|
-|**FEGetAllTemplates**|A call is  made, from a mobile device (front-end) to get the templates.|
-|**GetAllDocs**|A call is made from the document tracking site to load the **all documents** page for a user, or search all documents for the tenant. Use this value with the admin-action and acting-as-admin fields:<br /><br />- admin-action is empty: A user views the **all documents** page for their own documents.<br /><br />- admin-action is true and acting-as-user is empty: An administrator views all documents for their tenant.<br /><br />- admin-action is true and acting-as-user is not empty: An administrator views the **all documents** page for a user.|
-|**GetAllTemplates**|A call is  made from the Azure portal, to get all the templates.|
-|**GetConnectorAuthorizations**|A call  is made from the RMS connectors to get their configuration from the cloud.|
-|**GetSingle**|A call is made from the document tracking site to navigate to a **single document** page.|
-|**GetTemplateById**|A call is  made from the Azure portal to get a template by specifying a template ID.|
-|**LoadEventsForMap**|A call is made from the document tracking site to navigate to the map view for a single document.|
-|**LoadEventsForSummary**|A call is made from the document tracking site to navigate to the timeline view for a single document.|
-|**LoadEventsForTimeline**|A call is made from the document tracking site to navigate to the map view for a single document.|
-|**ImportTemplate**|A call is  made from the Azure portal to import a template.|
-|**RevokeAccess**|A call is made from the document tracking site to revoke a document.|
-|**SearchUsers** |A call is made from the document tracking site to search all users in a tenant.|
-|**UpdateNotificationSettings**|A call is made from the document tracking site to change the notification settings for a single document.|
-|**UpdateTemplate**|A call is  made from the Azure portal to update an existing template.|
-| | | 
-
-
+#### Protection usage logs and Microsoft 365 unified audit log
+File access and denied events do not currently include file name and are not accessible in the Microsoft 365 unified audit log. These events will be enhanced to be standalone useful and added from the Rights Management Service at a later date.
 
 ## PowerShell reference
 

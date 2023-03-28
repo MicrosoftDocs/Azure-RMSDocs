@@ -5,7 +5,7 @@ services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 07/30/2019
+ms.date: 11/14/2022
 ms.author: tommos
 ---
 
@@ -19,7 +19,7 @@ By default, MIP SDK **does not** send audit events. Auditing must be enabled in 
 
 To change this behavior, so that audit data is sent by all MIP SDK-enabled applications, do the following:
 
-- Add the following policy [advanced setting](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configuring-advanced-settings-for-the-client-via-powershell) using the Office 365 Security & Compliance Center PowerShell:
+- Add the following policy [advanced setting](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configuring-advanced-settings-for-the-client-via-powershell) using Security & Compliance Center PowerShell:
 
     - Key: **EnableAudit**
     - Value: **True**
@@ -59,7 +59,7 @@ Discovery events provide information on labeled information that is read or cons
 
 These events are submitted to Azure Information Protection Analytics, by setting the `AuditDiscoveryEnabled` parameter to true when creating a new `mip::FileHandler`. Additionally, a content identifier that identifies the file in some human-readable format is provided. It's recommended to use the file path for this identifier.
 
-The example below creates a new `mip::FileHandler` with audit discovery enabled. The `CreateFileHandler()` method is called on the `mip::FileEngine` and `AuditDiscoveryEnabled` set to true. Once the `FileHanlder` reads the label, a discovery audit is generated.
+The example below creates a new `mip::FileHandler` with audit discovery enabled. The `CreateFileHandler()` method is called on the `mip::FileEngine` and `AuditDiscoveryEnabled` set to true. Once the `FileHandler` reads the label, a discovery audit is generated.
 
 ```cpp
 // Create FileHandler with discovery enabled

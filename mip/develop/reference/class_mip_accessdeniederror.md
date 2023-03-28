@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class AccessDeniedError 
@@ -16,5 +16,6 @@ The user could not get access to the content. For example, no permissions, conte
 --------------------------------|---------------------------------------------
   
 ## Members
+
 _Not documented yet._
-_
+

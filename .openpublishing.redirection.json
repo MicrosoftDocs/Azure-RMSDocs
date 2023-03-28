@@ -1,5 +1,260 @@
 {
     "redirections": [
+    {
+      "source_path": "Azure-RMSDocs/rms-client/aip-client.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/aip-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-admin-guide-customizations.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/client-admin-guide-customizations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-admin-guide-file-types.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/client-admin-guide-file-types",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-admin-guide-files-and-logging.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/client-admin-guide-files-and-logging",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-admin-guide-install.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/client-admin-guide-install",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-admin-guide-powershell.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-admin-guide.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/client-admin-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-classify-protect.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/client-classify-protect",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-classify.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/client-classify",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-protection-only-mode.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/client-protection-only-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-remove-label-protection.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/client-remove-label-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-user-guide.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/client-user-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-version-release-history.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/client-version-release-history",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-view-use-files.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/client-view-use-files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/install-client-app.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/install-client-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/sharing-app-windows.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/sharing-app-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/upgrade-client-app.md",
+      "redirect_url": "/previous-versions/azure/information-protection/rms-client/upgrade-client-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-adrms-restrictions.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-adrms-restrictions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-exo-rules.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-exo-rules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-policy-add-remove-label.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-policy-add-remove-label",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-policy-change-label.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-policy-change-label",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-policy-classification.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-policy-classification",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-policy-default.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-policy-default",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-policy-delete-reorder.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-policy-delete-reorder",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-policy-languages.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-policy-languages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-policy-markings.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-policy-markings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-policy-new-label.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-policy-new-label",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-policy-protection.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-policy-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-policy-scope.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-policy-scope",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-policy-settings.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-policy-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-policy-templates.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-policy-templates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-policy.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-templates-with-powershell.md",
+      "redirect_url": "/previous-versions/azure/information-protection/configure-templates-with-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/deploy-aip-scanner-classic.md",
+      "redirect_url": "/previous-versions/azure/information-protection/deploy-aip-scanner-classic",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/deploy-aip-scanner-configure-install-classic.md",
+      "redirect_url": "/previous-versions/azure/information-protection/deploy-aip-scanner-configure-install-classic",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/deploy-aip-scanner-manage-classic.md",
+      "redirect_url": "/previous-versions/azure/information-protection/deploy-aip-scanner-manage-classic",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/deploy-aip-scanner-prereqs-classic.md",
+      "redirect_url": "/previous-versions/azure/information-protection/deploy-aip-scanner-prereqs-classic",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/deploy-aip-scanner-previousversions.md",
+      "redirect_url": "/previous-versions/azure/information-protection/deploy-aip-scanner-previousversions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/deployment-roadmap-protect-only.md",
+      "redirect_url": "/previous-versions/azure/information-protection/deployment-roadmap-protect-only",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/faqs-classic.md",
+      "redirect_url": "/previous-versions/azure/information-protection/faqs-classic",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/infoprotect-oversharing-tutorial.md",
+      "redirect_url": "/previous-versions/azure/information-protection/infoprotect-oversharing-tutorial",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/infoprotect-quick-start-tutorial.md",
+      "redirect_url": "/previous-versions/azure/information-protection/infoprotect-quick-start-tutorial",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/infoprotect-settings-tutorial.md",
+      "redirect_url": "/previous-versions/azure/information-protection/infoprotect-settings-tutorial",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/migrate-portal.md",
+      "redirect_url": "/previous-versions/azure/information-protection/migrate-portal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/overview-policy.md",
+      "redirect_url": "/previous-versions/azure/information-protection/overview-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/quickstart-findsensitiveinfo.md",
+      "redirect_url": "/previous-versions/azure/information-protection/quickstart-findsensitiveinfo",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/quickstart-label-dnf-protectedemail.md",
+      "redirect_url": "/previous-versions/azure/information-protection/quickstart-label-dnf-protectedemail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/quickstart-label-specificusers.md",
+      "redirect_url": "/previous-versions/azure/information-protection/quickstart-label-specificusers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/quickstart-viewpolicy.md",
+      "redirect_url": "/previous-versions/azure/information-protection/quickstart-viewpolicy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/refresh-templates.md",
+      "redirect_url": "/previous-versions/azure/information-protection/refresh-templates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/secure-collaboration-documents.md",
+      "redirect_url": "/previous-versions/azure/information-protection/secure-collaboration-documents",
+      "redirect_document_id": false
+    },
         {
             "source_path": "Azure-RMSDocs/tutorial-preventing-oversharing.md",
             "redirect_url": "/information-protection/tutorial-scan-networks-and-content",
@@ -502,7 +757,7 @@
         },
         {
             "source_path": "Azure-RMSDocs/rms-client/info-protect-client.md",
-            "redirect_url": "https://docs.microsoft.com/information-protection/rms-client/client-admin-guide",
+            "redirect_url": "/information-protection/rms-client/client-admin-guide",
             "redirect_document_id": false
         },
         {
@@ -1401,7 +1656,7 @@
         },
         {
             "source_path": "Azure-RMSDocs/configure-exchange-with-imported-tpd.md",
-            "redirect_url": "https://docs.microsoft.com/azure/information-protection/deploy-use/configure-office365#exchange-online-irm-configuration",
+            "redirect_url": "/azure/information-protection/deploy-use/configure-office365#exchange-online-irm-configuration",
             "redirect_document_id": false
         },
         {
@@ -1617,6 +1872,51 @@
 		{
             "source_path": "Azure-RMSDocs/activate-office365.md",
             "redirect_url": "/information-protection/activate-service",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "Azure-RMSDocs/deployment-roadmap.md",
+            "redirect_url": "/information-protection/deployment-roadmap-classify-label-protect",
+            "redirect_document_id": false
+       },
+		{
+            "source_path": "Azure-RMSDocs/deploy-aip-scanner.md",
+            "redirect_url": "/microsoft-365/compliance/deploy-scanner",
+            "redirect_document_id": false
+       },
+		{
+            "source_path": "Azure-RMSDocs/deploy-aip-scanner-configure-install.md",
+            "redirect_url": "/microsoft-365/compliance/deploy-scanner-configure-install",
+            "redirect_document_id": false
+       },
+		{
+            "source_path": "Azure-RMSDocs/deploy-aip-scanner-manage.md",
+            "redirect_url": "/microsoft-365/compliance/deploy-scanner-manage",
+            "redirect_document_id": false
+       },
+		{
+            "source_path": "Azure-RMSDocs/tutorial-install-scanner.md",
+            "redirect_url": "/microsoft-365/compliance/deploy-scanner-configure-install",
+            "redirect_document_id": false
+       },
+		{
+            "source_path": "Azure-RMSDocs/tutorial-scan-networks-and-content.md",
+            "redirect_url": "/microsoft-365/compliance/deploy-scanner-manage",
+            "redirect_document_id": false
+       },
+		{
+            "source_path": "Azure-RMSDocs/deploy-aip-scanner-prereqs.md",
+            "redirect_url": "/microsoft-365/compliance/deploy-scanner-prereqs",
+            "redirect_document_id": false
+       },
+		{
+            "source_path": "Azure-RMSDocs/deploy-aip-scanner-tsg.md",
+            "redirect_url": "/microsoft-365/troubleshoot/information-protection-scanner/resolve-deployment-issues",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "Azure-RMSDocs/removed-deprecated-services.md",
+            "redirect_url": "/information-protection/removed-sunset-services",
             "redirect_document_id": false
         }
     ]

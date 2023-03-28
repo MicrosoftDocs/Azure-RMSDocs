@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class xml::XmlDocument 
@@ -14,14 +14,14 @@ Interface to interact with XML document.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::vector\<std::shared_ptr\<XmlNode\>\> SelectNodes(const std::string& xpath, const std::shared_ptr\<XmlNode\>& node) const  |  Get matching xml nodes from a specified xpath.
+public std::vector&lt;std::shared_ptr&lt;XmlNode&gt;&gt; SelectNodes(const std::string& xpath, const std::shared_ptr&lt;XmlNode&gt;& node) const  |  Get matching xml nodes from a specified xpath. Will throw exception of type mip::BadInputError if xml nodes cannot be parsed, there is an invalid encoding, or the xpath cannot be interpreted.
 public std::string GetXmlContent() const  |  Parse an xml formatted buffer into an xmldocument.
-public std::shared_ptr\<XmlNode\> GetRootNode() const  |  Get the node that is an ancestor of all other nodes.
+public std::shared_ptr&lt;XmlNode&gt; GetRootNode() const  |  Get the node that is an ancestor of all other nodes.
   
 ## Members
   
 ### SelectNodes function
-Get matching xml nodes from a specified xpath.
+Get matching xml nodes from a specified xpath. Will throw exception of type mip::BadInputError if xml nodes cannot be parsed, there is an invalid encoding, or the xpath cannot be interpreted.
 
 Parameters:  
 * **xpath**: The path to search the xml document for the node 
@@ -44,4 +44,4 @@ Parse an xml formatted buffer into an xmldocument.
 Get the node that is an ancestor of all other nodes.
 
   
-**Returns**: A shared_ptr to an XmlNodede
+**Returns**: A shared_ptr to an XmlNode.

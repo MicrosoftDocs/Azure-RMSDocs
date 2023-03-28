@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class ParsedPublishingLicenseBuilder 
@@ -13,18 +13,18 @@ ms.date: 11/15/2021
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public void SetDomains(const std::vector\<std::string\>& domains)  |  Sets the license domains.
+public void SetDomains(const std::vector&lt;std::string&gt;& domains)  |  Sets the license domains.
 public void SetServerPublicCert(const std::string& serverPublicCert)  |  Sets the server public cert.
 public void SetContentId(const std::string& contentId)  |  Sets the content id.
 public void SetIssuerId(const std::string& issuerId)  |  Sets the issuer id.
 public void SetDoubleKeyAlgorithm(const std::string& doubleKeyAlgorithm)  |  Sets the double key algorithm.
 public void SetOwner(const std::string& owner)  |  Sets the owner.
-public void SetConnectionInfo(std::shared_ptr\<LicenseConnectionInfo\> licenseConnectionInfo)  |  Sets the connection info.
-public void SetDescriptor(std::shared_ptr\<LicenseDescriptor\> descriptor)  |  Sets the descriptor.
+public void SetConnectionInfo(std::shared_ptr&lt;LicenseConnectionInfo&gt; licenseConnectionInfo)  |  Sets the connection info.
+public void SetDescriptor(std::shared_ptr&lt;LicenseDescriptor&gt; descriptor)  |  Sets the descriptor.
 public void SetReferralInfoUrl(const std::string& referralInfoUrl)  |  Sets the referral info url.
-public void SetSignedApplicationData(const std::vector\<std::shared_ptr\<LicenseApplicationData\>\>& signedApplicationData)  |  Sets the signed application data.
-public void SetIssuedTime(const std::chrono::time_point\<std::chrono::system_clock\>& issuedTime)  |  Sets the issued time.
-public std::shared_ptr\<ParsedPublishingLicense\> CreateParsedPublishingLicense()  |  Creates a ParsedPublishingLicense with the properties set on this object instance.
+public void SetSignedApplicationData(const std::vector&lt;std::shared_ptr&lt;LicenseApplicationData&gt;&gt;& signedApplicationData)  |  Sets the signed application data.
+public void SetIssuedTime(const std::chrono::time_point&lt;std::chrono::system_clock&gt;& issuedTime)  |  Sets the issued time.
+public std::shared_ptr&lt;ParsedPublishingLicense&gt; CreateParsedPublishingLicense()  |  Creates a ParsedPublishingLicense with the properties set on this object instance.
   
 ## Members
   
@@ -120,4 +120,4 @@ Parameters:
 Creates a ParsedPublishingLicense with the properties set on this object instance.
 
   
-**Returns**: New ParsedPublishingLicense instancece
+**Returns**: New ParsedPublishingLicense instance.

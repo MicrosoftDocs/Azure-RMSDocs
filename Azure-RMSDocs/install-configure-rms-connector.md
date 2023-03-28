@@ -3,9 +3,9 @@
 
 title: Install & configure the Rights Management connector - AIP
 description: Information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from Deploying the Microsoft Rights Management connector.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 10/06/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -27,11 +27,6 @@ ms.custom: admin
 
 # Installing and configuring the Microsoft Rights Management connector
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows Server 2019, 2016, 2012 R2, and Windows Server 2012*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 
 Use the following information to help you install and configure the Microsoft Rights Management (RMS) connector. These procedures cover steps 1 though 4 from [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
@@ -304,7 +299,7 @@ For more information, see [Prerequisites for the RMS connector](deploy-rms-conne
 
 ## Enforce TLS 1.2 for the Azure RMS Connector
 
-Microsoft will disable older, insecure TLS protocols, including TLS 1.0 and TLS 1.1 on RMS Services by default on March 1, 2022. To prepare for this deprecation, you may want to turn off support for these older protocols on your RMS Connector servers and ensure that the system continues to work as expected.
+Microsoft will disable older, insecure TLS protocols, including TLS 1.0 and TLS 1.1 on RMS Services by default on March 1, 2022. To prepare for this change, you may want to turn off support for these older protocols on your RMS Connector servers and ensure that the system continues to work as expected.
 
 This section describes the steps to disable the Transport Layer Security (TLS) 1.0 and 1.1 on the RMS Connector servers and force the use of TLS 1.2.
 

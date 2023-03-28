@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: Document tracking for Azure Information Protection
-description: Instructions and information for admins to configure and use document tracking for Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+title: Document tracking for Rights Management Service protection via the legacy tracking portal
+description: Instructions and information for admins to configure and use the legacy document tracking portal for the Rights Management Service.
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 03/16/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
@@ -26,15 +26,13 @@ ms.custom: admin
 
 ---
 
-# Admin Guide: Configuring and using document tracking for Azure Information Protection using the classic client
+# Admin Guide: Configuring and using document tracking for Rights Management Service protection with the legacy tracking portal
 
->***Applies to**: Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
->
->***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](track-and-revoke-admin.md).*
+> [!NOTE]
+> The legacy Azure Information Protection doc tracking site is supported only for the classic client, and not for the unified labeling client. For more information, see [Removed and retired services](../removed-sunset-services.md#the-aip-classic-client).
 
-[!INCLUDE [AIP classic client is deprecated - extended support customers](../includes/classic-client-deprecation-extended-support.md)]
 
-If you have a [subscription that supports document tracking](https://www.microsoft.com/cloud-platform/azure-information-protection-features) and the AIP classic client, the document tracking site is enabled by default for all users in your organization. Document tracking provides information for users and administrators about when a protected document was accessed and if necessary, a tracked document can be revoked.
+If you have a subscription that supports document tracking, the document tracking site is enabled by default for all users in your organization. Document tracking provides information for users and administrators about when a protected document was accessed and if necessary, a tracked document can be revoked.
 
 ## Using PowerShell to manage the document tracking site
 
@@ -112,7 +110,7 @@ For instructions how to use the document tracking site, see [Track and revoke yo
 
 To be able to track and revoke a document, it must first be registered with the document tracking site. This action occurs when users select the **Track and revoke** option from File Explorer or their Office apps when they use the Azure Information Protection client.
 
-If you label and protect files for users by using the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. For example:
+If you label and protect files for users by using the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. For example:
 
 ```ps
 Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
@@ -133,11 +131,10 @@ For more information about usage logging, see [Logging and analyzing the protect
 ## Next steps
 Now that you've configured the document tracking site for the Azure Information Protection client, see the following for additional information that you might need to support this client:
 
-- [Customizations](client-admin-guide-customizations.md)
+- [Customizations](/previous-versions/azure/information-protection/rms-client/client-admin-guide-customizations)
 
-- [Client files and usage logging](client-admin-guide-files-and-logging.md)
+- [Client files and usage logging](/previous-versions/azure/information-protection/rms-client/client-admin-guide-files-and-logging)
 
-- [File types supported](client-admin-guide-file-types.md)
+- [File types supported](/previous-versions/azure/information-protection/rms-client/client-admin-guide-file-types)
 
-- [PowerShell commands](client-admin-guide-powershell.md)
-
+- [PowerShell commands](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell)

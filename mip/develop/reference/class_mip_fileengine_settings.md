@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class FileEngine::Settings 
@@ -13,20 +13,22 @@ ms.date: 11/15/2021
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& engineId, const std::shared_ptr\<AuthDelegate\>& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  FileEngine::Settings constructor for loading an existing engine.
-public Settings(const Identity& identity, const std::shared_ptr\<AuthDelegate\>& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  FileProfile::Settings constructor for creating a new engine.
+public Settings(const std::string& engineId, const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  FileEngine::Settings constructor for loading an existing engine.
+public Settings(const Identity& identity, const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  FileProfile::Settings constructor for creating a new engine.
 public const std::string& GetEngineId() const  |  Returns the engine ID.
 public void SetEngineId(const std::string& id)  |  Set the engine ID.
 public const Identity& GetIdentity() const  |  Returns the engine Identity.
 public void SetIdentity(const Identity& identity)  |  Sets the engine identity.
 public const std::string& GetClientData() const  |  Returns the engine client data.
 public const std::string& GetLocale() const  |  Return the engine locale.
-public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& value)  |  Sets a list of name/value pairs used for testing and experimentation.
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Gets a list of name/value pairs used for testing and experimentation.
+public void SetCustomSettings(const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& value)  |  Sets a list of name/value pairs used for testing and experimentation.
+public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetCustomSettings() const  |  Gets a list of name/value pairs used for testing and experimentation.
 public void SetSessionId(const std::string& sessionId)  |  Sets the engine session ID.
 public const std::string& GetSessionId() const  |  Return the engine session ID.
 public void SetCloud(Cloud cloud)  |  Optionally sets the target cloud.
 public Cloud GetCloud() const  |  Gets the target cloud used by all service requests.
+public void SetDataBoundary(DataBoundary dataBoundary)  |  Optionally sets the target diagnostic region.
+public DataBoundary GetDataBoundary() const  |  Gets the data boundary region.
 public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Sets the protection cloud endpoint base URL for custom cloud.
 public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Gets the protection cloud endpoint base url.
 public void SetPolicyCloudEndpointBaseUrl(const std::string& policyCloudEndpointBaseUrl)  |  Sets the policy cloud endpoint base URL for custom cloud.
@@ -38,14 +40,14 @@ public void EnablePFile(bool value)  |  Sets the flag indicating if produce PFil
 public const bool IsPFileEnabled()  |  Get the flag indicating if produce PFiles.
 public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
-public void SetLabelFilter(const std::vector\<LabelFilterType\>& deprecatedLabelFilters)  |  Sets the label filter.
-public const std::vector\<LabelFilterType\>& GetLabelFilter() const  |  Gets the label filters set through deprecated function SetLabelFilter.
+public void SetLabelFilter(const std::vector&lt;LabelFilterType&gt;& deprecatedLabelFilters)  |  Sets the label filter.
+public const std::vector&lt;LabelFilterType&gt;& GetLabelFilter() const  |  Gets the label filters set through deprecated function SetLabelFilter.
 public void ConfigureFunctionality(FunctionalityFilterType functionalityFilterType, bool enabled)  |  Enables or disables functionality.
-public const std::map\<FunctionalityFilterType, bool\>& GetConfiguredFunctionality() const  |  Gets the configured functionality.
-public void SetAuthDelegate(const std::shared_ptr\<AuthDelegate\>& authDelegate)  |  Set the Engine Auth Delegate.
-public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Get the Engine Auth Delegate.
-public const std::shared_ptr\<void\>& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
-public void SetLoggerContext(const std::shared_ptr\<void\>& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+public const std::map&lt;FunctionalityFilterType, bool&gt;& GetConfiguredFunctionality() const  |  Gets the configured functionality.
+public void SetAuthDelegate(const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate)  |  Set the Engine Auth Delegate.
+public std::shared_ptr&lt;AuthDelegate&gt; GetAuthDelegate() const  |  Get the Engine Auth Delegate.
+public const std::shared_ptr&lt;void&gt;& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+public void SetLoggerContext(const std::shared_ptr&lt;void&gt;& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
   
 ## Members
   
@@ -138,6 +140,21 @@ Gets the target cloud used by all service requests.
 
   
 **Returns**: Cloud
+  
+### SetDataBoundary function
+Optionally sets the target diagnostic region.
+
+Parameters:  
+* **dataBoundary**: Data boundary region
+
+
+If dataBoundary is not specified, then it will default to global diagnostic region.
+  
+### GetDataBoundary function
+Gets the data boundary region.
+
+  
+**Returns**: DataBoundary
   
 ### SetProtectionCloudEndpointBaseUrl function
 Sets the protection cloud endpoint base URL for custom cloud.
@@ -265,5 +282,4 @@ Get logger context that will be opaquely passed to the logger delegate for logs 
 Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
 
 Parameters:  
-* **loggerContext**: The logger context
-
+* **loggerContext**: The logger context.

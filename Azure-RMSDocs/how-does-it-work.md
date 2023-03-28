@@ -3,9 +3,9 @@
 
 title: How Azure RMS works - Azure Information Protection
 description: Breaking down how Azure RMS works, the cryptographic controls that it uses, and step-by-step diagrams of how this process works.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -27,13 +27,6 @@ ms.custom: admin
 
 
 # How does Azure RMS work? Under the hood
-
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
-
 
 An important thing to understand about how Azure RMS works, is that this data protection service from Azure Information Protection, does not see or store your data as part of the protection process. Information that you protect is never sent to or stored in Azure, unless you explicitly store it in Azure or use another cloud service that stores it in Azure. Azure RMS simply makes the data in a document unreadable to anyone other than authorized users and services:
 
@@ -60,7 +53,6 @@ Even if you don't need to know in detail how this technology works, you might be
 |Algorithm: AES<br /><br />Key length: 128 bits and 256 bits [[1]](#footnote-1)|Content protection|
 |Algorithm: RSA<br /><br />Key length: 2048 bits [[2]](#footnote-2)|Key protection|
 |SHA-256|Certificate signing|
-| | |
 
 ###### Footnote 1 
 
@@ -172,7 +164,7 @@ The preceding walkthroughs cover the standard scenarios but there are some varia
 
 - **Generic protection (.pfile)**: When the Azure Rights Management service generically protects a file, the flow is basically the same for content protection except that the RMS client creates a policy that grants all rights. When the file is consumed, it is decrypted before it is passed to the target application. This scenario lets you protect all files, even if they don’t natively support RMS.
 
-- **Microsoft accounts**: Azure Information Protection can authorize email addresses for consumption when they are authenticated with a Microsoft account. However, not all applications can open protected content when a Microsoft account is used for authentication. [More information](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
+- **Microsoft accounts**: Azure Information Protection can authorize email addresses for consumption when they are authenticated with a Microsoft account. However, not all applications can open protected content when a Microsoft account is used for authentication. [More information](/previous-versions/azure/information-protection/secure-collaboration-documents#supported-scenarios-for-opening-protected-documents).
 
 ## Next steps
 
@@ -181,9 +173,9 @@ To learn more about the Azure Rights Management service, use the other articles 
 Review [Terminology for Azure Information Protection](./terminology.md) so that you’re familiar with the terms that you might come across as you’re configuring and using the Azure Rights Management service, and be sure to also check [Requirements for Azure Information Protection](requirements.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the quickstart and tutorials:
 
 - [Quickstart: Deploy the unified labeling client](quickstart-deploy-client.md)
-- [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
-- [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
-- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
+- [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](/microsoft-365/compliance/deploy-scanner-configure-install)
+- [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](/microsoft-365/compliance/deploy-scanner-manage)
+- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](/azure/information-protection/tutorial-scan-networks-and-content)
 
 If you’re ready to start deploying data protection for your organization, use the [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md) for your deployment steps and links for how-to instructions.
 

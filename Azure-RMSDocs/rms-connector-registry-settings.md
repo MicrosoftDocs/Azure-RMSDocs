@@ -3,9 +3,9 @@
 
 title: Registry settings for the Rights Management connector - AIP
 description: Information about the registry settings on servers using the RMS connector. The recommended method to configure these settings is to use the server configuration tool for Microsoft RMS connector.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/30/2019
 ms.topic: how-to
 ms.collection: M365-security-compliance
@@ -28,11 +28,6 @@ ms.custom: admin
 
 # Registry setting for the Rights Management connector
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 
 Use the tables in the following sections only if you want to manually add or check registry settings on the servers that run Exchange, SharePoint, or Windows Server. These registry settings configure the servers to use the [RMS connector](deploy-rms-connector.md). The recommended method to configure these servers is to use the server configuration tool for Microsoft RMS connector.
@@ -105,55 +100,6 @@ Instructions for when you use these settings:
 
 **Value**: `https://<YourTenantURL>`
 
-
-**Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
-
-- `http://<ConnectorFQDN>`
-
-- `https://<ConnectorFQDN>`
-
-
-## Exchange 2010 registry settings
-
-**Registry path**: HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
-
-**Type**: Reg_SZ
-
-**Value**: Default
-
-**Data**: `https://<YourTenantURL>/_wmcs/certification`
-
----
-
-**Registry path:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
-
-**Type**: Reg_SZ
-
-**Value**: Default
-
-**Data**: `https://<YourTenantURL>*/_wmcs/Licensing`
-
----
-
-**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\CertificationServerRedirection
-
-**Type**: Reg_SZ
-
-**Value**: `https://<YourTenantURL>`
-
-**Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
-
-- `http://<ConnectorFQDN>`
-
-- `https://<ConnectorFQDN>`
-
----
-
-**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
-
-**Type**: Reg_SZ
-
-**Value**: `https://<YourTenantURL>`
 
 **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 

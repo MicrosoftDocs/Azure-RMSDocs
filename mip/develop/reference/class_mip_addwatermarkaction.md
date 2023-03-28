@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class AddWatermarkAction 
@@ -57,4 +57,4 @@ Get the font size used to display the watermark.
 Get the font color used to display the watermark.
 
   
-**Returns**: Font color as a string (for example, "#000000").).
+**Returns**: Font color as a string (for example, "#000000").

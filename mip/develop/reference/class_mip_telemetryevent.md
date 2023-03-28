@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class TelemetryEvent 
@@ -17,14 +17,14 @@ A single telemetry event.
 public const std::string& GetName() const  |  Get event name.
 public EventLevel GetLevel() const  |  Get level of event, indicating whether it is considered necessary service data (NSD) or not.
 public const std::chrono::steady_clock::time_point& GetStartTime() const  |  Get event start time.
-public void AddProperty(const std::shared_ptr\<EventProperty\>& prop)  |  Add a property to the event.
+public void AddProperty(const std::shared_ptr&lt;EventProperty&gt;& prop)  |  Add a property to the event.
 public void AddProperty(const std::string& name, bool value)  |  Add a bool property to the event.
 public void AddProperty(const std::string& name, double value, Pii pii)  |  Add a double property to the event.
 public void AddProperty(const std::string& name, int64_t value, Pii pii)  |  Add an int64 property to the event.
 public void AddProperty(const std::string& name, const std::string& value, Pii pii)  |  Add a string property to the event.
 public void AddAuditOnlyProperty(const std::string& name, const std::string& value)  |  Add an audit-only string property to the event.
-public std::vector\<std::shared_ptr\<EventProperty\>\> GetProperties() const  |  Get all event properties.
-public std::shared_ptr\<EventProperty\> GetProperty(const std::string& name)  |  Get property with the given name, if any.
+public std::vector&lt;std::shared_ptr&lt;EventProperty&gt;&gt; GetProperties() const  |  Get all event properties.
+public std::shared_ptr&lt;EventProperty&gt; GetProperty(const std::string& name)  |  Get property with the given name, if any.
   
 ## Members
   
@@ -134,4 +134,4 @@ Parameters:
 
 
   
-**Returns**: Property with the given name, or nullptr if nonene
+**Returns**: Property with the given name, or nullptr if none.

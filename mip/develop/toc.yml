@@ -7,7 +7,7 @@
 - name: Quickstarts
   expanded: true
   items:
-  - name: Setup and configure MIP SDK
+  - name: Set up and configure MIP SDK
     href: setup-configure-mip.md
   - name: Implement AD RMS support with the MIP SDK
     href: quick-app-adrms.md
@@ -61,30 +61,12 @@
         href: quick-protection-encrypt-decrypt-text-csharp.md  
 - name: Concepts
   items:
-  - name: The APIs
+  - name: SDK Overview
     href: concept-apis-use-cases.md
-  - name: MIP SDK API Permissions
-    href: concept-api-permissions.md
-  - name: MipContext object concepts
-    href: concept-mipcontext.md
-  - name: Cache storage
-    href: concept-cache-storage.md
-  - name: Profile and Engine (C++)
-    items: 
-      - name: Profile and Engine object concepts
-        href: concept-profile-engine-cpp.md
-      - name: File SDK profile (C++)
-        href: concept-profile-engine-file-profile-cpp.md
-      - name: File SDK engine (C++)
-        href: concept-profile-engine-file-engine-cpp.md
-      - name: Policy SDK profile (C++)
-        href: concept-profile-engine-policy-profile-cpp.md
-      - name: Policy SDK engine (C++)
-        href: concept-profile-engine-policy-engine-cpp.md
-      - name: Protection SDK profile (C++)
-        href: concept-profile-engine-protection-profile-cpp.md
-      - name: Protection SDK engine (C++)
-        href: concept-profile-engine-protection-engine-cpp.md            
+  - name: Access checks and rights
+    href: concept-accesscheck.md
+  - name: API Permissions
+    href: concept-api-permissions.md            
   - name: Authentication (C++)
     items:
     - name: Authentication concepts
@@ -93,8 +75,12 @@
       href: concept-authentication-delegate-cpp.md
     - name: Acquiring an access token (Python)
       href: concept-authentication-acquire-token-py.md     
+  - name: Cache storage
+    href: concept-cache-storage.md  
   - name: Consent
     href: concept-consent-cpp.md 
+  - name: Data privacy and compliance
+    href: concept-data-boundary.md  
   - name: Delegation
     href: concept-delegation.md
   - name: Handlers
@@ -117,6 +103,22 @@
         href: concept-handler-policy-auditing-cpp.md
     - name: Protection SDK handler (C++)
       href: concept-handler-protection-cpp.md
+  - name: Profile and Engine (C++)
+    items: 
+    - name: Profile and Engine object concepts
+      href: concept-profile-engine-cpp.md
+    - name: File SDK profile (C++)
+      href: concept-profile-engine-file-profile-cpp.md
+    - name: File SDK engine (C++)
+      href: concept-profile-engine-file-engine-cpp.md
+    - name: Policy SDK profile (C++)
+      href: concept-profile-engine-policy-profile-cpp.md
+    - name: Policy SDK engine (C++)
+      href: concept-profile-engine-policy-engine-cpp.md
+    - name: Protection SDK profile (C++)
+      href: concept-profile-engine-protection-profile-cpp.md
+    - name: Protection SDK engine (C++)
+      href: concept-profile-engine-protection-engine-cpp.md    
   - name: Labels and Protection
     items:
     - name: Labels   
@@ -127,6 +129,8 @@
       href: concept-user-defined-permissions.md  
   - name: Metadata
     href: concept-mip-metadata.md
+  - name: MipContext object concepts
+    href: concept-mipcontext.md
   - name: Observers for async (C++)
     items:
     - name: Observer concepts
@@ -136,13 +140,13 @@
     - name: Policy SDK observers (C++)
       href: concept-async-observers-policy-cpp.md
     - name: Protection SDK observers (C++)
-      href: concept-async-observers-protection-cpp.md
+      href: concept-async-observers-protection-cpp.md  
   - name: Proxy Support 
-    href: concept-mip-proxies.md
+    href: concept-mip-proxies.md  
+  - name: SDK Diagnostics  
+    href: concept-mip-diagnostics.md
   - name: Service Discovery Overview
     href: concept-service-discovery.md
-  - name: SDK Diagnostics
-    href: concept-mip-diagnostics.md
   - name: Supported File Types
     href: concept-supported-filetypes.md  
   - name: Use Cases
@@ -247,6 +251,8 @@
         href: ./reference/class_mip_error.md
       - name: Event
         href: ./reference/class_mip_event.md
+      - name: EventContext
+        href: ./reference/class_mip_eventcontext.md
       - name: EventProperty
         href: ./reference/class_mip_eventproperty.md
       - name: ExecutionState
@@ -321,6 +327,8 @@
         href: ./reference/class_mip_licensenameanddescriptionitem.md
       - name: LicenseNotRegisteredError
         href: ./reference/class_mip_licensenotregisterederror.md
+      - name: LogMessageData
+        href: ./reference/class_mip_logmessagedata.md
       - name: LoggerDelegate
         href: ./reference/class_mip_loggerdelegate.md
       - name: MetadataAction
@@ -419,6 +427,8 @@
         href: ./reference/class_mip_proxyauthenticationerror.md
       - name: PublishingLicenseInfo
         href: ./reference/class_mip_publishinglicenseinfo.md
+      - name: PublishingUseLicenseRequest
+        href: ./reference/class_mip_publishinguselicenserequest.md
       - name: RecommendLabelAction
         href: ./reference/class_mip_recommendlabelaction.md
       - name: RemoveContentFooterAction
@@ -465,6 +475,8 @@
         href: ./reference/class_mip_templatedescriptor.md
       - name: TemplateNotFoundError
         href: ./reference/class_mip_templatenotfounderror.md
+      - name: TenantInformation
+        href: ./reference/class_mip_tenantinformation.md
       - name: UserRights
         href: ./reference/class_mip_userrights.md
       - name: UserRoles
@@ -473,8 +485,12 @@
         href: ./reference/class_mip_xml_xmldelegate.md
       - name: xml::XmlDocument
         href: ./reference/class_mip_xml_xmldocument.md
+      - name: xml::XmlLoadException
+        href: ./reference/class_mip_xml_xmlloadexception.md
       - name: xml::XmlNode
         href: ./reference/class_mip_xml_xmlnode.md
+      - name: xml::XmlParserException
+        href: ./reference/class_mip_xml_xmlparserexception.md
       - name: xml::XmlReader
         href: ./reference/class_mip_xml_xmlreader.md
   - name: C library
@@ -502,7 +518,7 @@
   - name: Forums 
     href: https://stackoverflow.com/questions/tagged/microsoft-information-protection
   - name: Samples
-    href: https://azure.microsoft.com/resources/samples/?sort=0&term=mip+sdk
+    href: /samples/browse/?terms=mip%20sdk
   - name: Security best practices
     href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc
   - name: Version release history

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class CustomAction 
@@ -15,7 +15,7 @@ CustomAction is a generic action class that captures all the sub-properties of t
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetName() const  |  Get action name.
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetProperties() const  |  Get the properties key value pair list.
+public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetProperties() const  |  Get the properties key value pair list.
   
 ## Members
   
@@ -29,4 +29,4 @@ Get action name.
 Get the properties key value pair list.
 
   
-**Returns**: A key value pair list.t.
+**Returns**: A key value pair list.

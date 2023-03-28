@@ -3,9 +3,9 @@
 
 title: Use PowerShell with the Azure Information Protection unified labeling client
 description: Instructions and information for admins to manage the Azure Information Protection unified labeling client by using PowerShell.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 01/14/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -26,11 +26,7 @@ ms.custom: admin
 
 # Admin Guide: Using PowerShell with the Azure Information Protection unified client
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
->
->*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
->
->***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 When you install the Azure Information Protection unified labeling client, PowerShell commands are automatically installed as part of the [AzureInformationProtection](/powershell/module/azureinformationprotection) module, with cmdlets for labeling. 
 
@@ -48,7 +44,7 @@ The **AzureInformationProtection** module is installed in the **\ProgramFiles (x
 > [!IMPORTANT]
 > The **AzureInformationProtection** module doesn't support configuring advanced settings for labels or label policies. 
 >
->For these settings, you need the Office 365 Security & Compliance Center PowerShell. For more information, see [Custom configurations for the Azure Information Protection unified labeling client](clientv2-admin-guide-customizations.md).
+>For these settings, you need Security & Compliance Center PowerShell. For more information, see [Custom configurations for the Azure Information Protection unified labeling client](clientv2-admin-guide-customizations.md).
 
 > [!TIP]
 > To use cmdlets with path lengths greater than 260 characters, use the following [group policy setting](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10) that is available starting Windows 10, version 1607:<br /> **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths** 
@@ -92,8 +88,6 @@ The following table maps RMS-related cmdlets with the updated cmdlets used for u
 |[Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate)     |       Not relevant for unified labeling  |
 |[New-RMSProtectionLicense](/powershell/module/azureinformationprotection/new-rmsprotectionlicense)     |  [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/new-aipcustompermissions), and [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), with the **CustomPermissions** parameter      |
 |[Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), with the **RemoveProtection** parameter |
-| | |
-
 
 ## How to label files non-interactively for Azure Information Protection
 
@@ -123,7 +117,6 @@ To run Azure Information Protection labeling cmdlets unattended, use the followi
     |**Label policy**     |  Make sure that you have a label policy assigned to this account and that the policy contains the published labels you want to use.   <br><br>If you use label policies for different users, you might need to create a new label policy that publishes all your labels, and publish the policy to just this delegated user account.    |
     |**Decrypting content**     |    If this account needs to decrypt content, for example, to reprotect files and inspect files that others have protected, make it a [super user](../configure-super-users.md) for Azure Information Protection and make sure the super user feature is enabled.     |
     |**Onboarding controls**     |    If you have implemented [onboarding controls](../activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) for a phased deployment, make sure that this account is included in your onboarding controls you've configured.     |
-    |     |         |
 
 - **An Azure AD access token**, which sets and stores credentials for the delegated user to authenticate to Azure Information Protection. When the token in Azure AD expires, you must run the cmdlet again to acquire a new token. 
 
@@ -131,13 +124,11 @@ To run Azure Information Protection labeling cmdlets unattended, use the followi
 
 Run the labeling cmdlets non-interactively by first running the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet.
 
-The computer running the **AIPAuthentication** cmdlet downloads the labeling policy that's assigned to your delegated user account in the Microsoft 365 Compliance center.
+The computer running the **AIPAuthentication** cmdlet downloads the labeling policy that's assigned to your delegated user account in the Microsoft Purview compliance portal.
 
 ### Create and configure Azure AD applications for Set-AIPAuthentication
 
 The **Set-AIPAuthentication** cmdlet requires an app registration for the *AppId* and *AppSecret* parameters. 
-
-For users who've recently migrated from the classic client, and had created an app registration for the previous *WebAppID* and *NativeAppId* parameters, you'll need to create a new app registration for the unified labeling client.
 
 **To create a new app registration for the unified labeling client Set-AIPAuthentication cmdlet**:
 
@@ -152,7 +143,6 @@ For users who've recently migrated from the classic client, and had created an a
     |**Name**     |  `AIP-DelegatedUser` <br>Specify a different name as needed. The name must be unique per tenant.       |
     |**Supported account types**     |   Select **Accounts in this organizational directory only**.      |
     |**Redirect URI (optional)**     |     Select **Web**, and then enter `https://localhost`.    |
-    |     |         |
 
 1. On the **AIP-DelegatedUser** pane, copy the value for the **Application (client) ID**. 
 
@@ -170,7 +160,6 @@ For users who've recently migrated from the classic client, and had created an a
     |---------|---------|
     |**Description**     |  `Azure Information Protection unified labeling client`       |
     |**Expires**     |   Specify your choice of duration (1 year, 2 years, or never expires)     |
-    |     |         |
 
 1. Back on the **AIP-DelegatedUser - Certificates & secrets** pane, in the **Client secrets** section, copy the string for the **VALUE**. 
 

@@ -3,9 +3,9 @@
 
 title: Requirements for Azure Information Protection - AIP
 description: Identify the prerequisites required to deploy Azure Information Protection in your organization.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 04/12/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -27,13 +27,7 @@ ms.custom: admin
 
 # Azure Information Protection requirements
 
->****Applies to***: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)*
->
->***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
->
->*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 Before deploying Azure Information Protection, ensure that your system meets the following prerequisites:
 
@@ -43,7 +37,7 @@ Before deploying Azure Information Protection, ensure that your system meets the
 - [Applications](#applications)
 - [Firewalls and network infrastructure](#firewalls-and-network-infrastructure)
 
-To deploy Azure Information Protection, you must have the AIP client installed on any machines where you want to use AIP features. For more information, see [Install the Azure Information Protection unified labeling client for users](/rms-client/clientv2-admin-guide-install.md) and [The client side of Azure Information Protection](/rms-client/use-client.md).
+To deploy Azure Information Protection, you must have the AIP client installed on any machines where you want to use AIP features. For more information, see [Install the Azure Information Protection unified labeling client for users](./rms-client/clientv2-admin-guide-install.md) and [The client side of Azure Information Protection](./rms-client/use-client.md).
 
 ## Subscription for Azure Information Protection
 
@@ -133,7 +127,7 @@ Each Azure Information Protection client has additional requirements. For detail
 
 - [Azure Information Protection unified labeling client requirements](./rms-client/reqs-ul-client.md)
 
-- [Azure Information Protection client requirements](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
+- [Azure Information Protection client requirements](/previous-versions/azure/information-protection/rms-client/client-admin-guide-install#additional-prerequisites-for-the-azure-information-protection-client)
 
 ## Applications
 
@@ -147,21 +141,15 @@ The Azure Information Protection clients can label and protect documents and ema
 
 - **Office Professional Plus 2019**
 
-- **Office Professional Plus 2016**
+- **Office Professional Plus 2016** - Please note that as Office 2016 is out of mainstream support, AIP support will be done on basis of best effort and no fixes will be done for issues discovered in version 2016. see [Microsoft Office 2016](https://learn.microsoft.com/lifecycle/products/microsoft-office-2016)
 
 - **Office Professional Plus 2013 with Service Pack 1**
 
-- **Office Professional Plus 2010 with Service Pack 2**
-
 Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only, and labels that apply protection are not displayed for users. 
 
-Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client, or the **Protect** button in the classic client.
+Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client.
 
 For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
-
-> [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
-> 
 
 ### Office features and capabilities not supported
 
@@ -171,7 +159,7 @@ For more information, see [Applications that support Azure Rights Management dat
 
 ## Firewalls and network infrastructure
 
-If you have a firewalls or similar intervening network devices that are configured to allow specific connections, the network connectivity requirements are listed in this Office article: [Microsoft 365 Common and Office Online](/office365/enterprise/urls-and-ip-address-ranges#microsoft-365-common-and-office-online).
+If you have firewalls or similar intervening network devices that are configured to allow specific connections, the network connectivity requirements are listed in this Office article: [Microsoft 365 Common and Office Online](/office365/enterprise/urls-and-ip-address-ranges#microsoft-365-common-and-office-online).
 
 Azure Information Protection has the following additional requirements:
 
@@ -225,7 +213,7 @@ Azure Information Protection has the following additional requirements:
 
 ### Coexistence of AD RMS with Azure RMS
 
-Using AD RMS and Azure RMS side by side, in the same organization, to protect content by the same user in the same organization, is **only** supported in AD RMS for [HYOK (hold your own key) protection](configure-adrms-restrictions.md) with Azure Information Protection.
+Using AD RMS and Azure RMS side by side, in the same organization, to protect content by the same user in the same organization, is **only** supported in AD RMS for [HYOK (hold your own key) protection](/previous-versions/azure/information-protection/configure-adrms-restrictions) with Azure Information Protection.
 
 This scenario is *not* supported during [migration](migrate-from-ad-rms-to-azure-rms.md).
  Supported migration paths include:
@@ -275,10 +263,9 @@ Supported servers include:
 
 |Server type  |Supported versions  |
 |---------|---------|
-|**Exchange Server**     | - Exchange Server 2019 </br> - Exchange Server 2016 </br>- Exchange Server 2013 </br>- Exchange Server 2010       |
-|**Office SharePoint Server**     |- Office SharePoint Server 2016 </br>- Office SharePoint Server 2013 </br>- Office SharePoint Server 2010         |
+|**Exchange Server**     | - Exchange Server 2019 </br> - Exchange Server 2016 </br>- Exchange Server 2013       |
+|**Office SharePoint Server**     |- Office SharePoint Server 2019 <br>- Office SharePoint Server 2016 </br>- Office SharePoint Server 2013         |
 |**File servers that run Windows Server and use File Classification Infrastructure (FCI)**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
-| | |
 
 For more information, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
 
@@ -288,12 +275,11 @@ The following operating systems support the Azure Rights Management service, whi
 
 |OS  |Supported versions  |
 |---------|---------|
-|**Windows computers**     |- Windows 7 (x86, x64) </br>- Windows 8 (x86, x64) </br>- Windows 8.1 (x86, x64) </br>- Windows 10 (x86, x64)       | 
+|**Windows computers**     |- Windows 8 (x86, x64) </br>- Windows 8.1 (x86, x64) </br>- Windows 10 (x86, x64)       | 
 |**macOS**     |   Minimum version of macOS 10.8 (Mountain Lion)     |
 |**Android phones and tablets**     | Minimum version of Android 6.0        |
 |**iPhone and iPad**     | Minimum version of iOS 11.0        |
 |**Windows phones and tablets** | Windows 10 Mobile|
-| | |
 
 For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md). 
 

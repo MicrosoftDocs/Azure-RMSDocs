@@ -3,9 +3,9 @@
 
 title: Migrate AD RMS-Azure Information Protection - Phase 2
 description: Phase 2 of migrating from AD RMS to Azure Information Protection, covering steps 4 though 6 from Migrating from AD RMS to Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/11/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
@@ -26,12 +26,6 @@ ms.custom: admin
 ---
 
 # Migration phase 2 - server-side configuration for AD RMS
-
->***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 
 Use the following information for Phase 2 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 4 though 6 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
@@ -98,7 +92,6 @@ Use the following table to identify which procedure to use for your migration.
 |Password protection in the AD RMS database|Customer-managed (BYOK)|See the **Software-protected key to HSM-protected key** migration procedure after this table.<br /><br />This requires the Azure Key Vault BYOK toolset and four sets of steps to first extract your software key and import it to an on-premises HSM, then transfer the key from your on-premises HSM to the Azure Information Protection HSMs, next transfer your Key Vault data to Azure Information Protection, and finally to transfer your configuration data to Azure Information Protection.|
 |HSM protection by using a hardware security module (HSM) from a supplier other than nCipher |Customer-managed (BYOK)|Contact the supplier for your HSM for instructions how to transfer your key from this HSM to a nCipher nShield hardware security module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key** migration procedure after this table.|
 |Password protected by using an external cryptographic provider|Customer-managed (BYOK)|Contact the supplier for your cryptographic provider for instructions how to transfer your key to a nCipher nShield hardware security module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key** migration procedure after this table.|
-| | |
 
 If you have an HSM-protected key that you cannot export, you can still migrate to Azure Information Protection by configuring your AD RMS cluster for a read-only mode. In this mode, previously protected content can still be opened but newly protected content uses a new tenant key that is managed by you (BYOK) or managed by Microsoft. For more information, see [An update is available for Office to support migrations from AD RMS to Azure RMS](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to).
 
@@ -135,7 +128,7 @@ Open a PowerShell session and run the following commands:
 
 Because the templates that you imported have a default state of **Archived**, you must change this state to be **Published** if you want users to be able to use these templates with the Azure Rights Management service.
 
-Templates that you import from AD RMS look and behave just like custom templates that you can create in the Azure portal. To change imported templates to be published so that users can see them and select them from applications, see [Configuring and managing templates for Azure Information Protection](./configure-policy-templates.md).
+Templates that you import from AD RMS look and behave just like custom templates that you can create in the Azure portal. To change imported templates to be published so that users can see them and select them from applications, see [Configuring and managing templates for Azure Information Protection](/previous-versions/azure/information-protection/configure-policy-templates).
 
 In addition to publishing your newly imported templates, there are just two important changes for the templates that you might need to make before you continue with the migration. For a more consistent experience for users during the migration process, do not make additional changes to the imported templates and do not publish the two default templates that come with Azure Information Protection, or create new templates at this time. Instead, wait until the migration process is complete and you have deprovisioned the AD RMS servers.
 
@@ -169,7 +162,7 @@ If you're not sure whether your AD RMS templates include the ANYONE group, you c
 
 You can easily add external users to templates when you convert these templates to labels in the Azure portal. Then, on the **Add permissions** pane, choose **Enter details** to manually specify the email addresses for these users.
 
-For more information about this configuration, see [How to configure a label for Rights Management protection](./configure-policy-protection.md).
+For more information about this configuration, see [How to configure a label for Rights Management protection](/previous-versions/azure/information-protection/configure-policy-protection).
 
 #### Sample Windows PowerShell script to identify AD RMS templates that include the ANYONE group
 

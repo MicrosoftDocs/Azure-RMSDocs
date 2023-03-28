@@ -5,14 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class NoPermissionsError 
 The user could not get access to the content. For example, no permissions, content revoked.
   
 ## Summary
-
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string GetReferrer() const  |  Gets the contact in case of missing rights to the document.
@@ -41,6 +40,7 @@ Gets the category of no permissions failure.
 **Returns**: Category of no permissions failure
   
 ### Category enum
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unknown no permissions failure
@@ -52,4 +52,4 @@ UnknownTenant            |
 NotOwner            | User needs to be owner to perform action
 NotPremiumLicenseUser            | User needs to be a premium license holder to perform action. Tracking and Revocation for example
 
-Category of no permissions error.r.
+Category of no permissions error.

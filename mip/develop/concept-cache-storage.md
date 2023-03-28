@@ -4,7 +4,7 @@ description: This article will help you understand the concepts around cache sto
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 07/30/2019
+ms.date: 11/14/2022
 ms.author: tommos
 ---
 
@@ -52,7 +52,7 @@ Cache storage is important for maintaining offline access to previously-decrypte
 | ----------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Microsoft Windows | Windows 8 and newer    | Windows 7 supports only CacheStorageType::OnDisk                                                                                    |
 | macOS             | High Sierra and later  |                                                                                                                                     |
-| Ubuntu Linux      | 16.04 and later        | Requires [SecretService](https://developer.gnome.org/libsecret/unstable/SecretService.html) and `LinuxEncryptedCache` feature flag. |
+| Ubuntu Linux      | 16.04 and later        | Requires `SecretService` and `LinuxEncryptedCache` feature flag. |
 | Android           | Android 7.0 or later   |                                                                                                                                     |
 | iOS               | All supported versions |                                                                                                                                     |
 

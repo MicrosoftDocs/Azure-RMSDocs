@@ -3,9 +3,9 @@
 
 title: Classify & protect - Azure Information Protection unified labeling client
 description: How to instructions about classifying and protecting your documents and emails when using the Azure Information Protection unified labeling client for Windows.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 07/08/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
@@ -25,20 +25,16 @@ ms.custom: user
 
 # User Guide: Classify and protect with the Azure Information Protection unified labeling client
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8*
->
->*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
->
->***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
-
-> [!NOTE]
-> Use these instructions to help you classify and protect your documents and emails. If you need to only classify and not protect your documents and emails, see the [classify-only instructions](clientv2-classify.md). If you are not sure which set of instructions to use, check with your administrator or help desk.
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
 The easiest way to classify and protect your documents and emails is when you are creating or editing them from within your Office desktop apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
 However, you can also classify and protect files by using **File Explorer**. This method supports additional file types and is a convenient way to classify and protect multiple files at once. This method supports protecting Office documents, PDF files, text and image files, and a wide range of other files.
 
 If your label applies protection to a document, the protected document might not be suitable to be saved on SharePoint or OneDrive. Check whether your administrator has [enabled sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+
+> [!NOTE]
+> Use these instructions to help you classify and protect your documents and emails. If you need to only classify and not protect your documents and emails, see the [classify-only instructions](clientv2-classify.md). If you are not sure which set of instructions to use, check with your administrator or help desk.
 
 ## Safely share a file with people outside your organization
 
@@ -77,7 +73,7 @@ In addition to manually selecting labels, labels can also be applied in the foll
 
 If you don't see the **Sensitivity** button in your Office apps, you might not have the Azure Information Protection unified labeling client [installed](install-unifiedlabelingclient-app.md).
 
-If you don't see a **Sensitivity** button on the ribbon, but do see a **Protect** button with labels instead, you have the Azure Information Protection classic client installed and not the Azure Information Protection unified labeling client. For more information, see [What's the difference between the Azure Information Protection classic and unified labeling clients?](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)?
+If you don't see a **Sensitivity** button on the ribbon, but do see a **Protect** button with labels instead, you have the legacy Azure Information Protection *classic client* installed and not the Azure Information Protection unified labeling client. For more information, see the archived [AIP classic client documentation](/previous-versions/azure/information-protection).
 
 
 Your labels may appear differently than you expect for one of the following reasons:
@@ -136,9 +132,7 @@ When you use File Explorer to classify and protect your files, if one or more of
     |---------|---------|
     |**Select permissions**     | Select the level of access that you want people to have when you protect the selected file or files.        |
     |**Select users, groups, or organizations**     |  Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. <br><br>Alternatively, you can use the address book icon to select users or groups from the Outlook address book.       |
-    |**Expire access**     |  Select this option only for time-sensitive files so that the people you specified can't open your selected file or files after a date that you set. You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file. <br><br>**Note**:If this setting was previously configured by using custom permissions from an Office 2010 app, the specified expiry date does not display in this dialog box but the expiry date is still set. This is a display issue only for when the expiry date was configured in Office 2010.<br><br>   **Important**: Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).       |
-    |     |         |
-
+    |**Expire access**     |  Select this option only for time-sensitive files so that the people you specified can't open your selected file or files after a date that you set. You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.      |
 
 5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
 

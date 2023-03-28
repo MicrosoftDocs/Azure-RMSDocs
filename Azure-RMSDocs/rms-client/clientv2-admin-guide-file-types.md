@@ -3,9 +3,9 @@
 
 title: File types supported by the Azure Information Protection (AIP) unified labeling client
 description: Learn about the file types and sizes supported for the Azure Information Protection (AIP) unified labeling client for Windows.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 07/08/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -26,17 +26,9 @@ ms.custom: admin
 
 # File types supported by the Azure Information Protection (AIP) unified labeling client
 
->***Applies to** [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
->
->*If you have Windows 7 or Office 2010, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
->
->***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
-This article lists the file types and sizes supported by the Azure Information Protection (AIP) unified labeling client
-
-> [!NOTE]
-> For the listed file types, WebDav locations are not supported.
->
+This article lists the file types and sizes supported by the Azure Information Protection (AIP) unified labeling client. For the listed file types, WebDav locations are not supported.
 
 > [!TIP]
 > To protect generic file types, which do not have built-in support for protection, while ensuring that recipients will be able to access them as expected, we recommend that you define the recipient as a co-owner of the file. For more information, see [Protecting generic file types](clientv2-classify-protect.md#protecting-generic-file-types).
@@ -124,7 +116,6 @@ The Azure Information Protection unified labeling client supports protection at 
 |**Description**|For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and other application file types that support a Rights Management service, native protection provides a strong level of protection that includes both encryption and enforcement of rights (permissions).|For other supported file types, generic protection provides a level of protection that includes both file encapsulation using the .pfile file type and authentication to verify if a user is authorized to open the file.|
 |**Protection**|File protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for those users who receive the file through email or are given access to it through file or share permissions.<br /><br />- Additionally, usage rights and policy that were set by the content owner when the files were protected are enforced when the content is rendered in either the Azure Information Protection viewer (for protected text and image files) or the associated application (for all other supported file types).|File protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for people who are authorized to open the file and given access to it. If authorization fails, the file does not open.<br /><br />- Usage rights and policy set by the content owner are displayed to inform authorized users of the intended usage policy.<br /><br />- Audit logging of authorized users opening and accessing files occurs. However, usage rights are not enforced.|
 |**Default for file types**|Default level of protection for the following file types:<br /><br />- Text and image files<br /><br />- Microsoft Office (Word, Excel, PowerPoint) files<br /><br />- Portable document format (.pdf)<br /><br />For more information, see the following section, [Supported file types for classification and protection](#supported-file-types-for-classification-and-protection).|Default protection for all other file types (such as .vsdx, .rtf, and so on) that are not supported by native protection.|
-| | |
 
 You cannot change the default protection level that the Azure Information Protection unified labeling client or the scanner applies. However, you can change which file types are protected. For more information, see [Change which file types to protect](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
 
@@ -156,7 +147,6 @@ These file types are identified separately because when they are natively protec
 |.xla |.pxla |
 |.xlam |.pxlam |
 |.xml|.pxml|
-| | |
 
 **File types supported by Office**
 
@@ -252,12 +242,12 @@ By default, the scanner also excludes the same file types as the Azure Informati
 
 For the scanner, the following file types are also excluded: .msg, .rtf, and .rar
 
-To change the file types included or excluded for file inspection by the scanner, configure the **File types to scan** in the [content scan job](../deploy-aip-scanner-configure-install.md#configure-the-scanner-settings).
+To change the file types included or excluded for file inspection by the scanner, configure the **File types to scan** in the [content scan job](/microsoft-365/compliance/deploy-scanner-configure-install#configure-the-scanner-settings).
 
 > [!NOTE]
 > If you include .rtf files for scanning, we recommend that you carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted.
 
-By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. To change this behavior for the scanner, use the PowerShell advanced setting, **PFileSupportedExtensions**. For more information, see [Use PowerShell to change which file types are protected](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) from the scanner deployment instructions.
+By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. To change this behavior for the scanner, use the PowerShell advanced setting, **PFileSupportedExtensions**. For more information, see [Use PowerShell to change which file types are protected](/microsoft-365/compliance/deploy-scanner-configure-install#change-which-file-types-to-protect) from the scanner deployment instructions.
 
 ### Files that cannot be protected by default
 
@@ -278,7 +268,6 @@ Without any extra configuration, the Azure Information Protection unified labeli
 |**PowerPoint**|.ppt; .pps; .pot; .pptx|
 |**PDF** |.pdf|
 |**Text**|.txt; .xml; .csv|
-| | |
 
 With extra configuration, other file types can also be inspected. For example, you can [register a custom file name extension to use the existing Windows filter handler for text files](/windows/desktop/search/-search-ifilter-registering-filters), and you can install other filters from software vendors.
 
@@ -292,7 +281,7 @@ When your scanner is installed on a Windows server machine, you must also instal
 
 You can use the AIP scanner or the [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command to inspect .zip files.
 
-After finding sensitive information, if the .zip file should be classified and protected with a label, specify the .zip file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) from the scanner deployment instructions.
+After finding sensitive information, if the .zip file should be classified and protected with a label, specify the .zip file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](/microsoft-365/compliance/deploy-scanner-configure-install#change-which-file-types-to-protect) from the scanner deployment instructions.
 
 
 **Example scenario**:
@@ -305,7 +294,7 @@ After inspecting the file, the unified labeling client from your PowerShell sess
 
 The [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you install the Windows TIFF IFilter feature, and then configure [Windows TIFF IFilter Settings](/previous-versions/windows/it-pro/windows-7/dd744701(v=ws.10)) on the computer running the PowerShell session.
 
-For the scanner: After finding sensitive information, if the .tiff file should be classified and protected with a label, specify this file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) from the scanner deployment instructions.
+For the scanner: After finding sensitive information, if the .tiff file should be classified and protected with a label, specify this file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](/microsoft-365/compliance/deploy-scanner-configure-install#change-which-file-types-to-protect) from the scanner deployment instructions.
 
 ## Supported file sizes
 
@@ -315,14 +304,9 @@ The following table lists maximum sizes supported for protection using Office wi
 
 |                                                     Office application                                                      |                                                Maximum file size supported                                                 |
 |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-|             **Word 2010<br /><br />Word 2013<br /><br />Word 2016**             |                                          32-bit: 512 MB<br /><br />64-bit: 512 MB                                          |
-|           **Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016**           |                      32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                       |
-| **PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016** | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
-| | |
-
-> [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](../known-issues.md#aip-and-legacy-windows-and-office-versions).
->
+|             **Word 2013<br /><br />Word 2016**             |                                          32-bit: 512 MB<br /><br />64-bit: 512 MB                                          |
+|           **Excel 2013<br /><br />Excel 2016**           |                      32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                       |
+| **PowerPoint 2013<br /><br />PowerPoint 2016** | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
 
 ### Supported file sizes for non-Office files
 
@@ -336,7 +320,6 @@ The following table lists the maximum sizes support for encryption and decryptio
 |---------|---------|---------|
 |**Encryption**     |  2 GB       |   2 GB      |
 |**Decryption**     |   Up to the available disk size, RAM, or architecture limits (lowest of the three).     | Up to the available disk size or RAM, the lower of the two.        |
-|     |         |         |
 
 ## Next steps
 

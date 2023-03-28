@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class MetadataVersion 
-Interface for a MetadataVersion. [MetadataVersion determines which metadata is active and how it is processed.
+Interface for a MetadataVersion. MetadataVersion determines which metadata is active and how it is processed.
   
 ## Summary
  Members                        | Descriptions                                
@@ -48,4 +48,4 @@ Get whether a specific flag is set.
 Get the flags that define how metadata is processed for a given version.
 
   
-**Returns**: The flags that specify how the metadata is processed.d.
+**Returns**: The flags that specify how the metadata is processed.

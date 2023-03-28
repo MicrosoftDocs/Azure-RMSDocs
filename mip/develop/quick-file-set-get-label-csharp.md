@@ -5,7 +5,7 @@ services: information-protection
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 07/30/2019
+ms.date: 11/14/2022
 ms.author: mbaldwin
 ms.custom: has-adal-ref, mode-api
 #Customer intent: As a an application developer, I want to learn how to set labels with the MIP SDK, so that I can use the SDK APIs to apply labels and protection to my own files.
@@ -28,7 +28,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
 
 1. Using **Solution Explorer**, open the .cs file in your project that contains the implementation of the Main()` method. It defaults to the same name as the project containing it, which you specified during project creation.
 
-2. Toward the end of the `Main()` body, below `Console.ReadKey()` and above `}` (where you left off in the previous Quickstart), insert the following code:
+2. Toward the end of the `Main()` body, after `var fileEngine =` and above the `//Application Shutdown` comment, insert the following code:
 
    ```csharp
      //Set paths and label ID
@@ -65,7 +65,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
      Console.ReadKey();
    ```
 
-3. Toward the end of `Main()` find the application shutdown block created in the first quickstart and uncomment the handler line:
+3. At the end of `Main()` find the application shutdown block created in the first quickstart and uncomment the handler line:
 
    ```csharp
    // Application Shutdown
@@ -109,12 +109,12 @@ Build and test your client application.
    Committing changes
 
    Label committed to file: c:\Test\Test_labeled.docx
-   Press any key to continue . . .
+   Press any key to continue.
 
    Getting the label committed to file: c:\Test\Test_labeled.docx
-   Name: Confidential
-   Id: 074e457c-5848-4542-9a6f-34a182080e7z
-   Press any key to continue . . .
+   File Label: Confidential
+   IsProtected: false   
+   Press any key to continue.
    ```
 
 You can verify the application of the label, by opening the output file and visually inspecting the document's information protection settings.

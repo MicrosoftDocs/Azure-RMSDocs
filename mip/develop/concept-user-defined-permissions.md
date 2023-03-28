@@ -4,7 +4,7 @@ description: This article will help you understand the core SDK concept called u
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 02/02/2021
+ms.date: 11/14/2022
 ms.author: tommos
 ---
 
@@ -48,6 +48,39 @@ List<UserRights> userRightsList = new List<UserRights>()
 The result is that you'll have a `List<UserRights>` collection specifying that both Alice and Bob have VIEW and EDIT on the protected file. To add more users with a *different* set of permissions, you'd repeat the process to create a second `UserRights` object, passing in the new users and permissions, then add to the `List<UserRights>` collection by calling `userRightsList.Add(userRights2)`.
 
 This pattern is also true for `UserRoles` and can be implemented simply by replacing **rights** with **roles** and create a `List<UserRoles>` collection.
+
+## Protecting for a Domain
+
+Applying user-defined permissions for a domain requires using a well-known mail prefix and the target domain as the mail address. That address looks like: `AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.com`.
+
+In your application, users should be able to specify a domain, like **contoso.com** or **fabrikam.com**. When the application creates the protection descriptor, it will need to prepend **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@** to the domain suffix. 
+
+In the sample below, we assume that the user has specified *alice@contoso.com* and all of Fabrikam.com as valid recipients. 
+
+```csharp
+// Create a List<string> of the first set of permissions. 
+List<string> users = new List<string>()
+{
+    "alice@contoso.com",
+    "AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@fabrikam.com"
+};
+
+// Create a List<string> of the Rights the above users should have. 
+List<string> rights = new List<string>()
+{
+    Rights.View,
+    Rights.Edit                
+};
+
+// Create a UserRights object containing the defined users and rights.
+UserRights userRights = new UserRights(users, rights);
+
+// Add them to a new List<UserRights>
+List<UserRights> userRightsList = new List<UserRights>()
+{
+    userRights
+};
+```
 
 ### Apply Protection
 

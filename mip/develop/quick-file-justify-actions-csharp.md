@@ -4,7 +4,7 @@ description: This article will help you understand the scenario of how to downgr
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 05/01/2020
+ms.date: 11/14/2022
 ms.author: mbaldwin
 ms.custom: mode-api
 ---
@@ -103,7 +103,7 @@ Build and test your client application.
 
 1. Use CTRL-SHIFT-B (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
-2. If your project builds and runs successfully, the application *may* prompt for authentication via ADAL each time the SDK calls your `AcquireToken()` method. If cached credentials already exist, you won't be prompted to sign in and see the list of labels, followed by the information on the applied label and modified file.
+2. If your project builds and runs successfully, the application *may* prompt for authentication using Microsoft Authentication Library (MSAL) each time the SDK calls your `AcquireToken()` method. If cached credentials already exist, you won't be prompted to sign in and see the list of labels, followed by the information on the applied label and modified file.
 
   ```console
     Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6

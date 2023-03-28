@@ -3,9 +3,9 @@
 
 title: Migrate AD RMS-Azure Information Protection - Phase 3
 description: Phase 3 of migrating from AD RMS to Azure Information Protection, covering step 7 from Migrating from AD RMS to Azure Information Protection.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 11/11/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
@@ -25,12 +25,6 @@ ms.custom: admin
 
 ---
 # Migration phase 3 - client-side configuration
-
->***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
 
 
 Use the following information for Phase 3 of migrating from AD RMS to Azure Information Protection. These procedures cover step 7 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
@@ -92,7 +86,6 @@ This method is suitable only for Windows clients that run Microsoft 365 apps and
     |**Weight**|0|  
     |**Port number**|80|  
     |**Host offering this service**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
-    | | |
 
 2. Set a deny permission on the AD RMS publishing endpoint for users running Microsoft 365 apps or Office 2016 (or later):
 
@@ -162,7 +155,7 @@ When you cannot migrate all your Windows clients at once, run the following proc
    > [!IMPORTANT]
    > As before, be careful not to introduce additional spaces before or after your addresses.
    > 
-   > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number **443** in the string. For example: https://rms.treyresearch.net:443/_wmcs/licensing. You can find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, https://rms.treyresearch.net:<strong>443</strong>. 
+   > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number **443** in the string. For example: `https://rms.treyresearch.net:443/_wmcs/licensing.` You can find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, `https://rms.treyresearch.net`:<strong>443</strong>. 
     
    If you need to retrieve your Azure Rights Management service URL for *&lt;YourTenantURL&gt;*, refer back to [To identify your Azure Rights Management service URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 

@@ -3,9 +3,9 @@
 
 title: Additional prerequisites for Azure AD and Azure Information Protection
 description: Understand additional Azure AD prerequisites for Azure Information Protection in specific scenarios, such as multi-factor or certificate-based authentication and more.
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 07/22/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -26,11 +26,7 @@ ms.custom: admin, has-adal-ref
 
 # Additional Azure AD requirements for Azure Information Protection
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 An [Azure AD directory is a requirement](requirements.md#azure-active-directory) for using Azure Information protection. Use an account from an Azure AD directory to sign in to the Azure portal, where you can configure Azure Information Protection settings.
 
@@ -99,18 +95,6 @@ If you're using a mobile device or Mac computer that authenticates on-premises u
 - A minimum server version of **Windows Server 2012 R2**
 - An alternative authentication provider that supports the OAuth 2.0 protocol
 
-## Computers running Office 2010
 
-> [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](known-issues.md#aip-and-legacy-windows-and-office-versions).
-> 
-
-In addition to an Azure AD account, computers running Microsoft 2010 require the Azure Information Protection client for Windows to authenticate to Azure Information Protection, and its data protection service, Azure Rights Management. 
-
-If your user accounts are federated (for example, you use AD FS), these computers must use Windows-Integrated Authentication. Forms-based authentication in this scenario fails to authenticate users for Azure Information Protection.
-
-We recommend that you deploy the Azure Information Protection unified labeling client. If you haven't yet upgraded, your system may still have the [Azure Information Protection classic client](./rms-client/aip-client.md) deployed. 
-
-For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
 ## Next steps
 To check for other requirements, see [Requirements for Azure Information Protection](requirements.md).

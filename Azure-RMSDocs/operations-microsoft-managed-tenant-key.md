@@ -3,9 +3,9 @@
 
 title: Microsoft-managed - AIP tenant key life cycle operations
 description: Information about the life cycle operations that are relevant if Microsoft manages your tenant key for Azure Information Protection (the default).
-author: batamig
-ms.author: bagol
-manager: rkarlin
+author: aashishr
+ms.author: aashishr
+manager: aashishr
 ms.date: 10/23/2019
 ms.topic: how-to
 ms.collection: M365-security-compliance
@@ -28,11 +28,7 @@ ms.custom: admin
 
 # Microsoft-managed: Tenant key life cycle operations
 
->***Applies to**: [Azure Information Protection](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection), [Office 365](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dz8M)*
->
->***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
-
-[!INCLUDE [AIP classic client is deprecated](includes/classic-client-deprecation.md)]
+[!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
 
 If Microsoft manages your tenant key for Azure Information Protection (the default), use the following sections for more information about the life cycle operations that are relevant to this topology.
@@ -126,4 +122,3 @@ If you have a breach, the best action that you or Microsoft can take depends on 
 |Your tenant key is leaked.|Rekey your tenant key. See the [Rekey your tenant key](#rekey-your-tenant-key) section in this article.|
 |An unauthorized individual or malware got rights to use your tenant key but the key itself did not leak.|Rekeying your tenant key does not help here and requires root-cause analysis. If a process or software bug was responsible for the unauthorized individual to get access, that situation must be resolved.|
 |Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update Azure Information Protection to support new algorithms and longer key lengths that are resilient, and instruct all customers to rekey their tenant key.|
-| | |

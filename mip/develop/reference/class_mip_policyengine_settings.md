@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/15/2021
+ms.date: 11/14/2022
 ---
 
 # class PolicyEngine::Settings 
@@ -14,8 +14,8 @@ Defines the settings associated with a PolicyEngine.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& engineId, const std::shared_ptr\<AuthDelegate\>& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  PolicyEngine::Settings constructor for loading an existing engine.
-public Settings(const Identity& identity, const std::shared_ptr\<AuthDelegate\>& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  PolicyEngine::Settings constructor for creating a new engine.
+public Settings(const std::string& engineId, const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  PolicyEngine::Settings constructor for loading an existing engine.
+public Settings(const Identity& identity, const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  PolicyEngine::Settings constructor for creating a new engine.
 public const std::string& GetEngineId() const  |  Get the engine ID.
 public void SetEngineId(const std::string& id)  |  Set the engine ID.
 public const Identity& GetIdentity() const  |  Get the Identity object.
@@ -23,27 +23,29 @@ public void SetIdentity(const Identity& identity)  |  Set the Identity object.
 public const std::string& GetClientData() const  |  Get the Client Data set in the settings.
 public void SetClientData(const std::string& clientData)  |  Set the Client Data string.
 public const std::string& GetLocale() const  |  Get the Locale set in the settings.
-public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& customSettings)  |  Set the custom settings, used for feature gating and testing.
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
+public void SetCustomSettings(const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& customSettings)  |  Set the custom settings, used for feature gating and testing.
+public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
 public void SetSessionId(const std::string& sessionId)  |  Set the session ID, used for client defined telemetry and to make it easier to correlate application events with the corresponding policy service REST requests.
 public const std::string& GetSessionId() const  |  Get the session ID, a unique identifier.
 public bool IsLoadSensitivityTypesEnabled() const  |  Get the the flag indicating if load sensitivity labels is enabled.
 public void SetCloud(Cloud cloud)  |  Optionally sets the target cloud.
 public Cloud GetCloud() const  |  Gets the target cloud used by all service requests.
+public void SetDataBoundary(DataBoundary dataBoundary)  |  Optionally sets the target diagnostic region.
+public DataBoundary GetDataBoundary() const  |  Gets the data boundary region.
 public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Sets the cloud endpoint base URL for custom cloud.
 public const std::string& GetCloudEndpointBaseUrl() const  |  Gets the cloud base URL used by all service requests, if specified.
 public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
-public void SetLabelFilter(const std::vector\<LabelFilterType\>& deprecatedLabelFilters)  |  Sets the label filter.
-public const std::vector\<LabelFilterType\>& GetLabelFilter() const  |  Gets the label filters set through deprecated function SetLabelFilter.
+public void SetLabelFilter(const std::vector&lt;LabelFilterType&gt;& deprecatedLabelFilters)  |  Sets the label filter.
+public const std::vector&lt;LabelFilterType&gt;& GetLabelFilter() const  |  Gets the label filters set through deprecated function SetLabelFilter.
 public void ConfigureFunctionality(FunctionalityFilterType functionalityFilterType, bool enabled)  |  Enables or disables functionality.
-public const std::map\<FunctionalityFilterType, bool\>& GetConfiguredFunctionality() const  |  Gets the configured functionality.
+public const std::map&lt;FunctionalityFilterType, bool&gt;& GetConfiguredFunctionality() const  |  Gets the configured functionality.
 public void SetVariableTextMarkingType(VariableTextMarkingType variableTextMarkingType)  |  Sets the variable text marking type.
 public VariableTextMarkingType GetVariableTextMarkingType() const  |  Gets the variable text marking type.
-public void SetAuthDelegate(const std::shared_ptr\<AuthDelegate\>& authDelegate)  |  Set the Engine Auth Delegate.
-public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Get the Engine Auth Delegate.
-public const std::shared_ptr\<void\>& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
-public void SetLoggerContext(const std::shared_ptr\<void\>& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+public void SetAuthDelegate(const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate)  |  Set the Engine Auth Delegate.
+public std::shared_ptr&lt;AuthDelegate&gt; GetAuthDelegate() const  |  Get the Engine Auth Delegate.
+public const std::shared_ptr&lt;void&gt;& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+public void SetLoggerContext(const std::shared_ptr&lt;void&gt;& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
   
 ## Members
   
@@ -188,6 +190,21 @@ Gets the target cloud used by all service requests.
   
 **Returns**: Cloud
   
+### SetDataBoundary function
+Optionally sets the target diagnostic region.
+
+Parameters:  
+* **dataBoundary**: Data boundary region
+
+
+If dataBoundary is not specified, then it will default to global diagnostic region.
+  
+### GetDataBoundary function
+Gets the data boundary region.
+
+  
+**Returns**: DataBoundary
+  
 ### SetCloudEndpointBaseUrl function
 Sets the cloud endpoint base URL for custom cloud.
 
@@ -292,5 +309,4 @@ Get logger context that will be opaquely passed to the logger delegate for logs 
 Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
 
 Parameters:  
-* **loggerContext**: The logger context
-
+* **loggerContext**: The logger context.
