@@ -42,6 +42,15 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ## Version 1.13.161
 
+**Release Date:** March 28, 2023
+
+### Bug Fixes
+
+- Fixed a signing issue on .NET NuGet package.
+- Fixed an issue in `ProtectionProfile` where offline publishing setting was missing.
+
+## Version 1.13.158
+
 **Release Date:** March 17, 2023
 
 ### File SDK
