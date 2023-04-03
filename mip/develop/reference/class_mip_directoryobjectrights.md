@@ -15,9 +15,9 @@ The directory object and rights associated with it.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public DirectoryObjectRights(const DirectoryObject& directoryObject, const std::vector\<std::string\>& rights)  |  [DirectoryObjectRights](#class_directory_object_rights) constructor.
+public DirectoryObjectRights(const DirectoryObject& directoryObject, const std::vector\&lt;std::string\&gt;& rights)  |  [DirectoryObjectRights](#class_directory_object_rights) constructor.
 public const DirectoryObject& GetDirectoryObject() const  |  Gets directory object.
-public const std::vector\<std::string\>& GetRights() const  |  Gets rights associated with the directory object.
+public const std::vector\&lt;std::string\&gt;& GetRights() const  |  Gets rights associated with the directory object.
   
 ## Members
   

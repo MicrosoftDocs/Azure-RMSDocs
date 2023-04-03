@@ -14,7 +14,7 @@ A class that defines the interface to the MIP SDK storage for caching.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public mip::StorageTableResult CreateStorageTable(const std::string& path, const MipComponent mipComponent, const std::string& tableName, const std::vector\<std::string\>& allColumns, const std::vector\<std::string\>& encryptedColumns, const std::vector\<std::string\>& keyColumns) const  |  Creates an instance of a storage table that MIP uses for caching. If a table already exists & schema doesnt match with `allColumns` , implementatiion should drop the table and re-create new one.
+public mip::StorageTableResult CreateStorageTable(const std::string& path, const MipComponent mipComponent, const std::string& tableName, const std::vector\&lt;std::string\&gt;& allColumns, const std::vector\&lt;std::string\&gt;& encryptedColumns, const std::vector\&lt;std::string\&gt;& keyColumns) const  |  Creates an instance of a storage table that MIP uses for caching. If a table already exists & schema doesnt match with `allColumns` , implementatiion should drop the table and re-create new one.
 public StorageSettings GetSettings() const  |  Gets settings used by [StorageDelegate](undefined).
   
 ## Members

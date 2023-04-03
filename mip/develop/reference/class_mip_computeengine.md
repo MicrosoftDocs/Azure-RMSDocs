@@ -13,24 +13,24 @@ ms.date: 03/30/2023
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector\<std::shared_ptr\<Label\>\> ListSensitivityLabels(const std::vector\<std::string\>& contentFormats)  | _Not yet documented._
-public std::shared_ptr\<ContentLabel\> GetSensitivityLabel(ComputeEngineContext& context, const DocumentState& state)  | _Not yet documented._
-public std::vector\<std::shared_ptr\<Action\>\> ComputeActions(ComputeEngineContext& context, const DocumentState& documentState, const ApplicationActionState& actionState)  | _Not yet documented._
-public std::pair\<std::vector\<std::shared_ptr\<Action\>\>, bool\> ComputeActionsWithRemoteState(ComputeEngineContext& context, const DocumentState& localDocumentState, const DocumentState& remoteDocumentState, const ApplicationActionState& actionState)  |  Computes actions while choosing between remote and local state.
+public const std::vector\&lt;std::shared_ptr\&lt;Label\&gt;\&gt; ListSensitivityLabels(const std::vector\&lt;std::string\&gt;& contentFormats)  | _Not yet documented._
+public std::shared_ptr\&lt;ContentLabel\&gt; GetSensitivityLabel(ComputeEngineContext& context, const DocumentState& state)  | _Not yet documented._
+public std::vector\&lt;std::shared_ptr\&lt;Action\&gt;\&gt; ComputeActions(ComputeEngineContext& context, const DocumentState& documentState, const ApplicationActionState& actionState)  | _Not yet documented._
+public std::pair\&lt;std::vector\&lt;std::shared_ptr\&lt;Action\&gt;\&gt;, bool\&gt; ComputeActionsWithRemoteState(ComputeEngineContext& context, const DocumentState& localDocumentState, const DocumentState& remoteDocumentState, const ApplicationActionState& actionState)  |  Computes actions while choosing between remote and local state.
 public void NotifyCommittedActions(ComputeEngineContext& context, const DocumentState& documentState, const ApplicationActionState& actionState)  | _Not yet documented._
-public const std::shared_ptr\<Label\> GetDefaultLabel(const std::string& contentFormat) const  | _Not yet documented._
+public const std::shared_ptr\&lt;Label\&gt; GetDefaultLabel(const std::string& contentFormat) const  | _Not yet documented._
 public const std::string& GetMoreInfoUrl() const  | _Not yet documented._
 public const std::string& GetUpn() const  | _Not yet documented._
 public bool IsLabelingRequired(const std::string& contentFormat) const  | _Not yet documented._
 public bool IsDowngradeJustificationRequired() const  | _Not yet documented._
 public const std::string& GetFileId() const  | _Not yet documented._
-public bool HasClassificationRules(const std::vector\<std::string\>& contentFormats) const  | _Not yet documented._
+public bool HasClassificationRules(const std::vector\&lt;std::string\&gt;& contentFormats) const  | _Not yet documented._
 public bool IsEnhancedClassificationEnabled() const  | _Not yet documented._
-public std::shared_ptr\<Label\> GetLabelById(const std::string& id) const  | _Not yet documented._
+public std::shared_ptr\&lt;Label\&gt; GetLabelById(const std::string& id) const  | _Not yet documented._
 public const std::string& GetTenantId() const  | _Not yet documented._
-public void SetSensitivityTypesRulePackages(std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\> && custom)  | _Not yet documented._
-public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& GetSensitivityTypesRulePackages() const  | _Not yet documented._
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  | _Not yet documented._
+public void SetSensitivityTypesRulePackages(std::vector\&lt;std::shared_ptr\&lt;SensitivityTypesRulePackage\&gt;\&gt; && custom)  | _Not yet documented._
+public const std::vector\&lt;std::shared_ptr\&lt;SensitivityTypesRulePackage\&gt;\&gt;& GetSensitivityTypesRulePackages() const  | _Not yet documented._
+public const std::vector\&lt;std::pair\&lt;std::string, std::string\&gt;\&gt;& GetCustomSettings() const  | _Not yet documented._
 public uint32_t GetOpcMetadataVersion() const  | _Not yet documented._
 public const std::string& GetUserObjectId() const  | _Not yet documented._
 public bool HasWorkloadConsent(Workload workload) const  | _Not yet documented._

@@ -15,11 +15,11 @@ The rights related information of the publishing license.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public LicenseRightsData(const ProtectionType type, const std::vector\<DirectoryObjectRights\>& directoryObjectsRights, const std::chrono::time_point\<std::chrono::system_clock\>& contentValidUntil)  |  [LicenseRightsData](#class_license_rights_data) constructor.
+public LicenseRightsData(const ProtectionType type, const std::vector\&lt;DirectoryObjectRights\&gt;& directoryObjectsRights, const std::chrono::time_point\&lt;std::chrono::system_clock\&gt;& contentValidUntil)  |  [LicenseRightsData](#class_license_rights_data) constructor.
 public const ProtectionType GetProtectionType() const  |  Gets type of protection, whether it originated from protection SDK template or not.
-public const std::vector\<DirectoryObjectRights\>& GetDirectoryObjectsRights() const  |  Gets the set of directory objects and the rights associated with them.
+public const std::vector\&lt;DirectoryObjectRights\&gt;& GetDirectoryObjectsRights() const  |  Gets the set of directory objects and the rights associated with them.
 public bool DoesContentExpire()  |  Checks if content has an expiration time or not.
-public const std::chrono::time_point\<std::chrono::system_clock\> GetContentValidUntil() const  |  Gets protection expiration time.
+public const std::chrono::time_point\&lt;std::chrono::system_clock\&gt; GetContentValidUntil() const  |  Gets protection expiration time.
   
 ## Members
   

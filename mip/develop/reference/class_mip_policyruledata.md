@@ -15,11 +15,11 @@ ms.date: 03/30/2023
 --------------------------------|---------------------------------------------
 public const std::string& GetName() const  | _Not yet documented._
 public const std::string& GetId() const  | _Not yet documented._
-public const std::vector\<std::string\>& GetContentFormats() const  | _Not yet documented._
-public const std::vector\<std::unique_ptr\<ActionData\>\>& GetActionsData() const  | _Not yet documented._
+public const std::vector\&lt;std::string\&gt;& GetContentFormats() const  | _Not yet documented._
+public const std::vector\&lt;std::unique_ptr\&lt;ActionData\&gt;\&gt;& GetActionsData() const  | _Not yet documented._
 public bool IsCompatibleVersion() const  | _Not yet documented._
-public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetAttributeData() const  | _Not yet documented._
-public const std::vector\<std::map\<std::string, std::string, CaseInsensitiveComparator\>\>& GetRuleTags() const  | _Not yet documented._
+public const std::map\&lt;std::string, std::string, CaseInsensitiveComparator\&gt;& GetAttributeData() const  | _Not yet documented._
+public const std::vector\&lt;std::map\&lt;std::string, std::string, CaseInsensitiveComparator\&gt;\&gt;& GetRuleTags() const  | _Not yet documented._
 public const ConditionData* GetConditionData() const  | _Not yet documented._
 public virtual ~PolicyRuleData()  | _Not yet documented._
   

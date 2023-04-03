@@ -14,8 +14,8 @@ An [Action](undefined) that adds metadata information to the content.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector\<std::string\>& GetMetadataToRemove() const  |  Get the list of names of metadata that should be removed from content.
-public const std::vector\<MetadataEntry\>& GetMetadataToAdd() const  |  Get the metadata name/value pairs that should be added to the content.
+public const std::vector\&lt;std::string\&gt;& GetMetadataToRemove() const  |  Get the list of names of metadata that should be removed from content.
+public const std::vector\&lt;MetadataEntry\&gt;& GetMetadataToAdd() const  |  Get the metadata name/value pairs that should be added to the content.
   
 ## Members
   
@@ -30,5 +30,5 @@ Removing metadata should be done before adding metadata.
 Get the metadata name/value pairs that should be added to the content.
 
   
-**Returns**: Const std::vector<MetadataEntry>& 
+**Returns**: Const std::vector&lt;MetadataEntry&gt;& 
 Removing metadata should be done before adding metadata.
