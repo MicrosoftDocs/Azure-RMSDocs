@@ -247,6 +247,10 @@
         href: ./reference/class_mip_detailedclassificationresult.md
       - name: DiagnosticDelegate
         href: ./reference/class_mip_diagnosticdelegate.md
+      - name: DirectoryObject
+        href: ./reference/class_mip_directoryobject.md
+      - name: DirectoryObjectRights
+        href: ./reference/class_mip_directoryobjectrights.md
       - name: DocumentState
         href: ./reference/class_mip_documentstate.md
       - name: Error
@@ -329,6 +333,8 @@
         href: ./reference/class_mip_licensenameanddescriptionitem.md
       - name: LicenseNotRegisteredError
         href: ./reference/class_mip_licensenotregisterederror.md
+      - name: LicenseRightsData
+        href: ./reference/class_mip_licenserightsdata.md
       - name: LogMessageData
         href: ./reference/class_mip_logmessagedata.md
       - name: LoggerDelegate
