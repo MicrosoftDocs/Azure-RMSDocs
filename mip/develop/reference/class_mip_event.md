@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class Event 
@@ -17,4 +17,3 @@ A single audit/telemetry event.
   
 ## Members
 _Not documented yet._
-

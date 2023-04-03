@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class HttpDelegate 
@@ -14,8 +14,8 @@ Interface for overriding HTTP handling.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr&lt;HttpOperation&gt; Send(const std::shared_ptr&lt;HttpRequest&gt;& request, const std::shared_ptr&lt;void&gt;& context)  |  Send HTTP request.
-public std::shared_ptr&lt;HttpOperation&gt; SendAsync(const std::shared_ptr&lt;HttpRequest&gt;& request, const std::shared_ptr&lt;void&gt;& context, const std::function&lt;void(std::shared_ptr&lt;HttpOperation&gt;)&gt;& callbackFn)  |  Send HTTP request asynchronously.
+public std::shared_ptr\&lt;HttpOperation\&gt; Send(const std::shared_ptr\&lt;HttpRequest\&gt;& request, const std::shared_ptr\&lt;void\&gt;& context)  |  Send HTTP request.
+public std::shared_ptr\&lt;HttpOperation\&gt; SendAsync(const std::shared_ptr\&lt;HttpRequest\&gt;& request, const std::shared_ptr\&lt;void\&gt;& context, const std::function\&lt;void(std::shared_ptr\&lt;HttpOperation\&gt;)\&gt;& callbackFn)  |  Send HTTP request asynchronously.
 public void CancelOperation(const std::string& requestId)  |  Cancel a specific HTTP operation.
 public void CancelAllOperations()  |  Cancel ongoing HTTP requests.
   

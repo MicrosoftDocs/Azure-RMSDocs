@@ -5,21 +5,21 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class ContentLabel 
-Abstraction for a Microsoft Purview Information Protection label that is applied to a piece of content, typically a document.
+Abstraction for a Microsoft Information Protection label that is applied to a piece of content, typically a document.
 It also holds properties for a specific applied label instance.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::chrono::time_point&lt;std::chrono::system_clock&gt; GetCreationTime() const  |  Get the creation time of the label.
+public std::chrono::time_point\&lt;std::chrono::system_clock\&gt; GetCreationTime() const  |  Get the creation time of the label.
 public AssignmentMethod GetAssignmentMethod() const  |  Get the assignment method of the label.
-public const std::vector&lt;MetadataEntry&gt;& GetExtendedProperties() const  |  Gets extended properties.
+public const std::vector\&lt;MetadataEntry\&gt;& GetExtendedProperties() const  |  Gets extended properties.
 public bool IsProtectionAppliedFromLabel() const  |  Gets if protection was applied by the label or not.
-public std::shared_ptr&lt;Label&gt; GetLabel() const  |  Get the actual label object applied on the content.
+public std::shared_ptr\&lt;Label\&gt; GetLabel() const  |  Get the actual label object applied on the content.
   
 ## Members
   
@@ -55,4 +55,4 @@ Get the actual label object applied on the content.
   
 **Returns**: The label object applied on the content. 
   
-**See also**: mip::Label.
+**See also**: mip::Label

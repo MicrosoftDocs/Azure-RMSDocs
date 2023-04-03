@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class PublishingUseLicenseRequest 
@@ -33,4 +33,4 @@ Gets the delegated user.
 
   
 **Returns**: Delegated user
-A delegated user is specified when the authenticating user/application is acting on behalf of another user.
+A delegated user is specified when the authenticating user/application is acting on behalf of another user
