@@ -5,34 +5,34 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class ProtectionDescriptorBuilder 
-Constructs a ProtectionDescriptor that describes protection associated with a piece of content.
+Constructs a [ProtectionDescriptor](class_mip_protectiondescriptor.md) that describes protection associated with a piece of content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MIP_API std::shared_ptr&lt;ProtectionDescriptor&gt; Build()  |  Creates a ProtectionDescriptor whose access permissions are defined by this ProtectionDescriptorBuilder instance.
+public MIP_API std::shared_ptr\&lt;ProtectionDescriptor\&gt; Build()  |  Creates a [ProtectionDescriptor](class_mip_protectiondescriptor.md) whose access permissions are defined by this [ProtectionDescriptorBuilder](#class_protection_descriptor_builder) instance.
 public void SetName(const std::string& value)  |  Sets protection policy name.
 public void SetDescription(const std::string& value)  |  Sets protection policy description.
-public void SetContentValidUntil(const std::chrono::time_point&lt;std::chrono::system_clock&gt;& value)  |  Sets protection policy expiration time.
+public void SetContentValidUntil(const std::chrono::time_point\&lt;std::chrono::system_clock\&gt;& value)  |  Sets protection policy expiration time.
 public void SetAllowOfflineAccess(bool value)  |  Sets if protection policy allows offline content access or not.
 public void SetReferrer(const std::string& uri)  |  Sets protection policy referrer address.
-public void SetEncryptedAppData(const std::map&lt;std::string, std::string&gt;& value)  |  Sets app-specific data that should be encrypted.
-public void SetSignedAppData(const std::map&lt;std::string, std::string&gt;& value)  |  Sets app-specific data that should be signed.
+public void SetEncryptedAppData(const std::map\&lt;std::string, std::string\&gt;& value)  |  Sets app-specific data that should be encrypted.
+public void SetSignedAppData(const std::map\&lt;std::string, std::string\&gt;& value)  |  Sets app-specific data that should be signed.
 public void SetDoubleKeyUrl(const std::string& doubleKeyUrl)  |  Sets the double key url to be used for custom protection.
-public void SetLabelId(const std::string& labelId)  |  Sets the labelId for UDP protection. Only allowed for custom protection type.
+public void SetLabelInfo(const LabelInfo& labelId)  |  Sets the label id and tenant id for UDP protection. Only allowed for custom protection type.
 enum LicenseType  |  License type to create a specialized license.
   
 ## Members
   
 ### Build function
-Creates a ProtectionDescriptor whose access permissions are defined by this ProtectionDescriptorBuilder instance.
+Creates a [ProtectionDescriptor](class_mip_protectiondescriptor.md) whose access permissions are defined by this [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) instance.
 
   
-**Returns**: New ProtectionDescriptor instance
+**Returns**: New [ProtectionDescriptor](class_mip_protectiondescriptor.md) instance
   
 ### SetName function
 Sets protection policy name.
@@ -101,19 +101,17 @@ Parameters:
 
 
   
-### SetLabelId function
-Sets the labelId for UDP protection. Only allowed for custom protection type.
+### SetLabelInfo function
+Sets the label id and tenant id for UDP protection. Only allowed for custom protection type.
 
 Parameters:  
-* **labelId**: label Id
+* **[LabelInfo](#struct_label_info)**: label info containing labelId and tenantId.
 
 
   
 ### LicenseType enum
-
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 DoNotForward            | Defines a do not forward license type.
 EncryptOnly            | Defines an encrypt only license type.
-
 License type to create a specialized license.

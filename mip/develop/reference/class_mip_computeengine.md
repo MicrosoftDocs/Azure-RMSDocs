@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class ComputeEngine 
@@ -13,24 +13,24 @@ ms.date: 11/14/2022
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector&lt;std::shared_ptr&lt;Label&gt;&gt; ListSensitivityLabels(const std::vector&lt;std::string&gt;& contentFormats)  | _Not yet documented._
-public std::shared_ptr&lt;ContentLabel&gt; GetSensitivityLabel(ComputeEngineContext& context, const DocumentState& state)  | _Not yet documented._
-public std::vector&lt;std::shared_ptr&lt;Action&gt;&gt; ComputeActions(ComputeEngineContext& context, const DocumentState& documentState, const ApplicationActionState& actionState)  | _Not yet documented._
-public std::pair&lt;std::vector&lt;std::shared_ptr&lt;Action&gt;&gt;, bool&gt; ComputeActionsWithRemoteState(ComputeEngineContext& context, const DocumentState& localDocumentState, const DocumentState& remoteDocumentState, const ApplicationActionState& actionState)  |  Computes actions while choosing between remote and local state.
+public const std::vector\&lt;std::shared_ptr\&lt;Label\&gt;\&gt; ListSensitivityLabels(const std::vector\&lt;std::string\&gt;& contentFormats)  | _Not yet documented._
+public std::shared_ptr\&lt;ContentLabel\&gt; GetSensitivityLabel(ComputeEngineContext& context, const DocumentState& state)  | _Not yet documented._
+public std::vector\&lt;std::shared_ptr\&lt;Action\&gt;\&gt; ComputeActions(ComputeEngineContext& context, const DocumentState& documentState, const ApplicationActionState& actionState)  | _Not yet documented._
+public std::pair\&lt;std::vector\&lt;std::shared_ptr\&lt;Action\&gt;\&gt;, bool\&gt; ComputeActionsWithRemoteState(ComputeEngineContext& context, const DocumentState& localDocumentState, const DocumentState& remoteDocumentState, const ApplicationActionState& actionState)  |  Computes actions while choosing between remote and local state.
 public void NotifyCommittedActions(ComputeEngineContext& context, const DocumentState& documentState, const ApplicationActionState& actionState)  | _Not yet documented._
-public const std::shared_ptr&lt;Label&gt; GetDefaultLabel(const std::string& contentFormat) const  | _Not yet documented._
+public const std::shared_ptr\&lt;Label\&gt; GetDefaultLabel(const std::string& contentFormat) const  | _Not yet documented._
 public const std::string& GetMoreInfoUrl() const  | _Not yet documented._
 public const std::string& GetUpn() const  | _Not yet documented._
 public bool IsLabelingRequired(const std::string& contentFormat) const  | _Not yet documented._
 public bool IsDowngradeJustificationRequired() const  | _Not yet documented._
 public const std::string& GetFileId() const  | _Not yet documented._
-public bool HasClassificationRules(const std::vector&lt;std::string&gt;& contentFormats) const  | _Not yet documented._
+public bool HasClassificationRules(const std::vector\&lt;std::string\&gt;& contentFormats) const  | _Not yet documented._
 public bool IsEnhancedClassificationEnabled() const  | _Not yet documented._
-public std::shared_ptr&lt;Label&gt; GetLabelById(const std::string& id) const  | _Not yet documented._
+public std::shared_ptr\&lt;Label\&gt; GetLabelById(const std::string& id) const  | _Not yet documented._
 public const std::string& GetTenantId() const  | _Not yet documented._
-public void SetSensitivityTypesRulePackages(std::vector&lt;std::shared_ptr&lt;SensitivityTypesRulePackage&gt;&gt; && custom)  | _Not yet documented._
-public const std::vector&lt;std::shared_ptr&lt;SensitivityTypesRulePackage&gt;&gt;& GetSensitivityTypesRulePackages() const  | _Not yet documented._
-public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetCustomSettings() const  | _Not yet documented._
+public void SetSensitivityTypesRulePackages(std::vector\&lt;std::shared_ptr\&lt;SensitivityTypesRulePackage\&gt;\&gt; && custom)  | _Not yet documented._
+public const std::vector\&lt;std::shared_ptr\&lt;SensitivityTypesRulePackage\&gt;\&gt;& GetSensitivityTypesRulePackages() const  | _Not yet documented._
+public const std::vector\&lt;std::pair\&lt;std::string, std::string\&gt;\&gt;& GetCustomSettings() const  | _Not yet documented._
 public uint32_t GetOpcMetadataVersion() const  | _Not yet documented._
 public const std::string& GetUserObjectId() const  | _Not yet documented._
 public bool HasWorkloadConsent(Workload workload) const  | _Not yet documented._
@@ -52,7 +52,7 @@ _Not documented yet._
   
 ### ComputeActionsWithRemoteState function
 Computes actions while choosing between remote and local state.
-State is selected using this priority. Unknown protection types, (template or ad-hoc not in the policy). Protection state is always preferable to unprotected state. Document state with label is preferred above one without. Label order, higher is preferred. Label timestamp, prefer newest labelled document. DocumentState LastModifiedTime optionally implemented, prefer newly modified file.
+State is selected using this priority. Unknown protection types, (template or ad-hoc not in the policy). Protection state is always preferable to unprotected state. Document state with label is preferred above one without. [Label](class_mip_label.md) order, higher is preferred. [Label](class_mip_label.md) timestamp, prefer newest labelled document. [DocumentState](#class_document_state) LastModifiedTime optionally implemented, prefer newly modified file.
 
 Parameters:  
 * **context**: Comput engine context. 

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class xml::XmlDocument 
@@ -14,9 +14,9 @@ Interface to interact with XML document.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::vector&lt;std::shared_ptr&lt;XmlNode&gt;&gt; SelectNodes(const std::string& xpath, const std::shared_ptr&lt;XmlNode&gt;& node) const  |  Get matching xml nodes from a specified xpath. Will throw exception of type mip::BadInputError if xml nodes cannot be parsed, there is an invalid encoding, or the xpath cannot be interpreted.
+public std::vector\&lt;std::shared_ptr\&lt;XmlNode\&gt;\&gt; SelectNodes(const std::string& xpath, const std::shared_ptr\&lt;XmlNode\&gt;& node) const  |  Get matching xml nodes from a specified xpath. Will throw exception of type mip::BadInputError if xml nodes cannot be parsed, there is an invalid encoding, or the xpath cannot be interpreted.
 public std::string GetXmlContent() const  |  Parse an xml formatted buffer into an xmldocument.
-public std::shared_ptr&lt;XmlNode&gt; GetRootNode() const  |  Get the node that is an ancestor of all other nodes.
+public std::shared_ptr\&lt;XmlNode\&gt; GetRootNode() const  |  Get the node that is an ancestor of all other nodes.
   
 ## Members
   
@@ -32,16 +32,16 @@ Parameters:
 
 
   
-**Returns**: A vector of matching XmlNode shared pointers or an empty vector if none match
+**Returns**: A vector of matching [XmlNode](#classxml_1_1_xml_node) shared pointers or an empty vector if none match
   
 ### GetXmlContent function
 Parse an xml formatted buffer into an xmldocument.
 
   
-**Returns**: A utf-8 xml formatted string of the content of this XmlDocument
+**Returns**: A utf-8 xml formatted string of the content of this [XmlDocument](class_mip_xml_xmldocument.md)
   
 ### GetRootNode function
 Get the node that is an ancestor of all other nodes.
 
   
-**Returns**: A shared_ptr to an XmlNode.
+**Returns**: A shared_ptr to an [XmlNode](class_mip_xml_xmlnode.md)

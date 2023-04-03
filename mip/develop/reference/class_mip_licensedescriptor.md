@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class LicenseDescriptor 
@@ -15,7 +15,7 @@ The descriptor from a license.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Gets the Id.
-public const std::vector&lt;std::shared_ptr&lt;LicenseNameAndDescriptionItem&gt;&gt;& GetDescriptorItems() const  |  Gets the descriptor items.
+public const std::vector\&lt;std::shared_ptr\&lt;LicenseNameAndDescriptionItem\&gt;\&gt;& GetDescriptorItems() const  |  Gets the descriptor items.
   
 ## Members
   
@@ -29,4 +29,4 @@ Gets the Id.
 Gets the descriptor items.
 
   
-**Returns**: The descriptor items.
+**Returns**: The descriptor items

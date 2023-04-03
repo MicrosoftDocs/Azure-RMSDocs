@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class TemplateDescriptor 
@@ -16,7 +16,6 @@ ms.date: 11/14/2022
 public std::string GetId() const  |  Get Template ID.
 public std::string GetName() const  |  Get Template name.
 public std::string GetDescription() const  |  Get Template description.
-public bool GetIsOwnerGrantedFullAccess() const  |  Gets whether or not the owner is in the rights list with full access.
   
 ## Members
   
@@ -37,9 +36,3 @@ Get Template description.
 
   
 **Returns**: Template description
-  
-### GetIsOwnerGrantedFullAccess function
-Gets whether or not the owner is in the rights list with full access.
-
-  
-**Returns**: Bool.

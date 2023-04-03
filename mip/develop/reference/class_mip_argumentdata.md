@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class ArgumentData 
@@ -15,7 +15,7 @@ ms.date: 11/14/2022
 --------------------------------|---------------------------------------------
 public const std::string& GetValue() const  | _Not yet documented._
 public const std::string& GetKey() const  | _Not yet documented._
-public const std::vector&lt;std::string&gt;& GetValues() const  | _Not yet documented._
+public const std::vector\&lt;std::string\&gt;& GetValues() const  | _Not yet documented._
 public virtual ~ArgumentData()  | _Not yet documented._
   
 ## Members

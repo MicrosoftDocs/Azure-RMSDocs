@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class DocumentState 
@@ -15,13 +15,13 @@ ms.date: 11/14/2022
 --------------------------------|---------------------------------------------
 public std::string GetContentIdentifier() const  |  Gets the content description that describes the document. example for a file: [path\filename] example for an email: [Subject:Sender].
 public virtual DataState GetDataState() const  |  Gets the state of the content while the application is interacting with it.
-public std::vector&lt;MetadataEntry&gt; GetContentMetadata(const std::vector&lt;std::string&gt;& names, const std::vector&lt;std::string&gt;& namePrefixes) const  |  Get the meta-data items from the content.
-public std::shared_ptr&lt;ProtectionDescriptor&gt; GetProtectionDescriptor() const  |  Get the Protection Descriptor.
+public std::vector\&lt;MetadataEntry\&gt; GetContentMetadata(const std::vector\&lt;std::string\&gt;& names, const std::vector\&lt;std::string\&gt;& namePrefixes) const  |  Get the meta-data items from the content.
+public std::shared_ptr\&lt;ProtectionDescriptor\&gt; GetProtectionDescriptor() const  |  Get the Protection Descriptor.
 public std::string GetContentFormat() const  |  Gets the content format.
 public virtual MetadataVersion GetContentMetadataVersion() const  |  Gets the highest metadata version supported by the application for the tenant.
-public virtual std::shared_ptr&lt;ClassificationResults&gt; GetClassificationResults(const std::vector&lt;std::shared_ptr&lt;ClassificationRequest&gt;&gt; &) const  |  Return a map of classification results.
-public virtual std::map&lt;std::string, std::string&gt; GetAuditMetadata() const  |  Return a map of application specific audit key-value pairs.
-public virtual std::chrono::time_point&lt;std::chrono::system_clock&gt; GetLastModifiedTime() const  |  Return a time point to the last time the document was modified.
+public virtual std::shared_ptr\&lt;ClassificationResults\&gt; GetClassificationResults(const std::vector\&lt;std::shared_ptr\&lt;ClassificationRequest\&gt;\&gt; &) const  |  Return a map of classification results.
+public virtual std::map\&lt;std::string, std::string\&gt; GetAuditMetadata() const  |  Return a map of application specific audit key-value pairs.
+public virtual std::chrono::time_point\&lt;std::chrono::system_clock\&gt; GetLastModifiedTime() const  |  Return a time point to the last time the document was modified.
   
 ## Members
   

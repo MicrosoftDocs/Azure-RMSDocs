@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class FileEngine 
@@ -15,20 +15,20 @@ This class provides an interface for all engine functions.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Returns the engine settings.
-public const std::vector&lt;std::shared_ptr&lt;SensitivityTypesRulePackage&gt;&gt;& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
-public const std::shared_ptr&lt;Label&gt; GetDefaultSensitivityLabel() const  |  Get the default sensitivity label.
-public std::shared_ptr&lt;Label&gt; GetLabelById(const std::string& id) const  |  Gets the label according to the provided id.
-public const std::vector&lt;std::shared_ptr&lt;Label&gt;&gt; ListSensitivityLabels()  |  Returns a list of sensitivity labels.
+public const std::vector\&lt;std::shared_ptr\&lt;SensitivityTypesRulePackage\&gt;\&gt;& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
+public const std::shared_ptr\&lt;Label\&gt; GetDefaultSensitivityLabel() const  |  Get the default sensitivity label.
+public std::shared_ptr\&lt;Label\&gt; GetLabelById(const std::string& id) const  |  Gets the label according to the provided id.
+public const std::vector\&lt;std::shared_ptr\&lt;Label\&gt;\&gt; ListSensitivityLabels()  |  Returns a list of sensitivity labels.
 public const std::string& GetMoreInfoUrl() const  |  Provide a url for looking up more information about the policy/labels.
 public const std::string& GetPolicyFileId() const  |  Gets the policy file ID.
 public const std::string& GetSensitivityFileId() const  |  Gets the sensitivity file ID.
 public bool IsLabelingRequired() const  |  Checks if the policy dictates that a document must be labeled.
-public std::chrono::time_point&lt;std::chrono::system_clock&gt; GetLastPolicyFetchTime() const  |  Gets the time when the policy was last fetched.
+public std::chrono::time_point\&lt;std::chrono::system_clock\&gt; GetLastPolicyFetchTime() const  |  Gets the time when the policy was last fetched.
 public const std::string& GetPolicyDataXml() const  |  Gets policy data XML which describes the settings, labels, and rules associated with this policy.
-public std::shared_ptr&lt;AsyncControl&gt; CreateFileHandlerAsync(const std::string& inputFilePath, const std::string& actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr&lt;FileHandler::Observer&gt;& fileHandlerObserver, const std::shared_ptr&lt;void&gt;& context, const std::shared_ptr&lt;FileExecutionState&gt;& fileExecutionState, bool isGetSensitivityLabelAuditDiscoveryEnabled)  |  Starts creating a file handler for given file path.
-public std::shared_ptr&lt;AsyncControl&gt; CreateFileHandlerAsync(const std::shared_ptr&lt;Stream&gt;& inputStream, const std::string& actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr&lt;FileHandler::Observer&gt;& fileHandlerObserver, const std::shared_ptr&lt;void&gt;& context, const std::shared_ptr&lt;FileExecutionState&gt;& fileExecutionState, bool isGetSensitivityLabelAuditDiscoveryEnabled)  |  Starts creating a file handler for given file stream.
+public std::shared_ptr\&lt;AsyncControl\&gt; CreateFileHandlerAsync(const std::string& inputFilePath, const std::string& actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr\&lt;FileHandler::Observer\&gt;& fileHandlerObserver, const std::shared_ptr\&lt;void\&gt;& context, const std::shared_ptr\&lt;FileExecutionState\&gt;& fileExecutionState, bool isGetSensitivityLabelAuditDiscoveryEnabled)  |  Starts creating a file handler for given file path.
+public std::shared_ptr\&lt;AsyncControl\&gt; CreateFileHandlerAsync(const std::shared_ptr\&lt;Stream\&gt;& inputStream, const std::string& actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr\&lt;FileHandler::Observer\&gt;& fileHandlerObserver, const std::shared_ptr\&lt;void\&gt;& context, const std::shared_ptr\&lt;FileExecutionState\&gt;& fileExecutionState, bool isGetSensitivityLabelAuditDiscoveryEnabled)  |  Starts creating a file handler for given file stream.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Logs an application specific event to the audit pipeline.
-public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetCustomSettings() const  |  Gets a list of custom settings.
+public const std::vector\&lt;std::pair\&lt;std::string, std::string\&gt;\&gt;& GetCustomSettings() const  |  Gets a list of custom settings.
 public bool HasClassificationRules() const  |  Gets if the policy has automatic or recommendation rules.
 public bool HasWorkloadConsent(Workload workload) const  |  Checks if user has consented to specific workload,.
   
@@ -43,7 +43,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: FileEngine::Settings).
+**See also**: [FileEngine::Settings](#class_file_engine_1_1_settings)).
   
 ### GetDefaultSensitivityLabel function
 Get the default sensitivity label.
@@ -106,7 +106,7 @@ Parameters:
 * **isAuditDiscoveryEnabled**: representing whether audit discovery is enabled or not. 
 
 
-* **fileHandlerObserver**: A class implementing the FileHandler::Observer interface. 
+* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](class_mip_filehandler_observer.md) interface. 
 
 
 * **context**: Client context that will be opaquely passed back to the observer. 
@@ -132,7 +132,7 @@ Parameters:
 * **isAuditDiscoveryEnabled**: representing whether audit discovery is enabled or not. 
 
 
-* **fileHandlerObserver**: A class implementing the FileHandler::Observer interface. 
+* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](class_mip_filehandler_observer.md) interface. 
 
 
 * **context**: Client context that will be opaquely passed back to the observer. 

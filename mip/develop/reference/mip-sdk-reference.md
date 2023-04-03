@@ -5,14 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 # MIP SDK for C++ Reference
 
 The Microsoft Information Protection (MIP) SDK for C++ allows developers to manage and apply data protection policies to data and other digital assets.
 
 The MIP SDK for C++ includes Enumerations and structures](mip-enums-and-structs.md), and the following classes:
-
 
  Class                         | Description                                
 --------------------------------|---------------------------------------------
@@ -53,6 +52,8 @@ class [DelegationLicenseSettings](class_mip_delegationlicensesettings.md) | _Not
 class [DeprecatedApiError](class_mip_deprecatedapierror.md) | Caller invoked a deprecated API.
 class [DetailedClassificationResult](class_mip_detailedclassificationresult.md) | Class that contains the result of a classification call on the Execution State.
 class [DiagnosticDelegate](class_mip_diagnosticdelegate.md) | A class that defines the interface to the MIP SDK audit/telemetry notifications.
+class [DirectoryObject](class_mip_directioryobject.md) | The directory object information which includes- type, email, objectId and PUID.
+class [DirectoryObjectRights](class_mip_directioryobjectrights.md) | The directory object and rights associated with it.
 class [DocumentState](class_mip_documentstate.md) | _Not yet documented._
 class [Error](class_mip_error.md) | Base class for all errors that will be reported (thrown or returned) from MIP SDK.
 class [Event](class_mip_event.md) | A single audit/telemetry event.
@@ -90,6 +91,7 @@ class [LicenseConnectionInfo](class_mip_licenseconnectioninfo.md) | The connecti
 class [LicenseDescriptor](class_mip_licensedescriptor.md) | The descriptor from a license.
 class [LicenseNameAndDescriptionItem](class_mip_licensenameanddescriptionitem.md) | The descriptor line item from a license.
 class [LicenseNotRegisteredError](class_mip_licensenotregisterederror.md) | License is not registered.
+class [LicenseRightsData](class_mip_licenserightsdata.md) | The rights related information of the publishing license.
 class [LoggerDelegate](class_mip_loggerdelegate.md) | A class that defines the interface to the MIP SDK logger.
 class [LogMessageData](class_mip_logmessagedata.md) | A class that stores log messages.
 class [MetadataAction](class_mip_metadataaction.md) | An Action that adds metadata information to the content.

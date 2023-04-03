@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class PolicyHandler 
@@ -14,8 +14,8 @@ This class provides an interface for all policy handler functions on a file.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr&lt;ContentLabel&gt; GetSensitivityLabel(const ExecutionState& state)  |  Get the sensitivity label from existing content.
-public std::vector&lt;std::shared_ptr&lt;Action&gt;&gt; ComputeActions(const ExecutionState& state)  |  Executes the rules in the handler based on the provided state and returns the list of actions to be executed.
+public std::shared_ptr\&lt;ContentLabel\&gt; GetSensitivityLabel(const ExecutionState& state)  |  Get the sensitivity label from existing content.
+public std::vector\&lt;std::shared_ptr\&lt;Action\&gt;\&gt; ComputeActions(const ExecutionState& state)  |  Executes the rules in the handler based on the provided state and returns the list of actions to be executed.
 public void NotifyCommittedActions(const ExecutionState& state)  |  Called once the computed actions have been applied, and the data committed to disk.
   
 ## Members
