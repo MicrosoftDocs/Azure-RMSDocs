@@ -69,14 +69,14 @@ Gets the protection template ID, if any.
 Gets the label Info, if any.
 
   
-**Returns**: [Label](undefined) Info
+**Returns**: [Label](class_mip_label.md) Info
 This property will be populated in ProtectionDescriptors for preexisting protected content & for UDP label based protection. It is a field populated by the server at the moment protected content is consumed. For UDP label based protection, its populated from label and tenant id values set by client.
   
 ### GetLabelId function
 Gets the label ID, if any.
 
   
-**Returns**: [Label](undefined) ID
+**Returns**: [Label](class_mip_label.md) ID
 This property will be populated in ProtectionDescriptors for preexisting protected content & for UDP label based protection. It is a field populated by the server at the moment protected content is consumed. For UDP label based protection, its populated from labelId value set by client.
   
 ### GetContentId function
@@ -129,14 +129,14 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](undefined) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](#class_protection_descriptor_1a0624527c7c1237a97ec0f4b02140c42d)
+A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](#class_protection_descriptor_1a0624527c7c1237a97ec0f4b02140c42d)
   
 ### GetSignedAppData function
 Gets the app-specific data that was signed.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](undefined) may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](#class_protection_descriptor_1a1cb9a6cb79d37008c3918a6e0e3337c7)
+A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](#class_protection_descriptor_1a1cb9a6cb79d37008c3918a6e0e3337c7)
   
 ### GetDoubleKeyUrl function
 Gets the double key url to be used for custom protection.

@@ -124,13 +124,13 @@ Parameters:
 
   
 ### GetJsonDelegate function
-Get the [JsonDelegate](undefined) (if any) override implementation.
+Get the [JsonDelegate](class_mip_jsondelegate.md) (if any) override implementation.
 
   
-**Returns**: [JsonDelegate](undefined) (if any) override implementation.
+**Returns**: [JsonDelegate](class_mip_jsondelegate.md) (if any) override implementation.
   
 ### GetXmlDelegate function
-Get the XmlDelegate (if any) override implementation. [MipConfiguration](undefined) needs to be derived from to override the internal xmlDelegate with an alternative. This delegate is only configurable when using the MIP Core Context and only for the protection and upe sdk.
+Get the XmlDelegate (if any) override implementation. [MipConfiguration](class_mip_mipconfiguration.md) needs to be derived from to override the internal xmlDelegate with an alternative. This delegate is only configurable when using the MIP Core Context and only for the protection and upe sdk.
 
   
 **Returns**: XmlDelegate (if any) override implementation. nullptr by default.

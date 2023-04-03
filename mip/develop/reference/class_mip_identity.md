@@ -15,27 +15,27 @@ Abstraction for identity.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public Identity()  |  Default [Identity](#class_identity) constructor used when a user email address is not known.
-public Identity(const Identity& other)  |  [Identity](undefined) copy constructor.
-public explicit Identity(const std::string& email)  |  [Identity](undefined) constructor used when a user email address is known.
-public explicit Identity(const std::string& email, const std::string& name)  |  [Identity](undefined) constructor used when a user email address and user name is known.
+public Identity(const Identity& other)  |  [Identity](class_mip_identity.md) copy constructor.
+public explicit Identity(const std::string& email)  |  [Identity](class_mip_identity.md) constructor used when a user email address is known.
+public explicit Identity(const std::string& email, const std::string& name)  |  [Identity](class_mip_identity.md) constructor used when a user email address and user name is known.
 public const std::string& GetEmail() const  |  Get the email.
 public const std::string& GetName() const  |  Get the user's friendly name. used for text marking.
   
 ## Members
   
 ### Identity function
-Default [Identity](undefined) constructor used when a user email address is not known.
+Default [Identity](class_mip_identity.md) constructor used when a user email address is not known.
   
 ### Identity function
-[Identity](undefined) copy constructor.
+[Identity](class_mip_identity.md) copy constructor.
 
 Parameters:  
-* **[Identity](undefined)**: used to create the copy.
+* **[Identity](class_mip_identity.md)**: used to create the copy.
 
 
   
 ### Identity function
-[Identity](undefined) constructor used when a user email address is known.
+[Identity](class_mip_identity.md) constructor used when a user email address is known.
 
 Parameters:  
 * **email**: must be valid email address.
@@ -43,7 +43,7 @@ Parameters:
 
   
 ### Identity function
-[Identity](undefined) constructor used when a user email address and user name is known.
+[Identity](class_mip_identity.md) constructor used when a user email address and user name is known.
 
 Parameters:  
 * **email**: must be valid email address. 

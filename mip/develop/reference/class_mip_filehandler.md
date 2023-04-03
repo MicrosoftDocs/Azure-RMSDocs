@@ -95,7 +95,7 @@ Throws [JustificationRequiredError](#class_justification_required_error) when se
 ### DeleteLabel function
 Deletes the sensitivity label from the file.
 Changes won't be written to the file until CommitAsync is called. Privileged and Auto method allows the API to override any existing label 
-Throws [JustificationRequiredError](undefined) when setting the label requires the operation to be justified (via the labelingOptions parameter).
+Throws [JustificationRequiredError](class_mip_justificationrequirederror.md) when setting the label requires the operation to be justified (via the labelingOptions parameter).
   
 ### SetProtection function
 Sets either custom or template-based permissions (according to protectionDescriptor-&gt;GetProtectionType) to the file.
@@ -111,12 +111,12 @@ Changes won't be written to the file until CommitAsync is called.
   
 ### CommitAsync function
 Writes the changes to the file specified by the |outputFilePath| parameter.
-[FileHandler::Observer](undefined) will be called upon success or failure.
+[FileHandler::Observer](class_mip_filehandler_observer.md) will be called upon success or failure.
   
 ### CommitAsync function
 Writes the changes to the stream specified by the |outputStream| parameter.
 |outputStream| must not be the same as inputStream used for creating the handler.
-[FileHandler::Observer](undefined) will be called upon success or failure.
+[FileHandler::Observer](class_mip_filehandler_observer.md) will be called upon success or failure.
   
 ### IsModified function
 Checks if there are changes to commit to the file.
@@ -124,11 +124,11 @@ Changes won't be written to the file until CommitAsync is called.
   
 ### GetDecryptedTemporaryFileAsync function
 Returns a path to a temporary file (that will be deleted if possible) - representing the decrypted content.
-[FileHandler::Observer](undefined) will be called upon success or failure.
+[FileHandler::Observer](class_mip_filehandler_observer.md) will be called upon success or failure.
   
 ### GetDecryptedTemporaryStreamAsync function
 Returns a stream - representing the decrypted content.
-[FileHandler::Observer](undefined) will be called upon success or failure.
+[FileHandler::Observer](class_mip_filehandler_observer.md) will be called upon success or failure.
   
 ### NotifyCommitSuccessful function
 To be called when the changes have been committed to disk.

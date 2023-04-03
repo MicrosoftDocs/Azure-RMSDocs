@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class DelegateResponseError 
-Delegate Response [Error](undefined). Thrown or returned in response to encountering an error in a delegate method.
+Delegate Response [Error](class_mip_error.md). Thrown or returned in response to encountering an error in a delegate method.
   
 ## Summary
  Members                        | Descriptions                                

@@ -54,7 +54,7 @@ Parameters:
 * **observer**: A class implementing the [ProtectionEngine::Observer](#class_protection_engine_1_1_observer) interface 
 
 
-* **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 * **templateSettings**: [Settings](undefined) to use when obtaining templates
@@ -71,7 +71,7 @@ Parameters:
 * **observer**: A class implementing the [ProtectionEngine::Observer](undefined) interface 
 
 
-* **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -82,7 +82,7 @@ Parameters:
 Get collection of templates available to a user.
 
 Parameters:  
-* **context**: Client context that will be opaquely passed to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely passed to optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 * **templateSettings**: [Settings](undefined) to use when obtaining templates
@@ -96,7 +96,7 @@ Parameters:
 Get collection of templates available to a user.
 
 Parameters:  
-* **context**: Client context that will be opaquely passed to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely passed to optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -156,7 +156,7 @@ Parameters:
 * **A**: delegated user is specified when the authenticating user/application is acting on behalf of another user, empty if none 
 
 
-* **context**: This same context will be forwarded to optional [HttpDelegate](undefined)
+* **context**: This same context will be forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -170,10 +170,10 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -188,7 +188,7 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -203,10 +203,10 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -220,7 +220,7 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -231,7 +231,7 @@ Parameters:
 pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
 
 Parameters:  
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -242,10 +242,10 @@ Parameters:
 pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
 
 Parameters:  
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -262,7 +262,7 @@ Parameters:
 * **isOwnerNotificationEnabled**: Set to true to notify the owner via email whenever the document is decrypted, or false to not send the notification. 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
   
@@ -279,10 +279,10 @@ Parameters:
 * **isOwnerNotificationEnabled**: Set to true to notify the owner via email whenever the document is decrypted, or false to not send the notification. 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -296,7 +296,7 @@ Parameters:
 * **serializedPublishingLicense**: Serialized publishing license from protected content 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
   
@@ -307,10 +307,10 @@ Parameters:
 * **serializedPublishingLicense**: Serialized publishing license from protected content 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -324,7 +324,7 @@ Parameters:
 * **settings**: The delegation settings 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -339,10 +339,10 @@ Parameters:
 * **settings**: The delegation settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -357,7 +357,7 @@ Parameters:
 * **settings**: The common settings 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -371,10 +371,10 @@ Parameters:
 * **settings**: The common settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -389,7 +389,7 @@ Parameters:
 * **serializedPublishingLicense**: Serialized publishing license from protected content 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 * **settings**: The common settings
@@ -406,10 +406,10 @@ Parameters:
 * **serializedPublishingLicense**: Serialized publishing license from protected content 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 * **settings**: The common settings

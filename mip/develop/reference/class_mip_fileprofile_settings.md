@@ -9,15 +9,15 @@ ms.date: 03/30/2023
 ---
 
 # class FileProfile::Settings 
-[Settings](undefined) used by [FileProfile](undefined) during its creation and throughout its lifetime.
+[Settings](undefined) used by [FileProfile](class_mip_fileprofile.md) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::shared_ptr\&lt;MipContext\&gt;& mipContext, CacheStorageType cacheStorageType, std::shared_ptr\&lt;ConsentDelegate\&gt; consentDelegate, std::shared_ptr\&lt;Observer\&gt; observer)  |  [FileProfile::Settings](undefined) constructor.
+public Settings(const std::shared_ptr\&lt;MipContext\&gt;& mipContext, CacheStorageType cacheStorageType, std::shared_ptr\&lt;ConsentDelegate\&gt; consentDelegate, std::shared_ptr\&lt;Observer\&gt; observer)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor.
 public CacheStorageType GetCacheStorageType() const  |  Get whether caches are stored in memory or on disk.
 public std::shared_ptr\&lt;ConsentDelegate\&gt; GetConsentDelegate() const  |  Gets the consent delegate used to request user consent connecting to services.
-public std::shared_ptr\&lt;Observer\&gt; GetObserver() const  |  Gets the observer that receives notifications of events related to [FileProfile](undefined).
+public std::shared_ptr\&lt;Observer\&gt; GetObserver() const  |  Gets the observer that receives notifications of events related to [FileProfile](class_mip_fileprofile.md).
 public std::shared_ptr\&lt;MipContext\&gt; GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
 public std::shared_ptr\&lt;HttpDelegate\&gt; GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr\&lt;HttpDelegate\&gt;& httpDelegate)  |  Override default HTTP stack with client's own.
@@ -35,7 +35,7 @@ public void SetDnsRedirection(DnsRedirection dnsRedirection)  |  Sets the dns re
 ## Members
   
 ### Settings function
-[FileProfile::Settings](undefined) constructor.
+[FileProfile::Settings](class_mip_fileprofile_settings.md) constructor.
 
 Parameters:  
 * **mipContext**: Global context settings 
@@ -47,7 +47,7 @@ Parameters:
 * **consentDelegate**: Delegate used to obtain user permission to access external resources 
 
 
-* **observer**: [Observer](undefined) instance that will receive notifications of events related to [FileProfile](undefined)
+* **observer**: [Observer](undefined) instance that will receive notifications of events related to [FileProfile](class_mip_fileprofile.md)
 
 
   
@@ -64,10 +64,10 @@ Gets the consent delegate used to request user consent connecting to services.
 **Returns**: Consent delegate used for requesting user consent
   
 ### GetObserver function
-Gets the observer that receives notifications of events related to [FileProfile](undefined).
+Gets the observer that receives notifications of events related to [FileProfile](class_mip_fileprofile.md).
 
   
-**Returns**: [Observer](undefined) that receives notifications of events related to [FileProfile](undefined)
+**Returns**: [Observer](undefined) that receives notifications of events related to [FileProfile](class_mip_fileprofile.md)
   
 ### GetMipContext function
 Get MIP context which represents shared state across all profiles.

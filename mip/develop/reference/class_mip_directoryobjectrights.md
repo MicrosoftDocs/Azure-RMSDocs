@@ -22,7 +22,7 @@ public const std::vector\&lt;std::string\&gt;& GetRights() const  |  Gets rights
 ## Members
   
 ### DirectoryObjectRights function
-[DirectoryObjectRights](undefined) constructor.
+[DirectoryObjectRights](class_mip_directoryobjectrights.md) constructor.
 
 Parameters:  
 * **directoryObject**: The directory object 

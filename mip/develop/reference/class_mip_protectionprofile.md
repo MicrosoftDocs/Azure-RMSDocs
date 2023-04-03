@@ -62,7 +62,7 @@ Parameters:
 
   
 **Returns**: Async control object.
-[ProtectionProfile::Observer](undefined) will be called upon success or failure.
+[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) will be called upon success or failure.
   
 ### AddEngine function
 Add a new protection engine to the profile.
@@ -73,7 +73,7 @@ Parameters:
 
 
   
-**Returns**: Newly created [ProtectionEngine](undefined)
+**Returns**: Newly created [ProtectionEngine](class_mip_protectionengine.md)
   
 ### DeleteEngineAsync function
 Starts deleting the protection engine with the given ID. All data for the given engine will be deleted.
@@ -88,7 +88,7 @@ Parameters:
 
   
 **Returns**: Async control object.
-[ProtectionProfile::Observer](undefined) will be called upon success or failure.
+[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) will be called upon success or failure.
   
 ### DeleteEngine function
 Delete the protection engine with the given ID. All data for the given engine will be deleted.

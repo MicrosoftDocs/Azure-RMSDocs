@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class ProtectionProfile::Observer 
-Interface that receives notifications related to [ProtectionProfile](undefined).
+Interface that receives notifications related to [ProtectionProfile](class_mip_protectionprofile.md).
 This interface must be implemented by applications using the protection SDK
   
 ## Summary
@@ -30,7 +30,7 @@ public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const
 Called when profile was loaded successfully.
 
 Parameters:  
-* **profile**: A reference to the newly created [ProtectionProfile](undefined)
+* **profile**: A reference to the newly created [ProtectionProfile](class_mip_protectionprofile.md)
 
 
 * **context**: The same context that was passed to [ProtectionProfile::LoadAsync](#class_protection_profile_1a966887bd349935ad246747f981dd6309)
@@ -42,7 +42,7 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when loading a profile caused an error.
 
 Parameters:  
-* **error**: [Error](undefined) that occurred while loading 
+* **error**: [Error](class_mip_error.md) that occurred while loading 
 
 
 * **context**: The same context that was passed to [ProtectionProfile::LoadAsync](undefined)

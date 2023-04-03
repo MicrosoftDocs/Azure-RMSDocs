@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class LabelDisabledError 
-[Label](undefined) is disabled or inactive.
+[Label](class_mip_label.md) is disabled or inactive.
   
 ## Summary
  Members                        | Descriptions                                

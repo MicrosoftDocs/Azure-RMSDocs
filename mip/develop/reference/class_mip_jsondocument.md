@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class JsonDocument 
-[JsonDocument](undefined) abstraction class.
+[JsonDocument](class_mip_jsondocument.md) abstraction class.
   
 ## Summary
  Members                        | Descriptions                                

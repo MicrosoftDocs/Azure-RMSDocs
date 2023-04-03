@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class ProtectionHandler::PublishingSettings 
-Settings used to create a [ProtectionHandler](undefined) to protect new content.
+Settings used to create a [ProtectionHandler](class_mip_protectionhandler.md) to protect new content.
   
 ## Summary
  Members                        | Descriptions                                
@@ -38,8 +38,8 @@ public bool GetRepairLabelIdAllowed() const  |  Gets whether or not label id can
 public void SetRepairLabelIdAllowed(bool repairAllowed)  |  Sets whether or not label id can be added to publishing license on republish.
 public std::string GetApplicationScenarioId() const  |  Gets the scenario Id provided by the application which is used to correlation with the server.
 public void SetApplicationScenarioId(std::string applicationScenarioId)  |  Sets the scenario Id provided by the application.
-public bool GetIsOfflineOnly() const  |  Gets whether or not [ProtectionEngine](undefined) operation allows for online HTTP operations.
-public virtual void SetIsOfflineOnly(bool isOfflineOnly)  |  Sets whether or not [ProtectionEngine](undefined) operation allows for online HTTP operations.
+public bool GetIsOfflineOnly() const  |  Gets whether or not [ProtectionEngine](class_mip_protectionengine.md) operation allows for online HTTP operations.
+public virtual void SetIsOfflineOnly(bool isOfflineOnly)  |  Sets whether or not [ProtectionEngine](class_mip_protectionengine.md) operation allows for online HTTP operations.
 public void SetCustomSettings(const std::vector\&lt;std::pair\&lt;std::string, std::string\&gt;\&gt;& customSettings)  |  Set the custom settings, used for feature gating and testing.
 public const std::vector\&lt;std::pair\&lt;std::string, std::string\&gt;\&gt;& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
   
@@ -221,14 +221,14 @@ Parameters:
 
   
 ### GetIsOfflineOnly function
-Gets whether or not [ProtectionEngine](undefined) operation allows for online HTTP operations.
+Gets whether or not [ProtectionEngine](class_mip_protectionengine.md) operation allows for online HTTP operations.
 
   
 **Returns**: True if HTTP operations are disallowed, else false
 If this returns true, operation will only succeed if necessary content has already been cached. A mip::NetworkError will be thrown if needed info is not found. Consumption - content has already been previously decrypted and its unexpired license is cached. Protection - unexpired templates have been cached and user cert is loaded Others - undefined
   
 ### SetIsOfflineOnly function
-Sets whether or not [ProtectionEngine](undefined) operation allows for online HTTP operations.
+Sets whether or not [ProtectionEngine](class_mip_protectionengine.md) operation allows for online HTTP operations.
 
 Parameters:  
 * **isOfflineOnly**: True if HTTP operations are disallowed, else false

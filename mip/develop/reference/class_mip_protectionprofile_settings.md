@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class ProtectionProfile::Settings 
-[Settings](undefined) used by [ProtectionProfile](undefined) during its creation and throughout its lifetime.
+[Settings](undefined) used by [ProtectionProfile](class_mip_protectionprofile.md) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
@@ -18,11 +18,11 @@ public Settings(const std::shared_ptr\&lt;MipContext\&gt;& mipContext, CacheStor
 public Settings(const std::shared_ptr\&lt;MipContext\&gt;& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\&lt;ConsentDelegate\&gt;& consentDelegate)  |  [ProtectionProfile::Settings](undefined) constructor, used for synchronous operations.
 public CacheStorageType GetCacheStorageType() const  |  Get whether caches are stored in memory or on disk.
 public std::shared_ptr\&lt;ConsentDelegate\&gt; GetConsentDelegate() const  |  Gets the consent delegate used for connecting to services.
-public std::shared_ptr\&lt;ProtectionProfile::Observer\&gt; GetObserver() const  |  Gets the observer that receives notifications of events related to [ProtectionProfile](undefined).
+public std::shared_ptr\&lt;ProtectionProfile::Observer\&gt; GetObserver() const  |  Gets the observer that receives notifications of events related to [ProtectionProfile](class_mip_protectionprofile.md).
 public std::shared_ptr\&lt;MipContext\&gt; GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
 public std::shared_ptr\&lt;HttpDelegate\&gt; GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr\&lt;HttpDelegate\&gt;& httpDelegate)  |  Override default HTTP stack with client's own.
-public std::shared_ptr\&lt;StorageDelegate\&gt; GetStorageDelegate() const  |  Get the [StorageDelegate](undefined) (if any) provided by the application.
+public std::shared_ptr\&lt;StorageDelegate\&gt; GetStorageDelegate() const  |  Get the [StorageDelegate](class_mip_storagedelegate.md) (if any) provided by the application.
 public void SetStorageDelegate(const std::shared_ptr\&lt;StorageDelegate\&gt;& storageDelegate)  |  Override default storage cache with client's own implementation.
 public std::shared_ptr\&lt;TaskDispatcherDelegate\&gt; GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
 public void SetTaskDispatcherDelegate(const std::shared_ptr\&lt;TaskDispatcherDelegate\&gt;& taskDispatcherDelegate)  |  Override default asynchonous task dispatching handling with client's own.
@@ -54,7 +54,7 @@ Parameters:
 * **consentDelegate**: Delegate used to obtain user permission to access external resources 
 
 
-* **observer**: [Observer](undefined) instance that will receive notifications of events related to [ProtectionProfile](undefined)
+* **observer**: [Observer](undefined) instance that will receive notifications of events related to [ProtectionProfile](class_mip_protectionprofile.md)
 
 
 * **applicationInfo**: Info about application that is consuming the protection SDK
@@ -91,10 +91,10 @@ Gets the consent delegate used for connecting to services.
 **Returns**: Consent delegate used for connecting to services
   
 ### GetObserver function
-Gets the observer that receives notifications of events related to [ProtectionProfile](undefined).
+Gets the observer that receives notifications of events related to [ProtectionProfile](class_mip_protectionprofile.md).
 
   
-**Returns**: [Observer](undefined) that receives notifications of events related to [ProtectionProfile](undefined)
+**Returns**: [Observer](undefined) that receives notifications of events related to [ProtectionProfile](class_mip_protectionprofile.md)
   
 ### GetMipContext function
 Get MIP context which represents shared state across all profiles.
@@ -117,16 +117,16 @@ Parameters:
 
   
 ### GetStorageDelegate function
-Get the [StorageDelegate](undefined) (if any) provided by the application.
+Get the [StorageDelegate](class_mip_storagedelegate.md) (if any) provided by the application.
 
   
-**Returns**: [StorageDelegate](undefined) to be used for caching
+**Returns**: [StorageDelegate](class_mip_storagedelegate.md) to be used for caching
   
 ### SetStorageDelegate function
 Override default storage cache with client's own implementation.
 
 Parameters:  
-* **storageDelegate**: [StorageDelegate](undefined) interface implemented by client application
+* **storageDelegate**: [StorageDelegate](class_mip_storagedelegate.md) interface implemented by client application
 
 
   

@@ -9,12 +9,12 @@ ms.date: 03/30/2023
 ---
 
 # class ProtectionDescriptorBuilder 
-Constructs a [ProtectionDescriptor](undefined) that describes protection associated with a piece of content.
+Constructs a [ProtectionDescriptor](class_mip_protectiondescriptor.md) that describes protection associated with a piece of content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MIP_API std::shared_ptr\&lt;ProtectionDescriptor\&gt; Build()  |  Creates a [ProtectionDescriptor](undefined) whose access permissions are defined by this [ProtectionDescriptorBuilder](#class_protection_descriptor_builder) instance.
+public MIP_API std::shared_ptr\&lt;ProtectionDescriptor\&gt; Build()  |  Creates a [ProtectionDescriptor](class_mip_protectiondescriptor.md) whose access permissions are defined by this [ProtectionDescriptorBuilder](#class_protection_descriptor_builder) instance.
 public void SetName(const std::string& value)  |  Sets protection policy name.
 public void SetDescription(const std::string& value)  |  Sets protection policy description.
 public void SetContentValidUntil(const std::chrono::time_point\&lt;std::chrono::system_clock\&gt;& value)  |  Sets protection policy expiration time.
@@ -29,10 +29,10 @@ enum LicenseType  |  License type to create a specialized license.
 ## Members
   
 ### Build function
-Creates a [ProtectionDescriptor](undefined) whose access permissions are defined by this [ProtectionDescriptorBuilder](undefined) instance.
+Creates a [ProtectionDescriptor](class_mip_protectiondescriptor.md) whose access permissions are defined by this [ProtectionDescriptorBuilder](undefined) instance.
 
   
-**Returns**: New [ProtectionDescriptor](undefined) instance
+**Returns**: New [ProtectionDescriptor](class_mip_protectiondescriptor.md) instance
   
 ### SetName function
 Sets protection policy name.

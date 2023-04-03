@@ -24,7 +24,7 @@ public const std::chrono::time_point\&lt;std::chrono::system_clock\&gt; GetConte
 ## Members
   
 ### LicenseRightsData function
-[LicenseRightsData](undefined) constructor.
+[LicenseRightsData](class_mip_licenserightsdata.md) constructor.
 
 Parameters:  
 * **type**: The type of protection, whether it originated from protection SDK template or not 

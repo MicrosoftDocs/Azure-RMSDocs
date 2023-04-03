@@ -26,7 +26,7 @@ enum DirectoryObjectType  |  Describes the type of directory object.
   
 ### DirectoryObject function
 
-[DirectoryObject](undefined) constructor.
+[DirectoryObject](class_mip_directoryobject.md) constructor.
 
 Parameters:  
 * **type**: The type of directory object 

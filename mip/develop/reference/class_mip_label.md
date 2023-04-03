@@ -101,7 +101,7 @@ Get the custom settings of a label.
 Gets the action source of the label.
 
   
-**Returns**: [Action](undefined) source
+**Returns**: [Action](class_mip_action.md) source
   
 ### GetContentFormats function
 Gets content types.

@@ -14,14 +14,14 @@ A group of users and the rights associated with them.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public UserRights(const std::vector\&lt;std::string\&gt;& users, const std::vector\&lt;std::string\&gt;& rights)  |  [UserRights](undefined) constructor.
+public UserRights(const std::vector\&lt;std::string\&gt;& users, const std::vector\&lt;std::string\&gt;& rights)  |  [UserRights](class_mip_userrights.md) constructor.
 public const std::vector\&lt;std::string\&gt;& Users() const  |  Gets users associated with a set of rights.
 public const std::vector\&lt;std::string\&gt;& Rights() const  |  Gets rights associated with a group of users.
   
 ## Members
   
 ### UserRights function
-[UserRights](undefined) constructor.
+[UserRights](class_mip_userrights.md) constructor.
 
 Parameters:  
 * **users**: Group of users that share the same rights 

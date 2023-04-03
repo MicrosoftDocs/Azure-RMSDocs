@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class MetadataAction 
-An [Action](undefined) that adds metadata information to the content.
+An [Action](class_mip_action.md) that adds metadata information to the content.
   
 ## Summary
  Members                        | Descriptions                                

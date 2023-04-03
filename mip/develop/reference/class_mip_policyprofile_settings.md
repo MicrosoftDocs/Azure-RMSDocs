@@ -20,7 +20,7 @@ public const std::shared_ptr\&lt;PolicyProfile::Observer\&gt;& GetObserver() con
 public std::shared_ptr\&lt;MipContext\&gt; GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
 public std::shared_ptr\&lt;HttpDelegate\&gt; GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr\&lt;HttpDelegate\&gt;& httpDelegate)  |  Override default HTTP stack with client's own.
-public std::shared_ptr\&lt;StorageDelegate\&gt; GetStorageDelegate() const  |  Get the [StorageDelegate](undefined) (if any) provided by the application.
+public std::shared_ptr\&lt;StorageDelegate\&gt; GetStorageDelegate() const  |  Get the [StorageDelegate](class_mip_storagedelegate.md) (if any) provided by the application.
 public void SetStorageDelegate(const std::shared_ptr\&lt;StorageDelegate\&gt;& storageDelegate)  |  Override default storage cache with client's own implementation.
 public std::shared_ptr\&lt;TaskDispatcherDelegate\&gt; GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
 public void SetTaskDispatcherDelegate(const std::shared_ptr\&lt;TaskDispatcherDelegate\&gt;& taskDispatcherDelegate)  |  Override default asynchronous task dispatching handling with client's own.
@@ -44,7 +44,7 @@ Parameters:
 * **cacheStorageType**: Store any cached state in memory or on disk 
 
 
-* **observer**: A class implementing the [PolicyProfile::Observer](undefined) interface. Can be nullptr.
+* **observer**: A class implementing the [PolicyProfile::Observer](class_mip_policyprofile_observer.md) interface. Can be nullptr.
 
 
   
@@ -81,16 +81,16 @@ Parameters:
 
   
 ### GetStorageDelegate function
-Get the [StorageDelegate](undefined) (if any) provided by the application.
+Get the [StorageDelegate](class_mip_storagedelegate.md) (if any) provided by the application.
 
   
-**Returns**: [StorageDelegate](undefined) to be used for cache operations
+**Returns**: [StorageDelegate](class_mip_storagedelegate.md) to be used for cache operations
   
 ### SetStorageDelegate function
 Override default storage cache with client's own implementation.
 
 Parameters:  
-* **storageDelegate**: [StorageDelegate](undefined) implemented by client application
+* **storageDelegate**: [StorageDelegate](class_mip_storagedelegate.md) implemented by client application
 
 
   

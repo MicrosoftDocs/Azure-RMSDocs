@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class LabelNotFoundError 
-[Label](undefined) ID is not recognized.
+[Label](class_mip_label.md) ID is not recognized.
   
 ## Summary
  Members                        | Descriptions                                

@@ -15,8 +15,8 @@ An abstraction class for metadata entry.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public MetadataEntry(const std::string& key, const std::string& value, uint32_t version)  |  C'tor for a [MetadataEntry](#class_metadata_entry) abstraction.
-public MetadataEntry(const std::string& key, const std::string& value, const MetadataVersion& version)  |  C'tor for a [MetadataEntry](undefined) abstraction.
-public MetadataEntry(const std::string& key, const std::string& value)  |  C'tor for a [MetadataEntry](undefined) abstraction, version is set to a default of 0.
+public MetadataEntry(const std::string& key, const std::string& value, const MetadataVersion& version)  |  C'tor for a [MetadataEntry](class_mip_metadataentry.md) abstraction.
+public MetadataEntry(const std::string& key, const std::string& value)  |  C'tor for a [MetadataEntry](class_mip_metadataentry.md) abstraction, version is set to a default of 0.
 public const std::string& GetKey() const  |  Get the metadata entry key.
 public const std::string& GetValue() const  |  Get the metadata entry value.
 public MetadataVersion GetVersion() const  |  Get the metadata entry version.
@@ -24,7 +24,7 @@ public MetadataVersion GetVersion() const  |  Get the metadata entry version.
 ## Members
   
 ### MetadataEntry function
-C'tor for a [MetadataEntry](undefined) abstraction.
+C'tor for a [MetadataEntry](class_mip_metadataentry.md) abstraction.
 
 Parameters:  
 * **key**: metadata key entry. 
@@ -38,7 +38,7 @@ Parameters:
 
   
 ### MetadataEntry function
-C'tor for a [MetadataEntry](undefined) abstraction.
+C'tor for a [MetadataEntry](class_mip_metadataentry.md) abstraction.
 
 Parameters:  
 * **key**: metadata key entry. 
@@ -52,7 +52,7 @@ Parameters:
 
   
 ### MetadataEntry function
-C'tor for a [MetadataEntry](undefined) abstraction, version is set to a default of 0.
+C'tor for a [MetadataEntry](class_mip_metadataentry.md) abstraction, version is set to a default of 0.
 
 Parameters:  
 * **key**: metadata key entry. 

@@ -32,7 +32,7 @@ Parameters:
 Log a diagnostic event.
 
 Parameters:  
-* **event**: [Event](undefined) to be logged 
+* **event**: [Event](class_mip_event.md) to be logged 
 
 
 * **eventContext**: [EventContext](#class_event_context) associated with event

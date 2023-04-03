@@ -9,14 +9,14 @@ ms.date: 03/30/2023
 ---
 
 # class ProtectionHandler::ConsumptionSettings 
-Settings used to create a [ProtectionHandler](undefined) to consume existing content.
+Settings used to create a [ProtectionHandler](class_mip_protectionhandler.md) to consume existing content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public ConsumptionSettings(const std::vector\&lt;uint8_t\&gt;& serializedPublishingLicense)  |  [ProtectionHandler::ConsumptionSettings](#class_protection_handler_1_1_consumption_settings) constructor for creating a new handler.
-public ConsumptionSettings(const std::vector\&lt;uint8_t\&gt;& serializedPreLicense, const std::vector\&lt;uint8_t\&gt;& serializedPublishingLicense)  |  [ProtectionHandler::ConsumptionSettings](undefined) constructor for creating a new handler.
-public ConsumptionSettings(const std::shared_ptr\&lt;PublishingLicenseInfo\&gt;& licenseInfo)  |  [ProtectionHandler::ConsumptionSettings](undefined) constructor for creating a new handler.
+public ConsumptionSettings(const std::vector\&lt;uint8_t\&gt;& serializedPreLicense, const std::vector\&lt;uint8_t\&gt;& serializedPublishingLicense)  |  [ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
+public ConsumptionSettings(const std::shared_ptr\&lt;PublishingLicenseInfo\&gt;& licenseInfo)  |  [ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
 public std::shared_ptr\&lt;PublishingLicenseInfo\&gt; GetPublishingLicenseInfo() const  |  Get the publishing license associated with the protected content.
 public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
@@ -26,7 +26,7 @@ public const std::string& GetContentName() const  |  Gets the content name to re
 ## Members
   
 ### ConsumptionSettings function
-[ProtectionHandler::ConsumptionSettings](undefined) constructor for creating a new handler.
+[ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
 
 Parameters:  
 * **serializedPublishingLicense**: Serialized publishing license from protected content
@@ -34,7 +34,7 @@ Parameters:
 
   
 ### ConsumptionSettings function
-[ProtectionHandler::ConsumptionSettings](undefined) constructor for creating a new handler.
+[ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
 
 Parameters:  
 * **serializedPreLicense**: Serialized pre license from attached to the content. 
@@ -45,7 +45,7 @@ Parameters:
 
   
 ### ConsumptionSettings function
-[ProtectionHandler::ConsumptionSettings](undefined) constructor for creating a new handler.
+[ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
 
 Parameters:  
 * **licenseInfo**: Publishing license info from protected content

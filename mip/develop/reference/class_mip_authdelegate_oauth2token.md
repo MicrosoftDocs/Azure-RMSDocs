@@ -52,11 +52,11 @@ Parameters:
 Get the error message, if any.
 
   
-**Returns**: [Error](undefined) message.
+**Returns**: [Error](class_mip_error.md) message.
   
 ### SetErrorMessage function
 Set the error message.
 
 Parameters:  
-* **errorMessage**: [Error](undefined) message.
+* **errorMessage**: [Error](class_mip_error.md) message.
 

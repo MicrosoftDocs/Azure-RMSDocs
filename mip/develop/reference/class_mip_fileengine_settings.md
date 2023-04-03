@@ -14,10 +14,10 @@ ms.date: 03/30/2023
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public Settings(const std::string& engineId, const std::shared_ptr\&lt;AuthDelegate\&gt;& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [FileEngine::Settings](undefined) constructor for loading an existing engine.
-public Settings(const Identity& identity, const std::shared_ptr\&lt;AuthDelegate\&gt;& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [FileProfile::Settings](undefined) constructor for creating a new engine.
+public Settings(const Identity& identity, const std::shared_ptr\&lt;AuthDelegate\&gt;& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor for creating a new engine.
 public const std::string& GetEngineId() const  |  Returns the engine ID.
 public void SetEngineId(const std::string& id)  |  Set the engine ID.
-public const Identity& GetIdentity() const  |  Returns the engine [Identity](undefined).
+public const Identity& GetIdentity() const  |  Returns the engine [Identity](class_mip_identity.md).
 public void SetIdentity(const Identity& identity)  |  Sets the engine identity.
 public const std::string& GetClientData() const  |  Returns the engine client data.
 public const std::string& GetLocale() const  |  Return the engine locale.
@@ -72,10 +72,10 @@ Parameters:
 
   
 ### Settings function
-[FileProfile::Settings](undefined) constructor for creating a new engine.
+[FileProfile::Settings](class_mip_fileprofile_settings.md) constructor for creating a new engine.
 
 Parameters:  
-* **identity**: [Identity](undefined) info of the user associated with the new engine. 
+* **identity**: [Identity](class_mip_identity.md) info of the user associated with the new engine. 
 
 
 * **authDelegate**: The authentication delegate used by the SDK to acquire authentication tokens, will override the PolicyProfile::Settings::authDelegate if both provided 
@@ -103,7 +103,7 @@ Parameters:
 
   
 ### GetIdentity function
-Returns the engine [Identity](undefined).
+Returns the engine [Identity](class_mip_identity.md).
   
 ### SetIdentity function
 Sets the engine identity.

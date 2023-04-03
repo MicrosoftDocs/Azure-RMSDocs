@@ -32,7 +32,7 @@ public std::shared_ptr\&lt;EventProperty\&gt; GetProperty(const std::string& nam
 Get event name.
 
   
-**Returns**: [Event](undefined) name
+**Returns**: [Event](class_mip_event.md) name
   
 ### GetLevel function
 Get level of event, indicating whether it is considered necessary service data (NSD) or not.
@@ -44,7 +44,7 @@ Get level of event, indicating whether it is considered necessary service data (
 Get event start time.
 
   
-**Returns**: [Event](undefined) start time
+**Returns**: [Event](class_mip_event.md) start time
   
 ### AddProperty function
 Add a property to the event.
@@ -123,7 +123,7 @@ An audit-only property contains sensitive information and must not be written to
 Get all event properties.
 
   
-**Returns**: [Event](undefined) properties
+**Returns**: [Event](class_mip_event.md) properties
   
 ### GetProperty function
 Get property with the given name, if any.

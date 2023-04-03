@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class ProtectionEngine::Observer 
-Interface that receives notifications related to [ProtectionEngine](undefined).
+Interface that receives notifications related to [ProtectionEngine](class_mip_protectionengine.md).
 This interface must be implemented by applications using the protection SDK
   
 ## Summary
@@ -50,7 +50,7 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when retrieving templates generated an error.
 
 Parameters:  
-* **error**: [Error](undefined) that occurred while retrieving templates 
+* **error**: [Error](class_mip_error.md) that occurred while retrieving templates 
 
 
 * **context**: The same context that was passed to [ProtectionEngine::GetTemplatesAsync](undefined)
@@ -74,7 +74,7 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when retrieving rights for a label ID for the user.
 
 Parameters:  
-* **error**: [Error](undefined) that occurred while retrieving rights 
+* **error**: [Error](class_mip_error.md) that occurred while retrieving rights 
 
 
 * **context**: The same context that was passed to [ProtectionEngine::GetRightsForLabelIdAsync](undefined)
@@ -95,7 +95,7 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when user cert loaded failed.
 
 Parameters:  
-* **error**: [Error](undefined) that occurred while retrieving rights 
+* **error**: [Error](class_mip_error.md) that occurred while retrieving rights 
 
 
 * **context**: The same context that was passed to [ProtectionEngine::LoadUserCert](undefined)
@@ -116,7 +116,7 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when registration of content for tracking & revocation fails.
 
 Parameters:  
-* **error**: [Error](undefined) that occurred while registering content 
+* **error**: [Error](class_mip_error.md) that occurred while registering content 
 
 
 * **context**: The same context that was passed to [ProtectionEngine::RegisterContentForTrackingAndRevocationAsync](undefined)
@@ -137,7 +137,7 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when revocation of content is fails.
 
 Parameters:  
-* **error**: [Error](undefined) that occurred while revoking content 
+* **error**: [Error](class_mip_error.md) that occurred while revoking content 
 
 
 * **context**: The same context that was passed to [ProtectionEngine::RevokeContentAsync](undefined)
@@ -158,7 +158,7 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when create delegated license fails.
 
 Parameters:  
-* **error**: [Error](undefined) that occurred 
+* **error**: [Error](class_mip_error.md) that occurred 
 
 
 * **context**: The same context that was passed to [ProtectionEngine::CreateDelegationLicensesAsync](undefined)
@@ -179,7 +179,7 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when GetTenantInformationAsync fails.
 
 Parameters:  
-* **error**: [Error](undefined) that occurred 
+* **error**: [Error](class_mip_error.md) that occurred 
 
 
 * **context**: The same context that was passed to [ProtectionEngine::GetTenantInformationAsync](undefined)
@@ -203,7 +203,7 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when retrieving license rights data fails.
 
 Parameters:  
-* **error**: [Error](undefined) that occurred while retrieving license rights data 
+* **error**: [Error](class_mip_error.md) that occurred while retrieving license rights data 
 
 
 * **context**: The same context that was passed to [ProtectionEngine::GetLicenseRightsDataAsync](undefined)

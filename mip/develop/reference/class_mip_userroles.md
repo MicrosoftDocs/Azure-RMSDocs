@@ -21,7 +21,7 @@ public const std::vector\&lt;std::string\&gt;& Roles() const  |  Gets roles asso
 ## Members
   
 ### UserRoles function
-[UserRoles](undefined) constructor.
+[UserRoles](class_mip_userroles.md) constructor.
 
 Parameters:  
 * **users**: Group of users that share the same roles 

@@ -106,7 +106,7 @@ Parameters:
 * **isAuditDiscoveryEnabled**: representing whether audit discovery is enabled or not. 
 
 
-* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](undefined) interface. 
+* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](class_mip_filehandler_observer.md) interface. 
 
 
 * **context**: Client context that will be opaquely passed back to the observer. 
@@ -132,7 +132,7 @@ Parameters:
 * **isAuditDiscoveryEnabled**: representing whether audit discovery is enabled or not. 
 
 
-* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](undefined) interface. 
+* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](class_mip_filehandler_observer.md) interface. 
 
 
 * **context**: Client context that will be opaquely passed back to the observer. 
