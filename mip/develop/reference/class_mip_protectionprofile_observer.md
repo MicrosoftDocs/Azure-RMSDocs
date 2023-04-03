@@ -36,7 +36,7 @@ Parameters:
 * **context**: The same context that was passed to [ProtectionProfile::LoadAsync](#class_protection_profile_1a966887bd349935ad246747f981dd6309)
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionProfile::LoadAsync](undefined) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](#class_protection_profile_1_1_observer_1a96572cb783e546f44ed2a7b46ae070a9) or [ProtectionProfile::Observer::OnLoadFailure](#class_protection_profile_1_1_observer_1ae0a17f434b7e9cb2635e4b6b69581df6)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](#class_protection_profile_1_1_observer_1a96572cb783e546f44ed2a7b46ae070a9) or [ProtectionProfile::Observer::OnLoadFailure](#class_protection_profile_1_1_observer_1ae0a17f434b7e9cb2635e4b6b69581df6)
   
 ### OnLoadFailure function
 Called when loading a profile caused an error.
@@ -45,10 +45,10 @@ Parameters:
 * **error**: [Error](class_mip_error.md) that occurred while loading 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::LoadAsync](undefined)
+* **context**: The same context that was passed to ProtectionProfile::LoadAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionProfile::LoadAsync](undefined) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](undefined) or [ProtectionProfile::Observer::OnLoadFailure](undefined)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to ProtectionProfile::Observer::OnLoadSuccess or ProtectionProfile::Observer::OnLoadFailure
   
 ### OnListEnginesSuccess function
 Called when list of engines was generated successfully.
@@ -68,7 +68,7 @@ Parameters:
 * **error**: the error that caused the list engines operation to fail. 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::ListEnginesAsync](undefined)
+* **context**: The same context that was passed to ProtectionProfile::ListEnginesAsync
 
 
   
@@ -90,7 +90,7 @@ Parameters:
 * **error**: the error that caused the add engine operation to fail. 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::AddEngineAsync](undefined)
+* **context**: The same context that was passed to ProtectionProfile::AddEngineAsync
 
 
   

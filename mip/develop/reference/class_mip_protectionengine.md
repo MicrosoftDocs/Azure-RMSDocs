@@ -57,7 +57,7 @@ Parameters:
 * **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
-* **templateSettings**: [Settings](undefined) to use when obtaining templates
+* **templateSettings**: Settings to use when obtaining templates
 
 
 
@@ -68,7 +68,7 @@ Parameters:
 Get collection of templates available to a user.
 
 Parameters:  
-* **observer**: A class implementing the [ProtectionEngine::Observer](undefined) interface 
+* **observer**: A class implementing the ProtectionEngine::Observer interface 
 
 
 * **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
@@ -85,7 +85,7 @@ Parameters:
 * **context**: Client context that will be opaquely passed to optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
-* **templateSettings**: [Settings](undefined) to use when obtaining templates
+* **templateSettings**: Settings to use when obtaining templates
 
 
 
@@ -121,7 +121,7 @@ Parameters:
 * **documentId**: Document ID associated with the document metadata 
 
 
-* **labelId**: [Label](undefined) ID associated with the document metadata with which the document created 
+* **labelId**: Label ID associated with the document metadata with which the document created 
 
 
 * **ownerEmail**: owner of the document 
@@ -130,10 +130,10 @@ Parameters:
 * **A**: delegated user is specified when the authenticating user/application is acting on behalf of another user, empty if none 
 
 
-* **observer**: A class implementing the [ProtectionEngine::Observer](undefined) interface 
+* **observer**: A class implementing the ProtectionEngine::Observer interface 
 
 
-* **context**: This same context will be forwarded to [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](undefined) or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](undefined)
+* **context**: This same context will be forwarded to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
 
 
 
@@ -147,7 +147,7 @@ Parameters:
 * **documentId**: Document ID associated with the document metadata 
 
 
-* **labelId**: [Label](undefined) ID associated with the document metadata with which the document created 
+* **labelId**: Label ID associated with the document metadata with which the document created 
 
 
 * **ownerEmail**: Owner of the document 
@@ -380,7 +380,7 @@ Parameters:
 
   
 **Returns**: Async control object.
-- [ProtectionEngine::Observer::OnGetTenantInformationAsyncSuccess](undefined) will be called on success ProtectionEngine::Observer::OnGetTenantInformationAsyncFailure will be called on failure
+- ProtectionEngine::Observer::OnGetTenantInformationAsyncSuccess will be called on success ProtectionEngine::Observer::OnGetTenantInformationAsyncFailure will be called on failure
   
 ### GetLicenseRightsData function
 Get license rights data.

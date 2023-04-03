@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class xml::XmlNode 
-brief defines abstraction over XML node. XmlNodes will be treated as memory managed by [XmlDocument](class_mip_xml_xmldocument.md) except for [RemoveNodeFromDocument()](undefined) which should handle its own memory clean up
+brief defines abstraction over XML node. XmlNodes will be treated as memory managed by [XmlDocument](class_mip_xml_xmldocument.md) except for RemoveNodeFromDocument() which should handle its own memory clean up
   
 ## Summary
  Members                        | Descriptions                                

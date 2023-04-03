@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class FileProfile::Settings 
-[Settings](undefined) used by [FileProfile](class_mip_fileprofile.md) during its creation and throughout its lifetime.
+Settings used by [FileProfile](class_mip_fileprofile.md) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                

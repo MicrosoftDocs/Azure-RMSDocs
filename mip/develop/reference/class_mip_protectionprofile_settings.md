@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class ProtectionProfile::Settings 
-[Settings](undefined) used by [ProtectionProfile](class_mip_protectionprofile.md) during its creation and throughout its lifetime.
+Settings used by [ProtectionProfile](class_mip_protectionprofile.md) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                

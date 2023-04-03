@@ -22,7 +22,7 @@ public const bool isOfflineOnly() const  |  whether Network operations is enable
 public std::shared_ptr\&lt;DiagnosticConfiguration\&gt; GetDiagnosticConfiguration() const  |  Get the Diagnostic (if any) provided by the application.
 public void SetDiagnosticConfiguration(const std::shared_ptr\&lt;DiagnosticConfiguration\&gt;& diagnosticConfiguration)  |  Override default configuration of diagnostic.
 public std::shared_ptr\&lt;LoggerDelegate\&gt; GetLoggerDelegate() const  |  Get the [LoggerDelegate](#class_logger_delegate) (if any) override implementation.
-public void SetLoggerDelegate(const std::shared_ptr\&lt;LoggerDelegate\&gt;& loggerDelegate)  |  Set the [LoggerDelegate](undefined) (if any) override implementation.
+public void SetLoggerDelegate(const std::shared_ptr\&lt;LoggerDelegate\&gt;& loggerDelegate)  |  Set the LoggerDelegate (if any) override implementation.
 public std::shared_ptr\&lt;StorageDelegate\&gt; GetStorageDelegate() const  |  Get the [StorageDelegate](class_mip_storagedelegate.md) (if any) override implementation.
 public void SetStorageDelegate(const std::shared_ptr\&lt;StorageDelegate\&gt;& storageDelegate)  |  Set the [StorageDelegate](class_mip_storagedelegate.md) (if any) override implementation. It's a required delegate for MIP Core Context.
 public std::shared_ptr\&lt;HttpDelegate\&gt; GetHttpDelegate() const  |  Get the [HttpDelegate](class_mip_httpdelegate.md) (if any) override implementation.
@@ -82,16 +82,16 @@ Parameters:
 
   
 ### GetLoggerDelegate function
-Get the [LoggerDelegate](undefined) (if any) override implementation.
+Get the LoggerDelegate (if any) override implementation.
 
   
-**Returns**: [LoggerDelegate](undefined) (if any) override implementation.
+**Returns**: LoggerDelegate (if any) override implementation.
   
 ### SetLoggerDelegate function
-Set the [LoggerDelegate](undefined) (if any) override implementation.
+Set the LoggerDelegate (if any) override implementation.
 
 Parameters:  
-* **loggerDelegate**: [LoggerDelegate](undefined) override implementation
+* **loggerDelegate**: LoggerDelegate override implementation
 
 
   
