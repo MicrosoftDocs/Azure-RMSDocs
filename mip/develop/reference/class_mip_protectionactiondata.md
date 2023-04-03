@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class ProtectionActionData 
@@ -18,10 +18,10 @@ public const std::string& GetTemplateId() const  | _Not yet documented._
 public const std::string& GetDoubleKeyEncryptionUrl() const  | _Not yet documented._
 public virtual ~ProtectionActionData()  | _Not yet documented._
 public ActionDataType GetType() const  | _Not yet documented._
-public const std::map&lt;std::string, std::string, CaseInsensitiveComparator&gt;& GetProperties() const  | _Not yet documented._
+public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetProperties() const  | _Not yet documented._
 public std::string GetArgumentValue(const std::string& key) const  | _Not yet documented._
 public const std::string& GetName() const  | _Not yet documented._
-public std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt; GetArguments() const  | _Not yet documented._
+public std::vector\<std::pair\<std::string, std::string\>\> GetArguments() const  | _Not yet documented._
   
 ## Members
   
@@ -59,4 +59,3 @@ _Not documented yet._
   
 ### GetArguments function
 _Not documented yet._
-

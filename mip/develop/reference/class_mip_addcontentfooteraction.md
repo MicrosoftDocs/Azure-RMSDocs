@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class AddContentFooterAction 
@@ -28,7 +28,7 @@ public int GetMargin() const  |  Get the margin of the footer from the bottom.
 An API used to mark the content footer element.
 
   
-**Returns**: The name that should be used for the UI element that holds the content footer. The same name will be returned in RemoveContentFooterAction in case the content footer needs to be removed.
+**Returns**: The name that should be used for the UI element that holds the content footer. The same name will be returned in [RemoveContentFooterAction](#class_remove_content_footer_action) in case the content footer needs to be removed.
   
 ### GetText function
 Get the text that is meant to go into the content footer.
@@ -60,7 +60,7 @@ Get the alignment of the footer.
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: ContentMarkAlignment
+**See also**: [ContentMarkAlignment](#common__types_8h_1a641eae31b3fab746f2aabb8efd804f46)
   
 ### GetMargin function
 Get the margin of the footer from the bottom.

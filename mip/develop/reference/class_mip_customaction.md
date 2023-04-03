@@ -5,17 +5,17 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class CustomAction 
-CustomAction is a generic action class that captures all the sub-properties of the action as a property bag. The caller is responsible to understand the meaning of the action.
+[CustomAction](undefined) is a generic action class that captures all the sub-properties of the action as a property bag. The caller is responsible to understand the meaning of the action.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetName() const  |  Get action name.
-public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetProperties() const  |  Get the properties key value pair list.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetProperties() const  |  Get the properties key value pair list.
   
 ## Members
   

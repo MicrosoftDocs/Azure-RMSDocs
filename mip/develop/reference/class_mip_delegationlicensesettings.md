@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class DelegationLicenseSettings 
@@ -13,17 +13,17 @@ ms.date: 11/14/2022
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr&lt;const PublishingLicenseInfo&gt; GetLicenseInfo() const  |  Gets the PublishingLicenseInfo, the publishing license.
-public const std::vector&lt;std::string&gt;& GetUsers() const  |  Gets the list of users for the request.
+public std::shared_ptr\<const PublishingLicenseInfo\> GetLicenseInfo() const  |  Gets the [PublishingLicenseInfo](undefined), the publishing license.
+public const std::vector\<std::string\>& GetUsers() const  |  Gets the list of users for the request.
 public bool GetAquireEndUserLicenses() const  |  Gets the boolean value that indicates whether or not to obtain end user license in addition to the delegate license.
   
 ## Members
   
 ### GetLicenseInfo function
-Gets the PublishingLicenseInfo, the publishing license.
+Gets the [PublishingLicenseInfo](undefined), the publishing license.
 
   
-**Returns**: The PublishingLicenseInfo
+**Returns**: The [PublishingLicenseInfo](undefined)
   
 ### GetUsers function
 Gets the list of users for the request.
@@ -35,4 +35,4 @@ Gets the list of users for the request.
 Gets the boolean value that indicates whether or not to obtain end user license in addition to the delegate license.
 
   
-**Returns**: Whether to aquire end user licenses.
+**Returns**: Whether to aquire end user licenses

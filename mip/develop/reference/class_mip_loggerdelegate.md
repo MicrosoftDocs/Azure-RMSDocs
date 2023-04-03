@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class LoggerDelegate 
@@ -17,7 +17,7 @@ A class that defines the interface to the MIP SDK logger.
 public void Init(const std::string& storagePath)  |  Initialize the logger.
 public void Flush()  |  Flush the logger.
 public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  Write a log statement to log file.
-public virtual void WriteToLogWithContext(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line, const std::shared_ptr&lt;void&gt; &)  |  Write a log statement to log file with a context. Override this function to handle the context.
+public virtual void WriteToLogWithContext(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line, const std::shared_ptr\<void\> &)  |  Write a log statement to log file with a context. Override this function to handle the context.
 public virtual void WriteToLogWithLogMessage(const LogMessageData& logMessage)  |  Write a log statement to a log.
   
 ## Members
@@ -81,3 +81,4 @@ Write a log statement to a log.
 
 Parameters:  
 * **logMessage**: The log message data containing the logging information
+

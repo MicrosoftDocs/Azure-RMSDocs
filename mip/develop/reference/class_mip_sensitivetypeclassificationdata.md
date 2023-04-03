@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class SensitiveTypeClassificationData 
@@ -59,4 +59,3 @@ _Not documented yet._
   
 ### Evaluate function
 _Not documented yet._
-

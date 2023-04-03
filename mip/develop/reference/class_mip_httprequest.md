@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class HttpRequest 
@@ -17,8 +17,8 @@ Interface that describes a single HTTP request.
 public const std::string& GetId() const  |  Gets request ID.
 public HttpRequestType GetRequestType() const  |  Get request type.
 public const std::string& GetUrl() const  |  Get request url.
-public const std::vector&lt;uint8_t&gt;& GetBody() const  |  Get request body.
-public const std::map&lt;std::string, std::string, CaseInsensitiveComparator&gt;& GetHeaders() const  |  Get request headers.
+public const std::vector\<uint8_t\>& GetBody() const  |  Get request body.
+public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders() const  |  Get request headers.
 public TransportLayerSecurityMinimumVersion GetTransportLayerSecurityMinimumVersion() const  |  Get the minimum required TLS version for this request.
   
 ## Members
@@ -28,7 +28,7 @@ Gets request ID.
 
   
 **Returns**: Request ID
-The corresponding HttpResponse will have the same ID
+The corresponding [HttpResponse](undefined) will have the same ID
   
 ### GetRequestType function
 Get request type.

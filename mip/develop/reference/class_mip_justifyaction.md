@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class JustifyAction 
-Justify Action requires providing a justification to a label downgrade and setting the response in the execution state.
+Justify [Action](undefined) requires providing a justification to a label downgrade and setting the response in the execution state.
   
 **See also**: mip::ExecutionState::IsDowngradeJustified
   
@@ -19,4 +19,3 @@ Justify Action requires providing a justification to a label downgrade and setti
   
 ## Members
 _Not documented yet._
-

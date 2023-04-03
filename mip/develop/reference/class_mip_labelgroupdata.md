@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class LabelGroupData 
@@ -14,37 +14,37 @@ ms.date: 11/14/2022
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetLabelId() const  | _Not yet documented._
-public const std::vector&lt;std::unique_ptr&lt;LabelGroupData&gt;&gt;& GetLabelGroupData() const  | _Not yet documented._
+public const std::vector\<std::unique_ptr\<LabelGroupData\>\>& GetLabelGroupData() const  | _Not yet documented._
 public int GetOrder() const  | _Not yet documented._
-public const std::vector&lt;std::string&gt;& GetContentFormats() const  | _Not yet documented._
-public const std::pair&lt;std::string, std::string&gt;& GetColor() const  | _Not yet documented._
-public const std::pair&lt;std::string, std::string&gt;& GetName() const  | _Not yet documented._
-public const std::pair&lt;std::string, std::string&gt;& GetDescription() const  | _Not yet documented._
+public const std::vector\<std::string\>& GetContentFormats() const  | _Not yet documented._
+public const std::pair\<std::string, std::string\>& GetColor() const  | _Not yet documented._
+public const std::pair\<std::string, std::string\>& GetName() const  | _Not yet documented._
+public const std::pair\<std::string, std::string\>& GetDescription() const  | _Not yet documented._
 public const std::string& GetTemplateId() const  | _Not yet documented._
 public const std::string& GetInvariantName() const  | _Not yet documented._
-public const std::pair&lt;std::string, std::string&gt;& GetTooltip() const  | _Not yet documented._
-public const std::pair&lt;std::string, std::string&gt;& GetAutoTooltip() const  | _Not yet documented._
+public const std::pair\<std::string, std::string\>& GetTooltip() const  | _Not yet documented._
+public const std::pair\<std::string, std::string\>& GetAutoTooltip() const  | _Not yet documented._
 public bool IsEnabled() const  | _Not yet documented._
 public bool IsDowngradeJustificationRequired() const  | _Not yet documented._
-public const std::vector&lt;std::string&gt;& GetSupportedContentFormats() const  | _Not yet documented._
-public const std::vector&lt;std::pair&lt;Workload, bool&gt;&gt;& GetWorkloadConsent() const  | _Not yet documented._
+public const std::vector\<std::string\>& GetSupportedContentFormats() const  | _Not yet documented._
+public const std::vector\<std::pair\<Workload, bool\>\>& GetWorkloadConsent() const  | _Not yet documented._
 public const std::string& GetDefaultLabelId() const  | _Not yet documented._
 public const std::string& GetDefaultLabelId(const std::string& contentFormat) const  | _Not yet documented._
-public const std::map&lt;std::string, mip::DefaultLabelInfo&gt;& GetDefaultLabelInfoPerContentFormat() const  | _Not yet documented._
-public const std::pair&lt;std::string, std::string&gt;& GetMoreInfoUrl() const  | _Not yet documented._
+public const std::map\<std::string, mip::DefaultLabelInfo\>& GetDefaultLabelInfoPerContentFormat() const  | _Not yet documented._
+public const std::pair\<std::string, std::string\>& GetMoreInfoUrl() const  | _Not yet documented._
 public bool IsMandatory() const  | _Not yet documented._
 public bool IsMandatory(const std::string& contentFormat) const  | _Not yet documented._
-public const std::vector&lt;std::shared_ptr&lt;ProtectionActionData&gt;&gt;& GetProtectionActionData() const  | _Not yet documented._
+public const std::vector\<std::shared_ptr\<ProtectionActionData\>\>& GetProtectionActionData() const  | _Not yet documented._
 public EnableAuditSetting GetEnableAuditSetting() const  | _Not yet documented._
 public bool IsCoauthEnabled() const  | _Not yet documented._
 public bool IsEnhancedClassificationEnabled() const  | _Not yet documented._
 public bool IsSubLabelPriorityOrderEnabled() const  | _Not yet documented._
 public const std::string& GetAuditWorkspaceId() const  | _Not yet documented._
-public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetCustomSettings() const  | _Not yet documented._
-public const std::vector&lt;std::string&gt;& GetLabelByCustomProperties() const  | _Not yet documented._
-public const std::vector&lt;std::string&gt;& GetCustomPropertiesByLabel() const  | _Not yet documented._
-public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetParsedCustomPropertiesByLabel() const  | _Not yet documented._
-public const std::vector&lt;std::tuple&lt;std::string, std::string, std::string&gt;&gt;& GetLabelByCustomPropertiesSettings() const  | _Not yet documented._
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  | _Not yet documented._
+public const std::vector\<std::string\>& GetLabelByCustomProperties() const  | _Not yet documented._
+public const std::vector\<std::string\>& GetCustomPropertiesByLabel() const  | _Not yet documented._
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetParsedCustomPropertiesByLabel() const  | _Not yet documented._
+public const std::vector\<std::tuple\<std::string, std::string, std::string\>\>& GetLabelByCustomPropertiesSettings() const  | _Not yet documented._
 public virtual ~LabelGroupData()  | _Not yet documented._
   
 ## Members
@@ -179,4 +179,3 @@ _Not documented yet._
   
 ### ~LabelGroupData function
 _Not documented yet._
-

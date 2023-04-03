@@ -5,30 +5,28 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class ProtectionHandler::ConsumptionSettings 
-Settings used to create a ProtectionHandler to consume existing content.
+Settings used to create a [ProtectionHandler](undefined) to consume existing content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ConsumptionSettings(const std::vector&lt;uint8_t&gt;& serializedPublishingLicense)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
-public ConsumptionSettings(const std::vector&lt;uint8_t&gt;& serializedPreLicense, const std::vector&lt;uint8_t&gt;& serializedPublishingLicense)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
-public ConsumptionSettings(const std::shared_ptr&lt;PublishingLicenseInfo&gt;& licenseInfo)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
-public std::shared_ptr&lt;PublishingLicenseInfo&gt; GetPublishingLicenseInfo() const  |  Get the publishing license associated with the protected content.
-public bool GetIsOfflineOnly() const  |  Gets whether or not ProtectionHandler creation allows for online HTTP operations.
-public void SetIsOfflineOnly(bool isOfflineOnly)  |  Sets whether or not ProtectionHandler creation allows for online HTTP operations.
+public ConsumptionSettings(const std::vector\<uint8_t\>& serializedPublishingLicense)  |  [ProtectionHandler::ConsumptionSettings](#class_protection_handler_1_1_consumption_settings) constructor for creating a new handler.
+public ConsumptionSettings(const std::vector\<uint8_t\>& serializedPreLicense, const std::vector\<uint8_t\>& serializedPublishingLicense)  |  [ProtectionHandler::ConsumptionSettings](undefined) constructor for creating a new handler.
+public ConsumptionSettings(const std::shared_ptr\<PublishingLicenseInfo\>& licenseInfo)  |  [ProtectionHandler::ConsumptionSettings](undefined) constructor for creating a new handler.
+public std::shared_ptr\<PublishingLicenseInfo\> GetPublishingLicenseInfo() const  |  Get the publishing license associated with the protected content.
 public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
-public void SetContentName(const std::string& contentName)  | _Not yet documented._
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
-public const std::string& GetContentName() const  | _Not yet documented._
+public void SetContentName(const std::string& contentName)  |  Defines the content name to register with document tracking.
+public const std::string& GetContentName() const  |  Gets the content name to register with document tracking.
   
 ## Members
   
 ### ConsumptionSettings function
-ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
+[ProtectionHandler::ConsumptionSettings](undefined) constructor for creating a new handler.
 
 Parameters:  
 * **serializedPublishingLicense**: Serialized publishing license from protected content
@@ -36,7 +34,7 @@ Parameters:
 
   
 ### ConsumptionSettings function
-ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
+[ProtectionHandler::ConsumptionSettings](undefined) constructor for creating a new handler.
 
 Parameters:  
 * **serializedPreLicense**: Serialized pre license from attached to the content. 
@@ -47,35 +45,19 @@ Parameters:
 
   
 ### ConsumptionSettings function
-ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
+[ProtectionHandler::ConsumptionSettings](undefined) constructor for creating a new handler.
 
 Parameters:  
 * **licenseInfo**: Publishing license info from protected content
 
 
-Providing a PublishingLicenseInfo (as opposed to just a raw serialized publishing license) will remove the need for MIP SDK to parse the publishing license.
+Providing a [PublishingLicenseInfo](#class_publishing_license_info) (as opposed to just a raw serialized publishing license) will remove the need for MIP SDK to parse the publishing license.
   
 ### GetPublishingLicenseInfo function
 Get the publishing license associated with the protected content.
 
   
 **Returns**: Publishing license information
-  
-### GetIsOfflineOnly function
-Gets whether or not ProtectionHandler creation allows for online HTTP operations.
-
-  
-**Returns**: True if HTTP operations are disallowed, else false
-If this is set to true, ProtectionHandler creation will only succeed if content has already been previously decrypted and its unexpired license is cached. A mip::NetworkError will be thrown if cached content is not found.
-  
-### SetIsOfflineOnly function
-Sets whether or not ProtectionHandler creation allows for online HTTP operations.
-
-Parameters:  
-* **isOfflineOnly**: True if HTTP operations are disallowed, else false
-
-
-If this is set to true, ProtectionHandler creation will only succeed if content has already been previously decrypted and its unexpired license is cached. A mip::NetworkError will be thrown if cached content is not found.
   
 ### SetDelegatedUserEmail function
 Sets the delegated user.
@@ -86,10 +68,6 @@ Parameters:
 
 A delegated user is specified when the authenticating user/application is acting on behalf of another user
   
-### SetContentName function
-_Not documented yet._
-
-  
 ### GetDelegatedUserEmail function
 Gets the delegated user.
 
@@ -97,6 +75,17 @@ Gets the delegated user.
 **Returns**: Delegated user
 A delegated user is specified when the authenticating user/application is acting on behalf of another user
   
-### GetContentName function
-_Not documented yet._
+### SetContentName function
+Defines the content name to register with document tracking.
 
+Parameters:  
+* **contentName**: The identifier to register content under.
+
+
+: If the content has already been registered, its name will not be changed.
+  
+### GetContentName function
+Gets the content name to register with document tracking.
+
+  
+**Returns**: The content name

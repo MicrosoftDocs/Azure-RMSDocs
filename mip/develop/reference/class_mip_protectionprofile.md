@@ -5,31 +5,31 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class ProtectionProfile 
-ProtectionProfile is the root class for performing protection operations.
-An application needs to create a ProtectionProfile before performing any protection operations
+[ProtectionProfile](undefined) is the root class for performing protection operations.
+An application needs to create a [ProtectionProfile](undefined) before performing any protection operations
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Gets settings used by ProtectionProfile during its initialization and throughout its lifetime.
-public std::shared_ptr&lt;AsyncControl&gt; ListEnginesAsync(const std::shared_ptr&lt;void&gt;& context)  |  Starts list engines operation.
-public std::vector&lt;std::string&gt; ListEngines()  |  List engines.
-public std::shared_ptr&lt;AsyncControl&gt; AddEngineAsync(const ProtectionEngine::Settings& settings, const std::shared_ptr&lt;void&gt;& context)  |  Starts adding a new protection engine to the profile.
-public std::shared_ptr&lt;ProtectionEngine&gt; AddEngine(const ProtectionEngine::Settings& settings)  |  Add a new protection engine to the profile.
-public std::shared_ptr&lt;AsyncControl&gt; DeleteEngineAsync(const std::string& engineId, const std::shared_ptr&lt;void&gt;& context)  |  Starts deleting the protection engine with the given ID. All data for the given engine will be deleted.
+public const Settings& GetSettings() const  |  Gets settings used by [ProtectionProfile](undefined) during its initialization and throughout its lifetime.
+public std::shared_ptr\<AsyncControl\> ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  Starts list engines operation.
+public std::vector\<std::string\> ListEngines()  |  List engines.
+public std::shared_ptr\<AsyncControl\> AddEngineAsync(const ProtectionEngine::Settings& settings, const std::shared_ptr\<void\>& context)  |  Starts adding a new protection engine to the profile.
+public std::shared_ptr\<ProtectionEngine\> AddEngine(const ProtectionEngine::Settings& settings)  |  Add a new protection engine to the profile.
+public std::shared_ptr\<AsyncControl\> DeleteEngineAsync(const std::string& engineId, const std::shared_ptr\<void\>& context)  |  Starts deleting the protection engine with the given ID. All data for the given engine will be deleted.
 public void DeleteEngine(const std::string& engineId)  |  Delete the protection engine with the given ID. All data for the given engine will be deleted.
   
 ## Members
   
 ### GetSettings function
-Gets settings used by ProtectionProfile during its initialization and throughout its lifetime.
+Gets settings used by [ProtectionProfile](undefined) during its initialization and throughout its lifetime.
 
   
-**Returns**: Settings used by ProtectionProfile during its initialization and throughout its lifetime
+**Returns**: [Settings](undefined) used by [ProtectionProfile](undefined) during its initialization and throughout its lifetime
   
 ### ListEnginesAsync function
 Starts list engines operation.
@@ -41,7 +41,7 @@ Parameters:
 
   
 **Returns**: Async control object.
-ProtectionProfile::Observer will be called upon success or failure.
+[ProtectionProfile::Observer](#class_protection_profile_1_1_observer) will be called upon success or failure.
   
 ### ListEngines function
 List engines.
@@ -62,7 +62,7 @@ Parameters:
 
   
 **Returns**: Async control object.
-ProtectionProfile::Observer will be called upon success or failure.
+[ProtectionProfile::Observer](undefined) will be called upon success or failure.
   
 ### AddEngine function
 Add a new protection engine to the profile.
@@ -73,7 +73,7 @@ Parameters:
 
 
   
-**Returns**: Newly created ProtectionEngine
+**Returns**: Newly created [ProtectionEngine](undefined)
   
 ### DeleteEngineAsync function
 Starts deleting the protection engine with the given ID. All data for the given engine will be deleted.
@@ -88,13 +88,11 @@ Parameters:
 
   
 **Returns**: Async control object.
-ProtectionProfile::Observer will be called upon success or failure.
+[ProtectionProfile::Observer](undefined) will be called upon success or failure.
   
 ### DeleteEngine function
 Delete the protection engine with the given ID. All data for the given engine will be deleted.
 
 Parameters:  
 * **id**: the unique engine ID.
-
-
 

@@ -5,22 +5,22 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class FileProfile 
-FileProfile class is the root class for using the Microsoft Information Protection operations.
+[FileProfile](undefined) class is the root class for using the Microsoft Information Protection operations.
 A typical application will only need one Profile.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Returns the profile settings.
-public std::shared_ptr&lt;AsyncControl&gt; ListEnginesAsync(const std::shared_ptr&lt;void&gt;& context)  |  Starts list engines operation.
-public std::shared_ptr&lt;AsyncControl&gt; UnloadEngineAsync(const std::string& id, const std::shared_ptr&lt;void&gt;& context)  |  Starts unloading the file engine with the given ID.
-public std::shared_ptr&lt;AsyncControl&gt; AddEngineAsync(const FileEngine::Settings& settings, const std::shared_ptr&lt;void&gt;& context)  |  Starts adding a new file engine to the profile.
-public std::shared_ptr&lt;AsyncControl&gt; DeleteEngineAsync(const std::string& id, const std::shared_ptr&lt;void&gt;& context)  |  Starts deleting the file engine with the given ID. All data for the given profile will be deleted.
-public void AcquirePolicyAuthToken(Cloud cloud, const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate) const  |  Trigger an authentication callback for policy.
+public std::shared_ptr\<AsyncControl\> ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  Starts list engines operation.
+public std::shared_ptr\<AsyncControl\> UnloadEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Starts unloading the file engine with the given ID.
+public std::shared_ptr\<AsyncControl\> AddEngineAsync(const FileEngine::Settings& settings, const std::shared_ptr\<void\>& context)  |  Starts adding a new file engine to the profile.
+public std::shared_ptr\<AsyncControl\> DeleteEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Starts deleting the file engine with the given ID. All data for the given profile will be deleted.
+public void AcquirePolicyAuthToken(Cloud cloud, const std::shared_ptr\<AuthDelegate\>& authDelegate) const  |  Trigger an authentication callback for policy.
   
 ## Members
   
@@ -32,28 +32,28 @@ Starts list engines operation.
 
   
 **Returns**: Async control object.
-FileProfile::Observer will be called upon success or failure.
+[FileProfile::Observer](undefined) will be called upon success or failure.
   
 ### UnloadEngineAsync function
 Starts unloading the file engine with the given ID.
 
   
 **Returns**: Async control object.
-FileProfile::Observer will be called upon success or failure.
+[FileProfile::Observer](undefined) will be called upon success or failure.
   
 ### AddEngineAsync function
 Starts adding a new file engine to the profile.
 
   
 **Returns**: Async control object.
-FileProfile::Observer will be called upon success or failure.
+[FileProfile::Observer](undefined) will be called upon success or failure.
   
 ### DeleteEngineAsync function
 Starts deleting the file engine with the given ID. All data for the given profile will be deleted.
 
   
 **Returns**: Async control object.
-FileProfile::Observer will be called upon success or failure.
+[FileProfile::Observer](undefined) will be called upon success or failure.
   
 ### AcquirePolicyAuthToken function
 Trigger an authentication callback for policy.

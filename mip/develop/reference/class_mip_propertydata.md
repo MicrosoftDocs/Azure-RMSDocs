@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class PropertyData 
@@ -29,4 +29,3 @@ _Not documented yet._
   
 ### ~PropertyData function
 _Not documented yet._
-
