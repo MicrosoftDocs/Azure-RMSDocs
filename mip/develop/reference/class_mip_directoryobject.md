@@ -8,7 +8,8 @@ ms.author: mbaldwin
 ms.date: 03/30/2023
 ---
 
-# class DirectoryObject 
+# class DirectoryObject
+
 The directory object information which includes- type, email, objectId and PUID.
   
 ## Summary
@@ -24,6 +25,7 @@ enum DirectoryObjectType  |  Describes the type of directory object.
 ## Members
   
 ### DirectoryObject function
+
 [DirectoryObject](undefined) constructor.
 
 Parameters:  

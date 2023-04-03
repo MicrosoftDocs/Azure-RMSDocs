@@ -9,6 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class LicenseRightsData 
+
 The rights related information of the publishing license.
   
 ## Summary

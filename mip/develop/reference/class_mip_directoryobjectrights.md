@@ -8,7 +8,8 @@ ms.author: mbaldwin
 ms.date: 03/30/2023
 ---
 
-# class DirectoryObjectRights 
+# class DirectoryObjectRights
+
 The directory object and rights associated with it.
   
 ## Summary
