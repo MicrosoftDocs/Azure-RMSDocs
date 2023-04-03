@@ -1,6 +1,6 @@
 ---
 title: class ProtectionEngine 
-description: Documents the protectionengine::undefined class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the protectionengine:ProtectionEngine::Observer::OnGetTenantInformationAsyncFailure class of the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
@@ -193,7 +193,7 @@ Parameters:
 
 
   
-**Returns**: [ProtectionHandler](undefined)
+**Returns**: [ProtectionHandler](class_mip_protectionhandler.md)
 If settings are offline only, engine needs to have previously called GetTemplates and LoadUserCert
   
 ### CreateProtectionHandlerForConsumptionAsync function
@@ -225,7 +225,7 @@ Parameters:
 
 
   
-**Returns**: [ProtectionHandler](undefined)
+**Returns**: [ProtectionHandler](class_mip_protectionhandler.md)
   
 ### LoadUserCert function
 pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
@@ -380,7 +380,7 @@ Parameters:
 
   
 **Returns**: Async control object.
-- [ProtectionEngine::Observer::OnGetTenantInformationAsyncSuccess](undefined) will be called on success [ProtectionEngine::Observer::OnGetTenantInformationAsyncFailure](undefined) will be called on failure
+- [ProtectionEngine::Observer::OnGetTenantInformationAsyncSuccess](undefined) will be called on success ProtectionEngine::Observer::OnGetTenantInformationAsyncFailure will be called on failure
   
 ### GetLicenseRightsData function
 Get license rights data.

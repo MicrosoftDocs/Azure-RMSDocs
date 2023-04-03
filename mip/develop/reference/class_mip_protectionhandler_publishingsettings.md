@@ -15,8 +15,8 @@ Settings used to create a [ProtectionHandler](class_mip_protectionhandler.md) to
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public PublishingSettings(const std::shared_ptr\&lt;ProtectionDescriptor\&gt;& protectionDescriptor)  |  [PublishingSettings](#class_protection_handler_1_1_publishing_settings) constructor for enforcing protection on content.
-public PublishingSettings(const std::shared_ptr\&lt;ProtectionDescriptor\&gt;& protectionDescriptor, const std::vector\&lt;uint8_t\&gt;& serializedPublishingLicense)  |  [PublishingSettings](undefined) constructor for online republishing.
-public PublishingSettings(const std::shared_ptr\&lt;ProtectionDescriptor\&gt;& protectionDescriptor, const std::shared_ptr\&lt;ProtectionHandler\&gt;& protectionHandler)  |  [PublishingSettings](undefined) constructor for offline republishing.
+public PublishingSettings(const std::shared_ptr\&lt;ProtectionDescriptor\&gt;& protectionDescriptor, const std::vector\&lt;uint8_t\&gt;& serializedPublishingLicense)  |  PublishingSettings constructor for online republishing.
+public PublishingSettings(const std::shared_ptr\&lt;ProtectionDescriptor\&gt;& protectionDescriptor, const std::shared_ptr\&lt;ProtectionHandler\&gt;& protectionHandler)  |  PublishingSettings constructor for offline republishing.
 public std::shared_ptr\&lt;ProtectionDescriptor\&gt; GetProtectionDescriptor() const  | _Not yet documented._
 public std::shared_ptr\&lt;ProtectionHandler\&gt; GetProtectionHandlerForRepublish() const  |  Gets protection handler for republishing scenario.
 public bool GetIsAuditedExtractionAllowed() const  |  Gets whether or not non-MIP-aware applications are allowed to open protected content.
@@ -46,7 +46,7 @@ public const std::vector\&lt;std::pair\&lt;std::string, std::string\&gt;\&gt;& G
 ## Members
   
 ### PublishingSettings function
-[PublishingSettings](undefined) constructor for enforcing protection on content.
+PublishingSettings constructor for enforcing protection on content.
 
 Parameters:  
 * **protectionDescriptor**: Protection details
@@ -54,7 +54,7 @@ Parameters:
 
   
 ### PublishingSettings function
-[PublishingSettings](undefined) constructor for online republishing.
+PublishingSettings constructor for online republishing.
 
 Parameters:  
 * **protectionDescriptor**: New protection details 
@@ -65,7 +65,7 @@ Parameters:
 
   
 ### PublishingSettings function
-[PublishingSettings](undefined) constructor for offline republishing.
+PublishingSettings constructor for offline republishing.
 
 Parameters:  
 * **protectionDescriptor**: New protection details 

@@ -14,8 +14,8 @@ ms.date: 03/30/2023
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::shared_ptr\&lt;MipContext\&gt;& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\&lt;ConsentDelegate\&gt;& consentDelegate, const std::shared_ptr\&lt;ProtectionProfile::Observer\&gt;& observer)  |  [ProtectionProfile::Settings](undefined) constructor that specifies an observer to be used for async operations.
-public Settings(const std::shared_ptr\&lt;MipContext\&gt;& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\&lt;ConsentDelegate\&gt;& consentDelegate)  |  [ProtectionProfile::Settings](undefined) constructor, used for synchronous operations.
+public Settings(const std::shared_ptr\&lt;MipContext\&gt;& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\&lt;ConsentDelegate\&gt;& consentDelegate, const std::shared_ptr\&lt;ProtectionProfile::Observer\&gt;& observer)  |  [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) constructor that specifies an observer to be used for async operations.
+public Settings(const std::shared_ptr\&lt;MipContext\&gt;& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\&lt;ConsentDelegate\&gt;& consentDelegate)  |  [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) constructor, used for synchronous operations.
 public CacheStorageType GetCacheStorageType() const  |  Get whether caches are stored in memory or on disk.
 public std::shared_ptr\&lt;ConsentDelegate\&gt; GetConsentDelegate() const  |  Gets the consent delegate used for connecting to services.
 public std::shared_ptr\&lt;ProtectionProfile::Observer\&gt; GetObserver() const  |  Gets the observer that receives notifications of events related to [ProtectionProfile](class_mip_protectionprofile.md).
@@ -42,7 +42,7 @@ public void SetDnsRedirection(DnsRedirection dnsRedirection)  |  Sets the dns re
 ## Members
   
 ### Settings function
-[ProtectionProfile::Settings](undefined) constructor that specifies an observer to be used for async operations.
+[ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) constructor that specifies an observer to be used for async operations.
 
 Parameters:  
 * **mipContext**: Global context settings 
@@ -54,7 +54,7 @@ Parameters:
 * **consentDelegate**: Delegate used to obtain user permission to access external resources 
 
 
-* **observer**: [Observer](undefined) instance that will receive notifications of events related to [ProtectionProfile](class_mip_protectionprofile.md)
+* **observer**: Observer instance that will receive notifications of events related to [ProtectionProfile](class_mip_protectionprofile.md)
 
 
 * **applicationInfo**: Info about application that is consuming the protection SDK
@@ -62,7 +62,7 @@ Parameters:
 
   
 ### Settings function
-[ProtectionProfile::Settings](undefined) constructor, used for synchronous operations.
+[ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) constructor, used for synchronous operations.
 
 Parameters:  
 * **mipContext**: Global context settings 
@@ -94,7 +94,7 @@ Gets the consent delegate used for connecting to services.
 Gets the observer that receives notifications of events related to [ProtectionProfile](class_mip_protectionprofile.md).
 
   
-**Returns**: [Observer](undefined) that receives notifications of events related to [ProtectionProfile](class_mip_protectionprofile.md)
+**Returns**: Observer that receives notifications of events related to [ProtectionProfile](class_mip_protectionprofile.md)
   
 ### GetMipContext function
 Get MIP context which represents shared state across all profiles.

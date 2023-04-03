@@ -1,6 +1,6 @@
 ---
 title: class FileHandler 
-description: Documents the filehandler::undefined class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the filehandler:[ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) class of the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
@@ -54,7 +54,7 @@ Parameters:
 * **observer**: A class implementing the [ProtectionHandler::Observer](#class_protection_handler_1_1_observer) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -65,10 +65,10 @@ Parameters:
 Perform revocation for the content.
 
 Parameters:  
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 

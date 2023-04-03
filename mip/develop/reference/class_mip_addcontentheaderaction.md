@@ -60,7 +60,7 @@ Get the alignment of the header.
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: [ContentMarkAlignment](undefined)
+**See also**: ContentMarkAlignment
   
 ### GetMargin function
 Get the margin of the header from the bottom.

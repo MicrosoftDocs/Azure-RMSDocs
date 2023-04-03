@@ -29,7 +29,7 @@ enum LicenseType  |  License type to create a specialized license.
 ## Members
   
 ### Build function
-Creates a [ProtectionDescriptor](class_mip_protectiondescriptor.md) whose access permissions are defined by this [ProtectionDescriptorBuilder](undefined) instance.
+Creates a [ProtectionDescriptor](class_mip_protectiondescriptor.md) whose access permissions are defined by this [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) instance.
 
   
 **Returns**: New [ProtectionDescriptor](class_mip_protectiondescriptor.md) instance

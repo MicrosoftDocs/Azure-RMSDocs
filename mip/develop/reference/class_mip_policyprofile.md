@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class PolicyProfile 
-[PolicyProfile](undefined) class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile](undefined) but it can create multiple profiles if needed.
+[PolicyProfile](class_mip_policyprofile.md) class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile](class_mip_policyprofile.md) but it can create multiple profiles if needed.
   
 ## Summary
  Members                        | Descriptions                                

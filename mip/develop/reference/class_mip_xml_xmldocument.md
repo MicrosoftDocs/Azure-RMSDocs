@@ -38,10 +38,10 @@ Parameters:
 Parse an xml formatted buffer into an xmldocument.
 
   
-**Returns**: A utf-8 xml formatted string of the content of this [XmlDocument](undefined)
+**Returns**: A utf-8 xml formatted string of the content of this [XmlDocument](class_mip_xml_xmldocument.md)
   
 ### GetRootNode function
 Get the node that is an ancestor of all other nodes.
 
   
-**Returns**: A shared_ptr to an [XmlNode](undefined)
+**Returns**: A shared_ptr to an [XmlNode](class_mip_xml_xmlnode.md)

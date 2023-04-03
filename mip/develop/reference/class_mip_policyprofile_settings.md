@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class PolicyProfile::Settings 
-[Settings](undefined) used by [PolicyProfile](undefined) during its creation and throughout its lifetime.
+Settings used by [PolicyProfile](class_mip_policyprofile.md) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                

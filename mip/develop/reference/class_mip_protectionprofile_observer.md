@@ -109,5 +109,5 @@ Parameters:
 * **error**: the error that caused the delete engine operation to fail. 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::DeleteEngineAsync](undefined)
+* **context**: The same context that was passed to ProtectionProfile::DeleteEngineAsync
 

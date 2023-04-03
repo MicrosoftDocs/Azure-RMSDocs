@@ -209,4 +209,4 @@ Parameters:
 * **context**: The same context that was passed to [ProtectionEngine::GetLicenseRightsDataAsync](undefined)
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::GetLicenseRightsDataAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetLicenseRightsDataSuccess](undefined) or [ProtectionEngine::Observer::OnGetLicenseRightsDataFailure](undefined)
+An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::GetLicenseRightsDataAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetLicenseRightsDataSuccess](undefined) or ProtectionEngine::Observer::OnGetLicenseRightsDataFailure

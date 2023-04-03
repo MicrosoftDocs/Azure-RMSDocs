@@ -79,7 +79,7 @@ Get logger implementation.
 Get Http implementation.
 
   
-**Returns**: [HttpDelegate](undefined)
+**Returns**: [HttpDelegate](class_mip_httpdelegate.md)
   
 ### GetRawLoggerDelegate function
 Get raw logger implementation.

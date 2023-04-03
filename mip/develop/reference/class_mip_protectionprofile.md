@@ -9,13 +9,13 @@ ms.date: 03/30/2023
 ---
 
 # class ProtectionProfile 
-[ProtectionProfile](undefined) is the root class for performing protection operations.
-An application needs to create a [ProtectionProfile](undefined) before performing any protection operations
+[ProtectionProfile](class_mip_protectionprofile.md) is the root class for performing protection operations.
+An application needs to create a [ProtectionProfile](class_mip_protectionprofile.md) before performing any protection operations
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Gets settings used by [ProtectionProfile](undefined) during its initialization and throughout its lifetime.
+public const Settings& GetSettings() const  |  Gets settings used by [ProtectionProfile](class_mip_protectionprofile.md) during its initialization and throughout its lifetime.
 public std::shared_ptr\&lt;AsyncControl\&gt; ListEnginesAsync(const std::shared_ptr\&lt;void\&gt;& context)  |  Starts list engines operation.
 public std::vector\&lt;std::string\&gt; ListEngines()  |  List engines.
 public std::shared_ptr\&lt;AsyncControl\&gt; AddEngineAsync(const ProtectionEngine::Settings& settings, const std::shared_ptr\&lt;void\&gt;& context)  |  Starts adding a new protection engine to the profile.
@@ -26,10 +26,10 @@ public void DeleteEngine(const std::string& engineId)  |  Delete the protection 
 ## Members
   
 ### GetSettings function
-Gets settings used by [ProtectionProfile](undefined) during its initialization and throughout its lifetime.
+Gets settings used by [ProtectionProfile](class_mip_protectionprofile.md) during its initialization and throughout its lifetime.
 
   
-**Returns**: [Settings](undefined) used by [ProtectionProfile](undefined) during its initialization and throughout its lifetime
+**Returns**: Settings used by [ProtectionProfile](class_mip_protectionprofile.md) during its initialization and throughout its lifetime
   
 ### ListEnginesAsync function
 Starts list engines operation.

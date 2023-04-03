@@ -9,7 +9,7 @@ ms.date: 03/30/2023
 ---
 
 # class ProtectionEngine::Settings 
-[Settings](undefined) used by [ProtectionEngine](undefined) during its creation and throughout its lifetime.
+Settings used by [ProtectionEngine](class_mip_protectionengine.md) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
@@ -51,7 +51,7 @@ public void SetLoggerContext(const std::shared_ptr\&lt;void\&gt;& loggerContext)
 [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for creating a new engine.
 
 Parameters:  
-* **identity**: [Identity](class_mip_identity.md) that will be associated with [ProtectionEngine](undefined)
+* **identity**: [Identity](class_mip_identity.md) that will be associated with [ProtectionEngine](class_mip_protectionengine.md)
 
 
 * **authDelegate**: The authentication delegate used by the SDK to acquire authentication tokens, will override the PolicyProfile::Settings::authDelegate if both provided 
