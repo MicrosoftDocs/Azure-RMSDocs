@@ -36,4 +36,4 @@ Create an Object value to later be added as a child of this document.
 Create an Array value to later be added as a child of this document.
 
   
-**Returns**: An Array value to later be added as a child of this document.nt.
+**Returns**: An Array value to later be added as a child of this document.

@@ -103,4 +103,4 @@ Get flighting feature set.
 Gets the mip configuration that was used to create the [MipContext](class_mip_mipcontext.md).
 
   
-**Returns**: The mip configurationation
+**Returns**: The mip configuration.

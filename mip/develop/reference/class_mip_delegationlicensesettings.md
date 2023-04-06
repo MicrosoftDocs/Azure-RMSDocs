@@ -35,4 +35,4 @@ Gets the list of users for the request.
 Gets the boolean value that indicates whether or not to obtain end user license in addition to the delegate license.
 
   
-**Returns**: Whether to aquire end user licenseses
+**Returns**: Whether to aquire end user licenses.

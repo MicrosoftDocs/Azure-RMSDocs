@@ -14,7 +14,7 @@ Settings used to create a [ProtectionHandler](class_mip_protectionhandler.md) to
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ConsumptionSettings(const std::vector&lt;uint8_t&gt;& serializedPublishingLicense)  |  [ProtectionHandler::ConsumptionSettings](#class_protection_handler_1_1_consumption_settings) constructor for creating a new handler.
+public ConsumptionSettings(const std::vector&lt;uint8_t&gt;& serializedPublishingLicense)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
 public ConsumptionSettings(const std::vector&lt;uint8_t&gt;& serializedPreLicense, const std::vector&lt;uint8_t&gt;& serializedPublishingLicense)  |  [ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
 public ConsumptionSettings(const std::shared_ptr&lt;PublishingLicenseInfo&gt;& licenseInfo)  |  [ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
 public std::shared_ptr&lt;PublishingLicenseInfo&gt; GetPublishingLicenseInfo() const  |  Get the publishing license associated with the protected content.
@@ -51,7 +51,7 @@ Parameters:
 * **licenseInfo**: Publishing license info from protected content
 
 
-Providing a [PublishingLicenseInfo](#class_publishing_license_info) (as opposed to just a raw serialized publishing license) will remove the need for MIP SDK to parse the publishing license.
+Providing a [PublishingLicenseInfo](class_mip_publishinglicenseinfo.md) (as opposed to just a raw serialized publishing license) will remove the need for MIP SDK to parse the publishing license.
   
 ### GetPublishingLicenseInfo function
 Get the publishing license associated with the protected content.
@@ -88,4 +88,4 @@ Parameters:
 Gets the content name to register with document tracking.
 
   
-**Returns**: The content name name
+**Returns**: The content name.

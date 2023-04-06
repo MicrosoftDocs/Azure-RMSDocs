@@ -66,4 +66,4 @@ Gets the issued time.
 Gets the label info of the license, if applicable.
   
 ### GetEncryptedRightsData function
-Gets the encrypted rights data. Used internally by the SDK. Applications should not try to decipher or modify this data.s data.
+Gets the encrypted rights data. Used internally by the SDK. Applications should not try to decipher or modify this data.

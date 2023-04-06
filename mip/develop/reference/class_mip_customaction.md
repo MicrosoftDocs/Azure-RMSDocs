@@ -29,4 +29,4 @@ Get action name.
 Get the properties key value pair list.
 
   
-**Returns**: A key value pair list.t.
+**Returns**: A key value pair list.

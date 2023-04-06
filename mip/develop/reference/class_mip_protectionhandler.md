@@ -12,6 +12,7 @@ ms.date: 03/30/2023
 Manages protection-related actions for a specific protection configuration.
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr&lt;Stream&gt; CreateProtectedStream(const std::shared_ptr&lt;Stream&gt;& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Create a protected stream that will allow for encryption/decryption of content.
@@ -200,7 +201,7 @@ Parameters:
 
   
 **Returns**: Serialized pre-license
-A pre-license allows a user to immediately consume content without making an additional HTTP call. The [ProtectionHandler](class_mip_protectionhandler.md) must have been created with a [ProtectionHandler::PublishingSettings::SetPreLicenseUserEmail](#class_protection_handler_1_1_publishing_settings_1afa3aed89ea38dbee80a52f4629b206c3) value or else this will return an empty vector.
+A pre-license allows a user to immediately consume content without making an additional HTTP call. The [ProtectionHandler](class_mip_protectionhandler.md) must have been created with a [ProtectionHandler::PublishingSettings::SetPreLicenseUserEmail](class_mip_protectionhandler_publishingsettings.md) value or else this will return an empty vector.
   
 ### GetCipherMode function
 Gets the cipher mode of the protection handler.
@@ -213,4 +214,5 @@ Gets the cipher mode of the protection handler.
 --------------------------------|---------------------------------------------
 Xml            | Legacy XML/SOAP format used by MSIPC
 Json            | JSON/REST format used by MIP SDK and RMS SDK
-Pre-license format.ormat.
+
+Pre-license format.

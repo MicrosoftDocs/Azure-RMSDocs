@@ -41,4 +41,4 @@ Gets users associated with a set of rights.
 Gets rights associated with a group of users.
 
   
-**Returns**: Rights associated with a group of userssers
+**Returns**: Rights associated with a group of users.

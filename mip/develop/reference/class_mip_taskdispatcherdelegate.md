@@ -133,4 +133,4 @@ Parameters:
 **Returns**: True if task was successfully cancelled, else false
   
 ### CancelAllTasks function
-Cancel all background tasks.und tasks.
+Cancel all background tasks.

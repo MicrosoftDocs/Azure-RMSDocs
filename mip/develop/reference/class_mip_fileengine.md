@@ -43,7 +43,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: [FileEngine::Settings](#class_file_engine_1_1_settings)).
+**See also**: [FileEngine::Settings](class_mip_fileengine_settings.md).
   
 ### GetDefaultSensitivityLabel function
 Get the default sensitivity label.
@@ -175,4 +175,4 @@ Gets if the policy has automatic or recommendation rules.
 Checks if user has consented to specific workload,.
 
   
-**Returns**: Bool indicating consent.ndicating consent.
+**Returns**: Bool indicating consent.

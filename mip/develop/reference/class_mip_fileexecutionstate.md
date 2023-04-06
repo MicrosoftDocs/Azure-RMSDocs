@@ -51,4 +51,4 @@ Registered Key:Value pairs Sender: Email Id for the sender Recipients: Represent
 Return an identifier which correlates application events with the corresponding protection service REST requests.
 
   
-**Returns**: An identifier (usually specified as a GUID)GUID)
+**Returns**: An identifier (usually specified as a GUID).

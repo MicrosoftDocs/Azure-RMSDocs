@@ -11,6 +11,7 @@ ms.date: 03/30/2023
 # class ParsedPublishingLicenseBuilder 
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public void SetDomains(const std::vector&lt;std::string&gt;& domains)  |  Sets the license domains.
@@ -26,7 +27,7 @@ public void SetSignedApplicationData(const std::vector&lt;std::shared_ptr&lt;Lic
 public void SetIssuedTime(const std::chrono::time_point&lt;std::chrono::system_clock&gt;& issuedTime)  |  Sets the issued time.
 public void SetLabelInfo(const LabelInfo& labelInfo)  |  Sets the label info.
 public void SetEncryptedRightsData(const std::vector&lt;uint8_t&gt;& encryptedRightsData)  |  Sets the encrypted rights data.
-public std::shared_ptr&lt;ParsedPublishingLicense&gt; CreateParsedPublishingLicense()  |  Creates a [ParsedPublishingLicense](#class_parsed_publishing_license) with the properties set on this object instance.
+public std::shared_ptr&lt;ParsedPublishingLicense&gt; CreateParsedPublishingLicense()  |  Creates a [ParsedPublishingLicense](class_mip_parsedpublishinglicense.md) with the properties set on this object instance.
   
 ## Members
   
@@ -138,4 +139,4 @@ Parameters:
 Creates a [ParsedPublishingLicense](class_mip_parsedpublishinglicense.md) with the properties set on this object instance.
 
   
-**Returns**: New [ParsedPublishingLicense](class_mip_parsedpublishinglicense.md) instanceinstance
+**Returns**: New [ParsedPublishingLicense](class_mip_parsedpublishinglicense.md) instance.

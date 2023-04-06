@@ -32,7 +32,7 @@ Parameters:
 
 
   
-**Returns**: A vector of matching [XmlNode](#classxml_1_1_xml_node) shared pointers or an empty vector if none match
+**Returns**: A vector of matching [XmlNode](class_mip_xml_xmlnode.md) shared pointers or an empty vector if none match
   
 ### GetXmlContent function
 Parse an xml formatted buffer into an xmldocument.
@@ -44,4 +44,4 @@ Parse an xml formatted buffer into an xmldocument.
 Get the node that is an ancestor of all other nodes.
 
   
-**Returns**: A shared_ptr to an [XmlNode](class_mip_xml_xmlnode.md).md)
+**Returns**: A shared_ptr to an [XmlNode](class_mip_xml_xmlnode.md).

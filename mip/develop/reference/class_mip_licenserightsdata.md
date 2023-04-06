@@ -13,9 +13,10 @@ ms.date: 03/30/2023
 The rights related information of the publishing license.
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public LicenseRightsData(const ProtectionType type, const std::vector&lt;DirectoryObjectRights&gt;& directoryObjectsRights, const std::chrono::time_point&lt;std::chrono::system_clock&gt;& contentValidUntil)  |  [LicenseRightsData](#class_license_rights_data) constructor.
+public LicenseRightsData(const ProtectionType type, const std::vector&lt;DirectoryObjectRights&gt;& directoryObjectsRights, const std::chrono::time_point&lt;std::chrono::system_clock&gt;& contentValidUntil)  |  LicenseRightsData constructor.
 public const ProtectionType GetProtectionType() const  |  Gets type of protection, whether it originated from protection SDK template or not.
 public const std::vector&lt;DirectoryObjectRights&gt;& GetDirectoryObjectsRights() const  |  Gets the set of directory objects and the rights associated with them.
 public bool DoesContentExpire()  |  Checks if content has an expiration time or not.
@@ -59,4 +60,4 @@ Checks if content has an expiration time or not.
 Gets protection expiration time.
 
   
-**Returns**: Protection expiration timetime
+**Returns**: Protection expiration time

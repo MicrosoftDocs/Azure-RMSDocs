@@ -109,6 +109,7 @@ Get debug info.
 **Returns**: Debug info (keys/values)
   
 ### ErrorCode enum
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 General            | General bad input error
@@ -117,4 +118,5 @@ ParameterParsing            | Parameter cannot be parsed correctly
 LicenseNotTrusted            | Publishing license not issued by trusted source
 DoubleKey            | A paremeter for double key encryption is needed and missing
 FileFormatNotSupported            | The input file's format is not supported
-ErrorCode of bad input error.or.
+
+ErrorCode of bad input error.
