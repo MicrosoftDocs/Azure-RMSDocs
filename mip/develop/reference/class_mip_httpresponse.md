@@ -44,4 +44,4 @@ Get request body.
 Get request headers.
 
   
-**Returns**: Request headersrs
+**Returns**: Request headers.

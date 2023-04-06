@@ -65,4 +65,4 @@ Called when committing the changes to the file failed.
 Called when inspect success.
   
 ### OnInspectFailure function
-Called when inspect failed.n inspect failed.
+Called when inspect failed.
