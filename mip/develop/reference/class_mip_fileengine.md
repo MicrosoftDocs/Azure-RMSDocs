@@ -175,4 +175,4 @@ Gets if the policy has automatic or recommendation rules.
 Checks if user has consented to specific workload,.
 
   
-**Returns**: Bool indicating consent.ndicating consent.
+**Returns**: Bool indicating consent.
