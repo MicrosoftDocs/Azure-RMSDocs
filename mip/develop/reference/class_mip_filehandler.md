@@ -12,6 +12,7 @@ ms.date: 03/30/2023
 Interface for all file handling functions.
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr&lt;ContentLabel&gt; GetLabel()  |  Starts retrieving the sensitivity label from the file.
@@ -51,7 +52,7 @@ Parameters:
 * **isOwnerNotificationEnabled**: Set to true to notify the owner via email whenever the document is decrypted, or false to not send the notification. 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](#class_protection_handler_1_1_observer) interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
 
 
 * **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
@@ -90,7 +91,7 @@ Create a file inspector object, used to retrieve file contents from compatible f
 ### SetLabel function
 Sets the sensitivity label to the file.
 Changes won't be written to the file until CommitAsync is called. Privileged and Auto method allows the API to override any existing label 
-Throws [JustificationRequiredError](#class_justification_required_error) when setting the label requires the operation to be justified (via the labelingOptions parameter).
+Throws [JustificationRequiredError](class_mip_justificationrequirederror.md) when setting the label requires the operation to be justified (via the labelingOptions parameter).
   
 ### DeleteLabel function
 Deletes the sensitivity label from the file.

@@ -9,9 +9,11 @@ ms.date: 03/30/2023
 ---
 
 # class HttpOperation 
+
 Interface that describes a single HTTP operation, implemented by client app when overriding [HttpDelegate](class_mip_httpdelegate.md).
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Gets operation ID.
@@ -25,7 +27,7 @@ Gets operation ID.
 
   
 **Returns**: Operation ID
-The corresponding [HttpRequest](#class_http_request) and [HttpResponse](#class_http_response) will have the same ID
+The corresponding [HttpRequest](class_mip_httprequest.md) and [HttpResponse](class_mip_httpresponse.md) will have the same ID
   
 ### GetResponse function
 Get response, if any.

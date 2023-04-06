@@ -91,7 +91,7 @@ Gets collection of users-to-rights mappings.
 
   
 **Returns**: Collection of users-to-rights mappings
-The value of the [UserRights](#class_user_rights) property will be empty if the current user doesn't have access to this information (that is, if the user is not the owner and does not have the VIEWRIGHTSDATA right).
+The value of the [UserRights](class_mip_userrights.md) property will be empty if the current user doesn't have access to this information (that is, if the user is not the owner and does not have the VIEWRIGHTSDATA right).
   
 ### GetUserRoles function
 Gets collection of users-to-roles mappings.
@@ -129,14 +129,14 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](#class_protection_descriptor_1a0624527c7c1237a97ec0f4b02140c42d)
+A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via ProtectionDescriptor::GetSignedAppData.
   
 ### GetSignedAppData function
 Gets the app-specific data that was signed.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](#class_protection_descriptor_1a1cb9a6cb79d37008c3918a6e0e3337c7)
+A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via ProtectionDescriptor::GetEncryptedAppData.
   
 ### GetDoubleKeyUrl function
 Gets the double key url to be used for custom protection.
