@@ -15,22 +15,22 @@ This interface must be implemented by applications using the protection SDK
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnGetTemplatesSuccess(const std::vector\&lt;std::shared_ptr\&lt;TemplateDescriptor\&gt;\&gt;& templateDescriptors, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when templates were retrieved successfully.
-public virtual void OnGetTemplatesFailure(const std::exception_ptr& error, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when retrieving templates generated an error.
-public virtual void OnGetRightsForLabelIdSuccess(const std::shared_ptr\&lt;std::vector\&lt;std::string\&gt;\&gt;& rights, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when rights were retrieved successfully.
-public virtual void OnGetRightsForLabelIdFailure(const std::exception_ptr& error, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when retrieving rights for a label ID for the user.
-public virtual void OnLoadUserCertSuccess(const std::shared_ptr\&lt;void\&gt;& context)  |  Called when user cert loaded successfully.
-public virtual void OnLoadUserCertFailure(const std::exception_ptr& error, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when user cert loaded failed.
-public virtual void OnRegisterContentForTrackingAndRevocationSuccess(const std::shared_ptr\&lt;void\&gt;& context)  |  Called when registration of content for tracking & revocation is successful.
-public virtual void OnRegisterContentForTrackingAndRevocationFailure(const std::exception_ptr& error, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when registration of content for tracking & revocation fails.
-public virtual void OnRevokeContentSuccess(const std::shared_ptr\&lt;void\&gt;& context)  |  Called when revocation of is successful.
-public virtual void OnRevokeContentFailure(const std::exception_ptr& error, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when revocation of content is fails.
-public virtual void OnCreateDelegatedLicensesSuccess(std::vector\&lt;std::shared_ptr\&lt;DelegationLicense\&gt;\&gt; delegatedLicenses, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when create delegated license is successful.
-public virtual void OnCreateDelegatedLicensesFailure(const std::exception_ptr& error, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when create delegated license fails.
-public virtual void OnGetTenantInformationAsyncSuccess(const std::shared_ptr\&lt;TenantInformation\&gt;& tenantInformation, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when GetTenantInformationAsync is successful.
-public virtual void OnGetTenantInformationAsyncFailure(const std::exception_ptr& error, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when GetTenantInformationAsync fails.
-public virtual void OnGetLicenseRightsDataSuccess(const std::shared_ptr\&lt;LicenseRightsData\&gt;& licenseRightsData, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when license rights data were retrieved successfully.
-public virtual void OnGetLicenseRightsDataFailure(const std::exception_ptr& error, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when retrieving license rights data fails.
+public virtual void OnGetTemplatesSuccess(const std::vector&lt;std::shared_ptr&lt;TemplateDescriptor&gt;&gt;& templateDescriptors, const std::shared_ptr&lt;void&gt;& context)  |  Called when templates were retrieved successfully.
+public virtual void OnGetTemplatesFailure(const std::exception_ptr& error, const std::shared_ptr&lt;void&gt;& context)  |  Called when retrieving templates generated an error.
+public virtual void OnGetRightsForLabelIdSuccess(const std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;& rights, const std::shared_ptr&lt;void&gt;& context)  |  Called when rights were retrieved successfully.
+public virtual void OnGetRightsForLabelIdFailure(const std::exception_ptr& error, const std::shared_ptr&lt;void&gt;& context)  |  Called when retrieving rights for a label ID for the user.
+public virtual void OnLoadUserCertSuccess(const std::shared_ptr&lt;void&gt;& context)  |  Called when user cert loaded successfully.
+public virtual void OnLoadUserCertFailure(const std::exception_ptr& error, const std::shared_ptr&lt;void&gt;& context)  |  Called when user cert loaded failed.
+public virtual void OnRegisterContentForTrackingAndRevocationSuccess(const std::shared_ptr&lt;void&gt;& context)  |  Called when registration of content for tracking & revocation is successful.
+public virtual void OnRegisterContentForTrackingAndRevocationFailure(const std::exception_ptr& error, const std::shared_ptr&lt;void&gt;& context)  |  Called when registration of content for tracking & revocation fails.
+public virtual void OnRevokeContentSuccess(const std::shared_ptr&lt;void&gt;& context)  |  Called when revocation of is successful.
+public virtual void OnRevokeContentFailure(const std::exception_ptr& error, const std::shared_ptr&lt;void&gt;& context)  |  Called when revocation of content is fails.
+public virtual void OnCreateDelegatedLicensesSuccess(std::vector&lt;std::shared_ptr&lt;DelegationLicense&gt;&gt; delegatedLicenses, const std::shared_ptr&lt;void&gt;& context)  |  Called when create delegated license is successful.
+public virtual void OnCreateDelegatedLicensesFailure(const std::exception_ptr& error, const std::shared_ptr&lt;void&gt;& context)  |  Called when create delegated license fails.
+public virtual void OnGetTenantInformationAsyncSuccess(const std::shared_ptr&lt;TenantInformation&gt;& tenantInformation, const std::shared_ptr&lt;void&gt;& context)  |  Called when GetTenantInformationAsync is successful.
+public virtual void OnGetTenantInformationAsyncFailure(const std::exception_ptr& error, const std::shared_ptr&lt;void&gt;& context)  |  Called when GetTenantInformationAsync fails.
+public virtual void OnGetLicenseRightsDataSuccess(const std::shared_ptr&lt;LicenseRightsData&gt;& licenseRightsData, const std::shared_ptr&lt;void&gt;& context)  |  Called when license rights data were retrieved successfully.
+public virtual void OnGetLicenseRightsDataFailure(const std::exception_ptr& error, const std::shared_ptr&lt;void&gt;& context)  |  Called when retrieving license rights data fails.
   
 ## Members
   

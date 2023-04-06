@@ -13,7 +13,7 @@ ms.date: 03/30/2023
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual std::shared_ptr\&lt;Error\&gt; Clone() const  |  Clone the error.
+public virtual std::shared_ptr&lt;Error&gt; Clone() const  |  Clone the error.
   
 ## Members
   
@@ -21,4 +21,4 @@ public virtual std::shared_ptr\&lt;Error\&gt; Clone() const  |  Clone the error.
 Clone the error.
 
   
-**Returns**: A clone of the error.
+**Returns**: A clone of the error..

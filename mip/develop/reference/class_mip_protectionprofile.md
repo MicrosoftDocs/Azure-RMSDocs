@@ -16,11 +16,11 @@ An application needs to create a [ProtectionProfile](class_mip_protectionprofile
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Gets settings used by [ProtectionProfile](class_mip_protectionprofile.md) during its initialization and throughout its lifetime.
-public std::shared_ptr\&lt;AsyncControl\&gt; ListEnginesAsync(const std::shared_ptr\&lt;void\&gt;& context)  |  Starts list engines operation.
-public std::vector\&lt;std::string\&gt; ListEngines()  |  List engines.
-public std::shared_ptr\&lt;AsyncControl\&gt; AddEngineAsync(const ProtectionEngine::Settings& settings, const std::shared_ptr\&lt;void\&gt;& context)  |  Starts adding a new protection engine to the profile.
-public std::shared_ptr\&lt;ProtectionEngine\&gt; AddEngine(const ProtectionEngine::Settings& settings)  |  Add a new protection engine to the profile.
-public std::shared_ptr\&lt;AsyncControl\&gt; DeleteEngineAsync(const std::string& engineId, const std::shared_ptr\&lt;void\&gt;& context)  |  Starts deleting the protection engine with the given ID. All data for the given engine will be deleted.
+public std::shared_ptr&lt;AsyncControl&gt; ListEnginesAsync(const std::shared_ptr&lt;void&gt;& context)  |  Starts list engines operation.
+public std::vector&lt;std::string&gt; ListEngines()  |  List engines.
+public std::shared_ptr&lt;AsyncControl&gt; AddEngineAsync(const ProtectionEngine::Settings& settings, const std::shared_ptr&lt;void&gt;& context)  |  Starts adding a new protection engine to the profile.
+public std::shared_ptr&lt;ProtectionEngine&gt; AddEngine(const ProtectionEngine::Settings& settings)  |  Add a new protection engine to the profile.
+public std::shared_ptr&lt;AsyncControl&gt; DeleteEngineAsync(const std::string& engineId, const std::shared_ptr&lt;void&gt;& context)  |  Starts deleting the protection engine with the given ID. All data for the given engine will be deleted.
 public void DeleteEngine(const std::string& engineId)  |  Delete the protection engine with the given ID. All data for the given engine will be deleted.
   
 ## Members
@@ -95,4 +95,6 @@ Delete the protection engine with the given ID. All data for the given engine wi
 
 Parameters:  
 * **id**: the unique engine ID.
+
+ne ID.
 

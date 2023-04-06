@@ -15,7 +15,7 @@ Interface that describes a single HTTP operation, implemented by client app when
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Gets operation ID.
-public std::shared_ptr\&lt;HttpResponse\&gt; GetResponse()  |  Get response, if any.
+public std::shared_ptr&lt;HttpResponse&gt; GetResponse()  |  Get response, if any.
 public bool IsCancelled()  |  Get cancellation status of operation.
   
 ## Members
@@ -37,4 +37,4 @@ Get response, if any.
 Get cancellation status of operation.
 
   
-**Returns**: Cancellation status
+**Returns**: Cancellation statuss
