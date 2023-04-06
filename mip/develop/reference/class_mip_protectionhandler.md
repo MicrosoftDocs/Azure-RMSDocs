@@ -213,4 +213,4 @@ Gets the cipher mode of the protection handler.
 --------------------------------|---------------------------------------------
 Xml            | Legacy XML/SOAP format used by MSIPC
 Json            | JSON/REST format used by MIP SDK and RMS SDK
-Pre-license format.ormat.
+Pre-license format.

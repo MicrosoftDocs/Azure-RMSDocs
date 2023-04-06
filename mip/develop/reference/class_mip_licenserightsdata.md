@@ -59,4 +59,4 @@ Checks if content has an expiration time or not.
 Gets protection expiration time.
 
   
-**Returns**: Protection expiration timetime
+**Returns**: Protection expiration time

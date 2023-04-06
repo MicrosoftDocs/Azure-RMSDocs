@@ -114,4 +114,4 @@ Parameters:
 --------------------------------|---------------------------------------------
 DoNotForward            | Defines a do not forward license type.
 EncryptOnly            | Defines an encrypt only license type.
-License type to create a specialized license.nse.
+License type to create a specialized license.

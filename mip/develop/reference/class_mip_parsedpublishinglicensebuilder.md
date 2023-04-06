@@ -138,4 +138,4 @@ Parameters:
 Creates a [ParsedPublishingLicense](class_mip_parsedpublishinglicense.md) with the properties set on this object instance.
 
   
-**Returns**: New [ParsedPublishingLicense](class_mip_parsedpublishinglicense.md) instanceinstance
+**Returns**: New [ParsedPublishingLicense](class_mip_parsedpublishinglicense.md) instance.

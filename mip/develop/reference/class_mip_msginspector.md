@@ -58,4 +58,4 @@ Get file types,.
 Get the file stream.
 
   
-**Returns**: A shared ptr to the file stream.eam.
+**Returns**: A shared ptr to the file stream.
