@@ -16,11 +16,11 @@ A typical application will only need one Profile.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Returns the profile settings.
-public std::shared_ptr\&lt;AsyncControl\&gt; ListEnginesAsync(const std::shared_ptr\&lt;void\&gt;& context)  |  Starts list engines operation.
-public std::shared_ptr\&lt;AsyncControl\&gt; UnloadEngineAsync(const std::string& id, const std::shared_ptr\&lt;void\&gt;& context)  |  Starts unloading the file engine with the given ID.
-public std::shared_ptr\&lt;AsyncControl\&gt; AddEngineAsync(const FileEngine::Settings& settings, const std::shared_ptr\&lt;void\&gt;& context)  |  Starts adding a new file engine to the profile.
-public std::shared_ptr\&lt;AsyncControl\&gt; DeleteEngineAsync(const std::string& id, const std::shared_ptr\&lt;void\&gt;& context)  |  Starts deleting the file engine with the given ID. All data for the given profile will be deleted.
-public void AcquirePolicyAuthToken(Cloud cloud, const std::shared_ptr\&lt;AuthDelegate\&gt;& authDelegate) const  |  Trigger an authentication callback for policy.
+public std::shared_ptr&lt;AsyncControl&gt; ListEnginesAsync(const std::shared_ptr&lt;void&gt;& context)  |  Starts list engines operation.
+public std::shared_ptr&lt;AsyncControl&gt; UnloadEngineAsync(const std::string& id, const std::shared_ptr&lt;void&gt;& context)  |  Starts unloading the file engine with the given ID.
+public std::shared_ptr&lt;AsyncControl&gt; AddEngineAsync(const FileEngine::Settings& settings, const std::shared_ptr&lt;void&gt;& context)  |  Starts adding a new file engine to the profile.
+public std::shared_ptr&lt;AsyncControl&gt; DeleteEngineAsync(const std::string& id, const std::shared_ptr&lt;void&gt;& context)  |  Starts deleting the file engine with the given ID. All data for the given profile will be deleted.
+public void AcquirePolicyAuthToken(Cloud cloud, const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate) const  |  Trigger an authentication callback for policy.
   
 ## Members
   

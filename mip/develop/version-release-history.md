@@ -20,12 +20,10 @@ Preview versions shouldn't be deployed in production. Instead, use the latest pr
 
 Use the following information to see what’s new or changed for a supported release. The most current release is listed first.
 
+NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions prior to 1.4 are not available.
+
 > [!NOTE]
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
-
-## Downloads for Previous Versions
-
-NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions prior to 1.4 are not available.
 
 | Version | Link                         | Status             | End of Support     |
 | ------- | ---------------------------- | ------------------ | ------------------ |

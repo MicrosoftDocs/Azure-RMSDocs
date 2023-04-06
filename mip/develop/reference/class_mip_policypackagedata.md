@@ -13,7 +13,7 @@ ms.date: 03/30/2023
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector\&lt;std::unique_ptr\&lt;RulePackageData\&gt;\&gt;& GetRules() const  | _Not yet documented._
+public const std::vector&lt;std::unique_ptr&lt;RulePackageData&gt;&gt;& GetRules() const  | _Not yet documented._
 public virtual ~PolicyPackageData()  | _Not yet documented._
   
 ## Members
@@ -24,3 +24,4 @@ _Not documented yet._
   
 ### ~PolicyPackageData function
 _Not documented yet._
+_

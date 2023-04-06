@@ -12,25 +12,26 @@ ms.date: 03/30/2023
 Interface for all file handling functions.
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr\&lt;ContentLabel\&gt; GetLabel()  |  Starts retrieving the sensitivity label from the file.
-public std::vector\&lt;std::pair\&lt;std::string, std::string\&gt;\&gt; GetProperties(uint32_t version)  |  Retrieves the file properties according to version.
-public std::shared_ptr\&lt;ProtectionHandler\&gt; GetProtection()  |  Starts retrieving the protection policy from the file.
-public void RegisterContentForTrackingAndRevocationAsync(bool isOwnerNotificationEnabled, const std::shared_ptr\&lt;ProtectionEngine::Observer\&gt;& observer, const std::shared_ptr\&lt;void\&gt;& context)  |  #### Parameters
-public void RevokeContentAsync(const std::shared_ptr\&lt;ProtectionEngine::Observer\&gt;& observer, const std::shared_ptr\&lt;void\&gt;& context)  |  Perform revocation for the content.
-public void ClassifyAsync(const std::shared_ptr\&lt;void\&gt;& context)  |  Executes the rules in the handler and returns the list of actions to be executed.
-public void InspectAsync(const std::shared_ptr\&lt;void\&gt;& context)  |  Create a file inspector object, used to retrieve file contents from compatible file formats.
-public void SetLabel(const std::shared_ptr\&lt;Label\&gt;& label, const LabelingOptions& labelingOptions, const ProtectionSettings& protectionSettings)  |  Sets the sensitivity label to the file.
+public std::shared_ptr&lt;ContentLabel&gt; GetLabel()  |  Starts retrieving the sensitivity label from the file.
+public std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt; GetProperties(uint32_t version)  |  Retrieves the file properties according to version.
+public std::shared_ptr&lt;ProtectionHandler&gt; GetProtection()  |  Starts retrieving the protection policy from the file.
+public void RegisterContentForTrackingAndRevocationAsync(bool isOwnerNotificationEnabled, const std::shared_ptr&lt;ProtectionEngine::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context)  |  #### Parameters
+public void RevokeContentAsync(const std::shared_ptr&lt;ProtectionEngine::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context)  |  Perform revocation for the content.
+public void ClassifyAsync(const std::shared_ptr&lt;void&gt;& context)  |  Executes the rules in the handler and returns the list of actions to be executed.
+public void InspectAsync(const std::shared_ptr&lt;void&gt;& context)  |  Create a file inspector object, used to retrieve file contents from compatible file formats.
+public void SetLabel(const std::shared_ptr&lt;Label&gt;& label, const LabelingOptions& labelingOptions, const ProtectionSettings& protectionSettings)  |  Sets the sensitivity label to the file.
 public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Deletes the sensitivity label from the file.
-public void SetProtection(const std::shared_ptr\&lt;ProtectionDescriptor\&gt;& protectionDescriptor, const ProtectionSettings& protectionSettings)  |  Sets either custom or template-based permissions (according to protectionDescriptor-&gt;GetProtectionType) to the file.
-public void SetProtection(const std::shared_ptr\&lt;ProtectionHandler\&gt;& protectionHandler)  |  Sets protection on a document using an existing protection handler.
+public void SetProtection(const std::shared_ptr&lt;ProtectionDescriptor&gt;& protectionDescriptor, const ProtectionSettings& protectionSettings)  |  Sets either custom or template-based permissions (according to protectionDescriptor-&gt;GetProtectionType) to the file.
+public void SetProtection(const std::shared_ptr&lt;ProtectionHandler&gt;& protectionHandler)  |  Sets protection on a document using an existing protection handler.
 public void RemoveProtection()  |  Removes protection from the file. If the original file format does not support labeling, the label will be lost when protection is removed. When the native format supports labeling, the label metadata is maintained.
-public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\&lt;void\&gt;& context) | Writes the changes to the file specified by the \|outputFilePath\ |  parameter.
-public void CommitAsync(const std::shared_ptr\&lt;Stream\&gt;& outputStream, const std::shared_ptr\&lt;void\&gt;& context) | Writes the changes to the stream specified by the \|outputStream\ |  parameter.
+public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr&lt;void&gt;& context) | Writes the changes to the file specified by the \|outputFilePath\|  parameter.
+public void CommitAsync(const std::shared_ptr&lt;Stream&gt;& outputStream, const std::shared_ptr&lt;void&gt;& context) | Writes the changes to the stream specified by the \|outputStream\|  parameter.
 public bool IsModified()  |  Checks if there are changes to commit to the file.
-public void GetDecryptedTemporaryFileAsync(const std::shared_ptr\&lt;void\&gt;& context)  |  Returns a path to a temporary file (that will be deleted if possible) - representing the decrypted content.
-public void GetDecryptedTemporaryStreamAsync(const std::shared_ptr\&lt;void\&gt;& context)  |  Returns a stream - representing the decrypted content.
+public void GetDecryptedTemporaryFileAsync(const std::shared_ptr&lt;void&gt;& context)  |  Returns a path to a temporary file (that will be deleted if possible) - representing the decrypted content.
+public void GetDecryptedTemporaryStreamAsync(const std::shared_ptr&lt;void&gt;& context)  |  Returns a stream - representing the decrypted content.
 public void NotifyCommitSuccessful(const std::string& actualFilePath)  |  To be called when the changes have been committed to disk.
 public std::string GetOutputFileName()  |  Calculates the output file name and extension based on the original file name and the accumulated changes.
   
@@ -51,7 +52,7 @@ Parameters:
 * **isOwnerNotificationEnabled**: Set to true to notify the owner via email whenever the document is decrypted, or false to not send the notification. 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](#class_protection_handler_1_1_observer) interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
 
 
 * **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
@@ -90,7 +91,7 @@ Create a file inspector object, used to retrieve file contents from compatible f
 ### SetLabel function
 Sets the sensitivity label to the file.
 Changes won't be written to the file until CommitAsync is called. Privileged and Auto method allows the API to override any existing label 
-Throws [JustificationRequiredError](#class_justification_required_error) when setting the label requires the operation to be justified (via the labelingOptions parameter).
+Throws [JustificationRequiredError](class_mip_justificationrequirederror.md) when setting the label requires the operation to be justified (via the labelingOptions parameter).
   
 ### DeleteLabel function
 Deletes the sensitivity label from the file.

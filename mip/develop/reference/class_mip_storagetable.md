@@ -14,12 +14,12 @@ A class that defines the interface to the MIP SDK storage table used for caching
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void Insert(const std::vector\&lt;std::string\&gt;& allColumnValues)  |  Adds a row to the table.
-public void InsertOrReplace(const std::vector\&lt;std::string\&gt;& allColumnValues)  |  Adds a row to the table.
-public std::vector\&lt;std::vector\&lt;std::string\&gt;\&gt; List()  |  List all the rows in the table.
-public void Update(const std::vector\&lt;std::string\&gt;& updateColumns, const std::vector\&lt;std::string\&gt;& updateValues, const std::vector\&lt;std::string\&gt;& queryColumns, const std::vector\&lt;std::string\&gt;& queryValues)  |  Update a set of rows within the table.
-public void Delete(const std::vector\&lt;std::string\&gt;& queryColumns, const std::vector\&lt;std::string\&gt;& queryValues)  |  Delete a set of rows specified by queryColumns and queryValues.
-public std::vector\&lt;std::vector\&lt;std::string\&gt;\&gt; Find(const std::vector\&lt;std::string\&gt;& queryColumns, const std::vector\&lt;std::string\&gt;& queryValues)  |  Find a set of rows specified by `queryColumns` and `queryValues`. This method can return multiple rows based on the filter.
+public virtual void Insert(const std::vector&lt;std::string&gt;& allColumnValues)  |  Adds a row to the table.
+public void InsertOrReplace(const std::vector&lt;std::string&gt;& allColumnValues)  |  Adds a row to the table.
+public std::vector&lt;std::vector&lt;std::string&gt;&gt; List()  |  List all the rows in the table.
+public void Update(const std::vector&lt;std::string&gt;& updateColumns, const std::vector&lt;std::string&gt;& updateValues, const std::vector&lt;std::string&gt;& queryColumns, const std::vector&lt;std::string&gt;& queryValues)  |  Update a set of rows within the table.
+public void Delete(const std::vector&lt;std::string&gt;& queryColumns, const std::vector&lt;std::string&gt;& queryValues)  |  Delete a set of rows specified by queryColumns and queryValues.
+public std::vector&lt;std::vector&lt;std::string&gt;&gt; Find(const std::vector&lt;std::string&gt;& queryColumns, const std::vector&lt;std::string&gt;& queryValues)  |  Find a set of rows specified by `queryColumns` and `queryValues`. This method can return multiple rows based on the filter.
   
 ## Members
   
@@ -86,4 +86,4 @@ Parameters:
 
 
   
-**Returns**: List of all rows where each row is a list containing column values
+**Returns**: List of all rows where each row is a list containing column values.

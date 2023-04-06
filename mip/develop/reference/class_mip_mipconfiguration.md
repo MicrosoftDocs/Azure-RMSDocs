@@ -19,23 +19,23 @@ public const ApplicationInfo& GetApplicationInfo() const  |  Get the Description
 public const std::string& GetPath() const  |  Get the File path for logs, caches, etc.
 public const LogLevel& GetThresholdLogLevel() const  |  Get the Minimum log level for .miplog.
 public const bool isOfflineOnly() const  |  whether Network operations is enabled or disabled(not all actions supported when offline)
-public std::shared_ptr\&lt;DiagnosticConfiguration\&gt; GetDiagnosticConfiguration() const  |  Get the Diagnostic (if any) provided by the application.
-public void SetDiagnosticConfiguration(const std::shared_ptr\&lt;DiagnosticConfiguration\&gt;& diagnosticConfiguration)  |  Override default configuration of diagnostic.
-public std::shared_ptr\&lt;LoggerDelegate\&gt; GetLoggerDelegate() const  |  Get the [LoggerDelegate](#class_logger_delegate) (if any) override implementation.
-public void SetLoggerDelegate(const std::shared_ptr\&lt;LoggerDelegate\&gt;& loggerDelegate)  |  Set the LoggerDelegate (if any) override implementation.
-public std::shared_ptr\&lt;StorageDelegate\&gt; GetStorageDelegate() const  |  Get the [StorageDelegate](class_mip_storagedelegate.md) (if any) override implementation.
-public void SetStorageDelegate(const std::shared_ptr\&lt;StorageDelegate\&gt;& storageDelegate)  |  Set the [StorageDelegate](class_mip_storagedelegate.md) (if any) override implementation. It's a required delegate for MIP Core Context.
-public std::shared_ptr\&lt;HttpDelegate\&gt; GetHttpDelegate() const  |  Get the [HttpDelegate](class_mip_httpdelegate.md) (if any) override implementation.
-public void SetHttpDelegate(const std::shared_ptr\&lt;HttpDelegate\&gt;& httpDelegate)  |  Set the [HttpDelegate](class_mip_httpdelegate.md) (if any) override implementation. It's a required delegate for MIP Core Context.
-public std::shared_ptr\&lt;JsonDelegate\&gt; GetJsonDelegate() const  |  Get the [JsonDelegate](#class_json_delegate) (if any) override implementation.
-public std::shared_ptr\&lt;xml::XmlDelegate\&gt; GetXmlDelegate() const  |  Get the XmlDelegate (if any) override implementation. [MipConfiguration](#class_mip_configuration) needs to be derived from to override the internal xmlDelegate with an alternative. This delegate is only configurable when using the MIP Core Context and only for the protection and upe sdk.
-public std::map\&lt;FlightingFeature, bool\&gt; GetFeatureSettings() const  |  Get the Flighting features which should be set to non-default values.
-public void SetFeatureSettings(const std::map\&lt;FlightingFeature, bool\&gt;& featureSettings)  |  Set the Flighting features which should be set to non-default values.
+public std::shared_ptr&lt;DiagnosticConfiguration&gt; GetDiagnosticConfiguration() const  |  Get the Diagnostic (if any) provided by the application.
+public void SetDiagnosticConfiguration(const std::shared_ptr&lt;DiagnosticConfiguration&gt;& diagnosticConfiguration)  |  Override default configuration of diagnostic.
+public std::shared_ptr&lt;LoggerDelegate&gt; GetLoggerDelegate() const  |  Get the [LoggerDelegate](#class_logger_delegate) (if any) override implementation.
+public void SetLoggerDelegate(const std::shared_ptr&lt;LoggerDelegate&gt;& loggerDelegate)  |  Set the LoggerDelegate (if any) override implementation.
+public std::shared_ptr&lt;StorageDelegate&gt; GetStorageDelegate() const  |  Get the [StorageDelegate](class_mip_storagedelegate.md) (if any) override implementation.
+public void SetStorageDelegate(const std::shared_ptr&lt;StorageDelegate&gt;& storageDelegate)  |  Set the [StorageDelegate](class_mip_storagedelegate.md) (if any) override implementation. It's a required delegate for MIP Core Context.
+public std::shared_ptr&lt;HttpDelegate&gt; GetHttpDelegate() const  |  Get the [HttpDelegate](class_mip_httpdelegate.md) (if any) override implementation.
+public void SetHttpDelegate(const std::shared_ptr&lt;HttpDelegate&gt;& httpDelegate)  |  Set the [HttpDelegate](class_mip_httpdelegate.md) (if any) override implementation. It's a required delegate for MIP Core Context.
+public std::shared_ptr&lt;JsonDelegate&gt; GetJsonDelegate() const  |  Get the [JsonDelegate](#class_json_delegate) (if any) override implementation.
+public std::shared_ptr&lt;xml::XmlDelegate&gt; GetXmlDelegate() const  |  Get the XmlDelegate (if any) override implementation. [MipConfiguration](#class_mip_configuration) needs to be derived from to override the internal xmlDelegate with an alternative. This delegate is only configurable when using the MIP Core Context and only for the protection and upe sdk.
+public std::map&lt;FlightingFeature, bool&gt; GetFeatureSettings() const  |  Get the Flighting features which should be set to non-default values.
+public void SetFeatureSettings(const std::map&lt;FlightingFeature, bool&gt;& featureSettings)  |  Set the Flighting features which should be set to non-default values.
 public size_t GetApiLogCacheMaxMessages() const  |  Get the max messages per Api call that will be logged in the api log cache.
 public void SetApiLogCacheMaxMessages(size_t maxMessages)  |  Set the max messages per Api call that will be logged in the api log cache. Setting this to 0 will disable api log caching.
 public ~MipConfiguration()  | _Not yet documented._
-protected std::shared_ptr\&lt;JsonDelegate\&gt; mJsonDelegate  | _Not yet documented._
-protected std::shared_ptr\&lt;xml::XmlDelegate\&gt; mXmlDelegate  | _Not yet documented._
+protected std::shared_ptr&lt;JsonDelegate&gt; mJsonDelegate  | _Not yet documented._
+protected std::shared_ptr&lt;xml::XmlDelegate&gt; mXmlDelegate  | _Not yet documented._
   
 ## Members
   
@@ -173,3 +173,4 @@ _Not documented yet._
   
 ### xml::XmlDelegate
 _Not documented yet._
+umented yet._

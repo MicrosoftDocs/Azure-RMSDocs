@@ -14,22 +14,22 @@ Settings used by [PolicyProfile](class_mip_policyprofile.md) during its creation
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::shared_ptr\&lt;MipContext\&gt;& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\&lt;PolicyProfile::Observer\&gt;& observer)  |  Interface for configuring the profile.
+public Settings(const std::shared_ptr&lt;MipContext&gt;& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr&lt;PolicyProfile::Observer&gt;& observer)  |  Interface for configuring the profile.
 public CacheStorageType GetCacheStorageType() const  |  Get whether caches are stored in memory or on disk.
-public const std::shared_ptr\&lt;PolicyProfile::Observer\&gt;& GetObserver() const  |  Get the event observer.
-public std::shared_ptr\&lt;MipContext\&gt; GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
-public std::shared_ptr\&lt;HttpDelegate\&gt; GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
-public void SetHttpDelegate(const std::shared_ptr\&lt;HttpDelegate\&gt;& httpDelegate)  |  Override default HTTP stack with client's own.
-public std::shared_ptr\&lt;StorageDelegate\&gt; GetStorageDelegate() const  |  Get the [StorageDelegate](class_mip_storagedelegate.md) (if any) provided by the application.
-public void SetStorageDelegate(const std::shared_ptr\&lt;StorageDelegate\&gt;& storageDelegate)  |  Override default storage cache with client's own implementation.
-public std::shared_ptr\&lt;TaskDispatcherDelegate\&gt; GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
-public void SetTaskDispatcherDelegate(const std::shared_ptr\&lt;TaskDispatcherDelegate\&gt;& taskDispatcherDelegate)  |  Override default asynchronous task dispatching handling with client's own.
+public const std::shared_ptr&lt;PolicyProfile::Observer&gt;& GetObserver() const  |  Get the event observer.
+public std::shared_ptr&lt;MipContext&gt; GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
+public std::shared_ptr&lt;HttpDelegate&gt; GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
+public void SetHttpDelegate(const std::shared_ptr&lt;HttpDelegate&gt;& httpDelegate)  |  Override default HTTP stack with client's own.
+public std::shared_ptr&lt;StorageDelegate&gt; GetStorageDelegate() const  |  Get the [StorageDelegate](class_mip_storagedelegate.md) (if any) provided by the application.
+public void SetStorageDelegate(const std::shared_ptr&lt;StorageDelegate&gt;& storageDelegate)  |  Override default storage cache with client's own implementation.
+public std::shared_ptr&lt;TaskDispatcherDelegate&gt; GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
+public void SetTaskDispatcherDelegate(const std::shared_ptr&lt;TaskDispatcherDelegate&gt;& taskDispatcherDelegate)  |  Override default asynchronous task dispatching handling with client's own.
 public void SetSessionId(const std::string& sessionId)  | _Not yet documented._
 public const std::string& GetSessionId() const  | _Not yet documented._
-public void SetCustomSettings(const std::vector\&lt;std::pair\&lt;std::string, std::string\&gt;\&gt;& customSettings)  |  Set the custom settings, used for feature gating and testing.
-public const std::vector\&lt;std::pair\&lt;std::string, std::string\&gt;\&gt;& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
-public const std::shared_ptr\&lt;void\&gt;& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
-public void SetLoggerContext(const std::shared_ptr\&lt;void\&gt;& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+public void SetCustomSettings(const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& customSettings)  |  Set the custom settings, used for feature gating and testing.
+public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
+public const std::shared_ptr&lt;void&gt;& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+public void SetLoggerContext(const std::shared_ptr&lt;void&gt;& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
 public ~Settings()  | _Not yet documented._
   
 ## Members
@@ -147,3 +147,4 @@ Parameters:
   
 ### ~Settings function
 _Not documented yet._
+ocumented yet._
