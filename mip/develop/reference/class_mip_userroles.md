@@ -14,9 +14,9 @@ A group of users and the roles associated with them.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public UserRoles(const std::vector\&lt;std::string\&gt;& users, const std::vector\&lt;std::string\&gt;& roles)  |  [UserRoles](#class_user_roles) constructor.
-public const std::vector\&lt;std::string\&gt;& Users() const  |  Gets users associated with a set of roles.
-public const std::vector\&lt;std::string\&gt;& Roles() const  |  Gets roles associated with a group of users.
+public UserRoles(const std::vector&lt;std::string&gt;& users, const std::vector&lt;std::string&gt;& roles)  |  [UserRoles](#class_user_roles) constructor.
+public const std::vector&lt;std::string&gt;& Users() const  |  Gets users associated with a set of roles.
+public const std::vector&lt;std::string&gt;& Roles() const  |  Gets roles associated with a group of users.
   
 ## Members
   
@@ -41,4 +41,4 @@ Gets users associated with a set of roles.
 Gets roles associated with a group of users.
 
   
-**Returns**: Roles associated with a group of users
+**Returns**: Roles associated with a group of userssers

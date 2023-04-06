@@ -13,8 +13,8 @@ ms.date: 03/30/2023
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector\&lt;uint8_t\&gt;& GetBytes()  |  Get attachment as a binary byte vector.
-public std::shared_ptr\&lt;Stream\&gt; GetStream() const  |  Get attachment as a binary stream.
+public const std::vector&lt;uint8_t&gt;& GetBytes()  |  Get attachment as a binary byte vector.
+public std::shared_ptr&lt;Stream&gt; GetStream() const  |  Get attachment as a binary stream.
 public const std::string& GetName() const  |  Get attachment name as a string.
 public const std::string& GetLongName() const  |  Get attachment long name as a string.
 public const std::string& GetPath() const  |  Get attachment path name as a string. if path not empty then reference attachment.
@@ -38,4 +38,4 @@ Get attachment long name as a string.
 Get attachment path name as a string. if path not empty then reference attachment.
   
 ### GetLongPath function
-Get attachment long path name as a string. if path not empty then reference attachment.
+Get attachment long path name as a string. if path not empty then reference attachment.t.

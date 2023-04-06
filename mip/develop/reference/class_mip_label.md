@@ -22,11 +22,11 @@ public int GetSensitivity() const  |  Get the Sensitivity of the label.
 public const std::string& GetTooltip() const  |  Get the tooltip description of the label.
 public const std::string& GetAutoTooltip() const  |  Get the tooltip description of the classification that cause this label to be applied.
 public bool IsActive() const  |  Gets a boolean signaling if the label is active.
-public std::weak_ptr\&lt;Label\&gt; GetParent() const  |  Get the parent label.
-public const std::vector\&lt;std::shared_ptr\&lt;Label\&gt;\&gt;& GetChildren() const  |  Get the children labels of the current label.
-public const std::vector\&lt;std::pair\&lt;std::string, std::string\&gt;\&gt;& GetCustomSettings() const  |  Get the custom settings of a label.
+public std::weak_ptr&lt;Label&gt; GetParent() const  |  Get the parent label.
+public const std::vector&lt;std::shared_ptr&lt;Label&gt;&gt;& GetChildren() const  |  Get the children labels of the current label.
+public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetCustomSettings() const  |  Get the custom settings of a label.
 public ActionSource GetActionSource() const  |  Gets the action source of the label.
-public const std::vector\&lt;std::string\&gt;& GetContentFormats() const  |  Gets content types.
+public const std::vector&lt;std::string&gt;& GetContentFormats() const  |  Gets content types.
   
 ## Members
   
@@ -107,4 +107,4 @@ Gets the action source of the label.
 Gets content types.
 
   
-&lt;Returns&gt;
+&lt;Returns&gt;ns&gt;

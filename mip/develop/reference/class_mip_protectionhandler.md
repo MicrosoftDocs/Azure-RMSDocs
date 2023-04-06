@@ -14,22 +14,22 @@ Manages protection-related actions for a specific protection configuration.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr\&lt;Stream\&gt; CreateProtectedStream(const std::shared_ptr\&lt;Stream\&gt;& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Create a protected stream that will allow for encryption/decryption of content.
+public std::shared_ptr&lt;Stream&gt; CreateProtectedStream(const std::shared_ptr&lt;Stream&gt;& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Create a protected stream that will allow for encryption/decryption of content.
 public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Encrypt a buffer.
 public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Decrypt a buffer.
 public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calculates size (in bytes) of content if it were to be encrypted with this [ProtectionHandler](class_mip_protectionhandler.md).
 public int64_t GetBlockSize()  |  Gets the block size (in bytes) for the cipher mode used by this [ProtectionHandler](class_mip_protectionhandler.md).
-public std::vector\&lt;std::string\&gt; GetRights() const  |  Gets the rights granted to the user/identity associated with this [ProtectionHandler](class_mip_protectionhandler.md).
+public std::vector&lt;std::string&gt; GetRights() const  |  Gets the rights granted to the user/identity associated with this [ProtectionHandler](class_mip_protectionhandler.md).
 public bool AccessCheck(const std::string& right) const  |  Checks if protection handler grants user access to the specified right.
 public const std::string GetIssuedTo()  |  Gets user associated with the protection handler.
 public const std::string GetOwner()  |  Gets email address of content owner.
 public bool IsIssuedToOwner()  |  Gets if the current user is the content owner or not.
-public std::shared_ptr\&lt;ProtectionDescriptor\&gt; GetProtectionDescriptor()  |  Gets protection details.
+public std::shared_ptr&lt;ProtectionDescriptor&gt; GetProtectionDescriptor()  |  Gets protection details.
 public const std::string GetContentId()  |  Gets unique identifier for the document/content.
 public bool DoesUseDeprecatedAlgorithms()  |  Gets if protection handler uses deprecated crypto algorithms (ECB) for backward compatibility or not.
 public bool IsAuditedExtractAllowed()  |  Gets if protection handler grants user 'audited extract' right or not.
-public const std::vector\&lt;uint8_t\&gt;& GetSerializedPublishingLicense() const  |  Serialize [ProtectionHandler](class_mip_protectionhandler.md) into a publishing license (PL)
-public const std::vector\&lt;uint8_t\&gt;& GetSerializedPreLicense(PreLicenseFormat format) const  |  Get pre-license.
+public const std::vector&lt;uint8_t&gt;& GetSerializedPublishingLicense() const  |  Serialize [ProtectionHandler](class_mip_protectionhandler.md) into a publishing license (PL)
+public const std::vector&lt;uint8_t&gt;& GetSerializedPreLicense(PreLicenseFormat format) const  |  Get pre-license.
 public CipherMode GetCipherMode() const  |  Gets the cipher mode of the protection handler.
 enum PreLicenseFormat  |  Pre-license format.
   
@@ -213,4 +213,4 @@ Gets the cipher mode of the protection handler.
 --------------------------------|---------------------------------------------
 Xml            | Legacy XML/SOAP format used by MSIPC
 Json            | JSON/REST format used by MIP SDK and RMS SDK
-Pre-license format.
+Pre-license format.ormat.

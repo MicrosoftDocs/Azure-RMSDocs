@@ -13,12 +13,12 @@ ms.date: 03/30/2023
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector\&lt;uint8_t\&gt;& GetBody() const  |  Get the body of the msg. if TXT/HTML formatted as utf8.
+public const std::vector&lt;uint8_t&gt;& GetBody() const  |  Get the body of the msg. if TXT/HTML formatted as utf8.
 public unsigned int GetCodePage() const  |  Get body encoding code page, relevant for txt, html body formats.
 public BodyType GetBodyType() const  |  Get body type.
-public const std::vector\&lt;std::shared_ptr\&lt;MsgAttachmentData\&gt;\&gt;& GetAttachments() const  |  Get a list of attachment as msg attachment data objects.
+public const std::vector&lt;std::shared_ptr&lt;MsgAttachmentData&gt;&gt;& GetAttachments() const  |  Get a list of attachment as msg attachment data objects.
 public InspectorType GetInspectorType() const  |  Get file types,.
-public std::shared_ptr\&lt;Stream\&gt; GetFileStream() const  |  Get the file stream.
+public std::shared_ptr&lt;Stream&gt; GetFileStream() const  |  Get the file stream.
   
 ## Members
   
@@ -58,4 +58,4 @@ Get file types,.
 Get the file stream.
 
   
-**Returns**: A shared ptr to the file stream.
+**Returns**: A shared ptr to the file stream.eam.

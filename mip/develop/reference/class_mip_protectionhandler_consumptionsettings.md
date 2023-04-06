@@ -14,10 +14,10 @@ Settings used to create a [ProtectionHandler](class_mip_protectionhandler.md) to
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ConsumptionSettings(const std::vector\&lt;uint8_t\&gt;& serializedPublishingLicense)  |  [ProtectionHandler::ConsumptionSettings](#class_protection_handler_1_1_consumption_settings) constructor for creating a new handler.
-public ConsumptionSettings(const std::vector\&lt;uint8_t\&gt;& serializedPreLicense, const std::vector\&lt;uint8_t\&gt;& serializedPublishingLicense)  |  [ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
-public ConsumptionSettings(const std::shared_ptr\&lt;PublishingLicenseInfo\&gt;& licenseInfo)  |  [ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
-public std::shared_ptr\&lt;PublishingLicenseInfo\&gt; GetPublishingLicenseInfo() const  |  Get the publishing license associated with the protected content.
+public ConsumptionSettings(const std::vector&lt;uint8_t&gt;& serializedPublishingLicense)  |  [ProtectionHandler::ConsumptionSettings](#class_protection_handler_1_1_consumption_settings) constructor for creating a new handler.
+public ConsumptionSettings(const std::vector&lt;uint8_t&gt;& serializedPreLicense, const std::vector&lt;uint8_t&gt;& serializedPublishingLicense)  |  [ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
+public ConsumptionSettings(const std::shared_ptr&lt;PublishingLicenseInfo&gt;& licenseInfo)  |  [ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
+public std::shared_ptr&lt;PublishingLicenseInfo&gt; GetPublishingLicenseInfo() const  |  Get the publishing license associated with the protected content.
 public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
 public void SetContentName(const std::string& contentName)  |  Defines the content name to register with document tracking.
@@ -88,4 +88,4 @@ Parameters:
 Gets the content name to register with document tracking.
 
   
-**Returns**: The content name
+**Returns**: The content name name

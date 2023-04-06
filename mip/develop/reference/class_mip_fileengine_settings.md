@@ -13,16 +13,16 @@ ms.date: 03/30/2023
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& engineId, const std::shared_ptr\&lt;AuthDelegate\&gt;& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [FileEngine::Settings](class_mip_fileengine_settings.md) constructor for loading an existing engine.
-public Settings(const Identity& identity, const std::shared_ptr\&lt;AuthDelegate\&gt;& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor for creating a new engine.
+public Settings(const std::string& engineId, const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [FileEngine::Settings](class_mip_fileengine_settings.md) constructor for loading an existing engine.
+public Settings(const Identity& identity, const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor for creating a new engine.
 public const std::string& GetEngineId() const  |  Returns the engine ID.
 public void SetEngineId(const std::string& id)  |  Set the engine ID.
 public const Identity& GetIdentity() const  |  Returns the engine [Identity](class_mip_identity.md).
 public void SetIdentity(const Identity& identity)  |  Sets the engine identity.
 public const std::string& GetClientData() const  |  Returns the engine client data.
 public const std::string& GetLocale() const  |  Return the engine locale.
-public void SetCustomSettings(const std::vector\&lt;std::pair\&lt;std::string, std::string\&gt;\&gt;& value)  |  Sets a list of name/value pairs used for testing and experimentation.
-public const std::vector\&lt;std::pair\&lt;std::string, std::string\&gt;\&gt;& GetCustomSettings() const  |  Gets a list of name/value pairs used for testing and experimentation.
+public void SetCustomSettings(const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& value)  |  Sets a list of name/value pairs used for testing and experimentation.
+public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetCustomSettings() const  |  Gets a list of name/value pairs used for testing and experimentation.
 public void SetSessionId(const std::string& sessionId)  |  Sets the engine session ID.
 public const std::string& GetSessionId() const  |  Return the engine session ID.
 public void SetCloud(Cloud cloud)  |  Optionally sets the target cloud.
@@ -40,14 +40,14 @@ public void EnablePFile(bool value)  |  Sets the flag indicating if produce PFil
 public const bool IsPFileEnabled()  |  Get the flag indicating if produce PFiles.
 public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
-public void SetLabelFilter(const std::vector\&lt;LabelFilterType\&gt;& deprecatedLabelFilters)  |  Sets the label filter.
-public const std::vector\&lt;LabelFilterType\&gt;& GetLabelFilter() const  |  Gets the label filters set through deprecated function SetLabelFilter.
+public void SetLabelFilter(const std::vector&lt;LabelFilterType&gt;& deprecatedLabelFilters)  |  Sets the label filter.
+public const std::vector&lt;LabelFilterType&gt;& GetLabelFilter() const  |  Gets the label filters set through deprecated function SetLabelFilter.
 public void ConfigureFunctionality(FunctionalityFilterType functionalityFilterType, bool enabled)  |  Enables or disables functionality.
-public const std::map\&lt;FunctionalityFilterType, bool\&gt;& GetConfiguredFunctionality() const  |  Gets the configured functionality.
-public void SetAuthDelegate(const std::shared_ptr\&lt;AuthDelegate\&gt;& authDelegate)  |  Set the Engine Auth Delegate.
-public std::shared_ptr\&lt;AuthDelegate\&gt; GetAuthDelegate() const  |  Get the Engine Auth Delegate.
-public const std::shared_ptr\&lt;void\&gt;& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
-public void SetLoggerContext(const std::shared_ptr\&lt;void\&gt;& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+public const std::map&lt;FunctionalityFilterType, bool&gt;& GetConfiguredFunctionality() const  |  Gets the configured functionality.
+public void SetAuthDelegate(const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate)  |  Set the Engine Auth Delegate.
+public std::shared_ptr&lt;AuthDelegate&gt; GetAuthDelegate() const  |  Get the Engine Auth Delegate.
+public const std::shared_ptr&lt;void&gt;& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
+public void SetLoggerContext(const std::shared_ptr&lt;void&gt;& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
   
 ## Members
   
