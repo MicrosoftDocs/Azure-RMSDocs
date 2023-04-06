@@ -35,7 +35,7 @@ Get body encoding code page, relevant for txt, html body formats.
   
 **Returns**: An unsigned code page. 
   
-**See also**: [Code Page Identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers)
+**See also**: [Code Page Identifiers](/windows/win32/intl/code-page-identifiers)
   
 ### GetBodyType function
 Get body type.
