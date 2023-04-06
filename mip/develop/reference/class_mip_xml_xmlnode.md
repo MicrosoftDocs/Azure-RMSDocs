@@ -139,4 +139,4 @@ Parameters:
 Remove this node and children from the xml document.
 
   
-**Returns**: True if node was successfully deleted or false if failed.ailed.
+**Returns**: True if node was successfully deleted or false if failed.

@@ -86,4 +86,4 @@ Parameters:
 
 
   
-**Returns**: List of all rows where each row is a list containing column values column values
+**Returns**: List of all rows where each row is a list containing column values.

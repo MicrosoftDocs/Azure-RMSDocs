@@ -88,4 +88,4 @@ Parameters:
 Gets the content name to register with document tracking.
 
   
-**Returns**: The content name name
+**Returns**: The content name.

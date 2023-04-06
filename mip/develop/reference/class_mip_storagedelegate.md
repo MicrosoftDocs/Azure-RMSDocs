@@ -49,4 +49,4 @@ Parameters:
 Gets settings used by [StorageDelegate](class_mip_storagedelegate.md).
 
   
-**Returns**: Settings used by [StorageDelegate](class_mip_storagedelegate.md).d).
+**Returns**: Settings used by [StorageDelegate](class_mip_storagedelegate.md).
