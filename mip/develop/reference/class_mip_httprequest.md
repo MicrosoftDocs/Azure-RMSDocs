@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class HttpRequest 
@@ -28,7 +28,7 @@ Gets request ID.
 
   
 **Returns**: Request ID
-The corresponding HttpResponse will have the same ID
+The corresponding [HttpResponse](class_mip_httpresponse.md) will have the same ID
   
 ### GetRequestType function
 Get request type.

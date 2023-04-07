@@ -5,12 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class PolicyProfile 
-
-PolicyProfile class is the root class for using the Microsoft Purview Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
+[PolicyProfile](class_mip_policyprofile.md) class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile](class_mip_policyprofile.md) but it can create multiple profiles if needed.
   
 ## Summary
  Members                        | Descriptions                                
@@ -41,7 +40,7 @@ Parameters:
 * **context**: a parameter that will be passed into the observer functions. 
 
 
-PolicyProfile::Observer will be called upon success or failure.
+[PolicyProfile::Observer](class_mip_policyprofile_observer.md) will be called upon success or failure.
   
 ### ListEngines function
 List of engines.
@@ -59,7 +58,7 @@ Parameters:
 * **context**: a parameter that will be forwarded opaquely to the observer functions. 
 
 
-PolicyProfile::Observer will be called upon success or failure.
+[PolicyProfile::Observer](class_mip_policyprofile_observer.md) will be called upon success or failure.
   
 ### UnloadEngine function
 Starts unloading the policy engine with the given ID.
@@ -76,10 +75,10 @@ Parameters:
 * **settings**: the mip::PolicyEngine::Settings object that specifies the engine's settings. 
 
 
-* **context**: a parameter that will be forwarded opaquely to the observer functions and optional HttpDelegate. 
+* **context**: a parameter that will be forwarded opaquely to the observer functions and optional [HttpDelegate](class_mip_httpdelegate.md). 
 
 
-PolicyProfile::Observer will be called upon success or failure.
+[PolicyProfile::Observer](class_mip_policyprofile_observer.md) will be called upon success or failure.
   
 ### AddEngine function
 Add a new policy engine to the profile.
@@ -88,7 +87,7 @@ Parameters:
 * **settings**: the mip::PolicyEngine::Settings object that specifies the engine's settings. 
 
 
-* **context**: a parameter that will be forwarded opaquely to the optional HttpDelegate
+* **context**: a parameter that will be forwarded opaquely to the optional [HttpDelegate](class_mip_httpdelegate.md)
 
 
 
@@ -105,7 +104,7 @@ Parameters:
 * **context**: a parameter that will be passed into the observer functions. 
 
 
-PolicyProfile::Observer will be called upon success or failure.
+[PolicyProfile::Observer](class_mip_policyprofile_observer.md) will be called upon success or failure.
   
 ### DeleteEngine function
 Delete the policy engine with the given ID. All data for the given engine will be deleted.

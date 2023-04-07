@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class xml::XmlDocument 
@@ -32,16 +32,16 @@ Parameters:
 
 
   
-**Returns**: A vector of matching XmlNode shared pointers or an empty vector if none match
+**Returns**: A vector of matching [XmlNode](class_mip_xml_xmlnode.md) shared pointers or an empty vector if none match
   
 ### GetXmlContent function
 Parse an xml formatted buffer into an xmldocument.
 
   
-**Returns**: A utf-8 xml formatted string of the content of this XmlDocument
+**Returns**: A utf-8 xml formatted string of the content of this [XmlDocument](class_mip_xml_xmldocument.md)
   
 ### GetRootNode function
 Get the node that is an ancestor of all other nodes.
 
   
-**Returns**: A shared_ptr to an XmlNode.
+**Returns**: A shared_ptr to an [XmlNode](class_mip_xml_xmlnode.md).

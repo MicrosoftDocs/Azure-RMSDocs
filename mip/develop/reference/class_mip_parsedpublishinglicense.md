@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class ParsedPublishingLicense 
@@ -24,6 +24,8 @@ public std::shared_ptr&lt;LicenseDescriptor&gt; GetDescriptor()  |  Gets the des
 public const std::string& GetReferralInfoUrl()  |  Gets the referral info url.
 public const std::vector&lt;std::shared_ptr&lt;LicenseApplicationData&gt;&gt;& GetSignedApplicationData()  |  Gets the signed application data.
 public const std::chrono::time_point&lt;std::chrono::system_clock&gt;& GetIssuedTime()  |  Gets the issued time.
+public const mip::LabelInfo& GetLabelInfo()  |  Gets the label info of the license, if applicable.
+public const std::vector&lt;uint8_t&gt;& GetEncryptedRightsData()  |  Gets the encrypted rights data. Used internally by the SDK. Applications should not try to decipher or modify this data.
   
 ## Members
   
@@ -59,3 +61,9 @@ Gets the signed application data.
   
 ### GetIssuedTime function
 Gets the issued time.
+  
+### GetLabelInfo function
+Gets the label info of the license, if applicable.
+  
+### GetEncryptedRightsData function
+Gets the encrypted rights data. Used internally by the SDK. Applications should not try to decipher or modify this data.

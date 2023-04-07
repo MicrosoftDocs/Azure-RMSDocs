@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class ApplyLabelAction 
@@ -29,6 +29,4 @@ Get the label required.
 Get the Classification IDs that matched and caused this label to appear.
 
   
-
-**Returns**: Const std::vector\<std::string\>& a list of classification IDs that caused this label to appear.r.
-
+**Returns**: Const std::vector&lt;std::string&gt;& a list of classification IDs that caused this label to appear.

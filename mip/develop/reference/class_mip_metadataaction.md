@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class MetadataAction 
-An Action that adds metadata information to the content.
+An [Action](class_mip_action.md) that adds metadata information to the content.
   
 ## Summary
  Members                        | Descriptions                                
@@ -30,7 +30,5 @@ Removing metadata should be done before adding metadata.
 Get the metadata name/value pairs that should be added to the content.
 
   
-
 **Returns**: Const std::vector&lt;MetadataEntry&gt;& 
 Removing metadata should be done before adding metadata.
-

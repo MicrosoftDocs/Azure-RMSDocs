@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class ComputeEngine 
@@ -52,7 +52,7 @@ _Not documented yet._
   
 ### ComputeActionsWithRemoteState function
 Computes actions while choosing between remote and local state.
-State is selected using this priority. Unknown protection types, (template or ad-hoc not in the policy). Protection state is always preferable to unprotected state. Document state with label is preferred above one without. Label order, higher is preferred. Label timestamp, prefer newest labelled document. DocumentState LastModifiedTime optionally implemented, prefer newly modified file.
+State is selected using this priority. Unknown protection types, (template or ad-hoc not in the policy). Protection state is always preferable to unprotected state. Document state with label is preferred above one without. [Label](class_mip_label.md) order, higher is preferred. [Label](class_mip_label.md) timestamp, prefer newest labelled document. [DocumentState](#class_document_state) LastModifiedTime optionally implemented, prefer newly modified file.
 
 Parameters:  
 * **context**: Comput engine context. 
@@ -141,3 +141,4 @@ _Not documented yet._
   
 ### ~ComputeEngine function
 _Not documented yet._
+ documented yet._

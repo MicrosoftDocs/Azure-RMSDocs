@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class StorageTable 
@@ -14,7 +14,8 @@ A class that defines the interface to the MIP SDK storage table used for caching
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public void Insert(const std::vector&lt;std::string&gt;& allColumnValues)  |  Adds a row to the table.
+public virtual void Insert(const std::vector&lt;std::string&gt;& allColumnValues)  |  Adds a row to the table.
+public void InsertOrReplace(const std::vector&lt;std::string&gt;& allColumnValues)  |  Adds a row to the table.
 public std::vector&lt;std::vector&lt;std::string&gt;&gt; List()  |  List all the rows in the table.
 public void Update(const std::vector&lt;std::string&gt;& updateColumns, const std::vector&lt;std::string&gt;& updateValues, const std::vector&lt;std::string&gt;& queryColumns, const std::vector&lt;std::string&gt;& queryValues)  |  Update a set of rows within the table.
 public void Delete(const std::vector&lt;std::string&gt;& queryColumns, const std::vector&lt;std::string&gt;& queryValues)  |  Delete a set of rows specified by queryColumns and queryValues.
@@ -23,6 +24,15 @@ public std::vector&lt;std::vector&lt;std::string&gt;&gt; Find(const std::vector&
 ## Members
   
 ### Insert function
+Adds a row to the table.
+
+Parameters:  
+* **allColumnValues**: All column values in sequence as represented in storage table.
+
+
+&gt; Deprecated: This method will soon be deprecated in favor of InsertOrReplace. If the new version has been implemented, there is no need to implement this version.
+  
+### InsertOrReplace function
 Adds a row to the table.
 
 Parameters:  

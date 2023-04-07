@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class MipContext 
-MipContext represents state that is shared across all profiles, engines, handlers.
+[MipContext](class_mip_mipcontext.md) represents state that is shared across all profiles, engines, handlers.
   
 ## Summary
  Members                        | Descriptions                                
@@ -25,7 +25,7 @@ public std::shared_ptr&lt;HttpDelegate&gt; GetHttpDelegate() const  |  Get Http 
 public LoggerDelegate* GetRawLoggerDelegate() const  |  Get raw logger implementation.
 public std::shared_ptr&lt;StorageDelegate&gt; GetStorageDelegate() const  |  Get Storage Delegate implementation if provided.
 public const std::map&lt;FlightingFeature, bool&gt;& GetFlightingFeatures() const  |  Get flighting feature set.
-public const std::shared_ptr&lt;const MipConfiguration&gt;& GetMipConfiguration() const  |  Gets the mip configuration that was used to create the MipContext.
+public const std::shared_ptr&lt;const MipConfiguration&gt;& GetMipConfiguration() const  |  Gets the mip configuration that was used to create the [MipContext](class_mip_mipcontext.md).
   
 ## Members
   
@@ -79,7 +79,7 @@ Get logger implementation.
 Get Http implementation.
 
   
-**Returns**: HttpDelegate
+**Returns**: [HttpDelegate](class_mip_httpdelegate.md)
   
 ### GetRawLoggerDelegate function
 Get raw logger implementation.
@@ -91,7 +91,7 @@ Get raw logger implementation.
 Get Storage Delegate implementation if provided.
 
   
-**Returns**: StorageDelegate
+**Returns**: [StorageDelegate](class_mip_storagedelegate.md)
   
 ### GetFlightingFeatures function
 Get flighting feature set.
@@ -100,7 +100,7 @@ Get flighting feature set.
 **Returns**: Flighting feature map
   
 ### GetMipConfiguration function
-Gets the mip configuration that was used to create the MipContext.
+Gets the mip configuration that was used to create the [MipContext](class_mip_mipcontext.md).
 
   
 **Returns**: The mip configuration.

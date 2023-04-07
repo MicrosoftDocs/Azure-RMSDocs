@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class ComputeEngine::Settings 
@@ -118,4 +118,7 @@ Get logger context that will be opaquely passed to the logger delegate for logs 
 Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created engine.
 
 Parameters:  
-* **loggerContext**: The logger context.
+* **loggerContext**: The logger context
+
+e logger context
+

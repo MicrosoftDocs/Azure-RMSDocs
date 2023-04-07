@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class PublishingLicenseInfo 
@@ -34,6 +34,8 @@ public std::shared_ptr&lt;LicenseDescriptor&gt; GetDescriptor() const  | _Not ye
 public const std::string& GetReferralInfoUrl() const  | _Not yet documented._
 public const std::vector&lt;std::shared_ptr&lt;LicenseApplicationData&gt;&gt;& GetSignedApplicationData() const  | _Not yet documented._
 public const std::chrono::time_point&lt;std::chrono::system_clock&gt;& GetIssuedTime() const  | _Not yet documented._
+public const mip::LabelInfo GetLabelInfo() const  | _Not yet documented._
+public const std::vector&lt;uint8_t&gt;& GetEncryptedRightsData() const  | _Not yet documented._
   
 ## Members
   
@@ -116,3 +118,11 @@ _Not documented yet._
 ### GetIssuedTime function
 _Not documented yet._
 
+  
+### GetLabelInfo function
+_Not documented yet._
+
+  
+### GetEncryptedRightsData function
+_Not documented yet._
+umented yet._

@@ -5,21 +5,21 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class ProtectionEngine::Settings 
-Settings used by ProtectionEngine during its creation and throughout its lifetime.
+Settings used by [ProtectionEngine](class_mip_protectionengine.md) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const Identity& identity, const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate, const std::string& clientData, const std::string& locale)  |  ProtectionEngine::Settings constructor for creating a new engine.
-public Settings(const std::string& engineId, const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate, const std::string& clientData, const std::string& locale)  |  ProtectionEngine::Settings constructor for loading an existing engine.
+public Settings(const Identity& identity, const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate, const std::string& clientData, const std::string& locale)  |  [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for creating a new engine.
+public Settings(const std::string& engineId, const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate, const std::string& clientData, const std::string& locale)  |  [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for loading an existing engine.
 public const std::string& GetEngineId() const  |  Gets the engine ID.
 public void SetEngineId(const std::string& engineId)  |  Sets the engine ID.
-public const Identity& GetIdentity() const  |  Gets the user Identity associated with the engine.
-public void SetIdentity(const Identity& identity)  |  Sets the user Identity associated with the engine.
+public const Identity& GetIdentity() const  |  Gets the user [Identity](class_mip_identity.md) associated with the engine.
+public void SetIdentity(const Identity& identity)  |  Sets the user [Identity](class_mip_identity.md) associated with the engine.
 public const std::string& GetClientData() const  |  Gets custom data specified by client.
 public void SetClientData(const std::string& clientData)  |  Sets custom data specified by client.
 public const std::string& GetLocale() const  |  Gets the locale in which engine data will be written.
@@ -48,10 +48,10 @@ public void SetLoggerContext(const std::shared_ptr&lt;void&gt;& loggerContext)  
 ## Members
   
 ### Settings function
-ProtectionEngine::Settings constructor for creating a new engine.
+[ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for creating a new engine.
 
 Parameters:  
-* **identity**: Identity that will be associated with ProtectionEngine
+* **identity**: [Identity](class_mip_identity.md) that will be associated with [ProtectionEngine](class_mip_protectionengine.md)
 
 
 * **authDelegate**: The authentication delegate used by the SDK to acquire authentication tokens, will override the PolicyProfile::Settings::authDelegate if both provided 
@@ -65,7 +65,7 @@ Parameters:
 
   
 ### Settings function
-ProtectionEngine::Settings constructor for loading an existing engine.
+[ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for loading an existing engine.
 
 Parameters:  
 * **engineId**: Unique identifier of engine that will be loaded 
@@ -96,16 +96,16 @@ Parameters:
 
   
 ### GetIdentity function
-Gets the user Identity associated with the engine.
+Gets the user [Identity](class_mip_identity.md) associated with the engine.
 
   
-**Returns**: User Identity associated with the engine
+**Returns**: User [Identity](class_mip_identity.md) associated with the engine
   
 ### SetIdentity function
-Sets the user Identity associated with the engine.
+Sets the user [Identity](class_mip_identity.md) associated with the engine.
 
 Parameters:  
-* **identity**: User Identity associated with the engine
+* **identity**: User [Identity](class_mip_identity.md) associated with the engine
 
 
   
@@ -281,3 +281,4 @@ Sets the logger context that will be opaquely passed to the logger delegate for 
 
 Parameters:  
 * **loggerContext**: The logger context
+

@@ -5,17 +5,19 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
-# class StorageDelegate 
+# class StorageDelegate
+
 A class that defines the interface to the MIP SDK storage for caching.
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public mip::StorageTableResult CreateStorageTable(const std::string& path, const MipComponent mipComponent, const std::string& tableName, const std::vector&lt;std::string&gt;& allColumns, const std::vector&lt;std::string&gt;& encryptedColumns, const std::vector&lt;std::string&gt;& keyColumns) const  |  Creates an instance of a storage table that MIP uses for caching. If a table already exists & schema doesnt match with `allColumns` , implementatiion should drop the table and re-create new one.
-public StorageSettings GetSettings() const  |  Gets settings used by StorageDelegate.
+public StorageSettings GetSettings() const  |  Gets settings used by [StorageDelegate](class_mip_storagedelegate.md).
   
 ## Members
   
@@ -23,7 +25,7 @@ public StorageSettings GetSettings() const  |  Gets settings used by StorageDele
 Creates an instance of a storage table that MIP uses for caching. If a table already exists & schema doesnt match with `allColumns` , implementatiion should drop the table and re-create new one.
 
 Parameters:  
-* **path**: Default path for mip storage. 
+* **path**: Default path for mip storage. Will end in file extension returned from [StorageSettings::OnDiskExtension()](class_mip_storagedelegate_storagesettings.md).
 
 
 * **mipComponent**: MipComponent associated with this table. 
@@ -43,10 +45,10 @@ Parameters:
 
 
   
-**Returns**: A delegate response which either contains an instance of StorageTable or an exception.
+**Returns**: A delegate response which either contains an instance of [StorageTable](class_mip_storagetable.md) or an exception.
   
 ### GetSettings function
-Gets settings used by StorageDelegate.
+Gets settings used by [StorageDelegate](class_mip_storagedelegate.md).
 
   
-**Returns**: Settings used by StorageDelegate.
+**Returns**: Settings used by [StorageDelegate](class_mip_storagedelegate.md).

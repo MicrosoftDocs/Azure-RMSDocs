@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class TelemetryDelegate 
@@ -24,7 +24,7 @@ public void Flush()  |  Flush any queued events (e.g. due to shutdown)
 Log a diagnostic event.
 
 Parameters:  
-* **event**: Event to be logged
+* **event**: [Event](class_mip_event.md) to be logged
 
 
   
@@ -32,10 +32,10 @@ Parameters:
 Log a diagnostic event.
 
 Parameters:  
-* **event**: Event to be logged 
+* **event**: [Event](class_mip_event.md) to be logged 
 
 
-* **eventContext**: EventContext associated with event.
+* **eventContext**: [EventContext](class_mip_eventcontext.md) associated with event
 
 
   

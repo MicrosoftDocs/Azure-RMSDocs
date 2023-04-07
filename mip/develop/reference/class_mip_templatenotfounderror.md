@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class TemplateNotFoundError 
@@ -117,5 +117,6 @@ FileIsTooLargeForProtection            | File is too large for protection
 ParameterParsing            | Parameter cannot be parsed correctly
 LicenseNotTrusted            | Publishing license not issued by trusted source
 DoubleKey            | A paremeter for double key encryption is needed and missing
+FileFormatNotSupported            | The input file's format is not supported
 
 ErrorCode of bad input error.

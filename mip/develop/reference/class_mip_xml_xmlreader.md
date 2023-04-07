@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class xml::XmlReader 
-XmlReader abstraction class.
+[XmlReader](class_mip_xml_xmlreader.md) abstraction class.
   
 ## Summary
  Members                        | Descriptions                                
@@ -33,7 +33,7 @@ public std::string DumpNode()  |  Method returns all node elements in an unmodif
   
 ### Read function
 Reads the next node of the element.
-throws XmlParserException on failure
+throws [XmlParserException](#classxml_1_1_xml_parser_exception) on failure
 
   
 **Returns**: True if read node successfully.
@@ -46,7 +46,7 @@ Get current node type.
   
 ### GetName function
 Returns the name if found, exception otherwise. empty name is possible.
-throws XmlParserException on failure
+throws [XmlParserException](class_mip_xml_xmlparserexception.md) on failure
 
   
 **Returns**: Node name.
@@ -59,7 +59,7 @@ Returns if name was found. Sets name only when true. empty name is possible.
   
 ### Skip function
 Skips current node until it finds a non empty node.
-throws XmlParserException on failure
+throws [XmlParserException](class_mip_xml_xmlparserexception.md) on failure
 
   
 **Returns**: True if name successful.
@@ -76,14 +76,12 @@ Parameters:
 **Returns**: True if value exists else false.
   
 ### GetAncestors function
-
 Returns current node ancestors (for debug text), in the following purpose &lt;node grand parent attributes=...&gt;&gt;&lt;node parent&gt;&lt;node&gt;.
-
 used for debugging purposes, and error logging.
   
 ### IsEmptyElement function
 Returns whether the current node as an empty element.
-throws XmlParserException on failure
+throws [XmlParserException](class_mip_xml_xmlparserexception.md) on failure
 
   
 **Returns**: True if element is empty.
@@ -104,35 +102,36 @@ Parameters:
   
 ### HasAttributes function
 Returns whether the current node has attributes.
-throws XmlParserException on failure
+throws [XmlParserException](class_mip_xml_xmlparserexception.md) on failure
 
   
 **Returns**: True if the current node has attributes.
   
 ### MoveToFirstAttribute function
 Move to first attribute.
-throws XmlParserException on failure
+throws [XmlParserException](class_mip_xml_xmlparserexception.md) on failure
 
   
 **Returns**: True if successful
   
 ### MoveToNextAttribute function
 Move to Next attribute.
-throws XmlParserException on failure
+throws [XmlParserException](class_mip_xml_xmlparserexception.md) on failure
 
   
 **Returns**: True if successful
   
 ### MoveToElement function
 Move from attribute to element.
-throws XmlParserException on failure
+throws [XmlParserException](class_mip_xml_xmlparserexception.md) on failure
 
   
 **Returns**: True if successful
   
 ### DumpNode function
 Method returns all node elements in an unmodified way from the original xml.
-throws XmlParserException on failure
+throws [XmlParserException](class_mip_xml_xmlparserexception.md) on failure
 
   
-**Returns**: Entire serialized element. Moved to end of node.
+**Returns**: Entire serialized element.
+moved to end of node.

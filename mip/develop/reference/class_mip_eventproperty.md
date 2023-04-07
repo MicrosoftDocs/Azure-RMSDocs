@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class EventProperty 
@@ -65,4 +65,4 @@ Get property value (int64)
 Get property value (string)
 
   
-**Returns**: Property value.
+**Returns**: Property value

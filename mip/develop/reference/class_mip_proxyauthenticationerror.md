@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class ProxyAuthenticationError 
@@ -33,7 +33,6 @@ Gets the HTTP response status code.
 **Returns**: HTTP response status code, 0 if none
   
 ### Category enum
-
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unknown network failure
@@ -49,5 +48,4 @@ Throttled            | HTTP operation failed due to server traffic throttling
 Cancelled            | HTTP operation has been cancelled by the application
 FunctionNotImplemented            | HTTP response code indicates called function is not implemented
 ServiceUnavailable            | HTTP response code indicates service is unavailable
-
 Category of network error.

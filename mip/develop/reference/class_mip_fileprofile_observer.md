@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class FileProfile::Observer 
@@ -81,4 +81,4 @@ This optional callback may be used by an application to be informed whether or n
   
 ### Observer function
 _Not documented yet._
-
+mented yet._

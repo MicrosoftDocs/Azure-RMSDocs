@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class Label 
-Abstraction for a single Microsoft Purview Information Protection label.
+Abstraction for a single Microsoft Information Protection label.
   
 ## Summary
  Members                        | Descriptions                                
@@ -101,12 +101,10 @@ Get the custom settings of a label.
 Gets the action source of the label.
 
   
-**Returns**: Action source
+**Returns**: [Action](class_mip_action.md) source
   
 ### GetContentFormats function
 Gets content types.
 
   
-
-&lt;Returns&gt;
-
+&lt;Returns&gt;ns&gt;

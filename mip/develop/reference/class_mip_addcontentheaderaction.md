@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class AddContentHeaderAction 
@@ -28,7 +28,7 @@ public int GetMargin() const  |  Get the margin of the header from the bottom.
 An API used to mark the content header element.
 
   
-**Returns**: The name that should be used for the UI element that holds the content header. The same name will be returned in RemoveContentHeaderAction in case the content header needs to be removed.
+**Returns**: The name that should be used for the UI element that holds the content header. The same name will be returned in [RemoveContentHeaderAction](#class_remove_content_header_action) in case the content header needs to be removed.
   
 ### GetText function
 Get the text that is meant to go into the content header.

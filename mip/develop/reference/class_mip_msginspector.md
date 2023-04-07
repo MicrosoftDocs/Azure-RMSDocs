@@ -5,12 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class MsgInspector 
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::vector&lt;uint8_t&gt;& GetBody() const  |  Get the body of the msg. if TXT/HTML formatted as utf8.
@@ -34,7 +35,7 @@ Get body encoding code page, relevant for txt, html body formats.
   
 **Returns**: An unsigned code page. 
   
-**See also**: [/windows/win32/intl/code-page-identifiers](/windows/win32/intl/code-page-identifiers)
+**See also**: [Code Page Identifiers](/windows/win32/intl/code-page-identifiers)
   
 ### GetBodyType function
 Get body type.
@@ -46,9 +47,7 @@ Get body type.
 Get a list of attachment as msg attachment data objects.
 
   
-
-**Returns**: A vector of std::unique_ptr\<MsgAttachmentData\>
-
+**Returns**: A vector of std::unique_ptr&lt;MsgAttachmentData&gt;
   
 ### GetInspectorType function
 Get file types,.

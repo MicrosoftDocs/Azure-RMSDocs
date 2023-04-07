@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class LoggerDelegate 
@@ -81,3 +81,5 @@ Write a log statement to a log.
 
 Parameters:  
 * **logMessage**: The log message data containing the logging information
+
+

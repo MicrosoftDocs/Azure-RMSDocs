@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class LabelingOptions 
@@ -50,4 +50,4 @@ _Not documented yet._
   
 ### SetExtendedProperties function
 _Not documented yet._
-
+t._

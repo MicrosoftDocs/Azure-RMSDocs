@@ -5,16 +5,16 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/14/2022
+ms.date: 03/30/2023
 ---
 
 # class MetadataVersion 
-Interface for a MetadataVersion. MetadataVersion determines which metadata is active and how it is processed.
+Interface for a [MetadataVersion](class_mip_metadataversion.md). [MetadataVersion](class_mip_metadataversion.md) determines which metadata is active and how it is processed.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MetadataVersion(uint32_t version, MetadataVersionFormat flags)  |  MetadataVersion constructor.
+public MetadataVersion(uint32_t version, MetadataVersionFormat flags)  |  [MetadataVersion](class_mip_metadataversion.md) constructor.
 public virtual uint32_t GetValue() const  |  Get the numerical version.
 public virtual bool HasFlag(MetadataVersionFormat flag) const  |  Get whether a specific flag is set.
 public virtual MetadataVersionFormat GetFlags() const  |  Get the flags that define how metadata is processed for a given version.
@@ -22,7 +22,7 @@ public virtual MetadataVersionFormat GetFlags() const  |  Get the flags that def
 ## Members
   
 ### MetadataVersion function
-MetadataVersion constructor.
+[MetadataVersion](class_mip_metadataversion.md) constructor.
 
 Parameters:  
 * **version**: numerical version to use for metadata actions 
