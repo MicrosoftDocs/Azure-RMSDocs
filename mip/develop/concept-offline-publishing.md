@@ -52,6 +52,8 @@ The following code snippets are taken from these sample applications:
 mipsdk-protectionapi-cpp-sample-basic](https://github.com/Azure-Samples/mipsdk-protectionapi-cpp-sample-basic)
 - [mipsdk-protection-dotnet-quickstart](https://github.com/Azure-Samples/MipSDK-Protection-Dotnet-Quickstart)
 
+After completing the following steps, creating a publishing license will occur without making a service call if the templates cache hasn't expired. 
+
 ### C++ Example
 
 #### Configure ProtectionProfileSettings (C++)
