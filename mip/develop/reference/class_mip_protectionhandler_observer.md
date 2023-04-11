@@ -15,8 +15,8 @@ This interface must be implemented by applications using the protection SDK
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnCreateProtectionHandlerSuccess(const std::shared_ptr\&lt;ProtectionHandler\&gt;& protectionHandler, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when [ProtectionHandler](class_mip_protectionhandler.md) was created successfully.
-public virtual void OnCreateProtectionHandlerFailure(const std::exception_ptr& error, const std::shared_ptr\&lt;void\&gt;& context)  |  Called when [ProtectionHandler](class_mip_protectionhandler.md) creation failed.
+public virtual void OnCreateProtectionHandlerSuccess(const std::shared_ptr&lt;ProtectionHandler&gt;& protectionHandler, const std::shared_ptr&lt;void&gt;& context)  |  Called when [ProtectionHandler](class_mip_protectionhandler.md) was created successfully.
+public virtual void OnCreateProtectionHandlerFailure(const std::exception_ptr& error, const std::shared_ptr&lt;void&gt;& context)  |  Called when [ProtectionHandler](class_mip_protectionhandler.md) creation failed.
   
 ## Members
   
@@ -42,4 +42,4 @@ Parameters:
 * **context**: The same context that was passed to ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync or ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync or ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync, and that same context will be forwarded as-is to ProtectionEngine::Observer::OnCreateProtectionHandlerSuccess or ProtectionEngine::Observer::OnCreateProtectionHandlerFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync or ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync, and that same context will be forwarded as-is to ProtectionEngine::Observer::OnCreateProtectionHandlerSuccess or ProtectionEngine::Observer::OnCreateProtectionHandlerFailure.

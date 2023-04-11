@@ -14,8 +14,8 @@ A class that defines the interface to the MIP SDK telemetry notifications.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public void WriteEvent(const std::shared_ptr\&lt;TelemetryEvent\&gt;& event)  |  Log a diagnostic event.
-public void WriteEvent(const std::shared_ptr\&lt;TelemetryEvent\&gt;& event, const mip::EventContext& eventContext)  |  Log a diagnostic event.
+public void WriteEvent(const std::shared_ptr&lt;TelemetryEvent&gt;& event)  |  Log a diagnostic event.
+public void WriteEvent(const std::shared_ptr&lt;TelemetryEvent&gt;& event, const mip::EventContext& eventContext)  |  Log a diagnostic event.
 public void Flush()  |  Flush any queued events (e.g. due to shutdown)
   
 ## Members
@@ -24,7 +24,7 @@ public void Flush()  |  Flush any queued events (e.g. due to shutdown)
 Log a diagnostic event.
 
 Parameters:  
-* **event**: [Event](#class_event) to be logged
+* **event**: [Event](class_mip_event.md) to be logged
 
 
   
@@ -35,9 +35,9 @@ Parameters:
 * **event**: [Event](class_mip_event.md) to be logged 
 
 
-* **eventContext**: [EventContext](#class_event_context) associated with event
+* **eventContext**: [EventContext](class_mip_eventcontext.md) associated with event
 
 
   
 ### Flush function
-Flush any queued events (e.g. due to shutdown)
+Flush any queued events (e.g. due to shutdown).

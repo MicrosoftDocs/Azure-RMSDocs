@@ -13,19 +13,19 @@ ms.date: 03/30/2023
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector\&lt;std::string\&gt;& GetDomains()  |  Gets the license domains.
+public const std::vector&lt;std::string&gt;& GetDomains()  |  Gets the license domains.
 public const std::string& GetServerPublicCert()  |  Gets the server public cert.
 public const std::string& GetContentId()  |  Gets the content id.
 public const std::string& GetIssuerId()  |  Gets the issuer id.
 public const std::string& GetDoubleKeyAlgorithm()  |  Gets the double key algorithm.
 public const std::string& GetOwner()  |  Gets the owner.
-public std::shared_ptr\&lt;LicenseConnectionInfo\&gt; GetConnectionInfo()  |  Gets the connection info.
-public std::shared_ptr\&lt;LicenseDescriptor\&gt; GetDescriptor()  |  Gets the descriptor.
+public std::shared_ptr&lt;LicenseConnectionInfo&gt; GetConnectionInfo()  |  Gets the connection info.
+public std::shared_ptr&lt;LicenseDescriptor&gt; GetDescriptor()  |  Gets the descriptor.
 public const std::string& GetReferralInfoUrl()  |  Gets the referral info url.
-public const std::vector\&lt;std::shared_ptr\&lt;LicenseApplicationData\&gt;\&gt;& GetSignedApplicationData()  |  Gets the signed application data.
-public const std::chrono::time_point\&lt;std::chrono::system_clock\&gt;& GetIssuedTime()  |  Gets the issued time.
+public const std::vector&lt;std::shared_ptr&lt;LicenseApplicationData&gt;&gt;& GetSignedApplicationData()  |  Gets the signed application data.
+public const std::chrono::time_point&lt;std::chrono::system_clock&gt;& GetIssuedTime()  |  Gets the issued time.
 public const mip::LabelInfo& GetLabelInfo()  |  Gets the label info of the license, if applicable.
-public const std::vector\&lt;uint8_t\&gt;& GetEncryptedRightsData()  |  Gets the encrypted rights data. Used internally by the SDK. Applications should not try to decipher or modify this data.
+public const std::vector&lt;uint8_t&gt;& GetEncryptedRightsData()  |  Gets the encrypted rights data. Used internally by the SDK. Applications should not try to decipher or modify this data.
   
 ## Members
   

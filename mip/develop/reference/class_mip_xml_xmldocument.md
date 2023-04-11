@@ -14,9 +14,9 @@ Interface to interact with XML document.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::vector\&lt;std::shared_ptr\&lt;XmlNode\&gt;\&gt; SelectNodes(const std::string& xpath, const std::shared_ptr\&lt;XmlNode\&gt;& node) const  |  Get matching xml nodes from a specified xpath. Will throw exception of type mip::BadInputError if xml nodes cannot be parsed, there is an invalid encoding, or the xpath cannot be interpreted.
+public std::vector&lt;std::shared_ptr&lt;XmlNode&gt;&gt; SelectNodes(const std::string& xpath, const std::shared_ptr&lt;XmlNode&gt;& node) const  |  Get matching xml nodes from a specified xpath. Will throw exception of type mip::BadInputError if xml nodes cannot be parsed, there is an invalid encoding, or the xpath cannot be interpreted.
 public std::string GetXmlContent() const  |  Parse an xml formatted buffer into an xmldocument.
-public std::shared_ptr\&lt;XmlNode\&gt; GetRootNode() const  |  Get the node that is an ancestor of all other nodes.
+public std::shared_ptr&lt;XmlNode&gt; GetRootNode() const  |  Get the node that is an ancestor of all other nodes.
   
 ## Members
   
@@ -32,7 +32,7 @@ Parameters:
 
 
   
-**Returns**: A vector of matching [XmlNode](#classxml_1_1_xml_node) shared pointers or an empty vector if none match
+**Returns**: A vector of matching [XmlNode](class_mip_xml_xmlnode.md) shared pointers or an empty vector if none match
   
 ### GetXmlContent function
 Parse an xml formatted buffer into an xmldocument.
@@ -44,4 +44,4 @@ Parse an xml formatted buffer into an xmldocument.
 Get the node that is an ancestor of all other nodes.
 
   
-**Returns**: A shared_ptr to an [XmlNode](class_mip_xml_xmlnode.md)
+**Returns**: A shared_ptr to an [XmlNode](class_mip_xml_xmlnode.md).

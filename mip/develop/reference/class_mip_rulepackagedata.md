@@ -14,8 +14,8 @@ ms.date: 03/30/2023
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const PolicyRuleData* GetRuleData() const  | _Not yet documented._
-public const std::pair\&lt;std::string, std::string\&gt;& GetLabelToTemplateId() const  | _Not yet documented._
-public const std::pair\&lt;std::string, std::shared_ptr\&lt;ProtectionActionData\&gt;\&gt;& GetLabelToProtectionType() const  | _Not yet documented._
+public const std::pair&lt;std::string, std::string&gt;& GetLabelToTemplateId() const  | _Not yet documented._
+public const std::pair&lt;std::string, std::shared_ptr&lt;ProtectionActionData&gt;&gt;& GetLabelToProtectionType() const  | _Not yet documented._
 public virtual ~RulePackageData()  | _Not yet documented._
   
 ## Members
@@ -34,3 +34,4 @@ _Not documented yet._
   
 ### ~RulePackageData function
 _Not documented yet._
+._

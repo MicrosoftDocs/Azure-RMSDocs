@@ -14,8 +14,8 @@ Recommend label actions is meant to suggest a label to the users. Suppressing th
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::shared_ptr\&lt;Label\&gt;& GetLabel() const  |  Get the label suggested.
-public const std::vector\&lt;std::string\&gt;& GetClassificationIds() const  |  Get the Classification IDs that matched and caused this label to appear.
+public const std::shared_ptr&lt;Label&gt;& GetLabel() const  |  Get the label suggested.
+public const std::vector&lt;std::string&gt;& GetClassificationIds() const  |  Get the Classification IDs that matched and caused this label to appear.
   
 ## Members
   

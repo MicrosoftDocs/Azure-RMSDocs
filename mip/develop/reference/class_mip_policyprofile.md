@@ -15,15 +15,15 @@ ms.date: 03/30/2023
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Get the settings set on the profile.
-public std::shared_ptr\&lt;AsyncControl\&gt; ListEnginesAsync(const std::shared_ptr\&lt;void\&gt;& context)  |  Starts list engines operation.
-public std::vector\&lt;std::string\&gt; ListEngines()  |  List of engines.
-public std::shared_ptr\&lt;AsyncControl\&gt; UnloadEngineAsync(const std::string& id, const std::shared_ptr\&lt;void\&gt;& context)  |  Starts unloading the policy engine with the given ID.
+public std::shared_ptr&lt;AsyncControl&gt; ListEnginesAsync(const std::shared_ptr&lt;void&gt;& context)  |  Starts list engines operation.
+public std::vector&lt;std::string&gt; ListEngines()  |  List of engines.
+public std::shared_ptr&lt;AsyncControl&gt; UnloadEngineAsync(const std::string& id, const std::shared_ptr&lt;void&gt;& context)  |  Starts unloading the policy engine with the given ID.
 public void UnloadEngine(const std::string& id)  |  Starts unloading the policy engine with the given ID.
-public std::shared_ptr\&lt;AsyncControl\&gt; AddEngineAsync(const PolicyEngine::Settings& settings, const std::shared_ptr\&lt;void\&gt;& context)  |  Starts adding a new policy engine to the profile.
-public std::shared_ptr\&lt;PolicyEngine\&gt; AddEngine(const PolicyEngine::Settings& settings, const std::shared_ptr\&lt;void\&gt;& context)  |  Add a new policy engine to the profile.
-public std::shared_ptr\&lt;AsyncControl\&gt; DeleteEngineAsync(const std::string& id, const std::shared_ptr\&lt;void\&gt;& context)  |  Starts deleting the policy engine with the given ID. All data for the given profile will be deleted.
+public std::shared_ptr&lt;AsyncControl&gt; AddEngineAsync(const PolicyEngine::Settings& settings, const std::shared_ptr&lt;void&gt;& context)  |  Starts adding a new policy engine to the profile.
+public std::shared_ptr&lt;PolicyEngine&gt; AddEngine(const PolicyEngine::Settings& settings, const std::shared_ptr&lt;void&gt;& context)  |  Add a new policy engine to the profile.
+public std::shared_ptr&lt;AsyncControl&gt; DeleteEngineAsync(const std::string& id, const std::shared_ptr&lt;void&gt;& context)  |  Starts deleting the policy engine with the given ID. All data for the given profile will be deleted.
 public void DeleteEngine(const std::string& engineId)  |  Delete the policy engine with the given ID. All data for the given engine will be deleted.
-public void AcquireAuthToken(Cloud cloud, const std::shared_ptr\&lt;AuthDelegate\&gt;& authDelegate) const  |  Trigger an authentication callback.
+public void AcquireAuthToken(Cloud cloud, const std::shared_ptr&lt;AuthDelegate&gt;& authDelegate) const  |  Trigger an authentication callback.
   
 ## Members
   

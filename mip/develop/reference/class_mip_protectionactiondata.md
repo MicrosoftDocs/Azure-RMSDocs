@@ -18,10 +18,10 @@ public const std::string& GetTemplateId() const  | _Not yet documented._
 public const std::string& GetDoubleKeyEncryptionUrl() const  | _Not yet documented._
 public virtual ~ProtectionActionData()  | _Not yet documented._
 public ActionDataType GetType() const  | _Not yet documented._
-public const std::map\&lt;std::string, std::string, CaseInsensitiveComparator\&gt;& GetProperties() const  | _Not yet documented._
+public const std::map&lt;std::string, std::string, CaseInsensitiveComparator&gt;& GetProperties() const  | _Not yet documented._
 public std::string GetArgumentValue(const std::string& key) const  | _Not yet documented._
 public const std::string& GetName() const  | _Not yet documented._
-public std::vector\&lt;std::pair\&lt;std::string, std::string\&gt;\&gt; GetArguments() const  | _Not yet documented._
+public std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt; GetArguments() const  | _Not yet documented._
   
 ## Members
   
@@ -59,3 +59,4 @@ _Not documented yet._
   
 ### GetArguments function
 _Not documented yet._
+._
