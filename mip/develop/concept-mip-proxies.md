@@ -73,9 +73,9 @@ profileSettings.SetHttpDelegate(httpDelegate);
 
 When a custom HTTP delegate isn't an option, it will be required that you bypass your proxy and allow direct network connectivity for the MIP labeling and protection endpoints, as well as to Azure Active Directory. If [audit logging](/azure/information-protection/reports-aip) is desired, the audit logging endpoint is also required.
 
-| Endpoint           | Hostname                                                                                                                                                                |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Protection Service | https://api.aadrm.com                                                                                                                                                   |
-| Policy             | https://\*.protection.outlook.com                                                                                                                                       |
-| Audit Logging      | https://\*.events.data.microsoft.com, https://\*.aria.microsoft.com (iOS only)                                                                                          |
+| Endpoint           | Hostname                                                                                                                         |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| Protection Service | https://api.aadrm.com                                                                                                            |
+| Policy             | https://\*.protection.outlook.com, https://substrate.office.com                                                                  |
+| Audit Logging      | https://\*.events.data.microsoft.com, https://\*.aria.microsoft.com (iOS only)                                                   |
 | Authentication     | [Review Azure AD documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
