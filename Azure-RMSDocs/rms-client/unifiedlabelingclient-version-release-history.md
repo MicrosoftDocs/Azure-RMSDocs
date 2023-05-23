@@ -113,7 +113,7 @@ This version of the unified labeling client and scanner provides the following f
 - Fixed a bug where change counter was incremented but no audit event was sent. Change counter no longer incremented for those events.
 - Fixed a bug where display name was not passed MIP after MSAL changes.
 - Fixed an issue where EUII appeared in UserKey field of audit record.
-- Updated to [MIP SDK 1.13.161](/information-protection/develop/version-release-history#version-113161) for classification, labeling and protection services.
+- Updated to [MIP SDK 1.13.161](/information-protection/develop/version-release-history#version-113161), adding support for consumption of Office documents and emails protected with AES256-CBC.
 
 ## Version 2.15.33.0
 
