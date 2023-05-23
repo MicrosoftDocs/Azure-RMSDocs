@@ -100,7 +100,9 @@ This version includes the following fixes for the unified labeling scanner and c
 
 ### AIP Tenant Block
 
-Following the retirement notification for the Azure Information Protection add-in for Office on 04/11/2023, this version of the AIP UL client includes a tenant-level block for new deployments of AIP. Organizations who previously never used the AIP Unified Labeling add-in for Office before 05/23/2023 will be blocked from using the add-in. Enforcement for the tenant block will begin 05/30/2023 to block the download of labels for tenants not in the allow list. If your organization has shown usage of the AIP add-in 90 days before the release of 2.16.73.0, your tenant will automatically be added to the allow list.
+Following the retirement notification for the Azure Information Protection add-in for Office on 04/11/2023, this version of the AIP UL client includes a tenant-level block for new deployments of AIP. 
+
+Organizations who previously never used the AIP Unified Labeling add-in for Office before 05/23/2023 will be blocked from using the add-in. Enforcement for the tenant block will begin 05/30/2023 to block the download of labels for tenants not in the allow list. If your organization has shown usage of the AIP add-in 90 days before the release of 2.16.73.0, your tenant will automatically be added to the allow list.
 
 For more information, see our tech community blog [Retirement notification for the Azure Information Protection Unified Labeling add-in for Office](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/retirement-notification-for-the-azure-information-protection/ba-p/3791908) and for detailed migration steps, our [migration playbook](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIPPlaybook/).
 
