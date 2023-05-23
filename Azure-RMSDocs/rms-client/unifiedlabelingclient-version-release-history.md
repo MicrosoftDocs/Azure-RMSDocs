@@ -98,7 +98,7 @@ Unified labeling scanner and client version 2.16.73.0
 
 This version includes the following fixes for the unified labeling scanner and client:
 
-### AIP Tenant Block
+### Service block for new deployments of AIP
 
 Following the retirement notification for the Azure Information Protection add-in for Office on 04/11/2023, this version of the AIP UL client includes a tenant-level block for new deployments of AIP. 
 
