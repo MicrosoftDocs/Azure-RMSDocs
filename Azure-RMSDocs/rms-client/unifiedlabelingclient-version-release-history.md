@@ -45,11 +45,12 @@ The lifecycle of each generally available (GA) version of the Azure Information 
 
 |Client version|Date released|Supported through|
 |--------------|-------------|-------------|
+|2.16.73.0|05/23/2023|05/23/2024|
 |2.15.33.0|02/17/2023|02/17/2024|
 |2.14.90.0|09/01/2022|09/01/2023|
-|2.13.49.0|01/12/2022|03/01/2023|
+|2.13.49.0|01/12/2022|Deprecated|
 |2.12.62.0|08/02/2021|Deprecated|
-|2.11.58.0 |04/29/2021|Deprecated|
+|2.11.58.0|04/29/2021|Deprecated|
 |2.9.116.0|02/08/2021|Deprecated|
 |2.9.111.0|01/13/2021|Deprecated|
 |2.8.85.0|09/22/2020|Deprecated|
@@ -86,6 +87,31 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 > Minor fixes aren't always listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
 >
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
+
+## Version 2.16.73.0
+
+Unified labeling scanner and client version 2.16.73.0
+
+**Supported through** 05/23/2024
+
+**Released** 05/23/2023
+
+This version includes the following fixes for the unified labeling scanner and client:
+
+### AIP Tenant Block
+
+Following the retirement notification for the Azure Information Protection add-in for Office on 04/11/2023, this version of the AIP UL client includes a tenant-level block for new deployments of AIP. Organizations who previously never used the AIP Unified Labeling add-in for Office before 05/23/2023 will be blocked from using the add-in. Enforcement for the tenant block will begin 05/30/2023 and block the download of labels for tenants not in the allow list. If your organization has shown usage of the AIP add-in 90 days before the release of 2.16, your tenant will automatically be added to the allow list.
+
+For more information, see our tech community blog [Retirement notification for the Azure Information Protection Unified Labeling add-in for Office](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/retirement-notification-for-the-azure-information-protection/ba-p/3791908) and for detailed migration steps, our [migration playbook](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIPPlaybook/).
+
+### Fixes and improvements
+
+This version of the unified labeling client and scanner provides the following fixes and improvements:
+
+- Fixed a bug where change counter was incremented but no audit event was sent. Change counter no longer incremented for those events.
+- Fixed a bug where display name was not passed MIP after MSAL changes.
+- Fixed an issue where EUII appeared in UserKey field of audit record.
+- Updated to [MIP SDK 1.13.161](/information-protection/develop/version-release-history#version-113161) for classification, labeling and protection services.
 
 ## Version 2.15.33.0
 
