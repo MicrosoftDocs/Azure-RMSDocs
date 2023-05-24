@@ -98,7 +98,7 @@ Unified labeling scanner and client version 2.16.73.0
 
 This version includes the following fixes for the unified labeling scanner and client:
 
-### Service block for new deployments of AIP
+### Service block for new deployments of AIP add-in
 
 Organizations who have non-zero usage of AIP in the last 90 days before 05/23/2023 can use 2.16.73.0 with no impact. 
 
