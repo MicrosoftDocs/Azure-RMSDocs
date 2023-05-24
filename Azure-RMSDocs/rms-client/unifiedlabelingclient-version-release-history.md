@@ -100,16 +100,13 @@ This version includes the following fixes for the unified labeling scanner and c
 
 ### Service block for new deployments of AIP
 
-Following the retirement notification for the Azure Information Protection add-in for Office on 04/11/2023, this version of the AIP UL client includes a tenant-level block for new deployments of AIP. 
-
-- you can get an exception
-
 Organizations who have non-zero usage of AIP in the last 90 days before 05/23/2023 can use 2.16.73.0 with no impact. 
 
-Organizations that have zero usage of AIP in the last 90 days before 05/23/2023 will be impacted _if you use the AIP add-in_. Organizations that start to use the AIP add-in for the first time after 5/30/2023 can not download labels and will find the AIP add-in non-functional.
+Organizations who have zero usage of AIP in the last 90 days before 05/23/2023 will be impacted _if you use the AIP add-in_. Organizations who start to use the AIP add-in for the first time after 5/30/2023 can not download labels and will find the AIP add-in non-functional.
 
+Organizations with a legitimate business need to continue using the AIP add-in after 04/11/2024 can apply for an extension through support.
 
-For more information, see our TechCommunity blog [Retirement notification for the Azure Information Protection Unified Labeling add-in for Office](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/retirement-notification-for-the-azure-information-protection/ba-p/3791908) and for detailed migration steps, our [migration playbook](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIPPlaybook/).
+For more information about AIP add-in retirement, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/retirement-notification-for-the-azure-information-protection/ba-p/3791908) and for detailed migration steps, our [migration playbook](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIPPlaybook/).
 
 ### Fixes and improvements
 
