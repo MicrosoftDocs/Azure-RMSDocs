@@ -273,7 +273,7 @@ Microsoft 365 Data Loss Prevention (DLP) policies are now supported with the Azu
 
 - **Scanning your files with DLP rules enabled also creates file permission reports**. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
 
-Settings for enforcing or testing the DLP policy are configured in the [Microsoft Purview compliance portal](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
+Settings for enforcing or testing the DLP policy are configured in the [Microsoft Purview compliance portal](/microsoft-365/compliance/dlp-learn-about-dlp).
 
 For more information, including licensing requirements, see:
 
