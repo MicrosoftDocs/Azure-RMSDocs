@@ -92,7 +92,7 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 
 Unified labeling scanner and client version 2.16.73.0
 
-**Supported through** 05/23/2024
+**Supported through** 04/11/2024
 
 **Released** 05/23/2023
 
