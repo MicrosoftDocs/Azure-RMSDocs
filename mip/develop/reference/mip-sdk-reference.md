@@ -11,7 +11,7 @@ ms.date: 03/30/2023
 
 The Microsoft Information Protection (MIP) SDK for C++ allows developers to manage and apply data protection policies to data and other digital assets.
 
-The MIP SDK for C++ includes Enumerations and structures](mip-enums-and-structs.md), and the following classes:
+The MIP SDK for C++ includes [Enumerations and structures](mip-enums-and-structs.md), and the following classes:
 
  Class                         | Description                                
 --------------------------------|---------------------------------------------
