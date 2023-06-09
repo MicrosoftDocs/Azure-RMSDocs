@@ -11,7 +11,7 @@ ms.date: 03/30/2023
 
 The Microsoft Information Protection (MIP) SDK for C++ allows developers to manage and apply data protection policies to data and other digital assets.
 
-The MIP SDK for C++ includes Enumerations and structures](mip-enums-and-structs.md), and the following classes:
+The MIP SDK for C++ includes [Enumerations and structures](mip-enums-and-structs.md), and the following classes:
 
  Class                         | Description                                
 --------------------------------|---------------------------------------------
@@ -52,8 +52,8 @@ class [DelegationLicenseSettings](class_mip_delegationlicensesettings.md) | _Not
 class [DeprecatedApiError](class_mip_deprecatedapierror.md) | Caller invoked a deprecated API.
 class [DetailedClassificationResult](class_mip_detailedclassificationresult.md) | Class that contains the result of a classification call on the Execution State.
 class [DiagnosticDelegate](class_mip_diagnosticdelegate.md) | A class that defines the interface to the MIP SDK audit/telemetry notifications.
-class [DirectoryObject](class_mip_directioryobject.md) | The directory object information which includes- type, email, objectId and PUID.
-class [DirectoryObjectRights](class_mip_directioryobjectrights.md) | The directory object and rights associated with it.
+class [DirectoryObject](class_mip_directoryobject.md) | The directory object information which includes- type, email, objectId and PUID.
+class [DirectoryObjectRights](class_mip_directoryobjectrights.md) | The directory object and rights associated with it.
 class [DocumentState](class_mip_documentstate.md) | _Not yet documented._
 class [Error](class_mip_error.md) | Base class for all errors that will be reported (thrown or returned) from MIP SDK.
 class [Event](class_mip_event.md) | A single audit/telemetry event.
