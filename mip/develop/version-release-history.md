@@ -29,7 +29,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | ------- | ---------------------------- | ------------------ | ------------------ |
 | 1.13    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
 | 1.12    | https://aka.ms/mipsdkbins112 | **Supported**      | March 17, 2024     |
-| 1.11    | https://aka.ms/mipsdkbins111 | **Supported**      | June 9, 2023       |
+| 1.11    | https://aka.ms/mipsdkbins111 | **Out of Support** | June 9, 2023       |
 | 1.10    | https://aka.ms/mipsdkbins110 | **Out of Support** | November 17, 2022  |
 | 1.9     | https://aka.ms/mipsdkbins19  | **Out of Support** | August 23, 2022    |
 | 1.8     | https://aka.ms/mipsdkbins18  | **Out of Support** | April 29, 2022     |
@@ -37,6 +37,21 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support** | September 23, 2021 |
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
+
+## Version 1.13.174
+
+### Bug Fixes
+
+- Fixed an issue where CommitAsync() failed to return in low disk space conditions. 
+- Fixed an issue where creating FileHandler for xlsb files failed when file was downloaded from SharePoint.
+
+### Platform and Dependency Updates
+
+- Added support for Ubuntu 22.04.
+- Added support for Debian 11.
+- Added support for RedHat Enterprise Linux 9.
+- Removed support for Ubuntu 18.04.
+- Removed support for Debian 9.
 
 ## Version 1.13.161
 
