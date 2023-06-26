@@ -135,7 +135,7 @@ Do one of the following, depending on whether you have integrated Exchange on-pr
 
 - [Integrated Exchange on-premises with AD RMS](#if-you-have-integrated-exchange-on-premises-with-ad-rms)
 - [Integrated Exchange Online with AD RMS](#if-you-have-integrated-exchange-online-with-ad-rms)
-### If you have integrated Exchange Online with AD RMS
+### (Deprecated) If you have integrated Exchange Online with AD RMS
 
 1. Open an Exchange Online PowerShell session.
 
