@@ -73,9 +73,44 @@ profileSettings.SetHttpDelegate(httpDelegate);
 
 When a custom HTTP delegate isn't an option, it will be required that you bypass your proxy and allow direct network connectivity for the MIP labeling and protection endpoints, as well as to Azure Active Directory. If [audit logging](/azure/information-protection/reports-aip) is desired, the audit logging endpoint is also required.
 
+## Cloud Endpoints
+### Commercial
 | Endpoint           | Hostname                                                                                                                         |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
 | Protection Service | https://api.aadrm.com                                                                                                            |
 | Policy             | https://\*.protection.outlook.com, https://substrate.office.com                                                                  |
 | Audit Logging      | https://\*.events.data.microsoft.com, https://\*.aria.microsoft.com (iOS only)                                                   |
 | Authentication     | [Review Azure AD documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
+
+### USNAT
+| Endpoint           | Hostname                                                                                                                         |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| Protection Service | https://api.aadrm.us                                                                                                             |
+| Policy             | https://substrate.exo.eaglex.ic.gov/                        |
+| Audit Logging      | https://collector.azure.eaglex.ic.gov                                                |
+| Authentication     | [Review Azure AD documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
+
+### USSEC
+| Endpoint           | Hostname                                                                                                                         |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| Protection Service | https://api.aadrm.us                                                                                                             |
+| Policy             | https://substrate.exo.eaglex.ic.gov                                       |
+| Audit Logging      | https://collector.azure.microsoft.scloud                                                 |
+| Authentication     | [Review Azure AD documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
+
+### GCCH
+| Endpoint           | Hostname                                                                                                                         |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| Protection Service | https://api.aadrm.us                                                                                                             |
+| Policy             | https://substrate.office365.us/                                                               |
+| Audit Logging      | https://.tb.events.data.microsoft.com                                                  |
+| Authentication     | [Review Azure AD documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
+
+### DoD
+| Endpoint           | Hostname                                                                                                                         |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| Protection Service | https://api.aadrm.us                                                                                                             |
+| Policy             | https://substrate-dod.office365.us/                                                              |
+| Audit Logging      | https://pf.events.data.microsoft.com                                                   |
+| Authentication     | [Review Azure AD documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
+
