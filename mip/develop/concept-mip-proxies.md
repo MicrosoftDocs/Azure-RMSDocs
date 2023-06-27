@@ -85,15 +85,13 @@ When a custom HTTP delegate isn't an option, it will be required that you bypass
 ### USNAT
 | Endpoint           | Hostname                                                                                                                         |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| Protection Service | https://api.aadrm.us                                                                                                             |
-| Policy             | https://substrate.exo.eaglex.ic.gov/                        |
+| Policy             | https://substrate.exo.eaglex.ic.gov                        |
 | Audit Logging      | https://collector.azure.eaglex.ic.gov                                                |
 | Authentication     | [Review Azure AD documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
 
 ### USSEC
 | Endpoint           | Hostname                                                                                                                         |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| Protection Service | https://api.aadrm.us                                                                                                             |
 | Policy             | https://substrate.exo.eaglex.ic.gov                                       |
 | Audit Logging      | https://collector.azure.microsoft.scloud                                                 |
 | Authentication     | [Review Azure AD documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
@@ -102,7 +100,7 @@ When a custom HTTP delegate isn't an option, it will be required that you bypass
 | Endpoint           | Hostname                                                                                                                         |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
 | Protection Service | https://api.aadrm.us                                                                                                             |
-| Policy             | https://substrate.office365.us/                                                               |
+| Policy             | https://substrate.office365.us                                                               |
 | Audit Logging      | https://.tb.events.data.microsoft.com                                                  |
 | Authentication     | [Review Azure AD documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
 
@@ -110,7 +108,7 @@ When a custom HTTP delegate isn't an option, it will be required that you bypass
 | Endpoint           | Hostname                                                                                                                         |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
 | Protection Service | https://api.aadrm.us                                                                                                             |
-| Policy             | https://substrate-dod.office365.us/                                                              |
+| Policy             | https://substrate-dod.office365.us                                                              |
 | Audit Logging      | https://pf.events.data.microsoft.com                                                   |
 | Authentication     | [Review Azure AD documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
 
