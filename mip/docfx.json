@@ -36,6 +36,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "MSDocsHeader-Purview",
       "breadcrumb_path": "/information-protection/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",
