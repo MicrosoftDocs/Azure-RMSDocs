@@ -66,7 +66,7 @@ To modify this behavior, another custom setting is available called `container_d
 | `Msg`       | Decrypts the MSG and first level attachments. Doesn't recursively decrypt attached MSG files.                   |
 | `Top`       | Decrypt only the MSG file and do not decryption attachments.                                                     |
 
-The following examples shows how to set an application in .NET to decrypt only the root MSG file.
+The following example shows how to set an application in .NET to decrypt only the root MSG file.
 
 ```csharp
 engineSettings.CustomSettings.Add(new KeyValuePair<string, string>("container_decryption_option", "Top"));
