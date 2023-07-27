@@ -1,6 +1,6 @@
 ---
 title: How to - process email messages using MIP SDK
-description: This article will help you understand the scenario of how to use MIP File SDK to process .msg and .rpmsg files.
+description: This article helps you understand the scenario of how to use MIP File SDK to process .msg and .rpmsg files.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
@@ -29,7 +29,7 @@ MIP SDK supports protection application and removal for MSG files. Given the var
 
 ## Labeling of MSG Files
 
-MIP SDK supports reading and writing labels on MSG files. Child attachments will **not** inherit the label, but will inherit the protection settings. Review [Labeling and Protection Operations in the File SDK for .msg files](#labeling-and-protection-operations-in-the-file-sdk-for-msg-files) for additional details.
+MIP SDK supports reading and writing labels on MSG files. Child attachments don't inherit the label, but inherit the protection settings. Review [Labeling and Protection Operations in the File SDK for .msg files](#labeling-and-protection-operations-in-the-file-sdk-for-msg-files) for more details.
 
 ## Labeling and Protection Operations in the File SDK for .msg files
 
@@ -55,7 +55,7 @@ Refer to [Quickstart: List labels](quick-file-list-labels-cpp.md) for informatio
 
 ## Changing Default Attachment Handling Behaviors
 
-By default, the File SDK will attempt to process all attachments that are part of an MSG file, or a message.rpmsg file when using the inspection APIs. It will not recursively decrypt attachments that are part of MSG files attached to the root MSG. These behaviors can be problematic if attachments are password protected or if the user or service trying to decrypt doesn't have access.
+By default, the File SDK attempts to process all attachments that are part of an MSG file, or a message.rpmsg file when using the inspection APIs. It doesn't recursively decrypt attachments that are part of MSG files attached to the root MSG. These behaviors can be problematic if attachments are password protected or if the user or service trying to decrypt doesn't have access.
 
 To modify this behavior, another custom setting is available called `container_decryption_option`. In C++, this is exposed via an enum, `mip::ContainerDecryptionOption`.
 
@@ -63,7 +63,7 @@ To modify this behavior, another custom setting is available called `container_d
 | ----------- | ---------------------------------------------------------------------------------------------------------------- |
 | `All`       | Decrypts the MSG file, attachments, and if the attachment is an MSG recursively decrypts it and its attachments. |
 | `Default`   | Same as `Msg`.                                                                                                   |
-| `Msg`       | Decrypts the MSG and first level attachments. Does not recursively decrypt attached MSG files.                   |
+| `Msg`       | Decrypts the MSG and first level attachments. Doesn't recursively decrypt attached MSG files.                   |
 | `Top`       | Decrypt only the MSG file and do not decryption attachments.                                                     |
 
 The following examples shows how to set an application in .NET to decrypt only the root MSG file.
@@ -86,13 +86,13 @@ egineSettings.SetCustomSettings(customSettings);
 MIP SDK exposes an inspection function that can decrypt the embedded **message.rpmsg** file and present a set of byte streams as output. It's up to the SDK consumer to extract the *message.rpmsg* file and pass it to the inspection API. Variations of this file name exist for Office Message Encryption scenarios and the API will also accept message_v2, v3, or v4 files. 
 
 > [!IMPORTANT]
-> The inspection API *does not* provide an output that will result in a usable file, nor does it allow you to re-protect the input file. It outputs streams of bytes that your application can then process further. Recreating *MSG* files from *message.rpmsg* files is not supported by MIP SDK. 
+> The inspection API *doesn't* provide an output that will result in a usable file, nor does it allow you to re-protect the input file. It outputs streams of bytes that your application can then process further. Recreating *MSG* files from *message.rpmsg* files is not supported by MIP SDK. 
 
 Commonly, mail gateway and data loss prevention (DLP) services handle MIME compliant messages while email is in transit. When mail is protected, the encrypted contents of the message are stored in an attachment, *message.rpmsg*. This attachment contains the encrypted email body and any attachments that were part of the original message. The *rpmsg* file is then attached to a plaintext wrapper email and sent to the mail service. Once that message leaves the Exchange or Exchange Online boundary, it's in the MIME-compliant format so that it can be sent to its destination.
 
 In most cases, the DLP service needs to get the attachments and plaintext bytes from the message to inspect and evaluate against DLP policies. The inspect API takes the message.rpmsg as input and returns **byte streams as output**. These byte streams contain the plaintext bytes of the message and the attachments. It’s up to the application developer to handle these streams and to do something useful with them (inspect, recursively decrypt, etc.). 
 
-The `Inspect` API is implemented through a class, `mip::FileInspector`, which exposes operations for inspecting supported file types. `mip::MsgInspector` which extends `mip::FileInspector`, exposes decryption operations specific to rpmsg file format. MIP SDK does not support any publishing scenarios for *message.rpmsg* files. Additionally, the `FileHandler::RemoveProtection()` API does not support message.rpmsg files. *Message.rpmsg* files can be decrypted only for inspection and **will not output a valid, usable file**. If your application requires a file output, you must pass in an MSG file and remove protection from that object.  
+The `Inspect` API is implemented through a class, `mip::FileInspector`, which exposes operations for inspecting supported file types. `mip::MsgInspector` which extends `mip::FileInspector`, exposes decryption operations specific to rpmsg file format. MIP SDK doesn't support any publishing scenarios for *message.rpmsg* files. Additionally, the `FileHandler::RemoveProtection()` API doesn't support message.rpmsg files. *Message.rpmsg* files can be decrypted only for inspection and **will not output a valid, usable file**. If your application requires a file output, you must pass in an MSG file and remove protection from that object.  
 
 `mip::MsgInspector` class exposes below members:
 
@@ -104,7 +104,7 @@ public InspectorType GetInspectorType() const
 public std::shared_ptr<Stream> GetFileStream() const
 ```
 
-For more details refer to [API reference](./reference/mip-sdk-reference.md).
+For more information, see [API reference](./reference/mip-sdk-reference.md).
 
 ## Next Steps
 
