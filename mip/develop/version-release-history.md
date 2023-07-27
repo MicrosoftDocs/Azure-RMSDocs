@@ -554,7 +554,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 ### General Changes
 
 - Updated NuGet package to copy dependencies only on update rather than always.
-- Debug configuration on .NET will use release version of native libraries. We found that customers deploying .NET solutions in debug mode to remote servers were required to install the VC++ Debug runtime, which isn't trivial. If there's a need to debug in to native libraries, please copy the DLLs from the SDK redistributable into the project folder (https://ala.ms/mipsdkbins)
+- Debug configuration on .NET will use release version of native libraries. We found that customers deploying .NET solutions in debug mode to remote servers were required to install the VC++ Debug runtime, which isn't trivial. If there's a need to debug in to native libraries, please copy the DLLs from the SDK Redistributable into the project folder (https://ala.ms/mipsdkbins)
 - Fixed a bug that was generating warnings for .NET Core projects.
 
 ## Version 1.7.133
@@ -881,7 +881,7 @@ This version introduces support for the Protection SDK in the .NET package (Micr
 - Renamed `mip::PublishingLicenseContext` to `mip::PublishingLicenseInfo` and updated to contain rich fields instead of raw serialized bytes.
 - `mip::PublishingLicenseInfo` contains the data relevant to MIP after parsing a publishing license (PL).
 - `mip::TemplateNotFoundError` and `mip::LabelNotFoundError` thrown when application passes MIP a template ID or label ID that isn't recognized.
-- Added support for label-based conditional access via the claims parameter of `AcquireToken()` and `mip::AuthDelegate::OAuth2Challenge()`. This functionality hasn't yet been exposed via the Compliance Center portal.
+- Added support for label-based conditional access via the claims parameter of `AcquireToken()` and `mip::AuthDelegate::OAuth2Challenge()`. This functionality hasn't yet been exposed via the compliance center portal.
 
 ## Version 1.2.0
 
