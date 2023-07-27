@@ -38,7 +38,18 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
+
+## Version 1.13.182
+
+**Release Date:** July 27, 2023
+
+## Bug Fixes
+
+- Fixed an issue removing protectioin from MSG files when attachments are protected with non-RMS technology. Will now log a warning, but will not throw an exception.  
+  
 ## Version 1.13.176
+
+**Release Date:** June 10, 2023
 
 ### Bug Fixes
 

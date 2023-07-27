@@ -29,13 +29,20 @@ MIP SDK supports protection application and removal for MSG files. Given the var
 
 ## Labeling of MSG Files
 
-Starting in **MIP SDK 1.10**, reading and writing labels on MSG files is supported. Child attachments will **not** inherit the label, but will inherit the protection settings. Review [Labeling and Protection Operations in the File SDK for .msg files](#labeling-and-protection-operations-in-the-file-sdk-for-msg-files) for additional details. 
+MIP SDK supports reading and writing labels on MSG files. Child attachments will **not** inherit the label, but will inherit the protection settings. Review [Labeling and Protection Operations in the File SDK for .msg files](#labeling-and-protection-operations-in-the-file-sdk-for-msg-files) for additional details.
 
 ## Labeling and Protection Operations in the File SDK for .msg files
 
 File SDK supports labeling and protection operations for .msg files in manner identical to any other file type, except that the SDK needs the application to enable MSG feature flag.
 
-As discussed previously, instantiation of `mip::FileEngine` requires a settings object, `mip::FileEngineSettings`. `mip::FileEngineSettings` can be used to pass in parameters for custom settings to meet specific application needs. To enable MIP SDK to process MSG files, the `CustomSettings` property of the `FileEngineSettings` object is used to set the flag for `enable_msg_file_type` to enable processing of .msg files.
+As discussed previously, instantiation of `FileEngine` requires a settings object, `FileEngineSettings`. `FileEngineSettings` can be used to pass in parameters for custom settings to meet specific application needs. To enable MIP SDK to process MSG files, the `CustomSettings` property of the `FileEngineSettings` object is used to set the flag for `enable_msg_file_type` to enable processing of .msg files.
+
+If you've created a `FileEngineSettings` object called *engineSettings*, you'd set this property in .NET as follows:
+
+```csharp
+engineSettings.CustomSettings = new List<KeyValuePair<string, string>>();
+engineSettings.CustomSettings.Add(new KeyValuePair<string, string>("enable_msg_file_type", "true"));
+```
 
 The .msg file protection operations pseudocode may look like:
 
@@ -45,6 +52,34 @@ The .msg file protection operations pseudocode may look like:
 - Select a label and use the `mip::FileHandler`'s `SetLabel` method to apply the label.
 
 Refer to [Quickstart: List labels](quick-file-list-labels-cpp.md) for information on how to list labels.
+
+## Changing Default Attachment Handling Behaviors
+
+By default, the File SDK will attempt to process all attachments that are part of an MSG file, or a message.rpmsg file when using the inspection APIs. It will not recursively decrypt attachments that are part of MSG files attached to the root MSG. These behaviors can be problematic if attachments are password protected or if the user or service trying to decrypt doesn't have access.
+
+To modify this behavior, another custom setting is available called `container_decryption_option`. In C++, this is exposed via an enum, `mip::ContainerDecryptionOption`.
+
+| Option Name | Descripton                                                                                                       |
+| ----------- | ---------------------------------------------------------------------------------------------------------------- |
+| `All`       | Decrypts the MSG file, attachments, and if the attachment is an MSG recursively decrypts it and its attachments. |
+| `Default`   | Same as `Msg`.                                                                                                   |
+| `Msg`       | Decrypts the MSG and first level attachments. Does not recursively decrypt attached MSG files.                   |
+| `Top`       | Decrypt only the MSG file and do not decryption attachments.                                                     |
+
+The following examples shows how to set an application in .NET to decrypt only the root MSG file.
+
+```csharp
+engineSettings.CustomSettings.Add(new KeyValuePair<string, string>("container_decryption_option", "Top"));
+```
+
+And in C++:
+
+```cpp
+vector<pair<string, string>> customSettings;
+customSettings.emplace_back(mip::GetCustomSettingContainerDecryptionOption(),
+        mip::ContainerDecryptionOptionString(mip::ContainerDecryptionOption::Top));
+egineSettings.SetCustomSettings(customSettings);
+```
 
 ## File SDK operations for .rpmsg files
 
