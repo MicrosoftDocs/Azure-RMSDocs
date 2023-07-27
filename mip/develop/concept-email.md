@@ -59,7 +59,7 @@ By default, the File SDK attempts to process all attachments that are part of an
 
 To modify this behavior, another custom setting is available called `container_decryption_option`. In C++, this is exposed via an enum, `mip::ContainerDecryptionOption`.
 
-| Option Name | Descripton                                                                                                       |
+| Option Name | Description                                                                                                       |
 | ----------- | ---------------------------------------------------------------------------------------------------------------- |
 | `All`       | Decrypts the MSG file, attachments, and if the attachment is an MSG recursively decrypts it and its attachments. |
 | `Default`   | Same as `Msg`.                                                                                                   |
