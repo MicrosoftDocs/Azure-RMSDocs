@@ -20,7 +20,6 @@ ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
-
 ---
 
 # Known issues - Azure Information Protection
@@ -60,6 +59,10 @@ To disable Exploit protection via PowerShell, run the following:
 ```PowerShell
 Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
 ```
+
+## Known issues for watermarks
+
+When you're adding a watermark to a label, keep in mind that if you use font size 1, it will automatically adjust to fit the page. However, if you use any other font size, it will use the size you've specified in the font settings.
 
 ## PowerShell support for the Azure Information Protection client
 
@@ -113,6 +116,7 @@ Before you start, make sure that your system complies with the version requireme
 We recommend that you always use the latest Office version available. Earlier versions may cause unexpected results, such as not being able to see labels in Azure Information Protection, or no policy enforcement.
 
 
+
 > [!NOTE]
 > While sensitivity labels can be applied on files in Office 97-2003 formats, such as  **.doc**, **.ppt**, and **.xls**, co-authoring for these file types isn't supported. Once a label is applied on a newly-created file, or a file in the advanced file format, such as **.docx**, **.pptx**, and **.xlsx**, saving the file in an Office 97-2003 format will cause the label to be removed.
 >
@@ -135,7 +139,7 @@ For more information, see the [Word, PowerPoint, andCould you use contractions t
 > [!NOTE]
 > Unlike the Microsoft Azure Information Protection dialog box, the **Restricted Access** dialog box doesn't support specifying a domain name to automatically include all users in the organization.
 >
- 
+
 #### Unsupported features for co-authoring
 
 The following features aren't supported or are partially supported when [co-authoring is enabled](/microsoft-365/compliance/sensitivity-labels-coauthoring) for files encrypted with sensitivity labels:
@@ -149,7 +153,6 @@ The following features aren't supported or are partially supported when [co-auth
 - **Removing external content marking in apps**. External content marking is removed only when a label is applied, and not when the document is saved. For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
 
 - Features listed in the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring#limitations) as co-authoring limitations.
-
 
 ## Sharing external doc types across tenants
 
@@ -233,6 +236,7 @@ If you have documents stored in OneDrive with a sensitivity label applied, and a
 In such cases, relabel the document manually to apply the protection as needed.
 
 
+
 ## AIP-based Conditional Access policies
 
 External users who receive content protected by [Conditional Access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) must have an Azure Active Directory (Azure AD) business-to-business (B2B) collaboration guest user account in order to view the content.
@@ -268,3 +272,4 @@ The following additional articles may be helpful in answering questions you have
 - [Frequently asked questions about data protection in Azure Information Protection](faqs-rms.md)
 - [Frequently asked questions about classification and labeling in Azure Information Protection](faqs-infoprotect.md)
 - [FAQs for Microsoft Azure Information Protection app for iOS and Android](rms-client/mobile-app-faq.md)
+
