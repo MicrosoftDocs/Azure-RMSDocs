@@ -57,7 +57,7 @@ Instructions for when you use these settings:
 -   Use the HTTPS prefix for the connector URL if you have configured the connector to use HTTPS to communicate with your on-premises servers. For more information, see the [Configuring the RMS connector to use HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https) section from the main instructions. The Azure Rights Management service URL always uses HTTPS.
 
 
-## Exchange 2016 or Exchange 2013 registry settings
+## Exchange 2016 or Exchange 2019 registry settings
 
 **Registry path**: HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
@@ -106,6 +106,51 @@ Instructions for when you use these settings:
 - `http://<ConnectorFQDN>`
 
 - `https://<ConnectorFQDN>`
+
+---
+
+**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification
+
+**Type**: Reg_SZ
+
+**Value**: Default
+
+
+**Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+
+- `http://<ConnectorFQDN>/_wmcs/certification`
+
+- `https://<ConnectorFQDN>/_wmcs/certification`
+
+---
+
+**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing
+
+**Type**: Reg_SZ
+
+**Value**: Default
+
+
+**Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+
+- `http://<ConnectorFQDN>/_wmcs/licensing`
+
+- `https://<ConnectorFQDN>/_wmcs/licensing`
+
+---
+
+**Registry path**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
+
+**Type**: Reg_SZ
+
+**Value**: `/_wmcs/licensing`
+
+
+**Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+
+- `http://<ConnectorFQDN>/_wmcs/licensing`
+
+- `https://<ConnectorFQDN>/_wmcs/licensing`
 
 
 ## SharePoint 2016 or SharePoint 2013 registry settings
