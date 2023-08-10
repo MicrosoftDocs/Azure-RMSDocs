@@ -76,6 +76,20 @@ The current release of the **AzureInformationProtection** PowerShell module that
 
 For more information, see [Admin Guide: Using PowerShell with the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell).
 
+## Known issues AIP Scanner authentication in version 2.16.73
+
+If you're using version 2.16.73 of the AIP Scanner or installing it for the first time, you may encounter an error when trying to authenticate. The error message reads "Unable to authenticate and setup Microsoft Azure Information Protection". 
+
+This issue is caused by a problem with MSAL authentication. To resolve it, you can add a registry key to the server. 
+
+Path: Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP
+
+DWORD: AuthenticateUsingAdal
+
+Value: 1 
+
+By adding this registry key, the Scanner will authenticate using ADAL instead.
+
 ## AIP known issues in Office applications
 
 |Feature  |Known issues  |
@@ -114,6 +128,8 @@ All apps, services, and operation tools in your tenant must support co-authoring
 Before you start, make sure that your system complies with the version requirements listed in the [Microsoft 365 prerequisites for co-authoring](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites). 
 
 We recommend that you always use the latest Office version available. Earlier versions may cause unexpected results, such as not being able to see labels in Azure Information Protection, or no policy enforcement.
+
+
 
 
 
@@ -237,6 +253,8 @@ In such cases, relabel the document manually to apply the protection as needed.
 
 
 
+
+
 ## AIP-based Conditional Access policies
 
 External users who receive content protected by [Conditional Access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) must have an Azure Active Directory (Azure AD) business-to-business (B2B) collaboration guest user account in order to view the content.
@@ -272,4 +290,5 @@ The following additional articles may be helpful in answering questions you have
 - [Frequently asked questions about data protection in Azure Information Protection](faqs-rms.md)
 - [Frequently asked questions about classification and labeling in Azure Information Protection](faqs-infoprotect.md)
 - [FAQs for Microsoft Azure Information Protection app for iOS and Android](rms-client/mobile-app-faq.md)
+
 
