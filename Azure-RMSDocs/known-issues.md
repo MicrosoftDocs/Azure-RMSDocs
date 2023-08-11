@@ -72,13 +72,13 @@ The current release of the **AzureInformationProtection** PowerShell module that
 
 - **Outlook protected email message (.msg files with a .rpmsg attachment)**. Unprotecting Outlook protected email messages is supported by the **AzureInformationProtection** module for messages inside an Outlook personal folder (.pst file), or on disk in an Outlook message file (.msg file).
 
--  **PowerShell 7**. Currently PowerShell 7 is not supported by the AIP Client. using PS7 will result in the error: "Object reference not set to an instance of an object".
+-  **PowerShell 7**. Currently PowerShell 7 isn't supported by the AIP Client. using PS7 will result in the error: "Object reference not set to an instance of an object".
 
 For more information, see [Admin Guide: Using PowerShell with the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell).
 
 ## Known issues AIP Scanner authentication in version 2.16.73
 
-If you're using version 2.16.73 of the AIP Scanner or installing it for the first time, you may encounter an error when trying to authenticate. The error message reads "Unable to authenticate and setup Microsoft Azure Information Protection". 
+If you're using version 2.16.73 of the AIP Scanner or installing it for the first time, you may encounter an error when trying to authenticate. The error message reads "Unable to authenticate and set up Microsoft Azure Information Protection". 
 
 This issue is caused by a problem with MSAL authentication. To resolve it, you can add a registry key to the server. 
 
@@ -279,7 +279,7 @@ If a label contains any sub-labels in the [Microsoft Purview compliance portal](
 
 Similarly, AIP doesn’t support labels that contain sub-labels as default labels, and you can't configure automatic labeling for these labels.
 
-Additionally, using a label with UDP (User Defined Permissions) as a default label is not supported in the Unified Labeling Client. 
+Additionally, using a label with UDP (User Defined Permissions) as a default label isn't supported in the Unified Labeling Client. 
 
 ## More information
 
