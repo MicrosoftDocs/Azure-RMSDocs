@@ -38,12 +38,21 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
+## Version 1.13.187
+
+**Release Date:** August 15th, 2023
+
+### Bug Fixes
+
+- MIP SDK now hides symbols for statically linked OpenSSL on Linux.
+- Fixed a bug where non-Office compound files were using AES128-ECB if legacy algorithms flag was set. These files should use AES256-CBC and ignore the legacy algorithms flag.
+- Raised send priority of auditing events to highest level, ensuring audit events are submitted to the audit endpoint more frequently.
 
 ## Version 1.13.182
 
 **Release Date:** July 27, 2023
 
-## Bug Fixes
+### Bug Fixes
 
 - Fixed an issue removing protection from MSG files when attachments are protected with non-RMS technology. Will now log a warning, but will not throw an exception.  
   
