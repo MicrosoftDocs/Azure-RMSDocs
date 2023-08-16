@@ -42,7 +42,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 **Release Date:** August 15th, 2023
 
-## Bug Fixes
+### Bug Fixes
 
 - MIP SDK now hides symbols for statically linked OpenSSL on Linux.
 - Fixed a bug where non-Office compound files were using AES128-ECB if legacy algorithms flag was set. These files should use AES256-CBC and ignore the legacy algorithms flag.
@@ -52,7 +52,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 **Release Date:** July 27, 2023
 
-## Bug Fixes
+### Bug Fixes
 
 - Fixed an issue removing protection from MSG files when attachments are protected with non-RMS technology. Will now log a warning, but will not throw an exception.  
   
