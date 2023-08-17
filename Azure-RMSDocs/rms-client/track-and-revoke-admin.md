@@ -29,6 +29,11 @@ ms.custom: user
 
 [!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
+> [!NOTE]
+> **Are you looking for [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection)**, formerly Microsoft Information Protection (MIP)?
+> 
+> The Azure Information Protection add-in for Office is now in maintenance mode and will be [retired April 2024](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/retirement-notification-for-the-azure-information-protection/ba-p/3791908). Instead, we recommend you use [labels that are built in to your Office 365 apps and services](/purview/sensitivity-labels#sensitivity-labels-and-azure-information-protection), which also support [track and revoke](/purview/track-and-revoke-admin) for protected documents.
+
 Document tracking provides information for administrators, with either the [Azure Information Protection Administrator](/azure/active-directory/roles/permissions-reference#azure-information-protection-administrator) or [Azure Rights Management Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role, about when a protected document was accessed. If necessary, both admins and users can revoke document access for tracked documents.
 
 In versions [version 2.9.111.0](unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines) or later, any protected Office documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client. Protected documents are supported for track and revoke, even if they are not labeled.
