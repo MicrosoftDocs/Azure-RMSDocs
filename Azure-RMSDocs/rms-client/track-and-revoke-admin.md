@@ -27,7 +27,10 @@ ms.custom: user
 
 # Administrator Guide: Track and revoke document access with Azure Information Protection
 
-[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
+> [!NOTE]
+> **Are you looking for [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection)**, formerly Microsoft Information Protection (MIP)?
+> 
+> The Azure Information Protection add-in for Office is now in maintenance mode and will be [retired April 2024](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/retirement-notification-for-the-azure-information-protection/ba-p/3791908). Instead, we recommend you use [labels that are built in to your Office 365 apps and services](/purview/sensitivity-labels#sensitivity-labels-and-azure-information-protection), which also support [track and revoke document access](/purview/track-and-revoke-admin).
 
 Document tracking provides information for administrators, with either the [Azure Information Protection Administrator](/azure/active-directory/roles/permissions-reference#azure-information-protection-administrator) or [Azure Rights Management Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role, about when a protected document was accessed. If necessary, both admins and users can revoke document access for tracked documents.
 
