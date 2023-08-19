@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Activating the protection service from Azure Information Protection (AIP)
 description: Learn about activating the Azure Rights Management protection service in order to protect your documents and emails.
@@ -15,14 +14,11 @@ ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 # optional metadata
 
 #ROBOTS:
-#audience:
-#ms.devlang:
 ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: admin
-
+ms.custom: admin, has-azure-ad-ps-ref
 ---
 
 # Activating the protection service from Azure Information Protection
@@ -97,4 +93,3 @@ When you use these onboarding controls, all users in the organization can always
 ## Next steps
 
 Now that the protection service is activated for your organization, apps and services can apply encryption to help protect your data. One of the easiest ways to apply encryption, is by using [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from Microsoft Purview Information Protection.
-
