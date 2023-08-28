@@ -21,8 +21,7 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: admin
-
+ms.custom: admin, has-azure-ad-ps-ref
 ---
 
 # Migration phase 1 - preparation
