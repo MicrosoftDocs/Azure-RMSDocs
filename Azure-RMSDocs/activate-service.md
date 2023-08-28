@@ -21,8 +21,7 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: admin
-
+ms.custom: admin, has-azure-ad-ps-ref
 ---
 
 # Activating the protection service from Azure Information Protection
@@ -97,4 +96,3 @@ When you use these onboarding controls, all users in the organization can always
 ## Next steps
 
 Now that the protection service is activated for your organization, apps and services can apply encryption to help protect your data. One of the easiest ways to apply encryption, is by using [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from Microsoft Purview Information Protection.
-
