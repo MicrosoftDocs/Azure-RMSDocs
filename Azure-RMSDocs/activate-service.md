@@ -1,4 +1,5 @@
 ---
+# required metadata
 
 title: Activating the protection service from Azure Information Protection (AIP)
 description: Learn about activating the Azure Rights Management protection service in order to protect your documents and emails.
@@ -14,6 +15,8 @@ ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 # optional metadata
 
 #ROBOTS:
+#audience:
+#ms.devlang:
 ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems

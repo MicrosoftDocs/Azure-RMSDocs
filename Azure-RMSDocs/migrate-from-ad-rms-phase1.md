@@ -1,4 +1,5 @@
 ---
+# required metadata
 
 title: Migrate AD RMS-Azure Information Protection - Phase 1
 description: Phase 1 of migrating from AD RMS to Azure Information Protection, covering steps 1 though 3 from Migrating from AD RMS to Azure Information Protection.
@@ -14,6 +15,8 @@ ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 # optional metadata
 
 #ROBOTS:
+#audience:
+#ms.devlang:
 ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems

@@ -1,4 +1,5 @@
 ---
+# required metadata
 
 title: Prepare users and groups for Azure Information Protection
 description: Check that you have the user and group accounts that you need to start classifying, labeling, and protecting your organization's documents and emails.
@@ -14,6 +15,8 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 # optional metadata
 
 #ROBOTS:
+#audience:
+#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:

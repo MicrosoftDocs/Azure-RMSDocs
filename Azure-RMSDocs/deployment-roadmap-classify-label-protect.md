@@ -1,4 +1,5 @@
 ---
+# required metadata
 
 title: Deploy Azure Information Protection (AIP) for classification, labeling, and protection
 description: Use these steps to prepare for, implement, and manage Azure Information Protection (AIP) for your organization, when you want to classify, label, and protect your data.
@@ -14,6 +15,8 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 # optional metadata
 
 #ROBOTS:
+#audience:
+#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
