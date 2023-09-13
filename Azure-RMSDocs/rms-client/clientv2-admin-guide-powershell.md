@@ -88,7 +88,7 @@ The following table maps RMS-related cmdlets with the updated cmdlets used for u
 |[Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate)     |       Not relevant for unified labeling.  |
 |[New-RMSProtectionLicense](/powershell/module/azureinformationprotection/new-rmsprotectionlicense)     |  [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/new-aipcustompermissions), and [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), with the **CustomPermissions** parameter.      |
 |[Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) |
-|[Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile?view=azureipps) | [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), with the **RemoveProtection** parameter. |
+|[Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) | [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), with the **RemoveProtection** parameter. |
 
 ## How to label files non-interactively for Azure Information Protection
 
