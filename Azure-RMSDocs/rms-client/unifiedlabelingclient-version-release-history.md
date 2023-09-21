@@ -20,7 +20,6 @@ ms.subservice: v2client
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
-
 ---
 
 # Azure Information Protection unified labeling client - Release management and supportability
@@ -133,7 +132,7 @@ Starting in 2.15.33.0, EU customers can send data from the AIP UL Client to the 
 
 This version of the unified labeling client and scanner provides the following fixes and improvements:
 
-- Outlook supports [Double Key Encryption](/microsoft-365/compliance/double-key-encryption) templates.
+- Outlook supports [Double Key Encryption](/microsoft-365/compliance/double-key-encryption) (DKE) templates.
 - Updated to [MIP SDK 1.12.101](/information-protection/develop/version-release-history#version-112101) for classification, labeling and protection services.
 
 
@@ -410,3 +409,5 @@ For information about new features in the Microsoft Purview compliance portal, s
 
 - [What's new in Microsoft 365 compliance?](/microsoft-365/compliance/whats-new)
 - [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=Microsoft%2CInformation%2CProtection)
+
+
