@@ -78,7 +78,7 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 
 ## Known issues AIP Scanner authentication in version 2.16.73
 
-If you're using version 2.16.73 of the AIP Scanner or installing it for the first time, you may encounter an error when trying to authenticate. The error message reads "Unable to authenticate and set up Microsoft Azure Information Protection". 
+If you're using version 2.16.73 of the AIP Scanner or installing it for the first time, you might encounter an error when trying to authenticate. The error message reads "Unable to authenticate and set up Microsoft Azure Information Protection". 
 
 This issue is caused by a problem with MSAL authentication. To resolve it, you can add a registry key to the server. 
 
@@ -95,14 +95,14 @@ By adding this registry key, the Scanner will authenticate using ADAL instead.
 |Feature  |Known issues  |
 |---------|---------|
 |**Multiple versions of Office<br> <br> Multiple Office accounts**    | The Azure Information Protection unified labeling client doesn't support:  <br><br>-	Multiple versions of Office on the same computer <br>-	Multiple Office accounts, or switching user accounts in Office <br>-	Shared mailboxes     |
-|**Multiple displays** |If you're using multiple displays and have an Office application open: <br><br>- You may experience performance issues in your Office apps.<br>- The Azure Information Protection bar may appear to float in the middle of the Office screen, on one or both displays <br><br>To ensure consistent performance, and that the bar remains in the correct location, open the **Options** dialog for your Office application, and under **General**, select **Optimize for compatibility** instead of **Optimize for best appearance**.    |
+|**Multiple displays** |If you're using multiple displays and have an Office application open: <br><br>- You might experience performance issues in your Office apps.<br>- The Azure Information Protection bar might appear to float in the middle of the Office screen, on one or both displays <br><br>To ensure consistent performance, and that the bar remains in the correct location, open the **Options** dialog for your Office application, and under **General**, select **Optimize for compatibility** instead of **Optimize for best appearance**.    |
 |**IRM support in Office 2016**| The [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) registry setting, which controls metadata encryption in Office 2016, isn't supported for Azure Information Protection labels.|
 |**Outlook object model access** | - The [PromptOOMAddressBookAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when address books are accessed via the Outlook object model, isn't supported with Azure Information Protection labels. <br><br>- The [PromptOOMAddressInformationAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when a program reads address information, is't supported for Azure Information Protection labels.|
-|**Files attached to emails** |Due to a limitation in recent Windows updates, scanning Outlook messages (**.msg** files) may cause those files to be locked. To unlock the files, stop the scanner service. Starting the scanner service again doesn't lock the files again until the next time the messages are scanned. <br><br>To clarify whether your system is affected, you might want to start a scan on a specific folder with a single, sample message, and check to see if the file is locked after the scan is complete. <br><br>**Note**: This issue isn't relevant when applying and removing protection with PowerShell. |
+|**Files attached to emails** |Due to a limitation in recent Windows updates, scanning Outlook messages (**.msg** files) might cause those files to be locked. To unlock the files, stop the scanner service. Starting the scanner service again doesn't lock the files again until the next time the messages are scanned. <br><br>To clarify whether your system is affected, you might want to start a scan on a specific folder with a single, sample message, and check to see if the file is locked after the scan is complete. <br><br>**Note**: This issue isn't relevant when applying and removing protection with PowerShell. |
 |**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature isn't supported with any Azure Information Protection feature.       |
-| **S/MIME emails** | Opening S/MIME emails in Outlook's Reading Pane may cause performance issues. <br><br>To prevent performance issues with S/MIME emails, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property. <br><br>**Note**: Enabling this property prevents the AIP bar or the email classification from being displayed in Outlook's Reading Pane. |
-|**Content markings in Word**    | AIP [content markings](/previous-versions/azure/information-protection/configure-policy-markings) in Microsoft Word headers or footers may be offset or placed incorrectly, or may be hidden entirely, when that same header or footer also contains a table.<br><br>For more information, see [When visual markings are applied](/previous-versions/azure/information-protection/configure-policy-markings#when-visual-markings-are-applied). |
-|**Send to File Explorer option** |If you choose to right-click on any file in the File Explorer and select **Send to > Mail recipient**, the Outlook message that opens with the file attached may not display the AIP toolbar. <br><br>If this occurs and you need to use the AIP toolbar options, start your email from within Outlook and then browse to and attach the file you want to send.|
+| **S/MIME emails** | Opening S/MIME emails in Outlook's Reading Pane might cause performance issues. <br><br>To prevent performance issues with S/MIME emails, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property. <br><br>**Note**: Enabling this property prevents the AIP bar or the email classification from being displayed in Outlook's Reading Pane. |
+|**Content markings in Word**    | AIP [content markings](/previous-versions/azure/information-protection/configure-policy-markings) in Microsoft Word headers or footers might be offset or placed incorrectly, or might be hidden entirely, when that same header or footer also contains a table.<br><br>For more information, see [When visual markings are applied](/previous-versions/azure/information-protection/configure-policy-markings#when-visual-markings-are-applied). |
+|**Send to File Explorer option** |If you choose to right-click on any file in the File Explorer and select **Send to > Mail recipient**, the Outlook message that opens with the file attached might not display the AIP toolbar. <br><br>If this occurs and you need to use the AIP toolbar options, start your email from within Outlook and then browse to and attach the file you want to send.|
 
 ### Known issues for co-authoring
 
@@ -127,7 +127,13 @@ All apps, services, and operation tools in your tenant must support co-authoring
 
 Before you start, make sure that your system complies with the version requirements listed in the [Microsoft 365 prerequisites for co-authoring](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites). 
 
-We recommend that you always use the latest Office version available. Earlier versions may cause unexpected results, such as not being able to see labels in Azure Information Protection, or no policy enforcement.
+We recommend that you always use the latest Office version available. Earlier versions might cause unexpected results, such as not being able to see labels in Azure Information Protection, or no policy enforcement.
+
+
+
+
+
+
 
 
 
@@ -176,11 +182,11 @@ When users share external doc types, such as PDFs, across tenants, recipients re
 
 :::image type="content" source="media/cross-tenant-consent.png" alt-text="Cross-tenant consent prompt.":::
 
-Depending on your application, you may see this prompt repeatedly for the same document. When the prompt appears, select **Accept** to continue to the shared document.
+Depending on your application, you might see this prompt repeatedly for the same document. When the prompt appears, select **Accept** to continue to the shared document.
 
 ## Known issues in policies
 
-Publishing policies may take up to 24 hours.
+Publishing policies might take up to 24 hours.
 ## Known issues for the AIP viewer
 
 - [Landscape views](#landscape-views-in-the-aip-viewer)
@@ -188,9 +194,17 @@ Publishing policies may take up to 24 hours.
 - [ADRMS protected files on Android devices](#adrms-protected-files-on-android-devices)
 
 For more information, see [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md).
+### Mobile client support for protected PDFs and Intune
+
+The Azure Information Protection Viewer on Android can't open protected PDFs documents on devices managed by Intune. 
+
+To view protected PDFs on mobile, contact your administrator to disable Intune Mobile Application Management.
+
+Support for Intune MAM will be added back to the Azure Information Protection Viewer on Android following .NET platform and dependency updates.
+
 ### Landscape views in the AIP viewer
 
-The AIP viewer displays images in portrait mode, and some wide, landscape-view images may appear to be stretched.
+The AIP viewer displays images in portrait mode, and some wide, landscape-view images might appear to be stretched.
 
 For example, an original image is shown below on the left, with a stretched, portrait version in the AIP viewer on the right. 
 
@@ -198,7 +212,7 @@ For example, an original image is shown below on the left, with a stretched, por
 
 ### External users and the AIP viewer 
 
-If an external user already has a guest account in Azure AD, the AIP Viewer may display an error when the user opens a protected document, telling them that they can't sign in with a personal account.
+If an external user already has a guest account in Azure AD, the AIP Viewer might display an error when the user opens a protected document, telling them that they can't sign in with a personal account.
 
 If such an error appears, the user must install [Adobe Acrobat DC with the MIP extension](https://helpx.adobe.com/il_en/acrobat/kb/mip-plugin-download.html) in order to open the protected document.
 
@@ -255,11 +269,17 @@ In such cases, relabel the document manually to apply the protection as needed.
 
 
 
+
+
+
+
+
+
 ## AIP-based Conditional Access policies
 
 External users who receive content protected by [Conditional Access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) must have an Azure Active Directory (Azure AD) business-to-business (B2B) collaboration guest user account in order to view the content.
 
-While you can invite external users to activate a guest user account, allowing them to authenticate and pass the conditional access requirements, it may be difficult to ensure that this occurs for all external users required.
+While you can invite external users to activate a guest user account, allowing them to authenticate and pass the conditional access requirements, it might be difficult to ensure that this occurs for all external users required.
 
 We recommend enabling AIP-based conditional access policies for your internal users only.
 
@@ -283,7 +303,7 @@ Additionally, using a label with UDP (User Defined Permissions) as a default lab
 
 ## More information
 
-The following additional articles may be helpful in answering questions you have about Azure Information Protection:
+The following additional articles might be helpful in answering questions you have about Azure Information Protection:
 
 - [File types supported by the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-file-types.md)
 - [Frequently asked questions for Azure Information Protection](faqs.md)
