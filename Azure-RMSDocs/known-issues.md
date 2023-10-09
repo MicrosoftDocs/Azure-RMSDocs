@@ -189,7 +189,6 @@ Depending on your application, you may see this prompt repeatedly for the same d
 Publishing policies may take up to 24 hours.
 ## Known issues for the AIP viewer
 
-- [Mobile client support for protected PDFs](#Mobile-client-support-for-protected-PDFs)
 - [Landscape views](#landscape-views-in-the-aip-viewer)
 - [External users](#external-users-and-the-aip-viewer)
 - [ADRMS protected files on Android devices](#adrms-protected-files-on-android-devices)
