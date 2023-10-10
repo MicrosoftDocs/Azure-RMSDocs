@@ -139,6 +139,36 @@ We recommend that you always use the latest Office version available. Earlier ve
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 > [!NOTE]
 > While sensitivity labels can be applied on files in Office 97-2003 formats, such as  **.doc**, **.ppt**, and **.xls**, co-authoring for these file types isn't supported. Once a label is applied on a newly-created file, or a file in the advanced file format, such as **.docx**, **.pptx**, and **.xlsx**, saving the file in an Office 97-2003 format will cause the label to be removed.
 >
@@ -189,6 +219,7 @@ Depending on your application, you might see this prompt repeatedly for the same
 Publishing policies might take up to 24 hours.
 ## Known issues for the AIP viewer
 
+- [Mobile client support for protected PDFs and Intune](#mobile-client-support-for-protected-pdfs-and-intune)
 - [Landscape views](#landscape-views-in-the-aip-viewer)
 - [External users](#external-users-and-the-aip-viewer)
 - [ADRMS protected files on Android devices](#adrms-protected-files-on-android-devices)
@@ -264,6 +295,36 @@ Additionally, revoking access for one of the attachments also revokes access for
 If you have documents stored in OneDrive with a sensitivity label applied, and an administrator changes the label in the labeling policy to add protection, the newly applied protection isn't automatically applied to the labeled document. 
 
 In such cases, relabel the document manually to apply the protection as needed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
