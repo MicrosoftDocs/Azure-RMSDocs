@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Information Protection (MIP) SDK setup and configuration
 description: Provides the setup and configuration prerequisites, in order to use applications built with the Microsoft Information Protection SDK.
 author: msmbaldwin
@@ -141,19 +141,21 @@ Next, complete the following steps to ensure your client computer is set up and 
      - Use the following query to view the repositories: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk.
      - Using Git Bash, use `git clone https://github.com/azure-samples/<repo-name>` to download each sample repository.
 
-## Register a client application with Azure Active Directory
+<a name='register-a-client-application-with-azure-active-directory'></a>
 
-As part of the Microsoft 365 subscription provisioning process, an associated Azure Active Directory (Azure AD) tenant is created. The Azure AD tenant provides identity and access management for Microsoft 365 *user accounts* and *application accounts*. Applications that require access to secured APIs (such as MIP APIs), require an application account.
+## Register a client application with Microsoft Entra ID
+
+As part of the Microsoft 365 subscription provisioning process, an associated Microsoft Entra tenant is created. The Microsoft Entra tenant provides identity and access management for Microsoft 365 *user accounts* and *application accounts*. Applications that require access to secured APIs (such as MIP APIs), require an application account.
 
 For authentication and authorization at runtime, accounts are represented by a *security principal*, which is derived from the account's identity information. Security principals that represent an application account are referred to as a [*service principal*](/azure/active-directory/develop/developer-glossary#service-principal-object).
 
-To register an application account in Azure AD for use with the Quickstarts and MIP SDK samples:
+To register an application account in Microsoft Entra ID for use with the Quickstarts and MIP SDK samples:
 
   > [!IMPORTANT]
-  > To access Azure AD tenant management for account creation, you'll need to sign in to the Azure portal with a user account that is a member of the ["Owner" role on the subscription](/azure/billing/billing-add-change-azure-subscription-administrator). Depending on the configuration of your tenant, you may also need to be a member of the "Global Admininstrator" directory role to [register an application](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
+  > To access Microsoft Entra tenant management for account creation, you'll need to sign in to the Azure portal with a user account that is a member of the ["Owner" role on the subscription](/azure/billing/billing-add-change-azure-subscription-administrator). Depending on the configuration of your tenant, you may also need to be a member of the "Global Admininstrator" directory role to [register an application](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
   > We recommend testing with a restricted account. Be sure the account only has rights to access the necessary SCC endpoints. Cleartext passwords passed via commandline may be collected by logging systems.
 
-1. Follow the steps in [Register an app with Azure AD, Register a new application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal) section. For testing purposes, use the following values for the given properties as you go through the guide steps:
+1. Follow the steps in [Register an app with Microsoft Entra ID, Register a new application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal) section. For testing purposes, use the following values for the given properties as you go through the guide steps:
     - **Supported Account Types** - Select "Accounts in this organizational directory only."
     - **Redirect URI** - Set the redirect URI type to "Public client (mobile & desktop)." If your application is using the Microsoft Authentication Library (MSAL), use `http://localhost`. Otherwise, use something in the format `<app-name>://authorize`.
 
@@ -177,8 +179,8 @@ To register an application account in Azure AD for use with the Quickstarts and 
 
 When finished, application registration and API permissions should look similar to the following examples:
 
-   [![Azure AD app registration](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox)
-   [![Azure AD app API permissions](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
+   [![Microsoft Entra app registration](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox)
+   [![Microsoft Entra app API permissions](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
 
 For more information on adding APIs and permissions to a registration, see [Configure a client application to access web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Here you'll find information on adding the APIs and permissions needed by a client application.
 

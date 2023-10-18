@@ -255,7 +255,4 @@ Build and test your client application.
 You can verify the application of the label, by opening the output file and visually inspecting the document's information protection settings.
 
 > [!NOTE]
-> If you're labeling an Office document, but not signed in using an account from the Azure Active Directory (AD) tenant where the access token was obtained (and sensitivity labels are configured), you may be prompted to sign in before you can open the labelled document. 
-
-
-
+> If you're labeling an Office document, but not signed in using an account from the Microsoft Entra tenant where the access token was obtained (and sensitivity labels are configured), you may be prompted to sign in before you can open the labelled document. 

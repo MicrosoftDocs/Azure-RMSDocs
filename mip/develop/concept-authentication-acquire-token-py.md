@@ -20,7 +20,7 @@ To run the sample below:
 - Install Python 2.7 or newer.
 - Implement utils.h/cpp in your project.
 - Auth.py should be added to your project and exist in same directory as the binaries at build.
-- Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Azure Active Directory (Azure AD) tenant. Azure AD will provide an application ID, also known as client ID, which is used in your token acquisition logic.
+- Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Microsoft Entra tenant. Microsoft Entra ID will provide an application ID, also known as client ID, which is used in your token acquisition logic.
 
 This code isn't intended for production use. It may only be used for development and understanding auth concepts. The sample is cross-platform.
 

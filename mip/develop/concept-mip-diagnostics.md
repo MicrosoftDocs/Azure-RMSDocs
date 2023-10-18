@@ -36,7 +36,7 @@ Review the tables below to see exactly what events and data are sent with minimu
 | CreationTime                         | Time event was generated.                                                              | No       |
 | DefaultLabel.Id                      | Tenant default label ID.                                                               | No       |
 | Engine.TenantId                      | Home tenant GUID of the authenticated user.                                            | No       |
-| Engine.UserObjectId                  | User object ID in Azure Active Directory.                                              | No       |
+| Engine.UserObjectId                  | User object ID in Microsoft Entra ID.                                              | No       |
 | Event.CorrelationId                  | Generated unique ID associated with object that triggered the event.                   | No       |
 | Event.CorrelationIdDescription       | C++ class name of object that triggered the event.                                     | No       |
 | Event.ParentCorrelationId            | Parent event correlation ID.                                                           | No       |
@@ -51,7 +51,7 @@ Review the tables below to see exactly what events and data are sent with minimu
 | ProductVersion                       | Same as “App.ApplicationVersion”.                                                      | No       |
 | SDKVersion                           | Same as MIP.Version.                                                                   | No       |
 | UserId                               | Email address of the user.                                                             | **Yes**  |
-| UserObjectId                         | Azure AD object ID of the user.                                                        | No       |
+| UserObjectId                         | Microsoft Entra object ID of the user.                                                        | No       |
 | Version                              | Audit version schema (“1.1”).                                                          | No       |
 
 #### Event: Discovery
@@ -68,7 +68,7 @@ Review the tables below to see exactly what events and data are sent with minimu
 | DataState                            | The state of the data as the application acts on it “REST”, “MOTION”, “USE”.           | No       |
 | DefaultLabel.Id                      | Tenant default label identifier.                                                       | No       |
 | Engine.TenantId                      | Home tenant GUID of the authenticated user.                                            | No       |
-| Engine.UserObjectId                  | User object identifier in Azure Active Directory.                                      | No       |
+| Engine.UserObjectId                  | User object identifier in Microsoft Entra ID.                                      | No       |
 | Event.CorrelationId                  | Generated unique ID associated with object that triggered the event.                   | No       |
 | Event.CorrelationIdDescription       | C++ class name of object that triggered the event.                                     | No       |
 | Event.ParentCorrelationId            | Parent event correlation ID.                                                           | No       |
@@ -87,7 +87,7 @@ Review the tables below to see exactly what events and data are sent with minimu
 | ProtectionOwner                      | Email address of the protection owner.                                                 | **Yes**  |
 | SDKVersion                           | Same as MIP.Version.                                                                   | No       |
 | UserId                               | Email address of the user.                                                             | **Yes**  |
-| UserObjectId                         | Azure AD object ID of the user.                                                        | No       |
+| UserObjectId                         | Microsoft Entra object ID of the user.                                                        | No       |
 | Version                              | Audit version schema (“1.1”).                                                          | No       |
 
 #### Event: Label Change
@@ -106,7 +106,7 @@ Review the tables below to see exactly what events and data are sent with minimu
 | DataState                            | The state of the data as the application acts on it “REST”, “MOTION”, “USE”.           | No       |
 | DefaultLabel.Id                      | Tenant default label identifier.                                                       | No       |
 | Engine.TenantId                      | Home tenant GUID of the authenticated user.                                            | No       |
-| Engine.UserObjectId                  | User object identifier in Azure Active Directory.                                      | No       |
+| Engine.UserObjectId                  | User object identifier in Microsoft Entra ID.                                      | No       |
 | Event.CorrelationId                  | Generated unique ID associated with object that triggered the event.                   | No       |
 | Event.CorrelationIdDescription       | C++ class name of object that triggered the event.                                     | No       |
 | Event.ParentCorrelationId            | Parent event correlation ID.                                                           | No       |
@@ -134,7 +134,7 @@ Review the tables below to see exactly what events and data are sent with minimu
 | ProtectionOwnerBefore                | Previous email address of the protection owner.                                        | **Yes**  |
 | SDKVersion                           | Same as MIP.Version.                                                                   | No       |
 | UserId                               | Email address of the user.                                                             | **Yes**  |
-| UserObjectId                         | Azure AD object ID of the user.                                                        | No       |
+| UserObjectId                         | Microsoft Entra object ID of the user.                                                        | No       |
 | Version                              | Audit version schema (“1.1”).                                                          | No       |
 
 ### Opting out in C++
