@@ -40,7 +40,7 @@ The following sections list some of these names.
 
 - **Azure Rights Management** or **Azure Rights Management service**—frequently abbreviated to *Azure RMS*
 
-- **Azure Active Directory Rights Management**—occasionally abbreviated to *AADRM*
+- **Microsoft Entra Rights Management**—occasionally abbreviated to *AADRM*
 
 - **Windows Azure Active Directory Rights Management**—often abbreviated to *Windows Azure AD Rights Management*
 

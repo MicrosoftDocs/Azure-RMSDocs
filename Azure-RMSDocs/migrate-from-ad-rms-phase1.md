@@ -63,7 +63,7 @@ Your Azure Rights Management service URL has the following format: **{GUID}.rms.
     (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
     ```
 
-## Step 2. Prepare for client migration
+## Step 2: Prepare for client migration
 
 For most migrations, it is not practical to migrate all clients at once, so you will likely migrate clients in batches. 
 
@@ -75,7 +75,7 @@ This means that for a period of time, some clients will be using Azure Informati
 
 **To prepare for client migration**
 
-1. Create a group, for example, named **AIPMigrated**. This group can be created in Active Directory and synchronized to the cloud, or it can be created in Microsoft 365 or Azure Active Directory. 
+1. Create a group, for example, named **AIPMigrated**. This group can be created in Active Directory and synchronized to the cloud, or it can be created in Microsoft 365 or Microsoft Entra ID. 
 
     Do not assign any users to this group at this time. At a later step, when users are migrated, you will add them to the group.
 
@@ -118,7 +118,7 @@ This means that for a period of time, some clients will be using Azure Informati
 
     You can use Group Policy or another software deployment mechanism to deploy this script.
 
-## Step 3. Prepare your Exchange deployment for migration
+## Step 3: Prepare your Exchange deployment for migration
 
 If you are using Exchange on-premises or Exchange online, you might have previously integrated Exchange with your AD RMS deployment. In this step you will configure them to use the existing AD RMS configuration to support content protected by Azure RMS.
 

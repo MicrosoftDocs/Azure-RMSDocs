@@ -44,7 +44,7 @@ Before you read the instructions to migrate your labels, you might find the foll
 
 If you use admin roles for delegated administration in your organization, you might need to do some changes for the unified labeling platform:
 
-The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Azure Information Protection administrator** (formerly **Information Protection administrator**) is not supported by the unified labeling platform. If this administrative role is used in your organization to manage Azure Information Protection, add the users who have this role to the Azure AD roles of **Compliance administrator**, **Compliance data administrator**, or **Security administrator**. If you need help with this step, see [Give users access to the Microsoft Purview compliance portal](/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Azure AD portal and the Microsoft Purview compliance portal.
+The [Microsoft Entra role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Azure Information Protection administrator** (formerly **Information Protection administrator**) is not supported by the unified labeling platform. If this administrative role is used in your organization to manage Azure Information Protection, add the users who have this role to the Microsoft Entra roles of **Compliance administrator**, **Compliance data administrator**, or **Security administrator**. If you need help with this step, see [Give users access to the Microsoft Purview compliance portal](/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Microsoft Entra admin center and the Microsoft Purview compliance portal.
 
 Alternatively to using roles, in the Microsoft Purview compliance portal, you can create a new role group for these users and add either **Sensitivity Label Administrator** or **Organization Configuration** roles to this group.
 
@@ -221,7 +221,7 @@ Before you select the **Copy policies (preview)** option on the **Azure Informat
 
 - The **Copy policies** action verifies the following for each policy before it is copied:
 
-    - Users and groups assigned to the policy are currently in Azure AD. If one or more account is missing, the policy is not copied. Group membership is not checked.
+    - Users and groups assigned to the policy are currently in Microsoft Entra ID. If one or more account is missing, the policy is not copied. Group membership is not checked.
 
     - The Global policy contains at least one label. Because the admin labeling centers don't support label policies without labels, a Global policy without labels is not copied.
 
