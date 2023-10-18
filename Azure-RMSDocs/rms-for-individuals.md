@@ -28,9 +28,9 @@ ms.custom: admin
 
 
 
-RMS for individuals is a free self-service subscription for users who need to open files that have been protected by Azure Information Protection. If these users cannot be authenticated by Azure Active Directory, this free sign-up service can create an account in Azure Active Directory for a user. As a result, these users can now authenticate by using their company email address and then read the protected files on computers or mobile devices.
+RMS for individuals is a free self-service subscription for users who need to open files that have been protected by Azure Information Protection. If these users cannot be authenticated by Microsoft Entra ID, this free sign-up service can create an account in Microsoft Entra ID for a user. As a result, these users can now authenticate by using their company email address and then read the protected files on computers or mobile devices.
 
-RMS for individuals uses Azure Active Directory self-service signup. If users have created accounts for your organization by using this subscription, as an administrator for your organization, you can claim ownership and [take control of their accounts](/azure/active-directory/users-groups-roles/domains-admin-takeover#external-admin-takeover). 
+RMS for individuals uses Microsoft Entra self-service signup. If users have created accounts for your organization by using this subscription, as an administrator for your organization, you can claim ownership and [take control of their accounts](/azure/active-directory/users-groups-roles/domains-admin-takeover#external-admin-takeover). 
 
 To sign up for this free account, users go to the [Microsoft Azure Information Protection page](https://aka.ms/rms-signup), and provide their work email address. They receive an email in response from Microsoft, and they can then complete the sign-up process by entering details to create their account. 
 
@@ -72,4 +72,4 @@ Now your account is created, if you're prompted to sign in to read protected fil
 
 
 ## Next steps
-RMS for individuals is an example of using the self-service signup feature that is supported by Azure Active Directory. For more information about how this feature works, see [What is Self-Service Signup for Azure Active Directory?](/azure/active-directory/users-groups-roles/directory-self-service-signup) in the Azure Active Directory documentation.
+RMS for individuals is an example of using the self-service signup feature that is supported by Microsoft Entra ID. For more information about how this feature works, see [What is Self-Service Signup for Microsoft Entra ID?](/azure/active-directory/users-groups-roles/directory-self-service-signup) in the Microsoft Entra documentation.

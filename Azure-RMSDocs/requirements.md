@@ -32,7 +32,7 @@ ms.custom: admin
 Before deploying Azure Information Protection, ensure that your system meets the following prerequisites:
 
 - [Subscription for Azure Information Protection](#subscription-for-azure-information-protection)
-- [Azure Active Directory](#azure-active-directory)
+- [Microsoft Entra ID](#azure-active-directory)
 - [Client devices](#client-devices)
 - [Applications](#applications)
 - [Firewalls and network infrastructure](#firewalls-and-network-infrastructure)
@@ -48,11 +48,13 @@ You must have an **Azure Information Protection plan** for classification, label
 
 If your question is not answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
 
-## Azure Active Directory
+<a name='azure-active-directory'></a>
 
-To support authentication and authorization for Azure Information Protection, you must have an Azure Active Directory (AD). To use user accounts from your on-premises directory (AD DS), you must also configure directory integration.
+## Microsoft Entra ID
 
-- **Single sign-on (SSO)** is supported for Azure Information Protection so that users are not repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor for how to configure it for Azure AD. WS-Trust is a common requirement for these solutions to support single sign-on.
+To support authentication and authorization for Azure Information Protection, you must have a Microsoft Entra ID. To use user accounts from your on-premises directory (AD DS), you must also configure directory integration.
+
+- **Single sign-on (SSO)** is supported for Azure Information Protection so that users are not repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor for how to configure it for Microsoft Entra ID. WS-Trust is a common requirement for these solutions to support single sign-on.
 
 - **Multi-factor authentication (MFA)** is supported with Azure Information Protection when you have the required client software and have correctly configured the MFA-supporting infrastructure.
 
@@ -62,9 +64,9 @@ Additional prerequisites are required for specific scenarios, such as when using
 
 For more information, see:
 
-- [Additional Azure AD requirements for Azure Information Protection](requirements-azure-ad.md).
-- [What is Azure AD Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
-- [Integrate on-premises Active Directory domains with Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
+- [Additional Microsoft Entra requirements for Azure Information Protection](requirements-azure-ad.md).
+- [What is Microsoft Entra Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
+- [Integrate on-premises Active Directory domains with Microsoft Entra ID](/azure/architecture/reference-architectures/identity/azure-ad).
 
 ## Client devices
 
@@ -253,7 +255,7 @@ The following on-premises servers are supported with Azure Information Protectio
 
 This connector acts as a communications interface, and relays between on-premises servers and the Azure Rights Management service, which is used by Azure Information Protection to protect Office documents and emails. 
 
-To use this connector, you must configure directory synchronization between your Active Directory forests and Azure Active Directory.
+To use this connector, you must configure directory synchronization between your Active Directory forests and Microsoft Entra ID.
 
 Supported servers include:
 

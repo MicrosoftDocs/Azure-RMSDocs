@@ -39,7 +39,7 @@ Confused by a word, phrase, or acronym that's related to Azure Information Prote
 ### A
 |Term|Definition|
 |--------|--------------|
-|**AADRM**|The name of the first PowerShell module for the protection service (Azure Rights Management), which was derived from the unofficial abbreviation for Azure Rights Management when it was previously named (Windows) Azure Active Directory Rights Management. </br></br>This PowerShell module is now replaced with the AIPService module.|
+|**AADRM**|The name of the first PowerShell module for the protection service (Azure Rights Management), which was derived from the unofficial abbreviation for Azure Rights Management when it was previously named (Windows) Microsoft Entra Rights Management. </br></br>This PowerShell module is now replaced with the AIPService module.|
 |**activate**|Enable the Azure Rights Management protection service so that an organization can protect their documents and email. </br></br>This action also enables IRM features in Exchange Online and Microsoft SharePoint.|
 |**Active Directory Rights Management Services**|Frequently abbreviated to *AD RMS*.<br /><br />A Windows Server role that provides rights management protection by using encryption and policy to help secure documents, files, and email.|
 |**AD RMS**|See *Active Directory Rights Management Services*.|
@@ -158,7 +158,7 @@ Confused by a word, phrase, or acronym that's related to Azure Information Prote
 |**Rights Management sharing application**|Now replaced by the Azure Information Protection client.|
 |**RMS**|See *Rights Management services*.|
 |**RMS connector**|See *Rights Management connector*.|
-|**RMS for individuals**|A free subscription for a user to use Rights Management when their organization does not have a subscription to Office 365 or Azure Active Directory.|
+|**RMS for individuals**|A free subscription for a user to use Rights Management when their organization does not have a subscription to Office 365 or Microsoft Entra ID.|
 |**RMS sharing app**|See *Rights Management sharing application*.|
 |**RMS template**|See *protection template*.|
 

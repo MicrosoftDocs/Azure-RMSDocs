@@ -49,7 +49,7 @@ Heartbeat events are generated automatically for any application that has integr
 * Name of the machine where the audit was generated
 * Process Name
 * Platform
-* Application ID - Corresponds to the Azure AD Application ID.
+* Application ID - Corresponds to the Microsoft Entra Application ID.
 
 These events are useful in detecting applications across your enterprise that are using the Microsoft Information Protection SDK.
 
