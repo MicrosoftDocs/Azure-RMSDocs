@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Additional prerequisites for Azure AD and Azure Information Protection
-description: Understand additional Azure AD prerequisites for Azure Information Protection in specific scenarios, such as multi-factor or certificate-based authentication and more.
+title: Additional prerequisites for Microsoft Entra ID and Azure Information Protection
+description: Understand additional Microsoft Entra prerequisites for Azure Information Protection in specific scenarios, such as multi-factor or certificate-based authentication and more.
 author: aashishr
 ms.author: aashishr
 manager: aashishr
@@ -24,21 +24,21 @@ ms.custom: admin, has-adal-ref
 
 ---
 
-# Additional Azure AD requirements for Azure Information Protection
+# Additional Microsoft Entra requirements for Azure Information Protection
 
 [!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
-An [Azure AD directory is a requirement](requirements.md#azure-active-directory) for using Azure Information protection. Use an account from an Azure AD directory to sign in to the Azure portal, where you can configure Azure Information Protection settings.
+An [Microsoft Entra directory is a requirement](requirements.md#azure-active-directory) for using Azure Information protection. Use an account from a Microsoft Entra directory to sign in to the Azure portal, where you can configure Azure Information Protection settings.
 
-If you have a subscription that includes Azure Information Protection or Azure Rights Management, your Azure AD directory is automatically created for you if needed.
+If you have a subscription that includes Azure Information Protection or Azure Rights Management, your Microsoft Entra directory is automatically created for you if needed.
 
-The following sections list additional AIP and Azure AD requirements for specific scenarios. 
+The following sections list additional AIP and Microsoft Entra requirements for specific scenarios. 
 
 ## Support for certificate-based authentication (CBA)
 
 The Azure Information Protection apps for iOS and Android support certificate-based authentication. 
 
-For more information, see [Get started with certificate-based authentication in Azure Active Directory](/azure/active-directory/active-directory-certificate-based-authentication-get-started).
+For more information, see [Get started with certificate-based authentication in Microsoft Entra ID](/azure/active-directory/active-directory-certificate-based-authentication-get-started).
 
 ## Multi-factor authentication (MFA) and Azure Information Protection
 
@@ -53,13 +53,13 @@ To use multi-factor authentication (MFA) with Azure Information Protection, you 
 >
 Once you've confirmed these prerequisites, do one of the following, depending on your tenant configuration:
 
-- **Microsoft-managed tenants, with Azure AD or Microsoft 365**. Configure Azure MFA to enforce MFA for users. 
+- **Microsoft-managed tenants, with Microsoft Entra ID or Microsoft 365**. Configure Azure MFA to enforce MFA for users. 
 
     For more information, see: 
     - [Getting started with Azure Multi-Factor Authentication in the cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud)
     - [What is Azure Multi-Factor Authentication?](/multi-factor-authentication/multi-factor-authentication)
 
-- **Federated tenants, where federation servers operate on-premises**. Configure your federation servers for Azure Active Directory or Microsoft 365. 
+- **Federated tenants, where federation servers operate on-premises**. Configure your federation servers for Microsoft Entra ID or Microsoft 365. 
 For example, if you are using AD FS, see [Configure Additional Authentication Methods for AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs). 
 
 ## Rights Management connector / AIP scanner requirements
@@ -69,7 +69,7 @@ The Rights Management connector and the Azure Information Protection scanner do 
 If you deploy the connector or scanner, the following accounts must not require MFA:
 
 - The account that installs and configures the connector.
-- The service principal account in Azure AD, **Aadrm_S-1-7-0**, that the connector creates.
+- The service principal account in Microsoft Entra ID, **Aadrm_S-1-7-0**, that the connector creates.
 - The service account that runs the scanner.
 
 ## User UPN values don't match their email addresses
@@ -84,7 +84,7 @@ For more information, see:
 - [Office applications periodically prompt for credentials to SharePoint, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
 
 > [!TIP]
-> If the domain name in the UPN value is a domain that is verified for your tenant, add the user's UPN value as another email address to the Azure AD **proxyAddresses** attribute. This allows the user to be authorized for Azure Rights Management if their UPN value is specified at the time the usage rights are granted. 
+> If the domain name in the UPN value is a domain that is verified for your tenant, add the user's UPN value as another email address to the Microsoft Entra ID **proxyAddresses** attribute. This allows the user to be authorized for Azure Rights Management if their UPN value is specified at the time the usage rights are granted. 
 
 For more information, see [Preparing users and groups for Azure Information Protection](prepare.md).
 

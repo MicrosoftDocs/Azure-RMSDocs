@@ -31,12 +31,12 @@ ms.custom: admin
 
 Use the following information for Phase 4 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 8 through 9 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-## Step 8. Configure IRM integration for Exchange Online
+## Step 8: Configure IRM integration for Exchange Online
 
 > [!IMPORTANT]
 > You cannot control which recipients migrated users might select for protected emails.
 >
-> Therefore, make sure that all users and mail-enabled groups in your organization have an account in Azure AD that can be used with Azure Information Protection.
+> Therefore, make sure that all users and mail-enabled groups in your organization have an account in Microsoft Entra ID that can be used with Azure Information Protection.
 >
 > For more information, see [Preparing users and groups for Azure Information Protection](prepare.md).
 
@@ -62,7 +62,7 @@ Regardless of  the Azure Information Protection tenant key topology that you cho
     
         For more information, see the verification steps from [Set up new Microsoft 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
 
-## Step 9. Configure IRM integration for Exchange Server and SharePoint Server
+## Step 9: Configure IRM integration for Exchange Server and SharePoint Server
 
 If you have used the Information Rights Management (IRM) functionality of Exchange Server or SharePoint Server with AD RMS, you will need to deploy the Rights Management (RMS) connector.
 

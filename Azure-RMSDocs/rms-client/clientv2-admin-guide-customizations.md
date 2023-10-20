@@ -1437,7 +1437,7 @@ If you have computers that cannot connect to the internet for a period of time, 
 
 **To support disconnected computers from the unified labeling client**:
 
-1. Choose or create a user account in Azure AD that you will use to download labels and policy settings that you want to use on your disconnected computer.
+1. Choose or create a user account in Microsoft Entra ID that you will use to download labels and policy settings that you want to use on your disconnected computer.
 
 2. As an additional label policy setting for this account, [turn off sending audit data to Azure Information Protection analytics](#prevent-audit-data-from-being-sent-to-aip-and-microsoft-365-analytics).
     
