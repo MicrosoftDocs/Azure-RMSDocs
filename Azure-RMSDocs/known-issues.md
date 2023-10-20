@@ -243,7 +243,7 @@ For example, an original image is shown below on the left, with a stretched, por
 
 ### External users and the AIP viewer 
 
-If an external user already has a guest account in Azure AD, the AIP Viewer might display an error when the user opens a protected document, telling them that they can't sign in with a personal account.
+If an external user already has a guest account in Microsoft Entra ID, the AIP Viewer might display an error when the user opens a protected document, telling them that they can't sign in with a personal account.
 
 If such an error appears, the user must install [Adobe Acrobat DC with the MIP extension](https://helpx.adobe.com/il_en/acrobat/kb/mip-plugin-download.html) in order to open the protected document.
 
@@ -252,7 +252,7 @@ When a user opens the protected document after installing Adobe Acrobat DC with 
 This is an expected error. In the prompt window, select **Back** to continue opening the protected document.
 
 >[!NOTE]
-> The AIP Viewer supports guest *organizational* accounts in Azure AD, but not personal or Windows Live accounts.
+> The AIP Viewer supports guest *organizational* accounts in Microsoft Entra ID, but not personal or Windows Live accounts.
 >
 
 ### ADRMS protected files on Android devices
@@ -338,7 +338,7 @@ In such cases, relabel the document manually to apply the protection as needed.
 
 ## AIP-based Conditional Access policies
 
-External users who receive content protected by [Conditional Access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) must have an Azure Active Directory (Azure AD) business-to-business (B2B) collaboration guest user account in order to view the content.
+External users who receive content protected by [Conditional Access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) must have a Microsoft Entra business-to-business (B2B) collaboration guest user account in order to view the content.
 
 While you can invite external users to activate a guest user account, allowing them to authenticate and pass the conditional access requirements, it might be difficult to ensure that this occurs for all external users required.
 
@@ -371,5 +371,3 @@ The following additional articles might be helpful in answering questions you ha
 - [Frequently asked questions about data protection in Azure Information Protection](faqs-rms.md)
 - [Frequently asked questions about classification and labeling in Azure Information Protection](faqs-infoprotect.md)
 - [FAQs for Microsoft Azure Information Protection app for iOS and Android](rms-client/mobile-app-faq.md)
-
-
