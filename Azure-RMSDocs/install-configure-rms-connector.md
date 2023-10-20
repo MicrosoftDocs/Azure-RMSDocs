@@ -253,7 +253,7 @@ If your connector servers are installed in a network that does not have direct i
 
 1.  Add the string value of **ProxyAddress** and then set the Data for this value to be **http://&lt;MyProxyDomainOrIPaddress&gt;:&lt;MyProxyPort&gt;**
 
-    For example: **http://proxyserver.contoso.com:8080**
+    For example: **https://proxyserver.contoso.com:8080**
 
 1.  Close the registry editor, and then restart the server or perform an IISReset command to restart IIS.
 
