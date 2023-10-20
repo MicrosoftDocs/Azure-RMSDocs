@@ -60,7 +60,7 @@ If not already implemented, follow the steps listed in [File SDK application ini
 
 3. The managed wrapper includes a static class, `Microsoft.InformationProtection.MIP` used for initialization, creating a `MipContext`, loading profiles, and releasing resources. To initialize the wrapper for File SDK operations, call `MIP.Initialize()`, passing in `MipComponent.Protection` to load the libraries necessary for protection operations.
 
-4. In `Main()` in *Program.cs* add the following, replacing **\<application-id\>** with the ID of the Azure AD Application Registration created previously.
+4. In `Main()` in *Program.cs* add the following, replacing **\<application-id\>** with the ID of the Microsoft Entra Application Registration created previously.
 
 ```csharp
 using System;
@@ -154,7 +154,7 @@ namespace mip_sdk_dotnet_quickstart
 
    | Placeholder        | Value                                                                                                                  | Example                              |
    | :----------------- | :--------------------------------------------------------------------------------------------------------------------- | :----------------------------------- |
-   | \<application-id\> | The Azure AD Application ID assigned to the application registered in "MIP SDK setup and configuration" (2 instances). | 0edbblll-8773-44de-b87c-b8c6276d41eb |
+   | \<application-id\> | The Microsoft Entra Application ID assigned to the application registered in "MIP SDK setup and configuration" (2 instances). | 0edbblll-8773-44de-b87c-b8c6276d41eb |
    | \<friendly-name\>  | A user-defined friendly name for your application.                                                                     | AppInitialization                    |
 
 

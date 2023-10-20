@@ -60,7 +60,7 @@ Use the following PowerShell script to generate access tokens, which are request
 1. Create a PowerShell Script file (.ps1 extension), and copy/paste the following script into the file:
 
    - `$authority` and `$resourceUrl` are updated later, in the following section.
-   - Update `$appId` and `$redirectUri`, to match the values you specified in your Azure AD app registration.
+   - Update `$appId` and `$redirectUri`, to match the values you specified in your Microsoft Entra app registration.
 
    ```powershell
    $authority = '<authority-url>'                   # Specified when SDK calls AcquireOAuth2Token()
@@ -84,11 +84,11 @@ Finally, build and test your client application.
 3. To generate an access token for the prompt, go back to your PowerShell script and:
 
    - Update the `$authority` and `$resourceUrl` variables. They must match the values that are specified in the console output in step #2. These values are provided by the MIP SDK in the `challenge` parameter of `AcquireOAuth2Token()`:
-   - Run the PowerShell script. The `Get-ADALToken` cmdlet triggers an Azure AD authentication prompt, similar to the example below. Specify the same account provided in the console output in step #2. After successful sign-in, the access token will be placed on the clipboard.
+   - Run the PowerShell script. The `Get-ADALToken` cmdlet triggers a Microsoft Entra authentication prompt, similar to the example below. Specify the same account provided in the console output in step #2. After successful sign-in, the access token will be placed on the clipboard.
 
      [![Visual Studio acquire token sign-in](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
-   - You may also need to give consent, to allow the application to access the MIP APIs, while running under the sign-in account. This happens when the Azure AD application registration isn't pre-consented (as outlined in "MIP SDK setup and configuration"), or you're signing in with an account from a different tenant (other than the one where your application is registered). Simply click **Accept** to record your consent.
+   - You may also need to give consent, to allow the application to access the MIP APIs, while running under the sign-in account. This happens when the Microsoft Entra application registration isn't pre-consented (as outlined in "MIP SDK setup and configuration"), or you're signing in with an account from a different tenant (other than the one where your application is registered). Simply click **Accept** to record your consent.
 
      [![Visual Studio consent](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png#lightbox)
 

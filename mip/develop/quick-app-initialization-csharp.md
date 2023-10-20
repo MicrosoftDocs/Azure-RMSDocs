@@ -130,7 +130,7 @@ Now create an implementation for a consent delegate, by extending the SDK's `Mic
 
 3. The managed wrapper includes a static class, `Microsoft.InformationProtection.MIP` used for initialization, creating a `MipContext`, loading profiles, and releasing resources. To initialize the wrapper for File SDK operations, call `MIP.Initialize()`, passing in `MipComponent.File` to load the libraries necessary for file operations.
 
-4. In `Main()` in *Program.cs* add the following, replacing **\<application-id\>** with the ID of the Azure AD Application Registration created previously.
+4. In `Main()` in *Program.cs* add the following, replacing **\<application-id\>** with the ID of the Microsoft Entra Application Registration created previously.
 
 ```csharp
 using System;
@@ -180,7 +180,7 @@ namespace mip_sdk_dotnet_quickstart
                // Initialize Wrapper for File SDK operations.
                MIP.Initialize(MipComponent.File);
 
-               // Create ApplicationInfo, setting the clientID from Azure AD App Registration as the ApplicationId.
+               // Create ApplicationInfo, setting the clientID from Microsoft Entra App Registration as the ApplicationId.
                ApplicationInfo appInfo = new ApplicationInfo()
                {
                     ApplicationId = clientId,
@@ -229,9 +229,9 @@ namespace mip_sdk_dotnet_quickstart
 
    | Placeholder | Value | Example |
    |:----------- |:----- |:--------|
-   | \<application-id\> | The Azure AD Application ID assigned to the application registered in "MIP SDK setup and configuration" (2 instances).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
+   | \<application-id\> | The Microsoft Entra Application ID assigned to the application registered in "MIP SDK setup and configuration" (2 instances).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
    | \<friendly-name\> | A user-defined friendly name for your application. | AppInitialization |
-   | \<Tenant-GUID\> | Tenant-ID for your Azure AD tenant | TenantID |
+   | \<Tenant-GUID\> | Tenant-ID for your Microsoft Entra tenant | TenantID |
 
 
 4. Now do a final build of the application and resolve any errors. Your code should build successfully.
