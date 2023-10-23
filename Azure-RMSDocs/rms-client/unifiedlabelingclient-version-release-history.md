@@ -104,7 +104,8 @@ This version of the unified labeling client and scanner provides the following f
 - Created new feature flag to match the full untrusted recipient domain for oversharing popups in Outlook. The default behavior matches the trailing recipient domain. Contact support to request this change.
 - Changed information protection scanner to not report level event in the summary file when no change occured.
 - Changed information protection scanner to not report protection when a file failure occured.
-- Updated to [MIP SDK 1.13.171](/information-protection/develop/version-release-history#version-113176).
+- Fixed an issue where information protection scanner went offline due to corruption in MSAL refresh token.
+- Updated to [MIP SDK 1.13.187](/information-protection/develop/version-release-history#version-113187).
 
 ## Version 2.16.73.0
 
