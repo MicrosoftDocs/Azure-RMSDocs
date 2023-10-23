@@ -11,19 +11,19 @@ ms.service: information-protection
 
 # API permissions for the Microsoft Information Protection SDK
 
-The MIP SDK uses two backend Azure services for labeling and protection. In the Azure Active Directory app permissions blade, these services are:
+The MIP SDK uses two backend Azure services for labeling and protection. In the Microsoft Entra app permissions blade, these services are:
 
 - Azure Rights Management Service
 - Microsoft Purview Information Protection Sync Service
 
 Application permissions must be granted to one or more APIs when using the MIP SDK for labeling and protection. Various application authentication scenarios may require different application permissions. For application authentication scenarios, see [Authentication scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios).
 
-Tenant-wide admin consent should be granted for application permissions where Administrator consent is required. For more information, see the [Azure Active Directory documentation](/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations).
+Tenant-wide admin consent should be granted for application permissions where Administrator consent is required. For more information, see the [Microsoft Entra documentation](/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations).
 
 
 ## Application Permissions
 
-Application permissions allow an application in Azure Active Directory to act as it’s own entity, rather than on behalf of a specific user.
+Application permissions allow an application in Microsoft Entra ID to act as it’s own entity, rather than on behalf of a specific user.
 
 | Service                         | Permission Name           | Description                                  | Admin Consent Required |
 | ------------------------------- | ------------------------- | -------------------------------------------- | ---------------------- |
@@ -56,7 +56,7 @@ This permission is required when an application must be permitted to download un
 
 ## Delegated Permissions
 
-Delegated permissions allow an application in Azure Active Directory to perform actions on behalf of a particular user.
+Delegated permissions allow an application in Microsoft Entra ID to perform actions on behalf of a particular user.
 
 | Service                         | Permission Name         | Description                                      | Admin Consent Required |
 | ------------------------------- | ----------------------- | ------------------------------------------------ | ---------------------- |

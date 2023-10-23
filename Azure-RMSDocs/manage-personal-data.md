@@ -180,7 +180,7 @@ There is no search by ObjectID. However, you are not restricted by the `-UserEma
 
 ## Securing and controlling access to personal information
 
-Personal data that you view and specify in the Azure portal is accessible only to users who have been assigned one of the following [administrator roles from Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
+Personal data that you view and specify in the Azure portal is accessible only to users who have been assigned one of the following [administrator roles from Microsoft Entra ID](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
 - **Azure Information Protection administrator**
 
@@ -196,7 +196,7 @@ Personal data that you view and specify in the Azure portal is accessible only t
 
 - **Global reader**
 
-Personal data that you view and specify by using the AIPService module (or the older module, AADRM) is accessible only to users who have been assigned the **Azure Information Protection administrator**, **Compliance administrator**, **Compliance data administrator**, or **Global Administrator** roles from Azure Active Directory, or the global administrator role for the protection service.
+Personal data that you view and specify by using the AIPService module (or the older module, AADRM) is accessible only to users who have been assigned the **Azure Information Protection administrator**, **Compliance administrator**, **Compliance data administrator**, or **Global Administrator** roles from Microsoft Entra ID, or the global administrator role for the protection service.
 
 ## Updating personal data
 

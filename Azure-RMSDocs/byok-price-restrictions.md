@@ -163,7 +163,7 @@ BYOK prerequisites vary, depending on your system configuration. Verify that you
 
 Your Azure Information Protection tenant must have an Azure subscription. If you don't have one yet, you can sign up for a [free account](https://azure.microsoft.com/pricing/free-trial/). However, to use an HSM-protected key, you must have the Azure Key Vault Premium service tier.
 
-The free Azure subscription that provides access to Azure Active Directory configuration and Azure Rights Management custom template configuration is *not* sufficient for using Azure Key Vault.
+The free Azure subscription that provides access to Microsoft Entra configuration and Azure Rights Management custom template configuration is *not* sufficient for using Azure Key Vault.
 
 To confirm whether you have an Azure subscription that is compatible with BYOK, do the following to verify, using [Azure PowerShell](/powershell/azure/) cmdlets:
 

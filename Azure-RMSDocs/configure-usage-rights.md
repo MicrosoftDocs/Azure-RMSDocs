@@ -163,9 +163,9 @@ The Rights Management issuer is always granted the Full Control usage right for 
 
 By default, this account is also the **Rights Management owner** for that content, which is the case when a user who created the document or email initiates the protection. But there are some scenarios where an administrator or service can protect content on behalf of users. For example:
 
-- An administrator bulk-protects files on a file share: The administrator account in Azure AD protects the documents for the users.
+- An administrator bulk-protects files on a file share: The administrator account in Microsoft Entra ID protects the documents for the users.
 
-- The Rights Management connector protects Office documents on a Windows Server folder: The service principal account in Azure AD that is created for the RMS connector protects the documents for the users.
+- The Rights Management connector protects Office documents on a Windows Server folder: The service principal account in Microsoft Entra ID that is created for the RMS connector protects the documents for the users.
 
 In these scenarios, the Rights Management issuer can assign the Rights Management owner to another account by using the Azure Information Protection SDKs or PowerShell. For example, when you use the [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) PowerShell cmdlet with the Azure Information Protection client, you can specify the **OwnerEmail** parameter to assign the Rights Management owner to another account. 
 

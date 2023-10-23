@@ -27,7 +27,7 @@ Heartbeat events are generated automatically for any application that has integr
 * Name of the machine where the audit was generated
 * Process Name
 * Platform
-* Application ID - Corresponds to the Azure AD Application ID.
+* Application ID - Corresponds to the Microsoft Entra Application ID.
 
 These events are useful in detecting applications across your enterprise that are using the Microsoft Information Protection SDK.
 
@@ -72,4 +72,3 @@ Events submitted to the Azure Information Protection audit pipeline will surface
 
 - For details on the auditing experience in Azure Information Protection, see the [preview announcement blog on Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
 - Download the [Policy SDK Samples from GitHub and try out the Policy SDK](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
-

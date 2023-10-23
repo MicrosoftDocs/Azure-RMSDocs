@@ -214,7 +214,7 @@ For further details on file operations refer to the [File Handler concepts](conc
 
    | Placeholder | Value |
    |:----------- |:----- |
-   | \<application-id\> | The application ID as registered with Azure AD tenant, for example: `0edbblll-8773-44de-b87c-b8c6276d41eb`. |
+   | \<application-id\> | The application ID as registered with Microsoft Entra tenant, for example: `0edbblll-8773-44de-b87c-b8c6276d41eb`. |
    | \<engine-account\> | The account used for engine's identity, for example: `user@tenant.onmicrosoft.com`. |
    | \<engine-state\> | User defined application state, for example: `My engine state`. |
    | \<input-file-path\> | The full path to a test input message file, for example: `c:\\Test\\message.msg`. |

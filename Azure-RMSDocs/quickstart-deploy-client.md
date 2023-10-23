@@ -38,7 +38,7 @@ For organizations without an information protection platform, the client provide
 
 Use the articles linked below to help you understand the prerequisites for deploying Azure Information Protection unified labeling in your organization:
 
-- **[Azure Information Protection requirements](requirements.md)**. Describes detailed system requirements for deploying the AIP client in your organization, such as an Azure Information Protection subscription and Azure Active Directory. Also lists of supported client devices and supported applications.
+- **[Azure Information Protection requirements](requirements.md)**. Describes detailed system requirements for deploying the AIP client in your organization, such as an Azure Information Protection subscription and Microsoft Entra ID. Also lists of supported client devices and supported applications.
 
 - **[Unified labeling client requirements](./rms-client/reqs-ul-client.md)**. Lists system requirements for each machine where the AIP client is installed.
 
