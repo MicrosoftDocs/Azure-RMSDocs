@@ -23,7 +23,7 @@
     items:
     - name: Overview
       href: requirements.md
-    - name: Additional Azure Active Directory requirements
+    - name: Additional Microsoft Entra requirements
       href: requirements-azure-ad.md
     - name: Application support for protection
       href: requirements-applications.md

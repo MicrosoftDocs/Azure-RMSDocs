@@ -31,7 +31,7 @@ ms.custom: admin, has-adal-ref
 
 Use the following information for Phase 5 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 10 through 12 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-## Step 10. Deprovision AD RMS
+## Step 10: Deprovision AD RMS
 
 Remove the Service Connection Point (SCP) from Active Directory to prevent computers from discovering your on-premises Rights Management infrastructure. This is optional for the existing clients that you migrated because of the redirection that you configured in the registry (for example, by running the migration script). However, removing the SCP prevents new clients and potentially RMS-related services and tools from finding the SCP when the migration is complete. At this point, all computer connections should go to the Azure Rights Management service.
 
@@ -72,7 +72,7 @@ If migrated clients run Office 2010, users might experience delays in opening pr
 
 - **Redirection via DNS**: Create a new host (A) record for your AD RMS URL FQDN, which has the IP address of 127.0.0.1.
 
-## Step 11. Complete client migration tasks
+## Step 11: Complete client migration tasks
 
 For mobile device clients and Mac computers: Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)).
 
@@ -132,7 +132,7 @@ This task is typically enabled by using group policy and supports an AD RMS depl
 > [!IMPORTANT]
 > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](removed-sunset-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
 
-## Step 12. Rekey your Azure Information Protection tenant key
+## Step 12: Rekey your Azure Information Protection tenant key
 
 This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1 because this mode uses a 1024-bit key and SHA-1. This configuration is considered to offer an inadequate level of protection. Microsoft doesn't endorse the use of lower key lengths such as 1024-bit RSA keys and the associated use of protocols that offer inadequate levels of protection, such as SHA-1.
 

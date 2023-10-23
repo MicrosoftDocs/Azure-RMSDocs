@@ -58,7 +58,7 @@ Ensuring ongoing access for authorized people and services, also known as "reaso
 |Feature  |Description  |
 |---------|---------|
 |**Safely share information**     |  [Protected files](./rms-client/clientv2-classify-protect.md) are safe to share with others, such as an attachment to an email or a link to a SharePoint site. </br></br> If the sensitive information is within an email message, protect the email, or use the **Do Not Forward** option from Outlook.       |
-|**Support for business-to-business collaboration**     |  Because Azure Rights Management is a cloud service, there’s no need to explicitly configure trusts with other organizations before you can share protected content with them. </br></br>Collaboration with other organizations that already have a Microsoft 365 or an Azure AD directory is automatically supported. </br></br>For organizations without Microsoft 365 or an Azure AD directory, users can sign up for the free [RMS for individuals](rms-for-individuals.md) subscription, or use a Microsoft account for [supported applications](/previous-versions/azure/information-protection/secure-collaboration-documents#supported-scenarios-for-opening-protected-documents).       |
+|**Support for business-to-business collaboration**     |  Because Azure Rights Management is a cloud service, there’s no need to explicitly configure trusts with other organizations before you can share protected content with them. </br></br>Collaboration with other organizations that already have a Microsoft 365 or a Microsoft Entra directory is automatically supported. </br></br>For organizations without Microsoft 365 or a Microsoft Entra directory, users can sign up for the free [RMS for individuals](rms-for-individuals.md) subscription, or use a Microsoft account for [supported applications](/previous-versions/azure/information-protection/secure-collaboration-documents#supported-scenarios-for-opening-protected-documents).       |
 
 > [!TIP]
 > Attaching protected files, rather than protecting an entire email message, enables you to keep the email text un-encrypted. 
@@ -131,7 +131,7 @@ Organizations can benefit from IT control features, such as:
 |**Tenant key management**    | Use tenant key management solutions, such as Bring Your Own Key (BYOK) or Double Key Encryption (DKE). <br><br>For more information about, see: <br>- [Planning and implementing your AIP tenant key](plan-implement-tenant-key.md) <br>- [DKE in the Microsoft 365 documentation](/microsoft-365/compliance/double-key-encryption).|
 |**Auditing and usage logging**    |   Use auditing and [usage logging](log-analyze-usage.md) features to analyze for business insights, monitor for abuse, and perform forensic analysis for information leaks.      |
 |**Access delegation**     |  Delegate access with the [super user feature](configure-super-users.md), ensuring that IT can always access protected content, even if a document was protected by an employee who then leaves the organization. </br> In comparison, peer-to-peer encryption solutions risk losing access to company data.       |
-|**Active Directory synchronization**     |   Synchronize [just the directory attributes that Azure RMS needs](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#azure-rms) to support a common identity for your on-premises Active Directory accounts, by using [a hybrid identity solution](/azure/active-directory/hybrid/), such as Azure AD Connect.      |
+|**Active Directory synchronization**     |   Synchronize [just the directory attributes that Azure RMS needs](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#azure-rms) to support a common identity for your on-premises Active Directory accounts, by using [a hybrid identity solution](/azure/active-directory/hybrid/), such as Microsoft Entra Connect.      |
 |**Single-sign on**     | Enable single-sign on without replicating passwords to the cloud, by using AD FS.        |
 |**Migration from AD RMS** |If you've deployed Active Directory Rights Management Services (AD RMS), [migrate to the Azure Rights Management service](migrate-from-ad-rms-to-azure-rms.md) without losing access to data that was previously protected by AD RMS. |
 
@@ -150,7 +150,7 @@ Azure Rights Management supports the following security, compliance, and regula
     -   SOC 2 SSAE 16/ISAE 3402 attestations
     -   HIPAA BAA
     -   EU Model Clause
-    -   FedRAMP as part of Azure Active Directory in Office 365 certification, issued FedRAMP Agency Authority to Operate by HHS
+    -   FedRAMP as part of Microsoft Entra ID in Office 365 certification, issued FedRAMP Agency Authority to Operate by HHS
     -   PCI DSS Level 1
 
 For more information about these external certifications, see the [Azure Trust Center](https://azure.microsoft.com/support/trust-center/compliance/).

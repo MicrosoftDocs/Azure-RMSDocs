@@ -144,7 +144,7 @@ The **Reset Settings** signs out the user, deletes the currently downloaded sens
 
 #### **Client status** section
 
-Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Microsoft 365 or Azure Active Directory. The account must also belong to a Microsoft 365 tenant that is configured for sensitivity labels in your labeling management portal.
+Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Microsoft 365 or Microsoft Entra ID. The account must also belong to a Microsoft 365 tenant that is configured for sensitivity labels in your labeling management portal.
 
 If you need to sign in as a different user to the one displayed, see the [Sign in as a different user](clientv2-admin-guide-customizations.md#sign-in-as-a-different-user) instructions.
 

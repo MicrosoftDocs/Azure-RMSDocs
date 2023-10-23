@@ -30,7 +30,7 @@ ms.custom: admin
 
 Use the following information for Phase 2 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 4 though 6 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-## Step 4. Export configuration data from AD RMS and import it to Azure Information Protection
+## Step 4: Export configuration data from AD RMS and import it to Azure Information Protection
 
 This step is a two-part process:
 
@@ -106,7 +106,7 @@ To complete Step 4, choose and select the instructions for your migration path:
 - [HSM-protected key to HSM-protected key](migrate-hsmkey-to-hsmkey.md)
 - [Software-protected key to HSM-protected key](migrate-softwarekey-to-hsmkey.md)
 
-## Step 5. Activate the Azure Rights Management service
+## Step 5: Activate the Azure Rights Management service
 
 Open a PowerShell session and run the following commands:
 
@@ -124,7 +124,7 @@ Open a PowerShell session and run the following commands:
 
 **What if your Azure Information Protection tenant is already activated?** If the Azure Rights Management service is already activated for your organization, and you have created custom templates that you want to use after the migration, you must export and import these templates. This procedure is covered in the next step.
 
-## Step 6. Configure imported templates
+## Step 6: Configure imported templates
 
 Because the templates that you imported have a default state of **Archived**, you must change this state to be **Published** if you want users to be able to use these templates with the Azure Rights Management service.
 
@@ -138,7 +138,7 @@ The template changes that you might need to make for this step:
 
 - If your templates in AD RMS used the **ANYONE** group, you might need to manually add users or groups.
 
-    In AD RMS, the ANYONE group granted rights to all users authenticated by your on-premises Active Directory, and this group is not supported by Azure Information Protection. The closet equivalent is a group that's automatically created for all users in your Azure AD tenant. If you were using the ANYONE group for your AD RMS templates, you might need to add users and the rights that you want to grant them.
+    In AD RMS, the ANYONE group granted rights to all users authenticated by your on-premises Active Directory, and this group is not supported by Azure Information Protection. The closet equivalent is a group that's automatically created for all users in your Microsoft Entra tenant. If you were using the ANYONE group for your AD RMS templates, you might need to add users and the rights that you want to grant them.
 
 ### Procedure if you created custom templates before the migration
 
@@ -154,9 +154,9 @@ You can then publish or archive these templates as you would any other template 
 
 ### Procedure if your templates in AD RMS used the **ANYONE** group
 
-If your templates in AD RMS used the **ANYONE** group, the closest equivalent group in Azure Information Protection is named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: <strong>AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com</strong>. This group contains all users from your Azure AD tenant.
+If your templates in AD RMS used the **ANYONE** group, the closest equivalent group in Azure Information Protection is named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: <strong>AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com</strong>. This group contains all users from your Microsoft Entra tenant.
 
-When you manage templates and labels in the Azure portal, this group displays as your tenant's domain name in Azure AD. For example, this group might look like the following for Contoso: **contoso.onmicrosoft.com**. To add this group, the option displays **Add \<organization name> - All members**.
+When you manage templates and labels in the Azure portal, this group displays as your tenant's domain name in Microsoft Entra ID. For example, this group might look like the following for Contoso: **contoso.onmicrosoft.com**. To add this group, the option displays **Add \<organization name> - All members**.
 
 If you're not sure whether your AD RMS templates include the ANYONE group, you can use the following sample Windows PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see [Using Windows PowerShell to Administer AD RMS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee221079(v=ws.10)).
 

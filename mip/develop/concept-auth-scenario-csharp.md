@@ -1,4 +1,4 @@
-﻿---
+---
 title: Concepts - Authentication Scenarios for Microsoft Information Protection (MIP) SDK C# clients
 description: Technical details about authentication scenarios for Microsoft Information Protection SDK C# client applications.
 author: msmbaldwin
@@ -10,11 +10,11 @@ ms.service: information-protection
 
 # Quickstart: Public and Confidential Clients (C#)
 
-There are two common scenarios used when building applications with the MIP SDK. In the first scenario,the user directly authenticates against Azure AD. In the second, the application authenticates using an app secret or certificate.
+There are two common scenarios used when building applications with the MIP SDK. In the first scenario,the user directly authenticates against Microsoft Entra ID. In the second, the application authenticates using an app secret or certificate.
 
 ## Public Client Applications
 
-These applications are desktop or mobile applications that will prompt the user to authenticate. The user connects directly to the backend MIP services. In this scenario, authentication libraries should be used to ensure the user can sign in to Azure AD, meets any multi-factor or conditional access requirements, and obtains an OAuth2 token for the appropriate resource.
+These applications are desktop or mobile applications that will prompt the user to authenticate. The user connects directly to the backend MIP services. In this scenario, authentication libraries should be used to ensure the user can sign in to Microsoft Entra ID, meets any multi-factor or conditional access requirements, and obtains an OAuth2 token for the appropriate resource.
 
 For more information, see the [public client auth flow documentation](/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-public-client-application-from-configuration-options)
 
@@ -51,12 +51,12 @@ public string AcquireToken(Identity identity, string authority, string resource,
 }
 ```
 
-**Tenant-GUID** is the unique tenant GUID for the Azure AD tenant.
-**Application-ID** is the application ID in application registration on Azure AD portal.
+**Tenant-GUID** is the unique tenant GUID for the Microsoft Entra tenant.
+**Application-ID** is the application ID in application registration on Microsoft Entra admin center.
 
 ## Confidential Client Applications
 
-These applications are cloud or service-based applications where the user isn't directly connecting to the backend MIP services. The service has a need to label, protect, or decrypt files or other data. In this scenario, the application must store a certificate or application secret. These secrets will be used for authentication to Azure AD and use that secret to fetch tokens for the backend MIP services. It may then use the MIP SDK’s delegation features to protect or consume content on behalf of a user.
+These applications are cloud or service-based applications where the user isn't directly connecting to the backend MIP services. The service has a need to label, protect, or decrypt files or other data. In this scenario, the application must store a certificate or application secret. These secrets will be used for authentication to Microsoft Entra ID and use that secret to fetch tokens for the backend MIP services. It may then use the MIP SDK’s delegation features to protect or consume content on behalf of a user.
 
 Integrating the MIP SDK with service-based applications requires use of the client credential grant flow. The Microsoft Authentication Library (MSAL) can be used to implement this in a pattern similar to what we would see in a public client application. This article will briefly cover how to update the MIP SDK `IAuthDelegate` in .NET to perform authentication for service-based applications using this flow. At the time of publication, there's no version of MSAL for C++, however it's possible to implement this flow via [direct REST calls](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow#get-a-token).
 
@@ -118,5 +118,5 @@ public string AcquireToken(Identity identity, string authority, string resource,
 }
 
 ```
-**Tenant-GUID** is the unique tenant GUID for the Azure AD tenant.
-**Application-ID** is the application ID in application registration on Azure AD portal.
+**Tenant-GUID** is the unique tenant GUID for the Microsoft Entra tenant.
+**Application-ID** is the application ID in application registration on Microsoft Entra admin center.

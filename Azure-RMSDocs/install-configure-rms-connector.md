@@ -43,7 +43,7 @@ Before you begin:
 1.  Identify the computers (minimum of two) to run the RMS connector. These computers must meet the minimum specification listed in the prerequisites.
 
     > [!NOTE]
-    > Install a single RMS connector (consisting of multiple servers for high availability) per tenant (Microsoft 365 tenant or Azure AD tenant). Unlike Active Directory RMS, you do not have to install an RMS connector in each forest.
+    > Install a single RMS connector (consisting of multiple servers for high availability) per tenant (Microsoft 365 tenant or Microsoft Entra tenant). Unlike Active Directory RMS, you do not have to install an RMS connector in each forest.
 
 1.  Download the source files for the RMS connector from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=40839).
 
@@ -68,11 +68,11 @@ Before you begin:
 
     You can use an account that has one of the following privileges:
 
-    -   **Global administrator for your tenant**: An account that is a global administrator for your Microsoft 365 tenant or Azure AD tenant.
+    -   **Global administrator for your tenant**: An account that is a global administrator for your Microsoft 365 tenant or Microsoft Entra tenant.
 
-    -   **Azure Rights Management global administrator**: An account in Azure Active Directory that has been assigned the Azure RMS global administrator role.
+    -   **Azure Rights Management global administrator**: An account in Microsoft Entra ID that has been assigned the Azure RMS global administrator role.
 
-    -   **Azure Rights Management connector administrator**: An account in Azure Active Directory that has been granted rights to install and administer the RMS connector for your organization.
+    -   **Azure Rights Management connector administrator**: An account in Microsoft Entra ID that has been granted rights to install and administer the RMS connector for your organization.
 
     The Azure Rights Management global administrator role and Azure Rights Management connector administrator role are assigned to accounts by using the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) cmdlet.
 
@@ -253,7 +253,7 @@ If your connector servers are installed in a network that does not have direct i
 
 1.  Add the string value of **ProxyAddress** and then set the Data for this value to be **http://&lt;MyProxyDomainOrIPaddress&gt;:&lt;MyProxyPort&gt;**
 
-    For example: **http://proxyserver.contoso.com:8080**
+    For example: **https://proxyserver.contoso.com:8080**
 
 1.  Close the registry editor, and then restart the server or perform an IISReset command to restart IIS.
 
