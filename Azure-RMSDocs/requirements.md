@@ -22,7 +22,6 @@ ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
-
 ---
 
 # Azure Information Protection requirements
@@ -85,11 +84,6 @@ The Azure Information Protection clients for Windows are supported are the follo
 - **Windows 11**
 
 - **Windows 10** (x86, x64). Handwriting is not supported in the Windows 10 RS4 build and later.
- 
-- **Windows 8.1** (x86, x64)
-
-- **Windows 8** (x86, x64)
-
 - **Windows Server 2019**
 
 - **Windows Server 2016**
@@ -273,7 +267,7 @@ The following operating systems support the Azure Rights Management service, whi
 
 |OS  |Supported versions  |
 |---------|---------|
-|**Windows computers**     |- Windows 8 (x86, x64) </br>- Windows 8.1 (x86, x64) </br>- Windows 10 (x86, x64)       | 
+|**Windows computers**     |- Windows 10 (x86, x64) </br>- Windows 11 (x86, x64)       |
 |**macOS**     |   Minimum version of macOS 10.8 (Mountain Lion)     |
 |**Android phones and tablets**     | Minimum version of Android 6.0        |
 |**iPhone and iPad**     | Minimum version of iOS 11.0        |
@@ -282,6 +276,8 @@ The following operating systems support the Azure Rights Management service, whi
 For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md). 
 
 
+
 ## Next steps
 
 Once you've reviewed all AIP requirements and confirmed that your system complies, continue with [Preparing users and groups for Azure Information Protection](prepare.md).
+
