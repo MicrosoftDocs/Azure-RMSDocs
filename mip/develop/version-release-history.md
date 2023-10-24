@@ -27,7 +27,8 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 | Version | Link                         | Status             | End of Support     |
 | ------- | ---------------------------- | ------------------ | ------------------ |
-| 1.13    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
+| 1.14    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
+| 1.13    | https://aka.ms/mipsdkbins113 | **Supported**      | October 27, 2024   |
 | 1.12    | https://aka.ms/mipsdkbins112 | **Supported**      | March 17, 2024     |
 | 1.11    | https://aka.ms/mipsdkbins111 | **Out of Support** | June 9, 2023       |
 | 1.10    | https://aka.ms/mipsdkbins110 | **Out of Support** | November 17, 2022  |
@@ -37,6 +38,46 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support** | September 23, 2021 |
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
+
+## Version 1.14.85
+
+**Release Date:** October 27th, 2023
+
+### File SDK
+-	Exposed feature flags for ABAC. isAbacEnabled indicates whether label is ABAC is enabled and isCustomerSecurityAttributeRequired indicates whether the ABAC-enabled label requires one or more attributes.
+-	Fixed an issue where component governance poli-check alerts were not suppressed.
+-	Fixed a bug where .doc files encrypted by SPO had invalid metadata.
+-	Fixed an issue where labeling signed Office and PDF files invalidated the signature and could not be opened by some editors.
+-	Fixed an issue where constructing .msg files failed when using MAPI to convert files to .msg format.
+-	Fixed a bug in MIP file SDK sample where corrupted output files were not deleted in event of failure.
+-	Fixed an issue where file SDK did not remove all label metadata from protected PDFs.
+-	Fixed a bug where empty body .msg files threw an exception.
+-	Fixed a bug where .pdf files that start with comments are protected as .pfile instead of natively protected .pdf file.
+-	Fixed an issue where exception was thrown when updating an inactive label with the same label.
+### Policy SDK
+-	Added new exception when no policy handler is found when ProtectionOnly engine and file handler is created.
+Protection SDK
+-	Fixed bug where delegated user emails were included in telemetry events.
+-	Fixed a bug where non-RMS protected attachments did not throw an error when decryption or inspection failed for .msg files.
+-	Added support for caching EUL if license is valid for less than one day.
+-	Added support for setting encrypted application data for template protection.
+-	Added support for pulling serialized templates with SetFetchSerializedTemplates option in GetTemplatesSettings. Populate the TemplateDescriptor GetSerializedTemplate() field and empty if only the basic templates are fetched.
+-	Fixed an issue where user certificate store was not encrypted.
+-	Fixed a bug where signed app data was not provided consistently between publishing and consumption.
+### Platform and Dependency Updates
+-	Upgraded to Open SSL 3.0.
+-	Added support for shared mailbox.
+-	Removed customer PII from log files.
+-	Fixed an issue where iOS builds displayed too many warnings.
+-	Exposed setting to control maximum concurrent http requests from 1DS telemetry endpoint.
+-	Exposed custom setting constexpr for Java and C#.
+-	Exposed flag to control max shutdown timer for 1DS cache cleanup.
+-	Added support for masking PII in log files with AllowPii in the settings file. Default setting of IsPiiAllowed is true.
+-	Added support for CBC encryption of Office files by default.
+### Breaking Changes
+-	Error code for signed Office files and signed PDF files changed from Mip::FileIOError to Mip::NotSupportedError.
+-	Audit event properties store the type of PII instead of None by default. Custom audit delegates that expect the PII to be None require updates.
+-	Signed app data returns additional entries for DKE protected docs during publishing.
 
 ## Version 1.13.187
 
