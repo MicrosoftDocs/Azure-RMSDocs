@@ -102,8 +102,8 @@ This version of the unified labeling client and scanner provides the following f
 
 - Fixed a bug where Set-AIPAuthentication occasionally failed.
 - Created new feature flag to match the full untrusted recipient domain for oversharing popups in Outlook. The default behavior matches the trailing recipient domain. Contact support to request this change.
-- Changed information protection scanner to not report level event in the summary file when no change occured.
-- Changed information protection scanner to not report protection when a file failure occured.
+- Changed information protection scanner to not report level event in the summary file when no change occurred.
+- Changed information protection scanner to not report protection when a file failure occurred.
 - Fixed an issue where information protection scanner went offline due to corruption in MSAL refresh token.
 - Updated to [MIP SDK 1.13.187](/information-protection/develop/version-release-history#version-113187).
 
@@ -121,7 +121,7 @@ This version includes the following fixes for the unified labeling scanner and c
 
 Organizations who have non-zero usage of AIP in the last 90 days before 05/23/2023 can use 2.16.73.0 with no impact. 
 
-Organizations who have zero usage of AIP in the last 90 days before 05/23/2023 will be impacted _if you use the AIP add-in_. Organizations who start to use the AIP add-in for the first time after 5/30/2023 can not download labels and will find the AIP add-in non-functional. The other components in the unified labeling package - the Scanner, the right-click Classify and Protect, PowerShell, and Viewer - will continue to work with no impact. Organizations with a legitimate business need to continue using the AIP add-in after 05/30/2024 can apply for an extension through support.
+Organizations who have zero usage of AIP in the last 90 days before 05/23/2023 will be impacted _if you use the AIP add-in_. Organizations who start to use the AIP add-in for the first time after 5/30/2023 can't download labels and will find the AIP add-in non-functional. The other components in the unified labeling package - the Scanner, the right-click Classify and Protect, PowerShell, and Viewer - will continue to work with no impact. Organizations with a legitimate business need to continue using the AIP add-in after 05/30/2024 can apply for an extension through support.
 
 For more information about AIP add-in retirement, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/retirement-notification-for-the-azure-information-protection/ba-p/3791908) and for detailed migration steps, our [migration playbook](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIPPlaybook/).
 
@@ -130,7 +130,7 @@ For more information about AIP add-in retirement, see our [TechCommunity blog](h
 This version of the unified labeling client and scanner provides the following fixes and improvements:
 
 - Fixed a bug where change counter was incremented but no audit event was sent. Change counter no longer incremented for those events.
-- Fixed a bug where display name was not passed MIP after MSAL changes.
+- Fixed a bug where display name wasn't passed MIP after MSAL changes.
 - Fixed an issue where EUII appeared in UserKey field of audit record.
 - Updated to [MIP SDK 1.13.161](/information-protection/develop/version-release-history#version-113161), adding support for consumption of Office documents and emails protected with AES256-CBC.
 
