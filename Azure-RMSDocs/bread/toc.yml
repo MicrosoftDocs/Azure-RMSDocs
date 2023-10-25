@@ -1,31 +1,14 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Azure
+  tocHref: /azure/
+  topicHref: /azure/index
   items:
-  - name: Enterprise Mobility + Security
-    tocHref: /enterprise-mobility-security/
-    topicHref: /enterprise-mobility-security
-    items:
+  - name: Azure Information Protection
+    tocHref: /azure/information-protection/
+    topicHref: /azure/information-protection/index
+- name: Azure
+  tocHref: /security/benchmark/azure/
+  topicHref: /azure/index
+  items:
     - name: Azure Information Protection
-      tocHref: /azure/information-protection/
-      topicHref: /azure/information-protection
-      items:
-        - name: Plan & Design
-          tocHref: /azure/information-protection/plan-design/
-          topicHref: /azure/information-protection/plan-design/deployment-roadmap
-        - name: Deploy & Use the Service
-          tocHref: /azure/information-protection/deploy-use/
-          topicHref: /azure/information-protection/deploy-use/activate-service
-        - name: Deploy & Use the Client
-          tocHref: /azure/information-protection/rms-client/
-          topicHref: /azure/information-protection/rms-client/use-client
-        - name: Develop & Customize Apps
-          tocHref: /azure/information-protection/develop/
-          topicHref: /azure/information-protection/develop/developers-guide
-  - name: Enterprise Mobility + Security
-    tocHref: /security/benchmark/azure/
-    topicHref: /enterprise-mobility-security
-    items:
-      - name: Azure Information Protection
-        tocHref: /security/benchmark/azure/baselines/
-        topicHref: /azure/information-protection
+      tocHref: /security/benchmark/azure/baselines/
+      topicHref: /azure/information-protection/index
