@@ -81,7 +81,7 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 
 Use the following information to see the contents of each supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
 
-Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include other legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 > [!TIP]
 > Minor fixes aren't always listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
@@ -119,9 +119,9 @@ This version includes the following fixes for the unified labeling scanner and c
 
 ### Service block for new deployments of AIP add-in
 
-Organizations who have non-zero usage of AIP in the last 90 days before 05/23/2023 can use 2.16.73.0 with no impact. 
+Organizations who have nonzero usage of AIP in the last 90 days before May 23, 2023 can use 2.16.73.0 with no impact. 
 
-Organizations who have zero usage of AIP in the last 90 days before 05/23/2023 will be impacted _if you use the AIP add-in_. Organizations who start to use the AIP add-in for the first time after 5/30/2023 can't download labels and will find the AIP add-in non-functional. The other components in the unified labeling package - the Scanner, the right-click Classify and Protect, PowerShell, and Viewer - will continue to work with no impact. Organizations with a legitimate business need to continue using the AIP add-in after 05/30/2024 can apply for an extension through support.
+Organizations who have zero usage of AIP in the last 90 days before May 23, 2023 will be impacted _if you use the AIP add-in_. Organizations who start to use the AIP add-in for the first time after 5/30/2023 can't download labels and will find the AIP add-in non-functional. The other components in the unified labeling package - the Scanner, the right-click Classify and Protect, PowerShell, and Viewer - will continue to work with no impact. Organizations with a legitimate business need to continue using the AIP add-in after 05/30/2024 can apply for an extension through support.
 
 For more information about AIP add-in retirement, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/retirement-notification-for-the-azure-information-protection/ba-p/3791908) and for detailed migration steps, our [migration playbook](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIPPlaybook/).
 
