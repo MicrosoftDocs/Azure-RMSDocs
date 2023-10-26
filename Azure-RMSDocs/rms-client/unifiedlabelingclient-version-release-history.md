@@ -231,16 +231,16 @@ For more information, see the [MIP SDK documentation](/information-protection/de
 This version of the unified labeling client and scanner provides the following fixes and improvements:
 
 - Enhanced support for the [PFileSupportedExtensions](clientv2-admin-guide-customizations.md#pfilesupportedextension) advanced setting, to add the ability to protect only Office file types and PDF files, without configuring one specific value.
-- Fixed an issue where a watermark may not be reflected correctly when a label is changed.
-- Fixed  an issue where Office apps may behave unexpectedly if the [`color`](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label) value for a label has an invalid value.
-- Fixed an issue where selecting permissions via the File Explorer **Classify and protect** option may remove email addresses from the defined permissions if multiple email addresses include an apostrophe (**'**).
-- Fixed an issue where the auto-labeling custom text tooltip configured may not display as expected in case of an AsyncPolicy applied.
-- Fixed an issue when [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) may behave unexpectedly when attaching an email to another, newly encrypted email.
+- Fixed an issue where a watermark was reflected correctly when a label is changed.
+- Fixed  an issue where Office apps behaved unexpectedly if the [`color`](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label) value for a label has an invalid value.
+- Fixed an issue where selecting permissions via the File Explorer **Classify and protect** option removes email addresses from the defined permissions if multiple email addresses include an apostrophe (**'**).
+- Fixed an issue where the auto-labeling custom text tooltip configured did not display as expected in case of an AsyncPolicy applied.
+- Fixed an issue when [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) behaved unexpectedly when attaching an email to another, newly encrypted email.
 - Fixed an issue where an AIP-related error appeared after a child label is added and scoped to *Groups & Sites*.
-- Fixed an issue where the **Delete Label** icon may not appear in the Outlook classification bar when mandatory labeling is enabled across Office, [but not in Outlook](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling).
-- Fixed an issue where Excel may not close completely when both the AIP add-in and other add-ins are running.
-- Fixed an issue where Outlook may fail to send a message with embedded images in rich-text with rules for [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) configured.
-- Fixed an issue where the AIP add-in may fail to load in Office apps with language related errors.
+- Fixed an issue where the **Delete Label** icon did not appear in the Outlook classification bar when mandatory labeling is enabled across Office, [but not in Outlook](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling).
+- Fixed an issue where Excel did not close completely when both the AIP add-in and other add-ins are running.
+- Fixed an issue where Outlook failed to send a message with embedded images in rich-text with rules for [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) configured.
+- Fixed an issue where the AIP add-in failed to load in Office apps with language related errors.
 - Fixed an issue to prevent errors from occurring when removing protection from a PST file with special characters.
 - Fixed an issue where extra draft emails were kept while working with Outlook in [Online mode](https://support.microsoft.com/en-us/office/switch-from-working-offline-to-online-2460e4a8-16c7-47fc-b204-b1549275aac9).
 - Fixed an issue where popup messages were displayed, prompting users to save changes even when no changes were made, when working with Outlook in [Online mode](https://support.microsoft.com/en-us/office/switch-from-working-offline-to-online-2460e4a8-16c7-47fc-b204-b1549275aac9).
@@ -288,7 +288,7 @@ Microsoft 365 Data Loss Prevention (DLP) policies are now supported with the Azu
 
 - [**Enable DLP rules in your content scan job**](/microsoft-365/compliance/deploy-scanner-configure-install#use-a-dlp-policy) to reduce the exposure of any files that match your DLP policies.
 
-    The scanner may reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**.
+    The scanner can reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**.
 
 - **Scanning your files with DLP rules enabled also creates file permission reports**. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
 
@@ -303,31 +303,31 @@ For more information, including licensing requirements, see:
 
 ### Fixes and improvements - version 2.12.62.0
 
-- Fixes for errors where AIP may not load if a [policy](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
+- Fixes for errors where AIP did not load if a [policy](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
 
 - Fixed possibly incorrect **method** values in [New label audit logs](../audit-logs.md#new-label-audit-logs) for Outlook events.
 
 - Fixes for possibly incorrect **label** and **labelBefore** values in [Change protection audit logs](../audit-logs.md#change-protection-audit-logs).
 
-- Fixes for errors where documents may not be saved because of [edits made in the labeling metadata and lack of permissions](/microsoft-365/compliance/create-sensitivity-labels).
+- Fixes for errors where documents were not saved because of [edits made in the labeling metadata and lack of permissions](/microsoft-365/compliance/create-sensitivity-labels).
 
 - Fixes for possible crashes when running PowerShell cmdlets. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
 
-- Fixed errors where [justification popup messages](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) may not appear in Outlook.
+- Fixed errors where [justification popup messages](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) did not appear in Outlook.
 
-- Fixed errors where the [AIP add-in](clientv2-admin-guide-install.md) in Outlook may cause an error message to appear, if a message file that was saved locally was opened, closed, and then opened again.
+- Fixed errors where the [AIP add-in](clientv2-admin-guide-install.md) in Outlook caused an error message to appear, if a message file that was saved locally was opened, closed, and then opened again.
 
-- Fixed errors where [visual markings](use-client.md) may not be refreshed as expected after changing a file's label to a label with no content markings.
+- Fixed errors where [visual markings](use-client.md) were not refreshed as expected after changing a file's label to a label with no content markings.
 
-- Fixed errors where [audit logs](../audit-logs.md) may not be sent when a default label is applied to a document.
+- Fixed errors where [audit logs](../audit-logs.md) were not sent when a default label is applied to a document.
 
-- Fixed issues for [content markings](use-client.md) in Outlook may be duplicated.
+- Fixed issues for [content markings](use-client.md) in Outlook which can be duplicated.
 
-- Fixed issues where deferred messages may not be sent in Outlook when a deferral rule set is defined and the [AIP client is installed](clientv2-admin-guide-install.md).
+- Fixed issues where deferred messages were not be sent in Outlook when a deferral rule set is defined and the [AIP client is installed](clientv2-admin-guide-install.md).
 
-- Fixed issues where [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) may not display correctly when an image is found in the email signature.
+- Fixed issues where [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) did not display correctly when an image is found in the email signature.
 
-- Fixed issues where [Change protection audit logs](../audit-logs.md#change-protection-audit-logs) may not be sent as expected when a label is removed in Outlook.
+- Fixed issues where [Change protection audit logs](../audit-logs.md#change-protection-audit-logs) were not sent as expected when a label is removed in Outlook.
 
 ## Version 2.11.58.0
 
