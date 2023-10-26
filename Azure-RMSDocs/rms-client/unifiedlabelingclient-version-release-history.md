@@ -44,9 +44,10 @@ The lifecycle of each generally available (GA) version of the Azure Information 
 
 |Client version|Date released|Supported through|
 |--------------|-------------|-------------|
+|2.16.79.0|10/25/2023|4/11/2024|
 |2.16.73.0|05/23/2023|04/11/2024|
 |2.15.33.0|02/17/2023|02/17/2024|
-|2.14.90.0|09/01/2022|09/01/2023|
+|2.14.90.0|09/01/2022|Deprecated|
 |2.13.49.0|01/12/2022|Deprecated|
 |2.12.62.0|08/02/2021|Deprecated|
 |2.11.58.0|04/29/2021|Deprecated|
@@ -66,7 +67,7 @@ The lifecycle of each generally available (GA) version of the Azure Information 
 
 The date format used on this page is *month/day/year*.
 
-The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. Fixes and new functionality are always applied to the latest GA version and won't be applied to older GA versions.
+The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. Fixes and new functionality are always applied to the latest GA version and are not applied to older GA versions.
 
 ### Microsoft Update Catalog availability
 
@@ -80,12 +81,31 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 
 Use the following information to see the contents of each supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
 
-Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include other legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 > [!TIP]
 > Minor fixes aren't always listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
 >
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
+
+## Version 2.16.79.0
+
+Unified labeling scanner and client version 2.16.79.0
+
+**Supported through** 04/11/2024
+
+**Released** 10/25/2023
+
+### Fixes and improvements
+
+This version of the unified labeling client and scanner provides the following fixes and improvements:
+
+- Fixed a bug where Set-AIPAuthentication occasionally failed.
+- Created new feature flag to match the full untrusted recipient domain for oversharing popups in Outlook. The default behavior matches the trailing recipient domain. Contact support to request this change.
+- Changed information protection scanner to not report level event in the summary file when no change occurred.
+- Changed information protection scanner to not report protection when a file failure occurred.
+- Fixed an issue where information protection scanner went offline due to corruption in MSAL refresh token.
+- Updated to [MIP SDK 1.13.187](/information-protection/develop/version-release-history#version-113187).
 
 ## Version 2.16.73.0
 
@@ -99,9 +119,9 @@ This version includes the following fixes for the unified labeling scanner and c
 
 ### Service block for new deployments of AIP add-in
 
-Organizations who have non-zero usage of AIP in the last 90 days before 05/23/2023 can use 2.16.73.0 with no impact. 
+Organizations who have nonzero usage of AIP in the last 90 days before May 23, 2023 can use 2.16.73.0 with no impact. 
 
-Organizations who have zero usage of AIP in the last 90 days before 05/23/2023 will be impacted _if you use the AIP add-in_. Organizations who start to use the AIP add-in for the first time after 5/30/2023 can not download labels and will find the AIP add-in non-functional. The other components in the unified labeling package - the Scanner, the right-click Classify and Protect, PowerShell, and Viewer - will continue to work with no impact. Organizations with a legitimate business need to continue using the AIP add-in after 05/30/2024 can apply for an extension through support.
+Organizations who have zero usage of AIP in the last 90 days before May 23, 2023 will be impacted _if you use the AIP add-in_. Organizations who start to use the AIP add-in for the first time after 5/30/2023 can't download labels and will find the AIP add-in non-functional. The other components in the unified labeling package - the Scanner, the right-click Classify and Protect, PowerShell, and Viewer - continue to work with no impact. Organizations with a legitimate business need to continue using the AIP add-in after 05/30/2024 can apply for an extension through support.
 
 For more information about AIP add-in retirement, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/retirement-notification-for-the-azure-information-protection/ba-p/3791908) and for detailed migration steps, our [migration playbook](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIPPlaybook/).
 
@@ -110,7 +130,7 @@ For more information about AIP add-in retirement, see our [TechCommunity blog](h
 This version of the unified labeling client and scanner provides the following fixes and improvements:
 
 - Fixed a bug where change counter was incremented but no audit event was sent. Change counter no longer incremented for those events.
-- Fixed a bug where display name was not passed MIP after MSAL changes.
+- Fixed a bug where display name wasn't passed MIP after MSAL changes.
 - Fixed an issue where EUII appeared in UserKey field of audit record.
 - Updated to [MIP SDK 1.13.161](/information-protection/develop/version-release-history#version-113161), adding support for consumption of Office documents and emails protected with AES256-CBC.
 
@@ -211,16 +231,16 @@ For more information, see the [MIP SDK documentation](/information-protection/de
 This version of the unified labeling client and scanner provides the following fixes and improvements:
 
 - Enhanced support for the [PFileSupportedExtensions](clientv2-admin-guide-customizations.md#pfilesupportedextension) advanced setting, to add the ability to protect only Office file types and PDF files, without configuring one specific value.
-- Fixed an issue where a watermark may not be reflected correctly when a label is changed.
-- Fixed  an issue where Office apps may behave unexpectedly if the [`color`](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label) value for a label has an invalid value.
-- Fixed an issue where selecting permissions via the File Explorer **Classify and protect** option may remove email addresses from the defined permissions if multiple email addresses include an apostrophe (**'**).
-- Fixed an issue where the auto-labeling custom text tooltip configured may not display as expected in case of an AsyncPolicy applied.
-- Fixed an issue when [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) may behave unexpectedly when attaching an email to another, newly encrypted email.
+- Fixed an issue where a watermark was reflected correctly when a label is changed.
+- Fixed  an issue where Office apps behaved unexpectedly if the [`color`](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label) value for a label has an invalid value.
+- Fixed an issue where selecting permissions via the File Explorer **Classify and protect** option removes email addresses from the defined permissions if multiple email addresses include an apostrophe (**'**).
+- Fixed an issue where the auto-labeling custom text tooltip configured did not display as expected in case of an AsyncPolicy applied.
+- Fixed an issue when [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) behaved unexpectedly when attaching an email to another, newly encrypted email.
 - Fixed an issue where an AIP-related error appeared after a child label is added and scoped to *Groups & Sites*.
-- Fixed an issue where the **Delete Label** icon may not appear in the Outlook classification bar when mandatory labeling is enabled across Office, [but not in Outlook](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling).
-- Fixed an issue where Excel may not close completely when both the AIP add-in and other add-ins are running.
-- Fixed an issue where Outlook may fail to send a message with embedded images in rich-text with rules for [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) configured.
-- Fixed an issue where the AIP add-in may fail to load in Office apps with language related errors.
+- Fixed an issue where the **Delete Label** icon did not appear in the Outlook classification bar when mandatory labeling is enabled across Office, [but not in Outlook](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling).
+- Fixed an issue where Excel did not close completely when both the AIP add-in and other add-ins are running.
+- Fixed an issue where Outlook failed to send a message with embedded images in rich-text with rules for [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) configured.
+- Fixed an issue where the AIP add-in failed to load in Office apps with language related errors.
 - Fixed an issue to prevent errors from occurring when removing protection from a PST file with special characters.
 - Fixed an issue where extra draft emails were kept while working with Outlook in [Online mode](https://support.microsoft.com/en-us/office/switch-from-working-offline-to-online-2460e4a8-16c7-47fc-b204-b1549275aac9).
 - Fixed an issue where popup messages were displayed, prompting users to save changes even when no changes were made, when working with Outlook in [Online mode](https://support.microsoft.com/en-us/office/switch-from-working-offline-to-online-2460e4a8-16c7-47fc-b204-b1549275aac9).
@@ -268,7 +288,7 @@ Microsoft 365 Data Loss Prevention (DLP) policies are now supported with the Azu
 
 - [**Enable DLP rules in your content scan job**](/microsoft-365/compliance/deploy-scanner-configure-install#use-a-dlp-policy) to reduce the exposure of any files that match your DLP policies.
 
-    The scanner may reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**.
+    The scanner can reduce file access to data owners only, or reduce exposure to network-wide groups, such as **Everyone**, **Authenticated Users**, or **Domain Users**.
 
 - **Scanning your files with DLP rules enabled also creates file permission reports**. Query these reports to investigate specific file exposures or explore the exposure of a specific user to scanned files.
 
@@ -283,31 +303,31 @@ For more information, including licensing requirements, see:
 
 ### Fixes and improvements - version 2.12.62.0
 
-- Fixes for errors where AIP may not load if a [policy](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
+- Fixes for errors where AIP did not load if a [policy](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
 
 - Fixed possibly incorrect **method** values in [New label audit logs](../audit-logs.md#new-label-audit-logs) for Outlook events.
 
 - Fixes for possibly incorrect **label** and **labelBefore** values in [Change protection audit logs](../audit-logs.md#change-protection-audit-logs).
 
-- Fixes for errors where documents may not be saved because of [edits made in the labeling metadata and lack of permissions](/microsoft-365/compliance/create-sensitivity-labels).
+- Fixes for errors where documents were not saved because of [edits made in the labeling metadata and lack of permissions](/microsoft-365/compliance/create-sensitivity-labels).
 
 - Fixes for possible crashes when running PowerShell cmdlets. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
 
-- Fixed errors where [justification popup messages](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) may not appear in Outlook.
+- Fixed errors where [justification popup messages](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) did not appear in Outlook.
 
-- Fixed errors where the [AIP add-in](clientv2-admin-guide-install.md) in Outlook may cause an error message to appear, if a message file that was saved locally was opened, closed, and then opened again.
+- Fixed errors where the [AIP add-in](clientv2-admin-guide-install.md) in Outlook caused an error message to appear, if a message file that was saved locally was opened, closed, and then opened again.
 
-- Fixed errors where [visual markings](use-client.md) may not be refreshed as expected after changing a file's label to a label with no content markings.
+- Fixed errors where [visual markings](use-client.md) were not refreshed as expected after changing a file's label to a label with no content markings.
 
-- Fixed errors where [audit logs](../audit-logs.md) may not be sent when a default label is applied to a document.
+- Fixed errors where [audit logs](../audit-logs.md) were not sent when a default label is applied to a document.
 
-- Fixed issues for [content markings](use-client.md) in Outlook may be duplicated.
+- Fixed issues for [content markings](use-client.md) in Outlook, which can be duplicated.
 
-- Fixed issues where deferred messages may not be sent in Outlook when a deferral rule set is defined and the [AIP client is installed](clientv2-admin-guide-install.md).
+- Fixed issues where deferred messages were not be sent in Outlook when a deferral rule set is defined and the [AIP client is installed](clientv2-admin-guide-install.md).
 
-- Fixed issues where [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) may not display correctly when an image is found in the email signature.
+- Fixed issues where [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) did not display correctly when an image is found in the email signature.
 
-- Fixed issues where [Change protection audit logs](../audit-logs.md#change-protection-audit-logs) may not be sent as expected when a label is removed in Outlook.
+- Fixed issues where [Change protection audit logs](../audit-logs.md#change-protection-audit-logs) were not sent as expected when a label is removed in Outlook.
 
 ## Version 2.11.58.0
 
@@ -349,7 +369,7 @@ The unified labeling on-premises scanner has improved outputs for the following 
 
 |Cmdlet  |Improvement  |
 |---------|---------|
-|**Get-AIPScannerStatus**     |  Previously, running the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) command provided only high-level details of the scanner cluster status, without details per node in your cluster.   <br><br> Now, you can use the **NodesInfo** variable and the **Verbose** parameter to drill down into additional levels of detail for each node. <br><br>   For more information, see the [Verify scanning details per scanner node and repository](/microsoft-365/troubleshoot/information-protection-scanner/resolve-deployment-issues#verify-scanning-details-per-scanner-node-and-repository). |
+|**Get-AIPScannerStatus**     |  Previously, running the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) command provided only high-level details of the scanner cluster status, without details per node in your cluster.   <br><br> Now, you can use the **NodesInfo** variable and the **Verbose** parameter to drill down into more levels of detail for each node. <br><br>   For more information, see the [Verify scanning details per scanner node and repository](/microsoft-365/troubleshoot/information-protection-scanner/resolve-deployment-issues#verify-scanning-details-per-scanner-node-and-repository). |
 |**Get-AIPScannerConfiguration**     |   Running the [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/get-aipscannerconfiguration) now provides details about the current scanner configuration in addition to the online configuration settings.     |
 
 ### Updates for the scanner's supported information types
@@ -391,7 +411,7 @@ Unified labeling scanner and client version 2.9.116.0
 
 Users are now able to view protected files as expected in the following scenarios:
 
-- When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue had occurred only with the [AIP Viewer app](clientv2-view-use-files.md).
+- When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue occurred only with the [AIP Viewer app](clientv2-view-use-files.md).
 
 - When content with a scoped label is shared with users or groups not included in the label's scope. This issue had occurred both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the [File Explorer](clientv2-classify-protect.md#use-the-file-explorer-to-classify-and-protect-files).
 
