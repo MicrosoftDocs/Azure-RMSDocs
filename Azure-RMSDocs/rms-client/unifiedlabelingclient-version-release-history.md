@@ -67,7 +67,7 @@ The lifecycle of each generally available (GA) version of the Azure Information 
 
 The date format used on this page is *month/day/year*.
 
-The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. Fixes and new functionality are always applied to the latest GA version and won't be applied to older GA versions.
+The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. Fixes and new functionality are always applied to the latest GA version and are not applied to older GA versions.
 
 ### Microsoft Update Catalog availability
 
@@ -121,7 +121,7 @@ This version includes the following fixes for the unified labeling scanner and c
 
 Organizations who have nonzero usage of AIP in the last 90 days before May 23, 2023 can use 2.16.73.0 with no impact. 
 
-Organizations who have zero usage of AIP in the last 90 days before May 23, 2023 will be impacted _if you use the AIP add-in_. Organizations who start to use the AIP add-in for the first time after 5/30/2023 can't download labels and will find the AIP add-in non-functional. The other components in the unified labeling package - the Scanner, the right-click Classify and Protect, PowerShell, and Viewer - will continue to work with no impact. Organizations with a legitimate business need to continue using the AIP add-in after 05/30/2024 can apply for an extension through support.
+Organizations who have zero usage of AIP in the last 90 days before May 23, 2023 will be impacted _if you use the AIP add-in_. Organizations who start to use the AIP add-in for the first time after 5/30/2023 can't download labels and will find the AIP add-in non-functional. The other components in the unified labeling package - the Scanner, the right-click Classify and Protect, PowerShell, and Viewer - continue to work with no impact. Organizations with a legitimate business need to continue using the AIP add-in after 05/30/2024 can apply for an extension through support.
 
 For more information about AIP add-in retirement, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/retirement-notification-for-the-azure-information-protection/ba-p/3791908) and for detailed migration steps, our [migration playbook](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIPPlaybook/).
 
@@ -321,7 +321,7 @@ For more information, including licensing requirements, see:
 
 - Fixed errors where [audit logs](../audit-logs.md) were not sent when a default label is applied to a document.
 
-- Fixed issues for [content markings](use-client.md) in Outlook which can be duplicated.
+- Fixed issues for [content markings](use-client.md) in Outlook, which can be duplicated.
 
 - Fixed issues where deferred messages were not be sent in Outlook when a deferral rule set is defined and the [AIP client is installed](clientv2-admin-guide-install.md).
 
@@ -369,7 +369,7 @@ The unified labeling on-premises scanner has improved outputs for the following 
 
 |Cmdlet  |Improvement  |
 |---------|---------|
-|**Get-AIPScannerStatus**     |  Previously, running the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) command provided only high-level details of the scanner cluster status, without details per node in your cluster.   <br><br> Now, you can use the **NodesInfo** variable and the **Verbose** parameter to drill down into additional levels of detail for each node. <br><br>   For more information, see the [Verify scanning details per scanner node and repository](/microsoft-365/troubleshoot/information-protection-scanner/resolve-deployment-issues#verify-scanning-details-per-scanner-node-and-repository). |
+|**Get-AIPScannerStatus**     |  Previously, running the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) command provided only high-level details of the scanner cluster status, without details per node in your cluster.   <br><br> Now, you can use the **NodesInfo** variable and the **Verbose** parameter to drill down into more levels of detail for each node. <br><br>   For more information, see the [Verify scanning details per scanner node and repository](/microsoft-365/troubleshoot/information-protection-scanner/resolve-deployment-issues#verify-scanning-details-per-scanner-node-and-repository). |
 |**Get-AIPScannerConfiguration**     |   Running the [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/get-aipscannerconfiguration) now provides details about the current scanner configuration in addition to the online configuration settings.     |
 
 ### Updates for the scanner's supported information types
@@ -411,7 +411,7 @@ Unified labeling scanner and client version 2.9.116.0
 
 Users are now able to view protected files as expected in the following scenarios:
 
-- When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue had occurred only with the [AIP Viewer app](clientv2-view-use-files.md).
+- When protected files are shared with users who don’t have an AIP policy configured, such as external users. This issue occurred only with the [AIP Viewer app](clientv2-view-use-files.md).
 
 - When content with a scoped label is shared with users or groups not included in the label's scope. This issue had occurred both with the [AIP Viewer app](clientv2-view-use-files.md) and when viewing or classifying the shared content via the [File Explorer](clientv2-classify-protect.md#use-the-file-explorer-to-classify-and-protect-files).
 
