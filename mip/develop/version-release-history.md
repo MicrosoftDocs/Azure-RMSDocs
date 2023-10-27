@@ -62,8 +62,8 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 -	Fixed a bug where EULs valid for less than one day were not cached.
 -	Added support to preserve encrypted application data when using template protection. 
 -	Added support for pulling serialized template data (Windows/Linux/macOS).
-  - Enable using: GetTemplatesSettings::SetFetchSerializedTemplates.
-  -	Retrieve using TemplateDescriptor::GetSerializedTemplate().
+    - Enable using: GetTemplatesSettings::SetFetchSerializedTemplates.
+    -	Retrieve using TemplateDescriptor::GetSerializedTemplate().
 -	Fixed a bug where user certificate store was not encrypted.
 -	Fixed a bug where signed app data was not provided consistently between publishing and consumption.
   
@@ -73,7 +73,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 -	Fix an issue where some audit events were dropped.
 -	Exposed a flag to control max shutdown timer for 1DS cache cleanup.
 -	Added support for masking PII in log files. By default, PII is not masked.
-  -	Set AllowPii to false in mip_config.json to mask PII with a settings file. The settings file is located at mipConfiguration->GetPath()/mip.
+    -	Set AllowPii to false in mip_config.json to mask PII with a settings file. The settings file is located at mipConfiguration->GetPath()/mip.
 -	Added support for CBC encryption of Office files by default.
 -	Fixed Android exception regarding resource location path.
   
