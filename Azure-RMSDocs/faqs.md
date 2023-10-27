@@ -21,7 +21,6 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-
 ---
 
 # Frequently asked questions for Azure Information Protection (AIP)
@@ -189,13 +188,14 @@ For more information, see the full list [file types supported](./rms-client/clie
 > [!TIP]
 > Power BI supports classification by using sensitivity labels and can apply protection from those labels to data that is exported to the following file formats: .pdf, .xls, and .ppt. For more information, see [Data protection in Power BI](/power-bi/admin/service-security-data-protection-overview).
 >
+
 ## I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?
 
 Yes, as a preview offering, you can configure Microsoft Entra Conditional Access for Azure Information Protection.
 
 When a user opens a document that is protected by Azure Information Protection, administrators can now block or grant access to users in their tenant, based on the standard conditional access controls. Requiring multi-factor authentication (MFA) is one of the most commonly requested conditions. Another one is that devices must be [compliant with your Intune policies](/intune/protect/conditional-access-intune-common-ways-use) so that, for example, mobile devices meet your password requirements and a minimum operating system version, and computers must be domain-joined.
 
-For more information and some walk-through examples, see the following blog post: [Conditional Access policies for Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/17/conditional-access-policies-for-azure-information-protection/).
+For more information and some walk-through examples, see the following blog post: [Conditional Access policies and encrypted documents](/purview/encryption-azure-ad-configuration?view=o365-worldwide).
 
 Additional information:
 
@@ -237,3 +237,4 @@ First, review the frequently asked questions listed below, which are specific to
 - [FAQs for data protection](faqs-rms.md)
 
 If your question isn't answered, see the links and resources listed in [Information and support for Azure Information Protection](information-support.md).
+
