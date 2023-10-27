@@ -39,45 +39,50 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
-## Version 1.14.85
+## Version 1.14.108
 
 **Release Date:** October 27th, 2023
 
 ### File SDK
--	Exposed feature flags for ABAC. isAbacEnabled indicates whether label is ABAC is enabled and isCustomerSecurityAttributeRequired indicates whether the ABAC-enabled label requires one or more attributes.
--	Fixed an issue where component governance poli-check alerts were not suppressed.
--	Fixed a bug where .doc files encrypted by SPO had invalid metadata.
+- Fixed a bug where .doc files encrypted by SPO had invalid metadata.
 -	Fixed an issue where labeling signed Office and PDF files invalidated the signature and could not be opened by some editors.
--	Fixed an issue where constructing .msg files failed when using MAPI to convert files to .msg format.
+-	Fixed a bug where constructing .msg files failed when using MAPI to convert some files to .msg format.
 -	Fixed a bug in MIP file SDK sample where corrupted output files were not deleted in event of failure.
--	Fixed an issue where file SDK did not remove all label metadata from protected PDFs.
--	Fixed a bug where empty body .msg files threw an exception.
--	Fixed a bug where .pdf files that start with comments are protected as .pfile instead of natively protected .pdf file.
--	Fixed an issue where exception was thrown when updating an inactive label with the same label.
+-	Fixed an issue where decrypting PDF files did not remove all label metadata.
+-	Fixed a bug where encrypting .msg files with an empty body threw an exception.
+-	Fixed a bug where .pdf files that start with comments are protected as .pfiles instead of natively protected .pdf files.
+-	Fixed an issue where an exception was thrown when updating an inactive label with the same label.
+-	Added exceptions when attempting to use policy operations on a protection-only file engine.
+  
 ### Policy SDK
--	Added new exception when no policy handler is found when ProtectionOnly engine and file handler is created.
-Protection SDK
--	Fixed bug where delegated user emails were included in telemetry events.
+-	Change policy service URLs to target global endpoints for DoD, GCC-High and China sovereign clouds.
+  
+### Protection SDK
 -	Fixed a bug where non-RMS protected attachments did not throw an error when decryption or inspection failed for .msg files.
--	Added support for caching EUL if license is valid for less than one day.
--	Added support for setting encrypted application data for template protection.
--	Added support for pulling serialized templates with SetFetchSerializedTemplates option in GetTemplatesSettings. Populate the TemplateDescriptor GetSerializedTemplate() field and empty if only the basic templates are fetched.
--	Fixed an issue where user certificate store was not encrypted.
+-	Fixed a bug where EULs valid for less than one day were not cached.
+-	Added support to preserve encrypted application data when using template protection. 
+-	Added support for pulling serialized template data (Windows/Linux/macOS).
+  - Enable using: GetTemplatesSettings::SetFetchSerializedTemplates.
+  -	Retrieve using TemplateDescriptor::GetSerializedTemplate().
+-	Fixed a bug where user certificate store was not encrypted.
 -	Fixed a bug where signed app data was not provided consistently between publishing and consumption.
+  
 ### Platform and Dependency Updates
--	Upgraded to Open SSL 3.0.
--	Added support for shared mailbox.
--	Removed customer PII from log files.
--	Fixed an issue where iOS builds displayed too many warnings.
--	Exposed setting to control maximum concurrent http requests from 1DS telemetry endpoint.
--	Exposed custom setting constexpr for Java and C#.
--	Exposed flag to control max shutdown timer for 1DS cache cleanup.
--	Added support for masking PII in log files with AllowPii in the settings file. Default setting of IsPiiAllowed is true.
+-	Upgraded to Open SSL 3.0 for FIPS-compliance.
+-	Fixed a privacy issue to no longer include delegated user emails in telemetry events.
+-	Fix an issue where some audit events were dropped.
+-	Exposed a flag to control max shutdown timer for 1DS cache cleanup.
+-	Added support for masking PII in log files. By default, PII is not masked.
+  -	Set AllowPii to false in mip_config.json to mask PII with a settings file. The settings file is located at mipConfiguration->GetPath()/mip.
 -	Added support for CBC encryption of Office files by default.
+-	Fixed Android exception regarding resource location path.
+  
 ### Breaking Changes
 -	Error code for signed Office files and signed PDF files changed from Mip::FileIOError to Mip::NotSupportedError.
 -	Audit event properties store the type of PII instead of None by default. Custom audit delegates that expect the PII to be None require updates.
 -	Signed app data returns additional entries for DKE protected docs during publishing.
+-	Office files use CBC encryption by default. To revert this, set FlightingFeature::UseCbcForOfficeFileEncryption to false.
+
 
 ## Version 1.13.187
 
