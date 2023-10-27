@@ -370,7 +370,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
   - Review [MipContext Concepts](concept-mipcontext.md) for details.
 - `MipContext::Create()` constructor has been changed to accept only the new `MipConfiguration` object.
   - Review [MipContext Concepts](concept-mipcontext.md) for details.
-- All engine settings will default to en-US locale in the event that the `.Locale` property is set to `null`.
+- All engine settings will default to en-US locale if the `.Locale` property is set to `null`.
 - Fixed an issue where the SDK wasn't fully honoring the logging level settings.
 
 ### File SDK
@@ -534,7 +534,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 - Fixed bug in NuGet package where debug configuration for C++ projects deployed release binaries. Version 1.8.86 may result in a crash with native C++ apps. Make sure to update to 1.8.94 or later.
 - Fixed a bug where policy engine was required to remove protection.
-  - If policy engine can't be loaded and label metadata is present, it will be discarded if protection is removed.
+  - If policy engine can't be loaded and label metadata is present, the policy engine is discarded if protection is removed.
 - Fixed a bug where empty `labelInfo.xml` was generated if file was changed to another protected label.
 
 ## Version 1.8.86
@@ -549,7 +549,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Rename `TelemetryConfiguration` to `DiagnosticConfiguration`.
 - Updated `MipContext` to accept `DiagnosticConfiguration` instead of `TelemetryConfiguration`.
 - Exposed new `AuditDelegate`.
-- Several custom settings have had their name changed and will be removed in version 1.9. These will continue to function in parallel with their updates names in version 1.8.
+- Several custom settings have had their name changed and are removed in version 1.9. These cutsom settings continue to function in parallel with their updates names in version 1.8.
 
 | New Name          | Old Name                   |
 | ----------------- | -------------------------- |
@@ -561,7 +561,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Added support for user-defined labels with double key encryption.
 - Added an API, `MsgInspector.BodyType` to expose body encoding type for MSG files.
 - Added APIs to support Double Key Encryption with User-Defined Permissions.
-- Added flag for `mip::FileHandler` that will allow the caller to disable audit discover event send. This fixes a scenario where using the `ClassifyAsync()` API would result in duplicate discovery events.
+- Added flag for `mip::FileHandler` that allows the caller to disable audit discover event send. This fixes a scenario where using the `ClassifyAsync()` API would result in duplicate discovery events.
 - Fixed bugs where:
   - Setting protection on XPS file fails.
   - A file can't be opened after upload/download from SharePoint Online and removing custom permissions.
@@ -574,7 +574,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Added support for Azure Purview-specific labels.
 - Added ability to override both telemetry and audit via delegates for each.
   - Audit delegate provides the ability to send AIP auditing events to a destination other than AIP Analytics, or in addition to AIP Analytics.
-- Added flag for `mip::PolicyHandler` that will allow the caller to discover audit discover event send. This fixes a scenario where using the `ClassifyAsync()` API would result in duplicate discovery events.
+- Added flag for `mip::PolicyHandler` that allows the caller to discover audit discover event send. This fixes a scenario where using the `ClassifyAsync()` API would result in duplicate discovery events.
 - Fixed a bug where encrypted policy database couldn't be opened in certain scenarios.
 - Exposed new `AuditDelegate` that allows developers to override default MIP SDK audit pipeline and send events to their own infrastructure.
 - `mip::ClassifierUniqueIdsAndContentFormats` and `GetContentFormat()` now return `std::string` instead of `mip::ContentFormat`. This change is replicated in .NET and Java wrappers.
@@ -582,7 +582,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 ### Protection SDK
 
-- Added a `ProtectionEngineSettings.SetAllowCloudServiceOnly` property that will prohibit any connections to Active Directory Rights Management Services clusters when true. Only cloud environments will be used.
+- Added a `ProtectionEngineSettings.SetAllowCloudServiceOnly` property that prohibits any connections to Active Directory Rights Management Services clusters when true. Only cloud environments are used.
 - Added support for acquiring delegation licenses.
   - Delegations licenses enable services to fetch a license for content on behalf of a user.
   - This lets the service view rights data and decrypt on behalf of the user without additional calls to service.
@@ -609,7 +609,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 ### General Changes
 
 - Updated NuGet package to copy dependencies only on update rather than always.
-- Debug configuration on .NET will use release version of native libraries. We found that customers deploying .NET solutions in debug mode to remote servers were required to install the VC++ Debug runtime, which isn't trivial. If there's a need to debug in to native libraries, please copy the DLLs from the SDK Redistributable into the project folder (https://ala.ms/mipsdkbins)
+- Debug configuration on .NET uses release version of native libraries. We found that customers deploying .NET solutions in debug mode to remote servers were required to install the VC++ Debug runtime, which isn't trivial. If there's a need to debug in to native libraries, please copy the DLLs from the SDK Redistributable into the project folder (https://ala.ms/mipsdkbins)
 - Fixed a bug that was generating warnings for .NET Core projects.
 
 ## Version 1.7.133
@@ -705,10 +705,10 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 - New support for triggering token acquisition to allow an application to warm up its token cache via `PolicyProfile::AcquireAuthToken`.
 - HYOK labels are filtered by default.
-- Metadata associated with deleted labels will now be removed.
-- If there is ever a mismatch between cached label policy and sensitivity policy, the policy cache will now be cleared.
+- Metadata associated with deleted labels are now removed.
+- If there is ever a mismatch between cached label policy and sensitivity policy, the policy cache is cleared.
 - New support for versioned metadata:
-  - A file format may rev the location/format of its label metadata. In that case, an application should provide MIP with all metadata, and MIP will determine which metadata is "true".
+  - A file format may rev the location/format of its label metadata. In that case, an application should provide MIP with all metadata, and MIP determines which metadata is "true".
   - `ContentLabel::GetExtendedProperties` now returns `vector<MetadataEntry>` instead of `vector<pair<string, string>>`.
   - `MetadataAction::GetMetadataToAdd` now returns `vector<MetadataEntry>` instead of `vector<pair<string, string>>`.
   - `ExecutionState::GetContentMetadata` should now return `vector<MetadataEntry>` instead of `vector<pair<string, string>>`.
@@ -761,7 +761,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 ### Policy SDK
 
 - Dynamic content marking for watermark/header/footer actions:
-  - Fields like ${Item.Label}, ${Item.Name}, ${User.Name}, ${Event.DateTime} will be automatically
+  - Fields like ${Item.Label}, ${Item.Name}, ${User.Name}, ${Event.DateTime} are automatically
     populated by MIP
   - mip::Identity can be constructed with user-friendly "name" field used by dynamic content marking
   - Configurable via mip::PolicyEngine::Settings::SetVariableTextMarkingType()
@@ -819,14 +819,14 @@ export HTTP_PROXY="http://10.10.10.10:8080"
   - NetworkError
     - ProxyAuthenticationError: Proxy authentication is required
     - Category=BadResponse: Server returned unreadable HTTP response (retry might succeed)
-    - Category=Cancelled: Failed to establish HTTP connection because operation was canceled by user/app (retry will probably succeed)
+    - Category=Cancelled: Failed to establish HTTP connection because operation was canceled by user/app (retry probably succeeds)
     - Category=FailureResponseCode: Server returned a generic failure response (retry might succeed)
     - Category=NoConnection: Failed to establish HTTP connection (retry might succeed)
     - Category=Offline: Failed to establish HTTP connection because application is in offline mode (retry won't succeed)
     - Category=Proxy: Failed to establish HTTP connection due to proxy issue (retry probably won't succeed)
     - Category=SSL: Failed to establish HTTP connection due to SSL issue (retry probably won't succeed)
-    - Category=Throttled: Server returned "throttled" response (backoff/retry will probably succeed)
-    - Category=Timeout: Failed to establish HTTP connection after timeout (retry will probably succeed)
+    - Category=Throttled: Server returned "throttled" response (backoff/retry probably succeeds)
+    - Category=Timeout: Failed to establish HTTP connection after timeout (retry probably succeeds)
     - Category=UnexpectedResponse: Server returned unexpected data (retry might succeed)
   - NoPolicyError: Tenant or user isn't configured for labels
   - NotSupportedError: Operation not supported in current state
