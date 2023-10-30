@@ -145,6 +145,8 @@ Other editions of Office cannot protect documents and emails by using a Rights M
 
 Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client.
 
+- PDF files that are version 1.4 and lower will be automatically upgraded to version 1.5 when the AIP Client labels the file. 
+
 For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
 
 ### Office features and capabilities not supported
@@ -277,7 +279,10 @@ For more information, see [Applications that support Azure Rights Management dat
 
 
 
+
+
 ## Next steps
 
 Once you've reviewed all AIP requirements and confirmed that your system complies, continue with [Preparing users and groups for Azure Information Protection](prepare.md).
+
 
