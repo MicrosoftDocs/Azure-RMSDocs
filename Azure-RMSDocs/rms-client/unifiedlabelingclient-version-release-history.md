@@ -101,7 +101,7 @@ Unified labeling scanner and client version 2.16.79.0
 This version of the unified labeling client and scanner provides the following fixes and improvements:
 
 - Fixed a bug where Set-AIPAuthentication occasionally failed.
-- Created new feature flag to match the full untrusted recipient domain for oversharing popups in Outlook. The default behavior matches the trailing recipient domain. Contact support to request this change.
+- Created feature to match the full untrusted recipient domain for oversharing popups in Outlook. The default behavior matches the trailing recipient domain. Contact support to request this change.
 - Changed information protection scanner to not report level event in the summary file when no change occurred.
 - Changed information protection scanner to not report protection when a file failure occurred.
 - Fixed an issue where information protection scanner went offline due to corruption in MSAL refresh token.
