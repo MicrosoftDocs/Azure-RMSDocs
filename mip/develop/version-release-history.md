@@ -45,7 +45,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ### File SDK
 - Fixed a bug where .doc files encrypted by SPO had invalid metadata.
--	Fixed an issue where labeling signed Office and PDF files invalidated the signature and could not be opened by some editors.
+-	Fixed an issue where labeling signed Office and PDF files invalidated the signature and could not be opened with some editors.
 -	Fixed a bug where constructing .msg files failed when using MAPI to convert some files to .msg format.
 -	Fixed a bug in MIP file SDK sample where corrupted output files were not deleted in event of failure.
 -	Fixed an issue where decrypting PDF files did not remove all label metadata.
@@ -147,7 +147,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - `PublishingSettings` for republishing require either a serialized publishing license or a `ProtectionHandler` in the constructor instead of being able to set either/both after construction.
 - Removed `SetPublishingLicenseForRepublish` and `SetProtectionHandlerForRepublish`.
 - `ProtectionDescriptorBuilder` uses `SetLabelInfo` instead of `SetLabelId`
-- `Insert` method in `mip::StorageDelegate` and `IStorageDelegate` has been replaced with `InsertOrReplace`.
+- `Insert` method in `mip::StorageDelegate` and `IStorageDelegate` is replaced with `InsertOrReplace`.
 
 ### Critical Update
 
@@ -227,15 +227,15 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
 ### Breaking Changes
 
 - `FileHandler.SetLabel()` API no longer supports **rpmsg** files as input.
-- Passing a plaintext MSG file to the `MsgInspector` will result in a **NotSupportedError**
-- `MsgInpector` will no longer attempt to decrypt attachments that are part of the **message.rpmsg** file.
-- `MsgInpector` will now return a fully functional **MSG** file if the **message.rpmsg** file had MSG attachments. These MSG files can be decrypted with the `FileHandler.RemoveProtection` API.
+- Passing a plaintext MSG file to the `MsgInspector` results in a **NotSupportedError**
+- `MsgInpector` no longer attempts to decrypt attachments that are part of the **message.rpmsg** file.
+- `MsgInpector` returns a fully functional **MSG** file if the **message.rpmsg** file had MSG attachments. These MSG files can be decrypted with the `FileHandler.RemoveProtection` API.
 - `TelemetryDelegate` and `AuditDelegate` **WriteEvent** method now requires a second parameter, `EventContext`. The `EventContext` class exposes information on the target cloud and data boundary for the event. 
 
 ### Platform and Dependency Updates
 
 - Added support across all three SDKs for setting European Union data boundary. 
-  - When `DataBoundary` is set to EU, all telemetry and audit events will flow directly to the EU region.
+  - When `DataBoundary` is set to EU, all telemetry and audit events flow directly to the EU region.
   - Setting `DataBoundary` to any other region results in emitting data to nearest service entry point.
 - Updated libxml2 to 2.9.13.
 - Fixed a crash specific to Android. 
@@ -249,7 +249,7 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
 
 - Fixed a bug in `MemoryStream` for `GetDecryptedTemporaryStream` large file types 
 - Fixed a bug causing data loss during PDF encryption due to stack overflow crash 
-  - With `OptimizePdfMemory`, if /Info is an `ObjStm` with an internal indirect object, it will now return `PDFPARSER_ERROR_FORMAT` instead of stack overflow 
+  - With `OptimizePdfMemory`, if /Info is an `ObjStm` with an internal indirect object, it returns `PDFPARSER_ERROR_FORMAT` instead of stack overflow 
 - Fixed a bug where supporting MIP libraries weren't loading in Java 
 - Fixed a bug where MSG files with protected MSG file attachments would experience corruption when `rpmsg` extension had a trailing null terminator 
 - Fixed a crash in MSG files with link attachments 
