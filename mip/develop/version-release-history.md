@@ -45,7 +45,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ### File SDK
 - Fixed a bug where .doc files encrypted by SPO had invalid metadata.
--	Fixed an issue where labeling signed Office and PDF files invalidated the signature and could not be opened by some editors.
+-	Fixed an issue where labeling signed Office and PDF files invalidated the signature and could not be opened with some editors.
 -	Fixed a bug where constructing .msg files failed when using MAPI to convert some files to .msg format.
 -	Fixed a bug in MIP file SDK sample where corrupted output files were not deleted in event of failure.
 -	Fixed an issue where decrypting PDF files did not remove all label metadata.
@@ -69,7 +69,6 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
   
 ### Platform and Dependency Updates
 -	Upgraded to Open SSL 3.0 for FIPS-compliance.
--	Fixed a privacy issue to no longer include delegated user emails in telemetry events.
 -	Fix an issue where some audit events were dropped.
 -	Exposed a flag to control max shutdown timer for 1DS cache cleanup.
 -	Added support for masking PII in log files. By default, PII is not masked.
@@ -148,7 +147,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - `PublishingSettings` for republishing require either a serialized publishing license or a `ProtectionHandler` in the constructor instead of being able to set either/both after construction.
 - Removed `SetPublishingLicenseForRepublish` and `SetProtectionHandlerForRepublish`.
 - `ProtectionDescriptorBuilder` uses `SetLabelInfo` instead of `SetLabelId`
-- `Insert` method in `mip::StorageDelegate` and `IStorageDelegate` has been replaced with `InsertOrReplace`.
+- `Insert` method in `mip::StorageDelegate` and `IStorageDelegate` is replaced with `InsertOrReplace`.
 
 ### Critical Update
 
@@ -216,7 +215,7 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
 
 - Policy SDK now supports data boundary via `PolicyEngineSettings.DataBoundary`. 
 - Fixed a bug where in certain conditions policy changes resulted in a crash. 
-- Fixed an issue where Encrypt Only labels with DKE protection weren't filtered when they should have been. 
+- Fixed an issue where Encrypt Only labels with DKE protection weren't filtered when they should be. 
 
 ### Protection SDK
 
@@ -228,15 +227,15 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
 ### Breaking Changes
 
 - `FileHandler.SetLabel()` API no longer supports **rpmsg** files as input.
-- Passing a plaintext MSG file to the `MsgInspector` will result in a **NotSupportedError**
-- `MsgInpector` will no longer attempt to decrypt attachments that are part of the **message.rpmsg** file.
-- `MsgInpector` will now return a fully functional **MSG** file if the **message.rpmsg** file had MSG attachments. These MSG files can be decrypted with the `FileHandler.RemoveProtection` API.
+- Passing a plaintext MSG file to the `MsgInspector` results in a **NotSupportedError**
+- `MsgInpector` no longer attempts to decrypt attachments that are part of the **message.rpmsg** file.
+- `MsgInpector` returns a fully functional **MSG** file if the **message.rpmsg** file had MSG attachments. These MSG files can be decrypted with the `FileHandler.RemoveProtection` API.
 - `TelemetryDelegate` and `AuditDelegate` **WriteEvent** method now requires a second parameter, `EventContext`. The `EventContext` class exposes information on the target cloud and data boundary for the event. 
 
 ### Platform and Dependency Updates
 
 - Added support across all three SDKs for setting European Union data boundary. 
-  - When `DataBoundary` is set to EU, all telemetry and audit events will flow directly to the EU region.
+  - When `DataBoundary` is set to EU, all telemetry and audit events flow directly to the EU region.
   - Setting `DataBoundary` to any other region results in emitting data to nearest service entry point.
 - Updated libxml2 to 2.9.13.
 - Fixed a crash specific to Android. 
@@ -250,7 +249,7 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
 
 - Fixed a bug in `MemoryStream` for `GetDecryptedTemporaryStream` large file types 
 - Fixed a bug causing data loss during PDF encryption due to stack overflow crash 
-  - With `OptimizePdfMemory`, if /Info is an `ObjStm` with an internal indirect object, it will now return `PDFPARSER_ERROR_FORMAT` instead of stack overflow 
+  - With `OptimizePdfMemory`, if /Info is an `ObjStm` with an internal indirect object, it returns `PDFPARSER_ERROR_FORMAT` instead of stack overflow 
 - Fixed a bug where supporting MIP libraries weren't loading in Java 
 - Fixed a bug where MSG files with protected MSG file attachments would experience corruption when `rpmsg` extension had a trailing null terminator 
 - Fixed a crash in MSG files with link attachments 
@@ -320,13 +319,13 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
     - Service returns 503
   - `NetworkError::Category::Throttled`
     - Exception: `NetworkError`
-    - Returned when too many requests have been made to the dependent service.
+    - Returned when too many requests are made to the dependent service.
     - Service returns 429
 
 ### Platform and Dependency Updates
 
 - Updated SDK dependencies to latest versions
-- All MIP SDK binaries have been updated to use version 2.9.12 of libxml2 static library and libgsf dynamic library for Android and Windows.
+- All MIP SDK binaries are updated to use version 2.9.12 of libxml2 static library and libgsf dynamic library for Android and Windows.
 - Proxy support for Linux introduced. Example of how to set proxy below.
 
 ```bash
@@ -340,7 +339,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Fixed a bug in pfile-wrapped MSG files using the incorrect content format.
 - Fixed a bug where the `Inspector` class caused a crash on `rpmsg` files.
 - Fixed a bug where SDK wasn't properly compressing files over 4GB, resulting in possible corruption.
-- Fixed a bug in detecting that protected MSG files. Files may have been protected but SDK treated them as plaintext.
+- Fixed a bug in detecting that protected MSG files. Files may be protected but SDK treats them as plaintext.
 
 ## Version 1.10.98
 
@@ -370,7 +369,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
   - Review [MipContext Concepts](concept-mipcontext.md) for details.
 - `MipContext::Create()` constructor has been changed to accept only the new `MipConfiguration` object.
   - Review [MipContext Concepts](concept-mipcontext.md) for details.
-- All engine settings will default to en-US locale if the `.Locale` property is set to `null`.
+- All engine settings default to en-US locale if the `.Locale` property is set to `null`.
 - Fixed an issue where the SDK wasn't fully honoring the logging level settings.
 
 ### File SDK
@@ -378,7 +377,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Added support for reading and writing labels to MSG files.
   - The pattern for labeling these files is that same as any other file type.
   - The **enable_msg_file_type** custom setting must be set to enable MSG file handling.
-  - Attachments will be protected but **not** labeled.
+  - Attachments are protected but **not** labeled.
   - Review [Set enable_msg_file_type and use File SDK for protecting .msg file](quick-email-msg-csharp.md#set-enable_msg_file_type-and-use-file-sdk-for-labeling-msg-file) for details on custom setting.
 - `FileHandler::IsLabeledOrProtected()` now supports MSG files.
 - File SDK now supports decryption of protected attachments on unprotected MSG files.
@@ -386,9 +385,9 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Added new static method `mip::FileHandler::GetFileStatus()`
   - This function returns a new `mip::FileStatus` object that indicates whether the file is labeled, protected, or contains protected objects.
   - `FileStatus` exposes three properties: `IsProtected`, `IsLabeled`, and `ContainsProtectedObjects`.
-  - `ContainsProtectedObjects` is useful for MSG files that have protected attachments.
-- When calling `FileHandler::RemoveProtection()` on a plaintext MSG file with protected attachments, protection will be removed from the attachments.
-- Fixed a bug where `IProtectionHandler` was destroyed when calling `IFileHandler.SetProtection()` in a loop. `IProtectionHandler` instance will no longer be destroyed after use.
+  - `ContainsProtectedObjects` is useful for MSG files with protected attachments.
+- When calling `FileHandler::RemoveProtection()` on a plaintext MSG file with protected attachments, protection is removed from the attachments.
+- Fixed a bug where `IProtectionHandler` was destroyed when calling `IFileHandler.SetProtection()` in a loop. `IProtectionHandler` instance is no longer destroyed after use.
 
 ### Policy SDK
 
@@ -398,14 +397,14 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 ### Protection SDK
 
-- Added new more specific error types that will surface in both Protection and File SDK. See Breaking Changes section.
+- Added new more specific error types that surface in both Protection and File SDK. See Breaking Changes section.
 
 ### Breaking Changes
 
 - Introduced new custom settings to govern the default audit settings.
   - Added new property in audit Delegate to set audit settings.
   - `LabelGroupData` class no longer has `IsAuditEnabled()` method.
-  - You can use instead `GetEnableAuditSetting()` to get `EnableAudit` settings in the policy once policy is loaded. Default audit settings will be `Undefined` as oppose to `true` in older versions.
+  - You can use instead `GetEnableAuditSetting()` to get `EnableAudit` settings in the policy once policy is loaded. Default audit settings are `Undefined` as opposed to `true` in older versions.
 - Allow passing the document's timezone to ComputeActions to allow actions to be computed as if the document existed in a different timezone from the machine applying the label.
   - Useful for when labels are applied on behalf of a user through a service, where the server's local time isn't necessarily the same as the user's.
   - Instead of returning the `${Event.DateTime}` in UTC format, we now default to local time without displaying the timezone.
@@ -511,7 +510,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
   - `NoPermissionsError::Category::AccessDenied`
   - `NoPermissionsError::Category::AccessExpired`
   - `NoPermissionsError::Category::UserNotFound`
-- `Microsoft.RightsManagement.Exceptions.UnknownTenantException` thrown service will now surface as `ServiceDisabledError` instead of `Network Error`
+- `Microsoft.RightsManagement.Exceptions.UnknownTenantException` thrown service now surfaces as `ServiceDisabledError` instead of `Network Error`
 
 ### Bug Fixes
 
@@ -549,7 +548,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Rename `TelemetryConfiguration` to `DiagnosticConfiguration`.
 - Updated `MipContext` to accept `DiagnosticConfiguration` instead of `TelemetryConfiguration`.
 - Exposed new `AuditDelegate`.
-- Several custom settings have had their name changed and are removed in version 1.9. These cutsom settings continue to function in parallel with their updates names in version 1.8.
+- Several custom settings had their name changed and are removed in version 1.9. These cutsom settings continue to function in parallel with their updates names in version 1.8.
 
 | New Name          | Old Name                   |
 | ----------------- | -------------------------- |
