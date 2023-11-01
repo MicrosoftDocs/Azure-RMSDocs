@@ -69,7 +69,6 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
   
 ### Platform and Dependency Updates
 -	Upgraded to Open SSL 3.0 for FIPS-compliance.
--	Fixed a privacy issue to no longer include delegated user emails in telemetry events.
 -	Fix an issue where some audit events were dropped.
 -	Exposed a flag to control max shutdown timer for 1DS cache cleanup.
 -	Added support for masking PII in log files. By default, PII is not masked.
