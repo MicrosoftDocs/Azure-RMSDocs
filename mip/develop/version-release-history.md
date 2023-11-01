@@ -215,7 +215,7 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
 
 - Policy SDK now supports data boundary via `PolicyEngineSettings.DataBoundary`. 
 - Fixed a bug where in certain conditions policy changes resulted in a crash. 
-- Fixed an issue where Encrypt Only labels with DKE protection weren't filtered when they should have been. 
+- Fixed an issue where Encrypt Only labels with DKE protection weren't filtered when they should be. 
 
 ### Protection SDK
 
@@ -319,13 +319,13 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
     - Service returns 503
   - `NetworkError::Category::Throttled`
     - Exception: `NetworkError`
-    - Returned when too many requests have been made to the dependent service.
+    - Returned when too many requests are made to the dependent service.
     - Service returns 429
 
 ### Platform and Dependency Updates
 
 - Updated SDK dependencies to latest versions
-- All MIP SDK binaries have been updated to use version 2.9.12 of libxml2 static library and libgsf dynamic library for Android and Windows.
+- All MIP SDK binaries are updated to use version 2.9.12 of libxml2 static library and libgsf dynamic library for Android and Windows.
 - Proxy support for Linux introduced. Example of how to set proxy below.
 
 ```bash
@@ -339,7 +339,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Fixed a bug in pfile-wrapped MSG files using the incorrect content format.
 - Fixed a bug where the `Inspector` class caused a crash on `rpmsg` files.
 - Fixed a bug where SDK wasn't properly compressing files over 4GB, resulting in possible corruption.
-- Fixed a bug in detecting that protected MSG files. Files may have been protected but SDK treated them as plaintext.
+- Fixed a bug in detecting that protected MSG files. Files may be protected but SDK treats them as plaintext.
 
 ## Version 1.10.98
 
@@ -385,7 +385,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Added new static method `mip::FileHandler::GetFileStatus()`
   - This function returns a new `mip::FileStatus` object that indicates whether the file is labeled, protected, or contains protected objects.
   - `FileStatus` exposes three properties: `IsProtected`, `IsLabeled`, and `ContainsProtectedObjects`.
-  - `ContainsProtectedObjects` is useful for MSG files that have protected attachments.
+  - `ContainsProtectedObjects` is useful for MSG files with protected attachments.
 - When calling `FileHandler::RemoveProtection()` on a plaintext MSG file with protected attachments, protection will be removed from the attachments.
 - Fixed a bug where `IProtectionHandler` was destroyed when calling `IFileHandler.SetProtection()` in a loop. `IProtectionHandler` instance will no longer be destroyed after use.
 
@@ -548,7 +548,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Rename `TelemetryConfiguration` to `DiagnosticConfiguration`.
 - Updated `MipContext` to accept `DiagnosticConfiguration` instead of `TelemetryConfiguration`.
 - Exposed new `AuditDelegate`.
-- Several custom settings have had their name changed and are removed in version 1.9. These cutsom settings continue to function in parallel with their updates names in version 1.8.
+- Several custom settings had their name changed and are removed in version 1.9. These cutsom settings continue to function in parallel with their updates names in version 1.8.
 
 | New Name          | Old Name                   |
 | ----------------- | -------------------------- |
