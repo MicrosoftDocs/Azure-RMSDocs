@@ -369,7 +369,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
   - Review [MipContext Concepts](concept-mipcontext.md) for details.
 - `MipContext::Create()` constructor has been changed to accept only the new `MipConfiguration` object.
   - Review [MipContext Concepts](concept-mipcontext.md) for details.
-- All engine settings will default to en-US locale if the `.Locale` property is set to `null`.
+- All engine settings default to en-US locale if the `.Locale` property is set to `null`.
 - Fixed an issue where the SDK wasn't fully honoring the logging level settings.
 
 ### File SDK
@@ -377,7 +377,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Added support for reading and writing labels to MSG files.
   - The pattern for labeling these files is that same as any other file type.
   - The **enable_msg_file_type** custom setting must be set to enable MSG file handling.
-  - Attachments will be protected but **not** labeled.
+  - Attachments are protected but **not** labeled.
   - Review [Set enable_msg_file_type and use File SDK for protecting .msg file](quick-email-msg-csharp.md#set-enable_msg_file_type-and-use-file-sdk-for-labeling-msg-file) for details on custom setting.
 - `FileHandler::IsLabeledOrProtected()` now supports MSG files.
 - File SDK now supports decryption of protected attachments on unprotected MSG files.
@@ -386,8 +386,8 @@ export HTTP_PROXY="http://10.10.10.10:8080"
   - This function returns a new `mip::FileStatus` object that indicates whether the file is labeled, protected, or contains protected objects.
   - `FileStatus` exposes three properties: `IsProtected`, `IsLabeled`, and `ContainsProtectedObjects`.
   - `ContainsProtectedObjects` is useful for MSG files with protected attachments.
-- When calling `FileHandler::RemoveProtection()` on a plaintext MSG file with protected attachments, protection will be removed from the attachments.
-- Fixed a bug where `IProtectionHandler` was destroyed when calling `IFileHandler.SetProtection()` in a loop. `IProtectionHandler` instance will no longer be destroyed after use.
+- When calling `FileHandler::RemoveProtection()` on a plaintext MSG file with protected attachments, protection is removed from the attachments.
+- Fixed a bug where `IProtectionHandler` was destroyed when calling `IFileHandler.SetProtection()` in a loop. `IProtectionHandler` instance is no longer destroyed after use.
 
 ### Policy SDK
 
@@ -397,14 +397,14 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 ### Protection SDK
 
-- Added new more specific error types that will surface in both Protection and File SDK. See Breaking Changes section.
+- Added new more specific error types that surface in both Protection and File SDK. See Breaking Changes section.
 
 ### Breaking Changes
 
 - Introduced new custom settings to govern the default audit settings.
   - Added new property in audit Delegate to set audit settings.
   - `LabelGroupData` class no longer has `IsAuditEnabled()` method.
-  - You can use instead `GetEnableAuditSetting()` to get `EnableAudit` settings in the policy once policy is loaded. Default audit settings will be `Undefined` as oppose to `true` in older versions.
+  - You can use instead `GetEnableAuditSetting()` to get `EnableAudit` settings in the policy once policy is loaded. Default audit settings are `Undefined` as opposed to `true` in older versions.
 - Allow passing the document's timezone to ComputeActions to allow actions to be computed as if the document existed in a different timezone from the machine applying the label.
   - Useful for when labels are applied on behalf of a user through a service, where the server's local time isn't necessarily the same as the user's.
   - Instead of returning the `${Event.DateTime}` in UTC format, we now default to local time without displaying the timezone.
@@ -510,7 +510,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
   - `NoPermissionsError::Category::AccessDenied`
   - `NoPermissionsError::Category::AccessExpired`
   - `NoPermissionsError::Category::UserNotFound`
-- `Microsoft.RightsManagement.Exceptions.UnknownTenantException` thrown service will now surface as `ServiceDisabledError` instead of `Network Error`
+- `Microsoft.RightsManagement.Exceptions.UnknownTenantException` thrown service now surfaces as `ServiceDisabledError` instead of `Network Error`
 
 ### Bug Fixes
 
