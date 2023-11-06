@@ -24,7 +24,7 @@ As covered in [Profile and Engine objects](concept-profile-engine-cpp.md), an en
 
 ### Create File Engine Settings
 
-Similar to a profile, the engine also requires a settings object, `mip::FileEngine::Settings`. This object stores the unique engine identifier, the `mip::AuthDelegate` implemenatation, customizable client data that can be used for debugging or telemetry, and, optionally, the locale.
+Similar to a profile, the engine also requires a settings object, `mip::FileEngine::Settings`. This object stores the unique engine identifier, the `mip::AuthDelegate` implementation, customizable client data that can be used for debugging or telemetry, and, optionally, the locale.
 
 Here we create a `FileEngine::Settings` object called *engineSettings* using the identity of the application user.
 
