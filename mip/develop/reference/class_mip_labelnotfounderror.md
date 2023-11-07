@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class LabelNotFoundError 
-[Label](class_mip_label.md) ID is not recognized.
+Label ID is not recognized.
   
 ## Summary
  Members                        | Descriptions                                

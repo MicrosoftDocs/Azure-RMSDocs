@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class ExecutionState 
@@ -15,19 +15,20 @@ Clients should only call the methods to obtain the state that is needed. Hence, 
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr&lt;Label&gt; GetNewLabel() const  |  Gets the sensitivity label ID that should be applied on the document.
+public std::shared_ptr\<Label\> GetNewLabel() const  |  Gets the sensitivity label ID that should be applied on the document.
 public std::string GetContentIdentifier() const  |  Gets the content description that describes the document. example for a file: [path\filename] example for an email: [Subject:Sender].
+public virtual std::string GetApplicationScenarioId() const  |  Return an identifier which correlates application events with the corresponding audit or protection service REST requests.
 public virtual DataState GetDataState() const  |  Gets the state of the content while the application is interacting with it.
-public std::pair&lt;bool, std::string&gt; IsDowngradeJustified() const  |  Implementation should pass if justification to downgrade an existing label was given.
+public std::pair\<bool, std::string\> IsDowngradeJustified() const  |  Implementation should pass if justification to downgrade an existing label was given.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Get the new label's assignment method.
-public virtual std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt; GetNewLabelExtendedProperties() const  |  Return new label's extended properties.
-public std::vector&lt;MetadataEntry&gt; GetContentMetadata(const std::vector&lt;std::string&gt;& names, const std::vector&lt;std::string&gt;& namePrefixes) const  |  Get the meta-data items from the content.
-public std::shared_ptr&lt;ProtectionDescriptor&gt; GetProtectionDescriptor() const  |  Get the Protection Descriptor.
+public virtual std::vector\<std::pair\<std::string, std::string\>\> GetNewLabelExtendedProperties() const  |  Return new label's extended properties.
+public std::vector\<MetadataEntry\> GetContentMetadata(const std::vector\<std::string\>& names, const std::vector\<std::string\>& namePrefixes) const  |  Get the meta-data items from the content.
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Get the Protection Descriptor.
 public std::string GetContentFormat() const  |  Gets the content format.
 public virtual MetadataVersion GetContentMetadataVersion() const  |  Gets the highest metadata version supported by the application for the tenant.
 public ActionType GetSupportedActions() const  |  Gets a masked enum describing all the supported action types.
-public virtual std::shared_ptr&lt;ClassificationResults&gt; GetClassificationResults(const std::vector&lt;std::shared_ptr&lt;ClassificationRequest&gt;&gt; &) const  |  Return a map of classification results.
-public virtual std::map&lt;std::string, std::string&gt; GetAuditMetadata() const  |  Return a map of application specific audit key-value pairs.
+public virtual std::shared_ptr\<ClassificationResults\> GetClassificationResults(const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Return a map of classification results.
+public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  Return a map of application specific audit key-value pairs.
   
 ## Members
   
@@ -43,6 +44,12 @@ Gets the content description that describes the document. example for a file: [p
   
 **Returns**: Content description to be applied to the content.
 This value is used by auditing as a human-readable description of the content
+  
+### GetApplicationScenarioId function
+Return an identifier which correlates application events with the corresponding audit or protection service REST requests.
+
+  
+**Returns**: An identifier (usually specified as a GUID)
   
 ### GetDataState function
 Gets the state of the content while the application is interacting with it.
@@ -122,4 +129,4 @@ Return a map of application specific audit key-value pairs.
 
   
 **Returns**: A list of application specific audit metadata
-Registered Key:Value pairs Sender: Email Id for the sender Recipients: Represents a JSON array of recipients for an email LastModifiedBy: Email Id for the user who last modified the content LastModifiedDate: Date the content was last modified.
+Registered Key:Value pairs Sender: Email Id for the sender Recipients: Represents a JSON array of recipients for an email LastModifiedBy: Email Id for the user who last modified the content LastModifiedDate: Date the content was last modified

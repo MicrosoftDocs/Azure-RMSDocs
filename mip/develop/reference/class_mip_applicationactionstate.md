@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class ApplicationActionState 
@@ -14,10 +14,10 @@ ms.date: 03/30/2023
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public LabelState GetNewLabelState() const  |  Gets the new label state.
-public std::shared_ptr&lt;Label&gt; GetNewLabel() const  |  Gets the sensitivity label ID that should be applied on the document.
-public std::pair&lt;bool, std::string&gt; IsDowngradeJustified() const  |  Implementation should pass if justification to downgrade an existing label was given.
+public std::shared_ptr\<Label\> GetNewLabel() const  |  Gets the sensitivity label ID that should be applied on the document.
+public std::pair\<bool, std::string\> IsDowngradeJustified() const  |  Implementation should pass if justification to downgrade an existing label was given.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Get the new label's assignment method.
-public virtual std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt; GetNewLabelExtendedProperties() const  |  Return new label's extended properties.
+public virtual std::vector\<std::pair\<std::string, std::string\>\> GetNewLabelExtendedProperties() const  |  Return new label's extended properties.
 public ActionType GetSupportedActions() const  |  Gets a masked enum describing all the supported action types.
 public bool IsRecommendationEnabled() const  |  Get a bool that signifying recommend action will return. by default should be true unless user specifies else.
 public virtual int GetContentTimeZoneUtcOffset() const  |  Return the content's time zone as an offset from UTC, in seconds, or kTimeZoneOffsetLocalTime to use the machine's local time.

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class JsonValue 
@@ -17,18 +17,18 @@ public bool IsString() const  |  check if value is a string.
 public bool IsArray() const  |  check if value is a json array.
 public bool IsObject() const  |  check if value is a json object.
 public bool HasMember(const std::string& key) const  |  return true if object has a child with the specified key.
-public void PushBack(const std::shared_ptr&lt;JsonValue&gt;& jsonValue)  |  Add a value member to an Array. The object should not be modified after being added.
+public void PushBack(const std::shared_ptr\<JsonValue\>& jsonValue)  |  Add a value member to an Array. The object should not be modified after being added.
 public void PushBack(const std::string& member)  |  Add a string member to an Array with the specified value.
-public void AddMember(const std::string& key, const std::shared_ptr&lt;JsonValue&gt;& jsonValue)  |  Add a value member to an Object. The object should not be modified after being added.
+public void AddMember(const std::string& key, const std::shared_ptr\<JsonValue\>& jsonValue)  |  Add a value member to an Object. The object should not be modified after being added.
 public void AddMember(const std::string& key, const std::string& member)  | _Not yet documented._
 public void AddMember(const std::string& key, bool member)  |  Add a boolean member to an Object with the specified key and value.
 public void AddMember(const std::string& key, int member)  |  Add a signed integer member to an Object with the specified key and value.
 public void AddMember(const std::string& key, unsigned int member)  |  Add an unsigned integer member to an Object with the specified key and value.
-public std::shared_ptr&lt;JsonValue&gt; GetMember(const std::string& key) const  |  return child value with the specified key if this is an Object.
-public std::shared_ptr&lt;JsonValue&gt; GetMember(unsigned int index) const  |  return child value at specified index if this is an Array.
+public std::shared_ptr\<JsonValue\> GetMember(const std::string& key) const  |  return child value with the specified key if this is an Object.
+public std::shared_ptr\<JsonValue\> GetMember(unsigned int index) const  |  return child value at specified index if this is an Array.
 public size_t Size() const  |  return number of child elements.
-public std::vector&lt;std::string&gt; GetStringArray() const  |  return value array as strings, skip non string elements.
-public std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt; GetStringObjectMembers() const  |  Return all string members of this object and their keys, skip non string elements. Example: for the json object {"a": "b", "c": "d", "e": 1, "f": {"g": "h"}} this method would return a vector of two pairs: ("a", "b") and ("c", "d").
+public std::vector\<std::string\> GetStringArray() const  |  return value array as strings, skip non string elements.
+public std::vector\<std::pair\<std::string, std::string\>\> GetStringObjectMembers() const  |  Return all string members of this object and their keys, skip non string elements. Example: for the json object {"a": "b", "c": "d", "e": 1, "f": {"g": "h"}} this method would return a vector of two pairs: ("a", "b") and ("c", "d").
 public std::string GetString() const  |  If the current value is a string, return it.
 public bool IsInt() const  |  Returns true if the current value is an int.
 public int GetInt() const  |  If the current value is an int, return it.
