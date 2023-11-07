@@ -5,24 +5,23 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
-# class DirectoryObjectRights
-
+# class DirectoryObjectRights 
 The directory object and rights associated with it.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public DirectoryObjectRights(const DirectoryObject& directoryObject, const std::vector&lt;std::string&gt;& rights)  |  [DirectoryObjectRights](#class_directory_object_rights) constructor.
+public DirectoryObjectRights(const DirectoryObject& directoryObject, const std::vector\<std::string\>& rights)  |  DirectoryObjectRights constructor.
 public const DirectoryObject& GetDirectoryObject() const  |  Gets directory object.
-public const std::vector&lt;std::string&gt;& GetRights() const  |  Gets rights associated with the directory object.
+public const std::vector\<std::string\>& GetRights() const  |  Gets rights associated with the directory object.
   
 ## Members
   
 ### DirectoryObjectRights function
-[DirectoryObjectRights](class_mip_directoryobjectrights.md) constructor.
+DirectoryObjectRights constructor.
 
 Parameters:  
 * **directoryObject**: The directory object 
@@ -42,4 +41,4 @@ Gets directory object.
 Gets rights associated with the directory object.
 
   
-**Returns**: Rights associated with the directory objectct
+**Returns**: Rights associated with the directory object

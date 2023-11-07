@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class UserRoles 
@@ -14,14 +14,14 @@ A group of users and the roles associated with them.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public UserRoles(const std::vector&lt;std::string&gt;& users, const std::vector&lt;std::string&gt;& roles)  |  UserRoles constructor.
-public const std::vector&lt;std::string&gt;& Users() const  |  Gets users associated with a set of roles.
-public const std::vector&lt;std::string&gt;& Roles() const  |  Gets roles associated with a group of users.
+public UserRoles(const std::vector\<std::string\>& users, const std::vector\<std::string\>& roles)  |  UserRoles constructor.
+public const std::vector\<std::string\>& Users() const  |  Gets users associated with a set of roles.
+public const std::vector\<std::string\>& Roles() const  |  Gets roles associated with a group of users.
   
 ## Members
   
 ### UserRoles function
-[UserRoles](class_mip_userroles.md) constructor.
+UserRoles constructor.
 
 Parameters:  
 * **users**: Group of users that share the same roles 
@@ -41,4 +41,4 @@ Gets users associated with a set of roles.
 Gets roles associated with a group of users.
 
   
-**Returns**: Roles associated with a group of users.
+**Returns**: Roles associated with a group of users

@@ -5,20 +5,20 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class ProtectionHandler::PublishingSettings 
-Settings used to create a [ProtectionHandler](class_mip_protectionhandler.md) to protect new content.
+Settings used to create a ProtectionHandler to protect new content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public PublishingSettings(const std::shared_ptr&lt;ProtectionDescriptor&gt;& protectionDescriptor)  |  [PublishingSettings](#class_protection_handler_1_1_publishing_settings) constructor for enforcing protection on content.
-public PublishingSettings(const std::shared_ptr&lt;ProtectionDescriptor&gt;& protectionDescriptor, const std::vector&lt;uint8_t&gt;& serializedPublishingLicense)  |  PublishingSettings constructor for online republishing.
-public PublishingSettings(const std::shared_ptr&lt;ProtectionDescriptor&gt;& protectionDescriptor, const std::shared_ptr&lt;ProtectionHandler&gt;& protectionHandler)  |  PublishingSettings constructor for offline republishing.
-public std::shared_ptr&lt;ProtectionDescriptor&gt; GetProtectionDescriptor() const  | _Not yet documented._
-public std::shared_ptr&lt;ProtectionHandler&gt; GetProtectionHandlerForRepublish() const  |  Gets protection handler for republishing scenario.
+public PublishingSettings(const std::shared_ptr\<ProtectionDescriptor\>& protectionDescriptor)  |  PublishingSettings constructor for enforcing protection on content.
+public PublishingSettings(const std::shared_ptr\<ProtectionDescriptor\>& protectionDescriptor, const std::vector\<uint8_t\>& serializedPublishingLicense)  |  PublishingSettings constructor for online republishing.
+public PublishingSettings(const std::shared_ptr\<ProtectionDescriptor\>& protectionDescriptor, const std::shared_ptr\<ProtectionHandler\>& protectionHandler)  |  PublishingSettings constructor for offline republishing.
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  | _Not yet documented._
+public std::shared_ptr\<ProtectionHandler\> GetProtectionHandlerForRepublish() const  |  Gets protection handler for republishing scenario.
 public bool GetIsAuditedExtractionAllowed() const  |  Gets whether or not non-MIP-aware applications are allowed to open protected content.
 public void SetIsAuditedExtractionAllowed(bool isAuditedExtractionAllowed)  |  Sets whether or not non-MIP-aware applications are allowed to open protected content.
 public bool GetIsDeprecatedAlgorithmPreferred() const  |  Gets whether or not deprecated crypto algorithm (ECB) is preferred for backwards compatibility.
@@ -31,17 +31,17 @@ public bool GetRegenerateContentKey() const  |  Gets whether or not the content 
 public void SetRegenerateContentKey(bool regenerateContentKey)  |  Sets whether or not the content key and ID should be regenerated during republishing.
 public void SetPreLicenseUserEmail(const std::string& preLicenseUserEmail)  |  Sets pre-license user.
 public const std::string& GetPreLicenseUserEmail() const  |  Gets the pre-license user.
-public const std::vector&lt;uint8_t&gt;& GetPublishingLicenseForRepublish() const  |  Gets the serialized republishing license.
-public void SetRequestPreLicense(std::shared_ptr&lt;PublishingUseLicenseRequest&gt; publishingUseLicenseRequest)  |  Setting this will cause the publishing request to include a pre-license.
-public std::shared_ptr&lt;PublishingUseLicenseRequest&gt; GetPreLicenseRequest() const  |  Gets the pre-license request.
+public const std::vector\<uint8_t\>& GetPublishingLicenseForRepublish() const  |  Gets the serialized republishing license.
+public void SetRequestPreLicense(std::shared_ptr\<PublishingUseLicenseRequest\> publishingUseLicenseRequest)  |  Setting this will cause the publishing request to include a pre-license.
+public std::shared_ptr\<PublishingUseLicenseRequest\> GetPreLicenseRequest() const  |  Gets the pre-license request.
 public bool GetRepairLabelIdAllowed() const  |  Gets whether or not label id can be added to publishing license on republish.
 public void SetRepairLabelIdAllowed(bool repairAllowed)  |  Sets whether or not label id can be added to publishing license on republish.
 public std::string GetApplicationScenarioId() const  |  Gets the scenario Id provided by the application which is used to correlation with the server.
 public void SetApplicationScenarioId(std::string applicationScenarioId)  |  Sets the scenario Id provided by the application.
-public bool GetIsOfflineOnly() const  |  Gets whether or not [ProtectionEngine](class_mip_protectionengine.md) operation allows for online HTTP operations.
-public virtual void SetIsOfflineOnly(bool isOfflineOnly)  |  Sets whether or not [ProtectionEngine](class_mip_protectionengine.md) operation allows for online HTTP operations.
-public void SetCustomSettings(const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& customSettings)  |  Set the custom settings, used for feature gating and testing.
-public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
+public bool GetIsOfflineOnly() const  |  Gets whether or not ProtectionEngine operation allows for online HTTP operations.
+public virtual void SetIsOfflineOnly(bool isOfflineOnly)  |  Sets whether or not ProtectionEngine operation allows for online HTTP operations.
+public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& customSettings)  |  Set the custom settings, used for feature gating and testing.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
   
 ## Members
   
@@ -221,14 +221,14 @@ Parameters:
 
   
 ### GetIsOfflineOnly function
-Gets whether or not [ProtectionEngine](class_mip_protectionengine.md) operation allows for online HTTP operations.
+Gets whether or not ProtectionEngine operation allows for online HTTP operations.
 
   
 **Returns**: True if HTTP operations are disallowed, else false
 If this returns true, operation will only succeed if necessary content has already been cached. A mip::NetworkError will be thrown if needed info is not found. Consumption - content has already been previously decrypted and its unexpired license is cached. Protection - unexpired templates have been cached and user cert is loaded Others - undefined
   
 ### SetIsOfflineOnly function
-Sets whether or not [ProtectionEngine](class_mip_protectionengine.md) operation allows for online HTTP operations.
+Sets whether or not ProtectionEngine operation allows for online HTTP operations.
 
 Parameters:  
 * **isOfflineOnly**: True if HTTP operations are disallowed, else false
