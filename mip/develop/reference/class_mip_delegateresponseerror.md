@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class DelegateResponseError 
-Delegate Response [Error](class_mip_error.md). Thrown or returned in response to encountering an error in a delegate method.
+Delegate Response Error. Thrown or returned in response to encountering an error in a delegate method.
   
 ## Summary
  Members                        | Descriptions                                

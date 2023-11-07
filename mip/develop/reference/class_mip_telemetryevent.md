@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class TelemetryEvent 
@@ -17,14 +17,14 @@ A single telemetry event.
 public const std::string& GetName() const  |  Get event name.
 public EventLevel GetLevel() const  |  Get level of event, indicating whether it is considered necessary service data (NSD) or not.
 public const std::chrono::steady_clock::time_point& GetStartTime() const  |  Get event start time.
-public void AddProperty(const std::shared_ptr&lt;EventProperty&gt;& prop)  |  Add a property to the event.
+public void AddProperty(const std::shared_ptr\<EventProperty\>& prop)  |  Add a property to the event.
 public void AddProperty(const std::string& name, bool value)  |  Add a bool property to the event.
 public void AddProperty(const std::string& name, double value, Pii pii)  |  Add a double property to the event.
 public void AddProperty(const std::string& name, int64_t value, Pii pii)  |  Add an int64 property to the event.
 public void AddProperty(const std::string& name, const std::string& value, Pii pii)  |  Add a string property to the event.
 public void AddAuditOnlyProperty(const std::string& name, const std::string& value)  |  Add an audit-only string property to the event.
-public std::vector&lt;std::shared_ptr&lt;EventProperty&gt;&gt; GetProperties() const  |  Get all event properties.
-public std::shared_ptr&lt;EventProperty&gt; GetProperty(const std::string& name)  |  Get property with the given name, if any.
+public std::vector\<std::shared_ptr\<EventProperty\>\> GetProperties() const  |  Get all event properties.
+public std::shared_ptr\<EventProperty\> GetProperty(const std::string& name) const  |  Get property with the given name, if any.
   
 ## Members
   
@@ -32,7 +32,7 @@ public std::shared_ptr&lt;EventProperty&gt; GetProperty(const std::string& name)
 Get event name.
 
   
-**Returns**: [Event](class_mip_event.md) name
+**Returns**: Event name
   
 ### GetLevel function
 Get level of event, indicating whether it is considered necessary service data (NSD) or not.
@@ -44,7 +44,7 @@ Get level of event, indicating whether it is considered necessary service data (
 Get event start time.
 
   
-**Returns**: [Event](class_mip_event.md) start time
+**Returns**: Event start time
   
 ### AddProperty function
 Add a property to the event.
@@ -123,7 +123,7 @@ An audit-only property contains sensitive information and must not be written to
 Get all event properties.
 
   
-**Returns**: [Event](class_mip_event.md) properties
+**Returns**: Event properties
   
 ### GetProperty function
 Get property with the given name, if any.
@@ -134,4 +134,4 @@ Parameters:
 
 
   
-**Returns**: Property with the given name, or nullptr if none.
+**Returns**: Property with the given name, or nullptr if none

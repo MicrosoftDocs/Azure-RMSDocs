@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class ServiceDisabledError 
@@ -32,4 +32,5 @@ User            | Service is disabled for the user.
 Device            | Service is disabled for the device.
 Platform            | Service is disabled for the platform.
 Tenant            | Service is disabled for the tenant.
+
 Describes the extent for which the service is disabled.

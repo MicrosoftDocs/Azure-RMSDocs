@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class ClassificationResult 
@@ -19,7 +19,7 @@ public std::string GetName() const  |  Get the name of the classification policy
 public int GetCount() const  |  Get the instance count.
 public int GetConfidenceLevel() const  |  Get the confidence in the result.
 public std::string GetSensitiveInformationDetections() const  |  Get the sensitive information detections.
-public virtual std::vector&lt;std::shared_ptr&lt;mip::DetailedClassificationResult&gt;&gt; GetDetailedClassificationAttributes() const  |  Get the specific detection bands if the enchanced classification is enabled.
+public virtual std::vector\<std::shared_ptr\<mip::DetailedClassificationResult\>\> GetDetailedClassificationAttributes() const  |  Get the specific detection bands if the enchanced classification is enabled.
   
 ## Members
   
@@ -54,4 +54,4 @@ Get the sensitive information detections.
 Get the specific detection bands if the enchanced classification is enabled.
 
   
-**Returns**: A vector of instance counts at different confidence thresholds.
+**Returns**: A vector of instance counts at different confidence thresholds
