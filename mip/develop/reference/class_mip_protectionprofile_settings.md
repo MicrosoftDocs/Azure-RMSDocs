@@ -5,44 +5,44 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class ProtectionProfile::Settings 
-Settings used by [ProtectionProfile](class_mip_protectionprofile.md) during its creation and throughout its lifetime.
+Settings used by ProtectionProfile during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::shared_ptr&lt;MipContext&gt;& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr&lt;ConsentDelegate&gt;& consentDelegate, const std::shared_ptr&lt;ProtectionProfile::Observer&gt;& observer)  |  [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) constructor that specifies an observer to be used for async operations.
-public Settings(const std::shared_ptr&lt;MipContext&gt;& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr&lt;ConsentDelegate&gt;& consentDelegate)  |  [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) constructor, used for synchronous operations.
+public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<ConsentDelegate\>& consentDelegate, const std::shared_ptr\<ProtectionProfile::Observer\>& observer)  |  ProtectionProfile::Settings constructor that specifies an observer to be used for async operations.
+public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<ConsentDelegate\>& consentDelegate)  |  ProtectionProfile::Settings constructor, used for synchronous operations.
 public CacheStorageType GetCacheStorageType() const  |  Get whether caches are stored in memory or on disk.
-public std::shared_ptr&lt;ConsentDelegate&gt; GetConsentDelegate() const  |  Gets the consent delegate used for connecting to services.
-public std::shared_ptr&lt;ProtectionProfile::Observer&gt; GetObserver() const  |  Gets the observer that receives notifications of events related to [ProtectionProfile](class_mip_protectionprofile.md).
-public std::shared_ptr&lt;MipContext&gt; GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
-public std::shared_ptr&lt;HttpDelegate&gt; GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
-public void SetHttpDelegate(const std::shared_ptr&lt;HttpDelegate&gt;& httpDelegate)  |  Override default HTTP stack with client's own.
-public std::shared_ptr&lt;StorageDelegate&gt; GetStorageDelegate() const  |  Get the [StorageDelegate](class_mip_storagedelegate.md) (if any) provided by the application.
-public void SetStorageDelegate(const std::shared_ptr&lt;StorageDelegate&gt;& storageDelegate)  |  Override default storage cache with client's own implementation.
-public std::shared_ptr&lt;TaskDispatcherDelegate&gt; GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
-public void SetTaskDispatcherDelegate(const std::shared_ptr&lt;TaskDispatcherDelegate&gt;& taskDispatcherDelegate)  |  Override default asynchonous task dispatching handling with client's own.
+public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Gets the consent delegate used for connecting to services.
+public std::shared_ptr\<ProtectionProfile::Observer\> GetObserver() const  |  Gets the observer that receives notifications of events related to ProtectionProfile.
+public std::shared_ptr\<MipContext\> GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
+public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Override default HTTP stack with client's own.
+public std::shared_ptr\<StorageDelegate\> GetStorageDelegate() const  |  Get the StorageDelegate (if any) provided by the application.
+public void SetStorageDelegate(const std::shared_ptr\<StorageDelegate\>& storageDelegate)  |  Override default storage cache with client's own implementation.
+public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
+public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Override default asynchonous task dispatching handling with client's own.
 public void SetSessionId(const std::string& sessionId)  |  Sets the session ID.
 public const std::string& GetSessionId() const  |  Gets the session ID.
 public void SetCanCacheLicenses(bool canCacheLicenses)  |  Configures whether or not end user licenses (EULs) will be cached locally.
 public bool CanCacheLicenses() const  |  Gets whether or not end user licenses (EULs) are cached locally.
-public void SetCustomSettings(const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& customSettings)  |  Set the custom settings, used for feature gating and testing.
-public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
-public const std::shared_ptr&lt;void&gt;& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
-public void SetLoggerContext(const std::shared_ptr&lt;void&gt;& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& customSettings)  |  Set the custom settings, used for feature gating and testing.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
+public const std::shared_ptr\<void\>& GetLoggerContext() const  |  Get logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
+public void SetLoggerContext(const std::shared_ptr\<void\>& loggerContext)  |  Sets the logger context that will be opaquely passed to the logger delegate for logs associated with the created profile.
 public void AddRedirectionUri(const std::string& originalUri, const std::string& redirectUri)  |  Adds a redirect uri.
-public const std::map&lt;std::string, std::string&gt;& GetRedirectionUris() const  |  Gets the redirection uris.
+public const std::map\<std::string, std::string\>& GetRedirectionUris() const  |  Gets the redirection uris.
 public DnsRedirection GetDnsRedirection() const  |  Gets the dns redirect mode.
 public void SetDnsRedirection(DnsRedirection dnsRedirection)  |  Sets the dns redirection mode that controls how redirection is handled during online operations.
   
 ## Members
   
 ### Settings function
-[ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) constructor that specifies an observer to be used for async operations.
+ProtectionProfile::Settings constructor that specifies an observer to be used for async operations.
 
 Parameters:  
 * **mipContext**: Global context settings 
@@ -54,7 +54,7 @@ Parameters:
 * **consentDelegate**: Delegate used to obtain user permission to access external resources 
 
 
-* **observer**: Observer instance that will receive notifications of events related to [ProtectionProfile](class_mip_protectionprofile.md)
+* **observer**: Observer instance that will receive notifications of events related to ProtectionProfile
 
 
 * **applicationInfo**: Info about application that is consuming the protection SDK
@@ -62,7 +62,7 @@ Parameters:
 
   
 ### Settings function
-[ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) constructor, used for synchronous operations.
+ProtectionProfile::Settings constructor, used for synchronous operations.
 
 Parameters:  
 * **mipContext**: Global context settings 
@@ -91,10 +91,10 @@ Gets the consent delegate used for connecting to services.
 **Returns**: Consent delegate used for connecting to services
   
 ### GetObserver function
-Gets the observer that receives notifications of events related to [ProtectionProfile](class_mip_protectionprofile.md).
+Gets the observer that receives notifications of events related to ProtectionProfile.
 
   
-**Returns**: Observer that receives notifications of events related to [ProtectionProfile](class_mip_protectionprofile.md)
+**Returns**: Observer that receives notifications of events related to ProtectionProfile
   
 ### GetMipContext function
 Get MIP context which represents shared state across all profiles.
@@ -117,16 +117,16 @@ Parameters:
 
   
 ### GetStorageDelegate function
-Get the [StorageDelegate](class_mip_storagedelegate.md) (if any) provided by the application.
+Get the StorageDelegate (if any) provided by the application.
 
   
-**Returns**: [StorageDelegate](class_mip_storagedelegate.md) to be used for caching
+**Returns**: StorageDelegate to be used for caching
   
 ### SetStorageDelegate function
 Override default storage cache with client's own implementation.
 
 Parameters:  
-* **storageDelegate**: [StorageDelegate](class_mip_storagedelegate.md) interface implemented by client application
+* **storageDelegate**: StorageDelegate interface implemented by client application
 
 
   

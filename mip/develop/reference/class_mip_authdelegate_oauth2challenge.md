@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class AuthDelegate::OAuth2Challenge 
@@ -14,7 +14,7 @@ a class that contains all the information required from the calling application 
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public OAuth2Challenge(const std::string& authority, const std::string& resource, const std::string& scope, const std::string& claims)  |  Construct a new [OAuth2Challenge](#class_auth_delegate_1_1_o_auth2_challenge) object.
+public OAuth2Challenge(const std::string& authority, const std::string& resource, const std::string& scope, const std::string& claims)  |  Construct a new OAuth2Challenge object.
 public const std::string& GetAuthority() const  |  Get the authority string.
 public const std::string& GetResource() const  |  Get the resource string.
 public const std::string& GetScope() const  |  Get the scope string.

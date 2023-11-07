@@ -5,19 +5,17 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class HttpOperation 
-
-Interface that describes a single HTTP operation, implemented by client app when overriding [HttpDelegate](class_mip_httpdelegate.md).
+Interface that describes a single HTTP operation, implemented by client app when overriding HttpDelegate.
   
 ## Summary
-
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Gets operation ID.
-public std::shared_ptr&lt;HttpResponse&gt; GetResponse()  |  Get response, if any.
+public std::shared_ptr\<HttpResponse\> GetResponse()  |  Get response, if any.
 public bool IsCancelled()  |  Get cancellation status of operation.
   
 ## Members
@@ -27,7 +25,7 @@ Gets operation ID.
 
   
 **Returns**: Operation ID
-The corresponding [HttpRequest](class_mip_httprequest.md) and [HttpResponse](class_mip_httpresponse.md) will have the same ID
+The corresponding HttpRequest and HttpResponse will have the same ID
   
 ### GetResponse function
 Get response, if any.
@@ -39,4 +37,4 @@ Get response, if any.
 Get cancellation status of operation.
 
   
-**Returns**: Cancellation status.
+**Returns**: Cancellation status

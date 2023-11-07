@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class Label 
@@ -22,11 +22,11 @@ public int GetSensitivity() const  |  Get the Sensitivity of the label.
 public const std::string& GetTooltip() const  |  Get the tooltip description of the label.
 public const std::string& GetAutoTooltip() const  |  Get the tooltip description of the classification that cause this label to be applied.
 public bool IsActive() const  |  Gets a boolean signaling if the label is active.
-public std::weak_ptr&lt;Label&gt; GetParent() const  |  Get the parent label.
-public const std::vector&lt;std::shared_ptr&lt;Label&gt;&gt;& GetChildren() const  |  Get the children labels of the current label.
-public const std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;& GetCustomSettings() const  |  Get the custom settings of a label.
+public std::weak_ptr\<Label\> GetParent() const  |  Get the parent label.
+public const std::vector\<std::shared_ptr\<Label\>\>& GetChildren() const  |  Get the children labels of the current label.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings of a label.
 public ActionSource GetActionSource() const  |  Gets the action source of the label.
-public const std::vector&lt;std::string&gt;& GetContentFormats() const  |  Gets content types.
+public const std::vector\<std::string\>& GetContentFormats() const  |  Gets content types.
   
 ## Members
   
@@ -58,7 +58,7 @@ Get the color the label should be displayed.
 Get the Sensitivity of the label.
 
   
-**Returns**: A numerical value. Higher value defines higher Sensitivity.
+**Returns**: A numerical value. Higher value defines higher Sensitivity. Sub labels share the priority of their parent label so justification is never required when changing labels among them.
   
 ### GetTooltip function
 Get the tooltip description of the label.
@@ -101,10 +101,10 @@ Get the custom settings of a label.
 Gets the action source of the label.
 
   
-**Returns**: [Action](class_mip_action.md) source
+**Returns**: Action source
   
 ### GetContentFormats function
 Gets content types.
 
   
-&lt;Returns&gt;ns&gt;
+<Returns>

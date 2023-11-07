@@ -5,19 +5,19 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class ProtectionHandler::ConsumptionSettings 
-Settings used to create a [ProtectionHandler](class_mip_protectionhandler.md) to consume existing content.
+Settings used to create a ProtectionHandler to consume existing content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ConsumptionSettings(const std::vector&lt;uint8_t&gt;& serializedPublishingLicense)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
-public ConsumptionSettings(const std::vector&lt;uint8_t&gt;& serializedPreLicense, const std::vector&lt;uint8_t&gt;& serializedPublishingLicense)  |  [ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
-public ConsumptionSettings(const std::shared_ptr&lt;PublishingLicenseInfo&gt;& licenseInfo)  |  [ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
-public std::shared_ptr&lt;PublishingLicenseInfo&gt; GetPublishingLicenseInfo() const  |  Get the publishing license associated with the protected content.
+public ConsumptionSettings(const std::vector\<uint8_t\>& serializedPublishingLicense)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
+public ConsumptionSettings(const std::vector\<uint8_t\>& serializedPreLicense, const std::vector\<uint8_t\>& serializedPublishingLicense)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
+public ConsumptionSettings(const std::shared_ptr\<PublishingLicenseInfo\>& licenseInfo)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
+public std::shared_ptr\<PublishingLicenseInfo\> GetPublishingLicenseInfo() const  |  Get the publishing license associated with the protected content.
 public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
 public void SetContentName(const std::string& contentName)  |  Defines the content name to register with document tracking.
@@ -26,7 +26,7 @@ public const std::string& GetContentName() const  |  Gets the content name to re
 ## Members
   
 ### ConsumptionSettings function
-[ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
+ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
 
 Parameters:  
 * **serializedPublishingLicense**: Serialized publishing license from protected content
@@ -34,7 +34,7 @@ Parameters:
 
   
 ### ConsumptionSettings function
-[ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
+ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
 
 Parameters:  
 * **serializedPreLicense**: Serialized pre license from attached to the content. 
@@ -45,13 +45,13 @@ Parameters:
 
   
 ### ConsumptionSettings function
-[ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md) constructor for creating a new handler.
+ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
 
 Parameters:  
 * **licenseInfo**: Publishing license info from protected content
 
 
-Providing a [PublishingLicenseInfo](class_mip_publishinglicenseinfo.md) (as opposed to just a raw serialized publishing license) will remove the need for MIP SDK to parse the publishing license.
+Providing a PublishingLicenseInfo (as opposed to just a raw serialized publishing license) will remove the need for MIP SDK to parse the publishing license.
   
 ### GetPublishingLicenseInfo function
 Get the publishing license associated with the protected content.
@@ -88,4 +88,4 @@ Parameters:
 Gets the content name to register with document tracking.
 
   
-**Returns**: The content name.
+**Returns**: The content name

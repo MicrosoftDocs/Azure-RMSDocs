@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class AuthDelegate::OAuth2Token 
@@ -14,7 +14,7 @@ A class containing access token info provided by an application.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public OAuth2Token()  |  Construct a new [OAuth2Token](#class_auth_delegate_1_1_o_auth2_token) object.
+public OAuth2Token()  |  Construct a new OAuth2Token object.
 public OAuth2Token(const std::string& accessToken)  |  Construct a new OAuth2Token object from JWT access token.
 public const std::string& GetAccessToken() const  |  Get the access token string.
 public void SetAccessToken(const std::string& accessToken)  |  Set the access token string.
@@ -52,11 +52,11 @@ Parameters:
 Get the error message, if any.
 
   
-**Returns**: [Error](class_mip_error.md) message.
+**Returns**: Error message.
   
 ### SetErrorMessage function
 Set the error message.
 
 Parameters:  
-* **errorMessage**: [Error](class_mip_error.md) message.
+* **errorMessage**: Error message.
 
