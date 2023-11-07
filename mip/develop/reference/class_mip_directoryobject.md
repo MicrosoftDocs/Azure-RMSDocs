@@ -72,4 +72,5 @@ UNKNOWN            |
 INTERNAL            | Internal user - ANYONE
 USER            | individual user
 GROUP            | group object
+
 Describes the type of directory object.

@@ -16,7 +16,7 @@ ms.date: 11/07/2023
 public const std::vector\<uint8_t\>& GetBody() const  |  Get the body of the msg. if TXT/HTML formatted as utf8.
 public unsigned int GetCodePage() const  |  Get body encoding code page, relevant for txt, html body formats.
 public BodyType GetBodyType() const  |  Get body type.
-public const std::vector\<std::shared_ptr\<MsgAttachmentData\>\>& GetAttachments() const  |  Get a list of attachment as msg attachment data objects.
+public const std::vector\<std\:\:shared_ptr\<MsgAttachmentData\>\>& GetAttachments() const  |  Get a list of attachment as msg attachment data objects.
 public InspectorType GetInspectorType() const  |  Get file types,.
 public std::shared_ptr\<Stream\> GetFileStream() const  |  Get the file stream.
   

@@ -50,4 +50,5 @@ InvalidEmail            |
 UnknownTenant            | 
 NotOwner            | User needs to be owner to perform action
 NotPremiumLicenseUser            | User needs to be a premium license holder to perform action. Tracking and Revocation for example
+
 Category of no permissions error.
