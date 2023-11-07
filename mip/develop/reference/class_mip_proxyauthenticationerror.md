@@ -9,6 +9,7 @@ ms.date: 11/07/2023
 ---
 
 # class ProxyAuthenticationError 
+
 Proxy authentication failure.
   
 ## Summary
@@ -48,4 +49,5 @@ Throttled            | HTTP operation failed due to server traffic throttling
 Cancelled            | HTTP operation has been cancelled by the application
 FunctionNotImplemented            | HTTP response code indicates called function is not implemented
 ServiceUnavailable            | HTTP response code indicates service is unavailable
+
 Category of network error.

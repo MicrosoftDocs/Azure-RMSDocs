@@ -12,6 +12,7 @@ ms.date: 11/07/2023
 Abstraction for a single Microsoft Information Protection label.
   
 ## Summary
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Get the label ID.
@@ -105,6 +106,3 @@ Gets the action source of the label.
   
 ### GetContentFormats function
 Gets content types.
-
-  
-<Returns>

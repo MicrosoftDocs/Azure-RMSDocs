@@ -65,6 +65,7 @@ Gets GUID of directory object.
 **Returns**: GUID of directory object
   
 ### DirectoryObjectType enum
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 UNKNOWN            | 
