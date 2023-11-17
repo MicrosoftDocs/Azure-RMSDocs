@@ -37,6 +37,7 @@ The AIP mobile apps are *viewers only,* and do not enable you to create new emai
 - **If you are opening your file on a desktop**, use the [desktop version of the AIP Viewer](clientv2-view-use-files.md). 
 - **The AIP mobile apps support only protected files.** Unprotected files are not supported and cannot be consumed in the mobile viewer apps.
 - **[Intune's Open-In / Share filtering](/mem/intune/apps/data-transfer-between-apps-manage-ios)** features are not currently supported.
+- If an email has 2 layers of protected messages, then the AIP mobbile viewer can only open the first attached email. The second layer of attachments and beyond will fail with an error.  
 
 ## What's new for the AIP mobile viewer app
 
