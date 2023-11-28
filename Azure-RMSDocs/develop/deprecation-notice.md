@@ -23,7 +23,7 @@ ms.custom: dev
 
 ---
 
-# RMS SDK 4.2 and RMS SDK 2.1 deprecation
+# RMS SDK 4.2 and RMS SDK 2.1 deprecation notice
 
 ## RMS SDK 4.2
 *Applicable to all RMS SDK 4.2 versions*
@@ -49,7 +49,8 @@ Migration from RMS SDK 2.1 (MSIPC) to MIP SDK requires customers using Active Di
 
 Configuration of MDE is non-trivial, requiring deployment of Active Directory Federation Services (ADFS), DNS record registration both in internal and external DNS zones, and possibly proxy configurations if the endpoint is to be exposed to the public internet.
 
-Further, there’s uncertainty with AD RMS + MDE with MIP SDK around specific scenarios, including:
+Further, there's uncertainty with AD RMS + MDE with MIP SDK around specific scenarios, including:
+
 - Offline protection
 - Federated scenarios
 - FIPS support for encryption endpoints
@@ -57,5 +58,5 @@ Further, there’s uncertainty with AD RMS + MDE with MIP SDK around specific sc
 - Pre-licensing
 - Complex trust configurations
 
-Unless we can address these and ship updates for MDE, it’s likely that we may need to continue to support MSIPC for at least security updates for the near future for only AD RMS customers. 
+For AD RMS customers, MSIPC continues to be supported for the above scenarios.
 
