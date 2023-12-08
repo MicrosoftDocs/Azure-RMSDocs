@@ -31,6 +31,8 @@
       href: ./rms-client/clientv2-admin-guide-file-types.md
     - name: Unified labeling client requirements
       href: ./rms-client/reqs-ul-client.md
+    - name: Office 365 operated by 21Vianet
+      href: parity-between-azure-information-protection.md
   - name: AIP classification and protection
     href: aip-classification-and-protection.md
   - name: Azure Rights Management
