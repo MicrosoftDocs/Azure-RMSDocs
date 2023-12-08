@@ -274,7 +274,7 @@ For more information, see [Learn about the information protection scanner](/purv
 Continue with the following steps as needed:
 
 - [Run a discovery cycle and view reports for the scanner](/purview/deploy-scanner-manage#run-a-discovery-cycle-and-view-reports-for-the-scanner)
-- [Use PowerShell to configure the scanner to apply classification and protection](/purview/deploy-scanner-configure-installtabs=azure-portal-only#use-powershell-to-configure-the-scanner-to-apply-classification-and-protection)
+- [Use PowerShell to configure the scanner to apply classification and protection](/purview/deploy-scanner-configure-install?tabs=azure-portal-only#use-powershell-to-configure-the-scanner-to-apply-classification-and-protection)
 - [Use PowerShell to configure a DLP policy with the scanner](/purview/deploy-scanner-configure-install?tabs=azure-portal-only#use-powershell-to-configure-a-dlp-policy-with-the-scanner)
 
 The following table lists PowerShell cmdlets that are relevant for installing the scanner and managing your content scan jobs:
