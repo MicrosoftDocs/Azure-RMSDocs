@@ -295,4 +295,4 @@ For more information, see:
 
 - [Learn about the information protection scanner](/purview/deploy-scanner)
 - [Configuring and installing the information protection scanner](/purview/deploy-scanner-configure-install?tabs=powershell-only)
-- [Manage your content scan jobs using PowerShell only](/purview/deploy-scanner-prereqs#use-powershell-with-a-disconnected-computer).
+- [Manage your content scan jobs using PowerShell only](/purview/deploy-scanner-prereqs#use-powershell-with-a-disconnected-computer)
