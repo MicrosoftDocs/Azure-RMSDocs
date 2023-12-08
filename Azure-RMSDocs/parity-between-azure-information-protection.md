@@ -155,7 +155,7 @@ For more information, see:
 - [AIP quickstart: Deploy the AIP client](/azure/information-protection/quickstart-deploy-client)
 - [AIP administrator guide](/azure/information-protection/rms-client/clientv2-admin-guide)
 - [AIP user guide](/azure/information-protection/rms-client/clientv2-user-guide)
-- [Learn about Microsoft 365 sensitivity labels](/purview/sensitivity-labels.md)
+- [Learn about sensitivity labels](/purview/sensitivity-labels)
 
 ### Step 5: Configure AIP apps on Windows
 
@@ -173,9 +173,9 @@ AIP apps on Windows need the following registry key to point them to the correct
 
 Install the Microsoft Purview Information Protection scanner to scan your network and content shares for sensitive data, and apply classification and protection labels as configured in your organization's policy.
 
-When configuring and managing your content scan jobs, use the following procedure instead of the [Microsoft Purview compliance portal](/purview/deploy-scanner-configure-install.md) that's used by the commercial offerings.
+When configuring and managing your content scan jobs, use the following procedure instead of the [Microsoft Purview compliance portal](/purview/deploy-scanner-configure-install) that's used by the commercial offerings.
 
-For more information, see [Learn about the information protection scanner](/purview/deploy-scanner.md) and [Manage your content scan jobs using PowerShell only](/purview/deploy-scanner-prereqs.md#use-powershell-with-a-disconnected-computer).
+For more information, see [Learn about the information protection scanner](/purview/deploy-scanner) and [Manage your content scan jobs using PowerShell only](/purview/deploy-scanner-prereqs#use-powershell-with-a-disconnected-computer).
 
 **To install and configure your scanner**:
 
@@ -273,9 +273,9 @@ For more information, see [Learn about the information protection scanner](/purv
 
 Continue with the following steps as needed:
 
-- [Run a discovery cycle and view reports for the scanner](/purview/deploy-scanner-manage.md#run-a-discovery-cycle-and-view-reports-for-the-scanner)
-- [Use PowerShell to configure the scanner to apply classification and protection](/purview/deploy-scanner-configure-install.md?tabs=azure-portal-only#use-powershell-to-configure-the-scanner-to-apply-classification-and-protection)
-- [Use PowerShell to configure a DLP policy with the scanner](/purview/deploy-scanner-configure-install.md?tabs=azure-portal-only#use-powershell-to-configure-a-dlp-policy-with-the-scanner)
+- [Run a discovery cycle and view reports for the scanner](/purview/deploy-scanner-manage#run-a-discovery-cycle-and-view-reports-for-the-scanner)
+- [Use PowerShell to configure the scanner to apply classification and protection](/purview/deploy-scanner-configure-installtabs=azure-portal-only#use-powershell-to-configure-the-scanner-to-apply-classification-and-protection)
+- [Use PowerShell to configure a DLP policy with the scanner](/purview/deploy-scanner-configure-install?tabs=azure-portal-only#use-powershell-to-configure-a-dlp-policy-with-the-scanner)
 
 The following table lists PowerShell cmdlets that are relevant for installing the scanner and managing your content scan jobs:
 
@@ -293,6 +293,6 @@ The following table lists PowerShell cmdlets that are relevant for installing th
 
 For more information, see:
 
-- [Learn about the information protection scanner](/purview/deploy-scanner.md)
-- [Configuring and installing the information protection scanner](/purview/deploy-scanner-configure-install.md?tabs=powershell-only)
-- [Manage your content scan jobs using PowerShell only](/purview/deploy-scanner-prereqs.md#use-powershell-with-a-disconnected-computer).
+- [Learn about the information protection scanner](/purview/deploy-scanner)
+- [Configuring and installing the information protection scanner](/purview/deploy-scanner-configure-install?tabs=powershell-only)
+- [Manage your content scan jobs using PowerShell only](/purview/deploy-scanner-prereqs#use-powershell-with-a-disconnected-computer).
