@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure Information Protection support for Office 365 operated by 21Vianet
-description: Learn more about Azure Information Protection (AIP) for Office 365 operated by 21Vianet and how to configure it for customers in China..
+description: Learn about how to configure Azure Information Protection (AIP) for Office 365 operated by 21Vianet and how to configure it for tenants in China.
 author: libarson
 ms.author: libarson
 manager: aashishr
