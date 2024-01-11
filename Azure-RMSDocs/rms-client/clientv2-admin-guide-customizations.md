@@ -2120,17 +2120,28 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableGlobalization="True"}
 
 To turn off support again and revert to the default, set the **EnableGlobalization** advanced setting to an empty string.
 
-## Enable Data Boundary settings
+## Enable data boundary settings
 
 Following Microsoft's commitment to EU data boundary, EU customers of the Azure Information Protection unified labeling client can send their data to the EU to be stored and processed. 
 
-Turn on this feature in the AIP Client by changing this registry key that specifys the proper location that events should be sent to: 
+Turn on this feature in the AIP Client by changing this registry key that specifies the proper location that events should be sent to: 
 
 - Registry key: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\DataBoundary (DWORD)**
 - Values:
   - `Default = 0`
   - `North_America = 1`
   - `European_Union = 2`
+
+## Enable system default browser for authentication
+
+Use the system default browser for authentication in the AIP Client. By default, the AIP Client will open Microsoft Edge for authentication.
+
+Turn on this feature in the AIP Client by enabling this registry key: 
+
+- Registry key: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\MSALUseSytemDefaultBrowserAuth (DWORD)**
+- Values:
+  - `Disabled = 0`
+  - `Enabled = 1`
 
 ## Next steps
 
