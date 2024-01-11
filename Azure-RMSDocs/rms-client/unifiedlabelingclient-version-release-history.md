@@ -200,7 +200,7 @@ This version of the unified labeling client and scanner provides the following f
 - Fixed issues with handling of IQP protected files.
 - Fixed an issue with `Set-AIPFileLabel` crashes.
 - Fixed an issue with audit logging in AIP Viewer for protected PDFs.
-- Fixed an issue with co-authoring where users couldn't apply labels for certain cultures with special characters (i.e. "tr-TR").
+- Fixed an issue with coauthoring where users couldn't apply labels for certain cultures with special characters (i.e. "tr-TR").
 - Fixed an issue with super user protection for `Set-AIPFileLabel` -RemoveProtection if label wasn't published by super user.
 
 
@@ -251,11 +251,11 @@ This version of the unified labeling client and scanner provides the following f
 - Fixed an issue where a watermark was reflected correctly when a label is changed.
 - Fixed  an issue where Office apps behaved unexpectedly if the [`color`](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label) value for a label has an invalid value.
 - Fixed an issue where selecting permissions via the File Explorer **Classify and protect** option removes email addresses from the defined permissions if multiple email addresses include an apostrophe (**'**).
-- Fixed an issue where the auto-labeling custom text tooltip configured did not display as expected in case of an AsyncPolicy applied.
+- Fixed an issue where the auto-labeling custom text tooltip configured didn't display as expected in case of an AsyncPolicy applied.
 - Fixed an issue when [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) behaved unexpectedly when attaching an email to another, newly encrypted email.
 - Fixed an issue where an AIP-related error appeared after a child label is added and scoped to *Groups & Sites*.
-- Fixed an issue where the **Delete Label** icon did not appear in the Outlook classification bar when mandatory labeling is enabled across Office, [but not in Outlook](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling).
-- Fixed an issue where Excel did not close completely when both the AIP add-in and other add-ins are running.
+- Fixed an issue where the **Delete Label** icon didn't appear in the Outlook classification bar when mandatory labeling is enabled across Office, [but not in Outlook](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling).
+- Fixed an issue where Excel didn't close completely when both the AIP add-in and other add-ins are running.
 - Fixed an issue where Outlook failed to send a message with embedded images in rich-text with rules for [pop-ups in Outlook](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) configured.
 - Fixed an issue where the AIP add-in failed to load in Office apps with language related errors.
 - Fixed an issue to prevent errors from occurring when removing protection from a PST file with special characters.
@@ -274,17 +274,17 @@ Unified labeling scanner and client version 2.12.62.0
 
 This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
 
-### Built-in co-authoring support
+### Built-in coauthoring support
 
-Microsoft 365's co-authoring features are now supported directly in the main Azure Information Protection unified labeling client installation, for enabled tenants.
+Microsoft 365's coauthoring features are now supported directly in the main Azure Information Protection unified labeling client installation, for enabled tenants.
 
-Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+Coauthoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 > [!NOTE]
 > Before you start, we recommend that you review all related prerequisites and limitations. For more information, see:
 >
-> - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
-> - [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring)
+> - [Enable coauthoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
+> - [Known issues for coauthoring in AIP](../known-issues.md#known-issues-for-coauthoring)
 >
 
 ### Support for DKE labels with user-defined permissions
@@ -320,7 +320,7 @@ For more information, including licensing requirements, see:
 
 ### Fixes and improvements - version 2.12.62.0
 
-- Fixes for errors where AIP did not load if a [policy](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
+- Fixes for errors where AIP didn't load if a [policy](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) fails to parse parsing. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
 
 - Fixed possibly incorrect **method** values in [New label audit logs](../audit-logs.md#new-label-audit-logs) for Outlook events.
 
@@ -330,7 +330,7 @@ For more information, including licensing requirements, see:
 
 - Fixes for possible crashes when running PowerShell cmdlets. Fix provided by updates to the [Microsoft Information Protection (MIP) SDK](/information-protection/develop/version-release-history).
 
-- Fixed errors where [justification popup messages](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) did not appear in Outlook.
+- Fixed errors where [justification popup messages](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) didn't appear in Outlook.
 
 - Fixed errors where the [AIP add-in](clientv2-admin-guide-install.md) in Outlook caused an error message to appear, if a message file that was saved locally was opened, closed, and then opened again.
 
@@ -342,7 +342,7 @@ For more information, including licensing requirements, see:
 
 - Fixed issues where deferred messages were not be sent in Outlook when a deferral rule set is defined and the [AIP client is installed](clientv2-admin-guide-install.md).
 
-- Fixed issues where [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) did not display correctly when an image is found in the email signature.
+- Fixed issues where [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) didn't display correctly when an image is found in the email signature.
 
 - Fixed issues where [Change protection audit logs](../audit-logs.md#change-protection-audit-logs) were not sent as expected when a label is removed in Outlook.
 
