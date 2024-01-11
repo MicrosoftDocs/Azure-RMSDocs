@@ -283,7 +283,7 @@ Co-authoring for Office apps enables multiple users to edit documents that are l
 > [!NOTE]
 > Before you start, we recommend that you review all related prerequisites and limitations. For more information, see:
 >
-> - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-co-authoring) in the Microsoft 365 documentation.
+> - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
 > - [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring)
 >
 
