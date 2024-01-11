@@ -44,7 +44,8 @@ The lifecycle of each generally available (GA) version of the Azure Information 
 
 |Client version|Date released|Supported through|
 |--------------|-------------|-------------|
-|2.16.79.0|10/25/2023|4/11/2024|
+|2.17.66.0|01/11/2024|04/11/2024|
+|2.16.79.0|10/25/2023|04/11/2024|
 |2.16.73.0|05/23/2023|04/11/2024|
 |2.15.33.0|02/17/2023|02/17/2024|
 |2.14.90.0|09/01/2022|Deprecated|
@@ -87,6 +88,22 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 > Minor fixes aren't always listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
 >
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
+
+## Version 2.17.66.0
+
+Unified labeling scanner and client version 2.17.66.0
+
+**Supported through** 04/11/2024
+
+**Released** 01/11/2024
+
+### Fixes and improvements
+
+This version of the unified labeling client and scanner provides the following fixes and improvements:
+
+- Fixed accessibility bugs.
+- Added support to use the default browser for authentication. To enable the authentication setting, configure this [registry key](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-system-default-browser-for-authentication).
+- Updated to [MIP SDK 1.14.82](/information-protection/develop/version-release-history#version-114108).
 
 ## Version 2.16.79.0
 
