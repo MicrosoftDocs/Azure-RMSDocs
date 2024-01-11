@@ -55,7 +55,9 @@ Refer to [Quickstart: List labels](quick-file-list-labels-cpp.md) for informatio
 
 ## Changing Default Attachment Handling Behaviors
 
-By default, the File SDK attempts to process all attachments that are part of an MSG file, or a message.rpmsg file when using the inspection APIs. It doesn't recursively decrypt attachments that are part of MSG files attached to the root MSG. These behaviors can be problematic if attachments are password protected or if the user or service trying to decrypt doesn't have access.
+By default, the File SDK attempts to process all attachments that are part of an MSG file, or a message.rpmsg file when using the inspection APIs. It doesn't recursively decrypt attachments that are part of MSG files attached to the root MSG.  Modification of the default handling behavior is not supported at this time.
+<!--
+These behaviors can be problematic if attachments are password protected or if the user or service trying to decrypt doesn't have access.
 
 To modify this behavior, another custom setting is available called `container_decryption_option`. In C++, this is exposed via an enum, `mip::ContainerDecryptionOption`.
 
@@ -80,7 +82,7 @@ customSettings.emplace_back(mip::GetCustomSettingContainerDecryptionOption(),
         mip::ContainerDecryptionOptionString(mip::ContainerDecryptionOption::Top));
 egineSettings.SetCustomSettings(customSettings);
 ```
-
+-->
 ## File SDK operations for .rpmsg files
 
 MIP SDK exposes an inspection function that can decrypt the embedded **message.rpmsg** file and present a set of byte streams as output. It's up to the SDK consumer to extract the *message.rpmsg* file and pass it to the inspection API. Variations of this file name exist for Office Message Encryption scenarios and the API will also accept message_v2, v3, or v4 files. 
