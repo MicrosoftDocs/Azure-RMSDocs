@@ -200,7 +200,7 @@ This version of the unified labeling client and scanner provides the following f
 - Fixed issues with handling of IQP protected files.
 - Fixed an issue with `Set-AIPFileLabel` crashes.
 - Fixed an issue with audit logging in AIP Viewer for protected PDFs.
-- Fixed an issue with coauthoring where users couldn't apply labels for certain cultures with special characters (i.e. "tr-TR").
+- Fixed an issue with co-authoring where users couldn't apply labels for certain cultures with special characters (i.e. "tr-TR").
 - Fixed an issue with super user protection for `Set-AIPFileLabel` -RemoveProtection if label wasn't published by super user.
 
 
@@ -274,17 +274,17 @@ Unified labeling scanner and client version 2.12.62.0
 
 This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
 
-### Built-in coauthoring support
+### Built-in co-authoring support
 
-Microsoft 365's coauthoring features are now supported directly in the main Azure Information Protection unified labeling client installation, for enabled tenants.
+Microsoft 365's co-authoring features are now supported directly in the main Azure Information Protection unified labeling client installation, for enabled tenants.
 
-Coauthoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+Co-authoring for Office apps enables multiple users to edit documents that are labeled and encrypted by [sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 > [!NOTE]
 > Before you start, we recommend that you review all related prerequisites and limitations. For more information, see:
 >
-> - [Enable coauthoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-coauthoring) in the Microsoft 365 documentation.
-> - [Known issues for coauthoring in AIP](../known-issues.md#known-issues-for-coauthoring)
+> - [Enable co-authoring for files encrypted with sensitivity labels](/microsoft-365/compliance/sensitivity-labels-co-authoring) in the Microsoft 365 documentation.
+> - [Known issues for co-authoring in AIP](../known-issues.md#known-issues-for-co-authoring)
 >
 
 ### Support for DKE labels with user-defined permissions
