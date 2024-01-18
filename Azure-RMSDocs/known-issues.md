@@ -92,7 +92,13 @@ By adding this registry key, the Scanner will authenticate using ADAL instead.
 
 ## Known issues AIP Scanner
 
-Scanning of .msg files with signed PDF files is currently not supported.
+- Scanning of .msg files with signed PDF files is currently not supported.
+
+- repositories containing hidden share folders (folders with '$' sign) are not supported.
+
+- Sensitive Information Types (SIT) that are Trainable Classifiers and EDM (Exact Data Match) classifiers.
+
+- Password protected files.
 
 ## AIP known issues in Office applications
 
