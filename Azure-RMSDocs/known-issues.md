@@ -94,8 +94,6 @@ By adding this registry key, the Scanner authenticates using ADAL instead.
 
 - Scanning of .msg files with signed PDF files is currently not supported.
 
-- Repositories containing hidden share folders (folders with '$' sign) aren't supported.
-
 - Sensitive Information Types (SIT) that are Trainable Classifiers and EDM (Exact Data Match) classifiers.
 
 - Password protected files.
