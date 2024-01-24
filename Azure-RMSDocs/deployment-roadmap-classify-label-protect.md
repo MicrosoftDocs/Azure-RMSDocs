@@ -20,8 +20,7 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: admin
-
+ms.custom: admin, has-azure-ad-ps-ref
 ---
 
 # AIP deployment roadmap for classification, labeling, and protection
@@ -70,7 +69,7 @@ Then, assign licenses from this subscription to each user in your organization w
 > 
 ## Prepare your tenant to use Azure Information Protection
 
-Before you begin using Azure Information Protection, make sure that you have user accounts and groups in Microsoft 365 or Azure Active Directory that AIP can use to authenticate and authorize your users.
+Before you begin using Azure Information Protection, make sure that you have user accounts and groups in Microsoft 365 or Microsoft Entra ID that AIP can use to authenticate and authorize your users.
 
 If necessary, create these accounts and groups, or synchronize them from your on-premises directory. 
 

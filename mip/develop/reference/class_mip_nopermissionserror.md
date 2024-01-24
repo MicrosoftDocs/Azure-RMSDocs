@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class NoPermissionsError 
@@ -50,4 +50,5 @@ InvalidEmail            |
 UnknownTenant            | 
 NotOwner            | User needs to be owner to perform action
 NotPremiumLicenseUser            | User needs to be a premium license holder to perform action. Tracking and Revocation for example
+
 Category of no permissions error.

@@ -21,7 +21,6 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-
 ---
 
 # Frequently asked questions for Azure Information Protection (AIP)
@@ -92,7 +91,7 @@ To understand more about AIP subscriptions, see:
 
 ## Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?
 
-Global administrators for a Microsoft 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure Information Protection.
+Global administrators for a Microsoft 365 tenant or Microsoft Entra tenant can obviously run all administrative tasks for Azure Information Protection.
 
 However, if you want to assign administrative permissions to other users, do so using the following roles:
 
@@ -112,7 +111,7 @@ Additionally, note the following when managing administrative tasks and roles:
 
 ### Azure Information Protection administrator
 
-This Azure Active Directory administrator role lets an administrator configure Azure Information Protection but not other services.
+This Microsoft Entra administrator role lets an administrator configure Azure Information Protection but not other services.
 
 Administrators with this role can:
 
@@ -121,23 +120,23 @@ Administrators with this role can:
 - Configure the Azure Information Protection policy
 - Run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/clientv2-admin-guide-powershell.md) and from the [AIPService module](administer-powershell.md)
 
-To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
+To assign a user to this administrative role, see [Assign a user to administrator roles in Microsoft Entra ID](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
 > [!NOTE]
 > This role is not supported in the Azure portal if your tenant is on the [unified labeling platform](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
 
 ### Compliance administrator or Compliance data administrator
 
-These Azure Active Directory administrator roles enable administrators to:
+These Microsoft Entra administrator roles enable administrators to:
 
 - Configure Azure Information Protection, including activating and deactivating the Azure Rights Management protection service
 - Configure protection settings and labels
 - Configure the Azure Information Protection policy
 - Run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/clientv2-admin-guide-powershell.md) and from the [AIPService module](administer-powershell.md).
 
-To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
+To assign a user to this administrative role, see [Assign a user to administrator roles in Microsoft Entra ID](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
-To see what other permissions a user with these roles have, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Azure Active Directory documentation.
+To see what other permissions a user with these roles have, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Microsoft Entra documentation.
 
 > [!NOTE]
 > These roles don't support [tracking and revoking](rms-client/track-and-revoke-admin.md) documents for users.
@@ -145,13 +144,13 @@ To see what other permissions a user with these roles have, see the [Available r
 
 ### Security administrator
 
-This Azure Active Directory administrator role enables administrators to configure Azure Information Protection in the Azure portal and some aspects of other Azure services.
+This Microsoft Entra administrator role enables administrators to configure Azure Information Protection in the Azure portal and some aspects of other Azure services.
 
 Administrators with this role cannot run any of the [PowerShell cmdlets from the AIPService module](administer-powershell.md), or [track and revoke](rms-client/track-and-revoke-admin.md) documents for users.
 
-To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
+To assign a user to this administrative role, see [Assign a user to administrator roles in Microsoft Entra ID](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
-To see what other permissions a user with this role has, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Azure Active Directory documentation.
+To see what other permissions a user with this role has, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Microsoft Entra documentation.
 
 ### Azure Rights Management Global Administrator and Connector Administrator
 
@@ -170,7 +169,7 @@ Yes. Although Azure Information Protection is a cloud-based solution, it can cla
 If you have Exchange Server, SharePoint Server, and Windows file servers, use one or both of the following methods:
 
 - Deploy the [Rights Management connector](deploy-rms-connector.md) so that these on-premises servers can use the Azure Rights Management service to protect your emails and documents
-- Synchronize and federate your Active Directory domain controllers with Azure AD for a more seamless authentication experience for users. For example, use [Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect).
+- Synchronize and federate your Active Directory domain controllers with Microsoft Entra ID for a more seamless authentication experience for users. For example, use [Microsoft Entra Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect).
 
 The Azure Rights Management service automatically generates and manages XrML certificates as required, so it doesn't use an on-premises PKI.
 
@@ -189,13 +188,14 @@ For more information, see the full list [file types supported](./rms-client/clie
 > [!TIP]
 > Power BI supports classification by using sensitivity labels and can apply protection from those labels to data that is exported to the following file formats: .pdf, .xls, and .ppt. For more information, see [Data protection in Power BI](/power-bi/admin/service-security-data-protection-overview).
 >
+
 ## I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?
 
-Yes, as a preview offering, you can configure Azure AD conditional access for Azure Information Protection.
+Yes, as a preview offering, you can configure Microsoft Entra Conditional Access for Azure Information Protection.
 
 When a user opens a document that is protected by Azure Information Protection, administrators can now block or grant access to users in their tenant, based on the standard conditional access controls. Requiring multi-factor authentication (MFA) is one of the most commonly requested conditions. Another one is that devices must be [compliant with your Intune policies](/intune/protect/conditional-access-intune-common-ways-use) so that, for example, mobile devices meet your password requirements and a minimum operating system version, and computers must be domain-joined.
 
-For more information and some walk-through examples, see the following blog post: [Conditional Access policies for Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/17/conditional-access-policies-for-azure-information-protection/).
+For more information and some walk-through examples, see the following blog post: [Conditional Access policies and encrypted documents](/purview/encryption-azure-ad-configuration?view=o365-worldwide).
 
 Additional information:
 
@@ -203,9 +203,9 @@ Additional information:
 |---------|---------|
 |**Evaluation frequency**    | For Windows computers, and the current preview release, the conditional access policies for Azure Information Protection are evaluated when the [user environment is initialized](./how-does-it-work.md#initializing-the-user-environment) (this process is also known as bootstrapping), and then every 30 days.<br /><br />To fine-tune how often your conditional access policies get evaluated, [configure the token lifetime](/azure/active-directory/active-directory-configurable-token-lifetimes).       |
 |**Administrator accounts**     |We recommend that you do not add administrator accounts to your conditional access policies because these accounts will not be able to access the Azure Information Protection pane in the Azure portal.         |
-|**MFA and B2B collaboration**     | If you use MFA in your conditional access policies for collaborating with other organizations (B2B), you must use [Azure AD B2B collaboration](/azure/active-directory/b2b/what-is-b2b) and create guest accounts for the users you want to share with in the other organization.        |
-|**Terms of Use prompts**     |  With the Azure AD December 2018 preview release, you can now [prompt users to accept a terms of use](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822) before they open a protected document for the first time.       |
-|**Cloud apps**     |  If you use many cloud apps for conditional access, you might not see **Microsoft Azure Information Protection** displayed in the list to select. <br /><br />In this case, use the search box at the top of the list. Start typing "Microsoft Azure Information Protection" to filter the available apps. Providing you have a supported subscription, you'll then see **Microsoft Azure Information Protection** to select.        |
+|**MFA and B2B collaboration**     |If you use MFA in your conditional access policies for collaborating with other organizations (B2B), you must use [Microsoft Entra B2B collaboration](/azure/active-directory/b2b/what-is-b2b) and create guest accounts for the users you want to share with in the other organization.        |
+|**Terms of Use prompts**     |With the Microsoft Entra December 2018 preview release, you can now [prompt users to accept a terms of use](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822) before they open a protected document for the first time.       |
+|**Cloud apps**     |If you use many cloud apps for conditional access, you might not see **Microsoft Information Protection Sync Service** and **Microsoft Rights Management Service** displayed in the list to select. <br /><br />In this case, use the search box at the top of the list. Start typing "Microsoft Information Protection Sync Service" and "Microsoft Rights Management Service" to filter the available apps. Providing you have a supported subscription; you'll then see these option and will be able to select them. |
 
 > [!NOTE]
 > The Azure Information Protection support for conditional access is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
@@ -237,3 +237,5 @@ First, review the frequently asked questions listed below, which are specific to
 - [FAQs for data protection](faqs-rms.md)
 
 If your question isn't answered, see the links and resources listed in [Information and support for Azure Information Protection](information-support.md).
+
+

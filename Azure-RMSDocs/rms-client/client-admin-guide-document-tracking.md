@@ -30,6 +30,8 @@ ms.custom: admin
 
 > [!NOTE]
 > The legacy Azure Information Protection doc tracking site is supported only for the classic client, and not for the unified labeling client. For more information, see [Removed and retired services](../removed-sunset-services.md#the-aip-classic-client).
+> 
+> For the latest guidance, see [Track and revoke document access](/purview/track-and-revoke-admin).
 
 
 If you have a subscription that supports document tracking, the document tracking site is enabled by default for all users in your organization. Document tracking provides information for users and administrators about when a protected document was accessed and if necessary, a tracked document can be revoked.
@@ -48,7 +50,7 @@ This cmdlet disables access to the document tracking site so that all users in y
 
 When the document tracking site is enabled, by default, it shows information such as the email addresses of the people who attempted to access the protected documents, when these people tried to access them, and their location. This level of information can be helpful to determine how the shared documents are used and whether they should be revoked if suspicious activity is seen. However, for privacy reasons, you might need to disable this user information for some or all users. 
 
-If you have users who should not have this activity tracked by other users, add them to a group that is stored in Azure AD, and specify this group with the [Set-AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/Set-AipServiceDoNotTrackUserGroup) cmdlet. When you run this cmdlet, you must specify a single group. However, the group can contain nested groups. 
+If you have users who should not have this activity tracked by other users, add them to a group that is stored in Microsoft Entra ID, and specify this group with the [Set-AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/Set-AipServiceDoNotTrackUserGroup) cmdlet. When you run this cmdlet, you must specify a single group. However, the group can contain nested groups. 
 
 For these group members, users cannot see any activity on the document tracking site when that activity is related to documents that they shared with them. In addition, no email notifications are sent to the user who shared the document.
 
@@ -85,7 +87,7 @@ These URLs are standard for the Azure Rights Management service, with the except
 
 ## Tracking and revoking documents for users
 
-When users sign in to the document tracking site, they can track and revoke documents that they have protected by using the Azure Information Protection client. When you sign in as an Azure AD global administrator for your tenant, you can click the Admin icon, which switches to Administrator mode. Other administrator roles do not support this mode for the document tracking site. 
+When users sign in to the document tracking site, they can track and revoke documents that they have protected by using the Azure Information Protection client. When you sign in as a Microsoft Entra Global Administrator for your tenant, you can click the Admin icon, which switches to Administrator mode. Other administrator roles do not support this mode for the document tracking site. 
 
 ![Admin icon in the document tracking site](../media/tracking-site-admin-icon.png)
 

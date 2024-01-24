@@ -22,7 +22,6 @@ ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
-
 ---
 
 # Azure Information Protection requirements
@@ -32,7 +31,7 @@ ms.custom: admin
 Before deploying Azure Information Protection, ensure that your system meets the following prerequisites:
 
 - [Subscription for Azure Information Protection](#subscription-for-azure-information-protection)
-- [Azure Active Directory](#azure-active-directory)
+- [Microsoft Entra ID](#azure-active-directory)
 - [Client devices](#client-devices)
 - [Applications](#applications)
 - [Firewalls and network infrastructure](#firewalls-and-network-infrastructure)
@@ -48,11 +47,13 @@ You must have an **Azure Information Protection plan** for classification, label
 
 If your question is not answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
 
-## Azure Active Directory
+<a name='azure-active-directory'></a>
 
-To support authentication and authorization for Azure Information Protection, you must have an Azure Active Directory (AD). To use user accounts from your on-premises directory (AD DS), you must also configure directory integration.
+## Microsoft Entra ID
 
-- **Single sign-on (SSO)** is supported for Azure Information Protection so that users are not repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor for how to configure it for Azure AD. WS-Trust is a common requirement for these solutions to support single sign-on.
+To support authentication and authorization for Azure Information Protection, you must have a Microsoft Entra ID. To use user accounts from your on-premises directory (AD DS), you must also configure directory integration.
+
+- **Single sign-on (SSO)** is supported for Azure Information Protection so that users are not repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor for how to configure it for Microsoft Entra ID. WS-Trust is a common requirement for these solutions to support single sign-on.
 
 - **Multi-factor authentication (MFA)** is supported with Azure Information Protection when you have the required client software and have correctly configured the MFA-supporting infrastructure.
 
@@ -62,9 +63,9 @@ Additional prerequisites are required for specific scenarios, such as when using
 
 For more information, see:
 
-- [Additional Azure AD requirements for Azure Information Protection](requirements-azure-ad.md).
-- [What is Azure AD Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
-- [Integrate on-premises Active Directory domains with Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
+- [Additional Microsoft Entra requirements for Azure Information Protection](requirements-azure-ad.md).
+- [What is Microsoft Entra Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
+- [Integrate on-premises Active Directory domains with Microsoft Entra ID](/azure/architecture/reference-architectures/identity/azure-ad).
 
 ## Client devices
 
@@ -83,11 +84,6 @@ The Azure Information Protection clients for Windows are supported are the follo
 - **Windows 11**
 
 - **Windows 10** (x86, x64). Handwriting is not supported in the Windows 10 RS4 build and later.
- 
-- **Windows 8.1** (x86, x64)
-
-- **Windows 8** (x86, x64)
-
 - **Windows Server 2019**
 
 - **Windows Server 2016**
@@ -148,6 +144,8 @@ The Azure Information Protection clients can label and protect documents and ema
 Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only, and labels that apply protection are not displayed for users. 
 
 Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client.
+
+- PDF files that are version 1.4 and lower will be automatically upgraded to version 1.5 when the AIP Client labels the file. 
 
 For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
 
@@ -253,7 +251,7 @@ The following on-premises servers are supported with Azure Information Protectio
 
 This connector acts as a communications interface, and relays between on-premises servers and the Azure Rights Management service, which is used by Azure Information Protection to protect Office documents and emails. 
 
-To use this connector, you must configure directory synchronization between your Active Directory forests and Azure Active Directory.
+To use this connector, you must configure directory synchronization between your Active Directory forests and Microsoft Entra ID.
 
 Supported servers include:
 
@@ -271,7 +269,7 @@ The following operating systems support the Azure Rights Management service, whi
 
 |OS  |Supported versions  |
 |---------|---------|
-|**Windows computers**     |- Windows 8 (x86, x64) </br>- Windows 8.1 (x86, x64) </br>- Windows 10 (x86, x64)       | 
+|**Windows computers**     |- Windows 10 (x86, x64) </br>- Windows 11 (x86, x64)       |
 |**macOS**     |   Minimum version of macOS 10.8 (Mountain Lion)     |
 |**Android phones and tablets**     | Minimum version of Android 6.0        |
 |**iPhone and iPad**     | Minimum version of iOS 11.0        |
@@ -280,6 +278,11 @@ The following operating systems support the Azure Rights Management service, whi
 For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md). 
 
 
+
+
+
 ## Next steps
 
 Once you've reviewed all AIP requirements and confirmed that your system complies, continue with [Preparing users and groups for Azure Information Protection](prepare.md).
+
+

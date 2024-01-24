@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class StorageDelegate::StorageSettings 
-Settings used by [StorageDelegate](class_mip_storagedelegate.md).
+Settings used by StorageDelegate.
   
 ## Summary
  Members                        | Descriptions                                

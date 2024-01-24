@@ -85,9 +85,10 @@ The following table maps RMS-related cmdlets with the updated cmdlets used for u
 |[Get-RMSServerAuthentication](/powershell/module/azureinformationprotection/get-rmsserverauthentication)      |   [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)       |
 |[Clear-RMSAuthentication](/powershell/module/azureinformationprotection/clear-rmsauthentication)     | [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)       |
 |[Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication)     |  [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)      |
-|[Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate)     |       Not relevant for unified labeling  |
-|[New-RMSProtectionLicense](/powershell/module/azureinformationprotection/new-rmsprotectionlicense)     |  [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/new-aipcustompermissions), and [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), with the **CustomPermissions** parameter      |
-|[Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), with the **RemoveProtection** parameter |
+|[Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate)     |       Not relevant for unified labeling.  |
+|[New-RMSProtectionLicense](/powershell/module/azureinformationprotection/new-rmsprotectionlicense)     |  [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/new-aipcustompermissions), and [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), with the **CustomPermissions** parameter.      |
+|[Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) |
+|[Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) | [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), with the **RemoveProtection** parameter. |
 
 ## How to label files non-interactively for Azure Information Protection
 
@@ -96,11 +97,11 @@ By default, when you run the cmdlets for labeling, the commands run in your own 
 For more information, see:
 
 - [Prerequisites for running AIP labeling cmdlets unattended](#prerequisites-for-running-aip-labeling-cmdlets-unattended)
-- [Create and configure Azure AD applications for Set-AIPAuthentication](#create-and-configure-azure-ad-applications-for-set-aipauthentication)
+- [Create and configure Microsoft Entra applications for Set-AIPAuthentication](#create-and-configure-azure-ad-applications-for-set-aipauthentication)
 - [Running the Set-AIPAuthentication cmdlet](#running-the-set-aipauthentication-cmdlet)
 
 > [!NOTE]
-> If the computer cannot have internet access, there's no need to create the app in Azure AD and run the **Set-AIPAuthentication** cmdlet. Instead, follow the instructions for [disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
+> If the computer cannot have internet access, there's no need to create the app in Microsoft Entra ID and run the **Set-AIPAuthentication** cmdlet. Instead, follow the instructions for [disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
 
 ### Prerequisites for running AIP labeling cmdlets unattended
 
@@ -108,7 +109,7 @@ To run Azure Information Protection labeling cmdlets unattended, use the followi
 
 - **A Windows account** that can sign in interactively.
 
-- **An Azure AD account**, for delegated access. For ease of administration, use a single account that's synchronized from Active Directory to Azure AD.
+- **a Microsoft Entra account**, for delegated access. For ease of administration, use a single account that's synchronized from Active Directory to Microsoft Entra ID.
 
     For the delegated user account:
 
@@ -118,23 +119,25 @@ To run Azure Information Protection labeling cmdlets unattended, use the followi
     |**Decrypting content**     |    If this account needs to decrypt content, for example, to reprotect files and inspect files that others have protected, make it a [super user](../configure-super-users.md) for Azure Information Protection and make sure the super user feature is enabled.     |
     |**Onboarding controls**     |    If you have implemented [onboarding controls](../activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) for a phased deployment, make sure that this account is included in your onboarding controls you've configured.     |
 
-- **An Azure AD access token**, which sets and stores credentials for the delegated user to authenticate to Azure Information Protection. When the token in Azure AD expires, you must run the cmdlet again to acquire a new token. 
+- **a Microsoft Entra access token**, which sets and stores credentials for the delegated user to authenticate to Azure Information Protection. When the token in Microsoft Entra ID expires, you must run the cmdlet again to acquire a new token. 
 
-    The parameters for **Set-AIPAuthentication** use values from an app registration process in Azure AD. For more information, see [Create and configure Azure AD applications for Set-AIPAuthentication](#create-and-configure-azure-ad-applications-for-set-aipauthentication).
+    The parameters for **Set-AIPAuthentication** use values from an app registration process in Microsoft Entra ID. For more information, see [Create and configure Microsoft Entra applications for Set-AIPAuthentication](#create-and-configure-azure-ad-applications-for-set-aipauthentication).
 
 Run the labeling cmdlets non-interactively by first running the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet.
 
 The computer running the **AIPAuthentication** cmdlet downloads the labeling policy that's assigned to your delegated user account in the Microsoft Purview compliance portal.
 
-### Create and configure Azure AD applications for Set-AIPAuthentication
+<a name='create-and-configure-azure-ad-applications-for-set-aipauthentication'></a>
+
+### Create and configure Microsoft Entra applications for Set-AIPAuthentication
 
 The **Set-AIPAuthentication** cmdlet requires an app registration for the *AppId* and *AppSecret* parameters. 
 
 **To create a new app registration for the unified labeling client Set-AIPAuthentication cmdlet**:
 
-1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/) to the Azure AD tenant that you use with Azure Information Protection.
+1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/) to the Microsoft Entra tenant that you use with Azure Information Protection.
 
-1. Navigate to **Azure Active Directory** > **Manage** > **App registrations**, and select **New registration**. 
+1. Navigate to **Microsoft Entra ID** > **Manage** > **App registrations**, and select **New registration**. 
 
 1. On the **Register an application** pane, specify the following values, and then click **Register**:
 
@@ -196,12 +199,12 @@ The **Set-AIPAuthentication** cmdlet requires an app registration for the *AppId
     
     Your API permissions should look like the following image:
 
-    :::image type="content" source="../media/api-permissions-app.png" alt-text="API permissions for the registered app in Azure AD":::
+    :::image type="content" source="../media/api-permissions-app.png" alt-text="API permissions for the registered app in Microsoft Entra ID":::
 
 Now you've completed the registration of this app with a secret, you're ready to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *AppId*, and *AppSecret*. Additionally, you'll need your tenant ID. 
 
 > [!TIP]
->You can quickly copy your tenant ID by using Azure portal: **Azure Active Directory** > **Manage** > **Properties** > **Directory ID**.
+>You can quickly copy your tenant ID by using Azure portal: **Microsoft Entra ID** > **Manage** > **Properties** > **Directory ID**.
 
 ### Running the Set-AIPAuthentication cmdlet
 
@@ -217,7 +220,7 @@ Now you've completed the registration of this app with a secret, you're ready to
 
 1. Run the **Set-AIPAuthentication** cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you created. 
 
-    Also specify your app registration values, your tenant ID, and the name of the delegated user account in Azure AD. For example:
+    Also specify your app registration values, your tenant ID, and the name of the delegated user account in Microsoft Entra ID. For example:
     
     ```PowerShell
     Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds

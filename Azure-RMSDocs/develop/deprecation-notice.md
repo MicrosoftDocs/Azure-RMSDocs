@@ -23,34 +23,40 @@ ms.custom: dev
 
 ---
 
-# RMS SDK 4.2 Deprecation Notice 
+# RMS SDK 4.2 and RMS SDK 2.1 deprecation notice
 
-*Applicable to all RMS SDK 4.2 versions release before March 2020*
+## RMS SDK 4.2
+*Applicable to all RMS SDK 4.2 versions*
 
-On March 3, 2020, an update to the RMS SDK 4.2 for Android, iOS, and OSX was released via Microsoft Download Center. This update is mandatory for all applications that use these RMS SDK platforms today.  
+Applications that use RMS SDK 4.2 to interact with the Azure Rights Management Service, Active Directory Rights Management Service, or Microsoft Purview Information Protection protection-enabled labels must migrate to the Microsoft Information Protection SDK. 
 
-As of January 2021, versions of the RMS SDK released prior to March of 2020 will fail to connect to the Azure Rights Management Service endpoint. Applications not yet updated will fail to establish a TLS connection with the Azure Rights Management Service. 
+Microsoft support and development for RMS SDK 4.2, including security fixes, ends on November 28th, 2024.
 
-## Reason for Change 
+There are no RMS SDK 4.2 feature releases or new platform version releases planned prior to the deprecation date.
 
-Previous versions of the RMS SDK use certificate pinning to ensure that the RMS-enabled client is communicating with the RMS service, receiving a certificate chained to a specific, expected root CA.  
+## RMS SDK 2.1
+*Applicable to all RMS SDK 2.1 versions*
 
-Modern browsers use certificate transparency logs to verify that certificates have been issued to legitimate domain owners and that those certificates are issued by trusted root certification authorities.  
+Applications that use RMS SDK 2.1 to interact with the Azure Rights Management Service or Microsoft Purview Information Protection protection-enabled labels must migrate to the Microsoft Information Protection SDK.
 
-To better support modern browsers, on December 1, 2020, Microsoft will update the certificate for `https://api.aadrm.com` to a new certificate issued by a globally trusted root CA that reports issued certificates to certificate transparency logs trusted by modern browsers. Once this change is complete, legacy versions of RMS SDK attempting to perform certificate pinning to the expected root certificate will fail to find that certificate and will fail to connect.  
+Microsoft support and development for RMS SDK 2.1, including security fixes, ends on November 28th, 2024.
 
-## Client Impact 
+There are no RMS SDK 2.1 feature releases or new platform version releases planned prior to the deprecation date.
 
-The following Microsoft applications use the RMS SDKs today. Updates have been made available for these platforms and devices should be updated prior to the December deadline. 
+### AD RMS Guidance and Requirements
 
-- Office Pro Plus/2019 for Mac version 16.40 or later.
-- Office 2016 for Mac version 16.16.27 or later.
-- Word, Excel, and PowerPoint for iOS version 2.40.20071600 or later.
-- Word, Excel, and PowerPoint for Android version 16.0.12827.20140 or later.
+Migration from RMS SDK 2.1 (MSIPC) to MIP SDK requires customers using Active Directory Rights Management Service (AD RMS) to deploy Mobile Device Extensions (MDE) for AD RMS. With this feature, MIP SDK is able to communicate with AD RMS.
 
-Resources 
+Configuration of MDE is non-trivial, requiring deployment of Active Directory Federation Services (ADFS), DNS record registration both in internal and external DNS zones, and possibly proxy configurations if the endpoint is to be exposed to the public internet.
 
-- Android: https://www.microsoft.com/download/details.aspx?id=43673
-- iOS: https://www.microsoft.com/download/details.aspx?id=43674 
-- macOS: https://www.microsoft.com/download/details.aspx?id=43675 
-- Linux: https://azuread.github.io/rms-sdk-for-cpp/annotated.html
+Further, there's uncertainty with AD RMS + MDE with MIP SDK around specific scenarios, including:
+
+- Offline protection
+- Federated scenarios
+- FIPS support for encryption endpoints
+- User cert bootstrapping
+- Pre-licensing
+- Complex trust configurations
+
+For AD RMS customers, MSIPC continues to be supported for the above scenarios.
+

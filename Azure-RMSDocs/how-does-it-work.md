@@ -97,15 +97,15 @@ Before a user can protect content or consume protected content on a Windows comp
 
 ![RMS Client activation flow - step 1, authenticating the client](./media/AzRMS.png)
 
-**What's happening in step 1**: The RMS client on the computer first connects to the Azure Rights Management service, and authenticates the user by using their Azure Active Directory account.
+**What's happening in step 1**: The RMS client on the computer first connects to the Azure Rights Management service, and authenticates the user by using their Microsoft Entra account.
 
-When the user’s account is federated with Azure Active Directory, this authentication is automatic and the user is not prompted for credentials.
+When the user’s account is federated with Microsoft Entra ID, this authentication is automatic and the user is not prompted for credentials.
 
 ![RMS Client activation - step 2, certificates are downloaded to the client](./media/AzRMS_useractivation2.png)
 
 **What's happening in step 2**: After the user is authenticated, the connection is automatically redirected to the organization’s Azure Information Protection tenant, which issues certificates that let the user authenticate to the Azure Rights Management service in order to consume protected content and to protect content offline.
 
-One of these certificates is the rights account certificate, often abbreviated to RAC. This certificate authenticates the user to Azure Active Directory and is valid for 31 days. The certificate is automatically renewed by the RMS client, providing the user account is still in Azure Active Directory and the account is enabled. This certificate is not configurable by an administrator. 
+One of these certificates is the rights account certificate, often abbreviated to RAC. This certificate authenticates the user to Microsoft Entra ID and is valid for 31 days. The certificate is automatically renewed by the RMS client, providing the user account is still in Microsoft Entra ID and the account is enabled. This certificate is not configurable by an administrator. 
 
 A copy of this certificate is stored in Azure so that if the user moves to another device, the certificates are created by using the same keys.
 
@@ -120,7 +120,7 @@ When a user protects a document, the RMS client takes the following actions on a
 
 **What's happening in step 2**: The RMS client then creates a certificate that includes a policy for the document that includes the [usage rights](configure-usage-rights.md) for users or groups, and other restrictions, such as an expiration date. These settings can be defined in a template that an administrator previously configured, or specified at the time the content is protected (sometimes referred to as an "ad hoc policy").   
 
-The main Azure AD attribute used to identify the selected users and groups is the Azure AD ProxyAddresses attribute, which stores all the email addresses for a user or group. However, if a user account doesn't have any values in the AD ProxyAddresses attribute, the user's UserPrincipalName value is used instead.
+The main Microsoft Entra attribute used to identify the selected users and groups is the Microsoft Entra ProxyAddresses attribute, which stores all the email addresses for a user or group. However, if a user account doesn't have any values in the AD ProxyAddresses attribute, the user's UserPrincipalName value is used instead.
 
 The RMS client then uses the organization’s key that was obtained when the user environment was initialized and uses this key to encrypt the policy and the symmetric content key. The RMS client also signs the policy with the user’s certificate that was obtained when the user environment was initialized.
 
@@ -135,7 +135,7 @@ When a user wants to consume a protected document, the RMS client starts by requ
 
 ![RMS document consumption - step 1, user is authenticated and gets the list of rights](./media/AzRMS_documentconsumption1.png)
 
-**What's happening in step 1**: The authenticated user sends the document policy and the user’s certificates to the Azure Rights Management service. The service decrypts and evaluates the policy, and builds a list of rights (if any) the user has for the document. To identify the user, the Azure AD ProxyAddresses attribute is used for the user's account and groups to which the user is a member. For performance reasons, group membership is [cached](prepare.md#group-membership-caching-by-azure-information-protection). If the user account has no values for the Azure AD ProxyAddresses attribute, the value in the Azure AD UserPrincipalName is used instead.
+**What's happening in step 1**: The authenticated user sends the document policy and the user’s certificates to the Azure Rights Management service. The service decrypts and evaluates the policy, and builds a list of rights (if any) the user has for the document. To identify the user, the Microsoft Entra ProxyAddresses attribute is used for the user's account and groups to which the user is a member. For performance reasons, group membership is [cached](prepare.md#group-membership-caching-by-azure-information-protection). If the user account has no values for the Microsoft Entra ProxyAddresses attribute, the value in the Microsoft Entra UserPrincipalName is used instead.
 
 ![RMS document consumption - step 2, use license is returned to the client](./media/AzRMS_documentconsumption2.png)
 

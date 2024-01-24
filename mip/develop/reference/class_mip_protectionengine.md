@@ -1,11 +1,11 @@
 ---
 title: class ProtectionEngine 
-description: Documents the protectionengine:ProtectionEngine::Observer::OnGetTenantInformationAsyncFailure class of the Microsoft Information Protection (MIP) SDK.
+description: Documents the protectionengine::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class ProtectionEngine 
@@ -15,29 +15,29 @@ Manages protection-related actions related to a specific identity.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Gets the engine settings.
-public std::shared_ptr&lt;AsyncControl&gt; GetTemplatesAsync(const std::shared_ptr&lt;ProtectionEngine::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context, const std::shared_ptr&lt;const GetTemplatesSettings&gt;& templateSettings)  |  Get collection of templates available to a user.
-public std::shared_ptr&lt;AsyncControl&gt; GetTemplatesAsync(const std::shared_ptr&lt;ProtectionEngine::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context)  |  Get collection of templates available to a user.
-public std::vector&lt;std::shared_ptr&lt;TemplateDescriptor&gt;&gt; GetTemplates(const std::shared_ptr&lt;void&gt;& context, const std::shared_ptr&lt;const GetTemplatesSettings&gt;& templateSettings)  |  Get collection of templates available to a user.
-public std::vector&lt;std::shared_ptr&lt;TemplateDescriptor&gt;&gt; GetTemplates(const std::shared_ptr&lt;void&gt;& context)  |  Get collection of templates available to a user.
+public std::shared_ptr\<AsyncControl\> GetTemplatesAsync(const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context, const std::shared_ptr\<const GetTemplatesSettings\>& templateSettings)  |  Get collection of templates available to a user.
+public std::shared_ptr\<AsyncControl\> GetTemplatesAsync(const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Get collection of templates available to a user.
+public std::vector\<std::shared_ptr\<TemplateDescriptor\>\> GetTemplates(const std::shared_ptr\<void\>& context, const std::shared_ptr\<const GetTemplatesSettings\>& templateSettings)  |  Get collection of templates available to a user.
+public std::vector\<std::shared_ptr\<TemplateDescriptor\>\> GetTemplates(const std::shared_ptr\<void\>& context)  |  Get collection of templates available to a user.
 public bool IsFeatureSupported(FeatureId featureId)  |  Check is feature supported.
-public std::shared_ptr&lt;AsyncControl&gt; GetRightsForLabelIdAsync(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::string& delegatedUserEmail, const std::shared_ptr&lt;ProtectionEngine::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context, const ProtectionCommonSettings& settings)  |  Get collection of rights available to a user for a label ID.
-public std::vector&lt;std::string&gt; GetRightsForLabelId(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::string& delegatedUserEmail, const std::shared_ptr&lt;void&gt;& context, const ProtectionCommonSettings& settings)  |  Get collection of rights available to a user for a labelId.
-public std::shared_ptr&lt;AsyncControl&gt; CreateProtectionHandlerForPublishingAsync(const ProtectionHandler::PublishingSettings& settings, const std::shared_ptr&lt;ProtectionHandler::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
-public std::shared_ptr&lt;ProtectionHandler&gt; CreateProtectionHandlerForPublishing(const ProtectionHandler::PublishingSettings& settings, const std::shared_ptr&lt;void&gt;& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
-public std::shared_ptr&lt;AsyncControl&gt; CreateProtectionHandlerForConsumptionAsync(const ProtectionHandler::ConsumptionSettings& settings, const std::shared_ptr&lt;ProtectionHandler::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
-public std::shared_ptr&lt;ProtectionHandler&gt; CreateProtectionHandlerForConsumption(const ProtectionHandler::ConsumptionSettings& settings, const std::shared_ptr&lt;void&gt;& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
-public bool LoadUserCert(const std::shared_ptr&lt;void&gt;& context, const ProtectionCommonSettings& settings)  |  pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
-public std::shared_ptr&lt;AsyncControl&gt; LoadUserCertAsync(const std::shared_ptr&lt;ProtectionEngine::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context, const ProtectionCommonSettings& settings)  |  pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
-public void RegisterContentForTrackingAndRevocation(const std::vector&lt;uint8_t&gt;& serializedPublishingLicense, const std::string& contentName, bool isOwnerNotificationEnabled, const std::shared_ptr&lt;void&gt;& context, const ProtectionCommonSettings& settings)  |  Register publishing license (PL) for document tracking & revocation.
-public std::shared_ptr&lt;AsyncControl&gt; RegisterContentForTrackingAndRevocationAsync(const std::vector&lt;uint8_t&gt;& serializedPublishingLicense, const std::string& contentName, bool isOwnerNotificationEnabled, const std::shared_ptr&lt;ProtectionEngine::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context, const ProtectionCommonSettings& settings)  |  Register publishing license (PL) for document tracking & revocation.
-public void RevokeContent(const std::vector&lt;uint8_t&gt;& serializedPublishingLicense, const std::shared_ptr&lt;void&gt;& context, const ProtectionCommonSettings& settings)  |  Perform revocation for content.
-public std::shared_ptr&lt;AsyncControl&gt; RevokeContentAsync(const std::vector&lt;uint8_t&gt;& serializedPublishingLicense, const std::shared_ptr&lt;ProtectionEngine::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context, const ProtectionCommonSettings& settings)  |  Perform revocation for content.
-public std::vector&lt;std::shared_ptr&lt;DelegationLicense&gt;&gt; CreateDelegationLicenses(const DelegationLicenseSettings& settings, const std::shared_ptr&lt;void&gt;& context)  |  Creates a delegated license.
-public std::shared_ptr&lt;AsyncControl&gt; CreateDelegationLicensesAsync(const DelegationLicenseSettings& settings, const std::shared_ptr&lt;ProtectionEngine::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context)  |  Creates a delegated license.
-public std::shared_ptr&lt;TenantInformation&gt; GetTenantInformation(const ProtectionCommonSettings& settings, const std::shared_ptr&lt;void&gt;& context)  |  Loads user licensor certificate and returns information about the tenant.
-public std::shared_ptr&lt;AsyncControl&gt; GetTenantInformationAsync(const ProtectionCommonSettings& settings, const std::shared_ptr&lt;ProtectionEngine::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context)  |  Loads user licensor certificate and returns information about the tenant.
-public std::shared_ptr&lt;LicenseRightsData&gt; GetLicenseRightsData(const std::vector&lt;uint8_t&gt;& serializedPublishingLicense, const std::shared_ptr&lt;void&gt;& context, const ProtectionCommonSettings& settings)  |  Get license rights data.
-public std::shared_ptr&lt;AsyncControl&gt; GetLicenseRightsDataAsync(const std::vector&lt;uint8_t&gt;& serializedPublishingLicense, const std::shared_ptr&lt;ProtectionEngine::Observer&gt;& observer, const std::shared_ptr&lt;void&gt;& context, const ProtectionCommonSettings& settings)  |  Get license rights data.
+public std::shared_ptr\<AsyncControl\> GetRightsForLabelIdAsync(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::string& delegatedUserEmail, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context, const ProtectionCommonSettings& settings)  |  Get collection of rights available to a user for a label ID.
+public std::vector\<std::string\> GetRightsForLabelId(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::string& delegatedUserEmail, const std::shared_ptr\<void\>& context, const ProtectionCommonSettings& settings)  |  Get collection of rights available to a user for a labelId.
+public std::shared_ptr\<AsyncControl\> CreateProtectionHandlerForPublishingAsync(const ProtectionHandler::PublishingSettings& settings, const std::shared_ptr\<ProtectionHandler::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
+public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerForPublishing(const ProtectionHandler::PublishingSettings& settings, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
+public std::shared_ptr\<AsyncControl\> CreateProtectionHandlerForConsumptionAsync(const ProtectionHandler::ConsumptionSettings& settings, const std::shared_ptr\<ProtectionHandler::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
+public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerForConsumption(const ProtectionHandler::ConsumptionSettings& settings, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
+public bool LoadUserCert(const std::shared_ptr\<void\>& context, const ProtectionCommonSettings& settings)  |  pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
+public std::shared_ptr\<AsyncControl\> LoadUserCertAsync(const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context, const ProtectionCommonSettings& settings)  |  pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
+public void RegisterContentForTrackingAndRevocation(const std::vector\<uint8_t\>& serializedPublishingLicense, const std::string& contentName, bool isOwnerNotificationEnabled, const std::shared_ptr\<void\>& context, const ProtectionCommonSettings& settings)  |  Register publishing license (PL) for document tracking & revocation.
+public std::shared_ptr\<AsyncControl\> RegisterContentForTrackingAndRevocationAsync(const std::vector\<uint8_t\>& serializedPublishingLicense, const std::string& contentName, bool isOwnerNotificationEnabled, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context, const ProtectionCommonSettings& settings)  |  Register publishing license (PL) for document tracking & revocation.
+public void RevokeContent(const std::vector\<uint8_t\>& serializedPublishingLicense, const std::shared_ptr\<void\>& context, const ProtectionCommonSettings& settings)  |  Perform revocation for content.
+public std::shared_ptr\<AsyncControl\> RevokeContentAsync(const std::vector\<uint8_t\>& serializedPublishingLicense, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context, const ProtectionCommonSettings& settings)  |  Perform revocation for content.
+public std::vector\<std::shared_ptr\<DelegationLicense\>\> CreateDelegationLicenses(const DelegationLicenseSettings& settings, const std::shared_ptr\<void\>& context)  |  Creates a delegated license.
+public std::shared_ptr\<AsyncControl\> CreateDelegationLicensesAsync(const DelegationLicenseSettings& settings, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a delegated license.
+public std::shared_ptr\<TenantInformation\> GetTenantInformation(const ProtectionCommonSettings& settings, const std::shared_ptr\<void\>& context)  |  Loads user licensor certificate and returns information about the tenant.
+public std::shared_ptr\<AsyncControl\> GetTenantInformationAsync(const ProtectionCommonSettings& settings, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Loads user licensor certificate and returns information about the tenant.
+public std::shared_ptr\<LicenseRightsData\> GetLicenseRightsData(const std::vector\<uint8_t\>& serializedPublishingLicense, const std::shared_ptr\<void\>& context, const ProtectionCommonSettings& settings)  |  Get license rights data.
+public std::shared_ptr\<AsyncControl\> GetLicenseRightsDataAsync(const std::vector\<uint8_t\>& serializedPublishingLicense, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context, const ProtectionCommonSettings& settings)  |  Get license rights data.
   
 ## Members
   
@@ -51,10 +51,10 @@ Gets the engine settings.
 Get collection of templates available to a user.
 
 Parameters:  
-* **observer**: A class implementing the [ProtectionEngine::Observer](#class_protection_engine_1_1_observer) interface 
+* **observer**: A class implementing the ProtectionEngine::Observer interface 
 
 
-* **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely passed back to observers and optional HttpDelegate
 
 
 * **templateSettings**: Settings to use when obtaining templates
@@ -71,7 +71,7 @@ Parameters:
 * **observer**: A class implementing the ProtectionEngine::Observer interface 
 
 
-* **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely passed back to observers and optional HttpDelegate
 
 
 
@@ -82,7 +82,7 @@ Parameters:
 Get collection of templates available to a user.
 
 Parameters:  
-* **context**: Client context that will be opaquely passed to optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely passed to optional HttpDelegate
 
 
 * **templateSettings**: Settings to use when obtaining templates
@@ -96,7 +96,7 @@ Parameters:
 Get collection of templates available to a user.
 
 Parameters:  
-* **context**: Client context that will be opaquely passed to optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely passed to optional HttpDelegate
 
 
 
@@ -156,7 +156,7 @@ Parameters:
 * **A**: delegated user is specified when the authenticating user/application is acting on behalf of another user, empty if none 
 
 
-* **context**: This same context will be forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: This same context will be forwarded to optional HttpDelegate
 
 
 
@@ -170,10 +170,10 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
@@ -188,12 +188,12 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
 
   
-**Returns**: [ProtectionHandler](class_mip_protectionhandler.md)
+**Returns**: ProtectionHandler
 If settings are offline only, engine needs to have previously called GetTemplates and LoadUserCert
   
 ### CreateProtectionHandlerForConsumptionAsync function
@@ -203,10 +203,10 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
@@ -220,18 +220,18 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
 
   
-**Returns**: [ProtectionHandler](class_mip_protectionhandler.md)
+**Returns**: ProtectionHandler
   
 ### LoadUserCert function
 pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
 
 Parameters:  
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
 
@@ -242,10 +242,10 @@ Parameters:
 pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
 
 Parameters:  
-* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
@@ -262,7 +262,7 @@ Parameters:
 * **isOwnerNotificationEnabled**: Set to true to notify the owner via email whenever the document is decrypted, or false to not send the notification. 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
   
@@ -279,10 +279,10 @@ Parameters:
 * **isOwnerNotificationEnabled**: Set to true to notify the owner via email whenever the document is decrypted, or false to not send the notification. 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
@@ -296,7 +296,7 @@ Parameters:
 * **serializedPublishingLicense**: Serialized publishing license from protected content 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
   
@@ -307,10 +307,10 @@ Parameters:
 * **serializedPublishingLicense**: Serialized publishing license from protected content 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
@@ -324,7 +324,7 @@ Parameters:
 * **settings**: The delegation settings 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
@@ -339,16 +339,16 @@ Parameters:
 * **settings**: The delegation settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
   
 **Returns**: Async control object.
-Use this method to create licenses for a list of users. Receive the [DelegationLicense](#class_delegation_license) vector in callback OnCreateDelegatedLicensesSuccess Failures are sent in OnCreateDelegatedLicensesFailure
+Use this method to create licenses for a list of users. Receive the DelegationLicense vector in callback OnCreateDelegatedLicensesSuccess Failures are sent in OnCreateDelegatedLicensesFailure
   
 ### GetTenantInformation function
 Loads user licensor certificate and returns information about the tenant.
@@ -357,12 +357,12 @@ Parameters:
 * **settings**: The common settings 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
 
   
-**Returns**: [TenantInformation](#class_tenant_information)
+**Returns**: TenantInformation
   
 ### GetTenantInformationAsync function
 Loads user licensor certificate and returns information about the tenant.
@@ -371,10 +371,10 @@ Parameters:
 * **settings**: The common settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 
@@ -389,7 +389,7 @@ Parameters:
 * **serializedPublishingLicense**: Serialized publishing license from protected content 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
 * **settings**: The common settings
@@ -406,10 +406,10 @@ Parameters:
 * **serializedPublishingLicense**: Serialized publishing license from protected content 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
 * **settings**: The common settings

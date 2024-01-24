@@ -93,9 +93,9 @@ Before you start the migration to Azure Information Protection, make sure that t
 
 - **Preparation for Azure Information Protection**:
 
-  - Directory synchronization between your on-premises directory and Azure Active Directory
+  - Directory synchronization between your on-premises directory and Microsoft Entra ID
 
-  - Mail-enabled groups in Azure Active Directory
+  - Mail-enabled groups in Microsoft Entra ID
 
 	See [Preparing users and groups for Azure Information Protection](prepare.md).
 
@@ -130,7 +130,7 @@ To confirm the AD RMS cryptographic mode for Windows Server 2012 R2 and Windows 
 
 Include your AD RMS partners in your planning phase for migration because they must also migrate to Azure Information Protection. Before you do any of the following migration steps, make sure that the following is in place:
 
-- They have an Azure Active Directory tenant that supports the Azure Rights Management service.  
+- They have a Microsoft Entra tenant that supports the Azure Rights Management service.  
     
     For example, they have an Office 365 E3 or E5 subscription, or an Enterprise Mobility + Security subscription, or a standalone subscription for Azure Information Protection.
 

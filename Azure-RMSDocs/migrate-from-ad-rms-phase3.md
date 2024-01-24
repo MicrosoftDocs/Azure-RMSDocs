@@ -29,7 +29,7 @@ ms.custom: admin
 
 Use the following information for Phase 3 of migrating from AD RMS to Azure Information Protection. These procedures cover step 7 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-## Step 7. Reconfigure Windows computers to use Azure Information Protection
+## Step 7: Reconfigure Windows computers to use Azure Information Protection
 
 Reconfigure your Windows computers to use Azure Information Protection using one of the following methods:
 

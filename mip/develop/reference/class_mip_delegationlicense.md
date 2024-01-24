@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class DelegationLicense 
@@ -13,10 +13,10 @@ ms.date: 03/30/2023
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector&lt;uint8_t&gt;& GetSerializedDelegationJsonLicense()  |  Gets the delegation license in Json format.
-public const std::vector&lt;uint8_t&gt;& GetSerializedUserLicense(ProtectionHandler::PreLicenseFormat format)  |  Gets the user license, if requested.
+public const std::vector\<uint8_t\>& GetSerializedDelegationJsonLicense()  |  Gets the delegation license in Json format.
+public const std::vector\<uint8_t\>& GetSerializedUserLicense(ProtectionHandler::PreLicenseFormat format)  |  Gets the user license, if requested.
 public const std::string& GetUser()  |  Gets the user that this license was created for.
-public const std::vector&lt;uint8_t&gt;& GetSerializedDelegationXrmlLicense()  |  Gets the delegation license in Xrml format.
+public const std::vector\<uint8_t\>& GetSerializedDelegationXrmlLicense()  |  Gets the delegation license in Xrml format.
   
 ## Members
   
@@ -50,4 +50,4 @@ Gets the delegation license in Xrml format.
 
   
 **Returns**: Serialized license
-This license is bound to the identity of the user that made the request.
+This license is bound to the identity of the user that made the request

@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 03/30/2023
+ms.date: 11/07/2023
 ---
 
 # class LabelDisabledError 
-[Label](class_mip_label.md) is disabled or inactive.
+Label is disabled or inactive.
   
 ## Summary
  Members                        | Descriptions                                
