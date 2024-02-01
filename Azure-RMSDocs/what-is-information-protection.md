@@ -10,7 +10,6 @@ ms.date: 11/09/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
-Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
 
 # optional metadata
 
@@ -20,10 +19,9 @@ Customer intent: As an administrator, I want to extend Microsoft 365's labeling 
 #ms.reviewer: eymanor
 #ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: contperf-fy21q2
 search.appverid:
 - MET150
-
+Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
 ---
 
 # What is Azure Information Protection?
