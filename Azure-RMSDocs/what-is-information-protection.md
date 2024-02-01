@@ -10,7 +10,6 @@ ms.date: 11/09/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
-Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
 
 # optional metadata
 
@@ -20,10 +19,9 @@ Customer intent: As an administrator, I want to extend Microsoft 365's labeling 
 #ms.reviewer: eymanor
 #ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: contperf-fy21q2
 search.appverid:
 - MET150
-
+Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
 ---
 
 # What is Azure Information Protection?
@@ -107,7 +105,7 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 |**FAQs and known issues**     | [Frequently asked questions for Azure Information Protection](faqs.md) </br> [Known issues - Azure Information Protection](known-issues.md)       |
 |**Support options**     | [Support options for Azure Information Protection](information-support.md)        |
 |**Yammer**     |  [Information protection team](https://www.yammer.com/AskIPTeam)       |
-|**Release management and supportability**     | [AIP unified labeling client - Release management and supportability](/rms-client/unifiedlabelingclient-version-release-history.md) <br><br>See also: <br>- [Removed and retired services](removed-sunset-services.md)<br>- [What's new in Microsoft Purview risk and compliance solutions](/microsoft-365/compliance/whats-new)<br>- [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance) |
+|**Release management and supportability**     | [AIP unified labeling client - Release management and supportability](./rms-client/unifiedlabelingclient-version-release-history.md) <br><br>See also: <br>- [Removed and retired services](removed-sunset-services.md)<br>- [What's new in Microsoft Purview risk and compliance solutions](/microsoft-365/compliance/whats-new)<br>- [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance) |
 
 
 #### Top Ignite sessions
