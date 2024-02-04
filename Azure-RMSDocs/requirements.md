@@ -137,7 +137,7 @@ The Azure Information Protection clients can label and protect documents and ema
 
 - **Office Professional Plus 2019**
 
-- **Office Professional Plus 2016** - Please note that as Office 2016 is out of mainstream support, AIP support will be done on basis of best effort and no fixes will be done for issues discovered in version 2016. see [Microsoft Office 2016](https://learn.microsoft.com/lifecycle/products/microsoft-office-2016)
+- **Office Professional Plus 2016** - Please note that as Office 2016 is out of mainstream support, AIP support will be done on basis of best effort and no fixes will be done for issues discovered in version 2016. see [Microsoft Office 2016](/lifecycle/products/microsoft-office-2016)
 
 - **Office Professional Plus 2013 with Service Pack 1**
 
