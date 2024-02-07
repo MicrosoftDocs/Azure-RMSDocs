@@ -21,7 +21,7 @@ When applied to data labeled with Microsoft Purview Information Protection, the 
 
 `MSIP_Label_GUID_Enabled = true`
 
-The GUID is a unique identifier for each label in an organization.
+The GUID is a unique identifier for each label in an organization. An object can only have **one** label from the same organization. Multiple labels from the same organization cannot be written to a file or object. 
 
 ## Microsoft Information Protection SDK Metadata
 
