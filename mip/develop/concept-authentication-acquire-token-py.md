@@ -1,6 +1,6 @@
 ---
 title: Concepts - Using Python to acquire an access token.
-description: This article helps you understand how to use Python to acquire an OAuth2 access token. This is required by the implementation of the authentication delegate.
+description: This article helps you understand how to use Python to acquire an OAuth2 access token. 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
@@ -14,12 +14,12 @@ This example demonstrates how to call an external Python script to obtain an OAu
 
 ## Prerequisites
 
-To run the sample below:
+To run the sample:
 
 - Install Python 3.10 or newer.
 - Implement utils.h/cpp in your project.
 - Auth.py should be added to your project and exist in same directory as the binaries at build.
-- Complete [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you register your client application in your Microsoft Entra tenant. Microsoft Entra ID provide an application ID, also known as client ID, which is used in your token acquisition logic.
+- Complete [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you register your client application in your Microsoft Entra tenant. Microsoft Entra ID provides an application ID, also known as client ID, which is used in your token acquisition logic.
 
 This code isn't intended for production use. It may only be used for development and understanding auth concepts. The sample is cross-platform.
 
@@ -47,7 +47,7 @@ namespace sample {
 }
 ```
 
-The first three parameters will be provided by user input or hard coded in to your application. The last two parameters are provided by the SDK to the auth delegate.
+The first three parameters are provided by user input or hard coded in to your application. The last two parameters are provided by the SDK to the auth delegate.
 
 
 ### auth.cpp
@@ -204,4 +204,4 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
 }
 ```
 
-When the `engine` is added, the SDK will call the `AcquireOAuth2Token function, passing in the challenge, executing the Python script, receiving a token, then presenting the token to the service.
+When the `engine` is added, the SDK calls the `AcquireOAuth2Token function, passing in the challenge, executing the Python script, receiving a token, then presenting the token to the service.
