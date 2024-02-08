@@ -10,11 +10,11 @@ ms.service: information-protection
 
 # FIPS 140-2 Validation
 
-The Microsoft Information Protection SDK version 1.14 and above can be configured to use FIPS 140-2 validated ciphers. To use these ciphers by default, developers building applications consuming the MIP SDK must install and load the FIPS module.
+The Microsoft Information Protection SDK version 1.14 and above can be configured to use the FIPS validated version of OpenSSL 3.0. To use the FIPS validated OpenSSL 3.0 module, developers must install and load the FIPS module.
 
 ## FIPS 140-2 Compliance
 
-The Microsoft Information Protection SDK uses OpenSSL to implement all cryptographic operations. OpenSSL is not FIPS compliant without more configuration by the developer. To develop a FIPS 140-2 compliant application, OpenSSL in the MIP SDK must be configured to load the FIPS module to perform cryptography operations instead of the default OpenSSL ciphers.
+The Microsoft Information Protection SDK uses OpenSSL to implement all cryptographic operations. OpenSSL is not FIPS compliant without more configuration by the developer. To develop a FIPS 140-2 compliant application, OpenSSL in the MIP SDK must be configured to load the FIPS module to perform cryptographic operations instead of the default OpenSSL ciphers.
 
 ## Install and configure the FIPS Module
 
@@ -33,8 +33,7 @@ If installation fails, the OpenSSL provider remains default.
 ```
 
 Limitations of MIP SDK with FIPS 140-2 validated ciphers:
-- iOS and Android not supported. The FIPS module is available on Windows, Linux and Mac.
-- Appliations with the FIPS module loaded are forced to use more secure algorithms. Minimum 2k RSA key size is required.
+- MacOS and Android not supported. The FIPS module is available on Windows, Linux and Mac.
 
 ## TLS Requirements
 
