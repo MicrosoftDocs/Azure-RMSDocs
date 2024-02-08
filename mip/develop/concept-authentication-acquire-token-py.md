@@ -1,12 +1,11 @@
 ---
 title: Concepts - Using Python to acquire an access token.
-description: This article will help you understand how to use Python to acquire an OAuth2 access token. This is required by the implementation of the authentication delegate.
+description: This article helps you understand how to use Python to acquire an OAuth2 access token. 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/14/2022
 ms.author: mbaldwin
-ms.custom: has-adal-ref
 ---
 
 # Acquire an access token (Python)
@@ -15,18 +14,18 @@ This example demonstrates how to call an external Python script to obtain an OAu
 
 ## Prerequisites
 
-To run the sample below:
+To run the sample:
 
-- Install Python 2.7 or newer.
+- Install Python 3.10 or newer.
 - Implement utils.h/cpp in your project.
 - Auth.py should be added to your project and exist in same directory as the binaries at build.
-- Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Microsoft Entra tenant. Microsoft Entra ID will provide an application ID, also known as client ID, which is used in your token acquisition logic.
+- Complete [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you register your client application in your Microsoft Entra tenant. Microsoft Entra ID provides an application ID, also known as client ID, which is used in your token acquisition logic.
 
 This code isn't intended for production use. It may only be used for development and understanding auth concepts. The sample is cross-platform.
 
 ## sample::auth::AcquireToken()
 
-In the simple authentication example, we demonstrated a simple `AcquireToken()` function that took no parameters and returned a hard-coded token value. In this example, we'll overload AcquireToken() to accept authentication parameters and call an external Python script to return the token.
+In the simple authentication example, we demonstrated a simple `AcquireToken()` function that took no parameters and returned a hard-coded token value. In this example, we overload AcquireToken() to accept authentication parameters and call an external Python script to return the token.
 
 ### auth.h
 
@@ -48,7 +47,7 @@ namespace sample {
 }
 ```
 
-The first three parameters will be provided by user input or hard coded in to your application. The last two parameters are provided by the SDK to the auth delegate.
+The first three parameters are provided by user input or hard coded in to your application. The last two parameters are provided by the SDK to the auth delegate.
 
 
 ### auth.cpp
@@ -112,14 +111,14 @@ namespace sample {
 
 ## Python Script
 
-This script acquires authentication tokens directly via [ADAL for Python](https://github.com/AzureAD/azure-activedirectory-library-for-python). This code is included only as a means to acquire auth tokens for use by the sample apps and is not intended for use in production. The script works only against tenants that support plain old username/password http authentication. MFA or certificate-based authentication will fail.
+This script acquires authentication tokens directly via [Microsoft Authentication Library (MSAL) for Python](https://github.com/AzureAD/microsoft-authentication-library-for-python). This code is included only as a means to acquire auth tokens for use by the sample apps and isn't intended for use in production. The script works only against tenants that support plain old username/password authentication. MFA or certificate-based authentication aren't supported via this script.
 
 > [!NOTE]
-> Prior to running this sample, you must install ADAL for Python by running one of the following commands:
+> Prior to running this sample, you must install MSAL for Python by running one of the following commands:
 
 ```shell
-pip install adal
-pip3 install adal
+pip install msal
+pip3 install msal
 ```
 
 ```python
@@ -127,7 +126,7 @@ import getopt
 import sys
 import json
 import re
-from adal import AuthenticationContext
+from msal import PublicClientApplication
 
 def printUsage():
   print('auth.py -u <username> -p <password> -a <authority> -r <resource> -c <clientId>')
@@ -145,7 +144,7 @@ def main(argv):
   resource = ''
 
   clientId = ''
-
+    
   for option, arg in options:
     if option == '-h':
       printUsage()
@@ -165,24 +164,32 @@ def main(argv):
     printUsage()
     sys.exit(-1)
 
-  # Find everything after the last '/' and replace it with 'token'
-  if not authority.endswith('token'):
-    regex = re.compile('^(.*[\/])')
-    match = regex.match(authority)
-    authority = match.group()
-    authority = authority + username.split('@')[1]
+  # ONLY FOR DEMO PURPOSES AND MSAL FOR PYTHON
+  # This shouldn't be required when using proper auth flows in production.  
+  if authority.find('common') > 1:
+    authority = authority.split('/common')[0] + "/organizations"
+   
+  app = PublicClientApplication(client_id=clientId, authority=authority)  
+  
+  result = None  
 
-  auth_context = AuthenticationContext(authority)
-  token = auth_context.acquire_token_with_username_password(resource, username, password, clientId)
-  print(token["accessToken"])
+  if resource.endswith('/'):
+    resource += ".default"    
+  else:
+    resource += "/.default"
+  
+  # *DO NOT* use username/password authentication in production system.
+  # Instead, consider auth code flow and using a browser to fetch the token.
+  result = app.acquire_token_by_username_password(username=username, password=password, scopes=[resource])  
+  print(result['access_token'])
 
-if __name__ == '__main__':
+if __name__ == '__main__':  
   main(sys.argv[1:])
 ```
 
 ## Update AcquireOAuth2Token
 
-Finally, update the `AcquireOAuth2Token` function in `AuthDelegateImpl` to call the overloaded `AcquireToken` function. The resource and authority URLs are obtained by reading `challenge.GetResource()` and `challenge.GetAuthority()`. The `OAuth2Challenge` is passed in to the auth delegate when the engine is added. This work is done by the SDK and requires no additional work on the part of the developer.
+Finally, update the `AcquireOAuth2Token` function in `AuthDelegateImpl` to call the overloaded `AcquireToken` function. The resource and authority URLs are obtained by reading `challenge.GetResource()` and `challenge.GetAuthority()`. The `OAuth2Challenge` is passed in to the auth delegate when the engine is added. This work is done by the SDK and requires no extra work on the part of the developer.
 
 ```cpp
 bool AuthDelegateImpl::AcquireOAuth2Token(
@@ -197,4 +204,4 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
 }
 ```
 
-When the `engine` is added, the SDK will call the `AcquireOAuth2Token function, passing in the challenge, executing the Python script, receiving a token, then presenting the token to the service.
+When the `engine` is added, the SDK calls the `AcquireOAuth2Token function, passing in the challenge, executing the Python script, receiving a token, then presenting the token to the service.
