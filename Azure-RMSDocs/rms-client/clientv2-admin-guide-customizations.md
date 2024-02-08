@@ -45,9 +45,9 @@ Use the following information for advanced configurations needed for specific sc
 
 ## Configuring advanced settings for the client via PowerShell
 
-Use the Microsoft Purview compliance portal PowerShell to configure advanced settings for customizing label policies and labels. 
+Use Security & Compliance PowerShell to configure advanced settings for customizing label policies and labels. 
 
-In both cases, after you [connect to Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell), specify the **AdvancedSettings** parameter with the identity (name or GUID) of the policy or label, with key/value pairs in a [hash table](/powershell/module/microsoft.powershell.core/about/about_hash_tables). 
+In both cases, after you [connect to Security & Compliance PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell), specify the **AdvancedSettings** parameter with the identity (name or GUID) of the policy or label, with key/value pairs in a [hash table](/powershell/module/microsoft.powershell.core/about/about_hash_tables). 
 
 To remove an advanced setting, use the same **AdvancedSettings** parameter syntax, but specify a null string value. 
 
