@@ -13,7 +13,7 @@ ms.author: mbaldwin
 This article provides answers to Frequently Asked Questions (FAQs), and troubleshooting guidance for known issues and common errors.
 
 ## Frequently Asked Questions
-
+<!--
 ### Metadata Storage Changes
 
 We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the label metadata storage location for Office files (Word, Excel, PowerPoint) to support new features in Office 365, SharePoint Online, and other services.
@@ -59,8 +59,8 @@ We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the 
 | Action | Feature Not Enabled                                                                    | Feature Enabled                                                                                                                                                        |
 | ------ | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Read   | Label in custom.xml (unprotected) or Doc SummaryInfo (protected).                      | If label exists in labelinfo.xml, it is the effective label.<br> If there's no label in labelinfo.xml, label in custom.xml or Doc SummaryInfo is the effective label. |
-| Write  | All new labels are written to custom.xml (unprotected) or Doc SummaryInfo (protected). | All new labels are written to labelinfo.xml.                                                                                                                           |
-
+| Write  | All new labels are written to custom.xml (unprotected) or Doc SummaryInfo (protected). | All new labels are written to labelinfo.xml.                                                                                                                         |
+--->  
 ### File Parsing
 
 **Question**: Can I write to the same file that I'm currently reading with the File SDK?
