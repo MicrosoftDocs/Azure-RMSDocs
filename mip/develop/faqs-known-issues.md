@@ -61,10 +61,6 @@ We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the 
 | Read   | Label in custom.xml (unprotected) or Doc SummaryInfo (protected).                      | If label exists in labelinfo.xml, it is the effective label.<br> If there is no label in labelinfo.xml, label in custom.xml or Doc SummaryInfo is the effective label. |
 | Write  | All new labels are written to custom.xml (unprotected) or Doc SummaryInfo (protected). | All new labels are written to labelinfo.xml.                                                                                                                           |
 
-
-<br>
-<br>
-
 ### File Parsing
 
 **Question**: Can I write to the same file that I'm currently reading with the File SDK?
@@ -87,6 +83,11 @@ The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transfor
 **Question**: Does the MIP SDK support content marking? 
 
 MIP SDK doesn't support direct application of content marking, including header, footer, or watermark, on any files. When writing the label metadata to a file, the File SDK will write the *contentBits* metadata property to indicate that protection was applied (if configured) and *will not* write the properties that indicate header, footer, or watermark were applied. When the file is opened in an application that supports content marking, the content marking configuration should be evaluated by the application and written to the file on save. 
+
+### Protection and UPE SDKs on Android
+**Question**: Which shared library should I use for integrating the MIP SDK into my Android application?
+
+The MIP SDK Android binaries include `libmip_core.so`, `libmip_protection_sdk.so`, `libmip_upe_sdk.so` and `lipmip_unified.so`. `libmip_unified.so` is the recommended library that includes the core, protection and policy shared libraries.
 
 ## Compliance
 
