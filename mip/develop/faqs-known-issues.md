@@ -65,7 +65,7 @@ We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the 
 
 **Question**: Can I write to the same file that I'm currently reading with the File SDK?
 
-The MIP SDK does not support concurrently reading and writing the same file. Any labeled files will result in a *copy* of the input file with the label actions applied. Your application must replace the original with the labeled file.
+The MIP SDK does not support concurrently reading and writing the same file. Any labeled files result in a *copy* of the input file with the label actions applied. Your application must replace the original with the labeled file.
 
 ### SDK string handling
 
@@ -82,18 +82,18 @@ The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transfor
 
 **Question**: Does the MIP SDK support content marking? 
 
-MIP SDK doesn't support direct application of content marking, including header, footer, or watermark, on any files. When writing the label metadata to a file, the File SDK writes the *contentBits* metadata property to indicate that protection was applied (if configured) and *will not* write the properties that indicate header, footer, or watermark were applied. When the file is opened in an application that supports content marking, the content marking configuration should be evaluated by the application and written to the file on save. 
+MIP SDK doesn't support direct application of content marking, including header, footer, or watermark, on any files. When label metadata is written to a file, the File SDK writes the *contentBits* metadata property to indicate that protection was applied (if configured) and *won't* write the properties that indicate header, footer, or watermark were applied. When the file is opened in an application that supports content marking, the content marking configuration should be evaluated by the application and written to the file on save. 
 
-### Protection and UPE SDKs on Android
+### Protection and Policy SDKs on Android
 **Question**: Which shared library should I use for integrating the MIP SDK into my Android application?
 
-The MIP SDK Android binaries include `libmip_core.so`, `libmip_protection_sdk.so`, `libmip_upe_sdk.so` and `lipmip_unified.so`. `libmip_unified.so` is the recommended library that includes the core, protection and policy shared libraries.
+The MIP SDK Android binaries include `libmip_core.so`, `libmip_protection_sdk.so`, `libmip_upe_sdk.so` and `lipmip_unified.so`. `libmip_unified.so` is the recommended library that includes the core, protection, and policy shared libraries.
 
 ## Compliance
 
 **Question**: Is the Microsoft Information Protection SDK FIPS 140-2 compliant? 
 
-The Microsoft Information Protection SDK uses FIPS 140-2 approved ciphers but not FIPS 140-2 validated cryptographic libraries today. Applications consuming the MIP SDK need to be aware that the SDK is not considered FIPS compliant at this time. For more information, see the article on [FIPS 140-2 compliance](concept-fips-compliance.md). 
+The Microsoft Information Protection SDK uses FIPS 140-2 approved ciphers but not FIPS 140-2 validated cryptographic libraries today. Applications consuming the MIP SDK need to be aware that the SDK isn't considered FIPS compliant at this time. For more information, see the article on [FIPS 140-2 compliance](concept-fips-compliance.md). 
 
 ## Issues and errors reference
 
@@ -113,13 +113,13 @@ This exception results from attempting to protect or label a PDF file that has b
 
 This error indicates that you haven't migrated your labels from Azure Information Protection to the unified labeling experience. Follow [How to migrate Azure Information Protection labels to unified sensitivity labels](/azure/information-protection/configure-policy-migrate-labels) to migrate the labels, then create a Label Policy in Office 365 Security and compliance portal. 
 
-### Error: "NoPolicyException: Label policy did not contain data"
+### Error: "NoPolicyException: Label policy didn't contain data"
 
 **Question**: Why do I get the following error when trying to read a label or list labels via MIP SDK?
 
-> NoPolicyException: Label policy did not contain data, CorrelationId=GUID, CorrelationId.Description=PolicyProfile, NoPolicyError.Category=SyncFile, NoPolicyError.Category=SyncFile
+> NoPolicyException: Label policy didn't contain data, CorrelationId=GUID, CorrelationId.Description=PolicyProfile, NoPolicyError.Category=SyncFile, NoPolicyError.Category=SyncFile
 
-This error indicates that a label policy has not been published in the Microsoft Purview compliance portal. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
+This error indicates that a label policy hasn't been published in the Microsoft Purview compliance portal. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
 
 ### Error: "System.ComponentModel.Win32Exception: LoadLibrary failed"
 
@@ -127,7 +127,7 @@ This error indicates that a label policy has not been published in the Microsoft
 
 > System.ComponentModel.Win32Exception: LoadLibrary failed for: [sdk_wrapper_dotnet.dll] when calling MIP.Initialize().
 
-Your application does not have the required runtime, or was not built as Release. See [Ensure your app has the required runtime](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) for more information. 
+Your application doesn't have the required runtime, or was not built as Release. See [Ensure your app has the required runtime](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) for more information. 
 
 ### Error: "ProxyAuthError exception"
 
