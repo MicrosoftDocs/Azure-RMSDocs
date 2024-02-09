@@ -30,15 +30,15 @@ We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the 
 
 **Question**: Is there a specific version of MIP SDK that is required?
 
-- MIP SDK 1.7 and later are fully compatible.
+- MIP SDK 1.7 and latter are fully compatible.
 
-**Question**: Is there a specific version of the Office client that will be required or use this store?
+**Question**: Is there a specific version of the Office client that is required or use this store?
 
-- As features are announced, the Office client will be updated to leverage the new storage location. The new storage locations will not be used until the features are enabled by tenant administrators.
+- As features are announced, the Office client is updated to use the new storage location. The new storage locations won't be used until the features are enabled by tenant administrators.
 
 **Question**: Will the existing metadata stored as a custom property in *custom.xml* be kept up to date?
 
-- No. The first time the document is saved after the new storage location is enabled, label metadata will be moved to the new location. Metadata written via [`LabelingOptions.ExtendedProperties`](/dotnet/api/microsoft.informationprotection.file.labelingoptions.extendedproperties?view=mipsdk-dotnet-1.7&preserve-view=true#Microsoft_InformationProtection_File_LabelingOptions_ExtendedProperties) will remain in *custom.xml*.
+- No. The first time the document is saved after the new storage location is enabled, label metadata is moved to the new location. Metadata written via [`LabelingOptions.ExtendedProperties`](/dotnet/api/microsoft.informationprotection.file.labelingoptions.extendedproperties?view=mipsdk-dotnet-1.7&preserve-view=true#Microsoft_InformationProtection_File_LabelingOptions_ExtendedProperties) remains in *custom.xml*.
 
 **Question**: Will it be possible to read the label metadata without MIP SDK? 
 
@@ -58,7 +58,7 @@ We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the 
 
 | Action | Feature Not Enabled                                                                    | Feature Enabled                                                                                                                                                        |
 | ------ | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Read   | Label in custom.xml (unprotected) or Doc SummaryInfo (protected).                      | If label exists in labelinfo.xml, it is the effective label.<br> If there is no label in labelinfo.xml, label in custom.xml or Doc SummaryInfo is the effective label. |
+| Read   | Label in custom.xml (unprotected) or Doc SummaryInfo (protected).                      | If label exists in labelinfo.xml, it is the effective label.<br> If there's no label in labelinfo.xml, label in custom.xml or Doc SummaryInfo is the effective label. |
 | Write  | All new labels are written to custom.xml (unprotected) or Doc SummaryInfo (protected). | All new labels are written to labelinfo.xml.                                                                                                                           |
 
 ### File Parsing
@@ -82,7 +82,7 @@ The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transfor
 
 **Question**: Does the MIP SDK support content marking? 
 
-MIP SDK doesn't support direct application of content marking, including header, footer, or watermark, on any files. When writing the label metadata to a file, the File SDK will write the *contentBits* metadata property to indicate that protection was applied (if configured) and *will not* write the properties that indicate header, footer, or watermark were applied. When the file is opened in an application that supports content marking, the content marking configuration should be evaluated by the application and written to the file on save. 
+MIP SDK doesn't support direct application of content marking, including header, footer, or watermark, on any files. When writing the label metadata to a file, the File SDK writes the *contentBits* metadata property to indicate that protection was applied (if configured) and *will not* write the properties that indicate header, footer, or watermark were applied. When the file is opened in an application that supports content marking, the content marking configuration should be evaluated by the application and written to the file on save. 
 
 ### Protection and UPE SDKs on Android
 **Question**: Which shared library should I use for integrating the MIP SDK into my Android application?
