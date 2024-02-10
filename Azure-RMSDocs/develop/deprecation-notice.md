@@ -6,7 +6,7 @@ description: RMS SDK 4.2 Deprecation notice
 keywords:
 author: msmbaldwin
 ms.author: mbaldwin
-ms.date: 03/08/2020
+ms.date: 01/30/2024
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
