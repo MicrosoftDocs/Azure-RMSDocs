@@ -4,7 +4,7 @@ description: This article will help you understand the scenario of how to downgr
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 11/14/2022
+ms.date: 01/30/2024
 ms.author: mbaldwin
 ms.custom: mode-api
 ---
