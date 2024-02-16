@@ -20,7 +20,7 @@ Preview versions shouldn't be deployed in production. Instead, use the latest pr
 
 Use the following information to see what’s new or changed for a supported release. The most current release is listed first.
 
-NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions prior to 1.4 are not available.
+NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions before 1.4 are not available.
 
 > [!NOTE]
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
@@ -56,7 +56,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 ### Policy SDK
 - Updated the policy sync URL for China cloud.
 
-### Updates for legacy tenants who migrated from ADRMS to RMS
+### Updates for legacy tenants who migrated from AD RMS to RMS
 - Fixed an issue where `LoadUserCert` threw an error.
 - Fixed an issue causing corrupt offline publishing licenses which could not be consumed to decrypt content.
 - Fixed bug where legacy tenant prelicenses were not accepted by the protection SDK.
@@ -85,9 +85,9 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Fixed an issue where licenses were cached without owner emails.
 - Added support for UTF16-encoded JSON prelicenses.
 - Added check for expired prelicenses with `FlightingFeature::PreLicenseValidityCheck` with default true.
-- Updated EUL and prelicenses to expose label name and label description.
+- Updated End-User Licenses (EULs) and prelicenses to expose label name and label description.
 
-### Updates for legacy tenants who migrated from ADRMS to RMS
+### Updates for legacy tenants who migrated from Active Directory Rights Management Service (AD RMS) to Rights Management Service (RMS)
 - Fixed an issue where `LoadUserCert` threw an error.
 - Fixed an issue causing corrupt offline publishing licenses which could not be consumed to decrypt content.
 - Fixed bug where legacy tenant prelicenses were not accepted by the protection SDK.
@@ -99,7 +99,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Updated Libgsf to 1.14.52.
 
 ### Breaking Changes
-- Fixed path for config file from `applicationPath/mipmip_config.json` to `applicationPath/mip/mip_config.json`. Applications using a config file to mask PII in log files must update the file location.
+- Fixed path for config file from `applicationPath/mipmip_config.json` to `applicationPath/mip/mip_config.json`. Applications using a config file to mask Personal Identifiable Information (PII) in log files must update the file location.
 
 ## Version 1.14.108
 
@@ -315,7 +315,7 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
 - Fixed a bug where supporting MIP libraries weren't loading in Java 
 - Fixed a bug where MSG files with protected MSG file attachments would experience corruption when `rpmsg` extension had a trailing null terminator 
 - Fixed a crash in MSG files with link attachments 
-- Fixed a bug where sequence of label application wasn't honored correctly using AIP Unified Client app for Windows 
+- Fixed a bug where sequence of label application wasn't honored correctly using Azure Information Protection (AIP) Unified Client app for Windows 
 - Fixed a bug where `RemoveProtection` threw `LabelDisabledError` exception stating inactive label was specified 
 - Fixed a bug where `DeleteLabel` threw invalid metadata exception while input file is protected by templateID
 
@@ -606,7 +606,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 - Added support for Mac on ARM.
 - Signed all dylib files for Mac.
-- All clouds are fully supported across all three SDKs.
+- All clouds are fully supported across all three Software Development Kits (SDKs).
 - Rename `TelemetryConfiguration` to `DiagnosticConfiguration`.
 - Updated `MipContext` to accept `DiagnosticConfiguration` instead of `TelemetryConfiguration`.
 - Exposed new `AuditDelegate`.
