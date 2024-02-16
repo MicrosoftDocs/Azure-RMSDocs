@@ -58,8 +58,8 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ### Updates for legacy tenants who migrated from AD RMS to RMS
 - Fixed an issue where `LoadUserCert` threw an error.
-- Fixed an issue causing corrupt offline publishing licenses which could not be consumed to decrypt content.
-- Fixed bug where legacy tenant prelicenses were not accepted by the protection SDK.
+- Fixed an issue causing corrupt offline publishing licenses, which could not be consumed to decrypt content.
+- Fixed bug where legacy tenant prelicenses are not accepted by the protection SDK.
 
 ### Platform and Dependency Updates
 - Updated URI parser to 0.9.7.
@@ -89,8 +89,8 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ### Updates for legacy tenants who migrated from Active Directory Rights Management Service (AD RMS) to Rights Management Service (RMS)
 - Fixed an issue where `LoadUserCert` threw an error.
-- Fixed an issue causing corrupt offline publishing licenses which could not be consumed to decrypt content.
-- Fixed bug where legacy tenant prelicenses were not accepted by the protection SDK.
+- Fixed an issue causing corrupt offline publishing licenses, which could not be consumed to decrypt content.
+- Fixed bug where legacy tenant prelicenses are not accepted by the protection SDK.
 
 ### Platform and Dependency Updates
 - Updated OpenSSL to 1.1.1-w from 1.1.1-r.
@@ -106,9 +106,9 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 **Release Date:** October 27, 2023
 
 ### File SDK
-- Fixed a bug where .doc files encrypted by SPO had invalid metadata.
+- Fixed a bug where .doc files encrypted by SharePoint Online (SPO) had invalid metadata.
 -	Fixed an issue where labeling signed Office and PDF files invalidated the signature and could not be opened with some editors.
--	Fixed a bug where constructing .msg files failed when using MAPI to convert some files to .msg format.
+-	Fixed a bug where constructing .msg files failed when using Messaging Application Programming Interface (MAPI) to convert some files to .msg format.
 -	Fixed a bug in MIP file SDK sample where corrupted output files were not deleted in event of failure.
 -	Fixed an issue where decrypting PDF files did not remove all label metadata.
 -	Fixed a bug where encrypting .msg files with an empty body threw an exception.
@@ -229,7 +229,7 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
 - Fixed a bug when protection was removed for inactive labels.
 - Fixed a bug where changing label permissions with co-auth enabled produced protected documents that could not be opened.
 - Upgraded libgsf to 1.14.50 and LibXML2 to 2.9.14.
-- Upgraded XMP use an upgraded version of Expat – version 2.4.7 
+- Upgraded Extreme Memory Profiles (XMP) to use version 2.4.7 
 
 ### Policy SDK
 
@@ -346,7 +346,7 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
 
 ### Protection SDK
 
-- Fixed an issue related to chasing DNS records for AD RMS on iOS.
+- Fixed an issue related to chasing Domain Name System (DNS) records for AD RMS on iOS.
 
 ### Platform and Dependency Updates
 
@@ -661,7 +661,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 ### File SDK
 
-- Minor bug fix for the PBIX file format.
+- Minor bug fix for the `.PBIX` file format.
 
 ## Version 1.7.145
 
