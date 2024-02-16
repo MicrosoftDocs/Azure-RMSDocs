@@ -39,6 +39,68 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
+## Version 1.14.126
+
+**Release Date:** February 21st, 2024
+
+### File SDK
+- Fixed a bug with unicode characters when consuming MSG files.
+- Fixed an issue where Hangul characters were not displayed properly in MSG files.
+- Fixed a bug where streams were not aligned correctly when not null terminated.
+
+### Protection SDK
+- Added support for UTF16-encoded JSON prelicenses.
+- Added check for expired prelicenses with `FlightingFeature::PreLicenseValidityCheck` with default true.
+- Updated EUL and prelicenses to expose label name and label description.
+
+### Policy SDK
+- Updated the policy sync URL for China cloud.
+
+### Updates for legacy tenants who migrated from ADRMS to RMS
+- Fixed an issue where `LoadUserCert` threw an error.
+- Fixed an issue causing corrupt offline publishing licenses which could not be consumed to decrypt content.
+- Fixed bug where legacy tenant prelicenses were not accepted by the protection SDK.
+
+### Platform and Dependency Updates
+- Updated URI parser to 0.9.7.
+- Updated SQLite3 to 3.45.1.
+- Updated Libgsf to 1.14.52.
+
+### Breaking Changes
+- Fixed path for config file from `applicationPath/mipmip_config.json` to `applicationPath/mip/mip_config.json`. Applications using a config file to mask PII in log files must update the file location.
+
+## Version 1.13.207
+
+**Release Date:** February 21st, 2024
+
+### File SDK
+- Fixed a bug with unicode characters when consuming MSG files.
+- Fixed an issue where Hangul characters were not displayed properly in MSG files.
+- Fixed a bug where streams were not aligned correctly when not null terminated.
+
+### Policy SDK
+- Updated the policy sync URL for China cloud.
+
+### Protection SDK
+- Fixed an issue where licenses were cached without owner emails.
+- Added support for UTF16-encoded JSON prelicenses.
+- Added check for expired prelicenses with `FlightingFeature::PreLicenseValidityCheck` with default true.
+- Updated EUL and prelicenses to expose label name and label description.
+
+### Updates for legacy tenants who migrated from ADRMS to RMS
+- Fixed an issue where `LoadUserCert` threw an error.
+- Fixed an issue causing corrupt offline publishing licenses which could not be consumed to decrypt content.
+- Fixed bug where legacy tenant prelicenses were not accepted by the protection SDK.
+
+### Platform and Dependency Updates
+- Updated OpenSSL to 1.1.1-w from 1.1.1-r.
+- Updated URI parser to 0.9.7.
+- Updated SQLite3 to 3.45.1.
+- Updated Libgsf to 1.14.52.
+
+### Breaking Changes
+- Fixed path for config file from `applicationPath/mipmip_config.json` to `applicationPath/mip/mip_config.json`. Applications using a config file to mask PII in log files must update the file location.
+
 ## Version 1.14.108
 
 **Release Date:** October 27th, 2023
