@@ -39,9 +39,10 @@
       "uhfHeaderId": "MSDocsHeader-Purview",
       "breadcrumb_path": "/information-protection/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/azure-rmsdocs",
-      "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/"
+      "feedback_system": "Standard",
+      "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/5ad50ce6-8a83-ec11-8d21-0022482fa693",
+      "feedback_help_link_url": "https://learn.microsoft.com/en-us/answers/tags/24/azure-information-protection",
+      "feedback_help_link_type": "get-help-at-qna"
     },
     "fileMetadata": {},
     "template": [],

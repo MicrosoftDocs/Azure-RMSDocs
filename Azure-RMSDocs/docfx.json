@@ -31,10 +31,11 @@
     "dest": "Azure-RMSDocs",
     "template": "docs.html",
     "globalMetadata": {
-      "feedback_system": "GitHub",
       "uhfHeaderId": "azure",
-      "feedback_github_repo": "MicrosoftDocs/azure-rmsdocs",
-      "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/",
+      "feedback_system": "Standard",
+      "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/5ad50ce6-8a83-ec11-8d21-0022482fa693",
+      "feedback_help_link_url": "https://learn.microsoft.com/en-us/answers/tags/24/azure-information-protection",
+      "feedback_help_link_type": "get-help-at-qna",
       "layout": "Conceptual",
       "breadcrumb_path": "/azure/information-protection/bread/toc.json",
       "searchScope": [
