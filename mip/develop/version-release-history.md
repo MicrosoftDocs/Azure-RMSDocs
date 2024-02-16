@@ -41,7 +41,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ## Version 1.14.126
 
-**Release Date:** February 21st, 2024
+**Release Date:** February 21, 2024
 
 ### File SDK
 - Fixed a bug with unicode characters when consuming MSG files.
@@ -71,7 +71,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ## Version 1.13.207
 
-**Release Date:** February 21st, 2024
+**Release Date:** February 21, 2024
 
 ### File SDK
 - Fixed a bug with unicode characters when consuming MSG files.
@@ -103,7 +103,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ## Version 1.14.108
 
-**Release Date:** October 27th, 2023
+**Release Date:** October 27, 2023
 
 ### File SDK
 - Fixed a bug where .doc files encrypted by SPO had invalid metadata.
@@ -147,7 +147,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ## Version 1.13.187
 
-**Release Date:** August 15th, 2023
+**Release Date:** August 15, 2023
 
 ### Bug Fixes
 
