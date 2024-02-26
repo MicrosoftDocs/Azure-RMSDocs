@@ -34,10 +34,10 @@ Many of the SDK samples require access to an Office 365 subscription. If you hav
 | Name                                               | Sign-up                                                                         |
 | -------------------------------------------------- | ------------------------------------------------------------------------------- |
 | Office 365 Enterprise E3 Trial (30-day free trial) | https://go.microsoft.com/fwlink/p/?LinkID=403802                                |
-| Office 365 Enterprise E3 or E5                     | https://products.office.com/business/office-365-enterprise-e3-business-software |
-| Enterprise Mobility and Security E3 or E5          | https://www.microsoft.com/cloud-platform/enterprise-mobility-security           |
+| Office 365 Enterprise E3 or E5                     | https://www.microsoft.com/microsoft-365/enterprise/office-365-e3 |
+| Enterprise Mobility and Security E3 or E5          | https://www.microsoft.com/security           |
 | Azure Information Protection Premium P1 or P2      | [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection/)            |
-| Microsoft 365 E3, E5, or F1                        | https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans         |
+| Microsoft 365 E3, E5, or F1                        | https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing         |
 
 ## Configure sensitivity labels
 
