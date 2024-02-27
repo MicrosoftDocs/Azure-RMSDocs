@@ -4,7 +4,7 @@ description: This article helps you understand the scenario of how to use MIP Fi
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 11/14/2022
+ms.date: 01/30/2024
 ms.author: mbaldwin
 ---
 

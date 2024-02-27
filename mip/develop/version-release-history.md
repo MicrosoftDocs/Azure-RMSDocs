@@ -4,7 +4,7 @@ description: Version release history and change notes for the MIP SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 11/14/2022
+ms.date: 01/30/2024
 ms.author: mbaldwin
 ---
 
@@ -20,7 +20,7 @@ Preview versions shouldn't be deployed in production. Instead, use the latest pr
 
 Use the following information to see what’s new or changed for a supported release. The most current release is listed first.
 
-NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions prior to 1.4 are not available.
+NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions before 1.4 are not available.
 
 > [!NOTE]
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
@@ -39,14 +39,76 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
-## Version 1.14.108
+## Version 1.14.126
 
-**Release Date:** October 27th, 2023
+**Release Date:** February 27, 2024
 
 ### File SDK
-- Fixed a bug where .doc files encrypted by SPO had invalid metadata.
+- Fixed a bug with unicode characters when consuming MSG files.
+- Fixed an issue where Hangul characters were not displayed properly in MSG files.
+- Fixed a bug where streams were not aligned correctly when not null terminated.
+
+### Protection SDK
+- Added support for UTF16-encoded JSON prelicenses.
+- Added check for expired prelicenses with `FlightingFeature::PreLicenseValidityCheck` with default true.
+- Updated EUL and prelicenses to expose label name and label description.
+
+### Policy SDK
+- Updated the policy sync URL for China cloud.
+
+### Updates for legacy tenants who migrated from AD RMS to RMS
+- Fixed an issue where `LoadUserCert` threw an error.
+- Fixed an issue causing corrupt offline publishing licenses, which could not be consumed to decrypt content.
+- Fixed a bug where legacy tenant prelicenses were not accepted by the protection SDK.
+
+### Platform and Dependency Updates
+- Updated URI parser to 0.9.7.
+- Updated SQLite3 to 3.45.1.
+- Updated Libgsf to 1.14.52.
+
+### Breaking Changes
+- Fixed path for config file from `applicationPath/mipmip_config.json` to `applicationPath/mip/mip_config.json`. Applications using a config file to mask PII in log files must update the file location.
+
+## Version 1.13.207
+
+**Release Date:** February 27, 2024
+
+### File SDK
+- Fixed a bug with unicode characters when consuming MSG files.
+- Fixed an issue where Hangul characters were not displayed properly in MSG files.
+- Fixed a bug where streams were not aligned correctly when not null terminated.
+
+### Policy SDK
+- Updated the policy sync URL for China cloud.
+
+### Protection SDK
+- Fixed an issue where licenses were cached without owner emails.
+- Added support for UTF16-encoded JSON prelicenses.
+- Added check for expired prelicenses with `FlightingFeature::PreLicenseValidityCheck` with default true.
+- Updated End-User Licenses (EULs) and prelicenses to expose label name and label description.
+
+### Updates for legacy tenants who migrated from Active Directory Rights Management Service (AD RMS) to Rights Management Service (RMS)
+- Fixed an issue where `LoadUserCert` threw an error.
+- Fixed an issue causing corrupt offline publishing licenses, which could not be consumed to decrypt content.
+- Fixed bug where a legacy tenant prelicenses were not accepted by the protection SDK.
+
+### Platform and Dependency Updates
+- Updated OpenSSL to 1.1.1-w from 1.1.1-r.
+- Updated URI parser to 0.9.7.
+- Updated SQLite3 to 3.45.1.
+- Updated Libgsf to 1.14.52.
+
+### Breaking Changes
+- Fixed path for config file from `applicationPath/mipmip_config.json` to `applicationPath/mip/mip_config.json`. Applications using a config file to mask Personal Identifiable Information (PII) in log files must update the file location.
+
+## Version 1.14.108
+
+**Release Date:** October 27, 2023
+
+### File SDK
+- Fixed a bug where .doc files encrypted by SharePoint Online (SPO) had invalid metadata.
 -	Fixed an issue where labeling signed Office and PDF files invalidated the signature and could not be opened with some editors.
--	Fixed a bug where constructing .msg files failed when using MAPI to convert some files to .msg format.
+-	Fixed a bug where constructing .msg files failed when using Messaging Application Programming Interface (MAPI) to convert some files to .msg format.
 -	Fixed a bug in MIP file SDK sample where corrupted output files were not deleted in event of failure.
 -	Fixed an issue where decrypting PDF files did not remove all label metadata.
 -	Fixed a bug where encrypting .msg files with an empty body threw an exception.
@@ -85,7 +147,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ## Version 1.13.187
 
-**Release Date:** August 15th, 2023
+**Release Date:** August 15, 2023
 
 ### Bug Fixes
 
@@ -151,7 +213,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ### Critical Update
 
-MIP SDK 1.13 introduces support for consuming files and emails protected with AES256-CBC generated by Word, Excel, PowerPoint, Outlook, Exchange Online, SharePoint Online, and MIP SDK-enabled applications that have opted in to CBC publishing. If your application uses the File SDK to consume any of these formats, it's important that you update the application to MIP SDK 1.13. In the second half of 2023, Microsoft 365 Apps, Exchange Online, and SharePoint Online begin to protect with AES256-CBC by default. Applications that have not updated will fail to properly decrypt files and emails.
+MIP SDK 1.13 introduces support for consuming files and emails protected with AES256-CBC generated by Word, Excel, PowerPoint, Outlook, Exchange Online, SharePoint Online, and MIP SDK-enabled applications that opted in to CBC publishing. If your application uses the File SDK to consume any of these formats, it's important that you update the application to MIP SDK 1.13. In the second half of 2023, Microsoft 365 Apps, Exchange Online, and SharePoint Online begin to protect with AES256-CBC by default. Applications that have not updated will fail to properly decrypt files and emails.
 
 MIP SDK 1.13 continues to publish Office documents and emails using AES128 in electronic codebook (ECB) mode. MIP SDK 1.14 enables AES256-CBC publishing by default. If you'd like to test CBC publishing ahead of time, enable the `UseCBCForOfficeFileEncryption` feature flag via `MipConfiguration.FeatureSettingsOverride()`.
 
@@ -167,7 +229,7 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
 - Fixed a bug when protection was removed for inactive labels.
 - Fixed a bug where changing label permissions with co-auth enabled produced protected documents that could not be opened.
 - Upgraded libgsf to 1.14.50 and LibXML2 to 2.9.14.
-- Upgraded XMP use an upgraded version of Expat – version 2.4.7 
+- Upgraded Extreme Memory Profiles (XMP) to use version 2.4.7 
 
 ### Policy SDK
 
@@ -253,7 +315,7 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
 - Fixed a bug where supporting MIP libraries weren't loading in Java 
 - Fixed a bug where MSG files with protected MSG file attachments would experience corruption when `rpmsg` extension had a trailing null terminator 
 - Fixed a crash in MSG files with link attachments 
-- Fixed a bug where sequence of label application wasn't honored correctly using AIP Unified Client app for Windows 
+- Fixed a bug where sequence of label application wasn't honored correctly using Azure Information Protection (AIP) Unified Client app for Windows 
 - Fixed a bug where `RemoveProtection` threw `LabelDisabledError` exception stating inactive label was specified 
 - Fixed a bug where `DeleteLabel` threw invalid metadata exception while input file is protected by templateID
 
@@ -284,7 +346,7 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
 
 ### Protection SDK
 
-- Fixed an issue related to chasing DNS records for AD RMS on iOS.
+- Fixed an issue related to chasing Domain Name System (DNS) records for AD RMS on iOS.
 
 ### Platform and Dependency Updates
 
@@ -308,7 +370,7 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
 
 - Previously, when a label was configured for "Do Not Forward" or "Encrypt Only" and a file protection action, MIP SDK wouldn't display the label in the label list for the file content type.
 
-  - The SDK has been updated to fix this issue. The label will not be filtered in either case when configured to apply to both content types.
+  - The SDK is updated to fix this issue. The label will not be filtered in either case when configured to apply to both content types.
   - This change doesn't impact labels where the protection action was "Encrypt Only" or "Do Not Forward".
   - Lastly, it doesn’t impact labels intended for files where the action was predefined or user-defined protection.
 
@@ -367,7 +429,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
   - This class controls the configuration settings previously set directly on MipContext.
   - Delegates, logging location, etc. are set as part of this object.
   - Review [MipContext Concepts](concept-mipcontext.md) for details.
-- `MipContext::Create()` constructor has been changed to accept only the new `MipConfiguration` object.
+- `MipContext::Create()` constructor is changed to accept only the new `MipConfiguration` object.
   - Review [MipContext Concepts](concept-mipcontext.md) for details.
 - All engine settings default to en-US locale if the `.Locale` property is set to `null`.
 - Fixed an issue where the SDK wasn't fully honoring the logging level settings.
@@ -381,7 +443,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
   - Review [Set enable_msg_file_type and use File SDK for protecting .msg file](quick-email-msg-csharp.md#set-enable_msg_file_type-and-use-file-sdk-for-labeling-msg-file) for details on custom setting.
 - `FileHandler::IsLabeledOrProtected()` now supports MSG files.
 - File SDK now supports decryption of protected attachments on unprotected MSG files.
-  - This applies only to files and not containers such as MSG or ZIP files.
+  - This change applies only to files and not containers such as MSG or ZIP files.
 - Added new static method `mip::FileHandler::GetFileStatus()`
   - This function returns a new `mip::FileStatus` object that indicates whether the file is labeled, protected, or contains protected objects.
   - `FileStatus` exposes three properties: `IsProtected`, `IsLabeled`, and `ContainsProtectedObjects`.
@@ -392,7 +454,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 ### Policy SDK
 
 - The content marking variable `${Event.DateTime}` now defaults to local time rather than UTC.
-  - This can be set back to the previous default by using flighting feature `EventDateTimeTokenUseUtc`.
+  - This variable can be set back to the previous default by using flighting feature `EventDateTimeTokenUseUtc`.
 - Fixed bug where `IsActive` wasn't returning the same values inside a `PolicyHandler` as it was when retrieving labels from a `PolicyEngine`.
 
 ### Protection SDK
@@ -432,7 +494,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
     - New exception.
     - Returned when service returned HTTP501 (Not Implemented).
   - The following previously surfaced as `NetworkError::Category::FailureResponseCode`
-    - `TemplateArchivedError`: The application attempted to apply a template ID that has been archived.
+    - `TemplateArchivedError`: The application attempted to apply a template ID is archived.
     - `LicenseNotRegisteredError`: The document publishing license isn't registered for revocation.
     - `NoPermissionsError::Category::UserNotFound`: The provided user doesn't exist in the target tenant.
     - `NoPermissionsError::Category::InvalidEmail`: An invalid email address was provided.
@@ -544,7 +606,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 - Added support for Mac on ARM.
 - Signed all dylib files for Mac.
-- All clouds are fully supported across all three SDKs.
+- All clouds are fully supported across all three Software Development Kits (SDKs).
 - Rename `TelemetryConfiguration` to `DiagnosticConfiguration`.
 - Updated `MipContext` to accept `DiagnosticConfiguration` instead of `TelemetryConfiguration`.
 - Exposed new `AuditDelegate`.
@@ -599,7 +661,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 ### File SDK
 
-- Minor bug fix for the PBIX file format.
+- Minor bug fix for the `.PBIX` file format.
 
 ## Version 1.7.145
 
@@ -655,12 +717,12 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 - Added missing identity and DKE APIs.
 - Moved `AuthDelegate` from profile to engine across all SDKs.
 - Publish Policy SDK Sample for C
-- `MIP_CC_CreateProtectionEngineSettingsWithIdentity` has been deprecated, use `MIP_CC_CreateProtectionEngineSettingsWithIdentityAndAuthCallback` instead.
-- `MIP_CC_CreateProtectionEngineSettingsWithEngineId` has been deprecated, use `MIP_CC_CreateProtectionEngineSettingsWithEngineIdAndAuthCallback` instead.
+- `MIP_CC_CreateProtectionEngineSettingsWithIdentity` is deprecated, use `MIP_CC_CreateProtectionEngineSettingsWithIdentityAndAuthCallback` instead.
+- `MIP_CC_CreateProtectionEngineSettingsWithEngineId` is deprecated, use `MIP_CC_CreateProtectionEngineSettingsWithEngineIdAndAuthCallback` instead.
 - `MIP_CC_CreateProtectionProfileSettings` signature has changed.
-- `MIP_CC_CreatePolicyEngineSettingsWithIdentity` has been deprecated, use `MIP_CC_CreatePolicyEngineSettingsWithIdentityAndAuthCallback`.
-- `MIP_CC_CreatePolicyEngineSettingsWithEngineId` has been deprecated, use `MIP_CC_CreatePolicyEngineSettingsWithEngineIdAndAuthCallback`.
-- `MIP_CC_PolicyEngineSettings_SetLabelFilter` has been deprecated, use `MIP_CC_PolicyEngineSettings_ConfigureFunctionality`.
+- `MIP_CC_CreatePolicyEngineSettingsWithIdentity` is deprecated, use `MIP_CC_CreatePolicyEngineSettingsWithIdentityAndAuthCallback`.
+- `MIP_CC_CreatePolicyEngineSettingsWithEngineId` is deprecated, use `MIP_CC_CreatePolicyEngineSettingsWithEngineIdAndAuthCallback`.
+- `MIP_CC_PolicyEngineSettings_SetLabelFilter` is deprecated, use `MIP_CC_PolicyEngineSettings_ConfigureFunctionality`.
 - `MIP_CC_CreatePolicyProfileSettings` signature has changed.
 
 ### Breaking Changes
@@ -671,7 +733,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 
 #### C API
 
-- `mip_cc_document_state` has been updated with a new value `mip_cc_metadata_version_format` contentMetadataVersionFormat
+- `mip_cc_document_state` is updated with a new value `mip_cc_metadata_version_format` contentMetadataVersionFormat
 
 ## Version 1.6.103
 
@@ -703,7 +765,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 ### Policy SDK
 
 - New support for triggering token acquisition to allow an application to warm up its token cache via `PolicyProfile::AcquireAuthToken`.
-- HYOK labels are filtered by default.
+- Hold Your Own Key (HYOK) labels are filtered by default.
 - Metadata associated with deleted labels are now removed.
 - If there is ever a mismatch between cached label policy and sensitivity policy, the policy cache is cleared.
 - New support for versioned metadata:
@@ -812,7 +874,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
     - LabelNotFoundError: Unrecognized label ID
     - TemplateNotFoundError: Unrecognized template ID
   - ConsentDeniedError: An operation that required consent from user/app wasn't granted consent
-  - DeprecatedApiError: This API has been deprecated
+  - DeprecatedApiError: This API is deprecated
   - FileIOError: Failed to read/write file
   - InternalError: Unexpected internal failure
   - NetworkError
@@ -960,7 +1022,7 @@ This version introduces support for the Protection SDK in the .NET package (Micr
 - mip_common.dll split into mip_core.dll and mip_telemetry.dll.
 - Renamed mip::ContentState to mip::DataState to describe how an application interacts with data at a high level.
 - mip::AdhocProtectionRequiredError exception is thrown by FileHandler::SetLabel to notify an application that it must first apply ad hoc protection before applying a label.
-- mip::OperationCancelledError exception is thrown when an operation has been canceled (for example due to shutdown or HTTP cancellation).
+- mip::OperationCancelledError exception is thrown when an operation is canceled (for example due to shutdown or HTTP cancellation).
 - New APIs:
   - mip::ClassificationResult::GetSensitiveInformationDetections
   - mip::FileEngine::GetLastPolicyFetchTime
@@ -1015,7 +1077,7 @@ This version introduces support for the following platforms:
 - Custom label properties set by IT administrators can now be read via mip::Label::GetCustomSettings
 - Serialized publishing license can now be retrieved directly from a file without any HTTP operations via mip::FileHandler::GetSerializedPublishingLicense
 - Applications are notified whether an HTTP operation is required to complete the creation of a mip::FileEngine/mip::PolicyEngine via mip::FileProfile::Observer::OnAddPolicyEngineStarting/mip::PolicyProfile::Observer::OnAddEngineStarting
-- Detection of whether protected content has an expiration date or not has been simplified with convenience method mip::ProtectionDescriptor::DoesContentExpire
+- Detection of whether protected content has an expiration date or not is simplified with convenience method mip::ProtectionDescriptor::DoesContentExpire
 - Classification:
   - Sensitivity types (regex expressions for CC#'s, passport #'s, etc.) can be acquired from SCC service
     - Enable feature by setting mip::FileEngine::Settings/mip::PolicyEngine::Settings flag
