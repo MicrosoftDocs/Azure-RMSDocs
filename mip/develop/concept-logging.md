@@ -9,13 +9,13 @@ ms.author: yangczhang
 ---
 
 # Concept - Logging in MIP SDK
-Troubleshooting custom applications that consume the MIP SDK begin with inspecting mip logs. MIP log location is configured at [MipContext](/information-protection/develop/concept-mipcontext#mipcontext) creation and can be queried for with *.miplog file extension.
+Troubleshooting custom applications that consume the MIP SDK begin with inspecting mip logs. MIP log location is configured at MipContext creation and can be queried for with *.miplog file extension.
 Microsoft apps and samples store MIP logs at <application path>\APP_DATA\mip_data.
 
 ## Mask sensitive data in MIP logs
 Logs in the MIP SDK do not mask sensitive content which may be personally identifiable to a customer without extra configuration. 
 
-What sensitive data is most common in the MIP SDK?
+Common sensitive data in MIP SDK logs:
 - Email names
 - File names
 - Label names
