@@ -127,6 +127,8 @@
       href: concept-labeling-and-protection.md
     - name: User-defined Permissions
       href: concept-user-defined-permissions.md  
+  - name: Logging
+    href: concept-logging.md
   - name: Metadata
     href: concept-mip-metadata.md
   - name: MipContext object concepts
