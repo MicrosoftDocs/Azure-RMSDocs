@@ -13,7 +13,6 @@ ms.author: mbaldwin
 This article provides answers to Frequently Asked Questions (FAQs), and troubleshooting guidance for known issues and common errors.
 
 ## Frequently Asked Questions
-<!--
 ### Metadata Storage Changes
 
 We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the label metadata storage location for Office files (Word, Excel, PowerPoint) to support new features in Office 365, SharePoint Online, and other services.
@@ -30,11 +29,11 @@ We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the 
 
 **Question**: Is there a specific version of MIP SDK that is required?
 
-- MIP SDK 1.7 and latter are fully compatible.
+- MIP SDK 1.7 and later are fully compatible.
 
-**Question**: Is there a specific version of the Office client that is required or use this store?
+**Question**: Is there a specific version of the Office client that is required to use this storage location?
 
-- As features are announced, the Office client is updated to use the new storage location. The new storage locations won't be used until the features are enabled by tenant administrators.
+- All Microsoft 365 Apps clients released after September 2021 support this new metadata location. The new storage locations won't be used until the protected co-authoring feature is enabled by tenant administrators.
 
 **Question**: Will the existing metadata stored as a custom property in *custom.xml* be kept up to date?
 
@@ -60,7 +59,7 @@ We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the 
 | ------ | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Read   | Label in custom.xml (unprotected) or Doc SummaryInfo (protected).                      | If label exists in labelinfo.xml, it is the effective label.<br> If there's no label in labelinfo.xml, label in custom.xml or Doc SummaryInfo is the effective label. |
 | Write  | All new labels are written to custom.xml (unprotected) or Doc SummaryInfo (protected). | All new labels are written to labelinfo.xml.                                                                                                                         |
---->  
+
 ### File Parsing
 
 **Question**: Can I write to the same file that I'm currently reading with the File SDK?
