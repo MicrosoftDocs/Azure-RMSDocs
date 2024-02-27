@@ -13,7 +13,6 @@ ms.author: mbaldwin
 This article provides answers to Frequently Asked Questions (FAQs), and troubleshooting guidance for known issues and common errors.
 
 ## Frequently Asked Questions
-
 ### Metadata Storage Changes
 
 We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the label metadata storage location for Office files (Word, Excel, PowerPoint) to support new features in Office 365, SharePoint Online, and other services.
@@ -32,13 +31,13 @@ We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the 
 
 - MIP SDK 1.7 and later are fully compatible.
 
-**Question**: Is there a specific version of the Office client that will be required or use this store?
+**Question**: Is there a specific version of the Office client that is required to use this storage location?
 
-- As features are announced, the Office client will be updated to leverage the new storage location. The new storage locations will not be used until the features are enabled by tenant administrators.
+- All Microsoft 365 Apps clients released after September 2021 support this new metadata location. The new storage locations won't be used until the protected co-authoring feature is enabled by tenant administrators.
 
 **Question**: Will the existing metadata stored as a custom property in *custom.xml* be kept up to date?
 
-- No. The first time the document is saved after the new storage location is enabled, label metadata will be moved to the new location. Metadata written via [`LabelingOptions.ExtendedProperties`](/dotnet/api/microsoft.informationprotection.file.labelingoptions.extendedproperties?view=mipsdk-dotnet-1.7&preserve-view=true#Microsoft_InformationProtection_File_LabelingOptions_ExtendedProperties) will remain in *custom.xml*.
+- No. The first time the document is saved after the new storage location is enabled, label metadata is moved to the new location. Metadata written via [`LabelingOptions.ExtendedProperties`](/dotnet/api/microsoft.informationprotection.file.labelingoptions.extendedproperties?view=mipsdk-dotnet-1.7&preserve-view=true#Microsoft_InformationProtection_File_LabelingOptions_ExtendedProperties) remains in *custom.xml*.
 
 **Question**: Will it be possible to read the label metadata without MIP SDK? 
 
@@ -58,18 +57,14 @@ We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the 
 
 | Action | Feature Not Enabled                                                                    | Feature Enabled                                                                                                                                                        |
 | ------ | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Read   | Label in custom.xml (unprotected) or Doc SummaryInfo (protected).                      | If label exists in labelinfo.xml, it is the effective label.<br> If there is no label in labelinfo.xml, label in custom.xml or Doc SummaryInfo is the effective label. |
-| Write  | All new labels are written to custom.xml (unprotected) or Doc SummaryInfo (protected). | All new labels are written to labelinfo.xml.                                                                                                                           |
-
-
-<br>
-<br>
+| Read   | Label in custom.xml (unprotected) or Doc SummaryInfo (protected).                      | If label exists in labelinfo.xml, it is the effective label.<br> If there's no label in labelinfo.xml, label in custom.xml or Doc SummaryInfo is the effective label. |
+| Write  | All new labels are written to custom.xml (unprotected) or Doc SummaryInfo (protected). | All new labels are written to labelinfo.xml.                                                                                                                         |
 
 ### File Parsing
 
 **Question**: Can I write to the same file that I'm currently reading with the File SDK?
 
-The MIP SDK does not support concurrently reading and writing the same file. Any labeled files will result in a *copy* of the input file with the label actions applied. Your application must replace the original with the labeled file.
+The MIP SDK does not support concurrently reading and writing the same file. Any labeled files result in a *copy* of the input file with the label actions applied. Your application must replace the original with the labeled file.
 
 ### SDK string handling
 
@@ -86,13 +81,18 @@ The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transfor
 
 **Question**: Does the MIP SDK support content marking? 
 
-MIP SDK doesn't support direct application of content marking, including header, footer, or watermark, on any files. When writing the label metadata to a file, the File SDK will write the *contentBits* metadata property to indicate that protection was applied (if configured) and *will not* write the properties that indicate header, footer, or watermark were applied. When the file is opened in an application that supports content marking, the content marking configuration should be evaluated by the application and written to the file on save. 
+MIP SDK doesn't support direct application of content marking, including header, footer, or watermark, on any files. When label metadata is written to a file, the File SDK writes the *contentBits* metadata property to indicate that protection was applied (if configured) and *won't* write the properties that indicate header, footer, or watermark were applied. When the file is opened in an application that supports content marking, the content marking configuration should be evaluated by the application and written to the file on save. 
+
+### Protection and Policy SDKs on Android
+**Question**: Which shared library should I use for integrating the MIP SDK into my Android application?
+
+The MIP SDK Android binaries include `libmip_core.so`, `libmip_protection_sdk.so`, `libmip_upe_sdk.so` and `lipmip_unified.so`. `libmip_unified.so` is the recommended library that includes the core, protection, and policy shared libraries.
 
 ## Compliance
 
 **Question**: Is the Microsoft Information Protection SDK FIPS 140-2 compliant? 
 
-The Microsoft Information Protection SDK uses FIPS 140-2 approved ciphers but not FIPS 140-2 validated cryptographic libraries today. Applications consuming the MIP SDK need to be aware that the SDK is not considered FIPS compliant at this time. For more information, see the article on [FIPS 140-2 compliance](concept-fips-compliance.md). 
+The Microsoft Information Protection SDK uses FIPS 140-2 approved ciphers but not FIPS 140-2 validated cryptographic libraries today. Applications consuming the MIP SDK need to be aware that the SDK isn't considered FIPS compliant at this time. For more information, see the article on [FIPS 140-2 compliance](concept-fips-compliance.md). 
 
 ## Issues and errors reference
 
@@ -112,13 +112,13 @@ This exception results from attempting to protect or label a PDF file that has b
 
 This error indicates that you haven't migrated your labels from Azure Information Protection to the unified labeling experience. Follow [How to migrate Azure Information Protection labels to unified sensitivity labels](/azure/information-protection/configure-policy-migrate-labels) to migrate the labels, then create a Label Policy in Office 365 Security and compliance portal. 
 
-### Error: "NoPolicyException: Label policy did not contain data"
+### Error: "NoPolicyException: Label policy didn't contain data"
 
 **Question**: Why do I get the following error when trying to read a label or list labels via MIP SDK?
 
-> NoPolicyException: Label policy did not contain data, CorrelationId=GUID, CorrelationId.Description=PolicyProfile, NoPolicyError.Category=SyncFile, NoPolicyError.Category=SyncFile
+> NoPolicyException: Label policy didn't contain data, CorrelationId=GUID, CorrelationId.Description=PolicyProfile, NoPolicyError.Category=SyncFile, NoPolicyError.Category=SyncFile
 
-This error indicates that a label policy has not been published in the Microsoft Purview compliance portal. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
+This error indicates that a label policy hasn't been published in the Microsoft Purview compliance portal. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
 
 ### Error: "System.ComponentModel.Win32Exception: LoadLibrary failed"
 
@@ -126,7 +126,7 @@ This error indicates that a label policy has not been published in the Microsoft
 
 > System.ComponentModel.Win32Exception: LoadLibrary failed for: [sdk_wrapper_dotnet.dll] when calling MIP.Initialize().
 
-Your application does not have the required runtime, or was not built as Release. See [Ensure your app has the required runtime](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) for more information. 
+Your application doesn't have the required runtime, or was not built as Release. See [Ensure your app has the required runtime](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) for more information. 
 
 ### Error: "ProxyAuthError exception"
 
