@@ -39,7 +39,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
-## Version 1.14.126
+## Version 1.14.128
 
 **Release Date:** February 27, 2024
 
@@ -67,9 +67,9 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Updated Libgsf to 1.14.52.
 
 ### Breaking Changes
-- Fixed path for config file from `applicationPath/mipmip_config.json` to `applicationPath/mip/mip_config.json`. Applications using a config file to mask PII in log files must update the file location.
+- Fixed path for config file from `applicationPath/mipmip_config.json` to `applicationPath/mip/mip_config.json`. Applications using a [config file](/information-protection/develop/concept-logging) to mask PII in log files must update the file location.
 
-## Version 1.13.207
+## Version 1.13.209
 
 **Release Date:** February 27, 2024
 
@@ -99,7 +99,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Updated Libgsf to 1.14.52.
 
 ### Breaking Changes
-- Fixed path for config file from `applicationPath/mipmip_config.json` to `applicationPath/mip/mip_config.json`. Applications using a config file to mask Personal Identifiable Information (PII) in log files must update the file location.
+- Fixed path for config file from `applicationPath/mipmip_config.json` to `applicationPath/mip/mip_config.json`. Applications using a [config file](/information-protection/develop/concept-logging) to mask Personal Identifiable Information (PII) in log files must update the file location.
 
 ## Version 1.14.108
 
