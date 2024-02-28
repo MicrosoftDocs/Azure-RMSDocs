@@ -39,7 +39,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
-## Version 1.14.126
+## Version 1.14.128
 
 **Release Date:** February 27, 2024
 
@@ -67,9 +67,9 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Updated Libgsf to 1.14.52.
 
 ### Breaking Changes
-- Fixed path for config file from `applicationPath/mipmip_config.json` to `applicationPath/mip/mip_config.json`. Applications using a config file to mask PII in log files must update the file location.
+- Fixed path for config file from `applicationPath/mipmip_config.json` to `applicationPath/mip/mip_config.json`. Applications using a [config file](/information-protection/develop/concept-logging) to mask PII in log files must update the file location.
 
-## Version 1.13.207
+## Version 1.13.209
 
 **Release Date:** February 27, 2024
 
@@ -99,7 +99,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Updated Libgsf to 1.14.52.
 
 ### Breaking Changes
-- Fixed path for config file from `applicationPath/mipmip_config.json` to `applicationPath/mip/mip_config.json`. Applications using a config file to mask Personal Identifiable Information (PII) in log files must update the file location.
+- Fixed path for config file from `applicationPath/mipmip_config.json` to `applicationPath/mip/mip_config.json`. Applications using a [config file](/information-protection/develop/concept-logging) to mask Personal Identifiable Information (PII) in log files must update the file location.
 
 ## Version 1.14.108
 
@@ -134,7 +134,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 -	Fix an issue where some audit events were dropped.
 -	Exposed a flag to control max shutdown timer for 1DS cache cleanup.
 -	Added support for masking PII in log files. By default, PII is not masked.
-    -	Set AllowPii to false in mip_config.json to mask PII with a settings file. The settings file is located at mipConfiguration->GetPath()/mip.
+    -	Set AllowPii to false in mip_config.json to mask PII with a [config file](/information-protection/develop/concept-logging). The config file is located at mipConfiguration->GetPath()/mip.
 -	Added support for CBC encryption of Office files by default.
 -	Fixed Android exception regarding resource location path.
   
