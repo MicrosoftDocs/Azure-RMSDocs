@@ -203,8 +203,6 @@
       href: ./rms-client/clientv2-admin-guide-files-and-logging.md
   - name: Viewing protected files with mobile apps for iOS and Android
     href: ./rms-client/mobile-app-faq.md
-  - name: Viewing protected PDFs
-    href: ./rms-client/protected-pdf-readers.md
   - name: Developing & customizing apps
     items:
     - name: Microsoft Information Protection SDK
