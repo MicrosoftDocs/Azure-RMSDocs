@@ -134,7 +134,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 -	Fix an issue where some audit events were dropped.
 -	Exposed a flag to control max shutdown timer for 1DS cache cleanup.
 -	Added support for masking PII in log files. By default, PII is not masked.
-    -	Set AllowPii to false in mip_config.json to mask PII with a settings file. The settings file is located at mipConfiguration->GetPath()/mip.
+    -	Set AllowPii to false in mip_config.json to mask PII with a [config file](/information-protection/develop/concept-logging). The config file is located at mipConfiguration->GetPath()/mip.
 -	Added support for CBC encryption of Office files by default.
 -	Fixed Android exception regarding resource location path.
   
