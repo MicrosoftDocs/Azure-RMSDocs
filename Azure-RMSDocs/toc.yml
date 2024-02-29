@@ -201,8 +201,6 @@
       href: log-analyze-usage.md
     - name: Viewing logs for client files and usage
       href: ./rms-client/clientv2-admin-guide-files-and-logging.md
-  - name: Viewing protected files with mobile apps for iOS and Android
-    href: ./rms-client/mobile-app-faq.md
   - name: Developing & customizing apps
     items:
     - name: Microsoft Information Protection SDK
