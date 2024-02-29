@@ -6,6 +6,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/rms-client/mobile-app-faq.md",
+      "redirect_url": "https://prod.support.services.microsoft.com/en-us/topic/9fb56fae-7989-48b0-850f-f446e057cf73?preview=true#ID0EBF=iOS",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/rms-client/aip-client.md",
       "redirect_url": "/previous-versions/azure/information-protection/rms-client/aip-client",
       "redirect_document_id": false
