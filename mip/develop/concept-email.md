@@ -25,7 +25,8 @@ MIP SDK supports protection application and removal for MSG files. Given the var
 
 - Removing protection from MSG files that were protected with MIP SDK is fully supported.
 - Removing protection from MSG files created by [currently supported](/lifecycle/faq/office) versions of the Outlook client is fully supported.
-- Removing protection from MSG files created by out-of-support versions of the Outlook client is supported on a best-effort basis. 
+- Removing protection from MSG files created by out-of-support versions of the Outlook client is supported on a best-effort basis.
+- Reprotection of MSG files is not available with protected labels. Users must unprotect and remove the protected label explicitly before protecting the file again with another label.
 
 ## Labeling of MSG Files
 
