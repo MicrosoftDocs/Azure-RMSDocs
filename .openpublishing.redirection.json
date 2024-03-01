@@ -2,12 +2,12 @@
     "redirections": [
     {
       "source_path": "Azure-RMSDocs/rms-client/protected-pdf-readers.md",
-      "redirect_url": "https://prod.support.services.microsoft.com/en-us/topic/643c3dbe-c4ed-477c-9acb-078398a7e2b5?preview=true",
+      "redirect_url": "https://support.microsoft.com/en-us/topic/view-protected-pdfs-using-microsoft-edge-on-windows-or-mac-643c3dbe-c4ed-477c-9acb-078398a7e2b5",
       "redirect_document_id": false
     },
     {
       "source_path": "Azure-RMSDocs/rms-client/mobile-app-faq.md",
-      "redirect_url": "https://prod.support.services.microsoft.com/en-us/topic/9fb56fae-7989-48b0-850f-f446e057cf73?preview=true#ID0EBF=iOS",
+      "redirect_url": "https://support.microsoft.com/topic/view-protected-files-with-the-azure-information-protection-viewer-9fb56fae-7989-48b0-850f-f446e057cf73#ID0EBF=iOS",
       "redirect_document_id": false
     },
     {
