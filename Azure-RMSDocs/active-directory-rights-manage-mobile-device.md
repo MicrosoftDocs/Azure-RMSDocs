@@ -207,6 +207,11 @@ Add-AdfsClient –Name "Office for Mac and Office Mobile" –ClientId "d3590ed6-
 Set-AdfsClient -TargetClientId d3590ed6-52b3-4102-aeff-aad2292ab01c -RedirectUri "urn:ietf:wg:oauth:2.0:oob","launch-word://com.microsoft.Office.Word","launch-excel://com.microsoft.Office.Excel","launch-ppt://com.microsoft.Office.Powerpoint"
 ```
 
+
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier d3590ed6-52b3-4102-aeff-aad2292ab01c -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
 ### Specifying the DNS SRV records for the AD RMS mobile device extension
 
 You must create DNS SRV records for each email domain that your users use. If all your users use child domains from a single parent domain, and all users from this contiguous namespace use the same RMS cluster, you can use just one SRV record in the parent domain, and RMS will find the appropriate DNS records.
@@ -216,7 +221,7 @@ The SRV records have the following format: `_rmsdisco._http._tcp.<emailsuffix> <
 > Specify 443 for the \<portnumber>. Although can you specify a different port number in DNS, devices using the mobile device extension will always use 443.
 
 For example, if your organization has users with the following email addresses:
-  - _user@contoso.com
+- _user@contoso.com
   - _user@sales.contoso.com
   - _user@fabrikam.com
 If there are no other child domains for _contoso.com that use a different RMS cluster than the one named _rmsserver.contoso.com, create two DNS SRV records that have these values:
