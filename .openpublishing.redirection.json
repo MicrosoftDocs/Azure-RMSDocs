@@ -2,7 +2,7 @@
     "redirections": [
     {
       "source_path": "Azure-RMSDocs/rms-client/protected-pdf-readers.md",
-      "redirect_url": "https://support.microsoft.com/en-us/topic/view-protected-pdfs-using-microsoft-edge-on-windows-or-mac-643c3dbe-c4ed-477c-9acb-078398a7e2b5",
+      "redirect_url": "https://support.microsoft.com/topic/view-protected-pdfs-using-microsoft-edge-on-windows-or-mac-643c3dbe-c4ed-477c-9acb-078398a7e2b5",
       "redirect_document_id": false
     },
     {
