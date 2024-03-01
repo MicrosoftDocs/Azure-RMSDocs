@@ -40,7 +40,7 @@ Use the following resources for the unified labeling client:
 - [User guide for the Azure Information Protection unified labeling client](clientv2-user-guide.md)
 
 > [!TIP]
-> There's also an Azure Information Protection app for iOS and Android. For more information, see [FAQs for Azure Information Protection app for iOS and Android](mobile-app-faq.md).
+> There's also an Azure Information Protection viewer that supports iOS and Android. For more information, see [View protected files with the Azure Information Protection viewer](https://support.microsoft.com/topic/view-protected-files-with-the-azure-information-protection-viewer-9fb56fae-7989-48b0-850f-f446e057cf73).
 
 ## Install instructions
 
