@@ -199,7 +199,7 @@ The Azure Information Protection app for iOS and Android provides a viewer for r
 
 If your iOS and Android devices are enrolled by Microsoft Intune, users can install the app from the Company Portal and you can manage the app by using Intune's [app protection policies](/intune/apps/app-protection-policies).
 
-For more information about how to use app, see the [FAQ for Microsoft Azure Information Protection app for iOS and Android](./rms-client/mobile-app-faq.md).
+For more information about how to use app, see [View protected files with the Azure Information Protection viewer](https://support.microsoft.com/topic/view-protected-files-with-the-azure-information-protection-viewer-9fb56fae-7989-48b0-850f-f446e057cf73#ID0EBF=iOS).
 
 ## The Azure Information Protection client for Windows
 
