@@ -117,7 +117,7 @@ Options to create and store your own key:
 
     - **HSM-protected key, transferred as an HSM-protected key**. The most typical method chosen.
 
-        While this method has the most administrative overhead, it may be required for your organization to follow specific regulations. The HSMs used by Azure Key Vault are FIPS 140-2 Level 2 validated.
+        While this method has the most administrative overhead, it may be required for your organization to follow specific regulations. The HSMs used by Azure Key Vault have [FIPS 140 validation](/azure/key-vault/keys/about-keys#compliance).
 
     - **Software-protected key that is converted and transferred to Azure Key Vault as an HSM-protected key**. This method is supported only when [migrating from Active Directory Rights Management Services (AD RMS)](migrate-from-ad-rms-to-azure-rms.md).
 
