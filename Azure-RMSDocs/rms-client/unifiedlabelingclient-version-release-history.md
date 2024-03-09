@@ -38,7 +38,7 @@ If you're looking for updates for the *built-in labeling solution* for Microsoft
 
 ## Servicing information and timelines
 
-The Azure Information Protection unified labeling client has [multiple components bundled up into a single downloadable package](clientv2-admin-guide.md#technical-overview-of-the-azure-information-protection-unified-labeling-client). The Azure Information Protection add-in [part of the unified labeling client] is the only component in maintenance mode as of Jan 1, 2022, driven by the modernization effort to make sensitivity labeling and protection built-in to Office applications. All other components within the unified labeling client aren't in maintenance mode and are fully supported. For more information, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/azure-information-protection-and-the-information-protection/ba-p/3671070#:~:text=Azure%20Information%20Protection%20%28AIP%29%20has%20been%20on%20a,management%20experience%20into%20the%20Microsoft%20Purview%20compliance%20portal).
+The Azure Information Protection unified labeling client has [multiple components bundled up into a single downloadable package](clientv2-admin-guide.md#technical-overview-of-the-azure-information-protection-unified-labeling-client). The Azure Information Protection add-in [part of the unified labeling client] is the only component in maintenance mode as of January 1, 2022, driven by the modernization effort to make sensitivity labeling and protection built-in to Office applications. All other components within the unified labeling client aren't in maintenance mode and are fully supported. For more information, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/azure-information-protection-and-the-information-protection/ba-p/3671070#:~:text=Azure%20Information%20Protection%20%28AIP%29%20has%20been%20on%20a,management%20experience%20into%20the%20Microsoft%20Purview%20compliance%20portal).
 
 The lifecycle of each generally available (GA) version of the Azure Information Protection unified labeling client could vary from build to build, depending on the release date of a subsequent GA version.
 
@@ -69,7 +69,7 @@ The lifecycle of each generally available (GA) version of the Azure Information 
 
 The date format used on this page is *month/day/year*.
 
-The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. Fixes and new functionality are always applied to the latest GA version and are not applied to older GA versions.
+The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. Fixes and new functionality are always applied to the latest GA version and aren't applied to older GA versions.
 
 ### Microsoft Update Catalog availability
 
@@ -153,7 +153,7 @@ This version includes the following fixes for the unified labeling scanner and c
 
 Organizations who have nonzero usage of AIP in the last 90 days before May 23, 2023 can use 2.16.73.0 with no impact. 
 
-Organizations who have zero usage of AIP in the last 90 days before May 23, 2023 will be impacted _if you use the AIP add-in_. Organizations who start to use the AIP add-in for the first time after 5/30/2023 can't download labels and will find the AIP add-in non-functional. The other components in the unified labeling package - the Scanner, the right-click Classify and Protect, PowerShell, and Viewer - continue to work with no impact. Organizations with a legitimate business need to continue using the AIP add-in after 05/30/2024 can apply for an extension through support.
+Organizations who have zero usage of AIP in the last 90 days before May 23, 2023 will be impacted _if you use the AIP add-in_. Organizations who start to use the AIP add-in for the first time after 5/30/2023 can't download labels and will find the AIP add-in nonfunctional. The other components in the unified labeling package - the Scanner, the right-click Classify and Protect, PowerShell, and Viewer - continue to work with no impact. Organizations with a legitimate business need to continue using the AIP add-in after 05/30/2024 can apply for an extension through support.
 
 For more information about AIP add-in retirement, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/retirement-notification-for-the-azure-information-protection/ba-p/3791908) and for detailed migration steps, our [migration playbook](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIPPlaybook/).
 
@@ -185,7 +185,7 @@ Starting in 2.15.33.0, EU customers can send data from the AIP UL Client to the 
 This version of the unified labeling client and scanner provides the following fixes and improvements:
 
 - Outlook supports [Double Key Encryption](/microsoft-365/compliance/double-key-encryption) (DKE) templates.
-- Updated to [MIP SDK 1.12.101](/information-protection/develop/version-release-history#version-112101) for classification, labeling and protection services.
+- Updated to [MIP SDK 1.12.101](/information-protection/develop/version-release-history#version-112101) for classification, labeling, and protection services.
 
 
 ## Version 2.14.90.0
@@ -355,7 +355,7 @@ For more information, including licensing requirements, see:
 
 - Fixed issues for [content markings](use-client.md) in Outlook, which can be duplicated.
 
-- Fixed issues where deferred messages were not be sent in Outlook when a deferral rule set is defined and the [AIP client is installed](clientv2-admin-guide-install.md).
+- Fixed issues where deferred messages wouldn't be sent in Outlook when a deferral rule set is defined and the [AIP client is installed](clientv2-admin-guide-install.md).
 
 - Fixed issues where [customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages) didn't display correctly when an image is found in the email signature.
 
