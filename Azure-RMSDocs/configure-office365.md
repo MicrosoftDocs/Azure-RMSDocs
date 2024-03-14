@@ -132,8 +132,6 @@ Give users the following instructions so that they can configure their OneDrive 
 
 6. On the **Information Rights Management Settings** page, select **Restrict permissions on this library on download** check box. Specify your choice of  name and a description for the permissions, and optionally, click **SHOW OPTIONS** to configure optional configurations, and then click **OK**.
 
-    For more information about the configuration options, see the instructions in [Apply Information Rights Management to a list or library](https://support.office.com/article/Apply-Information-Rights-Management-to-a-list-or-library-3bdb5c4e-94fc-4741-b02f-4e7cc3c54aa1) from the Office documentation.
-
 Because this configuration relies on users rather than an administrator to IRM-protect their OneDrive files, educate users about the  benefits of protecting their files and how to do this. For example, explain that when they share a document from OneDrive, only people they authorize can access it with any restrictions that they configure, even if the file is renamed and copied somewhere else.
 
 #### Configuration for administrators
