@@ -20,7 +20,7 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: admin, has-azure-ad-ps-ref
+ms.custom: admin, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 
 # Preparing users and groups for Azure Information Protection
@@ -130,6 +130,8 @@ From the attributes list for Azure Rights Management, you see that for users, th
 ## Confirming your users and groups are prepared for Azure Information Protection
 
 You can use Azure AD PowerShell to confirm that users and groups can be used with Azure Information Protection. You can also use PowerShell to confirm the values that can be used to authorize them. 
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/AzureRMSDocs/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 For example, using the V1 PowerShell module for Microsoft Entra ID, [MSOnline](/powershell/module/msonline/), in a PowerShell session, first connect to the service and supply your global admin credentials:
 
