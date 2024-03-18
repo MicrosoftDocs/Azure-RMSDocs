@@ -68,7 +68,7 @@ Then, assign licenses from this subscription to each user in your organization w
 > For more information, see [RMS for individuals and Azure Information Protection](./rms-for-individuals.md).
 > 
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/Azure-RMSDocs/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../Azure-RMSDocs/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 ## Prepare your tenant to use Azure Information Protection
 
