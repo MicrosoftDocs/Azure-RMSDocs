@@ -44,10 +44,10 @@ The lifecycle of each generally available (GA) version of the Azure Information 
 
 |Client version|Date released|Supported through|
 |--------------|-------------|-------------|
-|2.17.67.0|03/11/2024|04/11/2024|
-|2.17.66.0|01/11/2024|04/11/2024|
-|2.16.79.0|10/25/2023|04/11/2024|
-|2.16.73.0|05/23/2023|04/11/2024|
+|2.17.67.0|03/11/2024|4/11/2024: AIP Add-in for Office <br>6/30/2024: AIP PowerShell/Scanner/File Labeler/Viewer|
+|2.17.66.0|01/11/2024|4/11/2024: AIP Add-in for Office <br>6/30/2024: AIP PowerShell/Scanner/File Labeler/Viewer|
+|2.16.79.0|10/25/2023|4/11/2024: AIP Add-in for Office <br>6/30/2024: AIP PowerShell/Scanner/File Labeler/Viewer|
+|2.16.73.0|05/23/2023|4/11/2024: AIP Add-in for Office <br>6/30/2024: AIP PowerShell/Scanner/File Labeler/Viewer|
 |2.15.33.0|02/17/2023|Deprecated|
 |2.14.90.0|09/01/2022|Deprecated|
 |2.13.49.0|01/12/2022|Deprecated|
