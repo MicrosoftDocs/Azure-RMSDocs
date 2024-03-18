@@ -87,7 +87,7 @@ When a custom HTTP delegate isn't an option, it will be required that you bypass
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
 | Protection Service | https://api.aadrm.us                                                                                                             |
 | Policy             | https://usg02b.dataservice.protection.office365.us, https://substrate.office365.us                                                               |
-| Audit Logging      | https://tb.events.data.microsoft.com                                                  |
+| Audit Logging      | https://\*.events.data.microsoft.com                                                  |
 | Authentication     | [Review Microsoft Entra documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
 
 ### DoD
@@ -95,5 +95,5 @@ When a custom HTTP delegate isn't an option, it will be required that you bypass
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
 | Protection Service | https://api.aadrm.us                                                                                                             |
 | Policy             | https://usg01b.dataservice.protection.office365.us, https://substrate-dod.office365.us                                                              |
-| Audit Logging      | https://pf.events.data.microsoft.com                                                   |
+| Audit Logging      | https://\*.events.data.microsoft.com                                                   |
 | Authentication     | [Review Microsoft Entra documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
