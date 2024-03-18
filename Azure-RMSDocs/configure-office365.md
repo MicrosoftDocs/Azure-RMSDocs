@@ -111,7 +111,7 @@ This configuration is done by the SharePoint site administrator.
 
 ### Configuring IRM for OneDrive
 
-After you have enabled the IRM service for SharePoint, users' OneDrive document library or individual folders can then be configured for Rights Management protection. Users can configure this for themselves by using their OneDrive website. Although administrators cannot configure this protection for them by using the SharePoint admin center, you can do this by using Windows PowerShell.
+After you have enabled the IRM service for SharePoint, users' OneDrive document library or individual folders can then be configured for Rights Management protection. Users can configure this for themselves by using their OneDrive website. Although administrators can't configure this protection for them by using the SharePoint admin center, you can do this by using Windows PowerShell.
 
 > [!NOTE]
 > For more information about configuring OneDrive, see the [OneDrive](https://support.office.com/article/Set-up-OneDrive-for-Business-in-Office-365-3e21f8f0-e0a1-43be-aa3e-8c0236bf11bb) documentation.
@@ -136,7 +136,7 @@ Because this configuration relies on users rather than an administrator to IRM-p
 
 #### Configuration for administrators
 
-Although you cannot configure IRM for users' OneDrive by using the SharePoint admin center, you can do this by using Windows PowerShell. To enable IRM for these libraries, follow these steps:
+Although you can't configure IRM for users' OneDrive by using the SharePoint admin center, you can do this by using Windows PowerShell. To enable IRM for these libraries, follow these steps:
 
 1. Download and install the [SharePoint Client Components SDK](https://www.microsoft.com/download/details.aspx?id=42038).
 
@@ -144,7 +144,7 @@ Although you cannot configure IRM for users' OneDrive by using the SharePoint ad
 
 3. Copy the contents of the following script and name the file Set-IRMOnOneDriveForBusiness.ps1 on your computer.
 
-   *&#42;&#42;Disclaimer&#42;&#42;*: This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
+   *&#42;&#42;Disclaimer&#42;&#42;*: This sample script isn't supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
 
    ```ps
    # Requires Windows PowerShell version 3
@@ -529,11 +529,11 @@ Although you cannot configure IRM for users' OneDrive by using the SharePoint ad
 
       For example, if the user in the contoso tenant has a user name of "rsimone", you would specify: **https:\//contoso-my.sharepoint.com/personal/rsimone_contoso_com**
 
-   4. Because we are using the script to configure OneDrive, do not change the value of **Documents** for the `$listTitle` variable.
+   4. Because we're using the script to configure OneDrive, don't change the value of **Documents** for the `$listTitle` variable.
 
    5. Search for `ADMIN INSTRUCTIONS`. If you make no changes to this section, the user's OneDrive will be configured for IRM with the policy title of "Protected Files" and the description of "This policy restricts access to authorized users".  No other IRM options will be set, which is probably appropriate for most environments. However, you can change the suggested policy title and description, and also add any other IRM options that are appropriate for your environment. See the commented example in the script to help you construct your own set of parameters for the Set-IrmConfiguration command.
 
-5. Save the script and sign it. If you do not sign the script (more secure), Windows PowerShell must be configured on your computer to run unsigned scripts. To do this, run a Windows PowerShell session with the **Run as Administrator** option, and type: **Set-ExecutionPolicy Unrestricted**. However, this configuration lets all unsigned scripts run (less secure).
+5. Save the script and sign it. If you don't sign the script (more secure), Windows PowerShell must be configured on your computer to run unsigned scripts. To do this, run a Windows PowerShell session with the **Run as Administrator** option, and type: **Set-ExecutionPolicy Unrestricted**. However, this configuration lets all unsigned scripts run (less secure).
 
    For more information about signing Windows PowerShell scripts, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) in the PowerShell documentation library.
 
@@ -552,7 +552,7 @@ For step 4c above, you can use the following Windows PowerShell script to extrac
 
 This script also requires the [SharePoint Client Components SDK](https://www.microsoft.com/download/details.aspx?id=42038) and the [SharePoint Management Shell](https://www.microsoft.com/download/details.aspx?id=35588). Follow the same instructions to copy and paste it, save the file locally (for example, "Report-OneDriveForBusinessSiteInfo.ps1"), modify the   `$sharepointAdminCenterUrl` and `$tenantAdmin` values as before, and then run the script.
 
-*&#42;&#42;Disclaimer&#42;&#42;*: This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
+*&#42;&#42;Disclaimer&#42;&#42;*: This sample script isn't supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
 
 ```ps
 # Requires Windows PowerShell version 3
@@ -778,7 +778,7 @@ Use the following sample script if you need to disable IRM for users' OneDrive.
 
 This script also requires the [SharePoint Client Components SDK](https://www.microsoft.com/download/details.aspx?id=42038) and the [SharePoint Management Shell](https://www.microsoft.com/download/details.aspx?id=35588). Copy and paste the contents, save the file locally (for example, "Disable-IRMOnOneDriveForBusiness.ps1"), and modify the `$sharepointAdminCenterUrl` and `$tenantAdmin` values. Manually specify the OneDrive URLs or use the script in the previous section so that you can import these, and then run the script.
 
-*&#42;&#42;Disclaimer&#42;&#42;*: This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
+*&#42;&#42;Disclaimer&#42;&#42;*: This sample script isn't supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
 
 ```ps
 # Requires Windows PowerShell version 3
