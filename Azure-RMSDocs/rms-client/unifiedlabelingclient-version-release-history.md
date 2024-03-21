@@ -36,9 +36,25 @@ If you're looking for updates for the *built-in labeling solution* for Microsoft
 - [Protect your sensitive data with Microsoft Purview](/microsoft-365/compliance/information-protection)
 - The [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance), filtered for Microsoft 365 compliance items
 
+
 ## Servicing information and timelines
+### Microsoft Purview Information Protection labeling client
+
+The Microsoft Purview Information Protection labeling client includes the PowerShell, Scanner, File Labeler (previously AIP Classify & Protect) and Viewer. Client versions begin with 3.X and do not include the AIP Add-in for Office.
+
+The Microsoft Purview Information Protection labeling client is available for preview starting April 11, 2024 on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). Upgrades from AIP UL 2.X client versions require manual uninstall before install of the Microsoft Purview Information Protection labeling client. Client upgrades through Windows Update on machines with AIP UL 2.X client versions installed will fail.
+
+The lifecycle of each generally available (GA) version of the Microsoft Purview Information Protection labeling client are 1 year after release.
+
+|Client version|Date released|Supported through|
+|--------------|-------------|-------------|
+|3.0.X.X|Public Preview 04/11/2024<br>General Availability 05/11/2024|05/11/2025|
+
+### Azure Information Protection unified labeling client
 
 The Azure Information Protection unified labeling client has [multiple components bundled up into a single downloadable package](clientv2-admin-guide.md#technical-overview-of-the-azure-information-protection-unified-labeling-client). The Azure Information Protection add-in [part of the unified labeling client] is the only component in maintenance mode as of January 1, 2022, driven by the modernization effort to make sensitivity labeling and protection built-in to Office applications. All other components within the unified labeling client aren't in maintenance mode and are fully supported. For more information, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/azure-information-protection-and-the-information-protection/ba-p/3671070#:~:text=Azure%20Information%20Protection%20%28AIP%29%20has%20been%20on%20a,management%20experience%20into%20the%20Microsoft%20Purview%20compliance%20portal).
+
+The final support date of the AIP Add-in for Office is April 11, 2024 and is disabled in Office clients starting May 11, 2024 unless you have an exception. 
 
 The lifecycle of each generally available (GA) version of the Azure Information Protection unified labeling client could vary from build to build, depending on the release date of a subsequent GA version.
 
