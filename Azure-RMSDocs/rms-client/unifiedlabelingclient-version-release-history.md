@@ -60,6 +60,7 @@ The lifecycle of each generally available (GA) version of the Azure Information 
 
 |Client version|Date released|Supported through|
 |--------------|-------------|-------------|
+|2.18.26.0|03/25/2024|04/11/2024: AIP Add-in for Office <br>06/30/2024: AIP PowerShell, Scanner, Classify & Protect and Viewer|
 |2.17.67.0|03/11/2024|04/11/2024: AIP Add-in for Office <br>06/30/2024: AIP PowerShell, Scanner, Classify & Protect and Viewer|
 |2.17.66.0|01/11/2024|04/11/2024: AIP Add-in for Office <br>06/30/2024: AIP PowerShell, Scanner, Classify & Protect and Viewer|
 |2.16.79.0|10/25/2023|04/11/2024: AIP Add-in for Office <br>06/30/2024: AIP PowerShell, Scanner, Classify & Protect and Viewer|
@@ -106,11 +107,26 @@ Noted Azure Information Protection features are currently in PREVIEW. The [Azure
 >
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
+## Version 2.18.26.0
+
+Unified labeling scanner and client version 2.18.26.0 is the final version of the AIP unified labeling client before the transition to the Microsoft Purview Information Protection client. Upgrades to this version are optional unless your organization requires the fixes below.
+
+**Supported through** 04/11/2024 for AIP Add-in for Office <br>06/30/2024 for AIP PowerShell, Scanner, Classify & Protect and Viewer
+
+**Released** 03/25/2024
+
+### Fixes and improvements
+
+This version of the unified labeling client and scanner provides the following fixes and improvements:
+- Upgraded Information Protection Scanner to use Microsoft Classification Engine (MCE.dll) library for classification of Sensitive Information Types.
+- Fixed a bug in Information Protection Viewer where some wide, landscape-view images might appear to be stretched.
+- Updated to [MIP SDK 1.14.128](/information-protection/develop/version-release-history#version-114128) to add support for CBC encryption of Office files by default.
+
 ## Version 2.17.67.0
 
 Unified labeling scanner and client version 2.17.67.0
 
-**Supported through** 04/11/2024
+**Supported through** 04/11/2024 for AIP Add-in for Office <br>06/30/2024 for AIP PowerShell, Scanner, Classify & Protect and Viewer
 
 **Released** 03/11/2024
 
@@ -124,7 +140,7 @@ This version of the unified labeling client and scanner provides the following f
 
 Unified labeling scanner and client version 2.17.66.0
 
-**Supported through** 04/11/2024
+**Supported through** 04/11/2024 for AIP Add-in for Office <br>06/30/2024 for AIP PowerShell, Scanner, Classify & Protect and Viewer
 
 **Released** 01/11/2024
 
@@ -140,7 +156,7 @@ This version of the unified labeling client and scanner provides the following f
 
 Unified labeling scanner and client version 2.16.79.0
 
-**Supported through** 04/11/2024
+**Supported through** 04/11/2024 for AIP Add-in for Office <br>06/30/2024 for AIP PowerShell, Scanner, Classify & Protect and Viewer
 
 **Released** 10/25/2023
 
