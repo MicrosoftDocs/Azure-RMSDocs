@@ -122,6 +122,8 @@ This version of the unified labeling client and scanner provides the following f
 - Fixed a bug in Information Protection Viewer where some wide, landscape-view images might appear to be stretched.
 - Updated to [MIP SDK 1.14.128](/information-protection/develop/version-release-history#version-114128) to add support for CBC encryption of Office files by default.
 
+- Fixed a bug in Classify & Protect and AIP viewer where if regional language is other than English, application would open with incorrect scaling.
+
 ## Version 2.17.67.0
 
 Unified labeling scanner and client version 2.17.67.0
