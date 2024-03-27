@@ -118,7 +118,7 @@ Unified labeling scanner and client version 2.18.26.0 is the final version of th
 ### Fixes and improvements
 
 This version of the unified labeling client and scanner provides the following fixes and improvements:
-- Upgraded Information Protection Scanner to use Microsoft Classification Engine (MCE.dll) library for classification of Sensitive Information Types.
+- Upgraded Information Protection Scanner to use Microsoft Classification Engine (MCE.dll) library for classification of [Sensitive Information Types](https://learn.microsoft.com/purview/deploy-scanner-supported-sits).
 - Fixed a bug in Information Protection Viewer where some wide, landscape-view images might appear to be stretched.
 - Updated to [MIP SDK 1.14.128](/information-protection/develop/version-release-history#version-114128) to add support for CBC encryption of Office files by default.
 
