@@ -45,7 +45,7 @@ You must have an **Azure Information Protection plan** for classification, label
 - [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)
 - [Modern Work Plan Comparison](https://go.microsoft.com/fwlink/?linkid=2139145) (PDF download)
 
-If your question is not answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
+If your question isn't answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
 
 <a name='azure-active-directory'></a>
 
@@ -53,9 +53,9 @@ If your question is not answered there, contact your Microsoft Account Manager o
 
 To support authentication and authorization for Azure Information Protection, you must have a Microsoft Entra ID. To use user accounts from your on-premises directory (AD DS), you must also configure directory integration.
 
-- **Single sign-on (SSO)** is supported for Azure Information Protection so that users are not repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor for how to configure it for Microsoft Entra ID. WS-Trust is a common requirement for these solutions to support single sign-on.
+- **Single sign-on (SSO)** is supported for Azure Information Protection so that users aren't repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor for how to configure it for Microsoft Entra ID. WS-Trust is a common requirement for these solutions to support single sign-on.
 
-- **Multi-factor authentication (MFA)** is supported with Azure Information Protection when you have the required client software and have correctly configured the MFA-supporting infrastructure.
+- **Multifactor authentication (MFA)** is supported with Azure Information Protection when you have the required client software and have correctly configured the MFA-supporting infrastructure.
 
 Conditional access is supported in preview for documents protected by Azure Information Protection. For more information, see: [I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
@@ -83,7 +83,7 @@ The Azure Information Protection clients for Windows are supported are the follo
 
 - **Windows 11**
 
-- **Windows 10** (x86, x64). Handwriting is not supported in the Windows 10 RS4 build and later.
+- **Windows 10** (x86, x64). Handwriting isn't supported in the Windows 10 RS4 build and later.
 - **Windows Server 2019**
 
 - **Windows Server 2016**
@@ -113,9 +113,9 @@ These applications use the following files, respectively: **winword.exe**, **exc
 
 For each of the server versions listed above, Azure Information Protection clients are supported for Remote Desktop Services. 
 
-If you delete user profiles when you use the Azure Information Protection clients with Remote Desktop Services, do not delete the **%Appdata%\Microsoft\Protect** folder.
+If you delete user profiles when you use the Azure Information Protection clients with Remote Desktop Services, don't delete the **%Appdata%\Microsoft\Protect** folder.
 
-Additionally, Server Core and Nano Server are not supported.
+Additionally, Server Core and Nano Server aren't supported.
 
 ### Additional requirements per client
 
@@ -139,9 +139,7 @@ The Azure Information Protection clients can label and protect documents and ema
 
 - **Office Professional Plus 2016** - Please note that as Office 2016 is out of mainstream support, AIP support will be done on basis of best effort and no fixes will be done for issues discovered in version 2016. see [Microsoft Office 2016](/lifecycle/products/microsoft-office-2016)
 
-- **Office Professional Plus 2013 with Service Pack 1**
-
-Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only, and labels that apply protection are not displayed for users. 
+Other editions of Office can't protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only, and labels that apply protection aren't displayed for users. 
 
 Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client.
 
@@ -151,9 +149,9 @@ For more information, see [Applications that support Azure Rights Management dat
 
 ### Office features and capabilities not supported
 
-- The Azure Information Protection clients for Windows do not support multiple versions of Office on the same computer, or switching user accounts in Office.
+- The Azure Information Protection clients for Windows don't support multiple versions of Office on the same computer, or switching user accounts in Office.
 
-- The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.
+- The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature isn't supported with any Azure Information Protection feature.
 
 ## Firewalls and network infrastructure
 
@@ -172,7 +170,7 @@ Azure Information Protection has the following additional requirements:
     - **Type**: `DWORD`
     - **Value**: `1`
     
-- **TLS client-to-service connections**. Do not terminate any TLS client-to-service connections, for example to perform packet-level inspection, to the **aadrm.com** URL. Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
+- **TLS client-to-service connections**. Don't terminate any TLS client-to-service connections, for example to perform packet-level inspection, to the **aadrm.com** URL. Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
      
     To determine whether your client connection is terminated before it reaches the Azure Rights Management service, use the following PowerShell commands:
 
@@ -184,7 +182,7 @@ Azure Information Protection has the following additional requirements:
 
     The result should show that the issuing CA is from a Microsoft CA, for example: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`. 
     
-    If you see an issuing CA name that is not from Microsoft, it is likely that your secure client-to-service connection is being terminated and needs reconfiguration on your firewall.
+    If you see an issuing CA name that isn't from Microsoft, it's likely that your secure client-to-service connection is being terminated and needs reconfiguration on your firewall.
 
 - **TLS version 1.2 or higher** (unified labeling client only). The unified labeling client requires a TLS version of 1.2 or higher to ensure the use of cryptographically secure protocols and align with Microsoft security guidelines.
 
@@ -227,7 +225,7 @@ For other, non-migration scenarios, where both services are active in the same o
 
 ### Service Tags
 
-If you are using an Azure endpoint and an NSG, make sure to allow access to all ports for the following Service Tags:
+If you're using an Azure endpoint and an NSG, make sure to allow access to all ports for the following Service Tags:
 
 - **AzureInformationProtection**
 - **AzureActiveDirectory**
@@ -235,7 +233,7 @@ If you are using an Azure endpoint and an NSG, make sure to allow access to all 
 
 Additionally, in this case, the Azure Information Protection service also depends on the following IP addresses and port:
 
- - **13.107.9.198**
+- **13.107.9.198**
  - **13.107.6.198**
  - **2620:1ec:4::198**
  - **2620:1ec:a92::198**
