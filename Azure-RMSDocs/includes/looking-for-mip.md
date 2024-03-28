@@ -18,4 +18,4 @@ ms.custom: include file
 > 
 >The Azure Information Protection add-in is [retired](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/retirement-notification-for-the-azure-information-protection/ba-p/3791908) and replaced with labels that are [built in to your Microsoft 365 apps and services](/purview/sensitivity-labels#sensitivity-labels-and-azure-information-protection). Learn more about the [support status of other Azure Information Protection components](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/azure-information-protection-and-the-information-protection/ba-p/3671070).
 >
-> The new Microsoft Information Protection client (without the add-in) is currently in preview and scheduled for general availability.
+> The new [Microsoft Information Protection client](https://review.learn.microsoft.com/en-us/purview/information-protection-extend-sensitivity-labeling-on-windows?branch=pr-en-us-1729) (without the add-in) is currently in preview and scheduled for general availability.
