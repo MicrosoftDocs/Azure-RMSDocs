@@ -139,8 +139,6 @@ The Azure Information Protection clients can label and protect documents and ema
 
 - **Office Professional Plus 2016** - Please note that as Office 2016 is out of mainstream support, AIP support will be done on basis of best effort and no fixes will be done for issues discovered in version 2016. see [Microsoft Office 2016](/lifecycle/products/microsoft-office-2016)
 
-- **Office Professional Plus 2013 with Service Pack 1**
-
 Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only, and labels that apply protection are not displayed for users. 
 
 Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client.
@@ -235,7 +233,7 @@ If you are using an Azure endpoint and an NSG, make sure to allow access to all 
 
 Additionally, in this case, the Azure Information Protection service also depends on the following IP addresses and port:
 
- - **13.107.9.198**
+- **13.107.9.198**
  - **13.107.6.198**
  - **2620:1ec:4::198**
  - **2620:1ec:a92::198**
