@@ -36,18 +36,18 @@ When you configure and use Azure Information Protection, email addresses and IP 
 
 - Usage logs for the protection service
 
-- Usage logs for the Azure Information Protection clients and RMS client 
+- Usage logs for the Microsoft Purview Information Protection client and RMS client 
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-intro-sentence.md)]
 
 ## Viewing personal data that Azure Information Protection uses
 
-- **Unified labeling client**:
+- **Microsoft Purview Information Protection client**:
 
-    For the unified labeling client, sensitivity labels and label policies are configured in the Microsoft Purview compliance portal. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+    For the Microsoft Purview Information Protection client, sensitivity labels and label policies are configured in the Microsoft Purview compliance portal. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
 > [!NOTE]
-> When Azure Information Protection is used to classify and protect documents and emails, email addresses and the users' IP addresses might be saved in log files.
+> When the Microsoft Purview Information Protection client is used to classify and protect documents and emails, email addresses and the users' IP addresses might be saved in log files.
 > 
 
 ### Super users and delegated administrators for the protection service
@@ -100,19 +100,19 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 When labels and protection are applied to documents and emails, email addresses and IP addresses can be stored in log files on a user's computer in the following locations:
 
-- For the Azure Information Protection unified labeling client: **%localappdata%\Microsoft\MSIP\Logs**
+- For the the Microsoft Purview Information Protection client: **%localappdata%\Microsoft\MSIP\Logs**
 
 - For the RMS client: **%localappdata%\Microsoft\MSIPC\msip\Logs**
 
-In addition, the Azure Information Protection client logs this personal data to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**.
+In addition, the Microsoft Purview Information Protection client logs this personal data to the local Windows event log **Applications and Services Logs** > **Microsoft Purview Information Protection**.
 
-When the Azure Information Protection client runs the scanner, personal data is saved to **%localappdata%\Microsoft\MSIP\Scanner\Reports** on the Windows Server computer that runs the scanner.
+When the Microsoft Purview Information Protection client runs the scanner, personal data is saved to **%localappdata%\Microsoft\MSIP\Scanner\Reports** on the Windows Server computer that runs the scanner.
 
-You can turn off logging information for the Azure Information Protection client and the scanner by using the following configurations:
+You can turn off logging information for the Microsoft Purview Information Protection client and the scanner by using the following configurations:
 
-- For the Azure Information Protection client: Create an [advanced client setting](./rms-client/clientv2-admin-guide-customizations.md#change-the-local-logging-level) that configures the **LogLevel** to **Off**.
+- For the Microsoft Purview Information Protection client: Create an [advanced client setting](./rms-client/clientv2-admin-guide-customizations.md#change-the-local-logging-level) that configures the **LogLevel** to **Off**.
 
-- For the Azure Information Protection scanner: Use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the *ReportLevel* parameter to **Off**.
+- For the Microsoft Purview Information Protection scanner: Use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the *ReportLevel* parameter to **Off**.
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 
