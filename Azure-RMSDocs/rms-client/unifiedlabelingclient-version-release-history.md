@@ -48,7 +48,7 @@ The lifecycle of each generally available (GA) version of the Microsoft Purview 
 
 |Client version|Date released|Supported through|
 |--------------|-------------|-------------|
-|3.0.X.X|Public Preview 04/11/2024<br>General Availability 05/11/2024|05/11/2025|
+|3.0.16.0|Public Preview 04/11/2024<br>General Availability May 2024|May 2025|
 
 ### Azure Information Protection unified labeling client
 
