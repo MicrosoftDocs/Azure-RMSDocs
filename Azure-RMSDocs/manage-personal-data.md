@@ -44,7 +44,7 @@ When you configure and use Azure Information Protection, email addresses and IP 
 
 - **Microsoft Purview Information Protection client**:
 
-    For the Microsoft Purview Information Protection client, sensitivity labels and label policies are configured in the Microsoft Purview compliance portal. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+    For the Microsoft Purview Information Protection client, sensitivity labels and label policies are configured in the Microsoft Purview portal or the Microsoft Purview compliance portal. For more information, see the [Microsoft Purview documentation](/microsoft-365/compliance/sensitivity-labels).
 
 > [!NOTE]
 > When the Microsoft Purview Information Protection client is used to classify and protect documents and emails, email addresses and the users' IP addresses might be saved in log files.
