@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Release management and supportability - Azure Information Protection (AIP)
-description: Learn about the contents of each version of the Azure Information Protection (AIP) unified labeling client for Windows and understand the lifecycle policy for support.
+title: Release management and supportability - Microsoft Purview Information Protection client
+description: Learn about the contents of each version of the Microsoft Purview Information Protection client for Windows and understand the lifecycle policy for support.
 author: aashishr
 ms.author: aashishr
 manager: aashishr
@@ -22,13 +22,13 @@ ms.suite: ems
 ms.custom: admin
 ---
 
-# Azure Information Protection unified labeling client - Release management and supportability
+# Microsoft Purview Information Protection client - Release management and supportability
 
 [!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
 
-This article describes the functionality added to each recent version of the unified labeling client, as well as servicing information and support timelines for each AIP unified client version.
+This article describes the functionality added to each recent version of the Microsoft Purview Information Protection client, as well as servicing information and support timelines for each client version.
 
-You can download the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
+You can download the Microsoft Purview Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
 If you're looking for updates for the *built-in labeling solution* for Microsoft Office applications, see:
 
@@ -38,9 +38,9 @@ If you're looking for updates for the *built-in labeling solution* for Microsoft
 
 
 ## Servicing information and timelines
-### Microsoft Purview Information Protection labeling client
+### Microsoft Purview Information Protection client
 
-The Microsoft Purview Information Protection labeling client includes the PowerShell, Scanner, File Labeler (previously AIP Classify & Protect) and Viewer. Client versions begin with 3.X and do not include the AIP Add-in for Office.
+The Microsoft Purview Information Protection client includes the PowerShell, Scanner, File Labeler (previously AIP Classify & Protect) and Viewer. Client versions begin with 3.X and do not include the AIP Add-in for Office.
 
 The Microsoft Purview Information Protection labeling client is available for preview starting April 11, 2024 on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). Upgrades from AIP UL 2.X client versions require manual uninstall before install of the Microsoft Purview Information Protection labeling client. Client upgrades through Windows Update on machines with AIP UL 2.X client versions installed will fail.
 
