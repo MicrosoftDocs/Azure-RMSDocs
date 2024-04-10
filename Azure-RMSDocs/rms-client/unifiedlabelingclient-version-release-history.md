@@ -68,7 +68,7 @@ The Azure Information Protection unified labaleing client has [all components](c
 
 ### Microsoft Update Catalog availability
 
-After a short delay of typically four weeks, the latest general availability version is also included in the Microsoft Update Catalog. Azure Information Protection versions have a product name of **Microsoft Purview Information Protection** > **Microsoft Purview Information Protection Client**, and a classification of **Updates**.
+After a short delay of typically four weeks, the latest general availability version is also included in the Microsoft Update Catalog. Microsoft Purview Information Protection versions have a product name of **Microsoft Purview Information Protection** > **Microsoft Purview Information Protection Client**, and a classification of **Updates**.
 
 Including the Microsoft Purview Information Protection client in the catalog means that you can upgrade the client using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
 
