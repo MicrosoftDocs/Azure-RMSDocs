@@ -72,7 +72,7 @@ After a short delay of typically four weeks, the latest general availability ver
 
 Including the Microsoft Purview Information Protection client in the catalog means that you can upgrade the client using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
 
-For more information, see [Upgrading and maintaining the Azure Information Protection unified labeling client](/purview/information-protection-client#install-or-upgrade-the-information-protection-client).
+For more information, see [Upgrading and maintaining the Information Protection client](/purview/information-protection-client#install-or-upgrade-the-information-protection-client).
 
 > [!NOTE]
 > Microsoft Purview Information Protection client version 3.0 is not available through the Microsoft Update Catalog. Version 3.1 will be the first available release.
