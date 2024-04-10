@@ -6,7 +6,7 @@ description: Learn about the contents of each version of the Microsoft Purview I
 author: aashishr
 ms.author: aashishr
 manager: aashishr
-ms.date: 06/24/2022
+ms.date: 04/11/2024
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -104,8 +104,8 @@ This version of the Microsoft Purview Information Protection client and scanner 
 - Updated right-click in File Explorer to display "Apply sensitivity label with Microsoft Purview" to open the Information Protection File Labeler.
 
 ### Breaking Changes
-- Upgrades from the Azure Information Protection Unified Labeling client must uninstall the 2.X client version from the local machine prior to installing Microsoft Purview Information Protection client version 3.0.
-- Updated service names and cmdlets for Scanner. Upgrades from client version 2.X to 3.X are required to follow the [migration steps](/purview/upgrade-scanner-migrate) or risk deployment failure.
+- Upgrades from the Azure Information Protection unified labeling client must uninstall the 2.X client version from the local machine prior to installing Microsoft Purview Information Protection client version 3.0.
+- Updated service names and cmdlets for the scanner. Upgrades from client version 2.X to 3.X are required to follow the [migration steps](/purview/upgrade-scanner-migrate) or risk deployment failure.
 - Updated parameters and functionality for [Set-FileLabel](https://go.microsoft.com/fwlink/?linkid=2259827) and [Remove-FileLabel](https://go.microsoft.com/fwlink/?linkid=2259828) PowerShell cmdlets.
 
 ## Next steps
@@ -114,9 +114,9 @@ For more information, see:
 
 - [Extend sensitivity labeling on Windows](/purview/information-protection-client)
 
-For information about new features in the Microsoft Purview compliance portal, see:
+For more information about new features for the information protection client, see:
 
-- [What's new in Microsoft 365 compliance?](/microsoft-365/compliance/whats-new)
+- [What's new in Microsoft Purview](/purview/whats-new)
 - [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=Microsoft%2CInformation%2CProtection)
 
 
