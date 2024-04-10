@@ -75,7 +75,7 @@ Including the Microsoft Purview Information Protection client in the catalog mea
 For more information, see [Upgrading and maintaining the Information Protection client](/purview/information-protection-client#install-or-upgrade-the-information-protection-client).
 
 > [!NOTE]
-> Microsoft Purview Information Protection client version 3.0 is not available through the Microsoft Update Catalog. Version 3.1 will be the first available release.
+> Microsoft Purview Information Protection client version 3.0 is not available through the Microsoft Update Catalog. Version 3.1 is the first available release.
 >
 
 ### Release information
