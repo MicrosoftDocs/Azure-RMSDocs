@@ -40,9 +40,9 @@ If you're looking for updates for the *built-in labeling solution* for Microsoft
 ## Servicing information and timelines
 ### Microsoft Purview Information Protection client
 
-The Microsoft Purview Information Protection client has [multiple components bundled up into a single downloadable package](/purview/information-protection-client). It includes the PowerShell, Scanner, File Labeler (previously AIP Classify & Protect) and Viewer. Client versions begin with 3.X and do not include the AIP Add-in for Office.
+The Microsoft Purview Information Protection client has [multiple components bundled up into a single downloadable package](/purview/information-protection-client). 
 
-The Microsoft Purview Information Protection labeling client is available for preview starting April 11, 2024 on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). Upgrades from AIP UL 2.X client versions require manual uninstall before install of the Microsoft Purview Information Protection labeling client. Client upgrades through Windows Update on machines with AIP UL 2.X client versions installed will fail.
+The Microsoft Purview Information Protection client is available for preview starting April 11, 2024 on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). The client includes the Information Protection Scanner, PowerShell, File Labeler (previously AIP Classify & Protect) and Viewer with a 3.X minimum client version. Upgrades from AIP UL 2.X client versions require manual uninstall before install of the Microsoft Purview Information Protection labeling client. Client upgrades through Windows Update on machines with AIP UL 2.X client versions installed will fail.
 
 The lifecycle of each generally available (GA) version of the Microsoft Purview Information Protection labeling client are 1 year after release.
 
@@ -50,11 +50,13 @@ The lifecycle of each generally available (GA) version of the Microsoft Purview 
 |--------------|-------------|-------------|
 |3.0.16.0|Public Preview 04/11/2024<br>General Availability May 2024|May 2025|
 
+The date format used on this page is *month/day/year*.
+
+The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. Fixes and new functionality are always applied to the latest GA version and aren't applied to older GA versions.
+
 ### Azure Information Protection unified labeling client
 
-The Azure Information Protection unified labeling client has [multiple components bundled up into a single downloadable package](clientv2-admin-guide.md#technical-overview-of-the-azure-information-protection-unified-labeling-client). The Azure Information Protection add-in [part of the unified labeling client] is the only component in maintenance mode as of January 1, 2022, driven by the modernization effort to make sensitivity labeling and protection built-in to Office applications. All other components within the unified labeling client aren't in maintenance mode and are fully supported. For more information, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/azure-information-protection-and-the-information-protection/ba-p/3671070#:~:text=Azure%20Information%20Protection%20%28AIP%29%20has%20been%20on%20a,management%20experience%20into%20the%20Microsoft%20Purview%20compliance%20portal).
-
-The final support date of the AIP Add-in for Office is April 11, 2024 and is disabled in Office clients starting May 11, 2024 unless you have an exception to continue using the AIP unified labeling client.
+The Azure Information Protection unified labaleing client has [all components](clientv2-admin-guide.md#technical-overview-of-the-azure-information-protection-unified-labeling-client) from the Microsoft Purview Information Protection client as well as the Azure Information Protection Add-in. The AIP Add-in for Office is the only component retired on April 11, 2024, driven by the modernization effort to make sensitivity labeling and protection built-in to Office applications. All other components within the unified labeling client aren't in maintenance mode and are fully supported. For more information, see our [TechCommunity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/azure-information-protection-and-the-information-protection/ba-p/3671070#:~:text=Azure%20Information%20Protection%20%28AIP%29%20has%20been%20on%20a,management%20experience%20into%20the%20Microsoft%20Purview%20compliance%20portal).
 
 |Client version|Date released|Supported through|
 |--------------|-------------|-------------|
@@ -64,18 +66,18 @@ The final support date of the AIP Add-in for Office is April 11, 2024 and is dis
 |2.16.79.0|10/25/2023|04/11/2024: AIP Add-in for Office <br>06/30/2024: AIP PowerShell, Scanner, Classify & Protect and Viewer|
 |2.16.73.0|05/23/2023|04/11/2024: AIP Add-in for Office <br>04/25/2024: AIP PowerShell, Scanner, Classify & Protect and Viewer|
 
-The date format used on this page is *month/day/year*.
-
-The documentation is updated accordingly to a client release cycle and is applicable only to the latest supported GA versions of the client. Fixes and new functionality are always applied to the latest GA version and aren't applied to older GA versions.
-<!---
 ### Microsoft Update Catalog availability
 
-After a short delay of typically four weeks, the latest general availability version is also included in the Microsoft Update Catalog. Azure Information Protection versions have a product name of **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Unified Labeling Client**, and a classification of **Updates**.
+After a short delay of typically four weeks, the latest general availability version is also included in the Microsoft Update Catalog. Azure Information Protection versions have a product name of **Microsoft Purview Information Protection** > **Microsoft Purview Information Protection Client**, and a classification of **Updates**.
 
-Including Azure Information Protection in the catalog means that you can upgrade the client using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
+Including the Microsoft Purview Information Protection client in the catalog means that you can upgrade the client using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
 
-For more information, see [Upgrading and maintaining the Azure Information Protection unified labeling client](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
---->
+For more information, see [Upgrading and maintaining the Azure Information Protection unified labeling client](/purview/information-protection-client#install-or-upgrade-the-information-protection-client).
+
+> [!NOTE]
+> Microsoft Purview Information Protection client version 3.0 is not available through the Microsoft Update Catalog. Version 3.1 will be the first available release.
+>
+
 ### Release information
 
 Use the following information to see the contents of each supported release of the Microsoft Purview Information Protection client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
@@ -103,15 +105,14 @@ This version of the Microsoft Purview Information Protection client and scanner 
 
 ### Breaking Changes
 - Upgrades from the Azure Information Protection Unified Labeling client must uninstall the 2.X client version from the local machine prior to installing Microsoft Purview Information Protection client version 3.0.
-- Updated service names and cmdlets for Scanner. Upgrades from client version 2.X to 3.X are required to follow the [recommended procedure](LINK #1) or risk deployment failure.
+- Updated service names and cmdlets for Scanner. Upgrades from client version 2.X to 3.X are required to follow the [recommended procedure](/purview/upgrade-scanner-migrate) or risk deployment failure.
 - Updated parameters and functionality for new [Set-FileLabel](LINK #2), [Set-FileClassification](Link #3) and [Remove-FileLabel](Link #4) PowerShell cmdlets.
 
 ## Next steps
 
 For more information, see:
 
-- For users: [Download and install the client](install-unifiedlabelingclient-app.md)
-- For admins: [Azure Information Protection unified labeling client administrator guide](clientv2-admin-guide.md)
+- [Extend sensitivity labeling on Windows](/purview/information-protection-client)
 
 For information about new features in the Microsoft Purview compliance portal, see:
 
