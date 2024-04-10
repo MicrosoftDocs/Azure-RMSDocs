@@ -91,22 +91,22 @@ Noted Microsoft Purview Information Protection features are currently in PREVIEW
 
 ## Version 3.0.16.0 Preview
 
-Microsoft Purview Information Protection client and scanner version 3.0.16.0 is available for public preview.
+Microsoft Purview Information Protection client and scanner version 3.0.16.0 is available for preview.
 
 **Preview Date** 04/11/2024
 
 ### Fixes and improvements
 This version of the Microsoft Purview Information Protection client and scanner provides the following fixes and improvements:
-- Removed Azure Information Protection Add-in for Office from the client.
-- Replaced references to the Azure Information Protection brand with Microsoft Purview Information Protection.  
+- Removed Azure Information Protection Add-in for Office from the client package.
+- Replaced references to the Azure Information Protection brand name with Microsoft Purview Information Protection.  
 - Updated PowerShell module name to PurviewInformationProtection from AzureInformationProtection.
 - Created aliases for AzureInformationProtection PowerShell cmdlets in PurviewInformationProtection, except for `Set-AIPFileLabel` and `Set-AIPFileClassification`.
 - Updated right-click in File Explorer to display "Apply sensitivity label with Microsoft Purview" to open the Information Protection File Labeler.
 
 ### Breaking Changes
 - Upgrades from the Azure Information Protection Unified Labeling client must uninstall the 2.X client version from the local machine prior to installing Microsoft Purview Information Protection client version 3.0.
-- Updated service names and cmdlets for Scanner. Upgrades from client version 2.X to 3.X are required to follow the [recommended procedure](/purview/upgrade-scanner-migrate) or risk deployment failure.
-- Updated parameters and functionality for new Set-FileLabel, Set-FileClassification and Remove-FileLabel PowerShell cmdlets.
+- Updated service names and cmdlets for Scanner. Upgrades from client version 2.X to 3.X are required to follow the [migration steps](/purview/upgrade-scanner-migrate) or risk deployment failure.
+- Updated parameters and functionality for [Set-FileLabel](https://go.microsoft.com/fwlink/?linkid=2259827) and [Remove-FileLabel](https://go.microsoft.com/fwlink/?linkid=2259828) PowerShell cmdlets.
 
 ## Next steps
 
