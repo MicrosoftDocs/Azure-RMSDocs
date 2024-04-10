@@ -42,7 +42,7 @@ If you're looking for updates for the *built-in labeling solution* for Microsoft
 
 The Microsoft Purview Information Protection client has [multiple components bundled up into a single downloadable package](/purview/information-protection-client). 
 
-The Microsoft Purview Information Protection client is available for preview starting April 11, 2024 on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). The client includes the Information Protection Scanner, PowerShell, File Labeler (previously AIP Classify & Protect) and Viewer with a 3.X minimum client version. Upgrades from AIP UL 2.X client versions require manual uninstall before install of the Microsoft Purview Information Protection labeling client. Client upgrades through Windows Update on machines with AIP UL 2.X client versions installed will fail.
+The Microsoft Purview Information Protection client is available for preview starting April 11, 2024 on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). The client includes the Information Protection Scanner, PowerShell, File Labeler (previously AIP Classify & Protect) and Viewer with a 3.X minimum client version.
 
 The lifecycle of each generally available (GA) version of the Microsoft Purview Information Protection labeling client are 1 year after release.
 
@@ -106,7 +106,7 @@ This version of the Microsoft Purview Information Protection client and scanner 
 ### Breaking Changes
 - Upgrades from the Azure Information Protection Unified Labeling client must uninstall the 2.X client version from the local machine prior to installing Microsoft Purview Information Protection client version 3.0.
 - Updated service names and cmdlets for Scanner. Upgrades from client version 2.X to 3.X are required to follow the [recommended procedure](/purview/upgrade-scanner-migrate) or risk deployment failure.
-- Updated parameters and functionality for new [Set-FileLabel](LINK #2), [Set-FileClassification](Link #3) and [Remove-FileLabel](Link #4) PowerShell cmdlets.
+- Updated parameters and functionality for new Set-FileLabel, Set-FileClassification and Remove-FileLabel PowerShell cmdlets.
 
 ## Next steps
 
