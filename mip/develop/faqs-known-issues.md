@@ -19,10 +19,6 @@ We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the 
 
 #### Metadata FAQ
 
-**Question**: When will the first features become available that require this new storage location?
-
-- Co-authoring for protected files in Microsoft 365 apps requires this new metadata storage location. For more details, review the [Security, Compliance, and Identity blog post](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-co-authoring-on-microsoft-information-protection/ba-p/2164162).
-
 **Question**: Are other formats impacted, such as PDF?
 
 - No, only Office files, specifically Word, Excel, and PowerPoint files.
@@ -33,25 +29,22 @@ We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the 
 
 **Question**: Is there a specific version of the Office client that is required to use this storage location?
 
-- All Microsoft 365 Apps clients released after September 2021 support this new metadata location. The new storage locations won't be used until the protected co-authoring feature is enabled by tenant administrators.
+- All Microsoft 365 Apps clients released after September 2021 support this new metadata location. The new storage location isn't used until the protected co-authoring feature is enabled by tenant administrators.
 
-**Question**: Will the existing metadata stored as a custom property in *custom.xml* be kept up to date?
+**Question**: Is existing metadata stored as a custom property in *custom.xml* be kept up to date?
 
 - No. The first time the document is saved after the new storage location is enabled, label metadata is moved to the new location. Metadata written via [`LabelingOptions.ExtendedProperties`](/dotnet/api/microsoft.informationprotection.file.labelingoptions.extendedproperties?view=mipsdk-dotnet-1.7&preserve-view=true#Microsoft_InformationProtection_File_LabelingOptions_ExtendedProperties) remains in *custom.xml*.
 
-**Question**: Will it be possible to read the label metadata without MIP SDK? 
+**Question**: Is it pssible to read the label metadata without MIP SDK? 
 
-- Yes, but you'll need to implement your own code to parse the file and extract the information.
+- Yes, but you need to implement your own code to parse the file and extract the information.
 
-**Question**: Currently, it's easy to "read" the label by extracting the key/value pair strings from the file. Will reading still be possible in this manner? 
+**Question**: Currently, it's easy to "read" the label by extracting the key/value pair strings from the file. Can metadata still be read in this manner?
 
-- Yes, the metadata is still available in the Office file XML to be read. However, it should be noted that your application will need to understand whether the new feature set is enabled to know which section is authoritative (custom.xml vs. labelinfo.xml). Review [MS-OFFCRYPTO: LabelInfo versus Custom Document Properties | Microsoft Docs.](/openspecs/office_file_formats/ms-offcrypto/13939de6-c833-44ab-b213-e0088bf02341) for implementation details.
-  
-**Question**: How can I discover if the new features are enabled? 
+- Yes, the metadata is still available in the Office file XML to be read. Your application must read the coauthoring setting from the policy file to know that the new feature set is enabled. This defines where to read/write the label data (custom.xml vs. labelinfo.xml). Review [MS-OFFCRYPTO: LabelInfo versus Custom Document Properties | Microsoft Docs.](/openspecs/office_file_formats/ms-offcrypto/13939de6-c833-44ab-b213-e0088bf02341) for implementation details.
+ 
 
-- We will share this information as we approach the feature release dates. 
-
-**Question**: How will labels be migrated?
+**Question**: How are labels migrated to the new location?
 
 - The following logic is used to determine which section is read and used to read or write label data.
 
@@ -81,7 +74,7 @@ The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transfor
 
 **Question**: Does the MIP SDK support content marking? 
 
-MIP SDK doesn't support direct application of content marking, including header, footer, or watermark, on any files. When label metadata is written to a file, the File SDK writes the *contentBits* metadata property to indicate that protection was applied (if configured) and *won't* write the properties that indicate header, footer, or watermark were applied. When the file is opened in an application that supports content marking, the content marking configuration should be evaluated by the application and written to the file on save. 
+MIP SDK doesn't support direct application of content marking, including header, footer, or watermark, on any files. When label metadata is written to a file, the File SDK writes the *contentBits* metadata property to indicate that protection was applied (if configured). It *won't* write the properties that indicate header, footer, or watermark were applied. When the file is opened in an application that supports content marking, the content marking configuration should be evaluated by the application and written to the file on save. 
 
 ### Protection and Policy SDKs on Android
 **Question**: Which shared library should I use for integrating the MIP SDK into my Android application?
