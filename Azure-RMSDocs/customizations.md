@@ -19,8 +19,6 @@ There are two types of reference sections - the legacy table by setting name, an
 
 FUTURE task - reorganize this topic by feature type so that admins can read related settings together. NOT recommended to reorganize this page into sub-pages as there are too many xrefs out there to this page and you'll need a lot of redirects. Additionally, users might just search for their setting or text on a single page. It would help to have related settings documented one right after the other to help with scrolling. -->
 
-[!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
-
 Use the following information for advanced configurations needed for specific scenarios or users when managing the AIP unified labeling client.
 
 > [!NOTE]
@@ -137,7 +135,7 @@ However, for labels, the Microsoft Purview compliance portal show both a **Name*
 
 For example, to identify the label in the following picture, use the following syntax in your PowerShell command: `-Identity "All Company"`:
 
-![Use 'Name' rather than 'Display name' to identify a sensitivity label](../media/labelname_scc.png)
+![Use 'Name' rather than 'Display name' to identify a sensitivity label](/media/labelname_scc.png)
 
 If you prefer to specify the label **GUID**, this value is *not* shown in the Microsoft Purview compliance portal. Use the [Get-Label](/powershell/module/exchange/get-label) command to find this value, as follows:
 
@@ -265,7 +263,7 @@ To hide the **Classify and Protect** menu option in the Windows File Explorer, c
 
 **HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Microsoft.Azip.RightClick\LegacyDisable**
 
-For more information, see [Using File Explorer to classify files](clientv2-classify.md#using-file-explorer-to-classify-files).
+For more information, see [Using File Explorer to classify files](/azure/information-protection/rms-client/clientv2-classify#using-file-explorer-to-classify-files).
 
 ## Display the Information Protection bar in Office apps
 
@@ -325,7 +323,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnable
 
 This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Security & Compliance Center PowerShell.
 
-When you configure this setting, the  [PowerShell](./clientv2-admin-guide-powershell.md) cmdlet **Set-AIPFileLabel** is enabled to allow removal of protection from PST, rar, and 7zip files.
+When you configure this setting, the  [PowerShell](/azure/information-protection/rms-client/clientv2-admin-guide-powershell) cmdlet **Set-AIPFileLabel** is enabled to allow removal of protection from PST, rar, and 7zip files.
 
 - Key: **EnableContainerSupport**
 
@@ -994,7 +992,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{
 
 By default, the Azure Information Protection unified labeling client supports central reporting and sends its audit data to:
 
-- [Azure Information Protection analytics](../reports-aip.md), if you've configured a [Log Analytics workspace](https://azure.microsoft.com/pricing/details/log-analytics)
+- [Azure Information Protection analytics](reports-aip.md), if you've configured a [Log Analytics workspace](https://azure.microsoft.com/pricing/details/log-analytics)
 - Microsoft 365, where you can view them in the [Activity Explorer](/microsoft-365/compliance/data-classification-activity-explorer)
 
 To change this behavior, so that audit data is not sent, do the following:
@@ -1023,7 +1021,7 @@ To enable the client to send audit log data again, change the advanced setting v
 
 This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Security & Compliance Center PowerShell.
 
-By default, the unified labeling client does not send content matches for sensitive info types to [Azure Information Protection analytics](../reports-aip.md). For more information about this additional information that can be sent, see the [Content matches for deeper analysis](../reports-aip.md#content-matches-for-deeper-analysis) section from the central reporting documentation.
+By default, the unified labeling client does not send content matches for sensitive info types to [Azure Information Protection analytics](reports-aip.md). For more information about this additional information that can be sent, see the [Content matches for deeper analysis](reports-aip.md#content-matches-for-deeper-analysis) section from the central reporting documentation.
 
 To send content matches when sensitive information types are sent, create the following advanced client setting in a label policy: 
 
@@ -1433,7 +1431,7 @@ If you have computers that cannot connect to the internet for a period of time, 
 
 4. From this computer, export the log files.
     
-    For example, run the [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) cmdlet, or use the **Export Logs** option from the client's [Help and Feedback](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) dialog box. 
+    For example, run the [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) cmdlet, or use the **Export Logs** option from the client's [Help and Feedback](/azure/information-protection/rms-client/clientv2-admin-guide#installing-and-supporting-the-azure-information-protection-unified-labeling-client) dialog box. 
     
     The log files are exported as a single compressed file.
 
@@ -1443,7 +1441,7 @@ If you have computers that cannot connect to the internet for a period of time, 
 
 7. If your chosen user account is one that usually connects to the internet, enable sending audit data again, by setting the **EnableAudit** value to **True**.
 
-Be aware that if a user on this computer selects the **Reset Settings** option from [Help and feedback](clientv2-admin-guide.md#help-and-feedback-section), this action deletes the policy files and renders the client inoperable until you manually replace the files or the client connects to the internet and downloads the files.
+Be aware that if a user on this computer selects the **Reset Settings** option from [Help and feedback](/azure/information-protection/rms-client/clientv2-admin-guide#help-and-feedback-section), this action deletes the policy files and renders the client inoperable until you manually replace the files or the client connects to the internet and downloads the files.
 
 If your disconnected computer is running the Azure Information Protection scanner, there are additional configuration steps you must take. For more information, see [Restriction: The scanner server cannot have internet connectivity](/microsoft-365/compliance/deploy-scanner-prereqs#restriction-the-scanner-server-cannot-have-internet-connectivity) from the scanner deployment instructions.
 
@@ -1469,7 +1467,7 @@ Set the logging level to one of the following values:
 
 - **Trace**: Detailed logging (the default setting for clients).
 
-This registry setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md).
+This registry setting does not change the information that's sent to Azure Information Protection for [central reporting](reports-aip.md).
 
 ## Skip or ignore files during scans depending on file attributes
 
@@ -1535,7 +1533,7 @@ Customize the justification prompts that are displayed in both Office and the AI
 
 For example, as an administrator, you may want to remind your users not to add any customer identifying information into this field:
 
-:::image type="content" source="../media/justification-office.png" alt-text="Customized justification prompt text":::
+:::image type="content" source="/media/justification-office.png" alt-text="Customized justification prompt text":::
 
 To modify the default **Other** text that's displayed, use the **JustificationTextForUserText** advanced property with the [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) cmdlet. Set the value to the text you want to use instead.
 
@@ -2018,7 +2016,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPa
 
 By default, document tracking features are turned on for your tenant. To turn them off, such as for privacy requirements in your organization or region, set the **EnableTrackAndRevoke** value to **False**.
 
-Once turned off, document tracking data will not longer be available in your organization, and users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
+Once turned off, document tracking data will not longer be available in your organization, and users will no longer see the [**Revoke**](/azure/information-protection/rms-client/revoke-access-user#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
 
 For the selected label policy, specify the following strings:
 
@@ -2035,7 +2033,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableTrackAndRevoke="False
 After setting this value to **False**, track and revoke is turned off as follows: 
 
 - Opening protected documents with the AIP unified labeling client no longer registers the documents for track and revoke.
-- End users will no longer see the [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
+- End users will no longer see the [**Revoke**](/azure/information-protection/rms-client/revoke-access-user#revoke-access-from-microsoft-office-apps) menu option in their Office apps.
 
 However, protected documents that are already registered for tracking will continue to be track, and administrators can still revoke access from PowerShell. To fully turn off track and revoke features, also run the [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) cmdlet.
 
@@ -2133,8 +2131,8 @@ Turn on this feature in the AIP Client by enabling this registry key:
 
 Now that you've customized the Azure Information Protection unified labeling client, see the following resources for additional information that you might need to support this client:
 
-- [Client files and usage logging](clientv2-admin-guide-files-and-logging.md)
+- [Client files and usage logging](/azure/information-protection/rms-client/clientv2-admin-guide-files-and-logging)
 
-- [File types supported](clientv2-admin-guide-file-types.md)
+- [File types supported](/azure/information-protection/rms-client/clientv2-admin-guide-file-types)
 
-- [PowerShell commands](clientv2-admin-guide-powershell.md)
+- [PowerShell commands](/azure/information-protection/rms-client/clientv2-admin-guide-powershell)
