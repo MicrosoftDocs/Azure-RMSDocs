@@ -135,7 +135,7 @@ However, for labels, the Microsoft Purview compliance portal show both a **Name*
 
 For example, to identify the label in the following picture, use the following syntax in your PowerShell command: `-Identity "All Company"`:
 
-![Use 'Name' rather than 'Display name' to identify a sensitivity label](/media/labelname_scc.png)
+![Use 'Name' rather than 'Display name' to identify a sensitivity label](media/labelname_scc.png)
 
 If you prefer to specify the label **GUID**, this value is *not* shown in the Microsoft Purview compliance portal. Use the [Get-Label](/powershell/module/exchange/get-label) command to find this value, as follows:
 
@@ -1533,7 +1533,7 @@ Customize the justification prompts that are displayed in both Office and the AI
 
 For example, as an administrator, you may want to remind your users not to add any customer identifying information into this field:
 
-:::image type="content" source="/media/justification-office.png" alt-text="Customized justification prompt text":::
+:::image type="content" source="media/justification-office.png" alt-text="Customized justification prompt text":::
 
 To modify the default **Other** text that's displayed, use the **JustificationTextForUserText** advanced property with the [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) cmdlet. Set the value to the text you want to use instead.
 
@@ -1630,7 +1630,7 @@ Supported node types include:
 | **Except**	| Returns *not* for its own child, causing it to behave as **All**        |
 | **SentTo**, followed by **Domains: listOfDomains**	|Checks one of the following: <br>- If the Parent is **Except**, checks whether **All** of the recipients are in one of the domains<br>- If the Parent is anything else but **Except**, checks whether **Any** of the recipients are in one of the domains.   |
 | **EMailLabel**, followed by label	| One of the following:  <br>- The label ID <br>- null, if not labeled             |
-| **AttachmentLabel**, followed by **Label** and supported **Extensions**	| One of the following:  <br><br>**true**: <br>- If the Parent is **Except**, checks whether **All** of the attachments with one supported extension exists within the label<br>- 	If the Parent is anything else but **Except**, checks whether **Any** of the attachments with one supported extension exists within the label <br>- If not labeled, and **label = null** <br><br> **false**: For all other cases <br><br>**Note**: If the **Extensions** property is empty or missing, all [supported file types (extensions)](clientv2-admin-guide-file-types.md) are included in the rule.
+| **AttachmentLabel**, followed by **Label** and supported **Extensions**	| One of the following:  <br><br>**true**: <br>- If the Parent is **Except**, checks whether **All** of the attachments with one supported extension exists within the label<br>- 	If the Parent is anything else but **Except**, checks whether **Any** of the attachments with one supported extension exists within the label <br>- If not labeled, and **label = null** <br><br> **false**: For all other cases <br><br>**Note**: If the **Extensions** property is empty or missing, all [supported file types (extensions)](/azure/information-protection/rms-client/clientv2-admin-guide-file-types) are included in the rule.
 
 #### Rule action syntax
 
