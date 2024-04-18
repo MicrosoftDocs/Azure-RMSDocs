@@ -45,7 +45,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 
 ## Information about new releases and updates
 
-For information about new and preview versions, see the [Azure Information Protection unified labeling client - Version release history and support policy](rms-client/unifiedlabelingclient-version-release-history.md).
+For information about new and preview versions, see the [Azure Information Protection unified labeling client - Version release history and support policy](/purview/information-protection/information-protection-client-relnotes).
 
 The official roadmap for Azure Information Protection is now on the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent).
 
