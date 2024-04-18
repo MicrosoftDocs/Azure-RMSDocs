@@ -238,7 +238,7 @@ To confirm whether the clients and services you use support unified labeling, re
 
 ##### Clients that currently support unified labeling include
 
-- **The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md)**. For more information, see [Compare Azure Information Protection and MIP built-in labeling](rms-client/use-client.md).
+- **The [Azure Information Protection unified labeling client for Windows](/purview/information-protection-client-relnotes)**. For more information, see [Compare Azure Information Protection and MIP built-in labeling](rms-client/use-client.md).
 
 - **Apps from Office that are in different stages of availability**
 
@@ -298,6 +298,6 @@ If you haven't already done so, install the Azure Information Protection unified
 
 For more information, see:
 
-- [Azure Information Protection unified labeling client - Version release history and support policy](rms-client/unifiedlabelingclient-version-release-history.md)
+- [Azure Information Protection unified labeling client - Version release history and support policy](/purview/information-protection-client-relnotes)
 - [Azure Information Protection unified labeling client administrator guide](rms-client/clientv2-admin-guide.md)
 - [Azure Information Protection unified labeling user guide](rms-client/clientv2-user-guide.md)
