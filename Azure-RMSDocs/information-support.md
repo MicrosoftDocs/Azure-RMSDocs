@@ -96,7 +96,7 @@ For additional support options, ask your Microsoft contact.
 
 - If you have deployed the Rights Management connector for your on-premises servers: See the [monitoring](monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
 
-- For the Azure Information Protection client, see the [Installation checks and troubleshooting](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) section from this client's administrator guide, and confirm that you're using a [supported version](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines). 
+- For the Azure Information Protection client, see the [Installation checks and troubleshooting](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) section from this client's administrator guide, and confirm that you're using a [supported version](/purview/information-protection/information-protection-client-relnotes#servicing-information-and-timelines). 
 
     If there's a preview version available, try that to see if it fixes the issue—not all fixes are listed in the version history.
     
