@@ -11,6 +11,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/rms-client/unifiedlabelingclient-version-release-history.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client-relnotes",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/rms-client/aip-client.md",
       "redirect_url": "/previous-versions/azure/information-protection/rms-client/aip-client",
       "redirect_document_id": false

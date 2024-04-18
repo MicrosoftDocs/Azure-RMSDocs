@@ -47,7 +47,7 @@ For more information, see
 
 - [Final reminder to migrate from Azure Information Protection classic client to unified labeling](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/final-reminder-to-migrate-from-azure-information-protection/ba-p/2731734)
 
-- [Azure Information Protection servicing information timelines](unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines)
+- [Azure Information Protection servicing information timelines](/purview/information-protection-client-relnotes#servicing-information-and-timelines)
 
 
 ## Latest labeling features 
