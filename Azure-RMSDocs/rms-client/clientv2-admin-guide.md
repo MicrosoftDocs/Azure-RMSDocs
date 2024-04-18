@@ -148,7 +148,7 @@ Use the **Connected as** value to confirm that the displayed user name identifie
 
 If you need to sign in as a different user to the one displayed, see the [Sign in as a different user](clientv2-admin-guide-customizations.md#sign-in-as-a-different-user) instructions.
 
-Use the **Version** information to confirm which version of the client is installed. You can check whether this is the latest release version and the corresponding fixes and new features by reading the [Version release information](/purview/information-protection/information-protection-client-relnotes) for the client.
+Use the **Version** information to confirm which version of the client is installed. You can check whether this is the latest release version and the corresponding fixes and new features by reading the [Version release information](/purview/information-protection-client-relnotes) for the client.
 
 ## Support for multiple languages
 
@@ -184,7 +184,7 @@ Alternatively, you can manually upgrade the client by downloading the new releas
 
 When you manually upgrade, uninstall the previous version first only if you're changing the installation method. For example, you change from the executable (.exe) version of the client to the Windows installer (.msi) version of the client. Or, if you need to install a previous version of the client. For example, you had a preview version installed for testing and now need to revert to the current general availability version.
 
-Use the [Version release history and support policy](/purview/information-protection/information-protection-client-relnotes) to understand the support policy for the Azure Information Protection unified labeling client, which versions are currently supported, and the content included in each of the supported releases.
+Use the [Version release history and support policy](/purview/information-protection-client-relnotes) to understand the support policy for the Azure Information Protection unified labeling client, which versions are currently supported, and the content included in each of the supported releases.
 
 ### Upgrading the Azure Information Protection scanner
 

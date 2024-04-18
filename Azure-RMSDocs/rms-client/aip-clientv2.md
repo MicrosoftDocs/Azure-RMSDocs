@@ -33,7 +33,7 @@ The Azure Information Protection unified labeling client for Windows is a downlo
 
 Use the following resources for the unified labeling client:
 
-- [Azure Information Protection unified labeling client: Version release history](/purview/information-protection/information-protection-client-relnotes)
+- [Azure Information Protection unified labeling client: Version release history](/purview/information-protection-client-relnotes)
 
 - [Administrator guide for the Azure Information Protection unified labeling client](clientv2-admin-guide.md)
 

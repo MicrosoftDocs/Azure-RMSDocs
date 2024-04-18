@@ -45,7 +45,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 
 ## Information about new releases and updates
 
-For information about new and preview versions, see the [Azure Information Protection unified labeling client - Version release history and support policy](/purview/information-protection/information-protection-client-relnotes).
+For information about new and preview versions, see the [Azure Information Protection unified labeling client - Version release history and support policy](/purview/information-protection-client-relnotes).
 
 The official roadmap for Azure Information Protection is now on the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent).
 
@@ -96,7 +96,7 @@ For additional support options, ask your Microsoft contact.
 
 - If you have deployed the Rights Management connector for your on-premises servers: See the [monitoring](monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
 
-- For the Azure Information Protection client, see the [Installation checks and troubleshooting](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) section from this client's administrator guide, and confirm that you're using a [supported version](/purview/information-protection/information-protection-client-relnotes#servicing-information-and-timelines). 
+- For the Azure Information Protection client, see the [Installation checks and troubleshooting](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) section from this client's administrator guide, and confirm that you're using a [supported version](/purview/information-protection-client-relnotes#servicing-information-and-timelines). 
 
     If there's a preview version available, try that to see if it fixes the issue—not all fixes are listed in the version history.
     

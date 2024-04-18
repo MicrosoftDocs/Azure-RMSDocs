@@ -84,7 +84,7 @@ The Azure Information Protection audit log feature is currently in PREVIEW. The 
 ## File removed audit logs
 
 > [!NOTE]
-> File removed audit logs are supported only in Azure Information Protection scanner [version 2.7.96.0](/purview/information-protection/information-protection-client-relnotes#servicing-information-and-timelines) and later.
+> File removed audit logs are supported only in Azure Information Protection scanner [version 2.7.96.0](/purview/information-protection-client-relnotes#servicing-information-and-timelines) and later.
 
 **File removed** audit logs are generated for the following activities:
 

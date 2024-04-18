@@ -62,7 +62,7 @@ landingContent:
           - text: Top recommended Ignite sessions
             url: what-is-information-protection.md#top-ignite-sessions
           - text: Release management and supportability
-            url: /purview/information-protection/information-protection-client-relnotes
+            url: /purview/information-protection-client-relnotes
 
   # Card
   - title: Classify & protect data in on-premises data stores

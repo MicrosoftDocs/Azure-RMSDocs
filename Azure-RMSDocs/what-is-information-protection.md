@@ -63,7 +63,7 @@ For example, configure the content scan job setting for the on-premises scanner 
 For more information, see:
 
 - [Learn about the information protection scanner](/microsoft-365/compliance/deploy-scanner)
-- The scanner sections of the [AIP unified labeling client - Version release history](/purview/information-protection/information-protection-client-relnotes)
+- The scanner sections of the [AIP unified labeling client - Version release history](/purview/information-protection-client-relnotes)
 
 Download the scanner installation together with the client from the [Microsoft Azure Information Protection download page](https://www.microsoft.com/download/details.aspx?id=53018).
 
@@ -105,7 +105,7 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 |**FAQs and known issues**     | [Frequently asked questions for Azure Information Protection](faqs.md) </br> [Known issues - Azure Information Protection](known-issues.md)       |
 |**Support options**     | [Support options for Azure Information Protection](information-support.md)        |
 |**Yammer**     |  [Information protection team](https://www.yammer.com/AskIPTeam)       |
-|**Release management and supportability**     | [AIP unified labeling client - Release management and supportability](/purview/information-protection/information-protection-client-relnotes) <br><br>See also: <br>- [Removed and retired services](removed-sunset-services.md)<br>- [What's new in Microsoft Purview risk and compliance solutions](/microsoft-365/compliance/whats-new)<br>- [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance) |
+|**Release management and supportability**     | [AIP unified labeling client - Release management and supportability](/purview/information-protection-client-relnotes) <br><br>See also: <br>- [Removed and retired services](removed-sunset-services.md)<br>- [What's new in Microsoft Purview risk and compliance solutions](/microsoft-365/compliance/whats-new)<br>- [Microsoft 365 roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=compliance) |
 
 
 #### Top Ignite sessions

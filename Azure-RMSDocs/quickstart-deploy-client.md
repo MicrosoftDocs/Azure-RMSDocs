@@ -57,7 +57,7 @@ The AIP client installation files are available from the [Microsoft Download sit
 For more information, see [Admin Guide: Install the Azure Information Protection unified labeling client for users](rms-client/clientv2-admin-guide-install.md).
 
 > [!TIP]
-> To test-run the latest features available for the AIP client, deploy our public preview version on a testing system. For more information, see the AIP unified labeling client [version release history](/purview/information-protection/information-protection-client-relnotes).
+> To test-run the latest features available for the AIP client, deploy our public preview version on a testing system. For more information, see the AIP unified labeling client [version release history](/purview/information-protection-client-relnotes).
 > 
 
 ## Next steps
