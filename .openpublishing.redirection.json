@@ -6,6 +6,66 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/quickstart-deploy-client.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-admin-guide.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-admin-guide-install.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client#install-or-upgrade-the-information-protection-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/track-and-revoke-admin.md",
+      "redirect_url": "https://learn.microsoft.com/purview/track-and-revoke-admin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-admin-guide-customizations.md",
+      "redirect_url": "https://learn.microsoft.com/powershell/exchange/client-advanced-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-user-guide.md",
+      "redirect_url": "https://support.microsoft.com/topic/label-and-protect-files-in-file-explorer-in-windows-67829155-2d0e-4122-9677-7c53c8cba18a",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/install-unifiedlabelingclient-app.md",
+      "redirect_url": "https://www.microsoft.com/download/details.aspx?id=53018",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-classify.md",
+      "redirect_url": "https://support.microsoft.com/topic/label-and-protect-files-in-file-explorer-in-windows-67829155-2d0e-4122-9677-7c53c8cba18a",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-classify-protect.md",
+      "redirect_url": "https://support.microsoft.com/topic/label-and-protect-files-in-file-explorer-in-windows-67829155-2d0e-4122-9677-7c53c8cba18a",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-view-use-files.md",
+      "redirect_url": "https://support.microsoft.com/topic/view-protected-files-with-the-azure-information-protection-viewer-9fb56fae-7989-48b0-850f-f446e057cf73",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-remove-label-protection.md",
+      "redirect_url": "https://support.microsoft.com/topic/label-and-protect-files-in-file-explorer-in-windows-67829155-2d0e-4122-9677-7c53c8cba18a",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/revoke-access-user.md",
+      "redirect_url": "https://support.microsoft.com/office/track-and-revoke-access-to-your-files-1de9a543-c2df-44b6-9464-396b23018f96",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/rms-client/mobile-app-faq.md",
       "redirect_url": "https://support.microsoft.com/topic/view-protected-files-with-the-azure-information-protection-viewer-9fb56fae-7989-48b0-850f-f446e057cf73#ID0EBF=iOS",
       "redirect_document_id": false
