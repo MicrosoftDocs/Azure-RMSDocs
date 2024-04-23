@@ -16,6 +16,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/deployment-roadmap-classify-label-protect.md",
+      "redirect_url": "https://learn.microsoft.com/purview/get-started-with-sensitivity-labels",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/rms-client/reqs-ul-client.md",
       "redirect_url": "https://learn.microsoft.com/purview/information-protection-client#requirements-for-deploying-the-information-protection-client",
       "redirect_document_id": false
