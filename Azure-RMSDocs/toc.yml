@@ -137,12 +137,6 @@
         href: install-powershell.md
     - name: Decommissioning and deactivating AIP
       href: decommission-deactivate.md
-    - name: Tracking and revoking with the legacy tracking portal
-      items:
-      - name: Tracking documents for admins
-        href: ./rms-client/client-admin-guide-document-tracking.md
-      - name: Tracking and revoking documents for users
-        href: ./rms-client/client-track-revoke.md
   - name: Deploying & using the client
     items:
     - name: Deploying the client
