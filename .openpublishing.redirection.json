@@ -21,6 +21,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-admin-guide-files-and-logging.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client#log-file-locations",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/configure-client.md",
       "redirect_url": "https://learn.microsoft.com/purview/information-protection-client",
       "redirect_document_id": false

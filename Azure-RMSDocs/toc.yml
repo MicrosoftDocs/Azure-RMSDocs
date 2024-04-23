@@ -147,8 +147,6 @@
       href: reports-aip.md
     - name: Viewing & analyzing service usage
       href: log-analyze-usage.md
-    - name: Viewing logs for client files and usage
-      href: ./rms-client/clientv2-admin-guide-files-and-logging.md
   - name: Developing & customizing apps
     items:
     - name: Microsoft Information Protection SDK
