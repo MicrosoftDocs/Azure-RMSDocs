@@ -53797,7 +53797,7 @@ The AIP viewer displays images in portrait mode, and some wide, landscape-view i
 
 For example, an original image is shown below on the left, with a stretched, portrait version in the AIP viewer on the right. 
 
-To fix this issue, upgrade to [Azure Information Protection unified labeling client]((/purview/information-protection-client-relnotes) version 2.18.26.0.
+To fix this issue, upgrade to [Azure Information Protection unified labeling client](/purview/information-protection-client-relnotes) version 2.18.26.0.
 
 :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Stretched image in client viewer":::
 

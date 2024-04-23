@@ -150,7 +150,7 @@ Download and install the AIP unified labeling client from the [Microsoft Downloa
 For more information, see:
 
 - [AIP documentation](/azure/information-protection/)
-- [AIP version history and support policy]((/purview/information-protection-client-relnotes)
+- [AIP version history and support policy](/purview/information-protection-client-relnotes)
 - [AIP system requirements](/azure/information-protection/requirements)
 - [AIP quickstart: Deploy the AIP client](/azure/information-protection/quickstart-deploy-client)
 - [AIP administrator guide](/azure/information-protection/rms-client/clientv2-admin-guide)
