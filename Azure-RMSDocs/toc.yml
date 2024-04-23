@@ -162,36 +162,8 @@
   - name: Deploying & using the client
     items:
     - name: Deploying the client
-      href: quickstart-deploy-client.md
-    - name: Unified labeling client admin guide
-      items:
-      - name: Overview
-        href: ./rms-client/clientv2-admin-guide.md
-      - name: Installing the client for users
-        href: ./rms-client/clientv2-admin-guide-install.md
-      - name: Tracking and revoking access
-        href: ./rms-client/track-and-revoke-admin.md
-      - name: Customizations
-        href: ./rms-client/clientv2-admin-guide-customizations.md
-      - name: PowerShell commands
-        href: ./rms-client/clientv2-admin-guide-powershell.md
-    - name: Unified labeling client user guide
-      items:
-      - name: Overview
-        href: ./rms-client/clientv2-user-guide.md
-      - name: Downloading and installing the client
-        href: ./rms-client/install-unifiedlabelingclient-app.md
-      - name: Classifying a file or email
-        href: ./rms-client/clientv2-classify.md
-      - name: Classifying and protecting a file or email
-        href: ./rms-client/clientv2-classify-protect.md
-      - name: Viewing protected files on Windows
-        href: ./rms-client/clientv2-view-use-files.md
-      - name: Removing labels and protection
-        href: ./rms-client/clientv2-remove-label-protection.md
-      - name: Revoking document access
-        href: ./rms-client/revoke-access-user.md
-  - name: Monitoring with AIP
+      href: about-aip-client.md
+   - name: Monitoring with AIP
     items:
     - name: Using AIP reports
       href: reports-aip.md
