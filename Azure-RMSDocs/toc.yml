@@ -107,8 +107,6 @@
           href: configure-office365.md
         - name: Office apps
           href: configure-office-apps.md
-        - name: Azure Information Protection client
-          href: configure-client.md
       - name: Configuring usage rights
         href: configure-usage-rights.md
       - name: Configuring super users for discovery services or data recovery
