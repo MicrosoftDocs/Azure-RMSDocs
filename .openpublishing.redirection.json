@@ -15,17 +15,21 @@
       "redirect_url": "https://learn.microsoft.com/purview/information-protection-client",
       "redirect_document_id": false
     },
-
     {
-      "source_path": "Azure-RMSDocs//rms-client/reqs-ul-client.md",
+      "source_path": "Azure-RMSDocs/rms-client/reqs-ul-client.md",
       "redirect_url": "https://learn.microsoft.com/purview/information-protection-client#requirements-for-deploying-the-information-protection-client",
       "redirect_document_id": false
     },
-
-
-
-
-
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-admin-guide-file-types.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client.md#supported-file-types",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/aip-classification-and-protection.md",
+      "redirect_url": "https://learn.microsoft.com/purview/sensitivity-labels",
+      "redirect_document_id": false
+    },
 
     {
       "source_path": "Azure-RMSDocs/quickstart-deploy-client.md",
