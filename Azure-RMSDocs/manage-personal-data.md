@@ -110,9 +110,9 @@ When the Microsoft Purview Information Protection client runs the scanner, perso
 
 You can turn off logging information for the Microsoft Purview Information Protection client and the scanner by using the following configurations:
 
-- For the Microsoft Purview Information Protection client: Create an [advanced client setting](./rms-client/clientv2-admin-guide-customizations.md#change-the-local-logging-level) that configures the **LogLevel** to **Off**.
+- For the Microsoft Purview Information Protection client: Edit the registry to [change the logging level](/purview/information-protection-client#change-the-local-logging-level to **Off**.
 
-- For the Microsoft Purview Information Protection scanner: Use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the *ReportLevel* parameter to **Off**.
+- For the Microsoft Purview Information Protection scanner: Use the [Set-ScannerConfiguration](/powershell/module/purviewinformationprotection/set-scannerconfiguration) cmdlet to set the *ReportLevel* parameter to **Off**.
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 
