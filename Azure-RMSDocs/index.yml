@@ -29,63 +29,7 @@ landingContent:
             url: what-is-information-protection.md
           - text: Frequently asked questions
             url: faqs.md
-          - text: Requirements
-            url: requirements.md
-
-  # Card
-  - title: Get started
-    linkLists:
-     - linkListType: quickstart
-       links:
-          - text: Deploy the unified labeling client
-            url: quickstart-deploy-client.md
-     - linkListType: tutorial
-       links:
-          - text: Install the scanner
-            url: /microsoft-365/compliance/deploy-scanner-configure-install
-          - text: Scan networks and content
-            url: /microsoft-365/compliance/deploy-scanner-manage
-          - text: Prevent oversharing
-            url: /azure/information-protection/tutorial-scan-networks-and-content
-     - linkListType: how-to-guide
-       links:
-          - text: View protected, non-Office, files
-            url: ./rms-client/clientv2-view-use-files.md
-          - text: Admin how-tos for common scenarios
-            url: how-to-guides.md
-
-  # Card
-  - title: Stay current
-    linkLists:
-     - linkListType: whats-new
-       links:
-          - text: Top recommended Ignite sessions
-            url: what-is-information-protection.md#top-ignite-sessions
-          - text: Release management and supportability
-            url: /purview/information-protection-client-relnotes
-
-  # Card
-  - title: Classify & protect data in on-premises data stores
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: About the on-premises scanner
-            url: /microsoft-365/compliance/deploy-scanner
-      - linkListType: how-to-guide
-        links:
-          - text: Configure and install the scanner
-            url: /microsoft-365/compliance/deploy-scanner-configure-install
-          - text: Run the scanner
-            url: /microsoft-365/compliance/deploy-scanner-manage
-
-  # Card
-  - title: Customize the client
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Advanced settings for the unified labeling client
-            url: ./rms-client/clientv2-admin-guide-customizations.md
-
+  
 # Card
   - title: Microsoft Information Protection SDK
     linkLists:
@@ -104,30 +48,4 @@ landingContent:
           - text: API reference for C++
             url: /information-protection/develop/version-release-history      
 
-  # Card
-  - title: Activate unified labels
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: About built-in labeling and the AIP client
-            url: ./rms-client/use-client.md
-      - linkListType: tutorial
-        links:
-          - text: Migrate to the unified labeling solution
-            url: tutorial-migrating-to-ul.md
-      - linkListType: how-to-guide
-        links:
-          - text: Migrate AIP labels to unified sensitivity labels
-            url: configure-policy-migrate-labels.md
-
-  # Card
-  - title: Monitor label usage & discover sensitive information
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Central reporting
-            url: reports-aip.md
-      - linkListType: reference
-        links:
-          - text: Audit log reference
-            url: audit-logs.md
+  
