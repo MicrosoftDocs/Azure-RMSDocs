@@ -21,6 +21,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/help-users.md",
+      "redirect_url": "https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/deployment-roadmap-classify-label-protect.md",
       "redirect_url": "https://learn.microsoft.com/purview/get-started-with-sensitivity-labels",
       "redirect_document_id": false

@@ -129,8 +129,6 @@
       href: verify.md
     - name: Managing personal data
       href: manage-personal-data.md
-    - name: Helping users to protect files
-      href: help-users.md
     - name: Administering with PowerShell
       items:
       - name: Overview
