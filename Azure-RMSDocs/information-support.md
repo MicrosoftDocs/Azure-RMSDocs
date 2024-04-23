@@ -84,8 +84,6 @@ For additional support options, ask your Microsoft contact.
 
 - Microsoft Virtual Academy sessions that include [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection).
 
-- [Recorded sessions from Microsoft Ignite](what-is-information-protection.md#additional-resources)
-
 **Troubleshooting**:
 
 - If you have a question about how something works: Check whether your question is already answered as a [frequently asked question](faqs.md).
