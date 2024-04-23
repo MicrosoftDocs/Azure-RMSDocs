@@ -5,8 +5,6 @@
   items:
   - name: What is Azure Information Protection?
     href: what-is-information-protection.md
-  - name: Built-in labeling and the AIP client
-    href: ./rms-client/use-client.md
   - name: Removed and retired services
     href: removed-sunset-services.md
   - name: AIP is also known as ...
