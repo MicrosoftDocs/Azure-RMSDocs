@@ -9,10 +9,6 @@
     href: removed-sunset-services.md
   - name: AIP is also known as ...
     href: aka.md
-- name: Tutorials
-  items:
-  - name: Migrating from the classic client to the unified labeling client
-    href: tutorial-migrating-to-ul.md
 - name: Concepts
   items:
   - name: AIP requirements
