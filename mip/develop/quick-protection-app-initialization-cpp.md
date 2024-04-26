@@ -183,15 +183,19 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
   #include "profile_observer.h"
   #include"engine_observer.h"
 
-  using std::promise;
+  using mip::ApplicationInfo;
+  using mip::Identity;
+  using mip::LogLevel;
+  using mip::MipConfiguration;
+  using mip::MipContext;
+  using mip::ProtectionEngine;
+  using mip::ProtectionProfile;
+  using std::cout;
   using std::future;
   using std::make_shared;
+  using std::promise;
   using std::shared_ptr;
   using std::string;
-  using std::cout;
-  using mip::ApplicationInfo;
-  using mip::ProtectionProfile;
-  using mip::ProtectionEngine;
 
   int main(){
 
@@ -201,12 +205,8 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
                             "<application-name>",
                             "<application-version>"};
 
-    std::shared_ptr<mip::MipConfiguration> mipConfiguration = std::make_shared<mip::MipConfiguration>(mAppInfo,
-				                                                                                               "mip_data",
-                                                                                        			         mip::LogLevel::Trace,
-                                                                                                       false);
-
-    std::shared_ptr<mip::MipContext> mMipContext = mip::MipContext::Create(mipConfiguration);
+    auto mipConfiguration = make_shared<MipConfiguration>(appInfo, "mip_data", LogLevel::Trace, false);
+    auto mipContext = MipContext::Create(mipConfiguration);
 
     auto profileObserver = make_shared<ProtectionProfileObserver>(); // Observer object
     auto authDelegateImpl = make_shared<AuthDelegateImpl>("<application-id>"); // Authentication delegate object (App ID)
@@ -214,7 +214,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
 
     // Construct/initialize profile object
     ProtectionProfile::Settings profileSettings(
-      mMipContext,
+      mipContext,
       mip::CacheStorageType::OnDisk,      
       consentDelegateImpl,
       profileObserver);
@@ -224,12 +224,12 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
     auto profileFuture = profilePromise->get_future();
     try
     {
-      mip::ProtectionProfile::LoadAsync(profileSettings, profilePromise);
+      ProtectionProfile::LoadAsync(profileSettings, profilePromise);
     }
     catch (const std::exception& e)
     {
       cout << "An exception occurred... are the Settings and ApplicationInfo objects populated correctly?\n\n"
-            << e.what() << "'\n";
+            << e.what() << '\n';
       system("pause");
       return 1;
     }
@@ -238,7 +238,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
 
     // Construct/initialize engine object
     ProtectionEngine::Settings engineSettings(       
-       mip::Identity("<engine-account>"),         // Engine identity (account used for authentication)
+       Identity("<engine-account>"),         // Engine identity (account used for authentication)
        authDelegateImpl,                          // Reference to mip::AuthDelegate implementation
        "",                                        // ClientData field
        "en-US");                                  // Locale (default = en-US)
@@ -259,16 +259,16 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
     catch (const std::exception& e)
     {
       cout << "An exception occurred... is the access token incorrect/expired?\n\n"
-           << e.what() << "'\n";
+           << e.what() << '\n';
       system("pause");
       return 1;
     }
 
-    // Application shutdown. Null out profile and engine, call ReleaseAllResources();
+    // Application shutdown. Null out profile and engine
     // Application may crash at shutdown if resources aren't properly released.
     engine = nullptr;
     profile = nullptr;
-    mipContext.Shutdown();
+    mipContext->ShutDown();
     mipContext = nullptr;
 
     return 0;
