@@ -2054,6 +2054,11 @@
             "redirect_document_id": false
         },
 		{
+            "source_path": "Azure-RMSDocs/information-support.md",
+            "redirect_url": "https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b",
+            "redirect_document_id": false
+        },
+		{
             "source_path": "Azure-RMSDocs/removed-deprecated-services.md",
             "redirect_url": "/information-protection/removed-sunset-services",
             "redirect_document_id": false
