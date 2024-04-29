@@ -51,23 +51,6 @@ Unlike Azure Information Protection, [Microsoft Purview Information Protection](
 For more information, see [Information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 
-## How can I determine if my tenant is on the unified labeling platform?
-
-When your tenant is on the unified labeling platform, it supports sensitivity labels that can be used by [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). If you obtained your subscription for Azure Information Protection in June 2019 or later, your tenant is automatically on the unified labeling platform and no further action is needed. Your tenant might also be on this platform because somebody migrated your Azure Information Protection labels.
-
-If your tenant is not on the unified labeling platform, you'll see the following information banner in the Azure portal, on the **Azure Information Protection** panes:
-
-![Migration information banner](media/migration-status-banner.png)
-
-You can also check by going to **Azure Information Protection** > **Manage** > **Unified labeling**, and view the **Unified labeling** status:
-
-|Status |Description  |
-|---------|---------|
-|**Activated**     |  Your tenant is on the unified labeling platform. <br />You can [create, configure, and publish labels](/microsoft-365/compliance/create-sensitivity-labels) from the Microsoft Purview compliance portal.       |
-|**Not activated**    |  Your tenant is not on the unified labeling platform. <br />For migration instructions and guidance, see [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md).       |
-
-
-
 ## What's the difference between Azure Information Protection and Azure Rights Management?
 
 Azure Information Protection (AIP) provides classification, labeling, and protection for an organization's documents and emails.
@@ -75,12 +58,6 @@ Azure Information Protection (AIP) provides classification, labeling, and protec
 Content is protected using the Azure Rights Management service, which is now a component of AIP.
 
 For more information, see [How AIP protects your data](aip-classification-and-protection.md#how-aip-protects-your-data) and [What is Azure Rights Management?](what-is-azure-rms.md).
-
-## What's the role of identity management for Azure Information Protection?
-
-Identity management is an important component of AIP, as users must have a valid user name and password to access protected content.
-
-To read more about how Azure Information Protection helps to secure your data, see [The role of Azure Information Protection in securing data](/enterprise-mobility-security/solutions/azure-information-protection-securing-data).
 
 ## What subscription do I need for Azure Information Protection and what features are included?
 
@@ -221,12 +198,6 @@ Different countries have different requirements and regulations. To help you ans
 
 ## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
 See [Compliance and supporting information for Azure Information Protection](./compliance.md).
-
-## How can I report a problem or send feedback for Azure Information Protection?
-
-For technical support, use your standard support channels or [contact Microsoft Support](information-support.md#to-contact-microsoft-support).
-
-We also invite you to engage with our engineering team, on their [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/).
 
 ## What do I do if my question isn't here?
 
