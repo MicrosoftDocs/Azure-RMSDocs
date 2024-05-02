@@ -32,13 +32,6 @@ When the protection service (Azure Rights Management) from Azure Information Pro
 
 A simple verification test is to protect a document or email message by using one user account, and then attempt to open and use that protected content from another user account on a different computer.
 
-For instructions to complete this testing, see the information in [Helping users to protect files by using the Azure Rights Management service](help-users.md).
-
-If your testing is unsuccessful, review the configuration steps in [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md).
-
-> [!TIP]
-> If you need additional help, see the [Support options and community resources](information-support.md#support-options-and-community-resources) section in the [Information and support for Azure Information Protection](information-support.md) article.
-
 ## Next steps
 
 You can monitor how your organization is using this protection service by using usage logging. For more information, see [Logging and analyzing the protection usage from Azure Information Protection](log-analyze-usage.md).

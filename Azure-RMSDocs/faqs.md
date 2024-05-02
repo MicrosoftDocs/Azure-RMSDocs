@@ -224,7 +224,7 @@ See [Compliance and supporting information for Azure Information Protection](./c
 
 ## How can I report a problem or send feedback for Azure Information Protection?
 
-For technical support, use your standard support channels or [contact Microsoft Support](information-support.md#to-contact-microsoft-support).
+For technical support, use your standard support channels or [contact Microsoft Support](https://support.microsoft.com/contactust).
 
 We also invite you to engage with our engineering team, on their [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/).
 
@@ -235,7 +235,3 @@ First, review the frequently asked questions listed below, which are specific to
 - [FAQs for classification and labeling](faqs-infoprotect.md)
 
 - [FAQs for data protection](faqs-rms.md)
-
-If your question isn't answered, see the links and resources listed in [Information and support for Azure Information Protection](information-support.md).
-
-

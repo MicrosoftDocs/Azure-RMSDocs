@@ -45,7 +45,7 @@ You must have an **Azure Information Protection plan** for classification, label
 - [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)
 - [Modern Work Plan Comparison](https://go.microsoft.com/fwlink/?linkid=2139145) (PDF download)
 
-If your question isn't answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
+If your question isn't answered there, contact your Microsoft Account Manager or [Microsoft Support](https://support.microsoft.com/contactus).
 
 <a name='azure-active-directory'></a>
 
