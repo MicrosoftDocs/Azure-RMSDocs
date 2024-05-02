@@ -178,6 +178,3 @@ Review [Terminology for Azure Information Protection](./terminology.md) so that 
 - [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](/azure/information-protection/tutorial-scan-networks-and-content)
 
 If you’re ready to start deploying data protection for your organization, use the [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md) for your deployment steps and links for how-to instructions.
-
-> [!TIP]
-> For additional information and help, use the resources and links in [Information and support for Azure Information Protection](information-support.md).

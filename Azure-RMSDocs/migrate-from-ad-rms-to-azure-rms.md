@@ -124,7 +124,7 @@ To confirm the AD RMS cryptographic mode for Windows Server 2012 R2 and Windows 
 
 - If your AD RMS deployment is configured to collaborate with external partners (for example, by using trusted user domains or federation), they must also migrate to Azure Information Protection either at the same time as your migration, or as soon as possible afterwards. To continue to access content that your organization previously protected by using Azure Information Protection, they must make client configuration changes that are similar to those that you make, and included in this document.
     
-    Because of the possible configuration variations that your partners might have, exact instructions for this reconfiguration are out of scope for this document. However, see the next section for planning guidance and for additional help, [contact Microsoft Support](./information-support.md#support-options-and-community-resources).
+    Because of the possible configuration variations that your partners might have, exact instructions for this reconfiguration are out of scope for this document. However, see the next section for planning guidance and for additional help, [contact Microsoft Support](https://support.microsoft.com/en-us/contactus).
 
 ## Migration planning if you collaborate with external partners
 
