@@ -35,7 +35,7 @@ If you have a subscription that includes Azure Information Protection or Azure R
 
 The following sections list additional AIP and Microsoft Entra requirements for specific scenarios. 
 
-## Support for certificate-based authentication (CBA) -> Asking Tom if still valid 
+## Support for certificate-based authentication (CBA)
 
 The Azure Information Protection apps for iOS and Android support certificate-based authentication. 
 
