@@ -46,20 +46,6 @@ The Azure Information Protection viewer can't open attachments in a protected PD
 
 For more information, see [Admin Guide: File types supported by the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-file-types).
 
-## Known issues for AIP and Exploit Protection
-
-The Azure Information Protection client isn't supported on machines that have .NET 2 or 3, where [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled, and will cause Office apps to behave unexpectedly.
-
-In such cases, we recommend that you upgrade your .NET version. For more information, see [Microsoft .NET Framework requirements](rms-client/reqs-ul-client.md#microsoft-net-framework-requirements).
-
-If you must keep your .NET version 2 or 3, make sure to disable Exploit protection before installing AIP. 
-
-To disable Exploit protection via PowerShell, run the following:
-
-```PowerShell
-Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
-```
-
 ## Known issues for watermarks
 
 When you're adding a watermark to a label, keep in mind that if you use font size one, it automatically adjusts to fit the page. However, if you use any other font size, it uses the size you specified in the font settings.
@@ -98,20 +84,6 @@ By adding this registry key, the Scanner authenticates using ADAL instead.
 
 - Password protected files.
 
-## AIP known issues in Office applications
-
-|Feature  |Known issues  |
-|---------|---------|
-|**Multiple versions of Office<br> <br> Multiple Office accounts**    | The Azure Information Protection unified labeling client doesn't support:  <br><br>-	Multiple versions of Office on the same computer <br>-	Multiple Office accounts, or switching user accounts in Office <br>-	Shared mailboxes     |
-|**Multiple displays** |If you're using multiple displays and have an Office application open: <br><br>- You might experience performance issues in your Office apps.<br>- The Azure Information Protection bar might appear to float in the middle of the Office screen, on one or both displays <br><br>To ensure consistent performance, and that the bar remains in the correct location, open the **Options** dialog for your Office application, and under **General**, select **Optimize for compatibility** instead of **Optimize for best appearance**.    |
-|**IRM support in Office 2016**| The [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) registry setting, which controls metadata encryption in Office 2016, isn't supported for Azure Information Protection labels.|
-|**Outlook object model access** | - The [PromptOOMAddressBookAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when address books are accessed via the Outlook object model, isn't supported with Azure Information Protection labels. <br><br>- The [PromptOOMAddressInformationAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) registry setting, which controls the prompts that display when a program reads address information, is't supported for Azure Information Protection labels.|
-|**Files attached to emails** |Due to a limitation in recent Windows updates, scanning Outlook messages (**.msg** files) might cause those files to be locked. To unlock the files, stop the scanner service. Starting the scanner service again doesn't lock the files again until the next time the messages are scanned. <br><br>To clarify whether your system is affected, you might want to start a scan on a specific folder with a single, sample message, and check to see if the file is locked after the scan is complete. <br><br>**Note**: This issue isn't relevant when applying and removing protection with PowerShell. |
-|**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature isn't supported with any Azure Information Protection feature.       |
-| **S/MIME emails** | Opening S/MIME emails in Outlook's Reading Pane might cause performance issues. <br><br>To prevent performance issues with S/MIME emails, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property. <br><br>**Note**: Enabling this property prevents the AIP bar or the email classification from being displayed in Outlook's Reading Pane. |
-|**Content markings in Word**    | AIP [content markings](/previous-versions/azure/information-protection/configure-policy-markings) in Microsoft Word headers or footers might be offset or placed incorrectly, or might be hidden entirely, when that same header or footer also contains a table.<br><br>For more information, see [When visual markings are applied](/previous-versions/azure/information-protection/configure-policy-markings#when-visual-markings-are-applied). |
-|**Send to File Explorer option** |If you choose to right-click on any file in the File Explorer and select **Send to > Mail recipient**, the Outlook message that opens with the file attached might not display the AIP toolbar. <br><br>If this occurs and you need to use the AIP toolbar options, start your email from within Outlook and then browse to and attach the file you want to send.|
-
 ### Known issues for co-authoring
 
 Known issues for co-authoring are relevant only when co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
@@ -119,8 +91,9 @@ Known issues for co-authoring are relevant only when co-authoring is [enabled in
 Known issues for co-authoring in AIP include:
 
 - [Supported versions for co-authoring and sensitivity labels](#supported-versions-for-co-authoring-and-sensitivity-labels)
+
 - [Policy updates](#policy-updates)
-- [User interface changes when applying labels](#user-interface-changes-when-applying-labels)
+
 - [Unsupported features for co-authoring](#unsupported-features-for-co-authoring)
 
 > [!IMPORTANT]
@@ -53737,15 +53710,6 @@ If your labeling policy was updated while an Office application was opened with 
 
 If this occurs, close and reopen your Office application to be able to apply your labels.
 
-#### User interface changes when applying labels
-
-When co-authoring is enabled in your tenant, the user experience for labels that are configured for user-defined permissions changes to the experience for built-in labels.
-
-Instead of seeing the Microsoft Azure Information Protection dialog box where users can select [permission levels](configure-usage-rights.md#rights-included-in-permissions-levels) such as **Viewer**, **Reviewer**, and **Only for me**, they see the same dialog box as if they had they selected the **File** tab > **Info** > **Protect Document** > **Restrict Access** > **Restricted Access**.  From this dialog box, they can specify their choice of permissions and users.  
-
-For more information, see the [Word, PowerPoint, andCould you use contractions to make it less formal?
- Excel permissions](/microsoft-365/compliance/encryption-sensitivity-labels#word-powerpoint-and-excel-permissions) section from the Microsoft Purview documentation.
-
 > [!NOTE]
 > Unlike the Microsoft Azure Information Protection dialog box, the **Restricted Access** dialog box doesn't support specifying a domain name to automatically include all users in the organization.
 >
@@ -53756,7 +53720,6 @@ The following features aren't supported or are partially supported when [co-auth
 
 - **DKE templates and DKE user-defined properties**. For more information, see [Double Key Encryption (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).
 
-- **Labels with user-defined permissions**. In Microsoft Word, Excel, and PowerPoint, labels with user-defined permissions are still available and can be applied to documents, but aren't supported for co-authoring features.
 - This means that applying a label with user-defined permissions prevents you from working on the document with others at the same time.
 
 - **Removing external content marking in apps**. External content marking is removed only when a label is applied, and not when the document is saved. For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
@@ -53824,7 +53787,7 @@ On Android devices, ADRMS-protected files can't be opened by the AIP Viewer app.
 Tracking and revoking document access using the unified labeling client has the following known issues:
 
 - [Password-protected documents](#password-protected-documents)
-- [Multiple attachments in a protected email](#multiple-attachments-in-a-protected-email)
+
 - [Documents accessed via SharePoint or OneDrive](#documents-accessed-via-sharepoint-or-onedrive)
 
 For more information, see the [Admin Guide](rms-client/track-and-revoke-admin.md) and [User Guide](rms-client/revoke-access-user.md) procedures.
@@ -53832,14 +53795,6 @@ For more information, see the [Admin Guide](rms-client/track-and-revoke-admin.md
 #### Password-protected documents
 
 Password-protected documents aren't supported by track and revoke features.
-#### Multiple attachments in a protected email
-
-If you attach multiple documents to an email, and then protect the email and send it, each of the attachments gets the same ContentID value.
-
-This ContentID value will be returned only with the first file that had been opened. Searching for the other attachments won't return the ContentID value required to get tracking data.
-
-Additionally, revoking access for one of the attachments also revokes access for the other attachments in the same protected email.
-
 #### Documents accessed via SharePoint or OneDrive
 
 - Protected documents that are uploaded to SharePoint or OneDrive lose their **ContentID** value, and access can't be tracked or revoked.
@@ -93928,4 +93883,5 @@ The following additional articles might be helpful in answering questions you ha
 - [File types supported by the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-file-types.md)
 - [Frequently asked questions for Azure Information Protection](faqs.md)
 - [Frequently asked questions about data protection in Azure Information Protection](faqs-rms.md)
+
 - [Frequently asked questions about classification and labeling in Azure Information Protection](faqs-infoprotect.md)
