@@ -46,20 +46,6 @@ The Azure Information Protection viewer can't open attachments in a protected PD
 
 For more information, see [Admin Guide: File types supported by the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-file-types).
 
-## Known issues for AIP and Exploit Protection
-
-The Azure Information Protection client isn't supported on machines that have .NET 2 or 3, where [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled, and will cause Office apps to behave unexpectedly.
-
-In such cases, we recommend that you upgrade your .NET version. For more information, see [Microsoft .NET Framework requirements](rms-client/reqs-ul-client.md#microsoft-net-framework-requirements).
-
-If you must keep your .NET version 2 or 3, make sure to disable Exploit protection before installing AIP. 
-
-To disable Exploit protection via PowerShell, run the following:
-
-```PowerShell
-Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
-```
-
 ## Known issues for watermarks
 
 When you're adding a watermark to a label, keep in mind that if you use font size one, it automatically adjusts to fit the page. However, if you use any other font size, it uses the size you specified in the font settings.
@@ -105,6 +91,7 @@ Known issues for co-authoring are relevant only when co-authoring is [enabled in
 Known issues for co-authoring in AIP include:
 
 - [Supported versions for co-authoring and sensitivity labels](#supported-versions-for-co-authoring-and-sensitivity-labels)
+
 - [Policy updates](#policy-updates)
 
 - [Unsupported features for co-authoring](#unsupported-features-for-co-authoring)
@@ -53723,13 +53710,16 @@ If your labeling policy was updated while an Office application was opened with 
 
 If this occurs, close and reopen your Office application to be able to apply your labels.
 
+> [!NOTE]
+> Unlike the Microsoft Azure Information Protection dialog box, the **Restricted Access** dialog box doesn't support specifying a domain name to automatically include all users in the organization.
+>
+
 #### Unsupported features for co-authoring
 
 The following features aren't supported or are partially supported when [co-authoring is enabled](/microsoft-365/compliance/sensitivity-labels-coauthoring) for files encrypted with sensitivity labels:
 
 - **DKE templates and DKE user-defined properties**. For more information, see [Double Key Encryption (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).
 
-- **Labels with user-defined permissions**. In Microsoft Word, Excel, and PowerPoint, labels with user-defined permissions are still available and can be applied to documents, but aren't supported for co-authoring features.
 - This means that applying a label with user-defined permissions prevents you from working on the document with others at the same time.
 
 - **Removing external content marking in apps**. External content marking is removed only when a label is applied, and not when the document is saved. For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
@@ -53797,7 +53787,7 @@ On Android devices, ADRMS-protected files can't be opened by the AIP Viewer app.
 Tracking and revoking document access using the unified labeling client has the following known issues:
 
 - [Password-protected documents](#password-protected-documents)
-- [Multiple attachments in a protected email](#multiple-attachments-in-a-protected-email)
+
 - [Documents accessed via SharePoint or OneDrive](#documents-accessed-via-sharepoint-or-onedrive)
 
 For more information, see the [Admin Guide](rms-client/track-and-revoke-admin.md) and [User Guide](rms-client/revoke-access-user.md) procedures.
@@ -93893,4 +93883,5 @@ The following additional articles might be helpful in answering questions you ha
 - [File types supported by the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-file-types.md)
 - [Frequently asked questions for Azure Information Protection](faqs.md)
 - [Frequently asked questions about data protection in Azure Information Protection](faqs-rms.md)
+
 - [Frequently asked questions about classification and labeling in Azure Information Protection](faqs-infoprotect.md)
