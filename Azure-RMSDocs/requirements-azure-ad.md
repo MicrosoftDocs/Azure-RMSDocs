@@ -1,4 +1,5 @@
 ---
+
 # required metadata
 
 title: Additional prerequisites for Microsoft Entra ID and Azure Information Protection
@@ -28,13 +29,13 @@ ms.custom: admin, has-adal-ref
 
 [!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
-An [Microsoft Entra directory is a requirement](requirements.md#azure-active-directory) for using Azure Information protection. Use an account from a Microsoft Entra directory to sign in to the Azure portal, where you can configure Azure Information Protection settings.
+An [Microsoft Entra directory is a requirement](requirements.md#azure-active-directory) for using Azure Information protection. Use an account from a Microsoft Entra directory to sign in to the Microsoft Purview compliance portal or Microsoft Purview portal.
 
 If you have a subscription that includes Azure Information Protection or Azure Rights Management, your Microsoft Entra directory is automatically created for you if needed.
 
 The following sections list additional AIP and Microsoft Entra requirements for specific scenarios. 
 
-## Support for certificate-based authentication (CBA)
+## Support for certificate-based authentication (CBA) -> Asking Tom if still valid 
 
 The Azure Information Protection apps for iOS and Android support certificate-based authentication. 
 
@@ -43,15 +44,6 @@ For more information, see [Get started with certificate-based authentication in 
 ## Multi-factor authentication (MFA) and Azure Information Protection
 
 To use multi-factor authentication (MFA) with Azure Information Protection, you must have at least one of the following installed:
-
-- **Microsoft Office**, version 2013 or higher
-- **An AIP client**. No minimum version required. The AIP clients for Windows, as well as the viewer apps for iOS and Android all support MFA.
-- **The Rights Management sharing app for Mac computers**. The RMS sharing apps have supported MFA since the September 2015 release.
-
-> [!NOTE]
-> If you have Office 2013, you might need to install an additional update to support Active Directory Authentication Library (ADAL), such as the [June 9, 2015, update for Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853). 
->
-Once you've confirmed these prerequisites, do one of the following, depending on your tenant configuration:
 
 - **Microsoft-managed tenants, with Microsoft Entra ID or Microsoft 365**. Configure Azure MFA to enforce MFA for users. 
 
@@ -62,9 +54,9 @@ Once you've confirmed these prerequisites, do one of the following, depending on
 - **Federated tenants, where federation servers operate on-premises**. Configure your federation servers for Microsoft Entra ID or Microsoft 365. 
 For example, if you are using AD FS, see [Configure Additional Authentication Methods for AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs). 
 
-## Rights Management connector / AIP scanner requirements
+## Rights Management connector requirements
 
-The Rights Management connector and the Azure Information Protection scanner do not support MFA. 
+The Rights Management connector and the Microsoft Purview Information Protection scanner do not support MFA. 
 
 If you deploy the connector or scanner, the following accounts must not require MFA:
 
@@ -88,12 +80,12 @@ For more information, see:
 
 For more information, see [Preparing users and groups for Azure Information Protection](prepare.md).
 
-## Authenticating on-premises using AD FS or another authentication provider
+## Authenticating on-premises using AD FS or another authentication provider
 
-If you're using a mobile device or Mac computer that authenticates on-premises using AD FS, or an equivalent authentication provider, you must use AD FS on one of the following configurations:
+If you're using a mobile device or Mac computer that authenticates on-premises using AD FS, or an equivalent authentication provider, you must use AD FS on one of the following configurations:
 
-- A minimum server version of **Windows Server 2012 R2**
-- An alternative authentication provider that supports the OAuth 2.0 protocol
+- A minimum server version of **Windows Server 2016**
+- An alternative authentication provider that supports the OAuth 2.0 protocol
 
 
 ## Next steps
