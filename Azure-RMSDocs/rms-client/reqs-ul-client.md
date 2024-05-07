@@ -50,8 +50,6 @@ If you are installing the [Azure Information Protection Viewer](clientv2-view-us
 
 ### Disable Exploit protection (.NET 2 or 3 only)
 
-The AIP client is not supported on machines with .NET 2 or 3 that have [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. 
-
 In such cases, we recommend that you upgrade your .NET version. 
 
 If you must keep your .NET version 2 or 3,  make sure to [disable Exploit protection](../known-issues.md#known-issues-for-aip-and-exploit-protection) before installing the AIP client.
