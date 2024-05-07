@@ -52,8 +52,6 @@ If you are installing the [Azure Information Protection Viewer](clientv2-view-us
 
 In such cases, we recommend that you upgrade your .NET version. 
 
-If you must keep your .NET version 2 or 3,  make sure to [disable Exploit protection](../known-issues.md#known-issues-for-aip-and-exploit-protection) before installing the AIP client.
-
 ## Windows PowerShell minimum requirements
 
 The PowerShell module for the client requires a minimum version of Windows PowerShell 4.0.
