@@ -130,7 +130,7 @@ For more information about the new capabilities that include supporting all emai
 
 ## What devices and which file types are supported by Azure RMS?
 
-For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](./requirements.md#client-devices). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the tables for [RMS-enlighted applications](./requirements-applications.md).
+Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the tables for [RMS-enlighted applications](./requirements-applications.md).
 
 The Azure Rights Management service can support all file types. For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and some other application file types, Azure Rights Management provides native protection that includes both encryption and enforcement of rights (permissions). For all other applications and file types, generic protection provides file encapsulation and authentication to verify if a user is authorized to open the file.
 
