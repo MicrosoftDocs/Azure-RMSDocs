@@ -38,8 +38,6 @@ For example, users can configure a Word document so that it can be accessed only
 
 If you are ready to configure Office apps see [Office apps: Configuration for clients](configure-office-apps.md).
 
-For relevant known issues, see [AIP known issues in Office applications](known-issues.md#aip-known-issues-in-office-applications).
-
 ## Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can configure options for Azure Information Protection. This configuration lets Exchange provide the following protection solutions:
 
