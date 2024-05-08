@@ -38,7 +38,7 @@ If you have firewalls or similar intervening network devices that are configured
 
 Azure Information Protection has the following additional requirements:
 
-- **Microsoft Purview Informaiton Protection client client**. To download labels and label policies, allow the following URL over HTTPS: ***.protection.outlook.com**
+- **Microsoft Purview Informaiton Protection client**. To download labels and label policies, allow the following URL over HTTPS: ***.protection.outlook.com**
 
 - **Web proxies**. If you use a web proxy that requires authentication, you must configure the proxy to use integrated Windows authentication with the user's Active Directory sign in credentials.
 
