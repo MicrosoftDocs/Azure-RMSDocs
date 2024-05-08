@@ -28,7 +28,7 @@ ms.custom: admin, has-adal-ref
 
 [!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
-An [Microsoft Entra directory is a requirement](requirements.md#azure-active-directory) for using Azure Information protection. Use an account from a Microsoft Entra directory to sign in to the Azure portal, where you can configure Azure Information Protection settings.
+An Microsoft Entra directory is a requirement for using Azure Information protection. Use an account from a Microsoft Entra directory to sign in to the Azure portal, where you can configure Azure Information Protection settings.
 
 If you have a subscription that includes Azure Information Protection or Azure Rights Management, your Microsoft Entra directory is automatically created for you if needed.
 
