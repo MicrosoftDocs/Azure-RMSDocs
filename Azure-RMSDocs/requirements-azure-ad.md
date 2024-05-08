@@ -31,13 +31,13 @@ ms.custom: admin, has-adal-ref
 
 An [Microsoft Entra directory is a requirement](requirements.md#azure-active-directory) for using Azure Information protection. Use an account from a Microsoft Entra directory to sign in to the Microsoft Purview compliance portal or Microsoft Purview portal.
 
-If you have a subscription that includes Azure Information Protection or Azure Rights Management, your Microsoft Entra directory is automatically created for you if needed.
+If you have a subscription that includes Microsoft Purview Information Protection or Azure Rights Management, your Microsoft Entra directory is automatically created for you if needed.
 
 The following sections list additional AIP and Microsoft Entra requirements for specific scenarios. 
 
 ## Support for certificate-based authentication (CBA)
 
-The Azure Information Protection apps for iOS and Android support certificate-based authentication. 
+The information protection for iOS and Android support certificate-based authentication. 
 
 For more information, see [Get started with certificate-based authentication in Microsoft Entra ID](/azure/active-directory/active-directory-certificate-based-authentication-get-started).
 
