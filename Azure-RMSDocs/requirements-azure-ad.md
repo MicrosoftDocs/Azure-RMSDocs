@@ -29,7 +29,7 @@ ms.custom: admin, has-adal-ref
 
 [!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
-A [Microsoft Entra directory is a requirement](requirements.md#azure-active-directory) for using Azure Information protection. Use an account from a Microsoft Entra directory to sign in to the Microsoft Purview compliance portal or Microsoft Purview portal.
+A Microsoft Entra directory is a requirement for using Azure Information protection. Use an account from a Microsoft Entra directory to sign in to the Microsoft Purview compliance portal or Microsoft Purview portal.
 
 If you have a subscription that includes Microsoft Purview Information Protection or Azure Rights Management, your Microsoft Entra directory is automatically created for you if needed.
 
