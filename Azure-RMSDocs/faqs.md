@@ -199,6 +199,13 @@ Different countries have different requirements and regulations. To help you ans
 ## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
 See [Compliance and supporting information for Azure Information Protection](./compliance.md).
 
+
+## How can I report a problem or send feedback for Azure Information Protection?
+
+For technical support, use your standard support channels or [contact Microsoft Support](https://support.microsoft.com/contactust).
+
+We also invite you to engage with our engineering team, on their [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/).
+
 ## What do I do if my question isn't here?
 
 First, review the frequently asked questions listed below, which are specific to classification and labeling, or specific to data protection. The [Azure Rights Management service (Azure RMS)](what-is-azure-rms.md) provides the data protection technology for Azure Information Protection. Azure RMS can be used with classification and labeling, or by itself.
@@ -206,7 +213,3 @@ First, review the frequently asked questions listed below, which are specific to
 - [FAQs for classification and labeling](faqs-infoprotect.md)
 
 - [FAQs for data protection](faqs-rms.md)
-
-If your question isn't answered, see the links and resources listed in [Information and support for Azure Information Protection](information-support.md).
-
-
