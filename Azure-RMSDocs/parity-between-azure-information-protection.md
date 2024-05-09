@@ -6,7 +6,7 @@ description: Learn about how to configure Microsoft Purview Information Protecti
 author: libarson
 ms.author: libarson
 manager: aashishr
-ms.date: 12/08/2023
+ms.date: 05/13/2024
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -174,64 +174,64 @@ For more information, see [Learn about the information protection scanner](/purv
 
 1. Sign in to the Windows Server computer that will run the scanner. Use an account that has local administrator rights and that has permissions to write to the SQL Server master database.
 
-1. Start with PowerShell closed. If you've previously installed the AIP client and scanner, make sure that the **AIPScanner** service is stopped.
+1. Start with PowerShell closed. If you've previously installed the information protection scanner, make sure the Microsoft Purview Information Protection Scanner service is stopped.
 
 1. Open a Windows PowerShell session with the **Run as an administrator** option.
 
-1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner, and a meaningful name for your scanner cluster.
+1. Run the [Install-Scanner](/powershell/module/purviewinformationprotection/install-scanner) cmdlet, specifying your SQL Server instance on which to create a database for the Microsoft Purview Information Protection scanner, and a meaningful name for your scanner cluster.
 
     ```PowerShell
-    Install-AIPScanner -SqlServerInstance <name> -Cluster <cluster name>
+    Install-Scanner -SqlServerInstance <name> -Cluster <cluster name>
     ```
 
     > [!TIP]
-    > You can use the same cluster name in the [Install-AIPScanner](/powershell/module/azureinformationprotection/install-aipscanner) command to associate multiple scanner nodes to the same cluster. Using the same cluster for multiple scanner nodes enables multiple scanners to work together to perform your scans.
+    > You can use the same cluster name in the [Install-Scanner](/powershell/module/purviewinformationprotection/install-scanner) command to associate multiple scanner nodes to the same cluster. Using the same cluster for multiple scanner nodes enables multiple scanners to work together to perform your scans.
     > 
 
 1. Verify that the service is now installed by using **Administrative Tools** > **Services**.
 
-    The installed service is named **Azure Information Protection Scanner** and is configured to run by using the scanner service account that you created.
+    The installed service is named **Microsoft Purview Information Protection Scanner** and is configured to run by using the scanner service account that you created.
 
 1. Get an Azure token to use with your scanner. A Microsoft Entra token allows the scanner to authenticate to the Azure Information Protection service, enabling the scanner to run non-interactively. 
 
     1. Open the Azure portal and create a Microsoft Entra application to specify an access token for authentication. For more information, see [How to label files non-interactively for Azure Information Protection](/azure/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
     
         > [!TIP]
-        > When creating and configuring Microsoft Entra applications for the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) command, the **Request API permissions** pane shows the **APIs my organization uses** tab instead of the **Microsoft APIs** tab. Select the **APIs my organization uses** to then select **Azure Rights Management Services**. 
+        > When creating and configuring Microsoft Entra applications for the [Set-Authentication](/powershell/module/purviewinformationprotection/set-authentication) command, the **Request API permissions** pane shows the **APIs my organization uses** tab instead of the **Microsoft APIs** tab. Select the **APIs my organization uses** to then select **Azure Rights Management Services**. 
         >
 
     1. From the Windows Server computer, if your scanner service account has been granted the **Log on locally** right for the installation, sign in with this account and start a PowerShell session. 
     
-        If your scanner service account cannot be granted the **Log on locally** right for the installation, use the *OnBehalfOf* parameter with [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), as described in [How to label files non-interactively for Azure Information Protection](/azure/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+        If your scanner service account cannot be granted the **Log on locally** right for the installation, use the *OnBehalfOf* parameter with [Set-Authentication](/powershell/module/purviewinformationprotection/set-scannerconfiguration), as described in [How to label files non-interactively for Azure Information Protection](/azure/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
-    1. Run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specifying values copied from your Microsoft Entra application:
+    1. Run [Set-Authentication](/powershell/module/purviewinformationprotection/set-authentication), specifying values copied from your Microsoft Entra application:
 
       ```PowerShell
-      Set-AIPAuthentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID> -DelegatedUser <Azure AD account>
+      Set-Authentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID> -DelegatedUser <Azure AD account>
       ```
 
       For example:
 
       ```PowerShell
       $pscreds = Get-Credential CONTOSO\scanner
-      Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+      Set-Authentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
       Acquired application access token on behalf of CONTOSO\scanner.
       ```
 
     The scanner now has a token to authenticate to Microsoft Entra ID. This token is valid for one year, two years, or never, according to your configuration of the **Web app /API** client secret in Microsoft Entra ID. When the token expires, you must repeat this procedure.
 
-1. Run the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the scanner to function in offline mode. Run:
+1. Run the [Set-ScannerConfiguration](/powershell/module/purviewinformationprotection/set-scannerconfiguration) cmdlet to set the scanner to function in offline mode. Run:
 
     ```powershell
-    Set-AIPScannerConfiguration -OnlineConfiguration Off
+    Set-ScannerConfiguration -OnlineConfiguration Off
     ```
 
-1. Run the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) cmdlet to create a default content scan job.
+1. Run the [Set-ScannerContentScanJob](/powershell/module/purviewinformationprotection/set-scannercontentscan) cmdlet to create a default content scan job.
 
-    The only required parameter in the **Set-AIPScannerContentScanJob** cmdlet is **Enforce**. However, you may want to define other settings for your content scan job at this time. For example:
+    The only required parameter in the **Set-ScannerContentScanJob** cmdlet is **Enforce**. However, you may want to define other settings for your content scan job at this time. For example:
 
     ```powershell
-    Set-AIPScannerContentScanJob -Schedule Manual -DiscoverInformationTypes PolicyOnly -Enforce Off -DefaultLabelType PolicyDefault -RelabelFiles Off -PreserveFileDetails On -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp' -DefaultOwner <account running the scanner>
+    Set-ScannerContentScanJob -Schedule Manual -DiscoverInformationTypes PolicyOnly -Enforce Off -DefaultLabelType PolicyDefault -RelabelFiles Off -PreserveFileDetails On -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp' -DefaultOwner <account running the scanner>
     ```
 
     The syntax above configures the following settings while you continue the configuration:
@@ -245,10 +245,10 @@ For more information, see [Learn about the information protection scanner](/purv
     - Sets the scanner to exclude .msg and .tmp files when running
     - Sets the default owner to the account you want to use when running the scanner
 
-1. Use the [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository) cmdlet to define the repositories you want to scan in your content scan job. For example, run:
+1. Use the [Add-ScannerRepository](/powershell/module/purviewinformationprotection/add-scannerrepository) cmdlet to define the repositories you want to scan in your content scan job. For example, run:
 
     ```powershell
-    Add-AIPScannerRepository -OverrideContentScanJob Off -Path 'c:\repoToScan'
+    Add-ScannerRepository -OverrideContentScanJob Off -Path 'c:\repoToScan'
     ```
     
     Use one of the following syntaxes, depending on the type of repository you're adding:
@@ -261,7 +261,7 @@ For more information, see [Learn about the information protection scanner](/purv
     > [!NOTE]
     > Wildcards are not supported and WebDav locations are not supported.
     >
-    > To modify the repository later on, use the [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) cmdlet instead. 
+    > To modify the repository later on, use the [Set-ScannerRepository](/powershell/module/purviewinformationprotection/set-scannerrepository) cmdlet instead. 
 
 
 Continue with the following steps as needed:
@@ -274,15 +274,14 @@ The following table lists PowerShell cmdlets that are relevant for installing th
 
 | Cmdlet | Description |
 |--|--|
-| [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository) | Adds a new repository to your content scan job. |
-| [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/get-aipscannerconfiguration)|Returns details about your cluster. |
-| [Get-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob) | Gets details about your content scan job. |
-| [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository) | Gets details about repositories defined for your content scan job. |
-| [Remove-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob) | Deletes your content scan job. |
-| [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository) | Removes a repository from your content scan job. |
-| [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) | Defines settings for your content scan job. |
-| [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) | Defines settings for an existing repository in your content scan job. |
-| | |
+| [Add-ScannerRepository](/powershell/module/purviewinformationprotection/add-scannerrepository) | Adds a new repository to your content scan job. |
+| [Get-ScannerConfiguration](/powershell/module/purviewinformationprotection/get-scannerconfiguration)|Returns details about your cluster. |
+| [Get-ScannerContentScan](/powershell/module/purviewinformationprotection/get-scannercontentscan) | Gets details about your content scan job. |
+| [Get-ScannerRepository](/powershell/module/purviewinformationprotection/get-scannerrepository) | Gets details about repositories defined for your content scan job. |
+| [Remove-ScannerContentScan](/powershell/module/purviewinformationprotection/remove-scannercontentscan) | Deletes your content scan job. |
+| [Remove-ScannerRepository](/powershell/module/purviewinformationprotection/remove-scannerrepository) | Removes a repository from your content scan job. |
+| [Set-ScannerContentScan](/powershell/module/purviewinformationprotection/set-scannercontentscan) | Defines settings for your content scan job. |
+| [Set-ScannerRepository](/powershell/module/purviewinformationprotection/set-scannerrepository) | Defines settings for an existing repository in your content scan job. |
 
 For more information, see:
 
