@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure Information Protection support for Office 365 operated by 21Vianet
-description: Learn about how to configure Microsoft Purview Information Protection support for Office 365 operated by 21Vianet and how to configure it for tenants in China.
+description: Learn how to configure Microsoft Purview Information Protection for tenants in China
 author: libarson
 ms.author: libarson
 manager: aashishr
@@ -23,11 +23,11 @@ ms.custom: admin
 
 ---
 
-# Microsoft Purview Information Protection support for Office 365 operated by 21Vianet
+# Microsoft Purview Information Protection for Office 365 operated by 21Vianet
 
 This article covers the differences between Microsoft Purview Information Protection support for Office 365 operated by 21Vianet and commercial offerings that is limited to offering previously known as Azure Information Protection (AIP), as well as specific configuration instructions for customers in China&mdash; including how to install the information protection scanner and manage content scan jobs.
 
-## Differences between Microsoft Purview Information Protection support for Office 365 operated by 21Vianet and commercial offerings
+## Differences between 21Vianet and commercial offerings
 
 While our goal is to deliver all commercial features and functionality to customers in China with our Microsoft Purview Information Protection support for Office 365 operated by 21Vianet offer, there's some missing functionality:
 
@@ -47,13 +47,13 @@ While our goal is to deliver all commercial features and functionality to custom
 
 - The scanner area of the compliance portal is unavailable to customers in China. Use [PowerShell commands](#step-6-install-the-information-protection-scanner-and-manage-content-scan-jobs) instead of performing actions in the portal, such as managing and running your content scan jobs.
 
-- Client endpoints in Microsoft Purview Information Protection support for Office 365 operated by 21Vianet are different than the endpoints required for other cloud services. Network connectivity from clients to the following endpoints is required:
+- Network endpoints for the Microsoft Purview Information Protection client within the 21Vianet environment are different than the endpoints required for other cloud services. Network connectivity from clients to the following endpoints is required:
     - Download label and label policies: `*.protection.partner.outlook.cn`
     - Azure Rights Management service: `*.aadrm.cn`
 
 - Document Tracking and Revocation *by users* is currently not available.
 
-## Configuration for customers in China
+## Configuration for customers in 21Vianet
 
 To configure Microsoft Purview Information Protection support for Office 365 operated by 21Vianet:
 1. [Enable Rights Management for the tenant](#step-1-enable-rights-management-for-the-tenant).
@@ -64,13 +64,13 @@ To configure Microsoft Purview Information Protection support for Office 365 ope
 
 1. [Install and configure the Microsoft Purview Information Protection client](#step-4-install-and-configure-the-labeling-client).
 
-1. [Configure Microsoft 365 apps on Windows](#step-5-configure-microsoft-365-apps-on-windows).
+1. [Configure Windows settings](#step-5-configure-windows-settings).
 
 1. [Install the information protection scanner and manage content scan jobs](#step-6-install-the-information-protection-scanner-and-manage-content-scan-jobs). 
 
 ### Step 1: Enable Rights Management for the tenant
 
-For the encryption to work correctly, the rights management (RMS) service must be enabled for the tenant.
+For the encryption to work correctly, the rights management service (RMS) must be enabled for the tenant.
 
 1. Check if RMS is enabled:
 
@@ -150,7 +150,7 @@ For more information, see:
 - [Extend sensitivity labeling on Windows](/purview/information-protection-client)
 - [Microsoft Purview Information Protection client - Release management and supportability](/purview/information-protection-client-relnotes)
 
-### Step 5: Configure Microsoft 365 apps on Windows
+### Step 5: Configure Windows settings
 
 Microsoft 365 apps on Windows need the following registry key to point them to the correct sovereign cloud for Azure China:
 
