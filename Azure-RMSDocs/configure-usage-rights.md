@@ -128,7 +128,7 @@ This option is available to tenants who use Exchange Online and can be selected 
 - **As an Office 365 DLP action**
 - **From the Outlook app** for desktops and mobile devices:
     - With a sensitivity label that's configured for **Let users assign permissions** and the **Encrypt-Only** option, for Windows, macOS, iOS and Android when you use built-in labeling with the minimum versions listed in the [table for sensitivity label capabilities in Outlook](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-outlook).
-    - With the **Encrypt** option on Windows and macOS, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), when you have [Microsoft 365 apps that support Azure Rights Management](requirements-applications.md).
+    - With the **Encrypt** option on Windows and macOS, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date).
 
 For more information about the encrypt-only option, see the following blog post when it was first announced from the Office team: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
 

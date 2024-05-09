@@ -30,128 +30,7 @@ ms.custom: admin
 
 Before deploying Azure Information Protection, ensure that your system meets the following prerequisites:
 
-- [Subscription for Azure Information Protection](#subscription-for-azure-information-protection)
-- [Microsoft Entra ID](#azure-active-directory)
-- [Client devices](#client-devices)
-- [Applications](#applications)
 - [Firewalls and network infrastructure](#firewalls-and-network-infrastructure)
-
-To deploy Azure Information Protection, you must have the AIP client installed on any machines where you want to use AIP features. For more information, see [Install the Azure Information Protection unified labeling client for users](./rms-client/clientv2-admin-guide-install.md) and [The client side of Azure Information Protection](./rms-client/use-client.md).
-
-## Subscription for Azure Information Protection
-
-You must have an **Azure Information Protection plan** for classification, labeling, and protection using the Azure Information Protection scanner or client. For more information, see:
-
-- [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)
-- [Modern Work Plan Comparison](https://go.microsoft.com/fwlink/?linkid=2139145) (PDF download)
-
-If your question isn't answered there, contact your Microsoft Account Manager or [Microsoft Support](https://support.microsoft.com/contactus).
-
-<a name='azure-active-directory'></a>
-
-## Microsoft Entra ID
-
-To support authentication and authorization for Azure Information Protection, you must have a Microsoft Entra ID. To use user accounts from your on-premises directory (AD DS), you must also configure directory integration.
-
-- **Single sign-on (SSO)** is supported for Azure Information Protection so that users aren't repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor for how to configure it for Microsoft Entra ID. WS-Trust is a common requirement for these solutions to support single sign-on.
-
-- **Multifactor authentication (MFA)** is supported with Azure Information Protection when you have the required client software and have correctly configured the MFA-supporting infrastructure.
-
-Conditional access is supported in preview for documents protected by Azure Information Protection. For more information, see: [I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
-
-Additional prerequisites are required for specific scenarios, such as when using certificate-based or multi-factor authentication, or when UPN values don't match user email addresses.
-
-For more information, see:
-
-- [Additional Microsoft Entra requirements for Azure Information Protection](requirements-azure-ad.md).
-- [What is Microsoft Entra Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
-- [Integrate on-premises Active Directory domains with Microsoft Entra ID](/azure/architecture/reference-architectures/identity/azure-ad).
-
-## Client devices
-
-User computers or mobile devices must run on an operating system that supports Azure Information Protection.
-
-- [Supported operating systems for client devices](#supported-operating-systems-for-client-devices)
-- [ARM64](#arm64)
-- [Virtual machines](#virtual-machines)
-- [Server support](#server-support)
-- [Additional requirements per client](#additional-requirements-per-client)
-
-### Supported operating systems for client devices
-
-The Azure Information Protection clients for Windows are supported are the following operating systems:
-
-- **Windows 11**
-
-- **Windows 10** (x86, x64). Handwriting isn't supported in the Windows 10 RS4 build and later.
-- **Windows Server 2019**
-
-- **Windows Server 2016**
-
-- **Windows Server 2012 R2** and **Windows Server 2012**
-
-For details about support in earlier versions of Windows, contact your Microsoft account or support representative.
-
-> [!NOTE]
-> When the Azure Information Protection clients protect the data by using the Azure Rights Management service, the data can be consumed by the [same devices](#client-devices) that support the Azure Rights Management service.
->
-
-
-### ARM64 
-
-ARM64 is **not** currently supported. 
-
-### Virtual machines
-
-If you're working with virtual machines, check whether the software vendor for your virtual desktop solution as additional configurations required for running the Azure Information Protection unified labeling or the Azure Information Protection client. 
-
-For example, for Citrix solutions, you might need to [disable Citrix Application Programming Interface (API) hooks](https://support.citrix.com/article/CTX107825) for Office, the Azure Information Protection unified labeling client, or the Azure Information Protection client. 
-
-These applications use the following files, respectively: **winword.exe**, **excel.exe**, **outlook.exe**, **powerpnt.exe**, **msip.app.exe**, **msip.viewer.exe**
-
-### Server support
-
-For each of the server versions listed above, Azure Information Protection clients are supported for Remote Desktop Services. 
-
-If you delete user profiles when you use the Azure Information Protection clients with Remote Desktop Services, don't delete the **%Appdata%\Microsoft\Protect** folder.
-
-Additionally, Server Core and Nano Server aren't supported.
-
-### Additional requirements per client
-
-Each Azure Information Protection client has additional requirements. For details, see:
-
-- [Azure Information Protection unified labeling client requirements](./rms-client/reqs-ul-client.md)
-
-- [Azure Information Protection client requirements](/previous-versions/azure/information-protection/rms-client/client-admin-guide-install#additional-prerequisites-for-the-azure-information-protection-client)
-
-## Applications
-
-The Azure Information Protection clients can label and protect documents and emails by using Microsoft **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office editions:
-
-- **Office apps**, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), from Microsoft 365 Apps for Business or Microsoft 365 Business Premium, when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
-
-- **Microsoft 365 Apps for Enterprise**
-
-- **Office Professional Plus 2021**
-
-- **Office Professional Plus 2019**
-
-- **Office Professional Plus 2016** - Please note that as Office 2016 is out of mainstream support, AIP support will be done on basis of best effort and no fixes will be done for issues discovered in version 2016. see [Microsoft Office 2016](/lifecycle/products/microsoft-office-2016)
-
-Other editions of Office can't protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only, and labels that apply protection aren't displayed for users. 
-
-Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client.
-
-- PDF files that are version 1.4 and lower will be automatically upgraded to version 1.5 when the AIP Client labels the file. 
-
-For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
-
-### Office features and capabilities not supported
-
-- The Azure Information Protection clients for Windows don't support multiple versions of Office on the same computer, or switching user accounts in Office.
-
-- The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature isn't supported with any Azure Information Protection feature.
 
 ## Firewalls and network infrastructure
 
@@ -159,7 +38,7 @@ If you have firewalls or similar intervening network devices that are configured
 
 Azure Information Protection has the following additional requirements:
 
-- **Unified labeling client**. To download labels and label policies, allow the following URL over HTTPS: ***.protection.outlook.com**
+- **Microsoft Purview Informaiton Protection client**. To download labels and label policies, allow the following URL over HTTPS: ***.protection.outlook.com**
 
 - **Web proxies**. If you use a web proxy that requires authentication, you must configure the proxy to use integrated Windows authentication with the user's Active Directory sign in credentials.
 
@@ -272,12 +151,6 @@ The following operating systems support the Azure Rights Management service, whi
 |**Android phones and tablets**     | Minimum version of Android 6.0        |
 |**iPhone and iPad**     | Minimum version of iOS 11.0        |
 |**Windows phones and tablets** | Windows 10 Mobile|
-
-For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md). 
-
-
-
-
 
 ## Next steps
 

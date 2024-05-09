@@ -23,8 +23,6 @@
       href: requirements.md
     - name: Additional Microsoft Entra requirements
       href: requirements-azure-ad.md
-    - name: Application support for protection
-      href: requirements-applications.md
     - name: File types supported
       href: ./rms-client/clientv2-admin-guide-file-types.md
     - name: Unified labeling client requirements
