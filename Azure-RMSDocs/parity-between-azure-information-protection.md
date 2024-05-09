@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure Information Protection support for Office 365 operated by 21Vianet
-description: Learn about how to configure Azure Information Protection (AIP) for Office 365 operated by 21Vianet and how to configure it for tenants in China.
+description: Learn about how to configure Microsoft Purview Information Protection support for Office 365 operated by 21Vianet and how to configure it for tenants in China.
 author: libarson
 ms.author: libarson
 manager: aashishr
@@ -25,13 +25,13 @@ ms.custom: admin
 
 # Microsoft Purview Information Protection support for Office 365 operated by 21Vianet
 
-This article covers the differences between Microsoft Purview Information Protection support for Office 365 operated by 21Vianet and commercial offerings that is limited to offering previously known as Azure Information Protection (AIP), as well as specific instructions for configuring AIP for customers in China&mdash;including how to install the information protection scanner and manage content scan jobs.
+This article covers the differences between Microsoft Purview Information Protection support for Office 365 operated by 21Vianet and commercial offerings that is limited to offering previously known as Azure Information Protection (AIP), as well as specific configuration instructions for customers in China&mdash; including how to install the information protection scanner and manage content scan jobs.
 
-## Differences between AIP for Office 365 operated by 21Vianet and commercial offerings
+## Differences between Microsoft Purview Information Protection support for Office 365 operated by 21Vianet and commercial offerings
 
-While our goal is to deliver all commercial features and functionality to customers in China with our AIP for Office 365 operated by 21Vianet offer, there's some missing functionality that we'd like to highlight.
+While our goal is to deliver all commercial features and functionality to customers in China with our Microsoft Purview Information Protection support for Office 365 operated by 21Vianet offer, there's some missing functionality that we'd like to highlight.
 
-Following is a list of gaps between AIP for Office 365 operated by 21Vianet and our commercial offerings:
+Following is a list of gaps between Microsoft Purview Information Protection support for Office 365 operated by 21Vianet and our commercial offerings:
 
 - Active Directory Rights Management Services (AD RMS) encryption is supported only in Microsoft 365 Apps for enterprise (build 11731.10000 or later). Office Professional Plus doesn't support AD RMS.
 
@@ -49,15 +49,15 @@ Following is a list of gaps between AIP for Office 365 operated by 21Vianet and 
 
 - The scanner area of the compliance portal is unavailable to customers in China. Use [PowerShell commands](#step-6-install-the-information-protection-scanner-and-manage-content-scan-jobs) instead of performing actions in the portal, such as managing and running your content scan jobs.
 
-- AIP endpoints in Office 365 operated by 21Vianet are different than the endpoints required for other cloud services. Network connectivity from clients to the following endpoints is required:
+- Client endpoints in Microsoft Purview Information Protection support for Office 365 operated by 21Vianet are different than the endpoints required for other cloud services. Network connectivity from clients to the following endpoints is required:
     - Download label and label policies: `*.protection.partner.outlook.cn`
     - Azure Rights Management service: `*.aadrm.cn`
 
 - Document Tracking and Revocation *by users* is currently not available.
 
-## Configure AIP for customers in China
+## Configuration for customers in China
 
-To configure AIP for customers in China:
+To configure Microsoft Purview Information Protection support for Office 365 operated by 21Vianet:
 1. [Enable Rights Management for the tenant](#step-1-enable-rights-management-for-the-tenant).
 
 1. [Add the Microsoft Information Protection Sync Service service principal](#step-2-add-the-microsoft-information-protection-sync-service-service-principal).
@@ -72,7 +72,7 @@ To configure AIP for customers in China:
 
 ### Step 1: Enable Rights Management for the tenant
 
-For the encryption to work correctly, RMS must be enabled for the tenant.
+For the encryption to work correctly, the rights management (RMS) service must be enabled for the tenant.
 
 1. Check if RMS is enabled:
 
