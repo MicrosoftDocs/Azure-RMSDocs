@@ -29,9 +29,7 @@ This article covers the differences between Microsoft Purview Information Protec
 
 ## Differences between Microsoft Purview Information Protection support for Office 365 operated by 21Vianet and commercial offerings
 
-While our goal is to deliver all commercial features and functionality to customers in China with our Microsoft Purview Information Protection support for Office 365 operated by 21Vianet offer, there's some missing functionality that we'd like to highlight.
-
-Following is a list of gaps between Microsoft Purview Information Protection support for Office 365 operated by 21Vianet and our commercial offerings:
+While our goal is to deliver all commercial features and functionality to customers in China with our Microsoft Purview Information Protection support for Office 365 operated by 21Vianet offer, there's some missing functionality:
 
 - Active Directory Rights Management Services (AD RMS) encryption is supported only in Microsoft 365 Apps for enterprise (build 11731.10000 or later). Office Professional Plus doesn't support AD RMS.
 
