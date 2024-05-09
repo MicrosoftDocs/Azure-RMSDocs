@@ -17,8 +17,6 @@
       href: requirements.md
     - name: Additional Microsoft Entra requirements
       href: requirements-azure-ad.md
-    - name: Application support for protection
-      href: requirements-applications.md
     - name: Office 365 operated by 21Vianet
       href: parity-between-azure-information-protection.md
   - name: Azure Rights Management

@@ -152,12 +152,6 @@ The following operating systems support the Azure Rights Management service, whi
 |**iPhone and iPad**     | Minimum version of iOS 11.0        |
 |**Windows phones and tablets** | Windows 10 Mobile|
 
-For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md). 
-
-
-
-
-
 ## Next steps
 
 Once you've reviewed all AIP requirements and confirmed that your system complies, continue with [Preparing users and groups for Azure Information Protection](prepare.md).

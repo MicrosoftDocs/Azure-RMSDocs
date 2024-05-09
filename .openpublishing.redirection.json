@@ -2024,6 +2024,11 @@
             "redirect_document_id": false
        },
 		{
+            "source_path": "Azure-RMSDocs/requirements-applications.md",
+            "redirect_url": "/purview/sensitivity-labels-versions",
+            "redirect_document_id": false
+       },
+		{
             "source_path": "Azure-RMSDocs/deploy-aip-scanner-configure-install.md",
             "redirect_url": "/microsoft-365/compliance/deploy-scanner-configure-install",
             "redirect_document_id": false
