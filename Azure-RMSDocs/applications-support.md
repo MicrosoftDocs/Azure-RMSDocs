@@ -28,9 +28,6 @@ ms.custom: admin
 
 Use the following information to help you understand how the most commonly used end-user applications and services can use the Azure Rights Management service from Azure Information Protection to help protect your organization's documents and emails. These applications include Word, Excel, PowerPoint, and Outlook. The services include Exchange and Microsoft SharePoint.
 
-> [!NOTE]
-> To verify the applications and versions that the Azure Rights Management service supports, see [Applications that support Azure Rights Management data protection](./requirements-applications.md).
-
 In some cases, the Azure Rights Management service automatically applies protection, according to policies that administrators configure. For example, this is the case with SharePoint libraries and Exchange transport rules. In other cases, end users must apply the protection themselves from their applications. For example, users select a classification label that is configured to apply protection, or they select a template, or select specific options. Protection that is applied by users is typical when users protect a file to share and they also restrict access or usage to selected users or to users outside the organization.
 
 Templates make it easier for users (and administrators who configure policies) to apply the correct level of protection and restrict access to people inside your organization. Although the Azure Rights Management service comes with two default templates, you probably want to create custom templates to reduce the times when users and administrators have to specify individual options. For more information about templates, see [Configuring and managing templates for Azure Information Protection](/previous-versions/azure/information-protection/configure-policy-templates).

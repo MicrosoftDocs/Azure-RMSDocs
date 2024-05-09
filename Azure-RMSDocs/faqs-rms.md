@@ -47,10 +47,6 @@ Yes, you can now use BYOK with Exchange Online when you follow the instructions 
 
 For more information about this change, see the blog announcement: [Office 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)
 
-## Where can I find information about third-party solutions that integrate with Azure RMS?
-
-Many software vendors already have solutions or are implementing solutions that integrate with Azure Rights Management—and the list is growing rapidly. You might find it useful to check the [RMS-enlightened applications](requirements-applications.md#) lists and get the latest updates from [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter. You can and post any specific integration questions on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam).
-
 ## Is there a management pack or similar monitoring mechanism for the RMS connector?
 
 Although the Rights Management connector logs information, warning, and error messages to the event log, there isn't a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Microsoft Rights Management connector](monitor-rms-connector.md).
@@ -129,8 +125,6 @@ To support this scenario, Exchange Online must be enabled for the Azure Rights M
 For more information about the new capabilities that include supporting all email accounts on all devices, see the following blog post: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
 ## What devices and which file types are supported by Azure RMS?
-
-Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the tables for [RMS-enlighted applications](./requirements-applications.md).
 
 The Azure Rights Management service can support all file types. For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and some other application file types, Azure Rights Management provides native protection that includes both encryption and enforcement of rights (permissions). For all other applications and file types, generic protection provides file encapsulation and authentication to verify if a user is authorized to open the file.
 
