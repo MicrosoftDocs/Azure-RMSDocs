@@ -64,9 +64,9 @@ To configure AIP for customers in China:
 
 1. [Configure DNS encryption](#step-3-configure-dns-encryption).
 
-1. [Install and configure the AIP unified labeling client](#step-4-install-and-configure-the-aip-unified-labeling-client).
+1. [Install and configure the Microsoft Purview Information Protection client](#step-4-install-and-configure-the-labeling-client).
 
-1. [Configure AIP apps on Windows](#step-5-configure-aip-apps-on-windows).
+1. [Configure Microsoft 365 apps on Windows](#step-5-configure-microsoft-365-apps-on-windows).
 
 1. [Install the information protection scanner and manage content scan jobs](#step-6-install-the-information-protection-scanner-and-manage-content-scan-jobs). 
 
@@ -143,23 +143,18 @@ Log in to your DNS provider, navigate to the DNS settings for the domain, and th
 - Priority, Weight, Seconds, TTL = default values
 
 
-### Step 4: Install and configure the AIP unified labeling client
+### Step 4: Install and configure the labeling client
 
-Download and install the AIP unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
+Download and install the the Microsoft Purview Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
 For more information, see:
 
-- [AIP documentation](/azure/information-protection/)
-- [AIP version history and support policy](/purview/information-protection-client-relnotes)
-- [AIP system requirements](/azure/information-protection/requirements)
-- [AIP quickstart: Deploy the AIP client](/azure/information-protection/quickstart-deploy-client)
-- [AIP administrator guide](/azure/information-protection/rms-client/clientv2-admin-guide)
-- [AIP user guide](/azure/information-protection/rms-client/clientv2-user-guide)
-- [Learn about sensitivity labels](/purview/sensitivity-labels)
+- [Extend sensitivity labeling on Windows](/purview/information-protection-client)
+- [Microsoft Purview Information Protection client - Release management and supportability](/purview/information-protection-client-relnotes)
 
-### Step 5: Configure AIP apps on Windows
+### Step 5: Configure Microsoft 365 apps on Windows
 
-AIP apps on Windows need the following registry key to point them to the correct sovereign cloud for Azure China:
+Microsoft 365 apps on Windows need the following registry key to point them to the correct sovereign cloud for Azure China:
 
 - Registry node = `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP`
 - Name = `CloudEnvType`
