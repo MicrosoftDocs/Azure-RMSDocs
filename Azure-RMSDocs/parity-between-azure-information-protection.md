@@ -6,7 +6,7 @@ description: Learn how to configure Microsoft Purview Information Protection for
 author: libarson
 ms.author: libarson
 manager: aashishr
-ms.date: 05/13/2024
+ms.date: 05/10/2024
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -152,7 +152,7 @@ For more information, see:
 
 ### Step 5: Configure Windows settings
 
-Windows need the following registry key for authentication to point to the correct sovereign cloud for Azure China:
+Windows needs the following registry key for authentication to point to the correct sovereign cloud for Azure China:
 
 - Registry node = `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP`
 - Name = `CloudEnvType`
