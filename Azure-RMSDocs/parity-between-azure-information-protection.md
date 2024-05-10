@@ -152,7 +152,7 @@ For more information, see:
 
 ### Step 5: Configure Windows settings
 
-Microsoft 365 apps on Windows need the following registry key to point them to the correct sovereign cloud for Azure China:
+Windows need the following registry key for authentication to point to the correct sovereign cloud for Azure China:
 
 - Registry node = `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP`
 - Name = `CloudEnvType`
