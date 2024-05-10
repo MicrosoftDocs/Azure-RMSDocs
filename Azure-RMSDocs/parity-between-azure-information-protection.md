@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Information Protection support for Office 365 operated by 21Vianet
+title: Microsoft Purview Information Protection for Office 365 operated by 21Vianet
 description: Learn how to configure Microsoft Purview Information Protection for tenants in China
 author: libarson
 ms.author: libarson
