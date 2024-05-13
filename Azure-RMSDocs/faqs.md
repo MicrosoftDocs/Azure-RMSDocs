@@ -99,9 +99,6 @@ Administrators with this role can:
 
 To assign a user to this administrative role, see [Assign a user to administrator roles in Microsoft Entra ID](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
-> [!NOTE]
-> This role is not supported in the Azure portal if your tenant is on the [unified labeling platform](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
-
 ### Compliance administrator or Compliance data administrator
 
 These Microsoft Entra administrator roles enable administrators to:
