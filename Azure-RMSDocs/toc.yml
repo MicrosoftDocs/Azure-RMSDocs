@@ -5,16 +5,10 @@
   items:
   - name: What is Azure Information Protection?
     href: what-is-information-protection.md
-  - name: Built-in labeling and the AIP client
-    href: ./rms-client/use-client.md
   - name: Removed and retired services
     href: removed-sunset-services.md
   - name: AIP is also known as ...
     href: aka.md
-- name: Tutorials
-  items:
-  - name: Migrating from the classic client to the unified labeling client
-    href: tutorial-migrating-to-ul.md
 - name: Concepts
   items:
   - name: AIP requirements
@@ -23,14 +17,8 @@
       href: requirements.md
     - name: Additional Microsoft Entra requirements
       href: requirements-azure-ad.md
-    - name: File types supported
-      href: ./rms-client/clientv2-admin-guide-file-types.md
-    - name: Unified labeling client requirements
-      href: ./rms-client/reqs-ul-client.md
     - name: Office 365 operated by 21Vianet
       href: parity-between-azure-information-protection.md
-  - name: AIP classification and protection
-    href: aip-classification-and-protection.md
   - name: Azure Rights Management
     items:
     - name: Overview
@@ -117,8 +105,6 @@
           href: configure-office365.md
         - name: Office apps
           href: configure-office-apps.md
-        - name: Azure Information Protection client
-          href: configure-client.md
       - name: Configuring usage rights
         href: configure-usage-rights.md
       - name: Configuring super users for discovery services or data recovery
@@ -141,8 +127,6 @@
       href: verify.md
     - name: Managing personal data
       href: manage-personal-data.md
-    - name: Helping users to protect files
-      href: help-users.md
     - name: Administering with PowerShell
       items:
       - name: Overview
@@ -151,52 +135,16 @@
         href: install-powershell.md
     - name: Decommissioning and deactivating AIP
       href: decommission-deactivate.md
-    - name: Tracking and revoking with the legacy tracking portal
-      items:
-      - name: Tracking documents for admins
-        href: ./rms-client/client-admin-guide-document-tracking.md
-      - name: Tracking and revoking documents for users
-        href: ./rms-client/client-track-revoke.md
   - name: Deploying & using the client
     items:
     - name: Deploying the client
-      href: quickstart-deploy-client.md
-    - name: Unified labeling client admin guide
-      items:
-      - name: Overview
-        href: ./rms-client/clientv2-admin-guide.md
-      - name: Installing the client for users
-        href: ./rms-client/clientv2-admin-guide-install.md
-      - name: Tracking and revoking access
-        href: ./rms-client/track-and-revoke-admin.md
-      - name: Customizations
-        href: ./rms-client/clientv2-admin-guide-customizations.md
-      - name: PowerShell commands
-        href: ./rms-client/clientv2-admin-guide-powershell.md
-    - name: Unified labeling client user guide
-      items:
-      - name: Overview
-        href: ./rms-client/clientv2-user-guide.md
-      - name: Downloading and installing the client
-        href: ./rms-client/install-unifiedlabelingclient-app.md
-      - name: Classifying a file or email
-        href: ./rms-client/clientv2-classify.md
-      - name: Classifying and protecting a file or email
-        href: ./rms-client/clientv2-classify-protect.md
-      - name: Viewing protected files on Windows
-        href: ./rms-client/clientv2-view-use-files.md
-      - name: Removing labels and protection
-        href: ./rms-client/clientv2-remove-label-protection.md
-      - name: Revoking document access
-        href: ./rms-client/revoke-access-user.md
+      href: about-aip-client.md
   - name: Monitoring with AIP
     items:
     - name: Using AIP reports
       href: reports-aip.md
     - name: Viewing & analyzing service usage
       href: log-analyze-usage.md
-    - name: Viewing logs for client files and usage
-      href: ./rms-client/clientv2-admin-guide-files-and-logging.md
   - name: Developing & customizing apps
     items:
     - name: Microsoft Information Protection SDK
@@ -217,8 +165,6 @@
       href: faqs-rms.md
   - name: Known issues
     href: known-issues.md
-  - name: Information and support
-    href: information-support.md
   - name: Compliance & supporting information
     href: compliance.md
   - name: PowerShell reference
