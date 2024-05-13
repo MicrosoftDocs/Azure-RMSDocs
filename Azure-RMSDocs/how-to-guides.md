@@ -27,17 +27,15 @@ ms.custom: admin
 
 [!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
-There are many ways in which you can use Azure Information Protection to classify and optionally, protect your organization's documents and emails. 
+There are many ways in which you can use Azure Information Protection when you label and protect your organization's documents and emails. 
 
-The most successful deployments are those that identify specific use cases that provide the most business benefit to the organization. Use the following list of common scenarios and instructions to get your deployment off the ground.
+The most successful deployments are those that identify specific use cases that provide the most business benefit to the organization.
+
 ## Common scenarios
 
-- [Discover your sensitive content with the Azure Information Protection (AIP) scanner](/microsoft-365/compliance/deploy-scanner-manage)
-- [Automatically protect users' emails that are sent outside the organization](/previous-versions/azure/information-protection/configure-exo-rules)
 - [Use my own key to protect my organization's data](plan-implement-tenant-key.md)
 
-> [!NOTE]
-> For more information, see also [Create and publish sensitivity labels](/microsoft-365/compliance/create-sensitivity-labels) in the Microsoft 365 Compliance documentation.
+For additional information, see [Common scenarios for sensitivity labels](/purview/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels) in the Microsoft Purview documentation.
 > 
 
 ## Additional deployment instructions
@@ -57,7 +55,3 @@ For more information and step-by-step instructions, see:
 - [Cataloging your Sensitive Data with AIP, Even Before Configuring Labels!](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cataloging-your-Sensitive-Data-with-AIP-Even-Before-Configuring/ba-p/267241)
 - [Azure Information Protection Scanner Express Installation](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Scanner-Express-Installation/ba-p/265424)
 - [Discovery of Sensitive Data Using the AIP Scanner (AIP Premium P1)](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discovery-of-Sensitive-Data-Using-the-AIP-Scanner-AIP-Premium-P1/ba-p/252040)
-
-## Next steps
-
-Don't see your scenario listed? Check the [Deployment roadmaps](/azure/information-protection/deployment-roadmap-classify-label-protect) for a full list of planning and deployment steps.

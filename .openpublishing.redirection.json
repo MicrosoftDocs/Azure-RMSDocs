@@ -6,6 +6,130 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/rms-client/use-client.md",
+      "redirect_url": "/purview/sensitivity-labels-office-apps#office-built-in-labeling-and-the-azure-information-protection-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/tutorial-migrating-to-ul.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/aip-clientv2.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-admin-guide-files-and-logging.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client#log-file-locations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-client.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/help-users.md",
+      "redirect_url": "https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/deployment-roadmap-classify-label-protect.md",
+      "redirect_url": "https://learn.microsoft.com/purview/get-started-with-sensitivity-labels",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/reqs-ul-client.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client#requirements-for-deploying-the-information-protection-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-admin-guide-file-types.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client.md#supported-file-types",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/aip-classification-and-protection.md",
+      "redirect_url": "https://learn.microsoft.com/purview/sensitivity-labels",
+      "redirect_document_id": false
+    },
+
+    {
+      "source_path": "Azure-RMSDocs/quickstart-deploy-client.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-admin-guide.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-admin-guide-install.md",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client#install-or-upgrade-the-information-protection-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/track-and-revoke-admin.md",
+      "redirect_url": "https://learn.microsoft.com/purview/track-and-revoke-admin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-admin-guide-document-tracking.md",
+      "redirect_url": "https://learn.microsoft.com/purview/track-and-revoke-admin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-admin-guide-customizations.md",
+      "redirect_url": "https://learn.microsoft.com/powershell/exchange/client-advanced-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-user-guide.md",
+      "redirect_url": "https://support.microsoft.com/topic/label-and-protect-files-in-file-explorer-in-windows-67829155-2d0e-4122-9677-7c53c8cba18a",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/install-unifiedlabelingclient-app.md",
+      "redirect_url": "https://www.microsoft.com/download/details.aspx?id=53018",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-classify.md",
+      "redirect_url": "https://support.microsoft.com/topic/label-and-protect-files-in-file-explorer-in-windows-67829155-2d0e-4122-9677-7c53c8cba18a",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-classify-protect.md",
+      "redirect_url": "https://support.microsoft.com/topic/label-and-protect-files-in-file-explorer-in-windows-67829155-2d0e-4122-9677-7c53c8cba18a",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-view-use-files.md",
+      "redirect_url": "https://support.microsoft.com/topic/view-protected-files-with-the-azure-information-protection-viewer-9fb56fae-7989-48b0-850f-f446e057cf73",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/clientv2-remove-label-protection.md",
+      "redirect_url": "https://support.microsoft.com/topic/label-and-protect-files-in-file-explorer-in-windows-67829155-2d0e-4122-9677-7c53c8cba18a",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/revoke-access-user.md",
+      "redirect_url": "https://support.microsoft.com/office/track-and-revoke-access-to-your-files-1de9a543-c2df-44b6-9464-396b23018f96",
+      "redirect_document_id": false
+    },
+
+    {
+      "source_path": "Azure-RMSDocs/rms-client/client-track-revoke.md",
+      "redirect_url": "https://support.microsoft.com/office/track-and-revoke-access-to-your-files-1de9a543-c2df-44b6-9464-396b23018f96",
+      "redirect_document_id": false
+    },
+
+
+    {
       "source_path": "Azure-RMSDocs/rms-client/mobile-app-faq.md",
       "redirect_url": "https://support.microsoft.com/topic/view-protected-files-with-the-azure-information-protection-viewer-9fb56fae-7989-48b0-850f-f446e057cf73#ID0EBF=iOS",
       "redirect_document_id": false
@@ -1932,6 +2056,11 @@
 		{
             "source_path": "Azure-RMSDocs/deploy-aip-scanner-tsg.md",
             "redirect_url": "/microsoft-365/troubleshoot/information-protection-scanner/resolve-deployment-issues",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "Azure-RMSDocs/information-support.md",
+            "redirect_url": "https://support.microsoft.com/contactus",
             "redirect_document_id": false
         },
 		{
