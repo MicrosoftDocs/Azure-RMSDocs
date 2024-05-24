@@ -42,7 +42,9 @@ We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the 
 **Question**: Currently, it's easy to "read" the label by extracting the key/value pair strings from the file. Can metadata still be read in this manner?
 
 - Yes, the metadata is still available in the Office file XML to be read. Your application must read the coauthoring setting from the policy file to know that the new feature set is enabled. This defines where to read/write the label data (custom.xml vs. labelinfo.xml). Review [MS-OFFCRYPTO: LabelInfo versus Custom Document Properties | Microsoft Docs.](/openspecs/office_file_formats/ms-offcrypto/13939de6-c833-44ab-b213-e0088bf02341) for implementation details.
- 
+
+**Question**: How do I determine if Co-authoring is enabled?
+The state of the co-auth setting is returned from the policy engine. An application can read the raw bytes from the policy engine to determine co-authoring status.
 
 **Question**: How are labels migrated to the new location?
 
