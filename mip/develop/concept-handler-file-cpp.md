@@ -214,7 +214,7 @@ if (fileHandler->GetProtection() != nullptr)
 if(handler.Protection != null)
 {                
     // Validate that user has rights to remove protection from the file.                    
-    if(handler.Protection.AccessCheck(Rights.Extract) || handler.Protection.AccessCheck(Rights.Owner))
+    if(handler.Protection.AccessCheck(Rights.Export) || handler.Protection.AccessCheck(Rights.Owner))
     {
         // If user has Extract right, remove protection and commit the change. Otherwise, throw exception. 
         handler.RemoveProtection();
