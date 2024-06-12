@@ -6,6 +6,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/rms-client/configure-fci.md",
+      "redirect_url": "/purview/deploy-scanner-configure-install",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/rms-client/fci-script.md",
+      "redirect_url": "/purview/deploy-scanner-configure-install",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/rms-client/use-client.md",
       "redirect_url": "/purview/sensitivity-labels-office-apps#office-built-in-labeling-and-the-azure-information-protection-client",
       "redirect_document_id": false
