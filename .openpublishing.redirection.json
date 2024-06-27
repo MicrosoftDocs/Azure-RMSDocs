@@ -57,7 +57,7 @@
     },
     {
       "source_path": "Azure-RMSDocs/rms-client/clientv2-admin-guide-file-types.md",
-      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client.md#supported-file-types",
+      "redirect_url": "https://learn.microsoft.com/purview/information-protection-client#supported-file-types",
       "redirect_document_id": false
     },
     {
