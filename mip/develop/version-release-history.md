@@ -27,7 +27,8 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 | Version | Link                         | Status             | End of Support     |
 | ------- | ---------------------------- | ------------------ | ------------------ |
-| 1.14    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
+| 1.15    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
+| 1.14    | https://aka.ms/mipsdkbins114 | **Supported**      | July 5, 2025       |
 | 1.13    | https://aka.ms/mipsdkbins113 | **Supported**      | October 27, 2024   |
 | 1.12    | https://aka.ms/mipsdkbins112 | **Out of Support** | March 17, 2024     |
 | 1.11    | https://aka.ms/mipsdkbins111 | **Out of Support** | June 9, 2023       |
@@ -38,6 +39,44 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support** | September 23, 2021 |
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
+
+## Version 1.15.86
+
+**Release Date:** July 5, 2024
+
+### File SDK
+- Fixed an issue where linearized PDFs were corrupted.
+- Fixed an issue where decryption for labeled files failed with MIP SDK 1.10/1.11.
+- Fixed a security bug in the PDF parser.
+- Added support for Central European text encoding to protect RTF email.
+
+### Platform and Dependency Updates
+- Added support for masking additional PII fields, like engineIDs and file paths.
+- Added support for C API additions that enable better configuration of protection descriptors for UDP and AdHoc protection.
+- Added support for TLS 1.3.
+
+## Version 1.14.146
+
+**Release Date:** July 5, 2024
+
+### File SDK
+- Fixed an issue where linearized PDFs were corrupted.
+- Fixed an issue where decryption for labeled files failed with MIP SDK 1.10/1.11.
+- Fixed a security bug in the PDF parser.
+
+### Platform and Dependency Updates
+- Added PII masking for engineIDs and file paths fields.
+
+<!--
+## Version 1.13.XXX
+
+**Release Date:** June 21, 2024
+
+### File SDK
+- Fixed an issue where linearized PDFs were corrupted.
+- Fixed an issue where decryption failed for labeled files with MIP SDK 1.10/1.11.
+- Fixed a security issue in the PDF parser.
+-->
 
 ## Version 1.14.128
 
