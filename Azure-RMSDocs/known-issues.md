@@ -53740,19 +53740,11 @@ Depending on your application, you might see this prompt repeatedly for the same
 Publishing policies might take up to 24 hours.
 ## Known issues for the AIP viewer
 
-- [Mobile client support for protected PDFs and Intune](#mobile-client-support-for-protected-pdfs-and-intune)
 - [Landscape views](#landscape-views-in-the-aip-viewer)
 - [External users](#external-users-and-the-aip-viewer)
 - [ADRMS protected files on Android devices](#adrms-protected-files-on-android-devices)
 
 For more information, see [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md).
-### Mobile client support for protected PDFs and Intune
-
-The Azure Information Protection Viewer on Android can't open protected PDFs documents on devices managed by Intune. 
-
-To view protected PDFs on mobile, contact your administrator to disable Intune Mobile Application Management.
-
-Support for Intune MAM will be added back to the Azure Information Protection Viewer on Android following .NET platform and dependency updates.
 
 ### Landscape views in the AIP viewer
 
