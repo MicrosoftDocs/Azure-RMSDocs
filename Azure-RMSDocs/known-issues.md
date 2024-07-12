@@ -53740,7 +53740,6 @@ Depending on your application, you might see this prompt repeatedly for the same
 Publishing policies might take up to 24 hours.
 ## Known issues for the AIP viewer
 
-- [Mobile client support for protected PDFs and Intune](#mobile-client-support-for-protected-pdfs-and-intune)
 - [Landscape views](#landscape-views-in-the-aip-viewer)
 - [External users](#external-users-and-the-aip-viewer)
 - [ADRMS protected files on Android devices](#adrms-protected-files-on-android-devices)
