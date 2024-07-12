@@ -40,6 +40,15 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
+## Version 1.13.229
+
+**Release Date:** July 12, 2024
+
+### File SDK
+- Fixed an issue where linearized PDFs were corrupted.
+- Fixed an issue where decryption failed for labeled files with MIP SDK 1.10/1.11.
+- Fixed a security issue in the PDF parser.
+
 ## Version 1.15.86
 
 **Release Date:** July 5, 2024
@@ -66,17 +75,6 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ### Platform and Dependency Updates
 - Added PII masking for engineIDs and file paths fields.
-
-<!--
-## Version 1.13.XXX
-
-**Release Date:** June 21, 2024
-
-### File SDK
-- Fixed an issue where linearized PDFs were corrupted.
-- Fixed an issue where decryption failed for labeled files with MIP SDK 1.10/1.11.
-- Fixed a security issue in the PDF parser.
--->
 
 ## Version 1.14.128
 
