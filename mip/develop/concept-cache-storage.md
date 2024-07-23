@@ -65,6 +65,9 @@ While the MIP SDK does support other Linux distributions, we didn't test the cac
 
 The MIP SDK maintains two databases for cache. One is for the Protection SDKs, and maintaining protection state details. The other is for the Policy SDKs and maintaining policy details and service information. Both are stored in the path defined in the settings object, under **mip\mip.policies.sqlite3** and **mip\mip.protection.sqlite3**.
 
+> [!NOTE]
+> The MIP SDK does not guarantee compatibility across different versions of its cache. It is advisable to clear all files within the mip\ directory, or any alternative directory changed from default setting, prior to upgrading the application to a new version of the MIP SDK.
+
 ### Protection Database
 
 | Table         | Purpose                                                        | Encrypted |
