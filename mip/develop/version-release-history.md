@@ -40,6 +40,28 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
+
+## Version 1.15.94
+
+**Release Date:** August 12, 2024
+
+### File SDK
+- Fixed an issue where saving PDF files with protection labels failed in Office.
+- Added exception when labeling .zip.pfile fails for labels without protection.
+- Fixed an issue where decryption failed for files protected with MIP SDK version 1.11 and below.
+
+### Platform and Dependency Updates
+- Fixed a crash when acquiring license rights data in .NET wrapper.
+- Updated Azure Identity from 1.11.0 to 1.11.4.
+
+## Version 1.14.148
+
+**Release Date:** August 12, 2024
+
+### Platform and Dependency Updates
+- Fixed a crash when acquiring license rights data in .NET wrapper.
+- Updated Azure Identity from 1.11.0 to 1.11.4.
+
 ## Version 1.13.229
 
 **Release Date:** July 12, 2024
