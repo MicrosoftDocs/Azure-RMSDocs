@@ -104,6 +104,9 @@ Not applicable to the Azure Information Protection client for Windows.
 ###### Footnote 4
 Not included in the Microsoft 365 compliance center, the Azure portal, or the Azure Information Protection client for Windows.
 
+###### Footnote 5
+Beginning in version 2408 of Word, Excel, and PowerPoint for Windows, there is a new user-defined permissions dialog. This dialog has updated names for permissions levels: **Reviewer** is now **Restricted Editor**, **Co-Author** is now **Editor**, and **Co-Owner** is now **Owner**. The usage rights included in each permissions level have not changed.
+
 ## Do Not Forward option for emails
 
 Exchange clients and services (for example, the Outlook client, Outlook on the web, Exchange mail flow rules, and DLP actions for Exchange) have an additional information rights protection option for emails: **Do Not Forward**. 
