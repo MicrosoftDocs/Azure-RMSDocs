@@ -115,6 +115,9 @@ This error indicates that you haven't migrated your labels from Azure Informatio
 
 This error indicates that a label policy hasn't been published in the Microsoft Purview compliance portal. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
 
+If this is not the case, ensure the specified user account has the appropriate permissions to access label policies. Without the [ProtectionOnlyEngine](https://learn.microsoft.com/en-us/information-protection/develop/reference/class_mip_fileengine_settings#setprotectiononlyengine-function) configuration, user accounts lacking the necessary permissions, such as external users, may encounter failures with certain APIs. To accommodate these users, consider implementing a retry mechanism that applies the ProtectionOnlyEngine setting after an initial attempt without it.
+Also, please note MIP SDK doesn't support cross-tenant access scenario.
+
 ### Error: "System.ComponentModel.Win32Exception: LoadLibrary failed"
 
 **Question**: Why do I get the following error when using the MIP SDK .NET Wrapper?
