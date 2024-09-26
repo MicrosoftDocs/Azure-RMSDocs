@@ -53740,21 +53740,10 @@ Depending on your application, you might see this prompt repeatedly for the same
 Publishing policies might take up to 24 hours.
 ## Known issues for the AIP viewer
 
-- [Landscape views](#landscape-views-in-the-aip-viewer)
 - [External users](#external-users-and-the-aip-viewer)
 - [ADRMS protected files on Android devices](#adrms-protected-files-on-android-devices)
 
 For more information, see [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md).
-
-### Landscape views in the AIP viewer
-
-The AIP viewer displays images in portrait mode, and some wide, landscape-view images might appear to be stretched.
-
-For example, an original image is shown below on the left, with a stretched, portrait version in the AIP viewer on the right. 
-
-To fix this issue, upgrade to [Azure Information Protection unified labeling client](/purview/information-protection-client-relnotes) version 2.18.26.0.
-
-:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Stretched image in client viewer":::
 
 ### External users and the AIP viewer 
 
