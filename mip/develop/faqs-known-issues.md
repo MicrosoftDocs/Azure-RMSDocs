@@ -115,8 +115,11 @@ This error indicates that you haven't migrated your labels from Azure Informatio
 
 This error indicates that a label policy hasn't been published in the Microsoft Purview compliance portal. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
 
-If this is not the case, ensure the specified user account has the appropriate permissions to access label policies. Without the [ProtectionOnlyEngine](https://learn.microsoft.com/en-us/information-protection/develop/reference/class_mip_fileengine_settings#setprotectiononlyengine-function) configuration, user accounts lacking the necessary permissions, such as external users, may encounter failures with certain APIs. To accommodate these users, consider implementing a retry mechanism that applies the ProtectionOnlyEngine setting after an initial attempt without it.
-Also, please note MIP SDK doesn't support cross-tenant access scenario.
+If a labeling policy has been published, ensure that the user account is included in any groups that are part of the *published to* section of the label policy configuration. For more information, review [Create and publish sensitivity labels](https://learn.microsoft.com/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
+ 
+External users, including guest users, cannot access another organization's label policies. To accommodate these users, implement a retry mechanism. If a `NoPolicyException` is thrown, set the `FileEngineSettings` property [ProtectionOnlyEngine](
+https://learn.microsoft.com/en-us/information-protection/develop/reference/class_mip_fileengine_settings#setprotectiononlyengine-function)
+to true and retry the request. Labeling operations will not be available for that `IFileEngine` instance, but protection operations will be available. 
 
 ### Error: "System.ComponentModel.Win32Exception: LoadLibrary failed"
 
