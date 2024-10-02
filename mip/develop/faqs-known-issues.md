@@ -29,22 +29,22 @@ We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the 
 
 **Question**: Is there a specific version of the Office client that is required to use this storage location?
 
-- All Microsoft 365 Apps clients released after September 2021 support this new metadata location. The new storage location isn't used until the protected coauthoring feature is enabled by tenant administrators.
+- All Microsoft 365 Apps clients released after September 2021 support this new metadata location. The new storage location isn't used until the tenant administrators enables the protected coauthoring feature.
 
 **Question**: Is existing metadata stored as a custom property in *custom.xml* be kept up to date?
 
 - No. The first time the document is saved after the new storage location is enabled, label metadata is moved to the new location. Metadata written via [`LabelingOptions.ExtendedProperties`](/dotnet/api/microsoft.informationprotection.file.labelingoptions.extendedproperties?view=mipsdk-dotnet-1.7&preserve-view=true#Microsoft_InformationProtection_File_LabelingOptions_ExtendedProperties) remains in *custom.xml*.
 
-**Question**: Is it pssible to read the label metadata without MIP SDK? 
+**Question**: Is it possible to read the label metadata without MIP SDK? 
 
 - Yes, but you need to implement your own code to parse the file and extract the information.
 
 **Question**: Currently, it's easy to "read" the label by extracting the key/value pair strings from the file. Can metadata still be read in this manner?
 
-- Yes, the metadata is still available in the Office file XML to be read. Your application must read the coauthoring setting from the policy file to know that the new feature set is enabled. This defines where to read/write the label data (custom.xml vs. labelinfo.xml). Review [MS-OFFCRYPTO: LabelInfo versus Custom Document Properties | Microsoft Docs.](/openspecs/office_file_formats/ms-offcrypto/13939de6-c833-44ab-b213-e0088bf02341) for implementation details.
+- Yes, the metadata is still available in the Office file XML to be read. Your application must read the coauthoring setting from the policy file to know that the new feature set is enabled. This setting defines where to read/write the label data (custom.xml vs. labelinfo.xml). Review [MS-OFFCRYPTO: LabelInfo versus Custom Document Properties | Microsoft Docs.](/openspecs/office_file_formats/ms-offcrypto/13939de6-c833-44ab-b213-e0088bf02341) for implementation details.
 
 **Question**: How do I determine if coauthoring is enabled in the label policy?
-The state of the coauth setting is returned from the policy engine. An application can read the raw bytes from the policy engine to determine coauthoring status.
+The state of the coauthoring setting is returned from the policy engine. An application can read the raw bytes from the policy engine to determine coauthoring status.
 
 **Question**: How are labels migrated to the new location?
 
@@ -52,14 +52,14 @@ The state of the coauth setting is returned from the policy engine. An applicati
 
 | Action | Feature Not Enabled                                                                    | Feature Enabled                                                                                                                                                        |
 | ------ | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Read   | Label in custom.xml (unprotected) or Doc SummaryInfo (protected).                      | If label exists in labelinfo.xml, it is the effective label.<br> If there's no label in labelinfo.xml, label in custom.xml or Doc SummaryInfo is the effective label. |
+| Read   | Label in custom.xml (unprotected) or Doc SummaryInfo (protected).                      | If label exists in labelinfo.xml, it's the effective label.<br> If there's no label in labelinfo.xml, label in custom.xml or Doc SummaryInfo is the effective label. |
 | Write  | All new labels are written to custom.xml (unprotected) or Doc SummaryInfo (protected). | All new labels are written to labelinfo.xml.                                                                                                                         |
 
 ### File Parsing
 
 **Question**: Can I write to the same file that I'm currently reading with the File SDK?
 
-The MIP SDK does not support concurrently reading and writing the same file. Any labeled files result in a *copy* of the input file with the label actions applied. Your application must replace the original with the labeled file.
+The MIP SDK doesn't support concurrently reading and writing the same file. Any labeled files result in a *copy* of the input file with the label actions applied. Your application must replace the original with the labeled file.
 
 ### SDK string handling
 
@@ -69,25 +69,25 @@ The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transfor
 
 | Platform        | Guidance                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Windows native  | For C++ SDK clients, the C++ Standard Library type [`std::string`](https://wikipedia.org/wiki/C%2B%2B_string_handling) is used for passing strings to/from API functions. Conversion to/from UTF-8 is managed internally by the MIP SDK. When a `std::string` is returned from an API, you must expect UTF-8 encoding and manage accordingly if converting the string. In some cases, a string is returned as part of a `uint8_t` vector (such as a publishing license (PL)), but should be treated as an opaque blob.<br><br>For more information and examples, see:<ul><li>[WideCharToMultiByte function](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte) for assistance with converting wide character strings to multi-byte, such as UTF-8.<li>The following sample files included in the [SDK download](setup-configure-mip.md#configure-your-client-workstation):<ul><li>Sample string utility functions in `file\samples\common\string_utils.cpp`, for converting to/from wide UTF-8 strings.<li>An implementation of `wmain(int argc, wchar_t *argv[])` in `file\samples\file\main.cpp`, which uses the preceding string conversion functions.</li></ul></ul> |
-| .NET            | For .NET SDK clients, all strings use the default UTF-16 encoding and no special conversion is needed. Conversion to/from UTF-16 is managed internally by the MIP SDK.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Windows native  | For C++ SDK clients, the C++ Standard Library type [`std::string`](https://wikipedia.org/wiki/C%2B%2B_string_handling) is used for passing strings to/from API functions. MIP SDK internally manages conversion to/from UTF-8. When a `std::string` is returned from an API, you must expect UTF-8 encoding and manage accordingly if converting the string. In some cases, a string is returned as part of a `uint8_t` vector (such as a publishing license (PL)), but should be treated as an opaque blob.<br><br>For more information and examples, see:<ul><li>[WideCharToMultiByte function](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte) for assistance with converting wide character strings to multi-byte, such as UTF-8.<li>The following sample files included in the [SDK download](setup-configure-mip.md#configure-your-client-workstation):<ul><li>Sample string utility functions in `file\samples\common\string_utils.cpp`, for converting to/from wide UTF-8 strings.<li>An implementation of `wmain(int argc, wchar_t *argv[])` in `file\samples\file\main.cpp`, which uses the preceding string conversion functions.</li></ul></ul> |
+| .NET            | For .NET SDK clients, all strings use the default UTF-16 encoding and no special conversion is needed. MIP SDK internally manages conversion to/from UTF-16.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | Other platforms | All other platforms supported by the MIP SDK have native support for UTF-8.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 ### Content Marking
 
 **Question**: Does the MIP SDK support content marking? 
 
-MIP SDK doesn't support direct application of content marking, including header, footer, or watermark, on any files. When label metadata is written to a file, the File SDK writes the *contentBits* metadata property to indicate that protection was applied (if configured). It *won't* write the properties that indicate header, footer, or watermark were applied. When the file is opened in an application that supports content marking, the content marking configuration should be evaluated by the application and written to the file on save. 
+MIP SDK doesn't support direct application of content marking, including header, footer, or watermark, on any files. When label metadata is written to a file, the File SDK writes the *contentBits* metadata property to indicate that protection was applied (if configured). It doesn't write the properties that indicate header, footer, or watermark were applied. When the file is opened in an application, the content marking configuration should be evaluated by the application and written to the file on save.
 
-### Protection and Policy SDKs on Android
+### Protection and Policy SDK on Android
 **Question**: Which shared library should I use for integrating the MIP SDK into my Android application?
 
 The MIP SDK Android binaries include `libmip_core.so`, `libmip_protection_sdk.so`, `libmip_upe_sdk.so` and `lipmip_unified.so`. `libmip_unified.so` is the recommended library that includes the core, protection, and policy shared libraries.
 
 ## Compliance
 
-**Question**: Is the Microsoft Information Protection SDK FIPS 140-2 compliant? 
+**Question**: Is the Microsoft Information Protection SDK Federal Information Processing Standard (FIPS) 140-2 compliant? 
 
-The Microsoft Information Protection SDK uses FIPS 140-2 approved ciphers but not FIPS 140-2 validated cryptographic libraries today. Applications consuming the MIP SDK need to be aware that the SDK isn't considered FIPS compliant at this time. For more information, see the article on [FIPS 140-2 compliance](concept-fips-compliance.md). 
+See [FIPS 140-2 Validation](https://learn.microsoft.com/information-protection/develop/concept-fips-compliance).
 
 ## Issues and errors reference
 
@@ -97,15 +97,7 @@ The Microsoft Information Protection SDK uses FIPS 140-2 approved ciphers but no
 
 > File format not supported
 
-This exception results from attempting to protect or label a PDF file that has been digitally signed or password protected. See [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) for more information on protecting and labeling PDF files.
-
-### Error: "Failed to parse the acquired Compliance Policy"  
-
-**Question**: Why do I get the following error after downloading the MIP SDK and attempting to use the file sample to list all labels?
-
-> Something bad happened: Failed to parse the acquired Compliance Policy. Failed with: [class mip::CompliancePolicyParserException] Tag not found: policy, NodeType: 15, Name: No Name Found, Value: , Ancestors: `<SyncFile><Content>`, correlationId:[34668a40-blll-4ef8-b2af-00005aa674z9]
-
-This error indicates that you haven't migrated your labels from Azure Information Protection to the unified labeling experience. Follow [How to migrate Azure Information Protection labels to unified sensitivity labels](/azure/information-protection/configure-policy-migrate-labels) to migrate the labels, then create a Label Policy in Office 365 Security and compliance portal. 
+This exception results from attempting to protect or label a PDF file that is digitally signed or password protected. See [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) for more information on protecting and labeling PDF files.
 
 ### Error: "NoPolicyException: Label policy didn't contain data"
 
@@ -113,7 +105,7 @@ This error indicates that you haven't migrated your labels from Azure Informatio
 
 > NoPolicyException: Label policy didn't contain data, CorrelationId=GUID, CorrelationId.Description=PolicyProfile, NoPolicyError.Category=SyncFile, NoPolicyError.Category=SyncFile
 
-This error indicates that a label policy hasn't been published in the Microsoft Purview compliance portal. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
+This error indicates that a label policy isn't published in the Microsoft Purview compliance portal. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
 
 ### Error: "System.ComponentModel.Win32Exception: LoadLibrary failed"
 
@@ -139,4 +131,4 @@ When using a stream for output, the stream must have both read and write access 
 
 **Question:** Are there any service-based throttling limits when using the MIP SDK?
 
-The protection service, used by the protection SDK or protection operations in the File SDK, has a limit of 7,500 requests per ten seconds for an entire organization. That is, if Application A is generating 4,000 requests per ten seconds and Applicaiton B in the same organziation is generating 4,000 requests per ten seconds, both applications may start to receive `HTTP 429 Too Many Requests` responses. Developers must implement a backoff period when these exceptions are received.
+The protection service, used by the protection SDK or protection operations in the File SDK, has a limit of 7,500 requests per 10 seconds for an entire organization. That is, if Application A is generating 4,000 requests per 10 seconds and Application B in the same organization is generating 4,000 requests per 10 seconds, both applications may start to receive `HTTP 429 Too Many Requests` responses. Developers must implement a backoff period when these exceptions are received.
