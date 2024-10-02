@@ -110,7 +110,7 @@ This error indicates that a label policy isn't published in the Microsoft Purvie
 If a labeling policy has been published, ensure that the user account is included in any groups that are part of the *published to* section of the label policy configuration. For more information, review [Create and publish sensitivity labels](https://learn.microsoft.com/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
  
 External users, including guest users, cannot access another organization's label policies. To accommodate these users, implement a retry mechanism. If a `NoPolicyException` is thrown, set the `FileEngineSettings` property [ProtectionOnlyEngine](
-https://learn.microsoft.com/en-us/information-protection/develop/reference/class_mip_fileengine_settings#setprotectiononlyengine-function)
+https://learn.microsoft.com/information-protection/develop/reference/class_mip_fileengine_settings#setprotectiononlyengine-function)
 to true and retry the request. Labeling operations will not be available for that `IFileEngine` instance, but protection operations will be available. 
 
 ### Error: "System.ComponentModel.Win32Exception: LoadLibrary failed"
