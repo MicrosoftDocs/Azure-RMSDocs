@@ -40,6 +40,37 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
+## Version 1.15.104
+
+**Release Date:** October 14, 2024
+
+### File SDK
+- Fixed an issue where `.msg` files could not be encrypted if email HTML contained emojis. Enable this feature using `FlightingFeature::PriopritizeHtmlInMsgs`, which is off by default.
+- Added support for text encoding standards KOI8-R, KOI8-U, ISO8859 (1, 3, 4, 6, 7, 8, 9, 13 and 15), HZ-GB2312, GB18030 and ISO-2022-JP.
+
+### Platform and Dependency Updates
+- Added support for Ubuntu 24.04.
+- Ended support for Debian 10 and RHEL 7.
+- Updated uriparser from 0.9.7 to 0.9.8.
+- Fixed an issue with End User License caches for file owners.
+- Improved exceptions on iOS to include more error details.
+- Improved error messaging for `NoPermissionError` during file decryption with ExtendedErrorInfo. Disable this feature by turning off `FlightingFeature::EnableExtendedErrors`.
+
+## Version 1.14.150
+
+**Release Date:** October 14, 2024
+
+### Platform and Dependency Updates
+- Updated uriparser from 0.9.7 to 0.9.8.
+  
+## Version 1.13.234
+
+**Release Date:** October 14, 2024
+
+### Platform and Dependency Updates
+- Updated uriparser from 0.9.7 to 0.9.8.
+- Updated Azure Identity from 1.11.0 to 1.11.4.
+- Fixed a crash when acquiring license rights data in .NET wrapper.
 
 ## Version 1.15.94
 
