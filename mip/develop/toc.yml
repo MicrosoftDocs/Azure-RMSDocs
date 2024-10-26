@@ -167,42 +167,7 @@
     href: https://microsoftdocs.github.io/mip-sdk-docs/cpp/
   - name: MIP SDK C Reference
     href: https://microsoftdocs.github.io/mip-sdk-docs/cpp/    
-  - href: concept-supported-filetypes.md
-    items:
-    - name: Use Cases
-      items:
-      - name: File SDK - Action justification for lowering a sensitivity label on a file
-        href: concept-justification.md
-      - name: File SDK - Republishing
-        href: concept-republishing.md 
-      - name: File SDK - Process email .msg files
-        href: concept-email.md 
-  - name: Reference
-    items:
-    - name: MIP SDK C++ Reference
-      href: https://microsoftdocs.github.io/mip-sdk-docs/cpp/
-    - name: MIP SDK C Reference
-      href: https://microsoftdocs.github.io/mip-sdk-docs/cpp/    
-    - name: .NET API Browser
-      href: /dotnet/api/?term=microsoft.informationprotection
-    - name: API Permissions
-      href: concept-api-permissions.md
-  - name: Resources
-    items:
-    - name: Developer blog
-      href: https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/bg-p/InformationProtectionDevelopers
-    - name: FAQs and known issues
-      href: faqs-known-issues.md
-    - name: FIPS 140-2 Compliance
-      href: concept-fips-compliance.md
-    - name: Forums 
-      href: https://stackoverflow.com/questions/tagged/microsoft-information-protection
-    - name: Samples
-      href: /samples/browse/?terms=mip%20sdk
-    - name: Security best practices
-      href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc
-    - name: Version release history
-      href: version-release-history.md  - name: .NET API Browser
+  - name: .NET API Browser
     href: /dotnet/api/?term=microsoft.informationprotection
   - name: API Permissions
     href: concept-api-permissions.md
