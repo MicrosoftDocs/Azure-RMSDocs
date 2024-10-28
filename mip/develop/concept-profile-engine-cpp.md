@@ -33,7 +33,7 @@ The profile itself provides the following functionality:
 - `MipContext`: The `MipContext` object that was initialized to store application info, state path, etc.
 - `CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted.
 - `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1ConsentDelegate.html).
-- `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile.html), and [`FileProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile_1_1Observer.html)).
+- `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classPolicyProfile_1_1Observer.html), [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile.html), and [`FileProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile_1_1Observer.html)).
 - `applicationInfo`: A [`mip::ApplicationInfo`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/structmip_1_1ApplicationInfo.html) object. Information about the application that is consuming the SDK, which matches your Microsoft Entra application registration ID and name.
 
 ## Engines
@@ -43,7 +43,7 @@ The File, Profile, and Protection SDK engines provide an interface for operation
 There are three engine classes in the SDK, one for each API. The following list shows the engine classes and a few of the functions associated with each:
 
 - [`mip::ProtectionEngine`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1ProtectionEngine.html)
-- [`mip::PolicyEngine`](reference/class_mip_policyengine.md)
+- [`mip::PolicyEngine`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classPolicyEngine.html)
   - `ListSensitivityLabels()`: Gets the list of labels for the loaded engine.
   - `GetSensitivityLabel()`: Gets the label from existing content.
   - `ComputeActions()`: Provided with a label ID and optional metadata, returns the list of actions that should occur for a specific item.
