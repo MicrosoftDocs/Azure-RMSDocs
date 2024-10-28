@@ -21,7 +21,7 @@ There are a few code-prerequisites that should be met prior to attempting to ins
 
 ## Load a Profile
 
-With the `ProfileObserver`, and `ConsentDelegateImpl`, defined, `mip::FileProfile` can now be instantiated. Creating the `mip::FileProfile` object requires [`mip::MipContext`] to have and [`mip::FileProfile::Settings`](reference/class_mip_fileprofile_settings.md) to store all of the settings information about the `FileProfile`.
+With the `ProfileObserver`, and `ConsentDelegateImpl`, defined, `mip::FileProfile` can now be instantiated. Creating the `mip::FileProfile` object requires [`mip::MipContext`] to have and [`mip::FileProfile::Settings`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile_1_1Settings.html) to store all of the settings information about the `FileProfile`.
 
 ### FileProfile::Settings Parameters
 

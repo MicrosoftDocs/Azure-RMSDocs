@@ -16,9 +16,9 @@ Where the `MipContext` is the class for storing SDK-specific settings, the profi
 
 There are three types of profile in the MIP SDK:
 
-- [`PolicyProfile`](reference/class_mip_policyprofile.md): The profile class for the MIP Policy SDK.
-- [`ProtectionProfile`](reference/class_mip_protectionprofile.md): The profile class for the MIP Protection SDK.
-- [`FileProfile`](reference/class_mip_fileprofile.md): The profile class for the MIP File SDK.
+- [`PolicyProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/policy__profile_8h.html): The profile class for the MIP Policy SDK.
+- [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1ProtectionProfile.html): The profile class for the MIP Protection SDK.
+- [`FileProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile.html): The profile class for the MIP File SDK.
 
 The API used in the consuming application determines which profile class should be used.
 
