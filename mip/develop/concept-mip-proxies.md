@@ -77,19 +77,19 @@ When a custom HTTP delegate isn't an option, it will be required that you bypass
 
 ### Commercial
 
-| Endpoint           | Hostname |
+| Endpoint | Hostname |
 | --- | --- |
-| Protection Service | `https://api.aadrm.`com                                                                                                            |
-| Policy             | `https://\*.protection.outlook.com`, `https://substrate.office`.`com                                                                  |
-| Audit Logging      | `https://\*.events.data.microsoft.com`, `https://\*.aria.microsoft.com` (iOS only)                                                   |
+| Protection Service | `https://api.aadrm.com` |
+| Policy             | `https://\*.protection.outlook.com`, `https://substrate.office.com` |
+| Audit Logging      | `https://\*.events.data.microsoft.com`, `https://\*.aria.microsoft.com` (iOS only) |
 | Authentication     | [Review Microsoft Entra documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
 
 ### GCCH
 
 | Endpoint           | Hostname |
 | --- | --- |
-| Protection Service | `https://api.aadrm`.us                                                                                                             |
-| Policy             | `https://usg02b.dataservice.protection.office365.us`, `https://substrate.office365`.us                                                               |
+| Protection Service | `https://api.aadrm.us` |
+| Policy             | `https://usg02b.dataservice.protection.office365.us`, `https://substrate.office365.us` |
 | Audit Logging      | `https://\*.events.data.microsoft.com`                                                  |
 | Authentication     | [Review Microsoft Entra documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
 
@@ -97,7 +97,7 @@ When a custom HTTP delegate isn't an option, it will be required that you bypass
 
 | Endpoint           | Hostname |
 | --- | --- |
-| Protection Service | `https://api.aadrm`.us                                                                                                             |
-| Policy             | `https://usg01b.dataservice.protection.office365.us`, `https://substrate-dod.office365`.us                                                              |
-| Audit Logging      | `https://\*.events.data.microsoft.com`                                                   |
+| Protection Service | `https://api.aadrm.us` |
+| Policy             | `https://usg01b.dataservice.protection.office365.us`, `https://substrate-dod.office365.us` |
+| Audit Logging      | `https://\*.events.data.microsoft.com` |
 | Authentication     | [Review Microsoft Entra documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
