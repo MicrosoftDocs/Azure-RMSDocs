@@ -17,7 +17,7 @@ Where the `MipContext` is the class for storing SDK-specific settings, the profi
 There are three types of profile in the MIP SDK:
 
 - [`PolicyProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/policy__profile_8h.html): The profile class for the MIP Policy SDK.
-- [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1ProtectionProfile.html): The profile class for the MIP Protection SDK.
+- [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile.html): The profile class for the MIP Protection SDK.
 - [`FileProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile.html): The profile class for the MIP File SDK.
 
 The API used in the consuming application determines which profile class should be used.
@@ -32,8 +32,8 @@ The profile itself provides the following functionality:
 
 - `MipContext`: The `MipContext` object that was initialized to store application info, state path, etc.
 - `CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted.
-- `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
-- `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), and [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
+- `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1ConsentDelegate.html).
+- `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile.html), and [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 - `applicationInfo`: A [`mip::ApplicationInfo`](reference/mip-enums-and-structs.md#structures) object. Information about the application that is consuming the SDK, which matches your Microsoft Entra application registration ID and name.
 
 ## Engines

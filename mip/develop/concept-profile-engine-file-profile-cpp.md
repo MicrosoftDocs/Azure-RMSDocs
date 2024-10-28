@@ -29,8 +29,8 @@ The `FileProfile::Settings` constructor accepts five parameters, listed below:
 
 - `std::shared_ptr<MipContext>`: The `mip::MipContext` object that was initialized to store application info, state path, etc.
 - `mip::CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted.
-- `std::shared_ptr<mip::ConsentDelegate>`: A shared pointer of class [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
-- `std::shared_ptr<mip::FileProfile::Observer> observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), and [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
+- `std::shared_ptr<mip::ConsentDelegate>`: A shared pointer of class [`mip::ConsentDelegate`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1ConsentDelegate.html).
+- `std::shared_ptr<mip::FileProfile::Observer> observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile.html), and [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 
 The following examples show how to create the `profileSettings` object using local storage for state storage as well as in-memory only. 
 
