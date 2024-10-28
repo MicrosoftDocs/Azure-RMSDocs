@@ -2922,17 +2922,17 @@
             "source_path": "mip/develop/reference/c/mip-enums-and-structs.md",
             "redirect_url": "https://microsoftdocs.github.io/mip-sdk-docs/c",
             "redirect_document_id": false
-        }
+        },
         {
             "source_path": "mip/develop/reference/c/functions.md",
             "redirect_url": "https://microsoftdocs.github.io/mip-sdk-docs/c",
             "redirect_document_id": false
-        }
+        },
         {
             "source_path": "mip/develop/reference/c/overview.md",
             "redirect_url": "https://microsoftdocs.github.io/mip-sdk-docs/c",
             "redirect_document_id": false
-        }
+        },
         {
             "source_path": "mip/develop/reference/c/structures.md",
             "redirect_url": "https://microsoftdocs.github.io/mip-sdk-docs/c",
