@@ -161,16 +161,14 @@
       href: concept-republishing.md 
     - name: File SDK - Process email .msg files
       href: concept-email.md 
-- name: Reference
-  items:
-  - name: MIP SDK C++ Reference
-    href: https://microsoftdocs.github.io/mip-sdk-docs/cpp/
-  - name: MIP SDK C Reference
-    href: https://microsoftdocs.github.io/mip-sdk-docs/cpp/    
-  - name: .NET API Browser
-    href: /dotnet/api/?term=microsoft.informationprotection
-  - name: API Permissions
-    href: concept-api-permissions.md
+- name: MIP SDK C++ Reference
+  href: https://microsoftdocs.github.io/mip-sdk-docs/cpp/
+- name: MIP SDK C Reference
+  href: https://microsoftdocs.github.io/mip-sdk-docs/c    
+- name: .NET API Browser
+  href: /dotnet/api/?term=microsoft.informationprotection
+- name: API Permissions
+  href: concept-api-permissions.md
 - name: Resources
   items:
   - name: Developer blog
