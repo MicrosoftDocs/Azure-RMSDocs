@@ -107,7 +107,7 @@ public InspectorType GetInspectorType() const
 public std::shared_ptr<Stream> GetFileStream() const
 ```
 
-For more information, see [API reference](./reference/mip-sdk-reference.md).
+For more information, see the [Microsoft Information Protection (MIP) SDK for C++: Reference](https://microsoftdocs.github.io/mip-sdk-docs/cpp).
 
 ## Next Steps
 

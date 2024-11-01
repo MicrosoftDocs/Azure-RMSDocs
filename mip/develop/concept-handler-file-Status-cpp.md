@@ -23,7 +23,7 @@ All that is required is the filename and the creation of mipContext along with a
 
 ## GetFileStatus() Function
 
-`mip::FileHandler::GetFileStatus()` allows developer to fetch the status of a file. For the full list, consult the [API reference](reference/class_mip_filestatus.md).
+`mip::FileHandler::GetFileStatus()` allows developer to fetch the status of a file. For the full list, consult the [API reference](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileHandler.html#a1afcf4f00a9a9be42f8f7e228d43079b).
 
 In this article, the following methods will be covered:
 
