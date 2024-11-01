@@ -12,8 +12,8 @@ ms.author: mbaldwin
 
 The File SDK contains two observer classes. Observer members are virtual and can be overridden to handle event callbacks.
 
-- [`mip::FileProfile::Observer`](reference/class_mip_fileprofile_observer.md)
-- [`mip::FileHandler::Observer`](reference/class_mip_filehandler_observer.md)
+- [`mip::FileProfile::Observer`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile_1_1Observer.html)
+- [`mip::FileHandler::Observer`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileHandler_1_1Observer.html)
 
 When an asynchronous operation completes, the `OnXxx()` member function corresponding to the result is called. Examples are `OnLoadSuccess()`, `OnLoadFailure()`, and `OnAddEngineSuccess()` for `mip::FileProfile::Observer`.
 
