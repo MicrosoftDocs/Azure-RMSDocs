@@ -50,11 +50,11 @@ export http_proxy=http://192.168.1.1:8080
 export https_proxy=https://192.168.1.1:8080
 ```
 
-If proxy support beyond this is required, review the custom [`mip::HttpDelegate`](./reference/class_mip_httpdelegate.md) and workaround section or more details.
+If proxy support beyond this is required, review the custom [`mip::HttpDelegate`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1HttpDelegate.html) and workaround section or more details.
 
 ## Custom HTTP Delegate
 
-The Microsoft Information Protection SDK supports implementation of a custom HTTP delegate that can override the SDK's default HTTP stack. When there are features not present, or a specific HTTP implementation is required, this delegate can be implemented by adding a new class that inherits [`mip::HttpDelegate`](./reference/class_mip_httpdelegate.md).
+The Microsoft Information Protection SDK supports implementation of a custom HTTP delegate that can override the SDK's default HTTP stack. When there are features not present, or a specific HTTP implementation is required, this delegate can be implemented by adding a new class that inherits [`mip::HttpDelegate`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1HttpDelegate.html).
 
 This `mip::HttpDelegate`-derived class is set via `mip::FileProfile::Settings`:
 
@@ -74,26 +74,30 @@ profileSettings.SetHttpDelegate(httpDelegate);
 When a custom HTTP delegate isn't an option, it will be required that you bypass your proxy and allow direct network connectivity for the MIP labeling and protection endpoints, as well as to Microsoft Entra ID. If [audit logging](/azure/information-protection/reports-aip) is desired, the audit logging endpoint is also required.
 
 ## Cloud Endpoints
+
 ### Commercial
-| Endpoint           | Hostname                                                                                                                         |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| Protection Service | https://api.aadrm.com                                                                                                            |
-| Policy             | https://\*.protection.outlook.com, https://substrate.office.com                                                                  |
-| Audit Logging      | https://\*.events.data.microsoft.com, https://\*.aria.microsoft.com (iOS only)                                                   |
+
+| Endpoint | Hostname |
+| --- | --- |
+| Protection Service | `https://api.aadrm.com` |
+| Policy             | `https://\*.protection.outlook.com`, `https://substrate.office.com` |
+| Audit Logging      | `https://\*.events.data.microsoft.com`, `https://\*.aria.microsoft.com` (iOS only) |
 | Authentication     | [Review Microsoft Entra documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
 
 ### GCCH
-| Endpoint           | Hostname                                                                                                                         |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| Protection Service | https://api.aadrm.us                                                                                                             |
-| Policy             | https://usg02b.dataservice.protection.office365.us, https://substrate.office365.us                                                               |
-| Audit Logging      | https://\*.events.data.microsoft.com                                                  |
+
+| Endpoint           | Hostname |
+| --- | --- |
+| Protection Service | `https://api.aadrm.us` |
+| Policy             | `https://usg02b.dataservice.protection.office365.us`, `https://substrate.office365.us` |
+| Audit Logging      | `https://\*.events.data.microsoft.com`                                                  |
 | Authentication     | [Review Microsoft Entra documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
 
 ### DoD
-| Endpoint           | Hostname                                                                                                                         |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| Protection Service | https://api.aadrm.us                                                                                                             |
-| Policy             | https://usg01b.dataservice.protection.office365.us, https://substrate-dod.office365.us                                                              |
-| Audit Logging      | https://\*.events.data.microsoft.com                                                   |
+
+| Endpoint           | Hostname |
+| --- | --- |
+| Protection Service | `https://api.aadrm.us` |
+| Policy             | `https://usg01b.dataservice.protection.office365.us`, `https://substrate-dod.office365.us` |
+| Audit Logging      | `https://\*.events.data.microsoft.com` |
 | Authentication     | [Review Microsoft Entra documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
