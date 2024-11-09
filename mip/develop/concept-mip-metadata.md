@@ -101,7 +101,7 @@ When replacing an attribute with a newer version, a version suffix should be add
 
 When [co-authoring for files encrypted with sensitivity labels](https://learn.microsoft.com/purview/sensitivity-labels-coauthoring) is enabled, the label metadata storage location and format for Word, Excel, and PowerPoint files change.
 
-When the co-authoring feature is enabled, the SDKautomatically reads and writes information to and from the updated metadata location. If label metadata doesn't exist in the new location, the SDK will attempt to read the metadata from the legacy storage location. If found, the label is available via get label operations. The next time a set label operation is performed, the metadata is written to the updated LabelInfo locations.
+When the co-authoring feature is enabled, the SDK automatically reads and writes information to and from the updated metadata storage location. If label metadata doesn't exist in the new location, the SDK will attempt to read the metadata from the legacy storage location. If found, the label is available via get label operations. The next time a set label operation is performed, the metadata is written to the updated LabelInfo locations.
 
 The purpose of the properties as previously described doesn't change.
 
