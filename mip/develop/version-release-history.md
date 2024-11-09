@@ -29,7 +29,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | ------- | ---------------------------- | ------------------ | ------------------ |
 | 1.15    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
 | 1.14    | https://aka.ms/mipsdkbins114 | **Supported**      | July 5, 2025       |
-| 1.13    | https://aka.ms/mipsdkbins113 | **Supported**      | October 27, 2024   |
+| 1.13    | https://aka.ms/mipsdkbins113 | **Out of Support** | October 27, 2024   |
 | 1.12    | https://aka.ms/mipsdkbins112 | **Out of Support** | March 17, 2024     |
 | 1.11    | https://aka.ms/mipsdkbins111 | **Out of Support** | June 9, 2023       |
 | 1.10    | https://aka.ms/mipsdkbins110 | **Out of Support** | November 17, 2022  |
@@ -49,6 +49,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Added support for text encoding standards KOI8-R, KOI8-U, ISO8859 (1, 3, 4, 6, 7, 8, 9, 13 and 15), HZ-GB2312, GB18030 and ISO-2022-JP.
 
 ### Platform and Dependency Updates
+- MIP SDK on .NET for all Ubunutu version is now generally available. 
 - Added support for Ubuntu 24.04.
 - Ended support for Debian 10 and RHEL 7.
 - Updated uriparser from 0.9.7 to 0.9.8.
