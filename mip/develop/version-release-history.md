@@ -29,7 +29,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | ------- | ---------------------------- | ------------------ | ------------------ |
 | 1.15    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
 | 1.14    | https://aka.ms/mipsdkbins114 | **Supported**      | July 5, 2025       |
-| 1.13    | https://aka.ms/mipsdkbins113 | **Supported**      | October 27, 2024   |
+| 1.13    | https://aka.ms/mipsdkbins113 | **Out of Support** | October 27, 2024   |
 | 1.12    | https://aka.ms/mipsdkbins112 | **Out of Support** | March 17, 2024     |
 | 1.11    | https://aka.ms/mipsdkbins111 | **Out of Support** | June 9, 2023       |
 | 1.10    | https://aka.ms/mipsdkbins110 | **Out of Support** | November 17, 2022  |
@@ -45,10 +45,13 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 **Release Date:** October 14, 2024
 
 ### File SDK
+
 - Fixed an issue where `.msg` files could not be encrypted if email HTML contained emojis. Enable this feature using `FlightingFeature::PriopritizeHtmlInMsgs`, which is off by default.
 - Added support for text encoding standards KOI8-R, KOI8-U, ISO8859 (1, 3, 4, 6, 7, 8, 9, 13 and 15), HZ-GB2312, GB18030 and ISO-2022-JP.
 
 ### Platform and Dependency Updates
+
+- MIP SDK on .NET for all Ubunutu versions is now generally available. 
 - Added support for Ubuntu 24.04.
 - Ended support for Debian 10 and RHEL 7.
 - Updated uriparser from 0.9.7 to 0.9.8.
@@ -61,6 +64,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 **Release Date:** October 14, 2024
 
 ### Platform and Dependency Updates
+
 - Updated uriparser from 0.9.7 to 0.9.8.
   
 ## Version 1.13.234
@@ -68,6 +72,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 **Release Date:** October 14, 2024
 
 ### Platform and Dependency Updates
+
 - Updated uriparser from 0.9.7 to 0.9.8.
 - Updated Azure Identity from 1.11.0 to 1.11.4.
 - Fixed a crash when acquiring license rights data in .NET wrapper.
@@ -77,11 +82,13 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 **Release Date:** August 12, 2024
 
 ### File SDK
+
 - Fixed an issue where saving PDF files with protection labels failed in Office.
 - Added exception when labeling .zip.pfile fails for labels without protection.
 - Fixed an issue where decryption failed for files protected with MIP SDK version 1.11 and below.
 
 ### Platform and Dependency Updates
+
 - Fixed a crash when acquiring license rights data in .NET wrapper.
 - Updated Azure Identity from 1.11.0 to 1.11.4.
 
@@ -90,6 +97,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 **Release Date:** August 12, 2024
 
 ### Platform and Dependency Updates
+
 - Fixed a crash when acquiring license rights data in .NET wrapper.
 - Updated Azure Identity from 1.11.0 to 1.11.4.
 
