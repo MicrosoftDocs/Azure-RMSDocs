@@ -63,8 +63,6 @@ When the file is opened in Microsoft Word, the header, footer, and watermark wil
 > [!Note]
 > This feature requires the Azure Information Protection client today, and works only in Word, Excel, or PowerPoint. It does not apply to Outlook. 
 
-
-
 ## Extending Metadata with Custom Attributes
 
 Custom metadata may be appended via File and Policy SDK. Custom attributes must maintain the base `MSIP_Label_GUID` prefix.
@@ -98,6 +96,19 @@ Over time, attributes will be introduced, modified, or retired. It's expected th
 When replacing an attribute with a newer version, a version suffix should be added to the attribute:
 
 `MSIP_Label_GUID_EnabledV2 = True | False | Condition`
+
+## Support for Protected Coauthoring
+
+When [co-authoring for files encrypted with sensitivity labels](https://learn.microsoft.com/purview/sensitivity-labels-coauthoring) is enabled, the label metadata storage location and format for Word, Excel, and PowerPoint files change.
+
+When the co-authoring feature is enabled, the SDK automatically reads and writes information to and from the updated metadata storage location. If label metadata doesn't exist in the new location, the SDK will attempt to read the metadata from the legacy storage location. If found, the label is available via get label operations. The next time a set label operation is performed, the metadata is written to the updated LabelInfo locations.
+
+The purpose of the properties as previously described doesn't change.
+
+The following references describe the format and storage locations:
+
+- [LabelInfo Stream Schema](https://learn.microsoft.com/openspecs/office_file_formats/ms-offcrypto/b75503d0-ada1-4eca-adc1-adeb643ab813)
+- [LabelInfo Stream Locations](https://learn.microsoft.com/openspecs/office_file_formats/ms-offcrypto/0c4ec12d-aba0-4dd4-8fd1-710da6735219)
 
 ## Email
 
