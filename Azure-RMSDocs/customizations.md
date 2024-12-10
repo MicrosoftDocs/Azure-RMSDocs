@@ -695,7 +695,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCu
 
 This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Security & Compliance Center PowerShell.
 
-By default, users see an option named **Protect with custom permissions** when they right-click in File Explorer and choose **Classify and protect**. This option lets them set their own protection settings that can override any protection settings that you might have included with a label configuration. Users can also see an option to remove protection. When you configure this setting, users do not see these options.
+By default, users see an option named **Protect with custom permissions** when they right-click in File Explorer and choose **Classify and protect**. This option cannot override any protection settings that you might have included with a label configuration. Users can also see an option to remove protection. When you configure this setting, users do not see these options.
 
 To configure this advanced setting, enter the following strings for the selected label policy:
 
