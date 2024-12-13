@@ -27,7 +27,8 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 | Version | Link                         | Status             | End of Support     |
 | ------- | ---------------------------- | ------------------ | ------------------ |
-| 1.15    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
+| 1.16    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
+| 1.15    | https://aka.ms/mipsdkbins115 | **Supported**      | December 13, 2025  |
 | 1.14    | https://aka.ms/mipsdkbins114 | **Supported**      | July 5, 2025       |
 | 1.13    | https://aka.ms/mipsdkbins113 | **Out of Support** | October 27, 2024   |
 | 1.12    | https://aka.ms/mipsdkbins112 | **Out of Support** | March 17, 2024     |
@@ -39,6 +40,31 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support** | September 23, 2021 |
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
+
+## Version 1.16.126
+
+**Release Date:** December 13, 2024
+
+### File SDK
+- Added support for labeling MP4s. These files can be labeled without converting to a pfile. Applying a protection label will result in a pfile output.
+- Added capability to decrypt nested .MSG files with `ContainerDecryptionOption::All`. After 10 decryptions of the same nested .MSG file, a mip::BadInputError("Max depth reached on nested msg attachments") exception is thrown.
+- Added support for Arm64 for Windows File SDK.
+- Fixed an issue where Double Key Encryption info was missing when User-Defined Permissions were modified.
+- Fixed a bug when remove protection failed for file sizes larger than 500MB.
+- Fixed a bug where text style in .MSG files were not preserved during decryption.
+- Fixed an issue where an exception was not thrown when protection is attempted for files that cannot be accessed.
+
+### Protection SDK
+- Fixed an intermittent crash in offline publishing.
+
+### Platform and Dependency Updates
+- Fixed an issue where TLS 1.2 was not accepted despite configuring settings to allow any TLS version.
+
+### Breaking Changes
+- Updated `CommitAsync` to remove output files instead of an empty file after failure.
+- Updated `LoadUserCert` API to `LoadUserCertSync`. `LoadUserCert` is deprecated.
+- Updated Java wrappers sample to use MSAL for authentication.
+
 
 ## Version 1.15.107
 
