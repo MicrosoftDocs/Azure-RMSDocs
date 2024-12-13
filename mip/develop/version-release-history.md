@@ -46,7 +46,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 **Release Date:** December 13, 2024
 
 ### File SDK
-- Added labeling and protection support for MP4 file type. MP4 files become pfiles after encryption.
+- Added support for labeling MP4s. These files can be labeled without converting to a pfile. Applying a protection label will result in a pfile output.
 - Added capability to decrypt nested .MSG files with `ContainerDecryptionOption::All`. After 10 decryptions of the same nested .MSG file, a mip::BadInputError("Max depth reached on nested msg attachments") exception is thrown.
 - Added support for Arm64 for Windows File SDK.
 - Fixed an issue where Double Key Encryption info was missing when User-Defined Permissions were modified.
@@ -63,7 +63,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 ### Breaking Changes
 - Updated `CommitAsync` to remove output files instead of an empty file after failure.
 - Updated `LoadUserCert` API to `LoadUserCertSync`. `LoadUserCert` is deprecated.
-- Updated Java wrappers to use MSAL for authentication.
+- Updated Java wrappers sample to use MSAL for authentication.
 
 
 ## Version 1.15.107
