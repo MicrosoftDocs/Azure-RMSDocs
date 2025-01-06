@@ -15,7 +15,7 @@ This article provides answers to Frequently Asked Questions (FAQs), and troubles
 ## Frequently Asked Questions
 
 **Question** : How many labels are supported by MIP SDK?
-- MIP SDK can handle up to 500 protection labels, and there is no limit for classification labels. Beyond this limit, a user may experience performance issues.
+- MIP SDK can handle up to 500 protection labels, and there is no limit for classification labels.
 
 **Question** : Does MIP SDK support relabeling .pfile types with classification labels?
 - No, this is by design because pfiles are protected file types. Decrypt with the MPIP File Labeler before classification.
@@ -25,10 +25,6 @@ This article provides answers to Frequently Asked Questions (FAQs), and troubles
 
 **Question** : How do I check what labels are applied when multiple labels from different tenants are applied to a file?
 - Query the [GetLabel](https://learn.microsoft.com/en-us/information-protection/develop/reference/class_mip_filehandler#summary) in the context of the user for each tenant.
-
-**Question** : How do I fetch the label name when user-defined permissions are applied to the file?
-- User-defined permissions are an option available when "Let users assign permissions when they apply the label" is selected during label creation in the Purview Portal.
-- Configure name and description in protection descriptor with [SetLabel](https://learn.microsoft.com/en-us/information-protection/develop/quick-file-set-get-label-cpp#add-logic-to-set-and-get-a-sensitivity-label) and get the label name with [GetLabel](https://learn.microsoft.com/en-us/information-protection/develop/reference/class_mip_filehandler#summary). If name and description is not included, the default name is encrypt.
 
 **Question** : Why is my web application failing to initialize with “[InternalError: 'KeyStoreWin32::OpenKey failure: NCryptOpenKey:-2147024894']”?
 - The policy SDK may fail to load a profile during app initialization. Set WEBSITE_LOAD_USER_PROFILE=1 in the environment variable setting of your web app and restart the application.
