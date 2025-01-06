@@ -15,7 +15,7 @@ This article provides answers to Frequently Asked Questions (FAQs), and troubles
 ## Frequently Asked Questions
 
 **Question** : How many labels are supported by MIP SDK?
-- MIP SDK can handle up to 500 protection labels, and there is no limit for classification labels.
+- MIP SDK can handle up to 500 protection labels, and there is no limit for labels without protection.
 
 **Question** : Does MIP SDK support relabeling .pfile types with classification labels?
 - No, this is by design because pfiles are protected file types. Decrypt with the MPIP File Labeler before classification.
@@ -24,15 +24,15 @@ This article provides answers to Frequently Asked Questions (FAQs), and troubles
 - This is a known issue in unsupported versions of the MIP SDK. Upgrade to the latest version of the MIP SDK.
 
 **Question** : How do I check what labels are applied when multiple labels from different tenants are applied to a file?
-- Query the [GetLabel](https://learn.microsoft.com/en-us/information-protection/develop/reference/class_mip_filehandler#summary) in the context of the user for each tenant.
+- Query the [GetLabel](/information-protection/develop/reference/class_mip_filehandler#summary) in the context of the user for each tenant.
 
-**Question** : Why is my web application failing to initialize with “[InternalError: 'KeyStoreWin32::OpenKey failure: NCryptOpenKey:-2147024894']”?
+**Question** : Why is my web application failing to initialize with “InternalError: 'KeyStoreWin32::OpenKey failure: NCryptOpenKey:-2147024894'”?
 - The policy SDK may fail to load a profile during app initialization. Set WEBSITE_LOAD_USER_PROFILE=1 in the environment variable setting of your web app and restart the application.
    - **Name** : WEBSITE_LOAD_USER_PROFILE
    - **Value** : 1
 
 **Question** : Why does my application fail with “KeyStoreWin32::OpenKey failure: NCryptOpenKey:-2146893788” when OnDiskEncrypted caching is configured?
-- Windows may create temporary profiles when your log-in profile is unavailable. Reading from the Windows registry for OnDiskEncrypted caching [Link](https://learn.microsoft.com/en-us/information-protection/develop/concept-cache-storage) with this temporary profile causes OpenKey failure in the MIP SDK log and is captured by the Windows operating system event logs with Event Id 1511 & 1515. To resolve this issue, contact your admin to fix the issue creating temporary profiles.
+- Windows may create temporary profiles when your log-in profile is unavailable. Reading from the Windows registry for OnDiskEncrypted caching [Link](/information-protection/develop/concept-cache-storage) with this temporary profile causes OpenKey failure in the MIP SDK log and is captured by the Windows operating system event logs with Event Id 1511 & 1515. To resolve this issue, contact your admin to fix the issue creating temporary profiles.
 
 ### Metadata Storage Changes
 
