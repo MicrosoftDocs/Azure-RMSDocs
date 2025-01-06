@@ -4,7 +4,7 @@ description: Microsoft Information Protection (MIP) SDK FAQs and troubleshooting
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: troubleshooting
-ms.date: 01/30/2024
+ms.date: 01/06/2025
 ms.author: mbaldwin
 ---
 
@@ -13,6 +13,27 @@ ms.author: mbaldwin
 This article provides answers to Frequently Asked Questions (FAQs), and troubleshooting guidance for known issues and common errors.
 
 ## Frequently Asked Questions
+
+**Question** : How many labels are supported by MIP SDK?
+- MIP SDK can handle up to 500 protection labels, and there is no limit for labels without protection.
+
+**Question** : Does MIP SDK support relabeling .pfile types with classification labels?
+- No, this is by design because pfiles are protected file types. Decrypt with the MPIP File Labeler before classification.
+
+**Question** : Why are protected files downloaded from Microsoft Teams failing to decrypt?
+- This is a known issue in unsupported versions of the MIP SDK. Upgrade to the latest version of the MIP SDK.
+
+**Question** : How do I check what labels are applied when multiple labels from different tenants are applied to a file?
+- Query the [GetLabel](/information-protection/develop/reference/class_mip_filehandler#summary) in the context of the user for each tenant.
+
+**Question** : Why is my web application failing to initialize with “InternalError: 'KeyStoreWin32::OpenKey failure: NCryptOpenKey:-2147024894'”?
+- The policy SDK may fail to load a profile during app initialization. Set WEBSITE_LOAD_USER_PROFILE=1 in the environment variable setting of your web app and restart the application.
+   - **Name** : WEBSITE_LOAD_USER_PROFILE
+   - **Value** : 1
+
+**Question** : Why does my application fail with “KeyStoreWin32::OpenKey failure: NCryptOpenKey:-2146893788” when OnDiskEncrypted caching is configured?
+- Windows may create temporary profiles when your log-in profile is unavailable. Reading from the Windows registry for OnDiskEncrypted caching [Link](/information-protection/develop/concept-cache-storage) with this temporary profile causes OpenKey failure in the MIP SDK log and is captured by the Windows operating system event logs with Event Id 1511 & 1515. To resolve this issue, contact your admin to fix the issue creating temporary profiles.
+
 ### Metadata Storage Changes
 
 We [announced](https://aka.ms/mipsdkmetadata) that we're making a change to the label metadata storage location for Office files (Word, Excel, PowerPoint) to support new features in Office 365, SharePoint Online, and other services.
@@ -87,7 +108,7 @@ The MIP SDK Android binaries include `libmip_core.so`, `libmip_protection_sdk.so
 
 **Question**: Is the Microsoft Information Protection SDK Federal Information Processing Standard (FIPS) 140-2 compliant? 
 
-See [FIPS 140-2 Validation](https://learn.microsoft.com/information-protection/develop/concept-fips-compliance).
+See [FIPS 140-2 Validation](/information-protection/develop/concept-fips-compliance).
 
 ## Issues and errors reference
 
@@ -107,10 +128,10 @@ This exception results from attempting to protect or label a PDF file that is di
 
 This error indicates that a label policy isn't published in the Microsoft Purview compliance portal. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
 
-If a labeling policy has been published, ensure that the user account is included in any groups that are part of the *published to* section of the label policy configuration. For more information, review [Create and publish sensitivity labels](https://learn.microsoft.com/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
+If a labeling policy has been published, ensure that the user account is included in any groups that are part of the *published to* section of the label policy configuration. For more information, review [Create and publish sensitivity labels](/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
  
 External users, including guest users, cannot access another organization's label policies. To accommodate these users, implement a retry mechanism. If a `NoPolicyException` is thrown, set the `FileEngineSettings` property [ProtectionOnlyEngine](
-https://learn.microsoft.com/information-protection/develop/reference/class_mip_fileengine_settings#setprotectiononlyengine-function)
+/information-protection/develop/reference/class_mip_fileengine_settings#setprotectiononlyengine-function)
 to true and retry the request. Labeling operations will not be available for that `IFileEngine` instance, but protection operations will be available. 
 
 ### Error: "System.ComponentModel.Win32Exception: LoadLibrary failed"
