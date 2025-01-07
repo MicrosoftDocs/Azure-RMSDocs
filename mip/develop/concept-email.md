@@ -56,18 +56,16 @@ Refer to [Quickstart: List labels](quick-file-list-labels-cpp.md) for informatio
 
 ## Changing Default Attachment Handling Behaviors
 
-By default, the File SDK attempts to process all attachments that are part of an MSG file, or a message.rpmsg file when using the inspection APIs. It doesn't recursively decrypt attachments that are part of MSG files attached to the root MSG.  Modification of the default handling behavior is not supported at this time.
-<!--
-These behaviors can be problematic if attachments are password protected or if the user or service trying to decrypt doesn't have access.
+By default, the File SDK attempts to process all attachments that are part of an MSG file, or a message.rpmsg file when using the inspection APIs. Only the root level item and the first level of attachments are decrypted by default.
 
-To modify this behavior, another custom setting is available called `container_decryption_option`. In C++, this is exposed via an enum, `mip::ContainerDecryptionOption`.
+To modify this behavior, the custom setting `container_decryption_option` can be used. In C++, this is exposed via an enum, `mip::ContainerDecryptionOption`.
 
-| Option Name | Description                                                                                                       |
-| ----------- | ---------------------------------------------------------------------------------------------------------------- |
-| `All`       | Decrypts the MSG file, attachments, and if the attachment is an MSG recursively decrypts it and its attachments. |
-| `Default`   | Same as `Msg`.                                                                                                   |
-| `Msg`       | Decrypts the MSG and first level attachments. Doesn't recursively decrypt attached MSG files.                   |
-| `Top`       | Decrypt only the MSG file and do not decryption attachments.                                                     |
+| Option Name | Description                                                                                                                                                                                                                                          |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `All`       | Decrypts the MSG file and attachments. If the attachment is an MSG, it recursively decrypts the MSG and its attachments. It will recurse a maximum of ten levels before throwing `mip::BadInputError("Max depth reached on nested msg attachments")` |
+| `Default`   | Same as `Msg`.                                                                                                                                                                                                                                       |
+| `Msg`       | Decrypts the MSG and first level attachments. Doesn't recursively decrypt attached MSG files.                                                                                                                                                        |
+| `Top`       | Decrypt only the MSG file and do not decrypt attachments.                                                                                                                                                                                         |
 
 The following example shows how to set an application in .NET to decrypt only the root MSG file.
 
@@ -81,12 +79,14 @@ And in C++:
 vector<pair<string, string>> customSettings;
 customSettings.emplace_back(mip::GetCustomSettingContainerDecryptionOption(),
         mip::ContainerDecryptionOptionString(mip::ContainerDecryptionOption::Top));
-egineSettings.SetCustomSettings(customSettings);
+engineSettings.SetCustomSettings(customSettings);
 ```
--->
+
+
+
 ## File SDK operations for .rpmsg files
 
-MIP SDK exposes an inspection function that can decrypt the embedded **message.rpmsg** file and present a set of byte streams as output. It's up to the SDK consumer to extract the *message.rpmsg* file and pass it to the inspection API. Variations of this file name exist for Office Message Encryption scenarios and the API will also accept message_v2, v3, or v4 files. 
+MIP SDK exposes an inspection function that can decrypt the embedded **message.rpmsg** file and present a set of byte streams as output. It's up to the SDK consumer to extract the *message.rpmsg* file and pass it to the inspection API. Variations of this file name exist for Purview Message Encryption scenarios and the API will also accept message_v2, v3, or v4 files. 
 
 > [!IMPORTANT]
 > The inspection API *doesn't* provide an output that will result in a usable file, nor does it allow you to re-protect the input file. It outputs streams of bytes that your application can then process further. Recreating *MSG* files from *message.rpmsg* files is not supported by MIP SDK. 
