@@ -34,7 +34,7 @@ Using the `mip::ProtectionHandler` from the original file, the owner, content ID
 
 ## Implementation
 
-As discussed earlier, the `mip::FileHandler` class, exposes methods for reading, writing, and removing both labels and protection information. For the full list of supported operations, review the reference for [mip::FileHandler](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileHandler.html).
+As discussed earlier, the `mip::FileHandler` class, exposes methods for reading, writing, and removing both labels and protection information. For the full list of supported operations, review the reference for [mip::FileHandler](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileHandler.html).
 
 This scenario uses the following methods of `mip::FileHandler`:
 
