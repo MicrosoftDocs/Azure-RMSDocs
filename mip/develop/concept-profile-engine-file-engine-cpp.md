@@ -14,7 +14,7 @@ The `mip::FileEngine` in the MIP File SDK provides an interface to all operation
 
 The `FileEngine` has two primary responsibilities: Listing labels for an authenticated user and creating file handlers to perform file operations on behalf of the user. 
 
-- [`mip::FileEngine`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileEngine.html)
+- [`mip::FileEngine`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileEngine.html)
 - `ListSensitivityLabels()`: Gets the list of labels for the loaded engine.
 - `CreateFileHandler()`: Creates a `mip::FileHandler` for a specific file or stream.
 
@@ -93,7 +93,7 @@ Using the added engine, it's now possible to list all of the sensitivity labels 
 
 `ListSensitivityLabels()` will fetch the list of labels and attributes of those labels for a specific user from the service. The result is stored in a vector of `std::shared_ptr<mip::Label>`.
 
-Read more [here](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1Label.html) on `mip::Label`.
+Read more [here](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classLabel.html) on `mip::Label`.
 
 ### ListSensitivityLabels()
 

@@ -12,7 +12,7 @@ ms.author: mbaldwin
 
 The Policy SDK contains one observer class. Observer members are virtual and should be overridden to handle callbacks for asynchronous operations.
 
-- [`mip::PolicyProfile::Observer`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1ProtectionProfile_1_1Observer.html)
+- [`mip::PolicyProfile::Observer`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classProtectionProfile_1_1Observer.html)
 
 When an asynchronous operation completes, the `OnXxx()` member function corresponding to the result is called. Examples are `OnLoadSuccess()`, `OnLoadFailure()`, and `OnAddEngineSuccess()` for `mip::Profile::Observer`.
 
