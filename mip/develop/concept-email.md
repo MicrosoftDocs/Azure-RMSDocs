@@ -79,7 +79,7 @@ And in C++:
 vector<pair<string, string>> customSettings;
 customSettings.emplace_back(mip::GetCustomSettingContainerDecryptionOption(),
         mip::ContainerDecryptionOptionString(mip::ContainerDecryptionOption::Top));
-egineSettings.SetCustomSettings(customSettings);
+engineSettings.SetCustomSettings(customSettings);
 ```
 
 
