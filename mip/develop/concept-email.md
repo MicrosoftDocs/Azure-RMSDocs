@@ -86,7 +86,7 @@ engineSettings.SetCustomSettings(customSettings);
 
 ## File SDK operations for .rpmsg files
 
-MIP SDK exposes an inspection function that can decrypt the embedded **message.rpmsg** file and present a set of byte streams as output. It's up to the SDK consumer to extract the *message.rpmsg* file and pass it to the inspection API. Variations of this file name exist for Office Message Encryption scenarios and the API will also accept message_v2, v3, or v4 files. 
+MIP SDK exposes an inspection function that can decrypt the embedded **message.rpmsg** file and present a set of byte streams as output. It's up to the SDK consumer to extract the *message.rpmsg* file and pass it to the inspection API. Variations of this file name exist for Purview Message Encryption scenarios and the API will also accept message_v2, v3, or v4 files. 
 
 > [!IMPORTANT]
 > The inspection API *doesn't* provide an output that will result in a usable file, nor does it allow you to re-protect the input file. It outputs streams of bytes that your application can then process further. Recreating *MSG* files from *message.rpmsg* files is not supported by MIP SDK. 
