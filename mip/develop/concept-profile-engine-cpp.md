@@ -34,7 +34,7 @@ The profile itself provides the following functionality:
 - `CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted.
 - `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classConsentDelegate.html).
 - `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classPolicyProfile_1_1Observer.html), [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileProfile.html), and [`FileProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileProfile_1_1Observer.html)).
-- `applicationInfo`: A [`mip::ApplicationInfo`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/structmip_1_1ApplicationInfo.html) object. Information about the application that is consuming the SDK, which matches your Microsoft Entra application registration ID and name.
+- `applicationInfo`: A [`mip::ApplicationInfo`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/structApplicationInfo.html) object. Information about the application that is consuming the SDK, which matches your Microsoft Entra application registration ID and name.
 
 ## Engines
 
