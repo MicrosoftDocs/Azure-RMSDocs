@@ -17,8 +17,8 @@ Where the `MipContext` is the class for storing SDK-specific settings, the profi
 There are three types of profile in the MIP SDK:
 
 - [`PolicyProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/policy__profile_8h.html): The profile class for the MIP Policy SDK.
-- [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile.html): The profile class for the MIP Protection SDK.
-- [`FileProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile.html): The profile class for the MIP File SDK.
+- [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileProfile.html): The profile class for the MIP Protection SDK.
+- [`FileProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileProfile.html): The profile class for the MIP File SDK.
 
 The API used in the consuming application determines which profile class should be used.
 
@@ -32,9 +32,9 @@ The profile itself provides the following functionality:
 
 - `MipContext`: The `MipContext` object that was initialized to store application info, state path, etc.
 - `CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted.
-- `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1ConsentDelegate.html).
-- `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classPolicyProfile_1_1Observer.html), [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile.html), and [`FileProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile_1_1Observer.html)).
-- `applicationInfo`: A [`mip::ApplicationInfo`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/structmip_1_1ApplicationInfo.html) object. Information about the application that is consuming the SDK, which matches your Microsoft Entra application registration ID and name.
+- `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classConsentDelegate.html).
+- `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classPolicyProfile_1_1Observer.html), [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileProfile.html), and [`FileProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileProfile_1_1Observer.html)).
+- `applicationInfo`: A [`mip::ApplicationInfo`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/structApplicationInfo.html) object. Information about the application that is consuming the SDK, which matches your Microsoft Entra application registration ID and name.
 
 ## Engines
 
@@ -42,12 +42,12 @@ The File, Profile, and Protection SDK engines provide an interface for operation
 
 There are three engine classes in the SDK, one for each API. The following list shows the engine classes and a few of the functions associated with each:
 
-- [`mip::ProtectionEngine`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1ProtectionEngine.html)
+- [`mip::ProtectionEngine`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classProtectionEngine.html)
 - [`mip::PolicyEngine`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classPolicyEngine.html)
   - `ListSensitivityLabels()`: Gets the list of labels for the loaded engine.
   - `GetSensitivityLabel()`: Gets the label from existing content.
   - `ComputeActions()`: Provided with a label ID and optional metadata, returns the list of actions that should occur for a specific item.
-- [`mip::FileEngine`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileEngine.html)
+- [`mip::FileEngine`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileEngine.html)
   - `ListSensitivityLabels()`: Gets the list of labels for the loaded engine.
   - `CreateFileHandler()`: Creates a `mip::FileHandler` for a specific file or stream.
 
