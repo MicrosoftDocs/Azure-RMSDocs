@@ -14,14 +14,14 @@ The two examples below show how to create the profileSettings object using local
 
 ## Load a Profile
 
-Now that the `ProtectionProfileObserverImpl` is defined, we'll use it to instantiate `mip::ProtectionProfile`. Creating the `mip::ProtectionProfile` object requires [`mip::ProtectionProfile::Settings`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1ProtectionProfile_1_1Settings.html).
+Now that the `ProtectionProfileObserverImpl` is defined, we'll use it to instantiate `mip::ProtectionProfile`. Creating the `mip::ProtectionProfile` object requires [`mip::ProtectionProfile::Settings`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classProtectionProfile_1_1Settings.html).
 
 ### ProtectionProfile::Settings Parameters
 
 - `std::shared_ptr<MipContext>`: The `mip::MipContext` object that was initialized to store application info, state path, etc.
 - `mip::CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted.
-- `std::shared_ptr<mip::ConsentDelegate>`: A shared pointer of class [`mip::ConsentDelegate`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1ConsentDelegate.html).
-- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classPolicyProfile_1_1Observer.html), [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile.html), and [`FileProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile_1_1Observer.html)).
+- `std::shared_ptr<mip::ConsentDelegate>`: A shared pointer of class [`mip::ConsentDelegate`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classConsentDelegate.html).
+- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classPolicyProfile_1_1Observer.html), [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileProfile.html), and [`FileProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileProfile_1_1Observer.html)).
 
 The two examples below show how to create the profileSettings object using local storage for state storage as well as in-memory only. 
 

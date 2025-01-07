@@ -21,7 +21,7 @@ In the MIP File SDK, the `mip::FileHandler` exposes all of the various operation
 
 ## File handler functions
 
-`mip::FileHandler` exposes methods for reading, writing, and removing both labels and protection information. For the full list, consult the [API reference](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileHandler.html).
+`mip::FileHandler` exposes methods for reading, writing, and removing both labels and protection information. For the full list, consult the [API reference](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileHandler.html).
 
 In this article, the following methods will be covered:
 

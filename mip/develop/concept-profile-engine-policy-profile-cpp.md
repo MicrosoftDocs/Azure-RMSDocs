@@ -24,7 +24,7 @@ The `PolicyProfile::Settings` constructor accepts four parameters, listed below:
 
 - `const std::shared_ptr<MipContext>`: The `mip::MipContext` object that was initialized to store application info, state path, etc.
 - `mip::CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted. For more details, see the [Cache storage concepts](concept-cache-storage.md).
-- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classPolicyProfile_1_1Observer.html), [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile.html), and [`FileProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1FileProfile_1_1Observer.html)).
+- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classPolicyProfile_1_1Observer.html), [`ProtectionProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileProfile.html), and [`FileProfile`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classFileProfile_1_1Observer.html)).
 
 The two examples below show how to create the profileSettings object using local storage for state storage as well as in-memory only. 
 

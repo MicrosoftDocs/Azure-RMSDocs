@@ -50,11 +50,11 @@ export http_proxy=http://192.168.1.1:8080
 export https_proxy=https://192.168.1.1:8080
 ```
 
-If proxy support beyond this is required, review the custom [`mip::HttpDelegate`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1HttpDelegate.html) and workaround section or more details.
+If proxy support beyond this is required, review the custom [`mip::HttpDelegate`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classHttpDelegate.html) and workaround section or more details.
 
 ## Custom HTTP Delegate
 
-The Microsoft Information Protection SDK supports implementation of a custom HTTP delegate that can override the SDK's default HTTP stack. When there are features not present, or a specific HTTP implementation is required, this delegate can be implemented by adding a new class that inherits [`mip::HttpDelegate`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1HttpDelegate.html).
+The Microsoft Information Protection SDK supports implementation of a custom HTTP delegate that can override the SDK's default HTTP stack. When there are features not present, or a specific HTTP implementation is required, this delegate can be implemented by adding a new class that inherits [`mip::HttpDelegate`](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classHttpDelegate.html).
 
 This `mip::HttpDelegate`-derived class is set via `mip::FileProfile::Settings`:
 

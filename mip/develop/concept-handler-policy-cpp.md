@@ -13,7 +13,7 @@ In the Policy SDK, `mip::PolicyHandler` exposes operations used to compute polic
 
 ## Policy handler functions
 
-`mip::PolicyHandler` exposes methods for reading, writing, and removing both labels and protection information. For the full list, consult the [API reference](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classmip_1_1PolicyHandler.html).
+`mip::PolicyHandler` exposes methods for reading, writing, and removing both labels and protection information. For the full list, consult the [API reference](https://microsoftdocs.github.io/mip-sdk-docs/cpp/classPolicyHandler.html).
 
 In this article, the following methods will be covered:
 
