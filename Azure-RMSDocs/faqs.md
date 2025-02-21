@@ -199,7 +199,7 @@ See [Compliance and supporting information for Azure Information Protection](./c
 
 ## How can I report a problem or send feedback for Azure Information Protection?
 
-For technical support, use your standard support channels or [contact Microsoft Support](https://support.microsoft.com/contactust).
+For technical support, use your standard support channels or [contact Microsoft Support](https://support.microsoft.com/contactus).
 
 We also invite you to engage with our engineering team, on their [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/).
 
