@@ -92,7 +92,7 @@ For the Azure Information Protection client for Windows, this right is required 
 Not included in the custom permissions dialog in Word, Excel, and PowerPoint for Windows (version 2408+).
 
 ###### Footnote 4
-The Microsoft Purview compliance portal and the custom permissions dialog in Word, Excel, and PowerPoint for Windows (version 2408+) have updated permissions level naming. **Reviewer** is now called **Restricted Editor**, **Co-Author** is now called **Editor**, and **Co-Owner** is now called **Owner**. Other applications continue to use the original permissions level naming.
+The Microsoft Purview compliance portal and the custom permissions dialog in Word, Excel, and PowerPoint for Windows (version 2411+) have updated permissions level naming. **Reviewer** is now called **Restricted Editor**, **Co-Author** is now called **Editor**, and **Co-Owner** is now called **Owner**. Other applications continue to use the original permissions level naming.
 
 ###### Footnote 5
 Not applicable to the Azure Information Protection client for Windows.
