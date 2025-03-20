@@ -156,6 +156,8 @@ The MIP SDK doesn't support the use of authenticated proxies. To fix this messag
 
 When using a stream for output, the stream must have both read and write access to modify the label or protection for an image file.
 
+### Throttling Limits
+
 **Question:** Are there any service-based throttling limits when using the MIP SDK?
 
-The protection service, used by the protection SDK or protection operations in the File SDK, has a limit of 7,500 requests per 10 seconds for an entire organization. That is, if Application A is generating 4,000 requests per 10 seconds and Application B in the same organization is generating 4,000 requests per 10 seconds, both applications may start to receive `HTTP 429 Too Many Requests` responses. Developers must implement a backoff period when these exceptions are received.
+The Rights Management Service, used by the protection SDK or protection operations in the File SDK, has a limit of 7,500 requests per 10 seconds for an entire organization. That is, if Application A is generating 4,000 requests per 10 seconds and Application B in the same organization is generating 4,000 requests per 10 seconds, both applications may start to receive `HTTP 429 Too Many Requests` responses. Developers must implement a backoff period when these exceptions are received. Future versions of MIP SDK will internally implement this backoff period.
