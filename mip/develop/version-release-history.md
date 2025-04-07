@@ -41,6 +41,52 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
+## Version 1.16.147
+
+**Release Date:** April 7, 2025
+
+### File SDK
+- Fixed an issue where Unicode characters in HTML messages were not rendering correctly.
+
+### Policy SDK
+- Fixed an issue where policy SDK was not connecting to the specificed cloud.
+
+### Platform and Dependency Updates
+- Updated OpenSSL from 3.0.15 to 3.4.1.
+- Updated libxml2 from 2.12.7 to 2.14.0.
+- Updated Zlib from 1.2.13 to 1.3.1.
+
+## Version 1.15.132
+
+**Release Date:** April 7, 2025
+
+### File SDK
+- Fixed an issue where Unicode characters in HTML messages were not rendering correctly.
+- Fixed a failure when attempting to protect unsynced cloud files.
+- Fixed a bug where a partially created output file lingered when CommitAsync failed.
+- Fixed bug where UDP label metadata was altered when protection was modified.
+
+### Policy SDK
+- Fixed an issue where policy SDK was not connecting to the specificed cloud.
+
+### Platform and Dependency Updates
+- Fixed an issue where TLS 1.2 was not accepted when "allow any TLS version" was configured.
+- Updated OpenSSL from 3.0.15 to 3.4.1.
+- Updated libxml2 from 2.12.7 to 2.14.0.
+- Updated Zlib from 1.2.13 to 1.3.1.
+
+## Version 1.14.171
+
+**Release Date:** April 7, 2025
+
+### File SDK
+- Fixed an issue where Unicode characters in HTML messages were not rendering correctly.
+
+### Platform and Dependency Updates
+- Updated OpenSSL from 3.0.15 to 3.4.1.
+- Updated libxml2 from 2.12.7 to 2.14.0.
+- Updated Zlib from 1.2.13 to 1.3.1.
+
 ## Version 1.16.126
 
 **Release Date:** December 13, 2024
