@@ -43,10 +43,12 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ## Version 1.16.147
 
-**Release Date:** April 7, 2025
+**Release Date:** April 8, 2025
 
 ### File SDK
 - Fixed an issue where Unicode characters in HTML messages were not rendering correctly.
+- Fixed a crash when using an AuthDelegate on Android with the C wrapper.
+- Fixed an issue where exception details were not displayed on Android.
 
 ### Policy SDK
 - Fixed an issue where policy SDK was not connecting to the specificed cloud.
@@ -58,13 +60,15 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ## Version 1.15.132
 
-**Release Date:** April 7, 2025
+**Release Date:** April 8, 2025
 
 ### File SDK
 - Fixed an issue where Unicode characters in HTML messages were not rendering correctly.
-- Fixed a failure when attempting to protect unsynced cloud files.
+- Fixed an issue where Office documents were encrypted with the extension .pfile when files were not synced to OneDrive.
 - Fixed a bug where a partially created output file lingered when CommitAsync failed.
 - Fixed bug where UDP label metadata was altered when protection was modified.
+- Fixed a crash when using an AuthDelegate on Android with the C wrapper.
+- Fixed an issue where exception details were not displayed on Android.
 
 ### Policy SDK
 - Fixed an issue where policy SDK was not connecting to the specificed cloud.
@@ -77,7 +81,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ## Version 1.14.171
 
-**Release Date:** April 7, 2025
+**Release Date:** April 8, 2025
 
 ### File SDK
 - Fixed an issue where Unicode characters in HTML messages were not rendering correctly.
