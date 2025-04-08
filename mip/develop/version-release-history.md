@@ -4,7 +4,7 @@ description: Version release history and change notes for the MIP SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 01/30/2024
+ms.date: 04/08/2025
 ms.author: mbaldwin
 ---
 
@@ -47,7 +47,6 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ### File SDK
 - Fixed an issue where Unicode characters in HTML messages were not rendering correctly.
-- Fixed an issue where exception details were not displayed on Android.
 
 ### Policy SDK
 - Fixed an issue where policy SDK was not connecting to the specificed cloud.
@@ -57,9 +56,11 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Fixed a crash when using an AuthDelegate on Android with the C wrapper.
 
 ### Platform and Dependency Updates
+- Fixed an issue where exception details were not displayed on Android.
 - Updated OpenSSL from 3.0.15 to 3.4.1.
 - Updated libxml2 from 2.12.7 to 2.14.0.
 - Updated Zlib from 1.2.13 to 1.3.1.
+
 
 ## Version 1.15.132
 
@@ -70,7 +71,6 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Fixed an issue where Office documents were encrypted with the extension .pfile when files were not synced to OneDrive.
 - Fixed a bug where a partially created output file lingered when CommitAsync failed.
 - Fixed bug where user-defined permissions label metadata was altered when protection was modified.
-- Fixed an issue where exception details were not displayed on Android.
 
 ### Policy SDK
 - Fixed an issue where policy SDK was not connecting to the specificed cloud.
@@ -81,6 +81,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ### Platform and Dependency Updates
 - Fixed an issue where TLS 1.2 was not accepted when "allow any TLS version" was configured.
+- Fixed an issue where exception details were not displayed on Android.
 - Updated OpenSSL from 3.0.15 to 3.4.1.
 - Updated libxml2 from 2.12.7 to 2.14.0.
 - Updated Zlib from 1.2.13 to 1.3.1.
