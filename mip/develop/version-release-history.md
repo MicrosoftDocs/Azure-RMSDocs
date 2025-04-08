@@ -53,7 +53,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Fixed an issue where policy SDK was not connecting to the specificed cloud.
 - Fixed a crash when using an AuthDelegate on Android with the C wrapper.
  
-## Protection SDK
+### Protection SDK
 - Fixed a crash when using an AuthDelegate on Android with the C wrapper.
 
 ### Platform and Dependency Updates
@@ -76,7 +76,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Fixed an issue where policy SDK was not connecting to the specificed cloud.
 - Fixed a crash when using an AuthDelegate on Android with the C wrapper.
  
-## Protection SDK
+### Protection SDK
 - Fixed a crash when using an AuthDelegate on Android with the C wrapper.
 
 ### Platform and Dependency Updates
