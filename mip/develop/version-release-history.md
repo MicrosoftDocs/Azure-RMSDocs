@@ -47,11 +47,14 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 ### File SDK
 - Fixed an issue where Unicode characters in HTML messages were not rendering correctly.
-- Fixed a crash when using an AuthDelegate on Android with the C wrapper.
 - Fixed an issue where exception details were not displayed on Android.
 
 ### Policy SDK
 - Fixed an issue where policy SDK was not connecting to the specificed cloud.
+- Fixed a crash when using an AuthDelegate on Android with the C wrapper.
+ 
+## Protection SDK
+- Fixed a crash when using an AuthDelegate on Android with the C wrapper.
 
 ### Platform and Dependency Updates
 - Updated OpenSSL from 3.0.15 to 3.4.1.
@@ -67,11 +70,14 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Fixed an issue where Office documents were encrypted with the extension .pfile when files were not synced to OneDrive.
 - Fixed a bug where a partially created output file lingered when CommitAsync failed.
 - Fixed bug where UDP label metadata was altered when protection was modified.
-- Fixed a crash when using an AuthDelegate on Android with the C wrapper.
 - Fixed an issue where exception details were not displayed on Android.
 
 ### Policy SDK
 - Fixed an issue where policy SDK was not connecting to the specificed cloud.
+- Fixed a crash when using an AuthDelegate on Android with the C wrapper.
+ 
+## Protection SDK
+- Fixed a crash when using an AuthDelegate on Android with the C wrapper.
 
 ### Platform and Dependency Updates
 - Fixed an issue where TLS 1.2 was not accepted when "allow any TLS version" was configured.
