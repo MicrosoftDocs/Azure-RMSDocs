@@ -41,7 +41,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
-## Version 1.16.147
+## Version 1.16.149
 
 **Release Date:** April 8, 2025
 
@@ -62,7 +62,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Updated Zlib from 1.2.13 to 1.3.1.
 
 
-## Version 1.15.132
+## Version 1.15.134
 
 **Release Date:** April 8, 2025
 
