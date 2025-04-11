@@ -32,7 +32,7 @@ The MIP SDK applies the following set of metadata.
 | **Enabled**                                     | True or False                 | This attribute indicates whether the classification represented by this set of key-value pairs is enabled for the data item. DLP products typically validate the existence of this key to identify the classification label.        | Yes       |
 | **SiteId**                                      | GUID                          | Microsoft Entra tenant ID                                                                                                                                                                                                    | Yes       |
 | **ActionId** (Removed in MIP SDK 1.8 and later) | GUID                          | ActionID is changed each time a label is set. Audit logs include both old and new actionID to allow chaining of labeling activity to the data item.                                                                            | Yes       |
-| **Method**                                      | Standard or Privileged        | Set via [mip::AssignmentMethod](https://microsoftdocs.github.io/mip-sdk-docs/cpp/namespacemip.html#ae02407abda6d300ea4f3e27633343344). Standard implies that the label is applied by default or automatically. Privileged implies that the label was manually selected.         | No        |
+| **Method**                                      | Standard or Privileged        | Set via [mip::AssignmentMethod](https://microsoftdocs.github.io/mip-sdk-docs/cpp/common__types_8h.html#a1368c269afcb86a2b4c3331a0a1f4ae9). Standard implies that the label is applied by default or automatically. Privileged implies that the label was manually selected.         | No        |
 | **SetDate**                                     | Extended ISO 8601 Date Format | The timestamp when the label was set.                                                                                                                                                                                               | No        |
 | **Name**                                        | string                        | Label unique name within the tenant. It doesn't necessarily correspond to display name.                                                                                                                                             | No        |
 | **ContentBits**                                 | integer                       | [ContentBits](#contentbits) is a bitmask that describes the types of content marking that was applied to content based on policy and client capabilities. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4, ENCRYPT = 0x8 | No                                              |
@@ -87,7 +87,7 @@ MSIP_Label_f048e7b8-f3aa-4857-bf32-a317f4bc3f29_GeneratedBy = HRReportingSystem
 > To maintain compatibility across common applications, the maximum length for each a key and a value is 255 characters.
 
 > [!Note]
-> When the [protected co-authoring](/microsoft-365/compliance/sensitivity-labels-coauthoring) experience is enabled, custom metadata properties will be written to the custom.xml component of supported Office file types.
+> When the [protected co-authoring](/purview/sensitivity-labels-coauthoring) experience is enabled, custom metadata properties will be written to the custom.xml component of supported Office file types.
 
 ## Versioning
 
@@ -99,7 +99,7 @@ When replacing an attribute with a newer version, a version suffix should be add
 
 ## Support for Protected Coauthoring
 
-When [co-authoring for files encrypted with sensitivity labels](https://learn.microsoft.com/purview/sensitivity-labels-coauthoring) is enabled, the label metadata storage location and format for Word, Excel, and PowerPoint files change.
+When [co-authoring for files encrypted with sensitivity labels](/purview/sensitivity-labels-coauthoring) is enabled, the label metadata storage location and format for Word, Excel, and PowerPoint files change.
 
 When the co-authoring feature is enabled, the SDK automatically reads and writes information to and from the updated metadata storage location. If label metadata doesn't exist in the new location, the SDK will attempt to read the metadata from the legacy storage location. If found, the label is available via get label operations. The next time a set label operation is performed, the metadata is written to the updated LabelInfo locations.
 
@@ -107,8 +107,8 @@ The purpose of the properties as previously described doesn't change.
 
 The following references describe the format and storage locations:
 
-- [LabelInfo Stream Schema](https://learn.microsoft.com/openspecs/office_file_formats/ms-offcrypto/b75503d0-ada1-4eca-adc1-adeb643ab813)
-- [LabelInfo Stream Locations](https://learn.microsoft.com/openspecs/office_file_formats/ms-offcrypto/0c4ec12d-aba0-4dd4-8fd1-710da6735219)
+- [LabelInfo Stream Schema](/openspecs/office_file_formats/ms-offcrypto/b75503d0-ada1-4eca-adc1-adeb643ab813)
+- [LabelInfo Stream Locations](https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-offcrypto/0c4ec12d-aba0-4dd4-8fd1-710da6735219)
 
 ## Email
 

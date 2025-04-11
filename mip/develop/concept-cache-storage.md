@@ -81,7 +81,7 @@ The MIP SDK maintains two databases for cache. One is for the Protection SDKs, a
 | SdInfoStore   | Stores service discovery results.                              | No        |
 
 > [!NOTE]
-> The LicenseStore cache requires an identity to be set on the [protection engine](https://review.learn.microsoft.com/information-protection/develop/concept-profile-engine-protection-engine-cpp?branch=main#implementation-create-protection-engine-settings) or [file engine](https://learn.microsoft.com/information-protection/develop/concept-profile-engine-file-engine-cpp#create-file-engine-settings).
+> The LicenseStore cache requires an identity to be set on the [protection engine](concept-profile-engine-protection-engine-cpp.md#implementation-create-protection-engine-settings) or [file engine](concept-profile-engine-file-engine-cpp,md#create-file-engine-settings).
 
 ### Policy Database
 
