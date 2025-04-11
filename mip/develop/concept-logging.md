@@ -4,7 +4,7 @@ description: This article helps you understand the concepts around logging in MI
 author: yangczhang
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 02/27/2024
+ms.date: 04/10/2025
 ms.author: yangczhang
 ---
 

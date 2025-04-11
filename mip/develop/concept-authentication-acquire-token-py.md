@@ -4,7 +4,7 @@ description: This article helps you understand how to use Python to acquire an O
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 01/30/2024
+ms.date: 04/10/2025
 ms.author: mbaldwin
 ---
 

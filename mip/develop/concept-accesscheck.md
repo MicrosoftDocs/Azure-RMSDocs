@@ -3,7 +3,7 @@ title: Access Check - Microsoft Information Protection SDK
 description: Technical details about performing access checks with the Microsoft Purview Information Protection Software Development kit.
 author: tommoser
 ms.author: tommos
-ms.date: 11/14/2022
+ms.date: 04/10/2025
 ms.topic: conceptual
 ms.service: information-protection
 

@@ -4,7 +4,7 @@ description: Provides the setup and configuration prerequisites, in order to use
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 01/30/2024
+ms.date: 04/10/2025
 ms.author: mbaldwin
 ms.custom: has-adal-ref, mode-api
 #Customer intent: As a an application developer, I want to learn about setup and configuration, so that I can use the SDK to build applications.
