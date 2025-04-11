@@ -4,7 +4,7 @@ description: A quickstart showing you how to use the Microsoft Information Prote
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 01/30/2024
+ms.date: 04/10/2025
 ms.author: mbaldwin
 ms.custom: has-adal-ref, mode-api
 #Customer intent: As a an application developer, I want to learn how to list labels in the MIP SDK, so that I can use the SDK APIs to apply labels later on.

@@ -4,7 +4,7 @@ description: Microsoft Purview Information Protection is the unification of Micr
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: overview
-ms.date: 01/30/2024
+ms.date: 04/10/2025
 ms.author: mbaldwin
 #Customer intent: As a an application developer or administrator, I want to get an overview of the MIP SDK, so that I can determine what it is and how it's used.
 ---

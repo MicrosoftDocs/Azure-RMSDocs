@@ -4,7 +4,7 @@ description: This article will help you understand how Policy SDK handlers are c
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 11/14/2022
+ms.date: 04/10/2025
 ms.author: tommos
 ---
 # Microsoft Information Protection SDK - Policy handler concepts

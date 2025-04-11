@@ -4,7 +4,7 @@ description: A quickstart showing you how to write the initialization logic for 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 01/30/2024
+ms.date: 04/10/2025
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to do SDK initialization, so that I can use the SDK APIs.
 ms.custom: mode-api
