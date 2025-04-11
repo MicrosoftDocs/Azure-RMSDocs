@@ -4,7 +4,7 @@ description: A quick overview on how to get started with the MIP SDK .NET wrappe
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 11/14/2022
+ms.date: 04/10/2025
 ms.author: tommos
 ---
 # Getting Started with the Microsoft Information Protection .NET Wrapper

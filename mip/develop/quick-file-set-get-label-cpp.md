@@ -5,7 +5,7 @@ services: information-protection
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 01/30/2024
+ms.date: 04/10/2025
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to set and get a sensitivity label, so that I can implement this logic in my own application.
 ms.custom: mode-api

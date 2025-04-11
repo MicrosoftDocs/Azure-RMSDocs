@@ -3,7 +3,7 @@ title: MIP SDK FIPS Compliance Statement
 description: Details about the MIP SDK and FIPS Compliance Status
 author: tommoser
 ms.author: tommos
-ms.date: 11/14/2022
+ms.date: 04/10/2025
 ms.topic: conceptual
 ms.service: information-protection
 ---

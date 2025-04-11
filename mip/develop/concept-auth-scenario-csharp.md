@@ -3,7 +3,7 @@ title: Concepts - Authentication Scenarios for Microsoft Information Protection 
 description: Technical details about authentication scenarios for Microsoft Information Protection SDK C# client applications.
 author: msmbaldwin
 ms.author: mbaldwin
-ms.date: 01/30/2024
+ms.date: 04/10/2025
 ms.topic: conceptual
 ms.service: information-protection
 ---

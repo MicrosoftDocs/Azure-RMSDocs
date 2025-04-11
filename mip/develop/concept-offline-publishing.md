@@ -4,7 +4,7 @@ description: This article helps you to understand how to enable and use offline 
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 03/20/2023
+ms.date: 04/10/2025
 ms.author: tommos
 ---
 
