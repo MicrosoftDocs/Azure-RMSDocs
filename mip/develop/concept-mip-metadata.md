@@ -108,7 +108,7 @@ The purpose of the properties as previously described doesn't change.
 The following references describe the format and storage locations:
 
 - [LabelInfo Stream Schema](/openspecs/office_file_formats/ms-offcrypto/b75503d0-ada1-4eca-adc1-adeb643ab813)
-- [LabelInfo Stream Locations](https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-offcrypto/0c4ec12d-aba0-4dd4-8fd1-710da6735219)
+- [LabelInfo Stream Locations](/openspecs/office_file_formats/ms-offcrypto/0c4ec12d-aba0-4dd4-8fd1-710da6735219)
 
 ## Email
 

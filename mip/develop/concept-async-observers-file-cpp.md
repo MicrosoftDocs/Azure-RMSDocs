@@ -1,6 +1,6 @@
 ---
 title: Concepts - File SDK observers in the MIP SDK.
-description: The MIP SDK is designed to be almost entirely asynchronous. This article will help you understand how File SDK observers are implemented and used for asynchronicity.
+description: The MIP SDK is designed to be almost entirely asynchronous. This article helps you understand how File SDK observers are implemented and used for asynchronicity.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
@@ -17,13 +17,13 @@ The File SDK contains two observer classes. Observer members are virtual and can
 
 When an asynchronous operation completes, the `OnXxx()` member function corresponding to the result is called. Examples are `OnLoadSuccess()`, `OnLoadFailure()`, and `OnAddEngineSuccess()` for `mip::FileProfile::Observer`.
 
-The examples below demonstrate the promise/future pattern, which is also used by the SDK samples, and can be extended to implement the desired callback behavior. 
+These examples demonstrate the promise/future pattern, which is also used by the SDK samples, and can be extended to implement the desired callback behavior. 
 
 ## File Profile Observer Implementation
 
-In the following example, we've created a class, `ProfileObserver` that is derived from `mip::FileProfile::Observer`. The member functions have been overridden to use the future/promise pattern used throughout the samples.
+In the following example, we created a class, `ProfileObserver` that is derived from `mip::FileProfile::Observer`. The member functions have been overridden to use the future/promise pattern used throughout the samples.
 
-**Note**: The below samples are only partially implemented and do not include overrides for the `mip::FileEngine` related observers.
+**Note**: The samples are only partially implemented and do not include overrides for the `mip::FileEngine` related observers.
 
 ### profile_observer.h
 
@@ -71,7 +71,7 @@ void ProfileObserver::OnLoadFailure(const std::exception_ptr& error, const std::
 //TODO: Implement mip::FileEngine related observers.
 ```
 
-When we instantiate any SDK class or use a function that performs asynchronous operations, we will pass the observer implementation to the settings constructor or async function itself. When instantiating the `mip::FileProfile::Settings` object, the constructor takes in `mip::FileProfile::Observer` as one of the parameters. The example below shows our custom `ProfileObserver`, used in a  `mip::FileProfile::Settings` constructor.
+When we instantiate any SDK class or use a function that performs asynchronous operations, we pass the observer implementation to the settings constructor or async function itself. When instantiating the `mip::FileProfile::Settings` object, the constructor takes in `mip::FileProfile::Observer` as one of the parameters. This example shows our custom `ProfileObserver`, used in a  `mip::FileProfile::Settings` constructor.
 
 ## FileHandler Observer Implementation
 
