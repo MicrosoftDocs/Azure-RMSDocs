@@ -49,7 +49,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Fixed an issue where Unicode characters in HTML messages were not rendering correctly.
 
 ### Policy SDK
-- Fixed an issue where policy SDK was not connecting to the specificed cloud.
+- Fixed an issue where policy SDK was not connecting to the specified cloud.
 - Fixed a crash when using an AuthDelegate on Android with the C wrapper.
  
 ### Protection SDK
@@ -73,7 +73,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Fixed bug where user-defined permissions label metadata was altered when protection was modified.
 
 ### Policy SDK
-- Fixed an issue where policy SDK was not connecting to the specificed cloud.
+- Fixed an issue where policy SDK was not connecting to the specified cloud.
 - Fixed a crash when using an AuthDelegate on Android with the C wrapper.
  
 ### Protection SDK
