@@ -136,7 +136,7 @@ Next, complete the following steps to ensure your client computer is set up and 
 1. Download SDK samples from GitHub (OPTIONAL):
 
    - If you don't have one already, first create a [GitHub profile](https://github.com/join).
-   - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/download/)
+   - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/downloads)
    - Using Git Bash, download the sample(s) of interest:
      - Use the following query to view the repositories: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk.
      - Using Git Bash, use `git clone https://github.com/azure-samples/<repo-name>` to download each sample repository.
