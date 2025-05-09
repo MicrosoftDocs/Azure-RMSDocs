@@ -186,11 +186,11 @@ Front-end SharePoint webservers, including those hosting the Central Administrat
 
 To use the RMS connector, these servers running SharePoint must be running one of the following software versions:
 
+-   SharePoint Server Subscription Edition
+
 -   SharePoint Server 2019
 
 -   SharePoint Server 2016
-
--   SharePoint Server 2013
 
 A server running SharePoint 2019, 2016 or SharePoint 2013 must also be running a version of the MSIPC client 2.1 that is supported with the RMS connector. 
 
