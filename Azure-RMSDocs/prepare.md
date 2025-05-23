@@ -209,7 +209,7 @@ Then check that the groups contain the users (or other groups) that you want to 
 For the two Azure Rights Management service configuration scenarios that use security groups, you can use the following PowerShell command to find the object ID and display name that can be used to identify these groups. You can also use the Azure portal to find these groups and copy the values for the object ID and the display name:
 
 ```ps
-Get-EntraGroup | where {$_.GroupType -eq "Security"}
+ Get-EntraGroup -Filter "SecurityEnabled eq true"
 ```
 
 ## Considerations for Azure Information Protection if email addresses change
