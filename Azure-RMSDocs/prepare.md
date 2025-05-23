@@ -35,7 +35,7 @@ There are different ways to create these accounts for users and groups, which in
 
 - You create the users and groups in the Azure portal.
 
-- You create the users and group by using Microsoft Graph PowerShell and Exchange Online cmdlets.
+- You create the users and group by using Microsoft Entra PowerShell and Exchange Online cmdlets.
 
 - You create the users and groups in your on-premises Active Directory and synchronize them to Microsoft Entra ID.
 
@@ -129,7 +129,7 @@ From the attributes list for Azure Rights Management, you see that for users, th
 
 ## Confirming your users and groups are prepared for Azure Information Protection
 
-You can useMicrosoft Entra PowerShell to confirm that users and groups can be used with Azure Information Protection. You can also use PowerShell to confirm the values that can be used to authorize them. 
+You can use Microsoft Entra PowerShell to confirm that users and groups can be used with Azure Information Protection. You can also use PowerShell to confirm the values that can be used to authorize them. 
 
 For example, using [Microsoft Entra PowerShell](/powershell/entra-powershell/overview), in a PowerShell session, first connect to the service and supply your global admin credentials:
 
