@@ -20,7 +20,7 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: admin, has-azure-ad-ps-ref
+ms.custom: admin, no-azure-ad-ps-ref
 ---
 
 # Preparing users and groups for Azure Information Protection
@@ -35,7 +35,7 @@ There are different ways to create these accounts for users and groups, which in
 
 - You create the users and groups in the Azure portal.
 
-- You create the users and group by using Azure AD PowerShell and Exchange Online cmdlets.
+- You create the users and group by using Microsoft Graph PowerShell and Exchange Online cmdlets.
 
 - You create the users and groups in your on-premises Active Directory and synchronize them to Microsoft Entra ID.
 
@@ -129,17 +129,15 @@ From the attributes list for Azure Rights Management, you see that for users, th
 
 ## Confirming your users and groups are prepared for Azure Information Protection
 
-You can use Azure AD PowerShell to confirm that users and groups can be used with Azure Information Protection. You can also use PowerShell to confirm the values that can be used to authorize them. 
+You can useMicrosoft Entra PowerShell to confirm that users and groups can be used with Azure Information Protection. You can also use PowerShell to confirm the values that can be used to authorize them. 
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../Azure-RMSDocs/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
-
-For example, using the V1 PowerShell module for Microsoft Entra ID, [MSOnline](/powershell/module/msonline/), in a PowerShell session, first connect to the service and supply your global admin credentials:
+For example, using [Microsoft Entra PowerShell](/powershell/entra-powershell/overview), in a PowerShell session, first connect to the service and supply your global admin credentials:
 
 ```ps
-Connect-MsolService
+Connect-Entra -Scopes -Scopes "User.ReadWrite.All","Group.ReadWrite.All"
 ```
 
-Note: If this command doesn't work, you can run `Install-Module MSOnline` to install the MSOnline module.
+Note: If this command doesn't work, you can run `Install-Module Microsoft.Entra -Scope CurrentUser -Repository PSGallery -Force` to install the Microsoft Entra PowerShell module.
 
 Next, configure your PowerShell session so that it doesn't truncate the values:
 
@@ -152,7 +150,7 @@ $Formatenumerationlimit =-1
 To confirm the user accounts, run the following command:
 
 ```ps
-Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
+Get-Entrauser | select DisplayName, UserPrincipalName, ProxyAddresses
 ```
 
 Your first check is to make sure that the users you want to use with Azure Information Protection are displayed.
@@ -190,7 +188,7 @@ In most cases, the value for UserPrincipalName matches one of the values in the 
 > [!TIP]
 > You can use the Export-Csv cmdlet to export the results to a spreadsheet for easier management, such as searching and bulk-editing for import.
 >
-> For example: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
+> For example: `Get-EntraGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
 
 > [!NOTE]
 > With UPN changes for users, there will be a loss of business continuity for at least 24 hours or until the UPN changes are properly reflected in the system.
@@ -201,17 +199,17 @@ In most cases, the value for UserPrincipalName matches one of the values in the 
 To confirm group accounts, use the following command:
 
 ```ps
-Get-MsolGroup | select DisplayName, ProxyAddresses
+Get-EntraGroup | select DisplayName, ProxyAddresses
 ```
 
 Make sure that the groups you want to use with Azure Information Protection are displayed. For the groups displayed, the email addresses in the **ProxyAddresses** column can be used to authorize the group members for the Azure Rights Management service.
 
-Then check that the groups contain the users (or other groups) that you want to use for Azure Information Protection. You can use PowerShell to do this (for example, [Get-MsolGroupMember](/powershell/module/msonline/Get-MsolGroupMember)), or use your management portal.
+Then check that the groups contain the users (or other groups) that you want to use for Azure Information Protection. You can use PowerShell to do this (for example, [Get-EntraGroupMember](/powershell/module/microsoft.entra/get-entragroupmember)), or use your management portal.
 
 For the two Azure Rights Management service configuration scenarios that use security groups, you can use the following PowerShell command to find the object ID and display name that can be used to identify these groups. You can also use the Azure portal to find these groups and copy the values for the object ID and the display name:
 
 ```ps
-Get-MsolGroup | where {$_.GroupType -eq "Security"}
+Get-EntraGroup | where {$_.GroupType -eq "Security"}
 ```
 
 ## Considerations for Azure Information Protection if email addresses change
