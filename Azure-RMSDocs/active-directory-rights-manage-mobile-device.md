@@ -26,6 +26,9 @@ ms.custom: admin
 
 # Active Directory Rights Management Services Mobile Device Extension
 
+> [!NOTE]
+> We're retiring the RMS sharing app for MacOS and the Azure Information Protection (AIP) Viewer for iOS and Android starting May 30, 2025, and ending May 30, 2026. Instead, we recommend opening protected non-Office files in other productivity apps. For more information, see the [blog post announcement]([https://techcommunity.microsoft.com/blog/microsoft-security-blog/retirement-notification-for-the-azure-information-protection-mobile-viewer-and-r/4416663).
+
 You can download the Active Directory Rights Management Services (AD RMS) mobile device extension from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=43738) and install this extension on top of an existing AD RMS deployment. This lets users  protect and consume sensitive data when their device supports the latest API-enlightened apps. For example, users can do the following on their mobile devices:
 
 - Use the Azure Information Protection app to consume protected text files in different formats (including .txt, .csv, and .xml).
@@ -308,8 +311,3 @@ If you have a proxy server between the AD RMS cluster and the AD FS servers, by 
 1. Reset IIS, for example, by running **iisreset** as an administrator from a command prompt.
 
 Repeat this procedure on all the nodes in your RMS cluster.
-
-
-## See Also
-
-Find out more about Azure Information Protection, make contact with other AIP customers, and with AIP product managers using the [API yammer group](https://www.yammer.com/askipteam/). 
