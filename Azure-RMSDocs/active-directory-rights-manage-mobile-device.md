@@ -27,7 +27,9 @@ ms.custom: admin
 # Active Directory Rights Management Services Mobile Device Extension
 
 > [!NOTE]
-> We're retiring the RMS sharing app for MacOS and the Azure Information Protection (AIP) Viewer for iOS and Android starting May 30, 2025, and ending May 30, 2026. Instead, we recommend opening protected non-Office files in other productivity apps. For more information, see the blog post announcement [Retirement notification for the Azure Information Protection Mobile Viewer and RMS Sharing App]([https://techcommunity.microsoft.com/blog/microsoft-security-blog/retirement-notification-for-the-azure-information-protection-mobile-viewer-and-r/4416663).
+> We're retiring the RMS sharing app for MacOS and the Azure Information Protection (AIP) Viewer for iOS and Android starting May 30, 2025, and ending May 30, 2026. Instead, we recommend opening protected non-Office files in other productivity apps.
+> 
+> For more information, see the blog post announcement [Retirement notification for the Azure Information Protection Mobile Viewer and RMS Sharing App]([https://techcommunity.microsoft.com/blog/microsoft-security-blog/retirement-notification-for-the-azure-information-protection-mobile-viewer-and-r/4416663).
 
 You can download the Active Directory Rights Management Services (AD RMS) mobile device extension from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=43738) and install this extension on top of an existing AD RMS deployment. This lets users  protect and consume sensitive data when their device supports the latest API-enlightened apps. For example, users can do the following on their mobile devices:
 
