@@ -27,7 +27,7 @@ ms.custom: admin
 # Active Directory Rights Management Services Mobile Device Extension
 
 > [!NOTE]
-> We're retiring the RMS sharing app for MacOS and the Azure Information Protection (AIP) Viewer for iOS and Android starting May 30, 2025, and ending May 30, 2026. Instead, we recommend opening protected non-Office files in other productivity apps.
+> We're retiring the RMS sharing app for MacOS and the Azure Information Protection app for iOS and Android starting May 30, 2025, and ending May 30, 2026. Instead, we recommend opening protected non-Office files in other productivity apps.
 > 
 > For more information, see the blog post announcement [Retirement notification for the Azure Information Protection Mobile Viewer and RMS Sharing App]([https://techcommunity.microsoft.com/blog/microsoft-security-blog/retirement-notification-for-the-azure-information-protection-mobile-viewer-and-r/4416663).
 
