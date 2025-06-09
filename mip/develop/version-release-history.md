@@ -27,7 +27,8 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 | Version | Link                         | Status             | End of Support     |
 | ------- | ---------------------------- | ------------------ | ------------------ |
-| 1.16    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
+| 1.17    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
+| 1.16    | https://aka.ms/mipsdkbins116 | **Supported**      | June 9, 2026       |
 | 1.15    | https://aka.ms/mipsdkbins115 | **Supported**      | December 13, 2025  |
 | 1.14    | https://aka.ms/mipsdkbins114 | **Supported**      | July 5, 2025       |
 | 1.13    | https://aka.ms/mipsdkbins113 | **Out of Support** | October 27, 2024   |
@@ -40,6 +41,18 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support** | September 23, 2021 |
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
+
+## Version 1.17.137
+
+**Release Date:** June 9, 2025
+
+### File SDK
+- Added support for EML file types.
+- Added support for offline publishing.
+
+### Platform and Dependency Updates
+- Added support for cloud auto-discovery to automatically get services information based on email address in Identity if there is no Cloud or CloudEndPointBaseUrl set. By default, this feature is disabled, Setting `FlightingFeature::CloudAutoDiscovery` to enable.
+- Updated Android NDK version from 23.2 to 27.2.
 
 ## Version 1.16.149
 
