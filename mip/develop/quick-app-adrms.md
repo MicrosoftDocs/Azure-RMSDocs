@@ -4,7 +4,7 @@ description: A quickstart showing you how to configure the MIP SDK to use Active
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 11/14/2022
+ms.date: 04/10/2025
 ms.author: tommos
 ms.custom: has-adal-ref, mode-portal
 #Customer intent: As a an application developer, I want to learn how to use the MIP SDK to connect to AD RMS so I can consume and protect using my on-premises service.

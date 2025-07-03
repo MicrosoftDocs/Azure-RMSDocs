@@ -3,7 +3,7 @@ title: MIP SDK FIPS Compliance Statement
 description: Details about the MIP SDK and FIPS Compliance Status
 author: tommoser
 ms.author: tommos
-ms.date: 11/14/2022
+ms.date: 04/10/2025
 ms.topic: conceptual
 ms.service: information-protection
 ---
@@ -19,7 +19,7 @@ The Microsoft Information Protection SDK uses OpenSSL to implement all cryptogra
 ## Install and configure the FIPS Module
 
 Applications using OpenSSL can install and load the FIPS module with the following procedure published by OpenSSL:
-1. Install FIPS module following [Appendix A: Installation and Usage Guidance](https://www.openssl.org/source/fips-doc/openssl-3.0.8-security-policy-2023-05-05.pdf)
+1. Install FIPS module following [Appendix A: Installation and Usage Guidance](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4282.pdf)
 2. Load FIPS module in MIP SDK by [Making all applications use the FIPS module by default](https://www.openssl.org/docs/man3.0/man7/fips_module.html). Configure the [OpenSSL_MODULES](https://www.openssl.org/docs/manmaster/man7/openssl-env.html) environment variable to the directory containing the fips.dll.
 4. (Optional) Configure the FIPS module for some applications only by [Selectively making applications use the FIPS module by default](https://www.openssl.org/docs/man3.0/man7/fips_module.html)
 

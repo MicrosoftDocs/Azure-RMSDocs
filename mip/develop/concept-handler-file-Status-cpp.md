@@ -4,7 +4,7 @@ description: This article will help you understand how to fetch file status usin
 author: GRDININ
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 11/14/2022
+ms.date: 04/10/2025
 ms.author: GRDININ
 ---
 # Microsoft Information Protection SDK - Fetching the status of a file

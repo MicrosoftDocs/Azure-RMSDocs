@@ -4,7 +4,7 @@ description: Provides the setup and configuration prerequisites, in order to use
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 01/30/2024
+ms.date: 04/10/2025
 ms.author: mbaldwin
 ms.custom: has-adal-ref, mode-api
 #Customer intent: As a an application developer, I want to learn about setup and configuration, so that I can use the SDK to build applications.
@@ -136,7 +136,7 @@ Next, complete the following steps to ensure your client computer is set up and 
 1. Download SDK samples from GitHub (OPTIONAL):
 
    - If you don't have one already, first create a [GitHub profile](https://github.com/join).
-   - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/download/)
+   - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/downloads)
    - Using Git Bash, download the sample(s) of interest:
      - Use the following query to view the repositories: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk.
      - Using Git Bash, use `git clone https://github.com/azure-samples/<repo-name>` to download each sample repository.

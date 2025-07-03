@@ -4,7 +4,7 @@ description: This article will help you understand how File SDK handlers are cre
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 01/30/2024
+ms.date: 04/10/2025
 ms.author: mbaldwin
 ---
 # Microsoft Information Protection SDK - File handler concepts

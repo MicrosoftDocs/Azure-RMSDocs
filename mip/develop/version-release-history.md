@@ -4,7 +4,7 @@ description: Version release history and change notes for the MIP SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 01/30/2024
+ms.date: 04/10/2025
 ms.author: mbaldwin
 ---
 
@@ -23,11 +23,12 @@ Use the following information to see what’s new or changed for a supported rel
 NuGet packages for major releases remain active in NuGet. Only the latest version of each major release is maintained on Microsoft Download Center. Versions before 1.4 are not available.
 
 > [!NOTE]
-> For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
+> For technical support, visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
 
 | Version | Link                         | Status             | End of Support     |
 | ------- | ---------------------------- | ------------------ | ------------------ |
-| 1.16    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
+| 1.17    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
+| 1.16    | https://aka.ms/mipsdkbins116 | **Supported**      | June 9, 2026       |
 | 1.15    | https://aka.ms/mipsdkbins115 | **Supported**      | December 13, 2025  |
 | 1.14    | https://aka.ms/mipsdkbins114 | **Supported**      | July 5, 2025       |
 | 1.13    | https://aka.ms/mipsdkbins113 | **Out of Support** | October 27, 2024   |
@@ -41,12 +42,82 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
+## Version 1.17.137
+
+**Release Date:** June 9, 2025
+
+### File SDK
+- Added support for EML file types.
+- Added support for offline publishing.
+
+### Platform and Dependency Updates
+- Added support for cloud auto-discovery to automatically get services information based on email address in Identity if there is no Cloud or CloudEndPointBaseUrl set. By default, this feature is disabled, Setting `FlightingFeature::CloudAutoDiscovery` to enable.
+- Added support for 16KB page sizes on Android.
+- Updated Android NDK version from 23.2 to 27.2.
+
+## Version 1.16.149
+
+**Release Date:** April 8, 2025
+
+### File SDK
+- Fixed an issue where Unicode characters in HTML messages were not rendering correctly.
+
+### Policy SDK
+- Fixed an issue where policy SDK was not connecting to the specified cloud.
+- Fixed a crash when using an AuthDelegate on Android with the C wrapper.
+ 
+### Protection SDK
+- Fixed a crash when using an AuthDelegate on Android with the C wrapper.
+
+### Platform and Dependency Updates
+- Fixed an issue where exception details were not displayed on Android.
+- Updated OpenSSL from 3.0.15 to 3.4.1.
+- Updated libxml2 from 2.12.7 to 2.14.0.
+- Updated Zlib from 1.2.13 to 1.3.1.
+
+
+## Version 1.15.134
+
+**Release Date:** April 8, 2025
+
+### File SDK
+- Fixed an issue where Unicode characters in HTML messages were not rendering correctly.
+- Fixed an issue where Office documents were encrypted with the extension .pfile when files were not synced to OneDrive.
+- Fixed a bug where a partially created output file lingered when CommitAsync failed.
+- Fixed bug where user-defined permissions label metadata was altered when protection was modified.
+
+### Policy SDK
+- Fixed an issue where policy SDK was not connecting to the specified cloud.
+- Fixed a crash when using an AuthDelegate on Android with the C wrapper.
+ 
+### Protection SDK
+- Fixed a crash when using an AuthDelegate on Android with the C wrapper.
+
+### Platform and Dependency Updates
+- Fixed an issue where TLS 1.2 was not accepted when "allow any TLS version" was configured.
+- Fixed an issue where exception details were not displayed on Android.
+- Updated OpenSSL from 3.0.15 to 3.4.1.
+- Updated libxml2 from 2.12.7 to 2.14.0.
+- Updated Zlib from 1.2.13 to 1.3.1.
+
+## Version 1.14.171
+
+**Release Date:** April 8, 2025
+
+### File SDK
+- Fixed an issue where Unicode characters in HTML messages were not rendering correctly.
+
+### Platform and Dependency Updates
+- Updated OpenSSL from 3.0.15 to 3.4.1.
+- Updated libxml2 from 2.12.7 to 2.14.0.
+- Updated Zlib from 1.2.13 to 1.3.1.
+
 ## Version 1.16.126
 
 **Release Date:** December 13, 2024
 
 ### File SDK
-- Added support for labeling MP4s. These files can be labeled without converting to a pfile. Applying a protection label will result in a pfile output.
+- Added support for labeling MP4s. These files can be labeled without converting to a pfile. Applying a protection label results in a pfile output.
 - Added capability to decrypt nested .MSG files with `ContainerDecryptionOption::All`. After 10 decryptions of the same nested .MSG file, a mip::BadInputError("Max depth reached on nested msg attachments") exception is thrown.
 - Added support for Arm64 for Windows File SDK.
 - Fixed an issue where Double Key Encryption info was missing when User-Defined Permissions were modified.
@@ -147,8 +218,8 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Added support for Central European text encoding to protect RTF email.
 
 ### Platform and Dependency Updates
-- Added support for masking additional PII fields, like engineIDs and file paths.
-- Added support for C API additions that enable better configuration of protection descriptors for UDP and AdHoc protection.
+- Added support for masking more PII fields, like engineIDs and file paths.
+- Added support for C API additions that enable better configuration of protection descriptors for user-defined permissions and AdHoc protection.
 - Added support for TLS 1.3.
 
 ## Version 1.14.146
@@ -475,7 +546,7 @@ Applications that fail to update to MIP SDK 1.13 may begin to encounter an excep
 ### Platform and Dependency Updates
 
 - Updated log4j in Java sample apps.
-- Rename arm64 ABI on Android to arm64-v8a
+- Renamed arm64 ABI on Android to arm64-v8a
 
 ## Version 1.11.53
 
@@ -794,7 +865,7 @@ export HTTP_PROXY="http://10.10.10.10:8080"
 ### General Changes
 
 - Updated NuGet package to copy dependencies only on update rather than always.
-- Debug configuration on .NET uses release version of native libraries. We found that customers deploying .NET solutions in debug mode to remote servers were required to install the VC++ Debug runtime, which isn't trivial. If there's a need to debug in to native libraries, please copy the DLLs from the SDK Redistributable into the project folder (https://ala.ms/mipsdkbins)
+- Debug configuration on .NET uses release version of native libraries. We found that customers deploying .NET solutions in debug mode to remote servers were required to install the VC++ Debug runtime, which isn't trivial. If there's a need to debug in to native libraries, copy the DLLs from the SDK Redistributable into the project folder (https://ala.ms/mipsdkbins)
 - Fixed a bug that was generating warnings for .NET Core projects.
 
 ## Version 1.7.133
