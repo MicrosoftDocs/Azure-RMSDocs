@@ -54,6 +54,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 - Added support for cloud auto-discovery to automatically get services information based on email address in Identity if there is no Cloud or CloudEndPointBaseUrl set. By default, this feature is disabled, Setting `FlightingFeature::CloudAutoDiscovery` to enable.
 - Added support for 16KB page sizes on Android.
 - Updated Android NDK version from 23.2 to 27.2.
+- Updated MSVC from 19.29 to 19.44.
 
 ## Version 1.16.149
 
