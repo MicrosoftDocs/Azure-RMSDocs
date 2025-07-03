@@ -3,10 +3,10 @@
 
 title: Bring Your Own Key (BYOK) details - Azure Information Protection
 description: Understand details and restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure Information Protection.
-author: aashishr
-ms.author: aashishr
-manager: aashishr
-ms.date: 11/09/2020
+author: tommos
+ms.author: tommos
+manager: tommos
+ms.date: 07/03/2025
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -18,7 +18,7 @@ ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 #audience:
 #ms.devlang:
 ms.subservice: kms
-ms.reviewer: esaggese
+ms.reviewer: tommos
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
@@ -39,7 +39,7 @@ Supported applications include:
 
 - **On-premises services** running Exchange and SharePoint applications that use the Azure Rights Management service via the RMS connector
 
-- **Client applications**, such as Office 2019, Office 2016, and Office 2013
+- **Client applications**, such as Office 2024 and Office 2021.
 
 > [!TIP]
 > If needed, apply additional security to specific documents using an additional on-premises key. For more information, see [Double Key Encryption (DKE) protection](plan-implement-tenant-key.md#double-key-encryption-dke) (unified labeling client only).
@@ -105,13 +105,16 @@ For more information about key usage logging for BYOK, see [Logging and analyzin
 > Additional instructions on granting key authorization are described below.
 >
 
-BYOK supports keys that are created either in Azure Key Vault or on-premises.
+BYOK supports keys that are created either in Azure Key Vault or on-premises. 
 
 If you create your key on-premises, you must then transfer or import it into your Key Vault and configure Azure Information Protection to use the key. Perform any additional key management from within Azure Key Vault.
 
 Options to create and store your own key:
 
 - **Created in Azure Key Vault**. Create and store your key in Azure Key Vault as an HSM-protected key or a software-protected key.
+
+> [!NOTE]
+> Keys generated directly in Azure Key Vault are **not exportable** for use outside of Azure Key Vault. If your organization requires that keys are exportable and in your possession, you must create the key on-premises and import to Azure Key Vault, maintaining backups of the key on-premises. Disaster recovery planning and testing should include measures to regularly test recovery of these keys. Keys can be backed up from Azure Key Vault, but can only be imported to the original subscription.
 
 - **Created on-premises**. Create your key on-premises and transfer it to Azure Key Vault using one of the following options:
 
@@ -127,7 +130,7 @@ For example, do the following to use a key created on-premises:
 
 1. Generate your tenant key on your premises, in line with your organization's IT and security policies. This key is the master copy. It remains on-premises, and you are required for its backup.
 
-1. Create a copy of the master key, and securely transfer it from your HSM to Azure Key Vault. Throughout this process, the master copy of the key never leaves the hardware protection boundary.
+2. Create a copy of the master key, and securely transfer it from your HSM to Azure Key Vault. Throughout this process, the master copy of the key never leaves the hardware protection boundary.
 
 Once transferred, the copy of the key is protected by Azure Key Vault.
 
@@ -219,6 +222,9 @@ The following table lists recommended Azure regions and instances for minimizing
 > For information specific for Managed HSMs, see [Enabling key authorization for Managed HSM keys via Azure CLI](#enabling-key-authorization-for-managed-hsm-keys-via-azure-cli).
 
 Create an Azure Key Vault and the key you want to use for Azure Information Protection. For more information, see the [Azure Key Vault documentation](/azure/key-vault/).
+
+>[!IMPORTANT]
+> After creating the Azure Key Vault, immediately enable both soft delete and purge protection. This will prevent accidental deletion of the vault and keys. Loss of the keys without sufficient backups will result in complete data loss of encrypted files and emails. For details, see [Azure Key Vault: soft-delete overview](https://learn.microsoft.com/azure/key-vault/general/soft-delete-overview).
 
 Note the following for configuring your Azure Key Vault and key for BYOK:
 
