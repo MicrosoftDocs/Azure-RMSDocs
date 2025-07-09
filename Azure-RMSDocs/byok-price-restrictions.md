@@ -128,7 +128,7 @@ Options to create and store your own key:
 
 For example, do the following to use a key created on-premises:
 
-1. Generate your tenant key on your premises, in line with your organization's IT and security policies. This key is the master copy. It remains on-premises, and you are required for its backup.
+1. Generate your tenant key on your premises, in line with your organization's IT and security policies. This key is the master copy. It remains on-premises, and you are responsible for its backup.
 
 2. Create a copy of the master key, and securely transfer it from your HSM to Azure Key Vault. Throughout this process, the master copy of the key never leaves the hardware protection boundary.
 
