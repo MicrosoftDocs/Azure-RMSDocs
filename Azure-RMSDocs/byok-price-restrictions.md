@@ -224,7 +224,7 @@ The following table lists recommended Azure regions and instances for minimizing
 Create an Azure Key Vault and the key you want to use for Azure Information Protection. For more information, see the [Azure Key Vault documentation](/azure/key-vault/).
 
 >[!IMPORTANT]
-> After creating the Azure Key Vault, immediately enable both soft delete and purge protection. This will prevent accidental deletion of the vault and keys. Loss of the keys without sufficient backups will result in complete data loss of encrypted files and emails. For details, see [Azure Key Vault: soft-delete overview](https://learn.microsoft.com/azure/key-vault/general/soft-delete-overview).
+> After creating the Azure Key Vault, immediately enable both soft delete and purge protection. This will prevent accidental deletion of the vault and keys. Loss of the keys without sufficient backups will result in complete data loss of encrypted files and emails. For details, see [Azure Key Vault: soft-delete overview](/azure/key-vault/general/soft-delete-overview).
 
 Note the following for configuring your Azure Key Vault and key for BYOK:
 
