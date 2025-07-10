@@ -66,9 +66,9 @@ handler->NotifyCommittedActions(*state);
 
 ## Audit Dashboard
 
-Audit events sent by the SDK will be available in [Purview activity explorer](https://learn.microsoft.com/purview/data-classification-activity-explorer).
+Audit events sent by the SDK will be available in [Purview activity explorer](/purview/data-classification-activity-explorer).
 
 ## Next Steps
 
-* For details on the Microsoft Purview activity explorer, see [Get started with activity explorer](https://learn.microsoft.com/en-us/purview/data-classification-activity-explorer).
+* For details on the Microsoft Purview activity explorer, see [Get started with activity explorer](/purview/data-classification-activity-explorer).
 * Download the [Policy SDK Samples from GitHub and try out the Policy SDK](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
