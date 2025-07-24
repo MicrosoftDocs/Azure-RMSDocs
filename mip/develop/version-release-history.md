@@ -42,6 +42,19 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
+## Version 1.17.154
+
+**Release Date:** July 18, 2025
+
+### File SDK
+- Fixed a bug where msg attachments with titles longer than 127 characters were truncated.
+- Fixed a bug where EML files were incorrectly identified as unlabeled.
+- Fixed bug where protecting a file on behalf of a delegated user caused the file to show the incorrect owner.
+- Fixed a bug where a pfile between 500 MB and 1 GB could not be decrypted on x86 systems.
+
+### Protection SDK
+- Added support for offline republishing and online publishing for cross-cloud scenarios.
+
 ## Version 1.17.137
 
 **Release Date:** June 9, 2025
