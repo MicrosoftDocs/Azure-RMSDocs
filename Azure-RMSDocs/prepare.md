@@ -137,7 +137,8 @@ For example, using [Microsoft Entra PowerShell](/powershell/entra-powershell/ove
 Connect-Entra -Scopes -Scopes "User.ReadWrite.All","Group.ReadWrite.All"
 ```
 
-Note: If this command doesn't work, you can run `Install-Module Microsoft.Entra -Scope CurrentUser -Repository PSGallery -Force` to install the Microsoft Entra PowerShell module.
+> [!NOTE]
+> If this command doesn't work, you can run `Install-Module Microsoft.Entra -Scope CurrentUser -Repository PSGallery -Force` to install the Microsoft Entra PowerShell module.
 
 Next, configure your PowerShell session so that it doesn't truncate the values:
 
