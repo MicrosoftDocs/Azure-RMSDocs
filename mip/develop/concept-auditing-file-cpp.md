@@ -1,6 +1,6 @@
 ---
 title: Concepts - Auditing in the Microsoft Information Protection File SDK
-description: This article will help you understand how to use the Microsoft Information Protection SDK to submit File SDK auditing events to Azure Information Protection Analytics.
+description: This article will help you understand how to use the Microsoft Information Protection SDK to submit File SDK auditing events to Microsoft Purview.
 services: information-protection
 author: tommoser
 ms.service: information-protection
@@ -37,7 +37,7 @@ To change this behavior, so that audit data is sent by all MIP SDK-enabled appli
 
 ## Event Types
 
-There are three types of events that can be submitted via the SDK to Azure Information Protection Analytics. **Heartbeat events**, **discovery events**, and **change events**
+There are three types of events that can be submitted via the SDK to Microsoft Purview. **Heartbeat events**, **discovery events**, and **change events**
 
 ### Heartbeat Events
 

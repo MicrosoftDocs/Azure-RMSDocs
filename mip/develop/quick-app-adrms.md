@@ -28,7 +28,7 @@ If you haven't already, be sure to:
 
 ## Service Discovery
 
-The SDK does service discovery based on the `mip::Identity` provided via `FileEngineSettings` or `ProtectionEngineSettings` by using the UPN or mail address suffix. It first searches the domain hierarchy for the *_rmsdisco* record for MDE. For more details on that process, review [Specifying the DNS SRV records for the AD RMS mobile device extension](/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). If that DNS SRV record isn't found, it defaults to the Azure Information Protection service as the service location.
+The MIP SDK will automatically discover the on-premises service endpoint for a `FileEngine` or `ProtectionEngine`, when no service URL has been provided explicitly. It uses the user identity provided via `FileEngineSettings` or `ProtectionEngineSettings` by using the UPN or mail address suffix. It first searches the domain hierarchy for the *_rmsdisco* record for MDE. For more details on that process, review [Specifying the DNS SRV records for the AD RMS mobile device extension](/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). If that DNS SRV record isn't found, it defaults to the Microsoft Purview Information Protection service as the service location.
 
 <!-- 
 If an identity isn't available, or the DNS SRV record for MDE hasn't been published, the service discovery process can be overridden by explicitly settings the [cloud endpoint URL](./reference/class_mip_fileengine_settings.md#setpolicycloudendpointbaseurl-function).

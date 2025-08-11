@@ -19,8 +19,7 @@ The Quickstart and Tutorial articles are centered around building applications t
 Be sure to review the following topics before getting started:
 
 - [Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center)
-- [What is Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
-- [How does the protection work in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
+- [What is Microsoft Purview Information Protection?](/purview/information-protection)
 
 > [!IMPORTANT]
 > **To honor user privacy, you must ask the user to consent before enabling automatic logging.** The following example is a standard message Microsoft uses for logging notification:
@@ -39,9 +38,12 @@ Many of the SDK samples require access to an Office 365 subscription. If you hav
 | Azure Information Protection Premium P1 or P2      | [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection/)            |
 | Microsoft 365 E3, E5, or F1                        | https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing         |
 
+> !NOTE
+> Azure Information Protection Premium P1 or P2 are no longer included as standalone offers. They may be purchased as part of Microsoft 365 E3 or E5, or Enterprise Mobility and Security E3 or E5.
+
 ## Configure sensitivity labels
 
-If you're currently using Azure Information Protection, you must migrate your labels to Office 365 Security and Compliance Center. For more information on the process, see [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels).
+If you're currently using legacy label configurations, you must migrate your labels to Microsoft Purview. For more information on the process, see [Create and configure sensitivity labels and their policies](/purview/create-sensitivity-labels).
 
 ## Configure your client workstation
 

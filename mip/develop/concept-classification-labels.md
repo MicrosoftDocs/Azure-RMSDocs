@@ -19,7 +19,7 @@ Attributes related to classification typically involve the **risk** to the organ
 * **Confidential**: Shall be applied to information, the unauthorized disclosure of which reasonably could be expected to cause damage to the national security that the original classification authority is able to identify or describe.
 * **Unclassified**: This isn't actually a classification, but rather the absence of one of the above three.
 
-In a commercial or private sector application, we may define a list similar to the default in the Azure Information Protection Service, with monetary values attached.
+In a commercial or private sector application, we may define a list similar to the default in the Microsoft Purview Information Protection Service, with monetary values attached.
 
 * **Highly Confidential**: Shall be applied to information, the unauthorized disclosure of which reasonably could be expected to cause damages greater than USD $1M.
 * **Confidential**: Shall be applied to information, the unauthorized disclosure of which reasonably could be expected to cause damages greater than USD $100K.
@@ -42,7 +42,7 @@ Labels are a fundamental component of the MIP SDK. Labels drive the tagging, pro
 * Change an existing label and mandate justification if required by policy
 * Remove a label from a document
 
-The label will apply protection and content marking based on configuration label administrators have defined in Security and Compliance Center. 
+The label will apply protection and content marking based on configuration label administrators have defined in the Microsoft Purview portal. 
 
 ## mip::Label vs. mip::ContentLabel
 

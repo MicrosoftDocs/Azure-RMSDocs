@@ -55,7 +55,7 @@ To successfully complete this reprotection scenario, review the Quick starts und
 
 `mip::ProtectionHandler`'s `AccessCheck()` is used to validate that the user has a specific right to the file and returns a boolean response, depending on the result. For example, to verify that the user has rights to edit, call the method passing in the value "EDIT". If the result is *true*, permit the user to edit the file. Once the **EDIT** right is verified, use `mip::FileHandler`'s `GetDecryptedTemporaryFileAsync()` to retrieve the temporary decrypted file.
 
-For further details on various user rights, consult [User rights for Azure Information Protection](/azure/information-protection/configure-usage-rights).
+For further details on various user rights, consult [Restrict access to content by using sensitivity labels to apply encryption](/purview/encryption-sensitivity-labels).
 
  > [!IMPORTANT]
  > Access checks and enforcement are purely up to the application developer. A user with VIEW rights is capable of decrypting the protected information. It's up to the application to validate the set of rights granted to the user and to enforce those rights via information protection controls such as preventing copy, editing, or taking screenshots. 

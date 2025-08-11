@@ -20,17 +20,21 @@ When creating any of the three engine types, the MIP SDK requires that the devel
 
 ```cpp
 FileEngine::Settings engineSettings(mip::Identity(mUsername), 
-													mAuthDelegate, 
-													"", 
-													"en-US", 
-													false);
+                                    mAuthDelegate, 
+                                    "", 
+                                    "en-US", 
+                                    false);
 ```
 
 The `FileEngine::Settings` object accepts a `mip::Identity` as the first parameter of the constructor. The UPN or email suffix provided via the `mip::Identity` is used first to determine whether the enterprise has any Active Directory Rights Management Service (AD RMS) cluster that should be used instead of Azure. This is done by attempting to resolve the **_rmsdisco._http._tcp** DNS SRV record under the domain suffix obtained from the `mip::Identity`. If name resolution fails for this SRV record, the SDK defaults to commercial cloud.
 
-> When an AD RMS cluster is found, the `mip::FileEngine::FileEngineSettings` property `IsProtectionOnlyEngine` must be set to true. The Policy SDK cannot be used in conjuction with AD RMS publishing (Hold Your Own Key).
+> [!NOTE]
+> In MIP SDK 1.17, you can enable cloud auto-discovery to resolve services based on the email address in `mip::Identity` when `Cloud` and explicit endpoint base URLs are not set. This is disabled by default and can be enabled via the flighting feature flag `FlightingFeature::CloudAutoDiscovery`.
 
-For example, if the `mip::Identity` is *Bob@contoso.com*, the SDK uses the mail address suffix *contoso.com* to generate a DNS query for SRV record. If the AD RMS Mobile Device Extensions (MDE) SRV record for Contoso (**_rmsdisco._http._tcp.contoso.com**) is found, the SDK will attempt to connect to the service referred to by the SRV record. If the Contoso record isn't found, the SDK defaults to the commercial endpoint at `https://api.aadrm.com`. For additional details on AD RMS configuration and DNS registration, please review the [AD RMS MDE documentation](./quick-app-adrms.md#service-discovery).
+> [!IMPORTANT]
+> When an AD RMS cluster is found, the `mip::FileEngine::FileEngineSettings` property `IsProtectionOnlyEngine` must be set to true. The Policy SDK cannot be used in conjunction with AD RMS publishing (Hold Your Own Key).
+
+For example, if the `mip::Identity` is *Bob@contoso.com*, the SDK uses the mail address suffix *contoso.com* to generate a DNS query for SRV record. If the AD RMS Mobile Device Extensions (MDE) SRV record for Contoso (**_rmsdisco._http._tcp.contoso.com**) is found, the SDK will attempt to connect to the service referred to by the SRV record. If the Contoso record isn't found, the SDK defaults to the commercial endpoint at [`https://api.aadrm.com`](https://api.aadrm.com). For additional details on AD RMS configuration and DNS registration, please review the [AD RMS MDE documentation](./quick-app-adrms.md#service-discovery).
 
 ## Service discovery with mip::Cloud
 
@@ -38,10 +42,10 @@ If the identity of the user isn't know at engine creation, or the customer is in
 
 ```cpp
 FileEngine::Settings engineSettings("engineGUID",
-                        				mAuthDelegate,
-				                        "",
-				                        "en-US",
-				                        false);
+                                    mAuthDelegate,
+                                    "",
+                                    "en-US",
+                                    false);
 engineSettings.SetCloud(mip::Cloud::US_GCC); // Tell engine to use US_GCC
 ```
 

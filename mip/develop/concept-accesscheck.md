@@ -17,7 +17,7 @@ The examples and tables below will demonstrate which scenarios require an access
 
 ## Rights list and outcomes
 
-For a full list of the usage rights and descriptions, refer to [Configure usage rights for Azure Information Protection](/azure/information-protection/configure-usage-rights). This article defines the responsibilities of an application developer in rights enforcement and enabled functions when specific rights are, or are not, present. 
+For a full list of the usage rights and descriptions, refer to [Configure usage rights for Microsoft Purview Information Protection](/purview/encryption-sensitivity-labels). This article defines the responsibilities of an application developer in rights enforcement and enabled functions when specific rights are, or are not, present. 
 
 > [!IMPORTANT]
 > It's the responsbility of application developers to both **check and enforce** rights. Failure to perform checks may result in data loss.
@@ -34,7 +34,7 @@ These applications should validate that the **OWNER** or **EXTRACT** rights are 
 
 ### Applications with a user interface
 
-File SDK applications with a user interface must implement controls restricting access to operations the user isn't permitted to perform. One example of such an application is the Azure Information Protection Viewer. The viewer temporarily decrypts the file and renders contents in the application window. It performs granular access checks before displaying the document and disables user interface elements based on the results of the access checks.
+File SDK applications with a user interface must implement controls restricting access to operations the user isn't permitted to perform. One example of such an application is the Microsoft Purview Information Protection Viewer. The viewer temporarily decrypts the file and renders contents in the application window. It performs granular access checks before displaying the document and disables user interface elements based on the results of the access checks.
 
 A partial workflow of performing access checks could look like:
 
