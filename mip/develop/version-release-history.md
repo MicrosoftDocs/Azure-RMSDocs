@@ -42,6 +42,17 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
+## Version 1.17.158
+
+**Release Date:** August 8, 2025
+
+### File SDK
+- Fixed a bug on x86 devices where content near 2 GB size boundary could be protected but not unprotected.
+
+### Platform and Dependency Updates
+- Fixed issue on Android where 16KB page size setting was not enabled correctly.
+- Removed support for Ubuntu 20.04.
+
 ## Version 1.17.154
 
 **Release Date:** July 18, 2025
