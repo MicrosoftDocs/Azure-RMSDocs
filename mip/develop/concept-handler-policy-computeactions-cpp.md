@@ -112,5 +112,5 @@ Remove: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ActionId
 
 ## Next Steps
 
-- Learn how to [pass audit events to Azure Information Protection Analytics](concept-handler-policy-auditing-cpp.md)
+- Learn how to [pass audit events to Microsoft Purview](concept-handler-policy-auditing-cpp.md)
 - Download the [Policy SDK Samples from GitHub and try out the Policy SDK](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

@@ -79,7 +79,7 @@ Now create an implementation for an authentication delegate, by extending the SD
     }
      ```
 
-    The `ApplicationInfo` object contains three properties. The `_appInfo.ApplicationId` will be used in the `AuthDelegateImplementation` class to provide the client ID to the auth library. `ApplicationName` and `ApplicationVersion` will be surfaced in Azure Information Protection Analytics reports.
+    The `ApplicationInfo` object contains three properties. The `_appInfo.ApplicationId` will be used in the `AuthDelegateImplementation` class to provide the client ID to the auth library. `ApplicationName` and `ApplicationVersion` will be surfaced in Microsoft Purview audit reports.
 
 5. Add the `public string AcquireToken()` method. This method should accept `Microsoft.InformationProtection.Identity` and three strings: authority URL, resource URI, and claims, if required. These string variables will be passed in to the authentication library by the API and shouldn't be manipulated. Please input Tenant GUID from Azure portal for your tenant. Editing strings other than the Tenant GUID may result in a failure to authenticate.
 

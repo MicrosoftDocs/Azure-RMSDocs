@@ -20,7 +20,7 @@ Passing information into the MIP SDK to compute an action that should be taken, 
 
 ## mip::ExecutionState Members
 
-`ExecutionState` exposes the following virtual members. Each provides some context to the policy engine to return information on which actions ought to be taken by the application. Additionally, this information may be used to provide audit information to the Azure Information Protection Reporting feature.
+`ExecutionState` exposes the following virtual members. Each provides some context to the policy engine to return information on which actions ought to be taken by the application. Additionally, this information may be used to provide audit information to Microsoft Purview.
 
 | Member                                                                             | Returns                                                                                                              |
 | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -58,7 +58,7 @@ struct ExecutionStateOptions {
 };
 ```
 
-Each property is set by the application, then `ExecutionStateOptions` is passed to the constructor of the class derived from `mip::ExecutionState`. This information is used to determine the actions to take. Data provided in the `mip::ExecutionState` will also surface in Azure Information Protection Analytics.
+Each property is set by the application, then `ExecutionStateOptions` is passed to the constructor of the class derived from `mip::ExecutionState`. This information is used to determine the actions to take. Data provided in the `mip::ExecutionState` will also surface in Microsoft Purview audit reports.
 
 ### Next Steps
 
