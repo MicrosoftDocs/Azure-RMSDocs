@@ -1,6 +1,6 @@
 ---
 title: Concepts - Auditing in the Microsoft Information Protection File SDK
-description: This article will help you understand how to use the Microsoft Information Protection SDK to submit File SDK auditing events to Microsoft Purview.
+description: This article helps you understand how to use the Microsoft Information Protection SDK to submit File SDK auditing events to Microsoft Purview.
 services: information-protection
 author: tommoser
 ms.service: information-protection
@@ -11,13 +11,13 @@ ms.author: tommos
 
 # Auditing in the MIP File SDK
 
-The [unified audit log](/purview/audit-new-search) provides access to audit events, including events that show which labels users are applying, manually or automatically, across any applications or services that have integrated with the MIP SDK. Development partners using the SDK can enable this functionality to surface information from their applications in customer reports.
+The [unified audit log](/purview/audit-new-search) provides access to audit events. These events show which labels users are applying, manually or automatically, across any applications or services integrated with the Microsoft Information Protection (MIP) SDK. Development partners using the SDK can enable this functionality to surface information from their applications in customer reports.
 
 ## Enabling Auditing
 
 By default, MIP SDK **does not** send audit events. Auditing must be enabled in one or more label policies for audit events to fire from MIP SDK-enabled applications.
 
-To change this behavior, so that audit data is sent by all MIP SDK-enabled applications, do the following:
+To send audit data, enable the following advanced setting.
 
 - Add the following policy [advanced setting](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configuring-advanced-settings-for-the-client-via-powershell) using Security & Compliance Center PowerShell:
 
@@ -31,7 +31,7 @@ To change this behavior, so that audit data is sent by all MIP SDK-enabled appli
     ```
 
     > [!NOTE]
-    > By default, this advanced setting is not present in the policy, and the audit logs are not sent.
+    > By default, this advanced setting isn't present in the policy, and the audit logs aren't sent.
     >
 
 
@@ -41,7 +41,7 @@ There are three types of events that can be submitted via the SDK to Microsoft P
 
 ### Heartbeat Events
 
-Heartbeat events are generated automatically for any application that has integrated the File SDK. Heartbeat events appear in the unified audit log as [AipHeartBeat events](/office/office-365-management-api/aipheartbeat). Heartbeat events include:
+Heartbeat events are generated automatically for any application integrated with the File SDK. Heartbeat events appear in the unified audit log as [AipHeartBeat events](/office/office-365-management-api/aipheartbeat). Heartbeat events include:
 
 * TenantId
 * Time Generated
@@ -55,11 +55,11 @@ These events are useful in detecting applications across your enterprise that ar
 
 ### Discovery Events
 
-Discovery events provide information on labeled information that is read or consumed by the File SDK. These events are useful as they surface the devices, location, and users who are accessing information across an organization. Discovery events appear in the unified audit log as [AipDiscover events](/office/office-365-management-api/aipdiscover).
+Discovery events provide information on labeled information read or consumed with the File SDK. These events are useful as they surface the devices, location, and users who are accessing information across an organization. Discovery events appear in the unified audit log as [AipDiscover events](/office/office-365-management-api/aipdiscover).
 
-These events are sent to audit, by setting the `AuditDiscoveryEnabled` parameter to true when creating a new `mip::FileHandler`. Additionally, a content identifier that identifies the file in some human-readable format is provided. It's recommended to use the file path for this identifier.
+These events are sent to audit, by setting the `AuditDiscoveryEnabled` parameter to true when creating a new `mip::FileHandler`. Additionally, a content identifier that identifies the file in some human-readable format is provided. The file path should generally be used for this identifier.
 
-The example below creates a new `mip::FileHandler` with audit discovery enabled. The `CreateFileHandler()` method is called on the `mip::FileEngine` and `AuditDiscoveryEnabled` set to true. Once the `FileHandler` reads the label, a discovery audit is generated.
+The following example creates a new `mip::FileHandler` with audit discovery enabled. The `CreateFileHandler()` method is called on the `mip::FileEngine` and `AuditDiscoveryEnabled` set to true. Once the `FileHandler` reads the label, a discovery audit is generated.
 
 ```cpp
 // Create FileHandler with discovery enabled
@@ -74,7 +74,7 @@ auto label = handler->GetLabel();
 
 ### Change Events
 
-Change events provide information about the file, the label that was applied or changed, and any justifications provided by the user. Change events are generated by calling `NotifyCommitSuccessful()` on the `mip::FileHandler`, after a change has been successfully committed to a file. Change events can appear in the unified audit as [AipSensitivityLabelAction](/office/office-365-management-api/aipsensitivitylabelaction), [AipProtectionAction](/office/office-365-management-api/aipprotectionaction), or [AipFileDeleted](/office/office-365-management-api/aipfiledeleted). 
+Change events provide information about the file, the label that was applied or changed, and any justifications provided by the user. Change events are generated by calling `NotifyCommitSuccessful()` on the `mip::FileHandler`, after a change is successfully committed to a file. Change events can appear in the unified audit as [AipSensitivityLabelAction](/office/office-365-management-api/aipsensitivitylabelaction), [AipProtectionAction](/office/office-365-management-api/aipprotectionaction), or [AipFileDeleted](/office/office-365-management-api/aipfiledeleted). 
 
 ```cpp
 // Create labeling options, set label

@@ -1,6 +1,6 @@
 ---
 title: Concepts - Classification labels
-description: This article will help you understand how labels are used for data classification.
+description: This article helps you understand how labels are used for data classification with the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
@@ -10,24 +10,24 @@ ms.author: mbaldwin
 
 # Microsoft Information Protection SDK - Classification label concepts
 
-As part of a comprehensive data protection strategy, organizations should implement a data classification system that outlines the levels of sensitivity of data within the organization, and then map document attributes to those classifications.
+As part of a comprehensive data protection strategy, organizations should implement a data classification system. This system should outline the levels of data sensitivity within the organization, and then map document attributes to those classifications.
 
 Attributes related to classification typically involve the **risk** to the organization if that document or data should be lost or seen by unintended subjects. In the familiar United States government classification system, there are three classification levels. Each has a definition that describes when that classification should be applied:
 
-* **Top Secret**: Shall be applied to information, the unauthorized disclosure of which reasonably could be expected to cause exceptionally grave damage to the national security that the original classification authority is able to identify or describe.
-* **Secret**: Shall be applied to information, the unauthorized disclosure of which reasonably could be expected to cause serious damage to the national security that the original classification authority is able to identify or describe.
-* **Confidential**: Shall be applied to information, the unauthorized disclosure of which reasonably could be expected to cause damage to the national security that the original classification authority is able to identify or describe.
-* **Unclassified**: This isn't actually a classification, but rather the absence of one of the above three.
+* **Top Secret**: Applied to information, the unauthorized disclosure of which reasonably could be expected to cause exceptionally grave damage to the national security that the original classification authority is able to identify or describe.
+* **Secret**: Applied to information, the unauthorized disclosure of which reasonably could be expected to cause serious damage to the national security that the original classification authority is able to identify or describe.
+* **Confidential**: Applied to information, the unauthorized disclosure of which reasonably could be expected to cause damage to the national security that the original classification authority is able to identify or describe.
+* **Unclassified**: The absence of one of the previous examples. 
 
 In a commercial or private sector application, we may define a list similar to the default in the Microsoft Purview Information Protection Service, with monetary values attached.
 
-* **Highly Confidential**: Shall be applied to information, the unauthorized disclosure of which reasonably could be expected to cause damages greater than USD $1M.
-* **Confidential**: Shall be applied to information, the unauthorized disclosure of which reasonably could be expected to cause damages greater than USD $100K.
-* **General**: Shall be applied to information, the unauthorized disclosure of which reasonably could be expected to cause little measurable damages.
-* **Public**: Shall be applied to information intended for public, external consumption. 
-* **Non-Business**: Shall be applied to information that is not related to company business, direct or indirect.
+* **Highly Confidential**: Applied to information, the unauthorized disclosure of which reasonably could be expected to cause damages greater than USD $1M.
+* **Confidential**: Applied to information, the unauthorized disclosure of which reasonably could be expected to cause damages greater than USD $100,000.
+* **General**: Applied to information, the unauthorized disclosure of which reasonably could be expected to cause little measurable damages.
+* **Public**: Applied to information intended for public, external consumption. 
+* **Non-Business**: Applied to information that isn't related to company business, direct or indirect.
 
-Each classification describes the risk to the business in the event of unauthorized disclosure of that information. After identifying these classification and conditions, attributes should be identified that help data owners to understand which classification to apply.
+Each classification describes the risk to the business if unauthorized disclosure of that information occurs. After identifying these classification and conditions, attributes should be identified that help data owners to understand which classification to apply.
 
 ## Labeling
 
@@ -42,20 +42,20 @@ Labels are a fundamental component of the MIP SDK. Labels drive the tagging, pro
 * Change an existing label and mandate justification if required by policy
 * Remove a label from a document
 
-The label will apply protection and content marking based on configuration label administrators have defined in the Microsoft Purview portal. 
+The label applies protection and content marking based on the configuration defined in the Microsoft Purview portal. 
 
 ## mip::Label vs. mip::ContentLabel
 
 Two types of label exist in the MIP SDK. `Label` and `ContentLabel`.
 
-* Label: A label that can be applied by a user or process as defined in the organizational policy.
+* Label: A label applied by a user or process as defined in the organizational policy.
 * ContentLabel: A label that already exists on a document or information. It can be read, updated, or removed. 
 
-In other words, the `ContentLabel` is a `Label` that has been applied to a piece of information.
+In other words, the `ContentLabel` is a `Label` that is applied to an object.
 
 ## Metadata
 
-The SDK also supported adding extra metadata to documents in the form of key/value pairs. If your organization has sub-classifications or tags that describe the information in a more specific manner, the SDK can be used to apply that metadata.
+The SDK also supported adding extra metadata to documents in the form of key/value pairs. If your organization has subclassifications or tags that describe the information in a more specific manner, the SDK can be used to apply that metadata.
 
 ## Next steps
 
