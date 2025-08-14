@@ -20,7 +20,7 @@ The examples and tables below will demonstrate which scenarios require an access
 For a full list of the usage rights and descriptions, refer to [Configure usage rights for Microsoft Purview Information Protection](/purview/encryption-sensitivity-labels). This article defines the responsibilities of an application developer in rights enforcement and enabled functions when specific rights are, or are not, present. 
 
 > [!IMPORTANT]
-> It's the responsbility of application developers to both **check and enforce** rights. Failure to perform checks may result in data loss.
+> It's the responsibility of application developers to both **check and enforce** rights. Failure to perform checks may result in data loss.
 
 ## Scenarios
 

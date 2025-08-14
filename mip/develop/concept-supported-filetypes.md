@@ -51,7 +51,7 @@ The following file types can be labeled even when they aren't protected.
     | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
     | .doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vdw<br /><br />.vsd | .vsdm<br /><br /> .vsdx<br /><br />.vss<br /><br />.vssm<br /><br />.vst<br /><br />.vstm<br /><br />.vssx<br /><br />.vstx<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx |
 
-Additional file types support labeling when they are also protected. For these file types, see the [Supported file types for classification and protection](#supported-file-types-for-labeling-and-protection) section.
+More file types support labeling when they are also protected. For these file types, see the [Supported file types for classification and protection](#supported-file-types-for-labeling-and-protection) section.
 
 For example, if a label **General** doesn't apply protection, you could apply the **General** label to a file named sales.pdf but you couldn't apply this label to a file named sales.txt.
 
@@ -88,7 +88,7 @@ The Microsoft Information Protection SDK supports labeling and protection of Pow
 
 - **For all other files**:
 
-    To protect other file types, and to remove the protection on these file types using the MIP SDK : The maximum file size is limited only by available disk space and memory.
+    To protect other file types, and to remove the protection on these file types using the MIP SDK: The maximum file size is limited only by available disk space and memory.
 
 ### Supported file types for labeling and protection
 

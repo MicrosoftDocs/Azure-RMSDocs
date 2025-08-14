@@ -10,8 +10,6 @@ ms.author: tommos
 
 # Offline Publishing
 
-## Overview
-
 Offline publishing allows a client, after making an initial connection to the rights management service, to generate [publishing licenses](/openspecs/windows_protocols/ms-rmsod/0af175ee-d54d-4d70-b169-b0ade1ab9bf4#gt_3b0362d9-f209-48d2-afd0-0c0f6531a7d1) for newly protected content without making a service call. This is useful for applications that either need to function in an offline mode, or want to avoid making service calls.
 
 ## Requirements

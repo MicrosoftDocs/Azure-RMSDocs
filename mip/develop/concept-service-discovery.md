@@ -1,5 +1,5 @@
 ---
-title: Concepts - Service discovery in the Microsoft Information Protection (MIP) SDK.
+title: Concepts - Service discovery in the Microsoft Information Protection (MIP) SDK
 description: This article helps you understand how the MIP SDK implements service discovery
 author: msmbaldwin
 ms.service: information-protection
@@ -9,8 +9,6 @@ ms.author: mbaldwin
 ---
 
 # Microsoft Information Protection SDK - Service Discovery
-
-## Overview
 
 The Microsoft Information Protection SDK supports the Azure commercial cloud, sovereign clouds, and on-premises Active Directory Rights Management Service (AD RMS). There are different mechanisms used to discover which endpoint the SDK should use. This article covers the discovery mechanisms and how to use each.
 
@@ -26,10 +24,10 @@ FileEngine::Settings engineSettings(mip::Identity(mUsername),
                                     false);
 ```
 
-The `FileEngine::Settings` object accepts a `mip::Identity` as the first parameter of the constructor. The UPN or email suffix provided via the `mip::Identity` is used first to determine whether the enterprise has any Active Directory Rights Management Service (ADRMS) cluster that should be used instead of Azure. The SDK attempts to resolve the **_rmsdisco._http._tcp** DNS SRV record under the domain suffix obtained from the `mip::Identity`. If name resolution fails for this SRV record, the SDK defaults to commercial cloud.
+The `FileEngine::Settings` object accepts a `mip::Identity` as the first parameter of the constructor. The UPN or email suffix provided via the `mip::Identity` is used first to determine whether the enterprise has any Active Directory Rights Management Service (AD RMS) cluster that should be used instead of Azure. The SDK attempts to resolve the **_rmsdisco._http._tcp** DNS SRV record under the domain suffix obtained from the `mip::Identity`. If name resolution fails for this SRV record, the SDK defaults to commercial cloud.
 
 > [!NOTE]
-> In MIP SDK 1.17, you can enable cloud autodiscovery to resolve services based on the email address in `mip::Identity` when `Cloud` and explicit endpoint base URLs aren't set. Autodiscovery disabled by default and can be enabled via the flighting feature flag `FlightingFeature::CloudAutoDiscovery`.
+> In MIP SDK 1.17, you can enable cloud autodiscovery to resolve services based on the email address in `mip::Identity` when `Cloud` and explicit endpoint base URLs aren't set. Autodiscovery is disabled by default and can be enabled via the flighting feature flag `FlightingFeature::CloudAutoDiscovery`.
 
 > [!IMPORTANT]
 > When an AD RMS cluster is found, the `mip::FileEngine::FileEngineSettings` property `IsProtectionOnlyEngine` must be set to true. The Policy SDK can't be used with AD RMS publishing (Hold Your Own Key).

@@ -27,7 +27,7 @@ In a commercial or private sector application, we may define a list similar to t
 * **Public**: Applied to information intended for public, external consumption. 
 * **Non-Business**: Applied to information that isn't related to company business, direct or indirect.
 
-Each classification describes the risk to the business if unauthorized disclosure of that information occurs. After identifying these classification and conditions, attributes should be identified that help data owners to understand which classification to apply.
+Each classification describes the risk to the business if unauthorized disclosure of that information occurs. After identifying these classifications and conditions, attributes should be identified that help data owners to understand which classification to apply.
 
 ## Labeling
 

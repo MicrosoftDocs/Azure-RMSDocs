@@ -10,14 +10,12 @@ ms.author: mbaldwin
 
 # Republishing (C++)
 
-## Overview
-
 This overview focuses on Republishing in MIP SDK. Republishing is required when an application needs to allow a user to edit the file, but must maintain the original [publishing license](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/licenses-and-certificates-and-how-ad-rms-protects-and-consumes/ba-p/247309) information about owner, rights, content key, and so on.
 
 The pattern may look something like:
 
 - A user opens a protected document for editing.
-- The user must only be permitted to edit the file if they've have the appropriate rights.
+- The user must only be permitted to edit the file if they have the appropriate rights.
 - The user edits and then saves the document.
 
 The MIP SDK pseudocode to accomplish this task may look like:
@@ -58,7 +56,7 @@ To successfully complete this reprotection scenario, review the Quick starts und
 For more information, see [Restrict access to content by using sensitivity labels to apply encryption](/purview/encryption-sensitivity-labels).
 
  > [!IMPORTANT]
- > Access checks and enforcement are purely up to the application developer. A user with VIEW rights is capable of decrypting the protected information. It's up to the application to validate the set of rights the user is gratned and to enforce those rights via information protection controls such as preventing copy, editing, or taking screenshots. 
+ > Access checks and enforcement are purely up to the application developer. A user with VIEW rights is capable of decrypting the protected information. It's up to the application to validate the set of rights the user is granted and to enforce those rights via information protection controls such as preventing copy, editing, or taking screenshots. 
  > Failure to properly implement protection controls may result in sensitive information exposure.
 
 ## Save and publish the edited file by applying Protection

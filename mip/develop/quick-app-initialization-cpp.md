@@ -39,7 +39,7 @@ First we create and configure the initial Visual Studio solution and project, up
 
      [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
-2. Add the Nuget package for the MIP File SDK to your project:
+2. Add the NuGet package for the MIP File SDK to your project:
    - In the **Solution Explorer**, right-click the project node (directly under the top/solution node), and select **Manage NuGet packages...**:
    - When the **NuGet Package Manager** tab opens in the Editor Group tabs area:
      - Select **Browse**.

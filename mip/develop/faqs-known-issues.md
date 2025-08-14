@@ -102,7 +102,7 @@ MIP SDK doesn't support direct application of content marking, including header,
 ### Protection and Policy SDK on Android
 **Question**: Which shared library should I use for integrating the MIP SDK into my Android application?
 
-The MIP SDK Android binaries include `libmip_core.so`, `libmip_protection_sdk.so`, `libmip_upe_sdk.so` and `lipmip_unified.so`. `libmip_unified.so` is the recommended library that includes the core, protection, and policy shared libraries.
+The MIP SDK Android binaries include `libmip_core.so`, `libmip_protection_sdk.so`, `libmip_upe_sdk.so` and `libmip_unified.so`. `libmip_unified.so` is the recommended library that includes the core, protection, and policy shared libraries.
 
 ## Compliance
 
