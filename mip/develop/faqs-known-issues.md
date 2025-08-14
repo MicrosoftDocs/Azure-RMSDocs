@@ -126,7 +126,7 @@ This exception results from attempting to protect or label a PDF file that is di
 
 > NoPolicyException: Label policy didn't contain data, CorrelationId=GUID, CorrelationId.Description=PolicyProfile, NoPolicyError.Category=SyncFile, NoPolicyError.Category=SyncFile
 
-This error indicates that a label policy isn't published in the Microsoft Purview compliance portal. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
+This error indicates that a label policy isn't published in the Microsoft Purview portal. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
 
 If a labeling policy has been published, ensure that the user account is included in any groups that are part of the *published to* section of the label policy configuration. For more information, review [Create and publish sensitivity labels](/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
  

@@ -64,4 +64,4 @@ Each can be set on the engine settings object in the relevant engines settings o
 
 ## Protected Content Consumption
 
-When protected content is consumed by the MIP SDK, service discovery is performed based on the licensing endpoint stored in the protected document. The application must still create a file or protection engine relevant to their own identity. When the `mip::FileHandler` object is created, the SDK parses the license information and connect to the appropriate endpoint. If authentication is required, the user may be prompted to authenticate.
+When protected content is consumed by the MIP SDK, service discovery is performed based on the licensing endpoint stored in the protected document. The application must still create a file or protection engine relevant to their own identity. When the `mip::FileHandler` object is created, the SDK parses the license information and connects to the appropriate endpoint. If authentication is required, the user may be prompted to authenticate.

@@ -18,7 +18,7 @@ The Quickstart and Tutorial articles are centered around building applications t
 
 Be sure to review the following topics before getting started:
 
-- [Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center)
+- [Microsoft Purview portal](/purview/purview-portal)
 - [What is Microsoft Purview Information Protection?](/purview/information-protection)
 
 > [!IMPORTANT]
@@ -154,7 +154,7 @@ For authentication and authorization at runtime, accounts are represented by a *
 To register an application account in Microsoft Entra ID for use with the Quickstarts and MIP SDK samples:
 
   > [!IMPORTANT]
-  > To access Microsoft Entra tenant management for account creation, you'll need to sign in to the Azure portal with a user account that is a member of the ["Owner" role on the subscription](/azure/billing/billing-add-change-azure-subscription-administrator). Depending on the configuration of your tenant, you may also need to be a member of the "Global Admininstrator" directory role to [register an application](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
+  > To access Microsoft Entra tenant management for account creation, you'll need to sign in to the Azure portal with a user account that is a member of the ["Owner" role on the subscription](/azure/billing/billing-add-change-azure-subscription-administrator). Depending on the configuration of your tenant, you may also need to be a member of the "Global Administrator" directory role to [register an application](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
   > We recommend testing with a restricted account. Be sure the account only has rights to access the necessary SCC endpoints. Cleartext passwords passed via commandline may be collected by logging systems.
 
 1. Follow the steps in [Register an app with Microsoft Entra ID, Register a new application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal) section. For testing purposes, use the following values for the given properties as you go through the guide steps:

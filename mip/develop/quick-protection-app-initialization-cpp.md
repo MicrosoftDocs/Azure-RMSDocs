@@ -285,7 +285,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
    | \<engine-account\> | The account used for the engine's identity. When you authenticate with a user account during token acquisition, it must match this value. | `"user1@tenant.onmicrosoft.com"` |
    | \<engine-state\> | User-defined state to be associated with the engine. | `"My App State"` |
 
-4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart. If you run the application, you see output similar to the following. The application would construct the Protection profile and Protection engine sucessfully but would not have fired authentication module and you won't have an access token yet, until you complete the next Quickstart.
+4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart. If you run the application, you see output similar to the following. The application would construct the Protection profile and Protection engine successfully but would not have fired authentication module and you won't have an access token yet, until you complete the next Quickstart.
 
    ```console
     C:\MIP Sample Apps\ProtectionQS\Debug\ProtectionQS.exe (process 8252) exited with code 0.

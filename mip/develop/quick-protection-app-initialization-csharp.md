@@ -15,7 +15,7 @@ ms.custom: mode-api
 This quickstart will show you how to implement the client initialization pattern, used by the MIP SDK .NET wrapper at runtime.
 
 > [!NOTE]
-> The steps outlined in this quickstart are required for any client application that uses the MIP .NET wrapper's Protection SDK. This Quickstarts should be done serially after Application Initialization and implementation of Authentication delegate and Consent delegate classes.
+> The steps outlined in this quickstart are required for any client application that uses the MIP .NET wrapper's Protection SDK. These Quickstarts should be done serially after Application Initialization and implementation of Authentication delegate and Consent delegate classes.
 
 ## Prerequisites
 
