@@ -89,7 +89,7 @@ engineSettings.SetCustomSettings(customSettings);
 MIP SDK exposes an inspection function that can decrypt the embedded **message.rpmsg** file and present a set of byte streams as output. It's up to the SDK consumer to extract the *message.rpmsg* file and pass it to the inspection API. Variations of this file name exist for Purview Message Encryption scenarios and the API will also accept message_v2, v3, or v4 files. 
 
 > [!IMPORTANT]
-> The inspection API *doesn't* provide an output that will result in a usable file, nor does it allow you to re-protect the input file. It outputs streams of bytes that your application can then process further. Recreating *MSG* files from *message.rpmsg* files is not supported by MIP SDK. 
+> The inspection API *doesn't* provide an output that will result in a usable file, nor does it allow you to re-protect the input file. It outputs streams of bytes that your application can then process further. Recreating *MSG* files from *message.rpmsg* files is not supported by MIP SDK. Additionally, it is more reliable to retrieve label information from the root .msg file, as it may not always be present on the *message.rpmsg* attachment.
 
 Commonly, mail gateway and data loss prevention (DLP) services handle MIME compliant messages while email is in transit. When mail is protected, the encrypted contents of the message are stored in an attachment, *message.rpmsg*. This attachment contains the encrypted email body and any attachments that were part of the original message. The *rpmsg* file is then attached to a plaintext wrapper email and sent to the mail service. Once that message leaves the Exchange or Exchange Online boundary, it's in the MIME-compliant format so that it can be sent to its destination.
 
