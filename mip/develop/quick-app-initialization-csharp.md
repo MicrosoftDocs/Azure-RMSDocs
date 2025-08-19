@@ -38,7 +38,7 @@ First we create and configure the initial Visual Studio solution and project, up
 
      [![Visual Studio solution creation](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
-2. Add the Nuget package for the MIP File SDK to your project:
+2. Add the NuGet package for the MIP File SDK to your project:
    - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Manage NuGet packages...**:
    - When the **NuGet Package Manager** tab opens in the Editor Group tabs area:
      - Select **Browse**.
@@ -79,7 +79,7 @@ Now create an implementation for an authentication delegate, by extending the SD
     }
      ```
 
-    The `ApplicationInfo` object contains three properties. The `_appInfo.ApplicationId` will be used in the `AuthDelegateImplementation` class to provide the client ID to the auth library. `ApplicationName` and `ApplicationVersion` will be surfaced in Azure Information Protection Analytics reports.
+    The `ApplicationInfo` object contains three properties. The `_appInfo.ApplicationId` will be used in the `AuthDelegateImplementation` class to provide the client ID to the auth library. `ApplicationName` and `ApplicationVersion` will be surfaced in Microsoft Purview audit reports.
 
 5. Add the `public string AcquireToken()` method. This method should accept `Microsoft.InformationProtection.Identity` and three strings: authority URL, resource URI, and claims, if required. These string variables will be passed in to the authentication library by the API and shouldn't be manipulated. Please input Tenant GUID from Azure portal for your tenant. Editing strings other than the Tenant GUID may result in a failure to authenticate.
 
