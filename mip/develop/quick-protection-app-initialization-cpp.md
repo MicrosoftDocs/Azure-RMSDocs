@@ -31,7 +31,7 @@ If you haven't already, be sure to:
 
 First we create and configure the initial Visual Studio solution and project, upon which the other Quickstarts build.
 
-1. Open Visual Studio 2017, select the **File** menu, **New**, **Project**. In the **New Project** dialog:
+1. Open Visual Studio 2019 or later, select the **File** menu, **New**, **Project**. In the **New Project** dialog:
    - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
    - In the center pane, select **Windows Console Application**
    - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
@@ -39,7 +39,7 @@ First we create and configure the initial Visual Studio solution and project, up
 
      [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
-2. Add the Nuget package for the MIP Protection SDK to your project:
+2. Add the NuGet package for the MIP Protection SDK to your project:
    - In the **Solution Explorer**, right-click the project node (directly under the top/solution node), and select **Manage NuGet packages...**:
    - When the **NuGet Package Manager** tab opens in the Editor Group tabs area:
      - Select **Browse**.
@@ -285,7 +285,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
    | \<engine-account\> | The account used for the engine's identity. When you authenticate with a user account during token acquisition, it must match this value. | `"user1@tenant.onmicrosoft.com"` |
    | \<engine-state\> | User-defined state to be associated with the engine. | `"My App State"` |
 
-4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart. If you run the application, you see output similar to the following. The application would construct the Protection profile and Protection engine sucessfully but would not have fired authentication module and you won't have an access token yet, until you complete the next Quickstart.
+4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart. If you run the application, you see output similar to the following. The application would construct the Protection profile and Protection engine successfully but would not have fired authentication module and you won't have an access token yet, until you complete the next Quickstart.
 
    ```console
     C:\MIP Sample Apps\ProtectionQS\Debug\ProtectionQS.exe (process 8252) exited with code 0.

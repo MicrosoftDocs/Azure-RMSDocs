@@ -102,7 +102,7 @@ MIP SDK doesn't support direct application of content marking, including header,
 ### Protection and Policy SDK on Android
 **Question**: Which shared library should I use for integrating the MIP SDK into my Android application?
 
-The MIP SDK Android binaries include `libmip_core.so`, `libmip_protection_sdk.so`, `libmip_upe_sdk.so` and `lipmip_unified.so`. `libmip_unified.so` is the recommended library that includes the core, protection, and policy shared libraries.
+The MIP SDK Android binaries include `libmip_core.so`, `libmip_protection_sdk.so`, `libmip_upe_sdk.so` and `libmip_unified.so`. `libmip_unified.so` is the recommended library that includes the core, protection, and policy shared libraries.
 
 ## Compliance
 
@@ -126,7 +126,7 @@ This exception results from attempting to protect or label a PDF file that is di
 
 > NoPolicyException: Label policy didn't contain data, CorrelationId=GUID, CorrelationId.Description=PolicyProfile, NoPolicyError.Category=SyncFile, NoPolicyError.Category=SyncFile
 
-This error indicates that a label policy isn't published in the Microsoft Purview compliance portal. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
+This error indicates that a label policy isn't published in the Microsoft Purview portal. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
 
 If a labeling policy has been published, ensure that the user account is included in any groups that are part of the *published to* section of the label policy configuration. For more information, review [Create and publish sensitivity labels](/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
  
@@ -148,7 +148,7 @@ Your application doesn't have the required runtime, or was not built as Release.
 
 > "ProxyAuthenticatonError: Proxy authentication is unsupported"
 
-The MIP SDK doesn't support the use of authenticated proxies. To fix this message, proxy administrators should set the Microsoft Purview Information Protection service endpoints to bypass the proxy. A list of those endpoints is available at the [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges) page. MIP SDK requires that `*.protection.outlook.com` (row 9) and the Azure Information Protection service endpoints (row 73) bypass proxy authentication.
+The MIP SDK doesn't support the use of authenticated proxies. To fix this message, proxy administrators should set the Microsoft Purview Information Protection service endpoints to bypass the proxy. A list of those endpoints is available at the [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges) page. MIP SDK requires that `*.protection.outlook.com` (row 9) and the Microsoft Purview Information Protection service endpoints (row 73) bypass proxy authentication.
 
 ### Error: "Unknown Error" when labeling an image file using a stream output
 

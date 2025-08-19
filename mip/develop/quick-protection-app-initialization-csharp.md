@@ -15,7 +15,7 @@ ms.custom: mode-api
 This quickstart will show you how to implement the client initialization pattern, used by the MIP SDK .NET wrapper at runtime.
 
 > [!NOTE]
-> The steps outlined in this quickstart are required for any client application that uses the MIP .NET wrapper's Protection SDK. This Quickstarts should be done serially after Application Initialization and implementation of Authentication delegate and Consent delegate classes.
+> The steps outlined in this quickstart are required for any client application that uses the MIP .NET wrapper's Protection SDK. These Quickstarts should be done serially after Application Initialization and implementation of Authentication delegate and Consent delegate classes.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ If you haven't already, be sure to:
 
 First we create and configure the initial Visual Studio solution and project, upon which the other Quickstarts will build.
 
-1. Open Visual Studio 2017, select the **File** menu, **New**, **Project**. In the **New Project** dialog:
+1. Open Visual Studio 2019 or later, select the **File** menu, **New**, **Project**. In the **New Project** dialog:
    - In the left pane, under **Installed**, **Visual C#**, select **Windows Desktop**.
    - In the center pane, select **Console App (.NET Framework)**
    - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
@@ -38,7 +38,7 @@ First we create and configure the initial Visual Studio solution and project, up
 
      [![Visual Studio solution creation](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
-2. Add the Nuget package for the MIP File SDK to your project:
+2. Add the NuGet package for the MIP File SDK to your project:
    - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Manage NuGet packages...**:
    - When the **NuGet Package Manager** tab opens in the Editor Group tabs area:
      - Select **Browse**.

@@ -61,7 +61,7 @@ Take, for example, the MIP File SDK. It doesn't support applying header, footer,
 When the file is opened in Microsoft Word, the header, footer, and watermark will be missing. When the user clicks **save** the policy is reevaluated and contentBits on the file is compared to the policy result. If there's a difference, the application applies the missing content marking.
 
 > [!Note]
-> This feature requires the Azure Information Protection client today, and works only in Word, Excel, or PowerPoint. It does not apply to Outlook. 
+> This feature requires the Microsoft Purview Information Protection client today, and works only in Word, Excel, or PowerPoint. It does not apply to Outlook. 
 
 ## Extending Metadata with Custom Attributes
 

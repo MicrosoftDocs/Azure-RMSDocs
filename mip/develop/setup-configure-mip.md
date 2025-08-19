@@ -18,9 +18,8 @@ The Quickstart and Tutorial articles are centered around building applications t
 
 Be sure to review the following topics before getting started:
 
-- [Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center)
-- [What is Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
-- [How does the protection work in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
+- [Microsoft Purview portal](/purview/purview-portal)
+- [What is Microsoft Purview Information Protection?](/purview/information-protection)
 
 > [!IMPORTANT]
 > **To honor user privacy, you must ask the user to consent before enabling automatic logging.** The following example is a standard message Microsoft uses for logging notification:
@@ -39,9 +38,12 @@ Many of the SDK samples require access to an Office 365 subscription. If you hav
 | Azure Information Protection Premium P1 or P2      | [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection/)            |
 | Microsoft 365 E3, E5, or F1                        | https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing         |
 
+> !NOTE
+> Azure Information Protection Premium P1 or P2 are no longer included as standalone offers. They may be purchased as part of Microsoft 365 E3 or E5, or Enterprise Mobility and Security E3 or E5.
+
 ## Configure sensitivity labels
 
-If you're currently using Azure Information Protection, you must migrate your labels to Office 365 Security and Compliance Center. For more information on the process, see [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels).
+If you're currently using legacy label configurations, you must migrate your labels to Microsoft Purview. For more information on the process, see [Create and configure sensitivity labels and their policies](/purview/create-sensitivity-labels).
 
 ## Configure your client workstation
 
@@ -152,7 +154,7 @@ For authentication and authorization at runtime, accounts are represented by a *
 To register an application account in Microsoft Entra ID for use with the Quickstarts and MIP SDK samples:
 
   > [!IMPORTANT]
-  > To access Microsoft Entra tenant management for account creation, you'll need to sign in to the Azure portal with a user account that is a member of the ["Owner" role on the subscription](/azure/billing/billing-add-change-azure-subscription-administrator). Depending on the configuration of your tenant, you may also need to be a member of the "Global Admininstrator" directory role to [register an application](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
+  > To access Microsoft Entra tenant management for account creation, you'll need to sign in to the Azure portal with a user account that is a member of the ["Owner" role on the subscription](/azure/billing/billing-add-change-azure-subscription-administrator). Depending on the configuration of your tenant, you may also need to be a member of the "Global Administrator" directory role to [register an application](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
   > We recommend testing with a restricted account. Be sure the account only has rights to access the necessary SCC endpoints. Cleartext passwords passed via commandline may be collected by logging systems.
 
 1. Follow the steps in [Register an app with Microsoft Entra ID, Register a new application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal) section. For testing purposes, use the following values for the given properties as you go through the guide steps:
