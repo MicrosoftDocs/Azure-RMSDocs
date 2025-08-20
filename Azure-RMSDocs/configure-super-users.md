@@ -108,11 +108,11 @@ The super user ability is automatically integrated with Exchange Online so that 
 
 If you can't use Microsoft Purview eDiscovery, you might have another eDiscovery solution that integrates with the Azure Rights Management service to similarly reason over data. 
 
-Or, if your eDiscovery solution cannot automatically read and decrypt protected content, you can still use this solution in a multi-step process together with the [Set-FileLabel](/powershell/module/purviewinformationprotection/set-filelabel) cmdlet:
+Or, if your eDiscovery solution can't automatically read and decrypt protected content, you can still use this solution in a multi-step process together with the [Set-FileLabel](/powershell/module/purviewinformationprotection/set-filelabel) cmdlet:
 
 1. Export the email in question to a PST file from Exchange Online or Exchange Server, or from the workstation where the user stored their email.
 
-2. Import the PST file into your eDiscovery tool. Because the tool cannot read encrypted content, expect these items to generate errors.
+2. Import the PST file into your eDiscovery tool. Because the tool can't read encrypted content, expect these items to generate errors.
 
 3. From all the items that the tool couldn't open, generate a new PST file that this time, contains just encrypted items. This second PST file will likely be much smaller than the original PST file.
 
