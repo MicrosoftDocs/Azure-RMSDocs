@@ -43,16 +43,16 @@ A super user always has the Rights Management Full Control [usage right](configu
 
 ## Configuration for the super user feature
 
-By default, the super user feature is not enabled, and no users are assigned this role. It is enabled for you automatically if you configure the Rights Management connector for Exchange, and it is not required for standard services that run Exchange Online, Microsoft SharePoint Server, or SharePoint in Microsoft 365.
+By default, the super user feature isn't enabled, and no users are assigned to this role. It's enabled for you automatically if you configure the Rights Management connector for Exchange, and it's not required for standard services that run Exchange Online, Microsoft SharePoint Server, or SharePoint in Microsoft 365.
 
 If you need to manually enable the super user feature, use the PowerShell cmdlet [Enable-AipServiceSuperUserFeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature), and then assign users (or service accounts) as needed by using the [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) cmdlet or the [Set-AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup) cmdlet and add users (or other groups) as needed to this group. 
 
-Although using a group for your super users is easier to manage, be aware that for performance reasons, the Azure Rights Management service [caches the group membership](prepare.md#group-membership-caching-by-azure-information-protection). So if you need to assign a new user to be a super user to decrypt content immediately, add that user by using Add-AipServiceSuperUser, rather than adding the user to an existing group that you have configured by using Set-AipServiceSuperUserGroup.
+Although using a group for your super users is easier to manage, for performance reasons, the Azure Rights Management service [caches the group membership](prepare.md#group-membership-caching-by-azure-information-protection). So if you need to assign a new user to be a super user to decrypt content immediately, add that user by using Add-AipServiceSuperUser, rather than adding the user to an existing group that you configured by using Set-AipServiceSuperUserGroup.
 
 > [!NOTE]
-> - When adding a user with the [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) cmdlet, you must also add the primary mail address or user principal name to the group. Email aliases are not evaluated.
+> - When adding a user with the [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) cmdlet, you must also add the primary mail address or user principal name to the group. Email aliases aren't evaluated.
 > 
-> - If you have not yet installed the Windows PowerShell module for Azure Rights Management, see [Installing the AIPService PowerShell module](install-powershell.md).
+> - If you haven't yet installed the Windows PowerShell module for Azure Rights Management, see [Installing the AIPService PowerShell module](install-powershell.md).
 
 It doesn't matter when you enable the super user feature or when you add users as super users. For example, if you enable the feature on Thursday and then add a user on Friday, that user can immediately open content that was protected at the very beginning of the week.
 
@@ -68,12 +68,12 @@ It doesn't matter when you enable the super user feature or when you add users a
 - When super users decrypt files, this action is logged and can be audited with [usage logging](log-analyze-usage.md).
 
     > [!NOTE]
-    > While the logs include details about the decryption, including the user who decrypted the file, they do not detail when the user is a super user.
+    > While the logs include details about the decryption, including the user who decrypted the file, they don't detail when the user is a super user.
     > 
     > Use the logs together with the cmdlets listed previously to first collect a list of super users that you can identify in the logs.
     >
 
-- If you do not need the super user feature for everyday services, enable the feature only when you need it, and disable it again by using the [Disable-AipServiceSuperUserFeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature) cmdlet.
+- If you don't need the super user feature for everyday services, enable the feature only when you need it, and disable it again by using the [Disable-AipServiceSuperUserFeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature) cmdlet.
 
 ### Example auditing for the super user feature
 
@@ -91,14 +91,14 @@ In this example, the administrator for Contoso Ltd confirms that the super user 
 
 ## Scripting options for super users
 
-Often, somebody who is assigned a super user for Azure Rights Management will need to remove encryption from multiple files, in multiple locations. While it’s possible to do this manually, it’s more efficient (and often more reliable) to script this using the [Set-FileLabel](/powershell/module/purviewinformationprotection/set-filelabel) cmdlet.
+Often, somebody who is assigned a super user for Azure Rights Management needs to remove encryption from multiple files, in multiple locations. While it’s possible to do this task manually, it’s more efficient (and often more reliable) to script this using the [Set-FileLabel](/powershell/module/purviewinformationprotection/set-filelabel) cmdlet.
 
 You can also use this cmdlet to apply a new label that doesn't apply encryption, or remove the label that applied encryption.
 
 For more information about these cmdlets, see [Use PowerShell with the Microsoft Purview Information Protection client](/powershell/azure/aip/setup-information-protection-client-powershell#use-powershell-with-the-microsoft-purview-information-protection-client) from the PurviewInformationProtection PowerShell documentation.
 
 > [!NOTE]
-> The PurviewInformationProtection module is different from and supplements the [AIPService PowerShell module](administer-powershell.md) that manages the Azure Rights Management service for Microsofot Purview Information Protection.
+> The PurviewInformationProtection module is different from and supplements the [AIPService PowerShell module](administer-powershell.md) that manages the Azure Rights Management service for Microsoft Purview Information Protection.
 
 ### Removing protection on PST files
 
@@ -106,13 +106,13 @@ To remove protection on PST files, we recommend that you use [eDiscovery from Mi
 
 The super user ability is automatically integrated with Exchange Online so that eDiscovery in the Microsoft Purview portal can search for encrypted items prior to export, or decrypt encrypted email on export.
 
-If you cannot use Microsoft Purview eDiscovery, you might have another eDiscovery solution that integrates with the Azure Rights Management service to similarly reason over data. 
+If you can't use Microsoft Purview eDiscovery, you might have another eDiscovery solution that integrates with the Azure Rights Management service to similarly reason over data. 
 
 Or, if your eDiscovery solution cannot automatically read and decrypt protected content, you can still use this solution in a multi-step process together with the [Set-FileLabel](/powershell/module/purviewinformationprotection/set-filelabel) cmdlet:
 
 1. Export the email in question to a PST file from Exchange Online or Exchange Server, or from the workstation where the user stored their email.
 
-2. Import the PST file into your eDiscovery tool. Because the tool cannot read encrypted content, it's expected that these items will generate errors.
+2. Import the PST file into your eDiscovery tool. Because the tool cannot read encrypted content, expect these items to generate errors.
 
 3. From all the items that the tool couldn't open, generate a new PST file that this time, contains just encrypted items. This second PST file will likely be much smaller than the original PST file.
 
