@@ -100,9 +100,9 @@ For more information about these cmdlets, see [Use PowerShell with the Microsoft
 > [!NOTE]
 > The PurviewInformationProtection module is different from and supplements the [AIPService PowerShell module](administer-powershell.md) that manages the Azure Rights Management service for Microsoft Purview Information Protection.
 
-### Removing protection on PST files
+### Removing encryption from PST files
 
-To remove protection on PST files, we recommend that you use [eDiscovery from Microsoft Purview](/purview/ediscovery) to search and extract encrypted emails and encrypted attachments in emails.
+To remove encryption from PST files, we recommend that you use [eDiscovery from Microsoft Purview](/purview/ediscovery) to search and extract encrypted emails and encrypted attachments in emails.
 
 The super user ability is automatically integrated with Exchange Online so that eDiscovery in the Microsoft Purview portal can search for encrypted items prior to export, or decrypt encrypted email on export.
 
