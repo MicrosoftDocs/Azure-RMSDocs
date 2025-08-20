@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Configure super users for Azure Rights Management - AIP
-description: Understand and implement the super user feature of the Azure Rights Management service from Microsoft Purview Information Protection, so that authorized people and services can always read and inspect ("reason over") your organization's protected data.
+title: Configure super users for Azure Rights Management
+description: Understand and implement the super user feature of the Azure Rights Management service from Microsoft Purview Information Protection, so that authorized people and services can always read and inspect ("reason over") your organization's encrypted data.
 author: aashishr
 ms.author: aashishr
 manager: aashishr
-ms.date: 07/22/2021
+ms.date: 08/20/2025
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -25,7 +25,7 @@ ms.custom: admin
 
 ---
 
-# Configuring super users for Azure Information Protection and discovery services or data recovery
+# Configuring super users for Azure Rights Management and discovery services or data recovery
 
 The super user feature of the Azure Rights Management service from Microsoft Purview Information Protection ensures that authorized people and services can always read and inspect the data that Azure Rights Management encrypts for your organization. If necessary, the encryption protection can then be removed or changed.
 
