@@ -209,4 +209,4 @@ The default use license validity period for a tenant is 30 days and you can conf
 ## See Also
 
 - [Restrict access to content by using sensitivity labels to apply encryption](/microsoft-365/compliance/encryption-sensitivity-labels)
-- [Configuring super users for Azure Information Protection and discovery services or data recovery](configure-super-users.md)
+- [Configuring super users for Azure Information Protection and discovery services or data recovery](/purview/encryption-super-users)
