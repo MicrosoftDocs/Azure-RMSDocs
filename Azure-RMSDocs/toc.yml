@@ -107,8 +107,6 @@
           href: configure-office-apps.md
       - name: Configuring usage rights
         href: configure-usage-rights.md
-      - name: Configuring super users for discovery services or data recovery
-        href: configure-super-users.md
     - name: Deploying the RMS connector
       items:
       - name: Overview
