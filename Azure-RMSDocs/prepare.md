@@ -237,4 +237,4 @@ When you have confirmed that your users and groups can be used with Azure Inform
 
 - If your subscription was obtained before February 2018: You must activate the service yourself. 
 
-For more information, which includes checking the activation status, see [Activate the Azure Rights Management service](./activate-service.md).
+For more information, which includes checking the activation status, see [Activate the Azure Rights Management service](/purview/activate-rights-management-service).

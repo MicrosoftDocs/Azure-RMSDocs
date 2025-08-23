@@ -95,8 +95,6 @@
           href: migrate-from-ad-rms-phase5.md
     - name: Configuring the protection service
       items:
-      - name: Activating protection
-        href: activate-service.md
       - name: Configuring applications
         items:
         - name: Overview
@@ -131,8 +129,6 @@
         href: administer-powershell.md
       - name: Installing the AIPService PowerShell module
         href: install-powershell.md
-    - name: Decommissioning and deactivating AIP
-      href: decommission-deactivate.md
   - name: Deploying & using the client
     items:
     - name: Deploying the client
