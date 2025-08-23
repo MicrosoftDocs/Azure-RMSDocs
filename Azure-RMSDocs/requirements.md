@@ -94,7 +94,7 @@ This scenario is *not* supported during [migration](migrate-from-ad-rms-to-azure
 * [From Azure Information Protection to AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl)
 
 > [!TIP]
-> If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](decommission-deactivate.md).
+> If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommission and deactivate the Azure Rights Management service](/purview/decommission-deactivate).
 
 For other, non-migration scenarios, where both services are active in the same organization, both services must be configured so that only one of them allows any given user to protect content. Configure such scenarios as follows:
 

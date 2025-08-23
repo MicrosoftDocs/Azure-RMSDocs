@@ -88,7 +88,7 @@ Azure RMS provides the following features to support IT departments and infrastr
 > [!NOTE]
 > Organizations always have the choice to stop using the Azure Rights Management service without losing access to content that was previously protected by Azure Rights Management. 
 > 
-> For more information, see  [Decommissioning and deactivating Azure Rights Management](decommission-deactivate.md). 
+> For more information, see  [Decommission and deactivate the Azure Rights Management service](/purview/decommission-deactivate). 
 > 
 
 #### Create simple and flexible policies
@@ -102,7 +102,7 @@ Configure your labeling policies in the Microsoft Purview compliance portal. For
 
 #### Easy activation
 
-For new subscriptions, activation is automatic. For existing subscriptions, [activating the Rights Management service](activate-service.md) requires just a couple of clicks in your management portal, or two PowerShell commands.
+For new subscriptions, activation is automatic. For existing subscriptions, [activating the Rights Management service](/purview/activate-rights-management-service) requires just a couple of clicks in your management portal, or two PowerShell commands.
 
 #### Auditing and monitoring services
 

@@ -42,7 +42,7 @@ If your organization requires on-premises protection for highly sensitive conten
 
 Activate the Rights Management service if it's not yet activated, to enable your organization to start using Azure Information Protection. Users immediately start to use your tenant key.
 
-For more information, see [Activating the protection service from Azure Information Protection](./activate-service.md).
+For more information, see [Activate the Azure Rights Management service](./activate-service.md).
 
 > [!NOTE]
 > If you decided to manage your own tenant key after the Rights Management service was activated, users are gradually transitioned from the old key to the new key over the course of a few weeks.
