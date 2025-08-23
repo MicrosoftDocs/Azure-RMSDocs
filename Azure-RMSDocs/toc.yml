@@ -123,12 +123,6 @@
       href: verify.md
     - name: Managing personal data
       href: manage-personal-data.md
-    - name: Administering with PowerShell
-      items:
-      - name: Overview
-        href: /purview/administer-rights-management-powershell
-      - name: Install the AIPService PowerShell module for the Azure Right Management service
-        href: install-powershell.md
   - name: Deploying & using the client
     items:
     - name: Deploying the client
