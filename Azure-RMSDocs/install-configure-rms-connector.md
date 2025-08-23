@@ -102,7 +102,7 @@ During the RMS connector installation process, all prerequisite software is vali
 
 This procedure describes how to create a dedicated account to run the Azure RMS connector with the least privileges possible, to use when [signing in](#signin) during the RMS connector installation.
 
-1. If you haven't already done so, download and install the AIPService PowerShell module. For more information, see [Installing the AIPService PowerShell module](install-powershell.md).
+1. If you haven't already done so, download and install the AIPService PowerShell module. For more information, see [Install the AIPService PowerShell module for the Azure Right Management service](/purview/install-aipservice-powershell).
 
     Start Windows PowerShell with the **Run as administrator** command, and connect to the protection service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) command:
 

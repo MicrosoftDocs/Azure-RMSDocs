@@ -70,7 +70,7 @@ Azure Information Protection writes logs as a series of blobs to an Azure storag
 
 It can take a while for logs to appear in your storage account after a protection action. Most logs appear within 15 minutes. Usage logs are only available when the "date" field name contains a value of a previous date (in UTC time). Usage logs from the current date are not available. We recommend that you download the logs to local storage, such as a local folder, a database, or a map-reduce repository.
 
-To download your usage logs, you will use the AIPService PowerShell module for Azure Information Protection. For installation instructions, see [Installing the AIPService PowerShell module](install-powershell.md).
+To download your usage logs, you will use the AIPService PowerShell module for Azure Information Protection. For installation instructions, see [Install the AIPService PowerShell module for the Azure Right Management service](/purview/install-aipservice-powershell).
 
 ### To download your usage logs by using PowerShell
 

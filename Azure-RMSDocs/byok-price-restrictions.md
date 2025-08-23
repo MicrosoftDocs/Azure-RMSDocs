@@ -157,7 +157,7 @@ BYOK prerequisites vary, depending on your system configuration. Verify that you
 |Requirement  |Description  |
 |---------|---------|
 |**Azure subscription**     |Required for all configurations. <br />For more information, see [Verifying that you have a BYOK-compatible Azure subscription](#verifying-that-you-have-a-byok-compatible-azure-subscription).         |
-|**AIPService PowerShell module for Azure Information Protection**|Required for all configurations. <br />For more information, see [Installing the AIPService PowerShell module](./install-powershell.md).|
+|**AIPService PowerShell module for Azure Information Protection**|Required for all configurations. <br />For more information, see [Install the AIPService PowerShell module for the Azure Right Management service](/purview/install-aipservice-powershell).|
 |**Azure Key Vault prerequisites for BYOK** | If you are using an HSM-protected key that was created on-premises, ensure that you also comply with the [prerequisites for BYOK](/azure/key-vault/keys/hsm-protected-keys-byok#prerequisites) listed in the Azure Key Vault documentation.         |
 |**Thales firmware version 11.62**    |You must have a Thales firmware version of 11.62 if you are migrating from AD RMS to Azure Information Protection by using software key to hardware key and are using Thales firmware for your HSM.
 |**Firewall bypass for trusted Microsoft services** |If the key vault that contains your tenant key uses Virtual Network Service Endpoints for Azure Key Vault, you must allow trusted Microsoft services to bypass this firewall. <br />For more information, see [Virtual Network Service Endpoints for Azure Key Vault](/azure/key-vault/general/overview-vnet-service-endpoints).       |

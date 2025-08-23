@@ -34,7 +34,7 @@ The table in the next section includes some of the advanced configuration scenar
 
 For a complete list of the available cmdlets for this module, with more information about each one, see [AIPService](/powershell/module/aipservice/#aipservice).
 
-To install this PowerShell module, see [Installing the AIPService PowerShell module](install-powershell.md).
+To install this PowerShell module, see [Install the AIPService PowerShell module for the Azure Right Management service](/purview/install-aipservice-powershell).
 
 > [!TIP]
 > In addition to this service-side PowerShell module, the Azure Information Protection client installs a supplemental PowerShell module, **AzureInformationProtection**. 

@@ -24,7 +24,7 @@ ms.custom: admin
 
 ---
 
-# Installing the AIPService PowerShell module
+# Install the AIPService PowerShell module for the Azure Right Management service
 
 
 
