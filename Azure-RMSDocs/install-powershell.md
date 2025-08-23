@@ -30,7 +30,7 @@ ms.custom: admin
 
 Use the following information to help you install the Windows PowerShell module for the protection service from Azure Information Protection. The name of this module is AIPService, and it replaces the previous version that was named AADRM.
 
-You can use this PowerShell module to administer the protection service (Azure Rights Management) from the command line by using any Windows computer that has an internet connection and that meets the prerequisites listed in the next section. Windows PowerShell for Azure Information Protection supports scripting for automation or might be necessary for advanced configuration scenarios. For more information about the administration tasks and configurations that the module supports, see [Administering protection from Azure Information Protection by using PowerShell](administer-powershell.md).
+You can use this PowerShell module to administer the protection service (Azure Rights Management) from the command line by using any Windows computer that has an internet connection and that meets the prerequisites listed in the next section. Windows PowerShell for Azure Information Protection supports scripting for automation or might be necessary for advanced configuration scenarios. For more information about the administration tasks and configurations that the module supports, see [Administering the Azure Rights Management service by using PowerShell](/purview/administer-rights-management-powershell).
 
 ## Prerequisites
 
@@ -108,7 +108,7 @@ For more information:
 
 - Full list of cmdlets available: [AIPService Module](/powershell/module/aipservice/)
 
-- List of main configuration scenarios that support PowerShell: [Administering protection from Azure Information Protection by using PowerShell](administer-powershell.md)
+- List of main configuration scenarios that support PowerShell: [Administering the Azure Rights Management service by using PowerShell](/purview/administer-rights-management-powershell)
 
 Before you can run any commands that configure the protection service, you must connect to the service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) cmdlet.
 

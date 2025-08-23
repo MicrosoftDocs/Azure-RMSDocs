@@ -126,7 +126,7 @@
     - name: Administering with PowerShell
       items:
       - name: Overview
-        href: administer-powershell.md
+        href: /purview/administer-rights-management-powershell
       - name: Installing the AIPService PowerShell module
         href: install-powershell.md
   - name: Deploying & using the client

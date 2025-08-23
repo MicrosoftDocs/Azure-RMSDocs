@@ -95,7 +95,7 @@ Administrators with this role can:
 - Activate and deactivate the Azure Rights Management protection service
 - Configure protection settings and labels
 - Configure the Azure Information Protection policy
-- Run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/clientv2-admin-guide-powershell.md) and from the [AIPService module](administer-powershell.md)
+- Run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/clientv2-admin-guide-powershell.md) and from the [AIPService module](/purview/administer-rights-management-powershell)
 
 To assign a user to this administrative role, see [Assign a user to administrator roles in Microsoft Entra ID](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
@@ -106,7 +106,7 @@ These Microsoft Entra administrator roles enable administrators to:
 - Configure Azure Information Protection, including activating and deactivating the Azure Rights Management protection service
 - Configure protection settings and labels
 - Configure the Azure Information Protection policy
-- Run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/clientv2-admin-guide-powershell.md) and from the [AIPService module](administer-powershell.md).
+- Run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/clientv2-admin-guide-powershell.md) and from the [AIPService module](/purview/administer-rights-management-powershell).
 
 To assign a user to this administrative role, see [Assign a user to administrator roles in Microsoft Entra ID](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
@@ -120,7 +120,7 @@ To see what other permissions a user with these roles have, see the [Available r
 
 This Microsoft Entra administrator role enables administrators to configure Azure Information Protection in the Azure portal and some aspects of other Azure services.
 
-Administrators with this role cannot run any of the [PowerShell cmdlets from the AIPService module](administer-powershell.md), or [track and revoke](rms-client/track-and-revoke-admin.md) documents for users.
+Administrators with this role cannot run any of the [PowerShell cmdlets from the AIPService module](/purview/administer-rights-management-powershell), or [track and revoke](rms-client/track-and-revoke-admin.md) documents for users.
 
 To assign a user to this administrative role, see [Assign a user to administrator roles in Microsoft Entra ID](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
@@ -128,7 +128,7 @@ To see what other permissions a user with this role has, see the [Available role
 
 ### Azure Rights Management Global Administrator and Connector Administrator
 
-The Global Administrator role enables users to run all [PowerShell cmdlets from the AIPService module](administer-powershell.md) without making them a global administrator for other cloud services.
+The Global Administrator role enables users to run all [PowerShell cmdlets from the AIPService module](/purview/administer-rights-management-powershell) without making them a global administrator for other cloud services.
 
 The Connector Administrator role enables users to run only the Rights Management (RMS) connector.
 

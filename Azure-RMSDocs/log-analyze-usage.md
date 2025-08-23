@@ -198,4 +198,4 @@ File access and denied events do not currently include file name and are not acc
 
 The only PowerShell cmdlet that you need to access your protection usage logging is [Get-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog). 
 
-For more information about using PowerShell for Azure Information Protection, see [Administering protection from Azure Information Protection by using PowerShell](administer-powershell.md).
+For more information about using PowerShell for Azure Information Protection, see [Administering the Azure Rights Management service by using PowerShell](/purview/administer-rights-management-powershell).
