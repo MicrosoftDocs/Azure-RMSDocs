@@ -75,7 +75,7 @@ Tip: To check whether a document was protected by a template or by using custom 
 Absolutely, and the nice thing is, users are able to seamlessly protect and consume protected emails and attachments across the two Exchange deployments. For this configuration, [activate Azure RMS](/purview/activate-rights-management-service) and [enable IRM for Exchange Online](/microsoft-365/enterprise/activate-rms-in-microsoft-365), then [deploy and configure the RMS connector](deploy-rms-connector.md) for Exchange Server.
 
 ## If I use this protection for my production environment, is my company then locked into the solution or risk losing access to content that we protected with Azure RMS?
-No, you always remain in control of your data and can continue to access it, even if you decide to no longer use the Azure Rights Management service. For more information, see [Decommission and deactivate the Azure Rights Management service](/purview/decommission-deactivate).
+No, you always remain in control of your data and can continue to access it, even if you decide to no longer use the Azure Rights Management service. For more information, see [Decommission and deactivate the Azure Rights Management service](/purview/deactivate-rights-management-service).
 
 ## Can I control which of my users can use Azure RMS to protect content?
 Yes, the Azure Rights Management service has user onboarding controls for this scenario. For more information, see the [Configuring onboarding controls for a phased deployment](/purview/activate-rights-management-service#configuring-onboarding-controls-for-a-phased-deployment) section in the [Activate the Azure Rights Management service](/purview/activate-rights-management-service) article.

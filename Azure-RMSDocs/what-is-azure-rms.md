@@ -88,7 +88,7 @@ Azure RMS provides the following features to support IT departments and infrastr
 > [!NOTE]
 > Organizations always have the choice to stop using the Azure Rights Management service without losing access to content that was previously protected by Azure Rights Management. 
 > 
-> For more information, see  [Decommission and deactivate the Azure Rights Management service](/purview/decommission-deactivate). 
+> For more information, see  [Decommission and deactivate the Azure Rights Management service](/purview/deactivate-rights-management-service). 
 > 
 
 #### Create simple and flexible policies
