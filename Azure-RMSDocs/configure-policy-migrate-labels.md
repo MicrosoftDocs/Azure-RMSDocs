@@ -173,7 +173,7 @@ In Outlook, protection is preserved with one exception: When an email has been p
 Protection is removed if the user has a usage right or role that supports this action:
 
 - The [usage right](configure-usage-rights.md#usage-rights-and-descriptions) Export or Full Control.
-- The role of [Rights Management issuer or Rights Management owner](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), or [super user](configure-super-users.md).
+- The role of [Rights Management issuer or Rights Management owner](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), or [super user](/purview/encryption-super-users).
 
 If the user doesn't have one of these usage rights or roles, the label is not applied and the original protection is preserved.
 
