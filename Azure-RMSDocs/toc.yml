@@ -21,8 +21,6 @@
       href: parity-between-azure-information-protection.md
   - name: Azure Rights Management
     items:
-    - name: Overview
-      href: what-is-azure-rms.md
     - name: How Rights Management protection works
       href: how-does-it-work.md
     - name: How applications support Azure Rights Management protection

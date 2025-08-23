@@ -57,7 +57,7 @@ Azure Information Protection (AIP) provides classification, labeling, and protec
 
 Content is protected using the Azure Rights Management service, which is now a component of AIP.
 
-For more information, see [How AIP protects your data](aip-classification-and-protection.md#how-aip-protects-your-data) and [What is Azure Rights Management?](what-is-azure-rms.md).
+For more information, see [How AIP protects your data](aip-classification-and-protection.md#how-aip-protects-your-data) and [Learn about the Azure Rights Management service](/purview/iazure-rights-management-learn-about)).
 
 ## What subscription do I need for Azure Information Protection and what features are included?
 
