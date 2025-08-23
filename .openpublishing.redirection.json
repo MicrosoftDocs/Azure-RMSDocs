@@ -142,6 +142,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/activate-service.md",
+      "redirect_url": "https://learn.microsoft.com/purview/activate-rights-management-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/decommission-deactivate.md",
+      "redirect_url": "https://learn.microsoft.com/purview/deactivate-rights-management-service",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/rms-client/mobile-app-faq.md",
       "redirect_url": "https://support.microsoft.com/topic/view-protected-files-with-the-azure-information-protection-viewer-9fb56fae-7989-48b0-850f-f446e057cf73#ID0EBF=iOS",
       "redirect_document_id": false
