@@ -1197,6 +1197,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "Azure-RMSDocs/deploy-use/log-analyze-usage.md",
+            "redirect_url": "/information-protection/rights-management-usage",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "Azure-RMSDocs/deploy-use/configure-adrms-restrictions.md",
             "redirect_url": "/information-protection/configure-adrms-restrictions",
             "redirect_document_id": false
