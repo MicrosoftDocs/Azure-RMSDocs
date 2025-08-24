@@ -57,4 +57,4 @@ Depending on your key management method, logging information may include details
 
 ![log file in Excel where tenant key is being used](./media/RMS_Logging.png)
 
-For more information about usage logging, see [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md).
+For more information about usage logging, see [Usage logging for the Azure Rights Management service](/purview/information-protection/rights-management-usage).

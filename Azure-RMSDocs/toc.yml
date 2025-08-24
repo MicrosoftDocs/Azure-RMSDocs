@@ -129,8 +129,6 @@
     items:
     - name: Using AIP reports
       href: reports-aip.md
-    - name: Viewing & analyzing service usage
-      href: log-analyze-usage.md
   - name: Developing & customizing apps
     items:
     - name: Microsoft Information Protection SDK
