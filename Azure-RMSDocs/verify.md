@@ -34,7 +34,7 @@ A simple verification test is to protect a document or email message by using on
 
 ## Next steps
 
-You can monitor how your organization is using this protection service by using usage logging. For more information, see [Logging and analyzing the protection usage from Azure Information Protection](/purview/information-protection/rights-management-usage).
+You can monitor how your organization is using this protection service by using usage logging. For more information, see [Logging and analyzing the protection usage from Azure Information Protection](/purview/rights-management-usage).
 
 
 
