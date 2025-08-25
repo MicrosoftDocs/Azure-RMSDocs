@@ -12,7 +12,12 @@
     },
     {
       "source_path": "Azure-RMSDocs/faqs-infoprotect.md",
-      "redirect_url": "/purview/get-sensitivity-labels",
+      "redirect_url": "/purview/sensitivity-labels",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-office-apps.md",
+      "redirect_url": "/purview/encryption-sensitivity-labels",
       "redirect_document_id": false
     },
     {

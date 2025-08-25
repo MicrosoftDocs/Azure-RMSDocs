@@ -101,8 +101,6 @@
           href: configure-applications.md
         - name: Microsoft 365 services
           href: configure-office365.md
-        - name: Office apps
-          href: configure-office-apps.md
       - name: Configuring usage rights
         href: configure-usage-rights.md
     - name: Deploying the RMS connector
