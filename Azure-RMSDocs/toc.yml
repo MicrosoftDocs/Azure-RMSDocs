@@ -155,8 +155,6 @@
     items:
     - name: FAQs - general
       href: faqs.md
-    - name: FAQs - classification & labeling
-      href: faqs-infoprotect.md
     - name: FAQs - data protection
       href: faqs-rms.md
   - name: Known issues
