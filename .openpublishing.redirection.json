@@ -167,6 +167,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/log-analyze-usage.md",
+      "redirect_url": "https://learn.microsoft.com/rights-management-usage",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/rms-client/mobile-app-faq.md",
       "redirect_url": "https://support.microsoft.com/topic/view-protected-files-with-the-azure-information-protection-viewer-9fb56fae-7989-48b0-850f-f446e057cf73#ID0EBF=iOS",
       "redirect_document_id": false
@@ -1194,11 +1199,6 @@
         {
             "source_path": "Azure-RMSDocs/deploy-use/administer-powershell.md",
             "redirect_url": "/information-protection/administer-powershell",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "Azure-RMSDocs/deploy-use/log-analyze-usage.md",
-            "redirect_url": "/information-protection/rights-management-usage",
             "redirect_document_id": false
         },
         {
