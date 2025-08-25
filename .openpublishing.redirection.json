@@ -11,6 +11,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/faqs.md",
+      "redirect_url": "/purview/sensitivity-labels",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/faqs-infoprotect.md",
       "redirect_url": "/purview/sensitivity-labels",
       "redirect_document_id": false

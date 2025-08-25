@@ -93862,6 +93862,5 @@ Additionally, using a label with UDP (User Defined Permissions) as a default lab
 The following additional articles might be helpful in answering questions you have about Azure Information Protection:
 
 - [File types supported by the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-file-types.md)
-- [Frequently asked questions for Azure Information Protection](faqs.md)
 - [Frequently asked questions about data protection in Azure Information Protection](faqs-rms.md)
 

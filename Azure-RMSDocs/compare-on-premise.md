@@ -81,6 +81,3 @@ If you're looking to migrate from AD RMS to Azure Information Protection, see [M
 
 Get started with [Active Directory Rights Management Services Mobile Device Extension](./active-directory-rights-manage-mobile-device.md). 
 
-You might be interested in the following FAQs:
-- [What's the difference between Azure Information Protection and Microsoft Purview Information Protection?](rms-client/use-client.md#whats-the-difference-between-azure-information-protection-and-microsoft-purview-information-protection)
-- [What's the difference between Azure Information Protection and Azure Rights Management?](faqs.md#whats-the-difference-between-azure-information-protection-and-azure-rights-management)
