@@ -33,7 +33,6 @@ For deployment scenarios that use sensitivity labels to apply the Azure Rights M
 
 ## Community resources
 
-Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
 - [How to Build a Custom AIP Tracking Portal](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-Build-a-Custom-AIP-Tracking-Portal/ba-p/875849)
 - [Create richer reports with Microsoft Purview Information Protection and Microsoft Entra login data](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
 - [Leverage Microsoft Defender for Cloud Apps to apply Azure Information Protection labels in the cloud](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Leverage-Microsoft-Cloud-App-Security-to-apply-Azure-Information/ba-p/388638)
