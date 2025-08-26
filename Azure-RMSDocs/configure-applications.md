@@ -70,6 +70,6 @@ If not, you might find the following operational information useful:
 
 - [Helping users to protect files by using the Azure Rights Management service](help-users.md)
 
-- [Logging and analyzing the Azure Rights Management service](log-analyze-usage.md)
+- [Usage logging for the Azure Rights Management service](/purview/rights-management-usage)
 
 - [Operations for your Azure Information Protection tenant key](operations-tenant-key.md)

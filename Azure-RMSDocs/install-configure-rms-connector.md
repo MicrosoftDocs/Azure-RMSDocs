@@ -77,7 +77,7 @@ Before you begin:
     The Azure Rights Management global administrator role and Azure Rights Management connector administrator role are assigned to accounts by using the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) cmdlet.
 
     > [!NOTE]
-    > If you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content.
+    > If you have implemented [onboarding controls](/purview/activate-rights-management-service#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content.
     >
     > For example, if you restricted the ability to protect content to the "IT department" group, the account that you specify here must be a member of that group. If not, you see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
     >
@@ -102,7 +102,7 @@ During the RMS connector installation process, all prerequisite software is vali
 
 This procedure describes how to create a dedicated account to run the Azure RMS connector with the least privileges possible, to use when [signing in](#signin) during the RMS connector installation.
 
-1. If you haven't already done so, download and install the AIPService PowerShell module. For more information, see [Installing the AIPService PowerShell module](install-powershell.md).
+1. If you haven't already done so, download and install the AIPService PowerShell module. For more information, see [Install the AIPService PowerShell module for the Azure Right Management service](/purview/install-aipservice-powershell).
 
     Start Windows PowerShell with the **Run as administrator** command, and connect to the protection service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) command:
 

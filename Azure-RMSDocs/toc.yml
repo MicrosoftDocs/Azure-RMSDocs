@@ -19,8 +19,6 @@
       href: parity-between-azure-information-protection.md
   - name: Azure Rights Management
     items:
-    - name: Overview
-      href: what-is-azure-rms.md
     - name: How Rights Management protection works
       href: how-does-it-work.md
     - name: How applications support Azure Rights Management protection
@@ -93,8 +91,6 @@
           href: migrate-from-ad-rms-phase5.md
     - name: Configuring the protection service
       items:
-      - name: Activating protection
-        href: activate-service.md
       - name: Configuring applications
         items:
         - name: Overview
@@ -121,14 +117,6 @@
       href: verify.md
     - name: Managing personal data
       href: manage-personal-data.md
-    - name: Administering with PowerShell
-      items:
-      - name: Overview
-        href: administer-powershell.md
-      - name: Installing the AIPService PowerShell module
-        href: install-powershell.md
-    - name: Decommissioning and deactivating AIP
-      href: decommission-deactivate.md
   - name: Deploying & using the client
     items:
     - name: Deploying the client
@@ -137,8 +125,6 @@
     items:
     - name: Using AIP reports
       href: reports-aip.md
-    - name: Viewing & analyzing service usage
-      href: log-analyze-usage.md
   - name: Developing & customizing apps
     items:
     - name: Microsoft Information Protection SDK

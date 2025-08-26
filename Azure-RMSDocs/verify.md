@@ -30,11 +30,13 @@ ms.custom: admin
 
 When the protection service (Azure Rights Management) from Azure Information Protection is activated and you have performed any additional configuration steps that are required for your organization, you are ready to verify that this protection service is working as expected. 
 
+## How to verify
+
 A simple verification test is to protect a document or email message by using one user account, and then attempt to open and use that protected content from another user account on a different computer.
 
 ## Next steps
 
-You can monitor how your organization is using this protection service by using usage logging. For more information, see [Logging and analyzing the protection usage from Azure Information Protection](log-analyze-usage.md).
+You can monitor how your organization is using this protection service by using usage logging. For more information, see [Logging and analyzing the protection usage from Azure Information Protection](/purview/rights-management-usage).
 
 
 
