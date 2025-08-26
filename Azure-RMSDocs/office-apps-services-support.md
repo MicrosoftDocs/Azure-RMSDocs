@@ -36,7 +36,7 @@ These applications support Azure Rights Management built-in, and let users apply
 
 For example, users can configure a Word document so that it can be accessed only by people in your organization. Or, control whether an Excel spreadsheet can be edited, or restricted to read-only, or prevent it from being printed. For time-sensitive files, an expiration time can be configured for when the file can no longer be accessed. This configuration can be made directly by users or by applying a protection template. For Outlook, users can also choose the **Do Not Forward** option to help prevent data leakage.
 
-If you are ready to configure Office apps see [Office apps: Configuration for clients](configure-office-apps.md).
+If you are ready to configure Office apps see [Restrict access to content by using sensitivity labels to apply encryption](/purview/encryption-sensitivity-labels).
 
 ## Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can configure options for Azure Information Protection. This configuration lets Exchange provide the following protection solutions:

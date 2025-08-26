@@ -51,11 +51,23 @@ For more information about this change, see the blog announcement: [Office 365 M
 
 Although the Rights Management connector logs information, warning, and error messages to the event log, there isn't a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Microsoft Rights Management connector](monitor-rms-connector.md).
 
-## How do I create a new custom template in the Azure portal?
+## I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?
 
-Custom templates have moved to the Azure portal where you can continue to manage them as templates, or convert them to labels. To create a new template, create a new label and configure the data protection settings for Azure RMS. Under the covers, this creates a new template that can then be accessed by services and applications that integrate with Rights Management templates.
+Yes, you can configure Microsoft Entra Conditional Access for Azure Information Protection.
 
-For more information about templates in the Azure portal, see [Configuring and managing templates for Azure Information Protection](/previous-versions/azure/information-protection/configure-policy-templates).
+When a user opens a document that is protected by Azure Information Protection, administrators can block or grant access to users in their tenant, based on the standard conditional access controls. Requiring multifactor authentication (MFA) is one of the most commonly requested conditions. Another one is that devices must be [compliant with your Intune policies](/mem/intune/protect/conditional-access-intune-common-ways-use) so that, for example, mobile devices meet your password requirements and a minimum operating system version, and computers must be domain-joined.
+
+For more information, see [Conditional Access policies and encrypted documents](/purview/encryption-azure-ad-configuration).
+
+Additional information:
+
+|Topic  |Details  |
+|---------|---------|
+|**Evaluation frequency**    | For Windows computers, and the current preview release, the conditional access policies for Azure Information Protection are evaluated when the [user environment is initialized](./how-does-it-work.md#initializing-the-user-environment) (this process is also known as bootstrapping), and then every 30 days.<br /><br />To fine-tune how often your conditional access policies get evaluated, [configure the token lifetime](/azure/active-directory/active-directory-configurable-token-lifetimes).       |
+|**Administrator accounts**     |We recommend that you do not add administrator accounts to your conditional access policies because these accounts will not be able to access the Azure Information Protection pane in the Azure portal.         |
+|**MFA and B2B collaboration**     |If you use MFA in your conditional access policies for collaborating with other organizations (B2B), you must use [Microsoft Entra B2B collaboration](/azure/active-directory/b2b/what-is-b2b) and create guest accounts for the users you want to share with in the other organization.        |
+|**Terms of Use prompts**     |With the Microsoft Entra December 2018 preview release, you can now [prompt users to accept a terms of use](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822) before they open a protected document for the first time.       |
+|**Cloud apps**     |If you use many cloud apps for conditional access, you might not see **Microsoft Information Protection Sync Service** and **Microsoft Rights Management Service** displayed in the list to select. <br /><br />In this case, use the search box at the top of the list. Start typing "Microsoft Information Protection Sync Service" and "Microsoft Rights Management Service" to filter the available apps. Providing you have a supported subscription; you'll then see these options and will be able to select them. |
 
 ## I've protected a document and now want to change the usage rights or add users—do I need to reprotect the document?
 

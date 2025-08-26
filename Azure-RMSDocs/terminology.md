@@ -183,6 +183,3 @@ Confused by a word, phrase, or acronym that's related to Azure Information Prote
 |**unprotect**|Remove protection controls from files or email messages, which used encryption, identity, usage rights, and access control policies to help secure your data.|
 |**use license**|A per-document certificate that is granted to a user who opens a file or email message that has been protected by a rights management service. </br></br>This certificate contains that user’s rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document’s policy.|
 
-## Next steps
-
-For more information about AIP names, see [Azure Information Protection - also known as ...](aka.md).
