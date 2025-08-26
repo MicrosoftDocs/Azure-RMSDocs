@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: How-to instructions for Azure Information Protection common scenarios 
-description: Identify use cases that classify and protect your organization's data by using Azure Information Protection.
+title: How-to instructions for the Azure Rights Management service 
+description: Resources to configure the Azure Rights Management service.
 author: aashishr
 ms.author: aashishr
 manager: aashishr
-ms.date: 11/11/2020
+ms.date: 08/26/2025
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -16,36 +16,24 @@ ms.service: information-protection
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: eymanor
+ms.reviewer: 
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
 
 ---
 
-# How-to guides for common scenarios that use Azure Information Protection
+# Resources to configure the Azure Rights Management service
 
 [!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
-There are many ways in which you can use Azure Information Protection when you label and protect your organization's documents and emails. 
+The documentation for the Azure Rights Management service from Microsoft Purview Information Protection is in the process of being migrated to the [Azure Rights Management service documentation](/purview/azure-rights-management-learn-about) for Microsoft Purview Information Protection.
 
-The most successful deployments are those that identify specific use cases that provide the most business benefit to the organization.
+For deployment scenarios that use sensitivity labels to apply the Azure Rights Management encryption, see [Common scenarios for sensitivity labels](/purview/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels) in the Microsoft Purview documentation.> 
 
-## Common scenarios
+## Community resources
 
-- [Use my own key to protect my organization's data](plan-implement-tenant-key.md)
-
-For additional information, see [Common scenarios for sensitivity labels](/purview/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels) in the Microsoft Purview documentation.
-> 
-
-## Additional deployment instructions
-
-Our [Azure Information Protection technical blog](https://aka.ms/AIPblog) includes additional guidance from the trenches.
-
-For example, for a methodology with best practices for business decision makers and IT implementers, see [Azure Information Protection Deployment Acceleration Guide](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
-
-For more information and step-by-step instructions, see:
-
+- [Azure Information Protection Deployment Acceleration Guide](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
 - [How to Build a Custom AIP Tracking Portal](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-Build-a-Custom-AIP-Tracking-Portal/ba-p/875849)
 - [Create richer reports with Microsoft Purview Information Protection and Microsoft Entra login data](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
 - [Leverage Microsoft Defender for Cloud Apps to apply Azure Information Protection labels in the cloud](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Leverage-Microsoft-Cloud-App-Security-to-apply-Azure-Information/ba-p/388638)
