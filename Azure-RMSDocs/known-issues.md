@@ -62,20 +62,6 @@ The current release of the **AzureInformationProtection** PowerShell module that
 
 For more information, see [Admin Guide: Using PowerShell with the Azure Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell).
 
-## Known issues AIP Scanner authentication in version 2.16.73
-
-If you're using version 2.16.73 of the AIP Scanner or installing it for the first time, you might encounter an error when trying to authenticate. The error message reads "Unable to authenticate and set up Microsoft Azure Information Protection."
-
-This issue is caused by a problem with MSAL authentication. To resolve it, you can add a registry key to the server. 
-
-Path: Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP
-
-DWORD: AuthenticateUsingAdal
-
-Value: 1 
-
-By adding this registry key, the Scanner authenticates using ADAL instead.
-
 ## Known issues AIP Scanner
 
 - Scanning of .msg files with signed PDF files is currently not supported.
