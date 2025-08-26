@@ -11,6 +11,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/terminology.md",
+      "redirect_url": "/purview/rights-management-learn-about",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/manage-personal-data.md",
       "redirect_url": "/purview/rights-management-personal-data",
       "redirect_document_id": false
