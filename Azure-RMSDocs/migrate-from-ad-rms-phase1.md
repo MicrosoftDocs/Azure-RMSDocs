@@ -33,7 +33,7 @@ Use the following information for Phase 1 of migrating from AD RMS to Azure Info
 
 Install the **AIPService** module to enable you to configure and manage the service that provides the data protection for Azure Information Protection.
 
-For instructions, see [Installing the AIPService PowerShell module](./install-powershell.md).
+For instructions, see [Install the AIPService PowerShell module for the Azure Right Management service](/purview/install-aipservice-powershell).
 
 To complete some of the migration instructions, you need to know the Azure Rights Management service URL for your tenant, so that you can substitute it for when you see references to *\<Your Tenant URL\>*. 
 

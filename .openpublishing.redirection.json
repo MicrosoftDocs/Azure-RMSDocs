@@ -11,6 +11,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/manage-personal-data.md",
+      "redirect_url": "/purview/rights-management-personal-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/verify.md",
+      "redirect_url": "/purview/activate-rights-management-service#next-steps",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/faqs.md",
       "redirect_url": "/purview/sensitivity-labels",
       "redirect_document_id": false
@@ -164,6 +174,36 @@
     {
       "source_path": "Azure-RMSDocs/configure-super-users.md",
       "redirect_url": "https://learn.microsoft.com/purview/encryption-super-users",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/activate-service.md",
+      "redirect_url": "https://learn.microsoft.com/purview/activate-rights-management-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/decommission-deactivate.md",
+      "redirect_url": "https://learn.microsoft.com/purview/deactivate-rights-management-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/administer-powershell.md",
+      "redirect_url": "https://learn.microsoft.com/purview/administer-rights-management-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/install-powershell.md",
+      "redirect_url": "https://learn.microsoft.com/purview/install-aipservice-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/what-is-azure-rms.md",
+      "redirect_url": "https://learn.microsoft.com/purview/azure-rights-management-learn-about",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/log-analyze-usage.md",
+      "redirect_url": "https://learn.microsoft.com/purview/rights-management-usage",
       "redirect_document_id": false
     },
     {

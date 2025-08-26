@@ -90,11 +90,11 @@ Known issues for coauthoring are relevant only when coauthoring is [enabled in y
 
 Known issues for coauthoring in AIP include:
 
-- [Supported versions for coauthoring and sensitivity labels](#supported-versions-for-co-authoring-and-sensitivity-labels)
+- [Supported versions for coauthoring and sensitivity labels](#supported-versions-for-coauthoring-and-sensitivity-labels)
 
 - [Policy updates](#policy-updates)
 
-- [Unsupported features for coauthoring](#unsupported-features-for-co-authoring)
+- [Unsupported features for coauthoring](#unsupported-features-for-coauthoring)
 
 > [!IMPORTANT]
 > Coauthoring and sensitivity labels can't be deployed to some users only, as any new labels won't be visible to users with an older version of the Office client.

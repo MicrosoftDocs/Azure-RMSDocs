@@ -180,7 +180,7 @@ If you have recently added new server accounts to use the connector, a good coun
 
 Usage logging helps you identify when emails and documents are protected and consumed. When the RMS connector is used to protect and consume content, the user ID field in the logs contains the service principal name of **Aadrm_S-1-7-0**. This name is automatically created for the RMS connector.
 
-For more information about usage logging, see [Logging and analyzing the protection usage from Azure Information Protection](log-analyze-usage.md).
+For more information about usage logging, see [Usage logging for the Azure Rights Management service](/purview/rights-management-usage).
 
 If you need more detailed logging for diagnosis purposes, use [DebugView](/sysinternals/downloads/debugview) from Windows Sysinternals to output the logs to a debug pipe. 
 

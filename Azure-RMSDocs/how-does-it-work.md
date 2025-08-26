@@ -85,7 +85,7 @@ Licenses and certificates that are sent to a Windows device are protected with t
 
 ## Walkthrough of how Azure RMS works: First use, content protection, content consumption
 
-To understand in more detail how Azure RMS works, let's walk through a typical flow after the [Azure Rights Management service is activated](activate-service.md) and when a user first uses the Rights Management service on their Windows computer (a process sometimes known as **initializing the user environment** or bootstrapping), **protects content** (a document or email), and then **consumes**  (opens and uses) content that has been protected by somebody else.
+To understand in more detail how Azure RMS works, let's walk through a typical flow after the [Azure Rights Management service is activated](/purview/activate-rights-management-service) and when a user first uses the Rights Management service on their Windows computer (a process sometimes known as **initializing the user environment** or bootstrapping), **protects content** (a document or email), and then **consumes**  (opens and uses) content that has been protected by somebody else.
 
 After the user environment is initialized, that user can then protect documents or consume protected documents on that computer.
 
