@@ -84,29 +84,29 @@ By adding this registry key, the Scanner authenticates using ADAL instead.
 
 - Password protected files.
 
-### Known issues for co-authoring
+### Known issues for coauthoring
 
-Known issues for co-authoring are relevant only when co-authoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
+Known issues for coauthoring are relevant only when coauthoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
 
-Known issues for co-authoring in AIP include:
+Known issues for coauthoring in AIP include:
 
-- [Supported versions for co-authoring and sensitivity labels](#supported-versions-for-co-authoring-and-sensitivity-labels)
+- [Supported versions for coauthoring and sensitivity labels](#supported-versions-for-co-authoring-and-sensitivity-labels)
 
 - [Policy updates](#policy-updates)
 
-- [Unsupported features for co-authoring](#unsupported-features-for-co-authoring)
+- [Unsupported features for coauthoring](#unsupported-features-for-co-authoring)
 
 > [!IMPORTANT]
-> Co-authoring and sensitivity labels can't be deployed to some users only, as any new labels won't be visible to users with an older version of the Office client.
+> Coauthoring and sensitivity labels can't be deployed to some users only, as any new labels won't be visible to users with an older version of the Office client.
 >
-> For more information about co-authoring support, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring), especially [documented limitations](/microsoft-365/compliance/sensitivity-labels-coauthoring).
+> For more information about coauthoring support, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring), especially [documented limitations](/microsoft-365/compliance/sensitivity-labels-coauthoring).
 >
 
-#### Supported versions for co-authoring and sensitivity labels
+#### Supported versions for coauthoring and sensitivity labels
 
-All apps, services, and operation tools in your tenant must support co-authoring.
+All apps, services, and operation tools in your tenant must support coauthoring.
 
-Before you start, make sure that your system complies with the version requirements listed in the [Microsoft 365 prerequisites for co-authoring](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites). 
+Before you start, make sure that your system complies with the version requirements listed in the [Microsoft 365 prerequisites for coauthoring](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites). 
 
 We recommend that you always use the latest Office version available. Earlier versions might cause unexpected results, such as not being able to see labels in Azure Information Protection, or no policy enforcement.
 
@@ -53701,7 +53701,7 @@ We recommend that you always use the latest Office version available. Earlier ve
 
 
 > [!NOTE]
-> While sensitivity labels can be applied on files in Office 97-2003 formats, such as  **.doc**, **.ppt**, and **.xls**, co-authoring for these file types isn't supported. Once a label is applied on a newly-created file, or a file in the advanced file format, such as **.docx**, **.pptx**, and **.xlsx**, saving the file in an Office 97-2003 format will cause the label to be removed.
+> While sensitivity labels can be applied on files in Office 97-2003 formats, such as  **.doc**, **.ppt**, and **.xls**, coauthoring for these file types isn't supported. Once a label is applied on a newly-created file, or a file in the advanced file format, such as **.docx**, **.pptx**, and **.xlsx**, saving the file in an Office 97-2003 format will cause the label to be removed.
 >
 
 #### Policy updates
@@ -53714,9 +53714,9 @@ If this occurs, close and reopen your Office application to be able to apply you
 > Unlike the Microsoft Azure Information Protection dialog box, the **Restricted Access** dialog box doesn't support specifying a domain name to automatically include all users in the organization.
 >
 
-#### Unsupported features for co-authoring
+#### Unsupported features for coauthoring
 
-The following features aren't supported or are partially supported when [co-authoring is enabled](/microsoft-365/compliance/sensitivity-labels-coauthoring) for files encrypted with sensitivity labels:
+The following features aren't supported or are partially supported when [coauthoring is enabled](/microsoft-365/compliance/sensitivity-labels-coauthoring) for files encrypted with sensitivity labels:
 
 - **DKE templates and DKE user-defined properties**. For more information, see [Double Key Encryption (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).
 
@@ -53724,7 +53724,7 @@ The following features aren't supported or are partially supported when [co-auth
 
 - **Removing external content marking in apps**. External content marking is removed only when a label is applied, and not when the document is saved. For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
 
-- Features listed in the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring#limitations) as co-authoring limitations.
+- Features listed in the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring#limitations) as coauthoring limitations.
 - Labelbycustomproperties for mapping other labeling solutions won't work with co-auth enabled.
 
 ## Sharing external doc types across tenants
