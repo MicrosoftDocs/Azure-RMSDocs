@@ -141,5 +141,4 @@
     href: /powershell/azure/aip/overview
   - name: Audit log reference
     href: audit-logs.md
-  - name: Terminology
-    href: terminology.md
+
