@@ -21,6 +21,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/reports-aip.md",
+      "redirect_url": "/purview//purview/data-classification-activity-explorer-available-events",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/verify.md",
       "redirect_url": "/purview/activate-rights-management-service#next-steps",
       "redirect_document_id": false

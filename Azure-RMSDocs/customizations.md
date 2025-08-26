@@ -990,10 +990,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{
 
 ## Prevent audit data from being sent to AIP and Microsoft 365 analytics
 
-By default, the Azure Information Protection unified labeling client supports central reporting and sends its audit data to:
-
-- [Azure Information Protection analytics](reports-aip.md), if you've configured a [Log Analytics workspace](https://azure.microsoft.com/pricing/details/log-analytics)
-- Microsoft 365, where you can view them in the [Activity Explorer](/microsoft-365/compliance/data-classification-activity-explorer)
+By default, the Azure Information Protection unified labeling client supports central reporting and sends its audit data to Microsoft 365, where you can view them in the [Activity Explorer](/microsoft-365/compliance/data-classification-activity-explorer).
 
 To change this behavior, so that audit data is not sent, do the following:
 
@@ -1021,7 +1018,7 @@ To enable the client to send audit log data again, change the advanced setting v
 
 This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Security & Compliance Center PowerShell.
 
-By default, the unified labeling client does not send content matches for sensitive info types to [Azure Information Protection analytics](reports-aip.md). For more information about this additional information that can be sent, see the [Content matches for deeper analysis](reports-aip.md#content-matches-for-deeper-analysis) section from the central reporting documentation.
+By default, the unified labeling client does not send content matches for sensitive info types to Microsoft Purview.
 
 To send content matches when sensitive information types are sent, create the following advanced client setting in a label policy: 
 
@@ -1467,7 +1464,7 @@ Set the logging level to one of the following values:
 
 - **Trace**: Detailed logging (the default setting for clients).
 
-This registry setting does not change the information that's sent to Azure Information Protection for [central reporting](reports-aip.md).
+This registry setting does not change the auditing information that's sent to Microsoft Purview.
 
 ## Skip or ignore files during scans depending on file attributes
 
