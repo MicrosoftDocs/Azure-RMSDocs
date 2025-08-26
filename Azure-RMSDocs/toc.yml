@@ -115,10 +115,6 @@
     items:
     - name: Deploying the client
       href: about-aip-client.md
-  - name: Monitoring with AIP
-    items:
-    - name: Using AIP reports
-      href: reports-aip.md
   - name: Developing & customizing apps
     items:
     - name: Microsoft Information Protection SDK
@@ -141,5 +137,4 @@
     href: /powershell/azure/aip/overview
   - name: Audit log reference
     href: audit-logs.md
-  - name: Terminology
-    href: terminology.md
+

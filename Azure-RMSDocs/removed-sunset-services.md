@@ -45,7 +45,6 @@ Customers who already have AIP audit logs configured will continue to have those
 
 For more information, see:
 
-- [Analytics and central reporting for Azure Information Protection](/azure/information-protection/reports-aip)
 - [Admin guide to auditing and reporting for the AIP Unified Labeling client](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/admin-guide-to-auditing-and-reporting-for-the-aip-unified/ba-p/3610727)
 - [Get started with activity explorer](/microsoft-365/compliance/data-classification-activity-explorer)
 - [Get started with content explorer](/microsoft-365/compliance/data-classification-content-explorer)
