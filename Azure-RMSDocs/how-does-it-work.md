@@ -168,13 +168,6 @@ The preceding walkthroughs cover the standard scenarios but there are some varia
 
 ## Next steps
 
-To learn more about the Azure Rights Management service, use the other articles in the **Understand & Explore** section, such as [How applications support the Azure Rights Management service](applications-support.md) to learn how your existing applications can integrate with Azure Rights Management to provide an information protection solution. 
+For a less technical overview of the Azure Rights Management service, see [Learn about the Azure Rights Management service](/purview/azure-rights-management-learn-about).
 
-Review [Terminology for Azure Information Protection](./terminology.md) so that you’re familiar with the terms that you might come across as you’re configuring and using the Azure Rights Management service, and be sure to also check [Requirements for Azure Information Protection](requirements.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the quickstart and tutorials:
-
-- [Quickstart: Deploy the unified labeling client](quickstart-deploy-client.md)
-- [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](/microsoft-365/compliance/deploy-scanner-configure-install)
-- [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](/microsoft-365/compliance/deploy-scanner-manage)
-- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](/azure/information-protection/tutorial-scan-networks-and-content)
-
-If you’re ready to start deploying data protection for your organization, use the [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md) for your deployment steps and links for how-to instructions.
+If you're ready for deployment recommended steps that include encryption to protect your data, see [Deploy an information protection solution with Microsoft Purview](/purview/information-protection-solution).
