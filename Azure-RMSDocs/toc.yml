@@ -7,8 +7,6 @@
     href: what-is-information-protection.md
   - name: Removed and retired services
     href: removed-sunset-services.md
-  - name: AIP is also known as ...
-    href: aka.md
 - name: Concepts
   items:
   - name: AIP requirements
@@ -99,8 +97,6 @@
           href: configure-applications.md
         - name: Microsoft 365 services
           href: configure-office365.md
-        - name: Office apps
-          href: configure-office-apps.md
       - name: Configuring usage rights
         href: configure-usage-rights.md
     - name: Deploying the RMS connector
@@ -141,10 +137,6 @@
   items:
   - name: Frequently asked questions
     items:
-    - name: FAQs - general
-      href: faqs.md
-    - name: FAQs - classification & labeling
-      href: faqs-infoprotect.md
     - name: FAQs - data protection
       href: faqs-rms.md
   - name: Known issues
