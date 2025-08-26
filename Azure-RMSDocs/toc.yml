@@ -37,8 +37,6 @@
       href: ./rms-client/client-deployment-notes.md
   - name: Your Azure Information Protection tenant key
     href: plan-implement-tenant-key.md
-  - name: Deployment roadmap
-    href: deployment-roadmap-classify-label-protect.md
   - name: Security
     items:
     - name: Security baseline
@@ -113,10 +111,6 @@
           href: rms-connector-registry-settings.md
       - name: Monitor the connector
         href: monitor-rms-connector.md
-    - name: Verifying the protection service
-      href: verify.md
-    - name: Managing personal data
-      href: manage-personal-data.md
   - name: Deploying & using the client
     items:
     - name: Deploying the client

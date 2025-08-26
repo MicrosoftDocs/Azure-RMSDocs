@@ -11,6 +11,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/manage-personal-data.md",
+      "redirect_url": "/purview/rights-management-personal-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/verify.md",
+      "redirect_url": "/purview/activate-rights-management-service#next-steps",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/faqs.md",
       "redirect_url": "/purview/sensitivity-labels",
       "redirect_document_id": false
