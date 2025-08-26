@@ -27,7 +27,7 @@ ms.custom: admin
 
 [!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
-Instructions to configure the Azure Rights Management service from Microsoft Purview Information Protection is in the process of being migrated to the [Microsoft Purview documentation](/purview/azure-rights-management-learn-about) for Microsoft Purview Information Protection.
+Instructions to configure the Azure Rights Management service from Microsoft Purview Information Protection are in the process of being migrated to the [Microsoft Purview documentation](/purview/azure-rights-management-learn-about).
 
 For deployment scenarios that use sensitivity labels to apply the Azure Rights Management encryption, see [Common scenarios for sensitivity labels](/purview/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels). 
 
