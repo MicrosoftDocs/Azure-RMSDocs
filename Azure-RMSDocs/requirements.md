@@ -80,8 +80,6 @@ Azure Information Protection has the following additional requirements:
     - `https://*.events.data.microsoft.com`
     - `https://*.aria.microsoft.com` (Android device data only)
     
-    For more information, see [Prerequisites for AIP reporting](reports-aip.md#prerequisites).
-
 ### Coexistence of AD RMS with Azure RMS
 
 Using AD RMS and Azure RMS side by side, in the same organization, to protect content by the same user in the same organization, is **only** supported in AD RMS for [HYOK (hold your own key) protection](/previous-versions/azure/information-protection/configure-adrms-restrictions) with Azure Information Protection.

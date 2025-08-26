@@ -145,7 +145,6 @@ For more information, see:
 
 - [Get started with activity explorer](/microsoft-365/compliance/data-classification-activity-explorer)
 - [Labeling activity reference in activity explorer](/microsoft-365/compliance/data-classification-activity-explorer-available-events), including mapping between names displayed in AIP and in the Microsoft 365 activity explorer
-- [Central reporting for Azure Information Protection (public preview)](reports-aip.md)
 
 To prevent the Azure Information Protection unified labeling client from sending auditing data, configure a [label policy advanced setting](rms-client/clientv2-admin-guide-customizations.md#prevent-audit-data-from-being-sent-to-aip-and-microsoft-365-analytics).
 
