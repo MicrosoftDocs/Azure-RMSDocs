@@ -6,6 +6,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/customizations.md",
+      "redirect_url": "/purview/information-protection-client#supported-customizations",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/configure-policy-migrate-labels.md",
       "redirect_url": "/purview/get-started-with-sensitivity-labels",
       "redirect_document_id": false
