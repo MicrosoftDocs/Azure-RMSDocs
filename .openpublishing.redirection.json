@@ -6,6 +6,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "rights-management-usage.md",
+      "redirect_url": "/purview/rights-management-usage-rights",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "Azure-RMSDocs/customizations.md",
       "redirect_url": "/purview/information-protection-client#supported-customizations",
       "redirect_document_id": false

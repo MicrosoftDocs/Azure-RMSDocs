@@ -29,8 +29,6 @@
         href: office-apps-services-support.md
       - name: Other applications that support the RMS APIs
         href: api-support.md
-    - name: RMS for individuals and Azure Information Protection
-      href: rms-for-individuals.md
     - name: Azure Information Protection and AD RMS
       href: compare-on-premise.md
     - name: RMS client deployment notes
@@ -95,8 +93,6 @@
           href: configure-applications.md
         - name: Microsoft 365 services
           href: configure-office365.md
-      - name: Configuring usage rights
-        href: configure-usage-rights.md
     - name: Deploying the RMS connector
       items:
       - name: Overview

@@ -75,7 +75,7 @@ If the document was protected by using a label or template, there's no need to r
 
 - When a user hasn't accessed the document before you made the changes, the changes take effect as soon as the user opens the document.
 
-- When a user has already accessed the document, these changes take effect when their [use license](configure-usage-rights.md#rights-management-use-license) expires. Reprotect the document only if you cannot wait for the use license to expire. Reprotecting effectively creates a new version of the document, and therefore a new use license for the user.
+- When a user has already accessed the document, these changes take effect when their [use license](/purview/rights-management-usage-rights#rights-management-use-license) expires. Reprotect the document only if you cannot wait for the use license to expire. Reprotecting effectively creates a new version of the document, and therefore a new use license for the user.
 
 Alternatively, if you have already configured a group for the required permissions, you can change the group membership to include or exclude users and there is no need to change the label or template. There might be a small delay before the changes take effect because group membership is [cached](prepare.md#group-membership-caching-by-azure-information-protection) by the Azure Rights Management service.
 
@@ -167,7 +167,7 @@ Use the [super user feature](/purview/encryption-super-users), which grants the 
 If your content is stored in SharePoint or OneDrive, admins can run the [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) cmdlet, to remove both the sensitivity label and the encryption. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document).
 
 ## Can Rights Management prevent screen captures?
-By not granting the **Copy** [usage right](configure-usage-rights.md), Rights Management can prevent screen captures from many of the commonly used screen capture tools on Windows platforms (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile, and Windows 11). However, iOS, Mac,and Android devices do not allow any app to prevent screen captures. In addition, browsers on any device cannot prevent screen captures. Browser use includes Outlook on the web and Office for the web.
+By not granting the **Copy** [usage right](/purview/rights-management-usage-rights), Rights Management can prevent screen captures from many of the commonly used screen capture tools on Windows platforms (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile, and Windows 11). However, iOS, Mac,and Android devices do not allow any app to prevent screen captures. In addition, browsers on any device cannot prevent screen captures. Browser use includes Outlook on the web and Office for the web.
 
 > [!NOTE]
 > Now rolling out to [Current Channel (Preview)](https://office.com/insider): in Office for Mac, Word, Excel, and PowerPoint (but not Outlook) now support the Rights Management usage right to prevent screen captures.
@@ -178,7 +178,7 @@ As these examples demonstrate, even if all platforms and all software supported 
 
 ## What's the difference between a user protecting an email with Do Not Forward and a template that doesn't include the Forward right?
 
-Despite its name and appearance, **Do Not Forward** is not the opposite of the Forward right, or a template. It is actually a set of rights that include restricting copying, printing, and saving the email outside the mailbox, in addition to restricting the forwarding of emails. The rights are dynamically applied to users via the chosen recipients, and not statically assigned by the administrator. For more information, see the [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails) section in [Configuring usage rights for Azure Information Protection](configure-usage-rights.md).
+Despite its name and appearance, **Do Not Forward** is not the opposite of the Forward right, or a template. It is actually a set of rights that include restricting copying, printing, and saving the email outside the mailbox, in addition to restricting the forwarding of emails. The rights are dynamically applied to users via the chosen recipients, and not statically assigned by the administrator. For more information, see the [Do Not Forward option for emails](/purview/rights-management-usage-rights#do-not-forward-option-for-emails) section in [Configure usage rights for the Azure Rights Management service](/purview/rights-management-usage-rights).
 
 ## What's the difference between Windows Server FCI and the Azure Information Protection scanner?
 
