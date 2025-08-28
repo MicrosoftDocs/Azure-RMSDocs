@@ -6,7 +6,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "rights-management-usage.md",
+      "source_path": "configure-usage-rights.md",
       "redirect_url": "/purview/rights-management-usage-rights",
       "redirect_document_id": true
     },
