@@ -6,6 +6,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/configure-usage-rights.md",
+      "redirect_url": "/purview/rights-management-usage-rights",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/customizations.md",
       "redirect_url": "/purview/information-protection-client#supported-customizations",
       "redirect_document_id": false
@@ -218,7 +223,7 @@
     },
     {
       "source_path": "Azure-RMSDocs/log-analyze-usage.md",
-      "redirect_url": "https://learn.microsoft.com/purview/rights-management-usage",
+      "redirect_url": "https://learn.microsoft.com/purview/rights-management-usage-logging",
       "redirect_document_id": false
     },
     {
