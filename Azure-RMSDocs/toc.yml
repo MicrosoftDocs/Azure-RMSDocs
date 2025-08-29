@@ -83,8 +83,6 @@
           href: migrate-from-ad-rms-phase4.md
         - name: Phase 5 - Post migration tasks
           href: migrate-from-ad-rms-phase5.md
-    - name: Configuring the protection service
-      items:
     - name: Deploying the RMS connector
       items:
       - name: Overview
