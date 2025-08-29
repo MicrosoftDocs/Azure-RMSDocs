@@ -16,6 +16,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/prepare.md#group-membership-caching-by-azure-information-protection",
+      "redirect_url": "/purview/rights-management-users-groups#group-membership-caching",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/customizations.md",
       "redirect_url": "/purview/information-protection-client#supported-customizations",
       "redirect_document_id": false
