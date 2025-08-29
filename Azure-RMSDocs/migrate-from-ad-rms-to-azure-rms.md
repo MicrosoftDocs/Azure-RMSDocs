@@ -96,7 +96,7 @@ Before you start the migration to Azure Information Protection, make sure that t
 
   - Mail-enabled groups in Microsoft Entra ID
 
-	See [Preparing users and groups for Azure Information Protection](prepare.md).
+	See [Learn how user accounts and groups use the Azure Rights Management service](/purview/rights-management-users-groups).
 
 - **If you have used the Information Rights Management (IRM) functionality of Exchange Server** (for example, transport rules and Outlook Web Access) or SharePoint Server with AD RMS:
 

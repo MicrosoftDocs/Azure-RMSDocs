@@ -135,7 +135,7 @@ When a user wants to consume a protected document, the RMS client starts by requ
 
 ![RMS document consumption - step 1, user is authenticated and gets the list of rights](./media/AzRMS_documentconsumption1.png)
 
-**What's happening in step 1**: The authenticated user sends the document policy and the user’s certificates to the Azure Rights Management service. The service decrypts and evaluates the policy, and builds a list of rights (if any) the user has for the document. To identify the user, the Microsoft Entra ProxyAddresses attribute is used for the user's account and groups to which the user is a member. For performance reasons, group membership is [cached](prepare.md#group-membership-caching-by-azure-information-protection). If the user account has no values for the Microsoft Entra ProxyAddresses attribute, the value in the Microsoft Entra UserPrincipalName is used instead.
+**What's happening in step 1**: The authenticated user sends the document policy and the user’s certificates to the Azure Rights Management service. The service decrypts and evaluates the policy, and builds a list of rights (if any) the user has for the document. To identify the user, the Microsoft Entra ProxyAddresses attribute is used for the user's account and groups to which the user is a member. For performance reasons, group membership is [cached](/purview/rights-management-users-groups#group-membership-caching-by-azure-information-protection). If the user account has no values for the Microsoft Entra ProxyAddresses attribute, the value in the Microsoft Entra UserPrincipalName is used instead.
 
 ![RMS document consumption - step 2, use license is returned to the client](./media/AzRMS_documentconsumption2.png)
 

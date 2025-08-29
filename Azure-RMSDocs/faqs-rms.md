@@ -77,7 +77,7 @@ If the document was protected by using a label or template, there's no need to r
 
 - When a user has already accessed the document, these changes take effect when their [use license](/purview/rights-management-usage-rights#rights-management-use-license) expires. Reprotect the document only if you cannot wait for the use license to expire. Reprotecting effectively creates a new version of the document, and therefore a new use license for the user.
 
-Alternatively, if you have already configured a group for the required permissions, you can change the group membership to include or exclude users and there is no need to change the label or template. There might be a small delay before the changes take effect because group membership is [cached](prepare.md#group-membership-caching-by-azure-information-protection) by the Azure Rights Management service.
+Alternatively, if you have already configured a group for the required permissions, you can change the group membership to include or exclude users and there is no need to change the label or template. There might be a small delay before the changes take effect because group membership is [cached](/purview/rights-management-users-groups#group-membership-caching-by-azure-information-protection) by the Azure Rights Management service.
 
 If the document was protected by using custom permissions, you cannot change the permissions for the existing document. You must protect the document again and specify all the users and all the usage rights that are required for this new version of the document. To reprotect a protected document, you must have the Full Control usage right.
 
@@ -124,7 +124,7 @@ Alternatively, you can add external users to custom templates (and labels) by us
     When you add users to an existing template, you must define rights definition objects for the existing users in the templates, in addition to the new users. For this scenario, you might find helpful **Example 3: Add new users and rights to a custom template** from the [Examples](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) section for the cmdlet.
 
 ## What type of groups can I use with Azure RMS?
-For most scenarios, you can use any group type in Microsoft Entra ID that has an email address. This rule of thumb always applies when you assign usage rights but there are some exceptions for administering the Azure Rights Management service. For more information, see [Azure Information Protection requirements for group accounts](prepare.md#azure-information-protection-requirements-for-group-accounts).
+For most scenarios, you can use any group type in Microsoft Entra ID that has an email address. This rule of thumb always applies when you assign usage rights but there are some exceptions for administering the Azure Rights Management service. For more information, see [Azure Information Protection requirements for group accounts](/purview/rights-management-users-groups#azure-information-protection-requirements-for-group-accounts).
 
 ## How do I send a protected email to a Gmail or Hotmail account?
 

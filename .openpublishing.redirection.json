@@ -11,6 +11,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/prepare.md",
+      "redirect_url": "/purview/rights-management-users-groups",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/customizations.md",
       "redirect_url": "/purview/information-protection-client#supported-customizations",
       "redirect_document_id": false

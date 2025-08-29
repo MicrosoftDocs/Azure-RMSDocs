@@ -78,7 +78,7 @@ For more information, see:
 > [!TIP]
 > If the domain name in the UPN value is a domain that is verified for your tenant, add the user's UPN value as another email address to the Microsoft Entra ID **proxyAddresses** attribute. This allows the user to be authorized for Azure Rights Management if their UPN value is specified at the time the usage rights are granted. 
 
-For more information, see [Preparing users and groups for Azure Information Protection](prepare.md).
+For more information, see [Learn how user accounts and groups use the Azure Rights Management service](/purview/rights-management-users-groups).
 
 ## Authenticating on-premises using AD FS or another authentication provider
 
