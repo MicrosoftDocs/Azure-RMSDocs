@@ -34,8 +34,6 @@ Templates make it easier for users (and administrators who configure policies) t
 
 For the cases where users must apply the protection themselves, be sure to provide them with instructions and guidance how and when to do this. Make the instructions specific for the application and versions that they use and how they use them. Also provide guidance for when and how users should apply the protection that is appropriate for your business. For more information, see [Helping users to protect files by using the Azure Rights Management service](help-users.md).
 
-For information about how to configure these applications for the Azure Rights Management service from Azure Information Protection, see [Configuring applications for Azure Rights Management](configure-applications.md).
-
 Search services can integrate with Rights Management in different ways. For example: 
 
 - Exchange Online and Exchange Server use service-side indexing so that a user's protected emails are automatically displayed in their search results. 

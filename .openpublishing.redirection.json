@@ -120,7 +120,16 @@
       "redirect_url": "https://learn.microsoft.com/purview/sensitivity-labels",
       "redirect_document_id": false
     },
-
+    {
+      "source_path": "Azure-RMSDocs/configure-office365.md",
+      "redirect_url": "/azure/information-protection/how-to-guides",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-applications.md",
+      "redirect_url": "/azure/information-protection/how-to-guides",
+      "redirect_document_id": false
+    },
     {
       "source_path": "Azure-RMSDocs/quickstart-deploy-client.md",
       "redirect_url": "https://learn.microsoft.com/purview/information-protection-client",

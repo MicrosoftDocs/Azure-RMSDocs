@@ -87,12 +87,6 @@
           href: migrate-from-ad-rms-phase5.md
     - name: Configuring the protection service
       items:
-      - name: Configuring applications
-        items:
-        - name: Overview
-          href: configure-applications.md
-        - name: Microsoft 365 services
-          href: configure-office365.md
     - name: Deploying the RMS connector
       items:
       - name: Overview
