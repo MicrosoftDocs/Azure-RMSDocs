@@ -26,7 +26,7 @@ ms.custom: admin
 # Azure Information Protection audit log reference (public preview)
 
 > [!NOTE]
-> > As of **March 18, 2022**, we are sunsetting the AIP audit log and analytics, with a full retirement date of **September 30, 2022**.>
+> > As of **March 18, 2022**, we are sunsetting the AIP audit log and analytics, with a full retirement date of **September 30, 2022**.
 
 This article lists the activity events for which Azure Information Protection audit logs are generated. Azure Information Protection collects data from desktop apps only, and not from mobile devices. For more information, see the details in the **Platform** columns in this article.
 
