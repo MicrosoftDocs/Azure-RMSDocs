@@ -152,6 +152,6 @@ The following operating systems support the Azure Rights Management service, whi
 
 ## Next steps
 
-Once you've reviewed all AIP requirements and confirmed that your system complies, continue with [Preparing users and groups for Azure Information Protection](prepare.md).
+Once you've reviewed all AIP requirements and confirmed that your system complies, continue with [Learn how user accounts and groups use the Azure Rights Management service](/purview/rights-management-users-groups).
 
 
