@@ -38,7 +38,7 @@ Use the following information for Phase 4 of migrating from AD RMS to Azure Info
 >
 > Therefore, make sure that all users and mail-enabled groups in your organization have an account in Microsoft Entra ID that can be used with Azure Information Protection.
 >
-> For more information, see [Preparing users and groups for Azure Information Protection](prepare.md).
+> For more information, see [Learn how user accounts and groups use the Azure Rights Management service](/purview/rights-management-users-groups).
 
 Regardless of  the Azure Information Protection tenant key topology that you chose, do the following:
 

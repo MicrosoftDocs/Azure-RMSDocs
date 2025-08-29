@@ -57,8 +57,6 @@
           href: operations-microsoft-managed-tenant-key.md
         - name: Customer-managed
           href: operations-customer-managed-tenant-key.md
-      - name: Preparing users and groups
-        href: prepare.md
       - name: Manage Active Directory Mobile Device Extensions
         href: active-directory-rights-manage-mobile-device.md
       - name: Migrating from AD RMS
