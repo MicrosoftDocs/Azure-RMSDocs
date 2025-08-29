@@ -124,7 +124,7 @@ Alternatively, you can add external users to custom templates (and labels) by us
     When you add users to an existing template, you must define rights definition objects for the existing users in the templates, in addition to the new users. For this scenario, you might find helpful **Example 3: Add new users and rights to a custom template** from the [Examples](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) section for the cmdlet.
 
 ## What type of groups can I use with Azure RMS?
-For most scenarios, you can use any group type in Microsoft Entra ID that has an email address. This rule of thumb always applies when you assign usage rights but there are some exceptions for administering the Azure Rights Management service. For more information, see [Azure Information Protection requirements for group accounts](/purview/rights-management-users-groups#azure-information-protection-requirements-for-group-accounts).
+For most scenarios, you can use any group type in Microsoft Entra ID that has an email address. This rule of thumb always applies when you assign usage rights but there are some exceptions for administering the Azure Rights Management service. For more information, see [Azure Information Protection requirements for group accounts](/purview/rights-management-users-groups#azure-rights-management-service-requirements-for-group-accounts).
 
 ## How do I send a protected email to a Gmail or Hotmail account?
 
