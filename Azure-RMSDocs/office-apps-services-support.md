@@ -92,6 +92,4 @@ For changes that are coming, see [Updates to SharePoint security, administration
 
 If you have Microsoft 365, you might be interested in reviewing [File Protection Solutions in Microsoft 365](/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect), which provides recommended capabilities for protecting files in Microsoft 365.
 
-To see how other applications and services support the Azure Rights Management service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
-
 If you are ready to start deployment, which includes configuring these applications and services, see the [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md).

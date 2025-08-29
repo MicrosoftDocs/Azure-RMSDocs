@@ -19,14 +19,6 @@
     items:
     - name: How Rights Management protection works
       href: how-does-it-work.md
-    - name: How applications support Azure Rights Management protection
-      items:
-      - name: Overview
-        href: applications-support.md
-      - name: Office applications and services
-        href: office-apps-services-support.md
-      - name: Other applications that support the RMS APIs
-        href: api-support.md
     - name: Azure Information Protection and AD RMS
       href: compare-on-premise.md
     - name: RMS client deployment notes
