@@ -16,6 +16,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/removed-sunset-services.md",
+      "redirect_url": "/azure/information-protection/",
+      "redirect_document_id": false
+    }, 
+    {
       "source_path": "Azure-RMSDocs/configure-policy-migrate-labels.md",
       "redirect_url": "/purview/get-started-with-sensitivity-labels",
       "redirect_document_id": false

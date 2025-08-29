@@ -26,10 +26,7 @@ ms.custom: admin
 # Azure Information Protection audit log reference (public preview)
 
 > [!NOTE]
-> **Are you looking for [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection)?** The Azure Information Protection unified labeling client is [currently in maintenance mode](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613). We recommend enabling Microsoft Purview Information Protection's built-in labeling for your Office 365 applications. [Learn more](/microsoft-365/compliance/sensitivity-labels#sensitivity-labels-and-azure-information-protection).
->
-> As of **March 18, 2022**, we are sunsetting the AIP audit log and analytics, with a full retirement date of **September 30, 2022**. For more information, see [Removed and retired services](removed-sunset-services.md).
->
+> > As of **March 18, 2022**, we are sunsetting the AIP audit log and analytics, with a full retirement date of **September 30, 2022**.>
 
 This article lists the activity events for which Azure Information Protection audit logs are generated. Azure Information Protection collects data from desktop apps only, and not from mobile devices. For more information, see the details in the **Platform** columns in this article.
 

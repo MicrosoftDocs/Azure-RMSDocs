@@ -86,8 +86,7 @@ Before you start the migration to Azure Information Protection, make sure that t
     If you have computers that run Office 2010, you must install the [Azure Information Protection client](rms-client/use-client.md) to provide the ability to authenticate users to cloud services. 
 
     > [!IMPORTANT]
-    > Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](removed-sunset-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
-    >  
+    > Office 2010 extended support ended on October 13, 2020.
     
 
 
@@ -228,7 +227,7 @@ The onboarding controls that you configured during the preparation phase are no 
 If your Windows computers are running Office 2010, check whether you need to disable the **AD RMS Rights Policy Template Management (Automated)** task.
 
 > [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](removed-sunset-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
+> Office 2010 extended support ended on October 13, 2020.
 
 **Step 12: Rekey your Azure Information Protection tenant key**
 
