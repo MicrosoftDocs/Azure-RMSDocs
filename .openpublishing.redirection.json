@@ -16,6 +16,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/removed-sunset-services.md",
+      "redirect_url": "/azure/information-protection/",
+      "redirect_document_id": false
+    }, 
+    {
       "source_path": "Azure-RMSDocs/configure-policy-migrate-labels.md",
       "redirect_url": "/purview/get-started-with-sensitivity-labels",
       "redirect_document_id": false
@@ -120,7 +125,16 @@
       "redirect_url": "https://learn.microsoft.com/purview/sensitivity-labels",
       "redirect_document_id": false
     },
-
+    {
+      "source_path": "Azure-RMSDocs/configure-office365.md",
+      "redirect_url": "/azure/information-protection/how-to-guides",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-applications.md",
+      "redirect_url": "/azure/information-protection/how-to-guides",
+      "redirect_document_id": false
+    },
     {
       "source_path": "Azure-RMSDocs/quickstart-deploy-client.md",
       "redirect_url": "https://learn.microsoft.com/purview/information-protection-client",

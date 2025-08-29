@@ -57,16 +57,6 @@ If you use Exchange on-premises, you can use the IRM features with the Azure Rig
 
 For more information about the email options that you can use to protect emails, see [Do Not Forward option for emails](/purview/rights-management-usage-rights#do-not-forward-option-for-emails) and [encrypt-only option for emails](/purview/rights-management-usage-rights#encrypt-only-option-for-emails).
 
-If you're ready to configure Exchange to protect emails:
-
-- For Exchange Online, see [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration).
-
-- For Exchange on-premises, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
-
-- Configure sensitivity labels and labeling polices in the Microsoft Purview compliance portal. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
-
-
-
 ## SharePoint in Microsoft 365 and SharePoint Server
 
 When you use SharePoint in Microsoft 365 or SharePoint Server, you can protect documents by using the SharePoint information rights management (IRM) feature. This feature lets administrators protect lists or libraries so that when a user checks out a document, the downloaded file is protected so that only authorized people can view and use the file according to the information protection policies that you specify. For example, the file might be read-only, disable the copying of text, prevent saving a local copy, and prevent printing the file.
@@ -97,13 +87,6 @@ For libraries that are not IRM-protected, if you apply protection-only to a file
 When you use SharePoint IRM protection, the Azure Rights Management service applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive and SharePoint](/microsoft-365/compliance/data-encryption-in-odb-and-spo?redirectSourcePath=%252fen-us%252farticle%252f6501b5ef-6bf7-43df-b60d-f65781847d6c) from the SharePoint documentation.
 
 For changes that are coming, see [Updates to SharePoint security, administration, and migration](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585).
-
-If you are ready to configure SharePoint for IRM:
-
-- For SharePoint in Microsoft 365, see [SharePoint in Microsoft 365 and OneDrive: IRM Configuration](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration).
-
-- For Sharepoint Server, see [Deploying the Microsoft Rights Management connector](deploy-rms-connector.md).
-
 
 ## Next steps
 

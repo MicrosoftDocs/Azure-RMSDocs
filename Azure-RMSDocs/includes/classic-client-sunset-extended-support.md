@@ -16,5 +16,5 @@ ms.custom: include file
 >- The classic client will be fully retired, and will stop functioning, on **March 31, 2022**.
 >- As of **March 18, 2022**, we are also sunsetting the AIP audit log and analytics, with a full retirement date of **September 31, 2022**.
 >
-> The content in this article is provided to support customers with extended support only. For more information, see [Removed and retired services](../removed-sunset-services.md).
+> The content in this article is provided to support customers with extended support only.
 >
