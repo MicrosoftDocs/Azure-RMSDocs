@@ -25,14 +25,11 @@
       "redirect_url": "/purview/rights-management-learn-about",
       "redirect_document_id": false
     },
-
     {
       "source_path": "Azure-RMSDocs/office-apps-services-support.md",
-      "redirect_url": "/purview/rights-management-learn-about",
+      "redirect_url": "/purview/azure-rights-management-learn-about",
       "redirect_document_id": false
     },
-
-
     {
       "source_path": "Azure-RMSDocs/customizations.md",
       "redirect_url": "/purview/information-protection-client#supported-customizations",
@@ -50,7 +47,7 @@
     },
     {
       "source_path": "Azure-RMSDocs/terminology.md",
-      "redirect_url": "/purview/rights-management-learn-about",
+      "redirect_url": "/purview/azure-rights-management-learn-about",
       "redirect_document_id": false
     },
     {
