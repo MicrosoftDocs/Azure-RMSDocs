@@ -66,10 +66,10 @@ Before you start the migration to Azure Information Protection, make sure that t
       - Multiple forests, multiple RMS clusters
         
     > [!NOTE]
-    > By default, multiple AD RMS clusters migrate to a single tenant for Azure Information Protection. If you want separate tenants for Azure Information Protection, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one tenant.
+    > By default, multiple AD RMS clusters migrate to a single tenant for Azure Information Protection. If you want separate tenants for Azure Information Protection, you must treat them as different migrations. A key from one RMS cluster can't be imported to more than one tenant.
     >
  
-- **All requirements to run Azure Information Protection, including a subscription for Azure Information Protection (the Azure Rights Management service is not activated)**:
+- **All requirements to run Azure Information Protection, including a subscription for Azure Information Protection (the Azure Rights Management service isn't activated)**:
 
 	See [Requirements for Azure Information Protection](./requirements.md).
 
@@ -77,7 +77,7 @@ Before you start the migration to Azure Information Protection, make sure that t
 
     For more information, see the admin guides for the [Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide.md).
 
-	Although you must have a subscription for Azure Information Protection before you can migrate from AD RMS, we recommend that the Rights Management service for your tenant is not activated before you start the migration. 
+	Although you must have a subscription for Azure Information Protection before you can migrate from AD RMS, we recommend that the Rights Management service for your tenant isn't activated before you start the migration. 
 
     The migration process includes this activation step after you have exported keys and templates from AD RMS and imported them to your tenant for Azure Information Protection. However, if the Rights Management service is already activated, you can still migrate from AD RMS with some additional steps.
 
@@ -133,7 +133,7 @@ Include your AD RMS partners in your planning phase for migration because they m
     
     For example, they have an Office 365 E3 or E5 subscription, or an Enterprise Mobility + Security subscription, or a standalone subscription for Azure Information Protection.
 
-- Their Azure Rights Management service is not yet activated but they know their Azure Rights Management service URL.
+- Their Azure Rights Management service isn't yet activated but they know their Azure Rights Management service URL.
 
     They can get this information by installing the Azure Rights Management Tool, connecting to the service ([Connect-AipService](/powershell/module/aipservice/connect-aipservice)), and then viewing their tenant information for the Azure Rights Management service ([Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)).
 
@@ -155,7 +155,7 @@ The migration process requires you to run one or more of the PowerShell cmdlets 
 
 **Step 2. Prepare for client migration**
 
-If you cannot migrate all clients at once and will migrate them in batches, use onboarding controls and deploy a pre-migration script. However, if you will migrate everything at the same time rather than do a phased migration, you can skip this step.
+If you can't migrate all clients at once and will migrate them in batches, use onboarding controls and deploy a pre-migration script. However, if you will migrate everything at the same time rather than do a phased migration, you can skip this step.
 
 **Step 3: Prepare your Exchange deployment for migration**
 
@@ -222,7 +222,7 @@ When you have confirmed that all Windows computers are using the Azure Rights Ma
 
 If you have deployed the [mobile device extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phones and tablets, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS. 
     
-The onboarding controls that you configured during the preparation phase are no longer needed. However, if you did not use onboarding controls because you chose to migrate everything at the same time rather than do a phased migration, you can skip the instructions to remove the onboarding controls.
+The onboarding controls that you configured during the preparation phase are no longer needed. However, if you didn't use onboarding controls because you chose to migrate everything at the same time rather than do a phased migration, you can skip the instructions to remove the onboarding controls.
     
 If your Windows computers are running Office 2010, check whether you need to disable the **AD RMS Rights Policy Template Management (Automated)** task.
 
@@ -231,7 +231,7 @@ If your Windows computers are running Office 2010, check whether you need to dis
 
 **Step 12: Rekey your Azure Information Protection tenant key**
 
-This step is recommended if you were not running in Cryptographic Mode 2 before the migration.
+This step is recommended if you weren't running in Cryptographic Mode 2 before the migration.
 
 ## Next steps
 To start the migration, go to [Phase 1 - preparation](migrate-from-ad-rms-phase1.md).
