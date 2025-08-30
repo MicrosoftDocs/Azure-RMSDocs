@@ -19,6 +19,8 @@
     items:
     - name: Azure Information Protection and AD RMS
       href: compare-on-premise.md
+    - name: RMS client deployment notes
+      href: ./rms-client/client-deployment-notes.md
   - name: Your Azure Information Protection tenant key
     href: plan-implement-tenant-key.md
   - name: Security
@@ -98,9 +100,9 @@
 - name: Resources
   items:
   - name: Frequently asked questions
-    href: faqs-rms.md
-  - name: RMS client deployment notes
-    href: ./rms-client/client-deployment-notes.md 
+    items:
+    - name: FAQs - data protection
+      href: faqs-rms.md
   - name: Known issues
     href: known-issues.md
   - name: PowerShell reference
