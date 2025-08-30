@@ -6,6 +6,21 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths",
+      "redirect_url": "/purview/rights-management-how-does-it-work#cryptographic-controls-algorithms-and-key-lengths",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/how-does-it-work.md",
+      "redirect_url": "/purview/rights-management-how-does-it-work",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/compliance.md",
+      "redirect_url": "/purview/azure-rights-management-compliance",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/configure-usage-rights.md",
       "redirect_url": "/purview/rights-management-usage-rights",
       "redirect_document_id": false
