@@ -98,12 +98,10 @@
 - name: Resources
   items:
   - name: Frequently asked questions
-    items:
-    - name: FAQs - data protection
-      href: faqs-rms.md
+    href: faqs-rms.md
   - name: RMS client deployment notes
-    href: ./rms-client/client-deployment-notes.md  
-- name: Known issues
+    href: ./rms-client/client-deployment-notes.md 
+  - name: Known issues
     href: known-issues.md
   - name: PowerShell reference
     href: /powershell/azure/aip/overview
