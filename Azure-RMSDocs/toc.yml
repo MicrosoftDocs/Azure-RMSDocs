@@ -101,8 +101,8 @@
     items:
     - name: FAQs - data protection
       href: faqs-rms.md
-- name: RMS client deployment notes
-  href: ./rms-client/client-deployment-notes.md  
+  - name: RMS client deployment notes
+    href: ./rms-client/client-deployment-notes.md  
 - name: Known issues
     href: known-issues.md
   - name: PowerShell reference
