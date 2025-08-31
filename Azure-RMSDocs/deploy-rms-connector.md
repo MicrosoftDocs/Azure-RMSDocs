@@ -51,8 +51,8 @@ Versions of these on-premises servers that are supported by the RMS connector:
 |Server type  |Supported versions  |
 |---------|---------|
 |**Exchange Server**     | - Exchange Server 2019 </br> - Exchange Server 2016 </br>- Exchange Server 2013       |
-|**Office SharePoint Server**     |- Office SharePoint Server 2019 <br>- Office SharePoint Server 2016 </br>- Office SharePoint Server 2013         |
-|**File servers that run Windows Server and use File Classification Infrastructure (FCI)**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
+|**SharePoint Server**     |- SharePoint Server 2019 <br>- SharePoint Server 2016 </br>- SharePoint Server 2013         |
+|**File servers that run Windows Server<br> and use File Classification Infrastructure (FCI)**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
 
 
 ### Support for hybrid scenarios
