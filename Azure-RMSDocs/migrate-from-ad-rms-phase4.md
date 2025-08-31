@@ -71,7 +71,7 @@ This step covers installing and configuring the connector, disabling IRM for Exc
 Finally, if you have imported AD RMS .xml data configuration files that were used to protect email messages in to Azure Information Protection, you must manually edit the registry on the Exchange Server computers to redirect all trusted publishing domain URLs to the RMS connector.
 
 > [!NOTE]
-> Before you start, check the versions of the on-premises servers that the Azure Rights Management service supports, from [On-premises servers that support Azure RMS](requirements.md#supported-on-premises-servers-for-azure-rights-management-data-protection).
+> Before you start, check the versions of the on-premises servers that the Azure Rights Management service supports with the [Rights Management connector](deploy-rms-connector.md).
 
 ### Install and configure the RMS connector
 

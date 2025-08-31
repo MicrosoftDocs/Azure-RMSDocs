@@ -69,15 +69,11 @@ Before you start the migration to Azure Information Protection, make sure that t
     > By default, multiple AD RMS clusters migrate to a single tenant for Azure Information Protection. If you want separate tenants for Azure Information Protection, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one tenant.
     >
  
-- **All requirements to run Azure Information Protection, including a subscription for Azure Information Protection (the Azure Rights Management service is not activated)**:
+- **All requirements for the Azure Rights Management service, including a subscription for Microsoft Purview Information Protection**:
 
-	See [Requirements for Azure Information Protection](./requirements.md).
+	See [Requirements for the Azure Rights Management service](/purview/rights-management-requirements).
 
-    The Azure Information Protection client is *required* for classification and labeling, and *optional, but recommended* if you want to only protect data. 
-
-    For more information, see the admin guides for the [Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide.md).
-
-	Although you must have a subscription for Azure Information Protection before you can migrate from AD RMS, we recommend that the Rights Management service for your tenant is not activated before you start the migration. 
+	Although you must have a subscription that includes the Azure Rights Management service before you can migrate from AD RMS, we recommend that this service isn't activated for your tenant before you start the migration. 
 
     The migration process includes this activation step after you have exported keys and templates from AD RMS and imported them to your tenant for Azure Information Protection. However, if the Rights Management service is already activated, you can still migrate from AD RMS with some additional steps.
 
@@ -119,7 +115,7 @@ To confirm the AD RMS cryptographic mode for Windows Server 2012 R2 and Windows 
 
 ### Migration limitations
 
-- If you have software and clients that are not supported by the Rights Management service that is used by Azure Information Protection, they will not be able to protect or consume content that is protected by Azure Rights Management. Be sure to check the supported applications and clients sections from [Requirements for Azure Information Protection](./requirements.md).
+- If you have software and clients that are not supported by the Rights Management service, they won't be able to encrypt or consume content that is encrypted by the Azure Rights Management service.
 
 - If your AD RMS deployment is configured to collaborate with external partners (for example, by using trusted user domains or federation), they must also migrate to Azure Information Protection either at the same time as your migration, or as soon as possible afterwards. To continue to access content that your organization previously protected by using Azure Information Protection, they must make client configuration changes that are similar to those that you make, and included in this document.
     
