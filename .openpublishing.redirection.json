@@ -1076,7 +1076,7 @@
           "redirect_document_id": false
         },
         {
-          "source_path": "Azure-RMSDocs/operations-customer-managed-tenant-key",
+          "source_path": "Azure-RMSDocs/operations-customer-managed-tenant-key.md",
           "redirect_url": "/purview/rights-management-tenant-key#operations-for-your-tenant-key",
           "redirect_document_id": false
         },
