@@ -3081,12 +3081,12 @@
         },
         {
           "source_path": "Azure-RMSDocs/operations-microsoft-managed-tenant-key",
-          "redirect_url": "/purview/rights-management-tenant-key?tabs=microsoft-managed#operations-for-your-tenant-key",
+          "redirect_url": "/purview/rights-management-tenant-key#operations-for-your-tenant-key",
           "redirect_document_id": false
         },
         {
           "source_path": "Azure-RMSDocs/operations-customer-managed-tenant-key",
-          "redirect_url": "/purview/rights-management-tenant-key?tabs=customer-managed#operations-for-your-tenant-key",
+          "redirect_url": "/purview/rights-management-tenant-key#operations-for-your-tenant-key",
           "redirect_document_id": false
         },
         {
