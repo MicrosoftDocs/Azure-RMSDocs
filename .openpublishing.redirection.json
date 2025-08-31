@@ -3060,9 +3060,39 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "mip/develop/reference/mip-sdk-reference.md",
-            "redirect_url": "https://microsoftdocs.github.io/mip-sdk-docs/cpp",
-            "redirect_document_id": false
+          "source_path": "Azure-RMSDocs/plan-implement-tenant-key.md",
+          "redirect_url": "/purview/rights-management-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/get-started-tenant-root-keys.md",
+          "redirect_url": "/purview/rights-management-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/byok-price-restrictions.md",
+          "redirect_url": "/purview/rights-management-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/operations-tenant-key.md",
+          "redirect_url": "/purview/rights-management-tenant-key#operations-for-your-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/operations-microsoft-managed-tenant-key",
+          "redirect_url": "/purview/rights-management-tenant-key?tabs=microsoft-managed#operations-for-your-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/operations-customer-managed-tenant-key",
+          "redirect_url": "/purview/rights-management-tenant-key?tabs=customer-managed#operations-for-your-tenant-key,
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "mip/develop/reference/mip-sdk-reference.md",
+          "redirect_url": "https://microsoftdocs.github.io/mip-sdk-docs/cpp",
+          "redirect_document_id": false
         }
     ]
 }
