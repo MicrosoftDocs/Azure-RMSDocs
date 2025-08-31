@@ -43,7 +43,7 @@ These encryption technologies are complementary and using them requires enabling
 
 ## Can I now use BYOK with Exchange Online?
 
-Yes, you can now use BYOK with Exchange Online when you follow the instructions in [Set up new Microsoft 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). These instructions enable the new capabilities in Exchange Online that support using BYOK for Azure Information Protection, as well as the new Office 365 Message Encryption.
+Yes, you can now use BYOK with Exchange Online when you follow the instructions in [Set up Message Encryption](/purview/set-up-new-message-encryption-capabilities). These instructions enable the new capabilities in Exchange Online that support using BYOK for the Azure Rights Management service.
 
 For more information about this change, see the blog announcement: [Office 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)
 
