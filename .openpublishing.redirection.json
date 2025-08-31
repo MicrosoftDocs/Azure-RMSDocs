@@ -3086,7 +3086,7 @@
         },
         {
           "source_path": "Azure-RMSDocs/operations-customer-managed-tenant-key",
-          "redirect_url": "/purview/rights-management-tenant-key?tabs=customer-managed#operations-for-your-tenant-key,
+          "redirect_url": "/purview/rights-management-tenant-key?tabs=customer-managed#operations-for-your-tenant-key",
           "redirect_document_id": false
         },
         {
