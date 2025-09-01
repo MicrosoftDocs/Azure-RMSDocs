@@ -9,8 +9,6 @@
   items:
   - name: Azure Rights Management
     items:
-    - name: Azure Information Protection and AD RMS
-      href: compare-on-premise.md
     - name: RMS client deployment notes
       href: ./rms-client/client-deployment-notes.md
   - name: Security
