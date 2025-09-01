@@ -9,8 +9,6 @@
   items:
   - name: Azure Rights Management
     items:
-    - name: How Rights Management protection works
-      href: how-does-it-work.md
     - name: Azure Information Protection and AD RMS
       href: compare-on-premise.md
     - name: RMS client deployment notes
@@ -97,8 +95,6 @@
     href: faqs-rms.md
   - name: Known issues
     href: known-issues.md
-  - name: Compliance & supporting information
-    href: compliance.md
   - name: Office 365 operated by 21Vianet
     href: parity-between-azure-information-protection.md
   - name: PowerShell reference
