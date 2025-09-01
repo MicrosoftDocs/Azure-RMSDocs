@@ -5,18 +5,6 @@
   items:
   - name: What is Azure Information Protection?
     href: what-is-information-protection.md
-- name: Concepts
-  items:
-  - name: Azure Rights Management
-    items:
-    - name: Azure Information Protection and AD RMS
-      href: compare-on-premise.md
-    - name: RMS client deployment notes
-      href: ./rms-client/client-deployment-notes.md
-  - name: Security
-    items:
-    - name: Security baseline
-      href: /security/benchmark/azure/baselines/information-protection-security-baseline?context=/azure/information-protection/context/context
 - name: How-to guides
   items:
   - name: Overview
@@ -49,6 +37,8 @@
           href: migrate-from-ad-rms-phase4.md
         - name: Phase 5 - Post migration tasks
           href: migrate-from-ad-rms-phase5.md
+        - name: Comparison with the Azure Rights Management service
+          href: compare-on-premise.md
     - name: Deploying the RMS connector
       items:
       - name: Overview
@@ -77,10 +67,14 @@
       href: /previous-versions/azure/rms/rights-management-sdks
 - name: Resources
   items:
+  - name: Security baseline
+    href: /security/benchmark/azure/baselines/information-protection-security-baseline?context=/azure/information-protection/context/context
   - name: Frequently asked questions
     href: faqs-rms.md
   - name: Known issues
     href: known-issues.md
+  - name: RMS client deployment notes
+    href: ./rms-client/client-deployment-notes.md
   - name: Office 365 operated by 21Vianet
     href: parity-between-azure-information-protection.md
   - name: PowerShell reference
