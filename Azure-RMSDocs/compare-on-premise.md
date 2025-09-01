@@ -6,7 +6,7 @@ description: Compare the Azure Rights Management service from Microsoft Purview 
 author: aashishr
 ms.author: aashishr
 manager: aashishr
-ms.date: 011/09/2025
+ms.date: 01/09/2025
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -32,14 +32,14 @@ If you know or have previously deployed Active Directory Rights Management S
 
 Some of the main differences for the Azure Rights Management service include:
 
-| Difference  | Description  |
-|---------|---------|
+|Difference  |Description |
+|------------|------------|
 |**No server infrastructure required** |  The Azure Rights Management service doesn't require the extra servers and PKI certificates that AD RMS needs, because Microsoft Azure takes care of those requirements for you. <br><br>That makes this cloud solution quicker to deploy and easier to maintain.       |
 |**Cloud-based authentication** |  The Azure Rights Management service uses Microsoft Entra ID for authentication - for both internal users and users from other organizations. <br><br>That means your users can be authenticated even when they aren't connected to your internal network and it's easier to share encrypted content with users from other organizations. <br><br>Many organizations already have user accounts in Microsoft Entra ID because they're running Azure services or have Microsoft 365. But if not, a Microsoft account or RMS for individuals lets users create a free account for authentication. <br><br>In comparison, to share AD RMS protected content with another organization, you must configure explicit trusts with each organization.       |
 |**Built-in support for mobile devices** | No deployment changes are needed for the Azure Rights Management service to support mobile devices and Mac computers. <br><br>To support these devices with AD RMS, you must install the mobile device extension, configure Active Directory Federation Services (AD FS) for federation, and create extra records for your public DNS service.        |
 |**Default templates** |  The Azure Rights Management service automatically creates default templates that restrict access of the content to your own organization. These templates make it easy to start protecting sensitive data immediately. <br><br>There are no default templates for AD RMS.       |
-|**Document tracking and revocation** | Only the Azure Rights Management service supports [these features](purview/track-and-revoke-admin).|
-|**Classification and labeling** | The Azure Rights Management service supports [sensitivity labels](purview/sensitivity-labels) that apply classification, and optionally, protection actions such as encryption and visual markings. <br><br>Sensitivity labels are built into Microsoft 365 apps and services with no additional installation required. Optionally, use the [Microsoft Purview Information Protection client](purview/information-protection-client) to extend labels to all file types, use PowerShell for automation, and a scanner for on-premises data stores. <br><br>   AD RMS does not support these classification and labeling capabilities.        |
+|**Document tracking and revocation** | Only the Azure Rights Management service supports [these features](/purview/track-and-revoke-admin).|
+|**Classification and labeling** | The Azure Rights Management service supports [sensitivity labels](/purview/sensitivity-labels) that apply classification, and optionally, protection actions such as encryption and visual markings. <br><br>Sensitivity labels are built into Microsoft 365 apps and services with no additional installation required. Optionally, use the [Microsoft Purview Information Protection client](/purview/information-protection-client) to extend labels to all file types, use PowerShell for automation, and a scanner for on-premises data stores. <br><br>   AD RMS does not support these classification and labeling capabilities. |
 
 In addition, because the Azure Rights Management service is a cloud service, it can deliver new features and fixes more quickly than an on-premises server-based solution. There aren't any new features planned for AD RMS in Windows Server.
 
