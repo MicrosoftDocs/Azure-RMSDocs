@@ -35,7 +35,7 @@ After the migration, your AD RMS servers are no longer in use but users still ha
 
 Although not required, you might find it useful to read the following documentation before you start the migration. This knowledge provides you with a better understanding of how the technology works when it is relevant to your migration step.
 
-- [Planning and implementing your Azure Information Protection tenant key](./plan-implement-tenant-key.md): Understand the key management options that you have for your Azure Information Protection tenant where your SLC key equivalent in the cloud is either managed by Microsoft (the default) or managed by you (the "bring your own key", or BYOK configuration). 
+- [Managing the root key for your Azure Rights Management service](/purview/rights-management-tenant-key): Understand the key management options that you have for your Azure Information Protection tenant where your SLC key equivalent in the cloud is either managed by Microsoft (the default) or managed by you (the "bring your own key", or BYOK configuration). 
 
 - [RMS service discovery](./rms-client/client-deployment-notes.md#rms-service-discovery): This section of the RMS client deployment notes explains that the order for service discovery is **registry**, then **service connection point (SCP)**, then **cloud**. During the migration process when the SCP is still installed, you configure clients with registry settings for your Azure Information Protection tenant so that they do not use the AD RMS cluster returned from the SCP.
 

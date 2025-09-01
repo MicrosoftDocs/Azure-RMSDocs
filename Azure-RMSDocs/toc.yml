@@ -21,8 +21,6 @@
       href: compare-on-premise.md
     - name: RMS client deployment notes
       href: ./rms-client/client-deployment-notes.md
-  - name: Your Azure Information Protection tenant key
-    href: plan-implement-tenant-key.md
   - name: Security
     items:
     - name: Security baseline
@@ -35,18 +33,6 @@
     items:
     - name: Preparing for the protection service
       items:
-      - name: Configure Bring Your Own Key (BYOK) protection
-        href: byok-price-restrictions.md
-      - name: Get started with tenant root keys
-        href: get-started-tenant-root-keys.md
-      - name: Operations for your tenant key
-        items:
-        - name: Overview
-          href: operations-tenant-key.md
-        - name: Microsoft-managed
-          href: operations-microsoft-managed-tenant-key.md
-        - name: Customer-managed
-          href: operations-customer-managed-tenant-key.md
       - name: Manage Active Directory Mobile Device Extensions
         href: active-directory-rights-manage-mobile-device.md
       - name: Migrating from AD RMS

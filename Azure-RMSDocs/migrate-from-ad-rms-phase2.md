@@ -81,7 +81,7 @@ Your current AD RMS deployment is using one of the following configurations for 
 > [!NOTE]
 > For more information about using hardware security modules with AD RMS, see [Using AD RMS with Hardware Security Modules](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj651024(v=ws.11)).
 
-The two Azure Information Protection tenant key topology options are: Microsoft manages your tenant key (**Microsoft-managed**) or you manage your tenant key (**customer-managed**) in Azure Key Vault. When you manage your own Azure Information Protection tenant key, it's sometimes referred to as "bring your own key" (BYOK). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) article.
+The two Azure Information Protection tenant key topology options are: Microsoft manages your tenant key (**Microsoft-managed**) or you manage your tenant key (**customer-managed**) in Azure Key Vault. When you manage your own Azure Information Protection tenant key, it's sometimes referred to as "bring your own key" (BYOK). For more information, see [Managing the root key for your Azure Rights Management service](/purview/rights-management-tenant-key) article.
 
 Use the following table to identify which procedure to use for your migration.
 
