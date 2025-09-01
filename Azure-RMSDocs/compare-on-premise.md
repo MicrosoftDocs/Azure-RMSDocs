@@ -6,7 +6,7 @@ description: Compare the Azure Rights Management service from Microsoft Purview 
 author: aashishr
 ms.author: aashishr
 manager: aashishr
-ms.date: 01/09/2025
+ms.date: 09/01/2025
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -24,11 +24,11 @@ ms.custom: admin
 
 ---
 
-# Comparing the Azure Rights Management service and AD RMS
+# Comparing the Azure Rights Management service with AD RMS
 
 [!INCLUDE [looking-for-mip](includes/looking-for-mip.md)]
 
-If you know or have previously deployed Active Directory Rights Management Services (AD RMS), you might be wondering how the [Azure Rights Management service](/purview/azure-rights-management-learn-about) from Microsoft Purview Information Protection compares in terms of functionality and requirements as an information protection solution.
+If you have previously deployed Active Directory Rights Management Services (AD RMS), you might be wondering how the [Azure Rights Management service](/purview/azure-rights-management-learn-about) compares in terms of functionality and requirements as an information protection solution.
 
 Some of the main differences for the Azure Rights Management service include:
 
@@ -43,13 +43,11 @@ Some of the main differences for the Azure Rights Management service include:
 
 In addition, because the Azure Rights Management service is a cloud service, it can deliver new features and fixes more quickly than an on-premises server-based solution. There aren't any new features planned for AD RMS in Windows Server.
 
-
 ### Detailed comparison between AIP and AD RMS
 
 For more details, use the following table for a side-by-side comparison. 
 
 If you have security-specific comparison questions, see the [Cryptographic controls for signing and encryption](#cryptographic-controls-for-signing-and-encryption) section in this article.
-
 
 |Difference|Rights Management service|AD RMS|
 |----------|-------------------------|------|
