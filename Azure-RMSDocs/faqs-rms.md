@@ -116,7 +116,7 @@ For a list of additional file types that are supported by the Microsoft Purview 
 No. In this scenario, the associated temporary file doesn't contain data from the original document but instead, only what the user enters while the file is open. Unlike the original file, the temporary file is obviously not designed for sharing and would remain on the device, protected by local security controls, such as BitLocker and EFS.
 
 ## How do we regain access to files that were encrypted by an employee who has now left the organization?
-Use the [super user feature](/purview/encryption-super-users), which grants the Full Control usage rights to authorized users for all documents and emails that are encrypted by your tenant. Super users can always read this encrypted content, and if necessary, remove the encrypted or re-encrypt it for different users. This same feature lets authorized services index and inspect files, as needed.
+Use the [super user feature](/purview/encryption-super-users), which grants the Full Control usage rights to authorized users for all items that are encrypted by your tenant. Super users can always read this encrypted content, and if necessary, remove the encryption or re-encrypt the item for different users. This same feature lets authorized services index and inspect items, as needed.
 
 If your content is stored in SharePoint or OneDrive, admins can run the [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) cmdlet, to remove both the sensitivity label and the encryption. For more information, see [Remove encryption for a labeled document](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document).
 
