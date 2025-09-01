@@ -41,6 +41,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/requirements.md",
+      "redirect_url": "/purview/rights-management-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/requirements-azure-ad.md",
+      "redirect_url": "/purview/rights-management-requirements",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/customizations.md",
       "redirect_url": "/purview/information-protection-client#supported-customizations",
       "redirect_document_id": false

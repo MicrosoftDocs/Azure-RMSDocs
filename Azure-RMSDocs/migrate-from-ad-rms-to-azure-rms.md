@@ -71,7 +71,7 @@ Before you start the migration to Azure Information Protection, make sure that t
  
 - **All requirements to run Azure Information Protection, including a subscription for Azure Information Protection (the Azure Rights Management service isn't activated)**:
 
-	See [Requirements for Azure Information Protection](./requirements.md).
+	See [Requirements for the Azure Rights Management service](/purview/rights-management-requirements).
 
     The Azure Information Protection client is *required* for classification and labeling, and *optional, but recommended* if you want to only protect data. 
 
@@ -88,8 +88,6 @@ Before you start the migration to Azure Information Protection, make sure that t
     > [!IMPORTANT]
     > Office 2010 extended support ended on October 13, 2020.
     
-
-
 - **Preparation for Azure Information Protection**:
 
   - Directory synchronization between your on-premises directory and Microsoft Entra ID
@@ -119,7 +117,7 @@ To confirm the AD RMS cryptographic mode for Windows Server 2012 R2 and Windows 
 
 ### Migration limitations
 
-- If you have software and clients that are not supported by the Rights Management service that is used by Azure Information Protection, they will not be able to protect or consume content that is protected by Azure Rights Management. Be sure to check the supported applications and clients sections from [Requirements for Azure Information Protection](./requirements.md).
+- If you have software and clients that are not supported by the Rights Management service, they won't be able to encrypt or consume content that is encrypted by the Azure Rights Management service.
 
 - If your AD RMS deployment is configured to collaborate with external partners (for example, by using trusted user domains or federation), they must also migrate to Azure Information Protection either at the same time as your migration, or as soon as possible afterwards. To continue to access content that your organization previously protected by using Azure Information Protection, they must make client configuration changes that are similar to those that you make, and included in this document.
     

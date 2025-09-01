@@ -7,14 +7,6 @@
     href: what-is-information-protection.md
 - name: Concepts
   items:
-  - name: AIP requirements
-    items:
-    - name: Overview
-      href: requirements.md
-    - name: Additional Microsoft Entra requirements
-      href: requirements-azure-ad.md
-    - name: Office 365 operated by 21Vianet
-      href: parity-between-azure-information-protection.md
   - name: Azure Rights Management
     items:
     - name: Azure Information Protection and AD RMS
@@ -86,11 +78,11 @@
 - name: Resources
   items:
   - name: Frequently asked questions
-    items:
-    - name: FAQs - data protection
-      href: faqs-rms.md
+    href: faqs-rms.md
   - name: Known issues
     href: known-issues.md
+  - name: Office 365 operated by 21Vianet
+    href: parity-between-azure-information-protection.md
   - name: PowerShell reference
     href: /powershell/azure/aip/overview
   - name: Audit log reference
