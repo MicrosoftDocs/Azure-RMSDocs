@@ -34,7 +34,7 @@ Use the following information for Phase 4 of migrating from AD RMS to Azure Info
 ## Step 8: Configure IRM integration for Exchange Online
 
 > [!IMPORTANT]
-> You cannot control which recipients migrated users might select for protected emails.
+> You can't control which recipients migrated users might select for protected emails.
 >
 > Therefore, make sure that all users and mail-enabled groups in your organization have an account in Microsoft Entra ID that can be used with Azure Information Protection.
 >
@@ -46,7 +46,7 @@ Regardless of  the Azure Information Protection tenant key topology that you cho
 
     This is done with the DNS SRV record for your AD RMS cluster that is also used to reconfigure Office clients to use Azure Information Protection. 
 
-    If you did not create the DNS SRV record for client reconfiguration in [step 7](migrate-from-ad-rms-phase3.md#step-7-reconfigure-windows-computers-to-use-azure-information-protection), create this record now to support Exchange Online. [Instructions](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
+    If you didn't create the DNS SRV record for client reconfiguration in [step 7](migrate-from-ad-rms-phase3.md#step-7-reconfigure-windows-computers-to-use-azure-information-protection), create this record now to support Exchange Online. [Instructions](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
     
     When this DNS record is in place, users using Outlook on the web and mobile email clients will be able to view AD RMS protected emails in those apps, and Exchange will be able to use the key you imported from AD RMS to decrypt, index, journal, and protect content that has been protected by AD RMS.  
 
@@ -62,7 +62,7 @@ Regardless of  the Azure Information Protection tenant key topology that you cho
 
 ## Step 9: Configure IRM integration for Exchange Server and SharePoint Server
 
-If you have used the Information Rights Management (IRM) functionality of Exchange Server or SharePoint Server with AD RMS, you will need to deploy the Rights Management (RMS) connector.
+If you have used the Information Rights Management (IRM) functionality of Exchange Server or SharePoint Server with AD RMS, you'll need to deploy the Rights Management (RMS) connector.
 
 The connector acts as a communications interface (a relay) between your on-premises servers and the protection service for Azure Information Protection.
 
@@ -77,14 +77,14 @@ Finally, if you have imported AD RMS .xml data configuration files that were use
 
 Use the instructions in the [Deploying the Microsoft Rights Management connector](./deploy-rms-connector.md) article, and perform steps 1 though 4. 
 
-Do not start step 5 yet from the connector instructions.
+Don't start step 5 yet from the connector instructions.
 
 ### Disable IRM on Exchange Servers and remove AD RMS configuration
 
 > [!IMPORTANT]
 > If you haven't yet configured IRM on any of your Exchange servers, do just steps 2 and 6.
 > 
-> Do all these steps if all the licensing URLs of all your AD RMS clusters are not displayed in the *LicensingLocation* parameter when you run [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration).
+> Do all these steps if all the licensing URLs of all your AD RMS clusters aren't displayed in the *LicensingLocation* parameter when you run [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration).
 
 1. On each Exchange server, locate the following folder and delete all the entries in that folder: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
 
@@ -123,7 +123,7 @@ Do not start step 5 yet from the connector instructions.
 
 ### Disable IRM on SharePoint Servers and remove AD RMS configuration
 
-1.  Make sure that there are no documents checked out from RMS-protected libraries. If there are, they will be become inaccessible at the end of this procedure.
+1.  Make sure that there are no documents checked out from RMS-protected libraries. If there are, they'll be become inaccessible at the end of this procedure.
 
 2.  On the SharePoint Central Administration Web site, in the **Quick Launch** section, click **Security**.
 
@@ -139,7 +139,7 @@ Do not start step 5 yet from the connector instructions.
 
     If you have SharePoint Server only, go straight to [Next steps](#next-steps) to continue the migration. 
 
-2. On each Exchange Server, manually add the registry keys in the next section for each configuration data file (.xml) that you imported, to redirect the trusted publishing domain URLs to the RMS connector. These registry entries are specific to migration and are not added by the server configuration tool for Microsoft RMS connector.
+2. On each Exchange Server, manually add the registry keys in the next section for each configuration data file (.xml) that you imported, to redirect the trusted publishing domain URLs to the RMS connector. These registry entries are specific to migration and aren't added by the server configuration tool for Microsoft RMS connector.
 
     When you make these registry edits, use the following instructions:
 
@@ -159,7 +159,7 @@ For all Exchange servers, add the following registry values to LicenseServerRedi
 
     - **Value**: `https://<AD RMS Intranet Licensing URL>/_wmcs/licensing`
 
-    - **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+    - **Data**: One of the following, depending on whether you're using HTTP or HTTPS from your Exchange server to the RMS connector:
 
         - `http://<connector FQDN>/_wmcs/licensing`
         
@@ -173,7 +173,7 @@ For all Exchange servers, add the following registry values to LicenseServerRedi
 
     - **Value**: `https://<AD RMS Extranet Licensing URL>/_wmcs/licensing`
 
-    - **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+    - **Data**: One of the following, depending on whether you're using HTTP or HTTPS from your Exchange server to the RMS connector:
 
         - `http://<connector FQDN>/_wmcs/licensing`
 
