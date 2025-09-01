@@ -43,7 +43,7 @@ These encryption technologies are complementary and using them requires enabling
 
 ## Can I now use BYOK with Exchange Online?
 
-Yes, you can now use BYOK with Exchange Online when you follow the instructions in [Set up new Microsoft 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). These instructions enable the new capabilities in Exchange Online that support using BYOK for Azure Information Protection, as well as the new Office 365 Message Encryption.
+Yes, you can now use BYOK with Exchange Online when you follow the instructions in [Set up Message Encryption](/purview/set-up-new-message-encryption-capabilities). These instructions enable the new capabilities in Exchange Online that support using BYOK for the Azure Rights Management service.
 
 For more information about this change, see the blog announcement: [Office 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)
 
@@ -63,7 +63,7 @@ Additional information:
 
 |Topic  |Details  |
 |---------|---------|
-|**Evaluation frequency**    | For Windows computers, and the current preview release, the conditional access policies for Azure Information Protection are evaluated when the [user environment is initialized](./how-does-it-work.md#initializing-the-user-environment) (this process is also known as bootstrapping), and then every 30 days.<br /><br />To fine-tune how often your conditional access policies get evaluated, [configure the token lifetime](/azure/active-directory/active-directory-configurable-token-lifetimes).       |
+|**Evaluation frequency**    | For Windows computers, and the current preview release, the conditional access policies for Azure Information Protection are evaluated when the [user environment is initialized](/purview/rights-management-how-does-it-work#initializing-the-user-environment) (this process is also known as bootstrapping), and then every 30 days.<br /><br />To fine-tune how often your conditional access policies get evaluated, [configure the token lifetime](/azure/active-directory/active-directory-configurable-token-lifetimes).       |
 |**Administrator accounts**     |We recommend that you do not add administrator accounts to your conditional access policies because these accounts will not be able to access the Azure Information Protection pane in the Azure portal.         |
 |**MFA and B2B collaboration**     |If you use MFA in your conditional access policies for collaborating with other organizations (B2B), you must use [Microsoft Entra B2B collaboration](/azure/active-directory/b2b/what-is-b2b) and create guest accounts for the users you want to share with in the other organization.        |
 |**Terms of Use prompts**     |With the Microsoft Entra December 2018 preview release, you can now [prompt users to accept a terms of use](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822) before they open a protected document for the first time.       |
@@ -167,7 +167,7 @@ Use the [super user feature](/purview/encryption-super-users), which grants the 
 If your content is stored in SharePoint or OneDrive, admins can run the [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) cmdlet, to remove both the sensitivity label and the encryption. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document).
 
 ## Can Rights Management prevent screen captures?
-By not granting the **Copy** [usage right](/purview/rights-management-usage-rights), Rights Management can prevent screen captures from many of the commonly used screen capture tools on Windows platforms (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile, and Windows 11). However, iOS, Mac,and Android devices do not allow any app to prevent screen captures. In addition, browsers on any device cannot prevent screen captures. Browser use includes Outlook on the web and Office for the web.
+By not granting the **Copy** [usage right](/purview/rights-management-usage-rights), Rights Management can prevent screen captures from many of the commonly used screen capture tools on Windows platforms (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile, and Windows 11). However, iOS, Mac, and Android devices do not allow any app to prevent screen captures. In addition, browsers on any device cannot prevent screen captures. Browser use includes Outlook on the web and Office for the web.
 
 > [!NOTE]
 > Now rolling out to [Current Channel (Preview)](https://office.com/insider): in Office for Mac, Word, Excel, and PowerPoint (but not Outlook) now support the Rights Management usage right to prevent screen captures.
