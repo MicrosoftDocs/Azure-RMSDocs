@@ -60,7 +60,7 @@ If you have security-specific comparison questions, see the [Cryptographic contr
 | **Secure collaboration**|Automatically enables secure collaboration on documents with any organization that also uses Microsoft Entra ID for authentication.|Secure collaboration on documents outside the organization requires authentication trusts to be explicitly defined in a direct point-to-point relationship between two organizations. <br><br>You must configure either trusted user domains (TUDs) or federated trusts that you create by using Active Directory Federation Services (AD FS).|
 | **Protected emails**|Send a protected email (optionally, with Office document attachments that are automatically protected) to users when no authentication trust relationship exists. <br><br>This scenario is made possible by using federation with social providers or a one-time passcode and web browser for viewing.|Does not support sending protected email when no authentication trust relationship exists.|
 | **Client support**|Supports the AIP unified labeling client.<!--need vihita on this one for both protection and consumption activities.--> |Supports the AIP unified labeling client for consumption only, and requires that you install the [Active Directory Rights Management Services Mobile Device Extension](./active-directory-rights-manage-mobile-device.md). |
-| **Multi-factor authentication (MFA)**|Supports MFA for computers and mobile devices.<br /><br />For more information, see the [Multi-factor authentication (MFA) and Azure Information Protection](./requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection).|Supports smart card authentication if IIS is configured to request certificates.|
+| **Multifactor authentication (MFA)**|Supports MFA for computers and mobile devices.<br /><br />For more information, see the [Multifactor authentication (MFA) and Azure Information Protection](./requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection).|Supports smart card authentication if IIS is configured to request certificates.|
 | **Cryptographic Mode**|Supports Cryptographic Mode 2 by default, to provide a recommended level of security for key lengths and encryption algorithms.|Supports Cryptographic Mode 1 by default, and requires extra configuration to support Cryptographic Mode 2 for a recommended level of security.<br /><br />For more information, see [AD RMS Cryptographic Modes](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh867439(v=ws.10)).|
 | **Licensing**|Requires an Azure Information Protection license or Azure Rights Management license with Microsoft 365 to protect content. <br /><br />No license is required to consume content that has been protected by AIP (includes users from another organization).|Requires an RMS license to protect content, and to consume  content that has been protected by AD RMS.<br /><br />For more information about licensing, see [Client Access Licenses and Management Licenses](https://www.microsoft.com/Licensing/product-licensing/client-access-license.aspx) for general information, but contact your Microsoft partner or Microsoft representative for specific information.|
 
@@ -71,11 +71,11 @@ Both Azure Information Protection and AD RMS use AES 128 for symmetric encrypt
 
 Azure Information Protection is compliant with FIPS 140-2 when your tenant key size is 2048 bits, which is the default when the Azure Rights Management service is activated. 
 
-For more information about the cryptographic controls, see [Cryptographic controls used by Azure RMS: Algorithms and key length](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
+For more information about the cryptographic controls, see [Cryptographic controls: Algorithms and key lengths](/purview/rights-management-how-does-it-work#cryptographic-controls-algorithms-and-key-lengths).
 
 
 ## Next steps
-For more detailed requirements to use Azure Information Protection, such as device support and minimum versions, see [Requirements for Azure Information Protection](requirements.md).
+For more detailed requirements to use the Azure Rights Management service, see [Requirements for the Azure Rights Management service](/purview/rights-management-requirements).
 
 If you're looking to migrate from AD RMS to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 

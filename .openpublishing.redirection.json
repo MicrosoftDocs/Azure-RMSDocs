@@ -6,6 +6,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/how-does-it-work.md",
+      "redirect_url": "/purview/rights-management-how-does-it-work",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/compliance.md",
+      "redirect_url": "/purview/azure-rights-management-compliance",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/configure-usage-rights.md",
       "redirect_url": "/purview/rights-management-usage-rights",
       "redirect_document_id": false
@@ -28,6 +38,16 @@
     {
       "source_path": "Azure-RMSDocs/office-apps-services-support.md",
       "redirect_url": "/purview/azure-rights-management-learn-about",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/requirements.md",
+      "redirect_url": "/purview/rights-management-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/requirements-azure-ad.md",
+      "redirect_url": "/purview/rights-management-requirements",
       "redirect_document_id": false
     },
     {
@@ -1049,6 +1069,36 @@
             "source_path": "Azure-RMSDocs/get-started/faqs.md",
             "redirect_url": "/information-protection/faqs",
             "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/plan-implement-tenant-key.md",
+          "redirect_url": "/purview/rights-management-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/get-started-tenant-root-keys.md",
+          "redirect_url": "/purview/rights-management-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/byok-price-restrictions.md",
+          "redirect_url": "/purview/rights-management-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/operations-tenant-key.md",
+          "redirect_url": "/purview/rights-management-tenant-key#operations-for-your-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/operations-microsoft-managed-tenant-key.md",
+          "redirect_url": "/purview/rights-management-tenant-key#operations-for-your-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/operations-customer-managed-tenant-key.md",
+          "redirect_url": "/purview/rights-management-tenant-key#operations-for-your-tenant-key",
+          "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/help-bot.md",
@@ -3060,9 +3110,9 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "mip/develop/reference/mip-sdk-reference.md",
-            "redirect_url": "https://microsoftdocs.github.io/mip-sdk-docs/cpp",
-            "redirect_document_id": false
+          "source_path": "mip/develop/reference/mip-sdk-reference.md",
+          "redirect_url": "https://microsoftdocs.github.io/mip-sdk-docs/cpp",
+          "redirect_document_id": false
         }
     ]
 }
