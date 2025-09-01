@@ -49,6 +49,8 @@
           href: migrate-from-ad-rms-phase4.md
         - name: Phase 5 - Post migration tasks
           href: migrate-from-ad-rms-phase5.md
+         - name: Compare the Azure Rights Management service with AD RMS
+          href: compare-on-premise.md
     - name: Deploying the RMS connector
       items:
       - name: Overview
