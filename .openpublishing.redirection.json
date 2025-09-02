@@ -6,6 +6,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/parity-between-azure-information-protection.md",
+      "redirect_url": "/purview/parity-between-azure-information-protection",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/how-does-it-work.md",
       "redirect_url": "/purview/rights-management-how-does-it-work",
       "redirect_document_id": false
