@@ -75,8 +75,6 @@
     href: known-issues.md
   - name: RMS client deployment notes
     href: ./rms-client/client-deployment-notes.md
-  - name: Office 365 operated by 21Vianet
-    href: parity-between-azure-information-protection.md
   - name: PowerShell reference
     href: /powershell/azure/aip/overview
   - name: Audit log reference
