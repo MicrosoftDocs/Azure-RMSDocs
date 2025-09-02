@@ -11,8 +11,6 @@
     href: how-to-guides.md
   - name: Deploying dependent configurations
     items:
-    - name: Active Directory Mobile Device Extensions
-      href: active-directory-rights-manage-mobile-device.md
     - name: Migrating from AD RMS
       items:
       - name: Overview
@@ -37,6 +35,8 @@
         href: migrate-from-ad-rms-phase5.md
       - name: Comparison with the Azure Rights Management service
         href: compare-on-premise.md
+    - name: Active Directory Mobile Device Extensions
+      href: active-directory-rights-manage-mobile-device.md
     - name: Deploying the Rights Management connector
       items:
       - name: Overview
