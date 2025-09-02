@@ -35,8 +35,6 @@
         href: migrate-from-ad-rms-phase5.md
       - name: Comparison with the Azure Rights Management service
         href: compare-on-premise.md
-    - name: Active Directory Mobile Device Extensions
-      href: active-directory-rights-manage-mobile-device.md
     - name: Deploying the Rights Management connector
       items:
       - name: Overview
@@ -51,6 +49,8 @@
           href: rms-connector-registry-settings.md
       - name: Monitor the connector
         href: monitor-rms-connector.md
+    - name: Active Directory Mobile Device Extensions
+      href: active-directory-rights-manage-mobile-device.md
   - name: Deploying & using the client
     items:
     - name: Deploying the client
