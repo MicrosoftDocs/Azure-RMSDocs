@@ -92,12 +92,17 @@
     },
     {
       "source_path": "Azure-RMSDocs/faqs.md",
-      "redirect_url": "/purview/sensitivity-labels",
+      "redirect_url": "/purview/azure-rights-management-learn-about#frequently-asked-questions",
       "redirect_document_id": false
     },
     {
       "source_path": "Azure-RMSDocs/faqs-infoprotect.md",
-      "redirect_url": "/purview/sensitivity-labels",
+      "redirect_url": "/purview/azure-rights-management-learn-about#frequently-asked-questions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/faqs-rms.md",
+      "redirect_url": "/purview/azure-rights-management-learn-about#frequently-asked-questions",
       "redirect_document_id": false
     },
     {
