@@ -49,12 +49,10 @@
           href: rms-connector-registry-settings.md
       - name: Monitor the connector
         href: monitor-rms-connector.md
-    - name: Active Directory Mobile Device Extensions
-      href: active-directory-rights-manage-mobile-device.md
-  - name: Deploying & using the client
-    items:
     - name: Deploying the client
       href: about-aip-client.md
+    - name: Active Directory Mobile Device Extensions
+      href: active-directory-rights-manage-mobile-device.md
   - name: Developing & customizing apps
     items:
     - name: Microsoft Information Protection SDK
