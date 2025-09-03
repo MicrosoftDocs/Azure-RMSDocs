@@ -11,6 +11,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/audit-logs.md",
+      "redirect_url": "/purview/data-classification-activity-explorer-available-events",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/how-does-it-work.md",
       "redirect_url": "/purview/rights-management-how-does-it-work",
       "redirect_document_id": false
