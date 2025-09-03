@@ -69,8 +69,6 @@
   items:
   - name: Security baseline
     href: /security/benchmark/azure/baselines/information-protection-security-baseline?context=/azure/information-protection/context/context
-  - name: Frequently asked questions
-    href: faqs-rms.md
   - name: Known issues
     href: known-issues.md
   - name: RMS client deployment notes
