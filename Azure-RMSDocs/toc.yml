@@ -9,37 +9,33 @@
   items:
   - name: Overview
     href: how-to-guides.md
-  - name: Deploying & using the protection service
+  - name: Deploying dependent configurations
     items:
-    - name: Preparing for the protection service
+    - name: Migrating from AD RMS
       items:
-      - name: Manage Active Directory Mobile Device Extensions
-        href: active-directory-rights-manage-mobile-device.md
-      - name: Migrating from AD RMS
+      - name: Overview
+        href: migrate-from-ad-rms-to-azure-rms.md
+      - name: Phase 1 - Preparation
+        href: migrate-from-ad-rms-phase1.md
+      - name: Phase 2 - Server-side configuration
         items:
         - name: Overview
-          href: migrate-from-ad-rms-to-azure-rms.md
-        - name: Phase 1 - Preparation
-          href: migrate-from-ad-rms-phase1.md
-        - name: Phase 2 - Server-side configuration
-          items:
-          - name: Overview
-            href: migrate-from-ad-rms-phase2.md
-          - name: Software key to software key
-            href: migrate-softwarekey-to-softwarekey.md
-          - name: HSM key to HSM key
-            href: migrate-hsmkey-to-hsmkey.md
-          - name: Software key to HSM key
-            href: migrate-softwarekey-to-hsmkey.md
-        - name: Phase 3 - Client-side configuration
-          href: migrate-from-ad-rms-phase3.md
-        - name: Phase 4 - Supporting services configuration
-          href: migrate-from-ad-rms-phase4.md
-        - name: Phase 5 - Post migration tasks
-          href: migrate-from-ad-rms-phase5.md
-        - name: Comparison with the Azure Rights Management service
-          href: compare-on-premise.md
-    - name: Deploying the RMS connector
+          href: migrate-from-ad-rms-phase2.md
+        - name: Software key to software key
+          href: migrate-softwarekey-to-softwarekey.md
+        - name: HSM key to HSM key
+          href: migrate-hsmkey-to-hsmkey.md
+        - name: Software key to HSM key
+          href: migrate-softwarekey-to-hsmkey.md
+      - name: Phase 3 - Client-side configuration
+        href: migrate-from-ad-rms-phase3.md
+      - name: Phase 4 - Supporting services configuration
+        href: migrate-from-ad-rms-phase4.md
+      - name: Phase 5 - Post migration tasks
+        href: migrate-from-ad-rms-phase5.md
+      - name: Comparison with the Azure Rights Management service
+        href: compare-on-premise.md
+    - name: Deploying the Rights Management connector
       items:
       - name: Overview
         href: deploy-rms-connector.md
@@ -53,10 +49,10 @@
           href: rms-connector-registry-settings.md
       - name: Monitor the connector
         href: monitor-rms-connector.md
-  - name: Deploying & using the client
-    items:
     - name: Deploying the client
       href: about-aip-client.md
+    - name: Active Directory Mobile Device Extensions
+      href: active-directory-rights-manage-mobile-device.md
   - name: Developing & customizing apps
     items:
     - name: Microsoft Information Protection SDK
