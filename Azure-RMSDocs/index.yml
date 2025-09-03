@@ -27,14 +27,6 @@ landingContent:
         links:
           - text: What is Azure Information Protection?
             url: what-is-information-protection.md
-  
-  # Card
-  - title: Manage your root encryption key
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Planning and implementing your Azure Information Protection tenant key
-            url: plan-implement-tenant-key.md
 
 # Card
   - title: Microsoft Information Protection SDK
