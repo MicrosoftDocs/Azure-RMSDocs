@@ -5,42 +5,6 @@
   items:
   - name: What is Azure Information Protection?
     href: what-is-information-protection.md
-  - name: Removed and retired services
-    href: removed-sunset-services.md
-- name: Concepts
-  items:
-  - name: AIP requirements
-    items:
-    - name: Overview
-      href: requirements.md
-    - name: Additional Microsoft Entra requirements
-      href: requirements-azure-ad.md
-    - name: Office 365 operated by 21Vianet
-      href: parity-between-azure-information-protection.md
-  - name: Azure Rights Management
-    items:
-    - name: How Rights Management protection works
-      href: how-does-it-work.md
-    - name: How applications support Azure Rights Management protection
-      items:
-      - name: Overview
-        href: applications-support.md
-      - name: Office applications and services
-        href: office-apps-services-support.md
-      - name: Other applications that support the RMS APIs
-        href: api-support.md
-    - name: RMS for individuals and Azure Information Protection
-      href: rms-for-individuals.md
-    - name: Azure Information Protection and AD RMS
-      href: compare-on-premise.md
-    - name: RMS client deployment notes
-      href: ./rms-client/client-deployment-notes.md
-  - name: Your Azure Information Protection tenant key
-    href: plan-implement-tenant-key.md
-  - name: Security
-    items:
-    - name: Security baseline
-      href: /security/benchmark/azure/baselines/information-protection-security-baseline?context=/azure/information-protection/context/context
 - name: How-to guides
   items:
   - name: Overview
@@ -49,20 +13,6 @@
     items:
     - name: Preparing for the protection service
       items:
-      - name: Configure Bring Your Own Key (BYOK) protection
-        href: byok-price-restrictions.md
-      - name: Get started with tenant root keys
-        href: get-started-tenant-root-keys.md
-      - name: Operations for your tenant key
-        items:
-        - name: Overview
-          href: operations-tenant-key.md
-        - name: Microsoft-managed
-          href: operations-microsoft-managed-tenant-key.md
-        - name: Customer-managed
-          href: operations-customer-managed-tenant-key.md
-      - name: Preparing users and groups
-        href: prepare.md
       - name: Manage Active Directory Mobile Device Extensions
         href: active-directory-rights-manage-mobile-device.md
       - name: Migrating from AD RMS
@@ -87,16 +37,8 @@
           href: migrate-from-ad-rms-phase4.md
         - name: Phase 5 - Post migration tasks
           href: migrate-from-ad-rms-phase5.md
-    - name: Configuring the protection service
-      items:
-      - name: Configuring applications
-        items:
-        - name: Overview
-          href: configure-applications.md
-        - name: Microsoft 365 services
-          href: configure-office365.md
-      - name: Configuring usage rights
-        href: configure-usage-rights.md
+        - name: Comparison with the Azure Rights Management service
+          href: compare-on-premise.md
     - name: Deploying the RMS connector
       items:
       - name: Overview
@@ -125,14 +67,14 @@
       href: /previous-versions/azure/rms/rights-management-sdks
 - name: Resources
   items:
+  - name: Security baseline
+    href: /security/benchmark/azure/baselines/information-protection-security-baseline?context=/azure/information-protection/context/context
   - name: Frequently asked questions
-    items:
-    - name: FAQs - data protection
-      href: faqs-rms.md
+    href: faqs-rms.md
   - name: Known issues
     href: known-issues.md
-  - name: Compliance & supporting information
-    href: compliance.md
+  - name: RMS client deployment notes
+    href: ./rms-client/client-deployment-notes.md
   - name: PowerShell reference
     href: /powershell/azure/aip/overview
   - name: Audit log reference

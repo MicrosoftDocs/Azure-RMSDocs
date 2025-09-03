@@ -6,10 +6,65 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/parity-between-azure-information-protection.md",
+      "redirect_url": "/purview/parity-between-azure-information-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/how-does-it-work.md",
+      "redirect_url": "/purview/rights-management-how-does-it-work",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/compliance.md",
+      "redirect_url": "/purview/azure-rights-management-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-usage-rights.md",
+      "redirect_url": "/purview/rights-management-usage-rights",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/prepare.md#group-membership-caching-by-azure-information-protection",
+      "redirect_url": "/purview/rights-management-users-groups#group-membership-caching",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/prepare.md",
+      "redirect_url": "/purview/rights-management-users-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/api-support.md",
+      "redirect_url": "/purview/azure-rights-management-learn-about",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/office-apps-services-support.md",
+      "redirect_url": "/purview/azure-rights-management-learn-about",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/requirements.md",
+      "redirect_url": "/purview/rights-management-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/requirements-azure-ad.md",
+      "redirect_url": "/purview/rights-management-requirements",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/customizations.md",
       "redirect_url": "/purview/information-protection-client#supported-customizations",
       "redirect_document_id": false
     },
+    {
+      "source_path": "Azure-RMSDocs/removed-sunset-services.md",
+      "redirect_url": "/azure/information-protection/",
+      "redirect_document_id": false
+    }, 
     {
       "source_path": "Azure-RMSDocs/configure-policy-migrate-labels.md",
       "redirect_url": "/purview/get-started-with-sensitivity-labels",
@@ -17,7 +72,7 @@
     },
     {
       "source_path": "Azure-RMSDocs/terminology.md",
-      "redirect_url": "/purview/rights-management-learn-about",
+      "redirect_url": "/purview/azure-rights-management-learn-about",
       "redirect_document_id": false
     },
     {
@@ -115,7 +170,16 @@
       "redirect_url": "https://learn.microsoft.com/purview/sensitivity-labels",
       "redirect_document_id": false
     },
-
+    {
+      "source_path": "Azure-RMSDocs/configure-office365.md",
+      "redirect_url": "/azure/information-protection/how-to-guides",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/configure-applications.md",
+      "redirect_url": "/azure/information-protection/how-to-guides",
+      "redirect_document_id": false
+    },
     {
       "source_path": "Azure-RMSDocs/quickstart-deploy-client.md",
       "redirect_url": "https://learn.microsoft.com/purview/information-protection-client",
@@ -218,7 +282,7 @@
     },
     {
       "source_path": "Azure-RMSDocs/log-analyze-usage.md",
-      "redirect_url": "https://learn.microsoft.com/purview/rights-management-usage",
+      "redirect_url": "https://learn.microsoft.com/purview/rights-management-usage-logging",
       "redirect_document_id": false
     },
     {
@@ -1010,6 +1074,36 @@
             "source_path": "Azure-RMSDocs/get-started/faqs.md",
             "redirect_url": "/information-protection/faqs",
             "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/plan-implement-tenant-key.md",
+          "redirect_url": "/purview/rights-management-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/get-started-tenant-root-keys.md",
+          "redirect_url": "/purview/rights-management-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/byok-price-restrictions.md",
+          "redirect_url": "/purview/rights-management-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/operations-tenant-key.md",
+          "redirect_url": "/purview/rights-management-tenant-key#operations-for-your-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/operations-microsoft-managed-tenant-key.md",
+          "redirect_url": "/purview/rights-management-tenant-key#operations-for-your-tenant-key",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "Azure-RMSDocs/operations-customer-managed-tenant-key.md",
+          "redirect_url": "/purview/rights-management-tenant-key#operations-for-your-tenant-key",
+          "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/help-bot.md",
@@ -3021,9 +3115,9 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "mip/develop/reference/mip-sdk-reference.md",
-            "redirect_url": "https://microsoftdocs.github.io/mip-sdk-docs/cpp",
-            "redirect_document_id": false
+          "source_path": "mip/develop/reference/mip-sdk-reference.md",
+          "redirect_url": "https://microsoftdocs.github.io/mip-sdk-docs/cpp",
+          "redirect_document_id": false
         }
     ]
 }

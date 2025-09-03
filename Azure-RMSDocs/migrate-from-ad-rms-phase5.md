@@ -35,7 +35,7 @@ Use the following information for Phase 5 of migrating from AD RMS to Azure Info
 
 Remove the Service Connection Point (SCP) from Active Directory to prevent computers from discovering your on-premises Rights Management infrastructure. This is optional for the existing clients that you migrated because of the redirection that you configured in the registry (for example, by running the migration script). However, removing the SCP prevents new clients and potentially RMS-related services and tools from finding the SCP when the migration is complete. At this point, all computer connections should go to the Azure Rights Management service.
 
-To remove the SCP, make sure that you are logged in as a domain enterprise administrator, and then use the following procedure:
+To remove the SCP, make sure that you're logged in as a domain enterprise administrator, and then use the following procedure:
 
 1. In the Active Directory Rights Management Services console, right-click the AD RMS cluster, and then click **Properties**.
 
@@ -49,20 +49,19 @@ Now monitor your AD RMS servers for activity. For example, check the [requests 
 
 When you have confirmed that RMS clients are no longer communicating with these servers and that clients are successfully using Azure Information Protection, you can remove the AD RMS server role from these servers. If you're using dedicated servers, you might prefer the cautionary step of first shutting down the servers for a period of time. This gives you time to make sure that there are no reported problems that might require you to restart these servers for service continuity while you investigate why clients are not using Azure Information Protection.
 
-After you have de-provisioned your AD RMS servers, you might want to take the opportunity to review your template and labels. For example, convert templates to labels, consolidate them so that users have fewer to choose from, or reconfigure them. This would also be a good time to publish default templates.
+After you have deprovisioned your AD RMS servers, you might want to take the opportunity to review your template and labels. For example, convert templates to labels, consolidate them so that users have fewer to choose from, or reconfigure them. This would also be a good time to publish default templates.
 
 For sensitivity labels and the unified labeling client, use the Microsoft Purview compliance portal. For more information, see the Microsoft 365 documentation.
 
 >[!IMPORTANT]
-> At the end of this migration, your AD RMS cluster cannot be used with Azure Information Protection and the hold your own key ([HYOK](/previous-versions/azure/information-protection/configure-adrms-restrictions)) option. 
+> At the end of this migration, your AD RMS cluster can't be used with Azure Information Protection and the hold your own key ([HYOK](/previous-versions/azure/information-protection/configure-adrms-restrictions)) option. 
 >
 ### Additional configuration for computers that run Office 2010
 
 > [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](removed-sunset-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
-> 
+> Office 2010 extended support ended on October 13, 2020.
 
-If migrated clients run Office 2010, users might experience delays in opening protected content after our AD RMS servers are de-provisioned. Or, users might see messages that they don't have credentials to open protected content. To resolve these problems, create a network redirection for these computers, which redirects the AD RMS URL FQDN to the local IP address of the computer (127.0.0.1). You can do this by configuring the local hosts file on each computer, or by using DNS.
+If migrated clients run Office 2010, users might experience delays in opening protected content after our AD RMS servers are deprovisioned. Or, users might see messages that they don't have credentials to open protected content. To resolve these problems, create a network redirection for these computers, which redirects the AD RMS URL FQDN to the local IP address of the computer (127.0.0.1). You can do this by configuring the local hosts file on each computer, or by using DNS.
 
 - **Redirection via local hosts file**: Add the following line in the local hosts file, replacing `<AD RMS URL FQDN>` with the value for your AD RMS cluster, without prefixes or web pages:
 
@@ -123,14 +122,14 @@ To remove the onboarding controls:
     Get-AipServiceOnboardingControlPolicy
     ```
 
-    In the output, **License** should show **False**, and there is no GUID displayed for the **SecurityGroupOjbectId**
+    In the output, **License** should show **False**, and there's no GUID displayed for the **SecurityGroupOjbectId**
 
-Finally, if you are using Office 2010 and you have enabled the **AD RMS Rights Policy Template Management (Automated)** task in the Windows Task Scheduler library, disable this task because it is not used by the Azure Information Protection client. 
+Finally, if you're using Office 2010 and you have enabled the **AD RMS Rights Policy Template Management (Automated)** task in the Windows Task Scheduler library, disable this task because it isn't used by the Azure Information Protection client. 
 
 This task is typically enabled by using group policy and supports an AD RMS deployment. You can find this task in the following location: **Microsoft** > **Windows** > **Active Directory Rights Management Services Client**. 
 
 > [!IMPORTANT]
-> Office 2010 extended support ended on October 13, 2020. For more information, see [AIP and legacy Windows and Office versions](removed-sunset-services.md#aip-and-legacy-windows-and-office-sharepoint-and-exchange-versions).
+> Office 2010 extended support ended on October 13, 2020.
 
 ## Step 12: Rekey your Azure Information Protection tenant key
 
@@ -142,7 +141,7 @@ Even if your AD RMS deployment was using Cryptographic Mode 2, we still recommen
 
 When you rekey your Azure Information Protection tenant key (also known as "rolling your key"), the currently active key is archived and Azure Information Protection starts to use a different key that you specify. This different key could be a new key that you create in Azure Key Vault, or the default key that was automatically created for your tenant.
 
-Moving from one key to another doesn't happen immediately but over a few weeks. Because it's not immediate, do not wait until you suspect a breach to your original key but do this step as soon as the migration is complete.
+Moving from one key to another doesn't happen immediately but over a few weeks. Because it's not immediate, don't wait until you suspect a breach to your original key but do this step as soon as the migration is complete.
 
 To rekey your Azure Information Protection tenant key:
 
@@ -155,7 +154,7 @@ To rekey your Azure Information Protection tenant key:
 
 - **If your tenant key is managed by you (BYOK)**: In Azure Key Vault, repeat your key creation process for your Azure Information Protection tenant, and then run the [Use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) cmdlet again to specify the URI for this new key.
 
-For more information about managing your Azure Information Protection tenant key, see [Operations for your Azure Information Protection tenant key](./operations-tenant-key.md).
+For more information about managing your Azure Information Protection tenant key, see [Operations for your tenant key](/purview/rights-management-tenant-key#operations-for-your-tenant-key.
 
 
 ## Next steps

@@ -46,7 +46,13 @@ The RMS connector supports the following on-premises servers: Exchange Server, S
 > [!NOTE]
 > If you want to protect multiple file types (not just Office documents) by using File Classification Infrastructure, do not use the RMS connector, but instead, use the [AzureInformationProtection cmdlets](/powershell/module/azureinformationprotection).
 
-For the versions of these on-premises servers that are supported by the RMS connector, see [On-premises servers that support Azure RMS](requirements.md#supported-on-premises-servers-for-azure-rights-management-data-protection).
+Versions of these on-premises servers that are supported by the RMS connector:
+
+|Server type  |Supported versions  |
+|---------|---------|
+|**Exchange Server**     | - Exchange Server 2019 </br> - Exchange Server 2016 </br>- Exchange Server 2013       |
+|**SharePoint Server**     |- SharePoint Server 2019 <br>- SharePoint Server 2016 </br>- SharePoint Server 2013         |
+|**File servers that run Windows Server<br> and use File Classification Infrastructure (FCI)**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
 
 
 ### Support for hybrid scenarios
@@ -57,7 +63,7 @@ You can use the RMS connector even if some of your users are connecting to onlin
 
 If you manage your own tenant key for Azure RMS (the bring your own key, or BYOK scenario), the RMS connector and the on-premises servers that use it do not access the hardware security module (HSM) that contains your tenant key. This is because all cryptographic operations that use the tenant key are performed in Azure RMS, and not on-premises.
 
-If you want to learn more about this scenario where you manage your tenant key, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
+If you want to learn more about this scenario where you manage your tenant key, see [Managing the root key for your Azure Rights Management service](/purview/rights-management-tenant-key).
 
 ## Prerequisites for the RMS connector
 

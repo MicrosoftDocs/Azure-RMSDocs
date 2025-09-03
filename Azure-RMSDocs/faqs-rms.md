@@ -43,7 +43,7 @@ These encryption technologies are complementary and using them requires enabling
 
 ## Can I now use BYOK with Exchange Online?
 
-Yes, you can now use BYOK with Exchange Online when you follow the instructions in [Set up new Microsoft 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). These instructions enable the new capabilities in Exchange Online that support using BYOK for Azure Information Protection, as well as the new Office 365 Message Encryption.
+Yes, you can now use BYOK with Exchange Online when you follow the instructions in [Set up Message Encryption](/purview/set-up-new-message-encryption-capabilities). These instructions enable the new capabilities in Exchange Online that support using BYOK for the Azure Rights Management service.
 
 For more information about this change, see the blog announcement: [Office 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)
 
@@ -63,7 +63,7 @@ Additional information:
 
 |Topic  |Details  |
 |---------|---------|
-|**Evaluation frequency**    | For Windows computers, and the current preview release, the conditional access policies for Azure Information Protection are evaluated when the [user environment is initialized](./how-does-it-work.md#initializing-the-user-environment) (this process is also known as bootstrapping), and then every 30 days.<br /><br />To fine-tune how often your conditional access policies get evaluated, [configure the token lifetime](/azure/active-directory/active-directory-configurable-token-lifetimes).       |
+|**Evaluation frequency**    | For Windows computers, and the current preview release, the conditional access policies for Azure Information Protection are evaluated when the [user environment is initialized](/purview/rights-management-how-does-it-work#initializing-the-user-environment) (this process is also known as bootstrapping), and then every 30 days.<br /><br />To fine-tune how often your conditional access policies get evaluated, [configure the token lifetime](/azure/active-directory/active-directory-configurable-token-lifetimes).       |
 |**Administrator accounts**     |We recommend that you do not add administrator accounts to your conditional access policies because these accounts will not be able to access the Azure Information Protection pane in the Azure portal.         |
 |**MFA and B2B collaboration**     |If you use MFA in your conditional access policies for collaborating with other organizations (B2B), you must use [Microsoft Entra B2B collaboration](/azure/active-directory/b2b/what-is-b2b) and create guest accounts for the users you want to share with in the other organization.        |
 |**Terms of Use prompts**     |With the Microsoft Entra December 2018 preview release, you can now [prompt users to accept a terms of use](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822) before they open a protected document for the first time.       |
@@ -75,9 +75,9 @@ If the document was protected by using a label or template, there's no need to r
 
 - When a user hasn't accessed the document before you made the changes, the changes take effect as soon as the user opens the document.
 
-- When a user has already accessed the document, these changes take effect when their [use license](configure-usage-rights.md#rights-management-use-license) expires. Reprotect the document only if you cannot wait for the use license to expire. Reprotecting effectively creates a new version of the document, and therefore a new use license for the user.
+- When a user has already accessed the document, these changes take effect when their [use license](/purview/rights-management-usage-rights#rights-management-use-license) expires. Reprotect the document only if you cannot wait for the use license to expire. Reprotecting effectively creates a new version of the document, and therefore a new use license for the user.
 
-Alternatively, if you have already configured a group for the required permissions, you can change the group membership to include or exclude users and there is no need to change the label or template. There might be a small delay before the changes take effect because group membership is [cached](prepare.md#group-membership-caching-by-azure-information-protection) by the Azure Rights Management service.
+Alternatively, if you have already configured a group for the required permissions, you can change the group membership to include or exclude users and there is no need to change the label or template. There might be a small delay before the changes take effect because group membership is [cached](/purview/rights-management-users-groups#group-membership-caching) by the Azure Rights Management service.
 
 If the document was protected by using custom permissions, you cannot change the permissions for the existing document. You must protect the document again and specify all the users and all the usage rights that are required for this new version of the document. To reprotect a protected document, you must have the Full Control usage right.
 
@@ -124,7 +124,7 @@ Alternatively, you can add external users to custom templates (and labels) by us
     When you add users to an existing template, you must define rights definition objects for the existing users in the templates, in addition to the new users. For this scenario, you might find helpful **Example 3: Add new users and rights to a custom template** from the [Examples](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) section for the cmdlet.
 
 ## What type of groups can I use with Azure RMS?
-For most scenarios, you can use any group type in Microsoft Entra ID that has an email address. This rule of thumb always applies when you assign usage rights but there are some exceptions for administering the Azure Rights Management service. For more information, see [Azure Information Protection requirements for group accounts](prepare.md#azure-information-protection-requirements-for-group-accounts).
+For most scenarios, you can use any group type in Microsoft Entra ID that has an email address. This rule of thumb always applies when you assign usage rights but there are some exceptions for administering the Azure Rights Management service. For more information, see [Azure Information Protection requirements for group accounts](/purview/rights-management-users-groups#azure-rights-management-service-requirements-for-group-accounts).
 
 ## How do I send a protected email to a Gmail or Hotmail account?
 
@@ -132,7 +132,7 @@ When you use Exchange Online and the Azure Rights Management service, you just s
 
 The recipient sees an option to sign in to their Gmail, Yahoo, or Microsoft account, and then they can read the protected email. Alternatively, they can choose the option for a one-time passcode to read the email in a browser.
 
-To support this scenario, Exchange Online must be enabled for the Azure Rights Management service and the new capabilities in Office 365 Message Encryption. For more information about this configuration, see [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration).
+To support this scenario, Exchange Online must be enabled for the Azure Rights Management service and Microsoft Purview Message Encryption.
 
 For more information about the new capabilities that include supporting all email accounts on all devices, see the following blog post: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
@@ -146,14 +146,14 @@ For a list of file name extensions that are natively supported by Azure Rights M
 No. In this scenario, the associated temporary file doesn't contain data from the original document but instead, only what the user enters while the file is open. Unlike the original file, the temporary file is obviously not designed for sharing and would remain on the device, protected by local security controls, such as BitLocker and EFS.
 
 ## A feature I am looking for doesn't seem to work with SharePoint protected libraries—is support for my feature planned?
-Currently, Microsoft SharePoint supports RMS-protected documents by using IRM protected libraries, which do not support Rights Management templates, document tracking, and some other capabilities. For more information, see the [SharePoint in Microsoft 365 and SharePoint Server](./office-apps-services-support.md#sharepoint-in-microsoft-365-and-sharepoint-server) section in the [Office applications and services](./office-apps-services-support.md) article.
+Currently, Microsoft SharePoint supports RMS-protected documents by using IRM protected libraries, which do not support Rights Management templates, document tracking, and some other capabilities.
 
 If you are interested in a specific capability that isn't yet supported, be sure to keep an eye on announcements on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
 ## How do I configure One Drive in SharePoint, so that users can safely share their files with people inside and outside the company?
 By default, as a Microsoft 365 administrator, you don't configure this; users do.
 
-Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive is designed for users to enable and configure IRM for their own OneDrive library. However, by using PowerShell, you can do this for them. For instructions, see [SharePoint in Microsoft 365 and OneDrive: IRM Configuration](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration).
+Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive is designed for users to enable and configure IRM for their own OneDrive library. However, by using PowerShell, you can do this for them.
 
 ## Do you have any tips or tricks for a successful deployment?
 
@@ -167,7 +167,7 @@ Use the [super user feature](/purview/encryption-super-users), which grants the 
 If your content is stored in SharePoint or OneDrive, admins can run the [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) cmdlet, to remove both the sensitivity label and the encryption. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document).
 
 ## Can Rights Management prevent screen captures?
-By not granting the **Copy** [usage right](configure-usage-rights.md), Rights Management can prevent screen captures from many of the commonly used screen capture tools on Windows platforms (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile, and Windows 11). However, iOS, Mac,and Android devices do not allow any app to prevent screen captures. In addition, browsers on any device cannot prevent screen captures. Browser use includes Outlook on the web and Office for the web.
+By not granting the **Copy** [usage right](/purview/rights-management-usage-rights), Rights Management can prevent screen captures from many of the commonly used screen capture tools on Windows platforms (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile, and Windows 11). However, iOS, Mac, and Android devices do not allow any app to prevent screen captures. In addition, browsers on any device cannot prevent screen captures. Browser use includes Outlook on the web and Office for the web.
 
 > [!NOTE]
 > Now rolling out to [Current Channel (Preview)](https://office.com/insider): in Office for Mac, Word, Excel, and PowerPoint (but not Outlook) now support the Rights Management usage right to prevent screen captures.
@@ -178,7 +178,7 @@ As these examples demonstrate, even if all platforms and all software supported 
 
 ## What's the difference between a user protecting an email with Do Not Forward and a template that doesn't include the Forward right?
 
-Despite its name and appearance, **Do Not Forward** is not the opposite of the Forward right, or a template. It is actually a set of rights that include restricting copying, printing, and saving the email outside the mailbox, in addition to restricting the forwarding of emails. The rights are dynamically applied to users via the chosen recipients, and not statically assigned by the administrator. For more information, see the [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails) section in [Configuring usage rights for Azure Information Protection](configure-usage-rights.md).
+Despite its name and appearance, **Do Not Forward** is not the opposite of the Forward right, or a template. It is actually a set of rights that include restricting copying, printing, and saving the email outside the mailbox, in addition to restricting the forwarding of emails. The rights are dynamically applied to users via the chosen recipients, and not statically assigned by the administrator. For more information, see the [Do Not Forward option for emails](/purview/rights-management-usage-rights#do-not-forward-option-for-emails) section in [Configure usage rights for the Azure Rights Management service](/purview/rights-management-usage-rights).
 
 ## What's the difference between Windows Server FCI and the Azure Information Protection scanner?
 
