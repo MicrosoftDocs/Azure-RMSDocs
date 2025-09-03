@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Azure Information Protection (AIP) documentation
-summary: Learn how to control and secure emails, documents, and sensitive data inside and outside your company walls using Azure Information Protection. Note that the AIP unified labeling client is currently in a maintenance mode. For functionality from Office applications, we recommend that you use built-in labeling instead.
+summary: Azure Information Protection is now integrated with Microsoft Purview Information Protection, with the Azure Rights Management service providing the main encryption technology to secure your data.
 
 metadata:
   title: Azure Information Protection documentation
