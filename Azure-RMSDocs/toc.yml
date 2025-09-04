@@ -71,6 +71,4 @@
     href: ./rms-client/client-deployment-notes.md
   - name: PowerShell reference
     href: /powershell/azure/aip/overview
-  - name: Audit log reference
-    href: audit-logs.md
 
