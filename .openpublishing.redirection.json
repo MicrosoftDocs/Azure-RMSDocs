@@ -11,6 +11,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/audit-logs.md",
+      "redirect_url": "/purview/data-classification-activity-explorer-available-events",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/how-does-it-work.md",
       "redirect_url": "/purview/rights-management-how-does-it-work",
       "redirect_document_id": false
@@ -23,6 +28,11 @@
     {
       "source_path": "Azure-RMSDocs/configure-usage-rights.md",
       "redirect_url": "/purview/rights-management-usage-rights",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Azure-RMSDocs/known-issues.md",
+      "redirect_url": "/troubleshoot/microsoft-365/sensitivity-labels/known-issues-ip-client",
       "redirect_document_id": false
     },
     {

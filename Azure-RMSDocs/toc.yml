@@ -65,12 +65,8 @@
   items:
   - name: Security baseline
     href: /security/benchmark/azure/baselines/information-protection-security-baseline?context=/azure/information-protection/context/context
-  - name: Known issues
-    href: known-issues.md
   - name: RMS client deployment notes
     href: ./rms-client/client-deployment-notes.md
   - name: PowerShell reference
     href: /powershell/azure/aip/overview
-  - name: Audit log reference
-    href: audit-logs.md
 
