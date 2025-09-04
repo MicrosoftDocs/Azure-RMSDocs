@@ -27,7 +27,7 @@
     },
     {
       "source_path": "Azure-RMSDocs/known-issues.md",
-      "redirect_url": "/troubleshoot/microsoft-365/microsoft-purview-welcome",
+      "redirect_url": "/troubleshoot/microsoft-365/sensitivity-labels/known-issues-ip-client",
       "redirect_document_id": false
     },
     {
