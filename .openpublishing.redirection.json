@@ -31,6 +31,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "Azure-RMSDocs/known-issues.md",
+      "redirect_url": "/troubleshoot/microsoft-365/sensitivity-labels/known-issues-ip-client",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "Azure-RMSDocs/prepare.md#group-membership-caching-by-azure-information-protection",
       "redirect_url": "/purview/rights-management-users-groups#group-membership-caching",
       "redirect_document_id": false
