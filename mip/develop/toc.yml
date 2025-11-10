@@ -171,8 +171,6 @@
   href: concept-api-permissions.md
 - name: Resources
   items:
-  - name: Developer blog
-    href: https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/bg-p/InformationProtectionDevelopers
   - name: FAQs and known issues
     href: faqs-known-issues.md
   - name: FIPS 140-2 Compliance
