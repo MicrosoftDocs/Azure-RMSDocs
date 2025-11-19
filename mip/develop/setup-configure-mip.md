@@ -232,14 +232,13 @@ Upon the sending of the email, allow up to 72 hours for an acknowledgment of the
 
 ## Ensure your app has the required dependencies
 
-Applications built with the MIP SDK require a supported version of these dependencies to deploy:
+Applications built with the MIP SDK on Windows require Visual C++ Runtime component to be installed, if not already present:
 - [Microsoft Visual C++ Redistributable for Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) with MSVC 14.3 or higher
-- [SCons](https://scons.org/pages/download.html)
-- [Python](https://www.python.org/downloads/)
+
+Applications built with the MIP SDK on Linux require supported versions of these dependencies:
 - [UUID](https://www.npmjs.com/package/uuid)
 - [OpenSSL](https://www.openssl-library.org/source/) libssl core library
 - [libsecret](https://github.com/GNOME/libsecret)
-- [Linux](https://www.linux.org/pages/download/)
 - [GMIME](https://github.com/jstedfast/gmime) for apps using the file SDK
 - [Libgsf](https://github.com/GNOME/libgsf) for apps using the file SDK
   
