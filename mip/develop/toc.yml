@@ -171,6 +171,8 @@
   href: concept-api-permissions.md
 - name: Resources
   items:
+  - name: Microsoft Purview Forums
+    href: https://techcommunity.microsoft.com/category/microsoft-purview
   - name: FAQs and known issues
     href: faqs-known-issues.md
   - name: FIPS 140-2 Compliance
