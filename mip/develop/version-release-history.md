@@ -50,6 +50,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 ### File SDK
 - Fixed an issue where extended properties were not written when co-authoring is enabled.
 - Fixed an issue where creating an Rich Text Format stream increased the size of the unprotected msg file.
+- Fixed an issue where "File is not protected" error was returned for PDF files with metadata mismatches.
 
 ### Platform and Dependency Updates
 - Added offline republishing support in C# and Java wrappers.
