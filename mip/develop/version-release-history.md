@@ -27,7 +27,8 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 
 | Version | Link                         | Status             | End of Support     |
 | ------- | ---------------------------- | ------------------ | ------------------ |
-| 1.17    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
+| 1.18    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
+| 1.17    | https://aka.ms/mipsdkbins117 | **Supported**      | Dec 4, 2026        |
 | 1.16    | https://aka.ms/mipsdkbins116 | **Supported**      | June 9, 2026       |
 | 1.15    | https://aka.ms/mipsdkbins115 | **Supported**      | December 13, 2025  |
 | 1.14    | https://aka.ms/mipsdkbins114 | **Out of Support** | July 5, 2025       |
@@ -41,6 +42,23 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support** | September 23, 2021 |
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
+
+## Version 1.18.75
+
+**Release Date:** December 4, 2025
+
+### File SDK
+- Fixed an issue where extended properties were not written when co-authoring is enabled.
+- Fixed an issue where creating an Rich Text Format stream increased the size of the unprotected msg file.
+
+### Platform and Dependency Updates
+- Added offline republishing support in C# and Java wrappers.
+- Updated ZLib from 1.2.3 to 1.3.1.
+- Updated OpenSSL from 3.4.1 to 3.4.3.
+- Updated XMP from 2023.12 to 2025.03.
+- Updated NLohmann's Json from 3.11.3 to 3.12.0.
+- Updated libXML from 2.14.0 to 2.15.0.
+- Updated SQLite from 3.49.1 to 3.50.4.
 
 ## Version 1.17.158
 
