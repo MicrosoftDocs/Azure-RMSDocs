@@ -236,9 +236,11 @@ Applications built with the MIP SDK on Windows require Visual C++ Runtime compon
 - [Microsoft Visual C++ Redistributable for Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) with MSVC 14.3 or higher
 
 Applications built with the MIP SDK on Linux require supported versions of these dependencies:
-- [UUID](https://www.npmjs.com/package/uuid)
-- [OpenSSL](https://www.openssl-library.org/source/) libssl core library
+
+- [curl](https://curl.se/docs/install.html)
 - [libsecret](https://github.com/GNOME/libsecret)
+- [OpenSSL](https://www.openssl-library.org/source/) libssl core library
+- [UUID](https://www.npmjs.com/package/uuid)
 - [GMIME](https://github.com/jstedfast/gmime) for apps using the file SDK
 - [Libgsf](https://github.com/GNOME/libgsf) for apps using the file SDK
   
