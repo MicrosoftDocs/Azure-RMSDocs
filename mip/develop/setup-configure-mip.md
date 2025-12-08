@@ -246,7 +246,7 @@ Applications built with the MIP SDK on Linux require supported versions of these
 - [GMIME](https://github.com/jstedfast/gmime) for apps using the file SDK
 - [Libgsf](https://github.com/GNOME/libgsf) for apps using the file SDK
   
-The [samples](/develop/setup-configure-mip?branch=main#configure-your-client-workstation) folder includes a `how-to-build-and-run.txt` file with commands to install the required dependencies for each OS.
+The binaries include a samples folder with a `how-to-build-and-run.txt` file that has commands to install the required dependencies for each OS.
 
 ## Next Steps
 
