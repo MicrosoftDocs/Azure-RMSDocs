@@ -46,7 +46,7 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 ## Version 1.17.181
 **Release Date:** December 5, 2025
 
-###File SDK
+### File SDK
 - Fixed an issue when detecting third-party password protection on Office files.
 
 ### Platform and Dependency Updates
