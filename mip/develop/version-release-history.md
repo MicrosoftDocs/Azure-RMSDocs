@@ -43,6 +43,21 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
 | 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
 
+## Version 1.17.181
+**Release Date:** December 5, 2025
+
+### File SDK
+- Fixed an issue when detecting third-party password protection on Office files.
+
+### Platform and Dependency Updates
+- Fixed an issue with loading the telemetry dll for .NET.
+- Updated ZLib from 1.2.3 to 1.3.1.
+- Updated OpenSSL from 3.4.1 to 3.4.3.
+- Updated XMP from 2023.12 to 2025.03.
+- Updated NLohmann's Json from 3.11.3 to 3.12.0.
+- Updated libXML from 2.14.0 to 2.15.0.
+- Updated SQLite from 3.49.1 to 3.50.4.
+
 ## Version 1.18.75
 
 **Release Date:** December 4, 2025
@@ -50,9 +65,18 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 ### File SDK
 - Fixed an issue where extended properties were not written when co-authoring is enabled.
 - Fixed an issue where creating an Rich Text Format stream increased the size of the unprotected msg file.
+- Fixed an issue where "File is not protected" error was returned for PDF files with metadata mismatches.
+- Fixed an issue when detecting third-party password protection on Office files.
+- Fixed an issue with duplicate discover audit events.
+- Added GetRightsForLabelId() to file engine to check if the label exists and supports protection.
+
+### Protection SDK
+- Added a get function to the protection descriptor for retrieving the lifetime of a EUL.
 
 ### Platform and Dependency Updates
 - Added offline republishing support in C# and Java wrappers.
+- Added ARM64 .NET support.
+- Removed support for Ubuntu 20.04.
 - Updated ZLib from 1.2.3 to 1.3.1.
 - Updated OpenSSL from 3.4.1 to 3.4.3.
 - Updated XMP from 2023.12 to 2025.03.
