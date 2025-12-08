@@ -235,6 +235,8 @@ Upon the sending of the email, allow up to 72 hours for an acknowledgment of the
 Applications built with the MIP SDK on Windows require Visual C++ Runtime component to be installed, if not already present:
 - [Microsoft Visual C++ Redistributable for Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) with MSVC 14.3 or higher
 
+These will only work if the application has been built as Release. If the application is built as Debug, then the Visual C++ runtime debug DLLs must be included with the application or installed on the machine.
+
 Applications built with the MIP SDK on Linux require supported versions of these dependencies:
 
 - [curl](https://curl.se/docs/install.html)
