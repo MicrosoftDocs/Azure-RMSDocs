@@ -9,7 +9,7 @@ manager: aashishr
 ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.service: information-protection
+ms.service: azure-rms
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ROBOTS: NOINDEX
 
@@ -18,7 +18,7 @@ ROBOTS: NOINDEX
 
 #audience:
 #ms.devlang:
-ms.subservice: fci
+ms.subservice: windows-server-fci
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
