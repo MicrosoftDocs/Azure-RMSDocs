@@ -9,7 +9,7 @@ manager: aashishr
 ms.date: 11/11/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
-ms.service: information-protection
+ms.service: azure-rms
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 
 
