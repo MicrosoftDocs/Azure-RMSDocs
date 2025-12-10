@@ -2,7 +2,7 @@
 title: Concepts - Fetching File Status
 description: This article will help you understand how to fetch file status using the `mip::FileHandler::GetFileStatus()` API
 author: GRDININ
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: GRDININ
