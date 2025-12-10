@@ -2,7 +2,7 @@
 title: How to - Republishing scenario C#
 description: This article will help you understand the scenario of how to re-use protection handler for republishing scenarios (C#).
 author: msmbaldwin
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: quickstart
 ms.date: 04/10/2025
 ms.author: mbaldwin

@@ -1,7 +1,7 @@
 ---
 author: msmbaldwin
 ms.author: mbaldwin
-ms.service: information-protection  
+ms.service: azure-information-protection
 ms.topic: include
 ms.collection: M365-security-compliance
 ms.date: 04/14/2025

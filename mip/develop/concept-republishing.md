@@ -2,7 +2,7 @@
 title: Republishing in Microsoft Information Protection (MIP) SDK
 description: This article helps you understand the scenario of how to re-use protection handler for republishing scenarios.
 author: msmbaldwin
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: mbaldwin
