@@ -140,7 +140,7 @@ to true and retry the request. Labeling operations will not be available for tha
 
 > System.ComponentModel.Win32Exception: LoadLibrary failed for: [sdk_wrapper_dotnet.dll] when calling MIP.Initialize().
 
-Your application doesn't have the required runtime, or was not built as Release. See [Ensure your app has the required runtime](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) for more information. 
+Your application doesn't have the required runtime, or was not built as Release. See [Ensure your app has the required dependencies](setup-configure-mip.md#ensure-your-app-has-the-required-dependencies) for more information. 
 
 ### Error: "ProxyAuthError exception"
 
