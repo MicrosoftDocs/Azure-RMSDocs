@@ -2,7 +2,7 @@
 title: Concepts - Label metadata in the MIP SDK
 description: This article helps you understand the metadata that the Microsoft Information Protection SDK generates.
 author: tommoser
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: tommos

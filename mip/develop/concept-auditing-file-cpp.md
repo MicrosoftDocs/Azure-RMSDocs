@@ -3,7 +3,7 @@ title: Concepts - Auditing in the Microsoft Information Protection File SDK
 description: This article helps you understand how to use the Microsoft Information Protection SDK to submit File SDK auditing events to Microsoft Purview.
 services: information-protection
 author: tommoser
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: tommos

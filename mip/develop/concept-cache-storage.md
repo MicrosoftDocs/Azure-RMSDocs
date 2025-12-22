@@ -2,7 +2,7 @@
 title: Concepts - Cache storage
 description: This article helps you understand the concepts around cache storage in MIP SDK.
 author: tommoser
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: tommos

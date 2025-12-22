@@ -2,7 +2,7 @@
 title: Concepts - The core concepts in the MIP SDK - Proxy Support
 description: This article will help you understand proxy support in the MIP SDK.
 author: tommoser
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: tommos

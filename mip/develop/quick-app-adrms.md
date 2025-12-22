@@ -2,7 +2,7 @@
 title: Quickstart - Active Directory Rights Management Server Protection
 description: A quickstart showing you how to configure the MIP SDK to use Active Directory Rights Management Server (AD RMS)
 author: tommoser
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: quickstart
 ms.date: 04/10/2025
 ms.author: tommos
