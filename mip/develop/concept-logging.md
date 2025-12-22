@@ -2,7 +2,7 @@
 title: Concepts - Logging
 description: This article helps you understand the concepts around logging in MIP SDK.
 author: yangczhang
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: yangczhang
