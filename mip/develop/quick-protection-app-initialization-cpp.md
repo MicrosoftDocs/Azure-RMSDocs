@@ -2,7 +2,7 @@
 title: Quickstart - Initialization for MIP SDK C++ clients using the Protection SDK
 description: A quickstart showing you how to write the initialization logic for Microsoft Information Protection (MIP) SDK client applications using the Protection SDK (C++)
 author: msmbaldwin
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: quickstart
 ms.date: 04/10/2025
 ms.author: mbaldwin

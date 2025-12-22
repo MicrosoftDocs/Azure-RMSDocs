@@ -9,7 +9,7 @@ ms.author: mbaldwin
 ms.date: 04/14/2025
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.service: information-protection
+ms.service: azure-information-protection
 
 # optional metadata
 

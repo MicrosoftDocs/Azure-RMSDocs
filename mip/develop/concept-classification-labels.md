@@ -2,7 +2,7 @@
 title: Concepts - Classification labels
 description: This article helps you understand how labels are used for data classification with the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: mbaldwin

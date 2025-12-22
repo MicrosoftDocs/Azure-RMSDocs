@@ -2,7 +2,7 @@
 title: Concepts - The core concepts in the MIP SDK - User-defined permissions. 
 description: This article will help you understand the core SDK concept called user-defined permissions.
 author: tommoser
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: tommos

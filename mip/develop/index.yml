@@ -7,7 +7,7 @@ metadata:
   title: Microsoft Information Protection SDK documentation
   description: Microsoft Information Protection SDK Documentation - Tutorials, API Reference 
   services: information-protection
-  ms.service: information-protection
+  ms.service: azure-information-protection
   ms.topic: landing-page # Required
   ms.collection: M365-security-compliance
   author: msmbaldwin

@@ -2,7 +2,7 @@
 title: Concepts - Delegation
 description: This article will help you understand the concepts around delegation in MIP SDK.
 author: tommoser
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: tommos

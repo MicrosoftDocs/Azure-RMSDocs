@@ -5,7 +5,7 @@ author: tommoser
 ms.author: tommos
 ms.date: 04/10/2025
 ms.topic: conceptual
-ms.service: information-protection
+ms.service: azure-information-protection
 ---
 
 # FIPS 140-2 Validation

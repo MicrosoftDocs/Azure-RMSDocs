@@ -2,7 +2,7 @@
 title: Concepts - Policy handlers in the MIP SDK.
 description: This article will help you understand how Policy SDK handlers are created and used for calling operations.
 author: tommoser
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: tommos

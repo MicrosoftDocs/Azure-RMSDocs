@@ -2,7 +2,7 @@
 title: Concepts - The core concepts in the MIP SDK - Diagnostic Control
 description: This article will help you understand how to opt out of diagnostic data and which events are still sent when opted out.
 author: tommoser
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: tommos

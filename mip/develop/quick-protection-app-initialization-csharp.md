@@ -2,7 +2,7 @@
 title: Quickstart - Client application initialization - Protection SDK (C#)
 description: A quickstart showing you how to write the initialization logic for a Microsoft Information Protection (MIP) SDK - Protection SDK C# client applications (C#)
 author: msmbaldwin
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: quickstart
 ms.date: 04/10/2025
 ms.author: mbaldwin
