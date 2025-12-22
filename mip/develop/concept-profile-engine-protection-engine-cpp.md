@@ -2,7 +2,7 @@
 title: Concepts - The Protection SDK engine object
 description: This article will help you understand the concepts around the Protection engine object, which is created during application initialization.
 author: msmbaldwin
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: mbaldwin

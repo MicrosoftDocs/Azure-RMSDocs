@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 ms.date: 04/10/2025
 ms.topic: conceptual
-ms.service: information-protection
+ms.service: azure-information-protection
 ---
 
 # Quickstart: Public and Confidential Clients (C#)
