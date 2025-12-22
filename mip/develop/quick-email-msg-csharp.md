@@ -2,7 +2,7 @@
 title: File SDK - Process email .msg files (C#)
 description: This article will help you understand the scenario of how to use MIP File SDK to process .msg files (C#).
 author: msmbaldwin
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: quickstart
 ms.date: 04/10/2025
 ms.author: mbaldwin

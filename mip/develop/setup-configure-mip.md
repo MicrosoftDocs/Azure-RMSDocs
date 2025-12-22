@@ -2,7 +2,7 @@
 title: Microsoft Information Protection (MIP) SDK setup and configuration
 description: Provides the setup and configuration prerequisites, in order to use applications built with the Microsoft Information Protection SDK.
 author: msmbaldwin
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: quickstart
 ms.date: 04/10/2025
 ms.author: mbaldwin

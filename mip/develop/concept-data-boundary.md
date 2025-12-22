@@ -2,7 +2,7 @@
 title: Concepts - Data boundary
 description: This article will help you understand the concepts around data compliance boundaries in MIP SDK.
 author: tommoser
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: tommos

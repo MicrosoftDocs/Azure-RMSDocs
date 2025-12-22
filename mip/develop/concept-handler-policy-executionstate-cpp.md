@@ -3,7 +3,7 @@ title: Concepts - Implementing ExecutionState in the Microsoft Information Prote
 description: This article will help you understand how to use the ExecutionState in the Microsoft Information Protection SDK to compute actions and provide details for audit logging.
 services: information-protection
 author: tommoser
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: tommos

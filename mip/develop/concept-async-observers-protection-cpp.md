@@ -2,7 +2,7 @@
 title: Concepts - Protection SDK observers in the MIP SDK.
 description: The MIP SDK is designed to be almost entirely asynchronous. This article will help you understand how Protection SDK observers are implemented and used for asynchronicity.
 author: msmbaldwin
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: mbaldwin

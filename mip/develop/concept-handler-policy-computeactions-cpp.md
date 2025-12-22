@@ -3,7 +3,7 @@ title: Concepts - Using the Microsoft Information Protection SDK to generate aud
 description: This article will help you understand how to use the Microsoft Information Protection SDK to compute.
 services: information-protection
 author: tommoser
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: tommos

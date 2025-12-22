@@ -2,7 +2,7 @@
 title: How to - process email messages using MIP SDK
 description: This article helps you understand the scenario of how to use MIP File SDK to process .msg and .rpmsg files.
 author: msmbaldwin
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: conceptual
 ms.date: 04/10/2025
 ms.author: mbaldwin

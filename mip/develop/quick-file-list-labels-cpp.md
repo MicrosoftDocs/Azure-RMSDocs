@@ -2,7 +2,7 @@
 title: Quickstart - List sensitivity labels in a Microsoft Purview Information Protection tenant using C++ MIP SDK
 description: A quickstart showing you how to use the Microsoft Information Protection C++ SDK to list the sensitivity labels in your tenant.
 author: msmbaldwin
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.topic: quickstart
 ms.date: 04/10/2025
 ms.author: mbaldwin

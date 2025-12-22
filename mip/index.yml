@@ -7,7 +7,7 @@ metadata:
   title: Microsoft Purview Information Protection documentation
   description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Purview Information Protection — no matter where it's stored or who it's shared with.
   services: information-protection
-  ms.service: information-protection
+  ms.service: azure-information-protection
   ms.topic: landing-page # Required
   ms.collection: M365-security-compliance
   author: msmbaldwin
