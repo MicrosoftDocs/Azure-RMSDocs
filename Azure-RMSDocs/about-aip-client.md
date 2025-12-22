@@ -9,7 +9,7 @@ manager: aashishr
 ms.date: 05/11/2024
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.service: information-protection
+ms.service: azure-information-protection
 
 ---
 
