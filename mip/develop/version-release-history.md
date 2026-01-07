@@ -29,8 +29,8 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 | ------- | ---------------------------- | ------------------ | ------------------ | ----------------- |
 | 1.18    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                | [C++](https://microsoftdocs.github.io/mip-sdk-docs/cpp/) \| [C](https://microsoftdocs.github.io/mip-sdk-docs/c/) |
 | 1.17    | https://aka.ms/mipsdkbins117 | **Supported**      | Dec 4, 2026        | [C++](https://microsoftdocs.github.io/mip-sdk-docs/archive/1.17/cpp/) \| [C](https://microsoftdocs.github.io/mip-sdk-docs/archive/1.17/c/) |
-| 1.16    | https://aka.ms/mipsdkbins116 | **Supported**      | June 9, 2026       | [C++](https://microsoftdocs.github.io/mip-sdk-docs/archive/1.16/cpp/) |
-| 1.15    | https://aka.ms/mipsdkbins115 | **Supported**      | December 13, 2025  | [C++](https://microsoftdocs.github.io/mip-sdk-docs/archive/1.15/cpp/) |
+| 1.16    | https://aka.ms/mipsdkbins116 | **Supported**      | June 9, 2026       | [C++](https://microsoftdocs.github.io/mip-sdk-docs/archive/1.16/cpp/) \| [C](https://microsoftdocs.github.io/mip-sdk-docs/archive/1.16/c/) |
+| 1.15    | https://aka.ms/mipsdkbins115 | **Supported**      | December 13, 2025  | [C++](https://microsoftdocs.github.io/mip-sdk-docs/archive/1.15/cpp/) \| [C](https://microsoftdocs.github.io/mip-sdk-docs/archive/1.15/c/) |
 | 1.14    | https://aka.ms/mipsdkbins114 | **Out of Support** | July 5, 2025       | |
 | 1.13    | https://aka.ms/mipsdkbins113 | **Out of Support** | October 27, 2024   | |
 | 1.12    | https://aka.ms/mipsdkbins112 | **Out of Support** | March 17, 2024     | |
