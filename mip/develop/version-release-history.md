@@ -25,25 +25,26 @@ NuGet packages for major releases remain active in NuGet. Only the latest versio
 > [!NOTE]
 > For technical support, visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection) or open a support case with Microsoft Support.
 
-| Version | Link                         | Status             | End of Support     |
-| ------- | ---------------------------- | ------------------ | ------------------ |
-| 1.18    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                |
-| 1.17    | https://aka.ms/mipsdkbins117 | **Supported**      | Dec 4, 2026        |
-| 1.16    | https://aka.ms/mipsdkbins116 | **Supported**      | June 9, 2026       |
-| 1.15    | https://aka.ms/mipsdkbins115 | **Supported**      | December 13, 2025  |
-| 1.14    | https://aka.ms/mipsdkbins114 | **Out of Support** | July 5, 2025       |
-| 1.13    | https://aka.ms/mipsdkbins113 | **Out of Support** | October 27, 2024   |
-| 1.12    | https://aka.ms/mipsdkbins112 | **Out of Support** | March 17, 2024     |
-| 1.11    | https://aka.ms/mipsdkbins111 | **Out of Support** | June 9, 2023       |
-| 1.10    | https://aka.ms/mipsdkbins110 | **Out of Support** | November 17, 2022  |
-| 1.9     | https://aka.ms/mipsdkbins19  | **Out of Support** | August 23, 2022    |
-| 1.8     | https://aka.ms/mipsdkbins18  | **Out of Support** | April 29, 2022     |
-| 1.7     | https://aka.ms/mipsdkbins17  | **Out of Support** | January 14, 2022   |
-| 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support** | September 23, 2021 |
-| 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     |
-| 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      |
+| Version | Link                         | Status             | End of Support     | SDK Documentation |
+| ------- | ---------------------------- | ------------------ | ------------------ | ----------------- |
+| 1.18    | https://aka.ms/mipsdkbins    | **Supported**      | TBD                | [C++](https://microsoftdocs.github.io/mip-sdk-docs/cpp/) \| [C](https://microsoftdocs.github.io/mip-sdk-docs/c/) |
+| 1.17    | https://aka.ms/mipsdkbins117 | **Supported**      | Dec 4, 2026        | [C++](https://microsoftdocs.github.io/mip-sdk-docs/archive/1.17/cpp/) \| [C](https://microsoftdocs.github.io/mip-sdk-docs/archive/1.17/c/) |
+| 1.16    | https://aka.ms/mipsdkbins116 | **Supported**      | June 9, 2026       | [C++](https://microsoftdocs.github.io/mip-sdk-docs/archive/1.16/cpp/) |
+| 1.15    | https://aka.ms/mipsdkbins115 | **Supported**      | December 13, 2025  | [C++](https://microsoftdocs.github.io/mip-sdk-docs/archive/1.15/cpp/) |
+| 1.14    | https://aka.ms/mipsdkbins114 | **Out of Support** | July 5, 2025       | |
+| 1.13    | https://aka.ms/mipsdkbins113 | **Out of Support** | October 27, 2024   | |
+| 1.12    | https://aka.ms/mipsdkbins112 | **Out of Support** | March 17, 2024     | |
+| 1.11    | https://aka.ms/mipsdkbins111 | **Out of Support** | June 9, 2023       | |
+| 1.10    | https://aka.ms/mipsdkbins110 | **Out of Support** | November 17, 2022  | |
+| 1.9     | https://aka.ms/mipsdkbins19  | **Out of Support** | August 23, 2022    | |
+| 1.8     | https://aka.ms/mipsdkbins18  | **Out of Support** | April 29, 2022     | |
+| 1.7     | https://aka.ms/mipsdkbins17  | **Out of Support** | January 14, 2022   | |
+| 1.6     | https://aka.ms/mipsdkbins16  | **Out of Support** | September 23, 2021 | |
+| 1.5     | https://aka.ms/mipsdkbins15  | **Out of Support** | April 16, 2021     | |
+| 1.4     | https://aka.ms/mipsdkbins14  | **Out of Support** | March 2, 2021      | |
 
-## Version 1.17.181
+## Version 1.18.181
+
 **Release Date:** December 5, 2025
 
 ### File SDK
