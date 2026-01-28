@@ -9,7 +9,7 @@ manager: aashishr
 ms.date: 06/06/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 
 # optional metadata

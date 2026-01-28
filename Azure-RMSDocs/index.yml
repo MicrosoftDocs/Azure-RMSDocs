@@ -7,7 +7,7 @@ metadata:
   title: Azure Information Protection documentation
   description: Control and help secure email, documents, and sensitive data that you share outside your company walls.
   services: information-protection
-  ms.service: information-protection
+  ms.service: azure-information-protection
   ms.topic: landing-page # Required
   ms.collection: M365-security-compliance
   author: aashishr
