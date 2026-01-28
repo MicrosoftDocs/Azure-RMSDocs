@@ -9,7 +9,7 @@ manager: aashishr
 ms.date: 11/09/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
-ms.service: information-protection
+ms.service: azure-information-protection
 
 # optional metadata
 
