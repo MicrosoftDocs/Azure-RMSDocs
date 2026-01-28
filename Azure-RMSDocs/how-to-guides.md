@@ -9,7 +9,7 @@ manager: aashishr
 ms.date: 08/26/2025
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.service: information-protection
+ms.service: azure-information-protection
 
 # optional metadata
 
