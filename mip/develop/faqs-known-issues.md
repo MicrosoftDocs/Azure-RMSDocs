@@ -4,7 +4,7 @@ description: Microsoft Information Protection (MIP) SDK FAQs and troubleshooting
 author: msmbaldwin
 ms.service: azure-information-protection
 ms.topic: troubleshooting
-ms.date: 04/10/2025
+ms.date: 05/05/2026
 ms.author: mbaldwin
 ---
 
@@ -15,7 +15,7 @@ This article provides answers to Frequently Asked Questions (FAQs), and troubles
 ## Frequently Asked Questions
 
 **Question** : How many labels are supported by MIP SDK?
-- MIP SDK can handle up to 500 protection labels, and there is no limit for labels without protection.
+- MIP SDK supports up to 500 encrypted sensitivity labels. Labels that do not use encryption are not subject to this limit. Tenants with a large number of sensitivity labels may experience some performance impact. For more information, see [Sensitivity label limitations](https://learn.microsoft.com/en-us/purview/sensitivity-labels#sensitivity-label-limitations-per-tenant).
 
 **Question** : Does MIP SDK support relabeling .pfile types with classification labels?
 - No, this is by design because pfiles are protected file types. Decrypt with the MPIP File Labeler before classification.
