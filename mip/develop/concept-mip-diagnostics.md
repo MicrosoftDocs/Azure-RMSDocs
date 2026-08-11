@@ -1,10 +1,10 @@
 ---
 title: Concepts - The core concepts in the MIP SDK - Diagnostic Control
-description: This article will help you understand how to opt out of diagnostic data and which events are still sent when opted out.
+description: Learn how to reduce or disable diagnostic data sent by the Microsoft Information Protection SDK.
 author: tommoser
 ms.service: azure-information-protection
 ms.topic: conceptual
-ms.date: 04/10/2025
+ms.date: 08/11/2026
 ms.author: tommos
 ---
 
@@ -16,7 +16,7 @@ By default, the Microsoft Information Protection SDK sends diagnostic data to Mi
 
 ## Diagnostic Configuration
 
-Diagnostic options in the MIP SDK can be controlled via `DiagnosticConfiguration`. Create an instance of this class, then set **isMinimalTelemetryEnabled** to true. Provide the object of class **DiagnosticConfiguration** to the function used to create **MipContext**.
+Diagnostic options in the MIP SDK can be controlled via `DiagnosticConfiguration`. Create an instance of this class, then provide it to the function used to create `MipContext`. Setting **isMinimalTelemetryEnabled** to true reduces the diagnostic data sent by the SDK, but doesn't completely disable telemetry.
 
 ### Minimum Diagnostic Events
 
@@ -137,9 +137,9 @@ Review the tables below to see exactly what events and data are sent with minimu
 | UserObjectId                         | Microsoft Entra object ID of the user.                                                        | No       |
 | Version                              | Audit version schema (“1.1”).                                                          | No       |
 
-### Opting out in C++
+### Enable minimum diagnostics in C++
 
-To set diagnostics to minimum only, create a shared pointer of **mip::DiagnosticConfiguration()** and set **isMinimalTelemetryEnabled** to true. Pass the object to `MipConfiguration::SetDiagnosticConfiguration()` then use the `MipConfiguration` to generate `MipContext`.
+To set diagnostics to minimum only, create a shared pointer of **mip::DiagnosticConfiguration()** and set **isMinimalTelemetryEnabled** to true. Minimum diagnostics still sends the events described in the preceding tables. Pass the object to `MipConfiguration::SetDiagnosticConfiguration()` then use the `MipConfiguration` to generate `MipContext`.
 
 ```cpp
 auto diagnosticConfig = std::make_shared<mip::DiagnosticConfiguration>();
@@ -158,9 +158,9 @@ mipConfiguration->SetDiagnosticConfiguration(diagnosticConfig);
 mMipContext = mip::MipContext::Create(mipConfiguration);
 ```
 
-### Opting out in .NET
+### Enable minimum diagnostics in .NET
 
-To set diagnostic data to minimum only, create a **DiagnosticConfiguration()** object and set **isMinimalTelemetryEnabled** to true. Set the `DiagnosticOverride` property on `MipConfiguration` then create the `MipContext`.
+To set diagnostic data to minimum only, create a **DiagnosticConfiguration()** object and set **isMinimalTelemetryEnabled** to true. Minimum diagnostics still sends the events described in the preceding tables. Set the `DiagnosticOverride` property on `MipConfiguration` then create the `MipContext`.
 
 ```csharp
 DiagnosticConfiguration diagnosticConfiguration = new DiagnosticConfiguration();
@@ -175,4 +175,38 @@ mipConfiguration.DiagnosticOverride = diagnosticConfiguration;
 // Create MipContext.
 MipContext mipContext = MIP.CreateMipContext(mipConfiguration);
 
+```
+
+### Completely disable telemetry and audit
+
+To prevent the built-in MIP SDK pipelines from sending telemetry and audit events to Microsoft, add the following settings to the `DiagnosticConfiguration` custom settings collection before creating `MipContext`.
+
+| Setting | Value | Behavior |
+| ------- | ----- | -------- |
+| `is_all_telemetry_disabled` | `true` | Disables the built-in telemetry pipeline. |
+| `is_built_in_audit_disabled` | `true` | Disables the built-in audit pipeline. |
+
+Set both values to disable both pipelines. These settings don't disable MIP SDK application logging, such as `.miplog` files. If the application configures a custom telemetry or audit delegate, the custom delegate can still receive events.
+
+#### C++
+
+```cpp
+auto diagnosticConfig = std::make_shared<mip::DiagnosticConfiguration>();
+diagnosticConfig->customSettings.emplace("is_all_telemetry_disabled", "true");
+diagnosticConfig->customSettings.emplace("is_built_in_audit_disabled", "true");
+
+mipConfiguration->SetDiagnosticConfiguration(diagnosticConfig);
+```
+
+#### .NET
+
+```csharp
+DiagnosticConfiguration diagnosticConfiguration = new DiagnosticConfiguration();
+diagnosticConfiguration.CustomSettings = new Dictionary<string, string>
+{
+    ["is_all_telemetry_disabled"] = "true",
+    ["is_built_in_audit_disabled"] = "true"
+};
+
+mipConfiguration.DiagnosticOverride = diagnosticConfiguration;
 ```
